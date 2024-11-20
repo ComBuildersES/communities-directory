@@ -1,0 +1,63 @@
+export const filteredMockData = [
+  {
+    Comunidad: "FrontFest",
+    Estado: "Inactiva",
+    Última_revisión: "18/10/2024",
+    Tipo_de_comunidad: "Tech Meetup",
+    Tipo_de_eventos: "Presencial",
+    "Localización habitual": "Madrid",
+    Temas: "",
+    Info_de_contacto: "",
+    URL_Comunidad: "https://frontfest.es/",
+    Miniatura:
+      "https://pbs.twimg.com/profile_images/788398317357113344/bejVS6DD_400x400.jpg",
+  },
+  {
+    Comunidad: "JSDayES",
+    Estado: "Activa",
+    Última_revisión: "18/10/2024",
+    Tipo_de_comunidad: "Conferencia",
+    Tipo_de_eventos: "Online",
+    "Localización habitual": "Madrid",
+    Temas: "",
+    Info_de_contacto: "",
+    URL_Comunidad: "https://2020.jsday.es/",
+    Miniatura:
+      "https://pbs.twimg.com/profile_images/1235865197887119361/c076B6Rd_400x400.jpg",
+  },
+  {
+    Comunidad: "Congreso javaHispano",
+    Estado: "Inactiva",
+    Última_revisión: "18/10/2024",
+    Tipo_de_comunidad: "Grupo colaborativo",
+    Tipo_de_eventos: "Hibridos",
+    "Localización habitual": "Madrid",
+    Temas: "",
+    Info_de_contacto: "",
+    URL_Comunidad:
+      "http://www.javahispano.org/fotos-seminario-jenkings/fotos-del-i-congreso-javahispano/",
+  },
+  {
+    Comunidad: "Iniciador Congreso",
+    Estado: "Inactiva",
+    Última_revisión: "18/10/2024",
+    Tipo_de_comunidad: "Organización paraguas",
+    Tipo_de_eventos: "Desconocido",
+    "Localización habitual": "Madrid",
+    Temas: "",
+    Info_de_contacto: "",
+    URL_Comunidad: "https://www.iniciador.com/es/proyectos-y-retos/congreso",
+  },
+  {
+    Comunidad: "CLSxMadrid",
+    Estado: "Inactiva",
+    Última_revisión: "18/10/2024",
+    Tipo_de_comunidad: "Hacklab",
+    Tipo_de_eventos: "Presencial",
+    "Localización habitual": "Madrid",
+    Temas: "",
+    Info_de_contacto: "",
+    URL_Comunidad:
+      "https://web.archive.org/web/20161202102359/http://www.clsxmadrid.es/index.es.html",
+  },
+];

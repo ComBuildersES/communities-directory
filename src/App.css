@@ -1,0 +1,70 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
+
+#search_app {
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  padding: 1rem;
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+}
+
+.communitieslist {
+  display: grid;
+  gap: 1rem;
+}
+
+.alto45rem {
+  height: 4.5rem;
+}
+
+.mycard {
+  position: relative;
+}
+
+.headingtag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 1rem;
+}
+
+/* Estilo para tablet: 2 cards por fila */
+@media (min-width: 768px) {
+  .communitieslist {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #search_app {
+    flex-direction: row;
+  }
+}
+
+/* Estilo para desktop: 3 cards por fila */
+@media (min-width: 1024px) {
+  .communitieslist {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Estilo para resoluciones mayores: 5 cards por fila */
+@media (min-width: 1440px) {
+  .communitieslist {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

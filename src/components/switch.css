@@ -1,0 +1,45 @@
+/* Contenedor principal del interruptor */
+.custom-switch {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 35px; /* Ajustar ancho según preferencia */
+  height: 20px;
+  background-color: #ccc; /* Fondo gris por defecto */
+  border-radius: 20px;
+  padding: 5px;
+  cursor: pointer;
+  position: relative;
+  transition: background-color 0.3s ease-in-out;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo cuando el interruptor está encendido */
+.custom-switch.on {
+  background-color: #28a745; /* Verde cuando está encendido */
+}
+
+/* Etiqueta del texto (YES o NO) */
+.switch-label {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+/* Estilo del círculo deslizante */
+.switch-slider {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Mover el círculo cuando está encendido */
+.custom-switch.on .switch-slider {
+  transform: translateX(15px);
+}
