@@ -4,7 +4,7 @@ import Sidebar from "./components/SideBar.jsx";
 
 import { URL } from "./constants.js";
 import { getAllCommunities } from "./data/API.js";
-import { buildInvertedIndex, makeInverseIndex } from "./data/invertedindex.js";
+import { makeInverseIndex } from "./data/invertedindex.js";
 import { busquedaFacetada, searchFaceted } from "./data/searchFaceted.js";
 import { useEffect } from "react";
 
@@ -22,10 +22,10 @@ function App() {
     async function fetchData() {
       try {
         awaitdata = await getAllCommunities(URL);
-        //console.log(awaitdata);
+        console.log(awaitdata);
         // const invertedIndex = buildInvertedIndex(awaitdata);
         const invertedIndex = makeInverseIndex(awaitdata);
-        console.log(invertedIndex);
+        // console.log(invertedIndex);
         //const searchdata = searchFaceted(awaitdata, invertedIndex, filters);
         // console.log("searchdata", searchdata);
         busquedaFacetada(awaitdata, invertedIndex, filtros);

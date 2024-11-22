@@ -1,4 +1,4 @@
-export const normalizar = (valor) => valor?.toString().trim.toLowerCase();
+export const normalizar = (valor) => valor?.toString().trim().toLowerCase();
 
 export const makeInverseIndex = (data) => {
   const inverseIndex = {};
@@ -6,7 +6,7 @@ export const makeInverseIndex = (data) => {
   data.forEach((registro) => {
     //Obtiene las claves del registro
     Object.keys(registro).forEach((clave) => {
-      const valor = registro[clave].toString().trim();
+      const valor = registro[clave]?.toString().trim().toLowerCase();
 
       // Si el valor de esa clave no existe en el indice la crea.
 
@@ -21,6 +21,9 @@ export const makeInverseIndex = (data) => {
       inverseIndex[clave][valor].add(registro.ID);
     });
   });
-
+  console.log(
+    "Índice Inverso Generado:",
+    JSON.stringify(inverseIndex, null, 2)
+  ); // Debug
   return inverseIndex;
 };

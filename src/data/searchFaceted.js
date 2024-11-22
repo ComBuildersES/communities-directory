@@ -1,3 +1,5 @@
+import { normalizar } from "./invertedindex";
+
 export const searchFaceted = (data, invertedIndex, filters) => {
   console.log(filters);
 
@@ -20,15 +22,24 @@ export const busquedaFacetada = (data, indexInverso, filtros) => {
 
   if (filtroskeys.length === 0) return data;
 
+  console.log("Filtros aplicados:", filtros); // Debug
+
   const IDsFiltrados = filtroskeys.reduce((acc, key) => {
     // Mapeamos los valores de filtro y obtenemos conjuntos de IDs desde el índice inverso
     const conjuntoIds = filtros[key]
-      .map((value) => indexInverso[key]?.[value])
-      .filter(Boolean); // Eliminamos los valores null o undefinet
+      .map((value) => {
+        const normalizedValue = value.toString().trim().toLowerCase();
+        const ids = indexInverso[key]?.[normalizedValue];
+        console.log(
+          `Clave: "${key}", Valor: "${value}" (normalizado: "${normalizedValue}"), IDs:`,
+          ids
+        ); // Debug
+        return ids;
+      })
+      .filter(Boolean); // Eliminamos los valores null o undefined
 
     // Combinamos los conjuntos en un solo conjunto plano
     const combinedIds = new Set(conjuntoIds.flatMap((set) => [...set]));
-    console.log("acc", acc);
 
     if (acc === null) {
       // Si es la primera iteración, inicializamos con el conjunto actual
@@ -40,7 +51,8 @@ export const busquedaFacetada = (data, indexInverso, filtros) => {
     // Intersección de conjuntos: mantenemos solo los IDs que están en ambos conjuntos
     return new Set([...acc].filter((id) => combinedIds.has(id)));
   }, null);
-  console.log("Ids filtrados", IDsFiltrados);
+
+  console.log("IDs Filtrados Finales:", IDsFiltrados); // Debug
   // Si no hay IDs filtrados, devolvemos un array vacío
   if (!IDsFiltrados) return [];
 
