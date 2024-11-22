@@ -21,23 +21,29 @@ export const busquedaFacetada = (data, indexInverso, filtros) => {
   if (filtroskeys.length === 0) return data;
 
   const IDsFiltrados = filtroskeys.reduce((acc, key) => {
-    const conjuntoIds = filtros[key].map(
-      (value) => indexInverso[key][value || new Set()]
-    );
+    // Mapeamos los valores de filtro y obtenemos conjuntos de IDs desde el índice inverso
+    const conjuntoIds = filtros[key]
+      .map((value) => indexInverso[key]?.[value])
+      .filter(Boolean); // Eliminamos los valores null o undefinet
 
+    // Combinamos los conjuntos en un solo conjunto plano
     const combinedIds = new Set(conjuntoIds.flatMap((set) => [...set]));
+    console.log("acc", acc);
 
-    // En la primera iteracion devolvemos el valor de Ids Combinados
     if (acc === null) {
+      // Si es la primera iteración, inicializamos con el conjunto actual
       return combinedIds;
     }
+
     // En la siguiente iteracion vamos acumulando los ids de cada filtro.
     // Como no queremos repetir volvemos a generar un  nuevo Set
+    // Intersección de conjuntos: mantenemos solo los IDs que están en ambos conjuntos
     return new Set([...acc].filter((id) => combinedIds.has(id)));
   }, null);
-  console.log("el reducer: ", IDsFiltrados);
+  console.log("Ids filtrados", IDsFiltrados);
+  // Si no hay IDs filtrados, devolvemos un array vacío
+  if (!IDsFiltrados) return [];
 
+  // Filtramos los datos originales según los IDs filtrados
   return data.filter((comunity) => IDsFiltrados.has(comunity.ID));
-
-  // console.log("los filtros", filtroskeys);
 };

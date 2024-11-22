@@ -1,27 +1,4 @@
-export const buildInvertedIndex = (data) => {
-  // Índice vacío para almacenar los datos
-  const invertedIndex = {};
-
-  data.forEach((item, indexId) => {
-    Object.entries(item).forEach(([key, value]) => {
-      if (!value) return; // ignora valores vacios
-
-      // Limpieza de espacios o caracteres especiales en el valor
-      const sanitizedValue = value.toString().trim();
-      // Inicializar la estructura de la faceta en el índice si no existe
-      if (!invertedIndex[key]) invertedIndex[key] = {};
-
-      // Inicializar el array para el valor específico de la faceta si no existe
-      if (!invertedIndex[key][sanitizedValue])
-        invertedIndex[key][sanitizedValue] = [];
-      // Acumular el índice de la comunidad
-      // Añadir la referencia (indexId numero indice del array data) de la comunidad en el array correspondiente
-      invertedIndex[key][sanitizedValue].push(indexId);
-    });
-  });
-
-  return invertedIndex;
-};
+export const normalizar = (valor) => valor?.toString().trim.toLowerCase();
 
 export const makeInverseIndex = (data) => {
   const inverseIndex = {};

@@ -15,7 +15,7 @@ function App() {
     const filtros = {
       Estado: [],
       Tipo_de_comunidad: [],
-      "Localización habitual": ["Albacete", "Córdoba"],
+      "Localización habitual": ["Albacete"],
       Tipo_de_eventos: ["Híbridos"],
     };
 
@@ -28,7 +28,7 @@ function App() {
         console.log(invertedIndex);
         //const searchdata = searchFaceted(awaitdata, invertedIndex, filters);
         // console.log("searchdata", searchdata);
-        console.log(busquedaFacetada(awaitdata, invertedIndex, filtros));
+        busquedaFacetada(awaitdata, invertedIndex, filtros);
       } catch (error) {
         console.error("Error obteniendo Datos", error);
       }
