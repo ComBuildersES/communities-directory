@@ -21,9 +21,6 @@ export const makeInverseIndex = (data) => {
       inverseIndex[clave][valor].add(registro.ID);
     });
   });
-  console.log(
-    "Índice Inverso Generado:",
-    JSON.stringify(inverseIndex, null, 2)
-  ); // Debug
+
   return inverseIndex;
 };

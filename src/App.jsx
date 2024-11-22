@@ -5,7 +5,7 @@ import Sidebar from "./components/SideBar.jsx";
 import { URL } from "./constants.js";
 import { getAllCommunities } from "./data/API.js";
 import { makeInverseIndex } from "./data/invertedindex.js";
-import { busquedaFacetada, searchFaceted } from "./data/searchFaceted.js";
+import { facetedSearch } from "./data/searchFaceted.js";
 import { useEffect } from "react";
 
 function App() {
@@ -13,22 +13,22 @@ function App() {
     let awaitdata = [];
     // Ejemplo de filtros
     const filtros = {
-      Estado: [],
+      Estado: ["Activa"],
       Tipo_de_comunidad: [],
-      "Localización habitual": ["Albacete"],
-      Tipo_de_eventos: ["Híbridos"],
+      "Localización habitual": ["Albacete", "Alicante"],
+      Tipo_de_eventos: ["Híbridos", "Presencial"],
     };
 
     async function fetchData() {
       try {
         awaitdata = await getAllCommunities(URL);
-        console.log(awaitdata);
+        // console.log(awaitdata);
         // const invertedIndex = buildInvertedIndex(awaitdata);
         const invertedIndex = makeInverseIndex(awaitdata);
-        // console.log(invertedIndex);
+        console.log(invertedIndex);
         //const searchdata = searchFaceted(awaitdata, invertedIndex, filters);
         // console.log("searchdata", searchdata);
-        busquedaFacetada(awaitdata, invertedIndex, filtros);
+        console.log(facetedSearch(awaitdata, invertedIndex, filtros));
       } catch (error) {
         console.error("Error obteniendo Datos", error);
       }
