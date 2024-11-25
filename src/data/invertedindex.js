@@ -24,3 +24,28 @@ export const makeInverseIndex = (data) => {
 
   return inverseIndex;
 };
+
+export const buildInverseIndex = (data) => {
+  const inverseIndex = {};
+
+  data.forEach((registro) => {
+    Object.keys(registro).forEach((key) => {
+      const value = registro[key]?.toString().trim().toLowerCase(); // Normalizamos los valores
+
+      if (!inverseIndex[key]) {
+        inverseIndex[key] = {};
+      }
+
+      if (!inverseIndex[key][value]) {
+        inverseIndex[key][value] = new Set();
+      }
+
+      inverseIndex[key][value].add(registro.ID);
+    });
+  });
+  console.log(
+    "Índice Inverso Generado:",
+    JSON.stringify(inverseIndex, null, 2)
+  ); // Debug
+  return inverseIndex;
+};

@@ -1,3 +1,4 @@
 const initialCommunityState = {
-  communities: [],
+  Allcommunities: [],
+  fiteredCommunities: [],
 };
