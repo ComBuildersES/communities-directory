@@ -43,9 +43,9 @@ export const buildInverseIndex = (data) => {
       inverseIndex[key][value].add(registro.ID);
     });
   });
-  console.log(
+  /*   console.log(
     "Índice Inverso Generado:",
     JSON.stringify(inverseIndex, null, 2)
-  ); // Debug
+  );  */ // Debug
   return inverseIndex;
 };

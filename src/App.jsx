@@ -5,7 +5,7 @@ import Sidebar from "./components/SideBar.jsx";
 import { URL } from "./constants.js";
 import { getAllCommunities } from "./data/API.js";
 import { makeInverseIndex, buildInverseIndex } from "./data/invertedindex.js";
-import { facetedSearch } from "./data/searchFaceted.js";
+import { facetedSearch, searchFaceted } from "./data/searchFaceted.js";
 import { useEffect } from "react";
 
 function App() {
@@ -26,8 +26,8 @@ function App() {
         const invertedIndex = buildInverseIndex(awaitdata);
         // const invertedIndex = makeInverseIndex(awaitdata);
         // console.log(invertedIndex);
-        //const searchdata = searchFaceted(awaitdata, invertedIndex, filters);
-        // console.log("searchdata", searchdata);
+        const searchdata = searchFaceted(awaitdata, invertedIndex, filtros);
+        console.log("searchdata", searchdata);
         // console.log(facetedSearch(awaitdata, invertedIndex, filtros));
       } catch (error) {
         console.error("Error obteniendo Datos", error);
