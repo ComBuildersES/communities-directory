@@ -4,6 +4,12 @@ import { URL } from "../constants";
 import { buildInverseIndex } from "../data/invertedindex";
 
 // El indice inverso solo se realiza cuando se carga la pagina
+const initialState = {
+  allCommunities: [], // Estado Inicial, Datos originales
+  invertedIndex: {}, // Indice inverso de los datos
+  isLoading: false, // Estado para mostrar carga
+  error: null, // Estado para manejar errores
+};
 
 const useCommunitiesStoreOLD = create((set, get) => {
   return {
@@ -45,20 +51,14 @@ const useCommunitiesStoreOLD = create((set, get) => {
 
 // Define el store Zustand
 export const useCommStore = create((set) => ({
-  data: [], // Estado inicial para los datos
-  loading: false, // Estado para mostrar carga
-  error: null, // Estado para manejar errores
-  fetchData: async (url) => {
-    set({ loading: true, error: null }); // Indica que está cargando
+  ...initialState,
+  fetchData: async () => {
+    set({ isLoading: true, error: null }); // Indica que está cargando
     try {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw new Error("Error al obtener los datos");
-      }
-      const data = await response.json();
-      set({ data, loading: false }); // Guarda los datos en el estado
+      const data = await getAllCommunities(URL);
+      set({ allCommunities: data, isLoading: false }); // Guarda los datos en el estado
     } catch (error) {
-      set({ error: error.message, loading: false }); // Maneja el error
+      set({ error: error.message, isLoading: false }); // Maneja el error
     }
   },
 }));

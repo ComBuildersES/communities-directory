@@ -12,15 +12,15 @@ export const filtros = {
 };
 
 export function CommunitiesList() {
-  const { data, loading, error, fetchData } = useCommStore();
+  const { allCommunities, isLoading, error, fetchData } = useCommStore();
 
   useEffect(() => {
     fetchData(URL);
   }, [fetchData]);
 
-  console.log("data", data);
+  console.log("allCommunities", allCommunities);
 
-  if (loading) return <p>Cargando datos...</p>;
+  if (isLoading) return <p>Cargando datos...</p>;
   if (error) return <p>Error: {error}</p>;
 
   return (
