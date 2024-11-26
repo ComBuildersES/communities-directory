@@ -59,27 +59,27 @@ export const searchFaceted = (data, inverseIndex, filters) => {
       .map((value) => {
         const normalizedValue = value.toString().trim().toLowerCase();
         const ids = inverseIndex[key]?.[normalizedValue] || new Set();
-        console.log(`Filtro: ${key}, Valor: ${value}, IDs encontrados:`, [
+        /* console.log(`Filtro: ${key}, Valor: ${value}, IDs encontrados:`, [
           ...ids,
-        ]);
+        ]); */
         return ids;
       })
       .filter((ids) => ids.size > 0); // Filtrar los conjuntos vacios
 
     const combinedIds = new Set(setIDsBykey.flatMap((set) => [...set])); // Combinar conjuntos en un único Set
-    console.log(`Combined IDs para filtro "${key}":`, [...combinedIds]);
+    // console.log(`Combined IDs para filtro "${key}":`, [...combinedIds]);
 
     if (filteredIDs === null) {
       // Primera iteración: inicializar con los IDs combinados
       filteredIDs = combinedIds;
     } else {
-      const beforeIntersection = new Set([...filteredIDs]);
+      // const beforeIntersection = new Set([...filteredIDs]);
       filteredIDs = new Set(
         [...filteredIDs].filter((id) => combinedIds.has(id))
       ); // Intersección
-      console.log(`Intersección para filtro "${key}":`);
+      /* console.log(`Intersección para filtro "${key}":`);
       console.log(`  Antes:`, [...beforeIntersection]);
-      console.log(`  Después:`, [...filteredIDs]);
+      console.log(`  Después:`, [...filteredIDs]); */
     }
   });
   if (!filteredIDs || filteredIDs.size === 0) {

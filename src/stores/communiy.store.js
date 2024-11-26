@@ -1,4 +1,0 @@
-const initialCommunityState = {
-  Allcommunities: [],
-  fiteredCommunities: [],
-};
