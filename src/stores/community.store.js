@@ -8,6 +8,7 @@ import { devtools } from "zustand/middleware";
 const initialState = {
   allCommunities: [], // Estado Inicial, Datos originales
   invertedIndex: {}, // Indice inverso de los datos
+  communitiesFiltered: [], // Comunidades filtradas
   isLoading: false, // Estado para mostrar carga
   error: null, // Estado para manejar errores
   filters: {}, // Estado para los filtros
@@ -22,7 +23,13 @@ const useCommunityStore = create(
         set({ isLoading: true, error: null }); // Indica que está cargando
         try {
           const data = await getAllCommunities(URL);
-          set({ allCommunities: data, isLoading: false }); // Guarda los datos en el estado
+          const inverseIndex = buildInverseIndex(data);
+          set({
+            allCommunities: data,
+            invertedIndex: inverseIndex,
+            communitiesFiltered: data,
+            isLoading: false,
+          }); // Guarda los datos en el estado
         } catch (error) {
           set({ error: error.message, isLoading: false }); // Maneja el error
         }
@@ -35,6 +42,9 @@ const useCommunityStore = create(
 
 export const useAllCommunities = () =>
   useCommunityStore((state) => state.allCommunities);
+
+export const useCommunitiesFiltered = () =>
+  useCommunityStore((state) => state.communitiesFiltered);
 
 export const useIsLoading = () => useCommunityStore((state) => state.isLoading);
 

@@ -6,6 +6,7 @@ import {
   useIsLoading,
   useIsError,
   useCommunityActions,
+  useCommunitiesFiltered,
 } from "../stores/community.store.js";
 
 import { useEffect } from "react";
@@ -21,6 +22,7 @@ export function CommunitiesList() {
   const allComunities = useAllCommunities();
   const isLoading = useIsLoading();
   const isError = useIsError();
+  const communitiesFiltered = useCommunitiesFiltered();
   const { fetchCommunities } = useCommunityActions();
 
   useEffect(() => {
@@ -30,7 +32,7 @@ export function CommunitiesList() {
   if (isLoading) return <p>Cargando datos...</p>;
   if (isError) return <p>Error: {isError}</p>;
 
-  console.log("allComunities", allComunities);
+  console.log("communities", communitiesFiltered);
   return (
     <>
       <div className="communitieslist ">

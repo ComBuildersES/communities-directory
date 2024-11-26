@@ -8,7 +8,7 @@ export function CommunityCard({ community }) {
     Última_revisión: revision,
     Tipo_de_comunidad: tipo,
     Tipo_de_eventos: tipoEvento,
-    ["Localización habitual"]: localizacion,
+    "Localización habitual": localizacion,
     Info_de_contacto: contacto,
     URL_Comunidad: url,
     Miniatura: miniatura,
