@@ -9,7 +9,7 @@ import {
   useCommunitiesFiltered,
 } from "../stores/community.store.js";
 
-import { useEffect } from "react";
+import { useMemo } from "react";
 
 export const filtros = {
   Estado: ["Activa"],
@@ -19,13 +19,12 @@ export const filtros = {
 };
 
 export function CommunitiesList() {
-  const allComunities = useAllCommunities();
   const isLoading = useIsLoading();
   const isError = useIsError();
   const communitiesFiltered = useCommunitiesFiltered();
   const { fetchCommunities } = useCommunityActions();
 
-  useEffect(() => {
+  useMemo(() => {
     fetchCommunities(URL);
   }, [fetchCommunities]);
 
