@@ -2,6 +2,7 @@ import { create } from "zustand";
 import { getAllCommunities } from "../data/API";
 import { URL } from "../constants";
 import { buildInverseIndex } from "../data/invertedindex";
+import { devtools } from "zustand/middleware";
 
 // El indice inverso solo se realiza cuando se carga la pagina
 const initialState = {
@@ -50,15 +51,17 @@ const useCommunitiesStoreOLD = create((set, get) => {
 });
 
 // Define el store Zustand
-export const useCommStore = create((set) => ({
-  ...initialState,
-  fetchData: async () => {
-    set({ isLoading: true, error: null }); // Indica que está cargando
-    try {
-      const data = await getAllCommunities(URL);
-      set({ allCommunities: data, isLoading: false }); // Guarda los datos en el estado
-    } catch (error) {
-      set({ error: error.message, isLoading: false }); // Maneja el error
-    }
-  },
-}));
+export const useCommStore = create(
+  devtools((set) => ({
+    ...initialState,
+    fetchData: async () => {
+      set({ isLoading: true, error: null }); // Indica que está cargando
+      try {
+        const data = await getAllCommunities(URL);
+        set({ allCommunities: data, isLoading: false }); // Guarda los datos en el estado
+      } catch (error) {
+        set({ error: error.message, isLoading: false }); // Maneja el error
+      }
+    },
+  }))
+);
