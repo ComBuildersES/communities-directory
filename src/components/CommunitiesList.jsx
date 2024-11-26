@@ -1,7 +1,13 @@
 import { filteredMockData } from "../data/filteredMockData.js";
 import { CommunityCard } from "./CommunityCard.jsx";
-import { URL } from "../constants";
-import { useCommStore } from "../stores/community.store.js";
+
+import {
+  useAllCommunities,
+  useIsLoading,
+  useIsError,
+  useCommunityActions,
+} from "../stores/community.store.js";
+
 import { useEffect } from "react";
 
 export const filtros = {
@@ -12,17 +18,19 @@ export const filtros = {
 };
 
 export function CommunitiesList() {
-  const { allCommunities, isLoading, error, fetchData } = useCommStore();
+  const allComunities = useAllCommunities();
+  const isLoading = useIsLoading();
+  const isError = useIsError();
+  const { fetchCommunities } = useCommunityActions();
 
   useEffect(() => {
-    fetchData(URL);
-  }, [fetchData]);
-
-  console.log("allCommunities", allCommunities);
+    fetchCommunities(URL);
+  }, [fetchCommunities]);
 
   if (isLoading) return <p>Cargando datos...</p>;
-  if (error) return <p>Error: {error}</p>;
+  if (isError) return <p>Error: {isError}</p>;
 
+  console.log("allComunities", allComunities);
   return (
     <>
       <div className="communitieslist ">
