@@ -3,6 +3,7 @@ import { getAllCommunities } from "../data/API";
 import { URL } from "../constants";
 import { buildInverseIndex } from "../data/invertedindex";
 import { devtools } from "zustand/middleware";
+import { searchFaceted } from "../data/searchFaceted";
 
 export const filtros = {
   Estado: ["Activa"],
@@ -42,9 +43,19 @@ const useCommunityStore = create(
         }
       },
       filterComunities: (key, value) => {
-        const { allCommunities, filters } = get();
-        // Anyadir filtros a los actuales
-        console.log(updateFilter(filtros, key, value));
+        const { allCommunities, filters, invertedIndex } = get();
+        // Actualizar filtros
+        const newFilters = updateFilter(filtros, key, value);
+
+        const communitiesWithNewFilters = searchFaceted(
+          allCommunities,
+          invertedIndex,
+          newFilters
+        );
+        set({
+          communitiesFiltered: communitiesWithNewFilters,
+          filters: newFilters,
+        });
       },
     },
   }))
