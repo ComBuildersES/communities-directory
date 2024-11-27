@@ -4,6 +4,13 @@ import { URL } from "../constants";
 import { buildInverseIndex } from "../data/invertedindex";
 import { devtools } from "zustand/middleware";
 
+export const filtros = {
+  Estado: ["Activa"],
+  Tipo_de_comunidad: [],
+  "Localización habitual": ["Albacete", "Alicante"],
+  Tipo_de_eventos: ["Híbridos", "Presencial"],
+};
+
 // El indice inverso solo se realiza cuando se carga la pagina
 const initialState = {
   allCommunities: [], // Estado Inicial, Datos originales
@@ -16,7 +23,7 @@ const initialState = {
 
 // Define el store Zustand
 const useCommunityStore = create(
-  devtools((set) => ({
+  devtools((set, get) => ({
     ...initialState,
     actions: {
       fetchCommunities: async () => {
@@ -34,9 +41,38 @@ const useCommunityStore = create(
           set({ error: error.message, isLoading: false }); // Maneja el error
         }
       },
+      filterComunities: (key, value) => {
+        const { allCommunities, filters } = get();
+        // Anyadir filtros a los actuales
+        console.log(updateFilter(filtros, key, value));
+      },
     },
   }))
 );
+
+const updateFilter = (filters, key, value) => {
+  // Si el valor es un array vacío, eliminamos la key del objeto
+  if (Array.isArray(value) && value.length === 0) {
+    // eslint-disable-next-line no-unused-vars
+    const { [key]: _, ...updatedFilters } = filters;
+    return updatedFilters;
+  }
+
+  // Asegurar que value siempre sea un array
+  const valueArray = Array.isArray(value) ? value : [value];
+
+  // Combinar valores existentes con el nuevo valor
+
+  const existingValue = filters[key];
+  const combinedValues = Array.isArray(existingValue)
+    ? [...existingValue, valueArray]
+    : [...(existingValue ? [existingValue] : []), ...valueArray];
+
+  return {
+    ...filters,
+    [key]: combinedValues,
+  };
+};
 
 // Selectores del estado
 

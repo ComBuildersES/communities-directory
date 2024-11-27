@@ -1,22 +1,13 @@
-import { filteredMockData } from "../data/filteredMockData.js";
+import { useMemo } from "react";
+
 import { CommunityCard } from "./CommunityCard.jsx";
 
 import {
-  useAllCommunities,
   useIsLoading,
   useIsError,
   useCommunityActions,
   useCommunitiesFiltered,
 } from "../stores/community.store.js";
-
-import { useMemo } from "react";
-
-export const filtros = {
-  Estado: ["Activa"],
-  Tipo_de_comunidad: [],
-  "Localización habitual": ["Albacete", "Alicante"],
-  Tipo_de_eventos: ["Híbridos", "Presencial"],
-};
 
 export function CommunitiesList() {
   const isLoading = useIsLoading();
@@ -31,12 +22,11 @@ export function CommunitiesList() {
   if (isLoading) return <p>Cargando datos...</p>;
   if (isError) return <p>Error: {isError}</p>;
 
-  console.log("communities", communitiesFiltered);
   return (
     <>
       <div className="communitieslist ">
-        {filteredMockData.map((community) => (
-          <CommunityCard key={community.Comunidad} community={community} />
+        {communitiesFiltered.map((community) => (
+          <CommunityCard key={community.ID} community={community} />
         ))}
       </div>
     </>

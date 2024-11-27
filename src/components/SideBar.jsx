@@ -21,7 +21,7 @@ export const Sidebar = () => {
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Tech Meetup</p>
-            <Switch />
+            <Switch name="Tipo_de_comunidad" value="Tech Meetup" />
           </div>
         </li>
         <li className="menu-item">
