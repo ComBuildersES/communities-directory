@@ -27,19 +27,25 @@ export const Sidebar = () => {
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Conferencia</p>
-            <Switch />
+            <Switch name="Tipo_de_comunidad" value="Conferencia" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Grupo Colaborativo</p>
-            <Switch />
+            <Switch name="Tipo_de_comunidad" value="Grupo colaborativo" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Grupo de Ayuda Mutua</p>
-            <Switch />
+            <Switch name="Tipo_de_comunidad" value="Grupo de ayuda mutua" />
+          </div>
+        </li>
+        <li className="menu-item">
+          <div className="option-item is-size-7">
+            <p>Hacklab</p>
+            <Switch name="Tipo_de_comunidad" value="Hacklab" />
           </div>
         </li>
       </ul>
@@ -49,25 +55,25 @@ export const Sidebar = () => {
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Híbridos</p>
-            <Switch />
+            <Switch name="Tipo_de_eventos" value="Híbridos" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Online</p>
-            <Switch />
+            <Switch name="Tipo_de_eventos" value="Online" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Presencial</p>
-            <Switch />
+            <Switch name="Tipo_de_eventos" value="Presencial" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Desconocidos</p>
-            <Switch />
+            <Switch name="Tipo_de_eventos" value="Desconocido" />
           </div>
         </li>
       </ul>

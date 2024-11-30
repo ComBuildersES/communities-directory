@@ -45,7 +45,7 @@ const useCommunityStore = create(
       filterComunities: (key, value) => {
         const { allCommunities, filters, invertedIndex } = get();
         // Actualizar filtros
-        const newFilters = updateFilter(filtros, key, value);
+        const newFilters = updateFilter(filters, key, value);
 
         const communitiesWithNewFilters = searchFaceted(
           allCommunities,
@@ -66,6 +66,8 @@ const updateFilter = (filters, key, value) => {
   if (Array.isArray(value) && value.length === 0) {
     // eslint-disable-next-line no-unused-vars
     const { [key]: _, ...updatedFilters } = filters;
+    console.log(`quitando valor ${key}  mandando valor ${value} `);
+    console.log(updatedFilters);
     return updatedFilters;
   }
 
@@ -76,9 +78,13 @@ const updateFilter = (filters, key, value) => {
 
   const existingValue = filters[key];
   const combinedValues = Array.isArray(existingValue)
-    ? [...existingValue, valueArray]
+    ? [...existingValue, value]
     : [...(existingValue ? [existingValue] : []), ...valueArray];
 
+  console.log({
+    ...filters,
+    [key]: combinedValues,
+  });
   return {
     ...filters,
     [key]: combinedValues,
