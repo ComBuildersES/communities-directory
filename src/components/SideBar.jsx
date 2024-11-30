@@ -64,18 +64,42 @@ export const Sidebar = () => {
             <Switch />
           </div>
         </li>
+        <li className="menu-item">
+          <div className="option-item is-size-7">
+            <p>Desconocidos</p>
+            <Switch />
+          </div>
+        </li>
       </ul>
+
+      <p className="menu-label">Estado de la comunidad</p>
+      {/*Aqui podia definir un list box de seleccion multiple con 
+        las distintas provincias como opciones */}
+      <ul className="menu-list">
+        <li className="menu-item">
+          <div className="option-item is-size-7">
+            <p>Activa</p>
+            <Switch />
+          </div>
+        </li>
+        <li className="menu-item">
+          <div className="option-item is-size-7">
+            <p>Inactiva</p>
+            <Switch />
+          </div>
+        </li>
+        <li className="menu-item">
+          <div className="option-item is-size-7">
+            <p>Desconocido</p>
+            <Switch />
+          </div>
+        </li>
+      </ul>
+
       <p className="menu-label">Localizacion habitual</p>
       {/*Aqui podia definir un list box de seleccion multiple con 
         las distintas provincias como opciones o poner todas y que 
         vayan filtrando */}
-      <ul className="menu-list">
-        <li className="menu-item"></li>
-        <li className="menu-item"></li>
-      </ul>
-      <p className="menu-label">Estado de la comunidad</p>
-      {/*Aqui podia definir un list box de seleccion multiple con 
-        las distintas provincias como opciones */}
       <ul className="menu-list">
         <li className="menu-item"></li>
         <li className="menu-item"></li>

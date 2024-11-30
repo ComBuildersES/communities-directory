@@ -11,8 +11,6 @@ export function Switch({ name = "nombre", value = "valor" }) {
   const toggleSwitch = () => {
     const newState = !isOn;
     setIsOn(newState);
-    console.log("valor", value);
-    console.log("isOn", newState);
     filterComunities(name, newState ? value : []);
   };
 
