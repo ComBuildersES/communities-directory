@@ -1,17 +1,14 @@
-import { useState } from "react";
 import { Switch } from "./Switch";
-import { useSidebarActions, useSideBarVisible } from "../stores/sidebar.store";
+import { useSideBarVisible } from "../stores/sidebar.store";
 
 export const Sidebar = () => {
   // Estado para controlar la visibilidad del sidebar
-  const isVisible = useSideBarVisible();
-
-  const { toggleSidebar } = useSidebarActions();
+  const isSidebarVisible = useSideBarVisible();
 
   return (
     <aside
       className={`sidebar menu column is-3 box ${
-        isVisible ? "is-active" : "is-hidden"
+        isSidebarVisible ? "is-active" : "is-hidden"
       }`}
     >
       <p className="menu-label">Tipo de Comunidad</p>
