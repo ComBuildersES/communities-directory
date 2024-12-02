@@ -21,3 +21,5 @@ export const TAG_EVENTS = {
   Online: "is-link",
   Hibridos: "is-info",
 };
+
+export const bajaString = "BAJA";

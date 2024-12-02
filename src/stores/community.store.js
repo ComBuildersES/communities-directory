@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { getAllCommunities } from "../data/API";
-import { URL } from "../constants";
+import { bajaString, URL } from "../constants";
 import { buildInverseIndex } from "../data/invertedindex";
 import { devtools } from "zustand/middleware";
 import { searchFaceted } from "../data/searchFaceted";
@@ -62,13 +62,31 @@ const useCommunityStore = create(
 );
 
 const updateFilter = (filters, key, value) => {
-  // Si el valor es un array vacío, eliminamos la key del objeto
-  if (Array.isArray(value) && value.length === 0) {
-    // eslint-disable-next-line no-unused-vars
-    const { [key]: _, ...updatedFilters } = filters;
-    console.log(`quitando valor ${key}  mandando valor ${value} `);
-    console.log(updatedFilters);
-    return updatedFilters;
+  // Si el valor es null
+
+  if (value.startsWith(bajaString)) {
+    const valueToremove = value.slice(bajaString.length, value.length);
+
+    const updatevaluesbyKey = filters[key].filter(
+      (item) => item !== valueToremove
+    );
+
+    if (updatevaluesbyKey.length === 0) {
+      // eliminamos la key
+      // eslint-disable-next-line no-unused-vars
+      const { [key]: _, ...updatedFilters } = filters;
+      return updatedFilters;
+    } else {
+      // devolvemos los filtros con el array con el valor actualizado
+      console.log({
+        ...filters,
+        [key]: updatevaluesbyKey,
+      });
+      return {
+        ...filters,
+        [key]: updatevaluesbyKey,
+      };
+    }
   }
 
   // Asegurar que value siempre sea un array
@@ -80,6 +98,8 @@ const updateFilter = (filters, key, value) => {
   const combinedValues = Array.isArray(existingValue)
     ? [...existingValue, value]
     : [...(existingValue ? [existingValue] : []), ...valueArray];
+
+  // devolvemos los filtros con el array con el valor actualizado
 
   console.log({
     ...filters,

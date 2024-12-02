@@ -3,6 +3,7 @@ import { useState } from "react";
 
 import "./Switch.css"; // Estilos personalizados
 import { useCommunityActions } from "../stores/community.store";
+import { bajaString } from "../constants";
 
 export function Switch({ name = "nombre", value = "valor" }) {
   const [isOn, setIsOn] = useState(false);
@@ -11,7 +12,7 @@ export function Switch({ name = "nombre", value = "valor" }) {
   const toggleSwitch = () => {
     const newState = !isOn;
     setIsOn(newState);
-    filterComunities(name, newState ? value : []);
+    filterComunities(name, newState ? value : bajaString + value);
   };
 
   return (
@@ -19,7 +20,7 @@ export function Switch({ name = "nombre", value = "valor" }) {
       className={`custom-switch ${isOn ? "on" : "off"}`}
       onClick={toggleSwitch}
       name={name}
-      value={isOn ? value : []}
+      value={isOn ? value : `BAJA${value}`}
     >
       <span className="switch-slider"></span>
     </div>

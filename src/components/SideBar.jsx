@@ -3,7 +3,7 @@ import { Switch } from "./Switch";
 
 export const Sidebar = () => {
   // Estado para controlar la visibilidad del sidebar
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(true);
 
   // Función para alternar el estado
   const toggleSidebar = () => {
@@ -12,8 +12,8 @@ export const Sidebar = () => {
 
   return (
     <aside
-      className={`menu column is-3 box ${
-        isActive ? "is-active" : "is-hidden-mobile"
+      className={`sidebar menu column is-3 box ${
+        isActive ? "is-active" : "is-hidden"
       }`}
     >
       <p className="menu-label">Tipo de Comunidad</p>
@@ -85,19 +85,19 @@ export const Sidebar = () => {
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Activa</p>
-            <Switch />
+            <Switch name="Estado" value="Activa" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Inactiva</p>
-            <Switch />
+            <Switch name="Estado" value="Inactiva" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Desconocido</p>
-            <Switch />
+            <Switch name="Estado" value="Desconocido" />
           </div>
         </li>
       </ul>

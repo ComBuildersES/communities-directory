@@ -9,7 +9,7 @@ export function Heading() {
       <h2 className="title is-3">Lista de comunidades</h2>
       {/* Botón para desplegar el sidebar */}
       <button className="button is-primary  mb-2" onClick={toggleSidebar}>
-        {isActive ? "Cerrar Menu" : "Abrir Menu"}
+        {isActive ? "Cerrar" : "Abrir"}
       </button>
     </div>
   );

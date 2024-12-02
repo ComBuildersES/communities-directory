@@ -3,13 +3,21 @@
 #search_app {
   display: flex;
   flex-direction: column;
+  height: 100vh;
+  padding: 1rem;
 }
 .main {
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem 1rem;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .heading {
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: var(--bulma-scheme-main);
 }
 
 .communitieslist {
