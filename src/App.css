@@ -3,6 +3,7 @@
 body,
 html {
   height: 100vh;
+  overflow: hidden;
 }
 
 #search_app {
@@ -15,10 +16,7 @@ html {
   padding: 1rem 1rem 1rem 1rem;
   display: flex;
   flex: 1;
-  /* height: calc(100vh - 10vh); */
-  /*  overflow-y: auto; */
-
-  /* overflow-x: hidden; */
+  column-gap: 20px;
 }
 .heading {
   display: flex;
@@ -86,9 +84,6 @@ html {
 @media (min-width: 768px) {
   .communitieslist {
     grid-template-columns: repeat(2, 1fr);
-  }
-  #search_app {
-    /* flex-direction: row; */
   }
 }
 

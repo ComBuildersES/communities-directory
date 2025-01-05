@@ -43,6 +43,24 @@ export const Sidebar = () => {
             <Switch name="Tipo_de_comunidad" value="Hacklab" />
           </div>
         </li>
+        <li className="menu-item">
+          <div className="option-item is-size-7">
+            <p>Hacklab</p>
+            <Switch name="Tipo_de_comunidad" value="Hacklab" />
+          </div>
+        </li>
+        <li className="menu-item">
+          <div className="option-item is-size-7">
+            <p>Organización paraguas</p>
+            <Switch name="Tipo_de_comunidad" value="Organización paraguas" />
+          </div>
+        </li>
+        <li className="menu-item">
+          <div className="option-item is-size-7">
+            <p>Meta comunidad</p>
+            <Switch name="Tipo_de_comunidad" value="Meta comunidad" />
+          </div>
+        </li>
       </ul>
 
       <p className="menu-label">Tipo de Eventos</p>
