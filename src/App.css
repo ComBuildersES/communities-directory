@@ -54,6 +54,10 @@ html {
   height: 4.5rem;
 }
 
+.alto45rem:hover {
+  color: hsl(217, 71%, 53%);
+}
+
 .mycard {
   position: relative;
 }

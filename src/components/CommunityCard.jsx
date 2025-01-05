@@ -40,7 +40,9 @@ export function CommunityCard({ community }) {
       <div className="card-content">
         <div className="media">
           <div className="media-content">
-            <p className="title is-3 alto45rem">{comunidad}</p>
+            <a href={url} target="_blank" alt={comunidad}>
+              <p className="title is-3 alto45rem">{comunidad}</p>
+            </a>
           </div>
         </div>
         <div className="level">
