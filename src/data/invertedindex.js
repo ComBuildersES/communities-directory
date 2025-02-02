@@ -1,27 +1,4 @@
-export const buildInvertedIndex = (data) => {
-  // Índice vacío para almacenar los datos
-  const invertedIndex = {};
-
-  data.forEach((item, indexId) => {
-    Object.entries(item).forEach(([key, value]) => {
-      if (!value) return; // ignora valores vacios
-
-      // Limpieza de espacios o caracteres especiales en el valor
-      const sanitizedValue = value.toString().trim();
-      // Inicializar la estructura de la faceta en el índice si no existe
-      if (!invertedIndex[key]) invertedIndex[key] = {};
-
-      // Inicializar el array para el valor específico de la faceta si no existe
-      if (!invertedIndex[key][sanitizedValue])
-        invertedIndex[key][sanitizedValue] = [];
-      // Acumular el índice de la comunidad
-      // Añadir la referencia (indexId numero indice del array data) de la comunidad en el array correspondiente
-      invertedIndex[key][sanitizedValue].push(indexId);
-    });
-  });
-
-  return invertedIndex;
-};
+export const normalizar = (valor) => valor?.toString().trim().toLowerCase();
 
 export const makeInverseIndex = (data) => {
   const inverseIndex = {};
@@ -29,7 +6,7 @@ export const makeInverseIndex = (data) => {
   data.forEach((registro) => {
     //Obtiene las claves del registro
     Object.keys(registro).forEach((clave) => {
-      const valor = registro[clave].toString().trim();
+      const valor = registro[clave]?.toString().trim().toLowerCase();
 
       // Si el valor de esa clave no existe en el indice la crea.
 
@@ -45,5 +22,30 @@ export const makeInverseIndex = (data) => {
     });
   });
 
+  return inverseIndex;
+};
+
+export const buildInverseIndex = (data) => {
+  const inverseIndex = {};
+
+  data.forEach((registro) => {
+    Object.keys(registro).forEach((key) => {
+      const value = registro[key]?.toString().trim().toLowerCase(); // Normalizamos los valores
+
+      if (!inverseIndex[key]) {
+        inverseIndex[key] = {};
+      }
+
+      if (!inverseIndex[key][value]) {
+        inverseIndex[key][value] = new Set();
+      }
+
+      inverseIndex[key][value].add(registro.ID);
+    });
+  });
+  /*   console.log(
+    "Índice Inverso Generado:",
+    JSON.stringify(inverseIndex, null, 2)
+  );  */ // Debug
   return inverseIndex;
 };

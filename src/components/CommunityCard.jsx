@@ -8,7 +8,7 @@ export function CommunityCard({ community }) {
     Última_revisión: revision,
     Tipo_de_comunidad: tipo,
     Tipo_de_eventos: tipoEvento,
-    ["Localización habitual"]: localizacion,
+    "Localización habitual": localizacion,
     Info_de_contacto: contacto,
     URL_Comunidad: url,
     Miniatura: miniatura,
@@ -40,7 +40,9 @@ export function CommunityCard({ community }) {
       <div className="card-content">
         <div className="media">
           <div className="media-content">
-            <p className="title is-3 alto45rem">{comunidad}</p>
+            <a href={url} target="_blank" alt={comunidad}>
+              <p className="title is-3 alto45rem">{comunidad}</p>
+            </a>
           </div>
         </div>
         <div className="level">
