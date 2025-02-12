@@ -115,7 +115,7 @@ export const Sidebar = () => {
         </li>
       </ul>
 
-      <p className="menu-label">Localizacion habitual</p>
+      {/* <p className="menu-label">Localizacion habitual</p> */}
       {/*Aqui podia definir un list box de seleccion multiple con 
         las distintas provincias como opciones o poner todas y que 
         vayan filtrando */}

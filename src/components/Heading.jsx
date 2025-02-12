@@ -9,12 +9,16 @@ export function Heading() {
   // clase para ocultar cuanto lo necesite is-hidden-desktop
 
   return (
-    <div className="heading">
+    <div >
+      <div>
       <h2 className="title is-3">Lista de comunidades</h2>
       {/* Botón para desplegar el sidebar */}
       <button className={`button is-primary  mb-2 `} onClick={toggleSidebar}>
-        {isVisible ? "Cerrar" : "Abrir"}
+        <i class={isVisible ? 'fa-solid fa-eye-slash' : "fa-solid fa-filter"}></i>&nbsp;
+        {isVisible ? 'Ocultar filtros' : "Filtrar"}
       </button>
+      </div>
+      <div>Resultados: XXXX comunidades</div>
     </div>
   );
 }
