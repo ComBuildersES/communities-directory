@@ -19,6 +19,11 @@ export function CommunityCard({ community }) {
       ? "tag is-light is-primary"
       : "tag is-light is-danger";
 
+
+  const contactActiveClassName =
+      contacto ? 'fas fa-envelope exists' 
+        : "fas fa-envelope not-exists";
+
   return (
     <div className="card mycard">
       <div className="headingtag">
@@ -41,11 +46,11 @@ export function CommunityCard({ community }) {
         <div className="media">
           <div className="media-content">
             <a href={url} target="_blank" alt={comunidad}>
-              <p className="title is-3 alto45rem">{comunidad}</p>
+              <p className="title is-4 alto45rem">{comunidad}</p>
             </a>
           </div>
         </div>
-        <div className="level">
+        <div className="level level-is-shrinkable">
           <div className="level-left">
             <div className="level-item">
               <p className="subtitle is-5 localizacion">{localizacion}</p>
@@ -53,9 +58,20 @@ export function CommunityCard({ community }) {
           </div>
           <div className="level-right">
             <div className="level-item">
-              <p className="subtitle is-6">
-                {contacto ? contacto : "Sin Contacto"}
-              </p>
+              <div className="subtitle is-6">
+                <div className="popover-container">
+                <button className="popover-trigger">
+                  <i className={contactActiveClassName}></i>
+                  
+                </button>
+                <div className="popover-content">
+                  <div className="box">
+                    {contacto ? contacto : "Sin Contacto"}
+                  </div>
+                </div>
+              </div>
+                
+              </div>
             </div>
           </div>
         </div>
@@ -67,7 +83,16 @@ export function CommunityCard({ community }) {
           </div>
           <div className="level-right">
             <div className="level-item">
-              <p className="subtitle is-6">{revision}</p>
+              
+              <div className="popover-container">
+                
+                <p className="subtitle is-6 popover-trigger">{revision}</p>
+                <div className="popover-content">
+                  <div className="box">
+                    Fecha de la última revisión: {revision}
+                  </div>
+                </div>
+                </div>
             </div>
           </div>
         </div>

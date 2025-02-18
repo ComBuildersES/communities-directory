@@ -1,4 +1,5 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css";
 
 body,
 html {
@@ -99,4 +100,85 @@ html {
   .communitieslist {
     grid-template-columns: repeat(5, 1fr);
   }
+}
+
+/* Overflow ellipsis */
+
+.popover-container {
+  position: relative;
+  display: inline-block;
+}
+
+.popover-content {
+  position: absolute;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s, visibility 0.2s;
+  width: 200px;
+  text-align: center;
+  /* Position the popover below the trigger by default */
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100%);
+}
+
+/* Show popover on hover */
+.popover-container:hover .popover-content {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Add a small arrow using pseudo-element */
+.popover-content::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 8px 8px 8px;
+  border-style: solid;
+  border-color: transparent transparent whitesmoke transparent;
+}
+
+/* Optional: Add animation */
+.popover-content .box {
+  transform-origin: top center;
+  animation: popover-fade 0.2s ease-out;
+}
+
+@keyframes popover-fade {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.exists{
+  color: deepskyblue
+}
+.not-exists{
+  color: tomato
+}
+
+.level-is-shrinkable .level-left,
+.level-is-shrinkable .level-right {
+    flex-shrink: 1;
+}
+.level-is-shrinkable .level-item{
+  max-width: 100%;
+}
+
+.is-4by3 img {
+  object-fit: contain;  /* This fills the space while maintaining ratio */
+  height: 100%;
+  width: 100%;
+}
+
+.popover-container{
+  cursor: pointer;
 }
