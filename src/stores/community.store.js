@@ -20,6 +20,7 @@ const initialState = {
   isLoading: false, // Estado para mostrar carga
   error: null, // Estado para manejar errores
   filters: {}, // Estado para los filtros
+  numberOFCommunities: 0, // Estado para el numero de comunidades
 };
 
 // Define el store Zustand
@@ -37,6 +38,7 @@ const useCommunityStore = create(
             invertedIndex: inverseIndex,
             communitiesFiltered: data,
             isLoading: false,
+            numberOFCommunities: data.length,
           }); // Guarda los datos en el estado
         } catch (error) {
           set({ error: error.message, isLoading: false }); // Maneja el error
@@ -55,6 +57,7 @@ const useCommunityStore = create(
         set({
           communitiesFiltered: communitiesWithNewFilters,
           filters: newFilters,
+          numberOFCommunities: communitiesWithNewFilters.length,
         });
       },
     },
@@ -127,6 +130,9 @@ export const useInvertedIndex = () =>
   useCommunityStore((state) => state.invertedIndex);
 
 export const useFilters = () => useCommunityStore((state) => state.filters);
+
+export const useNumberOfCommunities = () =>
+  useCommunityStore((state) => state.numberOFCommunities);
 
 // Selector de las acciones
 
