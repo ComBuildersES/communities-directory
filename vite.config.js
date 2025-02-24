@@ -9,7 +9,7 @@ export default defineConfig({
       outDir: 'dist'
   },
   publicDir: 'public',
-  //base: '/dist/' // build local
+  // base: '/dist/' // build local
   base: '/communities-directory/dist/' // build at gh-pages
 })
 
