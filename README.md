@@ -7,13 +7,12 @@ Pero también se usará para que quien quiera implicarse en dinamizar una comuni
 ![comunidades-manu (1)](https://github.com/user-attachments/assets/a735a62a-9b48-463c-a48b-1aeb903beb14)
 ![mapa-de-comunidades-tecnicas (1)](https://github.com/user-attachments/assets/7c57b789-f8ff-4cbb-ae62-76ad7b5d3716)
 
-
-* Canal de Discord: #listado-de-comunidades
-* Email thread: [Listado de comunidades]([url](https://groups.google.com/u/1/g/community-builders-es/c/agm4LEFrZco))
+* Email thread: [Listado de comunidades](https://groups.google.com/u/1/g/community-builders-es/c/agm4LEFrZco)
 * Recursos:
   * [Hoja de cálculo](https://docs.google.com/spreadsheets/d/18Rf0-3sREFosw__tQYaUmtzJNL3M-PLsm-HIqENf2Yw/edit?usp=sharing)
   * [Interfaz web que consume la hoja de cálculo y ofrecer una mejor UX para explorar y filtrar]([url](https://combuilderses.github.io/communities-directory/dist/))
   * Quién colaborar y cómo: Sentíos libres de añadir/actualizar lo que consideréis
+* Canal de Discord: #listado-de-comunidades (solo para miembros de Community Builders; ¿[cómo unirse](https://github.com/ComBuildersES#c%C3%B3mo-unirse-a-community-builders)?)
 
 # Contribuir
 
