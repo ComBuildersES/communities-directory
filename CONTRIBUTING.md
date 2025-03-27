@@ -1,0 +1,1 @@
+Perdón, estamos [pendientes de hacerlo]([url](https://github.com/ComBuildersES/communities-directory/issues/2)), pero no hay mejor excusa para hacerlo... que tener a alguien que quiere colaborar. Así que si es tu caso, avísanos en el issue porfi!
