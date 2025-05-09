@@ -1,8 +1,8 @@
 # Communities directory
 
-El principal objetivo de esta lista es identificar todas las comunidades (activas, pero también inactivas) de España, con el principal objetivo de ayudar a que cualquier persona interesada en participar en iniciativas de comunidad pueda encontrar qué existe, y lo que se adapta a lo que busca.
+Este proyecto tiene como objetivo identificar y visibilizar todas las comunidades existentes en España —tanto activas como inactivas— con la finalidad de facilitar que cualquier persona interesada en participar en iniciativas de comunidad pueda descubrir qué opciones existen y cuáles se ajustan a sus intereses.
 
-Pero también se usará para que quien quiera implicarse en dinamizar una comunidad pueda encontrar una que busque a personas para el equipo de organización, y también para reflejar qué comunidades están presentes en Community Builders.
+Además, servirá como punto de encuentro para quienes quiera involucrarse en la dinamización de una comunidad, permitiéndoles encontrar aquellas que buscan incorporar nuevas personas a sus equipos organizadores. También ayudará a reflejar qué comunidades ya están representadas en Community Builders.
 
 ![comunidades-manu (1)](https://github.com/user-attachments/assets/a735a62a-9b48-463c-a48b-1aeb903beb14)
 ![mapa-de-comunidades-tecnicas (1)](https://github.com/user-attachments/assets/7c57b789-f8ff-4cbb-ae62-76ad7b5d3716)
