@@ -18,7 +18,7 @@ Además, servirá como punto de encuentro para quienes quiera involucrarse en la
 
  * [Raúl Jiménez](https://rauljimenez.info/) (Coordinación software y datos)
  * [Manuel Saez Carmona](https://www.linkedin.com/in/manuel-saez-carmona/) (Web UI)
- * [Aléix Battle](https://www.linkedin.com/in/aleixbatllesureda/) (Map UI)
- * [Álvaro Gutiérrez]([url](https://www.linkedin.com/in/%C3%A1lvaro-guti%C3%A9rrez-climent-94a840217/))  (Map UI)
+ * [Aleix Batlle](https://www.linkedin.com/in/aleixbatllesureda/) (Map UI)
+ * [Álvaro Gutiérrez](https://www.linkedin.com/in/%C3%A1lvaro-guti%C3%A9rrez-climent-94a840217/)  (Map UI)
 
 ¿Quieres unirte? -> [CONTRIBUTING.md](https://github.com/ComBuildersES/communities-directory/blob/master/CONTRIBUTING.md)
