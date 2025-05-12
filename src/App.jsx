@@ -1,6 +1,7 @@
 import { CommunitiesList } from "./components/CommunitiesList.jsx";
 import { Footer } from "./components/Footer.jsx";
 import { Heading } from "./components/Heading.jsx";
+import Map from "./components/Map/Map.jsx";
 import Sidebar from "./components/SideBar.jsx";
 
 function App() {
@@ -8,8 +9,9 @@ function App() {
     <>
       <Heading />
       <div className="main">
-        <CommunitiesList />
-        <Sidebar />
+        {/* <CommunitiesList />
+        <Sidebar /> */}
+        <Map></Map>
       </div>
 
       <Footer />
