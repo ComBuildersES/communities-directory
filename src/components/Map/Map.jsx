@@ -1,79 +1,100 @@
-import "@arcgis/map-components/dist/components/arcgis-map";
-import FeatureLayer from "@arcgis/core/layers/FeatureLayer";
+// ArcGIS SDK Imports
+
+import '@arcgis/map-components/dist/components/arcgis-map'
+import FeatureLayer from "@arcgis/core/layers/FeatureLayer"
 import SimpleFillSymbol from "@arcgis/core/symbols/SimpleFillSymbol";
 import SimpleRenderer from "@arcgis/core/renderers/SimpleRenderer";
 
+// Css Imports
+
 import './Map.css'
-import { useEffect, useRef, useState } from "react";
+
+// React Imports
+
+import { useEffect, useState } from 'react'
 
 function Map () {
 
-  const [activeMap, setActiveMap] = useState(null) // MAP COMPONENT: https://developers.arcgis.com/javascript/latest/references/map-components/arcgis-map/#properties
+  const [activeView, setActiveView] = useState(null)
+  const [provincesCenter, setProvincesCenter] = useState()
 
+  // Setup Effect for the Provinces Feature Layer
 
-  useEffect(()=>{
+  useEffect(() => {
+    if (activeView) {
 
-    if(activeMap){
+      // Add the provinces Feature Layer to the map
 
-      console.log(activeMap)
-      
-      // Create Provinces Feature Layer
+      const provincesSymbol = new SimpleFillSymbol({
+        outline: {
+          cap: "round",
+          color: [0, 255, 204, 0.3],
+          join: "round",
+          miterLimit: 1,
+          style: "solid",
+          width: 0.5,
+        },
+        style: "solid",
+      })
 
-        // Renderer
+      const provincesRenderer = new SimpleRenderer({
+        symbol: provincesSymbol
+      })
 
-        const provinceSymbol = new SimpleFillSymbol({
-            outline: {
-                cap: "round",
-                color: [0, 255, 204, 0.3],
-                join: "round",
-                miterLimit: 1,
-                style: "solid",
-                width: 0.5,
-            },
-            style: "solid",
+      const provincesFL = new FeatureLayer({
+        portalItem: {
+          id: "503ef1cb832f4e8bb4be7fc024ad9aa2"
+        },
+        renderer: provincesRenderer,
+        effect: "bloom(1, 1px, 0.0)",
+        popupEnabled: false,
+      })
+
+      activeView.map.add(provincesFL)
+
+      // Function that takes the centers of every province and their nameunit once the layer loads.
+
+      activeView
+        .whenLayerView(provincesFL)
+        .then(() => {
+          provincesFL
+            .queryFeatures()
+            .then((queryResult) => {
+              const featureSetResults = queryResult.features
+              const arrayResultsFormatted = featureSetResults.map((feature)=>{
+                return {
+                  center:feature.geometry.extent.center,
+                  NAMEUNIT:feature.attributes.NAMEUNIT
+                }
+              })
+              
+              setProvincesCenter(()=> arrayResultsFormatted)
+
+            })
         })
 
-        const provincesRenderer = new SimpleRenderer({
-          symbol:provinceSymbol
-        })
-      
-
-        const provincesFL = new FeatureLayer({
-          portalItem:{
-            id:"503ef1cb832f4e8bb4be7fc024ad9aa2"
-          },
-          renderer:provincesRenderer
-        })
-
-        activeMap.add(provincesFL)
     }
+  }, [activeView])
 
-  },[activeMap])
+  // PopUp Setting
 
-  // I've tried to do it with the onacgisViewReadyChange event and it doesnt work.
-  // Setting view to State.
+  
 
-  const mapRef = useRef(null)
+  function activeViewChange (activeViewEvent) {
 
-  useEffect(()=>{
-    if(mapRef){
-      const mapComponent = mapRef.current 
-      setActiveMap((prevState) => mapComponent)
-    }
-  },[])
+    // Set the view to the state.
 
-  // Once view is on State
+    setActiveView(() => activeViewEvent.target.view)
+  }
 
-
-
-  return(
+  return (
     <>
       <arcgis-map
         basemap="dark-gray"
         center="-4, 40"
         zoom='4'
-        ref={mapRef}
-        ></arcgis-map>
+        onarcgisViewReadyChange={activeViewChange}
+      ></arcgis-map>
     </>
   )
 }
