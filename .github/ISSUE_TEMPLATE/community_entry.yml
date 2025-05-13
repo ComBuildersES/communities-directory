@@ -1,0 +1,92 @@
+name: Nueva Comunidad Tech
+description: Proponer una comunidad para añadir al directorio
+title: "[Añadir comunidad] Nombre_de_la_comunidad"
+labels: [nueva-comunidad]
+assignees: []
+
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Nombre de la comunidad
+      placeholder: "Ejemplo: Geo Developers"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Estado de la comunidad
+      options:
+        - Activa
+        - Inactiva
+        - Desconocido
+    validations:
+      required: true
+
+  - type: dropdown
+    id: communityType
+    attributes:
+      label: Tipo de comunidad
+      options:
+        - Tech Meetup
+        - Conferencia
+        - Organización paraguas
+        - Hacklab
+        - Grupo colaborativo
+        - Meta comunidad
+        - Grupo de ayuda mutua
+    validations:
+      required: true
+
+  - type: dropdown
+    id: eventFormat
+    attributes:
+      label: Formato
+      options:
+        - Presencial
+        - Online
+        - Híbrido
+        - Desconocido
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Ciudad o región principal (si aplica)
+      placeholder: "Ejemplo: Madrid"
+    validations:
+      required: false
+
+  - type: textarea
+    id: topics
+    attributes:
+      label: Temas que trata
+      placeholder: "Ejemplo: JavaScript, Desarrollo Web, DevOps..."
+    validations:
+      required: false
+
+  - type: input
+    id: contactInfo
+    attributes:
+      label: Correo de contacto (público)
+      description: Correo
+    validations:
+      required: false
+
+  - type: input
+    id: communityUrl
+    attributes:
+      label: URL principal de la comunidad
+      placeholder: "https://..."
+    validations:
+      required: true
+
+  - type: input
+    id: thumbnailUrl
+    attributes:
+      label: Imagen o logotipo de la comunidad
+      description: URL pública  (ej. `https://...`)
+    validations:
+      required: true

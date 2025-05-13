@@ -1,0 +1,45 @@
+name: Crear PR para nueva comunidad
+
+on:
+  issues:
+    types: [opened, labeled]
+
+jobs:
+  create-pr:
+    if: contains(github.event.issue.labels.*.name, 'nueva-comunidad')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      issues: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependencias
+        run: npm install node-fetch sharp
+
+      - name: Obtener datos del issue
+        run: |
+          echo "${{ github.event.issue.body }}" > issue-body.txt
+      
+      - name: Generar entrada de comunidad y actualizar JSON
+        run: node scripts/process-community-issue.js "$(cat issue-body.txt)"
+
+      - name: Crear Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          add-paths: |
+            communities.json
+            images/
+          commit-message: "Añadir nueva comunidad desde issue #${{ github.event.issue.number }}"
+          branch: "add-community-${{ github.event.issue.number }}"
+          title: "Propuesta: Añadir comunidad desde issue #${{ github.event.issue.number }}"
+          body: |
+            Esta PR ha sido generada automáticamente a partir del issue #${{ github.event.issue.number }}.
