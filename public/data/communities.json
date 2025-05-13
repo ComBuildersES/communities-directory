@@ -9435,5 +9435,22 @@
       "lat": 39.4702393,
       "lon": -0.3768049
     }
+  },
+  {
+    "id": "563",
+    "name": "HaskellMAD",
+    "status": "Activa",
+    "lastReviewed": "13/5/2025",
+    "communityType": "Tech Meetup",
+    "eventFormat": "Presencial",
+    "location": "",
+    "topics": "Haskell, Programación funcional, Código abierto",
+    "contactInfo": "",
+    "communityUrl": "https://x.com/haskellMAD/",
+    "thumbnailUrl": "images/haskellmad.webp",
+    "latLon": {
+      "lat": null,
+      "lon": null
+    }
   }
 ]
