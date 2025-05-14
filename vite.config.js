@@ -10,6 +10,6 @@ export default defineConfig({
   },
   publicDir: 'public',
   //base: '/dist/' // build local
-  base: '/communities-directory/dist/' // build at gh-pages
+  base: '/communities-directory/' // build at gh-pages
 })
 
