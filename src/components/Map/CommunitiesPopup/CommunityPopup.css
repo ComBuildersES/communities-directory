@@ -1,0 +1,8 @@
+.community-popup{
+  width: 200px;
+  position: absolute;
+  z-index: 2;
+  padding: 10px;
+  pointer-events: none;
+  background-color: white;
+}
