@@ -42,6 +42,18 @@
         "maintenance",
         "design"
       ]
+    },
+    {
+      "login": "hhkaos",
+      "name": "Raul Jimenez Ortega",
+      "avatar_url": "https://avatars.githubusercontent.com/u/826965?v=4",
+      "profile": "https://www.rauljimenez.info",
+      "contributions": [
+        "data",
+        "maintenance",
+        "projectManagement",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
