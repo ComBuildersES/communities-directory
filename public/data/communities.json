@@ -10,7 +10,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://dotnetfoundation.org/community/.net-meetups",
-    "thumbnailUrl": "images/net-foundation-meetups.jpg",
+    "thumbnailUrl": "images/net-foundation-meetups.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -27,7 +27,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://devnulltalks.github.io/",
-    "thumbnailUrl": "images/devnull-talks.svg",
+    "thumbnailUrl": "images/devnull-talks.webp",
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
@@ -44,7 +44,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.rootedcon.com/",
-    "thumbnailUrl": "images/rootedcon.jpg",
+    "thumbnailUrl": "images/rootedcon.webp",
     "latLon": {
       "lat": -20.1578377,
       "lon": -40.184541
@@ -61,7 +61,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://eslib.re",
-    "thumbnailUrl": "images/eslibre.jpg",
+    "thumbnailUrl": "images/eslibre.webp",
     "latLon": {
       "lat": -20.1578377,
       "lon": -40.184541
@@ -78,7 +78,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.youtube.com/playlist?list=PLKxa4AIfm4pUPtkq6rMt7hZkVR6doOLD1",
-    "thumbnailUrl": "images/licorcaconf.jpg",
+    "thumbnailUrl": "images/licorcaconf.webp",
     "latLon": {
       "lat": 42.8806228,
       "lon": -8.5466071
@@ -95,7 +95,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/AIndustriosa/",
-    "thumbnailUrl": "images/a-industriosa.png",
+    "thumbnailUrl": "images/a-industriosa.webp",
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
@@ -146,7 +146,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://adalaberfest.adalab.es/",
-    "thumbnailUrl": "images/adalaberfest.jpg",
+    "thumbnailUrl": "images/adalaberfest.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -163,7 +163,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://adoptaunjunior.es/",
-    "thumbnailUrl": "images/adopta-un-junior.jpg",
+    "thumbnailUrl": "images/adopta-un-junior.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -180,7 +180,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.agilealliance.org/resources/initiatives/",
-    "thumbnailUrl": "images/agile-alliance.jpg",
+    "thumbnailUrl": "images/agile-alliance.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -214,7 +214,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/AgileDeliveryES",
-    "thumbnailUrl": "images/agile-delivery.jpg",
+    "thumbnailUrl": "images/agile-delivery.webp",
     "latLon": {
       "lat": 1.3607359,
       "lon": 103.8395958
@@ -231,7 +231,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://aos.agile-spain.org/",
-    "thumbnailUrl": "images/agile-open-spain-aos.jpg",
+    "thumbnailUrl": "images/agile-open-spain-aos.webp",
     "latLon": {
       "lat": -20.1578377,
       "lon": -40.184541
@@ -248,7 +248,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://agile-spain.org/",
-    "thumbnailUrl": "images/agile-spain.jpg",
+    "thumbnailUrl": "images/agile-spain.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -282,7 +282,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://twitter.com/agilevigo",
-    "thumbnailUrl": "images/agilevigo.jpg",
+    "thumbnailUrl": "images/agilevigo.webp",
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
@@ -299,7 +299,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://twitter.com/agilegirls",
-    "thumbnailUrl": "images/agilegirls.JPG",
+    "thumbnailUrl": "images/agilegirls.webp",
     "latLon": {
       "lat": 1.3607359,
       "lon": 103.8395958
@@ -316,7 +316,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/AgileValencia",
-    "thumbnailUrl": "images/agilevalencia.jpg",
+    "thumbnailUrl": "images/agilevalencia.webp",
     "latLon": {
       "lat": 1.3607359,
       "lon": 103.8395958
@@ -333,7 +333,7 @@
     "topics": "IA aplicada al ámbito sanitario y a la investigación clínica. Divulgación y desmitificación de esta tecnología aplicada a la medicina",
     "contactInfo": "president@ai4med.org",
     "communityUrl": "https://www.ai4med.org/ ",
-    "thumbnailUrl": "images/ai4med-ia-para-medicina.png",
+    "thumbnailUrl": "images/ai4med-ia-para-medicina.webp",
     "latLon": {
       "lat": 40.42913,
       "lon": -3.70114
@@ -350,7 +350,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://aibirras.org/",
-    "thumbnailUrl": "images/aibirras.jpg",
+    "thumbnailUrl": "images/aibirras.webp",
     "latLon": {
       "lat": 12.151965053,
       "lon": -61.659644959
@@ -367,7 +367,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://akasha.barcelona/",
-    "thumbnailUrl": "images/akasha-hub.png",
+    "thumbnailUrl": "images/akasha-hub.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -384,7 +384,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://alhambrahub.es/",
-    "thumbnailUrl": "images/alhambra-hub.jpg",
+    "thumbnailUrl": "images/alhambra-hub.webp",
     "latLon": {
       "lat": 12.151965053,
       "lon": -61.659644959
@@ -401,7 +401,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/AlmeriaRUsers",
-    "thumbnailUrl": "images/almeria-r-users.jpg",
+    "thumbnailUrl": "images/almeria-r-users.webp",
     "latLon": {
       "lat": 36.8400939,
       "lon": -2.4679043
@@ -435,7 +435,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.almeriatech.es/",
-    "thumbnailUrl": "images/almeriatech.jpg",
+    "thumbnailUrl": "images/almeriatech.webp",
     "latLon": {
       "lat": 36.8400939,
       "lon": -2.4679043
@@ -520,7 +520,7 @@
     "topics": "APIs, Cloud, MIcroservicios",
     "contactInfo": "contacta@apiaddicts.org",
     "communityUrl": "https://www.apiaddicts.org/apiaddictsdays/",
-    "thumbnailUrl": "images/apiaddictsdays.png",
+    "thumbnailUrl": "images/apiaddictsdays.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -537,7 +537,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.linkedin.com/company/arcasiles-community-madrid",
-    "thumbnailUrl": "images/arcasiles-community-madrid.jpg",
+    "thumbnailUrl": "images/arcasiles-community-madrid.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -554,7 +554,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.unirioja.es/urmaker/",
-    "thumbnailUrl": "images/area-ur-maker.jpg",
+    "thumbnailUrl": "images/area-ur-maker.webp",
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
@@ -571,7 +571,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://asociacionatlantics.org/",
-    "thumbnailUrl": "images/asociacion-atlantics.png",
+    "thumbnailUrl": "images/asociacion-atlantics.webp",
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
@@ -588,7 +588,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/asocchea",
-    "thumbnailUrl": "images/asociacion-ciberseguridad-y-hacking-etico-asturias.jpg",
+    "thumbnailUrl": "images/asociacion-ciberseguridad-y-hacking-etico-asturias.webp",
     "latLon": {
       "lat": 10.5679998,
       "lon": 123.7171998
@@ -605,7 +605,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://torresburriel.com/weblog/nuevo-sitio-web-de-upa-spain/",
-    "thumbnailUrl": "images/asociacion-de-profesionales-de-usabilidad.gif",
+    "thumbnailUrl": "images/asociacion-de-profesionales-de-usabilidad.webp",
     "latLon": {
       "lat": 1.3607359,
       "lon": 103.8395958
@@ -639,7 +639,7 @@
     "topics": "",
     "contactInfo": "hhkaos@gmail.com",
     "communityUrl": "https://x.com/webgranada",
-    "thumbnailUrl": "images/asociacion-de-webmasters-de-granada.png",
+    "thumbnailUrl": "images/asociacion-de-webmasters-de-granada.webp",
     "latLon": {
       "lat": 12.151965053,
       "lon": -61.659644959
@@ -656,7 +656,7 @@
     "topics": "",
     "contactInfo": "hhkaos@gmail.com",
     "communityUrl": "https://x.com/webmalaga",
-    "thumbnailUrl": "images/asociacion-de-webmasters-de-malaga.png",
+    "thumbnailUrl": "images/asociacion-de-webmasters-de-malaga.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -673,7 +673,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://asociaciondrupal.es/",
-    "thumbnailUrl": "images/asociacion-espanola-de-drupal.png",
+    "thumbnailUrl": "images/asociacion-espanola-de-drupal.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -690,7 +690,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://linktr.ee/asturcontech",
-    "thumbnailUrl": "images/asturcontech.jpg",
+    "thumbnailUrl": "images/asturcontech.webp",
     "latLon": {
       "lat": 43.3602825,
       "lon": -5.8447919
@@ -707,7 +707,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://saraos.tech/@asturias-software-crafters",
-    "thumbnailUrl": "images/asturias-software-crafters.jpg",
+    "thumbnailUrl": "images/asturias-software-crafters.webp",
     "latLon": {
       "lat": 43.520243144013,
       "lon": -5.685033233419
@@ -724,7 +724,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/asturiasjs",
-    "thumbnailUrl": "images/asturiasjs.jpg",
+    "thumbnailUrl": "images/asturiasjs.webp",
     "latLon": {
       "lat": 1.3607359,
       "lon": 103.8395958
@@ -741,7 +741,7 @@
     "topics": "",
     "contactInfo": "asturiashacking@gmail.com",
     "communityUrl": "https://asturiashacking.org/",
-    "thumbnailUrl": "images/asturiashacking.svg",
+    "thumbnailUrl": "images/asturiashacking.webp",
     "latLon": {
       "lat": 1.3607359,
       "lon": 103.8395958
@@ -758,7 +758,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://asturiashacking.org/",
-    "thumbnailUrl": "images/asturiashacking.jpg",
+    "thumbnailUrl": "images/asturiashacking.webp",
     "latLon": {
       "lat": 1.3607359,
       "lon": 103.8395958
@@ -775,7 +775,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/asturphp",
-    "thumbnailUrl": "images/asturphp.png",
+    "thumbnailUrl": "images/asturphp.webp",
     "latLon": {
       "lat": 1.3607359,
       "lon": 103.8395958
@@ -792,7 +792,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://atlanticaconf.com/",
-    "thumbnailUrl": "images/atlanticaconf.jpg",
+    "thumbnailUrl": "images/atlanticaconf.webp",
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
@@ -809,7 +809,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.uco.es/aulasoftwarelibre/",
-    "thumbnailUrl": "images/aula-de-software-libre-cordoba.jpg",
+    "thumbnailUrl": "images/aula-de-software-libre-cordoba.webp",
     "latLon": {
       "lat": -31.405059,
       "lon": -64.171896
@@ -826,7 +826,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://awsugsevilla.com/",
-    "thumbnailUrl": "images/aws-user-group-sevilla.jpg",
+    "thumbnailUrl": "images/aws-user-group-sevilla.webp",
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
@@ -843,7 +843,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/pro/azuredatatechgroups/",
-    "thumbnailUrl": "images/azure-data-tech-groups.png",
+    "thumbnailUrl": "images/azure-data-tech-groups.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -860,7 +860,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://azuremalaga.com/",
-    "thumbnailUrl": "images/azure-malaga.png",
+    "thumbnailUrl": "images/azure-malaga.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -894,7 +894,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://developer.microsoft.com/en-us/azure-tech-groups/",
-    "thumbnailUrl": "images/azure-tech-groups.png",
+    "thumbnailUrl": "images/azure-tech-groups.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -944,7 +944,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/BarcelonaR/",
-    "thumbnailUrl": "images/barcelona-r-user-group.png",
+    "thumbnailUrl": "images/barcelona-r-user-group.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -961,7 +961,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://bcneng.org/",
-    "thumbnailUrl": "images/bcn-engineering.jpg",
+    "thumbnailUrl": "images/bcn-engineering.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -978,7 +978,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://betabeers.com/",
-    "thumbnailUrl": "images/betabeers.jpg",
+    "thumbnailUrl": "images/betabeers.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -995,7 +995,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/betabeersgal",
-    "thumbnailUrl": "images/betabeers-galicia.png",
+    "thumbnailUrl": "images/betabeers-galicia.webp",
     "latLon": {
       "lat": 42.756588768824,
       "lon": -7.910665567756
@@ -1012,7 +1012,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/bigagileos",
-    "thumbnailUrl": "images/big-agile-open-spac.jpg",
+    "thumbnailUrl": "images/big-agile-open-spac.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -1029,7 +1029,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "http://biggirlstheory.es/",
-    "thumbnailUrl": "images/big-girls-theory.jpg",
+    "thumbnailUrl": "images/big-girls-theory.webp",
     "latLon": {
       "lat": 1.3607359,
       "lon": 103.8395958
@@ -1046,7 +1046,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://bilbostack.com/",
-    "thumbnailUrl": "images/bilbostack-conference.jpg",
+    "thumbnailUrl": "images/bilbostack-conference.webp",
     "latLon": {
       "lat": 43.2569608,
       "lon": -2.9234602
@@ -1063,7 +1063,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/bitupalicante",
-    "thumbnailUrl": "images/bitup-alicante-ciberseguridad.jpg",
+    "thumbnailUrl": "images/bitup-alicante-ciberseguridad.webp",
     "latLon": {
       "lat": 38.34521,
       "lon": -0.4809945
@@ -1080,7 +1080,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.biznagafest.com/",
-    "thumbnailUrl": "images/biznagafest.png",
+    "thumbnailUrl": "images/biznagafest.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -1097,7 +1097,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/blockchain-malaga/",
-    "thumbnailUrl": "images/blockchain-malaga.jpg",
+    "thumbnailUrl": "images/blockchain-malaga.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -1114,7 +1114,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://blockchain.gal/",
-    "thumbnailUrl": "images/blockchaingal-vigo.jpg",
+    "thumbnailUrl": "images/blockchaingal-vigo.webp",
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
@@ -1165,7 +1165,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://bricolabs.cc/",
-    "thumbnailUrl": "images/bricolabs.jpg",
+    "thumbnailUrl": "images/bricolabs.webp",
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
@@ -1182,7 +1182,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://bsides.barcelona/",
-    "thumbnailUrl": "images/bsides-barcelona.jpg",
+    "thumbnailUrl": "images/bsides-barcelona.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -1199,7 +1199,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://c1b3rwall.policia.es/",
-    "thumbnailUrl": "images/c1b3rwall.jpg",
+    "thumbnailUrl": "images/c1b3rwall.webp",
     "latLon": {
       "lat": 40.6563881,
       "lon": -4.700433
@@ -1216,7 +1216,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/caceresfront",
-    "thumbnailUrl": "images/cacerestech.jpg",
+    "thumbnailUrl": "images/cacerestech.webp",
     "latLon": {
       "lat": 39.4762161,
       "lon": -6.3708585
@@ -1233,7 +1233,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/cadizgamedev",
-    "thumbnailUrl": "images/cadiz-gamedev.jpg",
+    "thumbnailUrl": "images/cadiz-gamedev.webp",
     "latLon": {
       "lat": 36.5297453,
       "lon": -6.2926477
@@ -1241,15 +1241,16 @@
   },
   {
     "id": "73",
-    "name": "Calendario de namees técnicas de Málaga",
-    "status": "Inactiva",
+    "name": "Calendario de comunidades técnicas de Málaga",
+    "status": "Activa",
     "lastReviewed": "29/11/2024",
     "communityType": "Meta name",
     "eventFormat": "Desconocido",
     "location": "Málaga",
     "topics": "",
     "contactInfo": "",
-    "communityUrl": "https://geekstorming.wordpress.com/calendario-namees-tecnicas/",
+    "communityUrl": "https://geekstorming.wordpress.com/calendario-comunidades-tecnicas/",
+    "thumbnailUrl": "images/calendario-de-comunidades-tecnicas-de-malaga.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -1266,7 +1267,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://t.me/canariasjs ",
-    "thumbnailUrl": "images/canariasjs.jpg",
+    "thumbnailUrl": "images/canariasjs.webp",
     "latLon": {
       "lat": 9.8999,
       "lon": -74.86048
@@ -1283,7 +1284,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://twitter.com/catdotnet",
-    "thumbnailUrl": "images/catdotnet.png",
+    "thumbnailUrl": "images/catdotnet.webp",
     "latLon": {
       "lat": 1.3607359,
       "lon": 103.8395958
@@ -1317,7 +1318,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.cesinfull.com/",
-    "thumbnailUrl": "images/cesinf-x.jpg",
+    "thumbnailUrl": "images/cesinf-x.webp",
     "latLon": {
       "lat": 9.8999,
       "lon": -74.86048
@@ -1334,7 +1335,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.civis.vgwb.org/civis-game-jam/",
-    "thumbnailUrl": "images/civis-gamejam.png",
+    "thumbnailUrl": "images/civis-gamejam.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -1368,7 +1369,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://community.cncf.io",
-    "thumbnailUrl": "images/cloud-native.jpg",
+    "thumbnailUrl": "images/cloud-native.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -1385,7 +1386,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://community.cncf.io/cloud-native-barcelona/",
-    "thumbnailUrl": "images/cloud-native-cncf-barcelona.png",
+    "thumbnailUrl": "images/cloud-native-cncf-barcelona.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -1402,7 +1403,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://community.cncf.io/cloud-native-bilbao/",
-    "thumbnailUrl": "images/cloud-native-cncf-bilbao.png",
+    "thumbnailUrl": "images/cloud-native-cncf-bilbao.webp",
     "latLon": {
       "lat": 43.2569608,
       "lon": -2.9234602
@@ -1419,7 +1420,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://community.cncf.io/cloud-native-galicia/",
-    "thumbnailUrl": "images/cloud-native-cncf-galicia.jpg",
+    "thumbnailUrl": "images/cloud-native-cncf-galicia.webp",
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
@@ -1436,7 +1437,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://community.cncf.io/cloud-native-granada/",
-    "thumbnailUrl": "images/cloud-native-cncf-granada.jpg",
+    "thumbnailUrl": "images/cloud-native-cncf-granada.webp",
     "latLon": {
       "lat": 12.151965053,
       "lon": -61.659644959
@@ -1453,7 +1454,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://community.cncf.io/cloud-native-madrid-1/",
-    "thumbnailUrl": "images/cloud-native-cncf-madrid.png",
+    "thumbnailUrl": "images/cloud-native-cncf-madrid.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -1504,7 +1505,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://community.cncf.io/cloud-native-rioja/",
-    "thumbnailUrl": "images/cloud-native-cncf-rioja.png",
+    "thumbnailUrl": "images/cloud-native-cncf-rioja.webp",
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
@@ -1521,7 +1522,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/cloud-native-sevilla/",
-    "thumbnailUrl": "images/cloud-native-cncf-sevilla.jpg",
+    "thumbnailUrl": "images/cloud-native-cncf-sevilla.webp",
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
@@ -1538,7 +1539,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://community.cncf.io/cloud-native-valencia/",
-    "thumbnailUrl": "images/cloud-native-cncf-valencia.jpg",
+    "thumbnailUrl": "images/cloud-native-cncf-valencia.webp",
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
@@ -1555,7 +1556,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/cloudnativeast",
-    "thumbnailUrl": "images/cloud-native-asturias.jpg",
+    "thumbnailUrl": "images/cloud-native-asturias.webp",
     "latLon": {
       "lat": 1.3607359,
       "lon": 103.8395958
@@ -1572,7 +1573,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://web.archive.org/web/20161202102359/http://www.clsxmadrid.es/index.es.html",
-    "thumbnailUrl": "images/clsxmadrid.png",
+    "thumbnailUrl": "images/clsxmadrid.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -1589,7 +1590,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://codebar.io",
-    "thumbnailUrl": "images/codebar.png",
+    "thumbnailUrl": "images/codebar.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -1606,7 +1607,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://codebar.io/barcelona",
-    "thumbnailUrl": "images/codebar-barcelona.jpg",
+    "thumbnailUrl": "images/codebar-barcelona.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -1623,7 +1624,7 @@
     "topics": "",
     "contactInfo": "Community+es@codemotion.it",
     "communityUrl": "https://conferences.codemotion.com/madrid2024/",
-    "thumbnailUrl": "images/codemotion.jpg",
+    "thumbnailUrl": "images/codemotion.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -1640,7 +1641,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/codenares",
-    "thumbnailUrl": "images/codenares.jpg",
+    "thumbnailUrl": "images/codenares.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -1657,7 +1658,7 @@
     "topics": "",
     "contactInfo": "coderiojamail@gmail.com",
     "communityUrl": "https://www.coderioja.com",
-    "thumbnailUrl": "images/coderioja.jpg",
+    "thumbnailUrl": "images/coderioja.webp",
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
@@ -1674,7 +1675,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/codersagora_org",
-    "thumbnailUrl": "images/coders-agora.jpg",
+    "thumbnailUrl": "images/coders-agora.webp",
     "latLon": {
       "lat": 1.3607359,
       "lon": 103.8395958
@@ -1725,7 +1726,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://commit-conf.com/",
-    "thumbnailUrl": "images/commitconf.jpg",
+    "thumbnailUrl": "images/commitconf.webp",
     "latLon": {
       "lat": 40.4052141,
       "lon": -3.8769548
@@ -1742,7 +1743,7 @@
     "topics": "",
     "contactInfo": "communitybuilders.es@gmail.com",
     "communityUrl": "https://linktr.ee/ComBuilders_ES",
-    "thumbnailUrl": "images/community-builders.jpg",
+    "thumbnailUrl": "images/community-builders.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -1759,7 +1760,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://twitter.com/alexadevsmadrid",
-    "thumbnailUrl": "images/name-de-alexa-en-espanol.jpg",
+    "thumbnailUrl": "images/name-de-alexa-en-espanol.webp",
     "latLon": {
       "lat": 1.3607359,
       "lon": 103.8395958
@@ -1776,7 +1777,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://r-es.org/",
-    "thumbnailUrl": "images/name-de-r-hispano.jpg",
+    "thumbnailUrl": "images/name-de-r-hispano.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -1810,7 +1811,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://cas.agile-spain.org/",
-    "thumbnailUrl": "images/conferencia-agile-spain-cas.png",
+    "thumbnailUrl": "images/conferencia-agile-spain-cas.webp",
     "latLon": {
       "lat": -20.1578377,
       "lon": -40.184541
@@ -1827,7 +1828,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://caearagon.org/#conferencia",
-    "thumbnailUrl": "images/conferencia-de-agilidad-en-la-empresa-aragonesa.jpg",
+    "thumbnailUrl": "images/conferencia-de-agilidad-en-la-empresa-aragonesa.webp",
     "latLon": {
       "lat": 41.656837,
       "lon": -0.8794245
@@ -1844,7 +1845,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://imus.us.es/congresos/IIIRqueR/",
-    "thumbnailUrl": "images/congreso-jornadas-de-usuarios-de-r.jpg",
+    "thumbnailUrl": "images/congreso-jornadas-de-usuarios-de-r.webp",
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
@@ -1861,7 +1862,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "http://www.javahispano.org/fotos-seminario-jenkings/fotos-del-i-congreso-javahispano/",
-    "thumbnailUrl": "images/congreso-javahispano.jpg",
+    "thumbnailUrl": "images/congreso-javahispano.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -1878,7 +1879,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://linktr.ee/tryit_upm",
-    "thumbnailUrl": "images/congreso-tryit.jpg",
+    "thumbnailUrl": "images/congreso-tryit.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -1895,7 +1896,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.eventbrite.com/o/cordoba-software-crafters-48873988743",
-    "thumbnailUrl": "images/cordoba-software-crafters.20241017-185230",
+    "thumbnailUrl": "images/cordoba-software-crafters.webp",
     "latLon": {
       "lat": -31.405059,
       "lon": -64.171896
@@ -1912,7 +1913,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://corunabloggers.com/",
-    "thumbnailUrl": "images/coruna-bloggers.png",
+    "thumbnailUrl": "images/coruna-bloggers.webp",
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
@@ -1929,7 +1930,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://linktr.ee/corunawtf",
-    "thumbnailUrl": "images/coruna-wtf.jpg",
+    "thumbnailUrl": "images/coruna-wtf.webp",
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
@@ -1946,7 +1947,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://coruna.events/",
-    "thumbnailUrl": "images/corunaevents.jpg",
+    "thumbnailUrl": "images/corunaevents.webp",
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
@@ -1980,7 +1981,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/craftersvigo/",
-    "thumbnailUrl": "images/crafters-vigo.png",
+    "thumbnailUrl": "images/crafters-vigo.webp",
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
@@ -2014,7 +2015,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.xover.es/",
-    "thumbnailUrl": "images/crossover.png",
+    "thumbnailUrl": "images/crossover.webp",
     "latLon": {
       "lat": 12.151965053,
       "lon": -61.659644959
@@ -2031,7 +2032,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/CryptoSpaceCS",
-    "thumbnailUrl": "images/cryptospace.jpg",
+    "thumbnailUrl": "images/cryptospace.webp",
     "latLon": {
       "lat": 1.3607359,
       "lon": 103.8395958
@@ -2048,7 +2049,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://ctosummit.geekshubs.com/",
-    "thumbnailUrl": "images/cto-summit-infojobs.png",
+    "thumbnailUrl": "images/cto-summit-infojobs.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -2065,7 +2066,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.nics.uma.es/cybercamp-uma/",
-    "thumbnailUrl": "images/cybercamp-uma.jpg",
+    "thumbnailUrl": "images/cybercamp-uma.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -2082,7 +2083,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "http://totalism.org/",
-    "thumbnailUrl": "images/cyberhippietotalism.png",
+    "thumbnailUrl": "images/cyberhippietotalism.webp",
     "latLon": {
       "lat": 28.3967904,
       "lon": -13.8637263
@@ -2099,7 +2100,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://cyliconvalley.es/",
-    "thumbnailUrl": "images/cylicon-valley.png",
+    "thumbnailUrl": "images/cylicon-valley.webp",
     "latLon": {
       "lat": 41.754270024781,
       "lon": -4.782332640458
@@ -2132,7 +2133,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.danaus.io/",
-    "thumbnailUrl": "images/danaus.jpg",
+    "thumbnailUrl": "images/danaus.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -2149,7 +2150,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://datasaturdays.com/Event/20241130-datasaturday0065#page-top",
-    "thumbnailUrl": "images/data-saturdays.png",
+    "thumbnailUrl": "images/data-saturdays.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -2183,7 +2184,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/big-data-developers-in-madrid/",
-    "thumbnailUrl": "images/data-cloud-and-ai-in-madrid.avif",
+    "thumbnailUrl": "images/data-cloud-and-ai-in-madrid.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -2200,7 +2201,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/databeers-almeria/",
-    "thumbnailUrl": "images/databeers-almeria.jpg",
+    "thumbnailUrl": "images/databeers-almeria.webp",
     "latLon": {
       "lat": 36.8400939,
       "lon": -2.4679043
@@ -2217,7 +2218,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/databeersgrx",
-    "thumbnailUrl": "images/databeers-granada.jpg",
+    "thumbnailUrl": "images/databeers-granada.webp",
     "latLon": {
       "lat": 12.151965053,
       "lon": -61.659644959
@@ -2234,7 +2235,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/databeers-malaga/",
-    "thumbnailUrl": "images/databeers-maaga.png",
+    "thumbnailUrl": "images/databeers-maaga.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -2251,7 +2252,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/databeers",
-    "thumbnailUrl": "images/databeers-madrid.png",
+    "thumbnailUrl": "images/databeers-madrid.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -2285,7 +2286,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://databeersvlc.com/",
-    "thumbnailUrl": "images/databeers-valencia.jpg",
+    "thumbnailUrl": "images/databeers-valencia.webp",
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
@@ -2318,7 +2319,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.des-show.com/",
-    "thumbnailUrl": "images/des.jpg",
+    "thumbnailUrl": "images/des.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -2335,7 +2336,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.devbcn.com/",
-    "thumbnailUrl": "images/devbcn.jpg",
+    "thumbnailUrl": "images/devbcn.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -2352,7 +2353,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://secure.meetupstatic.com/photos/event/2/2/0/5/clean_486848709.webp",
-    "thumbnailUrl": "images/devfest-sevilla-2024.jpg",
+    "thumbnailUrl": "images/devfest-sevilla-2024.webp",
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
@@ -2369,7 +2370,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://devopsdays.es/",
-    "thumbnailUrl": "images/devopsdays-caceres.jpg",
+    "thumbnailUrl": "images/devopsdays-caceres.webp",
     "latLon": {
       "lat": 39.4762161,
       "lon": -6.3708585
@@ -2386,7 +2387,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "http://devopsdays.org/madrid",
-    "thumbnailUrl": "images/devopsdays-madrid.png",
+    "thumbnailUrl": "images/devopsdays-madrid.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -2403,7 +2404,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://devopsdays.org/events/2022-vitoria/",
-    "thumbnailUrl": "images/devopsdays-vitoria.png",
+    "thumbnailUrl": "images/devopsdays-vitoria.webp",
     "latLon": {
       "lat": 42.8468573,
       "lon": -2.6715859
@@ -2420,7 +2421,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "http://devwomen.com ",
-    "thumbnailUrl": "images/devwomen.jpg",
+    "thumbnailUrl": "images/devwomen.webp",
     "latLon": {
       "lat": 1.3607359,
       "lon": 103.8395958
@@ -2454,7 +2455,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.docker.com/community/get-involved/",
-    "thumbnailUrl": "images/docker-user-groups.jpg",
+    "thumbnailUrl": "images/docker-user-groups.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -2471,7 +2472,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://dotnetconfspain.com/",
-    "thumbnailUrl": "images/dotnet-conf-spain.png",
+    "thumbnailUrl": "images/dotnet-conf-spain.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -2505,7 +2506,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://dotnetmalaga.es/",
-    "thumbnailUrl": "images/dotnetmalaga-conferencia.jpg",
+    "thumbnailUrl": "images/dotnetmalaga-conferencia.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -2539,7 +2540,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/dotnetters/",
-    "thumbnailUrl": "images/dotnetters-zaragoza.jpg",
+    "thumbnailUrl": "images/dotnetters-zaragoza.webp",
     "latLon": {
       "lat": 41.656837,
       "lon": -0.8794245
@@ -2556,7 +2557,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.droidcon.com/",
-    "thumbnailUrl": "images/droidcon.svg",
+    "thumbnailUrl": "images/droidcon.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -2621,7 +2622,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://groups.drupal.org/asturias-spain",
-    "thumbnailUrl": "images/drupal-asturias.jpg",
+    "thumbnailUrl": "images/drupal-asturias.webp",
     "latLon": {
       "lat": 10.5679998,
       "lon": 123.7171998
@@ -2718,7 +2719,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://drupalday.es/",
-    "thumbnailUrl": "images/drupal-day-spain.png",
+    "thumbnailUrl": "images/drupal-day-spain.webp",
     "latLon": {
       "lat": -20.1578377,
       "lon": -40.184541
@@ -2815,7 +2816,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://groups.drupal.org/madrid",
-    "thumbnailUrl": "images/drupal-madrid.png",
+    "thumbnailUrl": "images/drupal-madrid.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -2896,7 +2897,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://drupalcamp.es/es",
-    "thumbnailUrl": "images/drupalcamp-spain.jpg",
+    "thumbnailUrl": "images/drupalcamp-spain.webp",
     "latLon": {
       "lat": -20.1578377,
       "lon": -40.184541
@@ -2913,7 +2914,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://dyplofest.com/",
-    "thumbnailUrl": "images/dyplofest.jpg",
+    "thumbnailUrl": "images/dyplofest.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -2930,7 +2931,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://eshow.es/barcelona",
-    "thumbnailUrl": "images/e-show-barcelona.png",
+    "thumbnailUrl": "images/e-show-barcelona.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -2947,7 +2948,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://eshow.es/madrid",
-    "thumbnailUrl": "images/e-show-madrid.png",
+    "thumbnailUrl": "images/e-show-madrid.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -2964,7 +2965,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://econgressmalaga.es/",
-    "thumbnailUrl": "images/econgress-malaga.jpg",
+    "thumbnailUrl": "images/econgress-malaga.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -2981,7 +2982,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.elastic.co/community/usergroupguide#/community/usergroupguide",
-    "thumbnailUrl": "images/elastic-local-meetups.jpg",
+    "thumbnailUrl": "images/elastic-local-meetups.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -2998,7 +2999,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://linktr.ee/etsiittechclub",
-    "thumbnailUrl": "images/etsiittech_club.jpg",
+    "thumbnailUrl": "images/etsiittech_club.webp",
     "latLon": {
       "lat": 12.151965053,
       "lon": -61.659644959
@@ -3015,7 +3016,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.euskalhack.org/securitycongress/index_en.html",
-    "thumbnailUrl": "images/euskalhack-security-congress.png",
+    "thumbnailUrl": "images/euskalhack-security-congress.webp",
     "latLon": {
       "lat": 43.320905,
       "lon": -1.9845145
@@ -3032,7 +3033,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://extremaduradigitalday.com/",
-    "thumbnailUrl": "images/extremadura-digital-day.jpg",
+    "thumbnailUrl": "images/extremadura-digital-day.webp",
     "latLon": {
       "lat": 39.4762161,
       "lon": -6.3708585
@@ -3049,7 +3050,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://fabadaconf.com/",
-    "thumbnailUrl": "images/fabada-conference.jpg",
+    "thumbnailUrl": "images/fabada-conference.webp",
     "latLon": {
       "lat": 43.545229,
       "lon": -5.6619245
@@ -3235,7 +3236,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://frontfest.es/",
-    "thumbnailUrl": "images/frontfest.jpg",
+    "thumbnailUrl": "images/frontfest.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -3252,7 +3253,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/fullstacksvq",
-    "thumbnailUrl": "images/fullstack-sevilla.jpg",
+    "thumbnailUrl": "images/fullstack-sevilla.webp",
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
@@ -3269,7 +3270,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.galpon.org/",
-    "thumbnailUrl": "images/galpon.png",
+    "thumbnailUrl": "images/galpon.webp",
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
@@ -3303,7 +3304,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "http://gamaker.org/",
-    "thumbnailUrl": "images/gamaker.jpg",
+    "thumbnailUrl": "images/gamaker.webp",
     "latLon": {
       "lat": 42.8468573,
       "lon": -2.6715859
@@ -3320,7 +3321,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/Gamepolis_org",
-    "thumbnailUrl": "images/gamepolis.jpg",
+    "thumbnailUrl": "images/gamepolis.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -3337,7 +3338,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/gcubo_linux",
-    "thumbnailUrl": "images/gcubo.png",
+    "thumbnailUrl": "images/gcubo.webp",
     "latLon": {
       "lat": 12.151965053,
       "lon": -61.659644959
@@ -3371,7 +3372,7 @@
     "topics": "",
     "contactInfo": "cloudespanol@gmail.com",
     "communityUrl": "https://gdg.community.dev/gdg-cloud-espanol/",
-    "thumbnailUrl": "images/gdg-cloud-espanol.png",
+    "thumbnailUrl": "images/gdg-cloud-espanol.webp",
     "latLon": {
       "lat": 24.997102651132,
       "lon": -107.480258680048
@@ -3438,7 +3439,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://twitter.com/gdgjaen",
-    "thumbnailUrl": "images/gdg-jaen.jpg",
+    "thumbnailUrl": "images/gdg-jaen.webp",
     "latLon": {
       "lat": 37.7657753,
       "lon": -3.7893929
@@ -3471,7 +3472,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://gdg.community.dev/gdg-madrid/",
-    "thumbnailUrl": "images/gdg-madrid.png",
+    "thumbnailUrl": "images/gdg-madrid.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -3522,7 +3523,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://gdgponferrada.org",
-    "thumbnailUrl": "images/gdg-ponferrada.jpg",
+    "thumbnailUrl": "images/gdg-ponferrada.webp",
     "latLon": {
       "lat": 42.5463315,
       "lon": -6.5908331
@@ -3556,7 +3557,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://gdg.es/",
-    "thumbnailUrl": "images/gdg-spain.jpg",
+    "thumbnailUrl": "images/gdg-spain.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -3573,7 +3574,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://gdg.community.dev/gdg-toledo/",
-    "thumbnailUrl": "images/gdg-toledo.png",
+    "thumbnailUrl": "images/gdg-toledo.webp",
     "latLon": {
       "lat": 41.655298,
       "lon": -83.535717
@@ -3590,7 +3591,7 @@
     "topics": "",
     "contactInfo": "hola@gdgvalencia.es ",
     "communityUrl": "https://gdg.community.dev/gdg-valencia/",
-    "thumbnailUrl": "images/gdg-valencia.png",
+    "thumbnailUrl": "images/gdg-valencia.webp",
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
@@ -3623,7 +3624,7 @@
     "topics": "",
     "contactInfo": "geodevelopers.es@gmail.com",
     "communityUrl": "https://linktr.ee/geodevelopers",
-    "thumbnailUrl": "images/geodevelopers.png",
+    "thumbnailUrl": "images/geodevelopers.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -3672,7 +3673,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://globalai.community/",
-    "thumbnailUrl": "images/global-ai-bootcamp.svg",
+    "thumbnailUrl": "images/global-ai-bootcamp.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -3689,7 +3690,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://globalai.es/",
-    "thumbnailUrl": "images/global-ai-bootcamp-madrid.jpg",
+    "thumbnailUrl": "images/global-ai-bootcamp-madrid.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -3722,7 +3723,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://gsas.io/",
-    "thumbnailUrl": "images/global-software-architecture-summit.jpg",
+    "thumbnailUrl": "images/global-software-architecture-summit.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -3756,7 +3757,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/dscspain",
-    "thumbnailUrl": "images/google-developer-student-clubs-spain.jpg",
+    "thumbnailUrl": "images/google-developer-student-clubs-spain.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -3790,7 +3791,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://grafana.com/community/meetups/",
-    "thumbnailUrl": "images/grafana-meetups.jpg",
+    "thumbnailUrl": "images/grafana-meetups.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -3807,7 +3808,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.granadagaming.com/",
-    "thumbnailUrl": "images/granada-gaming.jpg",
+    "thumbnailUrl": "images/granada-gaming.webp",
     "latLon": {
       "lat": 12.151965053,
       "lon": -61.659644959
@@ -3824,7 +3825,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://linktr.ee/grinteractiva",
-    "thumbnailUrl": "images/granada-interactiva.jpg",
+    "thumbnailUrl": "images/granada-interactiva.webp",
     "latLon": {
       "lat": 12.151965053,
       "lon": -61.659644959
@@ -3841,7 +3842,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://granadajam.com/",
-    "thumbnailUrl": "images/granada-jam.jpg",
+    "thumbnailUrl": "images/granada-jam.webp",
     "latLon": {
       "lat": 12.151965053,
       "lon": -61.659644959
@@ -3907,7 +3908,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://gpul.org/",
-    "thumbnailUrl": "images/grupo-de-programadores-e-usuarios-de-linux-gpul.png",
+    "thumbnailUrl": "images/grupo-de-programadores-e-usuarios-de-linux-gpul.webp",
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
@@ -3924,7 +3925,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.joomlavigo.es/",
-    "thumbnailUrl": "images/grupo-de-usuarios-de-joomla-de-vigo.png",
+    "thumbnailUrl": "images/grupo-de-usuarios-de-joomla-de-vigo.webp",
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
@@ -3941,7 +3942,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/Grupo-de-Usuarios-de-R-de-Madrid/",
-    "thumbnailUrl": "images/grupo-de-usuarios-de-r-de-madrid.png",
+    "thumbnailUrl": "images/grupo-de-usuarios-de-r-de-madrid.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -4038,7 +4039,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://guadalindie.com/",
-    "thumbnailUrl": "images/guadalindie.jpg",
+    "thumbnailUrl": "images/guadalindie.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -4055,7 +4056,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/guarandinga-tech/",
-    "thumbnailUrl": "images/guarandinga-tech.jpg",
+    "thumbnailUrl": "images/guarandinga-tech.webp",
     "latLon": {
       "lat": 9.8999,
       "lon": -74.86048
@@ -4121,7 +4122,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://hackbarna.com",
-    "thumbnailUrl": "images/hackbarna.jpg",
+    "thumbnailUrl": "images/hackbarna.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -4138,7 +4139,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://wiki.hackerspaces.org/HackCS",
-    "thumbnailUrl": "images/hackcs.jpg",
+    "thumbnailUrl": "images/hackcs.webp",
     "latLon": {
       "lat": 39.9860398,
       "lon": -0.0360705
@@ -4155,7 +4156,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://hackersweek.es/",
-    "thumbnailUrl": "images/hackers-week.jpg",
+    "thumbnailUrl": "images/hackers-week.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -4188,7 +4189,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://hackmadrid.org",
-    "thumbnailUrl": "images/hackmadrid-27.png",
+    "thumbnailUrl": "images/hackmadrid-27.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -4205,7 +4206,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://hbscon.com/",
-    "thumbnailUrl": "images/hbscon.jpg",
+    "thumbnailUrl": "images/hbscon.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -4239,7 +4240,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://womentechmaker.appspot.com/",
-    "thumbnailUrl": "images/i-conferencia-women-techmakers-la-rioja.jpg",
+    "thumbnailUrl": "images/i-conferencia-women-techmakers-la-rioja.webp",
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
@@ -4256,7 +4257,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://community.ibm.com/community/user/community",
-    "thumbnailUrl": "images/ibm-groups.jpg",
+    "thumbnailUrl": "images/ibm-groups.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -4273,7 +4274,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://impulsar.ai/#/",
-    "thumbnailUrl": "images/impulsarai.png",
+    "thumbnailUrl": "images/impulsarai.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -4306,7 +4307,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://galicia.isf.es/?lang=es",
-    "thumbnailUrl": "images/ingenieria-sin-fronteras-enxeneria-sen-fronteiras.jpg",
+    "thumbnailUrl": "images/ingenieria-sin-fronteras-enxeneria-sen-fronteiras.webp",
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
@@ -4323,7 +4324,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://ingobernable.net/",
-    "thumbnailUrl": "images/ingobernable.jpg",
+    "thumbnailUrl": "images/ingobernable.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -5093,7 +5094,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.jonthebeach.com/",
-    "thumbnailUrl": "images/j-on-the-breach.png",
+    "thumbnailUrl": "images/j-on-the-breach.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -5110,7 +5111,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://dev.java/community/jugs/",
-    "thumbnailUrl": "images/java-user-groups.png",
+    "thumbnailUrl": "images/java-user-groups.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -5143,7 +5144,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://wikimedia.es/category/eventos/jornadas-anuales/",
-    "thumbnailUrl": "images/jornadas-anuales-wikimedia-espana.png",
+    "thumbnailUrl": "images/jornadas-anuales-wikimedia-espana.webp",
     "latLon": {
       "lat": -20.1578377,
       "lon": -40.184541
@@ -5160,7 +5161,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.jornadassiglibre.org/",
-    "thumbnailUrl": "images/jornadas-de-sig-libre.jpg",
+    "thumbnailUrl": "images/jornadas-de-sig-libre.webp",
     "latLon": {
       "lat": 42.128030322674,
       "lon": 2.673305566784
@@ -5177,7 +5178,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://jsdaycanarias.com/",
-    "thumbnailUrl": "images/jsday-canarias.jpg",
+    "thumbnailUrl": "images/jsday-canarias.webp",
     "latLon": {
       "lat": 9.8999,
       "lon": -74.86048
@@ -5194,7 +5195,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://2020.jsday.es/",
-    "thumbnailUrl": "images/jsdayes.jpg",
+    "thumbnailUrl": "images/jsdayes.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -5228,7 +5229,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://lajaqueria.org/sesiones/",
-    "thumbnailUrl": "images/la-jaqueria.png",
+    "thumbnailUrl": "images/la-jaqueria.webp",
     "latLon": {
       "lat": 36.8400939,
       "lon": -2.4679043
@@ -5245,7 +5246,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.laproductconf.com/",
-    "thumbnailUrl": "images/la-product-conf-lpcx-espana.jpg",
+    "thumbnailUrl": "images/la-product-conf-lpcx-espana.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -5278,7 +5279,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/Lambda_World",
-    "thumbnailUrl": "images/lambda-world.jpg",
+    "thumbnailUrl": "images/lambda-world.webp",
     "latLon": {
       "lat": 36.5297453,
       "lon": -6.2926477
@@ -5295,7 +5296,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://langdevcon.org/",
-    "thumbnailUrl": "images/langdev-conference.png",
+    "thumbnailUrl": "images/langdev-conference.webp",
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
@@ -5312,7 +5313,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://latinasintech.org/chapter/madrid",
-    "thumbnailUrl": "images/latinas-in-tech-madrid.jpg",
+    "thumbnailUrl": "images/latinas-in-tech-madrid.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -5329,7 +5330,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://lechazoconf.com/",
-    "thumbnailUrl": "images/lechazoconf.jpg",
+    "thumbnailUrl": "images/lechazoconf.webp",
     "latLon": {
       "lat": 41.6529421,
       "lon": -4.7283839
@@ -5346,7 +5347,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://librelabgrx.cc/",
-    "thumbnailUrl": "images/librelabgrx.png",
+    "thumbnailUrl": "images/librelabgrx.webp",
     "latLon": {
       "lat": 12.151965053,
       "lon": -61.659644959
@@ -5397,7 +5398,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "http://made-bcn.org/",
-    "thumbnailUrl": "images/made-makerspace.svg",
+    "thumbnailUrl": "images/made-makerspace.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -5544,7 +5545,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.madridtechshow.es/",
-    "thumbnailUrl": "images/madrid-tech-show.jpg",
+    "thumbnailUrl": "images/madrid-tech-show.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -5561,7 +5562,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://madridtechtalks.com/",
-    "thumbnailUrl": "images/madrid-tech-talks.png",
+    "thumbnailUrl": "images/madrid-tech-talks.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -5578,7 +5579,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.madridgug.com/",
-    "thumbnailUrl": "images/madrid-groovy-user-group-gug.png",
+    "thumbnailUrl": "images/madrid-groovy-user-group-gug.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -5595,7 +5596,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/madriddotnet/",
-    "thumbnailUrl": "images/madriddotnet.jpg",
+    "thumbnailUrl": "images/madriddotnet.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -5612,7 +5613,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/madridjs/",
-    "thumbnailUrl": "images/madridjs.png",
+    "thumbnailUrl": "images/madridjs.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -5629,7 +5630,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/madridjug/",
-    "thumbnailUrl": "images/madridjug.jpg",
+    "thumbnailUrl": "images/madridjug.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -5646,7 +5647,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/Scala-Programming-Madrid/",
-    "thumbnailUrl": "images/madridscala.jpg",
+    "thumbnailUrl": "images/madridscala.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -5679,7 +5680,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/makersofmurcia",
-    "thumbnailUrl": "images/makers-of-murcia.jpg",
+    "thumbnailUrl": "images/makers-of-murcia.webp",
     "latLon": {
       "lat": 37.9835334,
       "lon": -1.129905
@@ -5696,7 +5697,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://makespacemadrid.org/",
-    "thumbnailUrl": "images/makespacemadrid.jpg",
+    "thumbnailUrl": "images/makespacemadrid.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -5762,7 +5763,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/AIMalaga",
-    "thumbnailUrl": "images/malaga-ai.jpg",
+    "thumbnailUrl": "images/malaga-ai.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -5795,7 +5796,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://malagajam.com/",
-    "thumbnailUrl": "images/malagajam.jpg",
+    "thumbnailUrl": "images/malagajam.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -5812,7 +5813,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/MalagaJUG/",
-    "thumbnailUrl": "images/malagajug.png",
+    "thumbnailUrl": "images/malagajug.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -5829,7 +5830,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/MermeladaTech",
-    "thumbnailUrl": "images/mermeladatech.jpg",
+    "thumbnailUrl": "images/mermeladatech.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -5846,7 +5847,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.miduconf.com/",
-    "thumbnailUrl": "images/miduconf.jpg",
+    "thumbnailUrl": "images/miduconf.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -5863,7 +5864,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://discord.com/invite/midudev",
-    "thumbnailUrl": "images/midudev.jpg:large",
+    "thumbnailUrl": "images/midudev.webp:large",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -5896,7 +5897,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://morcillaconf.es/",
-    "thumbnailUrl": "images/morcillaconf.png",
+    "thumbnailUrl": "images/morcillaconf.webp",
     "latLon": {
       "lat": 42.3408923,
       "lon": -3.6997623
@@ -5913,7 +5914,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.morteruelo.net/",
-    "thumbnailUrl": "images/morteruelocon.jpg",
+    "thumbnailUrl": "images/morteruelocon.webp",
     "latLon": {
       "lat": -2.8887294,
       "lon": -78.9983816
@@ -5930,7 +5931,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://discord.com/invite/mouredev",
-    "thumbnailUrl": "images/mouredev.jpg",
+    "thumbnailUrl": "images/mouredev.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -5947,7 +5948,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/mscoders/",
-    "thumbnailUrl": "images/mscoders-madrid.png",
+    "thumbnailUrl": "images/mscoders-madrid.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -5964,7 +5965,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://meetups.mulesoft.com/barcelona",
-    "thumbnailUrl": "images/mulesoft-barcelona.jpg",
+    "thumbnailUrl": "images/mulesoft-barcelona.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -5981,7 +5982,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://meetups.mulesoft.com/madrid",
-    "thumbnailUrl": "images/mulesoft-madrid.jpg",
+    "thumbnailUrl": "images/mulesoft-madrid.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -5998,7 +5999,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://meetups.mulesoft.com/",
-    "thumbnailUrl": "images/mulesoft-meetups.png",
+    "thumbnailUrl": "images/mulesoft-meetups.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -6015,7 +6016,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://meetups.mulesoft.com/murcia",
-    "thumbnailUrl": "images/mulesoft-murcia.jpg",
+    "thumbnailUrl": "images/mulesoft-murcia.webp",
     "latLon": {
       "lat": 37.9835334,
       "lon": -1.129905
@@ -6032,7 +6033,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://meetups.mulesoft.com/sevilla",
-    "thumbnailUrl": "images/mulesoft-sevilla.jpg",
+    "thumbnailUrl": "images/mulesoft-sevilla.webp",
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
@@ -6049,7 +6050,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://meetups.mulesoft.com/valencia",
-    "thumbnailUrl": "images/mulesoft-valencia.jpg",
+    "thumbnailUrl": "images/mulesoft-valencia.webp",
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
@@ -6083,7 +6084,7 @@
     "topics": "TDD, Pair Programming, Katas,...",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/software-craftsmanship-murcia/",
-    "thumbnailUrl": "images/murcia-software-crafters.jpg",
+    "thumbnailUrl": "images/murcia-software-crafters.webp",
     "latLon": {
       "lat": 37.9835334,
       "lon": -1.129905
@@ -6100,7 +6101,7 @@
     "topics": "",
     "contactInfo": "hola@mytechplan.com",
     "communityUrl": "https://mytechplan.com/name/",
-    "thumbnailUrl": "images/my-tech-plan.png",
+    "thumbnailUrl": "images/my-tech-plan.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -6117,7 +6118,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.navajanegra.com/2024/",
-    "thumbnailUrl": "images/navaja-negra.jpg",
+    "thumbnailUrl": "images/navaja-negra.webp",
     "latLon": {
       "lat": 38.9976623,
       "lon": -1.8600675
@@ -6134,7 +6135,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://netcoreconf.com/",
-    "thumbnailUrl": "images/netcoreconf.jpg",
+    "thumbnailUrl": "images/netcoreconf.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -6151,7 +6152,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.noconname.org/",
-    "thumbnailUrl": "images/no-con-name.png",
+    "thumbnailUrl": "images/no-con-name.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -6168,7 +6169,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.nocodefest.es/",
-    "thumbnailUrl": "images/nocodefest.jpg",
+    "thumbnailUrl": "images/nocodefest.webp",
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
@@ -6217,7 +6218,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://nosday.com/",
-    "thumbnailUrl": "images/nosday.jpg",
+    "thumbnailUrl": "images/nosday.webp",
     "latLon": {
       "lat": 42.8806228,
       "lon": -8.5466071
@@ -6234,7 +6235,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://coruna-community.notion.site/Notion-Coru-a-39a383ce08424c419a6cef87daad52ce",
-    "thumbnailUrl": "images/notion-coruna.svg",
+    "thumbnailUrl": "images/notion-coruna.webp",
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
@@ -6268,7 +6269,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://2024.nsspain.com/",
-    "thumbnailUrl": "images/nsspain.jpg",
+    "thumbnailUrl": "images/nsspain.webp",
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
@@ -6318,7 +6319,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://osl.ugr.es/",
-    "thumbnailUrl": "images/oficina-de-software-libre-granada.png",
+    "thumbnailUrl": "images/oficina-de-software-libre-granada.webp",
     "latLon": {
       "lat": 12.151965053,
       "lon": -61.659644959
@@ -6351,7 +6352,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://openexpoeurope.com/",
-    "thumbnailUrl": "images/openexpo-europe.jpg",
+    "thumbnailUrl": "images/openexpo-europe.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -6368,7 +6369,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.opensouthcode.org/conferences/opensouthcode2024",
-    "thumbnailUrl": "images/opensouthcode.jpg",
+    "thumbnailUrl": "images/opensouthcode.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -6385,7 +6386,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://owasp.org/chapters/",
-    "thumbnailUrl": "images/owasp.jpg",
+    "thumbnailUrl": "images/owasp.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -6419,7 +6420,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://owasp.org/www-chapter-logrono/",
-    "thumbnailUrl": "images/owasp-logrono.jpg",
+    "thumbnailUrl": "images/owasp-logrono.webp",
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
@@ -6436,7 +6437,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://owasp.org/www-chapter-sevilla/",
-    "thumbnailUrl": "images/owasp-sevilla.png",
+    "thumbnailUrl": "images/owasp-sevilla.webp",
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
@@ -6453,7 +6454,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/PaellaCON",
-    "thumbnailUrl": "images/paellacon.jpg",
+    "thumbnailUrl": "images/paellacon.webp",
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
@@ -6470,7 +6471,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://pamplonaswcraft.com/",
-    "thumbnailUrl": "images/pamplona-iruna-software-crafters.jpg",
+    "thumbnailUrl": "images/pamplona-iruna-software-crafters.webp",
     "latLon": {
       "lat": 42.8179948,
       "lon": -1.6441817
@@ -6503,7 +6504,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/php-coruna/",
-    "thumbnailUrl": "images/php-coruna.jpg",
+    "thumbnailUrl": "images/php-coruna.webp",
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
@@ -6520,7 +6521,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/phpmad/events/304894313/",
-    "thumbnailUrl": "images/phpmad.png",
+    "thumbnailUrl": "images/phpmad.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -6585,7 +6586,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "http://www.picahack.org/",
-    "thumbnailUrl": "images/pica-pica-hacklab.png",
+    "thumbnailUrl": "images/pica-pica-hacklab.webp",
     "latLon": {
       "lat": 43.3602825,
       "lon": -5.8447919
@@ -6669,7 +6670,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/pucelatechday",
-    "thumbnailUrl": "images/pucelatechday.png",
+    "thumbnailUrl": "images/pucelatechday.webp",
     "latLon": {
       "lat": 41.6529421,
       "lon": -4.7283839
@@ -6686,7 +6687,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://pulpocon.es/",
-    "thumbnailUrl": "images/pulpo-con.jpg",
+    "thumbnailUrl": "images/pulpo-con.webp",
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
@@ -6703,7 +6704,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://pycamp.es/",
-    "thumbnailUrl": "images/pycamp-espana.jpg",
+    "thumbnailUrl": "images/pycamp-espana.webp",
     "latLon": {
       "lat": -20.1578377,
       "lon": -40.184541
@@ -6720,7 +6721,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://es.pycon.org/",
-    "thumbnailUrl": "images/pycon-espana.png",
+    "thumbnailUrl": "images/pycon-espana.webp",
     "latLon": {
       "lat": -20.1578377,
       "lon": -40.184541
@@ -6737,7 +6738,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://pydata.org/",
-    "thumbnailUrl": "images/pydata.png",
+    "thumbnailUrl": "images/pydata.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -6805,7 +6806,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://linktr.ee/pythoncoruna",
-    "thumbnailUrl": "images/python-coruna.png",
+    "thumbnailUrl": "images/python-coruna.webp",
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
@@ -6822,7 +6823,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://es.python.org",
-    "thumbnailUrl": "images/python-espana.png",
+    "thumbnailUrl": "images/python-espana.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -6839,7 +6840,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://pythongranada.github.io/blog/",
-    "thumbnailUrl": "images/python-granada.svg",
+    "thumbnailUrl": "images/python-granada.webp",
     "latLon": {
       "lat": 12.151965053,
       "lon": -61.659644959
@@ -6872,7 +6873,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://twitter.com/python_malaga",
-    "thumbnailUrl": "images/python-malaga.png",
+    "thumbnailUrl": "images/python-malaga.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -6889,7 +6890,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.python-vigo.es/",
-    "thumbnailUrl": "images/python-vigo.png",
+    "thumbnailUrl": "images/python-vigo.webp",
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
@@ -6940,7 +6941,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://reactalicante.es/",
-    "thumbnailUrl": "images/reactalicante.jpg",
+    "thumbnailUrl": "images/reactalicante.webp",
     "latLon": {
       "lat": 38.34521,
       "lon": -0.4809945
@@ -6957,7 +6958,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.redhat.com/en/red-hat-user-group/europe-middle-east-africa",
-    "thumbnailUrl": "images/red-hat-user-group-community.png",
+    "thumbnailUrl": "images/red-hat-user-group-community.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -6974,7 +6975,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/riojadotnet/",
-    "thumbnailUrl": "images/riojadotnet.jpg",
+    "thumbnailUrl": "images/riojadotnet.webp",
     "latLon": {
       "lat": -29.4101933,
       "lon": -66.829414
@@ -7007,7 +7008,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://rockndroid.dev/",
-    "thumbnailUrl": "images/rockndroid.jpg",
+    "thumbnailUrl": "images/rockndroid.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -7040,7 +7041,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://salmorejo.tech/2024/",
-    "thumbnailUrl": "images/salmorejotech.jpg:large",
+    "thumbnailUrl": "images/salmorejotech.webp:large",
     "latLon": {
       "lat": -31.405059,
       "lon": -64.171896
@@ -7057,7 +7058,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://scaladays.org/",
-    "thumbnailUrl": "images/scala-days.jpg",
+    "thumbnailUrl": "images/scala-days.webp",
     "latLon": {
       "lat": -20.1578377,
       "lon": -40.184541
@@ -7074,7 +7075,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es/SEO-Galicia/",
-    "thumbnailUrl": "images/seo-galicia.png",
+    "thumbnailUrl": "images/seo-galicia.webp",
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
@@ -7091,7 +7092,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://sevillarusers.netlify.app/about/",
-    "thumbnailUrl": "images/sevilla-r-users.jpg",
+    "thumbnailUrl": "images/sevilla-r-users.webp",
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
@@ -7108,7 +7109,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://singularitytechday.com/",
-    "thumbnailUrl": "images/singularity-tech-day.jpg",
+    "thumbnailUrl": "images/singularity-tech-day.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -7125,7 +7126,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://sirviendocodigo.com/",
-    "thumbnailUrl": "images/sirviendo-codigo.jpg",
+    "thumbnailUrl": "images/sirviendo-codigo.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -7174,7 +7175,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/socracan/",
-    "thumbnailUrl": "images/socracan-socrates-canaries.jpg",
+    "thumbnailUrl": "images/socracan-socrates-canaries.webp",
     "latLon": {
       "lat": 28,
       "lon": -15.5
@@ -7191,7 +7192,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://softwarecrafters.barcelona/",
-    "thumbnailUrl": "images/software-crafters-barcelona.jpg",
+    "thumbnailUrl": "images/software-crafters-barcelona.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -7242,7 +7243,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.southsummit.io/",
-    "thumbnailUrl": "images/south-summit.jpg",
+    "thumbnailUrl": "images/south-summit.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -7259,7 +7260,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://2025.springio.net/",
-    "thumbnailUrl": "images/spring-io.jpg",
+    "thumbnailUrl": "images/spring-io.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -7293,7 +7294,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://startupole.eu/",
-    "thumbnailUrl": "images/startup-ole.jpg",
+    "thumbnailUrl": "images/startup-ole.webp",
     "latLon": {
       "lat": 40.42972,
       "lon": -3.67975
@@ -7310,7 +7311,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://step4ward.es/",
-    "thumbnailUrl": "images/step4ward.jpg",
+    "thumbnailUrl": "images/step4ward.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -7327,7 +7328,7 @@
     "topics": "Desarrollo web, diseño y multimedia",
     "contactInfo": "",
     "communityUrl": "https://subflash.com/",
-    "thumbnailUrl": "images/subflash-summer-workshops.jpg",
+    "thumbnailUrl": "images/subflash-summer-workshops.webp",
     "latLon": {
       "lat": -20.1578377,
       "lon": -40.184541
@@ -7360,7 +7361,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://svqtech.com/",
-    "thumbnailUrl": "images/svqtech.png",
+    "thumbnailUrl": "images/svqtech.webp",
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
@@ -7393,7 +7394,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://sysarmy.com/",
-    "thumbnailUrl": "images/sysarmy.png",
+    "thumbnailUrl": "images/sysarmy.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -7410,7 +7411,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.sysarmygalicia.com/",
-    "thumbnailUrl": "images/sysarmy-galicia.png",
+    "thumbnailUrl": "images/sysarmy-galicia.webp",
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
@@ -7427,7 +7428,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://t3chfest.es/",
-    "thumbnailUrl": "images/t3chfest.jpg",
+    "thumbnailUrl": "images/t3chfest.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -7444,7 +7445,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://taigranada.com/",
-    "thumbnailUrl": "images/tai-granada.jpg",
+    "thumbnailUrl": "images/tai-granada.webp",
     "latLon": {
       "lat": 12.151965053,
       "lon": -61.659644959
@@ -7461,7 +7462,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://techclubasturias.com/",
-    "thumbnailUrl": "images/tech-club-asturias.png",
+    "thumbnailUrl": "images/tech-club-asturias.webp",
     "latLon": {
       "lat": 10.5679998,
       "lon": 123.7171998
@@ -7510,7 +7511,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://techshessions.com/",
-    "thumbnailUrl": "images/techshessions.jpg",
+    "thumbnailUrl": "images/techshessions.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -7527,7 +7528,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/TenerifeDev/",
-    "thumbnailUrl": "images/tenerifedev.png",
+    "thumbnailUrl": "images/tenerifedev.webp",
     "latLon": {
       "lat": 9.8999,
       "lon": -74.86048
@@ -7544,7 +7545,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://theantievent.org/",
-    "thumbnailUrl": "images/theantievent.jpg",
+    "thumbnailUrl": "images/theantievent.webp",
     "latLon": {
       "lat": 43.2569608,
       "lon": -2.9234602
@@ -7561,7 +7562,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "http://www.tizonaconf.com/",
-    "thumbnailUrl": "images/tizonaconf.jpg",
+    "thumbnailUrl": "images/tizonaconf.webp",
     "latLon": {
       "lat": 42.3408923,
       "lon": -3.6997623
@@ -7578,7 +7579,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/tomatinacon",
-    "thumbnailUrl": "images/tomatinacon.png",
+    "thumbnailUrl": "images/tomatinacon.webp",
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
@@ -7611,7 +7612,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://trgcon.com/",
-    "thumbnailUrl": "images/trgcon.jpg",
+    "thumbnailUrl": "images/trgcon.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -7628,7 +7629,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://docs.google.com/document/d/17OCsMsuwY5RabPsCgDiL-d84cyFN0idriCdD_ssqx8U/edit?tab=t.0#heading=h.fv330pyk733i",
-    "thumbnailUrl": "images/unity-user-group-network.jpg",
+    "thumbnailUrl": "images/unity-user-group-network.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -7710,7 +7711,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://vds.tech/",
-    "thumbnailUrl": "images/vds.jpg",
+    "thumbnailUrl": "images/vds.webp",
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
@@ -7727,7 +7728,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.vicon.gal/",
-    "thumbnailUrl": "images/vicon.jpg",
+    "thumbnailUrl": "images/vicon.webp",
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
@@ -7789,7 +7790,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/VuejsMalaga",
-    "thumbnailUrl": "images/vue-malaga.jpg",
+    "thumbnailUrl": "images/vue-malaga.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -7839,7 +7840,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://wasm.io/",
-    "thumbnailUrl": "images/wasm-io.jpg",
+    "thumbnailUrl": "images/wasm-io.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -7856,7 +7857,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/web3-island-makers",
-    "thumbnailUrl": "images/web3-island-makers.jpg",
+    "thumbnailUrl": "images/web3-island-makers.webp",
     "latLon": {
       "lat": 9.8999,
       "lon": -74.86048
@@ -7873,7 +7874,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://wecodefest.com/",
-    "thumbnailUrl": "images/wecodefest.jpg",
+    "thumbnailUrl": "images/wecodefest.webp",
     "latLon": {
       "lat": 41.6529421,
       "lon": -4.7283839
@@ -7890,7 +7891,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://weyweyweb.com/",
-    "thumbnailUrl": "images/wey-wey-web.jpg",
+    "thumbnailUrl": "images/wey-wey-web.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -7907,7 +7908,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Espa%C3%B1a",
-    "thumbnailUrl": "images/wikimedia-espana.jpg",
+    "thumbnailUrl": "images/wikimedia-espana.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -7924,7 +7925,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Almer%C3%ADa/Actividades",
-    "thumbnailUrl": "images/wikiproyecto-almeria.jpg",
+    "thumbnailUrl": "images/wikiproyecto-almeria.webp",
     "latLon": {
       "lat": 36.8400939,
       "lon": -2.4679043
@@ -7941,7 +7942,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Burgos/participantes",
-    "thumbnailUrl": "images/wikiproyecto-burgos.jpg",
+    "thumbnailUrl": "images/wikiproyecto-burgos.webp",
     "latLon": {
       "lat": 42.3408923,
       "lon": -3.6997623
@@ -7958,7 +7959,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Granada",
-    "thumbnailUrl": "images/wikiproyecto-granada.jpg",
+    "thumbnailUrl": "images/wikiproyecto-granada.webp",
     "latLon": {
       "lat": 12.151965053,
       "lon": -61.659644959
@@ -7975,7 +7976,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Ciudad_Real/participantes",
-    "thumbnailUrl": "images/wikiproyecto-guadalajara.jpg",
+    "thumbnailUrl": "images/wikiproyecto-guadalajara.webp",
     "latLon": {
       "lat": 38.9861041,
       "lon": -3.9272645
@@ -7992,7 +7993,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Guadalajara/participantes",
-    "thumbnailUrl": "images/wikiproyecto-guadalajara.jpg",
+    "thumbnailUrl": "images/wikiproyecto-guadalajara.webp",
     "latLon": {
       "lat": 20.6751711,
       "lon": -103.34733
@@ -8009,7 +8010,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Huelva_(provincia)/participantes",
-    "thumbnailUrl": "images/wikiproyecto-huelva.jpg",
+    "thumbnailUrl": "images/wikiproyecto-huelva.webp",
     "latLon": {
       "lat": 37.2571454,
       "lon": -6.9495382
@@ -8026,7 +8027,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Ja%C3%A9n/participantes",
-    "thumbnailUrl": "images/wikiproyecto-jaen.jpg",
+    "thumbnailUrl": "images/wikiproyecto-jaen.webp",
     "latLon": {
       "lat": 37.7657753,
       "lon": -3.7893929
@@ -8043,7 +8044,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Le%C3%B3n/Participantes",
-    "thumbnailUrl": "images/wikiproyecto-leon.jpg",
+    "thumbnailUrl": "images/wikiproyecto-leon.webp",
     "latLon": {
       "lat": 21.121972,
       "lon": -101.6832
@@ -8060,7 +8061,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Valladolid#Participantes",
-    "thumbnailUrl": "images/wikiproyecto-valladolid.jpg",
+    "thumbnailUrl": "images/wikiproyecto-valladolid.webp",
     "latLon": {
       "lat": 41.6529421,
       "lon": -4.7283839
@@ -8093,7 +8094,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://wtmgdgmadrid.github.io/",
-    "thumbnailUrl": "images/women-techmakers-madrid.jpg",
+    "thumbnailUrl": "images/women-techmakers-madrid.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -8126,7 +8127,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.wonderhack.es/",
-    "thumbnailUrl": "images/wonderhack-event.jpg",
+    "thumbnailUrl": "images/wonderhack-event.webp",
     "latLon": {
       "lat": 40.2445707,
       "lon": -3.3144655
@@ -8143,7 +8144,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://wordcamp.org//",
-    "thumbnailUrl": "images/wordcamp.png",
+    "thumbnailUrl": "images/wordcamp.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -8160,7 +8161,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/WCAlhaurin",
-    "thumbnailUrl": "images/wordcamp-alhaurin-de-la-torre.jpg",
+    "thumbnailUrl": "images/wordcamp-alhaurin-de-la-torre.webp",
     "latLon": {
       "lat": 36.6683574,
       "lon": -4.5529671
@@ -8177,7 +8178,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://granada.wordcamp.org/",
-    "thumbnailUrl": "images/wordcamp-granada.jpg",
+    "thumbnailUrl": "images/wordcamp-granada.webp",
     "latLon": {
       "lat": 12.151965053,
       "lon": -61.659644959
@@ -8194,7 +8195,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://grinon.wordcamp.org/2024/",
-    "thumbnailUrl": "images/wordcamp-grinon.jpg",
+    "thumbnailUrl": "images/wordcamp-grinon.webp",
     "latLon": {
       "lat": 40.2142405,
       "lon": -3.8561918
@@ -8211,7 +8212,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://sevilla.wordcamp.org/2024/",
-    "thumbnailUrl": "images/wordcamp-sevilla.jpg",
+    "thumbnailUrl": "images/wordcamp-sevilla.webp",
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
@@ -8245,7 +8246,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpress-alicante/",
-    "thumbnailUrl": "images/wordpress-alicante.jpg",
+    "thumbnailUrl": "images/wordpress-alicante.webp",
     "latLon": {
       "lat": 38.34521,
       "lon": -0.4809945
@@ -8296,7 +8297,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpress-bilbao/",
-    "thumbnailUrl": "images/wordpress-bilbao.jpg",
+    "thumbnailUrl": "images/wordpress-bilbao.webp",
     "latLon": {
       "lat": 43.2569608,
       "lon": -2.9234602
@@ -8313,7 +8314,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpress-cartagena/",
-    "thumbnailUrl": "images/wordpress-cartagena.jpg",
+    "thumbnailUrl": "images/wordpress-cartagena.webp",
     "latLon": {
       "lat": 37.6057068,
       "lon": -0.9913063
@@ -8380,7 +8381,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://xn--wpcorua-9za.com/es/",
-    "thumbnailUrl": "images/wordpress-coruna.png",
+    "thumbnailUrl": "images/wordpress-coruna.webp",
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
@@ -8397,7 +8398,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://wpdenia.com/",
-    "thumbnailUrl": "images/wordpress-denia.png",
+    "thumbnailUrl": "images/wordpress-denia.webp",
     "latLon": {
       "lat": 38.8403996,
       "lon": 0.1086422
@@ -8431,7 +8432,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://wpgranada.es/",
-    "thumbnailUrl": "images/wordpress-granada.jpg",
+    "thumbnailUrl": "images/wordpress-granada.webp",
     "latLon": {
       "lat": 12.151965053,
       "lon": -61.659644959
@@ -8448,7 +8449,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpressgranollers/",
-    "thumbnailUrl": "images/wordpress-granollers.jpg",
+    "thumbnailUrl": "images/wordpress-granollers.webp",
     "latLon": {
       "lat": 41.6082321,
       "lon": 2.287809
@@ -8465,7 +8466,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpress-grinon/",
-    "thumbnailUrl": "images/wordpress-grinon.jpg",
+    "thumbnailUrl": "images/wordpress-grinon.webp",
     "latLon": {
       "lat": 40.2142405,
       "lon": -3.8561918
@@ -8482,7 +8483,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/huelva-wordpress-meetup/",
-    "thumbnailUrl": "images/wordpress-huelva.jpg",
+    "thumbnailUrl": "images/wordpress-huelva.webp",
     "latLon": {
       "lat": 37.2571454,
       "lon": -6.9495382
@@ -8516,7 +8517,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/leon-wordpress-meetup/",
-    "thumbnailUrl": "images/wordpress-leon.jpg",
+    "thumbnailUrl": "images/wordpress-leon.webp",
     "latLon": {
       "lat": 21.121972,
       "lon": -101.6832
@@ -8584,7 +8585,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/mallorca-wordpress-meetup/",
-    "thumbnailUrl": "images/ordpress-mallorca.avif",
+    "thumbnailUrl": "images/ordpress-mallorca.webp",
     "latLon": {
       "lat": 15.3736704,
       "lon": 120.9655765
@@ -8601,7 +8602,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpress-meetup-marbella/",
-    "thumbnailUrl": "images/wordpress-marbella.png",
+    "thumbnailUrl": "images/wordpress-marbella.webp",
     "latLon": {
       "lat": 36.5118318,
       "lon": -4.8822775
@@ -8618,7 +8619,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpress-mataro/",
-    "thumbnailUrl": "images/wordpress-mataro.jpg",
+    "thumbnailUrl": "images/wordpress-mataro.webp",
     "latLon": {
       "lat": 41.5375002,
       "lon": 2.4452776
@@ -8635,7 +8636,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://make.wordpress.org/community/meetups/",
-    "thumbnailUrl": "images/wordpress-meetup-groups.jpg",
+    "thumbnailUrl": "images/wordpress-meetup-groups.webp",
     "latLon": {
       "lat": 56.8946671,
       "lon": 14.8215526
@@ -8652,7 +8653,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpressourense/",
-    "thumbnailUrl": "images/wordpress-ourense.jpg",
+    "thumbnailUrl": "images/wordpress-ourense.webp",
     "latLon": {
       "lat": 42.3401174,
       "lon": -7.8646923
@@ -8669,7 +8670,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpress-oviedo/",
-    "thumbnailUrl": "images/wordpress-oviedo.jpg",
+    "thumbnailUrl": "images/wordpress-oviedo.webp",
     "latLon": {
       "lat": 43.3602825,
       "lon": -5.8447919
@@ -8703,7 +8704,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/pontevedra-wordpress-meetup/",
-    "thumbnailUrl": "images/wordpress-pontevedra.jpg",
+    "thumbnailUrl": "images/wordpress-pontevedra.webp",
     "latLon": {
       "lat": 42.433575,
       "lon": -8.6481143
@@ -8753,7 +8754,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://wpsevilla.org/",
-    "thumbnailUrl": "images/wordpress-sevilla.jpg",
+    "thumbnailUrl": "images/wordpress-sevilla.webp",
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
@@ -8836,7 +8837,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/tortosa-wordpress-meetup/",
-    "thumbnailUrl": "images/wordpress-tordosa.jpg",
+    "thumbnailUrl": "images/wordpress-tordosa.webp",
     "latLon": {
       "lat": 40.8110042,
       "lon": 0.5209974
@@ -8853,7 +8854,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/torrelodones-wordpress-meetup/",
-    "thumbnailUrl": "images/wordpress-torrelodones.jpg",
+    "thumbnailUrl": "images/wordpress-torrelodones.webp",
     "latLon": {
       "lat": 40.576519,
       "lon": -3.9294568
@@ -8870,7 +8871,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpress-valencia-meetup/",
-    "thumbnailUrl": "images/wordpress-valencia.jpg",
+    "thumbnailUrl": "images/wordpress-valencia.webp",
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
@@ -8887,7 +8888,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/valladolid-wordpress-meetup/",
-    "thumbnailUrl": "images/wordpress-valladolid.jpg",
+    "thumbnailUrl": "images/wordpress-valladolid.webp",
     "latLon": {
       "lat": 41.6529421,
       "lon": -4.7283839
@@ -8904,7 +8905,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/vigo-wordpress-meetup/",
-    "thumbnailUrl": "images/wordpress-vigo.jpg",
+    "thumbnailUrl": "images/wordpress-vigo.webp",
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
@@ -8938,7 +8939,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wpzaragoza/",
-    "thumbnailUrl": "images/wordpress-zaragoza.jpg",
+    "thumbnailUrl": "images/wordpress-zaragoza.webp",
     "latLon": {
       "lat": 41.656837,
       "lon": -0.8794245
@@ -8972,7 +8973,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://xantardev.org",
-    "thumbnailUrl": "images/xantardev.png",
+    "thumbnailUrl": "images/xantardev.webp",
     "latLon": {
       "lat": 42.8806228,
       "lon": -8.5466071
@@ -8989,7 +8990,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://xauendevs.io/",
-    "thumbnailUrl": "images/xauendevs.jpg",
+    "thumbnailUrl": "images/xauendevs.webp",
     "latLon": {
       "lat": 37.7657753,
       "lon": -3.7893929
@@ -9006,7 +9007,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://x.com/XopsConference",
-    "thumbnailUrl": "images/xops-conference.jpg",
+    "thumbnailUrl": "images/xops-conference.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -9023,7 +9024,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.r-users.gal/",
-    "thumbnailUrl": "images/xornada-de-usuarios-de-r-en-galicia.png",
+    "thumbnailUrl": "images/xornada-de-usuarios-de-r-en-galicia.webp",
     "latLon": {
       "lat": 42.8806228,
       "lon": -8.5466071
@@ -9040,7 +9041,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.yeswetech.org/",
-    "thumbnailUrl": "images/yes-we-tech.jpg",
+    "thumbnailUrl": "images/yes-we-tech.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -9057,7 +9058,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://aprocyt.github.io/zurracapoteconf//",
-    "thumbnailUrl": "images/zurracapoteconf.jpg",
+    "thumbnailUrl": "images/zurracapoteconf.webp",
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
@@ -9074,7 +9075,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://barcelonajug.org/",
-    "thumbnailUrl": "images/barcelona-java-user-group.jpg",
+    "thumbnailUrl": "images/barcelona-java-user-group.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -9091,7 +9092,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.jsconf.es/",
-    "thumbnailUrl": "images/jsconf.png",
+    "thumbnailUrl": "images/jsconf.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
@@ -9108,7 +9109,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://raiolanetworks.com/rmcgalicia/",
-    "thumbnailUrl": "images/rmc.jpg",
+    "thumbnailUrl": "images/rmc.webp",
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
@@ -9142,7 +9143,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.lareiraconf.es/",
-    "thumbnailUrl": "images/lareira-conf.jpg",
+    "thumbnailUrl": "images/lareira-conf.webp",
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
@@ -9176,7 +9177,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://gdg.community.dev/gdg-menorca/",
-    "thumbnailUrl": "images/gdg-menorca.jpg",
+    "thumbnailUrl": "images/gdg-menorca.webp",
     "latLon": {
       "lat": 39.8154,
       "lon": 4.2754
@@ -9193,7 +9194,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://gdgmenorca.dev/",
-    "thumbnailUrl": "images/stem-talks-menorca-2025.jpg",
+    "thumbnailUrl": "images/stem-talks-menorca-2025.webp",
     "latLon": {
       "lat": 39.8154,
       "lon": 4.2754
@@ -9227,7 +9228,7 @@
     "topics": "",
     "contactInfo": "pybcn@googlegroups.com",
     "communityUrl": "https://pybcn.org/",
-    "thumbnailUrl": "images/python-barcelona.jpg",
+    "thumbnailUrl": "images/python-barcelona.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -9244,7 +9245,7 @@
     "topics": "",
     "contactInfo": "pyladies-bcn@googlegroups.com",
     "communityUrl": "https://pybcn.org/pyladies_bcn/about/",
-    "thumbnailUrl": "images/pyladies-barcelona.jpg",
+    "thumbnailUrl": "images/pyladies-barcelona.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -9278,7 +9279,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://womentechmakersbcn.github.io/",
-    "thumbnailUrl": "images/women-techmakers-barcelona.jpg",
+    "thumbnailUrl": "images/women-techmakers-barcelona.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -9312,7 +9313,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/galstech/",
-    "thumbnailUrl": "images/galstech.jpg",
+    "thumbnailUrl": "images/galstech.webp",
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
@@ -9329,7 +9330,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/WordPressOurense/",
-    "thumbnailUrl": "images/wordpress-ourense.jpg",
+    "thumbnailUrl": "images/wordpress-ourense.webp",
     "latLon": {
       "lat": 42.3401174,
       "lon": -7.8646923
@@ -9346,7 +9347,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es/bitcoin-2140-a-coruna/",
-    "thumbnailUrl": "images/bitcoin-2140-a-coruna.jpg",
+    "thumbnailUrl": "images/bitcoin-2140-a-coruna.webp",
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
@@ -9379,7 +9380,7 @@
     "topics": "Python & Tech",
     "contactInfo": "bilbao@es.python.org",
     "communityUrl": "https://github.com/pythonbilbao",
-    "thumbnailUrl": "images/python-bilbao.png",
+    "thumbnailUrl": "images/python-bilbao.webp",
     "latLon": {
       "lat": 43.2569608,
       "lon": -2.9234602
@@ -9396,7 +9397,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://wecodefest.com/",
-    "thumbnailUrl": "images/wecodefest.png",
+    "thumbnailUrl": "images/wecodefest.webp",
     "latLon": {
       "lat": 41.6529421,
       "lon": -4.7283839

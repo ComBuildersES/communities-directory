@@ -42,7 +42,7 @@ export const facetedSearch = (data, indexInverso, filtros) => {
     return [];
   }
 
-  return data.filter((comunity) => IDsFiltrados.includes(comunity.ID));
+  return data.filter((comunity) => IDsFiltrados.includes(comunity.id));
 };
 
 export const searchFaceted = (data, inverseIndex, filters) => {
@@ -87,5 +87,5 @@ export const searchFaceted = (data, inverseIndex, filters) => {
     return [];
   }
 
-  return data.filter((comunity) => filteredIDs.has(comunity.ID));
+  return data.filter((comunity) => filteredIDs.has(comunity.id));
 };

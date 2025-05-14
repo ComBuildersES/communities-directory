@@ -3,11 +3,10 @@ export function Footer() {
     <footer className="mi-footer">
       <div className="content has-text-centered">
         <p>
-         Directorio de <strong>Comunidades Tech</strong> creado y mantenido con 💖 por&nbsp;
-          <a href="https://manuelsaezcarmona.netlify.app/" target="_blank">
-            Manuel Saez Carmona & colaboradores
+         Proyecto mantenido con 💖&nbsp;<a href="https://github.com/ComBuildersES/communities-directory" target="_blank">
+         por la comunidad
           </a>
-          &nbsp;| <a href="#">CONTRIBUTING.md</a>
+          &nbsp; | Código bajo <a href="https://github.com/ComBuildersES/communities-directory/#licencias">Apache License 2.0</a> & datos bajo <a href="https://github.com/ComBuildersES/communities-directory/#licencias">CC BY 4.0</a>
         </p>
       </div>
     </footer>

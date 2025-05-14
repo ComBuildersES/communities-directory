@@ -26,7 +26,7 @@ export function CommunitiesList() {
     <>
       <div className="communitieslist ">
         {communitiesFiltered.map((community) => (
-          <CommunityCard key={community.ID} community={community} />
+          <CommunityCard key={community.id} community={community} />
         ))}
       </div>
     </>
