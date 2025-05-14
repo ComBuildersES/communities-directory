@@ -3,15 +3,16 @@ import { TAG_EVENTS, TAG_TYPES } from "../constants";
 /* eslint-disable react/prop-types */
 export function CommunityCard({ community }) {
   const {
-    Comunidad: comunidad,
-    Estado: estado,
-    Última_revisión: revision,
-    Tipo_de_comunidad: tipo,
-    Tipo_de_eventos: tipoEvento,
-    "Localización habitual": localizacion,
-    Info_de_contacto: contacto,
-    URL_Comunidad: url,
-    Miniatura: miniatura,
+    name: comunidad,
+    status: estado,
+    lastReviewed: revision,
+    communityType: tipo,
+    eventFormat: tipoEvento,
+    location: localizacion,
+    contactInfo: contacto,
+    communityUrl: url,
+    thumbnailUrl: miniatura,
+    latLon: latLon
   } = community;
 
   const tagActiveClassName =

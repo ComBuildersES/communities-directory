@@ -10,7 +10,7 @@ export function Heading() {
   // const isButtonVisible = window.innerWidth > 678 ? "is-active" : "is-hidden";
 
   // clase para ocultar cuanto lo necesite is-hidden-desktop
-  console.log("numero", numberOFCommunities);
+  // console.log("numero", numberOFCommunities);
   return (
     <div>
       <div>
