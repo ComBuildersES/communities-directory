@@ -3,19 +3,90 @@
 [![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-Este proyecto tiene como objetivo identificar y visibilizar todas las comunidades existentes en España —tanto activas como inactivas— con la finalidad de facilitar que cualquier persona interesada en participar en iniciativas de comunidad pueda descubrir qué opciones existen y cuáles se ajustan a sus intereses.
+Este proyecto identifica y visibiliza comunidades tecnológicas en España (activas e inactivas) para que **cualquier persona interesada descubra fácilmente las opciones disponibles y encuentre las que se ajustan a sus intereses.**
 
-Además, servirá como punto de encuentro para quienes quiera involucrarse en la dinamización de una comunidad, permitiéndoles encontrar aquellas que buscan incorporar nuevas personas a sus equipos organizadores. También ayudará a reflejar qué comunidades ya están representadas en Community Builders.
+También actúa como punto de encuentro para quienes desean dinamizar comunidades, facilitando el contacto con aquellas que buscan nuevas personas en sus equipos organizadores.
+
+Además, muestra qué comunidades ya están representadas en **Community Builders**.
 
 ![comunidades-manu (1)](https://github.com/user-attachments/assets/a735a62a-9b48-463c-a48b-1aeb903beb14)
 ![mapa-de-comunidades-tecnicas (1)](https://github.com/user-attachments/assets/7c57b789-f8ff-4cbb-ae62-76ad7b5d3716)
 
+
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+## 📖 Índice
+
+- [¿Por qué este proyecto?](#%C2%BFpor-qu%C3%A9-este-proyecto)
+  - [Si quieres crear o ayudar en una comunidad](#si-quieres-crear-o-ayudar-en-una-comunidad)
+  - [Si estás buscando una comunidad en la que participar](#si-est%C3%A1s-buscando-una-comunidad-en-la-que-participar)
+  - [Para quienes impulsamos comunidad](#para-quienes-impulsamos-comunidad)
+- [Instalación y uso en local](#instalaci%C3%B3n-y-uso-en-local)
+- [Roadmap](#roadmap)
+- [Licencias](#licencias)
+- [Contribuir](#contribuir)
+- [Contributors](#contributors)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## ¿Por qué este proyecto?
+
+Este directorio puede ser útil en muchos escenarios:
+
+### Si quieres crear o ayudar en una comunidad
+
+- Te puede interesar unirte a una red con branding más fuerte o con un ecosistema más amplio.
+
+- Puede ayudar a coordinar fechas y evitar solapes en grandes eventos del ecosistema.
+
+- Puedes ver qué _organizaciones paraguas_ existen (como GDG, PyLadies, Cloud Native, ...) que ofrecen red de contactos, recursos, apoyo económico o simplemente *know-how*.
+        
+- Podrás encontrar comunidades con las que hacer sinergias o cocrear eventos.
+    
+- También te permite detectar comunidades que podrían reactivarse.
+
+### Si estás buscando una comunidad en la que participar
+
+- Es una forma rápida de descubrir comunidades (locales u online) que podrías haber pasado por alto.
+    
+- Útil si estás de viaje o te has mudado a otra ciudad y quieres encontrar comunidades allí.
+    
+- Pudiendo filtrar por ubicación y también por temática o tipo de actividad.
+
+### Para quienes impulsamos comunidad
+
+- Nos ayuda a tener una visión más global del ecosistema a nivel nacional.
+    
+- Nos permite conectar con comunidades actuales o antiguas, aprender de su experiencia.
+    
+- Podemos identificar personas interesadas en participar en encuentros presenciales de Community Builders.
+
 * Email thread: [Listado de comunidades](https://groups.google.com/u/1/g/community-builders-es/c/agm4LEFrZco)
-* Recursos:
-  * [Hoja de cálculo](https://docs.google.com/spreadsheets/d/18Rf0-3sREFosw__tQYaUmtzJNL3M-PLsm-HIqENf2Yw/edit?usp=sharing)
-  * [Interfaz web que consume la hoja de cálculo y ofrecer una mejor UX para explorar y filtrar]([url](https://combuilderses.github.io/communities-directory/dist/))
-  * Quién colaborar y cómo: Sentíos libres de añadir/actualizar lo que consideréis
-* Canal de Discord: #listado-de-comunidades (solo para miembros de Community Builders; ¿[cómo unirse](https://github.com/ComBuildersES#c%C3%B3mo-unirse-a-community-builders)?)
+
+## Instalación y uso en local
+
+Tan solo ejecuta:
+
+```
+git clone https://github.com/ComBuildersES/communities-directory.git
+cd communities-directory
+npm install
+```
+
+Y una vez hecho esto, puede arrancar el entorno de desarrollo con:
+
+`npm run dev`
+
+Esto iniciará la app en `http://localhost:5174/communities-directory/dist/`, donde podrás explorar el directorio interactivo.
+
+## Contribuir
+¿Te gustaría añadir una comunidad, mejorar datos existentes o proponer ideas?
+
+Consulta la guía de colaboración → CONTRIBUTING.md
+
+## Roadmap
+
+Echa un vistazo a los *[milestones](https://github.com/ComBuildersES/communities-directory/milestones)* e *[issues](https://github.com/ComBuildersES/communities-directory/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen)* del proyecto.
 
 ## Licencias
 
