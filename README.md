@@ -1,6 +1,6 @@
 # Communities directory
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Este proyecto tiene como objetivo identificar y visibilizar todas las comunidades existentes en España —tanto activas como inactivas— con la finalidad de facilitar que cualquier persona interesada en participar en iniciativas de comunidad pueda descubrir qué opciones existen y cuáles se ajustan a sus intereses.
