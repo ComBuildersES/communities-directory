@@ -1,12 +1,29 @@
 {
-  "projectName": "communities-directory",
-  "projectOwner": "ComBuildersES",
   "files": [
     "README.md"
   ],
+  "imageSize": 100,
+  "commit": false,
   "commitType": "docs",
   "commitConvention": "angular",
-  "contributorsPerLine": 7,
   "contributors": [
-]
+    {
+      "login": "manuelsaezcarmona",
+      "name": "Manuel Saez Carmona",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70754764?v=4",
+      "profile": "https://manuelsaezcarmona.netlify.app/",
+      "contributions": [
+        "code",
+        "research",
+        "maintenance",
+        "design"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "communities-directory",
+  "projectOwner": "ComBuildersES"
 }
