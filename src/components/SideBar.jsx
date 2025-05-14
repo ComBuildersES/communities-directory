@@ -16,49 +16,43 @@ export const Sidebar = () => {
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Tech Meetup</p>
-            <Switch name="Tipo_de_comunidad" value="Tech Meetup" />
+            <Switch name="communityType" value="Tech Meetup" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Conferencia</p>
-            <Switch name="Tipo_de_comunidad" value="Conferencia" />
+            <Switch name="communityType" value="Conferencia" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Grupo Colaborativo</p>
-            <Switch name="Tipo_de_comunidad" value="Grupo colaborativo" />
+            <Switch name="communityType" value="Grupo colaborativo" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Grupo de Ayuda Mutua</p>
-            <Switch name="Tipo_de_comunidad" value="Grupo de ayuda mutua" />
+            <Switch name="communityType" value="Grupo de ayuda mutua" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Hacklab</p>
-            <Switch name="Tipo_de_comunidad" value="Hacklab" />
-          </div>
-        </li>
-        <li className="menu-item">
-          <div className="option-item is-size-7">
-            <p>Hacklab</p>
-            <Switch name="Tipo_de_comunidad" value="Hacklab" />
+            <Switch name="communityType" value="Hacklab" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Organización paraguas</p>
-            <Switch name="Tipo_de_comunidad" value="Organización paraguas" />
+            <Switch name="communityType" value="Organización paraguas" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Meta comunidad</p>
-            <Switch name="Tipo_de_comunidad" value="Meta comunidad" />
+            <Switch name="communityType" value="Meta comunidad" />
           </div>
         </li>
       </ul>
@@ -68,25 +62,25 @@ export const Sidebar = () => {
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Híbridos</p>
-            <Switch name="Tipo_de_eventos" value="Híbridos" />
+            <Switch name="eventFormat" value="Híbridos" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Online</p>
-            <Switch name="Tipo_de_eventos" value="Online" />
+            <Switch name="eventFormat" value="Online" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Presencial</p>
-            <Switch name="Tipo_de_eventos" value="Presencial" />
+            <Switch name="eventFormat" value="Presencial" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Desconocidos</p>
-            <Switch name="Tipo_de_eventos" value="Desconocido" />
+            <Switch name="eventFormat" value="Desconocido" />
           </div>
         </li>
       </ul>
@@ -98,19 +92,19 @@ export const Sidebar = () => {
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Activa</p>
-            <Switch name="Estado" value="Activa" />
+            <Switch name="status" value="Activa" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Inactiva</p>
-            <Switch name="Estado" value="Inactiva" />
+            <Switch name="status" value="Inactiva" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
             <p>Desconocido</p>
-            <Switch name="Estado" value="Desconocido" />
+            <Switch name="status" value="Desconocido" />
           </div>
         </li>
       </ul>
