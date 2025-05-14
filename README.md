@@ -14,6 +14,12 @@ Además, servirá como punto de encuentro para quienes quiera involucrarse en la
   * Quién colaborar y cómo: Sentíos libres de añadir/actualizar lo que consideréis
 * Canal de Discord: #listado-de-comunidades (solo para miembros de Community Builders; ¿[cómo unirse](https://github.com/ComBuildersES#c%C3%B3mo-unirse-a-community-builders)?)
 
+## Licencias
+
+* El código fuente está disponible bajo la licencia [Apache 2.0](./LICENSE).
+* Los datos en el directorio `public/data/` están bajo la licencia [CC BY 4.0](./LICENSE.data).
+
+
 # Contribuir
 
  * [Raúl Jiménez](https://rauljimenez.info/) (Coordinación software y datos)
