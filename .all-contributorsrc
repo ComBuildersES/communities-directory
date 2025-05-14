@@ -18,6 +18,18 @@
         "maintenance",
         "design"
       ]
+    },
+    {
+      "login": "Aleixbs",
+      "name": "Aleix Batlle",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84009394?v=4",
+      "profile": "https://github.com/Aleixbs",
+      "contributions": [
+        "code",
+        "research",
+        "maintenance",
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
