@@ -1,0 +1,65 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitType": "docs",
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "manuelsaezcarmona",
+      "name": "Manuel Saez Carmona",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70754764?v=4",
+      "profile": "https://manuelsaezcarmona.netlify.app/",
+      "contributions": [
+        "code",
+        "research",
+        "maintenance",
+        "design"
+      ]
+    },
+    {
+      "login": "alvarogtrzcliment",
+      "name": "Álvaro Gutiérrez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/124072319?v=4",
+      "profile": "https://github.com/alvarogtrzcliment",
+      "contributions": [
+        "code",
+        "research",
+        "maintenance",
+        "design"
+      ]
+    },
+    {
+      "login": "Aleixbs",
+      "name": "Aleix Batlle",
+      "avatar_url": "https://avatars.githubusercontent.com/u/84009394?v=4",
+      "profile": "https://github.com/Aleixbs",
+      "contributions": [
+        "code",
+        "research",
+        "maintenance",
+        "design"
+      ]
+    },
+    {
+      "login": "hhkaos",
+      "name": "Raul Jimenez Ortega",
+      "avatar_url": "https://avatars.githubusercontent.com/u/826965?v=4",
+      "profile": "https://www.rauljimenez.info",
+      "contributions": [
+        "data",
+        "maintenance",
+        "projectManagement",
+        "ideas"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "communities-directory",
+  "projectOwner": "ComBuildersES"
+}

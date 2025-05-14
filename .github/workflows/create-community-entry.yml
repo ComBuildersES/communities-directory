@@ -36,8 +36,8 @@ jobs:
         uses: peter-evans/create-pull-request@v5
         with:
           add-paths: |
-            communities.json
-            images/
+            public/data/communities.json
+            public/images/
           commit-message: "Añadir nueva comunidad desde issue #${{ github.event.issue.number }}"
           branch: "add-community-${{ github.event.issue.number }}"
           title: "Propuesta: Añadir comunidad desde issue #${{ github.event.issue.number }}"
