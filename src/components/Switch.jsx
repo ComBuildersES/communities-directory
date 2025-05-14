@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 
-import "./Switch.css"; // Estilos personalizados
+import "./switch.css"; // Estilos personalizados
 import { useCommunityActions } from "../stores/community.store";
 import { bajaString } from "../constants";
 
