@@ -18,7 +18,7 @@ export const makeInverseIndex = (data) => {
         inverseIndex[clave][valor] = new Set();
       }
 
-      inverseIndex[clave][valor].add(registro.ID);
+      inverseIndex[clave][valor].add(registro.id);
     });
   });
 
@@ -40,7 +40,7 @@ export const buildInverseIndex = (data) => {
         inverseIndex[key][value] = new Set();
       }
 
-      inverseIndex[key][value].add(registro.ID);
+      inverseIndex[key][value].add(registro.id);
     });
   });
   /*   console.log(
