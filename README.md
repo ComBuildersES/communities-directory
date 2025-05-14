@@ -16,9 +16,10 @@ Además, servirá como punto de encuentro para quienes quiera involucrarse en la
 
 # Contribuir
 
- * [Raúl Jiménez](https://rauljimenez.info/) (Coordinación software y datos)
- * [Manuel Saez Carmona](https://www.linkedin.com/in/manuel-saez-carmona/) (Web UI)
- * [Aleix Batlle](https://www.linkedin.com/in/aleixbatllesureda/) (Map UI)
- * [Álvaro Gutiérrez](https://www.linkedin.com/in/%C3%A1lvaro-guti%C3%A9rrez-climent-94a840217/)  (Map UI)
-
 ¿Quieres unirte? -> [CONTRIBUTING.md](https://github.com/ComBuildersES/communities-directory/blob/master/CONTRIBUTING.md)
+
+## Contributors
+
+Reconocemos todo tipo de contribuciones. Este proyecto sigue la especificación de [all-contributors](https://github.com/all-contributors/all-contributors) y la [Emoji Key ✨](https://allcontributors.org/docs/en/emoji-key) para los tipos de contribución. 
+
+Las instrucciones para añadirte o añadir emojis de contribución a tu nombre están [aquí](https://github.com/ComBuildersES/communities-directory/issues/22). 
