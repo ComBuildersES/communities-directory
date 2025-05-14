@@ -17,13 +17,12 @@ Además, servirá como punto de encuentro para quienes quiera involucrarse en la
   * Quién colaborar y cómo: Sentíos libres de añadir/actualizar lo que consideréis
 * Canal de Discord: #listado-de-comunidades (solo para miembros de Community Builders; ¿[cómo unirse](https://github.com/ComBuildersES#c%C3%B3mo-unirse-a-community-builders)?)
 
-# Contribuir
+## Contribuir
 
 ¿Quieres unirte? -> [CONTRIBUTING.md](https://github.com/ComBuildersES/communities-directory/blob/master/CONTRIBUTING.md)
 
 ## Contributors
 
-Reconocemos todo tipo de contribuciones. Este proyecto sigue la especificación de [all-contributors](https://github.com/all-contributors/all-contributors) y la [Emoji Key ✨](https://allcontributors.org/docs/en/emoji-key) para los tipos de contribución. 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
@@ -40,4 +39,4 @@ Reconocemos todo tipo de contribuciones. Este proyecto sigue la especificación 
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-Las instrucciones para añadirte o añadir emojis de contribución a tu nombre están [aquí](https://github.com/ComBuildersES/communities-directory/issues/22). 
+Las instrucciones para añadirte o añadir emojis de contribución a tu nombre están [en este *issue*](https://github.com/ComBuildersES/communities-directory/issues/22). 
