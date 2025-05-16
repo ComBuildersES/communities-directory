@@ -51,6 +51,16 @@ body:
     validations:
       required: true
 
+  - type: dropdown
+    id: displayOnMap
+    attributes:
+      label: Mostrar en el mapa
+      options:
+        - Sí
+        - No
+    validations:
+      required: true
+
   - type: input
     id: location
     attributes:
