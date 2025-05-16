@@ -741,17 +741,12 @@ function Map () {
         name: "thumbnailUrl",
         alias: "thumbnailUrl",
         type: "string"
-      },
-      {
-        name: "latLon",
-        alias: "latLon",
-        type: "geometry"
       }
     ]
 
     const communityBuildersRenderer = {
       type: "unique-value",
-      field: "Tipo_de_comunidad",
+      field: "communityType",
       defaultSymbol: {
         type: "simple-marker",
         style: "circle",
@@ -810,7 +805,7 @@ function Map () {
     // Creacion del Pie Chart Renderer
 
     communityBuildersFl.when().then(() => {
-      generarConfiguracionCluster(communityBuildersFl, activeView.view).then(
+      generarConfiguracionCluster(communityBuildersFl, activeView).then(
         (featureReduction) => {
           communityBuildersFl.featureReduction = featureReduction;
         }
@@ -830,27 +825,6 @@ function Map () {
     })
 
   }, [activeView, provincesFeatures])
-
-  // function abrirPopupArcGIS (community, view, geometry) {
-  //   if (!popupRef.current) {
-  //     popupRef.current = new Popup({
-  //       view,
-  //       title: community.name,
-  //       content: `
-  //         <div style="text-align: center ">
-  //           <img src="${BASE_URL}/${community.thumbnailUrl}" style="width: 100%  max-width: 250px  border-radius: 10px " />
-  //           <p><a href="${community.communityUrl}" target="_blank" style="color: blue  text-decoration: underline ">Visit Website</a></p>
-  //         </div>
-  //       `
-  //     }) 
-
-  //     view.popup = popupRef.current 
-  //   }
-
-  //   popupRef.current.open({
-  //     location: geometry
-  //   }) 
-  // }
 
   function abrirPopupArcGIS (community, view, geometry) {
     if (!popupRef.current) {
@@ -915,14 +889,6 @@ function Map () {
     })
   }
 
-  function normalize (str) {
-    return str
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .toLowerCase()
-      .replace(/[^a-z\s]/g, "")
-  }
-
   function activeViewChange (activeViewEvent) {
     setActiveView(() => activeViewEvent.target.view)
   }
@@ -948,6 +914,7 @@ function Map () {
     renderer.holePercentage = 0.66;
 
     const fieldInfos = fields.map((field) => {
+      console.log(field)
       return {
         fieldName: field.name,
         label: field.alias,
@@ -962,6 +929,53 @@ function Map () {
       return field.fieldName;
     });
 
+    const tablaHtmlPopup = `<table style="width: 100%; font-family: sans-serif; font-size: 14px; border-collapse: collapse;">
+  <thead>
+    <tr>
+      <th style="text-align: left; padding: 6px; color: #ffff">Tipo</th>
+      <th style="text-align: right; padding: 6px; color: #ffff">Total</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding: 6px;">
+        <span style="display: inline-block; width: 10px; height: 10px; background-color: #09ff00; border-radius: 50%; margin-right: 6px;"></span>
+        Tech Meetup
+      </td>
+      <td style="padding: 6px; text-align: right;"><b>{SUM_Tech_Meetup}</b></td>
+    </tr>
+    <tr>
+      <td style="padding: 6px;">
+        <span style="display: inline-block; width: 10px; height: 10px; background-color: #00fff2; border-radius: 50%; margin-right: 6px;"></span>
+        Conferencia
+      </td>
+      <td style="padding: 6px; text-align: right;"><b>{SUM_Conferencia}</b></td>
+    </tr>
+    <tr>
+      <td style="padding: 6px;">
+        <span style="display: inline-block; width: 10px; height: 10px; background-color: #ddff00; border-radius: 50%; margin-right: 6px;"></span>
+        Grupo colaborativo
+      </td>
+      <td style="padding: 6px; text-align: right;"><b>{SUM_Grupo_colaborativo}</b></td>
+    </tr>
+    <tr>
+      <td style="padding: 6px;">
+        <span style="display: inline-block; width: 10px; height: 10px; background-color: #ff1100; border-radius: 50%; margin-right: 6px;"></span>
+        Hacklab
+      </td>
+      <td style="padding: 6px; text-align: right;"><b>{SUM_Hacklab}</b></td>
+    </tr>
+    <tr>
+      <td style="padding: 6px;">
+        <span style="display: inline-block; width: 10px; height: 10px; background-color: #cccccc; border-radius: 50%; margin-right: 6px;"></span>
+        Otro
+      </td>
+      <td style="padding: 6px; text-align: right;"><b>{SUM_Otro}</b></td>
+    </tr>
+  </tbody>
+</table>
+`
+
     const popupTemplate = {
       content: [
         {
@@ -972,7 +986,7 @@ function Map () {
           type: "media",
           mediaInfos: [
             {
-              title: "Tipo de comunidad",
+              // title: "Tipo de comunidad",
               type: "pie-chart",
               value: {
                 fields: fieldNames,
@@ -980,9 +994,13 @@ function Map () {
             },
           ],
         },
+        // {
+        //   type: "fields",
+        // },
         {
-          type: "fields",
-        },
+          type: "text",
+          text: tablaHtmlPopup
+        }
       ],
       fieldInfos,
     };
