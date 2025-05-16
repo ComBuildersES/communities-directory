@@ -33,7 +33,7 @@ jobs:
         run: node scripts/process-community-issue.js "$(cat issue-body.txt)"
       
       - name: Run process-to-communities-to-geojson script
-        run: node .github/scripts/process-to-communities-to-geojson.js
+        run: node /scripts/process-to-communities-to-geojson.js
 
       - name: Read generated coordinates
         id: coords
