@@ -9,9 +9,9 @@ function App() {
     <>
       <Heading />
       <div className="main">
-        {/* <CommunitiesList />
-        <Sidebar /> */}
-        <Map></Map>
+        <CommunitiesList />
+        <Sidebar /> 
+        {/* <Map></Map>*/}
       </div>
 
       <Footer />
