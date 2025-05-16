@@ -25,3 +25,5 @@ dist-ssr
 issue-body.txt
 .DS_Store
 .obsidian
+.geo
+issue-body-test.txt
