@@ -82,6 +82,9 @@ async function main() {
   }else{
     displayOnMap = false;
   }
+
+  fs.mkdirSync('.geo', { recursive: true });
+  fs.writeFileSync(path.join('.geo', 'last-coordinates.json'), JSON.stringify(latLon, null, 2));
   
 
   // Preparar imagen
