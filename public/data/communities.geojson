@@ -1468,8 +1468,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.456,
-          42.455672
+          -2.44998,
+          42.46569
         ]
       },
       "properties": {
@@ -2499,7 +2499,7 @@
         "type": "Point",
         "coordinates": [
           -4.024544270483665,
-          41.655298
+          39.85966175170025
         ]
       },
       "properties": {
@@ -2817,8 +2817,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.456,
-          42.455672
+          -2.44998,
+          42.46569
         ]
       },
       "properties": {
@@ -3071,8 +3071,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -3.1621,
-          40.632155
+          -3.929649,
+          38.984305
         ]
       },
       "properties": {
@@ -3197,8 +3197,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.456,
-          42.455672
+          -2.44998,
+          42.46569
         ]
       },
       "properties": {
@@ -3359,8 +3359,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -3.67975,
-          40.42972
+          -5.665434,
+          40.966674
         ]
       },
       "properties": {
@@ -5043,8 +5043,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -2.456,
-          42.455672
+          -2.44998,
+          42.46569
         ]
       },
       "properties": {
@@ -5250,8 +5250,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -3.67975,
-          40.42972
+          -5.665434,
+          40.966674
         ]
       },
       "properties": {
@@ -5493,8 +5493,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -3.67975,
-          40.42972
+          -5.665434,
+          40.966674
         ]
       },
       "properties": {
@@ -6133,25 +6133,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -7.8646923,
-          42.3401174
-        ]
-      },
-      "properties": {
-        "id": "516",
-        "name": "WordPress Ourense",
-        "status": "Desconocido",
-        "eventFormat": "Presencial",
-        "location": "Orense (Ourense)",
-        "communityUrl": "https://www.meetup.com/wordpressourense/",
-        "thumbnailUrl": "images/wordpress-ourense.webp"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -5.8447919,
           43.3602825
         ]
@@ -6266,7 +6247,7 @@
         "type": "Point",
         "coordinates": [
           -4.024544270483665,
-          41.655298
+          39.85966175170025
         ]
       },
       "properties": {
@@ -6776,25 +6757,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -4.7283839,
-          41.6529421
-        ]
-      },
-      "properties": {
-        "id": "560",
-        "name": "WeCodeFest",
-        "status": "Desconocido",
-        "eventFormat": "Presencial",
-        "location": "Valladolid",
-        "communityUrl": "https://wecodefest.com/",
-        "thumbnailUrl": "images/wecodefest.webp"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -3.7003454,
           40.4166909
         ]
@@ -6826,6 +6788,25 @@
         "location": "Valencia",
         "communityUrl": "https://www.meetup.com/es-ES/valencia-codes/",
         "thumbnailUrl": "images/valencia-codes.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7003454,
+          40.4166909
+        ]
+      },
+      "properties": {
+        "id": "563",
+        "name": "HaskellMAD",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "",
+        "communityUrl": "https://x.com/haskellMAD/",
+        "thumbnailUrl": "images/haskellmad.webp"
       }
     }
   ]
