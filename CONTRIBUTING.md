@@ -39,43 +39,46 @@ Hay muchas maneras de participar, tanto si sabes programar como si no. Aquí van
     - Avisar si ves errores, duplicados o datos desactualizados.
     - Sugerir nuevas categorías o campos útiles para describir mejor cada comunidad.
         
-2. **Mejorar el código o la web** [`💻 code`, `🎨 design`, `⚠️ test`, ♿️ `a11y`, `👀 review`, `🧑‍🏫 mentoring`]
-    - Frontend (React), estilos, navegación o UX.
-    - Accesibilidad (`a11y`), experiencia en revisión de código o mentoring.
+1. **Mejorar el código o la web** [`💻 code`, `🎨 design`, `⚠️ test`, ♿️ `a11y`, `👀 review`, `🧑‍🏫 mentoring`]
+    - Frontend, estilos.
+    - Accesibilidad (`a11y`), navegación o UX, ...
+    - Arreglar bugs.
     - Escribir y mejorar tests.
-    - Probar la interfaz, detectar errores o problemas de usabilidad.
+    - Revisar de código.
+    - Mentorizar a otras personas que contribuyen.
         
-3. **Mejorar la documentación** [`📖 doc`]
-    - Redactar o aclarar guías como esta.
-    - Añadir ejemplos, capturas, referencias o esquemas.
-        
-4. **Ayudar a gestionar el proyecto** [`📆 projectManagement`]
-    - Definir roadmap y priorizar tareas.     
-    - Organizar issues y milestones.
-    - Identificar mejoras transversales.
-        
-5. **Internacionalizar el proyecto** [`🌍 translation`]
-    - Traducir la interfaz o documentación.
-    - Preparar el terreno para ampliar a otros países.
-    - Adaptar el lenguaje para una comunidad global.
-        
-6. **Dar visibilidad al proyecto** [`📣 promotion`, `📹 video`, `📝 blog`, `📢 talk`, `🔊 🔊`]
+1. **Proponer ideas de mejora** [`🤔 ideas`]
+    - Pensar en formas de darle más visibilidad al proyecto.
+    - Nuevas funcionalidades o formas de explorar comunidades.
+    - Proponer cambios en el flujo de contribución o [automatismos](#automatismos).                
+
+1. **Participar en conversaciones y debates** [`🗣️ talk`]
+    - Preguntar, responder dudas, aportar experiencia o comentar propuestas en los _issues_.
+
+1. **Dar visibilidad al proyecto** [`📣 promotion`, `📹 video`, `📝 blog`, `📢 talk`, `🔊 🔊`]
     - Escribir artículos, grabar vídeos, hacer charlas o podcasts.
     - Mencionar el proyecto en comunidades o redes.
     - Organizar o participar en eventos.
-        
-7. **Proponer ideas de mejora** [`🤔 ideas`]
-    - Pensar en formas de darle más visibilidad al proyecto.
-    - Nuevas funcionalidades o formas de explorar comunidades.
-    - Proponer cambios en el flujo de contribución o [automatismos](#automatismos).
-        
-8. **Reportar errores o bugs** [`🐛 bug`]
+
+1. **Mejorar la documentación** [`📖 doc`]
+    - Redactar o aclarar guías como esta.
+    - Añadir ejemplos, capturas, referencias o esquemas.
+
+1. **Reportar errores o bugs** [`🐛 bug`]
     - Ya sea en la web, en el fichero JSON o en los flujos automáticos.
         
-9. **Participar en conversaciones y debates** [`🗣️ talk`]
-    - Preguntar, responder dudas, aportar experiencia o comentar propuestas en los _issues_.
+1. **Ayudar a gestionar el proyecto** [`📆 projectManagement`]
+    - Definir roadmap y priorizar tareas.     
+    - Organizar issues y milestones.
+    - Identificar mejoras transversales.
+
+1. **Internacionalizar el proyecto** [`🌍 translation`]
+    - Traducir la interfaz o documentación.
+    - Preparar el terreno para ampliar a otros países.
+    - Adaptar el lenguaje para una comunidad global.
     
 ---
+
 ## Revisión y mejora de datos
 
 > *Es la forma más sencilla de empezar a contribuir, y sin necesidad de conocimientos técnicos.*
