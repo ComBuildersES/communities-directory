@@ -9999,5 +9999,23 @@
       "lon": -3.7035825
     },
     "displayOnMap": true
+  },
+  {
+    "id": 563,
+    "name": "Beers Storming",
+    "status": "Activa",
+    "lastReviewed": "16/5/2025",
+    "communityType": "Tech Meetup",
+    "eventFormat": "Presencial",
+    "location": "Madrid",
+    "topics": "",
+    "contactInfo": "",
+    "communityUrl": "https://www.linkedin.com/company/beersstorming/",
+    "thumbnailUrl": "images/beers-storming.webp",
+    "latLon": {
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   }
 ]
