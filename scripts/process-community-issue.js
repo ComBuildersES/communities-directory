@@ -108,7 +108,7 @@ async function main() {
 
   // Crear nuevo objeto
   const newCommunity = {
-    id: newId.toString(),
+    id: newId,
     name,
     status,
     lastReviewed,
