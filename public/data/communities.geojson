@@ -6808,6 +6808,25 @@
         "communityUrl": "https://x.com/haskellMAD/",
         "thumbnailUrl": "images/haskellmad.webp"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7035825,
+          40.4167047
+        ]
+      },
+      "properties": {
+        "id": "562",
+        "name": "Merge Madrid",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Madrid",
+        "communityUrl": "https://www.mmerge.io/",
+        "thumbnailUrl": "images/merge-madrid.webp"
+      }
     }
   ]
 }
