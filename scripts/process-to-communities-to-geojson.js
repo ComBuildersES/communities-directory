@@ -2,8 +2,8 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-const inputPath = path.resolve('../public/data/communities.json');
-const outputPath = path.resolve('../public/data/communities.geojson');
+const inputPath = path.resolve('public/data/communities.json');
+const outputPath = path.resolve('public/data/communities.geojson');
 
 async function generateGeoJSON() {
   try {
