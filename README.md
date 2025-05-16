@@ -17,10 +17,7 @@ Además, muestra qué comunidades ya están representadas en **Community Builder
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## 📖 Índice
 
-- [¿Por qué este proyecto?](#%C2%BFpor-qu%C3%A9-este-proyecto)
-  - [Si quieres crear o ayudar en una comunidad](#si-quieres-crear-o-ayudar-en-una-comunidad)
-  - [Si estás buscando una comunidad en la que participar](#si-est%C3%A1s-buscando-una-comunidad-en-la-que-participar)
-  - [Para quienes impulsamos comunidad](#para-quienes-impulsamos-comunidad)
+- [¿Por qué este proyecto?](#por-qué-este-proyecto)
 - [Instalación y uso en local](#instalaci%C3%B3n-y-uso-en-local)
 - [Roadmap](#roadmap)
 - [Licencias](#licencias)
@@ -29,39 +26,28 @@ Además, muestra qué comunidades ya están representadas en **Community Builder
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-## ¿Por qué este proyecto?
+## Por qué este proyecto
 
 Este directorio puede ser útil en muchos escenarios:
 
-### Si quieres crear o ayudar en una comunidad
-
+**Si quieres crear o ayudar en una comunidad**:
 - Te puede interesar unirte a una red con branding más fuerte o con un ecosistema más amplio.
-
 - Puede ayudar a coordinar fechas y evitar solapes en grandes eventos del ecosistema.
-
 - Puedes ver qué _organizaciones paraguas_ existen (como GDG, PyLadies, Cloud Native, ...) que ofrecen red de contactos, recursos, apoyo económico o simplemente *know-how*.
-        
 - Podrás encontrar comunidades con las que hacer sinergias o cocrear eventos.
-    
 - También te permite detectar comunidades que podrían reactivarse.
 
-### Si estás buscando una comunidad en la que participar
-
+**Si estás buscando una comunidad en la que participar**:
 - Es una forma rápida de descubrir comunidades (locales u online) que podrías haber pasado por alto.
-    
 - Útil si estás de viaje o te has mudado a otra ciudad y quieres encontrar comunidades allí.
-    
 - Pudiendo filtrar por ubicación y también por temática o tipo de actividad.
 
-### Para quienes impulsamos comunidad
-
+**Para quienes impulsamos comunidad**:
 - Nos ayuda a tener una visión más global del ecosistema a nivel nacional.
-    
 - Nos permite conectar con comunidades actuales o antiguas, aprender de su experiencia.
-    
 - Podemos identificar personas interesadas en participar en encuentros presenciales de Community Builders.
 
-* Email thread: [Listado de comunidades](https://groups.google.com/u/1/g/community-builders-es/c/agm4LEFrZco)
+> **Nota**: Puedes ver el hilo de correos donde explicamos el por qué del proyecto oficialmente por primera vez: [Listado de comunidades](https://groups.google.com/u/1/g/community-builders-es/c/agm4LEFrZco)
 
 ## Instalación y uso en local
 
