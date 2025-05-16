@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Communities Map with MarkerCluster</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <!-- MarkerCluster CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+
+  <style>
+    #map { height: 100vh; }
+    .custom-icon-img {
+      width: 40px !important;
+      height: 40px !important;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+      box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+  <div id="map"></div>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- MarkerCluster JS -->
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+
+  <script>
+    // Create map
+    const map = L.map('map').setView([40.0, -3.5], 5); // Centered over Spain
+
+    // Add OpenStreetMap tile layer
+    L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png', {
+      	attribution: '&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+
+    }).addTo(map);
+
+    // MarkerCluster group
+    const markers = L.markerClusterGroup();
+
+    // Load GeoJSON
+    fetch('../data/communities.geojson')
+      .then(res => res.json())
+      .then(data => {
+        const geoJsonLayer = L.geoJSON(data, {
+          pointToLayer: (feature, latlng) => {
+            console.log("feature.properties.thumbnailUrl=",feature.properties.thumbnailUrl);
+            const thumbnailUrl  = feature.properties.thumbnailUrl? `https://combuilderses.github.io/communities-directory/${feature.properties.thumbnailUrl}`: "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg";
+            const iconHtml = `<img src="${thumbnailUrl}" class="custom-icon-img"/>`;
+            const customIcon = L.divIcon({
+              html: iconHtml,
+              className: '',
+              iconSize: [40, 40],
+              popupAnchor: [0, -20]
+            });
+            return L.marker(latlng, { icon: customIcon });
+          },
+          onEachFeature: (feature, layer) => {
+            const props = feature.properties;
+            const popupContent = `
+              <strong>${props.name}</strong><br>
+              ${props.location || ''}<br>
+              ${props.description || ''}
+            `;
+            layer.bindPopup(popupContent);
+          }
+        });
+
+        markers.addLayer(geoJsonLayer);
+        map.addLayer(markers);
+        map.fitBounds(markers.getBounds());
+      })
+      .catch(err => console.error('Error loading GeoJSON:', err));
+  </script>
+</body>
+</html>
