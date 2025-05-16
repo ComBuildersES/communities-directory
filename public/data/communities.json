@@ -9981,5 +9981,23 @@
       "lon": -3.7003454
     },
     "displayOnMap": true
+  },
+  {
+    "id": "562",
+    "name": "Merge Madrid",
+    "status": "Activa",
+    "lastReviewed": "16/5/2025",
+    "communityType": "Tech Meetup",
+    "eventFormat": "Presencial",
+    "location": "",
+    "topics": "Web3",
+    "contactInfo": "",
+    "communityUrl": "https://www.mmerge.io/",
+    "thumbnailUrl": "images/merge-madrid.webp",
+    "latLon": {
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": true
   }
 ]
