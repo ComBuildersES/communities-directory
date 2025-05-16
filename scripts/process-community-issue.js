@@ -34,7 +34,7 @@ async function main() {
   const communityType = extractField('Tipo de comunidad');
   const eventFormat = extractField('Formato');
   let displayOnMap = extractField('Mostrar en el mapa');
-  const location = extractField('Ciudad o región principal (si aplica)');
+  const location = extractField('Ciudad o región principal');
   const topics = extractField('Temas que trata', true);
   const contactInfo = extractField('Correo de contacto (público)');
   const communityUrl = extractField('URL principal de la comunidad');
@@ -66,8 +66,10 @@ async function main() {
 
   // Calcular latLon si procede
   let latLon = { lat: null, lon: null };
+  console.log("displayOnMap=",displayOnMap);
   if(displayOnMap === "Sí"){
     displayOnMap = true;
+    console.log(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(location)}`)
     // Coordenadas desde Nominatim
     const geoRes = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(location)}`, {
       headers: {

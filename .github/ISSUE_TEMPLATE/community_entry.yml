@@ -64,7 +64,7 @@ body:
   - type: input
     id: location
     attributes:
-      label: Ciudad o región principal (si aplica)
+      label: Ciudad o región principal
       placeholder: "Ejemplo: Madrid"
     validations:
       required: false
