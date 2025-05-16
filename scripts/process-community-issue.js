@@ -75,6 +75,9 @@ async function main() {
     lon: parseFloat(geoData[0].lon)
   } : { lat: null, lon: null };
 
+  fs.mkdirSync('.geo', { recursive: true });
+  fs.writeFileSync(path.join('.geo', 'last-coordinates.json'), JSON.stringify(data, null, 2));
+
   // Preparar imagen
   if (!fs.existsSync(imagesFolder)) {
     fs.mkdirSync(imagesFolder, { recursive: true });
