@@ -11,6 +11,8 @@ import Popup from "@arcgis/core/widgets/Popup"
 import * as clusterLabelCreator from "@arcgis/core/smartMapping/labels/clusters.js";
 import * as pieChartRendererCreator from "@arcgis/core/smartMapping/renderers/pieChart.js";
 import { useCommunitiesFiltered } from "../../stores/community.store";
+// import { MapCard } from "../MapCard.jsx"
+import { CommunityCard } from "../CommunityCard.jsx"
 
 const BASE_URL = import.meta.env.BASE_URL
 
@@ -27,11 +29,19 @@ function Map () {
   const [activeView, setActiveView] = useState(null)
   const [provincesFeatures, setProvincesFeatures] = useState([])
   const [provincesCenter, setProvincesCenter] = useState()
+  const [visibleCommunities, setVisibleCommunities] = useState([]);
+
   const popupRef = useRef(null)
   const communityLayerRef = useRef(null);
 
 
-  const communities = useCommunitiesFiltered();
+  const communities = useCommunitiesFiltered().filter((community) => {
+
+    let comunidad = community.displayOnMap ? <CommunityCard key={community.id} community={community} /> : null
+
+    return comunidad
+  });
+
 
   // Setup Effect for the Provinces Feature Layer
   useEffect(() => {
@@ -386,15 +396,60 @@ function Map () {
     };
   }
 
+  useEffect(() => {
+    if (!activeView) return;
+
+    const handleExtentChange = () => {
+      const extent = activeView.extent;
+
+      const visible = communities
+        .filter(c => {
+          const { lon, lat } = c.latLon;
+          return extent.contains(new Point({ latitude: lat, longitude: lon }));
+        });
+
+      setVisibleCommunities(visible);
+    };
+
+    // Initial run
+    handleExtentChange();
+
+    // React to panning/zooming
+    const handle = activeView.watch("extent", handleExtentChange);
+
+    return () => {
+      handle.remove();
+    };
+  }, [activeView]);
+
+
   return (
-    <>
+    <div style={{ display: "flex", flexDirection: "column" }}>
       <arcgis-map
-        basemap="dark-gray"
+        basemap="gray"
         center="-4, 40"
         zoom="4"
         onarcgisViewReadyChange={activeViewChange}
       ></arcgis-map>
-    </>
+      <div className="communitieslist">
+
+        {/* {communities.map((community) => {
+
+          let comunidad = community.displayOnMap ? <CommunityCard key={community.id} community={community} /> : null
+
+          return comunidad
+        })} */}
+
+
+        {visibleCommunities.map((community) => (
+          <CommunityCard key={community.id} community={community} />
+        ))}
+
+
+
+
+      </div>
+    </div>
   )
 }
 

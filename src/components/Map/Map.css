@@ -4,6 +4,8 @@
 
 arcgis-map {
   /* Modificar para que entre correctamente en el div, Hablar con Manu para ver como lo quiere implementar */
-  height: calc(100vh - 35vh);
+  height: calc(100vh - 60vh);
   width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
 }
