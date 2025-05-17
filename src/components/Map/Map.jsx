@@ -203,7 +203,7 @@ function Map () {
         outFields: ["*"],
       }).then((queryResult) => {
         const featureSetResults = queryResult.features;
-        console.log(featureSetResults);
+        // console.log(featureSetResults);
       });
     });
 
@@ -299,7 +299,7 @@ function Map () {
     renderer.holePercentage = 0.66;
 
     const fieldInfos = fields.map((field) => {
-      console.log(field)
+      // console.log(field)
       return {
         fieldName: field.name,
         label: field.alias,
@@ -466,7 +466,7 @@ function Map () {
 
 
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
+    <div id="map" style={{ display: "flex", flexDirection: "column" }}>
       <arcgis-map
         basemap="gray"
         center="-4, 40"

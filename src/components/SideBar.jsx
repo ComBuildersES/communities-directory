@@ -7,7 +7,7 @@ export const Sidebar = () => {
 
   return (
     <aside
-      className={`sidebar menu column is-3 box ${
+      className={`sidebar menu column is-2 box sticky ${
         isSidebarVisible ? "is-active" : "is-hidden"
       }`}
     >

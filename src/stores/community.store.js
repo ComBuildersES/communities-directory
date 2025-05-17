@@ -21,6 +21,7 @@ const initialState = {
   error: null, // Estado para manejar errores
   filters: {}, // Estado para los filtros
   numberOFCommunities: 0, // Estado para el numero de comunidades
+  numberOFOnSiteCommunities: 0 // Estado para el numero de com. presenciales
 };
 
 // Define el store Zustand
@@ -39,6 +40,7 @@ const useCommunityStore = create(
             communitiesFiltered: data,
             isLoading: false,
             numberOFCommunities: data.length,
+            numberOFOnSiteCommunities: data.filter(e => e.displayOnMap == true).length
           }); // Guarda los datos en el estado
         } catch (error) {
           set({ error: error.message, isLoading: false }); // Maneja el error
@@ -58,6 +60,7 @@ const useCommunityStore = create(
           communitiesFiltered: communitiesWithNewFilters,
           filters: newFilters,
           numberOFCommunities: communitiesWithNewFilters.length,
+          numberOFOnSiteCommunities: communitiesWithNewFilters.filter(e => e.displayOnMap == true).length
         });
       },
     },
@@ -81,10 +84,10 @@ const updateFilter = (filters, key, value) => {
       return updatedFilters;
     } else {
       // devolvemos los filtros con el array con el valor actualizado
-      console.log({
-        ...filters,
-        [key]: updatevaluesbyKey,
-      });
+      // console.log({
+      //   ...filters,
+      //   [key]: updatevaluesbyKey,
+      // });
       return {
         ...filters,
         [key]: updatevaluesbyKey,
@@ -104,10 +107,10 @@ const updateFilter = (filters, key, value) => {
 
   // devolvemos los filtros con el array con el valor actualizado
 
-  console.log({
-    ...filters,
-    [key]: combinedValues,
-  });
+  // console.log({
+  //   ...filters,
+  //   [key]: combinedValues,
+  // });
   return {
     ...filters,
     [key]: combinedValues,
@@ -133,6 +136,9 @@ export const useFilters = () => useCommunityStore((state) => state.filters);
 
 export const useNumberOfCommunities = () =>
   useCommunityStore((state) => state.numberOFCommunities);
+
+export const useNumberOFOnSiteCommunities = () =>
+  useCommunityStore((state) => state.numberOFOnSiteCommunities);
 
 // Selector de las acciones
 
