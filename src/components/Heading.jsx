@@ -59,9 +59,10 @@ export function Heading ({ view, toggleView }) {
 
         {/* Botón para cambiar vista */}
         <ViewToggleButton view={view} toggleView={toggleView} />
+        <div style={{ padding: '10px' }}>Resultados: {numberOFCommunities} comunidades</div>
       </div>
 
-      <div>Resultados: {numberOFCommunities} comunidades</div>
+
     </div>
   );
 }
