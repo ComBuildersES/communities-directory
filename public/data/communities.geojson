@@ -277,6 +277,7 @@
         ]
       },
       "properties": {
+<<<<<<< HEAD
         "id": 27,
         "name": "Angular Madrid",
         "status": "Inactiva",
@@ -315,6 +316,8 @@
         ]
       },
       "properties": {
+=======
+>>>>>>> e2971278dba4d88f0b823a05be5c458ed7ee53a4
         "id": 30,
         "name": "APIAddictsDays",
         "status": "Activa",
@@ -1530,6 +1533,7 @@
         ]
       },
       "properties": {
+<<<<<<< HEAD
         "id": 114,
         "name": "CorunaEvents",
         "status": "Activa",
@@ -1549,6 +1553,8 @@
         ]
       },
       "properties": {
+=======
+>>>>>>> e2971278dba4d88f0b823a05be5c458ed7ee53a4
         "id": 115,
         "name": "CoruñaJUG",
         "status": "Inactiva",
@@ -3647,6 +3653,7 @@
         ]
       },
       "properties": {
+<<<<<<< HEAD
         "id": 248,
         "name": "HackMadrid %27",
         "status": "Activa",
@@ -3666,6 +3673,8 @@
         ]
       },
       "properties": {
+=======
+>>>>>>> e2971278dba4d88f0b823a05be5c458ed7ee53a4
         "id": 249,
         "name": "HBSCON",
         "status": "Activa",
@@ -5076,6 +5085,7 @@
         ]
       },
       "properties": {
+<<<<<<< HEAD
         "id": 332,
         "name": "Madrid Tech Talks",
         "status": "Activa",
@@ -5095,6 +5105,8 @@
         ]
       },
       "properties": {
+=======
+>>>>>>> e2971278dba4d88f0b823a05be5c458ed7ee53a4
         "id": 333,
         "name": "Madrid-Groovy User Group (GUG)",
         "status": "Activa",
@@ -7291,6 +7303,7 @@
         ]
       },
       "properties": {
+<<<<<<< HEAD
         "id": 482,
         "name": "Women in DevOps Madrid",
         "status": "Inactiva",
@@ -7309,6 +7322,8 @@
         ]
       },
       "properties": {
+=======
+>>>>>>> e2971278dba4d88f0b823a05be5c458ed7ee53a4
         "id": 483,
         "name": "Women Techmakers Madrid",
         "status": "Activa",
@@ -8755,6 +8770,25 @@
         "location": "Madrid",
         "communityUrl": "https://www.mmerge.io/",
         "thumbnailUrl": "images/merge-madrid.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7035825,
+          40.4167047
+        ]
+      },
+      "properties": {
+        "id": 563,
+        "name": "Beers Storming",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Madrid",
+        "communityUrl": "https://www.linkedin.com/company/beersstorming/",
+        "thumbnailUrl": "images/beers-storming.webp"
       }
     }
   ]
