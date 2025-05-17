@@ -1,4 +1,4 @@
-
+import { useMemo } from 'react'
 
 // ArcGIS SDK Imports
 import '@arcgis/map-components/dist/components/arcgis-map'
@@ -35,12 +35,18 @@ function Map () {
   const communityLayerRef = useRef(null);
 
 
-  const communities = useCommunitiesFiltered().filter((community) => {
+  {/* <  const communities = useCommunitiesFiltered().filter((community) => {
 
     let comunidad = community.displayOnMap ? <CommunityCard key={community.id} community={community} /> : null
 
     return comunidad
-  });
+  });> */}
+  const rawCommunities = useCommunitiesFiltered(); // already filtered by sidebar
+  const communities = useMemo(() => {
+    return rawCommunities.filter(c => c.displayOnMap);
+  }, [rawCommunities]);
+
+
 
 
   // Setup Effect for the Provinces Feature Layer
@@ -396,31 +402,67 @@ function Map () {
     };
   }
 
+  // useEffect(() => {
+  //   if (!activeView) return;
+
+  //   const handleExtentChange = () => {
+  //     const extent = activeView.extent;
+
+  //     const filteredCommunities = communities//useCommunitiesFiltered(); // sidebar filtered ones
+
+  //     const visible = filteredCommunities.filter((c) => {
+  //       const { lon, lat } = c.latLon;
+  //       return extent.contains(new Point({ latitude: lat, longitude: lon }));
+  //     });
+
+  //     setVisibleCommunities(visible);
+
+
+  //   };
+
+  //   // Initial run
+  //   handleExtentChange();
+
+  //   // React to panning/zooming
+  //   const handle = activeView.watch("extent", handleExtentChange);
+
+  //   return () => {
+  //     handle.remove();
+  //   };
+  // }, [activeView, communities]);
+
   useEffect(() => {
     if (!activeView) return;
 
-    const handleExtentChange = () => {
-      const extent = activeView.extent;
+    let rafId;
 
-      const visible = communities
-        .filter(c => {
+    const handleExtentChange = () => {
+      if (rafId) return;
+
+      rafId = requestAnimationFrame(() => {
+        rafId = null;
+
+        const extent = activeView.extent;
+        const visible = communities.filter((c) => {
           const { lon, lat } = c.latLon;
           return extent.contains(new Point({ latitude: lat, longitude: lon }));
         });
 
-      setVisibleCommunities(visible);
+        setVisibleCommunities(visible);
+      });
     };
 
-    // Initial run
+    // Initial filter run
     handleExtentChange();
 
-    // React to panning/zooming
+    // Listen to extent changes
     const handle = activeView.watch("extent", handleExtentChange);
 
     return () => {
       handle.remove();
+      cancelAnimationFrame(rafId);
     };
-  }, [activeView]);
+  }, [activeView, communities]);
 
 
   return (
@@ -441,10 +483,12 @@ function Map () {
         })} */}
 
 
+        {/* {communities.map((community) => (
+          <CommunityCard key={community.id} community={community} />
+        ))} */}
         {visibleCommunities.map((community) => (
           <CommunityCard key={community.id} community={community} />
         ))}
-
 
 
 
