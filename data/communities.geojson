@@ -63,6 +63,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 7,
+        "name": "AdaBcnJs",
+        "status": "Desconocido",
+        "eventFormat": "Desconocido",
+        "location": "Barcelona",
+        "communityUrl": "https://www.meetup.com/adabcnjs/",
+        "thumbnailUrl": "images/adabcnjs.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -0.8794245,
           41.656837
         ]
@@ -113,6 +132,63 @@
         "location": "Vigo",
         "communityUrl": "https://twitter.com/agilevigo",
         "thumbnailUrl": "images/agilevigo.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 20,
+        "name": "AiBirras",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://aibirras.org/",
+        "thumbnailUrl": "images/aibirras.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 21,
+        "name": "AKASHA Hub",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://akasha.barcelona/",
+        "thumbnailUrl": "images/akasha-hub.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 22,
+        "name": "Alhambra Hub",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://alhambrahub.es/",
+        "thumbnailUrl": "images/alhambra-hub.webp"
       }
     },
     {
@@ -201,6 +277,47 @@
         ]
       },
       "properties": {
+<<<<<<< HEAD
+        "id": 27,
+        "name": "Angular Madrid",
+        "status": "Inactiva",
+        "eventFormat": "Desconocido",
+        "location": "Madrid",
+        "communityUrl": "https://www.meetup.com/es-ES/angular_madrid/",
+        "thumbnailUrl": "images/angular-madrid.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -4.4200007,
+          36.7196292
+        ]
+      },
+      "properties": {
+        "id": 28,
+        "name": "Angular Málaga",
+        "status": "Activa",
+        "eventFormat": "Desconocido",
+        "location": "Málaga",
+        "communityUrl": "https://www.meetup.com/es-ES/angular-malaga/",
+        "thumbnailUrl": "images/angular-malaga.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7003454,
+          40.4166909
+        ]
+      },
+      "properties": {
+=======
+>>>>>>> e2971278dba4d88f0b823a05be5c458ed7ee53a4
         "id": 30,
         "name": "APIAddictsDays",
         "status": "Activa",
@@ -303,6 +420,25 @@
         "location": "Albacete",
         "communityUrl": "https://www.meetup.com/es-ES/asociacion-de-usuarios-de-r-de-castilla-la-mancha/",
         "thumbnailUrl": "images/asociacion-de-usuarios-de-r-de-castilla-la-mancha.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 37,
+        "name": "Asociación de Webmasters de Granada",
+        "status": "Inactiva",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://x.com/webgranada",
+        "thumbnailUrl": "images/asociacion-de-webmasters-de-granada.webp"
       }
     },
     {
@@ -481,6 +617,43 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 54,
+        "name": "Barcelona Android Developer Group",
+        "status": "Inactiva",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://www.meetup.com/es-ES/barcelona-android-dev-group"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 55,
+        "name": "Barcelona R User Group",
+        "status": "Desconocido",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://www.meetup.com/BarcelonaR/",
+        "thumbnailUrl": "images/barcelona-r-user-group.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -7.910665567756,
           42.756588768824
         ]
@@ -595,6 +768,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -8.7124252,
+          42.2313601
+        ]
+      },
+      "properties": {
+        "id": 65,
+        "name": "Blockchain.gal Vigo",
+        "status": "Inactiva",
+        "eventFormat": "Desconocido",
+        "location": "Vigo, Galicia",
+        "communityUrl": "https://blockchain.gal/",
+        "thumbnailUrl": "images/blockchaingal-vigo.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -4.4200007,
           36.7196292
         ]
@@ -614,6 +806,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -4.4200007,
+          36.7196292
+        ]
+      },
+      "properties": {
+        "id": 67,
+        "name": "BoquerónSec",
+        "status": "Activa",
+        "eventFormat": "Desconocido",
+        "location": "Málaga",
+        "communityUrl": "https://www.meetup.com/es-ES/BoqueronSec/",
+        "thumbnailUrl": "images/boqueronsec.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -8.3958532,
           43.3707332
         ]
@@ -626,6 +837,25 @@
         "location": "Coruña",
         "communityUrl": "https://bricolabs.cc/",
         "thumbnailUrl": "images/bricolabs.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 69,
+        "name": "BSides Barcelona",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://bsides.barcelona/",
+        "thumbnailUrl": "images/bsides-barcelona.webp"
       }
     },
     {
@@ -690,6 +920,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -4.4200007,
+          36.7196292
+        ]
+      },
+      "properties": {
+        "id": 73,
+        "name": "Calendario de comunidades técnicas de Málaga",
+        "status": "Activa",
+        "eventFormat": "Desconocido",
+        "location": "Málaga",
+        "communityUrl": "https://geekstorming.wordpress.com/calendario-comunidades-tecnicas/",
+        "thumbnailUrl": "images/calendario-de-comunidades-tecnicas-de-malaga.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -16.60942,
           28.2631
         ]
@@ -702,6 +951,25 @@
         "location": "Tenerife",
         "communityUrl": "https://t.me/canariasjs ",
         "thumbnailUrl": "images/canariasjs.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 76,
+        "name": "CATzure",
+        "status": "Activa",
+        "eventFormat": "Híbridos",
+        "location": "Barcelona",
+        "communityUrl": "https://www.meetup.com/es-ES/CATzure/",
+        "thumbnailUrl": "images/catzure.webp"
       }
     },
     {
@@ -766,6 +1034,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 81,
+        "name": "Cloud Native (CNCF) Barcelona",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://community.cncf.io/cloud-native-barcelona/",
+        "thumbnailUrl": "images/cloud-native-cncf-barcelona.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -2.9234602,
           43.2569608
         ]
@@ -797,6 +1084,25 @@
         "location": "Coruña, Galicia",
         "communityUrl": "https://community.cncf.io/cloud-native-galicia/",
         "thumbnailUrl": "images/cloud-native-cncf-galicia.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 84,
+        "name": "Cloud Native (CNCF) Granada",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://community.cncf.io/cloud-native-granada/",
+        "thumbnailUrl": "images/cloud-native-cncf-granada.webp"
       }
     },
     {
@@ -937,6 +1243,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 94,
+        "name": "Codebar Barcelona",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://codebar.io/barcelona",
+        "thumbnailUrl": "images/codebar-barcelona.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -3.7003454,
           40.4166909
         ]
@@ -1044,6 +1369,25 @@
         "location": "Madrid (Boadilla del Monte)",
         "communityUrl": "https://commit-conf.com/",
         "thumbnailUrl": "images/commitconf.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7003454,
+          40.4166909
+        ]
+      },
+      "properties": {
+        "id": 105,
+        "name": "Comunidades tecnológicas Madrid",
+        "status": "Inactiva",
+        "eventFormat": "Desconocido",
+        "location": "Madrid",
+        "communityUrl": "https://www.meetup.com/es-ES/comunidades-tecnologicas-madrid/",
+        "thumbnailUrl": "images/namees-tecnologicas-madrid.webp"
       }
     },
     {
@@ -1189,6 +1533,28 @@
         ]
       },
       "properties": {
+<<<<<<< HEAD
+        "id": 114,
+        "name": "CorunaEvents",
+        "status": "Activa",
+        "eventFormat": "Desconocido",
+        "location": "Coruña",
+        "communityUrl": "https://coruna.events/",
+        "thumbnailUrl": "images/corunaevents.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.3958532,
+          43.3707332
+        ]
+      },
+      "properties": {
+=======
+>>>>>>> e2971278dba4d88f0b823a05be5c458ed7ee53a4
         "id": 115,
         "name": "CoruñaJUG",
         "status": "Inactiva",
@@ -1234,6 +1600,25 @@
         "location": "Málaga (Fuengirola)",
         "communityUrl": "https://www.meetup.com/FerrolterraWordPress/",
         "thumbnailUrl": "images/criptomonedas-meetup-group.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 118,
+        "name": "CrossOver",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://www.xover.es/",
+        "thumbnailUrl": "images/crossover.webp"
       }
     },
     {
@@ -1335,6 +1720,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 125,
+        "name": "Danaus",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://www.danaus.io/",
+        "thumbnailUrl": "images/danaus.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -3.7003454,
           40.4166909
         ]
@@ -1347,6 +1751,25 @@
         "location": "Madrid",
         "communityUrl": "https://datasaturdays.com/Event/20241130-datasaturday0065#page-top",
         "thumbnailUrl": "images/data-saturdays.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 127,
+        "name": "Data, Cloud and AI in Barcelona",
+        "status": "Activa",
+        "eventFormat": "Online",
+        "location": "Barcelona",
+        "communityUrl": "https://www.meetup.com/big-data-developers-in-barcelona/",
+        "thumbnailUrl": "images/data-cloud-and-ai-in-barcelona.webp"
       }
     },
     {
@@ -1385,6 +1808,25 @@
         "location": "Almería",
         "communityUrl": "https://www.meetup.com/es-ES/databeers-almeria/",
         "thumbnailUrl": "images/databeers-almeria.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 130,
+        "name": "Databeers Granada",
+        "status": "Inactiva",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://x.com/databeersgrx",
+        "thumbnailUrl": "images/databeers-granada.webp"
       }
     },
     {
@@ -1498,6 +1940,25 @@
         "location": "Málaga",
         "communityUrl": "https://www.des-show.com/",
         "thumbnailUrl": "images/des.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 137,
+        "name": "DevBcn",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://www.devbcn.com/",
+        "thumbnailUrl": "images/devbcn.webp"
       }
     },
     {
@@ -1786,6 +2247,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -0.0360705,
+          39.9860398
+        ]
+      },
+      "properties": {
+        "id": 156,
+        "name": "Drupal Castellón",
+        "status": "Desconocido",
+        "eventFormat": "Presencial",
+        "location": "Castellón de la Plana",
+        "communityUrl": "https://groups.drupal.org/castellon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -4.782332640458,
           41.754270024781
         ]
@@ -1797,6 +2276,24 @@
         "eventFormat": "Presencial",
         "location": "Castilla y León",
         "communityUrl": "https://groups.drupal.org/castillayleon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -103.193958,
+          24.166435
+        ]
+      },
+      "properties": {
+        "id": 158,
+        "name": "Drupal Comunidad Valenciana",
+        "status": "Desconocido",
+        "eventFormat": "Presencial",
+        "location": "Comunidad Valenciana",
+        "communityUrl": "https://groups.drupal.org/comunidad-valenciana"
       }
     },
     {
@@ -1851,6 +2348,24 @@
         "eventFormat": "Presencial",
         "location": "Galicia",
         "communityUrl": "https://groups.drupal.org/galiza-drupal-group"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 164,
+        "name": "Drupal Granada",
+        "status": "Desconocido",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://groups.drupal.org/granada"
       }
     },
     {
@@ -1913,6 +2428,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -0.9913063,
+          37.6057068
+        ]
+      },
+      "properties": {
+        "id": 168,
+        "name": "Drupal Region de Murcia y Cartagena",
+        "status": "Desconocido",
+        "eventFormat": "Presencial",
+        "location": "Region de Murcia y Cartagena",
+        "communityUrl": "https://groups.drupal.org/murcia"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -5.9962951,
           37.38264
         ]
@@ -1968,6 +2501,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 173,
+        "name": "E-Show Barcelona",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://eshow.es/barcelona",
+        "thumbnailUrl": "images/e-show-barcelona.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -3.7003454,
           40.4166909
         ]
@@ -1999,6 +2551,25 @@
         "location": "Málaga",
         "communityUrl": "https://econgressmalaga.es/",
         "thumbnailUrl": "images/econgress-malaga.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 177,
+        "name": "ETSIITTech_Club",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://linktr.ee/etsiittechclub",
+        "thumbnailUrl": "images/etsiittech_club.webp"
       }
     },
     {
@@ -2075,6 +2646,25 @@
         "location": "Madrid",
         "communityUrl": "https://www.meetup.com/es-ES/facebook-developer-circle-madrid/",
         "thumbnailUrl": "images/facebook-developer-circle-madrid.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 183,
+        "name": "Flutter Barcelona",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://www.meetup.com/flutter-barcelona/",
+        "thumbnailUrl": "images/flutter-barcelona.webp"
       }
     },
     {
@@ -2310,6 +2900,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 197,
+        "name": "Gcubo",
+        "status": "Inactiva",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://x.com/gcubo_linux",
+        "thumbnailUrl": "images/gcubo.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -8.3958532,
           43.3707332
         ]
@@ -2340,6 +2949,25 @@
         "eventFormat": "Presencial",
         "location": "Madrid",
         "communityUrl": "https://gdg.community.dev/gdg-cloud-madrid/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 201,
+        "name": "GDG Granada",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://www.meetup.com/es-ES/granadagdg/",
+        "thumbnailUrl": "images/gdg-granada.webp"
       }
     },
     {
@@ -2573,6 +3201,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 220,
+        "name": "Global Software Architecture Summit",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://gsas.io/",
+        "thumbnailUrl": "images/global-software-architecture-summit.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -3.7003454,
           40.4166909
         ]
@@ -2585,6 +3232,137 @@
         "location": "Madrid",
         "communityUrl": "https://www.meetup.com/es-ES/go-mad/",
         "thumbnailUrl": "images/gomad.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 223,
+        "name": "GR Interactiva",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://www.meetup.com/gr-interactiva/",
+        "thumbnailUrl": "images/gr-interactiva.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 225,
+        "name": "Granada Gaming",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://www.granadagaming.com/",
+        "thumbnailUrl": "images/granada-gaming.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 226,
+        "name": "Granada Interactiva",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://linktr.ee/grinteractiva",
+        "thumbnailUrl": "images/granada-interactiva.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 227,
+        "name": "Granada Jam",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://granadajam.com/",
+        "thumbnailUrl": "images/granada-jam.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 228,
+        "name": "Granada PHP",
+        "status": "Inactiva",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://web.archive.org/web/20070217032309/http://www.agenciaq4.com:80/granadasitu/granada_php/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 229,
+        "name": "Granada Tech",
+        "status": "Activa",
+        "eventFormat": "Desconocido",
+        "location": "Granada",
+        "communityUrl": "https://www.granadatech.org/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 230,
+        "name": "GranadaJUG",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://www.meetup.com/granadajug/",
+        "thumbnailUrl": "images/granadajug.webp"
       }
     },
     {
@@ -2667,6 +3445,60 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          1.528756658648,
+          41.798241349587
+        ]
+      },
+      "properties": {
+        "id": 235,
+        "name": "Grupo de usuarios de Sharepoint de Cataluña (SUG)",
+        "status": "Inactiva",
+        "eventFormat": "Desconocido",
+        "location": "Cataluña",
+        "communityUrl": "https://www.meetup.com/es-ES/sug-cat/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.44998,
+          42.46569
+        ]
+      },
+      "properties": {
+        "id": 236,
+        "name": "Grupo de Usuarios Joomla! de Logroño",
+        "status": "Inactiva",
+        "eventFormat": "Desconocido",
+        "location": "Logroño",
+        "communityUrl": "https://www.facebook.com/groups/juglogrono/?locale=es_LA"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -15.5,
+          28
+        ]
+      },
+      "properties": {
+        "id": 237,
+        "name": "Grupo usuarios de R de Canarias",
+        "status": "Desconocido",
+        "eventFormat": "Desconocido",
+        "location": "Canarias",
+        "communityUrl": "http://canarias.r-es.org/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -1.129905,
           37.9835334
         ]
@@ -2723,6 +3555,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 242,
+        "name": "Hack Night",
+        "status": "Desconocido",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://lu.ma/6xew9jdf"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -3.7003454,
           40.4166909
         ]
@@ -2734,6 +3584,44 @@
         "eventFormat": "Presencial",
         "location": "Madrid",
         "communityUrl": "https://hackathonlovers.com/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 244,
+        "name": "HackBarna",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://hackbarna.com",
+        "thumbnailUrl": "images/hackbarna.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0360705,
+          39.9860398
+        ]
+      },
+      "properties": {
+        "id": 245,
+        "name": "HackCS",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Castellón de la Plana",
+        "communityUrl": "https://wiki.hackerspaces.org/HackCS",
+        "thumbnailUrl": "images/hackcs.webp"
       }
     },
     {
@@ -2765,6 +3653,28 @@
         ]
       },
       "properties": {
+<<<<<<< HEAD
+        "id": 248,
+        "name": "HackMadrid %27",
+        "status": "Activa",
+        "eventFormat": "Desconocido",
+        "location": "Madrid",
+        "communityUrl": "https://hackmadrid.org",
+        "thumbnailUrl": "images/hackmadrid-27.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7003454,
+          40.4166909
+        ]
+      },
+      "properties": {
+=======
+>>>>>>> e2971278dba4d88f0b823a05be5c458ed7ee53a4
         "id": 249,
         "name": "HBSCON",
         "status": "Activa",
@@ -2826,7 +3736,7 @@
         "name": "Indismatic",
         "status": "Activa",
         "eventFormat": "Presencial",
-        "location": "La RIoja",
+        "location": "La Rioja",
         "communityUrl": "https://www.indismatic.es/"
       }
     },
@@ -2981,6 +3891,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 264,
+        "name": "Iniciador Barcelona",
+        "status": "Inactiva",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://www.iniciador.com/es/barcelona"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -2.9234602,
           43.2569608
         ]
@@ -3071,6 +3999,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -0.0360705,
+          39.9860398
+        ]
+      },
+      "properties": {
+        "id": 270,
+        "name": "Iniciador Castellón",
+        "status": "Inactiva",
+        "eventFormat": "Presencial",
+        "location": "Castellón de la Plana",
+        "communityUrl": "https://iniciador.com/Castellón"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -3.929649,
           38.984305
         ]
@@ -3143,6 +4089,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 275,
+        "name": "Iniciador Emprendimiento social Barcelona",
+        "status": "Inactiva",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://www.iniciador.com/es/emprendimiento-social-barcelona/organizadores233_i177_i192"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -13.8637263,
           28.3967904
         ]
@@ -3154,6 +4118,42 @@
         "eventFormat": "Presencial",
         "location": "Las Palmas (Fuerteventura)",
         "communityUrl": "https://iniciador.com/Fuerteventura"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.673305566784,
+          42.128030322674
+        ]
+      },
+      "properties": {
+        "id": 277,
+        "name": "Iniciador Girona",
+        "status": "Inactiva",
+        "eventFormat": "Presencial",
+        "location": "Gerona (Girona)",
+        "communityUrl": "https://iniciador.com/Girona"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 278,
+        "name": "Iniciador Granada",
+        "status": "Inactiva",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://iniciador.com/Granada"
       }
     },
     {
@@ -3334,6 +4334,24 @@
         "eventFormat": "Presencial",
         "location": "Murcia",
         "communityUrl": "https://iniciador.com/Murcia"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.64548557819,
+          42.667475795076
+        ]
+      },
+      "properties": {
+        "id": 289,
+        "name": "Iniciador Navarra",
+        "status": "Inactiva",
+        "eventFormat": "Presencial",
+        "location": "Navarra",
+        "communityUrl": "https://iniciador.com/Navarra"
       }
     },
     {
@@ -3540,6 +4558,60 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 301,
+        "name": "Interferencias",
+        "status": "Desconocido",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://interferencias.tech/quedadas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7003454,
+          40.4166909
+        ]
+      },
+      "properties": {
+        "id": 302,
+        "name": "Internet of Things Madrid Meetup",
+        "status": "Inactiva",
+        "eventFormat": "Desconocido",
+        "location": "Madrid",
+        "communityUrl": "https://www.meetup.com/es-ES/iotmadrid/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7003454,
+          40.4166909
+        ]
+      },
+      "properties": {
+        "id": 303,
+        "name": "Ionic Madrid",
+        "status": "Desconocido",
+        "eventFormat": "Desconocido",
+        "location": "Madrid",
+        "communityUrl": "https://www.meetup.com/es-ES/ionic-madrid/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -4.4200007,
           36.7196292
         ]
@@ -3552,6 +4624,25 @@
         "location": "Málaga",
         "communityUrl": "https://www.jonthebeach.com/",
         "thumbnailUrl": "images/j-on-the-breach.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.673305566784,
+          42.128030322674
+        ]
+      },
+      "properties": {
+        "id": 308,
+        "name": "Jornadas de SIG Libre",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Gerona (Girona)",
+        "communityUrl": "https://www.jornadassiglibre.org/",
+        "thumbnailUrl": "images/jornadas-de-sig-libre.webp"
       }
     },
     {
@@ -3654,6 +4745,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -2.44998,
+          42.46569
+        ]
+      },
+      "properties": {
+        "id": 314,
+        "name": "La Rioja Tech Alliance ",
+        "status": "Inactiva",
+        "eventFormat": "Online",
+        "location": "La Rioja",
+        "communityUrl": "https://web.archive.org/web/20230309185755/http://www.lariojatech.org/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -6.2926477,
           36.5297453
         ]
@@ -3730,6 +4839,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 319,
+        "name": "LibreLabGRX",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://librelabgrx.cc/",
+        "thumbnailUrl": "images/librelabgrx.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -3.7003454,
           40.4166909
         ]
@@ -3761,6 +4889,25 @@
         "location": "Madrid",
         "communityUrl": "https://www.meetup.com/es-ES/machinelearningspain/",
         "thumbnailUrl": "images/machine-learning-spain.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 322,
+        "name": "MADE Makerspace",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "http://made-bcn.org/",
+        "thumbnailUrl": "images/made-makerspace.webp"
       }
     },
     {
@@ -3938,6 +5085,28 @@
         ]
       },
       "properties": {
+<<<<<<< HEAD
+        "id": 332,
+        "name": "Madrid Tech Talks",
+        "status": "Activa",
+        "eventFormat": "Desconocido",
+        "location": "Madrid",
+        "communityUrl": "https://madridtechtalks.com/",
+        "thumbnailUrl": "images/madrid-tech-talks.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7003454,
+          40.4166909
+        ]
+      },
+      "properties": {
+=======
+>>>>>>> e2971278dba4d88f0b823a05be5c458ed7ee53a4
         "id": 333,
         "name": "Madrid-Groovy User Group (GUG)",
         "status": "Activa",
@@ -4271,6 +5440,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 356,
+        "name": "Mulesoft Barcelona",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://meetups.mulesoft.com/barcelona",
+        "thumbnailUrl": "images/mulesoft-barcelona.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -3.7003454,
           40.4166909
         ]
@@ -4416,6 +5604,25 @@
         "location": "Madrid",
         "communityUrl": "https://netcoreconf.com/",
         "thumbnailUrl": "images/netcoreconf.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 367,
+        "name": "No cON Name",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://www.noconname.org/",
+        "thumbnailUrl": "images/no-con-name.webp"
       }
     },
     {
@@ -4573,6 +5780,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 377,
+        "name": "Oficina de Software Libre Granada",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://osl.ugr.es/",
+        "thumbnailUrl": "images/oficina-de-software-libre-granada.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -3.7003454,
           40.4166909
         ]
@@ -4622,6 +5848,25 @@
         "location": "Málaga",
         "communityUrl": "https://www.opensouthcode.org/conferences/opensouthcode2024",
         "thumbnailUrl": "images/opensouthcode.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 382,
+        "name": "OWASP Barcelona",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://owasp.org/www-chapter-barcelona/",
+        "thumbnailUrl": "images/owasp-barcelona.jpeg"
       }
     },
     {
@@ -4679,6 +5924,25 @@
         "location": "Valencia",
         "communityUrl": "https://x.com/PaellaCON",
         "thumbnailUrl": "images/paellacon.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.6441817,
+          42.8179948
+        ]
+      },
+      "properties": {
+        "id": 386,
+        "name": "Pamplona-Iruña Software Crafters",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Pamplona",
+        "communityUrl": "https://pamplonaswcraft.com/",
+        "thumbnailUrl": "images/pamplona-iruna-software-crafters.webp"
       }
     },
     {
@@ -4753,6 +6017,24 @@
         "eventFormat": "Presencial",
         "location": "Madrid",
         "communityUrl": "https://www.meetup.com/es-ES/phpmad/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7124252,
+          42.2313601
+        ]
+      },
+      "properties": {
+        "id": 392,
+        "name": "PHPVigo",
+        "status": "Inactiva",
+        "eventFormat": "Desconocido",
+        "location": "Vigo, Galicia",
+        "communityUrl": "https://twitter.com/phpvigo"
       }
     },
     {
@@ -4892,6 +6174,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 403,
+        "name": "PyData Granada",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://linksta.cc/@PyDataGRX",
+        "thumbnailUrl": "images/pydata-granada.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -3.7003454,
           40.4166909
         ]
@@ -4942,6 +6243,25 @@
         "location": "Coruña",
         "communityUrl": "https://linktr.ee/pythoncoruna",
         "thumbnailUrl": "images/python-coruna.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 408,
+        "name": "Python Granada",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://pythongranada.github.io/blog/",
+        "thumbnailUrl": "images/python-granada.webp"
       }
     },
     {
@@ -5062,6 +6382,24 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -2.44998,
+          42.46569
+        ]
+      },
+      "properties": {
+        "id": 417,
+        "name": "RioJakers",
+        "status": "Activa",
+        "eventFormat": "Online",
+        "location": "La Rioja",
+        "communityUrl": "https://riojakers.com/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -3.7003454,
           40.4166909
         ]
@@ -5137,6 +6475,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 424,
+        "name": "Singularity Tech Day",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://singularitytechday.com/",
+        "thumbnailUrl": "images/singularity-tech-day.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -3.7003454,
           40.4166909
         ]
@@ -5167,6 +6524,44 @@
         "eventFormat": "Presencial",
         "location": "Madrid",
         "communityUrl": "??"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -15.5,
+          28
+        ]
+      },
+      "properties": {
+        "id": 428,
+        "name": "Socracan (SoCraTes Canaries)",
+        "status": "Inactiva",
+        "eventFormat": "Presencial",
+        "location": "Canarias",
+        "communityUrl": "https://x.com/socracan/",
+        "thumbnailUrl": "images/socracan-socrates-canaries.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 429,
+        "name": "Software Crafters Barcelona",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://softwarecrafters.barcelona/",
+        "thumbnailUrl": "images/software-crafters-barcelona.webp"
       }
     },
     {
@@ -5231,6 +6626,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 433,
+        "name": "Spring I/O",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://2025.springio.net/",
+        "thumbnailUrl": "images/spring-io.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -4.4200007,
           36.7196292
         ]
@@ -5269,6 +6683,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 436,
+        "name": "Step4ward",
+        "status": "Activa",
+        "eventFormat": "Híbridos",
+        "location": "Barcelona",
+        "communityUrl": "https://step4ward.es/",
+        "thumbnailUrl": "images/step4ward.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -5.9962951,
           37.38264
         ]
@@ -5280,6 +6713,25 @@
         "eventFormat": "Presencial",
         "location": "Sevilla",
         "communityUrl": "https://www.meetup.com/svqjug"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.9962951,
+          37.38264
+        ]
+      },
+      "properties": {
+        "id": 439,
+        "name": "SVQTech",
+        "status": "Activa",
+        "eventFormat": "Desconocido",
+        "location": "Sevilla",
+        "communityUrl": "https://svqtech.com/",
+        "thumbnailUrl": "images/svqtech.webp"
       }
     },
     {
@@ -5336,6 +6788,44 @@
         "location": "Madrid",
         "communityUrl": "https://t3chfest.es/",
         "thumbnailUrl": "images/t3chfest.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 444,
+        "name": "TAI Granada",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://taigranada.com/",
+        "thumbnailUrl": "images/tai-granada.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          123.7171998,
+          10.5679998
+        ]
+      },
+      "properties": {
+        "id": 445,
+        "name": "Tech Club Asturias",
+        "status": "Desconocido",
+        "eventFormat": "Desconocido",
+        "location": "Asturias",
+        "communityUrl": "https://techclubasturias.com/",
+        "thumbnailUrl": "images/tech-club-asturias.webp"
       }
     },
     {
@@ -5604,6 +7094,59 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -8.7124252,
+          42.2313601
+        ]
+      },
+      "properties": {
+        "id": 462,
+        "name": "Vigo Android Developer Group",
+        "status": "Inactiva",
+        "eventFormat": "Desconocido",
+        "location": "Vigo, Galicia",
+        "communityUrl": "https://www.meetup.com/es-ES/Vigo-JUG/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7124252,
+          42.2313601
+        ]
+      },
+      "properties": {
+        "id": 463,
+        "name": "Vigo Tech Alliance",
+        "status": "Activa",
+        "eventFormat": "Desconocido",
+        "location": "Vigo, Galicia",
+        "communityUrl": "https://vigotech.org/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.7124252,
+          42.2313601
+        ]
+      },
+      "properties": {
+        "id": 464,
+        "name": "VigoJUG",
+        "status": "Inactiva",
+        "eventFormat": "Desconocido",
+        "location": "Vigo, Galicia"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -4.4200007,
           36.7196292
         ]
@@ -5653,6 +7196,25 @@
         "eventFormat": "Presencial",
         "location": "Valencia",
         "communityUrl": "https://vuejsvalencia.com/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 468,
+        "name": "Wasm I/O",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://wasm.io/",
+        "thumbnailUrl": "images/wasm-io.webp"
       }
     },
     {
@@ -5741,6 +7303,27 @@
         ]
       },
       "properties": {
+<<<<<<< HEAD
+        "id": 482,
+        "name": "Women in DevOps Madrid",
+        "status": "Inactiva",
+        "eventFormat": "Desconocido",
+        "location": "Madrid",
+        "communityUrl": "https://www.meetup.com/es-ES/Women-in-DevOps-Madrid/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7003454,
+          40.4166909
+        ]
+      },
+      "properties": {
+=======
+>>>>>>> e2971278dba4d88f0b823a05be5c458ed7ee53a4
         "id": 483,
         "name": "Women Techmakers Madrid",
         "status": "Activa",
@@ -5811,6 +7394,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 488,
+        "name": "Wordcamp Granada",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://granada.wordcamp.org/",
+        "thumbnailUrl": "images/wordcamp-granada.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -3.8561918,
           40.2142405
         ]
@@ -5849,6 +7451,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          -3.3641362,
+          40.481663
+        ]
+      },
+      "properties": {
+        "id": 491,
+        "name": "WordPress Alcalá de Hernares",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Madrid (Alcalá de Henares)",
+        "communityUrl": "https://www.meetup.com/alcala-de-henares-wordpress-meetup-group/",
+        "thumbnailUrl": "images/wordpress-alcala-de-hernares.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -0.4809945,
           38.34521
         ]
@@ -5861,6 +7482,25 @@
         "location": "Alicante",
         "communityUrl": "https://www.meetup.com/wordpress-alicante/",
         "thumbnailUrl": "images/wordpress-alicante.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 493,
+        "name": "WordPress Barcelona",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://www.meetup.com/wordpressbcn/",
+        "thumbnailUrl": "images/wordpress-barcelona.jpeg"
       }
     },
     {
@@ -5899,6 +7539,63 @@
         "location": "Bilbao",
         "communityUrl": "https://www.meetup.com/wordpress-bilbao/",
         "thumbnailUrl": "images/wordpress-bilbao.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.9913063,
+          37.6057068
+        ]
+      },
+      "properties": {
+        "id": 496,
+        "name": "WordPress Cartagena",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Cartagena, Murcia",
+        "communityUrl": "https://www.meetup.com/wordpress-cartagena/",
+        "thumbnailUrl": "images/wordpress-cartagena.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.0360705,
+          39.9860398
+        ]
+      },
+      "properties": {
+        "id": 497,
+        "name": "WordPress Castelló",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Castellón de la Plana",
+        "communityUrl": "https://www.meetup.com/meetup-wordpress-castello/",
+        "thumbnailUrl": "images/wordpress-castello.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.14367,
+          36.41976
+        ]
+      },
+      "properties": {
+        "id": 498,
+        "name": "WordPress Chiclana",
+        "status": "Desconocido",
+        "eventFormat": "Presencial",
+        "location": "Chiclana, Cádiz",
+        "communityUrl": "https://www.meetup.com/wordpress-meetup-chiclana/",
+        "thumbnailUrl": "images/wordpress-chiclana.webp"
       }
     },
     {
@@ -5981,6 +7678,44 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          3.6012,
+          37.1825
+        ]
+      },
+      "properties": {
+        "id": 503,
+        "name": "Wordpress Granada",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Granada",
+        "communityUrl": "https://wpgranada.es/",
+        "thumbnailUrl": "images/wordpress-granada.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.287809,
+          41.6082321
+        ]
+      },
+      "properties": {
+        "id": 504,
+        "name": "WordPress Granollers",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona (Granollers)",
+        "communityUrl": "https://www.meetup.com/wordpressgranollers/",
+        "thumbnailUrl": "images/wordpress-granollers.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -3.8561918,
           40.2142405
         ]
@@ -6012,6 +7747,25 @@
         "location": "Huelva",
         "communityUrl": "https://www.meetup.com/huelva-wordpress-meetup/",
         "thumbnailUrl": "images/wordpress-huelva.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.6171926,
+          41.5787648
+        ]
+      },
+      "properties": {
+        "id": 507,
+        "name": "WordPress Igualada",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona (Igualada)",
+        "communityUrl": "https://wpigualada.com/",
+        "thumbnailUrl": "images/wordpress-igualada.webp"
       }
     },
     {
@@ -6133,6 +7887,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          2.4452776,
+          41.5375002
+        ]
+      },
+      "properties": {
+        "id": 514,
+        "name": "WordPress Mataró",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona (Mataró)",
+        "communityUrl": "https://www.meetup.com/wordpress-mataro/",
+        "thumbnailUrl": "images/wordpress-mataro.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -5.8447919,
           43.3602825
         ]
@@ -6246,6 +8019,44 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          1.24533,
+          41.1186629
+        ]
+      },
+      "properties": {
+        "id": 523,
+        "name": "WordPress Tarragona",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Tarragona",
+        "communityUrl": "https://www.meetup.com/wordpresstarragona/",
+        "thumbnailUrl": "images/wordpress-tarragona.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.0104484,
+          41.5609412
+        ]
+      },
+      "properties": {
+        "id": 524,
+        "name": "WordPress Terrassa",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona (Terrassa)",
+        "communityUrl": "https://www.meetup.com/terrassa-wordpress-meetup/",
+        "thumbnailUrl": "images/wordpress-terrassa.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -4.024544270483665,
           39.85966175170025
         ]
@@ -6257,6 +8068,25 @@
         "eventFormat": "Presencial",
         "location": "Toledo",
         "communityUrl": "https://www.meetup.com/toledo-wordpress/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          0.5209974,
+          40.8110042
+        ]
+      },
+      "properties": {
+        "id": 526,
+        "name": "WordPress Tordosa",
+        "status": "Desconocido",
+        "eventFormat": "Presencial",
+        "location": "Tarragona (Tortosa)",
+        "communityUrl": "https://www.meetup.com/tortosa-wordpress-meetup/",
+        "thumbnailUrl": "images/wordpress-tordosa.webp"
       }
     },
     {
@@ -6511,6 +8341,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 540,
+        "name": "Barcelona Java User Group",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://barcelonajug.org/",
+        "thumbnailUrl": "images/barcelona-java-user-group.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -3.7003454,
           40.4166909
         ]
@@ -6637,6 +8486,101 @@
         "location": "Menorca",
         "communityUrl": "https://gdgmenorca.dev/",
         "thumbnailUrl": "images/stem-talks-menorca-2025.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 548,
+        "name": "AI Engineers Barcelona",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://www.meetup.com/ai-engineers-barcelona/",
+        "thumbnailUrl": "images/ai-engineers-barcelona.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 549,
+        "name": "Python Barcelona",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://pybcn.org/",
+        "thumbnailUrl": "images/python-barcelona.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 550,
+        "name": "PyLadies Barcelona",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://pybcn.org/pyladies_bcn/about/",
+        "thumbnailUrl": "images/pyladies-barcelona.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 551,
+        "name": "Tech Barcelona",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://www.meetup.com/meetup-group-nkodwxya/?eventOrigin=event_home_page",
+        "thumbnailUrl": "images/tech-barcelona.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 552,
+        "name": "Women Techmakers Barcelona",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona",
+        "communityUrl": "https://womentechmakersbcn.github.io/",
+        "thumbnailUrl": "images/women-techmakers-barcelona.webp"
       }
     },
     {
