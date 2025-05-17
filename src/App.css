@@ -4,7 +4,7 @@
 body,
 html {
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 #search_app {
@@ -13,12 +13,14 @@ html {
   min-height: 100%;
   padding: 1rem;
 }
+
 .main {
   padding: 1rem 1rem 1rem 1rem;
   display: flex;
   flex: 1;
   column-gap: 20px;
 }
+
 .heading {
   display: flex;
   justify-content: space-between;
@@ -47,6 +49,7 @@ html {
   gap: 1rem;
   height: calc(100vh - 10vh);
   overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .alto45rem {
@@ -152,33 +155,37 @@ html {
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
   }
 }
 
-.exists{
+.exists {
   color: deepskyblue
 }
-.not-exists{
+
+.not-exists {
   color: tomato
 }
 
 .level-is-shrinkable .level-left,
 .level-is-shrinkable .level-right {
-    flex-shrink: 1;
+  flex-shrink: 1;
 }
-.level-is-shrinkable .level-item{
+
+.level-is-shrinkable .level-item {
   max-width: 100%;
 }
 
 .is-4by3 img {
-  object-fit: contain;  /* This fills the space while maintaining ratio */
+  object-fit: contain;
+  /* This fills the space while maintaining ratio */
   height: 100%;
   width: 100%;
 }
 
-.popover-container{
+.popover-container {
   cursor: pointer;
 }

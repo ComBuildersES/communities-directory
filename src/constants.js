@@ -1,6 +1,7 @@
 // export const URL =
 //   "https://opensheet.elk.sh/18Rf0-3sREFosw__tQYaUmtzJNL3M-PLsm-HIqENf2Yw/Comunidades";
-export const URL = "data/communities.json";
+// export const URL = "data/communities.json";
+export const URL = "data/communities_displayMap.json";
 
 export const TAG_TYPES = {
   default: "is-white",
