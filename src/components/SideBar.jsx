@@ -113,10 +113,10 @@ export const Sidebar = () => {
       {/*Aqui podia definir un list box de seleccion multiple con 
         las distintas provincias como opciones o poner todas y que 
         vayan filtrando */}
-      <ul className="menu-list">
+      {/* <ul className="menu-list">
         <li className="menu-item"></li>
         <li className="menu-item"></li>
-      </ul>
+      </ul> */}
     </aside>
   );
 };

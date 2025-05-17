@@ -43,7 +43,7 @@ export function Heading ({ view, toggleView }) {
   const numberOFOnSiteCommunities = useNumberOFOnSiteCommunities();
   return (
     <div>
-      <div id="title" className="is-flex is-align-items-center sticky">
+      <div id="title" className="is-flex-tablet is-align-items-center sticky">
         <h2 className="title is-3 mr-4">Comunidades Tech</h2>
 
         {/* Botón para desplegar el sidebar */}

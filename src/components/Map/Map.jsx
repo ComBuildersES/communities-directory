@@ -464,7 +464,7 @@ function Map () {
     };
   }, [activeView, communities]);
 
-
+  const numVisible = visibleCommunities.length;
   return (
     <div id="map" style={{ display: "flex", flexDirection: "column" }}>
       <arcgis-map
@@ -473,8 +473,8 @@ function Map () {
         zoom="4"
         onarcgisViewReadyChange={activeViewChange}
       ></arcgis-map>
+      <div className="mb-2 has-text-centered	">Encontradas: {numVisible} comunidades en este área</div>
       <div className="communitieslist">
-
         {/* {communities.map((community) => {
 
           let comunidad = community.displayOnMap ? <CommunityCard key={community.id} community={community} /> : null

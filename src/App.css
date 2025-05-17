@@ -117,6 +117,25 @@ body{
   }
 }
 
+/* Mobile width */
+@media (max-width: 768px) { 
+  
+  #title{
+    text-align: center;
+  } 
+  #title h2{
+    margin-bottom: 0.5rem;;
+  }
+  .main aside{
+    width: 93vw;
+    position: fixed;
+    top: 10rem;
+  }
+  .main{
+    /* padding-left: 0; */
+  }
+}
+
 /* Estilo para desktop: 3 cards por fila */
 @media (min-width: 1024px) {
   .communitieslist {
