@@ -2846,8 +2846,8 @@
     "contactInfo": "",
     "communityUrl": "https://groups.drupal.org/comunidad-valenciana",
     "latLon": {
-      "lat": 24.166435,
-      "lon": -103.193958
+      "lat": 39.4702393,
+      "lon": -0.3768049
     },
     "displayOnMap": true
   },
@@ -7910,10 +7910,10 @@
     "communityUrl": "https://techclubasturias.com/",
     "thumbnailUrl": "images/tech-club-asturias.webp",
     "latLon": {
-      "lat": 10.5679998,
-      "lon": 123.7171998
+      "lat": null,
+      "lon": null
     },
-    "displayOnMap": true
+    "displayOnMap": false
   },
   {
     "id": 446,

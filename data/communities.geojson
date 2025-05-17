@@ -277,7 +277,6 @@
         ]
       },
       "properties": {
-<<<<<<< HEAD
         "id": 27,
         "name": "Angular Madrid",
         "status": "Inactiva",
@@ -316,8 +315,6 @@
         ]
       },
       "properties": {
-=======
->>>>>>> e2971278dba4d88f0b823a05be5c458ed7ee53a4
         "id": 30,
         "name": "APIAddictsDays",
         "status": "Activa",
@@ -1533,7 +1530,6 @@
         ]
       },
       "properties": {
-<<<<<<< HEAD
         "id": 114,
         "name": "CorunaEvents",
         "status": "Activa",
@@ -1553,8 +1549,6 @@
         ]
       },
       "properties": {
-=======
->>>>>>> e2971278dba4d88f0b823a05be5c458ed7ee53a4
         "id": 115,
         "name": "CoruñaJUG",
         "status": "Inactiva",
@@ -2283,8 +2277,8 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -103.193958,
-          24.166435
+          -0.3768049,
+          39.4702393
         ]
       },
       "properties": {
@@ -3653,7 +3647,6 @@
         ]
       },
       "properties": {
-<<<<<<< HEAD
         "id": 248,
         "name": "HackMadrid %27",
         "status": "Activa",
@@ -3673,8 +3666,6 @@
         ]
       },
       "properties": {
-=======
->>>>>>> e2971278dba4d88f0b823a05be5c458ed7ee53a4
         "id": 249,
         "name": "HBSCON",
         "status": "Activa",
@@ -5085,7 +5076,6 @@
         ]
       },
       "properties": {
-<<<<<<< HEAD
         "id": 332,
         "name": "Madrid Tech Talks",
         "status": "Activa",
@@ -5105,8 +5095,6 @@
         ]
       },
       "properties": {
-=======
->>>>>>> e2971278dba4d88f0b823a05be5c458ed7ee53a4
         "id": 333,
         "name": "Madrid-Groovy User Group (GUG)",
         "status": "Activa",
@@ -6814,25 +6802,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          123.7171998,
-          10.5679998
-        ]
-      },
-      "properties": {
-        "id": 445,
-        "name": "Tech Club Asturias",
-        "status": "Desconocido",
-        "eventFormat": "Desconocido",
-        "location": "Asturias",
-        "communityUrl": "https://techclubasturias.com/",
-        "thumbnailUrl": "images/tech-club-asturias.webp"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -3.7003454,
           40.4166909
         ]
@@ -7303,7 +7272,6 @@
         ]
       },
       "properties": {
-<<<<<<< HEAD
         "id": 482,
         "name": "Women in DevOps Madrid",
         "status": "Inactiva",
@@ -7322,8 +7290,6 @@
         ]
       },
       "properties": {
-=======
->>>>>>> e2971278dba4d88f0b823a05be5c458ed7ee53a4
         "id": 483,
         "name": "Women Techmakers Madrid",
         "status": "Activa",
