@@ -35,7 +35,9 @@
 
   <script>
     // Create map
-    const map = L.map('map').setView([40.0, -3.5], 5); // Centered over Spain
+    const map = L.map('map',{
+      maxZoom: 16
+    }).setView([40.0, -3.5], 5); // Centered over Spain
 
     // Add OpenStreetMap tile layer
     L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
