@@ -33,7 +33,8 @@ async function main() {
   const status = extractField('Estado de la comunidad');
   const communityType = extractField('Tipo de comunidad');
   const eventFormat = extractField('Formato');
-  const location = extractField('Ciudad o región principal (si aplica)');
+  let displayOnMap = extractField('Mostrar en el mapa');
+  const location = extractField('Ciudad o región principal');
   const topics = extractField('Temas que trata', true);
   const contactInfo = extractField('Correo de contacto (público)');
   const communityUrl = extractField('URL principal de la comunidad');
@@ -63,17 +64,30 @@ async function main() {
   const now = new Date();
   const lastReviewed = now.toLocaleDateString('es-ES');
 
-  // Coordenadas desde Nominatim
-  const geoRes = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(location)}`, {
-    headers: {
-      'User-Agent': 'ComunidadBot/1.0 (communitybuilders.es@gmail.com)'
-    }
-  });
-  const geoData = await geoRes.json();
-  const latLon = geoData.length ? {
-    lat: parseFloat(geoData[0].lat),
-    lon: parseFloat(geoData[0].lon)
-  } : { lat: null, lon: null };
+  // Calcular latLon si procede
+  let latLon = { lat: null, lon: null };
+  console.log("displayOnMap=",displayOnMap);
+  if(displayOnMap === "Sí"){
+    displayOnMap = true;
+    console.log(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(location)}`)
+    // Coordenadas desde Nominatim
+    const geoRes = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(location)}`, {
+      headers: {
+        'User-Agent': 'ComunidadBot/1.0 (communitybuilders.es@gmail.com)'
+      }
+    });
+    const geoData = await geoRes.json();
+    latLon = geoData.length ? {
+      lat: parseFloat(geoData[0].lat),
+      lon: parseFloat(geoData[0].lon)
+    } : { lat: null, lon: null };
+  }else{
+    displayOnMap = false;
+  }
+
+  fs.mkdirSync('.geo', { recursive: true });
+  fs.writeFileSync(path.join('.geo', 'last-coordinates.json'), JSON.stringify(latLon, null, 2));
+  
 
   // Preparar imagen
   if (!fs.existsSync(imagesFolder)) {
@@ -94,7 +108,7 @@ async function main() {
 
   // Crear nuevo objeto
   const newCommunity = {
-    id: newId.toString(),
+    id: newId,
     name,
     status,
     lastReviewed,
@@ -105,7 +119,8 @@ async function main() {
     contactInfo,
     communityUrl,
     thumbnailUrl,
-    latLon
+    latLon,
+    displayOnMap
   };
 
   // Añadir y guardar

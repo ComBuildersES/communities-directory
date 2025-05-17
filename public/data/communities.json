@@ -1,6 +1,6 @@
 [
   {
-    "id": "0",
+    "id": 0,
     "name": ".NET foundation meetups",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -12,12 +12,13 @@
     "communityUrl": "https://dotnetfoundation.org/community/.net-meetups",
     "thumbnailUrl": "images/net-foundation-meetups.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "1",
+    "id": 1,
     "name": "/dev/null talks",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -31,10 +32,11 @@
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "2",
+    "id": 2,
     "name": "/RootedCON",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -46,12 +48,13 @@
     "communityUrl": "https://www.rootedcon.com/",
     "thumbnailUrl": "images/rootedcon.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "3",
+    "id": 3,
     "name": "#esLibre",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -63,12 +66,13 @@
     "communityUrl": "https://eslib.re",
     "thumbnailUrl": "images/eslibre.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "4",
+    "id": 4,
     "name": "🥃LicorcaConf",
     "status": "Inactiva",
     "lastReviewed": "17/10/2024",
@@ -82,10 +86,11 @@
     "latLon": {
       "lat": 42.8806228,
       "lon": -8.5466071
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "5",
+    "id": 5,
     "name": "A Industriosa",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
@@ -99,10 +104,11 @@
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "6",
+    "id": 6,
     "name": "Accesibilidad Spain",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -114,12 +120,13 @@
     "communityUrl": "https://www.meetup.com/es-ES/accesibilidad-spain/",
     "thumbnailUrl": "images/accesibilidad-spain.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "7",
+    "id": 7,
     "name": "AdaBcnJs",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -133,10 +140,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "8",
+    "id": 8,
     "name": "AdalaberFest",
     "status": "Inactiva",
     "lastReviewed": "17/10/2024",
@@ -148,12 +156,13 @@
     "communityUrl": "https://adalaberfest.adalab.es/",
     "thumbnailUrl": "images/adalaberfest.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "9",
+    "id": 9,
     "name": "Adopta un Junior",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -165,12 +174,13 @@
     "communityUrl": "https://adoptaunjunior.es/",
     "thumbnailUrl": "images/adopta-un-junior.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "10",
+    "id": 10,
     "name": "Agile Alliance",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -182,12 +192,13 @@
     "communityUrl": "https://www.agilealliance.org/resources/initiatives/",
     "thumbnailUrl": "images/agile-alliance.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "11",
+    "id": 11,
     "name": "Agile Aragón",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -201,10 +212,11 @@
     "latLon": {
       "lat": 41.656837,
       "lon": -0.8794245
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "12",
+    "id": 12,
     "name": "Agile Delivery",
     "status": "Inactiva",
     "lastReviewed": "18/12/2024",
@@ -216,12 +228,13 @@
     "communityUrl": "https://x.com/AgileDeliveryES",
     "thumbnailUrl": "images/agile-delivery.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "13",
+    "id": 13,
     "name": "Agile Open Spain (AOS)",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -233,12 +246,13 @@
     "communityUrl": "https://aos.agile-spain.org/",
     "thumbnailUrl": "images/agile-open-spain-aos.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "14",
+    "id": 14,
     "name": "Agile Spain",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -250,12 +264,13 @@
     "communityUrl": "https://agile-spain.org/",
     "thumbnailUrl": "images/agile-spain.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "15",
+    "id": 15,
     "name": "Agile Sur",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -269,10 +284,11 @@
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "16",
+    "id": 16,
     "name": "agileVigo",
     "status": "Desconocido",
     "lastReviewed": "27/11/2024",
@@ -286,10 +302,11 @@
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "17",
+    "id": 17,
     "name": "AgileGirls",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -301,12 +318,13 @@
     "communityUrl": "https://twitter.com/agilegirls",
     "thumbnailUrl": "images/agilegirls.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "18",
+    "id": 18,
     "name": "AgileValencia",
     "status": "Inactiva",
     "lastReviewed": "18/12/2024",
@@ -318,12 +336,13 @@
     "communityUrl": "https://x.com/AgileValencia",
     "thumbnailUrl": "images/agilevalencia.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "19",
+    "id": 19,
     "name": "AI4MED - IA para medicina",
     "status": "Activa",
     "lastReviewed": "15/11/2024",
@@ -335,12 +354,13 @@
     "communityUrl": "https://www.ai4med.org/ ",
     "thumbnailUrl": "images/ai4med-ia-para-medicina.webp",
     "latLon": {
-      "lat": 40.42913,
-      "lon": -3.70114
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "20",
+    "id": 20,
     "name": "AiBirras",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -352,12 +372,13 @@
     "communityUrl": "https://aibirras.org/",
     "thumbnailUrl": "images/aibirras.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "21",
+    "id": 21,
     "name": "AKASHA Hub",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -371,10 +392,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "22",
+    "id": 22,
     "name": "Alhambra Hub",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -386,12 +408,13 @@
     "communityUrl": "https://alhambrahub.es/",
     "thumbnailUrl": "images/alhambra-hub.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "23",
+    "id": 23,
     "name": "Almería R users",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -405,10 +428,11 @@
     "latLon": {
       "lat": 36.8400939,
       "lon": -2.4679043
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "24",
+    "id": 24,
     "name": "AlmeríaJS",
     "status": "Inactiva",
     "lastReviewed": "25/10/2024",
@@ -422,10 +446,11 @@
     "latLon": {
       "lat": 36.8400939,
       "lon": -2.4679043
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "25",
+    "id": 25,
     "name": "AlmeríaTech",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -439,10 +464,11 @@
     "latLon": {
       "lat": 36.8400939,
       "lon": -2.4679043
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "26",
+    "id": 26,
     "name": "Andalucía Startup Founder",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -454,12 +480,13 @@
     "communityUrl": "https://www.meetup.com/andalucia-startup-founder/",
     "thumbnailUrl": "images/andalucia-startup-founder.webp",
     "latLon": {
-      "lat": -31.405059,
-      "lon": -64.171896
-    }
+      "lat": 37.888422,
+      "lon": -4.77513
+    },
+    "displayOnMap": true
   },
   {
-    "id": "27",
+    "id": 27,
     "name": "Angular Madrid",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -471,12 +498,13 @@
     "communityUrl": "https://www.meetup.com/es-ES/angular_madrid/",
     "thumbnailUrl": "images/angular-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "28",
+    "id": 28,
     "name": "Angular Málaga",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -490,10 +518,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "29",
+    "id": 29,
     "name": "APIAddicts",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -505,12 +534,13 @@
     "communityUrl": "https://www.meetup.com/es-ES/apiaddicts/",
     "thumbnailUrl": "images/apiaddicts.webp",
     "latLon": {
-      "lat": 19.4326773,
-      "lon": -99.1342112
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "30",
+    "id": 30,
     "name": "APIAddictsDays",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -522,12 +552,13 @@
     "communityUrl": "https://www.apiaddicts.org/apiaddictsdays/",
     "thumbnailUrl": "images/apiaddictsdays.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "31",
+    "id": 31,
     "name": "Arcasiles Community Madrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -539,12 +570,13 @@
     "communityUrl": "https://www.linkedin.com/company/arcasiles-community-madrid",
     "thumbnailUrl": "images/arcasiles-community-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "32",
+    "id": 32,
     "name": "Area UR-Maker",
     "status": "Activa",
     "lastReviewed": "16/10/2024",
@@ -558,10 +590,11 @@
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "33",
+    "id": 33,
     "name": "Asociación Atlantics",
     "status": "Activa",
     "lastReviewed": "22/10/2024",
@@ -575,10 +608,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "34",
+    "id": 34,
     "name": "Asociación Ciberseguridad Y Hacking Ético Asturias",
     "status": "Activa",
     "lastReviewed": "18/12/2024",
@@ -590,12 +624,13 @@
     "communityUrl": "https://x.com/asocchea",
     "thumbnailUrl": "images/asociacion-ciberseguridad-y-hacking-etico-asturias.webp",
     "latLon": {
-      "lat": 10.5679998,
-      "lon": 123.7171998
-    }
+      "lat": 43.3602825,
+      "lon": -5.8447919
+    },
+    "displayOnMap": true
   },
   {
-    "id": "35",
+    "id": 35,
     "name": "Asociación de profesionales de Usabilidad",
     "status": "Inactiva",
     "lastReviewed": "15/10/2024",
@@ -607,12 +642,13 @@
     "communityUrl": "https://torresburriel.com/weblog/nuevo-sitio-web-de-upa-spain/",
     "thumbnailUrl": "images/asociacion-de-profesionales-de-usabilidad.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "36",
+    "id": 36,
     "name": "Asociación de usuarios de R de Castilla-La Mancha",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -626,10 +662,11 @@
     "latLon": {
       "lat": 38.9976623,
       "lon": -1.8600675
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "37",
+    "id": 37,
     "name": "Asociación de Webmasters de Granada",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -641,12 +678,13 @@
     "communityUrl": "https://x.com/webgranada",
     "thumbnailUrl": "images/asociacion-de-webmasters-de-granada.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "38",
+    "id": 38,
     "name": "Asociación de Webmasters de Málaga",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -660,10 +698,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "39",
+    "id": 39,
     "name": "Asociación Española de Drupal",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -675,12 +714,13 @@
     "communityUrl": "https://asociaciondrupal.es/",
     "thumbnailUrl": "images/asociacion-espanola-de-drupal.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "40",
+    "id": 40,
     "name": "AsturCON.tech",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -694,10 +734,11 @@
     "latLon": {
       "lat": 43.3602825,
       "lon": -5.8447919
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "41",
+    "id": 41,
     "name": "Asturias Software Crafters",
     "status": "Activa",
     "lastReviewed": "24/09/2024",
@@ -711,10 +752,11 @@
     "latLon": {
       "lat": 43.520243144013,
       "lon": -5.685033233419
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "42",
+    "id": 42,
     "name": "asturias.js",
     "status": "Inactiva",
     "lastReviewed": "18/12/2024",
@@ -726,12 +768,13 @@
     "communityUrl": "https://x.com/asturiasjs",
     "thumbnailUrl": "images/asturiasjs.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "43",
+    "id": 43,
     "name": "AsturiasHacking",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -743,12 +786,13 @@
     "communityUrl": "https://asturiashacking.org/",
     "thumbnailUrl": "images/asturiashacking.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "44",
+    "id": 44,
     "name": "AsturiasHacking",
     "status": "Inactiva",
     "lastReviewed": "18/12/2024",
@@ -760,12 +804,13 @@
     "communityUrl": "https://asturiashacking.org/",
     "thumbnailUrl": "images/asturiashacking.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "45",
+    "id": 45,
     "name": "AsturPHP",
     "status": "Inactiva",
     "lastReviewed": "18/12/2024",
@@ -777,12 +822,13 @@
     "communityUrl": "https://x.com/asturphp",
     "thumbnailUrl": "images/asturphp.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "46",
+    "id": 46,
     "name": "AtlánticaConf",
     "status": "Activa",
     "lastReviewed": "02/06/2025",
@@ -796,10 +842,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "47",
+    "id": 47,
     "name": "Aula de Software Libre Córdoba",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -811,12 +858,13 @@
     "communityUrl": "https://www.uco.es/aulasoftwarelibre/",
     "thumbnailUrl": "images/aula-de-software-libre-cordoba.webp",
     "latLon": {
-      "lat": -31.405059,
-      "lon": -64.171896
-    }
+      "lat": 37.888422,
+      "lon": -4.77513
+    },
+    "displayOnMap": true
   },
   {
-    "id": "48",
+    "id": 48,
     "name": "AWS user group Sevilla",
     "status": "Activa",
     "lastReviewed": "18/12/2024",
@@ -830,10 +878,11 @@
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "49",
+    "id": 49,
     "name": "Azure Data Tech Groups",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -845,12 +894,13 @@
     "communityUrl": "https://www.meetup.com/pro/azuredatatechgroups/",
     "thumbnailUrl": "images/azure-data-tech-groups.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "50",
+    "id": 50,
     "name": "Azure Malaga",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -864,10 +914,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "51",
+    "id": 51,
     "name": "Azure Malaga (Meetup)",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -881,10 +932,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "52",
+    "id": 52,
     "name": "Azure Tech Groups",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -896,12 +948,13 @@
     "communityUrl": "https://developer.microsoft.com/en-us/azure-tech-groups/",
     "thumbnailUrl": "images/azure-tech-groups.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "53",
+    "id": 53,
     "name": "Azurebrains",
     "status": "Desconocido",
     "lastReviewed": "25/10/2024",
@@ -913,12 +966,13 @@
     "communityUrl": "https://www.meetup.com/azurebrains-name-global-ai-spain/",
     "thumbnailUrl": "images/azurebrains.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "54",
+    "id": 54,
     "name": "Barcelona Android Developer Group",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -931,10 +985,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "55",
+    "id": 55,
     "name": "Barcelona R User Group",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -948,10 +1003,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "56",
+    "id": 56,
     "name": "BCN Engineering",
     "status": "Activa",
     "lastReviewed": "29/10/2024",
@@ -963,12 +1019,13 @@
     "communityUrl": "https://bcneng.org/",
     "thumbnailUrl": "images/bcn-engineering.webp",
     "latLon": {
-      "lat": 41.387917,
-      "lon": 2.1699187
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "57",
+    "id": 57,
     "name": "Betabeers",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -980,12 +1037,13 @@
     "communityUrl": "https://betabeers.com/",
     "thumbnailUrl": "images/betabeers.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "58",
+    "id": 58,
     "name": "Betabeers Galicia",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -999,10 +1057,11 @@
     "latLon": {
       "lat": 42.756588768824,
       "lon": -7.910665567756
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "59",
+    "id": 59,
     "name": "Big Agile Open Spac",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1014,12 +1073,13 @@
     "communityUrl": "https://x.com/bigagileos",
     "thumbnailUrl": "images/big-agile-open-spac.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "60",
+    "id": 60,
     "name": "Big Girls Theory",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -1031,12 +1091,13 @@
     "communityUrl": "http://biggirlstheory.es/",
     "thumbnailUrl": "images/big-girls-theory.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "61",
+    "id": 61,
     "name": "BilboStack Conference",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1050,10 +1111,11 @@
     "latLon": {
       "lat": 43.2569608,
       "lon": -2.9234602
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "62",
+    "id": 62,
     "name": "Bitup Alicante Ciberseguridad",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -1067,10 +1129,11 @@
     "latLon": {
       "lat": 38.34521,
       "lon": -0.4809945
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "63",
+    "id": 63,
     "name": "BiznagaFest",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -1084,10 +1147,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "64",
+    "id": 64,
     "name": "Blockchain Málaga",
     "status": "Desconocido",
     "lastReviewed": "25/10/2024",
@@ -1101,10 +1165,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "65",
+    "id": 65,
     "name": "Blockchain.gal Vigo",
     "status": "Inactiva",
     "lastReviewed": "27/11/2024",
@@ -1118,10 +1183,11 @@
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "66",
+    "id": 66,
     "name": "Blockchain4All",
     "status": "Desconocido",
     "lastReviewed": "25/10/2024",
@@ -1135,10 +1201,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "67",
+    "id": 67,
     "name": "BoquerónSec",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -1152,10 +1219,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "68",
+    "id": 68,
     "name": "BricoLabs",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -1169,10 +1237,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "69",
+    "id": 69,
     "name": "BSides Barcelona",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -1186,10 +1255,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "70",
+    "id": 70,
     "name": "C1b3rWall",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -1203,10 +1273,11 @@
     "latLon": {
       "lat": 40.6563881,
       "lon": -4.700433
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "71",
+    "id": 71,
     "name": "CaceresTech",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1220,10 +1291,11 @@
     "latLon": {
       "lat": 39.4762161,
       "lon": -6.3708585
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "72",
+    "id": 72,
     "name": "Cádiz GameDev",
     "status": "Activa",
     "lastReviewed": "18/12/2024",
@@ -1237,10 +1309,11 @@
     "latLon": {
       "lat": 36.5297453,
       "lon": -6.2926477
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "73",
+    "id": 73,
     "name": "Calendario de comunidades técnicas de Málaga",
     "status": "Activa",
     "lastReviewed": "29/11/2024",
@@ -1254,10 +1327,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "74",
+    "id": 74,
     "name": "CanariasJS",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -1269,12 +1343,13 @@
     "communityUrl": "https://t.me/canariasjs ",
     "thumbnailUrl": "images/canariasjs.webp",
     "latLon": {
-      "lat": 9.8999,
-      "lon": -74.86048
-    }
+      "lat": 28.2631,
+      "lon": -16.60942
+    },
+    "displayOnMap": true
   },
   {
-    "id": "75",
+    "id": 75,
     "name": "CatDotNet",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -1286,12 +1361,13 @@
     "communityUrl": "https://twitter.com/catdotnet",
     "thumbnailUrl": "images/catdotnet.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "76",
+    "id": 76,
     "name": "CATzure",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -1305,10 +1381,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "77",
+    "id": 77,
     "name": "CESINF X",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1320,12 +1397,13 @@
     "communityUrl": "https://www.cesinfull.com/",
     "thumbnailUrl": "images/cesinf-x.webp",
     "latLon": {
-      "lat": 9.8999,
-      "lon": -74.86048
-    }
+      "lat": 28.2631,
+      "lon": -16.60942
+    },
+    "displayOnMap": true
   },
   {
-    "id": "78",
+    "id": 78,
     "name": "Civis GameJam",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1339,10 +1417,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "79",
+    "id": 79,
     "name": "ClassDojo España",
     "status": "Desconocido",
     "lastReviewed": "25/10/2024",
@@ -1356,10 +1435,11 @@
     "latLon": {
       "lat": 37.2571454,
       "lon": -6.9495382
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "80",
+    "id": 80,
     "name": "Cloud Native",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1371,12 +1451,13 @@
     "communityUrl": "https://community.cncf.io",
     "thumbnailUrl": "images/cloud-native.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "81",
+    "id": 81,
     "name": "Cloud Native (CNCF) Barcelona",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1390,10 +1471,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "82",
+    "id": 82,
     "name": "Cloud Native (CNCF) Bilbao",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -1407,10 +1489,11 @@
     "latLon": {
       "lat": 43.2569608,
       "lon": -2.9234602
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "83",
+    "id": 83,
     "name": "Cloud Native (CNCF) Galicia",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1424,10 +1507,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "84",
+    "id": 84,
     "name": "Cloud Native (CNCF) Granada",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1439,12 +1523,13 @@
     "communityUrl": "https://community.cncf.io/cloud-native-granada/",
     "thumbnailUrl": "images/cloud-native-cncf-granada.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "85",
+    "id": 85,
     "name": "Cloud Native (CNCF) Madrid",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1456,12 +1541,13 @@
     "communityUrl": "https://community.cncf.io/cloud-native-madrid-1/",
     "thumbnailUrl": "images/cloud-native-cncf-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "86",
+    "id": 86,
     "name": "Cloud Native (CNCF) Malaga",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -1475,10 +1561,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "87",
+    "id": 87,
     "name": "Cloud Native (CNCF) Mallorca",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1490,12 +1577,13 @@
     "communityUrl": "https://community.cncf.io/cloud-native-mallorca/",
     "thumbnailUrl": "images/cloud-native-cncf-mallorca.webp",
     "latLon": {
-      "lat": 15.3736704,
-      "lon": 120.9655765
-    }
+      "lat": 39.578695,
+      "lon": 2.654489
+    },
+    "displayOnMap": true
   },
   {
-    "id": "88",
+    "id": 88,
     "name": "Cloud Native (CNCF) Rioja",
     "status": "Activa",
     "lastReviewed": "14/11/2024",
@@ -1509,10 +1597,11 @@
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "89",
+    "id": 89,
     "name": "Cloud Native (CNCF) Sevilla",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1526,10 +1615,11 @@
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "90",
+    "id": 90,
     "name": "Cloud Native (CNCF) Valencia",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1543,10 +1633,11 @@
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "91",
+    "id": 91,
     "name": "Cloud Native Asturias",
     "status": "Inactiva",
     "lastReviewed": "18/12/2024",
@@ -1558,12 +1649,13 @@
     "communityUrl": "https://x.com/cloudnativeast",
     "thumbnailUrl": "images/cloud-native-asturias.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "92",
+    "id": 92,
     "name": "CLSxMadrid",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -1575,12 +1667,13 @@
     "communityUrl": "https://web.archive.org/web/20161202102359/http://www.clsxmadrid.es/index.es.html",
     "thumbnailUrl": "images/clsxmadrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "93",
+    "id": 93,
     "name": "Codebar",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1592,12 +1685,13 @@
     "communityUrl": "https://codebar.io",
     "thumbnailUrl": "images/codebar.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "94",
+    "id": 94,
     "name": "Codebar Barcelona",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1611,10 +1705,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "95",
+    "id": 95,
     "name": "Codemotion",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -1626,12 +1721,13 @@
     "communityUrl": "https://conferences.codemotion.com/madrid2024/",
     "thumbnailUrl": "images/codemotion.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "96",
+    "id": 96,
     "name": "Codenares",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -1643,12 +1739,13 @@
     "communityUrl": "https://x.com/codenares",
     "thumbnailUrl": "images/codenares.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "97",
+    "id": 97,
     "name": "CodeRioja",
     "status": "Activa",
     "lastReviewed": "14/11/2024",
@@ -1662,10 +1759,11 @@
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "98",
+    "id": 98,
     "name": "Coders' Agora",
     "status": "Inactiva",
     "lastReviewed": "18/12/2024",
@@ -1677,12 +1775,13 @@
     "communityUrl": "https://x.com/codersagora_org",
     "thumbnailUrl": "images/coders-agora.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "99",
+    "id": 99,
     "name": "CodifyMeetup",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -1694,12 +1793,13 @@
     "communityUrl": "https://www.meetup.com/es-ES/codify/",
     "thumbnailUrl": "images/codifymeetup.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "100",
+    "id": 100,
     "name": "Collaborative Modeling (CoMo) Madrid",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1711,12 +1811,13 @@
     "communityUrl": "https://collaborativemodeling.carrd.co/",
     "thumbnailUrl": "images/collaborative-modeling-como-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "101",
+    "id": 101,
     "name": "CommitConf",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -1730,10 +1831,11 @@
     "latLon": {
       "lat": 40.4052141,
       "lon": -3.8769548
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "102",
+    "id": 102,
     "name": "Community Builders",
     "status": "Activa",
     "lastReviewed": "24/02/2025",
@@ -1745,13 +1847,14 @@
     "communityUrl": "https://linktr.ee/ComBuilders_ES",
     "thumbnailUrl": "images/community-builders.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "103",
-    "name": "name de Alexa en español",
+    "id": 103,
+    "name": "Comunidad de Alexa en español",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
     "communityType": "Tech Meetup",
@@ -1762,13 +1865,14 @@
     "communityUrl": "https://twitter.com/alexadevsmadrid",
     "thumbnailUrl": "images/name-de-alexa-en-espanol.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "104",
-    "name": "name de R Hispano",
+    "id": 104,
+    "name": "Comunidad de R Hispano",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
     "communityType": "Organización paraguas",
@@ -1779,13 +1883,14 @@
     "communityUrl": "https://r-es.org/",
     "thumbnailUrl": "images/name-de-r-hispano.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "105",
-    "name": "namees tecnológicas Madrid",
+    "id": 105,
+    "name": "Comunidades tecnológicas Madrid",
     "status": "Inactiva",
     "lastReviewed": "29/11/2024",
     "communityType": "Meta name",
@@ -1793,15 +1898,16 @@
     "location": "Madrid",
     "topics": "",
     "contactInfo": "",
-    "communityUrl": "https://www.meetup.com/es-ES/namees-tecnologicas-madrid/",
+    "communityUrl": "https://www.meetup.com/es-ES/comunidades-tecnologicas-madrid/",
     "thumbnailUrl": "images/namees-tecnologicas-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "106",
+    "id": 106,
     "name": "Conferencia Agile Spain (CAS)",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1813,12 +1919,13 @@
     "communityUrl": "https://cas.agile-spain.org/",
     "thumbnailUrl": "images/conferencia-agile-spain-cas.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "107",
+    "id": 107,
     "name": "Conferencia de Agilidad\nen la Empresa Aragonesa",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1832,10 +1939,11 @@
     "latLon": {
       "lat": 41.656837,
       "lon": -0.8794245
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "108",
+    "id": 108,
     "name": "Congreso & Jornadas de Usuarios de R",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1849,10 +1957,11 @@
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "109",
+    "id": 109,
     "name": "Congreso javaHispano",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -1864,12 +1973,13 @@
     "communityUrl": "http://www.javahispano.org/fotos-seminario-jenkings/fotos-del-i-congreso-javahispano/",
     "thumbnailUrl": "images/congreso-javahispano.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "110",
+    "id": 110,
     "name": "Congreso TryIT!",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1881,12 +1991,13 @@
     "communityUrl": "https://linktr.ee/tryit_upm",
     "thumbnailUrl": "images/congreso-tryit.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "111",
+    "id": 111,
     "name": "Córdoba Software Crafters",
     "status": "Activa",
     "lastReviewed": "29/11/2024",
@@ -1898,12 +2009,13 @@
     "communityUrl": "https://www.eventbrite.com/o/cordoba-software-crafters-48873988743",
     "thumbnailUrl": "images/cordoba-software-crafters.webp",
     "latLon": {
-      "lat": -31.405059,
-      "lon": -64.171896
-    }
+      "lat": 37.888422,
+      "lon": -4.77513
+    },
+    "displayOnMap": true
   },
   {
-    "id": "112",
+    "id": 112,
     "name": "Coruña Bloggers",
     "status": "Activa",
     "lastReviewed": "22/10/2024",
@@ -1917,10 +2029,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "113",
+    "id": 113,
     "name": "Coruña WTF",
     "status": "Activa",
     "lastReviewed": "03/03/2025",
@@ -1934,10 +2047,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "114",
+    "id": 114,
     "name": "CorunaEvents",
     "status": "Activa",
     "lastReviewed": "29/11/2024",
@@ -1951,10 +2065,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "115",
+    "id": 115,
     "name": "CoruñaJUG",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -1968,10 +2083,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "116",
+    "id": 116,
     "name": "Crafters Vigo",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
@@ -1985,10 +2101,11 @@
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "117",
+    "id": 117,
     "name": "Criptomonedas Meetup Group",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -2002,10 +2119,11 @@
     "latLon": {
       "lat": 36.5390044,
       "lon": -4.6243528
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "118",
+    "id": 118,
     "name": "CrossOver",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2017,12 +2135,13 @@
     "communityUrl": "https://www.xover.es/",
     "thumbnailUrl": "images/crossover.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "119",
+    "id": 119,
     "name": "Cryptospace",
     "status": "Inactiva",
     "lastReviewed": "18/12/2024",
@@ -2034,12 +2153,13 @@
     "communityUrl": "https://x.com/CryptoSpaceCS",
     "thumbnailUrl": "images/cryptospace.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "120",
+    "id": 120,
     "name": "CTO Summit InfoJobs",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -2051,12 +2171,13 @@
     "communityUrl": "https://ctosummit.geekshubs.com/",
     "thumbnailUrl": "images/cto-summit-infojobs.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "121",
+    "id": 121,
     "name": "CyberCamp UMA",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2070,10 +2191,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "122",
+    "id": 122,
     "name": "Cyberhippietotalism",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2087,10 +2209,11 @@
     "latLon": {
       "lat": 28.3967904,
       "lon": -13.8637263
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "123",
+    "id": 123,
     "name": "CyLicon Valley",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -2104,10 +2227,11 @@
     "latLon": {
       "lat": 41.754270024781,
       "lon": -4.782332640458
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "124",
+    "id": 124,
     "name": "CyLicon Valley",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -2120,10 +2244,11 @@
     "latLon": {
       "lat": 41.6529421,
       "lon": -4.7283839
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "125",
+    "id": 125,
     "name": "Danaus",
     "status": "Activa",
     "lastReviewed": "19/10/2024",
@@ -2137,10 +2262,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "126",
+    "id": 126,
     "name": "Data Saturdays",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -2152,12 +2278,13 @@
     "communityUrl": "https://datasaturdays.com/Event/20241130-datasaturday0065#page-top",
     "thumbnailUrl": "images/data-saturdays.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "127",
+    "id": 127,
     "name": "Data, Cloud and AI in Barcelona",
     "status": "Activa",
     "lastReviewed": "24/03/2025",
@@ -2171,10 +2298,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "128",
+    "id": 128,
     "name": "Data, Cloud and AI in Madrid",
     "status": "Activa",
     "lastReviewed": "24/03/2025",
@@ -2186,12 +2314,13 @@
     "communityUrl": "https://www.meetup.com/big-data-developers-in-madrid/",
     "thumbnailUrl": "images/data-cloud-and-ai-in-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "129",
+    "id": 129,
     "name": "Databeers Almería",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -2205,10 +2334,11 @@
     "latLon": {
       "lat": 36.8400939,
       "lon": -2.4679043
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "130",
+    "id": 130,
     "name": "Databeers Granada",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -2220,12 +2350,13 @@
     "communityUrl": "https://x.com/databeersgrx",
     "thumbnailUrl": "images/databeers-granada.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "131",
+    "id": 131,
     "name": "Databeers Máaga",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2239,10 +2370,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "132",
+    "id": 132,
     "name": "Databeers Madrid",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2254,12 +2386,13 @@
     "communityUrl": "https://x.com/databeers",
     "thumbnailUrl": "images/databeers-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "133",
+    "id": 133,
     "name": "Databeers Sevilla",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2273,10 +2406,11 @@
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "134",
+    "id": 134,
     "name": "Databeers Valencia",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2290,10 +2424,11 @@
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "135",
+    "id": 135,
     "name": "DatabeersRIO",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
@@ -2304,12 +2439,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.linkedin.com/company/databeersrio/?originalSubdomain=es",
     "latLon": {
-      "lat": -29.4101933,
-      "lon": -66.829414
-    }
+      "lat": 42.46569,
+      "lon": -2.44998
+    },
+    "displayOnMap": true
   },
   {
-    "id": "136",
+    "id": 136,
     "name": "DES",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2323,10 +2459,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "137",
+    "id": 137,
     "name": "DevBcn",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -2340,10 +2477,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "138",
+    "id": 138,
     "name": "DevFest Sevilla 2024",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2357,10 +2495,11 @@
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "139",
+    "id": 139,
     "name": "DevOpsDays Cáceres",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -2374,10 +2513,11 @@
     "latLon": {
       "lat": 39.4762161,
       "lon": -6.3708585
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "140",
+    "id": 140,
     "name": "DevopsDays Madrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -2389,12 +2529,13 @@
     "communityUrl": "http://devopsdays.org/madrid",
     "thumbnailUrl": "images/devopsdays-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "141",
+    "id": 141,
     "name": "DevOpsDays Vitória",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -2408,10 +2549,11 @@
     "latLon": {
       "lat": 42.8468573,
       "lon": -2.6715859
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "142",
+    "id": 142,
     "name": "DevWomen",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -2423,12 +2565,13 @@
     "communityUrl": "http://devwomen.com ",
     "thumbnailUrl": "images/devwomen.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "143",
+    "id": 143,
     "name": "Docker Madrid",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -2440,12 +2583,13 @@
     "communityUrl": "https://www.meetup.com/es-ES/docker-madrid/",
     "thumbnailUrl": "images/docker-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "144",
+    "id": 144,
     "name": "Docker User Groups",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2457,12 +2601,13 @@
     "communityUrl": "https://www.docker.com/community/get-involved/",
     "thumbnailUrl": "images/docker-user-groups.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "145",
+    "id": 145,
     "name": "dotNET Conf Spain",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2474,12 +2619,13 @@
     "communityUrl": "https://dotnetconfspain.com/",
     "thumbnailUrl": "images/dotnet-conf-spain.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "146",
+    "id": 146,
     "name": "dotnetMalaga (meetup)",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -2493,10 +2639,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "147",
+    "id": 147,
     "name": "DotNetMálaga Conferencia",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2510,10 +2657,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "148",
+    "id": 148,
     "name": "DotNetters",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -2527,10 +2675,11 @@
     "latLon": {
       "lat": 41.656837,
       "lon": -0.8794245
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "149",
+    "id": 149,
     "name": "DotNetters Zaragoza",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2544,10 +2693,11 @@
     "latLon": {
       "lat": 41.656837,
       "lon": -0.8794245
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "150",
+    "id": 150,
     "name": "Droidcon",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2559,12 +2709,13 @@
     "communityUrl": "https://www.droidcon.com/",
     "thumbnailUrl": "images/droidcon.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "151",
+    "id": 151,
     "name": "Droidcon Madrid",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2575,12 +2726,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.madrid.droidcon.com/",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "152",
+    "id": 152,
     "name": "Drupal Alicante",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2593,10 +2745,11 @@
     "latLon": {
       "lat": 38.34521,
       "lon": -0.4809945
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "153",
+    "id": 153,
     "name": "Drupal Almería",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2609,10 +2762,11 @@
     "latLon": {
       "lat": 36.8400939,
       "lon": -2.4679043
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "154",
+    "id": 154,
     "name": "Drupal Asturias",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2624,12 +2778,13 @@
     "communityUrl": "https://groups.drupal.org/asturias-spain",
     "thumbnailUrl": "images/drupal-asturias.webp",
     "latLon": {
-      "lat": 10.5679998,
-      "lon": 123.7171998
-    }
+      "lat": 43.3602825,
+      "lon": -5.8447919
+    },
+    "displayOnMap": true
   },
   {
-    "id": "155",
+    "id": 155,
     "name": "Drupal Cádiz",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2642,10 +2797,11 @@
     "latLon": {
       "lat": 36.5297453,
       "lon": -6.2926477
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "156",
+    "id": 156,
     "name": "Drupal Castellón",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2658,10 +2814,11 @@
     "latLon": {
       "lat": 39.9860398,
       "lon": -0.0360705
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "157",
+    "id": 157,
     "name": "Drupal Castilla y León",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2674,26 +2831,28 @@
     "latLon": {
       "lat": 41.754270024781,
       "lon": -4.782332640458
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "158",
-    "name": "Drupal name Valenciana",
+    "id": 158,
+    "name": "Drupal Comunidad Valenciana",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
     "communityType": "Tech Meetup",
     "eventFormat": "Presencial",
-    "location": "name Valenciana",
+    "location": "Comunidad Valenciana",
     "topics": "",
     "contactInfo": "",
-    "communityUrl": "https://groups.drupal.org/name-valenciana",
+    "communityUrl": "https://groups.drupal.org/comunidad-valenciana",
     "latLon": {
-      "lat": 24.166435,
-      "lon": -103.193958
-    }
+      "lat": 39.4702393,
+      "lon": -0.3768049
+    },
+    "displayOnMap": true
   },
   {
-    "id": "159",
+    "id": 159,
     "name": "Drupal Comunitat catalana del Drupal | Web de Drupal.cat",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2704,12 +2863,13 @@
     "contactInfo": "",
     "communityUrl": "https://groups.drupal.org/comunitat-catalana-del-drupal",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "160",
+    "id": 160,
     "name": "Drupal Day Spain",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2721,12 +2881,13 @@
     "communityUrl": "https://drupalday.es/",
     "thumbnailUrl": "images/drupal-day-spain.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "161",
+    "id": 161,
     "name": "Drupal Euskadi",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2739,10 +2900,11 @@
     "latLon": {
       "lat": 43.043147818644,
       "lon": -2.616915141407
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "162",
+    "id": 162,
     "name": "Drupal Extremadura",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2755,10 +2917,11 @@
     "latLon": {
       "lat": 39.191324883543,
       "lon": -6.150896536229
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "163",
+    "id": 163,
     "name": "Drupal Galiza Drupal Group",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2771,10 +2934,11 @@
     "latLon": {
       "lat": 42.756588768824,
       "lon": -7.910665567756
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "164",
+    "id": 164,
     "name": "Drupal Granada",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2785,12 +2949,13 @@
     "contactInfo": "",
     "communityUrl": "https://groups.drupal.org/granada",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "165",
+    "id": 165,
     "name": "Drupal León",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2801,12 +2966,13 @@
     "contactInfo": "",
     "communityUrl": "https://groups.drupal.org/node/315528",
     "latLon": {
-      "lat": 21.121972,
-      "lon": -101.6832
-    }
+      "lat": 42.598862,
+      "lon": -5.572586
+    },
+    "displayOnMap": true
   },
   {
-    "id": "166",
+    "id": 166,
     "name": "Drupal Madrid",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2818,12 +2984,13 @@
     "communityUrl": "https://groups.drupal.org/madrid",
     "thumbnailUrl": "images/drupal-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "167",
+    "id": 167,
     "name": "Drupal Malaga",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2836,10 +3003,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "168",
+    "id": 168,
     "name": "Drupal Region de Murcia y Cartagena",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2852,10 +3020,11 @@
     "latLon": {
       "lat": 37.6057068,
       "lon": -0.9913063
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "169",
+    "id": 169,
     "name": "Drupal Sevilla",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2868,10 +3037,11 @@
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "170",
+    "id": 170,
     "name": "Drupal Zaragoza y alrededores",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2884,10 +3054,11 @@
     "latLon": {
       "lat": 41.656837,
       "lon": -0.8794245
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "171",
+    "id": 171,
     "name": "DrupalCamp Spain",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2899,12 +3070,13 @@
     "communityUrl": "https://drupalcamp.es/es",
     "thumbnailUrl": "images/drupalcamp-spain.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "172",
+    "id": 172,
     "name": "DyploFest",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -2918,10 +3090,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "173",
+    "id": 173,
     "name": "E-Show Barcelona",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2935,10 +3108,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "174",
+    "id": 174,
     "name": "E-Show Madrid",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2950,12 +3124,13 @@
     "communityUrl": "https://eshow.es/madrid",
     "thumbnailUrl": "images/e-show-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "175",
+    "id": 175,
     "name": "eCongress Málaga",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2969,10 +3144,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "176",
+    "id": 176,
     "name": "Elastic Local Meetups",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2984,12 +3160,13 @@
     "communityUrl": "https://www.elastic.co/community/usergroupguide#/community/usergroupguide",
     "thumbnailUrl": "images/elastic-local-meetups.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "177",
+    "id": 177,
     "name": "ETSIITTech_Club",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3001,12 +3178,13 @@
     "communityUrl": "https://linktr.ee/etsiittechclub",
     "thumbnailUrl": "images/etsiittech_club.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "178",
+    "id": 178,
     "name": "EuskalHack Security Congress",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3020,10 +3198,11 @@
     "latLon": {
       "lat": 43.320905,
       "lon": -1.9845145
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "179",
+    "id": 179,
     "name": "Extremadura Digital Day",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -3037,10 +3216,11 @@
     "latLon": {
       "lat": 39.4762161,
       "lon": -6.3708585
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "180",
+    "id": 180,
     "name": "Fabada Conference",
     "status": "Inactiva",
     "lastReviewed": "17/10/2024",
@@ -3054,10 +3234,11 @@
     "latLon": {
       "lat": 43.545229,
       "lon": -5.6619245
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "181",
+    "id": 181,
     "name": "Facebook Developer Circle Madrid",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -3069,12 +3250,13 @@
     "communityUrl": "https://www.meetup.com/es-ES/facebook-developer-circle-madrid/",
     "thumbnailUrl": "images/facebook-developer-circle-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "182",
+    "id": 182,
     "name": "Femdevs",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -3085,12 +3267,13 @@
     "contactInfo": "",
     "communityUrl": "https://femdevs.es/",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "183",
+    "id": 183,
     "name": "Flutter Barcelona",
     "status": "Activa",
     "lastReviewed": "30/01/2025",
@@ -3104,10 +3287,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "184",
+    "id": 184,
     "name": "Flutter Lleida",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -3121,10 +3305,11 @@
     "latLon": {
       "lat": 41.6141646,
       "lon": 0.6258029
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "185",
+    "id": 185,
     "name": "Flutter Madrid",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -3136,12 +3321,13 @@
     "communityUrl": "https://www.meetup.com/flutter-madrid/",
     "thumbnailUrl": "images/flutter-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "186",
+    "id": 186,
     "name": "Flutter Málaga",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -3155,10 +3341,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "187",
+    "id": 187,
     "name": "Flutter Sevilla",
     "status": "Desconocido",
     "lastReviewed": "25/10/2024",
@@ -3172,10 +3359,11 @@
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "188",
+    "id": 188,
     "name": "Flutter Valencia",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -3189,10 +3377,11 @@
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "189",
+    "id": 189,
     "name": "Foro Cybercamp",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -3204,12 +3393,13 @@
     "communityUrl": "https://www.meetup.com/cybercamp-uma/",
     "thumbnailUrl": "images/foro-cybercamp.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "190",
+    "id": 190,
     "name": "Frontend Developers Madrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -3221,12 +3411,13 @@
     "communityUrl": "https://www.meetup.com/es-ES/Front-Developers-Madrid/",
     "thumbnailUrl": "images/frontend-developers-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "191",
+    "id": 191,
     "name": "FrontFest",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -3238,12 +3429,13 @@
     "communityUrl": "https://frontfest.es/",
     "thumbnailUrl": "images/frontfest.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "192",
+    "id": 192,
     "name": "Fullstack Sevilla",
     "status": "Activa",
     "lastReviewed": "18/12/2024",
@@ -3257,10 +3449,11 @@
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "193",
+    "id": 193,
     "name": "GALPon",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
@@ -3274,10 +3467,11 @@
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "194",
+    "id": 194,
     "name": "Galstech",
     "status": "Desconocido",
     "lastReviewed": "22/10/2024",
@@ -3291,10 +3485,11 @@
     "latLon": {
       "lat": 42.433575,
       "lon": -8.6481143
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "195",
+    "id": 195,
     "name": "Gamaker",
     "status": "Inactiva",
     "lastReviewed": "30/03/2025",
@@ -3308,10 +3503,11 @@
     "latLon": {
       "lat": 42.8468573,
       "lon": -2.6715859
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "196",
+    "id": 196,
     "name": "Gamepolis",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3325,10 +3521,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "197",
+    "id": 197,
     "name": "Gcubo",
     "status": "Inactiva",
     "lastReviewed": "21/10/2024",
@@ -3340,12 +3537,13 @@
     "communityUrl": "https://x.com/gcubo_linux",
     "thumbnailUrl": "images/gcubo.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "198",
+    "id": 198,
     "name": "GDG A Coruña",
     "status": "Activa",
     "lastReviewed": "03/03/2025",
@@ -3359,10 +3557,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "199",
+    "id": 199,
     "name": "GDG Cloud Español",
     "status": "Activa",
     "lastReviewed": "18/11/2024",
@@ -3374,12 +3573,13 @@
     "communityUrl": "https://gdg.community.dev/gdg-cloud-espanol/",
     "thumbnailUrl": "images/gdg-cloud-espanol.webp",
     "latLon": {
-      "lat": 24.997102651132,
-      "lon": -107.480258680048
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "200",
+    "id": 200,
     "name": "GDG Cloud Madrid",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -3390,12 +3590,13 @@
     "contactInfo": "",
     "communityUrl": "https://gdg.community.dev/gdg-cloud-madrid/",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "201",
+    "id": 201,
     "name": "GDG Granada",
     "status": "Activa",
     "lastReviewed": "24/10/2024",
@@ -3407,12 +3608,13 @@
     "communityUrl": "https://www.meetup.com/es-ES/granadagdg/",
     "thumbnailUrl": "images/gdg-granada.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "202",
+    "id": 202,
     "name": "GDG Huelva",
     "status": "Inactiva",
     "lastReviewed": "25/10/2024",
@@ -3426,10 +3628,11 @@
     "latLon": {
       "lat": 37.2571454,
       "lon": -6.9495382
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "203",
+    "id": 203,
     "name": "GDG Jaén",
     "status": "Activa",
     "lastReviewed": "30/01/2025",
@@ -3443,10 +3646,11 @@
     "latLon": {
       "lat": 37.7657753,
       "lon": -3.7893929
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "204",
+    "id": 204,
     "name": "GDG La Rioja",
     "status": "Activa",
     "lastReviewed": "14/11/2024",
@@ -3459,10 +3663,11 @@
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "205",
+    "id": 205,
     "name": "GDG Madrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -3474,12 +3679,13 @@
     "communityUrl": "https://gdg.community.dev/gdg-madrid/",
     "thumbnailUrl": "images/gdg-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "206",
+    "id": 206,
     "name": "GDG Málaga",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -3493,10 +3699,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "207",
+    "id": 207,
     "name": "GDG Marbella",
     "status": "Desconocido",
     "lastReviewed": "25/10/2024",
@@ -3510,10 +3717,11 @@
     "latLon": {
       "lat": 36.5118318,
       "lon": -4.8822775
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "208",
+    "id": 208,
     "name": "GDG Ponferrada",
     "status": "Activa",
     "lastReviewed": "11/12/2024",
@@ -3527,10 +3735,11 @@
     "latLon": {
       "lat": 42.5463315,
       "lon": -6.5908331
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "209",
+    "id": 209,
     "name": "GDG Sevilla",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3544,10 +3753,11 @@
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "210",
+    "id": 210,
     "name": "GDG Spain",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -3559,12 +3769,13 @@
     "communityUrl": "https://gdg.es/",
     "thumbnailUrl": "images/gdg-spain.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "211",
+    "id": 211,
     "name": "GDG Toledo",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -3576,12 +3787,13 @@
     "communityUrl": "https://gdg.community.dev/gdg-toledo/",
     "thumbnailUrl": "images/gdg-toledo.webp",
     "latLon": {
-      "lat": 41.655298,
-      "lon": -83.535717
-    }
+      "lat": 39.85966175170025,
+      "lon": -4.024544270483665
+    },
+    "displayOnMap": true
   },
   {
-    "id": "212",
+    "id": 212,
     "name": "GDG Valencia",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -3595,10 +3807,11 @@
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "213",
+    "id": 213,
     "name": "GDG Vigo",
     "status": "Inactiva",
     "lastReviewed": "27/11/2024",
@@ -3611,10 +3824,11 @@
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "214",
+    "id": 214,
     "name": "GeoDevelopers",
     "status": "Activa",
     "lastReviewed": "24/02/2025",
@@ -3626,12 +3840,13 @@
     "communityUrl": "https://linktr.ee/geodevelopers",
     "thumbnailUrl": "images/geodevelopers.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "215",
+    "id": 215,
     "name": "GeoVoluntarios",
     "status": "Inactiva",
     "lastReviewed": "03/10/2024",
@@ -3642,12 +3857,13 @@
     "contactInfo": "geonamecovid@gmail.com;hhkaos@gmail.com",
     "communityUrl": "https://geovoluntarios.org/",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "216",
+    "id": 216,
     "name": "Girls in Tech Spain",
     "status": "Inactiva",
     "lastReviewed": "15/10/2024",
@@ -3658,12 +3874,13 @@
     "contactInfo": "",
     "communityUrl": "https://spain.girlsintech.org/",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "217",
+    "id": 217,
     "name": "Global AI Bootcamp",
     "status": "Activa",
     "lastReviewed": "24/03/2025",
@@ -3675,12 +3892,13 @@
     "communityUrl": "https://globalai.community/",
     "thumbnailUrl": "images/global-ai-bootcamp.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "218",
+    "id": 218,
     "name": "Global AI Bootcamp Madrid",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3692,12 +3910,13 @@
     "communityUrl": "https://globalai.es/",
     "thumbnailUrl": "images/global-ai-bootcamp-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "219",
+    "id": 219,
     "name": "Global Day of Code Retreat",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -3708,12 +3927,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.coderetreat.org/",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "220",
+    "id": 220,
     "name": "Global Software Architecture Summit",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -3727,10 +3947,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "221",
+    "id": 221,
     "name": "GoMad",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -3742,12 +3963,13 @@
     "communityUrl": "https://www.meetup.com/es-ES/go-mad/",
     "thumbnailUrl": "images/gomad.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "222",
+    "id": 222,
     "name": "Google Developer Student Clubs Spain",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -3759,12 +3981,13 @@
     "communityUrl": "https://x.com/dscspain",
     "thumbnailUrl": "images/google-developer-student-clubs-spain.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "223",
+    "id": 223,
     "name": "GR Interactiva",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -3776,12 +3999,13 @@
     "communityUrl": "https://www.meetup.com/gr-interactiva/",
     "thumbnailUrl": "images/gr-interactiva.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "224",
+    "id": 224,
     "name": "Grafana Meetups",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3793,12 +4017,13 @@
     "communityUrl": "https://grafana.com/community/meetups/",
     "thumbnailUrl": "images/grafana-meetups.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "225",
+    "id": 225,
     "name": "Granada Gaming",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3810,12 +4035,13 @@
     "communityUrl": "https://www.granadagaming.com/",
     "thumbnailUrl": "images/granada-gaming.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "226",
+    "id": 226,
     "name": "Granada Interactiva",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3827,12 +4053,13 @@
     "communityUrl": "https://linktr.ee/grinteractiva",
     "thumbnailUrl": "images/granada-interactiva.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "227",
+    "id": 227,
     "name": "Granada Jam",
     "status": "Activa",
     "lastReviewed": "30/01/2025",
@@ -3844,12 +4071,13 @@
     "communityUrl": "https://granadajam.com/",
     "thumbnailUrl": "images/granada-jam.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "228",
+    "id": 228,
     "name": "Granada PHP",
     "status": "Inactiva",
     "lastReviewed": "15/10/2024",
@@ -3860,12 +4088,13 @@
     "contactInfo": "",
     "communityUrl": "https://web.archive.org/web/20070217032309/http://www.agenciaq4.com:80/granadasitu/granada_php/",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "229",
+    "id": 229,
     "name": "Granada Tech",
     "status": "Activa",
     "lastReviewed": "29/11/2024",
@@ -3876,12 +4105,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.granadatech.org/",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "230",
+    "id": 230,
     "name": "GranadaJUG",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3893,12 +4123,13 @@
     "communityUrl": "https://www.meetup.com/granadajug/",
     "thumbnailUrl": "images/granadajug.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "231",
+    "id": 231,
     "name": "Grupo de Programadores e Usuarios de Linux (GPUL)",
     "status": "Activa",
     "lastReviewed": "22/10/2024",
@@ -3912,10 +4143,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "232",
+    "id": 232,
     "name": "Grupo de Usuarios de Joomla de Vigo",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
@@ -3929,10 +4161,11 @@
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "233",
+    "id": 233,
     "name": "Grupo de Usuarios de R de Madrid",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3944,12 +4177,13 @@
     "communityUrl": "https://www.meetup.com/Grupo-de-Usuarios-de-R-de-Madrid/",
     "thumbnailUrl": "images/grupo-de-usuarios-de-r-de-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "234",
+    "id": 234,
     "name": "Grupo de usuarios de R en Málaga",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -3962,10 +4196,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "235",
+    "id": 235,
     "name": "Grupo de usuarios de Sharepoint de Cataluña (SUG)",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -3978,10 +4213,11 @@
     "latLon": {
       "lat": 41.798241349587,
       "lon": 1.528756658648
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "236",
+    "id": 236,
     "name": "Grupo de Usuarios Joomla! de Logroño",
     "status": "Inactiva",
     "lastReviewed": "27/11/2024",
@@ -3994,10 +4230,11 @@
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "237",
+    "id": 237,
     "name": "Grupo usuarios de R de Canarias",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -4010,10 +4247,11 @@
     "latLon": {
       "lat": 28,
       "lon": -15.5
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "238",
+    "id": 238,
     "name": "Grupo usuarios de R de Murcia",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4026,10 +4264,11 @@
     "latLon": {
       "lat": 37.9835334,
       "lon": -1.129905
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "239",
+    "id": 239,
     "name": "Guadalindie",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -4043,10 +4282,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "240",
+    "id": 240,
     "name": "Guarandinga Tech",
     "status": "Activa",
     "lastReviewed": "18/12/2024",
@@ -4058,12 +4298,13 @@
     "communityUrl": "https://www.meetup.com/guarandinga-tech/",
     "thumbnailUrl": "images/guarandinga-tech.webp",
     "latLon": {
-      "lat": 9.8999,
-      "lon": -74.86048
-    }
+      "lat": 28.26061255652491,
+      "lon": -16.592734601719567
+    },
+    "displayOnMap": true
   },
   {
-    "id": "241",
+    "id": 241,
     "name": "Hack & Beers",
     "status": "Inactiva",
     "lastReviewed": "22/10/2024",
@@ -4075,12 +4316,13 @@
     "communityUrl": "https://web.archive.org/web/20240304115556/https://hackandbeers.es/",
     "thumbnailUrl": "images/hack-beers.jpeg",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "242",
+    "id": 242,
     "name": "Hack Night",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -4093,10 +4335,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "243",
+    "id": 243,
     "name": "HackathonLovers",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -4107,12 +4350,13 @@
     "contactInfo": "",
     "communityUrl": "https://hackathonlovers.com/",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "244",
+    "id": 244,
     "name": "HackBarna",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -4126,10 +4370,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "245",
+    "id": 245,
     "name": "HackCS",
     "status": "Activa",
     "lastReviewed": "21/10/2024",
@@ -4143,10 +4388,11 @@
     "latLon": {
       "lat": 39.9860398,
       "lon": -0.0360705
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "246",
+    "id": 246,
     "name": "Hackers Week",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -4160,26 +4406,29 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "247",
+    "id": 247,
     "name": "HackLab",
     "status": "Inactiva",
     "lastReviewed": "14/12/2024",
     "communityType": "Grupo colaborativo",
-    "eventFormat": "Desconocido",
-    "location": "Sin completar",
+    "eventFormat": "Híbridos",
+    "location": "Almería",
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://hacklabalmeria.net/",
+    "thumbnailUrl": "images/hacklab-almeria.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": 36.8400939,
+      "lon": -2.4679043
+    },
+    "displayOnMap": false
   },
   {
-    "id": "248",
+    "id": 248,
     "name": "HackMadrid %27",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -4191,12 +4440,13 @@
     "communityUrl": "https://hackmadrid.org",
     "thumbnailUrl": "images/hackmadrid-27.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "249",
+    "id": 249,
     "name": "HBSCON",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -4208,12 +4458,13 @@
     "communityUrl": "https://hbscon.com/",
     "thumbnailUrl": "images/hbscon.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "250",
+    "id": 250,
     "name": "HTML5Spain",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -4225,12 +4476,13 @@
     "communityUrl": "https://www.meetup.com/es-ES/HTML5-Spain/",
     "thumbnailUrl": "images/html5spain.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "251",
+    "id": 251,
     "name": "I Conferencia Women Techmakers La Rioja",
     "status": "Inactiva",
     "lastReviewed": "27/11/2024",
@@ -4244,10 +4496,11 @@
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "252",
+    "id": 252,
     "name": "IBM Groups",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -4259,12 +4512,13 @@
     "communityUrl": "https://community.ibm.com/community/user/community",
     "thumbnailUrl": "images/ibm-groups.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "253",
+    "id": 253,
     "name": "Impulsar.ai",
     "status": "Activa",
     "lastReviewed": "24/03/2025",
@@ -4276,28 +4530,30 @@
     "communityUrl": "https://impulsar.ai/#/",
     "thumbnailUrl": "images/impulsarai.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "254",
+    "id": 254,
     "name": "Indismatic",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
     "communityType": "Grupo de ayuda mutua",
     "eventFormat": "Presencial",
-    "location": "La RIoja",
+    "location": "La Rioja",
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.indismatic.es/",
     "latLon": {
-      "lat": -29.4101933,
-      "lon": -66.829414
-    }
+      "lat": 42.46569,
+      "lon": -2.44998
+    },
+    "displayOnMap": true
   },
   {
-    "id": "255",
+    "id": 255,
     "name": "Ingeniería Sin Fronteras (Enxeñeria Sen Fronteiras)",
     "status": "Activa",
     "lastReviewed": "22/10/2024",
@@ -4311,10 +4567,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "256",
+    "id": 256,
     "name": "Ingobernable",
     "status": "Inactiva",
     "lastReviewed": "22/10/2024",
@@ -4326,12 +4583,13 @@
     "communityUrl": "https://ingobernable.net/",
     "thumbnailUrl": "images/ingobernable.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "257",
+    "id": 257,
     "name": "Iniciador",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4342,12 +4600,13 @@
     "contactInfo": "",
     "communityUrl": "https://iniciador.com/",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "258",
+    "id": 258,
     "name": "Iniciador Albacete",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4360,10 +4619,11 @@
     "latLon": {
       "lat": 38.9976623,
       "lon": -1.8600675
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "259",
+    "id": 259,
     "name": "Iniciador Alicante",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4376,10 +4636,11 @@
     "latLon": {
       "lat": 38.34521,
       "lon": -0.4809945
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "260",
+    "id": 260,
     "name": "Iniciador Almería",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4392,10 +4653,11 @@
     "latLon": {
       "lat": 36.8400939,
       "lon": -2.4679043
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "261",
+    "id": 261,
     "name": "Iniciador Asturias",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4406,12 +4668,13 @@
     "contactInfo": "",
     "communityUrl": "https://iniciador.com/Asturias",
     "latLon": {
-      "lat": 10.5679998,
-      "lon": 123.7171998
-    }
+      "lat": 43.3602825,
+      "lon": -5.8447919
+    },
+    "displayOnMap": true
   },
   {
-    "id": "262",
+    "id": 262,
     "name": "Iniciador Ávila",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4424,10 +4687,11 @@
     "latLon": {
       "lat": 40.6563881,
       "lon": -4.700433
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "263",
+    "id": 263,
     "name": "Iniciador Badajoz",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4440,10 +4704,11 @@
     "latLon": {
       "lat": 38.8785497,
       "lon": -6.9701578
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "264",
+    "id": 264,
     "name": "Iniciador Barcelona",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4456,10 +4721,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "265",
+    "id": 265,
     "name": "Iniciador Bilbao",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4472,10 +4738,11 @@
     "latLon": {
       "lat": 43.2569608,
       "lon": -2.9234602
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "266",
+    "id": 266,
     "name": "Iniciador Burgos",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4488,10 +4755,11 @@
     "latLon": {
       "lat": 42.3408923,
       "lon": -3.6997623
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "267",
+    "id": 267,
     "name": "Iniciador Cáceres",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4504,10 +4772,11 @@
     "latLon": {
       "lat": 39.4762161,
       "lon": -6.3708585
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "268",
+    "id": 268,
     "name": "Iniciador Cádiz",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4520,10 +4789,11 @@
     "latLon": {
       "lat": 36.5297453,
       "lon": -6.2926477
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "269",
+    "id": 269,
     "name": "Iniciador Cantabria",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4536,10 +4806,11 @@
     "latLon": {
       "lat": 43.197540444542,
       "lon": -4.029910146256
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "270",
+    "id": 270,
     "name": "Iniciador Castellón",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4552,10 +4823,11 @@
     "latLon": {
       "lat": 39.9860398,
       "lon": -0.0360705
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "271",
+    "id": 271,
     "name": "Iniciador Ciudad Real",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4566,12 +4838,13 @@
     "contactInfo": "",
     "communityUrl": "https://iniciador.com/Ciudad Real",
     "latLon": {
-      "lat": 38.9861041,
-      "lon": -3.9272645
-    }
+      "lat": 38.984305,
+      "lon": -3.929649
+    },
+    "displayOnMap": true
   },
   {
-    "id": "272",
+    "id": 272,
     "name": "Iniciador Congreso",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4582,12 +4855,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.iniciador.com/es/proyectos-y-retos/congreso",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "273",
+    "id": 273,
     "name": "Iniciador Córdoba",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4598,12 +4872,13 @@
     "contactInfo": "",
     "communityUrl": "https://iniciador.com/Cordoba",
     "latLon": {
-      "lat": -31.405059,
-      "lon": -64.171896
-    }
+      "lat": 37.888422,
+      "lon": -4.77513
+    },
+    "displayOnMap": true
   },
   {
-    "id": "274",
+    "id": 274,
     "name": "Iniciador Donostia",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4616,10 +4891,11 @@
     "latLon": {
       "lat": 43.320905,
       "lon": -1.9845145
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "275",
+    "id": 275,
     "name": "Iniciador Emprendimiento social Barcelona",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4632,10 +4908,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "276",
+    "id": 276,
     "name": "Iniciador Fuerteventura",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4648,10 +4925,11 @@
     "latLon": {
       "lat": 28.3967904,
       "lon": -13.8637263
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "277",
+    "id": 277,
     "name": "Iniciador Girona",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4664,10 +4942,11 @@
     "latLon": {
       "lat": 42.128030322674,
       "lon": 2.673305566784
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "278",
+    "id": 278,
     "name": "Iniciador Granada",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4678,12 +4957,13 @@
     "contactInfo": "iniciador-granada@googlegroups.com; hhkaos@gmail.com",
     "communityUrl": "https://iniciador.com/Granada",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "279",
+    "id": 279,
     "name": "Iniciador Guadalajara",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4694,12 +4974,13 @@
     "contactInfo": "",
     "communityUrl": "https://iniciador.com/Guadalajara",
     "latLon": {
-      "lat": 20.6751711,
-      "lon": -103.34733
-    }
+      "lat": 40.632155,
+      "lon": -3.1621
+    },
+    "displayOnMap": true
   },
   {
-    "id": "280",
+    "id": 280,
     "name": "Iniciador Huesca",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4712,10 +4993,11 @@
     "latLon": {
       "lat": 42.1400519,
       "lon": -0.40887
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "281",
+    "id": 281,
     "name": "Iniciador La Rioja",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4726,12 +5008,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.iniciador.com/es/la-rioja",
     "latLon": {
-      "lat": -29.4101933,
-      "lon": -66.829414
-    }
+      "lat": 42.46569,
+      "lon": -2.44998
+    },
+    "displayOnMap": true
   },
   {
-    "id": "282",
+    "id": 282,
     "name": "Iniciador Las Palmas",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4744,10 +5027,11 @@
     "latLon": {
       "lat": 29.416481733333,
       "lon": -13.504866833333
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "283",
+    "id": 283,
     "name": "Iniciador León",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4758,12 +5042,13 @@
     "contactInfo": "",
     "communityUrl": "https://iniciador.com/Leon",
     "latLon": {
-      "lat": 21.121972,
-      "lon": -101.6832
-    }
+      "lat": 42.598862,
+      "lon": -5.572586
+    },
+    "displayOnMap": true
   },
   {
-    "id": "284",
+    "id": 284,
     "name": "Iniciador Lleida",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4776,10 +5061,11 @@
     "latLon": {
       "lat": 41.6141646,
       "lon": 0.6258029
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "285",
+    "id": 285,
     "name": "Iniciador Madrid",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4790,12 +5076,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.iniciador.com/es/madrid",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "286",
+    "id": 286,
     "name": "Iniciador Málaga",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4808,10 +5095,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "287",
+    "id": 287,
     "name": "Iniciador Mallorca",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4822,12 +5110,13 @@
     "contactInfo": "",
     "communityUrl": "https://iniciador.com/Mallorca",
     "latLon": {
-      "lat": 15.3736704,
-      "lon": 120.9655765
-    }
+      "lat": 39.578695,
+      "lon": 2.654489
+    },
+    "displayOnMap": true
   },
   {
-    "id": "288",
+    "id": 288,
     "name": "Iniciador Murcia",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4840,10 +5129,11 @@
     "latLon": {
       "lat": 37.9835334,
       "lon": -1.129905
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "289",
+    "id": 289,
     "name": "Iniciador Navarra",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4856,10 +5146,11 @@
     "latLon": {
       "lat": 42.667475795076,
       "lon": -1.64548557819
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "290",
+    "id": 290,
     "name": "Iniciador Palencia",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4872,10 +5163,11 @@
     "latLon": {
       "lat": 42.0124584,
       "lon": -4.5311748
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "291",
+    "id": 291,
     "name": "Iniciador Salamanca",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4886,12 +5178,13 @@
     "contactInfo": "",
     "communityUrl": "https://iniciador.com/Salamanca",
     "latLon": {
-      "lat": 40.42972,
-      "lon": -3.67975
-    }
+      "lat": 40.966674,
+      "lon": -5.665434
+    },
+    "displayOnMap": true
   },
   {
-    "id": "292",
+    "id": 292,
     "name": "Iniciador Santiago de Compostela",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4904,10 +5197,11 @@
     "latLon": {
       "lat": 42.8806228,
       "lon": -8.5466071
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "293",
+    "id": 293,
     "name": "Iniciador Sevilla",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4920,10 +5214,11 @@
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "294",
+    "id": 294,
     "name": "Iniciador Tenerife",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4934,12 +5229,13 @@
     "contactInfo": "",
     "communityUrl": "https://iniciador.com/Tenerife",
     "latLon": {
-      "lat": 9.8999,
-      "lon": -74.86048
-    }
+      "lat": 28.2631,
+      "lon": -16.60942
+    },
+    "displayOnMap": true
   },
   {
-    "id": "295",
+    "id": 295,
     "name": "Iniciador Teruel",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4952,10 +5248,11 @@
     "latLon": {
       "lat": 40.3441099,
       "lon": -1.1069096
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "296",
+    "id": 296,
     "name": "Iniciador Toledo",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4966,12 +5263,13 @@
     "contactInfo": "",
     "communityUrl": "https://iniciador.com/Toledo",
     "latLon": {
-      "lat": 41.655298,
-      "lon": -83.535717
-    }
+      "lat": 39.85966175170025,
+      "lon": -4.024544270483665
+    },
+    "displayOnMap": true
   },
   {
-    "id": "297",
+    "id": 297,
     "name": "Iniciador Valencia",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4984,10 +5282,11 @@
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "298",
+    "id": 298,
     "name": "Iniciador Valladolid",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5000,10 +5299,11 @@
     "latLon": {
       "lat": 41.6529421,
       "lon": -4.7283839
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "299",
+    "id": 299,
     "name": "Iniciador Zaragoza",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5016,10 +5316,11 @@
     "latLon": {
       "lat": 41.656837,
       "lon": -0.8794245
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "300",
+    "id": 300,
     "name": "Intellias Spain Tech Talks",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -5033,10 +5334,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "301",
+    "id": 301,
     "name": "Interferencias",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -5047,12 +5349,13 @@
     "contactInfo": "",
     "communityUrl": "https://interferencias.tech/quedadas",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "302",
+    "id": 302,
     "name": "Internet of Things Madrid Meetup",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -5063,12 +5366,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/iotmadrid/",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "303",
+    "id": 303,
     "name": "Ionic Madrid",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -5079,12 +5383,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/ionic-madrid/",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "304",
+    "id": 304,
     "name": "J On The Beach",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5098,10 +5403,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "305",
+    "id": 305,
     "name": "Java User Groups",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5113,12 +5419,13 @@
     "communityUrl": "https://dev.java/community/jugs/",
     "thumbnailUrl": "images/java-user-groups.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "306",
+    "id": 306,
     "name": "javaHispano",
     "status": "Inactiva",
     "lastReviewed": "15/10/2024",
@@ -5129,12 +5436,13 @@
     "contactInfo": "",
     "communityUrl": "http://www.javahispano.org/",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "307",
+    "id": 307,
     "name": "Jornadas Anuales Wikimedia España",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5146,12 +5454,13 @@
     "communityUrl": "https://wikimedia.es/category/eventos/jornadas-anuales/",
     "thumbnailUrl": "images/jornadas-anuales-wikimedia-espana.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "308",
+    "id": 308,
     "name": "Jornadas de SIG Libre",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5165,10 +5474,11 @@
     "latLon": {
       "lat": 42.128030322674,
       "lon": 2.673305566784
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "309",
+    "id": 309,
     "name": "JSDay Canarias",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5180,12 +5490,13 @@
     "communityUrl": "https://jsdaycanarias.com/",
     "thumbnailUrl": "images/jsday-canarias.webp",
     "latLon": {
-      "lat": 9.8999,
-      "lon": -74.86048
-    }
+      "lat": 28.2631,
+      "lon": -16.60942
+    },
+    "displayOnMap": true
   },
   {
-    "id": "310",
+    "id": 310,
     "name": "JSDayES",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5197,12 +5508,13 @@
     "communityUrl": "https://2020.jsday.es/",
     "thumbnailUrl": "images/jsdayes.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "311",
+    "id": 311,
     "name": "Killer Skills",
     "status": "Activa",
     "lastReviewed": "16/10/2024",
@@ -5214,12 +5526,13 @@
     "communityUrl": "https://killerskills.me/",
     "thumbnailUrl": "images/killer-skills.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "312",
+    "id": 312,
     "name": "La Jaquería",
     "status": "Activa",
     "lastReviewed": "23/10/2024",
@@ -5233,10 +5546,11 @@
     "latLon": {
       "lat": 36.8400939,
       "lon": -2.4679043
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "313",
+    "id": 313,
     "name": "La Product Conf & LPCx España",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -5248,12 +5562,13 @@
     "communityUrl": "https://www.laproductconf.com/",
     "thumbnailUrl": "images/la-product-conf-lpcx-espana.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "314",
+    "id": 314,
     "name": "La Rioja Tech Alliance ",
     "status": "Inactiva",
     "lastReviewed": "27/11/2024",
@@ -5264,12 +5579,13 @@
     "contactInfo": "",
     "communityUrl": "https://web.archive.org/web/20230309185755/http://www.lariojatech.org/",
     "latLon": {
-      "lat": -29.4101933,
-      "lon": -66.829414
-    }
+      "lat": 42.46569,
+      "lon": -2.44998
+    },
+    "displayOnMap": true
   },
   {
-    "id": "315",
+    "id": 315,
     "name": "Lambda World",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5283,10 +5599,11 @@
     "latLon": {
       "lat": 36.5297453,
       "lon": -6.2926477
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "316",
+    "id": 316,
     "name": "LangDev Conference",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5300,10 +5617,11 @@
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "317",
+    "id": 317,
     "name": "Latinas in Tech Madrid",
     "status": "Activa",
     "lastReviewed": "11/12/2024",
@@ -5315,12 +5633,13 @@
     "communityUrl": "https://latinasintech.org/chapter/madrid",
     "thumbnailUrl": "images/latinas-in-tech-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "318",
+    "id": 318,
     "name": "LechazoConf",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5334,10 +5653,11 @@
     "latLon": {
       "lat": 41.6529421,
       "lon": -4.7283839
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "319",
+    "id": 319,
     "name": "LibreLabGRX",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5349,12 +5669,13 @@
     "communityUrl": "https://librelabgrx.cc/",
     "thumbnailUrl": "images/librelabgrx.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "320",
+    "id": 320,
     "name": "Liferay Spain User Group (LUGSpain)",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5366,12 +5687,13 @@
     "communityUrl": "https://www.meetup.com/liferay-spain-user-group/",
     "thumbnailUrl": "images/liferay-spain-user-group-lugspain.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "321",
+    "id": 321,
     "name": "Machine Learning Spain",
     "status": "Activa",
     "lastReviewed": "24/03/2025",
@@ -5383,12 +5705,13 @@
     "communityUrl": "https://www.meetup.com/es-ES/machinelearningspain/",
     "thumbnailUrl": "images/machine-learning-spain.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "322",
+    "id": 322,
     "name": "MADE Makerspace",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -5402,10 +5725,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "323",
+    "id": 323,
     "name": "Madriagil",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -5417,12 +5741,13 @@
     "communityUrl": "https://www.meetup.com/es-ES/madriagil/",
     "thumbnailUrl": "images/madriagil.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "324",
+    "id": 324,
     "name": "Madrid |> Elixir",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -5434,12 +5759,13 @@
     "communityUrl": "https://www.meetup.com/es-ES/madrid-elixir/",
     "thumbnailUrl": "images/madrid-elixir.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "325",
+    "id": 325,
     "name": "Madrid Android Developer Group",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -5450,12 +5776,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/madrid-android-dev-group/",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "326",
+    "id": 326,
     "name": "Madrid DevOps",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -5466,12 +5793,13 @@
     "contactInfo": "",
     "communityUrl": "https://madrid.devops.es/",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "327",
+    "id": 327,
     "name": "Madrid DUG (Google Dart User Group)",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -5482,12 +5810,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/madrid-dug/",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "328",
+    "id": 328,
     "name": "Madrid Ruby User Group (madrid.rb)",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -5498,12 +5827,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.madridrb.com/?locale=en",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "329",
+    "id": 329,
     "name": "Madrid Smalltalk User Group (SUG)",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -5514,12 +5844,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/madridsug/",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "330",
+    "id": 330,
     "name": "Madrid Spring User Group",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -5530,12 +5861,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/madrid-spring-user-group",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "331",
+    "id": 331,
     "name": "Madrid Tech Show",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -5547,12 +5879,13 @@
     "communityUrl": "https://www.madridtechshow.es/",
     "thumbnailUrl": "images/madrid-tech-show.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "332",
+    "id": 332,
     "name": "Madrid Tech Talks",
     "status": "Activa",
     "lastReviewed": "11/12/2024",
@@ -5564,12 +5897,13 @@
     "communityUrl": "https://madridtechtalks.com/",
     "thumbnailUrl": "images/madrid-tech-talks.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "333",
+    "id": 333,
     "name": "Madrid-Groovy User Group (GUG)",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -5581,12 +5915,13 @@
     "communityUrl": "https://www.madridgug.com/",
     "thumbnailUrl": "images/madrid-groovy-user-group-gug.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "334",
+    "id": 334,
     "name": "MadridDotNet",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -5598,12 +5933,13 @@
     "communityUrl": "https://www.meetup.com/madriddotnet/",
     "thumbnailUrl": "images/madriddotnet.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "335",
+    "id": 335,
     "name": "MadridJS",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -5615,12 +5951,13 @@
     "communityUrl": "https://www.meetup.com/es-ES/madridjs/",
     "thumbnailUrl": "images/madridjs.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "336",
+    "id": 336,
     "name": "MadridJUG",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -5632,12 +5969,13 @@
     "communityUrl": "https://www.meetup.com/es-ES/madridjug/",
     "thumbnailUrl": "images/madridjug.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "337",
+    "id": 337,
     "name": "MadridScala",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -5649,12 +5987,13 @@
     "communityUrl": "https://www.meetup.com/es-ES/Scala-Programming-Madrid/",
     "thumbnailUrl": "images/madridscala.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "338",
+    "id": 338,
     "name": "MadRust",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -5665,12 +6004,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/madrust/",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "339",
+    "id": 339,
     "name": "Makers of Murcia",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -5684,10 +6024,11 @@
     "latLon": {
       "lat": 37.9835334,
       "lon": -1.129905
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "340",
+    "id": 340,
     "name": "MakespaceMadrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -5699,12 +6040,13 @@
     "communityUrl": "https://makespacemadrid.org/",
     "thumbnailUrl": "images/makespacemadrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "341",
+    "id": 341,
     "name": "Málaga Indie Hackers",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -5718,10 +6060,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "342",
+    "id": 342,
     "name": "Málaga Scala Devs",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5734,10 +6077,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "343",
+    "id": 343,
     "name": "Málaga TechClub",
     "status": "Desconocido",
     "lastReviewed": "25/10/2024",
@@ -5750,10 +6094,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "344",
+    "id": 344,
     "name": "Málaga-AI",
     "status": "Activa",
     "lastReviewed": "24/03/2025",
@@ -5767,10 +6112,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "345",
+    "id": 345,
     "name": "Malaga-Scala",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -5783,10 +6129,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "346",
+    "id": 346,
     "name": "MálagaJam",
     "status": "Activa",
     "lastReviewed": "24/03/2025",
@@ -5800,10 +6147,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "347",
+    "id": 347,
     "name": "MálagaJUG",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -5817,10 +6165,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "348",
+    "id": 348,
     "name": "Mermelada.tech",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -5832,12 +6181,13 @@
     "communityUrl": "https://x.com/MermeladaTech",
     "thumbnailUrl": "images/mermeladatech.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "349",
+    "id": 349,
     "name": "miduConf",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -5849,12 +6199,13 @@
     "communityUrl": "https://www.miduconf.com/",
     "thumbnailUrl": "images/miduconf.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "350",
+    "id": 350,
     "name": "Midudev",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -5866,12 +6217,13 @@
     "communityUrl": "https://discord.com/invite/midudev",
     "thumbnailUrl": "images/midudev.webp:large",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "351",
+    "id": 351,
     "name": "Mobile Development",
     "status": "Desconocido",
     "lastReviewed": "25/10/2024",
@@ -5882,12 +6234,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/xamarin-madrid/?eventOrigin=topic_overview_nearest_groups",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "352",
+    "id": 352,
     "name": "MorcillaConf",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -5901,10 +6254,11 @@
     "latLon": {
       "lat": 42.3408923,
       "lon": -3.6997623
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "353",
+    "id": 353,
     "name": "MorterueloCon",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5916,12 +6270,13 @@
     "communityUrl": "https://www.morteruelo.net/",
     "thumbnailUrl": "images/morteruelocon.webp",
     "latLon": {
-      "lat": -2.8887294,
-      "lon": -78.9983816
-    }
+      "lat": 40.06682,
+      "lon": -2.14167
+    },
+    "displayOnMap": true
   },
   {
-    "id": "354",
+    "id": 354,
     "name": "Mouredev",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -5933,12 +6288,13 @@
     "communityUrl": "https://discord.com/invite/mouredev",
     "thumbnailUrl": "images/mouredev.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "355",
+    "id": 355,
     "name": "MsCoders Madrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -5950,12 +6306,13 @@
     "communityUrl": "https://www.meetup.com/es-ES/mscoders/",
     "thumbnailUrl": "images/mscoders-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "356",
+    "id": 356,
     "name": "Mulesoft Barcelona",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -5969,10 +6326,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "357",
+    "id": 357,
     "name": "Mulesoft Madrid",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -5984,12 +6342,13 @@
     "communityUrl": "https://meetups.mulesoft.com/madrid",
     "thumbnailUrl": "images/mulesoft-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "358",
+    "id": 358,
     "name": "MuleSoft Meetups",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -6001,12 +6360,13 @@
     "communityUrl": "https://meetups.mulesoft.com/",
     "thumbnailUrl": "images/mulesoft-meetups.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "359",
+    "id": 359,
     "name": "Mulesoft Murcia",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -6020,10 +6380,11 @@
     "latLon": {
       "lat": 37.9835334,
       "lon": -1.129905
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "360",
+    "id": 360,
     "name": "Mulesoft Sevilla",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -6037,10 +6398,11 @@
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "361",
+    "id": 361,
     "name": "Mulesoft Valencia",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -6054,10 +6416,11 @@
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "362",
+    "id": 362,
     "name": "murcia dev",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
@@ -6071,10 +6434,11 @@
     "latLon": {
       "lat": 37.9835334,
       "lon": -1.129905
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "363",
+    "id": 363,
     "name": "Murcia software crafters",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
@@ -6088,10 +6452,11 @@
     "latLon": {
       "lat": 37.9835334,
       "lon": -1.129905
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "364",
+    "id": 364,
     "name": "My Tech Plan",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -6103,12 +6468,13 @@
     "communityUrl": "https://mytechplan.com/name/",
     "thumbnailUrl": "images/my-tech-plan.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "365",
+    "id": 365,
     "name": "Navaja Negra",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6122,10 +6488,11 @@
     "latLon": {
       "lat": 38.9976623,
       "lon": -1.8600675
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "366",
+    "id": 366,
     "name": "Netcoreconf",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -6137,12 +6504,13 @@
     "communityUrl": "https://netcoreconf.com/",
     "thumbnailUrl": "images/netcoreconf.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "367",
+    "id": 367,
     "name": "No cON Name",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6156,10 +6524,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "368",
+    "id": 368,
     "name": "NoCodeFest",
     "status": "Inactiva",
     "lastReviewed": "17/10/2024",
@@ -6173,10 +6542,11 @@
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "369",
+    "id": 369,
     "name": "NodeJSMadrid",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -6187,12 +6557,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/node-js-madrid/",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "370",
+    "id": 370,
     "name": "NorthemQuality",
     "status": "Inactiva",
     "lastReviewed": "18/12/2024",
@@ -6203,12 +6574,13 @@
     "contactInfo": "",
     "communityUrl": "https://northemquality.github.io/",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "371",
+    "id": 371,
     "name": "nosday",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6222,10 +6594,11 @@
     "latLon": {
       "lat": 42.8806228,
       "lon": -8.5466071
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "372",
+    "id": 372,
     "name": "Notion Coruña",
     "status": "Activa",
     "lastReviewed": "22/10/2024",
@@ -6239,10 +6612,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "373",
+    "id": 373,
     "name": "NSCoder Night Madrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -6254,12 +6628,13 @@
     "communityUrl": "https://www.meetup.com/nscoder-night-madrid/",
     "thumbnailUrl": "images/nscoder-night-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "374",
+    "id": 374,
     "name": "NSSpain",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6273,10 +6648,11 @@
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "375",
+    "id": 375,
     "name": "Nuberos.net",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -6289,10 +6665,11 @@
     "latLon": {
       "lat": 43.4614116,
       "lon": -3.8093031
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "376",
+    "id": 376,
     "name": "NWC10Lab: Innovación WEB3, CRIPTO y blockchain para todos",
     "status": "Activa",
     "lastReviewed": "11/12/2024",
@@ -6304,12 +6681,13 @@
     "communityUrl": "https://www.meetup.com/innovacion-web3-para-todos-con-super-pioneros/?eventOrigin=event_home_page",
     "thumbnailUrl": "images/nwc10lab-innovacion-web3-cripto-y-blockchain-para-todos.jpeg",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "377",
+    "id": 377,
     "name": "Oficina de Software Libre Granada",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6321,12 +6699,13 @@
     "communityUrl": "https://osl.ugr.es/",
     "thumbnailUrl": "images/oficina-de-software-libre-granada.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "378",
+    "id": 378,
     "name": "Open Source Weekends",
     "status": "Inactiva",
     "lastReviewed": "03/10/2024",
@@ -6337,12 +6716,13 @@
     "contactInfo": "",
     "communityUrl": "http://osweekends.com",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "379",
+    "id": 379,
     "name": "OpenExpo Europe",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6354,12 +6734,13 @@
     "communityUrl": "https://openexpoeurope.com/",
     "thumbnailUrl": "images/openexpo-europe.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "380",
+    "id": 380,
     "name": "OpenSouthCode",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6373,10 +6754,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "381",
+    "id": 381,
     "name": "OWASP",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6388,12 +6770,13 @@
     "communityUrl": "https://owasp.org/chapters/",
     "thumbnailUrl": "images/owasp.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "382",
+    "id": 382,
     "name": "OWASP Barcelona",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6407,10 +6790,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "383",
+    "id": 383,
     "name": "OWASP Logroño",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6424,10 +6808,11 @@
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "384",
+    "id": 384,
     "name": "OWASP Sevilla",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6441,10 +6826,11 @@
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "385",
+    "id": 385,
     "name": "PaellaCon",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -6458,10 +6844,11 @@
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "386",
+    "id": 386,
     "name": "Pamplona-Iruña Software Crafters",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6475,10 +6862,11 @@
     "latLon": {
       "lat": 42.8179948,
       "lon": -1.6441817
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "387",
+    "id": 387,
     "name": "PASS Spain",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -6489,12 +6877,13 @@
     "contactInfo": "",
     "communityUrl": "http://www.sqlpass.es",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "388",
+    "id": 388,
     "name": "PHP Coruña",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -6508,10 +6897,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "389",
+    "id": 389,
     "name": "PHPMad",
     "status": "Activa",
     "lastReviewed": "11/12/2024",
@@ -6523,12 +6913,13 @@
     "communityUrl": "https://www.meetup.com/phpmad/events/304894313/",
     "thumbnailUrl": "images/phpmad.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "390",
+    "id": 390,
     "name": "PhpMadrid",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -6539,12 +6930,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/phpmad/",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "391",
+    "id": 391,
     "name": "PHPúrpura",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -6555,12 +6947,13 @@
     "contactInfo": "",
     "communityUrl": "https://phpurpura.com/",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "392",
+    "id": 392,
     "name": "PHPVigo",
     "status": "Inactiva",
     "lastReviewed": "27/11/2024",
@@ -6573,10 +6966,11 @@
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "393",
+    "id": 393,
     "name": "Pica Pica HackLab",
     "status": "Activa",
     "lastReviewed": "24/10/2024",
@@ -6590,10 +6984,11 @@
     "latLon": {
       "lat": 43.3602825,
       "lon": -5.8447919
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "394",
+    "id": 394,
     "name": "Power BI & Fabric Malaga",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6607,10 +7002,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "395",
+    "id": 395,
     "name": "PowerTips Cádiz",
     "status": "Desconocido",
     "lastReviewed": "25/10/2024",
@@ -6623,10 +7019,11 @@
     "latLon": {
       "lat": 36.5297453,
       "lon": -6.2926477
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "396",
+    "id": 396,
     "name": "PrestaShop - Málaga Ecommerce Meetup",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6640,10 +7037,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "397",
+    "id": 397,
     "name": "ProductTank Málaga",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -6657,10 +7055,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "398",
+    "id": 398,
     "name": "PucelaTechDay",
     "status": "Inactiva",
     "lastReviewed": "17/10/2024",
@@ -6674,10 +7073,11 @@
     "latLon": {
       "lat": 41.6529421,
       "lon": -4.7283839
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "399",
+    "id": 399,
     "name": "Pulpo Con 🐙 ",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -6691,10 +7091,11 @@
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "400",
+    "id": 400,
     "name": "PyCamp España",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -6706,12 +7107,13 @@
     "communityUrl": "https://pycamp.es/",
     "thumbnailUrl": "images/pycamp-espana.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "401",
+    "id": 401,
     "name": "PyCon España",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6723,12 +7125,13 @@
     "communityUrl": "https://es.pycon.org/",
     "thumbnailUrl": "images/pycon-espana.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "402",
+    "id": 402,
     "name": "PyData",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6740,12 +7143,13 @@
     "communityUrl": "https://pydata.org/",
     "thumbnailUrl": "images/pydata.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "403",
+    "id": 403,
     "name": "PyData Granada",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -6757,12 +7161,13 @@
     "communityUrl": "https://linksta.cc/@PyDataGRX",
     "thumbnailUrl": "images/pydata-granada.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "404",
+    "id": 404,
     "name": "PyData Madrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -6774,12 +7179,13 @@
     "communityUrl": "https://www.meetup.com/PyData-Madrid/",
     "thumbnailUrl": "images/pydata-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "405",
+    "id": 405,
     "name": "PyData Málaga",
     "status": "Activa",
     "lastReviewed": "21/10/2024",
@@ -6793,10 +7199,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "406",
+    "id": 406,
     "name": "Python Coruña",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -6810,10 +7217,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "407",
+    "id": 407,
     "name": "Python España",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -6825,12 +7233,13 @@
     "communityUrl": "https://es.python.org",
     "thumbnailUrl": "images/python-espana.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "408",
+    "id": 408,
     "name": "Python Granada",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -6842,12 +7251,13 @@
     "communityUrl": "https://pythongranada.github.io/blog/",
     "thumbnailUrl": "images/python-granada.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "409",
+    "id": 409,
     "name": "Python Madrid",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -6858,12 +7268,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/python-madrid",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "410",
+    "id": 410,
     "name": "Python Málaga",
     "status": "Activa",
     "lastReviewed": "21/10/2024",
@@ -6877,10 +7288,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "411",
+    "id": 411,
     "name": "Python Vigo",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
@@ -6894,10 +7306,11 @@
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "412",
+    "id": 412,
     "name": "QA Málaga",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -6911,10 +7324,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "413",
+    "id": 413,
     "name": "Quedadas WordPress en Español",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6926,12 +7340,13 @@
     "communityUrl": "https://www.meetup.com/quedadas-wordpress-en-espanol/",
     "thumbnailUrl": "images/quedadas-wordpress-en-espanol.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "414",
+    "id": 414,
     "name": "ReactAlicante",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6945,10 +7360,11 @@
     "latLon": {
       "lat": 38.34521,
       "lon": -0.4809945
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "415",
+    "id": 415,
     "name": "Red Hat User Group Community",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6960,12 +7376,13 @@
     "communityUrl": "https://www.redhat.com/en/red-hat-user-group/europe-middle-east-africa",
     "thumbnailUrl": "images/red-hat-user-group-community.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "416",
+    "id": 416,
     "name": "Rioja{dotnet}",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -6977,12 +7394,13 @@
     "communityUrl": "https://www.meetup.com/riojadotnet/",
     "thumbnailUrl": "images/riojadotnet.webp",
     "latLon": {
-      "lat": -29.4101933,
-      "lon": -66.829414
-    }
+      "lat": 42.46569,
+      "lon": -2.44998
+    },
+    "displayOnMap": true
   },
   {
-    "id": "417",
+    "id": 417,
     "name": "RioJakers",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
@@ -6993,12 +7411,13 @@
     "contactInfo": "",
     "communityUrl": "https://riojakers.com/",
     "latLon": {
-      "lat": -29.4101933,
-      "lon": -66.829414
-    }
+      "lat": 42.46569,
+      "lon": -2.44998
+    },
+    "displayOnMap": true
   },
   {
-    "id": "418",
+    "id": 418,
     "name": "rockndroid",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -7010,12 +7429,13 @@
     "communityUrl": "https://rockndroid.dev/",
     "thumbnailUrl": "images/rockndroid.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "419",
+    "id": 419,
     "name": "rockndroid Madrid",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -7026,12 +7446,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/rockndroidmad/",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "420",
+    "id": 420,
     "name": "SalmorejoTech",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7043,12 +7464,13 @@
     "communityUrl": "https://salmorejo.tech/2024/",
     "thumbnailUrl": "images/salmorejotech.webp:large",
     "latLon": {
-      "lat": -31.405059,
-      "lon": -64.171896
-    }
+      "lat": 37.888422,
+      "lon": -4.77513
+    },
+    "displayOnMap": true
   },
   {
-    "id": "421",
+    "id": 421,
     "name": "Scala Days",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -7060,12 +7482,13 @@
     "communityUrl": "https://scaladays.org/",
     "thumbnailUrl": "images/scala-days.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "422",
+    "id": 422,
     "name": "Seo Galicia",
     "status": "Inactiva",
     "lastReviewed": "27/11/2024",
@@ -7079,10 +7502,11 @@
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "423",
+    "id": 423,
     "name": "Sevilla R users",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7096,10 +7520,11 @@
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "424",
+    "id": 424,
     "name": "Singularity Tech Day",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -7113,10 +7538,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "425",
+    "id": 425,
     "name": "Sirviendo código",
     "status": "Activa",
     "lastReviewed": "16/10/2024",
@@ -7128,12 +7554,13 @@
     "communityUrl": "https://sirviendocodigo.com/",
     "thumbnailUrl": "images/sirviendo-codigo.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "426",
+    "id": 426,
     "name": "Sistopics Distribuidos",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -7144,12 +7571,13 @@
     "contactInfo": "",
     "communityUrl": "https://web.archive.org/web/20180617225556/http://www.sug.cat/",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "427",
+    "id": 427,
     "name": "Smart Devices Madrid",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -7160,12 +7588,13 @@
     "contactInfo": "",
     "communityUrl": "??",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "428",
+    "id": 428,
     "name": "Socracan (SoCraTes Canaries)",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -7179,10 +7608,11 @@
     "latLon": {
       "lat": 28,
       "lon": -15.5
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "429",
+    "id": 429,
     "name": "Software Crafters Barcelona",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7196,10 +7626,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "430",
+    "id": 430,
     "name": "Software Crafters Madrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -7211,12 +7642,13 @@
     "communityUrl": "https://www.meetup.com/es-ES/madswcraft/",
     "thumbnailUrl": "images/software-crafters-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "431",
+    "id": 431,
     "name": "Software Testers & QA Experts de Málaga",
     "status": "Desconocido",
     "lastReviewed": "25/10/2024",
@@ -7230,10 +7662,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "432",
+    "id": 432,
     "name": "South Summit",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7245,12 +7678,13 @@
     "communityUrl": "https://www.southsummit.io/",
     "thumbnailUrl": "images/south-summit.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "433",
+    "id": 433,
     "name": "Spring I/O",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7264,10 +7698,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "434",
+    "id": 434,
     "name": "Startup Oasis",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -7281,10 +7716,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "435",
+    "id": 435,
     "name": "Startup Olé",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7296,12 +7732,13 @@
     "communityUrl": "https://startupole.eu/",
     "thumbnailUrl": "images/startup-ole.webp",
     "latLon": {
-      "lat": 40.42972,
-      "lon": -3.67975
-    }
+      "lat": 40.966674,
+      "lon": -5.665434
+    },
+    "displayOnMap": true
   },
   {
-    "id": "436",
+    "id": 436,
     "name": "Step4ward",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -7315,10 +7752,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "437",
+    "id": 437,
     "name": "Subflash Summer Workshops",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
@@ -7330,12 +7768,13 @@
     "communityUrl": "https://subflash.com/",
     "thumbnailUrl": "images/subflash-summer-workshops.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "438",
+    "id": 438,
     "name": "SVQJUG",
     "status": "Activa",
     "lastReviewed": "11/04/2024",
@@ -7348,10 +7787,11 @@
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "439",
+    "id": 439,
     "name": "SVQTech",
     "status": "Activa",
     "lastReviewed": "29/11/2024",
@@ -7365,10 +7805,11 @@
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "440",
+    "id": 440,
     "name": "Sysadmin Galicia",
     "status": "Inactiva",
     "lastReviewed": "27/11/2024",
@@ -7381,10 +7822,11 @@
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "441",
+    "id": 441,
     "name": "Sysarmy",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7396,12 +7838,13 @@
     "communityUrl": "https://sysarmy.com/",
     "thumbnailUrl": "images/sysarmy.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "442",
+    "id": 442,
     "name": "Sysarmy Galicia",
     "status": "Activa",
     "lastReviewed": "25/04/2025",
@@ -7415,10 +7858,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "443",
+    "id": 443,
     "name": "T3chFest",
     "status": "Activa",
     "lastReviewed": "13/08/2024",
@@ -7430,12 +7874,13 @@
     "communityUrl": "https://t3chfest.es/",
     "thumbnailUrl": "images/t3chfest.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "444",
+    "id": 444,
     "name": "TAI Granada",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7447,12 +7892,13 @@
     "communityUrl": "https://taigranada.com/",
     "thumbnailUrl": "images/tai-granada.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "445",
+    "id": 445,
     "name": "Tech Club Asturias",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -7464,12 +7910,13 @@
     "communityUrl": "https://techclubasturias.com/",
     "thumbnailUrl": "images/tech-club-asturias.webp",
     "latLon": {
-      "lat": 10.5679998,
-      "lon": 123.7171998
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "446",
+    "id": 446,
     "name": "Tech Network- Pitch your ideas over a beer!",
     "status": "Inactiva",
     "lastReviewed": "11/12/2024",
@@ -7480,12 +7927,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/technetwork/events/304881438/",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "447",
+    "id": 447,
     "name": "Techdencias",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -7496,12 +7944,13 @@
     "contactInfo": "",
     "communityUrl": "https://web.archive.org/web/20220702201035/http://techdencias.net/",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "448",
+    "id": 448,
     "name": "TechShessions",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7513,12 +7962,13 @@
     "communityUrl": "https://techshessions.com/",
     "thumbnailUrl": "images/techshessions.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "449",
+    "id": 449,
     "name": "TenerifeDev",
     "status": "Activa",
     "lastReviewed": "18/12/2024",
@@ -7530,12 +7980,13 @@
     "communityUrl": "https://www.meetup.com/TenerifeDev/",
     "thumbnailUrl": "images/tenerifedev.webp",
     "latLon": {
-      "lat": 9.8999,
-      "lon": -74.86048
-    }
+      "lat": 28.2631,
+      "lon": -16.609420751149337
+    },
+    "displayOnMap": true
   },
   {
-    "id": "450",
+    "id": 450,
     "name": "TheAntiEvent",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7549,10 +8000,11 @@
     "latLon": {
       "lat": 43.2569608,
       "lon": -2.9234602
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "451",
+    "id": 451,
     "name": "Tizonaconf",
     "status": "Inactiva",
     "lastReviewed": "17/10/2024",
@@ -7566,10 +8018,11 @@
     "latLon": {
       "lat": 42.3408923,
       "lon": -3.6997623
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "452",
+    "id": 452,
     "name": "TomatinaCON",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -7583,10 +8036,11 @@
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "453",
+    "id": 453,
     "name": "Tomelloso Tech",
     "status": "Inactiva",
     "lastReviewed": "03/10/2024",
@@ -7599,10 +8053,11 @@
     "latLon": {
       "lat": 39.157747,
       "lon": -3.0208068
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "454",
+    "id": 454,
     "name": "TRGCON",
     "status": "Activa",
     "lastReviewed": "02/06/2025",
@@ -7614,12 +8069,13 @@
     "communityUrl": "https://trgcon.com/",
     "thumbnailUrl": "images/trgcon.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "455",
+    "id": 455,
     "name": "Unity User Group Network",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7631,12 +8087,13 @@
     "communityUrl": "https://docs.google.com/document/d/17OCsMsuwY5RabPsCgDiL-d84cyFN0idriCdD_ssqx8U/edit?tab=t.0#heading=h.fv330pyk733i",
     "thumbnailUrl": "images/unity-user-group-network.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "456",
+    "id": 456,
     "name": "Usuarios R Salamanca",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -7647,12 +8104,13 @@
     "contactInfo": "",
     "communityUrl": "http://salamanca.r-es.org/",
     "latLon": {
-      "lat": 40.42972,
-      "lon": -3.67975
-    }
+      "lat": 40.966674,
+      "lon": -5.665434
+    },
+    "displayOnMap": true
   },
   {
-    "id": "457",
+    "id": 457,
     "name": "Usuarios R Valencia",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -7665,10 +8123,11 @@
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "458",
+    "id": 458,
     "name": "UX Galicia",
     "status": "Inactiva",
     "lastReviewed": "27/11/2024",
@@ -7681,10 +8140,11 @@
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "459",
+    "id": 459,
     "name": "Valencia Interactive",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7698,10 +8158,11 @@
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "460",
+    "id": 460,
     "name": "VDS",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -7715,10 +8176,11 @@
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "461",
+    "id": 461,
     "name": "viCON",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -7732,10 +8194,11 @@
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "462",
+    "id": 462,
     "name": "Vigo Android Developer Group",
     "status": "Inactiva",
     "lastReviewed": "27/11/2024",
@@ -7748,10 +8211,11 @@
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "463",
+    "id": 463,
     "name": "Vigo Tech Alliance",
     "status": "Activa",
     "lastReviewed": "03/03/2025",
@@ -7764,10 +8228,11 @@
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "464",
+    "id": 464,
     "name": "VigoJUG",
     "status": "Inactiva",
     "lastReviewed": "27/11/2024",
@@ -7777,10 +8242,11 @@
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "465",
+    "id": 465,
     "name": "Vue Málaga",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -7794,10 +8260,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "466",
+    "id": 466,
     "name": "VueJS Madrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -7809,12 +8276,13 @@
     "communityUrl": "https://www.meetup.com/es-ES/vuejs-madrid/",
     "thumbnailUrl": "images/vuejs-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "467",
+    "id": 467,
     "name": "VueJS Valencia",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -7827,10 +8295,11 @@
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "468",
+    "id": 468,
     "name": "Wasm I/O",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -7844,10 +8313,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "469",
+    "id": 469,
     "name": "Web3 Island Makers",
     "status": "Activa",
     "lastReviewed": "18/12/2024",
@@ -7859,12 +8329,13 @@
     "communityUrl": "https://www.meetup.com/web3-island-makers",
     "thumbnailUrl": "images/web3-island-makers.webp",
     "latLon": {
-      "lat": 9.8999,
-      "lon": -74.86048
-    }
+      "lat": 28.2631,
+      "lon": -16.60942
+    },
+    "displayOnMap": true
   },
   {
-    "id": "470",
+    "id": 470,
     "name": "wecodefest",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -7878,10 +8349,11 @@
     "latLon": {
       "lat": 41.6529421,
       "lon": -4.7283839
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "471",
+    "id": 471,
     "name": "Wey Wey Web",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -7895,10 +8367,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "472",
+    "id": 472,
     "name": "Wikimedia España",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7910,12 +8383,13 @@
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Espa%C3%B1a",
     "thumbnailUrl": "images/wikimedia-espana.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "473",
+    "id": 473,
     "name": "Wikiproyecto Almería",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7929,10 +8403,11 @@
     "latLon": {
       "lat": 36.8400939,
       "lon": -2.4679043
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "474",
+    "id": 474,
     "name": "Wikiproyecto Burgos",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -7944,12 +8419,13 @@
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Burgos/participantes",
     "thumbnailUrl": "images/wikiproyecto-burgos.webp",
     "latLon": {
-      "lat": 42.3408923,
-      "lon": -3.6997623
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "475",
+    "id": 475,
     "name": "Wikiproyecto Granada",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -7961,13 +8437,14 @@
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Granada",
     "thumbnailUrl": "images/wikiproyecto-granada.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "476",
-    "name": "Wikiproyecto Guadalajara",
+    "id": 476,
+    "name": "Wikiproyecto Ciudad Real",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
     "communityType": "Grupo colaborativo",
@@ -7976,14 +8453,15 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Ciudad_Real/participantes",
-    "thumbnailUrl": "images/wikiproyecto-guadalajara.webp",
+    "thumbnailUrl": "images/wikiproyecto-ciudad-real.webp",
     "latLon": {
-      "lat": 38.9861041,
-      "lon": -3.9272645
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "477",
+    "id": 477,
     "name": "Wikiproyecto Guadalajara",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -7995,12 +8473,13 @@
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Guadalajara/participantes",
     "thumbnailUrl": "images/wikiproyecto-guadalajara.webp",
     "latLon": {
-      "lat": 20.6751711,
-      "lon": -103.34733
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "478",
+    "id": 478,
     "name": "Wikiproyecto Huelva",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -8012,12 +8491,13 @@
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Huelva_(provincia)/participantes",
     "thumbnailUrl": "images/wikiproyecto-huelva.webp",
     "latLon": {
-      "lat": 37.2571454,
-      "lon": -6.9495382
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "479",
+    "id": 479,
     "name": "Wikiproyecto Jaén",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -8029,12 +8509,13 @@
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Ja%C3%A9n/participantes",
     "thumbnailUrl": "images/wikiproyecto-jaen.webp",
     "latLon": {
-      "lat": 37.7657753,
-      "lon": -3.7893929
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "480",
+    "id": 480,
     "name": "Wikiproyecto León",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -8046,12 +8527,13 @@
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Le%C3%B3n/Participantes",
     "thumbnailUrl": "images/wikiproyecto-leon.webp",
     "latLon": {
-      "lat": 21.121972,
-      "lon": -101.6832
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "481",
+    "id": 481,
     "name": "Wikiproyecto Valladolid",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -8063,12 +8545,13 @@
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Valladolid#Participantes",
     "thumbnailUrl": "images/wikiproyecto-valladolid.webp",
     "latLon": {
-      "lat": 41.6529421,
-      "lon": -4.7283839
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "482",
+    "id": 482,
     "name": "Women in DevOps Madrid",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -8079,12 +8562,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/Women-in-DevOps-Madrid/",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "483",
+    "id": 483,
     "name": "Women Techmakers Madrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -8096,12 +8580,13 @@
     "communityUrl": "https://wtmgdgmadrid.github.io/",
     "thumbnailUrl": "images/women-techmakers-madrid.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "484",
+    "id": 484,
     "name": "Women Techmakers Zaragoza - Mulleres Tech",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -8114,10 +8599,11 @@
     "latLon": {
       "lat": 41.656837,
       "lon": -0.8794245
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "485",
+    "id": 485,
     "name": "WonderHack Event",
     "status": "Inactiva",
     "lastReviewed": "17/10/2024",
@@ -8131,10 +8617,11 @@
     "latLon": {
       "lat": 40.2445707,
       "lon": -3.3144655
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "486",
+    "id": 486,
     "name": "Wordcamp",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8146,12 +8633,13 @@
     "communityUrl": "https://wordcamp.org//",
     "thumbnailUrl": "images/wordcamp.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "487",
+    "id": 487,
     "name": "WordCamp Alhaurín de la Torre",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -8165,10 +8653,11 @@
     "latLon": {
       "lat": 36.6683574,
       "lon": -4.5529671
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "488",
+    "id": 488,
     "name": "Wordcamp Granada",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8180,12 +8669,13 @@
     "communityUrl": "https://granada.wordcamp.org/",
     "thumbnailUrl": "images/wordcamp-granada.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "489",
+    "id": 489,
     "name": "Wordcamp Griñón",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8199,10 +8689,11 @@
     "latLon": {
       "lat": 40.2142405,
       "lon": -3.8561918
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "490",
+    "id": 490,
     "name": "Wordcamp Sevilla",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8216,10 +8707,11 @@
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "491",
+    "id": 491,
     "name": "WordPress Alcalá de Hernares",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8233,10 +8725,11 @@
     "latLon": {
       "lat": 40.481663,
       "lon": -3.3641362
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "492",
+    "id": 492,
     "name": "WordPress Alicante",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8250,10 +8743,11 @@
     "latLon": {
       "lat": 38.34521,
       "lon": -0.4809945
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "493",
+    "id": 493,
     "name": "WordPress Barcelona",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8267,10 +8761,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "494",
+    "id": 494,
     "name": "WordPress Benidorm",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8284,10 +8779,11 @@
     "latLon": {
       "lat": 38.5369002,
       "lon": -0.1291231
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "495",
+    "id": 495,
     "name": "WordPress Bilbao",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8301,10 +8797,11 @@
     "latLon": {
       "lat": 43.2569608,
       "lon": -2.9234602
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "496",
+    "id": 496,
     "name": "WordPress Cartagena",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8318,10 +8815,11 @@
     "latLon": {
       "lat": 37.6057068,
       "lon": -0.9913063
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "497",
+    "id": 497,
     "name": "WordPress Castelló",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8335,10 +8833,11 @@
     "latLon": {
       "lat": 39.9860398,
       "lon": -0.0360705
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "498",
+    "id": 498,
     "name": "WordPress Chiclana",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -8352,10 +8851,11 @@
     "latLon": {
       "lat": 36.41976,
       "lon": -6.14367
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "499",
+    "id": 499,
     "name": "WordPress Collado Villalba",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -8368,10 +8868,11 @@
     "latLon": {
       "lat": 40.6272562,
       "lon": -4.0085868
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "500",
+    "id": 500,
     "name": "WordPress Coruña",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8385,10 +8886,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "501",
+    "id": 501,
     "name": "WordPress Dénia",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8402,10 +8904,11 @@
     "latLon": {
       "lat": 38.8403996,
       "lon": 0.1086422
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "502",
+    "id": 502,
     "name": "Ferrolterra WordPress",
     "status": "Activa",
     "lastReviewed": "04/08/2025",
@@ -8419,10 +8922,11 @@
     "latLon": {
       "lat": 43.4883872,
       "lon": -8.2225093
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "503",
+    "id": 503,
     "name": "Wordpress Granada",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8434,12 +8938,13 @@
     "communityUrl": "https://wpgranada.es/",
     "thumbnailUrl": "images/wordpress-granada.webp",
     "latLon": {
-      "lat": 12.151965053,
-      "lon": -61.659644959
-    }
+      "lat": 37.1825,
+      "lon": 3.6012
+    },
+    "displayOnMap": true
   },
   {
-    "id": "504",
+    "id": 504,
     "name": "WordPress Granollers",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8453,10 +8958,11 @@
     "latLon": {
       "lat": 41.6082321,
       "lon": 2.287809
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "505",
+    "id": 505,
     "name": "WordPress Griñón",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8470,10 +8976,11 @@
     "latLon": {
       "lat": 40.2142405,
       "lon": -3.8561918
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "506",
+    "id": 506,
     "name": "WordPress Huelva",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8487,10 +8994,11 @@
     "latLon": {
       "lat": 37.2571454,
       "lon": -6.9495382
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "507",
+    "id": 507,
     "name": "WordPress Igualada",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8504,10 +9012,11 @@
     "latLon": {
       "lat": 41.5787648,
       "lon": 1.6171926
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "508",
+    "id": 508,
     "name": "WordPress León",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8519,12 +9028,13 @@
     "communityUrl": "https://www.meetup.com/leon-wordpress-meetup/",
     "thumbnailUrl": "images/wordpress-leon.webp",
     "latLon": {
-      "lat": 21.121972,
-      "lon": -101.6832
-    }
+      "lat": 42.598862,
+      "lon": -5.572586
+    },
+    "displayOnMap": true
   },
   {
-    "id": "509",
+    "id": 509,
     "name": "WordPress Logroño",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8538,10 +9048,11 @@
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "510",
+    "id": 510,
     "name": "WordPress Lugo",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8555,10 +9066,11 @@
     "latLon": {
       "lat": 43.0120963,
       "lon": -7.5558311
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "511",
+    "id": 511,
     "name": "Wordpress Málaga",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -8572,10 +9084,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "512",
+    "id": 512,
     "name": "WordPress Mallorca",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8587,12 +9100,13 @@
     "communityUrl": "https://www.meetup.com/mallorca-wordpress-meetup/",
     "thumbnailUrl": "images/ordpress-mallorca.webp",
     "latLon": {
-      "lat": 15.3736704,
-      "lon": 120.9655765
-    }
+      "lat": 39.578695,
+      "lon": 2.654489
+    },
+    "displayOnMap": true
   },
   {
-    "id": "513",
+    "id": 513,
     "name": "WordPress Marbella",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8606,10 +9120,11 @@
     "latLon": {
       "lat": 36.5118318,
       "lon": -4.8822775
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "514",
+    "id": 514,
     "name": "WordPress Mataró",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8623,10 +9138,11 @@
     "latLon": {
       "lat": 41.5375002,
       "lon": 2.4452776
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "515",
+    "id": 515,
     "name": "Wordpress Meetup Groups",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8638,29 +9154,13 @@
     "communityUrl": "https://make.wordpress.org/community/meetups/",
     "thumbnailUrl": "images/wordpress-meetup-groups.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "516",
-    "name": "WordPress Ourense",
-    "status": "Desconocido",
-    "lastReviewed": "18/10/2024",
-    "communityType": "Tech Meetup",
-    "eventFormat": "Presencial",
-    "location": "Orense (Ourense)",
-    "topics": "",
-    "contactInfo": "",
-    "communityUrl": "https://www.meetup.com/wordpressourense/",
-    "thumbnailUrl": "images/wordpress-ourense.webp",
-    "latLon": {
-      "lat": 42.3401174,
-      "lon": -7.8646923
-    }
-  },
-  {
-    "id": "517",
+    "id": 516,
     "name": "WordPress Oviedo",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8674,10 +9174,11 @@
     "latLon": {
       "lat": 43.3602825,
       "lon": -5.8447919
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "518",
+    "id": 517,
     "name": "WordPress Ponferrada",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8691,10 +9192,11 @@
     "latLon": {
       "lat": 42.5463315,
       "lon": -6.5908331
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "519",
+    "id": 518,
     "name": "WordPress Pontevedra",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8708,10 +9210,11 @@
     "latLon": {
       "lat": 42.433575,
       "lon": -8.6481143
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "520",
+    "id": 519,
     "name": "WordPress Santander",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -8724,10 +9227,11 @@
     "latLon": {
       "lat": 43.4614116,
       "lon": -3.8093031
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "521",
+    "id": 520,
     "name": "WordPress Santiago de Compostela",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8741,10 +9245,11 @@
     "latLon": {
       "lat": 42.8806228,
       "lon": -8.5466071
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "522",
+    "id": 521,
     "name": "WordPress Sevilla",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8758,10 +9263,11 @@
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "523",
+    "id": 522,
     "name": "WordPress Sevilla para Desarrolladores",
     "status": "Inactiva",
     "lastReviewed": "18/12/2024",
@@ -8772,12 +9278,13 @@
     "contactInfo": "",
     "communityUrl": "https://x.com/wpsevilladevs",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
-    }
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   },
   {
-    "id": "524",
+    "id": 523,
     "name": "WordPress Tarragona",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8791,10 +9298,11 @@
     "latLon": {
       "lat": 41.1186629,
       "lon": 1.24533
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "525",
+    "id": 524,
     "name": "WordPress Terrassa",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8808,10 +9316,11 @@
     "latLon": {
       "lat": 41.5609412,
       "lon": 2.0104484
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "526",
+    "id": 525,
     "name": "WordPress Toledo",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -8822,12 +9331,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/toledo-wordpress/",
     "latLon": {
-      "lat": 41.655298,
-      "lon": -83.535717
-    }
+      "lat": 39.85966175170025,
+      "lon": -4.024544270483665
+    },
+    "displayOnMap": true
   },
   {
-    "id": "527",
+    "id": 526,
     "name": "WordPress Tordosa",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -8841,10 +9351,11 @@
     "latLon": {
       "lat": 40.8110042,
       "lon": 0.5209974
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "528",
+    "id": 527,
     "name": "WordPress Torrelodones",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8858,10 +9369,11 @@
     "latLon": {
       "lat": 40.576519,
       "lon": -3.9294568
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "529",
+    "id": 528,
     "name": "WordPress Valencia",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8875,10 +9387,11 @@
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "530",
+    "id": 529,
     "name": "WordPress Valladolid",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8892,10 +9405,11 @@
     "latLon": {
       "lat": 41.6529421,
       "lon": -4.7283839
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "531",
+    "id": 530,
     "name": "WordPress Vigo",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8909,10 +9423,11 @@
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "532",
+    "id": 531,
     "name": "WordPress Vitoria-Gasteiz",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8926,10 +9441,11 @@
     "latLon": {
       "lat": 42.8468573,
       "lon": -2.6715859
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "533",
+    "id": 532,
     "name": "WordPress Zaragoza",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8943,10 +9459,11 @@
     "latLon": {
       "lat": 41.656837,
       "lon": -0.8794245
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "534",
+    "id": 533,
     "name": "Wunderdog Málaga Meetup",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -8960,10 +9477,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "535",
+    "id": 534,
     "name": "XantarDev",
     "status": "Activa",
     "lastReviewed": "02/07/2025",
@@ -8977,10 +9495,11 @@
     "latLon": {
       "lat": 42.8806228,
       "lon": -8.5466071
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "536",
+    "id": 535,
     "name": "XauenDevs",
     "status": "Activa",
     "lastReviewed": "18/12/2024",
@@ -8994,10 +9513,11 @@
     "latLon": {
       "lat": 37.7657753,
       "lon": -3.7893929
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "537",
+    "id": 536,
     "name": "Xops Conference",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9009,12 +9529,13 @@
     "communityUrl": "https://x.com/XopsConference",
     "thumbnailUrl": "images/xops-conference.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "538",
+    "id": 537,
     "name": "Xornada de Usuarios de R en Galicia",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9028,10 +9549,11 @@
     "latLon": {
       "lat": 42.8806228,
       "lon": -8.5466071
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "539",
+    "id": 538,
     "name": "Yes we tech",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -9045,10 +9567,11 @@
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "540",
+    "id": 539,
     "name": "zurracapoteconf",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -9062,10 +9585,11 @@
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "541",
+    "id": 540,
     "name": "Barcelona Java User Group",
     "status": "Activa",
     "lastReviewed": "06/02/2025",
@@ -9079,10 +9603,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "542",
+    "id": 541,
     "name": "JSConf",
     "status": "Activa",
     "lastReviewed": "02/06/2025",
@@ -9094,12 +9619,13 @@
     "communityUrl": "https://www.jsconf.es/",
     "thumbnailUrl": "images/jsconf.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "543",
+    "id": 542,
     "name": "RMC",
     "status": "Activa",
     "lastReviewed": "02/06/2025",
@@ -9113,10 +9639,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "544",
+    "id": 543,
     "name": "Datolada",
     "status": "Activa",
     "lastReviewed": "02/06/2025",
@@ -9130,10 +9657,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "545",
+    "id": 544,
     "name": "Lareira Conf",
     "status": "Activa",
     "lastReviewed": "02/06/2025",
@@ -9147,10 +9675,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "546",
+    "id": 545,
     "name": "GitHub Community Spain",
     "status": "Activa",
     "lastReviewed": "17/02/2025",
@@ -9162,12 +9691,13 @@
     "communityUrl": "ghspain.github.io",
     "thumbnailUrl": "images/github-community-spain.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "547",
+    "id": 546,
     "name": "GDG Menorca",
     "status": "Activa",
     "lastReviewed": "17/02/2025",
@@ -9181,10 +9711,11 @@
     "latLon": {
       "lat": 39.8154,
       "lon": 4.2754
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "548",
+    "id": 547,
     "name": "STEM Talks Menorca 2025",
     "status": "Activa",
     "lastReviewed": "24/03/2025",
@@ -9198,10 +9729,11 @@
     "latLon": {
       "lat": 39.8154,
       "lon": 4.2754
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "549",
+    "id": 548,
     "name": "AI Engineers Barcelona",
     "status": "Activa",
     "lastReviewed": "17/02/2025",
@@ -9215,10 +9747,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "550",
+    "id": 549,
     "name": "Python Barcelona",
     "status": "Activa",
     "lastReviewed": "17/02/2025",
@@ -9232,10 +9765,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "551",
+    "id": 550,
     "name": "PyLadies Barcelona",
     "status": "Activa",
     "lastReviewed": "17/02/2025",
@@ -9249,10 +9783,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "552",
+    "id": 551,
     "name": "Tech Barcelona",
     "status": "Activa",
     "lastReviewed": "17/02/2025",
@@ -9266,10 +9801,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "553",
+    "id": 552,
     "name": "Women Techmakers Barcelona",
     "status": "Activa",
     "lastReviewed": "17/02/2025",
@@ -9283,10 +9819,11 @@
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "554",
+    "id": 553,
     "name": "Global AI Ponferrada",
     "status": "Activa",
     "lastReviewed": "24/02/2025",
@@ -9300,10 +9837,11 @@
     "latLon": {
       "lat": 42.5463315,
       "lon": -6.5908331
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "555",
+    "id": 554,
     "name": "Galstech",
     "status": "Activa",
     "lastReviewed": "03/03/2025",
@@ -9317,10 +9855,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "556",
+    "id": 555,
     "name": "WordPress Ourense",
     "status": "Activa",
     "lastReviewed": "03/03/2025",
@@ -9334,10 +9873,11 @@
     "latLon": {
       "lat": 42.3401174,
       "lon": -7.8646923
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "557",
+    "id": 556,
     "name": "Bitcoin 2140 A Coruña",
     "status": "Activa",
     "lastReviewed": "03/03/2025",
@@ -9351,10 +9891,11 @@
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "558",
+    "id": 557,
     "name": "Makers iA",
     "status": "Activa",
     "lastReviewed": "03/09/2025",
@@ -9365,12 +9906,13 @@
     "contactInfo": "",
     "communityUrl": "https://www.linkedin.com/company/makersia/",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "559",
+    "id": 558,
     "name": "Python Bilbao",
     "status": "Activa",
     "lastReviewed": "19/04/2025",
@@ -9384,27 +9926,11 @@
     "latLon": {
       "lat": 43.2569608,
       "lon": -2.9234602
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "560",
-    "name": "WeCodeFest",
-    "status": "Desconocido",
-    "lastReviewed": "21/04/2025",
-    "communityType": "Conferencia",
-    "eventFormat": "Presencial",
-    "location": "Valladolid",
-    "topics": "",
-    "contactInfo": "",
-    "communityUrl": "https://wecodefest.com/",
-    "thumbnailUrl": "images/wecodefest.webp",
-    "latLon": {
-      "lat": 41.6529421,
-      "lon": -4.7283839
-    }
-  },
-  {
-    "id": "561",
+    "id": 559,
     "name": "DevMad! Developers ",
     "status": "Activa",
     "lastReviewed": "25/04/2025",
@@ -9416,12 +9942,13 @@
     "communityUrl": "https://linktr.ee/devmad",
     "thumbnailUrl": "images/devmad-developers.webp",
     "latLon": {
-      "lat": 40.4166909,
-      "lon": -3.7003454
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   },
   {
-    "id": "562",
+    "id": 560,
     "name": "Valencia Codes",
     "status": "Activa",
     "lastReviewed": "25/04/2025",
@@ -9435,10 +9962,11 @@
     "latLon": {
       "lat": 39.4702393,
       "lon": -0.3768049
-    }
+    },
+    "displayOnMap": true
   },
   {
-    "id": "563",
+    "id": 561,
     "name": "HaskellMAD",
     "status": "Activa",
     "lastReviewed": "13/5/2025",
@@ -9450,8 +9978,45 @@
     "communityUrl": "https://x.com/haskellMAD/",
     "thumbnailUrl": "images/haskellmad.webp",
     "latLon": {
-      "lat": null,
-      "lon": null
-    }
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
+  },
+  {
+    "id": 562,
+    "name": "Merge Madrid",
+    "status": "Activa",
+    "lastReviewed": "16/5/2025",
+    "communityType": "Tech Meetup",
+    "eventFormat": "Presencial",
+    "location": "Madrid",
+    "topics": "Web3",
+    "contactInfo": "",
+    "communityUrl": "https://www.mmerge.io/",
+    "thumbnailUrl": "images/merge-madrid.webp",
+    "latLon": {
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
+  },
+  {
+    "id": 563,
+    "name": "Beers Storming",
+    "status": "Activa",
+    "lastReviewed": "16/5/2025",
+    "communityType": "Tech Meetup",
+    "eventFormat": "Presencial",
+    "location": "Madrid",
+    "topics": "",
+    "contactInfo": "",
+    "communityUrl": "https://www.linkedin.com/company/beersstorming/",
+    "thumbnailUrl": "images/beers-storming.webp",
+    "latLon": {
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   }
 ]
