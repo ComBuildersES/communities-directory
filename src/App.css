@@ -122,6 +122,7 @@ body{
   
   #title{
     text-align: center;
+    padding-bottom: 0;
   } 
   #title h2{
     margin-bottom: 0.5rem;;
@@ -133,6 +134,9 @@ body{
   }
   .main{
     /* padding-left: 0; */
+  }
+  body{
+    padding-top:10rem;
   }
 }
 

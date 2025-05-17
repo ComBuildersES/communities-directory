@@ -159,19 +159,19 @@ function Map () {
       uniqueValueInfos: [
         {
           value: "Tech Meetup",
-          symbol: { type: "simple-marker", style: "circle", size: "8px", color: "#09ff00" },
+          symbol: { type: "simple-marker", style: "circle", size: "8px", color: "#ff595e" },
         },
         {
           value: "Conferencia",
-          symbol: { type: "simple-marker", style: "circle", size: "8px", color: "#00fff2" },
+          symbol: { type: "simple-marker", style: "circle", size: "8px", color: "#ffca3a" },
         },
         {
           value: "Grupo colaborativo",
-          symbol: { type: "simple-marker", style: "circle", size: "8px", color: "#ddff00" },
+          symbol: { type: "simple-marker", style: "circle", size: "8px", color: "#8ac926" },
         },
         {
           value: "Hacklab",
-          symbol: { type: "simple-marker", style: "circle", size: "8px", color: "#ff1100" },
+          symbol: { type: "simple-marker", style: "circle", size: "8px", color: "#1982c4" },
         },
       ],
     };
@@ -324,35 +324,35 @@ function Map () {
   <tbody>
     <tr>
       <td style="padding: 6px;">
-        <span style="display: inline-block; width: 10px; height: 10px; background-color: #09ff00; border-radius: 50%; margin-right: 6px;"></span>
+        <span style="display: inline-block; width: 10px; height: 10px; background-color: #ff595e; border-radius: 50%; margin-right: 6px;"></span>
         Tech Meetup
       </td>
       <td style="padding: 6px; text-align: right;"><b>{SUM_Tech_Meetup}</b></td>
     </tr>
     <tr>
       <td style="padding: 6px;">
-        <span style="display: inline-block; width: 10px; height: 10px; background-color: #00fff2; border-radius: 50%; margin-right: 6px;"></span>
+        <span style="display: inline-block; width: 10px; height: 10px; background-color: #ffca3a; border-radius: 50%; margin-right: 6px;"></span>
         Conferencia
       </td>
       <td style="padding: 6px; text-align: right;"><b>{SUM_Conferencia}</b></td>
     </tr>
     <tr>
       <td style="padding: 6px;">
-        <span style="display: inline-block; width: 10px; height: 10px; background-color: #ddff00; border-radius: 50%; margin-right: 6px;"></span>
+        <span style="display: inline-block; width: 10px; height: 10px; background-color: #8ac926; border-radius: 50%; margin-right: 6px;"></span>
         Grupo colaborativo
       </td>
       <td style="padding: 6px; text-align: right;"><b>{SUM_Grupo_colaborativo}</b></td>
     </tr>
     <tr>
       <td style="padding: 6px;">
-        <span style="display: inline-block; width: 10px; height: 10px; background-color: #ff1100; border-radius: 50%; margin-right: 6px;"></span>
+        <span style="display: inline-block; width: 10px; height: 10px; background-color: #1982c4; border-radius: 50%; margin-right: 6px;"></span>
         Hacklab
       </td>
       <td style="padding: 6px; text-align: right;"><b>{SUM_Hacklab}</b></td>
     </tr>
     <tr>
       <td style="padding: 6px;">
-        <span style="display: inline-block; width: 10px; height: 10px; background-color: #cccccc; border-radius: 50%; margin-right: 6px;"></span>
+        <span style="display: inline-block; width: 10px; height: 10px; background-color: #6a4c93; border-radius: 50%; margin-right: 6px;"></span>
         Otro
       </td>
       <td style="padding: 6px; text-align: right;"><b>{SUM_Otro}</b></td>
