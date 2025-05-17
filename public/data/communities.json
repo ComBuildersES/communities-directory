@@ -12,8 +12,8 @@
     "communityUrl": "https://dotnetfoundation.org/community/.net-meetups",
     "thumbnailUrl": "images/net-foundation-meetups.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -48,8 +48,8 @@
     "communityUrl": "https://www.rootedcon.com/",
     "thumbnailUrl": "images/rootedcon.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -66,8 +66,8 @@
     "communityUrl": "https://eslib.re",
     "thumbnailUrl": "images/eslibre.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -120,8 +120,8 @@
     "communityUrl": "https://www.meetup.com/es-ES/accesibilidad-spain/",
     "thumbnailUrl": "images/accesibilidad-spain.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -141,7 +141,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 8,
@@ -156,8 +156,8 @@
     "communityUrl": "https://adalaberfest.adalab.es/",
     "thumbnailUrl": "images/adalaberfest.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -174,8 +174,8 @@
     "communityUrl": "https://adoptaunjunior.es/",
     "thumbnailUrl": "images/adopta-un-junior.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -192,8 +192,8 @@
     "communityUrl": "https://www.agilealliance.org/resources/initiatives/",
     "thumbnailUrl": "images/agile-alliance.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -228,8 +228,8 @@
     "communityUrl": "https://x.com/AgileDeliveryES",
     "thumbnailUrl": "images/agile-delivery.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -246,8 +246,8 @@
     "communityUrl": "https://aos.agile-spain.org/",
     "thumbnailUrl": "images/agile-open-spain-aos.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -264,8 +264,8 @@
     "communityUrl": "https://agile-spain.org/",
     "thumbnailUrl": "images/agile-spain.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -318,8 +318,8 @@
     "communityUrl": "https://twitter.com/agilegirls",
     "thumbnailUrl": "images/agilegirls.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -336,8 +336,8 @@
     "communityUrl": "https://x.com/AgileValencia",
     "thumbnailUrl": "images/agilevalencia.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -354,8 +354,8 @@
     "communityUrl": "https://www.ai4med.org/ ",
     "thumbnailUrl": "images/ai4med-ia-para-medicina.webp",
     "latLon": {
-      "lat": 40.42913,
-      "lon": -3.70114
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -375,7 +375,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 21,
@@ -393,7 +393,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 22,
@@ -411,7 +411,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 23,
@@ -501,7 +501,7 @@
       "lat": 40.4166909,
       "lon": -3.7003454
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 28,
@@ -519,7 +519,7 @@
       "lat": 36.7196292,
       "lon": -4.4200007
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 29,
@@ -534,8 +534,8 @@
     "communityUrl": "https://www.meetup.com/es-ES/apiaddicts/",
     "thumbnailUrl": "images/apiaddicts.webp",
     "latLon": {
-      "lat": 19.4326773,
-      "lon": -99.1342112
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -642,8 +642,8 @@
     "communityUrl": "https://torresburriel.com/weblog/nuevo-sitio-web-de-upa-spain/",
     "thumbnailUrl": "images/asociacion-de-profesionales-de-usabilidad.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -681,7 +681,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 38,
@@ -714,8 +714,8 @@
     "communityUrl": "https://asociaciondrupal.es/",
     "thumbnailUrl": "images/asociacion-espanola-de-drupal.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -768,8 +768,8 @@
     "communityUrl": "https://x.com/asturiasjs",
     "thumbnailUrl": "images/asturiasjs.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -786,8 +786,8 @@
     "communityUrl": "https://asturiashacking.org/",
     "thumbnailUrl": "images/asturiashacking.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -804,8 +804,8 @@
     "communityUrl": "https://asturiashacking.org/",
     "thumbnailUrl": "images/asturiashacking.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -822,8 +822,8 @@
     "communityUrl": "https://x.com/asturphp",
     "thumbnailUrl": "images/asturphp.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -894,8 +894,8 @@
     "communityUrl": "https://www.meetup.com/pro/azuredatatechgroups/",
     "thumbnailUrl": "images/azure-data-tech-groups.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -948,8 +948,8 @@
     "communityUrl": "https://developer.microsoft.com/en-us/azure-tech-groups/",
     "thumbnailUrl": "images/azure-tech-groups.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -986,7 +986,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 55,
@@ -1004,7 +1004,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 56,
@@ -1019,8 +1019,8 @@
     "communityUrl": "https://bcneng.org/",
     "thumbnailUrl": "images/bcn-engineering.webp",
     "latLon": {
-      "lat": 41.387917,
-      "lon": 2.1699187
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -1037,8 +1037,8 @@
     "communityUrl": "https://betabeers.com/",
     "thumbnailUrl": "images/betabeers.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -1091,8 +1091,8 @@
     "communityUrl": "http://biggirlstheory.es/",
     "thumbnailUrl": "images/big-girls-theory.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -1184,7 +1184,7 @@
       "lat": 42.2313601,
       "lon": -8.7124252
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 66,
@@ -1220,7 +1220,7 @@
       "lat": 36.7196292,
       "lon": -4.4200007
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 68,
@@ -1256,7 +1256,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 70,
@@ -1328,7 +1328,7 @@
       "lat": 36.7196292,
       "lon": -4.4200007
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 74,
@@ -1361,8 +1361,8 @@
     "communityUrl": "https://twitter.com/catdotnet",
     "thumbnailUrl": "images/catdotnet.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -1382,7 +1382,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 77,
@@ -1451,8 +1451,8 @@
     "communityUrl": "https://community.cncf.io",
     "thumbnailUrl": "images/cloud-native.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -1472,7 +1472,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 82,
@@ -1526,7 +1526,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 85,
@@ -1649,8 +1649,8 @@
     "communityUrl": "https://x.com/cloudnativeast",
     "thumbnailUrl": "images/cloud-native-asturias.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -1685,8 +1685,8 @@
     "communityUrl": "https://codebar.io",
     "thumbnailUrl": "images/codebar.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -1706,7 +1706,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 95,
@@ -1775,8 +1775,8 @@
     "communityUrl": "https://x.com/codersagora_org",
     "thumbnailUrl": "images/coders-agora.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -1847,14 +1847,14 @@
     "communityUrl": "https://linktr.ee/ComBuilders_ES",
     "thumbnailUrl": "images/community-builders.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
   {
     "id": 103,
-    "name": "name de Alexa en español",
+    "name": "Comunidad de Alexa en español",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
     "communityType": "Tech Meetup",
@@ -1865,14 +1865,14 @@
     "communityUrl": "https://twitter.com/alexadevsmadrid",
     "thumbnailUrl": "images/name-de-alexa-en-espanol.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
   {
     "id": 104,
-    "name": "name de R Hispano",
+    "name": "Comunidad de R Hispano",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
     "communityType": "Organización paraguas",
@@ -1883,14 +1883,14 @@
     "communityUrl": "https://r-es.org/",
     "thumbnailUrl": "images/name-de-r-hispano.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
   {
     "id": 105,
-    "name": "namees tecnológicas Madrid",
+    "name": "Comunidades tecnológicas Madrid",
     "status": "Inactiva",
     "lastReviewed": "29/11/2024",
     "communityType": "Meta name",
@@ -1898,13 +1898,13 @@
     "location": "Madrid",
     "topics": "",
     "contactInfo": "",
-    "communityUrl": "https://www.meetup.com/es-ES/namees-tecnologicas-madrid/",
+    "communityUrl": "https://www.meetup.com/es-ES/comunidades-tecnologicas-madrid/",
     "thumbnailUrl": "images/namees-tecnologicas-madrid.webp",
     "latLon": {
       "lat": 40.4166909,
       "lon": -3.7003454
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 106,
@@ -1919,8 +1919,8 @@
     "communityUrl": "https://cas.agile-spain.org/",
     "thumbnailUrl": "images/conferencia-agile-spain-cas.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -2066,7 +2066,7 @@
       "lat": 43.3707332,
       "lon": -8.3958532
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 115,
@@ -2138,7 +2138,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 119,
@@ -2153,8 +2153,8 @@
     "communityUrl": "https://x.com/CryptoSpaceCS",
     "thumbnailUrl": "images/cryptospace.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -2263,7 +2263,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 126,
@@ -2299,7 +2299,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 128,
@@ -2353,7 +2353,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 131,
@@ -2478,7 +2478,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 138,
@@ -2565,8 +2565,8 @@
     "communityUrl": "http://devwomen.com ",
     "thumbnailUrl": "images/devwomen.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -2601,8 +2601,8 @@
     "communityUrl": "https://www.docker.com/community/get-involved/",
     "thumbnailUrl": "images/docker-user-groups.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -2709,8 +2709,8 @@
     "communityUrl": "https://www.droidcon.com/",
     "thumbnailUrl": "images/droidcon.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -2815,7 +2815,7 @@
       "lat": 39.9860398,
       "lon": -0.0360705
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 157,
@@ -2841,7 +2841,7 @@
     "lastReviewed": "18/10/2024",
     "communityType": "Tech Meetup",
     "eventFormat": "Presencial",
-    "location": "name Valenciana",
+    "location": "Comunidad Valenciana",
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://groups.drupal.org/comunidad-valenciana",
@@ -2849,7 +2849,7 @@
       "lat": 24.166435,
       "lon": -103.193958
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 159,
@@ -2863,8 +2863,8 @@
     "contactInfo": "",
     "communityUrl": "https://groups.drupal.org/comunitat-catalana-del-drupal",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -2881,8 +2881,8 @@
     "communityUrl": "https://drupalday.es/",
     "thumbnailUrl": "images/drupal-day-spain.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -2952,7 +2952,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 165,
@@ -3021,7 +3021,7 @@
       "lat": 37.6057068,
       "lon": -0.9913063
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 169,
@@ -3070,8 +3070,8 @@
     "communityUrl": "https://drupalcamp.es/es",
     "thumbnailUrl": "images/drupalcamp-spain.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -3109,7 +3109,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 174,
@@ -3160,8 +3160,8 @@
     "communityUrl": "https://www.elastic.co/community/usergroupguide#/community/usergroupguide",
     "thumbnailUrl": "images/elastic-local-meetups.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -3181,7 +3181,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 178,
@@ -3267,8 +3267,8 @@
     "contactInfo": "",
     "communityUrl": "https://femdevs.es/",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -3288,7 +3288,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 184,
@@ -3393,8 +3393,8 @@
     "communityUrl": "https://www.meetup.com/cybercamp-uma/",
     "thumbnailUrl": "images/foro-cybercamp.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -3540,7 +3540,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 198,
@@ -3611,7 +3611,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 202,
@@ -3769,8 +3769,8 @@
     "communityUrl": "https://gdg.es/",
     "thumbnailUrl": "images/gdg-spain.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -3840,8 +3840,8 @@
     "communityUrl": "https://linktr.ee/geodevelopers",
     "thumbnailUrl": "images/geodevelopers.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -3857,8 +3857,8 @@
     "contactInfo": "geonamecovid@gmail.com;hhkaos@gmail.com",
     "communityUrl": "https://geovoluntarios.org/",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -3874,8 +3874,8 @@
     "contactInfo": "",
     "communityUrl": "https://spain.girlsintech.org/",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -3892,8 +3892,8 @@
     "communityUrl": "https://globalai.community/",
     "thumbnailUrl": "images/global-ai-bootcamp.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -3927,8 +3927,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.coderetreat.org/",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -3948,7 +3948,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 221,
@@ -3981,8 +3981,8 @@
     "communityUrl": "https://x.com/dscspain",
     "thumbnailUrl": "images/google-developer-student-clubs-spain.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -4002,7 +4002,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 224,
@@ -4017,8 +4017,8 @@
     "communityUrl": "https://grafana.com/community/meetups/",
     "thumbnailUrl": "images/grafana-meetups.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -4038,7 +4038,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 226,
@@ -4056,7 +4056,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 227,
@@ -4074,7 +4074,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 228,
@@ -4091,7 +4091,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 229,
@@ -4108,7 +4108,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 230,
@@ -4126,7 +4126,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 231,
@@ -4214,7 +4214,7 @@
       "lat": 41.798241349587,
       "lon": 1.528756658648
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 236,
@@ -4231,7 +4231,7 @@
       "lat": 42.46569,
       "lon": -2.44998
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 237,
@@ -4248,7 +4248,7 @@
       "lat": 28,
       "lon": -15.5
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 238,
@@ -4316,8 +4316,8 @@
     "communityUrl": "https://web.archive.org/web/20240304115556/https://hackandbeers.es/",
     "thumbnailUrl": "images/hack-beers.jpeg",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -4336,7 +4336,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 243,
@@ -4371,7 +4371,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 245,
@@ -4389,7 +4389,7 @@
       "lat": 39.9860398,
       "lon": -0.0360705
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 246,
@@ -4415,14 +4415,15 @@
     "status": "Inactiva",
     "lastReviewed": "14/12/2024",
     "communityType": "Grupo colaborativo",
-    "eventFormat": "Desconocido",
-    "location": "Sin completar",
+    "eventFormat": "Híbridos",
+    "location": "Almería",
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://hacklabalmeria.net/",
+    "thumbnailUrl": "images/hacklab-almeria.webp",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": 36.8400939,
+      "lon": -2.4679043
     },
     "displayOnMap": false
   },
@@ -4442,7 +4443,7 @@
       "lat": 40.4166909,
       "lon": -3.7003454
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 249,
@@ -4511,8 +4512,8 @@
     "communityUrl": "https://community.ibm.com/community/user/community",
     "thumbnailUrl": "images/ibm-groups.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -4529,8 +4530,8 @@
     "communityUrl": "https://impulsar.ai/#/",
     "thumbnailUrl": "images/impulsarai.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -4541,7 +4542,7 @@
     "lastReviewed": "27/11/2024",
     "communityType": "Grupo de ayuda mutua",
     "eventFormat": "Presencial",
-    "location": "La RIoja",
+    "location": "La Rioja",
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.indismatic.es/",
@@ -4599,8 +4600,8 @@
     "contactInfo": "",
     "communityUrl": "https://iniciador.com/",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -4721,7 +4722,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 265,
@@ -4823,7 +4824,7 @@
       "lat": 39.9860398,
       "lon": -0.0360705
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 271,
@@ -4908,7 +4909,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 276,
@@ -4942,7 +4943,7 @@
       "lat": 42.128030322674,
       "lon": 2.673305566784
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 278,
@@ -4959,7 +4960,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 279,
@@ -5146,7 +5147,7 @@
       "lat": 42.667475795076,
       "lon": -1.64548557819
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 290,
@@ -5351,7 +5352,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 302,
@@ -5368,7 +5369,7 @@
       "lat": 40.4166909,
       "lon": -3.7003454
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 303,
@@ -5385,7 +5386,7 @@
       "lat": 40.4166909,
       "lon": -3.7003454
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 304,
@@ -5418,8 +5419,8 @@
     "communityUrl": "https://dev.java/community/jugs/",
     "thumbnailUrl": "images/java-user-groups.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -5435,8 +5436,8 @@
     "contactInfo": "",
     "communityUrl": "http://www.javahispano.org/",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -5453,8 +5454,8 @@
     "communityUrl": "https://wikimedia.es/category/eventos/jornadas-anuales/",
     "thumbnailUrl": "images/jornadas-anuales-wikimedia-espana.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -5474,7 +5475,7 @@
       "lat": 42.128030322674,
       "lon": 2.673305566784
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 309,
@@ -5581,7 +5582,7 @@
       "lat": 42.46569,
       "lon": -2.44998
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 315,
@@ -5671,7 +5672,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 320,
@@ -5725,7 +5726,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 323,
@@ -5899,7 +5900,7 @@
       "lat": 40.4166909,
       "lon": -3.7003454
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 333,
@@ -6180,8 +6181,8 @@
     "communityUrl": "https://x.com/MermeladaTech",
     "thumbnailUrl": "images/mermeladatech.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -6198,8 +6199,8 @@
     "communityUrl": "https://www.miduconf.com/",
     "thumbnailUrl": "images/miduconf.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -6216,8 +6217,8 @@
     "communityUrl": "https://discord.com/invite/midudev",
     "thumbnailUrl": "images/midudev.webp:large",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -6233,8 +6234,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/xamarin-madrid/?eventOrigin=topic_overview_nearest_groups",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -6287,8 +6288,8 @@
     "communityUrl": "https://discord.com/invite/mouredev",
     "thumbnailUrl": "images/mouredev.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -6326,7 +6327,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 357,
@@ -6359,8 +6360,8 @@
     "communityUrl": "https://meetups.mulesoft.com/",
     "thumbnailUrl": "images/mulesoft-meetups.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -6467,8 +6468,8 @@
     "communityUrl": "https://mytechplan.com/name/",
     "thumbnailUrl": "images/my-tech-plan.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -6524,7 +6525,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 368,
@@ -6573,8 +6574,8 @@
     "contactInfo": "",
     "communityUrl": "https://northemquality.github.io/",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -6701,7 +6702,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 378,
@@ -6769,8 +6770,8 @@
     "communityUrl": "https://owasp.org/chapters/",
     "thumbnailUrl": "images/owasp.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -6790,7 +6791,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 383,
@@ -6862,7 +6863,7 @@
       "lat": 42.8179948,
       "lon": -1.6441817
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 387,
@@ -6946,8 +6947,8 @@
     "contactInfo": "",
     "communityUrl": "https://phpurpura.com/",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -6966,7 +6967,7 @@
       "lat": 42.2313601,
       "lon": -8.7124252
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 393,
@@ -7106,8 +7107,8 @@
     "communityUrl": "https://pycamp.es/",
     "thumbnailUrl": "images/pycamp-espana.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -7124,8 +7125,8 @@
     "communityUrl": "https://es.pycon.org/",
     "thumbnailUrl": "images/pycon-espana.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -7142,8 +7143,8 @@
     "communityUrl": "https://pydata.org/",
     "thumbnailUrl": "images/pydata.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -7163,7 +7164,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 404,
@@ -7232,8 +7233,8 @@
     "communityUrl": "https://es.python.org",
     "thumbnailUrl": "images/python-espana.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -7253,7 +7254,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 409,
@@ -7339,8 +7340,8 @@
     "communityUrl": "https://www.meetup.com/quedadas-wordpress-en-espanol/",
     "thumbnailUrl": "images/quedadas-wordpress-en-espanol.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -7375,8 +7376,8 @@
     "communityUrl": "https://www.redhat.com/en/red-hat-user-group/europe-middle-east-africa",
     "thumbnailUrl": "images/red-hat-user-group-community.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -7413,7 +7414,7 @@
       "lat": 42.46569,
       "lon": -2.44998
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 418,
@@ -7428,8 +7429,8 @@
     "communityUrl": "https://rockndroid.dev/",
     "thumbnailUrl": "images/rockndroid.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -7481,8 +7482,8 @@
     "communityUrl": "https://scaladays.org/",
     "thumbnailUrl": "images/scala-days.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -7538,7 +7539,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 425,
@@ -7570,8 +7571,8 @@
     "contactInfo": "",
     "communityUrl": "https://web.archive.org/web/20180617225556/http://www.sug.cat/",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -7608,7 +7609,7 @@
       "lat": 28,
       "lon": -15.5
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 429,
@@ -7626,7 +7627,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 430,
@@ -7698,7 +7699,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 434,
@@ -7752,7 +7753,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 437,
@@ -7767,8 +7768,8 @@
     "communityUrl": "https://subflash.com/",
     "thumbnailUrl": "images/subflash-summer-workshops.webp",
     "latLon": {
-      "lat": -20.1578377,
-      "lon": -40.184541
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -7805,7 +7806,7 @@
       "lat": 37.38264,
       "lon": -5.9962951
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 440,
@@ -7837,8 +7838,8 @@
     "communityUrl": "https://sysarmy.com/",
     "thumbnailUrl": "images/sysarmy.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -7894,7 +7895,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 445,
@@ -7912,7 +7913,7 @@
       "lat": 10.5679998,
       "lon": 123.7171998
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 446,
@@ -7943,8 +7944,8 @@
     "contactInfo": "",
     "communityUrl": "https://web.archive.org/web/20220702201035/http://techdencias.net/",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -8086,8 +8087,8 @@
     "communityUrl": "https://docs.google.com/document/d/17OCsMsuwY5RabPsCgDiL-d84cyFN0idriCdD_ssqx8U/edit?tab=t.0#heading=h.fv330pyk733i",
     "thumbnailUrl": "images/unity-user-group-network.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -8211,7 +8212,7 @@
       "lat": 42.2313601,
       "lon": -8.7124252
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 463,
@@ -8228,7 +8229,7 @@
       "lat": 42.2313601,
       "lon": -8.7124252
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 464,
@@ -8242,7 +8243,7 @@
       "lat": 42.2313601,
       "lon": -8.7124252
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 465,
@@ -8313,7 +8314,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 469,
@@ -8382,8 +8383,8 @@
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Espa%C3%B1a",
     "thumbnailUrl": "images/wikimedia-espana.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -8418,8 +8419,8 @@
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Burgos/participantes",
     "thumbnailUrl": "images/wikiproyecto-burgos.webp",
     "latLon": {
-      "lat": 42.3408923,
-      "lon": -3.6997623
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -8436,14 +8437,14 @@
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Granada",
     "thumbnailUrl": "images/wikiproyecto-granada.webp",
     "latLon": {
-      "lat": 37.1825,
-      "lon": 3.6012
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
   {
     "id": 476,
-    "name": "Wikiproyecto Guadalajara",
+    "name": "Wikiproyecto Ciudad Real",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
     "communityType": "Grupo colaborativo",
@@ -8452,10 +8453,10 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Ciudad_Real/participantes",
-    "thumbnailUrl": "images/wikiproyecto-guadalajara.webp",
+    "thumbnailUrl": "images/wikiproyecto-ciudad-real.webp",
     "latLon": {
-      "lat": 40.632155,
-      "lon": -3.1621
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -8472,8 +8473,8 @@
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Guadalajara/participantes",
     "thumbnailUrl": "images/wikiproyecto-guadalajara.webp",
     "latLon": {
-      "lat": 40.632155,
-      "lon": -3.1621
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -8490,8 +8491,8 @@
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Huelva_(provincia)/participantes",
     "thumbnailUrl": "images/wikiproyecto-huelva.webp",
     "latLon": {
-      "lat": 37.2571454,
-      "lon": -6.9495382
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -8508,8 +8509,8 @@
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Ja%C3%A9n/participantes",
     "thumbnailUrl": "images/wikiproyecto-jaen.webp",
     "latLon": {
-      "lat": 37.7657753,
-      "lon": -3.7893929
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -8526,8 +8527,8 @@
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Le%C3%B3n/Participantes",
     "thumbnailUrl": "images/wikiproyecto-leon.webp",
     "latLon": {
-      "lat": 42.598862,
-      "lon": -5.572586
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -8544,8 +8545,8 @@
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Valladolid#Participantes",
     "thumbnailUrl": "images/wikiproyecto-valladolid.webp",
     "latLon": {
-      "lat": 41.6529421,
-      "lon": -4.7283839
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -8564,7 +8565,7 @@
       "lat": 40.4166909,
       "lon": -3.7003454
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 483,
@@ -8632,8 +8633,8 @@
     "communityUrl": "https://wordcamp.org//",
     "thumbnailUrl": "images/wordcamp.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -8671,7 +8672,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 489,
@@ -8725,7 +8726,7 @@
       "lat": 40.481663,
       "lon": -3.3641362
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 492,
@@ -8761,7 +8762,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 494,
@@ -8815,7 +8816,7 @@
       "lat": 37.6057068,
       "lon": -0.9913063
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 497,
@@ -8833,7 +8834,7 @@
       "lat": 39.9860398,
       "lon": -0.0360705
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 498,
@@ -8851,7 +8852,7 @@
       "lat": 36.41976,
       "lon": -6.14367
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 499,
@@ -8940,7 +8941,7 @@
       "lat": 37.1825,
       "lon": 3.6012
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 504,
@@ -8958,7 +8959,7 @@
       "lat": 41.6082321,
       "lon": 2.287809
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 505,
@@ -9012,7 +9013,7 @@
       "lat": 41.5787648,
       "lon": 1.6171926
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 508,
@@ -9138,7 +9139,7 @@
       "lat": 41.5375002,
       "lon": 2.4452776
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 515,
@@ -9153,8 +9154,8 @@
     "communityUrl": "https://make.wordpress.org/community/meetups/",
     "thumbnailUrl": "images/wordpress-meetup-groups.webp",
     "latLon": {
-      "lat": 56.8946671,
-      "lon": 14.8215526
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -9277,8 +9278,8 @@
     "contactInfo": "",
     "communityUrl": "https://x.com/wpsevilladevs",
     "latLon": {
-      "lat": 1.3607359,
-      "lon": 103.8395958
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   },
@@ -9298,7 +9299,7 @@
       "lat": 41.1186629,
       "lon": 1.24533
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 524,
@@ -9316,7 +9317,7 @@
       "lat": 41.5609412,
       "lon": 2.0104484
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 525,
@@ -9351,7 +9352,7 @@
       "lat": 40.8110042,
       "lon": 0.5209974
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 527,
@@ -9603,7 +9604,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 541,
@@ -9747,7 +9748,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 549,
@@ -9765,7 +9766,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 550,
@@ -9783,7 +9784,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 551,
@@ -9801,7 +9802,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 552,
@@ -9819,7 +9820,7 @@
       "lat": 41.387917,
       "lon": 2.1699187
     },
-    "displayOnMap": false
+    "displayOnMap": true
   },
   {
     "id": 553,
