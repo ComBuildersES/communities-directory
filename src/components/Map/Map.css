@@ -11,6 +11,6 @@ arcgis-map {
 }
 
 #map{
-  min-width: 82.44%;
+  /* min-width: 82.44%; */
   max-width: calc(100% - 1rem);
 }

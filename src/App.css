@@ -30,10 +30,10 @@ body{
 
 .main {
   /* padding: 1rem 1rem 1rem 1rem; */
-  padding-left: 1rem;
+  /* padding-left: 1rem; */
   display: flex;
   flex: 1;
-  column-gap: 20px;
+  /* column-gap: 20px; */
 }
 
 .main aside{

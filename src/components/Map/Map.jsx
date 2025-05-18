@@ -466,7 +466,7 @@ function Map () {
 
   const numVisible = visibleCommunities.length;
   return (
-    <div id="map" style={{ display: "flex", flexDirection: "column" }}>
+    <div id="map" className="column is-two-thirds-tablet is-three-quarters-desktop is-four-fifths-widescreen is-four-fifths-fullhd" style={{ display: "flex", flexDirection: "column" }}>
       <arcgis-map
         basemap="gray"
         center="-4, 40"
