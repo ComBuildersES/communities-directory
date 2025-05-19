@@ -102,6 +102,7 @@ Cada comunidad es un objeto con información clave como:
 
 Puedes colaborar con los datos de varias formas:
 
+- Uniéndote a [las personas que quieran ayudar a mantener las comunidades de cada provincia](https://github.com/ComBuildersES/communities-directory/issues/53).
 - Desde la web de GitHub, edita directamente [communities.json](https://github.com/ComBuildersES/communities-directory/blob/master/public/data/communities.json) y envía un PR.
 - Crea un _issue_ describiendo los cambios sugeridos: correcciones, mejoras, comunidades a eliminar, normalización de campos, etc.
 - Sugiere datos de alto valor que podrían añadirse.
