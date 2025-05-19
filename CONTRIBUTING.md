@@ -141,7 +141,9 @@ Esto abrirá la aplicación en `http://localhost:5173` por defecto (puede variar
 
 - Los cambios se ven reflejados en tiempo real en el navegador al modificar el código.
 - Puedes usar `npm run build` para generar la versión final en `/dist`.
-- El despliegue se hace automáticamente al hacer push en `master`, mediante el workflow `deploy.yml`, que publica en GitHub Pages.
+- Cambia en fichero `vite.config.js`, comenta `'/communities-directory/'`y descomenta `base: '/dist/'`
+
+> **Nota**: recuerda volver a dejarlo como estaba antes de hacer el push
 
 ### Linting y estilo
 

@@ -4,21 +4,49 @@
 body,
 html {
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
+}
+body{
+  padding-top: 5rem;;
+}
+#title{
+  padding: 1rem;
+  position: fixed;
+  z-index: 9999;
+  background: white;
+  width: 100%;
+}
+#title > h2,
+#title > button{
+  margin-bottom: 0;
 }
 
 #search_app {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  padding: 1rem;
+  
 }
+
 .main {
-  padding: 1rem 1rem 1rem 1rem;
+  /* padding: 1rem 1rem 1rem 1rem; */
+  /* padding-left: 1rem; */
   display: flex;
   flex: 1;
-  column-gap: 20px;
+  /* column-gap: 20px; */
 }
+
+.main aside{
+  position: sticky;
+  top: 1rem;
+}
+.sticky{
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+  align-self: flex-start;
+}
+
 .heading {
   display: flex;
   justify-content: space-between;
@@ -45,8 +73,9 @@ html {
 .communitieslist {
   display: grid;
   gap: 1rem;
-  height: calc(100vh - 10vh);
+  /* height: calc(100vh - 10vh);
   overflow-y: auto;
+  overflow-x: hidden; */
 }
 
 .alto45rem {
@@ -85,6 +114,29 @@ html {
 @media (min-width: 768px) {
   .communitieslist {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile width */
+@media (max-width: 768px) { 
+  
+  #title{
+    text-align: center;
+    padding-bottom: 0;
+  } 
+  #title h2{
+    margin-bottom: 0.5rem;;
+  }
+  .main aside{
+    width: 93vw;
+    position: fixed;
+    top: 10rem;
+  }
+  .main{
+    /* padding-left: 0; */
+  }
+  body{
+    padding-top:10rem;
   }
 }
 
@@ -152,33 +204,37 @@ html {
     opacity: 0;
     transform: scale(0.95);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
   }
 }
 
-.exists{
+.exists {
   color: deepskyblue
 }
-.not-exists{
+
+.not-exists {
   color: tomato
 }
 
 .level-is-shrinkable .level-left,
 .level-is-shrinkable .level-right {
-    flex-shrink: 1;
+  flex-shrink: 1;
 }
-.level-is-shrinkable .level-item{
+
+.level-is-shrinkable .level-item {
   max-width: 100%;
 }
 
 .is-4by3 img {
-  object-fit: contain;  /* This fills the space while maintaining ratio */
+  object-fit: contain;
+  /* This fills the space while maintaining ratio */
   height: 100%;
   width: 100%;
 }
 
-.popover-container{
+.popover-container {
   cursor: pointer;
 }

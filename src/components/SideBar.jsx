@@ -7,7 +7,7 @@ export const Sidebar = () => {
 
   return (
     <aside
-      className={`sidebar menu column is-3 box ${
+      className={`sidebar menu column is-full-mobile is-one-third-tablet is-one-quarter-desktop is-one-fifth-widescreen is-one-fifth-fullhd box sticky ${
         isSidebarVisible ? "is-active" : "is-hidden"
       }`}
     >
@@ -113,10 +113,10 @@ export const Sidebar = () => {
       {/*Aqui podia definir un list box de seleccion multiple con 
         las distintas provincias como opciones o poner todas y que 
         vayan filtrando */}
-      <ul className="menu-list">
+      {/* <ul className="menu-list">
         <li className="menu-item"></li>
         <li className="menu-item"></li>
-      </ul>
+      </ul> */}
     </aside>
   );
 };
