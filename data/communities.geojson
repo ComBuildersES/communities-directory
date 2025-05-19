@@ -7216,7 +7216,7 @@
       },
       "properties": {
         "id": 470,
-        "name": "wecodefest",
+        "name": "WeCodeFest",
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Valladolid",
@@ -8755,6 +8755,44 @@
         "location": "Madrid",
         "communityUrl": "https://www.linkedin.com/company/beersstorming/",
         "thumbnailUrl": "images/beers-storming.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.8447919,
+          43.3602825
+        ]
+      },
+      "properties": {
+        "id": 564,
+        "name": "Tech Riders",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Asturias",
+        "communityUrl": "https://techriders.tajamar.es/",
+        "thumbnailUrl": "tech-riders.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.3959425,
+          43.3709703
+        ]
+      },
+      "properties": {
+        "id": 565,
+        "name": "Coruña Agile",
+        "status": "Inactiva",
+        "eventFormat": "Presencial",
+        "location": "A Coruña, España",
+        "communityUrl": "https://www.meetup.com/es-ES/Coruna-Agile/",
+        "thumbnailUrl": "images/corua-agile.webp"
       }
     }
   ]
