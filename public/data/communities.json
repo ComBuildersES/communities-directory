@@ -7900,18 +7900,18 @@
   {
     "id": 445,
     "name": "Tech Club Asturias",
-    "status": "Desconocido",
+    "status": "Activa",
     "lastReviewed": "31/05/2024",
     "communityType": "Tech Meetup",
-    "eventFormat": "Desconocido",
+    "eventFormat": "Presencial",
     "location": "Asturias",
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://techclubasturias.com/",
     "thumbnailUrl": "images/tech-club-asturias.webp",
     "latLon": {
-      "lat": null,
-      "lon": null
+      "lat": 43.3602825,
+      "lon": -5.8447919
     },
     "displayOnMap": false
   },
@@ -8336,7 +8336,7 @@
   },
   {
     "id": 470,
-    "name": "wecodefest",
+    "name": "WeCodeFest",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
     "communityType": "Conferencia",
@@ -10016,6 +10016,24 @@
     "latLon": {
       "lat": 40.4167047,
       "lon": -3.7035825
+    },
+    "displayOnMap": true
+  },
+  {
+    "id": 564,
+    "name": "Tech Riders",
+    "status": "Activa",
+    "lastReviewed": "5/8/2025",
+    "communityType": "Tech Meetup",
+    "eventFormat": "Presencial",
+    "location": "Asturias",
+    "topics": "",
+    "contactInfo": "",
+    "communityUrl": "https://techriders.tajamar.es/",
+    "thumbnailUrl": "tech-riders.webp",
+    "latLon": {
+      "lat": 43.3602825,
+      "lon": -5.8447919
     },
     "displayOnMap": true
   }
