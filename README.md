@@ -9,8 +9,7 @@ También actúa como punto de encuentro para quienes desean dinamizar comunidade
 
 Además, muestra qué comunidades ya están representadas en **Community Builders**.
 
-![comunidades-manu (1)](https://github.com/user-attachments/assets/a735a62a-9b48-463c-a48b-1aeb903beb14)
-![mapa-de-comunidades-tecnicas (1)](https://github.com/user-attachments/assets/7c57b789-f8ff-4cbb-ae62-76ad7b5d3716)
+[![Pantallazo de la app](./public/images/directorio-de-comunidades-tecnicas-de-españa-1280-800.webp)](https://combuilderses.github.io/communities-directory/)
 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->

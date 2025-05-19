@@ -139,11 +139,9 @@ Esto abrirá la aplicación en `http://localhost:5173` por defecto (puede variar
 
 ### Probar el repo en local
 
-- Los cambios se ven reflejados en tiempo real en el navegador al modificar el código.
-- Puedes usar `npm run build` para generar la versión final en `/dist`.
-- Cambia en fichero `vite.config.js`, comenta `'/communities-directory/'`y descomenta `base: '/dist/'`
-
-> **Nota**: recuerda volver a dejarlo como estaba antes de hacer el push
+- Para desarrollar en local usa `npm run dev`
+  - Los cambios se ven reflejados en tiempo real en el navegador al modificar el código.
+- Para probar el build en local usa `npm run build-preview`
 
 ### Linting y estilo
 
