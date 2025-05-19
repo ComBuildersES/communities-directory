@@ -31,15 +31,31 @@ jobs:
       
       - name: Generar entrada de comunidad y actualizar JSON
         run: node scripts/process-community-issue.js "$(cat issue-body.txt)"
+      
+      - name: Run process-to-communities-to-geojson script
+        run: node scripts/process-to-communities-to-geojson.js
+
+      - name: Read generated coordinates
+        id: coords
+        run: |
+          COORDS=$(cat .geo/last-coordinates.json)
+          LAT=$(echo "$COORDS" | jq -r .lat)
+          LON=$(echo "$COORDS" | jq -r .lon)
+          echo "LAT=$LAT" >> $GITHUB_OUTPUT
+          echo "LON=$LON" >> $GITHUB_OUTPUT
 
       - name: Crear Pull Request
         uses: peter-evans/create-pull-request@v5
         with:
           add-paths: |
-            public/data/communities.json
+            public/data/
             public/images/
           commit-message: "Añadir nueva comunidad desde issue #${{ github.event.issue.number }}"
           branch: "add-community-${{ github.event.issue.number }}"
           title: "Propuesta: Añadir comunidad desde issue #${{ github.event.issue.number }}"
           body: |
             Esta PR ha sido generada automáticamente a partir del issue #${{ github.event.issue.number }}.
+            
+            📍 Check location on maps:
+            - [OpenStreetMap](https://www.openstreetmap.org/?mlat=${{ steps.coords.outputs.LAT }}&mlon=${{ steps.coords.outputs.LON }}&zoom=15)
+            - [Google Maps](https://www.google.com/maps/search/?api=1&query=${{ steps.coords.outputs.LAT }},${{ steps.coords.outputs.LON }})

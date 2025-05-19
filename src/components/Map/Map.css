@@ -9,3 +9,8 @@ arcgis-map {
   border-radius: 10px;
   margin-bottom: 20px;
 }
+
+#map{
+  /* min-width: 82.44%; */
+  max-width: calc(100% - 1rem);
+}

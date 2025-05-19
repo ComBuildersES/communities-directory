@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="mi-footer">
+    <footer className="mi-footer is-hidden-mobile">
       <div className="content has-text-centered">
         <p>
          Proyecto mantenido con 💖&nbsp;<a href="https://github.com/ComBuildersES/communities-directory" target="_blank">

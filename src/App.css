@@ -6,19 +6,45 @@ html {
   height: 100vh;
   /* overflow: hidden; */
 }
+body{
+  padding-top: 5rem;;
+}
+#title{
+  padding: 1rem;
+  position: fixed;
+  z-index: 9999;
+  background: white;
+  width: 100%;
+}
+#title > h2,
+#title > button{
+  margin-bottom: 0;
+}
 
 #search_app {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  padding: 1rem;
+  
 }
 
 .main {
-  padding: 1rem 1rem 1rem 1rem;
+  /* padding: 1rem 1rem 1rem 1rem; */
+  /* padding-left: 1rem; */
   display: flex;
   flex: 1;
-  column-gap: 20px;
+  /* column-gap: 20px; */
+}
+
+.main aside{
+  position: sticky;
+  top: 1rem;
+}
+.sticky{
+  position: sticky;
+  top: 0;
+  z-index: 99999;
+  align-self: flex-start;
 }
 
 .heading {
@@ -47,9 +73,9 @@ html {
 .communitieslist {
   display: grid;
   gap: 1rem;
-  height: calc(100vh - 10vh);
+  /* height: calc(100vh - 10vh);
   overflow-y: auto;
-  overflow-x: hidden;
+  overflow-x: hidden; */
 }
 
 .alto45rem {
@@ -88,6 +114,29 @@ html {
 @media (min-width: 768px) {
   .communitieslist {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile width */
+@media (max-width: 768px) { 
+  
+  #title{
+    text-align: center;
+    padding-bottom: 0;
+  } 
+  #title h2{
+    margin-bottom: 0.5rem;;
+  }
+  .main aside{
+    width: 93vw;
+    position: fixed;
+    top: 10rem;
+  }
+  .main{
+    /* padding-left: 0; */
+  }
+  body{
+    padding-top:10rem;
   }
 }
 

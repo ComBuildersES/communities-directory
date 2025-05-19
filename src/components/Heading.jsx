@@ -31,7 +31,7 @@
 //   );
 // }
 
-import { useNumberOfCommunities } from "../stores/community.store";
+import { useNumberOfCommunities, useNumberOFOnSiteCommunities } from "../stores/community.store";
 import { useSidebarActions, useSideBarVisible } from "../stores/sidebar.store";
 import { ViewToggleButton } from "./ViewToggleButton.jsx"; // 👈 Import the button
 
@@ -40,14 +40,14 @@ export function Heading ({ view, toggleView }) {
   const isVisible = useSideBarVisible();
 
   const numberOFCommunities = useNumberOfCommunities();
-
+  const numberOFOnSiteCommunities = useNumberOFOnSiteCommunities();
   return (
     <div>
-      <div className="is-flex is-align-items-center mb-2">
-        <h2 className="title is-3 mr-4">Lista de comunidades</h2>
+      <div id="title" className="is-flex-tablet is-align-items-center sticky">
+        <h2 className="title is-3 mr-4">Comunidades Tech</h2>
 
         {/* Botón para desplegar el sidebar */}
-        <button className="button is-primary mb-2 mr-2" onClick={toggleSidebar}>
+        <button className="button is-primary mr-2" onClick={toggleSidebar}>
           <i
             className={
               isVisible ? "fa-solid fa-eye-slash" : "fa-solid fa-filter"
@@ -59,10 +59,11 @@ export function Heading ({ view, toggleView }) {
 
         {/* Botón para cambiar vista */}
         <ViewToggleButton view={view} toggleView={toggleView} />
-        <div style={{ padding: '10px' }}>Resultados: {numberOFCommunities} comunidades</div>
+        <div style={{ padding: '10px' }}>
+          Mostrando:&nbsp;
+          {view === "map" ? `${numberOFOnSiteCommunities} comunidades presenciales e híbridas` : `${numberOFCommunities} comunidades`} 
+        </div>
       </div>
-
-
     </div>
   );
 }
