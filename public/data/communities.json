@@ -10055,5 +10055,23 @@
       "lon": -8.3959425
     },
     "displayOnMap": true
+  },
+  {
+    "id": 566,
+    "name": "CanallaCon",
+    "status": "Activa",
+    "lastReviewed": "23/5/2025",
+    "communityType": "Conferencia",
+    "eventFormat": "Presencial",
+    "location": "Roquetas de Mar, Almería",
+    "topics": "Seguridad, Hacking",
+    "contactInfo": "",
+    "communityUrl": "https://canallacon.com/",
+    "thumbnailUrl": "images/canallacon.webp",
+    "latLon": {
+      "lat": 36.7630203,
+      "lon": -2.6115886
+    },
+    "displayOnMap": true
   }
 ]

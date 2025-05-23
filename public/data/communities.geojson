@@ -8794,6 +8794,25 @@
         "communityUrl": "https://www.meetup.com/es-ES/Coruna-Agile/",
         "thumbnailUrl": "images/corua-agile.webp"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.6115886,
+          36.7630203
+        ]
+      },
+      "properties": {
+        "id": 566,
+        "name": "CanallaCon",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Roquetas de Mar, Almería",
+        "communityUrl": "https://canallacon.com/",
+        "thumbnailUrl": "images/canallacon.webp"
+      }
     }
   ]
 }
