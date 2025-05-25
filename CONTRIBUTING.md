@@ -12,6 +12,12 @@
 - [Revisión y mejora de datos](#revisi%C3%B3n-y-mejora-de-datos)
     - [Estructura de los datos](#estructura-de-los-datos)
     - [Formas de contribuir a los datos](#formas-de-contribuir-a-los-datos)
+    - [Convenciones de datos](#convenciones-de-datos)
+      - [Qué comunidades tienen cabida en el repo](#qu%C3%A9-comunidades-tienen-cabida-en-el-repo)
+      - [Quién revisa los datos](#qui%C3%A9n-revisa-los-datos)
+      - [Taxonomía de comunidades](#taxonom%C3%ADa-de-comunidades)
+      - [Estado de las comunidades](#estado-de-las-comunidades)
+      - [Tipos de eventos](#tipos-de-eventos)
 - [Mejorar el código o la web](#mejorar-el-c%C3%B3digo-o-la-web)
   - [Configuración del entorno de desarrollo](#configuraci%C3%B3n-del-entorno-de-desarrollo)
   - [Probar el repo en local](#probar-el-repo-en-local)
@@ -110,7 +116,55 @@ Puedes colaborar con los datos de varias formas:
 - Comparte ideas sobre cómo mantener clasificar comunidades por temáticas o tecnologías.
 - Cambios en la estructura del JSON para facilitar su reutilización en otras aplicaciones.
 
+#### Convenciones de datos
+
+##### Qué comunidades tienen cabida en el repo
+
+Cualquier comunidad tech (que gire en torno a la informática, software, hardware, datos, ...), aunque es cierto que a veces hay comunidades que pueden generar dudas, por eso hemos [abierto este issue al respecto](https://github.com/ComBuildersES/communities-directory/issues/62)
+
+##### Quién revisa los datos
+
+Tenemos una lista de [personas voluntarias que se encargar de revisar los PRs](https://github.com/ComBuildersES/communities-directory/issues/53) a las que puedes solicitar unirte si quieres.
+
+##### Taxonomía de comunidades
+
+Actualmente estos son los diferentes tipos de comunidades:
+
+|Tipo de comunidad|Definición. ¿Qué caracteriza a este tipo de comunidad?|Ejemplos|
+|---|---|---|
+|Tech Meetup|Realiza encuentros periódicos (presenciales u online) normalmente varios al año, con el objetivo de compartir conocimientos en formato charla. Los eventos rara vez llegan a las 100 personas. Cuando son en presencial, suelen finalizar organizando un networking|Arcasiles Community Madrid, [Azure Malaga](https://www.meetup.com/azuremalaga/), [PyData Granada](https://linksta.cc/@PyDataGRX) / [Madrid](https://www.meetup.com/PyData-Madrid/), [Madrid JUG](https://www.meetup.com/es-ES/madridjug/)...
+|Conferencia|Encuentro normalmente anual, en el que se reunen muchas personas y hay varios ponentes. Puede haber múltiples tracks en pararlelo y normalmente la logística es más compleja|[CommitConf](https://www.commit-conf.com/), [Codemotion](https://conferences.codemotion.com/madrid2024/), [CodeRioja](https://www.coderioja.com/)
+|Organización paraguas|Es un tipo de organización que agrupa a múltiples comunidades. Esta comunidades normalmente son locales, comparten una marca, un propósito, y la organización paraguas dan apoyo a las nuevas comunidades con recursos, manuales, presentación y a veces financiación|[Python España](https://es.python.org/), [GDG Spain](https://gdg.es/), [PyData](https://pydata.org/), [OWASP](https://owasp.org/chapters/)...
+|Hacklab|O FabLab, es un un tipo de comunidad normalmente más vinculada al movimiento maker. Normalmente cuenta con un espacio físico, cedido, alquilado o propiedad de la comunidad donde se encuentran recursos hardware y donde la comunidad se reúne|[Makespace Madrid](https://makespacemadrid.org/), [Made Makerspace](https://www.made-bcn.org/en), [La Jaquería](https://lajaqueria.org/)...
+|Grupo colaborativo|Personas que se organizar para colaborar **en diferentes proyectos de interés común**. Puede ser organización de charlas, conferencias, desarrollo de proyectos, escribir artículos de blog, ofrecerse ayuda mutua, ... o todas ellas a la vez|[Step4ward](https://step4ward.es/), [Adopta un Junior](https://adoptaunjunior.es/), [AtlanTICs](https://asociacionatlantics.org/)...
+|Meta comunidad|Es una organización que agrupa a personas que representan/dinamizan otras comunidades para colaborar en uno o varios proyectos de interés común|[Community Builders](https://github.com/ComBuildersES), [Granada Tech](https://www.granadatech.org/), [Vigo Tech Alliance](https://vigotech.org/)...
+|Grupo de ayuda mutua|Se caracteriza porque el objetivo principal es ayudarse mutuamente. Si una persona tiene un problema, tiene un mecanismo de contacto a través del cual contactar con el resto de personas de la comunidad y pedir ayuda. Los canales pueden ser foros, listas de correo, canales de mensajería instantánea, etc.|[BCN Engineering](https://bcneng.org/), [Midudev Discord](https://discord.com/invite/midudev), [Sysarmy Galicia](https://www.sysarmygalicia.com/), [TechShessions](https://techshessions.com/)...
+
+¿Puede una comunidad ser etiquetada con dos tipos de comunidades? Actualmente no, aunque [este aspecto y la propia taxonomía está siendo revisada](https://github.com/ComBuildersES/communities-directory/issues/63).
+
+##### Estado de las comunidades
+
+Actualmente usamos tres tipos:
+
+* **Activa**: si hay personas activas dinamizando y han estado haciendo cosas "recientemente"
+* **Inactiva**: 
+  * En el caso de Meetups se considera inactiva si lleva más de un año sin actividad
+  * En el caso de Conferencias más de la cadencia habitual (dependiendo el histórico), si es una Conferencia nueva, si lleva dos años o más sin convocarse.
+* **Desconocido**: si no lo tenemos claro
+
+> **Nota** [esto está siendo revisado](https://github.com/ComBuildersES/communities-directory/issues/63).
+
+##### Tipos de eventos
+
+* **Presencial**: comunidades que tienen encuentros presenciales con cierta periodicidad y **no suelen retransmitir sus eventos en directo**.
+* **Online**: comunidades cuyo foco de la actividad es principalmente online.
+* **Híbridos**: comunidades que celebran encuentros presenciales con cierta periodicidad y que **suelen retransmitir sus eventos**.
+* **Desconocido**: no tenemos muy claro sus dinámicas
+
+> **Nota** [esto está siendo revisado](https://github.com/ComBuildersES/communities-directory/issues/63).
+
 ---
+
 ## Mejorar el código o la web
 
 ### Configuración del entorno de desarrollo
