@@ -10361,5 +10361,23 @@
       "lon": null
     },
     "displayOnMap": false
+  },
+  {
+    "id": 584,
+    "name": "Rural Hackers",
+    "status": "Activa",
+    "lastReviewed": "26/5/2025",
+    "communityType": "Grupo colaborativo",
+    "eventFormat": "Presencial",
+    "location": "Anceu, Pontevedra",
+    "topics": "",
+    "contactInfo": "",
+    "communityUrl": "https://ruralhackers.com/",
+    "thumbnailUrl": "images/rural-hackers.webp",
+    "latLon": {
+      "lat": 42.3604762,
+      "lon": -8.4652171
+    },
+    "displayOnMap": true
   }
 ]
