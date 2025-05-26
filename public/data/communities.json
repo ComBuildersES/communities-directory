@@ -3641,7 +3641,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://gdg.community.dev/gdg-malaga/",
-    "thumbnailUrl": "images/gdg-malaga.jpeg",
+    "thumbnailUrl": "images/gdg-malaga.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -4261,7 +4261,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://web.archive.org/web/20240304115556/https://hackandbeers.es/",
-    "thumbnailUrl": "images/hack-beers.jpeg",
+    "thumbnailUrl": "images/hack-beers.webp",
     "latLon": {
       "lat": null,
       "lon": null
@@ -6377,7 +6377,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/murciadev/",
-    "thumbnailUrl": "images/murcia-dev.jpeg",
+    "thumbnailUrl": "images/murcia-dev.webp",
     "latLon": {
       "lat": 37.9835334,
       "lon": -1.129905
@@ -6626,7 +6626,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/innovacion-web3-para-todos-con-super-pioneros/?eventOrigin=event_home_page",
-    "thumbnailUrl": "images/nwc10lab-innovacion-web3-cripto-y-blockchain-para-todos.jpeg",
+    "thumbnailUrl": "images/nwc10lab-innovacion-web3-cripto-y-blockchain-para-todos.webp",
     "latLon": {
       "lat": 40.4167047,
       "lon": -3.7035825
@@ -6733,7 +6733,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://owasp.org/www-chapter-barcelona/",
-    "thumbnailUrl": "images/owasp-barcelona.jpeg",
+    "thumbnailUrl": "images/owasp-barcelona.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -7357,6 +7357,7 @@
     "topics": "",
     "contactInfo": "https://www.linkedin.com/posts/pabpereza_discord-a-new-way-to-chat-with-friends-activity-6763868171494559744-UXkr?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAFTWIUB408_I8M39G1F7ZzN47wVswa8PcA",
     "communityUrl": "https://github.com/Riojakers",
+    "thumbnailUrl": "images/riojakers.webp",
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
@@ -8704,7 +8705,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpressbcn/",
-    "thumbnailUrl": "images/wordpress-barcelona.jpeg",
+    "thumbnailUrl": "images/wordpress-barcelona.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -10347,6 +10348,24 @@
   {
     "id": 583,
     "name": "Saturdays.AI",
+    "status": "Activa",
+    "lastReviewed": "26/5/2025",
+    "communityType": "Organización paraguas",
+    "eventFormat": "Presencial",
+    "location": "",
+    "topics": "",
+    "contactInfo": "",
+    "communityUrl": "https://saturdays.ai/cities/",
+    "thumbnailUrl": "images/saturdaysai.webp",
+    "latLon": {
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
+  },
+  {
+    "id": 583,
+    "name": "Saturdays.AI Alicante",
     "status": "Activa",
     "lastReviewed": "26/5/2025",
     "communityType": "Organización paraguas",
