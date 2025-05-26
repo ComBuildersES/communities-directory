@@ -8871,6 +8871,25 @@
         "communityUrl": "https://programamos.es/",
         "thumbnailUrl": "images/programamos.webp"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          null,
+          null
+        ]
+      },
+      "properties": {
+        "id": 572,
+        "name": "Sevilla Maker Societ",
+        "status": "Inactiva",
+        "eventFormat": "Presencial",
+        "location": "",
+        "communityUrl": "https://x.com/MakerSocietySVQ",
+        "thumbnailUrl": "images/sevilla-maker-societ.webp"
+      }
     }
   ]
 }

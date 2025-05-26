@@ -10145,5 +10145,23 @@
       "lon": -5.9953403
     },
     "displayOnMap": true
+  },
+  {
+    "id": 572,
+    "name": "Sevilla Maker Societ",
+    "status": "Inactiva",
+    "lastReviewed": "26/5/2025",
+    "communityType": "Tech Meetup",
+    "eventFormat": "Presencial",
+    "location": "",
+    "topics": "",
+    "contactInfo": "",
+    "communityUrl": "https://x.com/MakerSocietySVQ",
+    "thumbnailUrl": "images/sevilla-maker-societ.webp",
+    "latLon": {
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": true
   }
 ]
