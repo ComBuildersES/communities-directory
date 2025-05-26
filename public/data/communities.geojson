@@ -8883,12 +8883,50 @@
       },
       "properties": {
         "id": 572,
+        "name": "Sevilla Maker Society",
+        "status": "Inactiva",
+        "eventFormat": "Presencial",
+        "location": "Sevilla, España",
+        "communityUrl": "https://x.com/MakerSocietySVQ",
+        "thumbnailUrl": "images/sevilla-maker-societ.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.9953403,
+          37.3886303
+        ]
+      },
+      "properties": {
+        "id": 573,
         "name": "Ping A Programadoras",
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Sevilla, España",
         "communityUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/",
         "thumbnailUrl": "images/ping-a-programadoras.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.9953403,
+          37.3886303
+        ]
+      },
+      "properties": {
+        "id": 574,
+        "name": "Salesforce Developer Group, Sevilla",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Sevilla, Spain",
+        "communityUrl": "https://trailblazercommunitygroups.com/salesforce-developer-group-sevilla-spain/",
+        "thumbnailUrl": "images/salesforce-developer-group-sevilla.webp"
       }
     }
   ]
