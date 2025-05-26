@@ -10253,5 +10253,23 @@
       "lon": -5.9953403
     },
     "displayOnMap": true
+  },
+  {
+    "id": 578,
+    "name": "The Things Network Sevilla",
+    "status": "Desconocido",
+    "lastReviewed": "26/5/2025",
+    "communityType": "Grupo colaborativo",
+    "eventFormat": "Híbrido",
+    "location": "Sevilla, Spain",
+    "topics": "",
+    "contactInfo": "",
+    "communityUrl": "https://x.com/ttn_sevilla",
+    "thumbnailUrl": "images/the-things-network-sevilla.webp",
+    "latLon": {
+      "lat": 37.3886303,
+      "lon": -5.9953403
+    },
+    "displayOnMap": true
   }
 ]
