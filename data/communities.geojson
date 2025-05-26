@@ -8966,6 +8966,25 @@
         "communityUrl": "https://www.meetup.com/es-ES/SevillaDotNet/",
         "thumbnailUrl": "images/sevilladotnet.webp"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.9953403,
+          37.3886303
+        ]
+      },
+      "properties": {
+        "id": 577,
+        "name": "Sevilla Ruby On Rails",
+        "status": "Inactiva",
+        "eventFormat": "Presencial",
+        "location": "Sevilla, Spain",
+        "communityUrl": "https://www.meetup.com/es-ES/Sevilla-Ruby-On-Rails-Meetup/",
+        "thumbnailUrl": "images/sevilla-ruby-on-rails.webp"
+      }
     }
   ]
 }
