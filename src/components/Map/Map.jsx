@@ -466,14 +466,14 @@ function Map () {
 
   const numVisible = visibleCommunities.length;
   return (
-    <div id="map" className="column is-two-thirds-tablet is-three-quarters-desktop is-four-fifths-widescreen is-four-fifths-fullhd" style={{ display: "flex", flexDirection: "column" }}>
+    <div id="map" className="column" style={{ display: "flex", flexDirection: "column" }}>
       <arcgis-map
         basemap="gray"
         center="-4, 40"
         zoom="4"
         onarcgisViewReadyChange={activeViewChange}
       ></arcgis-map>
-      <div className="mb-2 has-text-centered	">Encontradas: {numVisible} comunidades en este área</div>
+      <div className="mb-2 has-text-centered	">Encontradas: {numVisible} comunidades en este área<br /><small>⚠️ <i>Para ver comunidades online ir a "Ver lista"</i></small></div>
       <div className="communitieslist">
         {/* {communities.map((community) => {
 

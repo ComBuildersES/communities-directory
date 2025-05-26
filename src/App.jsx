@@ -7,7 +7,7 @@ import Map from "./components/Map/Map.jsx";
 import Sidebar from "./components/SideBar.jsx";
 
 function App () {
-  const [view, setView] = useState("map");
+  const [view, setView] = useState("list");
   const { fetchCommunities } = useCommunityActions();
 
   useEffect(() => {
