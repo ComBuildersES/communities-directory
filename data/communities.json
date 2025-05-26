@@ -10325,5 +10325,23 @@
       "lon": -5.9953403
     },
     "displayOnMap": true
+  },
+  {
+    "id": 582,
+    "name": "IA Generativa Sevilla",
+    "status": "Activa",
+    "lastReviewed": "26/5/2025",
+    "communityType": "Tech Meetup",
+    "eventFormat": "Presencial",
+    "location": "Sevilla, Spain",
+    "topics": "",
+    "contactInfo": "",
+    "communityUrl": "https://www.meetup.com/ia-generativa-sevilla/",
+    "thumbnailUrl": "images/ia-generativa-sevilla.webp",
+    "latLon": {
+      "lat": 37.3886303,
+      "lon": -5.9953403
+    },
+    "displayOnMap": true
   }
 ]
