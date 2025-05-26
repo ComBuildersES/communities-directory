@@ -16,7 +16,7 @@ try {
 // 🔹 Reasignamos IDs autoincrementales desde 1
 communities = communities.map((community, index) => ({
   ...community,
-  id: index + 1,
+  id: index,
 }));
 
 // 🔹 Escribimos el archivo con los IDs corregidos
