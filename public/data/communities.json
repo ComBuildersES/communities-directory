@@ -10361,5 +10361,23 @@
       "lon": null
     },
     "displayOnMap": false
+  },
+  {
+    "id": 584,
+    "name": "#VLCTesting",
+    "status": "Activa",
+    "lastReviewed": "26/5/2025",
+    "communityType": "Conferencia",
+    "eventFormat": "Presencial",
+    "location": "Valencia, Spain",
+    "topics": "",
+    "contactInfo": "",
+    "communityUrl": "https://vlctesting.es/",
+    "thumbnailUrl": "images/vlctesting.webp",
+    "latLon": {
+      "lat": 39.4697065,
+      "lon": -0.3763353
+    },
+    "displayOnMap": true
   }
 ]

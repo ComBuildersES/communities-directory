@@ -9080,6 +9080,25 @@
         "communityUrl": "https://www.meetup.com/ia-generativa-sevilla/",
         "thumbnailUrl": "images/ia-generativa-sevilla.webp"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3763353,
+          39.4697065
+        ]
+      },
+      "properties": {
+        "id": 584,
+        "name": "#VLCTesting",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Valencia, Spain",
+        "communityUrl": "https://vlctesting.es/",
+        "thumbnailUrl": "images/vlctesting.webp"
+      }
     }
   ]
 }
