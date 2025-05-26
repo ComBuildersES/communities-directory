@@ -10343,5 +10343,23 @@
       "lon": -5.9953403
     },
     "displayOnMap": true
+  },
+  {
+    "id": 583,
+    "name": "Saturdays.AI",
+    "status": "Activa",
+    "lastReviewed": "26/5/2025",
+    "communityType": "Organización paraguas",
+    "eventFormat": "Presencial",
+    "location": "",
+    "topics": "",
+    "contactInfo": "",
+    "communityUrl": "https://saturdays.ai/cities/",
+    "thumbnailUrl": "images/saturdaysai.webp",
+    "latLon": {
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   }
 ]
