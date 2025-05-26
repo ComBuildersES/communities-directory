@@ -10307,5 +10307,23 @@
       "lon": -5.9953403
     },
     "displayOnMap": true
+  },
+  {
+    "id": 581,
+    "name": "Golang Sevilla",
+    "status": "Activa",
+    "lastReviewed": "26/5/2025",
+    "communityType": "Tech Meetup",
+    "eventFormat": "Presencial",
+    "location": "Sevilla, Spain",
+    "topics": "",
+    "contactInfo": "",
+    "communityUrl": "https://www.meetup.com/golang-sevilla/",
+    "thumbnailUrl": "images/golang-sevilla.webp",
+    "latLon": {
+      "lat": 37.3886303,
+      "lon": -5.9953403
+    },
+    "displayOnMap": true
   }
 ]
