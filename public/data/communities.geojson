@@ -8814,6 +8814,25 @@
         "communityUrl": "https://www.meetup.com/seville-mongodb-meetup-group/",
         "thumbnailUrl": "images/mongodb-sevilla.webp"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.9953403,
+          37.3886303
+        ]
+      },
+      "properties": {
+        "id": 569,
+        "name": "Hacking Sevilla",
+        "status": "Inactiva",
+        "eventFormat": "Presencial",
+        "location": "Sevilla España",
+        "communityUrl": "https://www.meetup.com/es-es/hacking-sevillaqk14/",
+        "thumbnailUrl": "images/hacking-sevilla.webp"
+      }
     }
   ]
 }
