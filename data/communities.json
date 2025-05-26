@@ -10037,5 +10037,23 @@
       "lon": -5.9953403
     },
     "displayOnMap": true
+  },
+  {
+    "id": 566,
+    "name": "Ethereum Meetup Sevilla",
+    "status": "Desconocido",
+    "lastReviewed": "26/5/2025",
+    "communityType": "Tech Meetup",
+    "eventFormat": "Presencial",
+    "location": "Sevilla, España",
+    "topics": "",
+    "contactInfo": "",
+    "communityUrl": "https://web.archive.org/web/20240917072042/https://www.meetup.com/es-ES/Ethereum-Meetup-Sevilla/",
+    "thumbnailUrl": "images/ethereum-meetup-sevilla.webp",
+    "latLon": {
+      "lat": 37.3886303,
+      "lon": -5.9953403
+    },
+    "displayOnMap": true
   }
 ]
