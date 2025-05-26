@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 0,
     "name": ".NET foundation meetups",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -18,7 +18,7 @@
     "displayOnMap": false
   },
   {
-    "id": 2,
+    "id": 1,
     "name": "/dev/null talks",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -36,7 +36,7 @@
     "displayOnMap": true
   },
   {
-    "id": 3,
+    "id": 2,
     "name": "/RootedCON",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -54,7 +54,7 @@
     "displayOnMap": false
   },
   {
-    "id": 4,
+    "id": 3,
     "name": "#esLibre",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -72,7 +72,7 @@
     "displayOnMap": false
   },
   {
-    "id": 5,
+    "id": 4,
     "name": "🥃LicorcaConf",
     "status": "Inactiva",
     "lastReviewed": "17/10/2024",
@@ -90,7 +90,7 @@
     "displayOnMap": true
   },
   {
-    "id": 6,
+    "id": 5,
     "name": "A Industriosa",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
@@ -108,7 +108,7 @@
     "displayOnMap": true
   },
   {
-    "id": 7,
+    "id": 6,
     "name": "Accesibilidad Spain",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -126,7 +126,7 @@
     "displayOnMap": false
   },
   {
-    "id": 8,
+    "id": 7,
     "name": "AdaBcnJs",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -144,7 +144,7 @@
     "displayOnMap": true
   },
   {
-    "id": 9,
+    "id": 8,
     "name": "AdalaberFest",
     "status": "Inactiva",
     "lastReviewed": "17/10/2024",
@@ -162,7 +162,7 @@
     "displayOnMap": false
   },
   {
-    "id": 10,
+    "id": 9,
     "name": "Adopta un Junior",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -180,7 +180,7 @@
     "displayOnMap": false
   },
   {
-    "id": 11,
+    "id": 10,
     "name": "Agile Alliance",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -198,7 +198,7 @@
     "displayOnMap": false
   },
   {
-    "id": 12,
+    "id": 11,
     "name": "Agile Aragón",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -216,7 +216,7 @@
     "displayOnMap": true
   },
   {
-    "id": 13,
+    "id": 12,
     "name": "Agile Delivery",
     "status": "Inactiva",
     "lastReviewed": "26/05/2025",
@@ -234,7 +234,7 @@
     "displayOnMap": false
   },
   {
-    "id": 14,
+    "id": 13,
     "name": "Agile Open Spain (AOS)",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -252,7 +252,7 @@
     "displayOnMap": false
   },
   {
-    "id": 15,
+    "id": 14,
     "name": "Agile Spain",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -270,7 +270,7 @@
     "displayOnMap": false
   },
   {
-    "id": 16,
+    "id": 15,
     "name": "Agile Sur",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -288,7 +288,7 @@
     "displayOnMap": true
   },
   {
-    "id": 17,
+    "id": 16,
     "name": "agileVigo",
     "status": "Desconocido",
     "lastReviewed": "26/05/2025",
@@ -306,7 +306,7 @@
     "displayOnMap": true
   },
   {
-    "id": 18,
+    "id": 17,
     "name": "AgileGirls",
     "status": "Inactiva",
     "lastReviewed": "26/05/2025",
@@ -324,7 +324,7 @@
     "displayOnMap": false
   },
   {
-    "id": 19,
+    "id": 18,
     "name": "AgileValencia",
     "status": "Inactiva",
     "lastReviewed": "18/12/2024",
@@ -342,7 +342,7 @@
     "displayOnMap": false
   },
   {
-    "id": 20,
+    "id": 19,
     "name": "AI4MED - IA para medicina",
     "status": "Activa",
     "lastReviewed": "15/11/2024",
@@ -360,7 +360,7 @@
     "displayOnMap": false
   },
   {
-    "id": 21,
+    "id": 20,
     "name": "AiBirras",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -378,7 +378,7 @@
     "displayOnMap": true
   },
   {
-    "id": 22,
+    "id": 21,
     "name": "AKASHA Hub",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -396,7 +396,7 @@
     "displayOnMap": true
   },
   {
-    "id": 23,
+    "id": 22,
     "name": "Alhambra Hub",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -414,7 +414,7 @@
     "displayOnMap": true
   },
   {
-    "id": 24,
+    "id": 23,
     "name": "Almería R users",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -432,7 +432,7 @@
     "displayOnMap": true
   },
   {
-    "id": 25,
+    "id": 24,
     "name": "AlmeríaJS",
     "status": "Inactiva",
     "lastReviewed": "26/05/2025",
@@ -450,7 +450,7 @@
     "displayOnMap": true
   },
   {
-    "id": 26,
+    "id": 25,
     "name": "AlmeríaTech",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -468,7 +468,7 @@
     "displayOnMap": true
   },
   {
-    "id": 27,
+    "id": 26,
     "name": "Andalucía Startup Founder",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -486,7 +486,7 @@
     "displayOnMap": true
   },
   {
-    "id": 28,
+    "id": 27,
     "name": "Angular Madrid",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -504,7 +504,7 @@
     "displayOnMap": true
   },
   {
-    "id": 29,
+    "id": 28,
     "name": "Angular Málaga",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -522,7 +522,7 @@
     "displayOnMap": true
   },
   {
-    "id": 30,
+    "id": 29,
     "name": "APIAddicts",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -540,7 +540,7 @@
     "displayOnMap": false
   },
   {
-    "id": 31,
+    "id": 30,
     "name": "APIAddictsDays",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -558,7 +558,7 @@
     "displayOnMap": true
   },
   {
-    "id": 32,
+    "id": 31,
     "name": "Arcasiles Community Madrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -576,7 +576,7 @@
     "displayOnMap": true
   },
   {
-    "id": 33,
+    "id": 32,
     "name": "Area UR-Maker",
     "status": "Activa",
     "lastReviewed": "16/10/2024",
@@ -594,7 +594,7 @@
     "displayOnMap": true
   },
   {
-    "id": 34,
+    "id": 33,
     "name": "Asociación Atlantics",
     "status": "Activa",
     "lastReviewed": "22/10/2024",
@@ -612,7 +612,7 @@
     "displayOnMap": true
   },
   {
-    "id": 35,
+    "id": 34,
     "name": "Asociación Ciberseguridad Y Hacking Ético Asturias",
     "status": "Activa",
     "lastReviewed": "18/12/2024",
@@ -630,7 +630,7 @@
     "displayOnMap": true
   },
   {
-    "id": 36,
+    "id": 35,
     "name": "Asociación de profesionales de Usabilidad",
     "status": "Inactiva",
     "lastReviewed": "15/10/2024",
@@ -648,7 +648,7 @@
     "displayOnMap": false
   },
   {
-    "id": 37,
+    "id": 36,
     "name": "Asociación de usuarios de R de Castilla-La Mancha",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -666,7 +666,7 @@
     "displayOnMap": true
   },
   {
-    "id": 38,
+    "id": 37,
     "name": "Asociación de Webmasters de Granada",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -684,7 +684,7 @@
     "displayOnMap": true
   },
   {
-    "id": 39,
+    "id": 38,
     "name": "Asociación de Webmasters de Málaga",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -702,7 +702,7 @@
     "displayOnMap": true
   },
   {
-    "id": 40,
+    "id": 39,
     "name": "Asociación Española de Drupal",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -720,7 +720,7 @@
     "displayOnMap": false
   },
   {
-    "id": 41,
+    "id": 40,
     "name": "AsturCON.tech",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -738,7 +738,7 @@
     "displayOnMap": true
   },
   {
-    "id": 42,
+    "id": 41,
     "name": "Asturias Software Crafters",
     "status": "Activa",
     "lastReviewed": "24/09/2024",
@@ -756,7 +756,7 @@
     "displayOnMap": true
   },
   {
-    "id": 43,
+    "id": 42,
     "name": "asturias.js",
     "status": "Inactiva",
     "lastReviewed": "18/12/2024",
@@ -774,7 +774,7 @@
     "displayOnMap": false
   },
   {
-    "id": 44,
+    "id": 43,
     "name": "AsturiasHacking",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -792,7 +792,7 @@
     "displayOnMap": false
   },
   {
-    "id": 45,
+    "id": 44,
     "name": "AsturPHP",
     "status": "Inactiva",
     "lastReviewed": "18/12/2024",
@@ -810,7 +810,7 @@
     "displayOnMap": false
   },
   {
-    "id": 46,
+    "id": 45,
     "name": "AtlánticaConf",
     "status": "Activa",
     "lastReviewed": "02/06/2025",
@@ -828,7 +828,7 @@
     "displayOnMap": true
   },
   {
-    "id": 47,
+    "id": 46,
     "name": "Aula de Software Libre Córdoba",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -846,7 +846,7 @@
     "displayOnMap": true
   },
   {
-    "id": 48,
+    "id": 47,
     "name": "AWS user group Sevilla",
     "status": "Activa",
     "lastReviewed": "18/12/2024",
@@ -864,7 +864,7 @@
     "displayOnMap": true
   },
   {
-    "id": 49,
+    "id": 48,
     "name": "Azure Data Tech Groups",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -882,7 +882,7 @@
     "displayOnMap": false
   },
   {
-    "id": 50,
+    "id": 49,
     "name": "Azure Malaga",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -900,7 +900,7 @@
     "displayOnMap": true
   },
   {
-    "id": 51,
+    "id": 50,
     "name": "Azure Malaga (Meetup)",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -918,7 +918,7 @@
     "displayOnMap": true
   },
   {
-    "id": 52,
+    "id": 51,
     "name": "Azure Tech Groups",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -936,7 +936,7 @@
     "displayOnMap": false
   },
   {
-    "id": 53,
+    "id": 52,
     "name": "Azurebrains",
     "status": "Desconocido",
     "lastReviewed": "25/10/2024",
@@ -954,7 +954,7 @@
     "displayOnMap": true
   },
   {
-    "id": 54,
+    "id": 53,
     "name": "Barcelona Android Developer Group",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -971,7 +971,7 @@
     "displayOnMap": true
   },
   {
-    "id": 55,
+    "id": 54,
     "name": "Barcelona R User Group",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -989,7 +989,7 @@
     "displayOnMap": true
   },
   {
-    "id": 56,
+    "id": 55,
     "name": "BCN Engineering",
     "status": "Activa",
     "lastReviewed": "29/10/2024",
@@ -1007,7 +1007,7 @@
     "displayOnMap": false
   },
   {
-    "id": 57,
+    "id": 56,
     "name": "Betabeers",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -1025,7 +1025,7 @@
     "displayOnMap": false
   },
   {
-    "id": 58,
+    "id": 57,
     "name": "Betabeers Galicia",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -1043,7 +1043,7 @@
     "displayOnMap": true
   },
   {
-    "id": 59,
+    "id": 58,
     "name": "Big Agile Open Spac",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1061,7 +1061,7 @@
     "displayOnMap": true
   },
   {
-    "id": 60,
+    "id": 59,
     "name": "Big Girls Theory",
     "status": "Inactiva",
     "lastReviewed": "26/05/2025",
@@ -1079,7 +1079,7 @@
     "displayOnMap": false
   },
   {
-    "id": 61,
+    "id": 60,
     "name": "BilboStack Conference",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1097,7 +1097,7 @@
     "displayOnMap": true
   },
   {
-    "id": 62,
+    "id": 61,
     "name": "Bitup Alicante Ciberseguridad",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -1115,7 +1115,7 @@
     "displayOnMap": true
   },
   {
-    "id": 63,
+    "id": 62,
     "name": "BiznagaFest",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -1133,7 +1133,7 @@
     "displayOnMap": true
   },
   {
-    "id": 64,
+    "id": 63,
     "name": "Blockchain Málaga",
     "status": "Desconocido",
     "lastReviewed": "25/10/2024",
@@ -1151,7 +1151,7 @@
     "displayOnMap": true
   },
   {
-    "id": 65,
+    "id": 64,
     "name": "Blockchain.gal Vigo",
     "status": "Inactiva",
     "lastReviewed": "26/05/2025",
@@ -1169,7 +1169,7 @@
     "displayOnMap": true
   },
   {
-    "id": 66,
+    "id": 65,
     "name": "Blockchain4All",
     "status": "Desconocido",
     "lastReviewed": "25/10/2024",
@@ -1187,7 +1187,7 @@
     "displayOnMap": true
   },
   {
-    "id": 67,
+    "id": 66,
     "name": "BoquerónSec",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -1205,7 +1205,7 @@
     "displayOnMap": true
   },
   {
-    "id": 68,
+    "id": 67,
     "name": "BricoLabs",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -1223,7 +1223,7 @@
     "displayOnMap": true
   },
   {
-    "id": 69,
+    "id": 68,
     "name": "BSides Barcelona",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -1241,7 +1241,7 @@
     "displayOnMap": true
   },
   {
-    "id": 70,
+    "id": 69,
     "name": "C1b3rWall",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -1259,7 +1259,7 @@
     "displayOnMap": true
   },
   {
-    "id": 71,
+    "id": 70,
     "name": "CaceresTech",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1277,7 +1277,7 @@
     "displayOnMap": true
   },
   {
-    "id": 72,
+    "id": 71,
     "name": "Cádiz GameDev",
     "status": "Activa",
     "lastReviewed": "18/12/2024",
@@ -1295,7 +1295,7 @@
     "displayOnMap": true
   },
   {
-    "id": 73,
+    "id": 72,
     "name": "Comunidades técnicas en Málaga",
     "status": "Activa",
     "lastReviewed": "29/11/2024",
@@ -1313,7 +1313,7 @@
     "displayOnMap": true
   },
   {
-    "id": 74,
+    "id": 73,
     "name": "CanariasJS",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -1331,7 +1331,7 @@
     "displayOnMap": true
   },
   {
-    "id": 75,
+    "id": 74,
     "name": "CatDotNet",
     "status": "Inactiva",
     "lastReviewed": "26/05/2025",
@@ -1349,7 +1349,7 @@
     "displayOnMap": false
   },
   {
-    "id": 76,
+    "id": 75,
     "name": "CATzure",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -1367,7 +1367,7 @@
     "displayOnMap": true
   },
   {
-    "id": 77,
+    "id": 76,
     "name": "CESINF X",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1385,7 +1385,7 @@
     "displayOnMap": true
   },
   {
-    "id": 78,
+    "id": 77,
     "name": "Civis GameJam",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1403,7 +1403,7 @@
     "displayOnMap": true
   },
   {
-    "id": 79,
+    "id": 78,
     "name": "ClassDojo España",
     "status": "Desconocido",
     "lastReviewed": "25/10/2024",
@@ -1421,7 +1421,7 @@
     "displayOnMap": true
   },
   {
-    "id": 80,
+    "id": 79,
     "name": "Cloud Native",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1439,7 +1439,7 @@
     "displayOnMap": false
   },
   {
-    "id": 81,
+    "id": 80,
     "name": "Cloud Native (CNCF) Barcelona",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1457,7 +1457,7 @@
     "displayOnMap": true
   },
   {
-    "id": 82,
+    "id": 81,
     "name": "Cloud Native (CNCF) Bilbao",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -1475,7 +1475,7 @@
     "displayOnMap": true
   },
   {
-    "id": 83,
+    "id": 82,
     "name": "Cloud Native (CNCF) Galicia",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1493,7 +1493,7 @@
     "displayOnMap": true
   },
   {
-    "id": 84,
+    "id": 83,
     "name": "Cloud Native (CNCF) Granada",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1511,7 +1511,7 @@
     "displayOnMap": true
   },
   {
-    "id": 85,
+    "id": 84,
     "name": "Cloud Native (CNCF) Madrid",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1529,7 +1529,7 @@
     "displayOnMap": true
   },
   {
-    "id": 86,
+    "id": 85,
     "name": "Cloud Native (CNCF) Malaga",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -1547,7 +1547,7 @@
     "displayOnMap": true
   },
   {
-    "id": 87,
+    "id": 86,
     "name": "Cloud Native (CNCF) Mallorca",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1565,7 +1565,7 @@
     "displayOnMap": true
   },
   {
-    "id": 88,
+    "id": 87,
     "name": "Cloud Native (CNCF) Rioja",
     "status": "Activa",
     "lastReviewed": "14/11/2024",
@@ -1583,7 +1583,7 @@
     "displayOnMap": true
   },
   {
-    "id": 89,
+    "id": 88,
     "name": "Cloud Native (CNCF) Sevilla",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1601,7 +1601,7 @@
     "displayOnMap": true
   },
   {
-    "id": 90,
+    "id": 89,
     "name": "Cloud Native (CNCF) Valencia",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1619,7 +1619,7 @@
     "displayOnMap": true
   },
   {
-    "id": 91,
+    "id": 90,
     "name": "Cloud Native Asturias",
     "status": "Inactiva",
     "lastReviewed": "18/12/2024",
@@ -1637,7 +1637,7 @@
     "displayOnMap": false
   },
   {
-    "id": 92,
+    "id": 91,
     "name": "CLSxMadrid",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -1655,7 +1655,7 @@
     "displayOnMap": true
   },
   {
-    "id": 93,
+    "id": 92,
     "name": "Codebar",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1673,7 +1673,7 @@
     "displayOnMap": false
   },
   {
-    "id": 94,
+    "id": 93,
     "name": "Codebar Barcelona",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1691,7 +1691,7 @@
     "displayOnMap": true
   },
   {
-    "id": 95,
+    "id": 94,
     "name": "Codemotion",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -1709,7 +1709,7 @@
     "displayOnMap": true
   },
   {
-    "id": 96,
+    "id": 95,
     "name": "Codenares",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -1727,7 +1727,7 @@
     "displayOnMap": true
   },
   {
-    "id": 97,
+    "id": 96,
     "name": "CodeRioja",
     "status": "Activa",
     "lastReviewed": "14/11/2024",
@@ -1745,7 +1745,7 @@
     "displayOnMap": true
   },
   {
-    "id": 98,
+    "id": 97,
     "name": "Coders' Agora",
     "status": "Inactiva",
     "lastReviewed": "18/12/2024",
@@ -1763,7 +1763,7 @@
     "displayOnMap": false
   },
   {
-    "id": 99,
+    "id": 98,
     "name": "CodifyMeetup",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -1781,7 +1781,7 @@
     "displayOnMap": true
   },
   {
-    "id": 100,
+    "id": 99,
     "name": "Collaborative Modeling (CoMo) Madrid",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1799,7 +1799,7 @@
     "displayOnMap": true
   },
   {
-    "id": 101,
+    "id": 100,
     "name": "CommitConf",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -1817,7 +1817,7 @@
     "displayOnMap": true
   },
   {
-    "id": 102,
+    "id": 101,
     "name": "Community Builders",
     "status": "Activa",
     "lastReviewed": "24/02/2025",
@@ -1835,7 +1835,7 @@
     "displayOnMap": false
   },
   {
-    "id": 103,
+    "id": 102,
     "name": "Comunidad de Alexa en español",
     "status": "Inactiva",
     "lastReviewed": "26/05/2025",
@@ -1853,7 +1853,7 @@
     "displayOnMap": false
   },
   {
-    "id": 104,
+    "id": 103,
     "name": "Comunidad de R Hispano",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1871,7 +1871,7 @@
     "displayOnMap": false
   },
   {
-    "id": 105,
+    "id": 104,
     "name": "Comunidades tecnológicas Madrid",
     "status": "Inactiva",
     "lastReviewed": "29/11/2024",
@@ -1889,7 +1889,7 @@
     "displayOnMap": true
   },
   {
-    "id": 106,
+    "id": 105,
     "name": "Conferencia Agile Spain (CAS)",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1907,7 +1907,7 @@
     "displayOnMap": false
   },
   {
-    "id": 107,
+    "id": 106,
     "name": "Conferencia de Agilidad\nen la Empresa Aragonesa",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1925,7 +1925,7 @@
     "displayOnMap": true
   },
   {
-    "id": 108,
+    "id": 107,
     "name": "Congreso & Jornadas de Usuarios de R",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1943,7 +1943,7 @@
     "displayOnMap": true
   },
   {
-    "id": 109,
+    "id": 108,
     "name": "Congreso javaHispano",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -1961,7 +1961,7 @@
     "displayOnMap": true
   },
   {
-    "id": 110,
+    "id": 109,
     "name": "Congreso TryIT!",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -1979,7 +1979,7 @@
     "displayOnMap": true
   },
   {
-    "id": 111,
+    "id": 110,
     "name": "Córdoba Software Crafters",
     "status": "Activa",
     "lastReviewed": "29/11/2024",
@@ -1997,7 +1997,7 @@
     "displayOnMap": true
   },
   {
-    "id": 112,
+    "id": 111,
     "name": "Coruña Bloggers",
     "status": "Activa",
     "lastReviewed": "22/10/2024",
@@ -2015,7 +2015,7 @@
     "displayOnMap": true
   },
   {
-    "id": 113,
+    "id": 112,
     "name": "Coruña WTF",
     "status": "Activa",
     "lastReviewed": "03/03/2025",
@@ -2033,7 +2033,7 @@
     "displayOnMap": true
   },
   {
-    "id": 114,
+    "id": 113,
     "name": "CorunaEvents",
     "status": "Activa",
     "lastReviewed": "29/11/2024",
@@ -2051,7 +2051,7 @@
     "displayOnMap": true
   },
   {
-    "id": 115,
+    "id": 114,
     "name": "CoruñaJUG",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -2069,7 +2069,7 @@
     "displayOnMap": true
   },
   {
-    "id": 116,
+    "id": 115,
     "name": "Crafters Vigo",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
@@ -2087,7 +2087,7 @@
     "displayOnMap": true
   },
   {
-    "id": 117,
+    "id": 116,
     "name": "Criptomonedas Meetup Group",
     "status": "Activa",
     "lastReviewed": "26/05/2025",
@@ -2105,7 +2105,7 @@
     "displayOnMap": true
   },
   {
-    "id": 118,
+    "id": 117,
     "name": "CrossOver",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2123,7 +2123,7 @@
     "displayOnMap": true
   },
   {
-    "id": 119,
+    "id": 118,
     "name": "Cryptospace",
     "status": "Inactiva",
     "lastReviewed": "18/12/2024",
@@ -2141,7 +2141,7 @@
     "displayOnMap": false
   },
   {
-    "id": 120,
+    "id": 119,
     "name": "CTO Summit InfoJobs",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -2159,7 +2159,7 @@
     "displayOnMap": true
   },
   {
-    "id": 121,
+    "id": 120,
     "name": "CyberCamp UMA",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2177,7 +2177,7 @@
     "displayOnMap": true
   },
   {
-    "id": 122,
+    "id": 121,
     "name": "Cyberhippietotalism",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2195,7 +2195,7 @@
     "displayOnMap": true
   },
   {
-    "id": 123,
+    "id": 122,
     "name": "CyLicon Valley",
     "status": "Inactiva",
     "lastReviewed": "26/05/2025",
@@ -2212,7 +2212,7 @@
     "displayOnMap": true
   },
   {
-    "id": 124,
+    "id": 123,
     "name": "Danaus",
     "status": "Activa",
     "lastReviewed": "19/10/2024",
@@ -2230,7 +2230,7 @@
     "displayOnMap": true
   },
   {
-    "id": 125,
+    "id": 124,
     "name": "Data Saturdays",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -2248,7 +2248,7 @@
     "displayOnMap": true
   },
   {
-    "id": 126,
+    "id": 125,
     "name": "Data, Cloud and AI in Barcelona",
     "status": "Activa",
     "lastReviewed": "24/03/2025",
@@ -2266,7 +2266,7 @@
     "displayOnMap": true
   },
   {
-    "id": 127,
+    "id": 126,
     "name": "Data, Cloud and AI in Madrid",
     "status": "Activa",
     "lastReviewed": "24/03/2025",
@@ -2284,7 +2284,7 @@
     "displayOnMap": true
   },
   {
-    "id": 128,
+    "id": 127,
     "name": "Databeers Almería",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -2302,7 +2302,7 @@
     "displayOnMap": true
   },
   {
-    "id": 129,
+    "id": 128,
     "name": "Databeers Granada",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -2320,7 +2320,7 @@
     "displayOnMap": true
   },
   {
-    "id": 130,
+    "id": 129,
     "name": "Databeers Máaga",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2338,7 +2338,7 @@
     "displayOnMap": true
   },
   {
-    "id": 131,
+    "id": 130,
     "name": "Databeers Madrid",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2356,7 +2356,7 @@
     "displayOnMap": true
   },
   {
-    "id": 132,
+    "id": 131,
     "name": "Databeers Sevilla",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2374,7 +2374,7 @@
     "displayOnMap": true
   },
   {
-    "id": 133,
+    "id": 132,
     "name": "Databeers Valencia",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2392,7 +2392,7 @@
     "displayOnMap": true
   },
   {
-    "id": 134,
+    "id": 133,
     "name": "DatabeersRIO",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
@@ -2409,7 +2409,7 @@
     "displayOnMap": true
   },
   {
-    "id": 135,
+    "id": 134,
     "name": "DES",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2427,7 +2427,7 @@
     "displayOnMap": true
   },
   {
-    "id": 136,
+    "id": 135,
     "name": "DevBcn",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -2445,7 +2445,7 @@
     "displayOnMap": true
   },
   {
-    "id": 137,
+    "id": 136,
     "name": "DevFest Sevilla 2024",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2463,7 +2463,7 @@
     "displayOnMap": true
   },
   {
-    "id": 138,
+    "id": 137,
     "name": "DevOpsDays Cáceres",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -2481,7 +2481,7 @@
     "displayOnMap": true
   },
   {
-    "id": 139,
+    "id": 138,
     "name": "DevopsDays Madrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -2499,7 +2499,7 @@
     "displayOnMap": true
   },
   {
-    "id": 140,
+    "id": 139,
     "name": "DevOpsDays Vitória",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -2517,7 +2517,7 @@
     "displayOnMap": true
   },
   {
-    "id": 141,
+    "id": 140,
     "name": "DevWomen",
     "status": "Inactiva",
     "lastReviewed": "26/05/2025",
@@ -2535,7 +2535,7 @@
     "displayOnMap": false
   },
   {
-    "id": 142,
+    "id": 141,
     "name": "Docker Madrid",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -2553,7 +2553,7 @@
     "displayOnMap": true
   },
   {
-    "id": 143,
+    "id": 142,
     "name": "Docker User Groups",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2571,7 +2571,7 @@
     "displayOnMap": false
   },
   {
-    "id": 144,
+    "id": 143,
     "name": "dotNET Conf Spain",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2589,7 +2589,7 @@
     "displayOnMap": true
   },
   {
-    "id": 145,
+    "id": 144,
     "name": "dotnetMalaga (meetup)",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -2607,7 +2607,7 @@
     "displayOnMap": true
   },
   {
-    "id": 146,
+    "id": 145,
     "name": "DotNetMálaga Conferencia",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2625,7 +2625,7 @@
     "displayOnMap": true
   },
   {
-    "id": 147,
+    "id": 146,
     "name": "DotNetters",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -2643,7 +2643,7 @@
     "displayOnMap": true
   },
   {
-    "id": 148,
+    "id": 147,
     "name": "DotNetters Zaragoza",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2661,7 +2661,7 @@
     "displayOnMap": true
   },
   {
-    "id": 149,
+    "id": 148,
     "name": "Droidcon",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2679,7 +2679,7 @@
     "displayOnMap": false
   },
   {
-    "id": 150,
+    "id": 149,
     "name": "Droidcon Madrid",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2696,7 +2696,7 @@
     "displayOnMap": true
   },
   {
-    "id": 151,
+    "id": 150,
     "name": "Drupal Alicante",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2713,7 +2713,7 @@
     "displayOnMap": true
   },
   {
-    "id": 152,
+    "id": 151,
     "name": "Drupal Almería",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2730,7 +2730,7 @@
     "displayOnMap": true
   },
   {
-    "id": 153,
+    "id": 152,
     "name": "Drupal Asturias",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2748,7 +2748,7 @@
     "displayOnMap": true
   },
   {
-    "id": 154,
+    "id": 153,
     "name": "Drupal Cádiz",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2765,7 +2765,7 @@
     "displayOnMap": true
   },
   {
-    "id": 155,
+    "id": 154,
     "name": "Drupal Castellón",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2782,7 +2782,7 @@
     "displayOnMap": true
   },
   {
-    "id": 156,
+    "id": 155,
     "name": "Drupal Castilla y León",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2799,7 +2799,7 @@
     "displayOnMap": true
   },
   {
-    "id": 157,
+    "id": 156,
     "name": "Drupal Comunidad Valenciana",
     "status": "Desconocido",
     "lastReviewed": "26/05/2025",
@@ -2816,7 +2816,7 @@
     "displayOnMap": true
   },
   {
-    "id": 158,
+    "id": 157,
     "name": "Drupal Comunitat catalana del Drupal | Web de Drupal.cat",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2833,7 +2833,7 @@
     "displayOnMap": false
   },
   {
-    "id": 159,
+    "id": 158,
     "name": "Drupal Day Spain",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2851,7 +2851,7 @@
     "displayOnMap": false
   },
   {
-    "id": 160,
+    "id": 159,
     "name": "Drupal Euskadi",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2868,7 +2868,7 @@
     "displayOnMap": true
   },
   {
-    "id": 161,
+    "id": 160,
     "name": "Drupal Extremadura",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2885,7 +2885,7 @@
     "displayOnMap": true
   },
   {
-    "id": 162,
+    "id": 161,
     "name": "Drupal Galiza Drupal Group",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2902,7 +2902,7 @@
     "displayOnMap": true
   },
   {
-    "id": 163,
+    "id": 162,
     "name": "Drupal Granada",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2919,7 +2919,7 @@
     "displayOnMap": true
   },
   {
-    "id": 164,
+    "id": 163,
     "name": "Drupal León",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2936,7 +2936,7 @@
     "displayOnMap": true
   },
   {
-    "id": 165,
+    "id": 164,
     "name": "Drupal Madrid",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -2954,7 +2954,7 @@
     "displayOnMap": true
   },
   {
-    "id": 166,
+    "id": 165,
     "name": "Drupal Malaga",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2971,7 +2971,7 @@
     "displayOnMap": true
   },
   {
-    "id": 167,
+    "id": 166,
     "name": "Drupal Region de Murcia y Cartagena",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -2988,7 +2988,7 @@
     "displayOnMap": true
   },
   {
-    "id": 168,
+    "id": 167,
     "name": "Drupal Sevilla",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -3005,7 +3005,7 @@
     "displayOnMap": true
   },
   {
-    "id": 169,
+    "id": 168,
     "name": "Drupal Zaragoza y alrededores",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -3022,7 +3022,7 @@
     "displayOnMap": true
   },
   {
-    "id": 170,
+    "id": 169,
     "name": "DrupalCamp Spain",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3040,7 +3040,7 @@
     "displayOnMap": false
   },
   {
-    "id": 171,
+    "id": 170,
     "name": "DyploFest",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -3058,7 +3058,7 @@
     "displayOnMap": true
   },
   {
-    "id": 172,
+    "id": 171,
     "name": "E-Show Barcelona",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3076,7 +3076,7 @@
     "displayOnMap": true
   },
   {
-    "id": 173,
+    "id": 172,
     "name": "E-Show Madrid",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3094,7 +3094,7 @@
     "displayOnMap": true
   },
   {
-    "id": 174,
+    "id": 173,
     "name": "eCongress Málaga",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3112,7 +3112,7 @@
     "displayOnMap": true
   },
   {
-    "id": 175,
+    "id": 174,
     "name": "Elastic Local Meetups",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3130,7 +3130,7 @@
     "displayOnMap": false
   },
   {
-    "id": 176,
+    "id": 175,
     "name": "ETSIITTech_Club",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3148,7 +3148,7 @@
     "displayOnMap": true
   },
   {
-    "id": 177,
+    "id": 176,
     "name": "EuskalHack Security Congress",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3166,7 +3166,7 @@
     "displayOnMap": true
   },
   {
-    "id": 178,
+    "id": 177,
     "name": "Extremadura Digital Day",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -3184,7 +3184,7 @@
     "displayOnMap": true
   },
   {
-    "id": 179,
+    "id": 178,
     "name": "Fabada Conference",
     "status": "Inactiva",
     "lastReviewed": "17/10/2024",
@@ -3202,7 +3202,7 @@
     "displayOnMap": true
   },
   {
-    "id": 180,
+    "id": 179,
     "name": "Facebook Developer Circle Madrid",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -3220,7 +3220,7 @@
     "displayOnMap": true
   },
   {
-    "id": 181,
+    "id": 180,
     "name": "Femdevs",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -3237,7 +3237,7 @@
     "displayOnMap": false
   },
   {
-    "id": 182,
+    "id": 181,
     "name": "Flutter Barcelona",
     "status": "Activa",
     "lastReviewed": "30/01/2025",
@@ -3255,7 +3255,7 @@
     "displayOnMap": true
   },
   {
-    "id": 183,
+    "id": 182,
     "name": "Flutter Lleida",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -3273,7 +3273,7 @@
     "displayOnMap": true
   },
   {
-    "id": 184,
+    "id": 183,
     "name": "Flutter Madrid",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -3291,7 +3291,7 @@
     "displayOnMap": true
   },
   {
-    "id": 185,
+    "id": 184,
     "name": "Flutter Málaga",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -3309,7 +3309,7 @@
     "displayOnMap": true
   },
   {
-    "id": 186,
+    "id": 185,
     "name": "Flutter Sevilla",
     "status": "Desconocido",
     "lastReviewed": "25/10/2024",
@@ -3327,7 +3327,7 @@
     "displayOnMap": true
   },
   {
-    "id": 187,
+    "id": 186,
     "name": "Flutter Valencia",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -3345,7 +3345,7 @@
     "displayOnMap": true
   },
   {
-    "id": 188,
+    "id": 187,
     "name": "Foro Cybercamp",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -3363,7 +3363,7 @@
     "displayOnMap": false
   },
   {
-    "id": 189,
+    "id": 188,
     "name": "Frontend Developers Madrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -3381,7 +3381,7 @@
     "displayOnMap": true
   },
   {
-    "id": 190,
+    "id": 189,
     "name": "FrontFest",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -3399,7 +3399,7 @@
     "displayOnMap": true
   },
   {
-    "id": 191,
+    "id": 190,
     "name": "Fullstack Sevilla",
     "status": "Activa",
     "lastReviewed": "18/12/2024",
@@ -3417,7 +3417,7 @@
     "displayOnMap": true
   },
   {
-    "id": 192,
+    "id": 191,
     "name": "GALPon",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
@@ -3435,7 +3435,7 @@
     "displayOnMap": true
   },
   {
-    "id": 193,
+    "id": 192,
     "name": "Gamaker",
     "status": "Inactiva",
     "lastReviewed": "30/03/2025",
@@ -3453,7 +3453,7 @@
     "displayOnMap": true
   },
   {
-    "id": 194,
+    "id": 193,
     "name": "Gamepolis",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3471,7 +3471,7 @@
     "displayOnMap": true
   },
   {
-    "id": 195,
+    "id": 194,
     "name": "Gcubo",
     "status": "Inactiva",
     "lastReviewed": "21/10/2024",
@@ -3489,7 +3489,7 @@
     "displayOnMap": true
   },
   {
-    "id": 196,
+    "id": 195,
     "name": "GDG A Coruña",
     "status": "Activa",
     "lastReviewed": "03/03/2025",
@@ -3507,7 +3507,7 @@
     "displayOnMap": true
   },
   {
-    "id": 197,
+    "id": 196,
     "name": "GDG Cloud Español",
     "status": "Activa",
     "lastReviewed": "18/11/2024",
@@ -3525,7 +3525,7 @@
     "displayOnMap": false
   },
   {
-    "id": 198,
+    "id": 197,
     "name": "GDG Cloud Madrid",
     "status": "Inactivo",
     "lastReviewed": "26/05/2025",
@@ -3542,7 +3542,7 @@
     "displayOnMap": true
   },
   {
-    "id": 199,
+    "id": 198,
     "name": "GDG Granada",
     "status": "Activa",
     "lastReviewed": "24/10/2024",
@@ -3560,7 +3560,7 @@
     "displayOnMap": true
   },
   {
-    "id": 200,
+    "id": 199,
     "name": "GDG Huelva",
     "status": "Inactiva",
     "lastReviewed": "25/10/2024",
@@ -3578,7 +3578,7 @@
     "displayOnMap": true
   },
   {
-    "id": 201,
+    "id": 200,
     "name": "GDG Jaén",
     "status": "Activa",
     "lastReviewed": "26/05/2025",
@@ -3596,7 +3596,7 @@
     "displayOnMap": true
   },
   {
-    "id": 202,
+    "id": 201,
     "name": "GDG La Rioja",
     "status": "Activa",
     "lastReviewed": "14/11/2024",
@@ -3613,7 +3613,7 @@
     "displayOnMap": true
   },
   {
-    "id": 203,
+    "id": 202,
     "name": "GDG Madrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -3631,7 +3631,7 @@
     "displayOnMap": true
   },
   {
-    "id": 204,
+    "id": 203,
     "name": "GDG Málaga",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -3649,7 +3649,7 @@
     "displayOnMap": true
   },
   {
-    "id": 205,
+    "id": 204,
     "name": "GDG Marbella",
     "status": "Desconocido",
     "lastReviewed": "25/10/2024",
@@ -3667,7 +3667,7 @@
     "displayOnMap": true
   },
   {
-    "id": 206,
+    "id": 205,
     "name": "GDG Ponferrada",
     "status": "Activa",
     "lastReviewed": "11/12/2024",
@@ -3685,7 +3685,7 @@
     "displayOnMap": true
   },
   {
-    "id": 207,
+    "id": 206,
     "name": "GDG Sevilla",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3703,7 +3703,7 @@
     "displayOnMap": true
   },
   {
-    "id": 208,
+    "id": 207,
     "name": "GDG Spain",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -3721,7 +3721,7 @@
     "displayOnMap": false
   },
   {
-    "id": 209,
+    "id": 208,
     "name": "GDG Toledo",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -3739,7 +3739,7 @@
     "displayOnMap": true
   },
   {
-    "id": 210,
+    "id": 209,
     "name": "GDG Valencia",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -3757,7 +3757,7 @@
     "displayOnMap": true
   },
   {
-    "id": 211,
+    "id": 210,
     "name": "GDG Vigo",
     "status": "Inactiva",
     "lastReviewed": "27/11/2024",
@@ -3774,7 +3774,7 @@
     "displayOnMap": true
   },
   {
-    "id": 212,
+    "id": 211,
     "name": "GeoDevelopers",
     "status": "Activa",
     "lastReviewed": "24/02/2025",
@@ -3792,7 +3792,7 @@
     "displayOnMap": false
   },
   {
-    "id": 213,
+    "id": 212,
     "name": "GeoVoluntarios",
     "status": "Inactiva",
     "lastReviewed": "03/10/2024",
@@ -3809,7 +3809,7 @@
     "displayOnMap": false
   },
   {
-    "id": 214,
+    "id": 213,
     "name": "Girls in Tech Spain",
     "status": "Inactiva",
     "lastReviewed": "26/05/2025",
@@ -3826,7 +3826,7 @@
     "displayOnMap": false
   },
   {
-    "id": 215,
+    "id": 214,
     "name": "Global AI Bootcamp",
     "status": "Activa",
     "lastReviewed": "24/03/2025",
@@ -3844,7 +3844,7 @@
     "displayOnMap": false
   },
   {
-    "id": 216,
+    "id": 215,
     "name": "Global AI Bootcamp Madrid",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3862,7 +3862,7 @@
     "displayOnMap": true
   },
   {
-    "id": 217,
+    "id": 216,
     "name": "Global Day of Code Retreat",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -3879,7 +3879,7 @@
     "displayOnMap": false
   },
   {
-    "id": 218,
+    "id": 217,
     "name": "Global Software Architecture Summit",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -3897,7 +3897,7 @@
     "displayOnMap": true
   },
   {
-    "id": 219,
+    "id": 218,
     "name": "GoMad",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -3915,7 +3915,7 @@
     "displayOnMap": true
   },
   {
-    "id": 220,
+    "id": 219,
     "name": "Google Developer Student Clubs Spain",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -3933,7 +3933,7 @@
     "displayOnMap": false
   },
   {
-    "id": 221,
+    "id": 220,
     "name": "GR Interactiva",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -3951,7 +3951,7 @@
     "displayOnMap": true
   },
   {
-    "id": 222,
+    "id": 221,
     "name": "Grafana Meetups",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3969,7 +3969,7 @@
     "displayOnMap": false
   },
   {
-    "id": 223,
+    "id": 222,
     "name": "Granada Gaming",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -3987,7 +3987,7 @@
     "displayOnMap": true
   },
   {
-    "id": 224,
+    "id": 223,
     "name": "Granada Interactiva",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -4005,7 +4005,7 @@
     "displayOnMap": true
   },
   {
-    "id": 225,
+    "id": 224,
     "name": "Granada Jam",
     "status": "Activa",
     "lastReviewed": "30/01/2025",
@@ -4023,7 +4023,7 @@
     "displayOnMap": true
   },
   {
-    "id": 226,
+    "id": 225,
     "name": "Granada PHP",
     "status": "Inactiva",
     "lastReviewed": "15/10/2024",
@@ -4040,7 +4040,7 @@
     "displayOnMap": true
   },
   {
-    "id": 227,
+    "id": 226,
     "name": "Granada Tech",
     "status": "Activa",
     "lastReviewed": "29/11/2024",
@@ -4058,7 +4058,7 @@
     "displayOnMap": true
   },
   {
-    "id": 228,
+    "id": 227,
     "name": "GranadaJUG",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -4076,7 +4076,7 @@
     "displayOnMap": true
   },
   {
-    "id": 229,
+    "id": 228,
     "name": "Grupo de Programadores e Usuarios de Linux (GPUL)",
     "status": "Activa",
     "lastReviewed": "22/10/2024",
@@ -4094,7 +4094,7 @@
     "displayOnMap": true
   },
   {
-    "id": 230,
+    "id": 229,
     "name": "Grupo de Usuarios de Joomla de Vigo",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
@@ -4112,7 +4112,7 @@
     "displayOnMap": true
   },
   {
-    "id": 231,
+    "id": 230,
     "name": "Grupo de Usuarios de R de Madrid",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -4130,7 +4130,7 @@
     "displayOnMap": true
   },
   {
-    "id": 232,
+    "id": 231,
     "name": "Grupo de usuarios de R en Málaga",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4147,7 +4147,7 @@
     "displayOnMap": true
   },
   {
-    "id": 233,
+    "id": 232,
     "name": "Grupo de usuarios de Sharepoint de Cataluña (SUG)",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -4164,7 +4164,7 @@
     "displayOnMap": true
   },
   {
-    "id": 234,
+    "id": 233,
     "name": "Grupo de Usuarios Joomla! de Logroño",
     "status": "Inactiva",
     "lastReviewed": "27/11/2024",
@@ -4181,7 +4181,7 @@
     "displayOnMap": true
   },
   {
-    "id": 235,
+    "id": 234,
     "name": "Grupo usuarios de R de Canarias",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -4198,7 +4198,7 @@
     "displayOnMap": true
   },
   {
-    "id": 236,
+    "id": 235,
     "name": "Grupo usuarios de R de Murcia",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4215,7 +4215,7 @@
     "displayOnMap": true
   },
   {
-    "id": 237,
+    "id": 236,
     "name": "Guadalindie",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -4233,7 +4233,7 @@
     "displayOnMap": true
   },
   {
-    "id": 238,
+    "id": 237,
     "name": "Guarandinga Tech",
     "status": "Activa",
     "lastReviewed": "18/12/2024",
@@ -4251,7 +4251,7 @@
     "displayOnMap": true
   },
   {
-    "id": 239,
+    "id": 238,
     "name": "Hack & Beers",
     "status": "Inactiva",
     "lastReviewed": "22/10/2024",
@@ -4269,7 +4269,7 @@
     "displayOnMap": false
   },
   {
-    "id": 240,
+    "id": 239,
     "name": "Hack Night",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -4286,7 +4286,7 @@
     "displayOnMap": true
   },
   {
-    "id": 241,
+    "id": 240,
     "name": "HackathonLovers",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -4303,7 +4303,7 @@
     "displayOnMap": true
   },
   {
-    "id": 242,
+    "id": 241,
     "name": "HackBarna",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -4321,7 +4321,7 @@
     "displayOnMap": true
   },
   {
-    "id": 243,
+    "id": 242,
     "name": "HackCS",
     "status": "Activa",
     "lastReviewed": "21/10/2024",
@@ -4339,7 +4339,7 @@
     "displayOnMap": true
   },
   {
-    "id": 244,
+    "id": 243,
     "name": "Hackers Week",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -4357,7 +4357,7 @@
     "displayOnMap": true
   },
   {
-    "id": 245,
+    "id": 244,
     "name": "HackLab",
     "status": "Inactiva",
     "lastReviewed": "14/12/2024",
@@ -4375,7 +4375,7 @@
     "displayOnMap": false
   },
   {
-    "id": 246,
+    "id": 245,
     "name": "HackMadrid %27",
     "status": "Activa",
     "lastReviewed": "26/05/2025",
@@ -4393,7 +4393,7 @@
     "displayOnMap": true
   },
   {
-    "id": 247,
+    "id": 246,
     "name": "HBSCON",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -4411,7 +4411,7 @@
     "displayOnMap": true
   },
   {
-    "id": 248,
+    "id": 247,
     "name": "HTML5Spain",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -4429,7 +4429,7 @@
     "displayOnMap": true
   },
   {
-    "id": 249,
+    "id": 248,
     "name": "I Conferencia Women Techmakers La Rioja",
     "status": "Inactiva",
     "lastReviewed": "27/11/2024",
@@ -4447,7 +4447,7 @@
     "displayOnMap": true
   },
   {
-    "id": 250,
+    "id": 249,
     "name": "IBM Groups",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -4465,7 +4465,7 @@
     "displayOnMap": false
   },
   {
-    "id": 251,
+    "id": 250,
     "name": "Impulsar.ai",
     "status": "Activa",
     "lastReviewed": "24/03/2025",
@@ -4483,7 +4483,7 @@
     "displayOnMap": false
   },
   {
-    "id": 252,
+    "id": 251,
     "name": "Indismatic",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
@@ -4500,7 +4500,7 @@
     "displayOnMap": true
   },
   {
-    "id": 253,
+    "id": 252,
     "name": "Ingeniería Sin Fronteras",
     "status": "Activa",
     "lastReviewed": "26/05/2025",
@@ -4518,7 +4518,7 @@
     "displayOnMap": false
   },
   {
-    "id": 254,
+    "id": 253,
     "name": "Ingobernable",
     "status": "Inactiva",
     "lastReviewed": "22/10/2024",
@@ -4536,7 +4536,7 @@
     "displayOnMap": true
   },
   {
-    "id": 255,
+    "id": 254,
     "name": "Iniciador",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4553,7 +4553,7 @@
     "displayOnMap": false
   },
   {
-    "id": 256,
+    "id": 255,
     "name": "Iniciador Albacete",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4570,7 +4570,7 @@
     "displayOnMap": true
   },
   {
-    "id": 257,
+    "id": 256,
     "name": "Iniciador Alicante",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4587,7 +4587,7 @@
     "displayOnMap": true
   },
   {
-    "id": 258,
+    "id": 257,
     "name": "Iniciador Almería",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4604,7 +4604,7 @@
     "displayOnMap": true
   },
   {
-    "id": 259,
+    "id": 258,
     "name": "Iniciador Asturias",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4621,7 +4621,7 @@
     "displayOnMap": true
   },
   {
-    "id": 260,
+    "id": 259,
     "name": "Iniciador Ávila",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4638,7 +4638,7 @@
     "displayOnMap": true
   },
   {
-    "id": 261,
+    "id": 260,
     "name": "Iniciador Badajoz",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4655,7 +4655,7 @@
     "displayOnMap": true
   },
   {
-    "id": 262,
+    "id": 261,
     "name": "Iniciador Barcelona",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4672,7 +4672,7 @@
     "displayOnMap": true
   },
   {
-    "id": 263,
+    "id": 262,
     "name": "Iniciador Bilbao",
     "status": "Inactiva",
     "lastReviewed": "26/05/2025",
@@ -4689,7 +4689,7 @@
     "displayOnMap": true
   },
   {
-    "id": 264,
+    "id": 263,
     "name": "Iniciador Burgos",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4706,7 +4706,7 @@
     "displayOnMap": true
   },
   {
-    "id": 265,
+    "id": 264,
     "name": "Iniciador Cáceres",
     "status": "Inactiva",
     "lastReviewed": "26/05/2025",
@@ -4723,7 +4723,7 @@
     "displayOnMap": true
   },
   {
-    "id": 266,
+    "id": 265,
     "name": "Iniciador Cádiz",
     "status": "Inactiva",
     "lastReviewed": "26/05/2025",
@@ -4740,7 +4740,7 @@
     "displayOnMap": true
   },
   {
-    "id": 267,
+    "id": 266,
     "name": "Iniciador Cantabria",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4757,7 +4757,7 @@
     "displayOnMap": true
   },
   {
-    "id": 268,
+    "id": 267,
     "name": "Iniciador Castellón",
     "status": "Inactiva",
     "lastReviewed": "26/05/2025",
@@ -4774,7 +4774,7 @@
     "displayOnMap": true
   },
   {
-    "id": 269,
+    "id": 268,
     "name": "Iniciador Ciudad Real",
     "status": "Inactiva",
     "lastReviewed": "26/05/2025",
@@ -4791,7 +4791,7 @@
     "displayOnMap": true
   },
   {
-    "id": 270,
+    "id": 269,
     "name": "Iniciador Congreso",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4808,7 +4808,7 @@
     "displayOnMap": true
   },
   {
-    "id": 271,
+    "id": 270,
     "name": "Iniciador Córdoba",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4825,7 +4825,7 @@
     "displayOnMap": true
   },
   {
-    "id": 272,
+    "id": 271,
     "name": "Iniciador Donostia",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4842,7 +4842,7 @@
     "displayOnMap": true
   },
   {
-    "id": 273,
+    "id": 272,
     "name": "Iniciador Emprendimiento social Barcelona",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4859,7 +4859,7 @@
     "displayOnMap": true
   },
   {
-    "id": 274,
+    "id": 273,
     "name": "Iniciador Fuerteventura",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4876,7 +4876,7 @@
     "displayOnMap": true
   },
   {
-    "id": 275,
+    "id": 274,
     "name": "Iniciador Girona",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4893,7 +4893,7 @@
     "displayOnMap": true
   },
   {
-    "id": 276,
+    "id": 275,
     "name": "Iniciador Granada",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4910,7 +4910,7 @@
     "displayOnMap": true
   },
   {
-    "id": 277,
+    "id": 276,
     "name": "Iniciador Guadalajara",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4927,7 +4927,7 @@
     "displayOnMap": true
   },
   {
-    "id": 278,
+    "id": 277,
     "name": "Iniciador Huesca",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4944,7 +4944,7 @@
     "displayOnMap": true
   },
   {
-    "id": 279,
+    "id": 278,
     "name": "Iniciador La Rioja",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4961,7 +4961,7 @@
     "displayOnMap": true
   },
   {
-    "id": 280,
+    "id": 279,
     "name": "Iniciador Las Palmas",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4978,7 +4978,7 @@
     "displayOnMap": true
   },
   {
-    "id": 281,
+    "id": 280,
     "name": "Iniciador León",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -4995,7 +4995,7 @@
     "displayOnMap": true
   },
   {
-    "id": 282,
+    "id": 281,
     "name": "Iniciador Lleida",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5012,7 +5012,7 @@
     "displayOnMap": true
   },
   {
-    "id": 283,
+    "id": 282,
     "name": "Iniciador Madrid",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5029,7 +5029,7 @@
     "displayOnMap": true
   },
   {
-    "id": 284,
+    "id": 283,
     "name": "Iniciador Málaga",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5046,7 +5046,7 @@
     "displayOnMap": true
   },
   {
-    "id": 285,
+    "id": 284,
     "name": "Iniciador Mallorca",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5063,7 +5063,7 @@
     "displayOnMap": true
   },
   {
-    "id": 286,
+    "id": 285,
     "name": "Iniciador Murcia",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5080,7 +5080,7 @@
     "displayOnMap": true
   },
   {
-    "id": 287,
+    "id": 286,
     "name": "Iniciador Navarra",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5097,7 +5097,7 @@
     "displayOnMap": true
   },
   {
-    "id": 288,
+    "id": 287,
     "name": "Iniciador Palencia",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5114,7 +5114,7 @@
     "displayOnMap": true
   },
   {
-    "id": 289,
+    "id": 288,
     "name": "Iniciador Salamanca",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5131,7 +5131,7 @@
     "displayOnMap": true
   },
   {
-    "id": 290,
+    "id": 289,
     "name": "Iniciador Santiago de Compostela",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5148,7 +5148,7 @@
     "displayOnMap": true
   },
   {
-    "id": 291,
+    "id": 290,
     "name": "Iniciador Sevilla",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5165,7 +5165,7 @@
     "displayOnMap": true
   },
   {
-    "id": 292,
+    "id": 291,
     "name": "Iniciador Tenerife",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5182,7 +5182,7 @@
     "displayOnMap": true
   },
   {
-    "id": 293,
+    "id": 292,
     "name": "Iniciador Teruel",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5199,7 +5199,7 @@
     "displayOnMap": true
   },
   {
-    "id": 294,
+    "id": 293,
     "name": "Iniciador Toledo",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5216,7 +5216,7 @@
     "displayOnMap": true
   },
   {
-    "id": 295,
+    "id": 294,
     "name": "Iniciador Valencia",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5233,7 +5233,7 @@
     "displayOnMap": true
   },
   {
-    "id": 296,
+    "id": 295,
     "name": "Iniciador Valladolid",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5250,7 +5250,7 @@
     "displayOnMap": true
   },
   {
-    "id": 297,
+    "id": 296,
     "name": "Iniciador Zaragoza",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5267,7 +5267,7 @@
     "displayOnMap": true
   },
   {
-    "id": 298,
+    "id": 297,
     "name": "Intellias Spain Tech Talks",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -5285,7 +5285,7 @@
     "displayOnMap": true
   },
   {
-    "id": 299,
+    "id": 298,
     "name": "Interferencias",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -5302,7 +5302,7 @@
     "displayOnMap": true
   },
   {
-    "id": 300,
+    "id": 299,
     "name": "Internet of Things Madrid Meetup",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -5319,7 +5319,7 @@
     "displayOnMap": true
   },
   {
-    "id": 301,
+    "id": 300,
     "name": "Ionic Madrid",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -5336,7 +5336,7 @@
     "displayOnMap": true
   },
   {
-    "id": 302,
+    "id": 301,
     "name": "J On The Beach",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5354,7 +5354,7 @@
     "displayOnMap": true
   },
   {
-    "id": 303,
+    "id": 302,
     "name": "Java User Groups",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5372,7 +5372,7 @@
     "displayOnMap": false
   },
   {
-    "id": 304,
+    "id": 303,
     "name": "javaHispano",
     "status": "Inactiva",
     "lastReviewed": "15/10/2024",
@@ -5389,7 +5389,7 @@
     "displayOnMap": false
   },
   {
-    "id": 305,
+    "id": 304,
     "name": "Jornadas Anuales Wikimedia España",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5407,7 +5407,7 @@
     "displayOnMap": false
   },
   {
-    "id": 306,
+    "id": 305,
     "name": "Jornadas de SIG Libre",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5425,7 +5425,7 @@
     "displayOnMap": true
   },
   {
-    "id": 307,
+    "id": 306,
     "name": "JSDay Canarias",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5443,7 +5443,7 @@
     "displayOnMap": true
   },
   {
-    "id": 308,
+    "id": 307,
     "name": "JSDayES",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -5461,7 +5461,7 @@
     "displayOnMap": true
   },
   {
-    "id": 309,
+    "id": 308,
     "name": "Killer Skills",
     "status": "Activa",
     "lastReviewed": "16/10/2024",
@@ -5479,7 +5479,7 @@
     "displayOnMap": true
   },
   {
-    "id": 310,
+    "id": 309,
     "name": "La Jaquería",
     "status": "Activa",
     "lastReviewed": "23/10/2024",
@@ -5497,7 +5497,7 @@
     "displayOnMap": true
   },
   {
-    "id": 311,
+    "id": 310,
     "name": "La Product Conf & LPCx España",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -5515,7 +5515,7 @@
     "displayOnMap": true
   },
   {
-    "id": 312,
+    "id": 311,
     "name": "La Rioja Tech Alliance ",
     "status": "Inactiva",
     "lastReviewed": "27/11/2024",
@@ -5532,7 +5532,7 @@
     "displayOnMap": true
   },
   {
-    "id": 313,
+    "id": 312,
     "name": "Lambda World",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5550,7 +5550,7 @@
     "displayOnMap": true
   },
   {
-    "id": 314,
+    "id": 313,
     "name": "LangDev Conference",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5568,7 +5568,7 @@
     "displayOnMap": true
   },
   {
-    "id": 315,
+    "id": 314,
     "name": "Latinas in Tech Madrid",
     "status": "Activa",
     "lastReviewed": "11/12/2024",
@@ -5586,7 +5586,7 @@
     "displayOnMap": true
   },
   {
-    "id": 316,
+    "id": 315,
     "name": "LechazoConf",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5604,7 +5604,7 @@
     "displayOnMap": true
   },
   {
-    "id": 317,
+    "id": 316,
     "name": "LibreLabGRX",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5622,7 +5622,7 @@
     "displayOnMap": true
   },
   {
-    "id": 318,
+    "id": 317,
     "name": "Liferay Spain User Group (LUGSpain)",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -5640,7 +5640,7 @@
     "displayOnMap": true
   },
   {
-    "id": 319,
+    "id": 318,
     "name": "Machine Learning Spain",
     "status": "Activa",
     "lastReviewed": "24/03/2025",
@@ -5658,7 +5658,7 @@
     "displayOnMap": true
   },
   {
-    "id": 320,
+    "id": 319,
     "name": "MADE Makerspace",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -5676,7 +5676,7 @@
     "displayOnMap": true
   },
   {
-    "id": 321,
+    "id": 320,
     "name": "Madriagil",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -5694,7 +5694,7 @@
     "displayOnMap": true
   },
   {
-    "id": 322,
+    "id": 321,
     "name": "Madrid |> Elixir",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -5712,7 +5712,7 @@
     "displayOnMap": true
   },
   {
-    "id": 323,
+    "id": 322,
     "name": "Madrid Android Developer Group",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -5729,7 +5729,7 @@
     "displayOnMap": true
   },
   {
-    "id": 324,
+    "id": 323,
     "name": "Madrid DevOps",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -5746,7 +5746,7 @@
     "displayOnMap": true
   },
   {
-    "id": 325,
+    "id": 324,
     "name": "Madrid DUG (Google Dart User Group)",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -5763,7 +5763,7 @@
     "displayOnMap": true
   },
   {
-    "id": 326,
+    "id": 325,
     "name": "Madrid Ruby User Group (madrid.rb)",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -5780,7 +5780,7 @@
     "displayOnMap": true
   },
   {
-    "id": 327,
+    "id": 326,
     "name": "Madrid Smalltalk User Group (SUG)",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -5797,7 +5797,7 @@
     "displayOnMap": true
   },
   {
-    "id": 328,
+    "id": 327,
     "name": "Madrid Spring User Group",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -5814,7 +5814,7 @@
     "displayOnMap": true
   },
   {
-    "id": 329,
+    "id": 328,
     "name": "Madrid Tech Show",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -5832,7 +5832,7 @@
     "displayOnMap": true
   },
   {
-    "id": 330,
+    "id": 329,
     "name": "Madrid Tech Talks",
     "status": "Activa",
     "lastReviewed": "11/12/2024",
@@ -5850,7 +5850,7 @@
     "displayOnMap": true
   },
   {
-    "id": 331,
+    "id": 330,
     "name": "Madrid-Groovy User Group (GUG)",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -5868,7 +5868,7 @@
     "displayOnMap": true
   },
   {
-    "id": 332,
+    "id": 331,
     "name": "MadridDotNet",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -5886,7 +5886,7 @@
     "displayOnMap": true
   },
   {
-    "id": 333,
+    "id": 332,
     "name": "MadridJS",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -5904,7 +5904,7 @@
     "displayOnMap": true
   },
   {
-    "id": 334,
+    "id": 333,
     "name": "MadridJUG",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -5922,7 +5922,7 @@
     "displayOnMap": true
   },
   {
-    "id": 335,
+    "id": 334,
     "name": "MadridScala",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -5940,7 +5940,7 @@
     "displayOnMap": true
   },
   {
-    "id": 336,
+    "id": 335,
     "name": "MadRust",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -5957,7 +5957,7 @@
     "displayOnMap": true
   },
   {
-    "id": 337,
+    "id": 336,
     "name": "Makers of Murcia",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -5975,7 +5975,7 @@
     "displayOnMap": true
   },
   {
-    "id": 338,
+    "id": 337,
     "name": "MakespaceMadrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -5993,7 +5993,7 @@
     "displayOnMap": true
   },
   {
-    "id": 339,
+    "id": 338,
     "name": "Málaga Indie Hackers",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -6011,7 +6011,7 @@
     "displayOnMap": true
   },
   {
-    "id": 340,
+    "id": 339,
     "name": "Málaga Scala Devs",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -6028,7 +6028,7 @@
     "displayOnMap": true
   },
   {
-    "id": 341,
+    "id": 340,
     "name": "Málaga TechClub",
     "status": "Desconocido",
     "lastReviewed": "25/10/2024",
@@ -6045,7 +6045,7 @@
     "displayOnMap": true
   },
   {
-    "id": 342,
+    "id": 341,
     "name": "Málaga-AI",
     "status": "Activa",
     "lastReviewed": "24/03/2025",
@@ -6063,7 +6063,7 @@
     "displayOnMap": true
   },
   {
-    "id": 343,
+    "id": 342,
     "name": "Malaga-Scala",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -6080,7 +6080,7 @@
     "displayOnMap": true
   },
   {
-    "id": 344,
+    "id": 343,
     "name": "MálagaJam",
     "status": "Activa",
     "lastReviewed": "24/03/2025",
@@ -6098,7 +6098,7 @@
     "displayOnMap": true
   },
   {
-    "id": 345,
+    "id": 344,
     "name": "MálagaJUG",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -6116,7 +6116,7 @@
     "displayOnMap": true
   },
   {
-    "id": 346,
+    "id": 345,
     "name": "Mermelada.tech",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -6134,7 +6134,7 @@
     "displayOnMap": false
   },
   {
-    "id": 347,
+    "id": 346,
     "name": "miduConf",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -6152,7 +6152,7 @@
     "displayOnMap": false
   },
   {
-    "id": 348,
+    "id": 347,
     "name": "Midudev",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -6170,7 +6170,7 @@
     "displayOnMap": false
   },
   {
-    "id": 349,
+    "id": 348,
     "name": "Mobile Development",
     "status": "Desconocido",
     "lastReviewed": "25/10/2024",
@@ -6187,7 +6187,7 @@
     "displayOnMap": false
   },
   {
-    "id": 350,
+    "id": 349,
     "name": "MorcillaConf",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -6205,7 +6205,7 @@
     "displayOnMap": true
   },
   {
-    "id": 351,
+    "id": 350,
     "name": "MorterueloCon",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6223,7 +6223,7 @@
     "displayOnMap": true
   },
   {
-    "id": 352,
+    "id": 351,
     "name": "Mouredev",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -6241,7 +6241,7 @@
     "displayOnMap": false
   },
   {
-    "id": 353,
+    "id": 352,
     "name": "MsCoders Madrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -6259,7 +6259,7 @@
     "displayOnMap": true
   },
   {
-    "id": 354,
+    "id": 353,
     "name": "Mulesoft Barcelona",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -6277,7 +6277,7 @@
     "displayOnMap": true
   },
   {
-    "id": 355,
+    "id": 354,
     "name": "Mulesoft Madrid",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -6295,7 +6295,7 @@
     "displayOnMap": true
   },
   {
-    "id": 356,
+    "id": 355,
     "name": "MuleSoft Meetups",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -6313,7 +6313,7 @@
     "displayOnMap": false
   },
   {
-    "id": 357,
+    "id": 356,
     "name": "Mulesoft Murcia",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -6331,7 +6331,7 @@
     "displayOnMap": true
   },
   {
-    "id": 358,
+    "id": 357,
     "name": "Mulesoft Sevilla",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -6349,7 +6349,7 @@
     "displayOnMap": true
   },
   {
-    "id": 359,
+    "id": 358,
     "name": "Mulesoft Valencia",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -6367,7 +6367,7 @@
     "displayOnMap": true
   },
   {
-    "id": 360,
+    "id": 359,
     "name": "murcia dev",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
@@ -6385,7 +6385,7 @@
     "displayOnMap": true
   },
   {
-    "id": 361,
+    "id": 360,
     "name": "Murcia software crafters",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
@@ -6403,7 +6403,7 @@
     "displayOnMap": true
   },
   {
-    "id": 362,
+    "id": 361,
     "name": "My Tech Plan",
     "status": "Activa",
     "lastReviewed": "26/05/2025",
@@ -6421,7 +6421,7 @@
     "displayOnMap": false
   },
   {
-    "id": 363,
+    "id": 362,
     "name": "Navaja Negra",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6439,7 +6439,7 @@
     "displayOnMap": true
   },
   {
-    "id": 364,
+    "id": 363,
     "name": "Netcoreconf",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -6457,7 +6457,7 @@
     "displayOnMap": true
   },
   {
-    "id": 365,
+    "id": 364,
     "name": "No cON Name",
     "status": "Activa",
     "lastReviewed": "26/05/2025",
@@ -6475,7 +6475,7 @@
     "displayOnMap": true
   },
   {
-    "id": 366,
+    "id": 365,
     "name": "NoCodeFest",
     "status": "Inactiva",
     "lastReviewed": "17/10/2024",
@@ -6493,7 +6493,7 @@
     "displayOnMap": true
   },
   {
-    "id": 367,
+    "id": 366,
     "name": "NodeJSMadrid",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -6510,7 +6510,7 @@
     "displayOnMap": true
   },
   {
-    "id": 368,
+    "id": 367,
     "name": "NorthemQuality",
     "status": "Inactiva",
     "lastReviewed": "18/12/2024",
@@ -6527,7 +6527,7 @@
     "displayOnMap": false
   },
   {
-    "id": 369,
+    "id": 368,
     "name": "nosday",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6545,7 +6545,7 @@
     "displayOnMap": true
   },
   {
-    "id": 370,
+    "id": 369,
     "name": "Notion Coruña",
     "status": "Activa",
     "lastReviewed": "22/10/2024",
@@ -6563,7 +6563,7 @@
     "displayOnMap": true
   },
   {
-    "id": 371,
+    "id": 370,
     "name": "NSCoder Night Madrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -6581,7 +6581,7 @@
     "displayOnMap": true
   },
   {
-    "id": 372,
+    "id": 371,
     "name": "NSSpain",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6599,7 +6599,7 @@
     "displayOnMap": true
   },
   {
-    "id": 373,
+    "id": 372,
     "name": "Nuberos.net",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -6616,7 +6616,7 @@
     "displayOnMap": true
   },
   {
-    "id": 374,
+    "id": 373,
     "name": "NWC10Lab: Innovación WEB3, CRIPTO y blockchain para todos",
     "status": "Activa",
     "lastReviewed": "11/12/2024",
@@ -6634,7 +6634,7 @@
     "displayOnMap": true
   },
   {
-    "id": 375,
+    "id": 374,
     "name": "Oficina de Software Libre Granada",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6652,7 +6652,7 @@
     "displayOnMap": true
   },
   {
-    "id": 376,
+    "id": 375,
     "name": "Open Source Weekends",
     "status": "Inactiva",
     "lastReviewed": "03/10/2024",
@@ -6669,7 +6669,7 @@
     "displayOnMap": true
   },
   {
-    "id": 377,
+    "id": 376,
     "name": "OpenExpo Europe",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6687,7 +6687,7 @@
     "displayOnMap": true
   },
   {
-    "id": 378,
+    "id": 377,
     "name": "OpenSouthCode",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6705,7 +6705,7 @@
     "displayOnMap": true
   },
   {
-    "id": 379,
+    "id": 378,
     "name": "OWASP",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6723,7 +6723,7 @@
     "displayOnMap": false
   },
   {
-    "id": 380,
+    "id": 379,
     "name": "OWASP Barcelona",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6741,7 +6741,7 @@
     "displayOnMap": true
   },
   {
-    "id": 381,
+    "id": 380,
     "name": "OWASP Logroño",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6759,7 +6759,7 @@
     "displayOnMap": true
   },
   {
-    "id": 382,
+    "id": 381,
     "name": "OWASP Sevilla",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6777,7 +6777,7 @@
     "displayOnMap": true
   },
   {
-    "id": 383,
+    "id": 382,
     "name": "PaellaCon",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -6795,7 +6795,7 @@
     "displayOnMap": true
   },
   {
-    "id": 384,
+    "id": 383,
     "name": "Pamplona-Iruña Software Crafters",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6813,7 +6813,7 @@
     "displayOnMap": true
   },
   {
-    "id": 385,
+    "id": 384,
     "name": "PASS Spain",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -6830,7 +6830,7 @@
     "displayOnMap": true
   },
   {
-    "id": 386,
+    "id": 385,
     "name": "PHP Coruña",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -6848,7 +6848,7 @@
     "displayOnMap": true
   },
   {
-    "id": 387,
+    "id": 386,
     "name": "PHPMad",
     "status": "Activa",
     "lastReviewed": "11/12/2024",
@@ -6866,7 +6866,7 @@
     "displayOnMap": true
   },
   {
-    "id": 388,
+    "id": 387,
     "name": "PhpMadrid",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -6883,7 +6883,7 @@
     "displayOnMap": true
   },
   {
-    "id": 389,
+    "id": 388,
     "name": "PHPúrpura",
     "status": "Inactiva",
     "lastReviewed": "26/05/2025",
@@ -6900,7 +6900,7 @@
     "displayOnMap": false
   },
   {
-    "id": 390,
+    "id": 389,
     "name": "PHPVigo",
     "status": "Inactiva",
     "lastReviewed": "26/05/2025",
@@ -6917,7 +6917,7 @@
     "displayOnMap": true
   },
   {
-    "id": 391,
+    "id": 390,
     "name": "Pica Pica HackLab",
     "status": "Activa",
     "lastReviewed": "24/10/2024",
@@ -6935,7 +6935,7 @@
     "displayOnMap": true
   },
   {
-    "id": 392,
+    "id": 391,
     "name": "Power BI & Fabric Malaga",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6953,7 +6953,7 @@
     "displayOnMap": true
   },
   {
-    "id": 393,
+    "id": 392,
     "name": "PowerTips Cádiz",
     "status": "Desconocido",
     "lastReviewed": "25/10/2024",
@@ -6970,7 +6970,7 @@
     "displayOnMap": true
   },
   {
-    "id": 394,
+    "id": 393,
     "name": "PrestaShop - Málaga Ecommerce Meetup",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -6988,7 +6988,7 @@
     "displayOnMap": true
   },
   {
-    "id": 395,
+    "id": 394,
     "name": "ProductTank Málaga",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -7006,7 +7006,7 @@
     "displayOnMap": true
   },
   {
-    "id": 396,
+    "id": 395,
     "name": "PucelaTechDay",
     "status": "Inactiva",
     "lastReviewed": "17/10/2024",
@@ -7024,7 +7024,7 @@
     "displayOnMap": true
   },
   {
-    "id": 397,
+    "id": 396,
     "name": "Pulpo Con 🐙 ",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -7042,7 +7042,7 @@
     "displayOnMap": true
   },
   {
-    "id": 398,
+    "id": 397,
     "name": "PyCamp España",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -7060,7 +7060,7 @@
     "displayOnMap": false
   },
   {
-    "id": 399,
+    "id": 398,
     "name": "PyCon España",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7078,7 +7078,7 @@
     "displayOnMap": false
   },
   {
-    "id": 400,
+    "id": 399,
     "name": "PyData",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7096,7 +7096,7 @@
     "displayOnMap": false
   },
   {
-    "id": 401,
+    "id": 400,
     "name": "PyData Granada",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -7114,7 +7114,7 @@
     "displayOnMap": true
   },
   {
-    "id": 402,
+    "id": 401,
     "name": "PyData Madrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -7132,7 +7132,7 @@
     "displayOnMap": true
   },
   {
-    "id": 403,
+    "id": 402,
     "name": "PyData Málaga",
     "status": "Activa",
     "lastReviewed": "21/10/2024",
@@ -7150,7 +7150,7 @@
     "displayOnMap": true
   },
   {
-    "id": 404,
+    "id": 403,
     "name": "Python Coruña",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -7168,7 +7168,7 @@
     "displayOnMap": true
   },
   {
-    "id": 405,
+    "id": 404,
     "name": "Python España",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -7186,7 +7186,7 @@
     "displayOnMap": false
   },
   {
-    "id": 406,
+    "id": 405,
     "name": "Python Granada",
     "status": "Activa",
     "lastReviewed": "15/10/2024",
@@ -7204,7 +7204,7 @@
     "displayOnMap": true
   },
   {
-    "id": 407,
+    "id": 406,
     "name": "Python Madrid",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -7221,7 +7221,7 @@
     "displayOnMap": true
   },
   {
-    "id": 408,
+    "id": 407,
     "name": "Python Málaga",
     "status": "Activa",
     "lastReviewed": "26/05/2025",
@@ -7239,7 +7239,7 @@
     "displayOnMap": true
   },
   {
-    "id": 409,
+    "id": 408,
     "name": "Python Vigo",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
@@ -7257,7 +7257,7 @@
     "displayOnMap": true
   },
   {
-    "id": 410,
+    "id": 409,
     "name": "QA Málaga",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -7275,7 +7275,7 @@
     "displayOnMap": true
   },
   {
-    "id": 411,
+    "id": 410,
     "name": "Quedadas WordPress en Español",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7293,7 +7293,7 @@
     "displayOnMap": false
   },
   {
-    "id": 412,
+    "id": 411,
     "name": "ReactAlicante",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7311,7 +7311,7 @@
     "displayOnMap": true
   },
   {
-    "id": 413,
+    "id": 412,
     "name": "Red Hat User Group Community",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7329,7 +7329,7 @@
     "displayOnMap": false
   },
   {
-    "id": 414,
+    "id": 413,
     "name": "Rioja{dotnet}",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -7347,7 +7347,7 @@
     "displayOnMap": true
   },
   {
-    "id": 415,
+    "id": 414,
     "name": "RioJakers",
     "status": "Activa",
     "lastReviewed": "26/05/2025",
@@ -7364,7 +7364,7 @@
     "displayOnMap": true
   },
   {
-    "id": 416,
+    "id": 415,
     "name": "rockndroid",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -7382,7 +7382,7 @@
     "displayOnMap": false
   },
   {
-    "id": 417,
+    "id": 416,
     "name": "rockndroid Madrid",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -7399,7 +7399,7 @@
     "displayOnMap": true
   },
   {
-    "id": 418,
+    "id": 417,
     "name": "SalmorejoTech",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7417,7 +7417,7 @@
     "displayOnMap": true
   },
   {
-    "id": 419,
+    "id": 418,
     "name": "Scala Days",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -7435,7 +7435,7 @@
     "displayOnMap": false
   },
   {
-    "id": 420,
+    "id": 419,
     "name": "Seo Galicia",
     "status": "Inactiva",
     "lastReviewed": "27/11/2024",
@@ -7453,7 +7453,7 @@
     "displayOnMap": true
   },
   {
-    "id": 421,
+    "id": 420,
     "name": "Sevilla R users",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7471,7 +7471,7 @@
     "displayOnMap": true
   },
   {
-    "id": 422,
+    "id": 421,
     "name": "Singularity Tech Day",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -7489,7 +7489,7 @@
     "displayOnMap": true
   },
   {
-    "id": 423,
+    "id": 422,
     "name": "Sirviendo código",
     "status": "Activa",
     "lastReviewed": "16/10/2024",
@@ -7507,7 +7507,7 @@
     "displayOnMap": true
   },
   {
-    "id": 424,
+    "id": 423,
     "name": "Sistopics Distribuidos",
     "status": "Desconocido",
     "lastReviewed": "31/05/2024",
@@ -7524,7 +7524,7 @@
     "displayOnMap": false
   },
   {
-    "id": 425,
+    "id": 424,
     "name": "Smart Devices Madrid",
     "status": "Inactiva",
     "lastReviewed": "26/05/2025",
@@ -7541,7 +7541,7 @@
     "displayOnMap": true
   },
   {
-    "id": 426,
+    "id": 425,
     "name": "Socracan (SoCraTes Canaries)",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -7559,7 +7559,7 @@
     "displayOnMap": true
   },
   {
-    "id": 427,
+    "id": 426,
     "name": "Software Crafters Barcelona",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7577,7 +7577,7 @@
     "displayOnMap": true
   },
   {
-    "id": 428,
+    "id": 427,
     "name": "Software Crafters Madrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -7595,7 +7595,7 @@
     "displayOnMap": true
   },
   {
-    "id": 429,
+    "id": 428,
     "name": "Software Testers & QA Experts de Málaga",
     "status": "Desconocido",
     "lastReviewed": "25/10/2024",
@@ -7613,7 +7613,7 @@
     "displayOnMap": true
   },
   {
-    "id": 430,
+    "id": 429,
     "name": "South Summit",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7631,7 +7631,7 @@
     "displayOnMap": true
   },
   {
-    "id": 431,
+    "id": 430,
     "name": "Spring I/O",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7649,7 +7649,7 @@
     "displayOnMap": true
   },
   {
-    "id": 432,
+    "id": 431,
     "name": "Startup Oasis",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -7667,7 +7667,7 @@
     "displayOnMap": true
   },
   {
-    "id": 433,
+    "id": 432,
     "name": "Startup Olé",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7685,7 +7685,7 @@
     "displayOnMap": true
   },
   {
-    "id": 434,
+    "id": 433,
     "name": "Step4ward",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -7703,7 +7703,7 @@
     "displayOnMap": true
   },
   {
-    "id": 435,
+    "id": 434,
     "name": "Subflash Summer Workshops",
     "status": "Activa",
     "lastReviewed": "27/11/2024",
@@ -7721,7 +7721,7 @@
     "displayOnMap": false
   },
   {
-    "id": 436,
+    "id": 435,
     "name": "SVQJUG",
     "status": "Activa",
     "lastReviewed": "11/04/2024",
@@ -7738,7 +7738,7 @@
     "displayOnMap": true
   },
   {
-    "id": 437,
+    "id": 436,
     "name": "SVQTech",
     "status": "Activa",
     "lastReviewed": "29/11/2024",
@@ -7756,7 +7756,7 @@
     "displayOnMap": true
   },
   {
-    "id": 438,
+    "id": 437,
     "name": "Sysadmin Galicia",
     "status": "Inactiva",
     "lastReviewed": "27/11/2024",
@@ -7773,7 +7773,7 @@
     "displayOnMap": true
   },
   {
-    "id": 439,
+    "id": 438,
     "name": "Sysarmy",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7791,7 +7791,7 @@
     "displayOnMap": false
   },
   {
-    "id": 440,
+    "id": 439,
     "name": "Sysarmy Galicia",
     "status": "Activa",
     "lastReviewed": "26/05/2025",
@@ -7809,7 +7809,7 @@
     "displayOnMap": true
   },
   {
-    "id": 441,
+    "id": 440,
     "name": "T3chFest",
     "status": "Activa",
     "lastReviewed": "13/08/2024",
@@ -7827,7 +7827,7 @@
     "displayOnMap": true
   },
   {
-    "id": 442,
+    "id": 441,
     "name": "TAI Granada",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7845,7 +7845,7 @@
     "displayOnMap": true
   },
   {
-    "id": 443,
+    "id": 442,
     "name": "Tech Club Asturias",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -7863,7 +7863,7 @@
     "displayOnMap": false
   },
   {
-    "id": 444,
+    "id": 443,
     "name": "Tech Network- Pitch your ideas over a beer!",
     "status": "Inactiva",
     "lastReviewed": "11/12/2024",
@@ -7880,7 +7880,7 @@
     "displayOnMap": true
   },
   {
-    "id": 445,
+    "id": 444,
     "name": "Techdencias",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -7897,7 +7897,7 @@
     "displayOnMap": false
   },
   {
-    "id": 446,
+    "id": 445,
     "name": "TechShessions",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7915,7 +7915,7 @@
     "displayOnMap": true
   },
   {
-    "id": 447,
+    "id": 446,
     "name": "TenerifeDev",
     "status": "Activa",
     "lastReviewed": "18/12/2024",
@@ -7933,7 +7933,7 @@
     "displayOnMap": true
   },
   {
-    "id": 448,
+    "id": 447,
     "name": "TheAntiEvent",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -7951,7 +7951,7 @@
     "displayOnMap": true
   },
   {
-    "id": 449,
+    "id": 448,
     "name": "Tizonaconf",
     "status": "Inactiva",
     "lastReviewed": "17/10/2024",
@@ -7969,7 +7969,7 @@
     "displayOnMap": true
   },
   {
-    "id": 450,
+    "id": 449,
     "name": "TomatinaCON",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -7987,7 +7987,7 @@
     "displayOnMap": true
   },
   {
-    "id": 451,
+    "id": 450,
     "name": "Tomelloso Tech",
     "status": "Inactiva",
     "lastReviewed": "26/05/2025",
@@ -8004,7 +8004,7 @@
     "displayOnMap": true
   },
   {
-    "id": 452,
+    "id": 451,
     "name": "TRGCON",
     "status": "Activa",
     "lastReviewed": "02/06/2025",
@@ -8022,7 +8022,7 @@
     "displayOnMap": true
   },
   {
-    "id": 453,
+    "id": 452,
     "name": "Unity User Group Network",
     "status": "Activa",
     "lastReviewed": "26/05/2025",
@@ -8040,7 +8040,7 @@
     "displayOnMap": false
   },
   {
-    "id": 454,
+    "id": 453,
     "name": "Usuarios R Salamanca",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -8057,7 +8057,7 @@
     "displayOnMap": true
   },
   {
-    "id": 455,
+    "id": 454,
     "name": "Usuarios R Valencia",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -8074,7 +8074,7 @@
     "displayOnMap": true
   },
   {
-    "id": 456,
+    "id": 455,
     "name": "UX Galicia",
     "status": "Inactiva",
     "lastReviewed": "27/11/2024",
@@ -8091,7 +8091,7 @@
     "displayOnMap": true
   },
   {
-    "id": 457,
+    "id": 456,
     "name": "Valencia Interactive",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8109,7 +8109,7 @@
     "displayOnMap": true
   },
   {
-    "id": 458,
+    "id": 457,
     "name": "VDS",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -8127,7 +8127,7 @@
     "displayOnMap": true
   },
   {
-    "id": 459,
+    "id": 458,
     "name": "viCON",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -8145,7 +8145,7 @@
     "displayOnMap": true
   },
   {
-    "id": 460,
+    "id": 459,
     "name": "Vigo Android Developer Group",
     "status": "Inactiva",
     "lastReviewed": "27/11/2024",
@@ -8162,7 +8162,7 @@
     "displayOnMap": true
   },
   {
-    "id": 461,
+    "id": 460,
     "name": "Vigo Tech Alliance",
     "status": "Activa",
     "lastReviewed": "03/03/2025",
@@ -8179,7 +8179,7 @@
     "displayOnMap": true
   },
   {
-    "id": 462,
+    "id": 461,
     "name": "VigoJUG",
     "status": "Inactiva",
     "lastReviewed": "27/11/2024",
@@ -8193,7 +8193,7 @@
     "displayOnMap": true
   },
   {
-    "id": 463,
+    "id": 462,
     "name": "Vue Málaga",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -8211,7 +8211,7 @@
     "displayOnMap": true
   },
   {
-    "id": 464,
+    "id": 463,
     "name": "VueJS Madrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -8229,7 +8229,7 @@
     "displayOnMap": true
   },
   {
-    "id": 465,
+    "id": 464,
     "name": "VueJS Valencia",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -8246,7 +8246,7 @@
     "displayOnMap": true
   },
   {
-    "id": 466,
+    "id": 465,
     "name": "Wasm I/O",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -8264,7 +8264,7 @@
     "displayOnMap": true
   },
   {
-    "id": 467,
+    "id": 466,
     "name": "Web3 Island Makers",
     "status": "Activa",
     "lastReviewed": "18/12/2024",
@@ -8282,7 +8282,7 @@
     "displayOnMap": true
   },
   {
-    "id": 468,
+    "id": 467,
     "name": "WeCodeFest",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -8300,7 +8300,7 @@
     "displayOnMap": true
   },
   {
-    "id": 469,
+    "id": 468,
     "name": "Wey Wey Web",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -8318,7 +8318,7 @@
     "displayOnMap": true
   },
   {
-    "id": 470,
+    "id": 469,
     "name": "Wikimedia España",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8336,7 +8336,7 @@
     "displayOnMap": false
   },
   {
-    "id": 471,
+    "id": 470,
     "name": "Wikiproyecto Almería",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8354,7 +8354,7 @@
     "displayOnMap": true
   },
   {
-    "id": 472,
+    "id": 471,
     "name": "Wikiproyecto Burgos",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -8372,7 +8372,7 @@
     "displayOnMap": false
   },
   {
-    "id": 473,
+    "id": 472,
     "name": "Wikiproyecto Granada",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -8390,7 +8390,7 @@
     "displayOnMap": false
   },
   {
-    "id": 474,
+    "id": 473,
     "name": "Wikiproyecto Ciudad Real",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -8408,7 +8408,7 @@
     "displayOnMap": false
   },
   {
-    "id": 475,
+    "id": 474,
     "name": "Wikiproyecto Guadalajara",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -8426,7 +8426,7 @@
     "displayOnMap": false
   },
   {
-    "id": 476,
+    "id": 475,
     "name": "Wikiproyecto Huelva",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -8444,7 +8444,7 @@
     "displayOnMap": false
   },
   {
-    "id": 477,
+    "id": 476,
     "name": "Wikiproyecto Jaén",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -8462,7 +8462,7 @@
     "displayOnMap": false
   },
   {
-    "id": 478,
+    "id": 477,
     "name": "Wikiproyecto León",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -8480,7 +8480,7 @@
     "displayOnMap": false
   },
   {
-    "id": 479,
+    "id": 478,
     "name": "Wikiproyecto Valladolid",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -8498,7 +8498,7 @@
     "displayOnMap": false
   },
   {
-    "id": 480,
+    "id": 479,
     "name": "Women in DevOps Madrid",
     "status": "Inactiva",
     "lastReviewed": "31/05/2024",
@@ -8515,7 +8515,7 @@
     "displayOnMap": true
   },
   {
-    "id": 481,
+    "id": 480,
     "name": "Women Techmakers Madrid",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -8533,7 +8533,7 @@
     "displayOnMap": true
   },
   {
-    "id": 482,
+    "id": 481,
     "name": "Women Techmakers Zaragoza - Mulleres Tech",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -8550,7 +8550,7 @@
     "displayOnMap": true
   },
   {
-    "id": 483,
+    "id": 482,
     "name": "WonderHack Event",
     "status": "Inactiva",
     "lastReviewed": "26/05/2025",
@@ -8568,7 +8568,7 @@
     "displayOnMap": true
   },
   {
-    "id": 484,
+    "id": 483,
     "name": "Wordcamp",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8586,7 +8586,7 @@
     "displayOnMap": false
   },
   {
-    "id": 485,
+    "id": 484,
     "name": "WordCamp Alhaurín de la Torre",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -8604,7 +8604,7 @@
     "displayOnMap": true
   },
   {
-    "id": 486,
+    "id": 485,
     "name": "Wordcamp Granada",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8622,7 +8622,7 @@
     "displayOnMap": true
   },
   {
-    "id": 487,
+    "id": 486,
     "name": "Wordcamp Griñón",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8640,7 +8640,7 @@
     "displayOnMap": true
   },
   {
-    "id": 488,
+    "id": 487,
     "name": "Wordcamp Sevilla",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8658,7 +8658,7 @@
     "displayOnMap": true
   },
   {
-    "id": 489,
+    "id": 488,
     "name": "WordPress Alcalá de Hernares",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8676,7 +8676,7 @@
     "displayOnMap": true
   },
   {
-    "id": 490,
+    "id": 489,
     "name": "WordPress Alicante",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8694,7 +8694,7 @@
     "displayOnMap": true
   },
   {
-    "id": 491,
+    "id": 490,
     "name": "WordPress Barcelona",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8712,7 +8712,7 @@
     "displayOnMap": true
   },
   {
-    "id": 492,
+    "id": 491,
     "name": "WordPress Benidorm",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8730,7 +8730,7 @@
     "displayOnMap": true
   },
   {
-    "id": 493,
+    "id": 492,
     "name": "WordPress Bilbao",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8748,7 +8748,7 @@
     "displayOnMap": true
   },
   {
-    "id": 494,
+    "id": 493,
     "name": "WordPress Cartagena",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8766,7 +8766,7 @@
     "displayOnMap": true
   },
   {
-    "id": 495,
+    "id": 494,
     "name": "WordPress Castelló",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8784,7 +8784,7 @@
     "displayOnMap": true
   },
   {
-    "id": 496,
+    "id": 495,
     "name": "WordPress Chiclana",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -8802,7 +8802,7 @@
     "displayOnMap": true
   },
   {
-    "id": 497,
+    "id": 496,
     "name": "WordPress Collado Villalba",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -8819,7 +8819,7 @@
     "displayOnMap": true
   },
   {
-    "id": 498,
+    "id": 497,
     "name": "WordPress Coruña",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8837,7 +8837,7 @@
     "displayOnMap": true
   },
   {
-    "id": 499,
+    "id": 498,
     "name": "WordPress Dénia",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8855,7 +8855,7 @@
     "displayOnMap": true
   },
   {
-    "id": 500,
+    "id": 499,
     "name": "Ferrolterra WordPress",
     "status": "Activa",
     "lastReviewed": "04/08/2025",
@@ -8873,7 +8873,7 @@
     "displayOnMap": true
   },
   {
-    "id": 501,
+    "id": 500,
     "name": "Wordpress Granada",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8891,7 +8891,7 @@
     "displayOnMap": true
   },
   {
-    "id": 502,
+    "id": 501,
     "name": "WordPress Granollers",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8909,7 +8909,7 @@
     "displayOnMap": true
   },
   {
-    "id": 503,
+    "id": 502,
     "name": "WordPress Griñón",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8927,7 +8927,7 @@
     "displayOnMap": true
   },
   {
-    "id": 504,
+    "id": 503,
     "name": "WordPress Huelva",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8945,7 +8945,7 @@
     "displayOnMap": true
   },
   {
-    "id": 505,
+    "id": 504,
     "name": "WordPress Igualada",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8963,7 +8963,7 @@
     "displayOnMap": true
   },
   {
-    "id": 506,
+    "id": 505,
     "name": "WordPress León",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8981,7 +8981,7 @@
     "displayOnMap": true
   },
   {
-    "id": 507,
+    "id": 506,
     "name": "WordPress Logroño",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -8999,7 +8999,7 @@
     "displayOnMap": true
   },
   {
-    "id": 508,
+    "id": 507,
     "name": "WordPress Lugo",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9017,7 +9017,7 @@
     "displayOnMap": true
   },
   {
-    "id": 509,
+    "id": 508,
     "name": "Wordpress Málaga",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -9035,7 +9035,7 @@
     "displayOnMap": true
   },
   {
-    "id": 510,
+    "id": 509,
     "name": "WordPress Mallorca",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9053,7 +9053,7 @@
     "displayOnMap": true
   },
   {
-    "id": 511,
+    "id": 510,
     "name": "WordPress Marbella",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9071,7 +9071,7 @@
     "displayOnMap": true
   },
   {
-    "id": 512,
+    "id": 511,
     "name": "WordPress Mataró",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9089,7 +9089,7 @@
     "displayOnMap": true
   },
   {
-    "id": 513,
+    "id": 512,
     "name": "Wordpress Meetup Groups",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9107,7 +9107,7 @@
     "displayOnMap": false
   },
   {
-    "id": 514,
+    "id": 513,
     "name": "WordPress Oviedo",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9125,7 +9125,7 @@
     "displayOnMap": true
   },
   {
-    "id": 515,
+    "id": 514,
     "name": "WordPress Ponferrada",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9143,7 +9143,7 @@
     "displayOnMap": true
   },
   {
-    "id": 516,
+    "id": 515,
     "name": "WordPress Pontevedra",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9161,7 +9161,7 @@
     "displayOnMap": true
   },
   {
-    "id": 517,
+    "id": 516,
     "name": "WordPress Santander",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -9178,7 +9178,7 @@
     "displayOnMap": true
   },
   {
-    "id": 518,
+    "id": 517,
     "name": "WordPress Santiago de Compostela",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9196,7 +9196,7 @@
     "displayOnMap": true
   },
   {
-    "id": 519,
+    "id": 518,
     "name": "WordPress Sevilla",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9214,7 +9214,7 @@
     "displayOnMap": true
   },
   {
-    "id": 520,
+    "id": 519,
     "name": "WordPress Sevilla para Desarrolladores",
     "status": "Inactiva",
     "lastReviewed": "18/12/2024",
@@ -9231,7 +9231,7 @@
     "displayOnMap": false
   },
   {
-    "id": 521,
+    "id": 520,
     "name": "WordPress Tarragona",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9249,7 +9249,7 @@
     "displayOnMap": true
   },
   {
-    "id": 522,
+    "id": 521,
     "name": "WordPress Terrassa",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9267,7 +9267,7 @@
     "displayOnMap": true
   },
   {
-    "id": 523,
+    "id": 522,
     "name": "WordPress Toledo",
     "status": "Inactiva",
     "lastReviewed": "18/10/2024",
@@ -9284,7 +9284,7 @@
     "displayOnMap": true
   },
   {
-    "id": 524,
+    "id": 523,
     "name": "WordPress Tordosa",
     "status": "Desconocido",
     "lastReviewed": "18/10/2024",
@@ -9302,7 +9302,7 @@
     "displayOnMap": true
   },
   {
-    "id": 525,
+    "id": 524,
     "name": "WordPress Torrelodones",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9320,7 +9320,7 @@
     "displayOnMap": true
   },
   {
-    "id": 526,
+    "id": 525,
     "name": "WordPress Valencia",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9338,7 +9338,7 @@
     "displayOnMap": true
   },
   {
-    "id": 527,
+    "id": 526,
     "name": "WordPress Valladolid",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9356,7 +9356,7 @@
     "displayOnMap": true
   },
   {
-    "id": 528,
+    "id": 527,
     "name": "WordPress Vigo",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9374,7 +9374,7 @@
     "displayOnMap": true
   },
   {
-    "id": 529,
+    "id": 528,
     "name": "WordPress Vitoria-Gasteiz",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9392,7 +9392,7 @@
     "displayOnMap": true
   },
   {
-    "id": 530,
+    "id": 529,
     "name": "WordPress Zaragoza",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9410,7 +9410,7 @@
     "displayOnMap": true
   },
   {
-    "id": 531,
+    "id": 530,
     "name": "Wunderdog Málaga Meetup",
     "status": "Activa",
     "lastReviewed": "25/10/2024",
@@ -9428,7 +9428,7 @@
     "displayOnMap": true
   },
   {
-    "id": 532,
+    "id": 531,
     "name": "XantarDev",
     "status": "Activa",
     "lastReviewed": "02/07/2025",
@@ -9446,7 +9446,7 @@
     "displayOnMap": true
   },
   {
-    "id": 533,
+    "id": 532,
     "name": "XauenDevs",
     "status": "Activa",
     "lastReviewed": "18/12/2024",
@@ -9464,7 +9464,7 @@
     "displayOnMap": true
   },
   {
-    "id": 534,
+    "id": 533,
     "name": "Xops Conference",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9482,7 +9482,7 @@
     "displayOnMap": true
   },
   {
-    "id": 535,
+    "id": 534,
     "name": "Xornada de Usuarios de R en Galicia",
     "status": "Activa",
     "lastReviewed": "18/10/2024",
@@ -9500,7 +9500,7 @@
     "displayOnMap": true
   },
   {
-    "id": 536,
+    "id": 535,
     "name": "Yes we tech",
     "status": "Activa",
     "lastReviewed": "31/05/2024",
@@ -9518,7 +9518,7 @@
     "displayOnMap": true
   },
   {
-    "id": 537,
+    "id": 536,
     "name": "zurracapoteconf",
     "status": "Activa",
     "lastReviewed": "17/10/2024",
@@ -9536,7 +9536,7 @@
     "displayOnMap": true
   },
   {
-    "id": 538,
+    "id": 537,
     "name": "Barcelona Java User Group",
     "status": "Activa",
     "lastReviewed": "06/02/2025",
@@ -9554,7 +9554,7 @@
     "displayOnMap": true
   },
   {
-    "id": 539,
+    "id": 538,
     "name": "JSConf",
     "status": "Activa",
     "lastReviewed": "02/06/2025",
@@ -9572,7 +9572,7 @@
     "displayOnMap": true
   },
   {
-    "id": 540,
+    "id": 539,
     "name": "RMC",
     "status": "Activa",
     "lastReviewed": "02/06/2025",
@@ -9590,7 +9590,7 @@
     "displayOnMap": true
   },
   {
-    "id": 541,
+    "id": 540,
     "name": "Datolada",
     "status": "Activa",
     "lastReviewed": "02/06/2025",
@@ -9608,7 +9608,7 @@
     "displayOnMap": true
   },
   {
-    "id": 542,
+    "id": 541,
     "name": "Lareira Conf",
     "status": "Activa",
     "lastReviewed": "02/06/2025",
@@ -9626,7 +9626,7 @@
     "displayOnMap": true
   },
   {
-    "id": 543,
+    "id": 542,
     "name": "GitHub Community Spain",
     "status": "Activa",
     "lastReviewed": "26/05/2025",
@@ -9644,7 +9644,7 @@
     "displayOnMap": true
   },
   {
-    "id": 544,
+    "id": 543,
     "name": "GDG Menorca",
     "status": "Activa",
     "lastReviewed": "17/02/2025",
@@ -9662,7 +9662,7 @@
     "displayOnMap": true
   },
   {
-    "id": 545,
+    "id": 544,
     "name": "STEM Talks Menorca 2025",
     "status": "Activa",
     "lastReviewed": "24/03/2025",
@@ -9680,7 +9680,7 @@
     "displayOnMap": true
   },
   {
-    "id": 546,
+    "id": 545,
     "name": "AI Engineers Barcelona",
     "status": "Activa",
     "lastReviewed": "17/02/2025",
@@ -9698,7 +9698,7 @@
     "displayOnMap": true
   },
   {
-    "id": 547,
+    "id": 546,
     "name": "Python Barcelona",
     "status": "Activa",
     "lastReviewed": "17/02/2025",
@@ -9716,7 +9716,7 @@
     "displayOnMap": true
   },
   {
-    "id": 548,
+    "id": 547,
     "name": "PyLadies Barcelona",
     "status": "Activa",
     "lastReviewed": "17/02/2025",
@@ -9734,7 +9734,7 @@
     "displayOnMap": true
   },
   {
-    "id": 549,
+    "id": 548,
     "name": "Tech Barcelona",
     "status": "Activa",
     "lastReviewed": "17/02/2025",
@@ -9752,7 +9752,7 @@
     "displayOnMap": true
   },
   {
-    "id": 550,
+    "id": 549,
     "name": "Women Techmakers Barcelona",
     "status": "Activa",
     "lastReviewed": "17/02/2025",
@@ -9770,7 +9770,7 @@
     "displayOnMap": true
   },
   {
-    "id": 551,
+    "id": 550,
     "name": "Global AI Ponferrada",
     "status": "Activa",
     "lastReviewed": "24/02/2025",
@@ -9788,7 +9788,7 @@
     "displayOnMap": true
   },
   {
-    "id": 552,
+    "id": 551,
     "name": "Galstech",
     "status": "Activa",
     "lastReviewed": "03/03/2025",
@@ -9806,7 +9806,7 @@
     "displayOnMap": true
   },
   {
-    "id": 553,
+    "id": 552,
     "name": "WordPress Ourense",
     "status": "Activa",
     "lastReviewed": "03/03/2025",
@@ -9824,7 +9824,7 @@
     "displayOnMap": true
   },
   {
-    "id": 554,
+    "id": 553,
     "name": "Bitcoin 2140 A Coruña",
     "status": "Activa",
     "lastReviewed": "03/03/2025",
@@ -9842,7 +9842,7 @@
     "displayOnMap": true
   },
   {
-    "id": 555,
+    "id": 554,
     "name": "Makers iA",
     "status": "Activa",
     "lastReviewed": "03/09/2025",
@@ -9859,7 +9859,7 @@
     "displayOnMap": true
   },
   {
-    "id": 556,
+    "id": 555,
     "name": "Python Bilbao",
     "status": "Activa",
     "lastReviewed": "19/04/2025",
@@ -9877,7 +9877,7 @@
     "displayOnMap": true
   },
   {
-    "id": 557,
+    "id": 556,
     "name": "DevMad! Developers ",
     "status": "Activa",
     "lastReviewed": "25/04/2025",
@@ -9895,7 +9895,7 @@
     "displayOnMap": true
   },
   {
-    "id": 558,
+    "id": 557,
     "name": "Valencia Codes",
     "status": "Activa",
     "lastReviewed": "25/04/2025",
@@ -9913,7 +9913,7 @@
     "displayOnMap": true
   },
   {
-    "id": 559,
+    "id": 558,
     "name": "HaskellMAD",
     "status": "Activa",
     "lastReviewed": "13/5/2025",
@@ -9931,7 +9931,7 @@
     "displayOnMap": true
   },
   {
-    "id": 560,
+    "id": 559,
     "name": "Merge Madrid",
     "status": "Activa",
     "lastReviewed": "16/5/2025",
@@ -9949,7 +9949,7 @@
     "displayOnMap": true
   },
   {
-    "id": 561,
+    "id": 560,
     "name": "Beers Storming",
     "status": "Activa",
     "lastReviewed": "16/5/2025",
@@ -9967,7 +9967,7 @@
     "displayOnMap": true
   },
   {
-    "id": 562,
+    "id": 561,
     "name": "Tech Riders",
     "status": "Activa",
     "lastReviewed": "5/8/2025",
@@ -9985,7 +9985,7 @@
     "displayOnMap": true
   },
   {
-    "id": 563,
+    "id": 562,
     "name": "Coruña Agile",
     "status": "Inactiva",
     "lastReviewed": "19/5/2025",
@@ -10003,7 +10003,7 @@
     "displayOnMap": true
   },
   {
-    "id": 564,
+    "id": 563,
     "name": "CanallaCon",
     "status": "Activa",
     "lastReviewed": "23/5/2025",
