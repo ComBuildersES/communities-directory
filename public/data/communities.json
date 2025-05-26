@@ -10019,5 +10019,23 @@
       "lon": -2.6115886
     },
     "displayOnMap": true
+  },
+  {
+    "id": 564,
+    "name": "Cloud Native Sevilla",
+    "status": "Activa",
+    "lastReviewed": "26/5/2025",
+    "communityType": "Tech Meetup",
+    "eventFormat": "Presencial",
+    "location": "Sevilla, España",
+    "topics": "",
+    "contactInfo": "",
+    "communityUrl": "https://cloudnativesevilla.com/",
+    "thumbnailUrl": "images/cloud-native-sevilla.webp",
+    "latLon": {
+      "lat": 37.3886303,
+      "lon": -5.9953403
+    },
+    "displayOnMap": true
   }
 ]
