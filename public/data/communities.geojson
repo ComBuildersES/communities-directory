@@ -8985,6 +8985,25 @@
         "communityUrl": "https://www.meetup.com/es-ES/Sevilla-Ruby-On-Rails-Meetup/",
         "thumbnailUrl": "images/sevilla-ruby-on-rails.webp"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.9953403,
+          37.3886303
+        ]
+      },
+      "properties": {
+        "id": 578,
+        "name": "The Things Network Sevilla",
+        "status": "Desconocido",
+        "eventFormat": "Híbrido",
+        "location": "Sevilla, Spain",
+        "communityUrl": "https://x.com/ttn_sevilla",
+        "thumbnailUrl": "images/the-things-network-sevilla.webp"
+      }
     }
   ]
 }
