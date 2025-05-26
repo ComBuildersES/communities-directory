@@ -9004,6 +9004,25 @@
         "communityUrl": "https://x.com/ttn_sevilla",
         "thumbnailUrl": "images/the-things-network-sevilla.webp"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.9953403,
+          37.3886303
+        ]
+      },
+      "properties": {
+        "id": 579,
+        "name": "Sevilla TypeScript",
+        "status": "Desconocido",
+        "eventFormat": "Presencial",
+        "location": "Sevilla, Spain",
+        "communityUrl": "https://x.com/SVQTypeScript",
+        "thumbnailUrl": "images/sevilla-typescript.webp"
+      }
     }
   ]
 }
