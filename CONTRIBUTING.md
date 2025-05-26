@@ -10,17 +10,18 @@
 - [Cómo nos organizamos](#c%C3%B3mo-nos-organizamos)
 - [Cómo contribuir](#c%C3%B3mo-contribuir)
 - [Revisión y mejora de datos](#revisi%C3%B3n-y-mejora-de-datos)
-    - [Estructura de los datos](#estructura-de-los-datos)
     - [Formas de contribuir a los datos](#formas-de-contribuir-a-los-datos)
     - [Convenciones de datos](#convenciones-de-datos)
       - [Qué comunidades tienen cabida en el repo](#qu%C3%A9-comunidades-tienen-cabida-en-el-repo)
+      - [Campo `communityType` (taxonomía de comunidades)](#campo-communitytype-taxonom%C3%ADa-de-comunidades)
+      - [Campo `status` (estado de las comunidades)](#campo-status-estado-de-las-comunidades)
+      - [Campo `eventFormat` (formato de eventos)](#campo-eventformat-formato-de-eventos)
       - [Quién revisa los datos](#qui%C3%A9n-revisa-los-datos)
-      - [Taxonomía de comunidades](#taxonom%C3%ADa-de-comunidades)
-      - [Estado de las comunidades](#estado-de-las-comunidades)
-      - [Tipos de eventos](#tipos-de-eventos)
+    - [Estructura de los datos](#estructura-de-los-datos)
+    - [Utilidades](#utilidades)
 - [Mejorar el código o la web](#mejorar-el-c%C3%B3digo-o-la-web)
   - [Configuración del entorno de desarrollo](#configuraci%C3%B3n-del-entorno-de-desarrollo)
-  - [Probar el repo en local](#probar-el-repo-en-local)
+  - [Ejecutar el repo en local](#ejecutar-el-repo-en-local)
   - [Linting y estilo](#linting-y-estilo)
   - [Automatismos](#automatismos)
     - [Crear PR tras añadir comunidades](#crear-pr-tras-a%C3%B1adir-comunidades)
@@ -34,19 +35,21 @@
 ## Cómo nos organizamos
 
 - Usamos **[issues](https://github.com/ComBuildersES/communities-directory/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen)** para proponer mejoras, reportar errores, sugerir nuevas comunidades, etc.
-- Los **[milestones](https://github.com/ComBuildersES/communities-directory/milestones)** nos ayudan a agrupar temas por objetivos.
+- Los **[milestones](https://github.com/ComBuildersES/communities-directory/milestones)** nos ayudan a agrupar los issues por objetivos ("releases").
 
 ## Cómo contribuir
 
 Hay muchas maneras de participar, tanto si sabes programar como si no. Aquí van algunas ideas:
 
+> **Nota**: se incluye, entre corchetes, los "[Emojikeys](https://github.com/ComBuildersES/communities-directory/issues/22)" asociados a cada tipo de contribución.
+
 1. **Revisión y mejora de datos** [`🔣 data`]
     - Proponer una nueva comunidad [completando el formulario](https://github.com/ComBuildersES/communities-directory/issues/new?template=community_entry.yml).
-    - Avisar si ves errores, duplicados o datos desactualizados.
+    - Avisar si se encuentran errores, comunidades duplicadas o datos desactualizados.
     - Sugerir nuevas categorías o campos útiles para describir mejor cada comunidad.
         
 1. **Mejorar el código o la web** [`💻 code`, `🎨 design`, `⚠️ test`, ♿️ `a11y`, `👀 review`, `🧑‍🏫 mentoring`]
-    - Frontend, estilos.
+    - Frontend / estilos.
     - Accesibilidad (`a11y`), navegación o UX, ...
     - Arreglar bugs.
     - Escribir y mejorar tests.
@@ -54,12 +57,12 @@ Hay muchas maneras de participar, tanto si sabes programar como si no. Aquí van
     - Mentorizar a otras personas que contribuyen.
         
 1. **Proponer ideas de mejora** [`🤔 ideas`]
-    - Pensar en formas de darle más visibilidad al proyecto.
+    - Formas de darle más visibilidad al proyecto.
     - Nuevas funcionalidades o formas de explorar comunidades.
-    - Proponer cambios en el flujo de contribución o [automatismos](#automatismos).                
+    - Cambios en el flujo de contribución (o [automatismos](#automatismos)).
 
 1. **Participar en conversaciones y debates** [`🗣️ talk`]
-    - Preguntar, responder dudas, aportar experiencia o comentar propuestas en los _issues_.
+    - Preguntar, responder dudas, aportar experiencia o comentar propuestas en los [_issues_](https://github.com/ComBuildersES/communities-directory/issues?q=sort%3Aupdated-desc+is%3Aissue+is%3Aopen).
 
 1. **Dar visibilidad al proyecto** [`📣 promotion`, `📹 video`, `📝 blog`, `📢 talk`, `🔊 🔊`]
     - Escribir artículos, grabar vídeos, hacer charlas o podcasts.
@@ -75,7 +78,7 @@ Hay muchas maneras de participar, tanto si sabes programar como si no. Aquí van
         
 1. **Ayudar a gestionar el proyecto** [`📆 projectManagement`]
     - Definir roadmap y priorizar tareas.     
-    - Organizar issues y milestones.
+    - Organizar _issues_ y _milestones_.
     - Identificar mejoras transversales.
 
 1. **Internacionalizar el proyecto** [`🌍 translation`]
@@ -91,48 +94,31 @@ Hay muchas maneras de participar, tanto si sabes programar como si no. Aquí van
 
 El núcleo del proyecto es el fichero [communities.json](https://github.com/ComBuildersES/communities-directory/blob/master/public/data/communities.json), donde se almacenan los datos de todas las comunidades. 
 
-#### Estructura de los datos
-
-Cada comunidad es un objeto con información clave como:
-
-- Nombre de la comunidad
-- Estado (activa/inactiva)
-- Ciudad o región principal
-- Tipo de comunidad (meetup, organización paraguas, etc.)
-- Formato de eventos (presencial, online, híbrido)
-- Temáticas
-- URL principal
-- Imagen/logo
-
 #### Formas de contribuir a los datos
 
 Puedes colaborar con los datos de varias formas:
 
 - Uniéndote a [las personas que quieran ayudar a mantener las comunidades de cada provincia](https://github.com/ComBuildersES/communities-directory/issues/53).
-- Desde la web de GitHub, edita directamente [communities.json](https://github.com/ComBuildersES/communities-directory/blob/master/public/data/communities.json) y envía un PR.
-- Crea un _issue_ describiendo los cambios sugeridos: correcciones, mejoras, comunidades a eliminar, normalización de campos, etc.
-- Sugiere datos de alto valor que podrían añadirse.
-- Buscar formas de mejorar el procesamiento automatizado y validación  de datos (nombres normalizados, detección de duplicados...).
-- Comparte ideas sobre cómo mantener clasificar comunidades por temáticas o tecnologías.
-- Cambios en la estructura del JSON para facilitar su reutilización en otras aplicaciones.
+- Añadiendo comunidades o mejorando los datos de las existentes:
+   - Desde la web de GitHub, edita directamente [communities.json](https://github.com/ComBuildersES/communities-directory/blob/master/public/data/communities.json) y envía un PR.
+   - Creando un _issue_ describiendo los cambios sugeridos: correcciones, mejoras, comunidades a eliminar, normalización de campos, etc.
+- Sugiendo mejoras en la [estructura da datos](#estructura-de-datos).
+- Buscando formas de mejorar el procesamiento automatizado y validación  de datos (normalización de nombres, detección de duplicados...).
+- Aportando al debate de cómo mejorar [las convenciones establecidas](https://github.com/ComBuildersES/communities-directory/issues/63).
 
 #### Convenciones de datos
 
 ##### Qué comunidades tienen cabida en el repo
 
-Cualquier comunidad tech (que gire en torno a la informática, software, hardware, datos, ...), aunque es cierto que a veces hay comunidades que pueden generar dudas, por eso hemos [abierto este issue al respecto](https://github.com/ComBuildersES/communities-directory/issues/62)
+Cualquier comunidad tech (que gire en torno a la informática, software, hardware, datos, ...), aunque es cierto que a veces hay comunidades que pueden generar dudas, por eso hemos [abierto este issue al respecto](https://github.com/ComBuildersES/communities-directory/issues/62).
 
-##### Quién revisa los datos
-
-Tenemos una lista de [personas voluntarias que se encargar de revisar los PRs](https://github.com/ComBuildersES/communities-directory/issues/53) a las que puedes solicitar unirte si quieres.
-
-##### Taxonomía de comunidades
+##### Campo `communityType` (taxonomía de comunidades)
 
 Actualmente estos son los diferentes tipos de comunidades:
 
 |Tipo de comunidad|Definición. ¿Qué caracteriza a este tipo de comunidad?|Ejemplos|
 |---|---|---|
-|Tech Meetup|Realiza encuentros periódicos (presenciales u online) normalmente varios al año, con el objetivo de compartir conocimientos en formato charla. Los eventos rara vez llegan a las 100 personas. Cuando son en presencial, suelen finalizar organizando un networking|Arcasiles Community Madrid, [Azure Malaga](https://www.meetup.com/azuremalaga/), [PyData Granada](https://linksta.cc/@PyDataGRX) / [Madrid](https://www.meetup.com/PyData-Madrid/), [Madrid JUG](https://www.meetup.com/es-ES/madridjug/)...
+|Tech Meetup|Realiza encuentros periódicos (presenciales u online) normalmente varios al año, con el objetivo de compartir conocimientos en formato charla. Los eventos rara vez llegan a las 100 personas. Cuando son en presencial, suelen finalizar organizando un networking|[Arcasiles Community Madrid](https://www.linkedin.com/company/arcasilesgroup/), [Azure Malaga](https://www.meetup.com/azuremalaga/), [PyData Granada](https://linksta.cc/@PyDataGRX) / [Madrid](https://www.meetup.com/PyData-Madrid/), [Madrid JUG](https://www.meetup.com/es-ES/madridjug/)...
 |Conferencia|Encuentro normalmente anual, en el que se reunen muchas personas y hay varios ponentes. Puede haber múltiples tracks en pararlelo y normalmente la logística es más compleja|[CommitConf](https://www.commit-conf.com/), [Codemotion](https://conferences.codemotion.com/madrid2024/), [CodeRioja](https://www.coderioja.com/)
 |Organización paraguas|Es un tipo de organización que agrupa a múltiples comunidades. Esta comunidades normalmente son locales, comparten una marca, un propósito, y la organización paraguas dan apoyo a las nuevas comunidades con recursos, manuales, presentación y a veces financiación|[Python España](https://es.python.org/), [GDG Spain](https://gdg.es/), [PyData](https://pydata.org/), [OWASP](https://owasp.org/chapters/)...
 |Hacklab|O FabLab, es un un tipo de comunidad normalmente más vinculada al movimiento maker. Normalmente cuenta con un espacio físico, cedido, alquilado o propiedad de la comunidad donde se encuentran recursos hardware y donde la comunidad se reúne|[Makespace Madrid](https://makespacemadrid.org/), [Made Makerspace](https://www.made-bcn.org/en), [La Jaquería](https://lajaqueria.org/)...
@@ -142,7 +128,7 @@ Actualmente estos son los diferentes tipos de comunidades:
 
 ¿Puede una comunidad ser etiquetada con dos tipos de comunidades? Actualmente no, aunque [este aspecto y la propia taxonomía está siendo revisada](https://github.com/ComBuildersES/communities-directory/issues/63).
 
-##### Estado de las comunidades
+##### Campo `status` (estado de las comunidades)
 
 Actualmente usamos tres tipos:
 
@@ -154,7 +140,7 @@ Actualmente usamos tres tipos:
 
 > **Nota** [esto está siendo revisado](https://github.com/ComBuildersES/communities-directory/issues/63).
 
-##### Tipos de eventos
+##### Campo `eventFormat` (formato de eventos)
 
 * **Presencial**: comunidades que tienen encuentros presenciales con cierta periodicidad y **no suelen retransmitir sus eventos en directo**.
 * **Online**: comunidades cuyo foco de la actividad es principalmente online.
@@ -162,6 +148,63 @@ Actualmente usamos tres tipos:
 * **Desconocido**: no tenemos muy claro sus dinámicas
 
 > **Nota** [esto está siendo revisado](https://github.com/ComBuildersES/communities-directory/issues/63).
+
+##### Quién revisa los datos
+
+Tenemos una lista de [personas voluntarias que se encargan de revisar los PRs](https://github.com/ComBuildersES/communities-directory/issues/53) a las que te animamos unirte (cuantas más, mejor).
+
+> **Nota**: cada vez que llegue un PR asignaremos a todas las personas que correspondan, y daremos un par de días de plazo para revisarlos, pasados esos días, si no ha habido ninguna pega procederemos a mergear.
+
+#### Estructura de los datos
+
+EL fichero [communities.json](https://github.com/ComBuildersES/communities-directory/blob/master/public/data/communities.json) es un array donde cada comunidad es un objeto con la siguiente información:
+
+```json
+{
+  "id": <integer-autoincrement>,
+  "name": "<community name>",
+  "status": "<enum>",
+  "lastReviewed": "dd/mm/yyyy",
+  "communityType": "<enum>",
+  "eventFormat": "<enum>",
+  "location": "<postal address>",
+  "topics": "<comma separataded values>",
+  "contactInfo": "<email, contact form, ...>",
+  "communityUrl": "<absolute URL>",
+  "thumbnailUrl": "images/<slugify-name>.webp",
+  "latLon": {
+    "lat": <float or null>,
+    "lon": <float or null>
+  },
+  "displayOnMap": <true or false>
+},
+```
+
+- **id**<sup>*</sup>: Identificador (autoincremental)
+- **nombre**<sup>*</sup>: Nombre de la comunidad.
+- **status**<sup>*</sup>: Estado en el que se encuentra la comunidad ([enum](campo-status-estado-de-las-comunidades)).
+- **lastReviewed**<sup>*</sup>: Última fecha en la que alguien modificó o validó los datos.
+- **communityType**<sup>*</sup>: Tipo de comunidad (meetup, organización paraguas, etc.)
+- **eventFormat**<sup>*</sup>: Formato de eventos (presencial, online, híbrido)
+- **location**: Sólo para las comunidades presenciales o híbridas. Ciudad o región principal (si no tiene ubicación fija se puede poner dirección aproximada, ciudad, provincia, ...) 
+- **topics**: Lista de temáticas separada por comas (aún no hay convención de temáticas en torno a este campo, [ver issue](https://github.com/ComBuildersES/communities-directory/issues/6))
+- **contactInfo**: Email o URL de contacto. Tampoco existe convención al respecto
+- **communityUrl**<sup>*</sup>: URL principal donde encontrar información de la comunidad.
+- **thumbnailUrl**<sup>*</sup>: URL con la imagen a mostrar en el directorio (tener en cuenta que el fondo de la web es blanco)
+- **latLon**: En caso de ser una comunidad presencial o híbrida añadir en el JSON las coordenadas. Si ya hay comunidades en esa ubicación, se recomienda que sean exáctamente las mismas. Si no, dejar en _null_, _null_
+- **displayOnMap**: A `true` en caso de ser una comunidad presencial o híbrida, para que se muestre en el mapa.
+
+> **(*)**: Estos campos son obligatorios
+
+#### Utilidades
+
+Algunos scripts útiles para mantener los datos de las comunidades:
+
+* `npm run find-duplicates`: busca comunidades potentialmente duplicadas en el JSON.
+* `npm run check-urls`: comprueba si las URLs de las comunidades siguen siendo accesbiles.
+* `npm run ensure-id-autoincrement`: sobrescribe los IDs de las comunidades para asegurar que sean consecutivos.
+* `npm run process-to-communities-to-geojson`:  parsea el fichero communities.json y genera el communities.geojson.
+* `npm test-geojson`: abre un visor para explorar las ubicaciones del fichero geojson fácilmente.
 
 ---
 
@@ -192,7 +235,7 @@ npm run dev
 
 Esto abrirá la aplicación en `http://localhost:5173` por defecto (puede variar según el puerto libre).
 
-### Probar el repo en local
+### Ejecutar el repo en local
 
 - Para desarrollar en local usa `npm run dev`
   - Los cambios se ven reflejados en tiempo real en el navegador al modificar el código.
@@ -207,10 +250,10 @@ Esto abrirá la aplicación en `http://localhost:5173` por defecto (puede variar
 
 #### Crear PR tras añadir comunidades
 
-Al crear un issue con la etiqueta `nueva-comunidad`, se ejecuta `create-community-entry.yml`, que:
-- Procesa el issue.
-- Genera los datos y la imagen.
-- Abre un PR con los cambios en `public/data/communities.json`.
+Al crear un issue con la etiqueta `nueva-comunidad`, se ejecuta [create-community-entry.yml](https://github.com/ComBuildersES/communities-directory/blob/master/.github/workflows/create-community-entry.yml), que:
+- Procesa el issue y genera un PR añadiendo los datos y la imagen ([process-community-issue.js](https://github.com/ComBuildersES/communities-directory/blob/master/scripts/process-community-issue.js)).
+- Ejecuta [process-to-communities-to-geojson.js](https://github.com/ComBuildersES/communities-directory/blob/master/scripts/process-to-communities-to-geojson.js) que procesa los datos anteriores y actualiza el fichero [communities.geojson](https://github.com/ComBuildersES/communities-directory/blob/master/public/data/communities.geojson) que contiene las comunidades presenciales e híbridas.
+- Abre un PR con todos cambios.
 
 #### Despliegue tras merge en master
 
