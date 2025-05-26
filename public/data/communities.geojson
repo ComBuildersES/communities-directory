@@ -11,7 +11,7 @@
         ]
       },
       "properties": {
-        "id": 1,
+        "id": 2,
         "name": "/dev/null talks",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -30,7 +30,7 @@
         ]
       },
       "properties": {
-        "id": 4,
+        "id": 5,
         "name": "🥃LicorcaConf",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -49,7 +49,7 @@
         ]
       },
       "properties": {
-        "id": 5,
+        "id": 6,
         "name": "A Industriosa",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -68,7 +68,7 @@
         ]
       },
       "properties": {
-        "id": 7,
+        "id": 8,
         "name": "AdaBcnJs",
         "status": "Desconocido",
         "eventFormat": "Desconocido",
@@ -87,7 +87,7 @@
         ]
       },
       "properties": {
-        "id": 11,
+        "id": 12,
         "name": "Agile Aragón",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -106,7 +106,7 @@
         ]
       },
       "properties": {
-        "id": 15,
+        "id": 16,
         "name": "Agile Sur",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -125,12 +125,12 @@
         ]
       },
       "properties": {
-        "id": 16,
+        "id": 17,
         "name": "agileVigo",
         "status": "Desconocido",
         "eventFormat": "Presencial",
         "location": "Vigo",
-        "communityUrl": "https://twitter.com/agilevigo",
+        "communityUrl": "https://x.com/agilevigo",
         "thumbnailUrl": "images/agilevigo.webp"
       }
     },
@@ -144,7 +144,7 @@
         ]
       },
       "properties": {
-        "id": 20,
+        "id": 21,
         "name": "AiBirras",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -163,7 +163,7 @@
         ]
       },
       "properties": {
-        "id": 21,
+        "id": 22,
         "name": "AKASHA Hub",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -182,7 +182,7 @@
         ]
       },
       "properties": {
-        "id": 22,
+        "id": 23,
         "name": "Alhambra Hub",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -201,7 +201,7 @@
         ]
       },
       "properties": {
-        "id": 23,
+        "id": 24,
         "name": "Almería R users",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -220,12 +220,12 @@
         ]
       },
       "properties": {
-        "id": 24,
+        "id": 25,
         "name": "AlmeríaJS",
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Almería",
-        "communityUrl": "https://twitter.com/AlmeriaJs",
+        "communityUrl": "https://x.com/AlmeriaJs",
         "thumbnailUrl": "images/almeriajs.webp"
       }
     },
@@ -239,7 +239,7 @@
         ]
       },
       "properties": {
-        "id": 25,
+        "id": 26,
         "name": "AlmeríaTech",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -258,7 +258,7 @@
         ]
       },
       "properties": {
-        "id": 26,
+        "id": 27,
         "name": "Andalucía Startup Founder",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -277,7 +277,7 @@
         ]
       },
       "properties": {
-        "id": 27,
+        "id": 28,
         "name": "Angular Madrid",
         "status": "Inactiva",
         "eventFormat": "Desconocido",
@@ -296,7 +296,7 @@
         ]
       },
       "properties": {
-        "id": 28,
+        "id": 29,
         "name": "Angular Málaga",
         "status": "Activa",
         "eventFormat": "Desconocido",
@@ -315,7 +315,7 @@
         ]
       },
       "properties": {
-        "id": 30,
+        "id": 31,
         "name": "APIAddictsDays",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -334,7 +334,7 @@
         ]
       },
       "properties": {
-        "id": 31,
+        "id": 32,
         "name": "Arcasiles Community Madrid",
         "status": "Activa",
         "eventFormat": "Híbridos",
@@ -353,7 +353,7 @@
         ]
       },
       "properties": {
-        "id": 32,
+        "id": 33,
         "name": "Area UR-Maker",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -372,7 +372,7 @@
         ]
       },
       "properties": {
-        "id": 33,
+        "id": 34,
         "name": "Asociación Atlantics",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -391,7 +391,7 @@
         ]
       },
       "properties": {
-        "id": 34,
+        "id": 35,
         "name": "Asociación Ciberseguridad Y Hacking Ético Asturias",
         "status": "Activa",
         "eventFormat": "Híbridos",
@@ -410,7 +410,7 @@
         ]
       },
       "properties": {
-        "id": 36,
+        "id": 37,
         "name": "Asociación de usuarios de R de Castilla-La Mancha",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -429,7 +429,7 @@
         ]
       },
       "properties": {
-        "id": 37,
+        "id": 38,
         "name": "Asociación de Webmasters de Granada",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -448,7 +448,7 @@
         ]
       },
       "properties": {
-        "id": 38,
+        "id": 39,
         "name": "Asociación de Webmasters de Málaga",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -467,7 +467,7 @@
         ]
       },
       "properties": {
-        "id": 40,
+        "id": 41,
         "name": "AsturCON.tech",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -486,7 +486,7 @@
         ]
       },
       "properties": {
-        "id": 41,
+        "id": 42,
         "name": "Asturias Software Crafters",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -775,7 +775,7 @@
         "status": "Inactiva",
         "eventFormat": "Desconocido",
         "location": "Vigo, Galicia",
-        "communityUrl": "https://blockchain.gal/",
+        "communityUrl": "https://github.com/blockchain-gal",
         "thumbnailUrl": "images/blockchaingal-vigo.webp"
       }
     },
@@ -923,11 +923,11 @@
       },
       "properties": {
         "id": 73,
-        "name": "Calendario de comunidades técnicas de Málaga",
+        "name": "Comunidades técnicas en Málaga",
         "status": "Activa",
         "eventFormat": "Desconocido",
         "location": "Málaga",
-        "communityUrl": "https://geekstorming.wordpress.com/calendario-comunidades-tecnicas/",
+        "communityUrl": "https://malagatechcomms.github.io/",
         "thumbnailUrl": "images/calendario-de-comunidades-tecnicas-de-malaga.webp"
       }
     },
@@ -1592,7 +1592,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Málaga (Fuengirola)",
-        "communityUrl": "https://www.meetup.com/FerrolterraWordPress/",
+        "communityUrl": "https://www.meetup.com/es-ES/fuengirola-criptomonedas-meetup-group/?eventOrigin=topic_overview_nearest_groups",
         "thumbnailUrl": "images/criptomonedas-meetup-group.webp"
       }
     },
@@ -1677,31 +1677,12 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -4.782332640458,
-          41.754270024781
-        ]
-      },
-      "properties": {
-        "id": 123,
-        "name": "CyLicon Valley",
-        "status": "Activa",
-        "eventFormat": "Presencial",
-        "location": "Castilla y León",
-        "communityUrl": "https://cyliconvalley.es/",
-        "thumbnailUrl": "images/cylicon-valley.webp"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -4.7283839,
           41.6529421
         ]
       },
       "properties": {
-        "id": 124,
+        "id": 123,
         "name": "CyLicon Valley",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -1719,7 +1700,7 @@
         ]
       },
       "properties": {
-        "id": 125,
+        "id": 124,
         "name": "Danaus",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -1738,7 +1719,7 @@
         ]
       },
       "properties": {
-        "id": 126,
+        "id": 125,
         "name": "Data Saturdays",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -1757,7 +1738,7 @@
         ]
       },
       "properties": {
-        "id": 127,
+        "id": 126,
         "name": "Data, Cloud and AI in Barcelona",
         "status": "Activa",
         "eventFormat": "Online",
@@ -1776,7 +1757,7 @@
         ]
       },
       "properties": {
-        "id": 128,
+        "id": 127,
         "name": "Data, Cloud and AI in Madrid",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -1795,7 +1776,7 @@
         ]
       },
       "properties": {
-        "id": 129,
+        "id": 128,
         "name": "Databeers Almería",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -1814,7 +1795,7 @@
         ]
       },
       "properties": {
-        "id": 130,
+        "id": 129,
         "name": "Databeers Granada",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -1833,7 +1814,7 @@
         ]
       },
       "properties": {
-        "id": 131,
+        "id": 130,
         "name": "Databeers Máaga",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -1852,7 +1833,7 @@
         ]
       },
       "properties": {
-        "id": 132,
+        "id": 131,
         "name": "Databeers Madrid",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -1871,7 +1852,7 @@
         ]
       },
       "properties": {
-        "id": 133,
+        "id": 132,
         "name": "Databeers Sevilla",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -1890,7 +1871,7 @@
         ]
       },
       "properties": {
-        "id": 134,
+        "id": 133,
         "name": "Databeers Valencia",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -1909,7 +1890,7 @@
         ]
       },
       "properties": {
-        "id": 135,
+        "id": 134,
         "name": "DatabeersRIO",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -1927,7 +1908,7 @@
         ]
       },
       "properties": {
-        "id": 136,
+        "id": 135,
         "name": "DES",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -1946,7 +1927,7 @@
         ]
       },
       "properties": {
-        "id": 137,
+        "id": 136,
         "name": "DevBcn",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -1965,7 +1946,7 @@
         ]
       },
       "properties": {
-        "id": 138,
+        "id": 137,
         "name": "DevFest Sevilla 2024",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -1984,7 +1965,7 @@
         ]
       },
       "properties": {
-        "id": 139,
+        "id": 138,
         "name": "DevOpsDays Cáceres",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2003,7 +1984,7 @@
         ]
       },
       "properties": {
-        "id": 140,
+        "id": 139,
         "name": "DevopsDays Madrid",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2022,7 +2003,7 @@
         ]
       },
       "properties": {
-        "id": 141,
+        "id": 140,
         "name": "DevOpsDays Vitória",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2041,7 +2022,7 @@
         ]
       },
       "properties": {
-        "id": 143,
+        "id": 142,
         "name": "Docker Madrid",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -2060,7 +2041,7 @@
         ]
       },
       "properties": {
-        "id": 145,
+        "id": 144,
         "name": "dotNET Conf Spain",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2079,7 +2060,7 @@
         ]
       },
       "properties": {
-        "id": 146,
+        "id": 145,
         "name": "dotnetMalaga (meetup)",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2098,7 +2079,7 @@
         ]
       },
       "properties": {
-        "id": 147,
+        "id": 146,
         "name": "DotNetMálaga Conferencia",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2117,7 +2098,7 @@
         ]
       },
       "properties": {
-        "id": 148,
+        "id": 147,
         "name": "DotNetters",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2136,7 +2117,7 @@
         ]
       },
       "properties": {
-        "id": 149,
+        "id": 148,
         "name": "DotNetters Zaragoza",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2155,7 +2136,7 @@
         ]
       },
       "properties": {
-        "id": 151,
+        "id": 150,
         "name": "Droidcon Madrid",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -2173,7 +2154,7 @@
         ]
       },
       "properties": {
-        "id": 152,
+        "id": 151,
         "name": "Drupal Alicante",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -2191,7 +2172,7 @@
         ]
       },
       "properties": {
-        "id": 153,
+        "id": 152,
         "name": "Drupal Almería",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -2209,7 +2190,7 @@
         ]
       },
       "properties": {
-        "id": 154,
+        "id": 153,
         "name": "Drupal Asturias",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2228,7 +2209,7 @@
         ]
       },
       "properties": {
-        "id": 155,
+        "id": 154,
         "name": "Drupal Cádiz",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -2246,7 +2227,7 @@
         ]
       },
       "properties": {
-        "id": 156,
+        "id": 155,
         "name": "Drupal Castellón",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -2264,7 +2245,7 @@
         ]
       },
       "properties": {
-        "id": 157,
+        "id": 156,
         "name": "Drupal Castilla y León",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -2282,12 +2263,12 @@
         ]
       },
       "properties": {
-        "id": 158,
+        "id": 157,
         "name": "Drupal Comunidad Valenciana",
         "status": "Desconocido",
         "eventFormat": "Presencial",
         "location": "Comunidad Valenciana",
-        "communityUrl": "https://groups.drupal.org/comunidad-valenciana"
+        "communityUrl": "https://x.com/drupalval"
       }
     },
     {
@@ -2300,7 +2281,7 @@
         ]
       },
       "properties": {
-        "id": 161,
+        "id": 160,
         "name": "Drupal Euskadi",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -2318,7 +2299,7 @@
         ]
       },
       "properties": {
-        "id": 162,
+        "id": 161,
         "name": "Drupal Extremadura",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -2336,7 +2317,7 @@
         ]
       },
       "properties": {
-        "id": 163,
+        "id": 162,
         "name": "Drupal Galiza Drupal Group",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -2354,7 +2335,7 @@
         ]
       },
       "properties": {
-        "id": 164,
+        "id": 163,
         "name": "Drupal Granada",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -2372,7 +2353,7 @@
         ]
       },
       "properties": {
-        "id": 165,
+        "id": 164,
         "name": "Drupal León",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -2390,7 +2371,7 @@
         ]
       },
       "properties": {
-        "id": 166,
+        "id": 165,
         "name": "Drupal Madrid",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2409,7 +2390,7 @@
         ]
       },
       "properties": {
-        "id": 167,
+        "id": 166,
         "name": "Drupal Malaga",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -2427,7 +2408,7 @@
         ]
       },
       "properties": {
-        "id": 168,
+        "id": 167,
         "name": "Drupal Region de Murcia y Cartagena",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -2445,7 +2426,7 @@
         ]
       },
       "properties": {
-        "id": 169,
+        "id": 168,
         "name": "Drupal Sevilla",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -2463,7 +2444,7 @@
         ]
       },
       "properties": {
-        "id": 170,
+        "id": 169,
         "name": "Drupal Zaragoza y alrededores",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -2481,7 +2462,7 @@
         ]
       },
       "properties": {
-        "id": 172,
+        "id": 171,
         "name": "DyploFest",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2500,7 +2481,7 @@
         ]
       },
       "properties": {
-        "id": 173,
+        "id": 172,
         "name": "E-Show Barcelona",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2519,7 +2500,7 @@
         ]
       },
       "properties": {
-        "id": 174,
+        "id": 173,
         "name": "E-Show Madrid",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2538,7 +2519,7 @@
         ]
       },
       "properties": {
-        "id": 175,
+        "id": 174,
         "name": "eCongress Málaga",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2557,7 +2538,7 @@
         ]
       },
       "properties": {
-        "id": 177,
+        "id": 176,
         "name": "ETSIITTech_Club",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2576,7 +2557,7 @@
         ]
       },
       "properties": {
-        "id": 178,
+        "id": 177,
         "name": "EuskalHack Security Congress",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2595,7 +2576,7 @@
         ]
       },
       "properties": {
-        "id": 179,
+        "id": 178,
         "name": "Extremadura Digital Day",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2614,7 +2595,7 @@
         ]
       },
       "properties": {
-        "id": 180,
+        "id": 179,
         "name": "Fabada Conference",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -2633,7 +2614,7 @@
         ]
       },
       "properties": {
-        "id": 181,
+        "id": 180,
         "name": "Facebook Developer Circle Madrid",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -2652,7 +2633,7 @@
         ]
       },
       "properties": {
-        "id": 183,
+        "id": 182,
         "name": "Flutter Barcelona",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2671,7 +2652,7 @@
         ]
       },
       "properties": {
-        "id": 184,
+        "id": 183,
         "name": "Flutter Lleida",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2690,7 +2671,7 @@
         ]
       },
       "properties": {
-        "id": 185,
+        "id": 184,
         "name": "Flutter Madrid",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2709,7 +2690,7 @@
         ]
       },
       "properties": {
-        "id": 186,
+        "id": 185,
         "name": "Flutter Málaga",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2728,7 +2709,7 @@
         ]
       },
       "properties": {
-        "id": 187,
+        "id": 186,
         "name": "Flutter Sevilla",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -2747,7 +2728,7 @@
         ]
       },
       "properties": {
-        "id": 188,
+        "id": 187,
         "name": "Flutter Valencia",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2766,7 +2747,7 @@
         ]
       },
       "properties": {
-        "id": 190,
+        "id": 189,
         "name": "Frontend Developers Madrid",
         "status": "Activa",
         "eventFormat": "Híbridos",
@@ -2785,7 +2766,7 @@
         ]
       },
       "properties": {
-        "id": 191,
+        "id": 190,
         "name": "FrontFest",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -2804,7 +2785,7 @@
         ]
       },
       "properties": {
-        "id": 192,
+        "id": 191,
         "name": "Fullstack Sevilla",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2823,7 +2804,7 @@
         ]
       },
       "properties": {
-        "id": 193,
+        "id": 192,
         "name": "GALPon",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2837,31 +2818,12 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -8.6481143,
-          42.433575
-        ]
-      },
-      "properties": {
-        "id": 194,
-        "name": "Galstech",
-        "status": "Desconocido",
-        "eventFormat": "Presencial",
-        "location": "Pontevedra",
-        "communityUrl": "https://www.meetup.com/es-ES/galstech/",
-        "thumbnailUrl": "images/galstech.webp"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -2.6715859,
           42.8468573
         ]
       },
       "properties": {
-        "id": 195,
+        "id": 193,
         "name": "Gamaker",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -2880,7 +2842,7 @@
         ]
       },
       "properties": {
-        "id": 196,
+        "id": 194,
         "name": "Gamepolis",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2899,7 +2861,7 @@
         ]
       },
       "properties": {
-        "id": 197,
+        "id": 195,
         "name": "Gcubo",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -2918,7 +2880,7 @@
         ]
       },
       "properties": {
-        "id": 198,
+        "id": 196,
         "name": "GDG A Coruña",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2937,12 +2899,12 @@
         ]
       },
       "properties": {
-        "id": 200,
+        "id": 198,
         "name": "GDG Cloud Madrid",
-        "status": "Desconocido",
+        "status": "Inactivo",
         "eventFormat": "Presencial",
         "location": "Madrid",
-        "communityUrl": "https://gdg.community.dev/gdg-cloud-madrid/"
+        "communityUrl": "https://x.com/gdgcloudmadrid?lang=en"
       }
     },
     {
@@ -2955,7 +2917,7 @@
         ]
       },
       "properties": {
-        "id": 201,
+        "id": 199,
         "name": "GDG Granada",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -2974,7 +2936,7 @@
         ]
       },
       "properties": {
-        "id": 202,
+        "id": 200,
         "name": "GDG Huelva",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -2993,12 +2955,12 @@
         ]
       },
       "properties": {
-        "id": 203,
+        "id": 201,
         "name": "GDG Jaén",
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Jaén ",
-        "communityUrl": "https://twitter.com/gdgjaen",
+        "communityUrl": "https://x.com/gdgjaen",
         "thumbnailUrl": "images/gdg-jaen.webp"
       }
     },
@@ -3012,7 +2974,7 @@
         ]
       },
       "properties": {
-        "id": 204,
+        "id": 202,
         "name": "GDG La Rioja",
         "status": "Activa",
         "eventFormat": "Híbridos",
@@ -3030,7 +2992,7 @@
         ]
       },
       "properties": {
-        "id": 205,
+        "id": 203,
         "name": "GDG Madrid",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3049,7 +3011,7 @@
         ]
       },
       "properties": {
-        "id": 206,
+        "id": 204,
         "name": "GDG Málaga",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3068,7 +3030,7 @@
         ]
       },
       "properties": {
-        "id": 207,
+        "id": 205,
         "name": "GDG Marbella",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -3087,7 +3049,7 @@
         ]
       },
       "properties": {
-        "id": 208,
+        "id": 206,
         "name": "GDG Ponferrada",
         "status": "Activa",
         "eventFormat": "Híbridos",
@@ -3106,7 +3068,7 @@
         ]
       },
       "properties": {
-        "id": 209,
+        "id": 207,
         "name": "GDG Sevilla",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3125,7 +3087,7 @@
         ]
       },
       "properties": {
-        "id": 211,
+        "id": 209,
         "name": "GDG Toledo",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3144,7 +3106,7 @@
         ]
       },
       "properties": {
-        "id": 212,
+        "id": 210,
         "name": "GDG Valencia",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3163,7 +3125,7 @@
         ]
       },
       "properties": {
-        "id": 213,
+        "id": 211,
         "name": "GDG Vigo",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -3181,7 +3143,7 @@
         ]
       },
       "properties": {
-        "id": 218,
+        "id": 216,
         "name": "Global AI Bootcamp Madrid",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3200,7 +3162,7 @@
         ]
       },
       "properties": {
-        "id": 220,
+        "id": 218,
         "name": "Global Software Architecture Summit",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3219,7 +3181,7 @@
         ]
       },
       "properties": {
-        "id": 221,
+        "id": 219,
         "name": "GoMad",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3238,7 +3200,7 @@
         ]
       },
       "properties": {
-        "id": 223,
+        "id": 221,
         "name": "GR Interactiva",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3257,7 +3219,7 @@
         ]
       },
       "properties": {
-        "id": 225,
+        "id": 223,
         "name": "Granada Gaming",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3276,7 +3238,7 @@
         ]
       },
       "properties": {
-        "id": 226,
+        "id": 224,
         "name": "Granada Interactiva",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3295,7 +3257,7 @@
         ]
       },
       "properties": {
-        "id": 227,
+        "id": 225,
         "name": "Granada Jam",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3314,7 +3276,7 @@
         ]
       },
       "properties": {
-        "id": 228,
+        "id": 226,
         "name": "Granada PHP",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -3332,12 +3294,13 @@
         ]
       },
       "properties": {
-        "id": 229,
+        "id": 227,
         "name": "Granada Tech",
         "status": "Activa",
         "eventFormat": "Desconocido",
         "location": "Granada",
-        "communityUrl": "https://www.granadatech.org/"
+        "communityUrl": "https://www.granadatech.org/",
+        "thumbnailUrl": "images/granada-tech.webp"
       }
     },
     {
@@ -3350,7 +3313,7 @@
         ]
       },
       "properties": {
-        "id": 230,
+        "id": 228,
         "name": "GranadaJUG",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3369,7 +3332,7 @@
         ]
       },
       "properties": {
-        "id": 231,
+        "id": 229,
         "name": "Grupo de Programadores e Usuarios de Linux (GPUL)",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3388,7 +3351,7 @@
         ]
       },
       "properties": {
-        "id": 232,
+        "id": 230,
         "name": "Grupo de Usuarios de Joomla de Vigo",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3407,7 +3370,7 @@
         ]
       },
       "properties": {
-        "id": 233,
+        "id": 231,
         "name": "Grupo de Usuarios de R de Madrid",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3426,7 +3389,7 @@
         ]
       },
       "properties": {
-        "id": 234,
+        "id": 232,
         "name": "Grupo de usuarios de R en Málaga",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -3444,7 +3407,7 @@
         ]
       },
       "properties": {
-        "id": 235,
+        "id": 233,
         "name": "Grupo de usuarios de Sharepoint de Cataluña (SUG)",
         "status": "Inactiva",
         "eventFormat": "Desconocido",
@@ -3462,7 +3425,7 @@
         ]
       },
       "properties": {
-        "id": 236,
+        "id": 234,
         "name": "Grupo de Usuarios Joomla! de Logroño",
         "status": "Inactiva",
         "eventFormat": "Desconocido",
@@ -3480,7 +3443,7 @@
         ]
       },
       "properties": {
-        "id": 237,
+        "id": 235,
         "name": "Grupo usuarios de R de Canarias",
         "status": "Desconocido",
         "eventFormat": "Desconocido",
@@ -3498,7 +3461,7 @@
         ]
       },
       "properties": {
-        "id": 238,
+        "id": 236,
         "name": "Grupo usuarios de R de Murcia",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -3516,7 +3479,7 @@
         ]
       },
       "properties": {
-        "id": 239,
+        "id": 237,
         "name": "Guadalindie",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3535,7 +3498,7 @@
         ]
       },
       "properties": {
-        "id": 240,
+        "id": 238,
         "name": "Guarandinga Tech",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3554,7 +3517,7 @@
         ]
       },
       "properties": {
-        "id": 242,
+        "id": 240,
         "name": "Hack Night",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -3572,7 +3535,7 @@
         ]
       },
       "properties": {
-        "id": 243,
+        "id": 241,
         "name": "HackathonLovers",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3590,7 +3553,7 @@
         ]
       },
       "properties": {
-        "id": 244,
+        "id": 242,
         "name": "HackBarna",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3609,7 +3572,7 @@
         ]
       },
       "properties": {
-        "id": 245,
+        "id": 243,
         "name": "HackCS",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3628,7 +3591,7 @@
         ]
       },
       "properties": {
-        "id": 246,
+        "id": 244,
         "name": "Hackers Week",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3647,12 +3610,12 @@
         ]
       },
       "properties": {
-        "id": 248,
+        "id": 246,
         "name": "HackMadrid %27",
         "status": "Activa",
-        "eventFormat": "Desconocido",
+        "eventFormat": "Presencial",
         "location": "Madrid",
-        "communityUrl": "https://hackmadrid.org",
+        "communityUrl": "https://www.meetup.com/es-ES/hackmadrid-27/",
         "thumbnailUrl": "images/hackmadrid-27.webp"
       }
     },
@@ -3666,7 +3629,7 @@
         ]
       },
       "properties": {
-        "id": 249,
+        "id": 247,
         "name": "HBSCON",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3685,7 +3648,7 @@
         ]
       },
       "properties": {
-        "id": 250,
+        "id": 248,
         "name": "HTML5Spain",
         "status": "Activa",
         "eventFormat": "Híbridos",
@@ -3704,7 +3667,7 @@
         ]
       },
       "properties": {
-        "id": 251,
+        "id": 249,
         "name": "I Conferencia Women Techmakers La Rioja",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -3723,7 +3686,7 @@
         ]
       },
       "properties": {
-        "id": 254,
+        "id": 252,
         "name": "Indismatic",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -3736,31 +3699,12 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -8.3958532,
-          43.3707332
-        ]
-      },
-      "properties": {
-        "id": 255,
-        "name": "Ingeniería Sin Fronteras (Enxeñeria Sen Fronteiras)",
-        "status": "Activa",
-        "eventFormat": "Presencial",
-        "location": "Coruña",
-        "communityUrl": "https://galicia.isf.es/?lang=es",
-        "thumbnailUrl": "images/ingenieria-sin-fronteras-enxeneria-sen-fronteiras.webp"
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -3.7035825,
           40.4167047
         ]
       },
       "properties": {
-        "id": 256,
+        "id": 254,
         "name": "Ingobernable",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -3779,7 +3723,7 @@
         ]
       },
       "properties": {
-        "id": 258,
+        "id": 256,
         "name": "Iniciador Albacete",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -3797,7 +3741,7 @@
         ]
       },
       "properties": {
-        "id": 259,
+        "id": 257,
         "name": "Iniciador Alicante",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -3815,7 +3759,7 @@
         ]
       },
       "properties": {
-        "id": 260,
+        "id": 258,
         "name": "Iniciador Almería",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -3833,7 +3777,7 @@
         ]
       },
       "properties": {
-        "id": 261,
+        "id": 259,
         "name": "Iniciador Asturias",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -3851,7 +3795,7 @@
         ]
       },
       "properties": {
-        "id": 262,
+        "id": 260,
         "name": "Iniciador Ávila",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -3869,7 +3813,7 @@
         ]
       },
       "properties": {
-        "id": 263,
+        "id": 261,
         "name": "Iniciador Badajoz",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -3887,7 +3831,7 @@
         ]
       },
       "properties": {
-        "id": 264,
+        "id": 262,
         "name": "Iniciador Barcelona",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -3905,12 +3849,12 @@
         ]
       },
       "properties": {
-        "id": 265,
+        "id": 263,
         "name": "Iniciador Bilbao",
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Bilbao",
-        "communityUrl": "https://iniciador.com/Bilbao"
+        "communityUrl": "https://x.com/iniciador_BIL"
       }
     },
     {
@@ -3923,7 +3867,7 @@
         ]
       },
       "properties": {
-        "id": 266,
+        "id": 264,
         "name": "Iniciador Burgos",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -3941,12 +3885,12 @@
         ]
       },
       "properties": {
-        "id": 267,
+        "id": 265,
         "name": "Iniciador Cáceres",
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Cáceres",
-        "communityUrl": "https://iniciador.com/Cáceres"
+        "communityUrl": "https://x.com/iniciador_cc"
       }
     },
     {
@@ -3959,12 +3903,12 @@
         ]
       },
       "properties": {
-        "id": 268,
+        "id": 266,
         "name": "Iniciador Cádiz",
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Cádiz",
-        "communityUrl": "https://iniciador.com/Cádiz"
+        "communityUrl": "https://x.com/iniciador_BCA"
       }
     },
     {
@@ -3977,7 +3921,7 @@
         ]
       },
       "properties": {
-        "id": 269,
+        "id": 267,
         "name": "Iniciador Cantabria",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -3995,12 +3939,12 @@
         ]
       },
       "properties": {
-        "id": 270,
+        "id": 268,
         "name": "Iniciador Castellón",
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Castellón de la Plana",
-        "communityUrl": "https://iniciador.com/Castellón"
+        "communityUrl": "https://x.com/iniciador_CAS"
       }
     },
     {
@@ -4013,12 +3957,12 @@
         ]
       },
       "properties": {
-        "id": 271,
+        "id": 269,
         "name": "Iniciador Ciudad Real",
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Ciudad Real",
-        "communityUrl": "https://iniciador.com/Ciudad Real"
+        "communityUrl": "https://www.iniciador.com/es/ciudad-real"
       }
     },
     {
@@ -4031,7 +3975,7 @@
         ]
       },
       "properties": {
-        "id": 272,
+        "id": 270,
         "name": "Iniciador Congreso",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4049,7 +3993,7 @@
         ]
       },
       "properties": {
-        "id": 273,
+        "id": 271,
         "name": "Iniciador Córdoba",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4067,7 +4011,7 @@
         ]
       },
       "properties": {
-        "id": 274,
+        "id": 272,
         "name": "Iniciador Donostia",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4085,7 +4029,7 @@
         ]
       },
       "properties": {
-        "id": 275,
+        "id": 273,
         "name": "Iniciador Emprendimiento social Barcelona",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4103,7 +4047,7 @@
         ]
       },
       "properties": {
-        "id": 276,
+        "id": 274,
         "name": "Iniciador Fuerteventura",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4121,7 +4065,7 @@
         ]
       },
       "properties": {
-        "id": 277,
+        "id": 275,
         "name": "Iniciador Girona",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4139,7 +4083,7 @@
         ]
       },
       "properties": {
-        "id": 278,
+        "id": 276,
         "name": "Iniciador Granada",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4157,7 +4101,7 @@
         ]
       },
       "properties": {
-        "id": 279,
+        "id": 277,
         "name": "Iniciador Guadalajara",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4175,7 +4119,7 @@
         ]
       },
       "properties": {
-        "id": 280,
+        "id": 278,
         "name": "Iniciador Huesca",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4193,7 +4137,7 @@
         ]
       },
       "properties": {
-        "id": 281,
+        "id": 279,
         "name": "Iniciador La Rioja",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4211,7 +4155,7 @@
         ]
       },
       "properties": {
-        "id": 282,
+        "id": 280,
         "name": "Iniciador Las Palmas",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4229,7 +4173,7 @@
         ]
       },
       "properties": {
-        "id": 283,
+        "id": 281,
         "name": "Iniciador León",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4247,7 +4191,7 @@
         ]
       },
       "properties": {
-        "id": 284,
+        "id": 282,
         "name": "Iniciador Lleida",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4265,7 +4209,7 @@
         ]
       },
       "properties": {
-        "id": 285,
+        "id": 283,
         "name": "Iniciador Madrid",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4283,7 +4227,7 @@
         ]
       },
       "properties": {
-        "id": 286,
+        "id": 284,
         "name": "Iniciador Málaga",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4301,7 +4245,7 @@
         ]
       },
       "properties": {
-        "id": 287,
+        "id": 285,
         "name": "Iniciador Mallorca",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4319,7 +4263,7 @@
         ]
       },
       "properties": {
-        "id": 288,
+        "id": 286,
         "name": "Iniciador Murcia",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4337,7 +4281,7 @@
         ]
       },
       "properties": {
-        "id": 289,
+        "id": 287,
         "name": "Iniciador Navarra",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4355,7 +4299,7 @@
         ]
       },
       "properties": {
-        "id": 290,
+        "id": 288,
         "name": "Iniciador Palencia",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4373,7 +4317,7 @@
         ]
       },
       "properties": {
-        "id": 291,
+        "id": 289,
         "name": "Iniciador Salamanca",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4391,7 +4335,7 @@
         ]
       },
       "properties": {
-        "id": 292,
+        "id": 290,
         "name": "Iniciador Santiago de Compostela",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4409,7 +4353,7 @@
         ]
       },
       "properties": {
-        "id": 293,
+        "id": 291,
         "name": "Iniciador Sevilla",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4427,7 +4371,7 @@
         ]
       },
       "properties": {
-        "id": 294,
+        "id": 292,
         "name": "Iniciador Tenerife",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4445,7 +4389,7 @@
         ]
       },
       "properties": {
-        "id": 295,
+        "id": 293,
         "name": "Iniciador Teruel",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4463,7 +4407,7 @@
         ]
       },
       "properties": {
-        "id": 296,
+        "id": 294,
         "name": "Iniciador Toledo",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4481,7 +4425,7 @@
         ]
       },
       "properties": {
-        "id": 297,
+        "id": 295,
         "name": "Iniciador Valencia",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4499,7 +4443,7 @@
         ]
       },
       "properties": {
-        "id": 298,
+        "id": 296,
         "name": "Iniciador Valladolid",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4517,7 +4461,7 @@
         ]
       },
       "properties": {
-        "id": 299,
+        "id": 297,
         "name": "Iniciador Zaragoza",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4535,7 +4479,7 @@
         ]
       },
       "properties": {
-        "id": 300,
+        "id": 298,
         "name": "Intellias Spain Tech Talks",
         "status": "Activa",
         "eventFormat": "Híbridos",
@@ -4554,7 +4498,7 @@
         ]
       },
       "properties": {
-        "id": 301,
+        "id": 299,
         "name": "Interferencias",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -4572,7 +4516,7 @@
         ]
       },
       "properties": {
-        "id": 302,
+        "id": 300,
         "name": "Internet of Things Madrid Meetup",
         "status": "Inactiva",
         "eventFormat": "Desconocido",
@@ -4590,7 +4534,7 @@
         ]
       },
       "properties": {
-        "id": 303,
+        "id": 301,
         "name": "Ionic Madrid",
         "status": "Desconocido",
         "eventFormat": "Desconocido",
@@ -4608,7 +4552,7 @@
         ]
       },
       "properties": {
-        "id": 304,
+        "id": 302,
         "name": "J On The Beach",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -4627,7 +4571,7 @@
         ]
       },
       "properties": {
-        "id": 308,
+        "id": 306,
         "name": "Jornadas de SIG Libre",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -4646,7 +4590,7 @@
         ]
       },
       "properties": {
-        "id": 309,
+        "id": 307,
         "name": "JSDay Canarias",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -4665,7 +4609,7 @@
         ]
       },
       "properties": {
-        "id": 310,
+        "id": 308,
         "name": "JSDayES",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4684,7 +4628,7 @@
         ]
       },
       "properties": {
-        "id": 311,
+        "id": 309,
         "name": "Killer Skills",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -4703,7 +4647,7 @@
         ]
       },
       "properties": {
-        "id": 312,
+        "id": 310,
         "name": "La Jaquería",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -4722,7 +4666,7 @@
         ]
       },
       "properties": {
-        "id": 313,
+        "id": 311,
         "name": "La Product Conf & LPCx España",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -4741,7 +4685,7 @@
         ]
       },
       "properties": {
-        "id": 314,
+        "id": 312,
         "name": "La Rioja Tech Alliance ",
         "status": "Inactiva",
         "eventFormat": "Online",
@@ -4759,7 +4703,7 @@
         ]
       },
       "properties": {
-        "id": 315,
+        "id": 313,
         "name": "Lambda World",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -4778,7 +4722,7 @@
         ]
       },
       "properties": {
-        "id": 316,
+        "id": 314,
         "name": "LangDev Conference",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -4797,7 +4741,7 @@
         ]
       },
       "properties": {
-        "id": 317,
+        "id": 315,
         "name": "Latinas in Tech Madrid",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -4816,7 +4760,7 @@
         ]
       },
       "properties": {
-        "id": 318,
+        "id": 316,
         "name": "LechazoConf",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -4835,7 +4779,7 @@
         ]
       },
       "properties": {
-        "id": 319,
+        "id": 317,
         "name": "LibreLabGRX",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -4854,7 +4798,7 @@
         ]
       },
       "properties": {
-        "id": 320,
+        "id": 318,
         "name": "Liferay Spain User Group (LUGSpain)",
         "status": "Activa",
         "eventFormat": "Híbridos",
@@ -4873,7 +4817,7 @@
         ]
       },
       "properties": {
-        "id": 321,
+        "id": 319,
         "name": "Machine Learning Spain",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -4892,7 +4836,7 @@
         ]
       },
       "properties": {
-        "id": 322,
+        "id": 320,
         "name": "MADE Makerspace",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -4911,7 +4855,7 @@
         ]
       },
       "properties": {
-        "id": 323,
+        "id": 321,
         "name": "Madriagil",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -4930,7 +4874,7 @@
         ]
       },
       "properties": {
-        "id": 324,
+        "id": 322,
         "name": "Madrid |> Elixir",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -4949,7 +4893,7 @@
         ]
       },
       "properties": {
-        "id": 325,
+        "id": 323,
         "name": "Madrid Android Developer Group",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -4967,7 +4911,7 @@
         ]
       },
       "properties": {
-        "id": 326,
+        "id": 324,
         "name": "Madrid DevOps",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -4985,7 +4929,7 @@
         ]
       },
       "properties": {
-        "id": 327,
+        "id": 325,
         "name": "Madrid DUG (Google Dart User Group)",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -5003,7 +4947,7 @@
         ]
       },
       "properties": {
-        "id": 328,
+        "id": 326,
         "name": "Madrid Ruby User Group (madrid.rb)",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -5021,7 +4965,7 @@
         ]
       },
       "properties": {
-        "id": 329,
+        "id": 327,
         "name": "Madrid Smalltalk User Group (SUG)",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -5039,7 +4983,7 @@
         ]
       },
       "properties": {
-        "id": 330,
+        "id": 328,
         "name": "Madrid Spring User Group",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -5057,7 +5001,7 @@
         ]
       },
       "properties": {
-        "id": 331,
+        "id": 329,
         "name": "Madrid Tech Show",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5076,7 +5020,7 @@
         ]
       },
       "properties": {
-        "id": 332,
+        "id": 330,
         "name": "Madrid Tech Talks",
         "status": "Activa",
         "eventFormat": "Desconocido",
@@ -5095,7 +5039,7 @@
         ]
       },
       "properties": {
-        "id": 333,
+        "id": 331,
         "name": "Madrid-Groovy User Group (GUG)",
         "status": "Activa",
         "eventFormat": "Híbridos",
@@ -5114,7 +5058,7 @@
         ]
       },
       "properties": {
-        "id": 334,
+        "id": 332,
         "name": "MadridDotNet",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5133,7 +5077,7 @@
         ]
       },
       "properties": {
-        "id": 335,
+        "id": 333,
         "name": "MadridJS",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5152,7 +5096,7 @@
         ]
       },
       "properties": {
-        "id": 336,
+        "id": 334,
         "name": "MadridJUG",
         "status": "Activa",
         "eventFormat": "Híbridos",
@@ -5171,7 +5115,7 @@
         ]
       },
       "properties": {
-        "id": 337,
+        "id": 335,
         "name": "MadridScala",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5190,7 +5134,7 @@
         ]
       },
       "properties": {
-        "id": 338,
+        "id": 336,
         "name": "MadRust",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -5208,7 +5152,7 @@
         ]
       },
       "properties": {
-        "id": 339,
+        "id": 337,
         "name": "Makers of Murcia",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5227,7 +5171,7 @@
         ]
       },
       "properties": {
-        "id": 340,
+        "id": 338,
         "name": "MakespaceMadrid",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5246,7 +5190,7 @@
         ]
       },
       "properties": {
-        "id": 341,
+        "id": 339,
         "name": "Málaga Indie Hackers",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5265,7 +5209,7 @@
         ]
       },
       "properties": {
-        "id": 342,
+        "id": 340,
         "name": "Málaga Scala Devs",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -5283,7 +5227,7 @@
         ]
       },
       "properties": {
-        "id": 343,
+        "id": 341,
         "name": "Málaga TechClub",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -5301,7 +5245,7 @@
         ]
       },
       "properties": {
-        "id": 344,
+        "id": 342,
         "name": "Málaga-AI",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5320,7 +5264,7 @@
         ]
       },
       "properties": {
-        "id": 345,
+        "id": 343,
         "name": "Malaga-Scala",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -5338,7 +5282,7 @@
         ]
       },
       "properties": {
-        "id": 346,
+        "id": 344,
         "name": "MálagaJam",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5357,7 +5301,7 @@
         ]
       },
       "properties": {
-        "id": 347,
+        "id": 345,
         "name": "MálagaJUG",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5376,7 +5320,7 @@
         ]
       },
       "properties": {
-        "id": 352,
+        "id": 350,
         "name": "MorcillaConf",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5395,7 +5339,7 @@
         ]
       },
       "properties": {
-        "id": 353,
+        "id": 351,
         "name": "MorterueloCon",
         "status": "Activa",
         "eventFormat": "Híbridos",
@@ -5414,7 +5358,7 @@
         ]
       },
       "properties": {
-        "id": 355,
+        "id": 353,
         "name": "MsCoders Madrid",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5433,7 +5377,7 @@
         ]
       },
       "properties": {
-        "id": 356,
+        "id": 354,
         "name": "Mulesoft Barcelona",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5452,7 +5396,7 @@
         ]
       },
       "properties": {
-        "id": 357,
+        "id": 355,
         "name": "Mulesoft Madrid",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5471,7 +5415,7 @@
         ]
       },
       "properties": {
-        "id": 359,
+        "id": 357,
         "name": "Mulesoft Murcia",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5490,7 +5434,7 @@
         ]
       },
       "properties": {
-        "id": 360,
+        "id": 358,
         "name": "Mulesoft Sevilla",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5509,7 +5453,7 @@
         ]
       },
       "properties": {
-        "id": 361,
+        "id": 359,
         "name": "Mulesoft Valencia",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5528,7 +5472,7 @@
         ]
       },
       "properties": {
-        "id": 362,
+        "id": 360,
         "name": "murcia dev",
         "status": "Activa",
         "eventFormat": "Híbridos",
@@ -5547,7 +5491,7 @@
         ]
       },
       "properties": {
-        "id": 363,
+        "id": 361,
         "name": "Murcia software crafters",
         "status": "Activa",
         "eventFormat": "Híbridos",
@@ -5566,7 +5510,7 @@
         ]
       },
       "properties": {
-        "id": 365,
+        "id": 363,
         "name": "Navaja Negra",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5585,7 +5529,7 @@
         ]
       },
       "properties": {
-        "id": 366,
+        "id": 364,
         "name": "Netcoreconf",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5604,12 +5548,12 @@
         ]
       },
       "properties": {
-        "id": 367,
+        "id": 365,
         "name": "No cON Name",
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Barcelona",
-        "communityUrl": "https://www.noconname.org/",
+        "communityUrl": "https://x.com/noconname",
         "thumbnailUrl": "images/no-con-name.webp"
       }
     },
@@ -5623,7 +5567,7 @@
         ]
       },
       "properties": {
-        "id": 368,
+        "id": 366,
         "name": "NoCodeFest",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -5642,7 +5586,7 @@
         ]
       },
       "properties": {
-        "id": 369,
+        "id": 367,
         "name": "NodeJSMadrid",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -5660,7 +5604,7 @@
         ]
       },
       "properties": {
-        "id": 371,
+        "id": 369,
         "name": "nosday",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5679,7 +5623,7 @@
         ]
       },
       "properties": {
-        "id": 372,
+        "id": 370,
         "name": "Notion Coruña",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5698,7 +5642,7 @@
         ]
       },
       "properties": {
-        "id": 373,
+        "id": 371,
         "name": "NSCoder Night Madrid",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5717,7 +5661,7 @@
         ]
       },
       "properties": {
-        "id": 374,
+        "id": 372,
         "name": "NSSpain",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5736,7 +5680,7 @@
         ]
       },
       "properties": {
-        "id": 375,
+        "id": 373,
         "name": "Nuberos.net",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -5754,7 +5698,7 @@
         ]
       },
       "properties": {
-        "id": 376,
+        "id": 374,
         "name": "NWC10Lab: Innovación WEB3, CRIPTO y blockchain para todos",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5773,7 +5717,7 @@
         ]
       },
       "properties": {
-        "id": 377,
+        "id": 375,
         "name": "Oficina de Software Libre Granada",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5792,7 +5736,7 @@
         ]
       },
       "properties": {
-        "id": 378,
+        "id": 376,
         "name": "Open Source Weekends",
         "status": "Inactiva",
         "eventFormat": "Híbridos",
@@ -5810,7 +5754,7 @@
         ]
       },
       "properties": {
-        "id": 379,
+        "id": 377,
         "name": "OpenExpo Europe",
         "status": "Activa",
         "eventFormat": "Híbridos",
@@ -5829,7 +5773,7 @@
         ]
       },
       "properties": {
-        "id": 380,
+        "id": 378,
         "name": "OpenSouthCode",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5848,7 +5792,7 @@
         ]
       },
       "properties": {
-        "id": 382,
+        "id": 380,
         "name": "OWASP Barcelona",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5867,7 +5811,7 @@
         ]
       },
       "properties": {
-        "id": 383,
+        "id": 381,
         "name": "OWASP Logroño",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5886,7 +5830,7 @@
         ]
       },
       "properties": {
-        "id": 384,
+        "id": 382,
         "name": "OWASP Sevilla",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5905,7 +5849,7 @@
         ]
       },
       "properties": {
-        "id": 385,
+        "id": 383,
         "name": "PaellaCon",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -5924,7 +5868,7 @@
         ]
       },
       "properties": {
-        "id": 386,
+        "id": 384,
         "name": "Pamplona-Iruña Software Crafters",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5943,7 +5887,7 @@
         ]
       },
       "properties": {
-        "id": 387,
+        "id": 385,
         "name": "PASS Spain",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -5961,7 +5905,7 @@
         ]
       },
       "properties": {
-        "id": 388,
+        "id": 386,
         "name": "PHP Coruña",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5980,7 +5924,7 @@
         ]
       },
       "properties": {
-        "id": 389,
+        "id": 387,
         "name": "PHPMad",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -5999,7 +5943,7 @@
         ]
       },
       "properties": {
-        "id": 390,
+        "id": 388,
         "name": "PhpMadrid",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -6017,12 +5961,12 @@
         ]
       },
       "properties": {
-        "id": 392,
+        "id": 390,
         "name": "PHPVigo",
         "status": "Inactiva",
         "eventFormat": "Desconocido",
         "location": "Vigo, Galicia",
-        "communityUrl": "https://twitter.com/phpvigo"
+        "communityUrl": "https://x.com/phpvigo"
       }
     },
     {
@@ -6035,7 +5979,7 @@
         ]
       },
       "properties": {
-        "id": 393,
+        "id": 391,
         "name": "Pica Pica HackLab",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6054,7 +5998,7 @@
         ]
       },
       "properties": {
-        "id": 394,
+        "id": 392,
         "name": "Power BI & Fabric Malaga",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6073,7 +6017,7 @@
         ]
       },
       "properties": {
-        "id": 395,
+        "id": 393,
         "name": "PowerTips Cádiz",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -6091,7 +6035,7 @@
         ]
       },
       "properties": {
-        "id": 396,
+        "id": 394,
         "name": "PrestaShop - Málaga Ecommerce Meetup",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6110,7 +6054,7 @@
         ]
       },
       "properties": {
-        "id": 397,
+        "id": 395,
         "name": "ProductTank Málaga",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6129,7 +6073,7 @@
         ]
       },
       "properties": {
-        "id": 398,
+        "id": 396,
         "name": "PucelaTechDay",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -6148,7 +6092,7 @@
         ]
       },
       "properties": {
-        "id": 399,
+        "id": 397,
         "name": "Pulpo Con 🐙 ",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6167,7 +6111,7 @@
         ]
       },
       "properties": {
-        "id": 403,
+        "id": 401,
         "name": "PyData Granada",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6186,7 +6130,7 @@
         ]
       },
       "properties": {
-        "id": 404,
+        "id": 402,
         "name": "PyData Madrid",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6205,7 +6149,7 @@
         ]
       },
       "properties": {
-        "id": 405,
+        "id": 403,
         "name": "PyData Málaga",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6224,7 +6168,7 @@
         ]
       },
       "properties": {
-        "id": 406,
+        "id": 404,
         "name": "Python Coruña",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6243,7 +6187,7 @@
         ]
       },
       "properties": {
-        "id": 408,
+        "id": 406,
         "name": "Python Granada",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6262,7 +6206,7 @@
         ]
       },
       "properties": {
-        "id": 409,
+        "id": 407,
         "name": "Python Madrid",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -6280,12 +6224,12 @@
         ]
       },
       "properties": {
-        "id": 410,
+        "id": 408,
         "name": "Python Málaga",
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Málaga",
-        "communityUrl": "https://twitter.com/python_malaga",
+        "communityUrl": "https://x.com/python_malaga",
         "thumbnailUrl": "images/python-malaga.webp"
       }
     },
@@ -6299,7 +6243,7 @@
         ]
       },
       "properties": {
-        "id": 411,
+        "id": 409,
         "name": "Python Vigo",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6318,7 +6262,7 @@
         ]
       },
       "properties": {
-        "id": 412,
+        "id": 410,
         "name": "QA Málaga",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6337,7 +6281,7 @@
         ]
       },
       "properties": {
-        "id": 414,
+        "id": 412,
         "name": "ReactAlicante",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6356,7 +6300,7 @@
         ]
       },
       "properties": {
-        "id": 416,
+        "id": 414,
         "name": "Rioja{dotnet}",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6375,12 +6319,12 @@
         ]
       },
       "properties": {
-        "id": 417,
+        "id": 415,
         "name": "RioJakers",
         "status": "Activa",
         "eventFormat": "Online",
         "location": "La Rioja",
-        "communityUrl": "https://riojakers.com/"
+        "communityUrl": "https://github.com/Riojakers"
       }
     },
     {
@@ -6393,7 +6337,7 @@
         ]
       },
       "properties": {
-        "id": 419,
+        "id": 417,
         "name": "rockndroid Madrid",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -6411,7 +6355,7 @@
         ]
       },
       "properties": {
-        "id": 420,
+        "id": 418,
         "name": "SalmorejoTech",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6430,7 +6374,7 @@
         ]
       },
       "properties": {
-        "id": 422,
+        "id": 420,
         "name": "Seo Galicia",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -6449,7 +6393,7 @@
         ]
       },
       "properties": {
-        "id": 423,
+        "id": 421,
         "name": "Sevilla R users",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6468,7 +6412,7 @@
         ]
       },
       "properties": {
-        "id": 424,
+        "id": 422,
         "name": "Singularity Tech Day",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6487,7 +6431,7 @@
         ]
       },
       "properties": {
-        "id": 425,
+        "id": 423,
         "name": "Sirviendo código",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6506,12 +6450,12 @@
         ]
       },
       "properties": {
-        "id": 427,
+        "id": 425,
         "name": "Smart Devices Madrid",
-        "status": "Desconocido",
+        "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Madrid",
-        "communityUrl": "??"
+        "communityUrl": "https://web.archive.org/web/20210925180244/https://www.meetup.com/es-ES/Smart-devices-for-Home-Madrid/"
       }
     },
     {
@@ -6524,7 +6468,7 @@
         ]
       },
       "properties": {
-        "id": 428,
+        "id": 426,
         "name": "Socracan (SoCraTes Canaries)",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -6543,7 +6487,7 @@
         ]
       },
       "properties": {
-        "id": 429,
+        "id": 427,
         "name": "Software Crafters Barcelona",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6562,7 +6506,7 @@
         ]
       },
       "properties": {
-        "id": 430,
+        "id": 428,
         "name": "Software Crafters Madrid",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6581,7 +6525,7 @@
         ]
       },
       "properties": {
-        "id": 431,
+        "id": 429,
         "name": "Software Testers & QA Experts de Málaga",
         "status": "Desconocido",
         "eventFormat": "Híbridos",
@@ -6600,7 +6544,7 @@
         ]
       },
       "properties": {
-        "id": 432,
+        "id": 430,
         "name": "South Summit",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6619,7 +6563,7 @@
         ]
       },
       "properties": {
-        "id": 433,
+        "id": 431,
         "name": "Spring I/O",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6638,7 +6582,7 @@
         ]
       },
       "properties": {
-        "id": 434,
+        "id": 432,
         "name": "Startup Oasis",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6657,7 +6601,7 @@
         ]
       },
       "properties": {
-        "id": 435,
+        "id": 433,
         "name": "Startup Olé",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6676,7 +6620,7 @@
         ]
       },
       "properties": {
-        "id": 436,
+        "id": 434,
         "name": "Step4ward",
         "status": "Activa",
         "eventFormat": "Híbridos",
@@ -6695,7 +6639,7 @@
         ]
       },
       "properties": {
-        "id": 438,
+        "id": 436,
         "name": "SVQJUG",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6713,7 +6657,7 @@
         ]
       },
       "properties": {
-        "id": 439,
+        "id": 437,
         "name": "SVQTech",
         "status": "Activa",
         "eventFormat": "Desconocido",
@@ -6732,7 +6676,7 @@
         ]
       },
       "properties": {
-        "id": 440,
+        "id": 438,
         "name": "Sysadmin Galicia",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -6750,12 +6694,12 @@
         ]
       },
       "properties": {
-        "id": 442,
+        "id": 440,
         "name": "Sysarmy Galicia",
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Coruña",
-        "communityUrl": "https://www.sysarmygalicia.com/",
+        "communityUrl": "https://github.com/Gallegarmy",
         "thumbnailUrl": "images/sysarmy-galicia.webp"
       }
     },
@@ -6769,7 +6713,7 @@
         ]
       },
       "properties": {
-        "id": 443,
+        "id": 441,
         "name": "T3chFest",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6788,7 +6732,7 @@
         ]
       },
       "properties": {
-        "id": 444,
+        "id": 442,
         "name": "TAI Granada",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6807,7 +6751,7 @@
         ]
       },
       "properties": {
-        "id": 446,
+        "id": 444,
         "name": "Tech Network- Pitch your ideas over a beer!",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -6825,7 +6769,7 @@
         ]
       },
       "properties": {
-        "id": 448,
+        "id": 446,
         "name": "TechShessions",
         "status": "Activa",
         "eventFormat": "Híbridos",
@@ -6844,7 +6788,7 @@
         ]
       },
       "properties": {
-        "id": 449,
+        "id": 447,
         "name": "TenerifeDev",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6863,7 +6807,7 @@
         ]
       },
       "properties": {
-        "id": 450,
+        "id": 448,
         "name": "TheAntiEvent",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6882,7 +6826,7 @@
         ]
       },
       "properties": {
-        "id": 451,
+        "id": 449,
         "name": "Tizonaconf",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -6901,7 +6845,7 @@
         ]
       },
       "properties": {
-        "id": 452,
+        "id": 450,
         "name": "TomatinaCON",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -6920,12 +6864,12 @@
         ]
       },
       "properties": {
-        "id": 453,
+        "id": 451,
         "name": "Tomelloso Tech",
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Ciudad Real (Tomelloso)",
-        "communityUrl": "https://tomellosotech.org/"
+        "communityUrl": "https://x.com/TomellosoTech"
       }
     },
     {
@@ -6938,7 +6882,7 @@
         ]
       },
       "properties": {
-        "id": 454,
+        "id": 452,
         "name": "TRGCON",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -6957,7 +6901,7 @@
         ]
       },
       "properties": {
-        "id": 456,
+        "id": 454,
         "name": "Usuarios R Salamanca",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -6975,7 +6919,7 @@
         ]
       },
       "properties": {
-        "id": 457,
+        "id": 455,
         "name": "Usuarios R Valencia",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -6993,7 +6937,7 @@
         ]
       },
       "properties": {
-        "id": 458,
+        "id": 456,
         "name": "UX Galicia",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -7011,7 +6955,7 @@
         ]
       },
       "properties": {
-        "id": 459,
+        "id": 457,
         "name": "Valencia Interactive",
         "status": "Activa",
         "eventFormat": "Híbridos",
@@ -7030,7 +6974,7 @@
         ]
       },
       "properties": {
-        "id": 460,
+        "id": 458,
         "name": "VDS",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7049,7 +6993,7 @@
         ]
       },
       "properties": {
-        "id": 461,
+        "id": 459,
         "name": "viCON",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7068,7 +7012,7 @@
         ]
       },
       "properties": {
-        "id": 462,
+        "id": 460,
         "name": "Vigo Android Developer Group",
         "status": "Inactiva",
         "eventFormat": "Desconocido",
@@ -7086,7 +7030,7 @@
         ]
       },
       "properties": {
-        "id": 463,
+        "id": 461,
         "name": "Vigo Tech Alliance",
         "status": "Activa",
         "eventFormat": "Desconocido",
@@ -7104,7 +7048,7 @@
         ]
       },
       "properties": {
-        "id": 464,
+        "id": 462,
         "name": "VigoJUG",
         "status": "Inactiva",
         "eventFormat": "Desconocido",
@@ -7121,7 +7065,7 @@
         ]
       },
       "properties": {
-        "id": 465,
+        "id": 463,
         "name": "Vue Málaga",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7140,7 +7084,7 @@
         ]
       },
       "properties": {
-        "id": 466,
+        "id": 464,
         "name": "VueJS Madrid",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7159,7 +7103,7 @@
         ]
       },
       "properties": {
-        "id": 467,
+        "id": 465,
         "name": "VueJS Valencia",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -7177,7 +7121,7 @@
         ]
       },
       "properties": {
-        "id": 468,
+        "id": 466,
         "name": "Wasm I/O",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7196,7 +7140,7 @@
         ]
       },
       "properties": {
-        "id": 469,
+        "id": 467,
         "name": "Web3 Island Makers",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7215,7 +7159,7 @@
         ]
       },
       "properties": {
-        "id": 470,
+        "id": 468,
         "name": "WeCodeFest",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -7234,7 +7178,7 @@
         ]
       },
       "properties": {
-        "id": 471,
+        "id": 469,
         "name": "Wey Wey Web",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7253,7 +7197,7 @@
         ]
       },
       "properties": {
-        "id": 473,
+        "id": 471,
         "name": "Wikiproyecto Almería",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7272,7 +7216,7 @@
         ]
       },
       "properties": {
-        "id": 482,
+        "id": 480,
         "name": "Women in DevOps Madrid",
         "status": "Inactiva",
         "eventFormat": "Desconocido",
@@ -7290,7 +7234,7 @@
         ]
       },
       "properties": {
-        "id": 483,
+        "id": 481,
         "name": "Women Techmakers Madrid",
         "status": "Activa",
         "eventFormat": "Híbridos",
@@ -7309,7 +7253,7 @@
         ]
       },
       "properties": {
-        "id": 484,
+        "id": 482,
         "name": "Women Techmakers Zaragoza - Mulleres Tech",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -7327,12 +7271,12 @@
         ]
       },
       "properties": {
-        "id": 485,
+        "id": 483,
         "name": "WonderHack Event",
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Madrid (Tielmes)",
-        "communityUrl": "https://www.wonderhack.es/",
+        "communityUrl": "https://x.com/wonderhackes?lang=en",
         "thumbnailUrl": "images/wonderhack-event.webp"
       }
     },
@@ -7346,7 +7290,7 @@
         ]
       },
       "properties": {
-        "id": 487,
+        "id": 485,
         "name": "WordCamp Alhaurín de la Torre",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7365,7 +7309,7 @@
         ]
       },
       "properties": {
-        "id": 488,
+        "id": 486,
         "name": "Wordcamp Granada",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7384,7 +7328,7 @@
         ]
       },
       "properties": {
-        "id": 489,
+        "id": 487,
         "name": "Wordcamp Griñón",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7403,7 +7347,7 @@
         ]
       },
       "properties": {
-        "id": 490,
+        "id": 488,
         "name": "Wordcamp Sevilla",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7422,7 +7366,7 @@
         ]
       },
       "properties": {
-        "id": 491,
+        "id": 489,
         "name": "WordPress Alcalá de Hernares",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7441,7 +7385,7 @@
         ]
       },
       "properties": {
-        "id": 492,
+        "id": 490,
         "name": "WordPress Alicante",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7460,7 +7404,7 @@
         ]
       },
       "properties": {
-        "id": 493,
+        "id": 491,
         "name": "WordPress Barcelona",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7479,7 +7423,7 @@
         ]
       },
       "properties": {
-        "id": 494,
+        "id": 492,
         "name": "WordPress Benidorm",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7498,7 +7442,7 @@
         ]
       },
       "properties": {
-        "id": 495,
+        "id": 493,
         "name": "WordPress Bilbao",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7517,7 +7461,7 @@
         ]
       },
       "properties": {
-        "id": 496,
+        "id": 494,
         "name": "WordPress Cartagena",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7536,7 +7480,7 @@
         ]
       },
       "properties": {
-        "id": 497,
+        "id": 495,
         "name": "WordPress Castelló",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7555,7 +7499,7 @@
         ]
       },
       "properties": {
-        "id": 498,
+        "id": 496,
         "name": "WordPress Chiclana",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -7574,7 +7518,7 @@
         ]
       },
       "properties": {
-        "id": 499,
+        "id": 497,
         "name": "WordPress Collado Villalba",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -7592,7 +7536,7 @@
         ]
       },
       "properties": {
-        "id": 500,
+        "id": 498,
         "name": "WordPress Coruña",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7611,7 +7555,7 @@
         ]
       },
       "properties": {
-        "id": 501,
+        "id": 499,
         "name": "WordPress Dénia",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7630,7 +7574,7 @@
         ]
       },
       "properties": {
-        "id": 502,
+        "id": 500,
         "name": "Ferrolterra WordPress",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7649,7 +7593,7 @@
         ]
       },
       "properties": {
-        "id": 503,
+        "id": 501,
         "name": "Wordpress Granada",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7668,7 +7612,7 @@
         ]
       },
       "properties": {
-        "id": 504,
+        "id": 502,
         "name": "WordPress Granollers",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7687,7 +7631,7 @@
         ]
       },
       "properties": {
-        "id": 505,
+        "id": 503,
         "name": "WordPress Griñón",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7706,7 +7650,7 @@
         ]
       },
       "properties": {
-        "id": 506,
+        "id": 504,
         "name": "WordPress Huelva",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7725,7 +7669,7 @@
         ]
       },
       "properties": {
-        "id": 507,
+        "id": 505,
         "name": "WordPress Igualada",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7744,7 +7688,7 @@
         ]
       },
       "properties": {
-        "id": 508,
+        "id": 506,
         "name": "WordPress León",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7763,7 +7707,7 @@
         ]
       },
       "properties": {
-        "id": 509,
+        "id": 507,
         "name": "WordPress Logroño",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7782,7 +7726,7 @@
         ]
       },
       "properties": {
-        "id": 510,
+        "id": 508,
         "name": "WordPress Lugo",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7801,7 +7745,7 @@
         ]
       },
       "properties": {
-        "id": 511,
+        "id": 509,
         "name": "Wordpress Málaga",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7820,7 +7764,7 @@
         ]
       },
       "properties": {
-        "id": 512,
+        "id": 510,
         "name": "WordPress Mallorca",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7839,7 +7783,7 @@
         ]
       },
       "properties": {
-        "id": 513,
+        "id": 511,
         "name": "WordPress Marbella",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7858,7 +7802,7 @@
         ]
       },
       "properties": {
-        "id": 514,
+        "id": 512,
         "name": "WordPress Mataró",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7877,7 +7821,7 @@
         ]
       },
       "properties": {
-        "id": 516,
+        "id": 514,
         "name": "WordPress Oviedo",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7896,7 +7840,7 @@
         ]
       },
       "properties": {
-        "id": 517,
+        "id": 515,
         "name": "WordPress Ponferrada",
         "status": "Activa",
         "eventFormat": "Híbridos",
@@ -7915,7 +7859,7 @@
         ]
       },
       "properties": {
-        "id": 518,
+        "id": 516,
         "name": "WordPress Pontevedra",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7934,7 +7878,7 @@
         ]
       },
       "properties": {
-        "id": 519,
+        "id": 517,
         "name": "WordPress Santander",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -7952,7 +7896,7 @@
         ]
       },
       "properties": {
-        "id": 520,
+        "id": 518,
         "name": "WordPress Santiago de Compostela",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7971,7 +7915,7 @@
         ]
       },
       "properties": {
-        "id": 521,
+        "id": 519,
         "name": "WordPress Sevilla",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -7990,7 +7934,7 @@
         ]
       },
       "properties": {
-        "id": 523,
+        "id": 521,
         "name": "WordPress Tarragona",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8009,7 +7953,7 @@
         ]
       },
       "properties": {
-        "id": 524,
+        "id": 522,
         "name": "WordPress Terrassa",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8028,7 +7972,7 @@
         ]
       },
       "properties": {
-        "id": 525,
+        "id": 523,
         "name": "WordPress Toledo",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -8046,7 +7990,7 @@
         ]
       },
       "properties": {
-        "id": 526,
+        "id": 524,
         "name": "WordPress Tordosa",
         "status": "Desconocido",
         "eventFormat": "Presencial",
@@ -8065,7 +8009,7 @@
         ]
       },
       "properties": {
-        "id": 527,
+        "id": 525,
         "name": "WordPress Torrelodones",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8084,7 +8028,7 @@
         ]
       },
       "properties": {
-        "id": 528,
+        "id": 526,
         "name": "WordPress Valencia",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8103,7 +8047,7 @@
         ]
       },
       "properties": {
-        "id": 529,
+        "id": 527,
         "name": "WordPress Valladolid",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8122,7 +8066,7 @@
         ]
       },
       "properties": {
-        "id": 530,
+        "id": 528,
         "name": "WordPress Vigo",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8141,7 +8085,7 @@
         ]
       },
       "properties": {
-        "id": 531,
+        "id": 529,
         "name": "WordPress Vitoria-Gasteiz",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8160,7 +8104,7 @@
         ]
       },
       "properties": {
-        "id": 532,
+        "id": 530,
         "name": "WordPress Zaragoza",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8179,7 +8123,7 @@
         ]
       },
       "properties": {
-        "id": 533,
+        "id": 531,
         "name": "Wunderdog Málaga Meetup",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8198,7 +8142,7 @@
         ]
       },
       "properties": {
-        "id": 534,
+        "id": 532,
         "name": "XantarDev",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8217,7 +8161,7 @@
         ]
       },
       "properties": {
-        "id": 535,
+        "id": 533,
         "name": "XauenDevs",
         "status": "Activa",
         "eventFormat": "Híbridos",
@@ -8236,7 +8180,7 @@
         ]
       },
       "properties": {
-        "id": 536,
+        "id": 534,
         "name": "Xops Conference",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8255,7 +8199,7 @@
         ]
       },
       "properties": {
-        "id": 537,
+        "id": 535,
         "name": "Xornada de Usuarios de R en Galicia",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8274,7 +8218,7 @@
         ]
       },
       "properties": {
-        "id": 538,
+        "id": 536,
         "name": "Yes we tech",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8293,7 +8237,7 @@
         ]
       },
       "properties": {
-        "id": 539,
+        "id": 537,
         "name": "zurracapoteconf",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8312,7 +8256,7 @@
         ]
       },
       "properties": {
-        "id": 540,
+        "id": 538,
         "name": "Barcelona Java User Group",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8331,7 +8275,7 @@
         ]
       },
       "properties": {
-        "id": 541,
+        "id": 539,
         "name": "JSConf",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8350,7 +8294,7 @@
         ]
       },
       "properties": {
-        "id": 542,
+        "id": 540,
         "name": "RMC",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8369,7 +8313,7 @@
         ]
       },
       "properties": {
-        "id": 543,
+        "id": 541,
         "name": "Datolada",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8388,7 +8332,7 @@
         ]
       },
       "properties": {
-        "id": 544,
+        "id": 542,
         "name": "Lareira Conf",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8407,12 +8351,12 @@
         ]
       },
       "properties": {
-        "id": 545,
+        "id": 543,
         "name": "GitHub Community Spain",
         "status": "Activa",
         "eventFormat": "Híbridos",
         "location": "Madrid y resto de España",
-        "communityUrl": "ghspain.github.io",
+        "communityUrl": "https://ghspain.github.io/",
         "thumbnailUrl": "images/github-community-spain.webp"
       }
     },
@@ -8426,7 +8370,7 @@
         ]
       },
       "properties": {
-        "id": 546,
+        "id": 544,
         "name": "GDG Menorca",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8445,7 +8389,7 @@
         ]
       },
       "properties": {
-        "id": 547,
+        "id": 545,
         "name": "STEM Talks Menorca 2025",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8464,7 +8408,7 @@
         ]
       },
       "properties": {
-        "id": 548,
+        "id": 546,
         "name": "AI Engineers Barcelona",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8483,7 +8427,7 @@
         ]
       },
       "properties": {
-        "id": 549,
+        "id": 547,
         "name": "Python Barcelona",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8502,7 +8446,7 @@
         ]
       },
       "properties": {
-        "id": 550,
+        "id": 548,
         "name": "PyLadies Barcelona",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8521,7 +8465,7 @@
         ]
       },
       "properties": {
-        "id": 551,
+        "id": 549,
         "name": "Tech Barcelona",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8540,7 +8484,7 @@
         ]
       },
       "properties": {
-        "id": 552,
+        "id": 550,
         "name": "Women Techmakers Barcelona",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8559,7 +8503,7 @@
         ]
       },
       "properties": {
-        "id": 553,
+        "id": 551,
         "name": "Global AI Ponferrada",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8578,7 +8522,7 @@
         ]
       },
       "properties": {
-        "id": 554,
+        "id": 552,
         "name": "Galstech",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8597,7 +8541,7 @@
         ]
       },
       "properties": {
-        "id": 555,
+        "id": 553,
         "name": "WordPress Ourense",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8616,7 +8560,7 @@
         ]
       },
       "properties": {
-        "id": 556,
+        "id": 554,
         "name": "Bitcoin 2140 A Coruña",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8635,7 +8579,7 @@
         ]
       },
       "properties": {
-        "id": 557,
+        "id": 555,
         "name": "Makers iA",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8653,7 +8597,7 @@
         ]
       },
       "properties": {
-        "id": 558,
+        "id": 556,
         "name": "Python Bilbao",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8672,7 +8616,7 @@
         ]
       },
       "properties": {
-        "id": 559,
+        "id": 557,
         "name": "DevMad! Developers ",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8691,7 +8635,7 @@
         ]
       },
       "properties": {
-        "id": 560,
+        "id": 558,
         "name": "Valencia Codes",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8710,7 +8654,7 @@
         ]
       },
       "properties": {
-        "id": 561,
+        "id": 559,
         "name": "HaskellMAD",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8729,7 +8673,7 @@
         ]
       },
       "properties": {
-        "id": 562,
+        "id": 560,
         "name": "Merge Madrid",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8748,7 +8692,7 @@
         ]
       },
       "properties": {
-        "id": 563,
+        "id": 561,
         "name": "Beers Storming",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8767,7 +8711,7 @@
         ]
       },
       "properties": {
-        "id": 564,
+        "id": 562,
         "name": "Tech Riders",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -8786,7 +8730,7 @@
         ]
       },
       "properties": {
-        "id": 565,
+        "id": 563,
         "name": "Coruña Agile",
         "status": "Inactiva",
         "eventFormat": "Presencial",
@@ -8805,7 +8749,7 @@
         ]
       },
       "properties": {
-        "id": 566,
+        "id": 564,
         "name": "CanallaCon",
         "status": "Activa",
         "eventFormat": "Presencial",
