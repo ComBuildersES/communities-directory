@@ -8928,6 +8928,25 @@
         "communityUrl": "https://trailblazercommunitygroups.com/salesforce-developer-group-sevilla-spain/",
         "thumbnailUrl": "images/salesforce-developer-group-sevilla.webp"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.9953403,
+          37.3886303
+        ]
+      },
+      "properties": {
+        "id": 575,
+        "name": "SevillaQA",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Sevilla, Spain",
+        "communityUrl": "https://www.meetup.com/es-ES/SevillaQA/",
+        "thumbnailUrl": "images/sevillaqa.webp"
+      }
     }
   ]
 }
