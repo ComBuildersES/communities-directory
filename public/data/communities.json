@@ -10217,5 +10217,23 @@
       "lon": -5.9953403
     },
     "displayOnMap": true
+  },
+  {
+    "id": 576,
+    "name": "SevillaDotNet",
+    "status": "Activa",
+    "lastReviewed": "26/5/2025",
+    "communityType": "Tech Meetup",
+    "eventFormat": "Presencial",
+    "location": "Sevilla, Spain",
+    "topics": "",
+    "contactInfo": "",
+    "communityUrl": "https://www.meetup.com/es-ES/SevillaDotNet/",
+    "thumbnailUrl": "images/sevilladotnet.webp",
+    "latLon": {
+      "lat": 37.3886303,
+      "lon": -5.9953403
+    },
+    "displayOnMap": true
   }
 ]
