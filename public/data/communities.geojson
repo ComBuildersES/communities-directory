@@ -9061,6 +9061,25 @@
         "communityUrl": "https://www.meetup.com/golang-sevilla/",
         "thumbnailUrl": "images/golang-sevilla.webp"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.9953403,
+          37.3886303
+        ]
+      },
+      "properties": {
+        "id": 582,
+        "name": "IA Generativa Sevilla",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Sevilla, Spain",
+        "communityUrl": "https://www.meetup.com/ia-generativa-sevilla/",
+        "thumbnailUrl": "images/ia-generativa-sevilla.webp"
+      }
     }
   ]
 }
