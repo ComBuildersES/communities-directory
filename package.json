@@ -8,6 +8,10 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "check-urls": "node scripts/check-urls.js",
+    "process-to-communities-to-geojson": "node scripts/process-to-communities-to-geojson.js",
+    "find-duplicates": "node scripts/find-duplicates.js",
+    "ensure-id-autoincrement": "node scripts/ensure-id-autoincrement.js",
     "build-preview": "vite build --mode localdev && npx http-server . -p 8080 -o dist/"
   },
   "dependencies": {
