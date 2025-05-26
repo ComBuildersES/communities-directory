@@ -68,6 +68,7 @@ body{
   height: 5vh;
   z-index: 30;
   padding: 5px;
+  box-shadow: 0px -1px 5px 3px #0000002b;
 }
 
 .communitieslist {
@@ -143,7 +144,7 @@ body{
 /* Estilo para desktop: 3 cards por fila */
 @media (min-width: 1024px) {
   .communitieslist {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
