@@ -9080,6 +9080,25 @@
         "communityUrl": "https://www.meetup.com/ia-generativa-sevilla/",
         "thumbnailUrl": "images/ia-generativa-sevilla.webp"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4652171,
+          42.3604762
+        ]
+      },
+      "properties": {
+        "id": 584,
+        "name": "Rural Hackers",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Anceu, Pontevedra",
+        "communityUrl": "https://ruralhackers.com/",
+        "thumbnailUrl": "images/rural-hackers.webp"
+      }
     }
   ]
 }

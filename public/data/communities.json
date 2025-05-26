@@ -10364,21 +10364,21 @@
     "displayOnMap": false
   },
   {
-    "id": 583,
-    "name": "Saturdays.AI Alicante",
+    "id": 584,
+    "name": "Rural Hackers",
     "status": "Activa",
     "lastReviewed": "26/5/2025",
-    "communityType": "Organización paraguas",
+    "communityType": "Grupo colaborativo",
     "eventFormat": "Presencial",
-    "location": "",
+    "location": "Anceu, Pontevedra",
     "topics": "",
     "contactInfo": "",
-    "communityUrl": "https://saturdays.ai/cities/",
-    "thumbnailUrl": "images/saturdaysai.webp",
+    "communityUrl": "https://ruralhackers.com/",
+    "thumbnailUrl": "images/rural-hackers.webp",
     "latLon": {
-      "lat": null,
-      "lon": null
+      "lat": 42.3604762,
+      "lon": -8.4652171
     },
-    "displayOnMap": false
+    "displayOnMap": true
   }
 ]
