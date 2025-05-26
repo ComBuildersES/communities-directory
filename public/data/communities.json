@@ -10055,5 +10055,23 @@
       "lon": -5.9953403
     },
     "displayOnMap": true
+  },
+  {
+    "id": 567,
+    "name": "Geoinquietos Sevilla",
+    "status": "Activa",
+    "lastReviewed": "26/5/2025",
+    "communityType": "Grupo de ayuda mutua",
+    "eventFormat": "Online",
+    "location": "",
+    "topics": "",
+    "contactInfo": "",
+    "communityUrl": "https://wiki.osgeo.org/wiki/Category:Geoinquietos_Sevilla",
+    "thumbnailUrl": "images/geoinquietos-sevilla.webp",
+    "latLon": {
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   }
 ]
