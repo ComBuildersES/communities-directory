@@ -26,7 +26,7 @@ async function main() {
 
   const data = fs.readFileSync(communitiesPath, 'utf-8');
   const communities = JSON.parse(data);
-  const newId = communities.length; // Autoincrementa el último ID
+  const newId = communities.length + 1; // Autoincrementa el último ID
 
   // Extraer campos desde el issue
   const name = extractField('Nombre de la comunidad');
