@@ -10145,5 +10145,23 @@
       "lon": -5.9953403
     },
     "displayOnMap": true
+  },
+  {
+    "id": 572,
+    "name": "Ping A Programadoras",
+    "status": "Activa",
+    "lastReviewed": "26/5/2025",
+    "communityType": "Grupo de ayuda mutua",
+    "eventFormat": "Presencial",
+    "location": "Sevilla, España",
+    "topics": "",
+    "contactInfo": "",
+    "communityUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/",
+    "thumbnailUrl": "images/ping-a-programadoras.webp",
+    "latLon": {
+      "lat": 37.3886303,
+      "lon": -5.9953403
+    },
+    "displayOnMap": true
   }
 ]
