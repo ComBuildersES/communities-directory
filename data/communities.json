@@ -10199,5 +10199,23 @@
       "lon": -5.9953403
     },
     "displayOnMap": true
+  },
+  {
+    "id": 575,
+    "name": "SevillaQA",
+    "status": "Inactiva",
+    "lastReviewed": "26/5/2025",
+    "communityType": "Tech Meetup",
+    "eventFormat": "Presencial",
+    "location": "Sevilla, Spain",
+    "topics": "",
+    "contactInfo": "",
+    "communityUrl": "https://www.meetup.com/es-ES/SevillaQA/",
+    "thumbnailUrl": "images/sevillaqa.webp",
+    "latLon": {
+      "lat": 37.3886303,
+      "lon": -5.9953403
+    },
+    "displayOnMap": true
   }
 ]
