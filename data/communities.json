@@ -2402,6 +2402,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.linkedin.com/company/databeersrio/?originalSubdomain=es",
+    "thumbnailUrl": "images/databeersrio.webp",
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
@@ -3606,6 +3607,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://gdg.community.dev/gdg-la-rioja/",
+    "thumbnailUrl": "images/gdg-la-rioja.webp",
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
@@ -3641,7 +3643,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://gdg.community.dev/gdg-malaga/",
-    "thumbnailUrl": "images/gdg-malaga.jpeg",
+    "thumbnailUrl": "images/gdg-malaga.webp",
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -4261,7 +4263,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://web.archive.org/web/20240304115556/https://hackandbeers.es/",
-    "thumbnailUrl": "images/hack-beers.jpeg",
+    "thumbnailUrl": "images/hack-beers.webp",
     "latLon": {
       "lat": null,
       "lon": null
@@ -4296,6 +4298,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://hackathonlovers.com/",
+    "thumbnailUrl": "images/hackathonlovers.webp",
     "latLon": {
       "lat": 40.4167047,
       "lon": -3.7035825
@@ -4385,7 +4388,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/hackmadrid-27/",
-    "thumbnailUrl": "images/hackmadrid-27.webp",
+    "thumbnailUrl": "images/hackmadrid.webp",
     "latLon": {
       "lat": 40.4167047,
       "lon": -3.7035825
@@ -4493,6 +4496,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.indismatic.es/",
+    "thumbnailUrl": "images/indismatic.webp",
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
@@ -6162,7 +6166,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://discord.com/invite/midudev",
-    "thumbnailUrl": "images/midudev.webp:large",
+    "thumbnailUrl": "images/midudev.webp",
     "latLon": {
       "lat": null,
       "lon": null
@@ -6180,6 +6184,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/xamarin-madrid/?eventOrigin=topic_overview_nearest_groups",
+    "thumbnailUrl": "images/mobile-development.webp",
     "latLon": {
       "lat": null,
       "lon": null
@@ -6377,7 +6382,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/murciadev/",
-    "thumbnailUrl": "images/murcia-dev.jpeg",
+    "thumbnailUrl": "images/murcia-dev.webp",
     "latLon": {
       "lat": 37.9835334,
       "lon": -1.129905
@@ -6626,7 +6631,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/innovacion-web3-para-todos-con-super-pioneros/?eventOrigin=event_home_page",
-    "thumbnailUrl": "images/nwc10lab-innovacion-web3-cripto-y-blockchain-para-todos.jpeg",
+    "thumbnailUrl": "images/nwc10lab-innovacion-web3-cripto-y-blockchain-para-todos.webp",
     "latLon": {
       "lat": 40.4167047,
       "lon": -3.7035825
@@ -6733,7 +6738,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://owasp.org/www-chapter-barcelona/",
-    "thumbnailUrl": "images/owasp-barcelona.jpeg",
+    "thumbnailUrl": "images/owasp-barcelona.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -7357,6 +7362,7 @@
     "topics": "",
     "contactInfo": "https://www.linkedin.com/posts/pabpereza_discord-a-new-way-to-chat-with-friends-activity-6763868171494559744-UXkr?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAFTWIUB408_I8M39G1F7ZzN47wVswa8PcA",
     "communityUrl": "https://github.com/Riojakers",
+    "thumbnailUrl": "images/riojakers.webp",
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
@@ -7409,7 +7415,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://salmorejo.tech/2024/",
-    "thumbnailUrl": "images/salmorejotech.webp:large",
+    "thumbnailUrl": "images/salmorejotech.webp",
     "latLon": {
       "lat": 37.888422,
       "lon": -4.77513
@@ -7729,8 +7735,9 @@
     "eventFormat": "Presencial",
     "location": "Sevilla",
     "topics": "",
-    "contactInfo": "",
+    "contactInfo": "svqjug@gmail.com",
     "communityUrl": "https://www.meetup.com/svqjug",
+    "thumbnailUrl": "images/svqjug.webp",
     "latLon": {
       "lat": 37.38264,
       "lon": -5.9962951
@@ -8172,6 +8179,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://vigotech.org/",
+    "thumbnailUrl": "images/vigo-tech-alliance.webp",
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
@@ -8704,7 +8712,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpressbcn/",
-    "thumbnailUrl": "images/wordpress-barcelona.jpeg",
+    "thumbnailUrl": "images/wordpress-barcelona.webp",
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -9852,6 +9860,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://www.linkedin.com/company/makersia/",
+    "thumbnailUrl": "images/makers-ia.webp",
     "latLon": {
       "lat": 40.4167047,
       "lon": -3.7035825
@@ -9977,7 +9986,7 @@
     "topics": "",
     "contactInfo": "",
     "communityUrl": "https://techriders.tajamar.es/",
-    "thumbnailUrl": "tech-riders.webp",
+    "thumbnailUrl": "images/tech-riders.webp",
     "latLon": {
       "lat": 43.3602825,
       "lon": -5.8447919
