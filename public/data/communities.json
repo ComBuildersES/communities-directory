@@ -10388,5 +10388,23 @@
       "lon": -8.4652171
     },
     "displayOnMap": true
+  },
+  {
+    "id": 585,
+    "name": "HackBcn",
+    "status": "Activa",
+    "lastReviewed": "26/5/2025",
+    "communityType": "Grupo colaborativo",
+    "eventFormat": "Híbrido",
+    "location": "Barcelona, Spain",
+    "topics": "",
+    "contactInfo": "",
+    "communityUrl": "https://x.com/hackbcn?lang=en",
+    "thumbnailUrl": "images/hackbcn.webp",
+    "latLon": {
+      "lat": 41.3825802,
+      "lon": 2.177073
+    },
+    "displayOnMap": true
   }
 ]
