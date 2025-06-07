@@ -10406,5 +10406,23 @@
       "lon": 2.177073
     },
     "displayOnMap": true
+  },
+  {
+    "id": 586,
+    "name": "GDG Alicante",
+    "status": "Activa",
+    "lastReviewed": "7/6/2025",
+    "communityType": "Tech Meetup",
+    "eventFormat": "Híbrido",
+    "location": "Alicante",
+    "topics": "El Google Developer Group de Alicante es un grupo sin ánimo de lucro, formado por apasionados de la tecnología de Google en Alicante. Nuestro objetivo de aprender e intercambiar conocimientos y experiencias y generar una comunidad local entorno a las tecnologías de Google.\n\nLa participación es abierta y gratuita, tanto para usuarios, desarrolladores experimentados, diseñadores y organizaciones en general interesadas en utilizar tecnologías Google en sus proyectos. Además en el grupo hay sitio para cualquier otra tecnología a parte de Android, Flutter, ML, Google Cloud, Desarrollo Web, y en general, de cualquiera que alguien tenga conocimiento y quiera compartir con los demás.",
+    "contactInfo": "",
+    "communityUrl": "https://gdg.community.dev/gdg-alicante/",
+    "thumbnailUrl": "images/gdg-alicante.webp",
+    "latLon": {
+      "lat": 38.3436365,
+      "lon": -0.4881708
+    },
+    "displayOnMap": true
   }
 ]
