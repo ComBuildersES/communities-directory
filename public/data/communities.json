@@ -10406,5 +10406,23 @@
       "lon": 2.177073
     },
     "displayOnMap": true
+  },
+  {
+    "id": 586,
+    "name": "MultitecUA",
+    "status": "Activa",
+    "lastReviewed": "7/6/2025",
+    "communityType": "Grupo colaborativo",
+    "eventFormat": "Presencial",
+    "location": "Alicante",
+    "topics": "**Multitec** es una asociación multidisciplinar sin ánimo de lucro formada por cualquier entusiasta de la ciencia o la tecnologia. El objetivo de formar una comunidad donde poder compartir conocimientos, difundir información y aprender nuevas cosas juntos.\n\n\nSomos más que una comunidad. Multitec es una familia que nace del espíritu y del objetivo común de ir más allá en lo tecnológico y personal. Multitec pretende ser un lugar de encuentro, un puente entre lo laboral y lo académico, y ser referentes en nuevas metodologías de aprendizaje.",
+    "contactInfo": "",
+    "communityUrl": "https://multitecua.com/",
+    "thumbnailUrl": "images/multitecua.webp",
+    "latLon": {
+      "lat": 38.3436365,
+      "lon": -0.4881708
+    },
+    "displayOnMap": true
   }
 ]
