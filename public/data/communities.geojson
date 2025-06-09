@@ -1895,7 +1895,8 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "La RIoja",
-        "communityUrl": "https://www.linkedin.com/company/databeersrio/?originalSubdomain=es"
+        "communityUrl": "https://www.linkedin.com/company/databeersrio/?originalSubdomain=es",
+        "thumbnailUrl": "images/databeersrio.webp"
       }
     },
     {
@@ -2979,7 +2980,8 @@
         "status": "Activa",
         "eventFormat": "Híbridos",
         "location": "Logroño La Rioja",
-        "communityUrl": "https://gdg.community.dev/gdg-la-rioja/"
+        "communityUrl": "https://gdg.community.dev/gdg-la-rioja/",
+        "thumbnailUrl": "images/gdg-la-rioja.webp"
       }
     },
     {
@@ -3017,7 +3019,7 @@
         "eventFormat": "Presencial",
         "location": "Málaga",
         "communityUrl": "https://gdg.community.dev/gdg-malaga/",
-        "thumbnailUrl": "images/gdg-malaga.jpeg"
+        "thumbnailUrl": "images/gdg-malaga.webp"
       }
     },
     {
@@ -3540,7 +3542,8 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Madrid",
-        "communityUrl": "https://hackathonlovers.com/"
+        "communityUrl": "https://hackathonlovers.com/",
+        "thumbnailUrl": "images/hackathonlovers.webp"
       }
     },
     {
@@ -3616,7 +3619,7 @@
         "eventFormat": "Presencial",
         "location": "Madrid",
         "communityUrl": "https://www.meetup.com/es-ES/hackmadrid-27/",
-        "thumbnailUrl": "images/hackmadrid-27.webp"
+        "thumbnailUrl": "images/hackmadrid.webp"
       }
     },
     {
@@ -3691,7 +3694,8 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "La Rioja",
-        "communityUrl": "https://www.indismatic.es/"
+        "communityUrl": "https://www.indismatic.es/",
+        "thumbnailUrl": "images/indismatic.webp"
       }
     },
     {
@@ -5478,7 +5482,7 @@
         "eventFormat": "Híbridos",
         "location": "Murcia, Murcia",
         "communityUrl": "https://www.meetup.com/es-ES/murciadev/",
-        "thumbnailUrl": "images/murcia-dev.jpeg"
+        "thumbnailUrl": "images/murcia-dev.webp"
       }
     },
     {
@@ -5704,7 +5708,7 @@
         "eventFormat": "Presencial",
         "location": "Madrid",
         "communityUrl": "https://www.meetup.com/innovacion-web3-para-todos-con-super-pioneros/?eventOrigin=event_home_page",
-        "thumbnailUrl": "images/nwc10lab-innovacion-web3-cripto-y-blockchain-para-todos.jpeg"
+        "thumbnailUrl": "images/nwc10lab-innovacion-web3-cripto-y-blockchain-para-todos.webp"
       }
     },
     {
@@ -5798,7 +5802,7 @@
         "eventFormat": "Presencial",
         "location": "Barcelona",
         "communityUrl": "https://owasp.org/www-chapter-barcelona/",
-        "thumbnailUrl": "images/owasp-barcelona.jpeg"
+        "thumbnailUrl": "images/owasp-barcelona.webp"
       }
     },
     {
@@ -6324,7 +6328,8 @@
         "status": "Activa",
         "eventFormat": "Online",
         "location": "La Rioja",
-        "communityUrl": "https://github.com/Riojakers"
+        "communityUrl": "https://github.com/Riojakers",
+        "thumbnailUrl": "images/riojakers.webp"
       }
     },
     {
@@ -6361,7 +6366,7 @@
         "eventFormat": "Presencial",
         "location": "Córdoba",
         "communityUrl": "https://salmorejo.tech/2024/",
-        "thumbnailUrl": "images/salmorejotech.webp:large"
+        "thumbnailUrl": "images/salmorejotech.webp"
       }
     },
     {
@@ -6644,7 +6649,8 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Sevilla",
-        "communityUrl": "https://www.meetup.com/svqjug"
+        "communityUrl": "https://www.meetup.com/svqjug",
+        "thumbnailUrl": "images/svqjug.webp"
       }
     },
     {
@@ -7035,7 +7041,8 @@
         "status": "Activa",
         "eventFormat": "Desconocido",
         "location": "Vigo, Galicia",
-        "communityUrl": "https://vigotech.org/"
+        "communityUrl": "https://vigotech.org/",
+        "thumbnailUrl": "images/vigo-tech-alliance.webp"
       }
     },
     {
@@ -7410,7 +7417,7 @@
         "eventFormat": "Presencial",
         "location": "Barcelona",
         "communityUrl": "https://www.meetup.com/wordpressbcn/",
-        "thumbnailUrl": "images/wordpress-barcelona.jpeg"
+        "thumbnailUrl": "images/wordpress-barcelona.webp"
       }
     },
     {
@@ -8584,7 +8591,8 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Madrid",
-        "communityUrl": "https://www.linkedin.com/company/makersia/"
+        "communityUrl": "https://www.linkedin.com/company/makersia/",
+        "thumbnailUrl": "images/makers-ia.webp"
       }
     },
     {
@@ -8659,7 +8667,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "",
-        "communityUrl": "https://x.com/haskellMAD/",
+        "communityUrl": "https://www.meetup.com/haskell-mad/",
         "thumbnailUrl": "images/haskellmad.webp"
       }
     },
@@ -8717,7 +8725,7 @@
         "eventFormat": "Presencial",
         "location": "Asturias",
         "communityUrl": "https://techriders.tajamar.es/",
-        "thumbnailUrl": "tech-riders.webp"
+        "thumbnailUrl": "images/tech-riders.webp"
       }
     },
     {
@@ -9081,6 +9089,46 @@
         "thumbnailUrl": "images/ia-generativa-sevilla.webp"
       }
     },
+    ,
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.4652171,
+          42.3604762
+        ]
+      },
+      "properties": {
+        "id": 583,
+        "name": "Rural Hackers",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Anceu, Pontevedra",
+        "communityUrl": "https://ruralhackers.com/",
+        "thumbnailUrl": "images/rural-hackers.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.177073,
+          41.3825802
+        ]
+      },
+      "properties": {
+        "id": 584,
+        "name": "HackBcn",
+        "status": "Activa",
+        "eventFormat": "Híbrido",
+        "location": "Barcelona, Spain",
+        "communityUrl": "https://x.com/hackbcn?lang=en",
+        "thumbnailUrl": "images/hackbcn.webp"
+      }
+    }
+,
     {
       "type": "Feature",
       "geometry": {
@@ -9092,6 +9140,7 @@
       },
       "properties": {
         "id": 584,
+
         "name": "#VLCTesting",
         "status": "Activa",
         "eventFormat": "Presencial",
