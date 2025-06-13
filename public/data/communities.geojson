@@ -9089,6 +9089,7 @@
         "thumbnailUrl": "images/ia-generativa-sevilla.webp"
       }
     },
+    ,
     {
       "type": "Feature",
       "geometry": {
@@ -9099,7 +9100,7 @@
         ]
       },
       "properties": {
-        "id": 584,
+        "id": 583,
         "name": "Rural Hackers",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -9118,7 +9119,7 @@
         ]
       },
       "properties": {
-        "id": 585,
+        "id": 584,
         "name": "HackBcn",
         "status": "Activa",
         "eventFormat": "Híbrido",
@@ -9138,12 +9139,33 @@
       },
       "properties": {
         "id": 586,
-        "name": "MultitecUA",
+        "name": "GDG Alicante",
+        "status": "Activa",
+        "eventFormat": "Híbrido",
+        "location": "Alicante",
+        "communityUrl": "https://gdg.community.dev/gdg-alicante/",
+        "thumbnailUrl": "images/gdg-alicante.webp"
+      }
+    }
+,
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3763353,
+          39.4697065
+        ]
+      },
+      "properties": {
+        "id": 584,
+
+        "name": "#VLCTesting",
         "status": "Activa",
         "eventFormat": "Presencial",
-        "location": "Alicante",
-        "communityUrl": "https://multitecua.com/",
-        "thumbnailUrl": "images/multitecua.webp"
+        "location": "Valencia, Spain",
+        "communityUrl": "https://vlctesting.es/",
+        "thumbnailUrl": "images/vlctesting.webp"
       }
     }
   ]

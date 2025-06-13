@@ -46,7 +46,7 @@ body:
       options:
         - Presencial
         - Online
-        - Híbrido
+        - Híbridos
         - Desconocido
     validations:
       required: true
@@ -65,7 +65,7 @@ body:
     id: location
     attributes:
       label: Ciudad o región principal
-      placeholder: "Ejemplo: Madrid"
+      placeholder: "Ejemplo: Madrid, España"
     validations:
       required: false
 
@@ -73,7 +73,7 @@ body:
     id: topics
     attributes:
       label: Temas que trata
-      placeholder: "Ejemplo: JavaScript, Desarrollo Web, DevOps..."
+      placeholder: "Introduce una lista de temas separados por comas. Por ejemplo: JavaScript, Desarrollo Web, DevOps, ..."
     validations:
       required: false
 
@@ -81,7 +81,7 @@ body:
     id: contactInfo
     attributes:
       label: Correo de contacto (público)
-      description: Correo
+      description: Correo electrónico o URL a través de la que poder contactar con la organización
     validations:
       required: false
 
