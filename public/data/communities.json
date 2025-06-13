@@ -10424,5 +10424,23 @@
             "lon": -0.3763353
         },
         "displayOnMap": true
+    },
+    {
+      "id": 587,
+      "name": "GDG Alicante",
+      "status": "Activa",
+      "lastReviewed": "7/6/2025",
+      "communityType": "Tech Meetup",
+      "eventFormat": "Híbrido",
+      "location": "Alicante",
+      "topics": "ciencia, tecnología, comunidad, aprendizaje, conocimiento compartido, desarrollo personal, desarrollo profesional, metodologías de aprendizaje, innovación, formación, networking, colaboración, multidisciplinar, educación, divulgación científica, asociación sin ánimo de lucro",
+      "contactInfo": "",
+      "communityUrl": "https://gdg.community.dev/gdg-alicante/",
+      "thumbnailUrl": "images/gdg-alicante.webp",
+      "latLon": {
+        "lat": 38.3436365,
+        "lon": -0.4881708
+      },
+      "displayOnMap": true
     }
 ]
