@@ -9127,6 +9127,25 @@
         "communityUrl": "https://x.com/hackbcn?lang=en",
         "thumbnailUrl": "images/hackbcn.webp"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4881708,
+          38.3436365
+        ]
+      },
+      "properties": {
+        "id": 586,
+        "name": "GDG Alicante",
+        "status": "Activa",
+        "eventFormat": "Híbrido",
+        "location": "Alicante",
+        "communityUrl": "https://gdg.community.dev/gdg-alicante/",
+        "thumbnailUrl": "images/gdg-alicante.webp"
+      }
     }
 ,
     {
