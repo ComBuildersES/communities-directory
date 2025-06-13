@@ -10442,5 +10442,23 @@
         "lon": -0.4881708
       },
       "displayOnMap": true
+    },
+    {
+      "id": 588,
+      "name": "MultitecUA",
+      "status": "Activa",
+      "lastReviewed": "7/6/2025",
+      "communityType": "Grupo colaborativo",
+      "eventFormat": "Presencial",
+      "location": "Alicante",
+      "topics": "ciencia, tecnología, comunidad, aprendizaje, conocimiento compartido, desarrollo personal, desarrollo profesional, metodologías de aprendizaje, innovación, formación, networking, colaboración, multidisciplinar, educación, divulgación científica, asociación sin ánimo de lucro",
+      "contactInfo": "",
+      "communityUrl": "https://multitecua.com/",
+      "thumbnailUrl": "images/multitecua.webp",
+      "latLon": {
+        "lat": 38.3436365,
+        "lon": -0.4881708
+      },
+      "displayOnMap": true
     }
 ]
