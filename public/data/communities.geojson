@@ -9089,7 +9089,6 @@
         "thumbnailUrl": "images/ia-generativa-sevilla.webp"
       }
     },
-    ,
     {
       "type": "Feature",
       "geometry": {
@@ -9100,7 +9099,7 @@
         ]
       },
       "properties": {
-        "id": 583,
+        "id": 584,
         "name": "Rural Hackers",
         "status": "Activa",
         "eventFormat": "Presencial",
@@ -9119,13 +9118,32 @@
         ]
       },
       "properties": {
-        "id": 584,
+        "id": 585,
         "name": "HackBcn",
         "status": "Activa",
-        "eventFormat": "Híbrido",
+        "eventFormat": "Híbridos",
         "location": "Barcelona, Spain",
         "communityUrl": "https://x.com/hackbcn?lang=en",
         "thumbnailUrl": "images/hackbcn.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3763353,
+          39.4697065
+        ]
+      },
+      "properties": {
+        "id": 586,
+        "name": "#VLCTesting",
+        "status": "Activa",
+        "eventFormat": "Híbridos",
+        "location": "Valencia, Spain",
+        "communityUrl": "https://vlctesting.es/",
+        "thumbnailUrl": "images/vlctesting.webp"
       }
     },
     {
@@ -9138,7 +9156,7 @@
         ]
       },
       "properties": {
-        "id": 586,
+        "id": 587,
         "name": "GDG Alicante",
         "status": "Activa",
         "eventFormat": "Híbrido",
@@ -9146,26 +9164,43 @@
         "communityUrl": "https://gdg.community.dev/gdg-alicante/",
         "thumbnailUrl": "images/gdg-alicante.webp"
       }
-    }
-,
+    },
     {
       "type": "Feature",
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -0.3763353,
-          39.4697065
+          -0.4881708,
+          38.3436365
         ]
       },
       "properties": {
-        "id": 584,
-
-        "name": "#VLCTesting",
+        "id": 588,
+        "name": "MultitecUA",
         "status": "Activa",
         "eventFormat": "Presencial",
-        "location": "Valencia, Spain",
-        "communityUrl": "https://vlctesting.es/",
-        "thumbnailUrl": "images/vlctesting.webp"
+        "location": "Alicante",
+        "communityUrl": "https://multitecua.com/",
+        "thumbnailUrl": "images/multitecua.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.4251246,
+          36.8887282
+        ]
+      },
+      "properties": {
+        "id": 589,
+        "name": "Jam Attack",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Viator, Almería",
+        "communityUrl": "https://arcadejam.github.io/",
+        "thumbnailUrl": "images/jam-attack.webp"
       }
     }
   ]
