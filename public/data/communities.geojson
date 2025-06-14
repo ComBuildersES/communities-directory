@@ -9202,6 +9202,25 @@
         "communityUrl": "https://arcadejam.github.io/",
         "thumbnailUrl": "images/jam-attack.webp"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3763353,
+          39.4697065
+        ]
+      },
+      "properties": {
+        "id": 590,
+        "name": "Productbeers",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Valencia",
+        "communityUrl": "https://www.linkedin.com/company/valencia-product-beers/",
+        "thumbnailUrl": "images/productbeers.webp"
+      }
     }
   ]
 }

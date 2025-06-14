@@ -10478,5 +10478,23 @@
       "lon": -2.4251246
     },
     "displayOnMap": true
+  },
+  {
+    "id": 590,
+    "name": "Productbeers",
+    "status": "Activa",
+    "lastReviewed": "14/6/2025",
+    "communityType": "Tech Meetup",
+    "eventFormat": "Presencial",
+    "location": "Valencia",
+    "topics": "Product Manager, product designer, Product owner",
+    "contactInfo": "",
+    "communityUrl": "https://www.linkedin.com/company/valencia-product-beers/",
+    "thumbnailUrl": "images/productbeers.webp",
+    "latLon": {
+      "lat": 39.4697065,
+      "lon": -0.3763353
+    },
+    "displayOnMap": true
   }
 ]
