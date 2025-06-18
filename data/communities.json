@@ -2455,7 +2455,7 @@
     "location": "Sevilla",
     "topics": "",
     "contactInfo": "",
-    "communityUrl": "https://secure.meetupstatic.com/photos/event/2/2/0/5/clean_486848709.webp",
+    "communityUrl": "https://gdg.community.dev/events/details/google-gdg-sevilla-presents-devfest-sevilla-2024/",
     "thumbnailUrl": "images/devfest-sevilla-2024.webp",
     "latLon": {
       "lat": 37.38264,
@@ -2836,7 +2836,7 @@
   {
     "id": 158,
     "name": "Drupal Day Spain",
-    "status": "Activa",
+    "status": "Inactiva",
     "lastReviewed": "18/10/2024",
     "communityType": "Conferencia",
     "eventFormat": "Presencial",
