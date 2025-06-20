@@ -3829,14 +3829,14 @@
   },
   {
     "id": 214,
-    "name": "Global AI Bootcamp",
+    "name": "Global AI Community",
     "status": "Activa",
     "lastReviewed": "24/03/2025",
     "communityType": "Organización paraguas",
-    "eventFormat": "Desconocido",
+    "eventFormat": "Híbridos",
     "location": "n/a",
-    "topics": "",
-    "contactInfo": "",
+    "topics": "artificial intelligence",
+    "contactInfo": "hq@globalai.community",
     "communityUrl": "https://globalai.community/",
     "thumbnailUrl": "images/global-ai-bootcamp.webp",
     "latLon": {
