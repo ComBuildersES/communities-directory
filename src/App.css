@@ -6,10 +6,10 @@ html {
   height: 100vh;
   /* overflow: hidden; */
 }
-body{
-  padding-top: 5rem;;
+body {
+  padding-top: 5rem;
 }
-#title{
+#title {
   padding: 1rem;
   position: fixed;
   z-index: 9999;
@@ -17,7 +17,7 @@ body{
   width: 100%;
 }
 #title > h2,
-#title > button{
+#title > button {
   margin-bottom: 0;
 }
 
@@ -25,7 +25,6 @@ body{
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  
 }
 
 .main {
@@ -36,11 +35,11 @@ body{
   /* column-gap: 20px; */
 }
 
-.main aside{
+.main aside {
   position: sticky;
   top: 1rem;
 }
-.sticky{
+.sticky {
   position: sticky;
   top: 0;
   z-index: 99999;
@@ -69,6 +68,15 @@ body{
   z-index: 30;
   padding: 5px;
   box-shadow: 0px -1px 5px 3px #0000002b;
+}
+
+.communitieslist-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 2rem;
+  margin-bottom: 5vh;
 }
 
 .communitieslist {
@@ -119,25 +127,24 @@ body{
 }
 
 /* Mobile width */
-@media (max-width: 768px) { 
-  
-  #title{
+@media (max-width: 768px) {
+  #title {
     text-align: center;
     padding-bottom: 0;
-  } 
-  #title h2{
-    margin-bottom: 0.5rem;;
   }
-  .main aside{
+  #title h2 {
+    margin-bottom: 0.5rem;
+  }
+  .main aside {
     width: 93vw;
     position: fixed;
     top: 10rem;
   }
-  .main{
+  .main {
     /* padding-left: 0; */
   }
-  body{
-    padding-top:10rem;
+  body {
+    padding-top: 10rem;
   }
 }
 
@@ -184,7 +191,7 @@ body{
 
 /* Add a small arrow using pseudo-element */
 .popover-content::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -8px;
   left: 50%;
@@ -213,11 +220,11 @@ body{
 }
 
 .exists {
-  color: deepskyblue
+  color: deepskyblue;
 }
 
 .not-exists {
-  color: tomato
+  color: tomato;
 }
 
 .level-is-shrinkable .level-left,

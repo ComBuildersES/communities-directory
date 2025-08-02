@@ -1,0 +1,12 @@
+.add-community-cta {
+  border: 1px solid var(--bulma-border);
+  border-radius: var(--bulma-radius);
+  background-color: var(--bulma-scheme-main);
+  box-shadow: var(--bulma-shadow);
+  padding: var(--bulma-block-spacing);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--bulma-size-small);
+}
