@@ -83,6 +83,10 @@ Echa un vistazo a los *[milestones](https://github.com/ComBuildersES/communities
 
 ¿Quieres unirte? -> [CONTRIBUTING.md](https://github.com/ComBuildersES/communities-directory/blob/master/CONTRIBUTING.md)
 
+Echa un vistazo a algunas de las tareas por las que podrías empezar a ayudar: 
+
+[![GitHub issues by-label](https://img.shields.io/github/issues/ComBuildersES/communities-directory/good%20first%20issue)](https://github.com/ComBuildersES/communities-directory/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+
 ## Contributors
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
