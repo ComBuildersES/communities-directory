@@ -9240,6 +9240,25 @@
         "communityUrl": "https://2024.awscommunity.es/en",
         "thumbnailUrl": "images/aws-community-day.webp"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.9953403,
+          37.3886303
+        ]
+      },
+      "properties": {
+        "id": 592,
+        "name": "IT~gals",
+        "status": "Desconocido",
+        "eventFormat": "Presencial",
+        "location": "Sevilla, España",
+        "communityUrl": "https://www.youtube.com/@it_gals",
+        "thumbnailUrl": "images/itgals.webp"
+      }
     }
   ]
 }
