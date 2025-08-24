@@ -10496,5 +10496,23 @@
       "lon": -0.3763353
     },
     "displayOnMap": true
+  },
+  {
+    "id": 591,
+    "name": "AWS Community Day",
+    "status": "Desconocido",
+    "lastReviewed": "24/8/2025",
+    "communityType": "Conferencia",
+    "eventFormat": "Presencial",
+    "location": "Gijón, Spain",
+    "topics": "AWS",
+    "contactInfo": "",
+    "communityUrl": "https://2024.awscommunity.es/en",
+    "thumbnailUrl": "images/aws-community-day.webp",
+    "latLon": {
+      "lat": 43.5449422,
+      "lon": -5.66275
+    },
+    "displayOnMap": true
   }
 ]
