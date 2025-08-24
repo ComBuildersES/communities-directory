@@ -1952,7 +1952,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Sevilla",
-        "communityUrl": "https://secure.meetupstatic.com/photos/event/2/2/0/5/clean_486848709.webp",
+        "communityUrl": "https://gdg.community.dev/events/details/google-gdg-sevilla-presents-devfest-sevilla-2024/",
         "thumbnailUrl": "images/devfest-sevilla-2024.webp"
       }
     },
@@ -9220,6 +9220,25 @@
         "location": "Valencia",
         "communityUrl": "https://www.linkedin.com/company/valencia-product-beers/",
         "thumbnailUrl": "images/productbeers.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.66275,
+          43.5449422
+        ]
+      },
+      "properties": {
+        "id": 591,
+        "name": "AWS Community Day",
+        "status": "Desconocido",
+        "eventFormat": "Presencial",
+        "location": "Gijón, Spain",
+        "communityUrl": "https://2024.awscommunity.es/en",
+        "thumbnailUrl": "images/aws-community-day.webp"
       }
     }
   ]
