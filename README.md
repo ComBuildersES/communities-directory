@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Communities directory
@@ -99,6 +99,7 @@ Echa un vistazo a algunas de las tareas por las que podrías empezar a ayudar:
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/alvarogtrzcliment"><img src="https://avatars.githubusercontent.com/u/124072319?v=4?s=100" width="100px;" alt="Álvaro Gutiérrez"/><br /><sub><b>Álvaro Gutiérrez</b></sub></a><br /><a href="https://github.com/ComBuildersES/communities-directory/commits?author=alvarogtrzcliment" title="Code">💻</a> <a href="#research-alvarogtrzcliment" title="Research">🔬</a> <a href="#maintenance-alvarogtrzcliment" title="Maintenance">🚧</a> <a href="#design-alvarogtrzcliment" title="Design">🎨</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Aleixbs"><img src="https://avatars.githubusercontent.com/u/84009394?v=4?s=100" width="100px;" alt="Aleix Batlle"/><br /><sub><b>Aleix Batlle</b></sub></a><br /><a href="https://github.com/ComBuildersES/communities-directory/commits?author=Aleixbs" title="Code">💻</a> <a href="#research-Aleixbs" title="Research">🔬</a> <a href="#maintenance-Aleixbs" title="Maintenance">🚧</a> <a href="#design-Aleixbs" title="Design">🎨</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.rauljimenez.info"><img src="https://avatars.githubusercontent.com/u/826965?v=4?s=100" width="100px;" alt="Raul Jimenez Ortega"/><br /><sub><b>Raul Jimenez Ortega</b></sub></a><br /><a href="#data-hhkaos" title="Data">🔣</a> <a href="#maintenance-hhkaos" title="Maintenance">🚧</a> <a href="#projectManagement-hhkaos" title="Project Management">📆</a> <a href="#ideas-hhkaos" title="Ideas, Planning, & Feedback">🤔</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/andreamagan"><img src="https://avatars.githubusercontent.com/u/45942798?v=4?s=100" width="100px;" alt="Andrea Magán Rey"/><br /><sub><b>Andrea Magán Rey</b></sub></a><br /><a href="https://github.com/ComBuildersES/communities-directory/commits?author=andreamagan" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
