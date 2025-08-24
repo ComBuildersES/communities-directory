@@ -54,6 +54,15 @@
         "projectManagement",
         "ideas"
       ]
+    },
+    {
+      "login": "andreamagan",
+      "name": "Andrea Magán Rey",
+      "avatar_url": "https://avatars.githubusercontent.com/u/45942798?v=4",
+      "profile": "https://github.com/andreamagan",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
