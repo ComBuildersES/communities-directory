@@ -9259,6 +9259,25 @@
         "communityUrl": "https://www.youtube.com/@it_gals",
         "thumbnailUrl": "images/itgals.webp"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7035825,
+          40.4167047
+        ]
+      },
+      "properties": {
+        "id": 593,
+        "name": "DisiTech",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Madrid, España",
+        "communityUrl": "https://www.linkedin.com/company/disitech",
+        "thumbnailUrl": "images/disitech.webp"
+      }
     }
   ]
 }
