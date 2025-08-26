@@ -10532,5 +10532,23 @@
       "lon": -5.9953403
     },
     "displayOnMap": true
+  },
+  {
+    "id": 593,
+    "name": "DisiTech",
+    "status": "Activa",
+    "lastReviewed": "26/8/2025",
+    "communityType": "Tech Meetup",
+    "eventFormat": "Presencial",
+    "location": "Madrid, España",
+    "topics": "disidencia, creatividad, tecnología crítica, diversidad, inclusión, comunidad tech, arte y tecnología, diseño experimental, inteligencia artificial, automatización, soft skills, narrativa, performance, innovación, innovación no normativa, enfoques híbridos, espacios seguros, colaboración, sensibilidad, identidades diversas, crítica cultural, tech con perspectiva humana",
+    "contactInfo": "",
+    "communityUrl": "https://www.linkedin.com/company/disitech",
+    "thumbnailUrl": "images/disitech.webp",
+    "latLon": {
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true
   }
 ]
