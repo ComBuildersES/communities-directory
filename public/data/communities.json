@@ -10550,5 +10550,23 @@
       "lon": -3.7035825
     },
     "displayOnMap": true
+  },
+  {
+    "id": 594,
+    "name": "Empower Tech",
+    "status": "Activa",
+    "lastReviewed": "26/8/2025",
+    "communityType": "Grupo colaborativo",
+    "eventFormat": "Online",
+    "location": "",
+    "topics": "Women in Tech, Girls in STEM, Female Empowerment, Gender Equality, Tech Mentorship, Tech Networking, Programming, Coding, Leadership, Diversity in Tech, Inclusive Tech, Career Development, Technology Education, Future Leaders, STEM Education",
+    "contactInfo": "",
+    "communityUrl": "https://empower-tech.org/",
+    "thumbnailUrl": "images/empower-tech.webp",
+    "latLon": {
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   }
 ]
