@@ -9278,6 +9278,25 @@
         "communityUrl": "https://www.linkedin.com/company/disitech",
         "thumbnailUrl": "images/disitech.webp"
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.177073,
+          41.3825802
+        ]
+      },
+      "properties": {
+        "id": 595,
+        "name": "AI Summit Barcelona",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Barcelona, España",
+        "communityUrl": "https://aisummitbarcelona.com/",
+        "thumbnailUrl": "images/ai-summit-barcelona.webp"
+      }
     }
   ]
 }

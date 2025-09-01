@@ -10568,5 +10568,23 @@
       "lon": null
     },
     "displayOnMap": false
+  },
+  {
+    "id": 595,
+    "name": "AI Summit Barcelona",
+    "status": "Activa",
+    "lastReviewed": "1/9/2025",
+    "communityType": "Conferencia",
+    "eventFormat": "Presencial",
+    "location": "Barcelona, España",
+    "topics": "",
+    "contactInfo": "",
+    "communityUrl": "https://aisummitbarcelona.com/",
+    "thumbnailUrl": "images/ai-summit-barcelona.webp",
+    "latLon": {
+      "lat": 41.3825802,
+      "lon": 2.177073
+    },
+    "displayOnMap": true
   }
 ]
