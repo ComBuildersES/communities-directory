@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Communities directory
@@ -101,6 +101,7 @@ Echa un vistazo a algunas de las tareas por las que podrías empezar a ayudar:
       <td align="center" valign="top" width="14.28%"><a href="https://www.rauljimenez.info"><img src="https://avatars.githubusercontent.com/u/826965?v=4?s=100" width="100px;" alt="Raul Jimenez Ortega"/><br /><sub><b>Raul Jimenez Ortega</b></sub></a><br /><a href="#data-hhkaos" title="Data">🔣</a> <a href="#maintenance-hhkaos" title="Maintenance">🚧</a> <a href="#projectManagement-hhkaos" title="Project Management">📆</a> <a href="#ideas-hhkaos" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/andreamagan"><img src="https://avatars.githubusercontent.com/u/45942798?v=4?s=100" width="100px;" alt="Andrea Magán Rey"/><br /><sub><b>Andrea Magán Rey</b></sub></a><br /><a href="https://github.com/ComBuildersES/communities-directory/commits?author=andreamagan" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://yisus82.github.io/"><img src="https://avatars.githubusercontent.com/u/7774855?v=4?s=100" width="100px;" alt="Jesús Ángel Pérez-Roca Fernández"/><br /><sub><b>Jesús Ángel Pérez-Roca Fernández</b></sub></a><br /><a href="#data-yisus82" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/dzknl"><img src="https://avatars.githubusercontent.com/u/137705294?v=4?s=100" width="100px;" alt="Daniel"/><br /><sub><b>Daniel</b></sub></a><br /><a href="https://github.com/ComBuildersES/communities-directory/pulls?q=is%3Apr+reviewed-by%3Adzknl" title="Reviewed Pull Requests">👀</a></td>
     </tr>
   </tbody>
 </table>
