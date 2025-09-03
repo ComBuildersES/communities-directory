@@ -2053,14 +2053,14 @@
   {
     "id": 114,
     "name": "CoruñaJUG",
-    "status": "Inactiva",
+    "status": "Activa",
     "lastReviewed": "31/05/2024",
     "communityType": "Tech Meetup",
     "eventFormat": "Presencial",
     "location": "Coruña",
     "topics": "",
     "contactInfo": "",
-    "communityUrl": "https://www.meetup.com/es-ES/corunajug/",
+    "communityUrl": "https://www.corunajug.org/",
     "thumbnailUrl": "images/corunajug.webp",
     "latLon": {
       "lat": 43.3707332,
