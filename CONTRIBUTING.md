@@ -43,9 +43,10 @@ Hay muchas maneras de participar, tanto si sabes programar como si no. Aquí van
 
 > **Nota**: se incluye, entre corchetes, los "[Emojikeys](https://github.com/ComBuildersES/communities-directory/issues/22)" asociados a cada tipo de contribución.
 
-1. **Revisión y mejora de datos** [`🔣 data`]
+1. **Revisión y mejora de datos** [`🔣 data`, `👀 review`]
     - Proponer una nueva comunidad [completando el formulario](https://github.com/ComBuildersES/communities-directory/issues/new?template=community_entry.yml).
     - Avisar si se encuentran errores, comunidades duplicadas o datos desactualizados.
+    - Revisar datos -> [Buscamos responsables (por provincia) para mantener los datos actualizados](https://github.com/ComBuildersES/communities-directory/issues/53).
     - Sugerir nuevas categorías o campos útiles para describir mejor cada comunidad.
         
 1. **Mejorar el código o la web** [`💻 code`, `🎨 design`, `⚠️ test`, ♿️ `a11y`, `👀 review`, `🧑‍🏫 mentoring`]
@@ -53,7 +54,7 @@ Hay muchas maneras de participar, tanto si sabes programar como si no. Aquí van
     - Accesibilidad (`a11y`), navegación o UX, ...
     - Arreglar bugs.
     - Escribir y mejorar tests.
-    - Revisar de código.
+    - Revisar código.
     - Mentorizar a otras personas que contribuyen.
         
 1. **Proponer ideas de mejora** [`🤔 ideas`]
