@@ -10586,5 +10586,23 @@
       "lon": 2.177073
     },
     "displayOnMap": true
+  },
+  {
+    "id": 596,
+    "name": "CODE FEST",
+    "status": "Activa",
+    "lastReviewed": "12/9/2025",
+    "communityType": "Conferencia",
+    "eventFormat": "Presencial",
+    "location": "Málaga, Spain",
+    "topics": "",
+    "contactInfo": "",
+    "communityUrl": "https://codespaceacademy.com/code-fest-edicion-ii-2025/",
+    "thumbnailUrl": "images/code-fest.webp",
+    "latLon": {
+      "lat": 36.7213028,
+      "lon": -4.4216366
+    },
+    "displayOnMap": true
   }
 ]
