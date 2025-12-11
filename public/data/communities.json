@@ -10604,5 +10604,23 @@
       "lon": -4.4216366
     },
     "displayOnMap": true
+  },
+  {
+    "id": 597,
+    "name": "GrafanaCON",
+    "status": "Activa",
+    "lastReviewed": "11/12/2025",
+    "communityType": "Conferencia",
+    "eventFormat": "Presencial",
+    "location": "Itinerante",
+    "topics": "data-visualization, big-data, data-engineering, etl, system-administration, OpenTelemetry, Loki, open-source, DevOps & Platform Engineer, Data Engineer, Cloud Engineer, Site Reliability Engineer, ci-cd, statistics, iot",
+    "contactInfo": "",
+    "communityUrl": "https://grafana.com/events/grafanacon/",
+    "thumbnailUrl": "images/grafanacon.webp",
+    "latLon": {
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   }
 ]
