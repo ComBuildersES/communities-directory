@@ -10620,6 +10620,24 @@
     "latLon": {
       "lat": null,
       "lon": null
+    }
+    "displayOnMap": false
+  },
+  {
+    "id": 598,
+    "name": "Upscale Conf",
+    "status": "Activa",
+    "lastReviewed": "3/11/2025",
+    "communityType": "Conferencia",
+    "eventFormat": "Presencial",
+    "location": "Málaga, Spain",
+    "topics": "inteligencia artificial,diseño, tecnologías emergentes",
+    "contactInfo": "",
+    "communityUrl": "https://www.upscaleconf.com/",
+    "thumbnailUrl": "images/upscale-conf.webp",
+    "latLon": {
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   }
