@@ -9479,8 +9479,8 @@
     "communityType": "Conferencia",
     "eventFormat": "Presencial",
     "location": "Madrid",
-    "topics": "",
-    "contactInfo": "",
+    "topics": "devops, platform-engineering, site-reliability-engineering, cloud, cloud-security, cybersecurity, ci/cd, infrastructure, automation, software-architecture",
+    "contactInfo": "info@xopsconference.com",
     "communityUrl": "https://x.com/XopsConference",
     "thumbnailUrl": "images/xops-conference.webp",
     "latLon": {
