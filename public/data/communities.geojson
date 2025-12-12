@@ -9316,25 +9316,6 @@
         "communityUrl": "https://codespaceacademy.com/code-fest-edicion-ii-2025/",
         "thumbnailUrl": "images/code-fest.webp"
       }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -4.4216366,
-          36.7213028
-        ]
-      },
-      "properties": {
-        "id": 597,
-        "name": "Upscale Conf",
-        "status": "Activa",
-        "eventFormat": "Presencial",
-        "location": "Málaga, Spain",
-        "communityUrl": "https://www.upscaleconf.com/",
-        "thumbnailUrl": "images/upscale-conf.webp"
-      }
     }
   ]
 }
