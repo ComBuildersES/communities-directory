@@ -10607,6 +10607,24 @@
   },
   {
     "id": 597,
+    "name": "GrafanaCON",
+    "status": "Activa",
+    "lastReviewed": "11/12/2025",
+    "communityType": "Conferencia",
+    "eventFormat": "Presencial",
+    "location": "Itinerante",
+    "topics": "data-visualization, big-data, data-engineering, etl, system-administration, OpenTelemetry, Loki, open-source, DevOps & Platform Engineer, Data Engineer, Cloud Engineer, Site Reliability Engineer, ci-cd, statistics, iot",
+    "contactInfo": "",
+    "communityUrl": "https://grafana.com/events/grafanacon/",
+    "thumbnailUrl": "images/grafanacon.webp",
+    "latLon": {
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
+  },
+  {
+    "id": 598,
     "name": "Upscale Conf",
     "status": "Activa",
     "lastReviewed": "3/11/2025",
@@ -10618,8 +10636,8 @@
     "communityUrl": "https://www.upscaleconf.com/",
     "thumbnailUrl": "images/upscale-conf.webp",
     "latLon": {
-      "lat": 36.7213028,
-      "lon": -4.4216366
+      "lat": null,
+      "lon": null
     },
     "displayOnMap": false
   }
