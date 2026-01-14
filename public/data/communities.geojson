@@ -7246,7 +7246,7 @@
         "status": "Activa",
         "eventFormat": "Híbridos",
         "location": "Madrid",
-        "communityUrl": "https://wtmgdgmadrid.github.io/",
+        "communityUrl": "https://wtmgdgmadrid.github.io/wtm-madrid-landing/",
         "thumbnailUrl": "images/women-techmakers-madrid.webp"
       }
     },
@@ -9315,6 +9315,25 @@
         "location": "Málaga, Spain",
         "communityUrl": "https://codespaceacademy.com/code-fest-edicion-ii-2025/",
         "thumbnailUrl": "images/code-fest.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.8199439,
+          41.9793006
+        ]
+      },
+      "properties": {
+        "id": 598,
+        "name": "a11yconf",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "Girona",
+        "communityUrl": "https://www.a11yconf.com/es",
+        "thumbnailUrl": "images/a11yconf.webp"
       }
     }
   ]

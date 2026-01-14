@@ -10640,5 +10640,23 @@
       "lon": null
     },
     "displayOnMap": false
+  },
+  {
+    "id": 598,
+    "name": "a11yconf",
+    "status": "Activa",
+    "lastReviewed": "12/12/2025",
+    "communityType": "Conferencia",
+    "eventFormat": "Presencial",
+    "location": "Girona",
+    "topics": "accessibility, diversity, ethics, tech4good, frontend-developer, ux-designer, ui-designer, web, inclusive-design",
+    "contactInfo": "",
+    "communityUrl": "https://www.a11yconf.com/es",
+    "thumbnailUrl": "images/a11yconf.webp",
+    "latLon": {
+      "lat": 41.9793006,
+      "lon": 2.8199439
+    },
+    "displayOnMap": true
   }
 ]
