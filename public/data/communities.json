@@ -10658,5 +10658,23 @@
       "lon": 2.8199439
     },
     "displayOnMap": true
+  },
+  {
+    "id": 600,
+    "name": "MindHub Club",
+    "status": "Activa",
+    "lastReviewed": "6/2/2026",
+    "communityType": "Organización paraguas",
+    "eventFormat": "Presencial",
+    "location": "",
+    "topics": "personal-growth, mentoring, ethics, tech4good, innovation, business-and-innovation-manager, community-and-social-media-manager, diversity",
+    "contactInfo": "",
+    "communityUrl": "https://mindhub.club/es",
+    "thumbnailUrl": "images/mindhub-club.webp",
+    "latLon": {
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false
   }
 ]
