@@ -169,9 +169,24 @@ EL fichero [communities.json](https://github.com/ComBuildersES/communities-direc
   "communityType": "<enum>",
   "eventFormat": "<enum>",
   "location": "<postal address>",
-  "topics": "<comma separataded values>",
+  "topics": "<comma separated values>",
+  "tags": ["<tag-id>", "..."],
+  "targetAudience": ["<audience-id>", "..."],
   "contactInfo": "<email, contact form, ...>",
   "communityUrl": "<absolute URL>",
+  "urls": {
+    "web": "<absolute URL or omit>",
+    "meetup": "<absolute URL or omit>",
+    "linkedin": "<absolute URL or omit>",
+    "twitter": "<absolute URL or omit>",
+    "instagram": "<absolute URL or omit>",
+    "youtube": "<absolute URL or omit>",
+    "discord": "<absolute URL or omit>",
+    "telegram": "<absolute URL or omit>",
+    "github": "<absolute URL or omit>",
+    "mastodon": "<absolute URL or omit>",
+    "bluesky": "<absolute URL or omit>"
+  },
   "thumbnailUrl": "images/<slugify-name>.webp",
   "latLon": {
     "lat": <float or null>,
@@ -187,12 +202,15 @@ EL fichero [communities.json](https://github.com/ComBuildersES/communities-direc
 - **lastReviewed**<sup>*</sup>: Última fecha en la que alguien modificó o validó los datos.
 - **communityType**<sup>*</sup>: Tipo de comunidad (meetup, organización paraguas, etc.)
 - **eventFormat**<sup>*</sup>: Formato de eventos (presencial, online, híbrido)
-- **location**: Sólo para las comunidades presenciales o híbridas. Ciudad o región principal (si no tiene ubicación fija se puede poner dirección aproximada, ciudad, provincia, ...) 
-- **topics**: Lista de temáticas separada por comas (aún no hay convención de temáticas en torno a este campo, [ver issue](https://github.com/ComBuildersES/communities-directory/issues/6))
-- **contactInfo**: Email o URL de contacto. Tampoco existe convención al respecto
-- **communityUrl**<sup>*</sup>: URL principal donde encontrar información de la comunidad.
+- **location**: Sólo para las comunidades presenciales o híbridas. Ciudad o región principal (si no tiene ubicación fija se puede poner dirección aproximada, ciudad, provincia, ...)
+- **topics**: Lista de temáticas en texto libre separada por comas (campo heredado, [ver issue](https://github.com/ComBuildersES/communities-directory/issues/6))
+- **tags**: Array de IDs de etiquetas temáticas de la taxonomía definida en [`public/data/tags.json`](../public/data/tags.json). Ejemplo: `["python", "data-science", "machine-learning"]`
+- **targetAudience**: Array de IDs de perfiles de público objetivo definidos en [`public/data/audience.json`](../public/data/audience.json). Ejemplo: `["data-scientist", "ml-engineer"]`
+- **contactInfo**: Email o URL de contacto.
+- **communityUrl**<sup>*</sup>: URL principal donde encontrar información de la comunidad. Se usa como enlace principal en la tarjeta y en el mapa.
+- **urls**: Objeto con URLs adicionales por plataforma. Solo incluir las claves que tengan valor (omitir las que no apliquen). Plataformas soportadas: `web`, `meetup`, `linkedin`, `twitter`, `instagram`, `youtube`, `discord`, `telegram`, `github`, `mastodon`, `bluesky`.
 - **thumbnailUrl**<sup>*</sup>: URL con la imagen a mostrar en el directorio (tener en cuenta que el fondo de la web es blanco)
-- **latLon**: En caso de ser una comunidad presencial o híbrida añadir en el JSON las coordenadas. Si ya hay comunidades en esa ubicación, se recomienda que sean exáctamente las mismas. Si no, dejar en _null_, _null_
+- **latLon**: En caso de ser una comunidad presencial o híbrida añadir en el JSON las coordenadas. Si ya hay comunidades en esa ubicación, se recomienda que sean exactamente las mismas. Si no, dejar en _null_, _null_
 - **displayOnMap**: A `true` en caso de ser una comunidad presencial o híbrida, para que se muestre en el mapa.
 
 > **(*)**: Estos campos son obligatorios

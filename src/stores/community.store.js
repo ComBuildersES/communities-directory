@@ -5,6 +5,9 @@ import { buildInverseIndex } from "../data/invertedindex";
 import { devtools } from "zustand/middleware";
 import { searchFaceted } from "../data/searchFaceted";
 
+const TAGS_URL = "data/tags.json";
+const AUDIENCE_URL = "data/audience.json";
+
 export const filtros = {
   Estado: ["Activa"],
   Tipo_de_comunidad: [],
@@ -15,6 +18,8 @@ export const filtros = {
 // El indice inverso solo se realiza cuando se carga la pagina
 const initialState = {
   allCommunities: [], // Estado Inicial, Datos originales
+  allTags: [], // Catálogo de etiquetas temáticas
+  allAudience: [], // Catálogo de perfiles de público objetivo
   invertedIndex: {}, // Indice inverso de los datos
   communitiesFiltered: [], // Comunidades filtradas
   isLoading: false, // Estado para mostrar carga
@@ -30,20 +35,29 @@ const useCommunityStore = create(
     ...initialState,
     actions: {
       fetchCommunities: async () => {
-        set({ isLoading: true, error: null }); // Indica que está cargando
+        set({ isLoading: true, error: null });
         try {
-          const data = await getAllCommunities(URL);
+          const [data, tags, audience] = await Promise.all([
+            getAllCommunities(URL),
+            getAllCommunities(TAGS_URL),
+            getAllCommunities(AUDIENCE_URL),
+          ]);
           const inverseIndex = buildInverseIndex(data);
+          const defaultFilters = { status: ["Activa"] };
+          const communitiesFiltered = searchFaceted(data, inverseIndex, defaultFilters);
           set({
             allCommunities: data,
+            allTags: tags,
+            allAudience: audience,
             invertedIndex: inverseIndex,
-            communitiesFiltered: data,
+            communitiesFiltered,
+            filters: defaultFilters,
             isLoading: false,
-            numberOFCommunities: data.length,
-            numberOFOnSiteCommunities: data.filter(e => e.displayOnMap == true).length
-          }); // Guarda los datos en el estado
+            numberOFCommunities: communitiesFiltered.length,
+            numberOFOnSiteCommunities: communitiesFiltered.filter(e => e.displayOnMap == true).length
+          });
         } catch (error) {
-          set({ error: error.message, isLoading: false }); // Maneja el error
+          set({ error: error.message, isLoading: false });
         }
       },
       filterComunities: (key, value) => {
@@ -98,12 +112,15 @@ const updateFilter = (filters, key, value) => {
   // Asegurar que value siempre sea un array
   const valueArray = Array.isArray(value) ? value : [value];
 
-  // Combinar valores existentes con el nuevo valor
-
+  // Combinar valores existentes con el nuevo valor, evitando duplicados
   const existingValue = filters[key];
-  const combinedValues = Array.isArray(existingValue)
-    ? [...existingValue, value]
-    : [...(existingValue ? [existingValue] : []), ...valueArray];
+  const existingArray = Array.isArray(existingValue)
+    ? existingValue
+    : existingValue ? [existingValue] : [];
+  const combinedValues = [
+    ...existingArray,
+    ...valueArray.filter((v) => !existingArray.includes(v)),
+  ];
 
   // devolvemos los filtros con el array con el valor actualizado
 
@@ -139,6 +156,10 @@ export const useNumberOfCommunities = () =>
 
 export const useNumberOFOnSiteCommunities = () =>
   useCommunityStore((state) => state.numberOFOnSiteCommunities);
+
+export const useTags = () => useCommunityStore((state) => state.allTags);
+
+export const useAudience = () => useCommunityStore((state) => state.allAudience);
 
 // Selector de las acciones
 

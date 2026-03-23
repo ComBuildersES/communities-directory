@@ -12,6 +12,10 @@
     "process-to-communities-to-geojson": "node scripts/process-to-communities-to-geojson.js",
     "find-duplicates": "node scripts/find-duplicates.js",
     "ensure-id-autoincrement": "node scripts/ensure-id-autoincrement.js",
+    "migrate-add-new-fields": "node scripts/migrate-add-new-fields.js",
+    "scrape-community-data": "node scripts/scrape-community-data.js",
+    "apply-suggestions": "node scripts/apply-suggestions.js",
+    "apply-url-mapping": "node scripts/apply-url-mapping.js",
     "build-preview": "vite build --mode localdev && npx http-server . -p 8080 -o dist/",
     "test-geojson": "npx http-server . -p 8080 -o public/viewer"
   },
@@ -32,6 +36,7 @@
     "eslint-plugin-react-hooks": "5.0.0",
     "eslint-plugin-react-refresh": "0.4.14",
     "globals": "15.11.0",
+    "playwright": "^1.58.2",
     "sharp": "^0.34.1",
     "vite": "5.4.10"
   }

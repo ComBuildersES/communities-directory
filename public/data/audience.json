@@ -1,0 +1,206 @@
+[
+  {
+    "id": "frontend-developer",
+    "label": "Frontend Developer",
+    "description": "Persona que desarrolla interfaces web y experiencias interactivas.",
+    "synonyms": ["frontend dev", "ui developer", "desarrollador frontend", "desarrolladora frontend"]
+  },
+  {
+    "id": "backend-developer",
+    "label": "Backend Developer",
+    "description": "Profesional que trabaja en la lógica de servidor, APIs y gestión de datos.",
+    "synonyms": ["backend dev", "desarrollador backend", "server side developer"]
+  },
+  {
+    "id": "fullstack-developer",
+    "label": "Full-stack Developer",
+    "description": "Persona que desarrolla tanto la parte frontend como backend de una aplicación.",
+    "synonyms": ["full stack", "fullstack dev", "desarrollador fullstack"]
+  },
+  {
+    "id": "mobile-developer",
+    "label": "Mobile Developer",
+    "description": "Profesional que crea aplicaciones móviles nativas o multiplataforma.",
+    "synonyms": ["mobile dev", "desarrollador móvil", "app developer"]
+  },
+  {
+    "id": "game-developer",
+    "label": "Game Developer",
+    "description": "Persona que diseña y desarrolla videojuegos.",
+    "synonyms": ["gamedev", "desarrollador de videojuegos", "indie developer"]
+  },
+  {
+    "id": "embedded-iot-engineer",
+    "label": "Embedded & IoT Engineer",
+    "description": "Profesional que trabaja con sistemas embebidos, electrónica e Internet de las Cosas.",
+    "synonyms": ["embedded systems", "firmware engineer", "iot developer", "sistemas embebidos"]
+  },
+  {
+    "id": "robotics-engineer",
+    "label": "Robotics Engineer",
+    "description": "Persona que diseña y programa robots y sistemas autónomos.",
+    "synonyms": ["robotics dev", "robot programmer", "ingeniería robótica"]
+  },
+  {
+    "id": "data-engineer",
+    "label": "Data Engineer",
+    "description": "Profesional que construye y mantiene pipelines y plataformas de datos.",
+    "synonyms": ["data engineering", "pipeline engineer", "ingeniero de datos"]
+  },
+  {
+    "id": "data-scientist",
+    "label": "Data Scientist",
+    "description": "Persona que analiza datos y crea modelos para obtener conocimiento accionable.",
+    "synonyms": ["científico de datos", "data analysis expert"]
+  },
+  {
+    "id": "ml-engineer",
+    "label": "Machine Learning Engineer",
+    "description": "Profesional que desarrolla, entrena y despliega modelos de machine learning.",
+    "synonyms": ["ml engineer", "ai engineer", "ingeniero de machine learning"]
+  },
+  {
+    "id": "data-analyst",
+    "label": "Data Analyst",
+    "description": "Persona que analiza datos para generar insights y apoyar decisiones de negocio.",
+    "synonyms": ["analista de datos", "business analyst", "analyst"]
+  },
+  {
+    "id": "devops-engineer",
+    "label": "DevOps & Platform Engineer",
+    "description": "Profesional que automatiza despliegues y construye plataformas internas para equipos de desarrollo.",
+    "synonyms": ["devops", "platform engineer", "site reliability", "infraestructura"]
+  },
+  {
+    "id": "cloud-engineer",
+    "label": "Cloud Engineer",
+    "description": "Persona especializada en diseñar y operar soluciones en la nube.",
+    "synonyms": ["cloud architect", "cloud developer", "ingeniero cloud"]
+  },
+  {
+    "id": "sre",
+    "label": "Site Reliability Engineer",
+    "description": "Profesional centrado en la fiabilidad, rendimiento y observabilidad de sistemas.",
+    "synonyms": ["sre", "reliability engineer", "observability engineer"]
+  },
+  {
+    "id": "sysadmin",
+    "label": "Systems & Network Administrator",
+    "description": "Persona encargada de administrar servidores, sistemas y redes.",
+    "synonyms": ["system admin", "sysadmin", "network admin", "administrador de sistemas"]
+  },
+  {
+    "id": "cybersecurity-engineer",
+    "label": "Cybersecurity Engineer",
+    "description": "Profesional especializado en proteger sistemas, redes y aplicaciones frente a amenazas.",
+    "synonyms": ["security engineer", "infosec engineer", "seguridad informática"]
+  },
+  {
+    "id": "pentester",
+    "label": "Penetration Tester",
+    "description": "Persona que realiza pruebas de penetración para identificar vulnerabilidades.",
+    "synonyms": ["pentester", "ethical hacker", "pen tester", "red team"]
+  },
+  {
+    "id": "qa-engineer",
+    "label": "QA Engineer",
+    "description": "Profesional que planifica y ejecuta pruebas para asegurar la calidad del software.",
+    "synonyms": ["quality assurance", "tester", "quality engineer", "qa"]
+  },
+  {
+    "id": "test-automation-engineer",
+    "label": "Test Automation Engineer",
+    "description": "Persona que automatiza pruebas funcionales, de regresión y rendimiento.",
+    "synonyms": ["automation tester", "sdet", "test automation"]
+  },
+  {
+    "id": "software-architect",
+    "label": "Software Architect",
+    "description": "Profesional responsable de definir la arquitectura técnica de sistemas y aplicaciones.",
+    "synonyms": ["arquitecto de software", "solutions architect", "technical architect"]
+  },
+  {
+    "id": "tech-lead",
+    "label": "Technical Lead",
+    "description": "Persona que lidera decisiones técnicas y guía al equipo de desarrollo.",
+    "synonyms": ["tech lead", "engineering lead", "lead developer", "lider técnico"]
+  },
+  {
+    "id": "product-manager",
+    "label": "Product Manager",
+    "description": "Profesional que define la visión, estrategia y evolución de productos digitales.",
+    "synonyms": ["pm", "product owner", "gestor de producto"]
+  },
+  {
+    "id": "project-manager",
+    "label": "Project Manager",
+    "description": "Persona que coordina equipos, recursos y tiempos en proyectos tecnológicos.",
+    "synonyms": ["pmo", "gestor de proyectos", "project lead"]
+  },
+  {
+    "id": "agile-practitioner",
+    "label": "Agile Practitioner",
+    "description": "Profesional que facilita y promueve el uso de metodologías ágiles en equipos.",
+    "synonyms": ["scrum master", "agile coach", "scrum", "kanban", "metodologías ágiles"]
+  },
+  {
+    "id": "ux-designer",
+    "label": "UX Designer",
+    "description": "Persona que diseña experiencias centradas en las necesidades reales de las personas usuarias.",
+    "synonyms": ["user experience", "ux research", "diseñador ux", "human centered design"]
+  },
+  {
+    "id": "ui-designer",
+    "label": "UI Designer",
+    "description": "Profesional que define la parte visual, gráfica e interactiva de interfaces digitales.",
+    "synonyms": ["user interface", "diseñador ui", "visual designer", "interaction design"]
+  },
+  {
+    "id": "digital-marketer",
+    "label": "Digital Marketer",
+    "description": "Profesional especializado en marketing digital, posicionamiento y captación online.",
+    "synonyms": ["marketing digital", "growth marketer", "seo specialist", "content marketer"]
+  },
+  {
+    "id": "community-manager",
+    "label": "Community & Social Media Manager",
+    "description": "Persona que gestiona comunidades digitales y presencia en redes sociales.",
+    "synonyms": ["community manager", "social media manager", "gestión de comunidades"]
+  },
+  {
+    "id": "entrepreneur",
+    "label": "Entrepreneur / Startup Founder",
+    "description": "Persona que crea, impulsa o lidera proyectos y empresas tecnológicas.",
+    "synonyms": ["founder", "emprendedor", "startup founder", "ceo"]
+  },
+  {
+    "id": "business-innovation-manager",
+    "label": "Business & Innovation Manager",
+    "description": "Profesional que impulsa iniciativas de innovación, alianzas y desarrollo de negocio.",
+    "synonyms": ["business developer", "innovation manager", "bd", "desarrollo de negocio"]
+  },
+  {
+    "id": "researcher",
+    "label": "Researcher",
+    "description": "Profesional que investiga en ámbitos tecnológicos, científicos o académicos.",
+    "synonyms": ["investigador", "academic researcher", "r&d", "investigación"]
+  },
+  {
+    "id": "maker",
+    "label": "Maker",
+    "description": "Persona que crea proyectos de hardware, electrónica o fabricación digital.",
+    "synonyms": ["hardware maker", "diy", "fabricante digital", "hacker creativo"]
+  },
+  {
+    "id": "open-source-contributor",
+    "label": "Open Source Contributor",
+    "description": "Persona que contribuye a proyectos de software libre o código abierto.",
+    "synonyms": ["oss contributor", "contribuidor open source", "foss contributor"]
+  },
+  {
+    "id": "data-journalist",
+    "label": "Data Journalist",
+    "description": "Profesional que combina análisis de datos y narrativa periodística para investigar, visualizar y comunicar información de interés público.",
+    "synonyms": ["periodismo de datos", "data journalism", "investigación periodística"]
+  }
+]

@@ -1,11 +1,10 @@
-import { useState } from "react";
-
 export function ViewToggleButton ({ view, toggleView }) {
     return (
-        <button className="button is-primary ml-2" onClick={toggleView}>
-            <i className={`fa-solid ${view === "map" ? "fa-list" : "fa-map"}`}></i>
-            &nbsp;
-            {view === "map" ? "Ver lista" : "Ver mapa"}
+        <button className="button is-light" onClick={toggleView}>
+            <span className="icon">
+                <i className={`fa-solid ${view === "map" ? "fa-list" : "fa-map"}`}></i>
+            </span>
+            <span>{view === "map" ? "Ver lista" : "Ver mapa"}</span>
         </button>
     );
 }

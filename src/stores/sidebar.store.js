@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 const useSidebarStore = create((set) => ({
-  isSidebarVisible: window.innerWidth > 768,
+  isSidebarVisible: false,
   actions: {
     toggleSidebar: () =>
       set((state) => ({ isSidebarVisible: !state.isSidebarVisible })),

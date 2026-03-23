@@ -1,17 +1,27 @@
 import { Switch } from "./Switch";
-import { useSideBarVisible } from "../stores/sidebar.store";
+import { useSideBarVisible, useSidebarActions } from "../stores/sidebar.store";
 
 export const Sidebar = () => {
-  // Estado para controlar la visibilidad del sidebar
   const isSidebarVisible = useSideBarVisible();
+  const { toggleSidebar } = useSidebarActions();
 
   return (
     <aside
       className={`sidebar menu column is-full-mobile is-one-third-tablet is-one-quarter-desktop is-one-fifth-widescreen is-one-fifth-fullhd box sticky ${
-        isSidebarVisible ? "is-active" : "is-hidden"
+        isSidebarVisible ? "" : "sidebar--collapsed"
       }`}
     >
-      <p className="menu-label">Tipo de Comunidad</p>
+      <div className="sidebar-header">
+        <button
+          className="sidebar-toggle-btn"
+          onClick={toggleSidebar}
+          title={isSidebarVisible ? "Ocultar filtros" : "Mostrar filtros"}
+        >
+          <i className={`fas ${isSidebarVisible ? "fa-chevron-right" : "fa-filter"}`}></i>
+        </button>
+        <p className="menu-label">Tipo de Comunidad</p>
+      </div>
+      <div className="sidebar-content">
       <ul className="menu-list">
         <li className="menu-item">
           <div className="option-item is-size-7">
@@ -110,13 +120,14 @@ export const Sidebar = () => {
       </ul>
 
       {/* <p className="menu-label">Localizacion habitual</p> */}
-      {/*Aqui podia definir un list box de seleccion multiple con 
-        las distintas provincias como opciones o poner todas y que 
+      {/*Aqui podia definir un list box de seleccion multiple con
+        las distintas provincias como opciones o poner todas y que
         vayan filtrando */}
       {/* <ul className="menu-list">
         <li className="menu-item"></li>
         <li className="menu-item"></li>
       </ul> */}
+      </div>
     </aside>
   );
 };

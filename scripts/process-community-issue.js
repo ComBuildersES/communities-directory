@@ -116,8 +116,11 @@ async function main() {
     eventFormat,
     location,
     topics,
+    tags: [],
+    targetAudience: [],
     contactInfo,
     communityUrl,
+    urls: {},
     thumbnailUrl,
     latLon,
     displayOnMap
