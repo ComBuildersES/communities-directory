@@ -4,7 +4,7 @@ export function ViewToggleButton ({ view, toggleView }) {
             <span className="icon">
                 <i className={`fa-solid ${view === "map" ? "fa-list" : "fa-map"}`}></i>
             </span>
-            <span>{view === "map" ? "Ver lista" : "Ver mapa"}</span>
+            <span className="heading-btn-label">{view === "map" ? "Ver lista" : "Ver mapa"}</span>
         </button>
     );
 }

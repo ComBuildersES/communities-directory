@@ -40,7 +40,7 @@ export function Heading ({
               title={isVisible ? "Ocultar filtros" : "Mostrar filtros"}
             >
               <span className="icon"><i className="fas fa-sliders"></i></span>
-              <span>Filtros</span>
+              <span className="heading-btn-label">Filtros</span>
             </button>
             <ViewToggleButton view={view} toggleView={toggleView} />
           </>

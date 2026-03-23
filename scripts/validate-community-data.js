@@ -383,7 +383,7 @@ function validateCommunityGlobal(community, index, knownTagIds, knownAudienceIds
   }
 }
 
-function validateCommunityStrict(community, index, issues) {
+function validateCommunityStrict(community, index, issues, isNew = true) {
   const prefix = `communities[${index}]`;
   const name = isNonEmptyString(community.name) ? community.name : `#${community.id ?? index}`;
   const label = `${name} (${prefix})`;
@@ -392,15 +392,13 @@ function validateCommunityStrict(community, index, issues) {
     pushIssue(issues.errors, "error", `${label}: id debe ser un entero mayor o igual que 0.`);
   }
 
-  for (const field of [
-    "name",
-    "status",
-    "lastReviewed",
-    "communityType",
-    "eventFormat",
-    "communityUrl",
-    "thumbnailUrl",
-  ]) {
+  const requiredFields = ["name", "status", "lastReviewed", "communityType", "eventFormat", "communityUrl"];
+
+  if (isNew) {
+    requiredFields.push("thumbnailUrl");
+  }
+
+  for (const field of requiredFields) {
     if (!isNonEmptyString(community[field])) {
       pushIssue(
         issues.errors,
@@ -519,14 +517,19 @@ function getChangedCommunities(currentCommunities, baselineCommunities) {
     }
   }
 
-  return currentCommunities.filter((community) => {
-    if (!isPlainObject(community) || !Number.isInteger(community.id)) {
-      return true;
-    }
+  return currentCommunities
+    .filter((community) => {
+      if (!isPlainObject(community) || !Number.isInteger(community.id)) {
+        return true;
+      }
 
-    const baselineSerialized = baselineById.get(community.id);
-    return baselineSerialized !== JSON.stringify(community);
-  });
+      const baselineSerialized = baselineById.get(community.id);
+      return baselineSerialized !== JSON.stringify(community);
+    })
+    .map((community) => ({
+      community,
+      isNew: !isPlainObject(community) || !Number.isInteger(community.id) || !baselineById.has(community.id),
+    }));
 }
 
 function printIssues(title, entries) {
@@ -604,9 +607,9 @@ function main() {
       } else {
         const changedCommunities = getChangedCommunities(communities, baselineCommunities);
 
-        changedCommunities.forEach((community) => {
+        changedCommunities.forEach(({ community, isNew }) => {
           const index = communities.findIndex((entry) => entry?.id === community?.id);
-          validateCommunityStrict(community, index, issues);
+          validateCommunityStrict(community, index, issues, isNew);
         });
       }
     }

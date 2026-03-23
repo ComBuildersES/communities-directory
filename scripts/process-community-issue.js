@@ -24,6 +24,14 @@ function normalizeString(value) {
   return typeof value === 'string' ? value.trim() : '';
 }
 
+function todayDDMMYYYY() {
+  const d = new Date();
+  const dd = String(d.getDate()).padStart(2, '0');
+  const mm = String(d.getMonth() + 1).padStart(2, '0');
+  const yyyy = d.getFullYear();
+  return `${dd}/${mm}/${yyyy}`;
+}
+
 function normalizeBoolean(value) {
   if (typeof value === 'boolean') return value;
   return ['sí', 'si', 'true', '1', 'yes'].includes(String(value).trim().toLowerCase());
@@ -58,7 +66,7 @@ function extractLegacyPayload() {
     id: null,
     name,
     status: extractField('Estado de la comunidad'),
-    lastReviewed: new Date().toLocaleDateString('es-ES'),
+    lastReviewed: todayDDMMYYYY(),
     communityType: extractField('Tipo de comunidad'),
     eventFormat: extractField('Formato'),
     location: extractField('Ciudad o región principal'),
@@ -103,7 +111,7 @@ function normalizePayload(payload) {
     id: payload.id ?? null,
     name: normalizeString(payload.name),
     status: normalizeString(payload.status) || 'Desconocido',
-    lastReviewed: normalizeString(payload.lastReviewed) || new Date().toLocaleDateString('es-ES'),
+    lastReviewed: normalizeString(payload.lastReviewed) || todayDDMMYYYY(),
     communityType: normalizeString(payload.communityType) || 'Tech Meetup',
     eventFormat: normalizeString(payload.eventFormat) || 'Desconocido',
     location: normalizeString(payload.location),

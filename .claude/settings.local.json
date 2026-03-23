@@ -3,7 +3,8 @@
     "allow": [
       "Bash(node scripts/scrape-community-data.js --id 3)",
       "Bash(node scripts/scrape-community-data.js --id 7)",
-      "Bash(node -e \":*)"
+      "Bash(node -e \":*)",
+      "Bash(node scripts/validate-community-data.js --strict-changed --baseline-ref HEAD)"
     ]
   }
 }

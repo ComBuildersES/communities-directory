@@ -199,8 +199,11 @@ html {
   .filter-group-divider {
     display: none;
   }
+  .filter-panel-inner {
+    padding: 0.75rem 1.25rem;
+  }
   .filter-group {
-    padding: 0.5rem 0;
+    padding: 0.5rem 0.5rem;
     border-bottom: 1px solid #f0f0f0;
   }
   .filter-panel--open {
@@ -334,6 +337,9 @@ html {
   }
   #title {
     padding: 0.5rem 0.75rem;
+  }
+  .heading-btn-label {
+    display: none;
   }
 }
 
