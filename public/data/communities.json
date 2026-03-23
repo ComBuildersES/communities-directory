@@ -6814,7 +6814,7 @@
     "id": 211,
     "name": "GeoDevelopers",
     "status": "Activa",
-    "lastReviewed": "23/03/2026",
+    "lastReviewed": "24/03/2026",
     "communityType": "Tech Meetup",
     "eventFormat": "Online",
     "location": "",
@@ -6874,7 +6874,8 @@
       "twitter": "https://x.com/geo_developers",
       "github": "https://github.com/geo-developers",
       "twitch": "https://www.twitch.tv/geodevelopers",
-      "eventsUrl": "https://calendar.google.com/calendar/u/0/embed?src=3mv6ssdlr6dipkrqaheqnbjmuo@group.calendar.google.com&ctz=Europe/Madrid"
+      "eventsUrl": "https://calendar.google.com/calendar/u/0/embed?src=3mv6ssdlr6dipkrqaheqnbjmuo@group.calendar.google.com&ctz=Europe/Madrid",
+      "mailingList": "https://groups.google.com/g/geo-developers"
     },
     "thumbnailUrl": "images/geodevelopers.webp",
     "latLon": {
