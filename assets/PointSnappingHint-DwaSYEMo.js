@@ -1,1 +1,0 @@
-import{J as i}from"./index-DveOj5Vb.js";import{a as n}from"./SketchOptions-CD6f_6zZ.js";class o extends n{constructor(t,s,r){super(s,r),this.point=t}equals(t){return t instanceof o&&i(this.point,t.point)}}export{o as n};
