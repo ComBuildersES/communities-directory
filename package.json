@@ -14,6 +14,7 @@
     "find-duplicates": "node scripts/find-duplicates.js",
     "ensure-id-autoincrement": "node scripts/ensure-id-autoincrement.js",
     "migrate-add-new-fields": "node scripts/migrate-add-new-fields.js",
+    "migrate-url-taxonomy": "node scripts/migrate-url-taxonomy.js",
     "scrape-community-data": "node scripts/scrape-community-data.js",
     "apply-suggestions": "node scripts/apply-suggestions.js",
     "apply-url-mapping": "node scripts/apply-url-mapping.js",

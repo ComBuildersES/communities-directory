@@ -5,17 +5,23 @@ import { buildContributionPath } from "../../lib/communitySubmission";
 import "./CommunityModal.css";
 
 const URL_CONFIG = [
-  { key: "web",       label: "Web",       icon: "fas fa-globe" },
-  { key: "meetup",    label: "Meetup",    icon: "fas fa-calendar-days" },
-  { key: "github",    label: "GitHub",    icon: "fab fa-github" },
-  { key: "discord",   label: "Discord",   icon: "fab fa-discord" },
-  { key: "telegram",  label: "Telegram",  icon: "fab fa-telegram" },
-  { key: "youtube",   label: "YouTube",   icon: "fab fa-youtube" },
-  { key: "linkedin",  label: "LinkedIn",  icon: "fab fa-linkedin" },
-  { key: "twitter",   label: "Twitter/X", icon: "fab fa-x-twitter" },
-  { key: "instagram", label: "Instagram", icon: "fab fa-instagram" },
-  { key: "mastodon",  label: "Mastodon",  icon: "fab fa-mastodon" },
-  { key: "bluesky",   label: "Bluesky",   icon: "fas fa-cloud" },
+  { key: "web",            label: "Web",                icon: "fas fa-globe" },
+  { key: "eventsUrl",      label: "Eventos",            icon: "fas fa-calendar-days" },
+  { key: "linkAggregator", label: "Agregador de links", icon: "fas fa-link" },
+  { key: "mailingList",    label: "Lista de correo",    icon: "fas fa-envelope" },
+  { key: "github",         label: "GitHub",             icon: "fab fa-github" },
+  { key: "discord",        label: "Discord",            icon: "fab fa-discord" },
+  { key: "telegram",       label: "Telegram",           icon: "fab fa-telegram" },
+  { key: "whatsapp",       label: "WhatsApp",           icon: "fab fa-whatsapp" },
+  { key: "slack",          label: "Slack",              icon: "fab fa-slack" },
+  { key: "youtube",        label: "YouTube",            icon: "fab fa-youtube" },
+  { key: "linkedin",       label: "LinkedIn",           icon: "fab fa-linkedin" },
+  { key: "twitter",        label: "Twitter/X",          icon: "fab fa-x-twitter" },
+  { key: "instagram",      label: "Instagram",          icon: "fab fa-instagram" },
+  { key: "facebook",       label: "Facebook",           icon: "fab fa-facebook" },
+  { key: "mastodon",       label: "Mastodon",           icon: "fab fa-mastodon" },
+  { key: "bluesky",        label: "Bluesky",            icon: "fas fa-cloud" },
+  { key: "twitch",         label: "Twitch",             icon: "fab fa-twitch" },
 ];
 
 const STATUS_CLASS = {
@@ -255,7 +261,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, onClose }) {
                     href={buildContributionPath({ mode: "edit", identifier: community.id })}
                     className="button is-small community-modal-validation-cta"
                   >
-                    Ayudar a validarlos
+                    Completar, validar o mejorar
                   </a>
                   <span className="community-modal-validation-note">
                     Bajo CC BY 4.0, tu validación beneficiará también a quien reutilice este directorio. Aquí puedes encontrar los datos usados en este directorio en{" "}

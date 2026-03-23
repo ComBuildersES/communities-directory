@@ -23,13 +23,19 @@ const MAPPING_PATH     = './scripts/url-mapping.json';
 // ─── Clasificación de URLs por plataforma ────────────────────────────────────
 
 const PLATFORM_PATTERNS = [
-  { key: 'meetup',    re: /\bmeetup\.com\b/i },
+  { key: 'eventsUrl', re: /\b(meetup\.com|eventbrite\.(com|es)|lu\.ma|gdg\.community\.dev|community\.cncf\.io|trailblazercommunitygroups\.com|wordcamp\.org|meetups\.mulesoft\.com|saraos\.tech)\b/i },
   { key: 'youtube',   re: /\b(youtube\.com|youtu\.be)\b/i },
   { key: 'github',    re: /\bgithub\.com\b/i },
   { key: 'telegram',  re: /\b(t\.me|telegram\.me)\b/i },
+  { key: 'whatsapp',  re: /\b(wa\.me|chat\.whatsapp\.com|whatsapp\.com)\b/i },
+  { key: 'slack',     re: /\b(join\.slack\.com|slack\.com)\b/i },
   { key: 'discord',   re: /\b(discord\.gg|discord\.com\/invite)\b/i },
   { key: 'instagram', re: /\binstagram\.com\b/i },
   { key: 'linkedin',  re: /\blinkedin\.com\b/i },
+  { key: 'facebook',  re: /\bfacebook\.com\b/i },
+  { key: 'twitch',    re: /\btwitch\.tv\b/i },
+  { key: 'linkAggregator', re: /\b(linktr\.ee|beacons\.ai|campsite\.bio|bio\.link|lnk\.bio|solo\.to|taplink\.cc|allmylinks\.com)\b/i },
+  { key: 'mailingList', re: /\b(substack\.com|buttondown\.email|mailchimp\.com|tinyletter\.com|groups\.google\.com|googlegroups\.com|groups\.io)\b/i },
   { key: 'mastodon',  re: /\/@[\w.-]+$/ },   // patrón ActivityPub: /user en cualquier instancia
   { key: 'bluesky',   re: /\bbsky\.app\b/i },
   { key: 'twitter',   re: /\b(twitter\.com|x\.com)\b/i },

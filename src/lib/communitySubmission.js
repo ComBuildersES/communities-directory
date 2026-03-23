@@ -16,16 +16,22 @@ export const SHORT_DESCRIPTION_MAX_LENGTH = 280;
 
 export const URL_PLATFORM_OPTIONS = [
   { key: "web", label: "Web" },
-  { key: "meetup", label: "Meetup" },
+  { key: "eventsUrl", label: "Eventos" },
+  { key: "linkAggregator", label: "Agregador de links" },
+  { key: "mailingList", label: "Lista de correo" },
   { key: "github", label: "GitHub" },
   { key: "discord", label: "Discord" },
   { key: "telegram", label: "Telegram" },
+  { key: "whatsapp", label: "WhatsApp" },
+  { key: "slack", label: "Slack" },
   { key: "youtube", label: "YouTube" },
   { key: "linkedin", label: "LinkedIn" },
   { key: "twitter", label: "Twitter/X" },
   { key: "instagram", label: "Instagram" },
+  { key: "facebook", label: "Facebook" },
   { key: "mastodon", label: "Mastodon" },
   { key: "bluesky", label: "Bluesky" },
+  { key: "twitch", label: "Twitch" },
 ];
 
 const CONTRIBUTION_MODE_PARAM = "contribute";

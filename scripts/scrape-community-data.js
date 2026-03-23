@@ -2,7 +2,7 @@
  * Scraping de datos de comunidades con Playwright.
  *
  * Para cada comunidad visita su communityUrl y extrae:
- *   - URLs de redes sociales/plataformas (meetup, linkedin, discord, telegram, etc.)
+ *   - URLs de redes sociales/plataformas (eventsUrl, linkedin, discord, telegram, etc.)
  *   - Tags sugeridos (match contra public/data/tags.json usando label + synonyms)
  *   - Hint de estado activa/inactiva (solo para páginas de meetup.com)
  *
@@ -37,14 +37,20 @@ const MIN_TAG_CHARS     = 4;      // longitud mínima de un término para consid
 
 // Plataformas detectables por patrón de URL
 const PLATFORM_PATTERNS = {
-  meetup:    /\bmeetup\.com\b/i,
+  eventsUrl: /\b(meetup\.com|eventbrite\.(com|es)|lu\.ma|gdg\.community\.dev|community\.cncf\.io|trailblazercommunitygroups\.com|wordcamp\.org|meetups\.mulesoft\.com|saraos\.tech)\b/i,
   linkedin:  /\blinkedin\.com\/(company|in|school|groups)\b/i,
   twitter:   /\b(twitter\.com|x\.com)\b/i,
   instagram: /\binstagram\.com\b/i,
   youtube:   /\b(youtube\.com\/(channel|c\/|@|user)|youtu\.be)\b/i,
   discord:   /\b(discord\.gg|discord\.com\/invite)\b/i,
   telegram:  /\b(t\.me|telegram\.me)\b/i,
+  whatsapp:  /\b(wa\.me|chat\.whatsapp\.com|whatsapp\.com)\b/i,
+  slack:     /\b(join\.slack\.com|slack\.com)\b/i,
   github:    /\bgithub\.com\/[^/]+\/?$/i,
+  facebook:  /\bfacebook\.com\b/i,
+  twitch:    /\btwitch\.tv\b/i,
+  linkAggregator: /\b(linktr\.ee|beacons\.ai|campsite\.bio|bio\.link|lnk\.bio|solo\.to|taplink\.cc|allmylinks\.com)\b/i,
+  mailingList: /\b(substack\.com|buttondown\.email|mailchimp\.com|tinyletter\.com|groups\.google\.com|googlegroups\.com|groups\.io)\b/i,
   mastodon:  /\b(mastodon\.social|fosstodon\.org|hachyderm\.io|infosec\.exchange|social\.coop)\b/i,
   bluesky:   /\bbsky\.app\b/i,
 };
@@ -76,7 +82,7 @@ function classifyUrl(url) {
 
 /**
  * Dada la URL de una comunidad, detecta si es en sí misma una URL de plataforma.
- * Ej: "https://www.meetup.com/python-madrid/" → { meetup: "https://..." }
+ * Ej: "https://www.meetup.com/python-madrid/" → { eventsUrl: "https://..." }
  */
 function platformFromCommunityUrl(communityUrl) {
   const platform = classifyUrl(communityUrl);
