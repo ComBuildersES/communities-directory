@@ -178,7 +178,10 @@ VITE_BASE=/communities-directory/ # .env.production
 - **Rendimiento**: `useMemo` en Map, `requestAnimationFrame` para cambios de extent del mapa
 - **Estilos**: clases Bulma (`.is-*`, `.has-*`) + clases propias con prefijo de contexto (`.custom-switch`, `.popover-*`, `.mycard`)
 - **Grid responsive**: 1 col móvil → 2 tablet → 4 desktop → 5 large
-- No hay tests automatizados; validación manual con scripts de datos
+- Tests con **Vitest** (`npm test`). Los ficheros viven en `tests/`
+- Ejecutar `npm test` tras corregir bugs o implementar funcionalidad nueva
+- Añadir tests para cada bug fix (test que reproduce el bug + verifica la corrección)
+- Para testear scripts Node, exportar las funciones puras y guardar `main()` bajo `if (import.meta.url === \`file://\${process.argv[1]}\`)`
 
 ## Despliegue
 
