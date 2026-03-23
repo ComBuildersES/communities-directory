@@ -6,6 +6,9 @@ on:
   schedule:
     - cron: "0 7 * * 1"
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   check-urls:
     runs-on: ubuntu-latest
