@@ -152,6 +152,19 @@ const TAG_CATEGORY_ORDER = [
   "Videojuegos",
 ];
 
+const AUDIENCE_CATEGORY_ORDER = [
+  "Etapa profesional",
+  "Desarrollo de software",
+  "Datos e inteligencia artificial",
+  "Plataforma, cloud y operaciones",
+  "Calidad, seguridad y arquitectura",
+  "Liderazgo, producto y delivery",
+  "Diseño, experiencia y contenido",
+  "Negocio, comunidad e impacto",
+  "Hardware, sistemas y robótica",
+  "Investigación, educación y academia",
+];
+
 function FieldHelp({ content, isOpen, onToggle, onClose }) {
   return (
     <div className={`contribution-field-help ${isOpen ? "is-open" : ""}`}>
@@ -854,6 +867,13 @@ export function CommunityContribution({
   const formRef = useRef(null);
   const nextId = useMemo(() => getNextCommunityId(communities), [communities]);
   const isEditMode = Boolean(existingCommunity);
+  const groupedAudience = useMemo(
+    () => allAudience.map((item) => ({
+      ...item,
+      category: item.category || "Otros perfiles",
+    })),
+    [allAudience]
+  );
   const storageKey = useMemo(
     () => getContributionDraftStorageKey({
       mode: isEditMode ? "edit" : "new",
@@ -1415,7 +1435,7 @@ export function CommunityContribution({
       <TaxonomyPicker
         title="Público objetivo"
         description="Indica a quién va especialmente dirigida la comunidad."
-        items={allAudience}
+        items={groupedAudience}
         selectedValues={draft.targetAudience}
         onToggle={(value) => setDraft((current) => ({
           ...current,
@@ -1423,7 +1443,14 @@ export function CommunityContribution({
         }))}
         searchValue={audienceQuery}
         onSearchChange={setAudienceQuery}
+        groupByCategory
         defaultExpanded={false}
+        categoryOrder={AUDIENCE_CATEGORY_ORDER}
+        suggestionCta={{
+          text: "¿Echas en falta algún público o quieres proponer una mejora en la taxonomía?",
+          label: "Abrir issue",
+          href: "https://github.com/ComBuildersES/communities-directory/issues/new",
+        }}
       />
 
       <section className="contribution-card">
