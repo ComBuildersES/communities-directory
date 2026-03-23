@@ -29,3 +29,6 @@ issue-body.txt
 issue-body-test.txt
 dist
 tmp
+
+# Claude Code
+.claude/
