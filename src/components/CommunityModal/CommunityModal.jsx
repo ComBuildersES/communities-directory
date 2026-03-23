@@ -35,7 +35,7 @@ function isArchivedUrl(url) {
   return typeof url === "string" && url.includes("web.archive.org/web/");
 }
 
-export function CommunityModal({ community, tagsMap, audienceMap, onClose }) {
+export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = [], onClose }) {
   const { filterComunities } = useCommunityActions();
 
   const applyFilter = (key, value) => {
@@ -261,6 +261,52 @@ export function CommunityModal({ community, tagsMap, audienceMap, onClose }) {
                   >
                     {audienceMap[audId] || audId}
                   </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Community Builders */}
+          {cbHandles.length === 0 && (
+            <div className="community-modal-cb-cta">
+              <i className="fa-solid fa-people-group"></i>
+              <span>
+                ¿Dinamizas o dinamizabas esta comunidad?{" "}
+                <a href="https://combuilderses.github.io/" target="_blank" rel="noopener noreferrer">
+                  Únete a Community Builders
+                </a>
+                , la meta-comunidad de organizadores de comunidades tech en España.
+              </span>
+            </div>
+          )}
+          {cbHandles.length > 0 && (
+            <div className="community-modal-section">
+              <h3 className="community-modal-section-title">
+                <i className="fa-solid fa-people-group"></i> Community Builders
+                <span className="community-modal-cb-tooltip-anchor">
+                  <i className="fa-solid fa-circle-info community-modal-cb-info-icon"></i>
+                  <span className="community-modal-cb-tooltip">
+                    Alguna de las personas que lidera o lideró esta comunidad forma parte de Community Builders, la meta-comunidad de organizadores de comunidades tech en España.
+                  </span>
+                </span>
+              </h3>
+              <div className="community-modal-cb-members">
+                {cbHandles.map((handle) => (
+                  <a
+                    key={handle}
+                    href={`https://github.com/${handle}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="community-modal-cb-member"
+                    title={`@${handle} en GitHub`}
+                  >
+                    <img
+                      src={`https://github.com/${handle}.png?size=40`}
+                      alt={handle}
+                      className="community-modal-cb-avatar"
+                    />
+                    <span>@{handle}</span>
+                  </a>
                 ))}
               </div>
             </div>

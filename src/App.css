@@ -322,6 +322,24 @@ html {
   gap: 0.3rem;
 }
 
+.cb-badge {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.6rem;
+  height: 1.6rem;
+  border-radius: 50%;
+  background: #2e6be6;
+  color: #fff;
+  font-size: 0.72rem;
+  box-shadow: 0 1px 4px rgba(46, 107, 230, 0.35);
+  pointer-events: auto;
+}
+
 .option-item {
   display: flex;
   align-items: center;

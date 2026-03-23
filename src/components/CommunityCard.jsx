@@ -2,7 +2,7 @@ import { useState } from "react";
 import { CommunityModal } from "./CommunityModal/CommunityModal";
 
 /* eslint-disable react/prop-types */
-export function CommunityCard({ community, tagsMap = {}, audienceMap = {} }) {
+export function CommunityCard({ community, tagsMap = {}, audienceMap = {}, hasCBMember = false, cbHandles = [] }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const {
@@ -29,6 +29,15 @@ export function CommunityCard({ community, tagsMap = {}, audienceMap = {} }) {
       >
         <div className="card-image card-image--clickable">
           <figure className="image is-1by1 community-card-media">
+            {hasCBMember && (
+              <span
+                className="cb-badge"
+                title="Esta comunidad está representada en Community Builders"
+                onClick={(e) => e.stopPropagation()}
+              >
+                <i className="fa-solid fa-people-group" aria-hidden="true"></i>
+              </span>
+            )}
             <img
               src={
                 miniatura ||
@@ -55,6 +64,7 @@ export function CommunityCard({ community, tagsMap = {}, audienceMap = {} }) {
           community={community}
           tagsMap={tagsMap}
           audienceMap={audienceMap}
+          cbHandles={cbHandles}
           onClose={() => setIsModalOpen(false)}
         />
       )}

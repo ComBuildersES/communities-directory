@@ -8,6 +8,8 @@ import {
   useCommunitiesFiltered,
   useTags,
   useAudience,
+  useCBMemberIds,
+  useCBMembersMap,
 } from "../stores/community.store.js";
 
 export function CommunitiesList() {
@@ -16,6 +18,8 @@ export function CommunitiesList() {
   const communitiesFiltered = useCommunitiesFiltered();
   const allTags = useTags();
   const allAudience = useAudience();
+  const cbMemberIds = useCBMemberIds();
+  const cbMembersMap = useCBMembersMap();
 
   const tagsMap = useMemo(
     () => Object.fromEntries(allTags.map((t) => [t.id, t.label])),
@@ -27,14 +31,23 @@ export function CommunitiesList() {
     [allAudience]
   );
 
+  const sortedCommunities = useMemo(
+    () => [...communitiesFiltered].sort((a, b) => {
+      const aHasCB = cbMemberIds.has(a.id) ? 0 : 1;
+      const bHasCB = cbMemberIds.has(b.id) ? 0 : 1;
+      return aHasCB - bHasCB;
+    }),
+    [communitiesFiltered, cbMemberIds]
+  );
+
   if (isLoading) return <p>Cargando datos...</p>;
   if (isError) return <p>Error: {isError}</p>;
 
   return (
     <div className="communitieslist-container">
       <div className="communitieslist">
-        {communitiesFiltered.map((community) => (
-          <CommunityCard key={community.id} community={community} tagsMap={tagsMap} audienceMap={audienceMap} />
+        {sortedCommunities.map((community) => (
+          <CommunityCard key={community.id} community={community} tagsMap={tagsMap} audienceMap={audienceMap} hasCBMember={cbMemberIds.has(community.id)} cbHandles={cbMembersMap.get(community.id) || []} />
         ))}
       </div>
       <AddCommunityCTA />

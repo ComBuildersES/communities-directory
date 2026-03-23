@@ -8,6 +8,7 @@ import { parseDirectoryFilters } from "../lib/communitySubmission";
 
 const TAGS_URL = "data/tags.json";
 const AUDIENCE_URL = "data/audience.json";
+const CB_MEMBERS_URL = "data/community-builders-members.json";
 
 export const filtros = {
   Estado: ["Activa"],
@@ -27,7 +28,9 @@ const initialState = {
   error: null, // Estado para manejar errores
   filters: {}, // Estado para los filtros
   numberOFCommunities: 0, // Estado para el numero de comunidades
-  numberOFOnSiteCommunities: 0 // Estado para el numero de com. presenciales
+  numberOFOnSiteCommunities: 0, // Estado para el numero de com. presenciales
+  cbMemberIds: new Set(), // IDs de comunidades con miembro en Community Builders
+  cbMembersMap: new Map(), // communityId -> [github handles]
 };
 
 // Define el store Zustand
@@ -38,11 +41,18 @@ const useCommunityStore = create(
       fetchCommunities: async () => {
         set({ isLoading: true, error: null });
         try {
-          const [data, tags, audience] = await Promise.all([
+          const [data, tags, audience, cbMembers] = await Promise.all([
             getAllCommunities(URL),
             getAllCommunities(TAGS_URL),
             getAllCommunities(AUDIENCE_URL),
+            getAllCommunities(CB_MEMBERS_URL),
           ]);
+          const cbMemberIds = new Set(cbMembers.map((m) => m.communityId));
+          const cbMembersMap = cbMembers.reduce((map, { communityId, github }) => {
+            if (!map.has(communityId)) map.set(communityId, []);
+            map.get(communityId).push(github);
+            return map;
+          }, new Map());
           const inverseIndex = buildInverseIndex(data);
           const defaultFilters = { status: ["Activa"] };
           const urlFilters = parseDirectoryFilters();
@@ -60,6 +70,8 @@ const useCommunityStore = create(
             invertedIndex: inverseIndex,
             communitiesFiltered,
             filters: initialFilters,
+            cbMemberIds,
+            cbMembersMap,
             isLoading: false,
             numberOFCommunities: communitiesFiltered.length,
             numberOFOnSiteCommunities: communitiesFiltered.filter(e => e.displayOnMap == true).length
@@ -168,6 +180,10 @@ export const useNumberOFOnSiteCommunities = () =>
 export const useTags = () => useCommunityStore((state) => state.allTags);
 
 export const useAudience = () => useCommunityStore((state) => state.allAudience);
+
+export const useCBMemberIds = () => useCommunityStore((state) => state.cbMemberIds);
+
+export const useCBMembersMap = () => useCommunityStore((state) => state.cbMembersMap);
 
 // Selector de las acciones
 
