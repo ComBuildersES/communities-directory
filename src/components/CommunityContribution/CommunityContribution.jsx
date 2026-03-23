@@ -844,6 +844,29 @@ function buildDatasetSignature(communities = []) {
   );
 }
 
+function buildEditableDraftSignature(draft) {
+  if (!draft) return JSON.stringify(null);
+
+  return JSON.stringify({
+    name: draft.name,
+    status: draft.status,
+    communityType: draft.communityType,
+    eventFormat: draft.eventFormat,
+    location: draft.location,
+    shortDescription: draft.shortDescription,
+    topics: draft.topics,
+    tags: draft.tags,
+    targetAudience: draft.targetAudience,
+    contactInfo: draft.contactInfo,
+    communityUrl: draft.communityUrl,
+    urls: draft.urls,
+    thumbnailUrl: draft.thumbnailUrl,
+    replaceThumbnail: draft.replaceThumbnail,
+    latLon: draft.latLon,
+    displayOnMap: draft.displayOnMap,
+  });
+}
+
 function formatDraftSavedAt(savedAt) {
   if (!savedAt) return null;
 
@@ -891,6 +914,7 @@ export function CommunityContribution({
   const [hasOpenedIssue, setHasOpenedIssue] = useState(false);
   const [hasRestoredDraft, setHasRestoredDraft] = useState(false);
   const [restoredDraftMeta, setRestoredDraftMeta] = useState(null);
+  const [hasUserInteracted, setHasUserInteracted] = useState(false);
   const inferredProvinceIdRef = useRef("");
   const datasetSignature = useMemo(() => buildDatasetSignature(communities), [communities]);
   const latestBaseDraft = useMemo(() => getCommunityDraft(existingCommunity, nextId), [existingCommunity, nextId]);
@@ -940,6 +964,7 @@ export function CommunityContribution({
     }
 
     setHasOpenedIssue(false);
+    setHasUserInteracted(false);
   }, [currentCommunityBaselineSignature, datasetSignature, latestBaseDraft, nextId, storageKey]);
 
   useEffect(() => {
@@ -1026,10 +1051,10 @@ export function CommunityContribution({
   }, [communities, existingCommunity, payload.name, payload.communityUrl, payload.urls]);
 
   const baseDraftSignature = useMemo(
-    () => JSON.stringify(latestBaseDraft),
+    () => buildEditableDraftSignature(latestBaseDraft),
     [latestBaseDraft]
   );
-  const currentDraftSignature = useMemo(() => JSON.stringify(draft), [draft]);
+  const currentDraftSignature = useMemo(() => buildEditableDraftSignature(draft), [draft]);
 
   useEffect(() => {
     inferredProvinceIdRef.current = draft.provinceId;
@@ -1087,7 +1112,7 @@ export function CommunityContribution({
       window.clearTimeout(timeoutId);
     };
   }, [draft.communityType, draft.eventFormat, draft.location]);
-  const isDirty = currentDraftSignature !== baseDraftSignature;
+  const isDirty = hasUserInteracted && currentDraftSignature !== baseDraftSignature;
 
   useEffect(() => {
     onDirtyChange?.(isDirty);
@@ -1129,10 +1154,12 @@ export function CommunityContribution({
   }, [hasOpenedIssue, isDirty]);
 
   const handleFieldChange = (key, value) => {
+    setHasUserInteracted(true);
     setDraft((current) => ({ ...current, [key]: value }));
   };
 
   const handleUrlChange = (key, value) => {
+    setHasUserInteracted(true);
     setDraft((current) => ({
       ...current,
       urls: {
@@ -1143,6 +1170,7 @@ export function CommunityContribution({
   };
 
   const handleReplaceThumbnailToggle = () => {
+    setHasUserInteracted(true);
     setDraft((current) => ({
       ...current,
       replaceThumbnail: !current.replaceThumbnail,
@@ -1169,6 +1197,7 @@ export function CommunityContribution({
     setHasRestoredDraft(false);
     setRestoredDraftMeta(null);
     setHasOpenedIssue(false);
+    setHasUserInteracted(false);
   };
 
   const restoredDraftSavedAt = formatDraftSavedAt(restoredDraftMeta?.savedAt);
@@ -1476,7 +1505,10 @@ export function CommunityContribution({
         description="Selecciona las etiquetas del catálogo para mejorar descubrimiento y filtros."
         items={allTags}
         selectedValues={draft.tags}
-        onToggle={(value) => setDraft((current) => ({ ...current, tags: toggleSelection(current.tags, value) }))}
+        onToggle={(value) => {
+          setHasUserInteracted(true);
+          setDraft((current) => ({ ...current, tags: toggleSelection(current.tags, value) }));
+        }}
         searchValue={tagQuery}
         onSearchChange={setTagQuery}
         groupByCategory
@@ -1496,10 +1528,13 @@ export function CommunityContribution({
         description="Indica a quién va especialmente dirigida la comunidad."
         items={groupedAudience}
         selectedValues={draft.targetAudience}
-        onToggle={(value) => setDraft((current) => ({
-          ...current,
-          targetAudience: toggleSelection(current.targetAudience, value),
-        }))}
+        onToggle={(value) => {
+          setHasUserInteracted(true);
+          setDraft((current) => ({
+            ...current,
+            targetAudience: toggleSelection(current.targetAudience, value),
+          }));
+        }}
         searchValue={audienceQuery}
         onSearchChange={setAudienceQuery}
         groupByCategory

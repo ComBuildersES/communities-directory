@@ -106,7 +106,7 @@ function readSubmission() {
   throw new Error('No se encontró un JSON válido ni el formato antiguo del issue');
 }
 
-function normalizePayload(payload) {
+export function normalizePayload(payload) {
   return {
     id: payload.id ?? null,
     name: normalizeString(payload.name),
@@ -115,6 +115,7 @@ function normalizePayload(payload) {
     communityType: normalizeString(payload.communityType) || 'Tech Meetup',
     eventFormat: normalizeString(payload.eventFormat) || 'Desconocido',
     location: normalizeString(payload.location),
+    shortDescription: normalizeString(payload.shortDescription),
     topics: normalizeString(payload.topics),
     tags: Array.isArray(payload.tags) ? [...new Set(payload.tags.filter(Boolean))] : [],
     targetAudience: Array.isArray(payload.targetAudience) ? [...new Set(payload.targetAudience.filter(Boolean))] : [],
@@ -249,7 +250,9 @@ async function main() {
   console.log(`✔ Comunidad añadida: ${normalizedCommunity.name} (ID ${normalizedCommunity.id})`);
 }
 
-main().catch(err => {
-  console.error('❌ Error:', err);
-  process.exit(1);
-});
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main().catch(err => {
+    console.error('❌ Error:', err);
+    process.exit(1);
+  });
+}
