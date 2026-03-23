@@ -206,7 +206,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Almería",
-        "communityUrl": "https://x.com/AlmeriaRUsers",
+        "communityUrl": "https://almeriarusers.wordpress.com/",
         "thumbnailUrl": "images/almeria-r-users.webp"
       }
     },
@@ -339,7 +339,7 @@
         "status": "Activa",
         "eventFormat": "Híbridos",
         "location": "Madrid",
-        "communityUrl": "https://www.linkedin.com/company/arcasiles-community-madrid",
+        "communityUrl": "https://arcasiles.com/",
         "thumbnailUrl": "images/arcasiles-community-madrid.webp"
       }
     },
@@ -396,7 +396,7 @@
         "status": "Activa",
         "eventFormat": "Híbridos",
         "location": "Asturias",
-        "communityUrl": "https://x.com/asocchea",
+        "communityUrl": "https://linktr.ee/asoc_chea",
         "thumbnailUrl": "images/asociacion-ciberseguridad-y-hacking-etico-asturias.webp"
       }
     },
@@ -434,7 +434,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Granada",
-        "communityUrl": "https://x.com/webgranada",
+        "communityUrl": "https://webmastergranada.es/",
         "thumbnailUrl": "images/asociacion-de-webmasters-de-granada.webp"
       }
     },
@@ -453,7 +453,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Málaga",
-        "communityUrl": "https://x.com/webmalaga",
+        "communityUrl": "http://www.webmastersmalaga.com/",
         "thumbnailUrl": "images/asociacion-de-webmasters-de-malaga.webp"
       }
     },
@@ -639,7 +639,7 @@
       "properties": {
         "id": 54,
         "name": "Barcelona R User Group",
-        "status": "Desconocido",
+        "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Barcelona",
         "communityUrl": "https://www.meetup.com/BarcelonaR/",
@@ -661,7 +661,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Galicia",
-        "communityUrl": "https://x.com/betabeersgal",
+        "communityUrl": "https://betabeers.com/community/betabeers-galicia-29/",
         "thumbnailUrl": "images/betabeers-galicia.webp"
       }
     },
@@ -680,7 +680,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Madrid",
-        "communityUrl": "https://x.com/bigagileos",
+        "communityUrl": "https://bigagileos.wixsite.com/website",
         "thumbnailUrl": "images/big-agile-open-spac.webp"
       }
     },
@@ -718,7 +718,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Alicante",
-        "communityUrl": "https://x.com/bitupalicante",
+        "communityUrl": "https://bitupalicante.com/",
         "thumbnailUrl": "images/bitup-alicante-ciberseguridad.webp"
       }
     },
@@ -753,7 +753,7 @@
       "properties": {
         "id": 63,
         "name": "Blockchain Málaga",
-        "status": "Desconocido",
+        "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Málaga",
         "communityUrl": "https://www.meetup.com/blockchain-malaga/",
@@ -889,7 +889,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Cáceres",
-        "communityUrl": "https://x.com/caceresfront",
+        "communityUrl": "https://cacerestech.com/",
         "thumbnailUrl": "images/cacerestech.webp"
       }
     },
@@ -908,7 +908,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Cádiz",
-        "communityUrl": "https://x.com/cadizgamedev",
+        "communityUrl": "https://linktr.ee/cadizgamedev",
         "thumbnailUrl": "images/cadiz-gamedev.webp"
       }
     },
@@ -1554,7 +1554,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Coruña",
-        "communityUrl": "https://www.corunajug.org/",
+        "communityUrl": "http://web.archive.org/web/20260206220648/https://corunajug.org/",
         "thumbnailUrl": "images/corunajug.webp"
       }
     },
@@ -1630,7 +1630,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Madrid",
-        "communityUrl": "https://ctosummit.geekshubs.com/",
+        "communityUrl": "http://web.archive.org/web/20250518065709/https://ctosummit.geekshubs.com/",
         "thumbnailUrl": "images/cto-summit-infojobs.webp"
       }
     },
@@ -1800,7 +1800,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Granada",
-        "communityUrl": "https://x.com/databeersgrx",
+        "communityUrl": "http://databeersgrx.com/",
         "thumbnailUrl": "images/databeers-granada.webp"
       }
     },
@@ -1819,7 +1819,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Málaga",
-        "communityUrl": "https://www.meetup.com/es-ES/databeers-malaga/",
+        "communityUrl": "https://databeersmlg.com/",
         "thumbnailUrl": "images/databeers-maaga.webp"
       }
     },
@@ -1838,7 +1838,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Madrid",
-        "communityUrl": "https://x.com/databeers",
+        "communityUrl": "https://databeers.tumblr.com/",
         "thumbnailUrl": "images/databeers-madrid.webp"
       }
     },
@@ -1892,7 +1892,7 @@
       "properties": {
         "id": 133,
         "name": "DatabeersRIO",
-        "status": "Activa",
+        "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "La RIoja",
         "communityUrl": "https://www.linkedin.com/company/databeersrio/?originalSubdomain=es",
@@ -1914,7 +1914,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Málaga",
-        "communityUrl": "https://www.des-show.com/",
+        "communityUrl": "http://web.archive.org/web/20260211193651/https://www.des-show.com/",
         "thumbnailUrl": "images/des.webp"
       }
     },
@@ -2025,7 +2025,7 @@
       "properties": {
         "id": 141,
         "name": "Docker Madrid",
-        "status": "Desconocido",
+        "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Madrid",
         "communityUrl": "https://www.meetup.com/es-ES/docker-madrid/",
@@ -2178,7 +2178,7 @@
         "status": "Desconocido",
         "eventFormat": "Presencial",
         "location": "Almería",
-        "communityUrl": "https://groups.drupal.org/almeria"
+        "communityUrl": "http://web.archive.org/web/20250531043545/https://groups.drupal.org/almeria"
       }
     },
     {
@@ -2196,7 +2196,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Asturias",
-        "communityUrl": "https://groups.drupal.org/asturias-spain",
+        "communityUrl": "http://web.archive.org/web/20230529034252/https://groups.drupal.org/asturias-spain",
         "thumbnailUrl": "images/drupal-asturias.webp"
       }
     },
@@ -2251,7 +2251,7 @@
         "status": "Desconocido",
         "eventFormat": "Presencial",
         "location": "Castilla y León",
-        "communityUrl": "https://groups.drupal.org/castillayleon"
+        "communityUrl": "http://web.archive.org/web/20230529035455/https://groups.drupal.org/castillayleon"
       }
     },
     {
@@ -2269,7 +2269,7 @@
         "status": "Desconocido",
         "eventFormat": "Presencial",
         "location": "Comunidad Valenciana",
-        "communityUrl": "https://x.com/drupalval"
+        "communityUrl": "https://groups.drupal.org/comunidad-valenciana"
       }
     },
     {
@@ -2287,7 +2287,7 @@
         "status": "Desconocido",
         "eventFormat": "Presencial",
         "location": "País Vasco",
-        "communityUrl": "https://groups.drupal.org/basque-country"
+        "communityUrl": "http://web.archive.org/web/20201225095243/https://groups.drupal.org/basque-country"
       }
     },
     {
@@ -2305,7 +2305,7 @@
         "status": "Desconocido",
         "eventFormat": "Presencial",
         "location": "Extremadura",
-        "communityUrl": "https://groups.drupal.org/extremadura"
+        "communityUrl": "http://web.archive.org/web/20240112162119/https://groups.drupal.org/extremadura"
       }
     },
     {
@@ -2450,7 +2450,7 @@
         "status": "Desconocido",
         "eventFormat": "Presencial",
         "location": "Zaragoza y alrededores",
-        "communityUrl": "https://groups.drupal.org/zaragoza"
+        "communityUrl": "http://web.archive.org/web/20230529035656/https://groups.drupal.org/zaragoza"
       }
     },
     {
@@ -2468,7 +2468,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Málaga",
-        "communityUrl": "https://dyplofest.com/",
+        "communityUrl": "http://web.archive.org/web/20250521164517/http://dyplofest.com/",
         "thumbnailUrl": "images/dyplofest.webp"
       }
     },
@@ -2712,7 +2712,7 @@
       "properties": {
         "id": 185,
         "name": "Flutter Sevilla",
-        "status": "Desconocido",
+        "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Sevilla",
         "communityUrl": "https://www.meetup.com/flutter-sevilla/",
@@ -2848,7 +2848,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Málaga",
-        "communityUrl": "https://x.com/Gamepolis_org",
+        "communityUrl": "https://gamepolis.org/",
         "thumbnailUrl": "images/gamepolis.webp"
       }
     },
@@ -2867,7 +2867,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Granada",
-        "communityUrl": "https://x.com/gcubo_linux",
+        "communityUrl": "https://gcubo.org/",
         "thumbnailUrl": "images/gcubo.webp"
       }
     },
@@ -2961,7 +2961,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Jaén ",
-        "communityUrl": "https://x.com/gdgjaen",
+        "communityUrl": "https://gdg.community.dev/gdg-jaen/",
         "thumbnailUrl": "images/gdg-jaen.webp"
       }
     },
@@ -3034,7 +3034,7 @@
       "properties": {
         "id": 204,
         "name": "GDG Marbella",
-        "status": "Desconocido",
+        "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Málaga (Marbella)",
         "communityUrl": "https://www.meetup.com/GDG-Marbella/",
@@ -3396,7 +3396,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Málaga",
-        "communityUrl": "https://x.com/_RMlg"
+        "communityUrl": "https://rmalaga.quarto.pub/"
       }
     },
     {
@@ -3468,7 +3468,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Murcia",
-        "communityUrl": "https://x.com/UMUR_Murcia"
+        "communityUrl": "https://gauss.inf.um.es/umur/"
       }
     },
     {
@@ -3858,7 +3858,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Bilbao",
-        "communityUrl": "https://x.com/iniciador_BIL"
+        "communityUrl": "https://www.iniciador.com/es/bilbao934"
       }
     },
     {
@@ -3894,7 +3894,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Cáceres",
-        "communityUrl": "https://x.com/iniciador_cc"
+        "communityUrl": "https://www.iniciador.com/es/caceres"
       }
     },
     {
@@ -3912,7 +3912,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Cádiz",
-        "communityUrl": "https://x.com/iniciador_BCA"
+        "communityUrl": "https://www.iniciador.com/es/cadiz"
       }
     },
     {
@@ -3948,7 +3948,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Castellón de la Plana",
-        "communityUrl": "https://x.com/iniciador_CAS"
+        "communityUrl": "https://www.iniciador.com/es/castellon"
       }
     },
     {
@@ -4712,7 +4712,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Cádiz",
-        "communityUrl": "https://x.com/Lambda_World",
+        "communityUrl": "https://www.lambda.world/",
         "thumbnailUrl": "images/lambda-world.webp"
       }
     },
@@ -4750,7 +4750,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Madrid",
-        "communityUrl": "https://latinasintech.org/chapter/madrid",
+        "communityUrl": "http://web.archive.org/web/20251205170100/https://latinasintech.org/chapter/madrid",
         "thumbnailUrl": "images/latinas-in-tech-madrid.webp"
       }
     },
@@ -4917,7 +4917,7 @@
       "properties": {
         "id": 323,
         "name": "Madrid DevOps",
-        "status": "Desconocido",
+        "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Madrid",
         "communityUrl": "https://madrid.devops.es/"
@@ -5029,7 +5029,7 @@
         "status": "Activa",
         "eventFormat": "Desconocido",
         "location": "Madrid",
-        "communityUrl": "https://madridtechtalks.com/",
+        "communityUrl": "http://web.archive.org/web/20250813111202/https://madridtechtalks.com/",
         "thumbnailUrl": "images/madrid-tech-talks.webp"
       }
     },
@@ -5233,7 +5233,7 @@
       "properties": {
         "id": 340,
         "name": "Málaga TechClub",
-        "status": "Desconocido",
+        "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Málaga",
         "communityUrl": "https://www.meetup.com/malaga-techstars/"
@@ -5254,7 +5254,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Málaga",
-        "communityUrl": "https://x.com/AIMalaga",
+        "communityUrl": "https://malaga-ai.community/",
         "thumbnailUrl": "images/malaga-ai.webp"
       }
     },
@@ -5557,7 +5557,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Barcelona",
-        "communityUrl": "https://x.com/noconname",
+        "communityUrl": "https://www.noconname.org/",
         "thumbnailUrl": "images/no-con-name.webp"
       }
     },
@@ -5576,7 +5576,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Valencia",
-        "communityUrl": "https://www.nocodefest.es/",
+        "communityUrl": "http://web.archive.org/web/20251214071738/https://www.nocodefest.es/",
         "thumbnailUrl": "images/nocodefest.webp"
       }
     },
@@ -5592,7 +5592,7 @@
       "properties": {
         "id": 366,
         "name": "NodeJSMadrid",
-        "status": "Desconocido",
+        "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Madrid",
         "communityUrl": "https://www.meetup.com/es-ES/node-js-madrid/"
@@ -5745,7 +5745,7 @@
         "status": "Inactiva",
         "eventFormat": "Híbridos",
         "location": "Madrid",
-        "communityUrl": "http://osweekends.com"
+        "communityUrl": "http://web.archive.org/web/20251105160740/https://osweekends.com/"
       }
     },
     {
@@ -5763,7 +5763,7 @@
         "status": "Activa",
         "eventFormat": "Híbridos",
         "location": "Madrid",
-        "communityUrl": "https://openexpoeurope.com/",
+        "communityUrl": "http://web.archive.org/web/20250812184530/https://openexpoeurope.com/",
         "thumbnailUrl": "images/openexpo-europe.webp"
       }
     },
@@ -5949,7 +5949,7 @@
       "properties": {
         "id": 387,
         "name": "PhpMadrid",
-        "status": "Desconocido",
+        "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Madrid",
         "communityUrl": "https://www.meetup.com/es-ES/phpmad/"
@@ -6023,7 +6023,7 @@
       "properties": {
         "id": 392,
         "name": "PowerTips Cádiz",
-        "status": "Desconocido",
+        "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Cádiz",
         "communityUrl": "https://www.meetup.com/PowerTips-Cadiz/"
@@ -6082,7 +6082,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Valladolid",
-        "communityUrl": "https://x.com/pucelatechday",
+        "communityUrl": "http://www.pucelatechday.com",
         "thumbnailUrl": "images/pucelatechday.webp"
       }
     },
@@ -6212,7 +6212,7 @@
       "properties": {
         "id": 406,
         "name": "Python Madrid",
-        "status": "Desconocido",
+        "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Madrid",
         "communityUrl": "https://www.meetup.com/es-ES/python-madrid"
@@ -6478,7 +6478,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Canarias",
-        "communityUrl": "https://x.com/socracan/",
+        "communityUrl": "http://web.archive.org/web/20230929223744/https://www.socracan.com/",
         "thumbnailUrl": "images/socracan-socrates-canaries.webp"
       }
     },
@@ -6532,7 +6532,7 @@
       "properties": {
         "id": 428,
         "name": "Software Testers & QA Experts de Málaga",
-        "status": "Desconocido",
+        "status": "Inactiva",
         "eventFormat": "Híbridos",
         "location": "Málaga",
         "communityUrl": "https://www.meetup.com/software-testers-qa-experts-de-malaga/",
@@ -6856,7 +6856,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Valencia",
-        "communityUrl": "https://x.com/tomatinacon",
+        "communityUrl": "http://www.tomatinacon.com/",
         "thumbnailUrl": "images/tomatinacon.webp"
       }
     },
@@ -6875,7 +6875,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Ciudad Real (Tomelloso)",
-        "communityUrl": "https://x.com/TomellosoTech"
+        "communityUrl": "http://www.tomellosotech.org"
       }
     },
     {
@@ -6930,7 +6930,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Valencia",
-        "communityUrl": "https://x.com/ValenciaRUserss"
+        "communityUrl": "https://valenciarusers.wordpress.com/"
       }
     },
     {
@@ -6948,7 +6948,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Vigo, Galicia",
-        "communityUrl": "https://x.com/uxgalicia/"
+        "communityUrl": "https://www.uxgalicia.com/"
       }
     },
     {
@@ -7074,10 +7074,10 @@
       "properties": {
         "id": 462,
         "name": "Vue Málaga",
-        "status": "Activa",
+        "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Málaga",
-        "communityUrl": "https://x.com/VuejsMalaga",
+        "communityUrl": "https://www.vuemalaga.com/",
         "thumbnailUrl": "images/vue-malaga.webp"
       }
     },
@@ -7283,7 +7283,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Madrid (Tielmes)",
-        "communityUrl": "https://x.com/wonderhackes?lang=en",
+        "communityUrl": "https://www.wonderhack.es/",
         "thumbnailUrl": "images/wonderhack-event.webp"
       }
     },
@@ -7302,7 +7302,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Málaga (Alhaurín de la Torre, )",
-        "communityUrl": "https://x.com/WCAlhaurin",
+        "communityUrl": "https://alhaurin.wordcamp.org/2025/",
         "thumbnailUrl": "images/wordcamp-alhaurin-de-la-torre.webp"
       }
     },
@@ -7508,7 +7508,7 @@
       "properties": {
         "id": 495,
         "name": "WordPress Chiclana",
-        "status": "Desconocido",
+        "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Chiclana, Cádiz",
         "communityUrl": "https://www.meetup.com/wordpress-meetup-chiclana/",
@@ -7887,7 +7887,7 @@
       "properties": {
         "id": 516,
         "name": "WordPress Santander",
-        "status": "Desconocido",
+        "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Santander",
         "communityUrl": "https://www.meetup.com/santander-wordpress-meetup/"
@@ -7999,7 +7999,7 @@
       "properties": {
         "id": 523,
         "name": "WordPress Tordosa",
-        "status": "Desconocido",
+        "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Tarragona (Tortosa)",
         "communityUrl": "https://www.meetup.com/tortosa-wordpress-meetup/",
@@ -8192,7 +8192,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Madrid",
-        "communityUrl": "https://x.com/XopsConference",
+        "communityUrl": "https://linktr.ee/xopscon",
         "thumbnailUrl": "images/xops-conference.webp"
       }
     },
@@ -8591,7 +8591,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Madrid",
-        "communityUrl": "https://www.linkedin.com/company/makersia/",
+        "communityUrl": "https://makersia.com/",
         "thumbnailUrl": "images/makers-ia.webp"
       }
     },
@@ -8705,7 +8705,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Madrid",
-        "communityUrl": "https://www.linkedin.com/company/beersstorming/",
+        "communityUrl": "https://beersstorming.com/",
         "thumbnailUrl": "images/beers-storming.webp"
       }
     },
@@ -8895,7 +8895,7 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Sevilla, España",
-        "communityUrl": "https://x.com/MakerSocietySVQ",
+        "communityUrl": "https://sevillamakers.org/",
         "thumbnailUrl": "images/sevilla-maker-societ.webp"
       }
     },
@@ -9006,10 +9006,10 @@
       "properties": {
         "id": 578,
         "name": "The Things Network Sevilla",
-        "status": "Desconocido",
-        "eventFormat": "Híbrido",
+        "status": "Inactiva",
+        "eventFormat": "Híbridos",
         "location": "Sevilla, Spain",
-        "communityUrl": "https://x.com/ttn_sevilla",
+        "communityUrl": "https://www.thethingsnetwork.org/community/sevilla/",
         "thumbnailUrl": "images/the-things-network-sevilla.webp"
       }
     },
@@ -9123,7 +9123,7 @@
         "status": "Activa",
         "eventFormat": "Híbridos",
         "location": "Barcelona, Spain",
-        "communityUrl": "https://x.com/hackbcn?lang=en",
+        "communityUrl": "https://hackbcn.org/",
         "thumbnailUrl": "images/hackbcn.webp"
       }
     },
@@ -9159,7 +9159,7 @@
         "id": 587,
         "name": "GDG Alicante",
         "status": "Activa",
-        "eventFormat": "Híbrido",
+        "eventFormat": "Híbridos",
         "location": "Alicante",
         "communityUrl": "https://gdg.community.dev/gdg-alicante/",
         "thumbnailUrl": "images/gdg-alicante.webp"
@@ -9218,7 +9218,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Valencia",
-        "communityUrl": "https://www.linkedin.com/company/valencia-product-beers/",
+        "communityUrl": "https://web.fourvenues.com/en/product-beers",
         "thumbnailUrl": "images/productbeers.webp"
       }
     },
@@ -9237,7 +9237,7 @@
         "status": "Desconocido",
         "eventFormat": "Presencial",
         "location": "Gijón, Spain",
-        "communityUrl": "https://2024.awscommunity.es/en",
+        "communityUrl": "http://web.archive.org/web/20260123140024/https://2024.awscommunity.es/en",
         "thumbnailUrl": "images/aws-community-day.webp"
       }
     },
