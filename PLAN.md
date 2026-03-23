@@ -46,6 +46,42 @@
 - `CONTRIBUTING.md` actualizado con el nuevo schema (campos `tags`, `targetAudience`, `urls`)
 - `CLAUDE.md` actualizado con toda la arquitectura actual
 
+#### Frontend de búsqueda y datos
+- `community.store.js` ya carga `tags.json` y `audience.json` junto a `communities.json`
+- La búsqueda facetada por etiquetas y público objetivo ya está integrada en el frontend actual
+- `TagSearch` está conectado a la experiencia principal de exploración
+- El modal de comunidad ya muestra etiquetas y público objetivo con mejor contexto visual
+
+#### Nuevo flujo de contribución en la web
+- Nueva interfaz de contribución integrada dentro de la app, sin depender del issue template como entrada principal
+- Soporte para alta nueva y edición de comunidades existentes desde la propia web
+- Deep links por query string para abrir el formulario en modo alta o con una comunidad precargada para editar
+- CTA del listado simplificada para solicitar nuevas comunidades desde la web
+- CTA contextual en comunidades no validadas para animar a validar datos y abrir el formulario precargado
+- Formulario guiado con:
+  - ayudas contextuales para `status`, `communityType`, `eventFormat` y `location`
+  - modal explicativo para `communityType` con ejemplos reales del dataset
+  - taxonomías de `tags` y `targetAudience` plegables, con búsqueda y chips visibles desde el resumen
+  - JSON generado colapsado por defecto
+  - validación visual de campos obligatorios con `*` rojo
+- Reglas del formulario alineadas con el modelo actual:
+  - `lastReviewed` se genera automáticamente con la fecha actual
+  - `humanValidated` se envía como `true` por defecto
+  - `displayOnMap` se calcula automáticamente a partir de `location`
+  - `location` sólo aparece para comunidades `Presencial` o `Híbridos`
+  - `location` usa `n/a` automáticamente en `Organización paraguas`
+  - el formulario ya no expone `topics` heredado
+  - `thumbnailUrl` sólo cambia si la persona activa explícitamente “Reemplazar imagen”
+
+#### Automatización de issues y PRs
+- El workflow ya acepta el nuevo formato de issue generado desde la web (`community-directory-submission:v2`)
+- `scripts/process-community-issue.js` ya soporta:
+  - creación de nuevas comunidades desde JSON
+  - edición de comunidades existentes por ID
+  - compatibilidad hacia atrás con el template antiguo
+  - geocodificación automática de `location`
+  - descarga y conversión de imágenes remotas a `webp` cuando se reemplaza `thumbnailUrl`
+
 ---
 
 ## Próximos pasos
@@ -71,32 +107,21 @@ Scraping completo ejecutado y resultados aplicados con `apply-suggestions`.
 
 ---
 
-### FASE 2 — Frontend: filtro de etiquetas
+### FASE 2 — Frontend: exploración y UX
 
-#### 2.1 Store (`community.store.js`)
-- Cargar `tags.json` y `audience.json` junto a `communities.json`
-- Añadir `filterByTags(tagIds[])` al store usando el índice invertido existente
-- Exponer hooks: `useTags`, `useAudience`, `useTagsFilter`
+#### 2.1 Búsqueda y filtros
+- Revisar si compensa añadir un filtro explícito de `targetAudience` separado del flujo actual
+- Evaluar si merece la pena exponer más señales de búsqueda en tarjetas o modal sin sobrecargar la UI
 
-#### 2.2 Componente `TagSearch`
-- Input de texto con autocompletado
-- Búsqueda sobre `label + description + synonyms` de `tags.json` (substring, case-insensitive)
-- Las sugerencias se agrupan por `category` en el dropdown
-- Al seleccionar un tag, se añade como chip activo y se filtra el listado
-- Soporte multi-tag (intersección de sets, consistente con el resto de filtros)
+#### 2.2 Tarjetas y modal de comunidad
+- Valorar mostrar señales resumidas de `tags` directamente en la tarjeta si mejora el descubrimiento sin saturarla
+- Revisar si los enlaces del modal necesitan todavía más jerarquía visual o agrupación por prioridad
+- Evaluar si conviene diferenciar mejor entre enlace principal y enlaces sociales en el modal
 
-#### 2.3 Integración en `SideBar`
-- Añadir `TagSearch` como nueva sección del panel lateral
-- Separar visualmente de los filtros actuales (status, eventFormat, communityType)
-- Mostrar contador de comunidades con cada tag (opcional, mejora UX)
-
-#### 2.4 `CommunityCard`
-- Mostrar chips de tags en la tarjeta (máximo 3-4 visibles, resto colapsado)
-- Los chips son clicables: al pulsar uno activa el filtro por ese tag
-
-#### 2.5 `AudienceFilter` (opcional, post-MVP)
-- Filtro separado para `targetAudience`, similar a `TagSearch`
-- Puede ir en el mismo sidebar o como filtro secundario
+#### 2.3 Accesibilidad y micro-UX del formulario
+- Validar navegación por teclado y focus management en tooltips, modal de ayuda y taxonomías
+- Revisar mensajes de error nativos del formulario y si conviene personalizarlos
+- Probar la experiencia completa en móvil con especial atención a densidad, scroll y tamaño de targets
 
 ---
 
@@ -114,16 +139,23 @@ Scraping completo ejecutado y resultados aplicados con `apply-suggestions`.
 
 ### FASE 4 — Flujo de contribución
 
-#### 4.1 GitHub Issue template
-- Actualizar el formulario de nueva comunidad para incluir campo de URLs adicionales y tags sugeridos
+#### 4.1 Hardening del nuevo formulario web
+- Revisar si el formulario debería bloquear envío cuando falten `tags` en comunidades donde serían especialmente útiles
+- Evaluar si conviene añadir guardarraíles extra de duplicados por nombre + URL + localización antes de abrir GitHub
+- Mejorar el copy final y mensajes de ayuda tras pruebas reales con personas colaboradoras
 
-#### 4.2 `process-community-issue.js`
-- Ya actualizado para incluir `tags: []`, `targetAudience: []`, `urls: {}` en nuevas comunidades
-- Pendiente: parsear el campo de URLs adicionales del formulario si se añade
-
-#### 4.3 Sugerencia de nuevas etiquetas
+#### 4.2 Issues auxiliares para mantenimiento de taxonomía
 - Crear template de issue para sugerir nuevas etiquetas o mejoras a etiquetas existentes
-- Documentar en CONTRIBUTING.md cómo proponer cambios a `tags.json`
+- Documentar en `CONTRIBUTING.md` cómo proponer cambios a `tags.json` y `audience.json`
+
+#### 4.3 Consolidación de `topics` heredado
+- Revisar dónde sigue usándose el campo legado `topics` en frontend, búsqueda y scripts
+- Definir estrategia para consolidarlo con `tags` sin perder información histórica útil
+- Preparar una migración progresiva para transformar o vaciar `topics` en los registros existentes
+
+#### 4.4 Evolución del issue template antiguo
+- Decidir si se elimina el template anterior, se deja como fallback o se redirige explícitamente al nuevo flujo web
+- Alinear `CONTRIBUTING.md` y cualquier documentación restante con el nuevo punto de entrada principal desde la web
 
 ---
 

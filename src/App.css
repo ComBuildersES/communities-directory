@@ -77,6 +77,13 @@ html {
   display: flex;
   flex: 1;
   /* column-gap: 20px; */
+  background:
+    radial-gradient(circle at top left, rgba(255, 235, 204, 0.65), transparent 36%),
+    linear-gradient(180deg, #fffdf8 0%, #f7f4ed 100%);
+}
+
+.contribution-loading {
+  padding: 2rem;
 }
 
 /* Filter panel */

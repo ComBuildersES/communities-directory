@@ -44,7 +44,8 @@ Hay muchas maneras de participar, tanto si sabes programar como si no. Aquí van
 > **Nota**: se incluye, entre corchetes, los "[Emojikeys](https://github.com/ComBuildersES/communities-directory/issues/22)" asociados a cada tipo de contribución.
 
 1. **Revisión y mejora de datos** [`🔣 data`, `👀 review`]
-    - Proponer una nueva comunidad [completando el formulario](https://github.com/ComBuildersES/communities-directory/issues/new?template=community_entry.yml).
+    - Proponer una nueva comunidad desde la web del directorio, usando el formulario integrado que genera el issue en GitHub automáticamente.
+    - Corregir o validar una comunidad existente desde la propia web, abriendo el formulario precargado para edición.
     - Avisar si se encuentran errores, comunidades duplicadas o datos desactualizados.
     - Revisar datos -> [Buscamos responsables (por provincia) para mantener los datos actualizados](https://github.com/ComBuildersES/communities-directory/issues/53).
     - Sugerir nuevas categorías o campos útiles para describir mejor cada comunidad.
@@ -101,8 +102,9 @@ Puedes colaborar con los datos de varias formas:
 
 - Uniéndote a [las personas que quieran ayudar a mantener las comunidades de cada provincia](https://github.com/ComBuildersES/communities-directory/issues/53).
 - Añadiendo comunidades o mejorando los datos de las existentes:
+   - Desde la web del directorio, usando el formulario guiado para altas nuevas o ediciones de comunidades ya existentes.
    - Desde la web de GitHub, edita directamente [communities.json](https://github.com/ComBuildersES/communities-directory/blob/master/public/data/communities.json) y envía un PR.
-   - Creando un _issue_ describiendo los cambios sugeridos: correcciones, mejoras, comunidades a eliminar, normalización de campos, etc.
+   - Creando un _issue_ para propuestas más abiertas: correcciones, mejoras, comunidades a eliminar, normalización de campos, sugerencias sobre etiquetas, etc.
 - Sugiendo mejoras en la [estructura da datos](#estructura-de-datos).
 - Buscando formas de mejorar el procesamiento automatizado y validación  de datos (normalización de nombres, detección de duplicados...).
 - Aportando al debate de cómo mejorar [las convenciones establecidas](https://github.com/ComBuildersES/communities-directory/issues/63).
@@ -202,7 +204,7 @@ EL fichero [communities.json](https://github.com/ComBuildersES/communities-direc
 - **lastReviewed**<sup>*</sup>: Última fecha en la que alguien modificó o validó los datos.
 - **communityType**<sup>*</sup>: Tipo de comunidad (meetup, organización paraguas, etc.)
 - **eventFormat**<sup>*</sup>: Formato de eventos (presencial, online, híbrido)
-- **location**: Sólo para las comunidades presenciales o híbridas. Ciudad o región principal (si no tiene ubicación fija se puede poner dirección aproximada, ciudad, provincia, ...)
+- **location**: Sólo para las comunidades presenciales o híbridas. Ciudad o región principal en formato tipo `Ciudad, País` (si no tiene ubicación fija puede usarse `Itinerante`; en organizaciones paraguas se usa `n/a`)
 - **topics**: Lista de temáticas en texto libre separada por comas (campo heredado, [ver issue](https://github.com/ComBuildersES/communities-directory/issues/6))
 - **tags**: Array de IDs de etiquetas temáticas de la taxonomía definida en [`public/data/tags.json`](../public/data/tags.json). Ejemplo: `["python", "data-science", "machine-learning"]`
 - **targetAudience**: Array de IDs de perfiles de público objetivo definidos en [`public/data/audience.json`](../public/data/audience.json). Ejemplo: `["data-scientist", "ml-engineer"]`
@@ -269,10 +271,14 @@ Esto abrirá la aplicación en `http://localhost:5173` por defecto (puede variar
 
 #### Crear PR tras añadir comunidades
 
-Al crear un issue con la etiqueta `nueva-comunidad`, se ejecuta [create-community-entry.yml](https://github.com/ComBuildersES/communities-directory/blob/master/.github/workflows/create-community-entry.yml), que:
-- Procesa el issue y genera un PR añadiendo los datos y la imagen ([process-community-issue.js](https://github.com/ComBuildersES/communities-directory/blob/master/scripts/process-community-issue.js)).
+El flujo principal recomendado es usar el formulario integrado en la web del directorio. Ese formulario abre un issue en GitHub con el JSON propuesto ya preparado para revisión.
+
+Cuando se crea ese issue, se ejecuta [create-community-entry.yml](https://github.com/ComBuildersES/communities-directory/blob/master/.github/workflows/create-community-entry.yml), que:
+- Procesa el issue y genera un PR añadiendo o actualizando los datos ([process-community-issue.js](https://github.com/ComBuildersES/communities-directory/blob/master/scripts/process-community-issue.js)).
 - Ejecuta [process-to-communities-to-geojson.js](https://github.com/ComBuildersES/communities-directory/blob/master/scripts/process-to-communities-to-geojson.js) que procesa los datos anteriores y actualiza el fichero [communities.geojson](https://github.com/ComBuildersES/communities-directory/blob/master/public/data/communities.geojson) que contiene las comunidades presenciales e híbridas.
-- Abre un PR con todos cambios.
+- Abre un PR con todos los cambios.
+
+La creación de issues desde GitHub queda ahora orientada a propuestas abiertas; para altas nuevas la entrada recomendada es el formulario web.
 
 #### Despliegue tras merge en master
 

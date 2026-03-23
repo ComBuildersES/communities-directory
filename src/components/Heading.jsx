@@ -1,7 +1,13 @@
+/* eslint-disable react/prop-types */
 import { ViewToggleButton } from "./ViewToggleButton.jsx";
 import { useSidebarActions, useSideBarVisible } from "../stores/sidebar.store";
 
-export function Heading ({ view, toggleView }) {
+export function Heading ({
+  view,
+  toggleView,
+  isContributionView = false,
+  closeContributionForm,
+}) {
   const { toggleSidebar } = useSidebarActions();
   const isVisible = useSideBarVisible();
 
@@ -18,17 +24,25 @@ export function Heading ({ view, toggleView }) {
       </div>
 
       <div className="heading-actions">
-        <button
-          className={`button ${isVisible ? "is-primary" : "is-light"}`}
-          onClick={toggleSidebar}
-          title={isVisible ? "Ocultar filtros" : "Mostrar filtros"}
-        >
-          <span className="icon"><i className="fas fa-sliders"></i></span>
-          <span>Filtros</span>
-        </button>
-        <ViewToggleButton view={view} toggleView={toggleView} />
+        {isContributionView ? (
+          <button className="button is-light" onClick={closeContributionForm}>
+            <span className="icon"><i className="fas fa-arrow-left"></i></span>
+            <span>Volver</span>
+          </button>
+        ) : (
+          <>
+            <button
+              className={`button ${isVisible ? "is-primary" : "is-light"}`}
+              onClick={toggleSidebar}
+              title={isVisible ? "Ocultar filtros" : "Mostrar filtros"}
+            >
+              <span className="icon"><i className="fas fa-sliders"></i></span>
+              <span>Filtros</span>
+            </button>
+            <ViewToggleButton view={view} toggleView={toggleView} />
+          </>
+        )}
       </div>
     </header>
   );
 }
-

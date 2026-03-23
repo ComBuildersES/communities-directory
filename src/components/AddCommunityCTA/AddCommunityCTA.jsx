@@ -2,6 +2,7 @@
 import {
   useIsLoading,
 } from "../../stores/community.store.js";
+import { buildContributionPath } from "../../lib/communitySubmission";
 
 import "./AddCommunityCTA.css";
 
@@ -12,9 +13,12 @@ export function AddCommunityCTA () {
 
   return (
     <div className="add-community-cta">
-      <h1 className="title">¿Hechas en falta alguna comunidad?</h1>
-      <p className="subtitle is-5">Si conoces alguna que aún no aparece, puedes añadirla fácilmente. ¡Este directorio lo construimos entre todos!</p>
-      <a className="button is-primary" href="https://github.com/ComBuildersES/communities-directory/issues/new?template=community_entry.yml" target="_blank">Añadir al directorio</a>
+      <p className="title">
+        ¿Echas en falta alguna comunidad?{" "}
+        <a className="button is-primary" href={buildContributionPath({ mode: "new" })}>
+          Solicitar nueva comunidad aquí
+        </a>
+      </p>
     </div>
   );
 }

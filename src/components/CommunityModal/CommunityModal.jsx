@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect } from "react";
 import { useCommunityActions } from "../../stores/community.store";
+import { buildContributionPath } from "../../lib/communitySubmission";
 import "./CommunityModal.css";
 
 const URL_CONFIG = [
@@ -118,14 +119,12 @@ export function CommunityModal({ community, tagsMap, audienceMap, onClose }) {
                 <a href={`mailto:${contactInfo}`}>{contactInfo}</a>
               </span>
             )}
-          </div>
-
-          {/* Validación humana */}
-          <div className={`community-modal-validation ${humanValidated ? "validated" : "not-validated"}`}>
-            <i className={`fas ${humanValidated ? "fa-circle-check" : "fa-circle-exclamation"}`}></i>
-            {humanValidated
-              ? "Datos validados por una persona"
-              : "Datos enriquecidos automáticamente, pendientes de validación humana"}
+            {communityUrl && (
+              <span>
+                <i className="fas fa-link"></i>{" "}
+                <a href={communityUrl} target="_blank" rel="noopener noreferrer">Enlace principal</a>
+              </span>
+            )}
           </div>
 
           {/* URLs */}
@@ -161,6 +160,53 @@ export function CommunityModal({ community, tagsMap, audienceMap, onClose }) {
               </div>
             </div>
           )}
+
+          {/* Validación humana */}
+          <div className={`community-modal-validation ${humanValidated ? "validated" : "not-validated"}`}>
+            <i className={`fas ${humanValidated ? "fa-circle-check" : "fa-circle-exclamation"}`}></i>
+            <div className="community-modal-validation-content">
+              <span className="community-modal-validation-text">
+                {humanValidated
+                  ? "Datos validados por una persona"
+                  : "Datos enriquecidos automáticamente, pendientes de validación humana"}
+              </span>
+              {!humanValidated && (
+                <>
+                  <a
+                    href={buildContributionPath({ mode: "edit", identifier: community.id })}
+                    className="button is-small community-modal-validation-cta"
+                  >
+                    Ayudar a validarlos
+                  </a>
+                  <span className="community-modal-validation-note">
+                    Bajo CC BY 4.0, tu validación beneficiará también a quien reutilice este directorio. Aquí puedes encontrar los datos usados en este directorio en{" "}
+                    <a
+                      href="https://github.com/ComBuildersES/communities-directory/blob/master/public/data/communities.json"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      `communities.json`
+                    </a>.
+                  </span>
+                </>
+              )}
+            </div>
+          </div>
+
+          <div className="community-modal-section">
+            <h3 className="community-modal-section-title">
+              <i className="fas fa-pen-to-square"></i> Colaborar
+            </h3>
+            <div className="community-modal-urls">
+              <a
+                href={buildContributionPath({ mode: "edit", identifier: community.id })}
+                className="community-modal-url-item"
+              >
+                <i className="fas fa-code-compare"></i>
+                <span>Proponer cambios</span>
+              </a>
+            </div>
+          </div>
 
           {/* Temáticas */}
           {tags.length > 0 && (

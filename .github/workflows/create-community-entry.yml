@@ -1,4 +1,4 @@
-name: Crear PR para nueva comunidad
+name: Crear PR desde issue de comunidad
 
 on:
   issues:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   create-pr:
-    if: contains(github.event.issue.labels.*.name, 'nueva-comunidad')
+    if: contains(github.event.issue.body, 'community-directory-submission:v2') || contains(github.event.issue.labels.*.name, 'nueva-comunidad')
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -50,9 +50,9 @@ jobs:
           add-paths: |
             public/data/
             public/images/
-          commit-message: "Añadir nueva comunidad desde issue #${{ github.event.issue.number }}"
-          branch: "add-community-${{ github.event.issue.number }}"
-          title: "Propuesta: Añadir comunidad desde issue #${{ github.event.issue.number }}"
+          commit-message: "Aplicar propuesta de comunidad desde issue #${{ github.event.issue.number }}"
+          branch: "community-issue-${{ github.event.issue.number }}"
+          title: "Propuesta: aplicar cambios de comunidad desde issue #${{ github.event.issue.number }}"
           body: |
             Esta PR ha sido generada automáticamente a partir del issue #${{ github.event.issue.number }}.
             

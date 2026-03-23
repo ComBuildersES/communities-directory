@@ -126,11 +126,47 @@
 /* Validación */
 .community-modal-validation {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5rem;
   font-size: 0.8rem;
   padding: 0.5rem 0.75rem;
   border-radius: 6px;
+}
+
+.community-modal-validation-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+}
+
+.community-modal-validation-text {
+  line-height: 1.4;
+}
+
+.community-modal-validation-note {
+  font-size: 0.76rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.community-modal-validation-note a {
+  color: inherit;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.community-modal-validation-cta {
+  margin-top: 0.15rem;
+  background: #946c00;
+  border-color: #946c00;
+  color: #fff;
+}
+
+.community-modal-validation-cta:hover {
+  background: #735300;
+  border-color: #735300;
+  color: #fff;
 }
 
 .community-modal-validation.validated {
