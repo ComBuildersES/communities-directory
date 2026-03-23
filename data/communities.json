@@ -26,11 +26,11 @@
     "contactInfo": "contact@dotnetfoundation.org",
     "communityUrl": "https://dotnetfoundation.org/community/.net-meetups",
     "urls": {
-      "meetup": "https://www.meetup.com/pro/dotnet",
       "github": "https://github.com/dotnet-foundation",
       "twitter": "https://twitter.com/dotnetfdn",
       "youtube": "https://www.youtube.com/channel/UCiaZbznpWV1o-KLxj8zqR6A",
-      "linkedin": "https://www.linkedin.com/company/dotnetfoundation/"
+      "linkedin": "https://www.linkedin.com/company/dotnetfoundation/",
+      "eventsUrl": "https://www.meetup.com/pro/dotnet"
     },
     "thumbnailUrl": "images/net-foundation-meetups.webp",
     "latLon": {
@@ -72,9 +72,8 @@
     "contactInfo": "devnulltalks@gmail.com",
     "communityUrl": "https://devnulltalks.github.io/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/nicol%C3%A1s-palumbo-9372615/",
-      "meetup": "https://www.meetup.com/dev-null/",
-      "github": "https://github.com/orderedlist"
+      "github": "https://github.com/orderedlist",
+      "eventsUrl": "https://www.meetup.com/dev-null/"
     },
     "thumbnailUrl": "images/devnull-talks.webp",
     "latLon": {
@@ -109,6 +108,7 @@
     "urls": {
       "twitter": "https://x.com/rootedcon",
       "linkedin": "https://www.linkedin.com/company/rooted",
+      "tiktok": "https://www.tiktok.com/@rootedcon",
       "instagram": "https://www.instagram.com/rootedc0n",
       "telegram": "https://t.me/RootedCONLive"
     },
@@ -193,10 +193,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/AIndustriosa/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/AIndustriosa/",
-      "linkedin": "https://www.linkedin.com/in/orestesca/",
       "twitter": "http://twitter.com/aindustriosa",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/AIndustriosa/"
     },
     "thumbnailUrl": "images/a-industriosa.webp",
     "latLon": {
@@ -219,7 +217,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/accesibilidad-spain/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es-ES/accesibilidad-spain/"
+    },
     "thumbnailUrl": "images/accesibilidad-spain.webp",
     "latLon": {
       "lat": null,
@@ -242,9 +242,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/adabcnjs/",
     "urls": {
-      "meetup": "https://www.meetup.com/adabcnjs/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/adabcnjs/"
     },
     "thumbnailUrl": "images/adabcnjs.webp",
     "latLon": {
@@ -360,9 +358,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/agilearagon/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/agilearagon/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "twitter": "https://x.com/agilearagon",
+      "eventsUrl": "https://www.meetup.com/es-ES/agilearagon/"
     },
     "thumbnailUrl": "images/agile-aragon.webp",
     "latLon": {
@@ -387,7 +384,7 @@
     "communityUrl": "https://x.com/AgileDeliveryES",
     "urls": {
       "twitter": "https://x.com/AgileDeliveryES",
-      "meetup": "https://www.meetup.com/es-es/agile-delivery-es/"
+      "eventsUrl": "https://www.meetup.com/es-es/agile-delivery-es/"
     },
     "thumbnailUrl": "images/agile-delivery.webp",
     "latLon": {
@@ -487,10 +484,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/agile-sur/?eventOrigin=event_home_page",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/agile-sur/?eventOrigin=event_home_page",
       "telegram": "https://t.me/+HIJ-46Dne3o2NzY0",
       "twitter": "https://twitter.com/agilesur",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/agile-sur/?eventOrigin=event_home_page"
     },
     "thumbnailUrl": "images/agile-sur.webp",
     "latLon": {
@@ -540,7 +536,7 @@
     "communityUrl": "https://www.facebook.com/AgileGirls/",
     "urls": {
       "twitter": "https://x.com/agilegirls",
-      "web": "https://www.facebook.com/AgileGirls/"
+      "facebook": "https://www.facebook.com/AgileGirls/"
     },
     "thumbnailUrl": "images/agilegirls.webp",
     "latLon": {
@@ -655,10 +651,10 @@
     "contactInfo": "hub@akasha.barcelona",
     "communityUrl": "https://akasha.barcelona/",
     "urls": {
-      "meetup": "https://www.meetup.com/akashabarcelona/",
       "telegram": "https://t.me/+BimXDWstf680Nzk8",
       "instagram": "https://www.instagram.com/akasha.barcelona/",
-      "twitter": "https://twitter.com/AKASHAworldBCN"
+      "twitter": "https://twitter.com/AKASHAworldBCN",
+      "eventsUrl": "https://www.meetup.com/akashabarcelona/"
     },
     "thumbnailUrl": "images/akasha-hub.webp",
     "latLon": {
@@ -740,7 +736,7 @@
     "communityUrl": "https://x.com/AlmeriaJs",
     "urls": {
       "twitter": "https://x.com/AlmeriaJs",
-      "meetup": "https://www.meetup.com/es-es/almeriajs/"
+      "eventsUrl": "https://www.meetup.com/es-es/almeriajs/"
     },
     "thumbnailUrl": "images/almeriajs.webp",
     "latLon": {
@@ -833,10 +829,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/andalucia-startup-founder/",
     "urls": {
-      "meetup": "https://www.meetup.com/andalucia-startup-founder/",
-      "linkedin": "https://www.linkedin.com/in/paulobrien/",
       "twitter": "https://twitter.com/founding",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/andalucia-startup-founder/"
     },
     "thumbnailUrl": "images/andalucia-startup-founder.webp",
     "latLon": {
@@ -859,7 +853,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/angular_madrid/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es-ES/angular_madrid/"
+    },
     "thumbnailUrl": "images/angular-madrid.webp",
     "latLon": {
       "lat": 40.4167047,
@@ -895,9 +891,8 @@
     "contactInfo": "sponsor@angularmalaga.com",
     "communityUrl": "https://www.meetup.com/es-ES/angular-malaga/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/angular-malaga/",
       "twitter": "http://twitter.com/angularmalaga/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/angular-malaga/"
     },
     "thumbnailUrl": "images/angular-malaga.webp",
     "latLon": {
@@ -921,9 +916,7 @@
     "contactInfo": "contacta@apiaddicts.org",
     "communityUrl": "https://www.meetup.com/es-ES/apiaddicts/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/apiaddicts/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/apiaddicts/"
     },
     "thumbnailUrl": "images/apiaddicts.webp",
     "latLon": {
@@ -1071,7 +1064,7 @@
     "communityUrl": "https://linktr.ee/asoc_chea",
     "urls": {
       "twitter": "https://x.com/asocchea",
-      "web": "https://linktr.ee/asoc_chea"
+      "linkAggregator": "https://linktr.ee/asoc_chea"
     },
     "thumbnailUrl": "images/asociacion-ciberseguridad-y-hacking-etico-asturias.webp",
     "latLon": {
@@ -1132,9 +1125,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/asociacion-de-usuarios-de-r-de-castilla-la-mancha/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/asociacion-de-usuarios-de-r-de-castilla-la-mancha/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/asociacion-de-usuarios-de-r-de-castilla-la-mancha/"
     },
     "thumbnailUrl": "images/asociacion-de-usuarios-de-r-de-castilla-la-mancha.webp",
     "latLon": {
@@ -1244,10 +1235,10 @@
     "communityUrl": "https://linktr.ee/asturcontech",
     "urls": {
       "instagram": "https://www.instagram.com/asturcontech/",
-      "linkedin": "https://www.linkedin.com/company/86026888/admin/",
       "twitter": "https://twitter.com/AsturCONtech",
       "telegram": "https://t.me/+wRE1sHSRAhdjZjc0",
-      "youtube": "https://www.youtube.com/@asturcontech?sub_confirmation=1"
+      "youtube": "https://www.youtube.com/@asturcontech?sub_confirmation=1",
+      "linkAggregator": "https://linktr.ee/asturcontech"
     },
     "thumbnailUrl": "images/asturcontech.webp",
     "latLon": {
@@ -1281,7 +1272,8 @@
     "urls": {
       "twitter": "https://x.com/asturiaswcraft",
       "bluesky": "https://bsky.app/profile/asturiascrafters.com",
-      "linkedin": "https://linkedin.com/company/asturiaswcraft"
+      "linkedin": "https://linkedin.com/company/asturiaswcraft",
+      "eventsUrl": "https://saraos.tech/@asturias-software-crafters"
     },
     "thumbnailUrl": "images/asturias-software-crafters.webp",
     "latLon": {
@@ -1306,7 +1298,7 @@
     "communityUrl": "https://x.com/asturiasjs",
     "urls": {
       "twitter": "https://x.com/asturiasjs",
-      "mastodon": "https://saraos.tech/@asturiasjs"
+      "eventsUrl": "https://saraos.tech/@asturiasjs"
     },
     "thumbnailUrl": "images/asturiasjs.webp",
     "latLon": {
@@ -1353,9 +1345,9 @@
     "communityUrl": "https://www.facebook.com/people/Astur-PHP/100068828983142/?_rdr",
     "urls": {
       "twitter": "https://x.com/asturphp",
-      "meetup": "https://www.meetup.com/es-es/asturphp/",
-      "web": "https://www.facebook.com/people/Astur-PHP/100068828983142/?_rdr",
-      "mastodon": "https://saraos.tech/@asturphp"
+      "mastodon": "https://saraos.tech/@asturphp",
+      "eventsUrl": "https://www.meetup.com/es-es/asturphp/",
+      "facebook": "https://www.facebook.com/people/Astur-PHP/100068828983142/?_rdr"
     },
     "thumbnailUrl": "images/asturphp.webp",
     "latLon": {
@@ -1404,10 +1396,10 @@
     "communityUrl": "https://atlanticaconf.com/",
     "urls": {
       "twitter": "https://twitter.com/CorunaDev",
-      "meetup": "https://www.meetup.com/es-ES/WordPressCoruna/",
       "discord": "https://discord.gg/yHxUpYJMzM",
       "linkedin": "https://www.linkedin.com/company/atlanticaconf/",
-      "bluesky": "https://bsky.app/profile/atlanticaconf.com"
+      "bluesky": "https://bsky.app/profile/atlanticaconf.com",
+      "eventsUrl": "https://www.meetup.com/es-ES/WordPressCoruna/"
     },
     "thumbnailUrl": "images/atlanticaconf.webp",
     "latLon": {
@@ -1510,9 +1502,7 @@
     "contactInfo": "ms-data@microsoft.com",
     "communityUrl": "https://www.meetup.com/pro/azuredatatechgroups/",
     "urls": {
-      "meetup": "https://www.meetup.com/pro/azuredatatechgroups/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/pro/azuredatatechgroups/"
     },
     "thumbnailUrl": "images/azure-data-tech-groups.webp",
     "latLon": {
@@ -1561,9 +1551,9 @@
     "communityUrl": "https://azuremalaga.com/",
     "urls": {
       "twitter": "http://twitter.com/azuremalaga",
-      "meetup": "https://www.meetup.com/es-ES/azuremalaga/",
       "github": "https://github.com/azuremalaga",
-      "linkedin": "https://www.linkedin.com/company/azuremalaga"
+      "linkedin": "https://www.linkedin.com/company/azuremalaga",
+      "eventsUrl": "https://www.meetup.com/es-ES/azuremalaga/"
     },
     "thumbnailUrl": "images/azure-malaga.webp",
     "latLon": {
@@ -1608,10 +1598,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/azuremalaga/",
     "urls": {
-      "meetup": "https://www.meetup.com/azuremalaga/",
       "twitter": "https://twitter.com/azuremalaga",
       "linkedin": "https://www.linkedin.com/groups/8197954/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/azuremalaga/"
     },
     "thumbnailUrl": "images/azure-malaga-meetup.webp",
     "latLon": {
@@ -1643,7 +1632,6 @@
     "contactInfo": "",
     "communityUrl": "https://developer.microsoft.com/en-us/azure-tech-groups/",
     "urls": {
-      "twitter": "https://twitter.com/intent/tweet?original_referer=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fazure-tech-groups%2F%3FWT.mc_id%3Dtwitter&tw_p=tweetbutton&url=https%3A%2F%2Flearn.microsoft.com%2Fen-us%2Fazure-tech-groups%2F%3FWT.mc_id%3Dtwitter",
       "github": "https://github.com/AzureTechCommunity"
     },
     "thumbnailUrl": "images/azure-tech-groups.webp",
@@ -1668,9 +1656,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/azurebrains-name-global-ai-spain/",
     "urls": {
-      "meetup": "https://www.meetup.com/azurebrains-name-global-ai-spain/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/azurebrains-name-global-ai-spain/"
     },
     "thumbnailUrl": "images/azurebrains.webp",
     "latLon": {
@@ -1693,7 +1679,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/barcelona-android-dev-group",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es-ES/barcelona-android-dev-group"
+    },
     "latLon": {
       "lat": 41.387917,
       "lon": 2.1699187
@@ -1734,9 +1722,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/BarcelonaR/",
     "urls": {
-      "meetup": "https://www.meetup.com/BarcelonaR/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/BarcelonaR/"
     },
     "thumbnailUrl": "images/barcelona-r-user-group.webp",
     "latLon": {
@@ -1987,7 +1973,7 @@
       "instagram": "https://www.instagram.com/biznagafest/",
       "twitter": "https://twitter.com/BiznagaFest",
       "youtube": "https://www.youtube.com/@biznagafest",
-      "meetup": "https://www.meetup.com/es-ES/google-developer-group-malaga/#top"
+      "eventsUrl": "https://www.meetup.com/es-ES/google-developer-group-malaga/#top"
     },
     "thumbnailUrl": "images/biznagafest.webp",
     "latLon": {
@@ -2023,9 +2009,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/blockchain-malaga/",
     "urls": {
-      "meetup": "https://www.meetup.com/blockchain-malaga/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/blockchain-malaga/"
     },
     "thumbnailUrl": "images/blockchain-malaga.webp",
     "latLon": {
@@ -2071,9 +2055,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/blockchain4all/",
     "urls": {
-      "meetup": "https://www.meetup.com/blockchain4all/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/blockchain4all/"
     },
     "thumbnailUrl": "images/blockchain4all.webp",
     "latLon": {
@@ -2097,9 +2079,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/BoqueronSec/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/BoqueronSec/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/BoqueronSec/"
     },
     "thumbnailUrl": "images/boqueronsec.webp",
     "latLon": {
@@ -2160,7 +2140,6 @@
     "contactInfo": "info@bsides.barcelona",
     "communityUrl": "https://bsides.barcelona/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/luanapascu/",
       "twitter": "https://x.com/BarcelonaBsides/",
       "youtube": "https://www.youtube.com/channel/UC6ZFHgp_gWbORaibgQgJn7g"
     },
@@ -2259,7 +2238,7 @@
       "twitter": "https://x.com/cadizgamedev",
       "instagram": "https://www.instagram.com/cadizgamedev",
       "discord": "https://discord.gg/jENjY6Jnwe",
-      "web": "https://linktr.ee/cadizgamedev"
+      "linkAggregator": "https://linktr.ee/cadizgamedev"
     },
     "thumbnailUrl": "images/cadiz-gamedev.webp",
     "latLon": {
@@ -2307,7 +2286,7 @@
     "contactInfo": "",
     "communityUrl": "https://t.me/canariasjs ",
     "urls": {
-      "telegram": "https://t.me/canariasjs "
+      "telegram": "https://t.me/canariasjs"
     },
     "thumbnailUrl": "images/canariasjs.webp",
     "latLon": {
@@ -2368,9 +2347,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/CATzure/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/CATzure/",
       "twitter": "https://twitter.com/CAT_zure",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/CATzure/"
     },
     "thumbnailUrl": "images/catzure.webp",
     "latLon": {
@@ -2461,9 +2439,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/classdojo-espana/",
     "urls": {
-      "meetup": "https://www.meetup.com/classdojo-espana/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/classdojo-espana/"
     },
     "thumbnailUrl": "images/classdojo-espana.webp",
     "latLon": {
@@ -2505,7 +2481,8 @@
       "instagram": "https://www.instagram.com/humans.of.cloudnative/",
       "linkedin": "https://www.linkedin.com/company/cloud-native-computing-foundation/",
       "youtube": "https://www.youtube.com/c/cloudnativefdn",
-      "github": "https://github.com/cncf"
+      "github": "https://github.com/cncf",
+      "eventsUrl": "https://community.cncf.io"
     },
     "thumbnailUrl": "images/cloud-native.webp",
     "latLon": {
@@ -2553,7 +2530,8 @@
       "instagram": "https://www.instagram.com/humans.of.cloudnative/",
       "linkedin": "https://www.linkedin.com/company/cloud-native-computing-foundation/",
       "youtube": "https://www.youtube.com/c/cloudnativefdn",
-      "github": "https://github.com/cncf"
+      "github": "https://github.com/cncf",
+      "eventsUrl": "https://community.cncf.io/cloud-native-barcelona/"
     },
     "thumbnailUrl": "images/cloud-native-cncf-barcelona.webp",
     "latLon": {
@@ -2585,7 +2563,8 @@
       "instagram": "https://www.instagram.com/humans.of.cloudnative/",
       "linkedin": "https://www.linkedin.com/company/cloud-native-computing-foundation/",
       "youtube": "https://www.youtube.com/c/cloudnativefdn",
-      "github": "https://github.com/cncf"
+      "github": "https://github.com/cncf",
+      "eventsUrl": "https://community.cncf.io/cloud-native-bilbao/"
     },
     "thumbnailUrl": "images/cloud-native-cncf-bilbao.webp",
     "latLon": {
@@ -2622,7 +2601,8 @@
       "twitter": "https://twitter.com/cloudnativegal",
       "instagram": "https://www.instagram.com/humans.of.cloudnative/",
       "youtube": "https://www.youtube.com/c/cloudnativefdn",
-      "github": "https://github.com/cncf"
+      "github": "https://github.com/cncf",
+      "eventsUrl": "https://community.cncf.io/cloud-native-galicia/"
     },
     "thumbnailUrl": "images/cloud-native-cncf-galicia.webp",
     "latLon": {
@@ -2664,7 +2644,8 @@
       "instagram": "https://www.instagram.com/humans.of.cloudnative/",
       "linkedin": "https://www.linkedin.com/company/cloud-native-computing-foundation/",
       "youtube": "https://www.youtube.com/c/cloudnativefdn",
-      "github": "https://github.com/cncf"
+      "github": "https://github.com/cncf",
+      "eventsUrl": "https://community.cncf.io/cloud-native-granada/"
     },
     "thumbnailUrl": "images/cloud-native-cncf-granada.webp",
     "latLon": {
@@ -2712,7 +2693,8 @@
       "instagram": "https://www.instagram.com/humans.of.cloudnative/",
       "linkedin": "https://www.linkedin.com/company/cloud-native-computing-foundation/",
       "youtube": "https://www.youtube.com/c/cloudnativefdn",
-      "github": "https://github.com/cncf"
+      "github": "https://github.com/cncf",
+      "eventsUrl": "https://community.cncf.io/cloud-native-madrid-1/"
     },
     "thumbnailUrl": "images/cloud-native-cncf-madrid.webp",
     "latLon": {
@@ -2752,7 +2734,8 @@
       "instagram": "https://www.instagram.com/humans.of.cloudnative/",
       "linkedin": "https://www.linkedin.com/company/cloud-native-computing-foundation/",
       "youtube": "https://www.youtube.com/c/cloudnativefdn",
-      "github": "https://github.com/cncf"
+      "github": "https://github.com/cncf",
+      "eventsUrl": "https://community.cncf.io/malaga/"
     },
     "thumbnailUrl": "images/cloud-native-cncf-malaga.webp",
     "latLon": {
@@ -2797,7 +2780,8 @@
       "instagram": "https://www.instagram.com/humans.of.cloudnative/",
       "linkedin": "https://www.linkedin.com/company/cloud-native-computing-foundation/",
       "youtube": "https://www.youtube.com/c/cloudnativefdn",
-      "github": "https://github.com/cncf"
+      "github": "https://github.com/cncf",
+      "eventsUrl": "https://community.cncf.io/cloud-native-mallorca/"
     },
     "thumbnailUrl": "images/cloud-native-cncf-mallorca.webp",
     "latLon": {
@@ -2843,7 +2827,8 @@
       "instagram": "https://www.instagram.com/humans.of.cloudnative/",
       "linkedin": "https://www.linkedin.com/company/cloud-native-computing-foundation/",
       "youtube": "https://www.youtube.com/c/cloudnativefdn",
-      "github": "https://github.com/cncf"
+      "github": "https://github.com/cncf",
+      "eventsUrl": "https://community.cncf.io/cloud-native-rioja/"
     },
     "thumbnailUrl": "images/cloud-native-cncf-rioja.webp",
     "latLon": {
@@ -2885,10 +2870,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/cloud-native-sevilla/",
     "urls": {
-      "meetup": "https://www.meetup.com/cloud-native-sevilla/",
       "youtube": "https://www.youtube.com/@CloudNativeSevilla",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/cloud-native-sevilla/"
     },
     "thumbnailUrl": "images/cloud-native-cncf-sevilla.webp",
     "latLon": {
@@ -2925,11 +2908,11 @@
     "contactInfo": "organizers@cloudnativevalencia.com",
     "communityUrl": "https://community.cncf.io/cloud-native-valencia/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/company/102956974/admin/feed/posts/",
       "twitter": "https://twitter.com/cloudnativefdn",
       "instagram": "https://www.instagram.com/humans.of.cloudnative/",
       "youtube": "https://www.youtube.com/c/cloudnativefdn",
-      "github": "https://github.com/cncf"
+      "github": "https://github.com/cncf",
+      "eventsUrl": "https://community.cncf.io/cloud-native-valencia/"
     },
     "thumbnailUrl": "images/cloud-native-cncf-valencia.webp",
     "latLon": {
@@ -2954,9 +2937,9 @@
     "communityUrl": "https://community.cncf.io/xxx-dormant-cloud-native-asturias/",
     "urls": {
       "twitter": "https://x.com/cloudnativeast",
-      "web": "https://community.cncf.io/xxx-dormant-cloud-native-asturias/",
       "mastodon": "https://saraos.tech/@cloud-native-asturias",
-      "youtube": "https://www.youtube.com/@cloudnativeasturias5752"
+      "youtube": "https://www.youtube.com/@cloudnativeasturias5752",
+      "eventsUrl": "https://community.cncf.io/xxx-dormant-cloud-native-asturias/"
     },
     "thumbnailUrl": "images/cloud-native-asturias.webp",
     "latLon": {
@@ -3114,7 +3097,7 @@
     "communityUrl": "https://x.com/codenares",
     "urls": {
       "twitter": "https://x.com/codenares",
-      "meetup": "https://www.meetup.com/es-es/codenares/"
+      "eventsUrl": "https://www.meetup.com/es-es/codenares/"
     },
     "thumbnailUrl": "images/codenares.webp",
     "latLon": {
@@ -3192,7 +3175,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/codify/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es-ES/codify/"
+    },
     "thumbnailUrl": "images/codifymeetup.webp",
     "latLon": {
       "lat": 40.4167047,
@@ -3240,8 +3225,7 @@
     "contactInfo": "",
     "communityUrl": "https://collaborativemodeling.carrd.co/",
     "urls": {
-      "telegram": "https://t.me/+oQdISHfNKQJjODJk",
-      "linkedin": "https://www.linkedin.com/in/lopezdeavila/"
+      "telegram": "https://t.me/+oQdISHfNKQJjODJk"
     },
     "thumbnailUrl": "images/collaborative-modeling-como-madrid.webp",
     "latLon": {
@@ -3281,10 +3265,6 @@
     "communityUrl": "https://commit-conf.com/",
     "urls": {
       "youtube": "https://youtu.be/MaHQ2y1dryE",
-      "twitter": "https://x.com/agilegirls",
-      "meetup": "https://www.meetup.com/es-ES/Front-end-Developers-Madrid/",
-      "telegram": "https://t.me/phpcoruna",
-      "linkedin": "https://www.linkedin.com/company/red-mujeres-ia/",
       "bluesky": "https://bsky.app/profile/commit-conf.com"
     },
     "thumbnailUrl": "images/commitconf.webp",
@@ -3310,7 +3290,9 @@
     ],
     "contactInfo": "communitybuilders.es@gmail.com",
     "communityUrl": "https://linktr.ee/ComBuilders_ES",
-    "urls": {},
+    "urls": {
+      "linkAggregator": "https://linktr.ee/ComBuilders_ES"
+    },
     "thumbnailUrl": "images/community-builders.webp",
     "latLon": {
       "lat": null,
@@ -3335,7 +3317,7 @@
     "urls": {
       "twitter": "https://x.com/alexadevsmadrid",
       "discord": "https://discord.com/invite/nuYEGd9Rcv",
-      "web": "https://www.twitch.tv/comunidadalexa"
+      "twitch": "https://www.twitch.tv/comunidadalexa"
     },
     "thumbnailUrl": "images/name-de-alexa-en-espanol.webp",
     "latLon": {
@@ -3397,7 +3379,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/comunidades-tecnologicas-madrid/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es-ES/comunidades-tecnologicas-madrid/"
+    },
     "thumbnailUrl": "images/namees-tecnologicas-madrid.webp",
     "latLon": {
       "lat": 40.4167047,
@@ -3453,7 +3437,6 @@
     "communityUrl": "https://caearagon.org/#conferencia",
     "urls": {
       "twitter": "http://twitter.com/iagilidad",
-      "linkedin": "https://www.linkedin.com/in/conferencia-agilidad-empresa-aragonesa/",
       "youtube": "https://www.youtube.com/channel/UCZkVhc0TGy_mgFhIkel7Khw"
     },
     "thumbnailUrl": "images/conferencia-de-agilidad-en-la-empresa-aragonesa.webp",
@@ -3487,7 +3470,6 @@
     "contactInfo": "3rquer@sevillar.es",
     "communityUrl": "https://imus.us.es/congresos/IIIRqueR/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/rosanaferrero/?originalSubdomain=es",
       "github": "https://github.com/Enchufa2",
       "twitter": "https://twitter.com/imus_us",
       "instagram": "https://www.instagram.com/instituto_matematicas_us/?hl=es",
@@ -3538,7 +3520,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://linktr.ee/tryit_upm",
-    "urls": {},
+    "urls": {
+      "linkAggregator": "https://linktr.ee/tryit_upm"
+    },
     "thumbnailUrl": "images/congreso-tryit.webp",
     "latLon": {
       "lat": 40.4167047,
@@ -3574,7 +3558,8 @@
     "urls": {
       "twitter": "https://www.twitter.com/CordobaCrafters",
       "linkedin": "https://www.linkedin.com/company/eventbrite",
-      "instagram": "https://www.instagram.com/eventbrite"
+      "instagram": "https://www.instagram.com/eventbrite",
+      "eventsUrl": "https://www.eventbrite.com/o/cordoba-software-crafters-48873988743"
     },
     "thumbnailUrl": "images/cordoba-software-crafters.webp",
     "latLon": {
@@ -3639,7 +3624,8 @@
       "telegram": "https://t.me/corunaWTF",
       "twitter": "https://twitter.com/corunawtf",
       "linkedin": "https://www.linkedin.com/groups/9273460",
-      "github": "https://github.com/corunawtf"
+      "github": "https://github.com/corunawtf",
+      "linkAggregator": "https://linktr.ee/corunawtf"
     },
     "thumbnailUrl": "images/coruna-wtf.webp",
     "latLon": {
@@ -3670,7 +3656,7 @@
     "urls": {
       "instagram": "https://instagram.com/coruna.events",
       "linkedin": "https://www.linkedin.com/company/coruna.events",
-      "meetup": "https://www.meetup.com/gpul-labs/events/313900823/"
+      "eventsUrl": "https://www.meetup.com/gpul-labs/events/313900823/"
     },
     "thumbnailUrl": "images/corunaevents.webp",
     "latLon": {
@@ -3729,11 +3715,10 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/craftersvigo/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/craftersvigo/",
       "twitter": "https://twitter.com/CraftersVigo",
       "linkedin": "https://www.linkedin.com/company/craftersvigo",
       "github": "https://github.com/craftersVigo",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/craftersvigo/"
     },
     "thumbnailUrl": "images/crafters-vigo.webp",
     "latLon": {
@@ -3767,9 +3752,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/fuengirola-criptomonedas-meetup-group/?eventOrigin=topic_overview_nearest_groups",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/fuengirola-criptomonedas-meetup-group/?eventOrigin=topic_overview_nearest_groups",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/fuengirola-criptomonedas-meetup-group/?eventOrigin=topic_overview_nearest_groups"
     },
     "thumbnailUrl": "images/criptomonedas-meetup-group.webp",
     "latLon": {
@@ -3821,7 +3804,7 @@
       "twitter": "https://x.com/CryptoSpaceCS",
       "web": "http://www.cryptospace.es/",
       "linkedin": "https://www.linkedin.com/company/cryptospacecs/",
-      "mastodon": "https://saraos.tech/@cryptospace"
+      "eventsUrl": "https://saraos.tech/@cryptospace"
     },
     "thumbnailUrl": "images/cryptospace.webp",
     "latLon": {
@@ -3889,8 +3872,8 @@
     "urls": {
       "twitter": "https://twitter.com/nics_lab",
       "linkedin": "https://www.linkedin.com/company/nics-lab/",
-      "meetup": "https://www.meetup.com/cybercamp-uma/",
-      "youtube": "https://www.youtube.com/channel/UCBaTbzG6zC_y97QEpmPL2hw"
+      "youtube": "https://www.youtube.com/channel/UCBaTbzG6zC_y97QEpmPL2hw",
+      "eventsUrl": "https://www.meetup.com/cybercamp-uma/"
     },
     "thumbnailUrl": "images/cybercamp-uma.webp",
     "latLon": {
@@ -4040,9 +4023,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/big-data-developers-in-barcelona/",
     "urls": {
-      "meetup": "https://www.meetup.com/big-data-developers-in-barcelona/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/big-data-developers-in-barcelona/"
     },
     "thumbnailUrl": "images/data-cloud-and-ai-in-barcelona.webp",
     "latLon": {
@@ -4088,10 +4069,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/big-data-developers-in-madrid/",
     "urls": {
-      "meetup": "https://www.meetup.com/big-data-developers-in-madrid/",
       "youtube": "https://www.youtube.com/channel/UCxROk30xBNLZE1uCW3TqH2g",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/big-data-developers-in-madrid/"
     },
     "thumbnailUrl": "images/data-cloud-and-ai-in-madrid.webp",
     "latLon": {
@@ -4114,7 +4093,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/databeers-almeria/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es-ES/databeers-almeria/"
+    },
     "thumbnailUrl": "images/databeers-almeria.webp",
     "latLon": {
       "lat": 36.8400939,
@@ -4178,7 +4159,7 @@
       "web": "https://databeersmlg.com/",
       "twitter": "https://x.com/DataBeersMLG",
       "youtube": "https://www.youtube.com/channel/UC87w8_m-ylzovTfXXyvvMhg",
-      "meetup": "https://www.meetup.com/es-es/databeers-malaga/"
+      "eventsUrl": "https://www.meetup.com/es-es/databeers-malaga/"
     },
     "thumbnailUrl": "images/databeers-maaga.webp",
     "latLon": {
@@ -4258,10 +4239,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/databeersvq/",
     "urls": {
-      "meetup": "https://www.meetup.com/databeersvq/",
       "twitter": "https://twitter.com/DatabeerSVQ/status/937029400331157504",
       "youtube": "https://www.youtube.com/channel/UCOKXC8v78ONvwJhaC7tWuXA",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/databeersvq/"
     },
     "thumbnailUrl": "images/databeers-sevilla.webp",
     "latLon": {
@@ -4454,7 +4434,7 @@
     "contactInfo": "",
     "communityUrl": "https://gdg.community.dev/events/details/google-gdg-sevilla-presents-devfest-sevilla-2024/",
     "urls": {
-      "twitter": "https://twitter.com/intent/tweet?text=I%27m%20attending%20Google%20Developer%20Groups%20GDG%20Sevilla%20w%2F%20Devfest%20Sevilla%202024%20on%20nov%2024."
+      "eventsUrl": "https://gdg.community.dev/events/details/google-gdg-sevilla-presents-devfest-sevilla-2024/"
     },
     "thumbnailUrl": "images/devfest-sevilla-2024.webp",
     "latLon": {
@@ -4563,8 +4543,7 @@
     "communityUrl": "https://devwomen.com/",
     "urls": {
       "web": "https://devwomen.com/",
-      "instagram": "https://www.instagram.com/devwomen_es/",
-      "linkedin": "https://www.linkedin.com/showcase/devwomen/about/"
+      "instagram": "https://www.instagram.com/devwomen_es/"
     },
     "thumbnailUrl": "images/devwomen.webp",
     "latLon": {
@@ -4607,10 +4586,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/docker-madrid/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/docker-madrid/",
       "twitter": "http://twitter.com/dockermadrid/",
       "linkedin": "http://www.linkedin.com/company/dotcloud",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/docker-madrid/"
     },
     "thumbnailUrl": "images/docker-madrid.webp",
     "latLon": {
@@ -4655,13 +4633,13 @@
     "contactInfo": "meetup@docker.com",
     "communityUrl": "https://www.docker.com/community/get-involved/",
     "urls": {
-      "meetup": "https://meetup.com/pro/docker",
       "discord": "https://discord.com/invite/sKqzB9eF3n",
       "linkedin": "https://www.linkedin.com/groups/6538078/",
       "youtube": "https://www.youtube.com/@dockerinc",
       "github": "https://github.com/docker",
       "instagram": "https://www.instagram.com/dockerinc/?hl=en",
-      "twitter": "https://twitter.com/docker"
+      "twitter": "https://twitter.com/docker",
+      "eventsUrl": "https://meetup.com/pro/docker"
     },
     "thumbnailUrl": "images/docker-user-groups.webp",
     "latLon": {
@@ -4700,7 +4678,6 @@
     "contactInfo": "marketing@plainconcepts.com",
     "communityUrl": "https://dotnetconfspain.com/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/glenncon/",
       "twitter": "https://x.com/dotNetConfSpain/status/1805173122225639729"
     },
     "thumbnailUrl": "images/dotnet-conf-spain.webp",
@@ -4748,9 +4725,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/dotnetmalaga/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/dotnetmalaga/",
       "twitter": "http://twitter.com/dotnetmalaga/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/dotnetmalaga/"
     },
     "thumbnailUrl": "images/dotnetmalaga-meetup.webp",
     "latLon": {
@@ -4800,7 +4776,7 @@
     "urls": {
       "twitter": "http://twitter.com/dotnetmalaga",
       "github": "https://github.com/dotnetmalaga",
-      "meetup": "http://www.meetup.com/dotnetMALAGA/"
+      "eventsUrl": "http://www.meetup.com/dotnetMALAGA/"
     },
     "thumbnailUrl": "images/dotnetmalaga-conferencia.webp",
     "latLon": {
@@ -4837,9 +4813,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/dotnetters/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/dotnetters/",
       "twitter": "http://twitter.com/dotnetters/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/dotnetters/"
     },
     "thumbnailUrl": "images/dotnetters.webp",
     "latLon": {
@@ -4876,9 +4851,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/dotnetters/",
     "urls": {
-      "meetup": "https://www.meetup.com/dotnetters/",
       "twitter": "http://twitter.com/dotnetters/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/dotnetters/"
     },
     "thumbnailUrl": "images/dotnetters-zaragoza.webp",
     "latLon": {
@@ -5569,11 +5543,11 @@
     "contactInfo": "meetups@elastic.co",
     "communityUrl": "https://www.elastic.co/community/usergroupguide#/community/usergroupguide",
     "urls": {
-      "meetup": "http://www.meetup.com/cities/th/bangkok/",
       "linkedin": "https://www.linkedin.com/company/elastic-co",
       "youtube": "https://www.youtube.com/user/elasticsearch",
       "twitter": "https://www.twitter.com/elastic",
-      "github": "https://github.com/elastic"
+      "github": "https://github.com/elastic",
+      "eventsUrl": "http://www.meetup.com/cities/th/bangkok/"
     },
     "thumbnailUrl": "images/elastic-local-meetups.webp",
     "latLon": {
@@ -5601,7 +5575,8 @@
       "instagram": "https://www.instagram.com/etsiittech_club",
       "twitter": "https://x.com/etsiittech_club",
       "linkedin": "https://www.linkedin.com/company/etsiittechlcub",
-      "discord": "https://discord.gg/yRya3Rquz9"
+      "discord": "https://discord.gg/yRya3Rquz9",
+      "linkAggregator": "https://linktr.ee/etsiittechclub"
     },
     "thumbnailUrl": "images/etsiittech_club.webp",
     "latLon": {
@@ -5720,7 +5695,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/facebook-developer-circle-madrid/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es-ES/facebook-developer-circle-madrid/"
+    },
     "thumbnailUrl": "images/facebook-developer-circle-madrid.webp",
     "latLon": {
       "lat": 40.4167047,
@@ -5773,10 +5750,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/flutter-barcelona/",
     "urls": {
-      "meetup": "https://www.meetup.com/flutter-barcelona/",
       "twitter": "https://twitter.com/flutter_barcelo",
       "linkedin": "https://www.linkedin.com/groups/9302385/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/flutter-barcelona/"
     },
     "thumbnailUrl": "images/flutter-barcelona.webp",
     "latLon": {
@@ -5817,9 +5793,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/flutter-lleida/",
     "urls": {
-      "meetup": "https://www.meetup.com/flutter-lleida/",
       "twitter": "http://twitter.com/flutterlleida/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/flutter-lleida/"
     },
     "thumbnailUrl": "images/flutter-lleida.webp",
     "latLon": {
@@ -5859,9 +5834,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/flutter-madrid/",
     "urls": {
-      "meetup": "https://www.meetup.com/flutter-madrid/",
       "twitter": "http://twitter.com/FlutterMadrid/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/flutter-madrid/"
     },
     "thumbnailUrl": "images/flutter-madrid.webp",
     "latLon": {
@@ -5898,10 +5872,10 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/flutter-malaga/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/flutter-malaga/",
       "twitter": "https://x.com/fluttermalaga",
       "linkedin": "https://www.linkedin.com/company/flutter-m%C3%A1laga/",
-      "instagram": "https://www.instagram.com/flutter_malaga"
+      "instagram": "https://www.instagram.com/flutter_malaga",
+      "eventsUrl": "https://www.meetup.com/es-ES/flutter-malaga/"
     },
     "thumbnailUrl": "images/flutter-malaga.webp",
     "latLon": {
@@ -5938,9 +5912,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/flutter-sevilla/",
     "urls": {
-      "meetup": "https://www.meetup.com/flutter-sevilla/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/flutter-sevilla/"
     },
     "thumbnailUrl": "images/flutter-sevilla.webp",
     "latLon": {
@@ -5990,10 +5962,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/flutter-valencia/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/flutter-valencia/",
       "twitter": "https://twitter.com/FlutterVal",
       "linkedin": "https://www.linkedin.com/company/flutter-valencia-community",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/flutter-valencia/"
     },
     "thumbnailUrl": "images/flutter-valencia.webp",
     "latLon": {
@@ -6017,9 +5988,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/cybercamp-uma/",
     "urls": {
-      "meetup": "https://www.meetup.com/cybercamp-uma/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/cybercamp-uma/"
     },
     "thumbnailUrl": "images/foro-cybercamp.webp",
     "latLon": {
@@ -6058,9 +6027,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/Front-Developers-Madrid/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/Front-Developers-Madrid/",
       "twitter": "https://twitter.com/FrontenddevMad",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/Front-Developers-Madrid/"
     },
     "thumbnailUrl": "images/frontend-developers-madrid.webp",
     "latLon": {
@@ -6107,8 +6075,8 @@
     "communityUrl": "https://x.com/fullstacksvq",
     "urls": {
       "twitter": "https://x.com/fullstacksvq",
-      "meetup": "https://www.meetup.com/es-es/fullstacksevilla/",
-      "mastodon": "https://saraos.tech/@fullstacksvq"
+      "mastodon": "https://saraos.tech/@fullstacksvq",
+      "eventsUrl": "https://www.meetup.com/es-es/fullstacksevilla/"
     },
     "thumbnailUrl": "images/fullstack-sevilla.webp",
     "latLon": {
@@ -6148,7 +6116,8 @@
     "contactInfo": "galpon@mastodon.gal",
     "communityUrl": "https://www.galpon.org/",
     "urls": {
-      "telegram": "https://t.me/galpon"
+      "telegram": "https://t.me/galpon",
+      "mastodon": "galpon@mastodon.gal"
     },
     "thumbnailUrl": "images/galpon.webp",
     "latLon": {
@@ -6264,10 +6233,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/gdg-coruna/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/gdg-coruna/",
       "twitter": "https://twitter.com/gdgcoruna",
       "linkedin": "https://www.linkedin.com/company/gdg-coruna/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/gdg-coruna/"
     },
     "thumbnailUrl": "images/gdg-a-coruna.webp",
     "latLon": {
@@ -6302,7 +6270,8 @@
     "communityUrl": "https://gdg.community.dev/gdg-cloud-espanol/",
     "urls": {
       "twitter": "https://www.twitter.com/gdg_cloud",
-      "linkedin": "https://www.linkedin.com/groups/13640206/"
+      "linkedin": "https://www.linkedin.com/groups/13640206/",
+      "eventsUrl": "https://gdg.community.dev/gdg-cloud-espanol/"
     },
     "thumbnailUrl": "images/gdg-cloud-espanol.webp",
     "latLon": {
@@ -6327,7 +6296,7 @@
     "communityUrl": "https://x.com/gdgcloudmadrid?lang=en",
     "urls": {
       "twitter": "https://x.com/gdgcloudmadrid?lang=en",
-      "meetup": "https://www.meetup.com/es-ES/gcdcmadrid/"
+      "eventsUrl": "https://www.meetup.com/es-ES/gcdcmadrid/"
     },
     "latLon": {
       "lat": 40.4167047,
@@ -6374,9 +6343,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/granadagdg/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/granadagdg/",
       "twitter": "http://twitter.com/GDGgranada/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/granadagdg/"
     },
     "thumbnailUrl": "images/gdg-granada.webp",
     "latLon": {
@@ -6399,7 +6367,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/GDG-Huelva/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/GDG-Huelva/"
+    },
     "thumbnailUrl": "images/gdg-huelva.webp",
     "latLon": {
       "lat": 37.2571454,
@@ -6436,7 +6406,7 @@
     "urls": {
       "twitter": "https://x.com/gdgjaen",
       "instagram": "https://www.instagram.com/gdgjaen",
-      "web": "https://gdg.community.dev/gdg-jaen/"
+      "eventsUrl": "https://gdg.community.dev/gdg-jaen/"
     },
     "thumbnailUrl": "images/gdg-jaen.webp",
     "latLon": {
@@ -6472,7 +6442,8 @@
     "contactInfo": "",
     "communityUrl": "https://gdg.community.dev/gdg-la-rioja/",
     "urls": {
-      "twitter": "https://www.twitter.com/GDGLaRioja"
+      "twitter": "https://www.twitter.com/GDGLaRioja",
+      "eventsUrl": "https://gdg.community.dev/gdg-la-rioja/"
     },
     "thumbnailUrl": "images/gdg-la-rioja.webp",
     "latLon": {
@@ -6516,7 +6487,8 @@
     "urls": {
       "twitter": "https://www.twitter.com/gdgmadrid",
       "linkedin": "https://www.linkedin.com/company/gdgmadrid",
-      "discord": "https://discord.gg/7acF6f3DB4"
+      "discord": "https://discord.gg/7acF6f3DB4",
+      "eventsUrl": "https://gdg.community.dev/gdg-madrid/"
     },
     "thumbnailUrl": "images/gdg-madrid.webp",
     "latLon": {
@@ -6556,8 +6528,8 @@
       "twitter": "https://www.twitter.com/gdgmalaga",
       "linkedin": "https://www.linkedin.com/company/gdg-malaga/",
       "instagram": "https://www.instagram.com/gdgmalaga",
-      "meetup": "https://www.meetup.com/malagamobile/",
-      "discord": "https://discord.gg/PbUpg2b6pW"
+      "discord": "https://discord.gg/PbUpg2b6pW",
+      "eventsUrl": "https://www.meetup.com/malagamobile/"
     },
     "thumbnailUrl": "images/gdg-malaga.webp",
     "latLon": {
@@ -6603,9 +6575,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/GDG-Marbella/",
     "urls": {
-      "meetup": "https://www.meetup.com/GDG-Marbella/",
       "twitter": "http://twitter.com/GDGMarbella/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/GDG-Marbella/"
     },
     "thumbnailUrl": "images/gdg-marbella.webp",
     "latLon": {
@@ -6672,9 +6643,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/GDGSevilla/",
     "urls": {
-      "meetup": "https://www.meetup.com/GDGSevilla/",
       "twitter": "http://twitter.com/GDGSevilla/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/GDGSevilla/"
     },
     "thumbnailUrl": "images/gdg-sevilla.webp",
     "latLon": {
@@ -6752,7 +6722,8 @@
     "urls": {
       "twitter": "https://www.twitter.com/gdgtoledo_es",
       "linkedin": "https://www.linkedin.com/company/103971769",
-      "discord": "https://discord.gg/KkvcV3krCY"
+      "discord": "https://discord.gg/KkvcV3krCY",
+      "eventsUrl": "https://gdg.community.dev/gdg-toledo/"
     },
     "thumbnailUrl": "images/gdg-toledo.webp",
     "latLon": {
@@ -6805,7 +6776,7 @@
     "urls": {
       "twitter": "https://www.twitter.com/gdgvalencia",
       "linkedin": "https://www.linkedin.com/company/gdg-valencia",
-      "meetup": "https://www.meetup.com/es-ES/flutter-valencia/?eventorigin=find_page&recsource=group_search&recid=6be59e59-c0a6-4ef8-a919-ca393d3f51b5&searchid=79e9fe5c-443d-4964-a180-d8781432835d"
+      "eventsUrl": "https://www.meetup.com/es-ES/flutter-valencia/?eventorigin=find_page&recsource=group_search&recid=6be59e59-c0a6-4ef8-a919-ca393d3f51b5&searchid=79e9fe5c-443d-4964-a180-d8781432835d"
     },
     "thumbnailUrl": "images/gdg-valencia.webp",
     "latLon": {
@@ -6852,7 +6823,9 @@
     "targetAudience": [],
     "contactInfo": "geodevelopers.es@gmail.com",
     "communityUrl": "https://linktr.ee/geodevelopers",
-    "urls": {},
+    "urls": {
+      "linkAggregator": "https://linktr.ee/geodevelopers"
+    },
     "thumbnailUrl": "images/geodevelopers.webp",
     "latLon": {
       "lat": null,
@@ -6964,7 +6937,6 @@
     "urls": {
       "youtube": "https://www.youtube.com/c/GlobalAISpain/",
       "twitter": "https://x.com/mariasotocast",
-      "linkedin": "https://www.linkedin.com/in/mariasotocastro",
       "github": "https://github.com/alejandrolmeida"
     },
     "thumbnailUrl": "images/global-ai-bootcamp-madrid.webp",
@@ -7003,7 +6975,6 @@
     "communityUrl": "https://www.coderetreat.org/",
     "urls": {
       "twitter": "https://twitter.com/racingDeveloper/status/665529557961830400",
-      "linkedin": "https://www.linkedin.com/in/colindean/",
       "mastodon": "https://hachyderm.io/@coderetreat",
       "github": "https://github.com/coderetreat"
     },
@@ -7061,9 +7032,9 @@
     "contactInfo": "gsas@apiumhub.com",
     "communityUrl": "https://gsas.io/",
     "urls": {
-      "meetup": "https://www.meetup.com/wtmbcn/",
       "twitter": "https://x.com/gsas_io",
-      "linkedin": "https://www.linkedin.com/company/globalsoftwarearchitecturesummit"
+      "linkedin": "https://www.linkedin.com/company/globalsoftwarearchitecturesummit",
+      "eventsUrl": "https://www.meetup.com/wtmbcn/"
     },
     "thumbnailUrl": "images/global-software-architecture-summit.webp",
     "latLon": {
@@ -7102,9 +7073,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/go-mad/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/go-mad/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/go-mad/"
     },
     "thumbnailUrl": "images/gomad.webp",
     "latLon": {
@@ -7166,10 +7135,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/gr-interactiva/",
     "urls": {
-      "meetup": "https://www.meetup.com/gr-interactiva/",
       "twitter": "https://twitter.com/GRinteractiva",
       "discord": "https://discord.gg/NeUdsTuM",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/gr-interactiva/"
     },
     "thumbnailUrl": "images/gr-interactiva.webp",
     "latLon": {
@@ -7220,11 +7188,11 @@
     "contactInfo": "meetups@grafana.com",
     "communityUrl": "https://grafana.com/community/meetups/",
     "urls": {
-      "meetup": "https://www.meetup.com/pro/grafana/",
       "twitter": "https://twitter.com/grafana",
       "linkedin": "https://www.linkedin.com/company/grafana-labs/",
       "github": "https://github.com/grafana/",
-      "youtube": "https://www.youtube.com/channel/UCYCwgQAMm9sTJv0rgwQLCxw"
+      "youtube": "https://www.youtube.com/channel/UCYCwgQAMm9sTJv0rgwQLCxw",
+      "eventsUrl": "https://www.meetup.com/pro/grafana/"
     },
     "thumbnailUrl": "images/grafana-meetups.webp",
     "latLon": {
@@ -7294,11 +7262,12 @@
     "contactInfo": "",
     "communityUrl": "https://linktr.ee/grinteractiva",
     "urls": {
-      "meetup": "https://www.meetup.com/gr-interactiva/events/306225253/?utm_medium=referral&utm_campaign=announceModal_savedevents_share_modal&utm_source=link",
       "discord": "https://discord.gg/QMWd5uCHs6",
       "twitter": "https://twitter.com/GRinteractiva",
       "instagram": "https://www.instagram.com/grinteractiva/",
-      "linkedin": "https://www.linkedin.com/groups/12728039"
+      "linkedin": "https://www.linkedin.com/groups/12728039",
+      "eventsUrl": "https://www.meetup.com/gr-interactiva/events/306225253/?utm_medium=referral&utm_campaign=announceModal_savedevents_share_modal&utm_source=link",
+      "linkAggregator": "https://linktr.ee/grinteractiva"
     },
     "thumbnailUrl": "images/granada-interactiva.webp",
     "latLon": {
@@ -7396,7 +7365,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/granadajug/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/granadajug/"
+    },
     "thumbnailUrl": "images/granadajug.webp",
     "latLon": {
       "lat": 37.1831938,
@@ -7498,9 +7469,7 @@
     "contactInfo": "r-madrid@r-es.org",
     "communityUrl": "https://www.meetup.com/Grupo-de-Usuarios-de-R-de-Madrid/",
     "urls": {
-      "meetup": "https://www.meetup.com/Grupo-de-Usuarios-de-R-de-Madrid/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/Grupo-de-Usuarios-de-R-de-Madrid/"
     },
     "thumbnailUrl": "images/grupo-de-usuarios-de-r-de-madrid.webp",
     "latLon": {
@@ -7547,7 +7516,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/sug-cat/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es-ES/sug-cat/"
+    },
     "latLon": {
       "lat": 41.798241349587,
       "lon": 1.528756658648
@@ -7568,7 +7539,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.facebook.com/groups/juglogrono/?locale=es_LA",
-    "urls": {},
+    "urls": {
+      "facebook": "https://www.facebook.com/groups/juglogrono/?locale=es_LA"
+    },
     "latLon": {
       "lat": 42.46569,
       "lon": -2.44998
@@ -7687,10 +7660,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/guarandinga-tech/",
     "urls": {
-      "meetup": "https://www.meetup.com/guarandinga-tech/",
       "twitter": "https://twitter.com/guarandingatech",
       "youtube": "https://www.youtube.com/@GuarandingaTECH",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/guarandinga-tech/"
     },
     "thumbnailUrl": "images/guarandinga-tech.webp",
     "latLon": {
@@ -7750,7 +7722,8 @@
       "twitter": "https://x.com/hackbarna",
       "youtube": "https://youtube.com/@hackbarna",
       "linkedin": "https://linkedin.com/company/103594048",
-      "instagram": "https://www.instagram.com/luma_hq/"
+      "instagram": "https://www.instagram.com/luma_hq/",
+      "eventsUrl": "https://lu.ma/6xew9jdf"
     },
     "latLon": {
       "lat": 41.387917,
@@ -7782,12 +7755,12 @@
     "communityUrl": "https://hackathonlovers.com/",
     "urls": {
       "discord": "https://discord.gg/QRN2epZVDB",
-      "meetup": "https://www.meetup.com/Hackathon-Lovers/",
       "mastodon": "https://mastodon.social/@hackathonlovers",
       "twitter": "http://twitter.com/HackathonLovers",
       "linkedin": "http://linkedin.com/groups/Hackathon-Lovers-6510465",
       "github": "http://github.com/hackathonlovers",
-      "youtube": "http://youtube.com/channel/UCRwSe7jK-y62BMvIiNBV1qw"
+      "youtube": "http://youtube.com/channel/UCRwSe7jK-y62BMvIiNBV1qw",
+      "eventsUrl": "https://www.meetup.com/Hackathon-Lovers/"
     },
     "thumbnailUrl": "images/hackathonlovers.webp",
     "latLon": {
@@ -7840,9 +7813,8 @@
     "contactInfo": "",
     "communityUrl": "https://hackbarna.com",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/ai-engineers-barcelona/",
       "youtube": "https://www.youtube.com/@rivela_",
-      "linkedin": "https://www.linkedin.com/in/igor-sakhankov/"
+      "eventsUrl": "https://www.meetup.com/es-ES/ai-engineers-barcelona/"
     },
     "thumbnailUrl": "images/hackbarna.webp",
     "latLon": {
@@ -7965,9 +7937,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/hackmadrid-27/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/hackmadrid-27/",
       "twitter": "https://twitter.com/hackmadrid",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/hackmadrid-27/"
     },
     "thumbnailUrl": "images/hackmadrid.webp",
     "latLon": {
@@ -8034,10 +8005,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/HTML5-Spain/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/HTML5-Spain/",
       "twitter": "https://twitter.com/HTML5MeetSpain",
       "youtube": "https://www.youtube.com/user/HTML5Spain",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/HTML5-Spain/"
     },
     "thumbnailUrl": "images/html5spain.webp",
     "latLon": {
@@ -8695,7 +8665,9 @@
     "targetAudience": [],
     "contactInfo": "iniciador-granada@googlegroups.com; hhkaos@gmail.com",
     "communityUrl": "https://iniciador.com/Granada",
-    "urls": {},
+    "urls": {
+      "mailingList": "iniciador-granada@googlegroups.com"
+    },
     "latLon": {
       "lat": 37.1831938,
       "lon": -3.604747
@@ -8863,7 +8835,9 @@
     "targetAudience": [],
     "contactInfo": "iniciador-malaga@googlegroups.com; hhkaos@gmail.com",
     "communityUrl": "https://iniciador.com/Malaga",
-    "urls": {},
+    "urls": {
+      "mailingList": "iniciador-malaga@googlegroups.com"
+    },
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -9174,9 +9148,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/intellias-spain-tech-talks/",
     "urls": {
-      "meetup": "https://www.meetup.com/intellias-spain-tech-talks/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/intellias-spain-tech-talks/"
     },
     "thumbnailUrl": "images/intellias-spain-tech-talks.webp",
     "latLon": {
@@ -9220,7 +9192,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/iotmadrid/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es-ES/iotmadrid/"
+    },
     "latLon": {
       "lat": 40.4167047,
       "lon": -3.7035825
@@ -9242,9 +9216,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/ionic-madrid/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/ionic-madrid/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/ionic-madrid/"
     },
     "latLon": {
       "lat": 40.4167047,
@@ -9283,7 +9255,6 @@
     "communityUrl": "https://www.jonthebeach.com/",
     "urls": {
       "youtube": "https://www.youtube.com/c/Jonthebeach",
-      "linkedin": "https://www.linkedin.com/company/j-on-the-beach/posts/?feedView=all",
       "twitter": "https://x.com/jotbconf"
     },
     "thumbnailUrl": "images/j-on-the-breach.webp",
@@ -9325,11 +9296,11 @@
     "communityUrl": "https://dev.java/community/jugs/",
     "urls": {
       "twitter": "https://twitter.com/i/lists/221697230/members",
-      "meetup": "https://www.meetup.com/ru-RU/almaty-java-user-group/",
       "linkedin": "https://www.linkedin.com/company/brabant-jug/",
       "discord": "https://discord.gg/RFzqQAyaYV",
       "github": "https://github.com/JavaDominicano",
-      "instagram": "https://www.instagram.com/jug_prayagraj"
+      "instagram": "https://www.instagram.com/jug_prayagraj",
+      "eventsUrl": "https://www.meetup.com/ru-RU/almaty-java-user-group/"
     },
     "thumbnailUrl": "images/java-user-groups.webp",
     "latLon": {
@@ -9454,7 +9425,6 @@
     "communityUrl": "https://jsdaycanarias.com/",
     "urls": {
       "twitter": "https://twitter.com/canariasjs",
-      "linkedin": "https://linkedin.com/in/canariasjs",
       "youtube": "https://youtube.com/c/canariasjs",
       "instagram": "https://www.instagram.com/canariasjs"
     },
@@ -9548,7 +9518,6 @@
     "urls": {
       "github": "https://github.com/LaJaqueria",
       "instagram": "https://instagram.com/lajaqueria",
-      "linkedin": "https://www.linkedin.com/in/lajaqueria",
       "twitter": "https://www.twitter.com/LaJaqueria",
       "youtube": "https://youtube.com/channel/UCYKcbF-qtcpfLj4WpUNOH2w"
     },
@@ -9807,9 +9776,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/liferay-spain-user-group/",
     "urls": {
-      "meetup": "https://www.meetup.com/liferay-spain-user-group/",
       "twitter": "http://twitter.com/LugSpain/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/liferay-spain-user-group/"
     },
     "thumbnailUrl": "images/liferay-spain-user-group-lugspain.webp",
     "latLon": {
@@ -9850,9 +9818,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/machinelearningspain/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/machinelearningspain/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/machinelearningspain/"
     },
     "thumbnailUrl": "images/machine-learning-spain.webp",
     "latLon": {
@@ -9910,10 +9876,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/madriagil/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/madriagil/",
       "twitter": "http://twitter.com/madriagil/",
       "linkedin": "http://www.linkedin.com/groups/Agile-Spain-137792",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/madriagil/"
     },
     "thumbnailUrl": "images/madriagil.webp",
     "latLon": {
@@ -9952,10 +9917,9 @@
     "contactInfo": "hec@hecperez.com",
     "communityUrl": "https://www.meetup.com/es-ES/madrid-elixir/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/madrid-elixir/",
       "twitter": "https://twitter.com/MadElixir",
       "youtube": "https://www.youtube.com/@ElixirMadrid",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/madrid-elixir/"
     },
     "thumbnailUrl": "images/madrid-elixir.webp",
     "latLon": {
@@ -9978,7 +9942,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/madrid-android-dev-group/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/madrid-android-dev-group/"
+    },
     "latLon": {
       "lat": 40.4167047,
       "lon": -3.7035825
@@ -10016,12 +9982,12 @@
     "contactInfo": "",
     "communityUrl": "https://madrid.devops.es/",
     "urls": {
-      "meetup": "http://www.meetup.com/madrid-devops",
       "twitter": "https://twitter.com/MadridDevops",
       "telegram": "https://t.me/madrid_devops",
       "youtube": "https://www.youtube.com/user/madridevops",
       "linkedin": "https://www.linkedin.com/company/devopsdaysmad",
-      "github": "https://github.com/dawud"
+      "github": "https://github.com/dawud",
+      "eventsUrl": "http://www.meetup.com/madrid-devops"
     },
     "latLon": {
       "lat": 40.4167047,
@@ -10043,7 +10009,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/madrid-dug/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es-ES/madrid-dug/"
+    },
     "latLon": {
       "lat": 40.4167047,
       "lon": -3.7035825
@@ -10085,7 +10053,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/madridsug/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es-ES/madridsug/"
+    },
     "latLon": {
       "lat": 40.4167047,
       "lon": -3.7035825
@@ -10107,9 +10077,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/madrid-spring-user-group",
     "urls": {
-      "meetup": "https://www.meetup.com/madrid-spring-user-group",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/madrid-spring-user-group"
     },
     "latLon": {
       "lat": 40.4167047,
@@ -10209,7 +10177,7 @@
     "urls": {
       "twitter": "https://twitter.com/madridgug",
       "youtube": "https://www.youtube.com/channel/UCgvO2jxLdGaVqHqnfPdyYzw",
-      "meetup": "http://www.meetup.com/madrid-gug"
+      "eventsUrl": "http://www.meetup.com/madrid-gug"
     },
     "thumbnailUrl": "images/madrid-groovy-user-group-gug.webp",
     "latLon": {
@@ -10252,9 +10220,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/madriddotnet/",
     "urls": {
-      "meetup": "https://www.meetup.com/madriddotnet/",
       "twitter": "http://twitter.com/madriddotnet/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/madriddotnet/"
     },
     "thumbnailUrl": "images/madriddotnet.webp",
     "latLon": {
@@ -10293,10 +10260,9 @@
     "contactInfo": "madridjs-list@meetup.com",
     "communityUrl": "https://www.meetup.com/es-ES/madridjs/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/madridjs/",
       "twitter": "https://twitter.com/madridjs",
       "github": "https://github.com/madridjs",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/madridjs/"
     },
     "thumbnailUrl": "images/madridjs.webp",
     "latLon": {
@@ -10335,9 +10301,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/madridjug/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/madridjug/",
       "twitter": "http://twitter.com/MadridJUG/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/madridjug/"
     },
     "thumbnailUrl": "images/madridjug.webp",
     "latLon": {
@@ -10376,9 +10341,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/Scala-Programming-Madrid/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/Scala-Programming-Madrid/",
       "twitter": "http://twitter.com/MadridScala/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/Scala-Programming-Madrid/"
     },
     "thumbnailUrl": "images/madridscala.webp",
     "latLon": {
@@ -10401,7 +10365,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/madrust/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es-ES/madrust/"
+    },
     "latLon": {
       "lat": 40.4167047,
       "lon": -3.7035825
@@ -10424,7 +10390,7 @@
     "communityUrl": "https://x.com/makersofmurcia",
     "urls": {
       "twitter": "https://x.com/makersofmurcia",
-      "meetup": "https://www.meetup.com/makers-of-muria/"
+      "eventsUrl": "https://www.meetup.com/makers-of-muria/"
     },
     "thumbnailUrl": "images/makers-of-murcia.webp",
     "latLon": {
@@ -10465,9 +10431,9 @@
     "communityUrl": "https://makespacemadrid.org/",
     "urls": {
       "telegram": "https://t.me/makespacemadrid",
-      "meetup": "https://www.meetup.com/es-ES/makespace-madrid/",
       "instagram": "https://www.instagram.com/makespacemadrid/",
-      "youtube": "https://youtu.be/94_uaafCR0w"
+      "youtube": "https://youtu.be/94_uaafCR0w",
+      "eventsUrl": "https://www.meetup.com/es-ES/makespace-madrid/"
     },
     "thumbnailUrl": "images/makespacemadrid.webp",
     "latLon": {
@@ -10505,9 +10471,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/malaga-indie-hackers/",
     "urls": {
-      "meetup": "https://www.meetup.com/malaga-indie-hackers/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/malaga-indie-hackers/"
     },
     "thumbnailUrl": "images/malaga-indie-hackers.webp",
     "latLon": {
@@ -10571,9 +10535,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/malaga-techstars/",
     "urls": {
-      "meetup": "https://www.meetup.com/malaga-techstars/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/malaga-techstars/"
     },
     "latLon": {
       "lat": 36.7196292,
@@ -10605,8 +10567,8 @@
       "linkedin": "https://www.linkedin.com/company/malaga-ai",
       "github": "https://github.com/Malaga-AI",
       "discord": "https://discord.com/invite/2tv7W2jxXF",
-      "meetup": "https://www.meetup.com/es-ES/BoqueronSec/",
-      "web": "https://malaga-ai.community/"
+      "web": "https://malaga-ai.community/",
+      "eventsUrl": "https://www.meetup.com/es-ES/BoqueronSec/"
     },
     "thumbnailUrl": "images/malaga-ai.webp",
     "latLon": {
@@ -10629,7 +10591,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/Malaga-Scala/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es-ES/Malaga-Scala/"
+    },
     "latLon": {
       "lat": 36.7196292,
       "lon": -4.4200007
@@ -10700,9 +10664,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/MalagaJUG/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/MalagaJUG/",
       "twitter": "https://twitter.com/MalagaJUG",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/MalagaJUG/"
     },
     "thumbnailUrl": "images/malagajug.webp",
     "latLon": {
@@ -10785,8 +10748,7 @@
     "urls": {
       "discord": "https://discord.gg/midudev",
       "twitter": "https://x.com/midudev",
-      "instagram": "https://www.instagram.com/midu.dev",
-      "linkedin": "https://www.linkedin.com/in/midudev"
+      "instagram": "https://www.instagram.com/midu.dev"
     },
     "thumbnailUrl": "images/miduconf.webp",
     "latLon": {
@@ -10849,9 +10811,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/xamarin-madrid/?eventOrigin=topic_overview_nearest_groups",
     "urls": {
-      "meetup": "https://www.meetup.com/xamarin-madrid/?eventOrigin=topic_overview_nearest_groups",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/xamarin-madrid/?eventOrigin=topic_overview_nearest_groups"
     },
     "thumbnailUrl": "images/mobile-development.webp",
     "latLon": {
@@ -10898,10 +10858,9 @@
     "contactInfo": "",
     "communityUrl": "https://morcillaconf.es/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/conchi-lillo-delgado-72356212",
       "twitter": "https://x.com/GrimerLoner",
       "instagram": "https://www.instagram.com/grimerloner",
-      "meetup": "https://www.meetup.com/es-ES/gdg-burgos/"
+      "eventsUrl": "https://www.meetup.com/es-ES/gdg-burgos/"
     },
     "thumbnailUrl": "images/morcillaconf.webp",
     "latLon": {
@@ -11006,9 +10965,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/mscoders/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/mscoders/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/mscoders/"
     },
     "thumbnailUrl": "images/mscoders-madrid.webp",
     "latLon": {
@@ -11054,7 +11011,8 @@
     "communityUrl": "https://meetups.mulesoft.com/barcelona",
     "urls": {
       "linkedin": "https://www.linkedin.com/groups/6936034",
-      "twitter": "https://twitter.com/MuleDev"
+      "twitter": "https://twitter.com/MuleDev",
+      "eventsUrl": "https://meetups.mulesoft.com/barcelona"
     },
     "thumbnailUrl": "images/mulesoft-barcelona.webp",
     "latLon": {
@@ -11090,7 +11048,8 @@
     "communityUrl": "https://meetups.mulesoft.com/madrid",
     "urls": {
       "linkedin": "https://www.linkedin.com/groups/6936034",
-      "twitter": "https://twitter.com/MuleDev"
+      "twitter": "https://twitter.com/MuleDev",
+      "eventsUrl": "https://meetups.mulesoft.com/madrid"
     },
     "thumbnailUrl": "images/mulesoft-madrid.webp",
     "latLon": {
@@ -11124,7 +11083,8 @@
     "communityUrl": "https://meetups.mulesoft.com/",
     "urls": {
       "linkedin": "https://www.linkedin.com/groups/6936034",
-      "twitter": "https://twitter.com/MuleDev"
+      "twitter": "https://twitter.com/MuleDev",
+      "eventsUrl": "https://meetups.mulesoft.com/"
     },
     "thumbnailUrl": "images/mulesoft-meetups.webp",
     "latLon": {
@@ -11157,7 +11117,8 @@
     "communityUrl": "https://meetups.mulesoft.com/murcia",
     "urls": {
       "linkedin": "https://www.linkedin.com/groups/6936034",
-      "twitter": "https://twitter.com/MuleDev"
+      "twitter": "https://twitter.com/MuleDev",
+      "eventsUrl": "https://meetups.mulesoft.com/murcia"
     },
     "thumbnailUrl": "images/mulesoft-murcia.webp",
     "latLon": {
@@ -11191,7 +11152,8 @@
     "communityUrl": "https://meetups.mulesoft.com/sevilla",
     "urls": {
       "linkedin": "https://www.linkedin.com/groups/6936034",
-      "twitter": "https://twitter.com/MuleDev"
+      "twitter": "https://twitter.com/MuleDev",
+      "eventsUrl": "https://meetups.mulesoft.com/sevilla"
     },
     "thumbnailUrl": "images/mulesoft-sevilla.webp",
     "latLon": {
@@ -11225,7 +11187,8 @@
     "communityUrl": "https://meetups.mulesoft.com/valencia",
     "urls": {
       "linkedin": "https://www.linkedin.com/groups/6936034",
-      "twitter": "https://twitter.com/MuleDev"
+      "twitter": "https://twitter.com/MuleDev",
+      "eventsUrl": "https://meetups.mulesoft.com/valencia"
     },
     "thumbnailUrl": "images/mulesoft-valencia.webp",
     "latLon": {
@@ -11265,12 +11228,11 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/murciadev/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/murciadev/",
       "discord": "https://discord.gg/xRVKFGURaw",
       "twitter": "https://twitter.com/MurciaDev",
       "linkedin": "https://www.linkedin.com/company/11855563",
       "telegram": "https://t.me/MurciaDev",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/murciadev/"
     },
     "thumbnailUrl": "images/murcia-dev.webp",
     "latLon": {
@@ -11309,9 +11271,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/software-craftsmanship-murcia/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/software-craftsmanship-murcia/",
       "twitter": "https://twitter.com/murciaswcraft",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/software-craftsmanship-murcia/"
     },
     "thumbnailUrl": "images/murcia-software-crafters.webp",
     "latLon": {
@@ -11375,7 +11336,6 @@
     "contactInfo": "contacto@navajanegra.com",
     "communityUrl": "https://www.navajanegra.com/2024/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/ainoa-guill%C3%A9n-gonzalez-92a787128/",
       "twitter": "https://x.com/alexfrancow",
       "youtube": "https://youtube.com/c/NavajaNegra",
       "instagram": "https://www.instagram.com/navajanegra_ab",
@@ -11427,7 +11387,6 @@
     "contactInfo": "",
     "communityUrl": "https://netcoreconf.com/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/adriandiazcervera/",
       "twitter": "https://x.com/AdrianDiaz81",
       "github": "https://github.com/AdrianDiaz81"
     },
@@ -11464,7 +11423,6 @@
     "communityUrl": "https://www.noconname.org/",
     "urls": {
       "twitter": "https://x.com/noconname",
-      "linkedin": "https://www.linkedin.com/in/marco-cofano/%20-%20https://www.linkedin.com/in/alina-hirschmann-65211714/",
       "web": "https://www.noconname.org/",
       "telegram": "https://t.me/noconname"
     },
@@ -11527,9 +11485,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/node-js-madrid/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/node-js-madrid/",
       "twitter": "https://twitter.com/NodeJsMadrid",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/node-js-madrid/"
     },
     "latLon": {
       "lat": 40.4167047,
@@ -11640,9 +11597,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/nscoder-night-madrid/",
     "urls": {
-      "meetup": "https://www.meetup.com/nscoder-night-madrid/",
       "twitter": "http://twitter.com/nscoder_mad/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/nscoder-night-madrid/"
     },
     "thumbnailUrl": "images/nscoder-night-madrid.webp",
     "latLon": {
@@ -11726,10 +11682,10 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/innovacion-web3-para-todos-con-super-pioneros/?eventOrigin=event_home_page",
     "urls": {
-      "meetup": "https://www.meetup.com/innovacion-web3-para-todos-con-super-pioneros/?eventOrigin=event_home_page",
       "twitter": "http://twitter.com/nwc10group/",
       "instagram": "https://www.instagram.com/nwc10.lab/",
-      "linkedin": "https://www.linkedin.com/company/nwc10"
+      "linkedin": "https://www.linkedin.com/company/nwc10",
+      "eventsUrl": "https://www.meetup.com/innovacion-web3-para-todos-con-super-pioneros/?eventOrigin=event_home_page"
     },
     "thumbnailUrl": "images/nwc10lab-innovacion-web3-cripto-y-blockchain-para-todos.webp",
     "latLon": {
@@ -11767,9 +11723,7 @@
     ],
     "contactInfo": "osl@ugr.es",
     "communityUrl": "https://osl.ugr.es/",
-    "urls": {
-      "linkedin": "https://www.linkedin.com/in/bryanmp/"
-    },
+    "urls": {},
     "thumbnailUrl": "images/oficina-de-software-libre-granada.webp",
     "latLon": {
       "lat": 37.1831938,
@@ -11857,8 +11811,8 @@
       "twitter": "https://twitter.com/opensouthcode",
       "linkedin": "https://www.linkedin.com/company/opensouthcode/",
       "youtube": "https://www.youtube.com/@opensouthcode",
-      "meetup": "https://www.meetup.com/es-ES/malagajug/",
-      "instagram": "https://www.instagram.com/tws_theworkshop/"
+      "instagram": "https://www.instagram.com/tws_theworkshop/",
+      "eventsUrl": "https://www.meetup.com/es-ES/malagajug/"
     },
     "thumbnailUrl": "images/opensouthcode.webp",
     "latLon": {
@@ -11906,11 +11860,11 @@
     "communityUrl": "https://owasp.org/chapters/",
     "urls": {
       "youtube": "https://www.youtube.com/user/OWASPGLOBAL/videos",
-      "meetup": "https://meetup.com/pro/owasp",
       "github": "https://github.com/OWASP/",
       "mastodon": "https://infosec.exchange/@owasp",
       "twitter": "https://twitter.com/owasp",
-      "linkedin": "https://www.linkedin.com/company/owasp/"
+      "linkedin": "https://www.linkedin.com/company/owasp/",
+      "eventsUrl": "https://meetup.com/pro/owasp"
     },
     "thumbnailUrl": "images/owasp.webp",
     "latLon": {
@@ -12121,7 +12075,6 @@
     "communityUrl": "https://pamplonaswcraft.com/",
     "urls": {
       "twitter": "https://x.com/fran_mosteiro",
-      "linkedin": "http://es.linkedin.com/in/mariaberenguer",
       "bluesky": "https://bsky.app/profile/pamplonaswcraft.bsky.social"
     },
     "thumbnailUrl": "images/pamplona-iruna-software-crafters.webp",
@@ -12167,9 +12120,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/php-coruna/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/php-coruna/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/php-coruna/"
     },
     "thumbnailUrl": "images/php-coruna.webp",
     "latLon": {
@@ -12196,9 +12147,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/phpmad/events/304894313/",
     "urls": {
-      "meetup": "https://www.meetup.com/phpmad/events/304894313/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/phpmad/events/304894313/"
     },
     "thumbnailUrl": "images/phpmad.webp",
     "latLon": {
@@ -12233,9 +12182,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/phpmad/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/phpmad/",
       "twitter": "http://twitter.com/PHPMad/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/phpmad/"
     },
     "latLon": {
       "lat": 40.4167047,
@@ -12350,9 +12298,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/powerbi-fabricmalaga/",
     "urls": {
-      "meetup": "https://www.meetup.com/powerbi-fabricmalaga/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/powerbi-fabricmalaga/"
     },
     "thumbnailUrl": "images/power-bi-fabric-malaga.webp",
     "latLon": {
@@ -12391,9 +12337,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/PowerTips-Cadiz/",
     "urls": {
-      "meetup": "https://www.meetup.com/PowerTips-Cadiz/",
       "twitter": "http://twitter.com/powertipses/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/PowerTips-Cadiz/"
     },
     "latLon": {
       "lat": 36.5297453,
@@ -12433,9 +12378,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/PrestaShop-Malaga-Meetup/",
     "urls": {
-      "meetup": "https://www.meetup.com/PrestaShop-Malaga-Meetup/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/PrestaShop-Malaga-Meetup/"
     },
     "thumbnailUrl": "images/prestashop-malaga-ecommerce-meetup.webp",
     "latLon": {
@@ -12477,9 +12420,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/producttank-malaga/",
     "urls": {
-      "meetup": "https://www.meetup.com/producttank-malaga/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/producttank-malaga/"
     },
     "thumbnailUrl": "images/producttank-malaga.webp",
     "latLon": {
@@ -12596,8 +12537,7 @@
     "urls": {
       "telegram": "https://t.me/pycampes",
       "twitter": "https://twitter.com/PyCampES",
-      "github": "https://github.com/PyCampES",
-      "linkedin": "https://www.linkedin.com/in/pycampes/"
+      "github": "https://github.com/PyCampES"
     },
     "thumbnailUrl": "images/pycamp-espana.webp",
     "latLon": {
@@ -12664,11 +12604,11 @@
     "contactInfo": "admin@pydata.org",
     "communityUrl": "https://pydata.org/",
     "urls": {
-      "meetup": "https://www.meetup.com/pro/pydata/",
       "youtube": "https://www.youtube.com/user/PyDataTV",
       "discord": "https://discord.gg/CjspHbE9xe",
       "mastodon": "https://mastodon.social/@PyData",
-      "twitter": "https://twitter.com/PyData"
+      "twitter": "https://twitter.com/PyData",
+      "eventsUrl": "https://www.meetup.com/pro/pydata/"
     },
     "thumbnailUrl": "images/pydata.webp",
     "latLon": {
@@ -12715,11 +12655,11 @@
     "contactInfo": "granada@pydata.org",
     "communityUrl": "https://linksta.cc/@PyDataGRX",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/pydatagrx/",
       "github": "https://github.com/PyDataGRX",
       "twitter": "https://twitter.com/PyDataGRX",
       "linkedin": "https://www.linkedin.com/company/pydata-grx/",
-      "discord": "https://discord.gg/XmZWeChMZd"
+      "discord": "https://discord.gg/XmZWeChMZd",
+      "eventsUrl": "https://www.meetup.com/es-ES/pydatagrx/"
     },
     "thumbnailUrl": "images/pydata-granada.webp",
     "latLon": {
@@ -12764,11 +12704,9 @@
     "contactInfo": "leah@numfocus.org",
     "communityUrl": "https://www.meetup.com/PyData-Madrid/",
     "urls": {
-      "meetup": "https://www.meetup.com/PyData-Madrid/",
       "linkedin": "https://www.linkedin.com/company/pydata-madrid/",
       "bluesky": "https://bsky.app/profile/madrid.pydata.org",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/PyData-Madrid/"
     },
     "thumbnailUrl": "images/pydata-madrid.webp",
     "latLon": {
@@ -12813,9 +12751,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/pydata-malaga/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/pydata-malaga/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/pydata-malaga/"
     },
     "thumbnailUrl": "images/pydata-malaga.webp",
     "latLon": {
@@ -12855,11 +12791,12 @@
     "communityUrl": "https://linktr.ee/pythoncoruna",
     "urls": {
       "telegram": "https://t.me/pythoncoruna",
-      "meetup": "https://www.meetup.com/python-a-coruna/",
       "github": "https://github.com/pythoncoruna",
       "youtube": "https://www.youtube.com/@PythonCoruna",
       "twitter": "https://twitter.com/pythoncoruna",
-      "linkedin": "https://www.linkedin.com/groups/9875231"
+      "linkedin": "https://www.linkedin.com/groups/9875231",
+      "eventsUrl": "https://www.meetup.com/python-a-coruna/",
+      "linkAggregator": "https://linktr.ee/pythoncoruna"
     },
     "thumbnailUrl": "images/python-coruna.webp",
     "latLon": {
@@ -12958,10 +12895,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/python-madrid",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/python-madrid",
       "twitter": "http://twitter.com/python_madrid/",
       "linkedin": "https://www.linkedin.com/company/python-madrid/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/python-madrid"
     },
     "latLon": {
       "lat": 40.4167047,
@@ -12985,7 +12921,7 @@
     "communityUrl": "https://x.com/python_malaga",
     "urls": {
       "twitter": "https://x.com/python_malaga",
-      "meetup": "https://www.meetup.com/es-ES/python_malaga/"
+      "eventsUrl": "https://www.meetup.com/es-ES/python_malaga/"
     },
     "thumbnailUrl": "images/python-malaga.webp",
     "latLon": {
@@ -13063,9 +12999,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/qa-malaga/",
     "urls": {
-      "meetup": "https://www.meetup.com/qa-malaga/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/qa-malaga/"
     },
     "thumbnailUrl": "images/qa-malaga.webp",
     "latLon": {
@@ -13107,11 +13041,11 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/quedadas-wordpress-en-espanol/",
     "urls": {
-      "meetup": "https://www.meetup.com/quedadas-wordpress-en-espanol/",
       "twitter": "https://twitter.com/QuedadasWP",
       "instagram": "https://www.instagram.com/quedadaswp",
       "linkedin": "https://www.linkedin.com/company/quedadaswp",
-      "bluesky": "https://bsky.app/profile/quedadaswp.com"
+      "bluesky": "https://bsky.app/profile/quedadaswp.com",
+      "eventsUrl": "https://www.meetup.com/quedadas-wordpress-en-espanol/"
     },
     "thumbnailUrl": "images/quedadas-wordpress-en-espanol.webp",
     "latLon": {
@@ -13256,9 +13190,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/riojadotnet/",
     "urls": {
-      "meetup": "https://www.meetup.com/riojadotnet/",
       "twitter": "http://twitter.com/RiojaDotNet/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/riojadotnet/"
     },
     "thumbnailUrl": "images/riojadotnet.webp",
     "latLon": {
@@ -13323,9 +13256,9 @@
     "contactInfo": "",
     "communityUrl": "https://rockndroid.dev/",
     "urls": {
-      "meetup": "https://www.meetup.com/barcelona-android-dev-group/",
       "youtube": "https://www.youtube.com/channel/UC2OA1JzZ_aD-u2SuE3GKxQA",
-      "twitter": "https://twitter.com/rockndroidBcn"
+      "twitter": "https://twitter.com/rockndroidBcn",
+      "eventsUrl": "https://www.meetup.com/barcelona-android-dev-group/"
     },
     "thumbnailUrl": "images/rockndroid.webp",
     "latLon": {
@@ -13348,7 +13281,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/rockndroidmad/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/rockndroidmad/"
+    },
     "latLon": {
       "lat": 40.4167047,
       "lon": -3.7035825
@@ -13387,7 +13322,6 @@
     "communityUrl": "https://salmorejo.tech/2024/",
     "urls": {
       "twitter": "https://twitter.com/jesusescribanos",
-      "linkedin": "https://www.linkedin.com/in/jes%C3%BAs-escribano-serena-4223b2211",
       "github": "https://github.com/jes106",
       "instagram": "https://www.instagram.com/aulasoftwarelibre/?hl=es",
       "telegram": "https://t.me/AulaSoftwareLibreUCO",
@@ -13436,7 +13370,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es/SEO-Galicia/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es/SEO-Galicia/"
+    },
     "thumbnailUrl": "images/seo-galicia.webp",
     "latLon": {
       "lat": 42.2313601,
@@ -13477,12 +13413,11 @@
     "contactInfo": "sevillarug@gmail.com",
     "communityUrl": "https://sevillarusers.netlify.app/about/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/Sevilla-R-users/",
       "youtube": "https://www.youtube.com/channel/UC4_SN0le5WFMu_LFaIufLbA",
       "twitter": "https://twitter.com/_SevillaR",
       "github": "https://github.com/SevillaR",
-      "linkedin": "https://linkedin.com/in/gruposevillar",
-      "telegram": "https://t.me/+HE3IBL13swTfZwYI"
+      "telegram": "https://t.me/+HE3IBL13swTfZwYI",
+      "eventsUrl": "https://www.meetup.com/es-ES/Sevilla-R-users/"
     },
     "thumbnailUrl": "images/sevilla-r-users.webp",
     "latLon": {
@@ -13593,9 +13528,9 @@
     "contactInfo": "",
     "communityUrl": "https://web.archive.org/web/20180617225556/http://www.sug.cat/",
     "urls": {
-      "meetup": "http://www.meetup.com/SUG-CAT/",
       "linkedin": "http://www.linkedin.com/groups/SUGCAT-2883719",
-      "twitter": "https://twitter.com/SUG_Cat"
+      "twitter": "https://twitter.com/SUG_Cat",
+      "eventsUrl": "http://www.meetup.com/SUG-CAT/"
     },
     "latLon": {
       "lat": null,
@@ -13617,7 +13552,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://web.archive.org/web/20210925180244/https://www.meetup.com/es-ES/Smart-devices-for-Home-Madrid/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://web.archive.org/web/20210925180244/https://www.meetup.com/es-ES/Smart-devices-for-Home-Madrid/"
+    },
     "latLon": {
       "lat": 40.4167047,
       "lon": -3.7035825
@@ -13683,11 +13620,10 @@
     "contactInfo": "info@softwarecrafters.barcelona",
     "communityUrl": "https://softwarecrafters.barcelona/",
     "urls": {
-      "meetup": "https://www.meetup.com/software-crafters-barcelona/events/313142147/",
       "twitter": "https://twitter.com/alchemist_devel",
-      "linkedin": "https://www.linkedin.com/in/sandra-d-367b1785/",
       "github": "https://github.com/bowserchris",
-      "youtube": "https://www.youtube.com/channel/UCksw6qsw6vk7cp8sVwIpNrQ"
+      "youtube": "https://www.youtube.com/channel/UCksw6qsw6vk7cp8sVwIpNrQ",
+      "eventsUrl": "https://www.meetup.com/software-crafters-barcelona/events/313142147/"
     },
     "thumbnailUrl": "images/software-crafters-barcelona.webp",
     "latLon": {
@@ -13727,10 +13663,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/madswcraft/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/madswcraft/",
       "twitter": "http://twitter.com/madswcraft/",
       "youtube": "https://www.youtube.com/channel/UChF6IE110BrZ6Hk1wAbOWhA",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/madswcraft/"
     },
     "thumbnailUrl": "images/software-crafters-madrid.webp",
     "latLon": {
@@ -13767,10 +13702,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/software-testers-qa-experts-de-malaga/",
     "urls": {
-      "meetup": "https://www.meetup.com/software-testers-qa-experts-de-malaga/",
       "twitter": "http://twitter.com/expoQA/",
       "linkedin": "https://es.linkedin.com/company/nexo-qa",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/software-testers-qa-experts-de-malaga/"
     },
     "thumbnailUrl": "images/software-testers-qa-experts-de-malaga.webp",
     "latLon": {
@@ -13878,9 +13812,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/startup-oasis/",
     "urls": {
-      "meetup": "https://www.meetup.com/startup-oasis/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/startup-oasis/"
     },
     "thumbnailUrl": "images/startup-oasis.webp",
     "latLon": {
@@ -13914,7 +13846,6 @@
     "contactInfo": "",
     "communityUrl": "https://startupole.eu/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/emiliocorchadogicap/",
       "twitter": "https://x.com/Startup_OLE",
       "instagram": "https://instagram.com/startupoleaccelerator",
       "youtube": "https://youtube.com/c/StartupOLE"
@@ -14036,9 +13967,8 @@
     "contactInfo": "svqjug@gmail.com",
     "communityUrl": "https://www.meetup.com/svqjug",
     "urls": {
-      "meetup": "https://www.meetup.com/svqjug",
       "twitter": "http://twitter.com/svqjug/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/svqjug"
     },
     "thumbnailUrl": "images/svqjug.webp",
     "latLon": {
@@ -14083,7 +14013,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/Sysadmin-Galicia/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es-ES/Sysadmin-Galicia/"
+    },
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
@@ -14125,10 +14057,10 @@
     "contactInfo": "root@sysarmy.com",
     "communityUrl": "https://sysarmy.com/",
     "urls": {
-      "meetup": "https://www.meetup.com/sysarmy",
       "twitter": "https://twitter.com/sysarmy",
       "instagram": "https://instagram.com/sysarmy",
-      "linkedin": "https://www.linkedin.com/groups/4736196/"
+      "linkedin": "https://www.linkedin.com/groups/4736196/",
+      "eventsUrl": "https://www.meetup.com/sysarmy"
     },
     "thumbnailUrl": "images/sysarmy.webp",
     "latLon": {
@@ -14270,7 +14202,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/technetwork/events/304881438/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/technetwork/events/304881438/"
+    },
     "latLon": {
       "lat": 40.4167047,
       "lon": -3.7035825
@@ -14321,8 +14255,8 @@
     "communityUrl": "https://techshessions.com/",
     "urls": {
       "twitter": "https://www.twitter.com/techshessions",
-      "meetup": "https://www.meetup.com/es-ES/Tech-SHEssions/",
-      "linkedin": "https://www.linkedin.com/company/techshessions/"
+      "linkedin": "https://www.linkedin.com/company/techshessions/",
+      "eventsUrl": "https://www.meetup.com/es-ES/Tech-SHEssions/"
     },
     "thumbnailUrl": "images/techshessions.webp",
     "latLon": {
@@ -14359,10 +14293,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/TenerifeDev/",
     "urls": {
-      "meetup": "https://www.meetup.com/TenerifeDev/",
       "twitter": "http://twitter.com/tenerifedev/",
       "linkedin": "https://www.linkedin.com/groups/3020881",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/TenerifeDev/"
     },
     "thumbnailUrl": "images/tenerifedev.webp",
     "latLon": {
@@ -14504,7 +14437,6 @@
     "urls": {
       "twitter": "https://x.com/search?q=%23trgx&src=typed_query&f=live",
       "youtube": "https://www.youtube.com/@CodelyTV",
-      "linkedin": "https://www.linkedin.com/in/juantomasgarcia/",
       "instagram": "https://www.instagram.com/raul_muro/"
     },
     "thumbnailUrl": "images/trgcon.webp",
@@ -14534,9 +14466,7 @@
     "contactInfo": "meetup@unity3d.com",
     "communityUrl": "https://www.meetup.com/es-ES/pro/unity/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/pro/unity/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/pro/unity/"
     },
     "thumbnailUrl": "images/unity-user-group-network.webp",
     "latLon": {
@@ -14650,11 +14580,10 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/valenciainteractive/",
     "urls": {
-      "meetup": "https://www.meetup.com/valenciainteractive/",
       "discord": "https://discord.gg/6FjnGjkx5G",
       "twitter": "http://twitter.com/VLCInteractive/",
       "linkedin": "https://www.linkedin.com/groups/8137182",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/valenciainteractive/"
     },
     "thumbnailUrl": "images/valencia-interactive.webp",
     "latLon": {
@@ -14739,7 +14668,6 @@
     "contactInfo": "vicon@galicia.com",
     "communityUrl": "https://www.vicon.gal/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/carolina-gomez-uriarte/",
       "twitter": "https://twitter.com/vicongal",
       "instagram": "https://instagram.com/vicon.gal"
     },
@@ -14764,7 +14692,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/Vigo-JUG/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es-ES/Vigo-JUG/"
+    },
     "latLon": {
       "lat": 42.2313601,
       "lon": -8.7124252
@@ -14790,10 +14720,10 @@
     "communityUrl": "https://vigotech.org/",
     "urls": {
       "twitter": "https://twitter.com/agilevigo",
-      "meetup": "https://www.meetup.com/es-ES/agile-vigo/",
       "github": "https://github.com/agileVigo",
       "youtube": "https://www.youtube.com/channel/UC9DPKfcLiNd7SEU-QLlIG7A",
-      "telegram": "https://t.me/vigotech"
+      "telegram": "https://t.me/vigotech",
+      "eventsUrl": "https://www.meetup.com/es-ES/agile-vigo/"
     },
     "thumbnailUrl": "images/vigo-tech-alliance.webp",
     "latLon": {
@@ -14873,9 +14803,8 @@
     "contactInfo": "meetup-vuejs-list@meetup.com",
     "communityUrl": "https://www.meetup.com/es-ES/vuejs-madrid/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/vuejs-madrid/",
       "twitter": "http://twitter.com/VueJSMadrid/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/vuejs-madrid/"
     },
     "thumbnailUrl": "images/vuejs-madrid.webp",
     "latLon": {
@@ -14962,11 +14891,11 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/web3-island-makers",
     "urls": {
-      "meetup": "https://www.meetup.com/web3-island-makers",
       "discord": "https://discord.gg/JNNQxJkq2W",
       "twitter": "https://twitter.com/wim_dao",
       "instagram": "https://www.instagram.com/web3islandmakers/",
-      "linkedin": "https://www.linkedin.com/company/86969414"
+      "linkedin": "https://www.linkedin.com/company/86969414",
+      "eventsUrl": "https://www.meetup.com/web3-island-makers"
     },
     "thumbnailUrl": "images/web3-island-makers.webp",
     "latLon": {
@@ -15298,7 +15227,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/Women-in-DevOps-Madrid/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es-ES/Women-in-DevOps-Madrid/"
+    },
     "latLon": {
       "lat": 40.4167047,
       "lon": -3.7035825
@@ -15331,7 +15262,6 @@
     "communityUrl": "https://wtmgdgmadrid.github.io/wtm-madrid-landing/",
     "urls": {
       "twitter": "https://twitter.com/_mtnieto",
-      "linkedin": "https://www.linkedin.com/in/mariateresanieto/",
       "bluesky": "https://bsky.app/profile/mtnieto.es",
       "instagram": "https://www.instagram.com/wtmmadrid/"
     },
@@ -15406,7 +15336,9 @@
     ],
     "contactInfo": "",
     "communityUrl": "https://wordcamp.org//",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://wordcamp.org//"
+    },
     "thumbnailUrl": "images/wordcamp.webp",
     "latLon": {
       "lat": null,
@@ -15430,7 +15362,7 @@
     "communityUrl": "https://alhaurin.wordcamp.org/2025/",
     "urls": {
       "twitter": "https://x.com/WCAlhaurin",
-      "web": "https://alhaurin.wordcamp.org/2025/"
+      "eventsUrl": "https://alhaurin.wordcamp.org/2025/"
     },
     "thumbnailUrl": "images/wordcamp-alhaurin-de-la-torre.webp",
     "latLon": {
@@ -15453,7 +15385,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://granada.wordcamp.org/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://granada.wordcamp.org/"
+    },
     "thumbnailUrl": "images/wordcamp-granada.webp",
     "latLon": {
       "lat": 37.1831938,
@@ -15498,7 +15432,7 @@
       "twitter": "https://twitter.com/WPGrinon",
       "instagram": "https://www.instagram.com/wpgrinon/",
       "youtube": "https://www.youtube.com/channel/UCuwhtNtXjCqAs9ty2pvDO2g",
-      "meetup": "https://www.meetup.com/es-ES/Wordpress-Grinon/"
+      "eventsUrl": "https://www.meetup.com/es-ES/Wordpress-Grinon/"
     },
     "thumbnailUrl": "images/wordcamp-grinon.webp",
     "latLon": {
@@ -15524,7 +15458,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://sevilla.wordcamp.org/2024/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://sevilla.wordcamp.org/2024/"
+    },
     "thumbnailUrl": "images/wordcamp-sevilla.webp",
     "latLon": {
       "lat": 37.38264,
@@ -15565,9 +15501,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/alcala-de-henares-wordpress-meetup-group/",
     "urls": {
-      "meetup": "https://www.meetup.com/alcala-de-henares-wordpress-meetup-group/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/alcala-de-henares-wordpress-meetup-group/"
     },
     "thumbnailUrl": "images/wordpress-alcala-de-hernares.webp",
     "latLon": {
@@ -15609,10 +15543,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpress-alicante/",
     "urls": {
-      "meetup": "https://www.meetup.com/wordpress-alicante/",
       "youtube": "https://www.youtube.com/channel/UCs6lm9A0PcJTsYw8bJwYkHg",
       "twitter": "http://twitter.com/wpalicante_es/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/wordpress-alicante/"
     },
     "thumbnailUrl": "images/wordpress-alicante.webp",
     "latLon": {
@@ -15654,9 +15587,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpressbcn/",
     "urls": {
-      "meetup": "https://www.meetup.com/wordpressbcn/",
       "twitter": "http://twitter.com/WPBarcelona/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/wordpressbcn/"
     },
     "thumbnailUrl": "images/wordpress-barcelona.webp",
     "latLon": {
@@ -15698,9 +15630,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpress-benidorm/",
     "urls": {
-      "meetup": "https://www.meetup.com/wordpress-benidorm/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/wordpress-benidorm/"
     },
     "thumbnailUrl": "images/wordpress-benidorm.webp",
     "latLon": {
@@ -15742,10 +15672,10 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpress-bilbao/",
     "urls": {
-      "meetup": "https://www.meetup.com/wordpress-bilbao/",
       "twitter": "http://twitter.com/WPBilbao/",
       "instagram": "https://www.instagram.com/wordpressbilbao/",
-      "linkedin": "https://www.linkedin.com/company/wordpressbilbao/"
+      "linkedin": "https://www.linkedin.com/company/wordpressbilbao/",
+      "eventsUrl": "https://www.meetup.com/wordpress-bilbao/"
     },
     "thumbnailUrl": "images/wordpress-bilbao.webp",
     "latLon": {
@@ -15787,9 +15717,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpress-cartagena/",
     "urls": {
-      "meetup": "https://www.meetup.com/wordpress-cartagena/",
       "twitter": "https://twitter.com/WPCartagena",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/wordpress-cartagena/"
     },
     "thumbnailUrl": "images/wordpress-cartagena.webp",
     "latLon": {
@@ -15831,9 +15760,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/meetup-wordpress-castello/",
     "urls": {
-      "meetup": "https://www.meetup.com/meetup-wordpress-castello/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/meetup-wordpress-castello/"
     },
     "thumbnailUrl": "images/wordpress-castello.webp",
     "latLon": {
@@ -15873,9 +15800,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpress-meetup-chiclana/",
     "urls": {
-      "meetup": "https://www.meetup.com/wordpress-meetup-chiclana/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/wordpress-meetup-chiclana/"
     },
     "thumbnailUrl": "images/wordpress-chiclana.webp",
     "latLon": {
@@ -15898,7 +15823,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpress-collado-villalba-meetup/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/wordpress-collado-villalba-meetup/"
+    },
     "latLon": {
       "lat": 40.6272562,
       "lon": -4.0085868
@@ -15938,8 +15865,8 @@
     "contactInfo": "",
     "communityUrl": "https://xn--wpcorua-9za.com/es/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/wordpresscoruna/",
-      "twitter": "https://twitter.com/wpcoruna"
+      "twitter": "https://twitter.com/wpcoruna",
+      "eventsUrl": "https://www.meetup.com/es-ES/wordpresscoruna/"
     },
     "thumbnailUrl": "images/wordpress-coruna.webp",
     "latLon": {
@@ -15981,11 +15908,11 @@
     "contactInfo": "meetup@wpdenia.com",
     "communityUrl": "https://wpdenia.com/",
     "urls": {
-      "meetup": "https://www.meetup.com/es/Wordpress-Denia/",
       "twitter": "https://twitter.com/WPDenia",
       "instagram": "https://www.instagram.com/wordpress_denia/",
       "telegram": "https://t.me/joinchat/MIEFyRAkLjYMayM-D1mAIA",
-      "youtube": "https://www.youtube.com/channel/UCcjR_iC6F0cFDKIYbRxAg1A"
+      "youtube": "https://www.youtube.com/channel/UCcjR_iC6F0cFDKIYbRxAg1A",
+      "eventsUrl": "https://www.meetup.com/es/Wordpress-Denia/"
     },
     "thumbnailUrl": "images/wordpress-denia.webp",
     "latLon": {
@@ -16027,9 +15954,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/ferrolterrawordpress/",
     "urls": {
-      "meetup": "https://www.meetup.com/ferrolterrawordpress/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/ferrolterrawordpress/"
     },
     "thumbnailUrl": "images/ferrolterra-wordpress.webp",
     "latLon": {
@@ -16071,8 +15996,8 @@
     "contactInfo": "",
     "communityUrl": "https://wpgranada.es/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/granada-wordpress-meetup/",
-      "youtube": "https://www.youtube.com/@wordpressgranada7164"
+      "youtube": "https://www.youtube.com/@wordpressgranada7164",
+      "eventsUrl": "https://www.meetup.com/es-ES/granada-wordpress-meetup/"
     },
     "thumbnailUrl": "images/wordpress-granada.webp",
     "latLon": {
@@ -16111,9 +16036,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpressgranollers/",
     "urls": {
-      "meetup": "https://www.meetup.com/wordpressgranollers/",
       "twitter": "http://twitter.com/wpgranollers/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/wordpressgranollers/"
     },
     "thumbnailUrl": "images/wordpress-granollers.webp",
     "latLon": {
@@ -16154,10 +16078,10 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpress-grinon/",
     "urls": {
-      "meetup": "https://www.meetup.com/wordpress-grinon/",
       "twitter": "https://twitter.com/WPGrinon",
       "instagram": "https://www.instagram.com/wpgrinon/",
-      "youtube": "https://www.youtube.com/channel/UCuwhtNtXjCqAs9ty2pvDO2g"
+      "youtube": "https://www.youtube.com/channel/UCuwhtNtXjCqAs9ty2pvDO2g",
+      "eventsUrl": "https://www.meetup.com/wordpress-grinon/"
     },
     "thumbnailUrl": "images/wordpress-grinon.webp",
     "latLon": {
@@ -16199,9 +16123,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/huelva-wordpress-meetup/",
     "urls": {
-      "meetup": "https://www.meetup.com/huelva-wordpress-meetup/",
       "twitter": "http://twitter.com/huelvawp/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/huelva-wordpress-meetup/"
     },
     "thumbnailUrl": "images/wordpress-huelva.webp",
     "latLon": {
@@ -16241,7 +16164,7 @@
     "contactInfo": "info@wpigualada.com",
     "communityUrl": "https://wpigualada.com/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/girona-wordpress-meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/girona-wordpress-meetup/"
     },
     "thumbnailUrl": "images/wordpress-igualada.webp",
     "latLon": {
@@ -16284,10 +16207,10 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/leon-wordpress-meetup/",
     "urls": {
-      "meetup": "https://www.meetup.com/leon-wordpress-meetup/",
       "twitter": "http://twitter.com/LeonWordPress/",
       "instagram": "https://www.instagram.com/leonwordpress/",
-      "linkedin": "https://www.linkedin.com/company/leon-wordpress/"
+      "linkedin": "https://www.linkedin.com/company/leon-wordpress/",
+      "eventsUrl": "https://www.meetup.com/leon-wordpress-meetup/"
     },
     "thumbnailUrl": "images/wordpress-leon.webp",
     "latLon": {
@@ -16329,9 +16252,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpress-logrono/",
     "urls": {
-      "meetup": "https://www.meetup.com/wordpress-logrono/",
       "instagram": "http://instagram.com/wordcamplogrono/",
-      "twitter": "https://twitter.com/Meetup/"
+      "eventsUrl": "https://www.meetup.com/wordpress-logrono/"
     },
     "thumbnailUrl": "images/wordpress-logrono.webp",
     "latLon": {
@@ -16373,9 +16295,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpresslugo/",
     "urls": {
-      "meetup": "https://www.meetup.com/wordpresslugo/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/wordpresslugo/"
     },
     "thumbnailUrl": "images/wordpress-lugo.webp",
     "latLon": {
@@ -16417,9 +16337,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/wordpress-malaga/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/wordpress-malaga/",
-      "twitter": "http://twitter.com/https://twitter.com/wpmalaga/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "twitter": "https://twitter.com/wpmalaga/",
+      "eventsUrl": "https://www.meetup.com/es-ES/wordpress-malaga/"
     },
     "thumbnailUrl": "images/wordpress-malaga.webp",
     "latLon": {
@@ -16461,10 +16380,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/mallorca-wordpress-meetup/",
     "urls": {
-      "meetup": "https://www.meetup.com/mallorca-wordpress-meetup/",
       "telegram": "https://t.me/wordpresmallorca",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/mallorca-wordpress-meetup/"
     },
     "thumbnailUrl": "images/ordpress-mallorca.webp",
     "latLon": {
@@ -16505,9 +16422,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpress-meetup-marbella/",
     "urls": {
-      "meetup": "https://www.meetup.com/wordpress-meetup-marbella/",
       "twitter": "http://twitter.com/wpmarbellaorg/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/wordpress-meetup-marbella/"
     },
     "thumbnailUrl": "images/wordpress-marbella.webp",
     "latLon": {
@@ -16549,9 +16465,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpress-mataro/",
     "urls": {
-      "meetup": "https://www.meetup.com/wordpress-mataro/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/wordpress-mataro/"
     },
     "thumbnailUrl": "images/wordpress-mataro.webp",
     "latLon": {
@@ -16594,11 +16508,11 @@
     "contactInfo": "support@wordcamp.org",
     "communityUrl": "https://make.wordpress.org/community/meetups/",
     "urls": {
-      "meetup": "https://www.meetup.com/pro/wordpress/",
       "twitter": "https://www.x.com/WordPress",
       "bluesky": "https://bsky.app/profile/wordpress.org",
       "instagram": "https://www.instagram.com/wordpress/",
-      "linkedin": "https://www.linkedin.com/company/wordpress"
+      "linkedin": "https://www.linkedin.com/company/wordpress",
+      "eventsUrl": "https://www.meetup.com/pro/wordpress/"
     },
     "thumbnailUrl": "images/wordpress-meetup-groups.webp",
     "latLon": {
@@ -16640,9 +16554,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpress-oviedo/",
     "urls": {
-      "meetup": "https://www.meetup.com/wordpress-oviedo/",
       "twitter": "http://twitter.com/WPOviedo/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/wordpress-oviedo/"
     },
     "thumbnailUrl": "images/wordpress-oviedo.webp",
     "latLon": {
@@ -16683,9 +16596,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/ponferrada-wordpress-meetup/",
     "urls": {
-      "meetup": "https://www.meetup.com/ponferrada-wordpress-meetup/",
       "twitter": "http://twitter.com/wpponfe/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/ponferrada-wordpress-meetup/"
     },
     "thumbnailUrl": "images/wordpress-ponferrada.webp",
     "latLon": {
@@ -16727,9 +16639,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/pontevedra-wordpress-meetup/",
     "urls": {
-      "meetup": "https://www.meetup.com/pontevedra-wordpress-meetup/",
       "twitter": "https://twitter.com/@wppontevedra",
-      "instagram": "https://instagram.com/wppontevedra"
+      "instagram": "https://instagram.com/wppontevedra",
+      "eventsUrl": "https://www.meetup.com/pontevedra-wordpress-meetup/"
     },
     "thumbnailUrl": "images/wordpress-pontevedra.webp",
     "latLon": {
@@ -16771,9 +16683,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/santander-wordpress-meetup/",
     "urls": {
-      "meetup": "https://www.meetup.com/santander-wordpress-meetup/",
       "twitter": "https://twitter.com/search?q=%23WordPress&src=hashtag_click",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/santander-wordpress-meetup/"
     },
     "latLon": {
       "lat": 43.4614116,
@@ -16814,10 +16725,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/santiago-de-compostela-wordpress-meetup-group/",
     "urls": {
-      "meetup": "https://www.meetup.com/santiago-de-compostela-wordpress-meetup-group/",
       "telegram": "https://t.me/+6faPK40eIFw1Njc0",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/santiago-de-compostela-wordpress-meetup-group/"
     },
     "thumbnailUrl": "images/wordpress-santiago-de-compostela.webp",
     "latLon": {
@@ -16859,8 +16768,8 @@
     "contactInfo": "",
     "communityUrl": "https://wpsevilla.org/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/wordpress-sevilla/",
-      "telegram": "https://t.me/wpsevilla"
+      "telegram": "https://t.me/wpsevilla",
+      "eventsUrl": "https://www.meetup.com/es-ES/wordpress-sevilla/"
     },
     "thumbnailUrl": "images/wordpress-sevilla.webp",
     "latLon": {
@@ -16885,7 +16794,7 @@
     "communityUrl": "https://x.com/wpsevilladevs",
     "urls": {
       "twitter": "https://x.com/wpsevilladevs",
-      "mastodon": "https://saraos.tech/@wordpress-sevilla-devs"
+      "eventsUrl": "https://saraos.tech/@wordpress-sevilla-devs"
     },
     "latLon": {
       "lat": null,
@@ -16926,9 +16835,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpresstarragona/",
     "urls": {
-      "meetup": "https://www.meetup.com/wordpresstarragona/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/wordpresstarragona/"
     },
     "thumbnailUrl": "images/wordpress-tarragona.webp",
     "latLon": {
@@ -16970,9 +16877,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/terrassa-wordpress-meetup/",
     "urls": {
-      "meetup": "https://www.meetup.com/terrassa-wordpress-meetup/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/terrassa-wordpress-meetup/"
     },
     "thumbnailUrl": "images/wordpress-terrassa.webp",
     "latLon": {
@@ -16995,7 +16900,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/toledo-wordpress/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/toledo-wordpress/"
+    },
     "latLon": {
       "lat": 39.85966175170025,
       "lon": -4.024544270483665
@@ -17035,9 +16942,8 @@
     "contactInfo": "hola@wptortosa.com",
     "communityUrl": "https://www.meetup.com/tortosa-wordpress-meetup/",
     "urls": {
-      "meetup": "https://www.meetup.com/tortosa-wordpress-meetup/",
       "twitter": "https://twitter.com/WPTortosa",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/tortosa-wordpress-meetup/"
     },
     "thumbnailUrl": "images/wordpress-tordosa.webp",
     "latLon": {
@@ -17078,9 +16984,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/torrelodones-wordpress-meetup/",
     "urls": {
-      "meetup": "https://www.meetup.com/torrelodones-wordpress-meetup/",
       "twitter": "http://twitter.com/WPTorrelodones/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/torrelodones-wordpress-meetup/"
     },
     "thumbnailUrl": "images/wordpress-torrelodones.webp",
     "latLon": {
@@ -17121,10 +17026,10 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wordpress-valencia-meetup/",
     "urls": {
-      "meetup": "https://www.meetup.com/wordpress-valencia-meetup/",
       "twitter": "https://twitter.com/_wpvalencia",
       "instagram": "https://www.instagram.com/wordpressvalencia/",
-      "discord": "https://discord.gg/e6PMDnuCFb"
+      "discord": "https://discord.gg/e6PMDnuCFb",
+      "eventsUrl": "https://www.meetup.com/wordpress-valencia-meetup/"
     },
     "thumbnailUrl": "images/wordpress-valencia.webp",
     "latLon": {
@@ -17165,9 +17070,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/valladolid-wordpress-meetup/",
     "urls": {
-      "meetup": "https://www.meetup.com/valladolid-wordpress-meetup/",
       "twitter": "http://twitter.com/wpvalladolid/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/valladolid-wordpress-meetup/"
     },
     "thumbnailUrl": "images/wordpress-valladolid.webp",
     "latLon": {
@@ -17209,10 +17113,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/vigo-wordpress-meetup/",
     "urls": {
-      "meetup": "https://www.meetup.com/vigo-wordpress-meetup/",
       "twitter": "https://twitter.com/wp_vigo",
       "youtube": "https://www.youtube.com/@wordpressvigo",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/vigo-wordpress-meetup/"
     },
     "thumbnailUrl": "images/wordpress-vigo.webp",
     "latLon": {
@@ -17254,9 +17157,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/vitoria-gasteiz-wordpress-meetup/",
     "urls": {
-      "meetup": "https://www.meetup.com/vitoria-gasteiz-wordpress-meetup/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/vitoria-gasteiz-wordpress-meetup/"
     },
     "thumbnailUrl": "images/wordpress-vitoria-gasteiz.webp",
     "latLon": {
@@ -17298,10 +17199,10 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wpzaragoza/",
     "urls": {
-      "meetup": "https://www.meetup.com/wpzaragoza/",
       "twitter": "http://twitter.com/zaragozawp/",
       "instagram": "https://www.instagram.com/wpzaragoza/",
-      "discord": "https://discord.com/invite/ebCjdwxnyk"
+      "discord": "https://discord.com/invite/ebCjdwxnyk",
+      "eventsUrl": "https://www.meetup.com/wpzaragoza/"
     },
     "thumbnailUrl": "images/wordpress-zaragoza.webp",
     "latLon": {
@@ -17344,10 +17245,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wunderdog-malaga-meetup/",
     "urls": {
-      "meetup": "https://www.meetup.com/wunderdog-malaga-meetup/",
-      "linkedin": "https://www.linkedin.com/company/sevendos/posts/?feedView=al",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/wunderdog-malaga-meetup/"
     },
     "thumbnailUrl": "images/wunderdog-malaga-meetup.webp",
     "latLon": {
@@ -17439,7 +17337,7 @@
       "instagram": "https://www.instagram.com/xops_conference",
       "linkedin": "https://www.linkedin.com/company/xops-conference/",
       "twitter": "https://x.com/XopsConference",
-      "web": "https://linktr.ee/xopscon"
+      "linkAggregator": "https://linktr.ee/xopscon"
     },
     "thumbnailUrl": "images/xops-conference.webp",
     "latLon": {
@@ -17499,9 +17397,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.yeswetech.org/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/laualm/",
-      "twitter": "https://www.google.com/url?q=https%3A%2F%2Fwww.twitter.com%2Fyeswetech_org&sa=D&sntz=1&usg=AOvVaw1ygGAZ9JQjIr1QqbJjJiyn",
-      "instagram": "https://www.google.com/url?q=https%3A%2F%2Fwww.instagram.com%2Fyeswetech_org%2F&sa=D&sntz=1&usg=AOvVaw2pWAunS_SCYJ9kqZ0RgrQM"
+      "twitter": "https://twitter.com/yeswetech_org",
+      "instagram": "https://www.instagram.com/yeswetech_org/"
     },
     "thumbnailUrl": "images/yes-we-tech.webp",
     "latLon": {
@@ -17525,8 +17422,8 @@
     "contactInfo": "",
     "communityUrl": "https://aprocyt.github.io/zurracapoteconf//",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/GDG-La-Rioja/events/265173706/",
-      "twitter": "https://twitter.com/zurracapoteconf"
+      "twitter": "https://twitter.com/zurracapoteconf",
+      "eventsUrl": "https://www.meetup.com/es-ES/GDG-La-Rioja/events/265173706/"
     },
     "thumbnailUrl": "images/zurracapoteconf.webp",
     "latLon": {
@@ -17608,8 +17505,7 @@
     "contactInfo": "miduga@gmail.com",
     "communityUrl": "https://www.jsconf.es/",
     "urls": {
-      "twitter": "https://x.com/erickwendel_/",
-      "linkedin": "https://www.linkedin.com/in/anna-via/?originalSubdomain=es"
+      "twitter": "https://x.com/erickwendel_/"
     },
     "thumbnailUrl": "images/jsconf.webp",
     "latLon": {
@@ -17733,7 +17629,6 @@
     "communityUrl": "https://www.lareiraconf.es/",
     "urls": {
       "instagram": "https://www.instagram.com/freak_gzm/",
-      "linkedin": "https://www.linkedin.com/in/ignacioespositobusto",
       "github": "https://github.com/Aquelarre-Dixital",
       "twitter": "https://x.com/lareiraconf",
       "telegram": "https://t.me/Qrow01"
@@ -17779,11 +17674,11 @@
     "contactInfo": "",
     "communityUrl": "https://ghspain.github.io/",
     "urls": {
-      "meetup": "https://www.meetup.com/ghspain",
       "linkedin": "https://www.linkedin.com/company/ghspain/",
       "github": "https://github.com/svg153",
       "youtube": "https://www.youtube.com/@GitHubCommunitySpain/",
-      "twitter": "https://x.com/GithubCommSpain"
+      "twitter": "https://x.com/GithubCommSpain",
+      "eventsUrl": "https://www.meetup.com/ghspain"
     },
     "thumbnailUrl": "images/github-community-spain.webp",
     "latLon": {
@@ -17820,7 +17715,8 @@
     "communityUrl": "https://gdg.community.dev/gdg-menorca/",
     "urls": {
       "twitter": "https://www.twitter.com/GDGMenorca",
-      "instagram": "https://www.instagram.com/gdgmenorca"
+      "instagram": "https://www.instagram.com/gdgmenorca",
+      "eventsUrl": "https://gdg.community.dev/gdg-menorca/"
     },
     "thumbnailUrl": "images/gdg-menorca.webp",
     "latLon": {
@@ -17905,10 +17801,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/ai-engineers-barcelona/",
     "urls": {
-      "meetup": "https://www.meetup.com/ai-engineers-barcelona/",
       "linkedin": "https://www.linkedin.com/company/ai-engineers-community",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/ai-engineers-barcelona/"
     },
     "thumbnailUrl": "images/ai-engineers-barcelona.webp",
     "latLon": {
@@ -17944,9 +17838,10 @@
     "urls": {
       "github": "https://github.com/pybcn",
       "linkedin": "https://linkedin.com/company/pybcn",
-      "meetup": "https://www.meetup.com/python-barcelona/",
       "twitter": "https://twitter.com/PyBCN",
-      "youtube": "https://www.youtube.com/c/PythonBarcelona"
+      "youtube": "https://www.youtube.com/c/PythonBarcelona",
+      "eventsUrl": "https://www.meetup.com/python-barcelona/",
+      "mailingList": "pybcn@googlegroups.com"
     },
     "thumbnailUrl": "images/python-barcelona.webp",
     "latLon": {
@@ -17985,9 +17880,10 @@
     "urls": {
       "github": "https://github.com/pybcn",
       "linkedin": "https://linkedin.com/company/pybcn",
-      "meetup": "https://www.meetup.com/python-barcelona/",
       "twitter": "https://twitter.com/PyBCN",
-      "youtube": "https://www.youtube.com/c/PythonBarcelona"
+      "youtube": "https://www.youtube.com/c/PythonBarcelona",
+      "eventsUrl": "https://www.meetup.com/python-barcelona/",
+      "mailingList": "pyladies-bcn@googlegroups.com"
     },
     "thumbnailUrl": "images/pyladies-barcelona.webp",
     "latLon": {
@@ -18023,9 +17919,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/meetup-group-nkodwxya/?eventOrigin=event_home_page",
     "urls": {
-      "meetup": "https://www.meetup.com/meetup-group-nkodwxya/?eventOrigin=event_home_page",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/meetup-group-nkodwxya/?eventOrigin=event_home_page"
     },
     "thumbnailUrl": "images/tech-barcelona.webp",
     "latLon": {
@@ -18084,9 +17978,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/global-ai-ponferrada/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/global-ai-ponferrada/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/global-ai-ponferrada/"
     },
     "thumbnailUrl": "images/global-ai-ponferrada.webp",
     "latLon": {
@@ -18124,9 +18016,8 @@
     "contactInfo": "galstechinfo@gmail.com",
     "communityUrl": "https://www.meetup.com/es-ES/galstech/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/galstech/",
       "twitter": "http://twitter.com/galstech_/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/galstech/"
     },
     "thumbnailUrl": "images/galstech.webp",
     "latLon": {
@@ -18169,10 +18060,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/WordPressOurense/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/WordPressOurense/",
       "telegram": "https://t.me/+Ipduptue5zA3M2I0",
       "twitter": "https://twitter.com/WPOurense",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/WordPressOurense/"
     },
     "thumbnailUrl": "images/wordpress-ourense.webp",
     "latLon": {
@@ -18208,10 +18098,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es/bitcoin-2140-a-coruna/",
     "urls": {
-      "meetup": "https://www.meetup.com/es/bitcoin-2140-a-coruna/",
       "telegram": "https://t.me/B2140_ACoruna",
       "twitter": "https://twitter.com/2140Coruna",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es/bitcoin-2140-a-coruna/"
     },
     "thumbnailUrl": "images/bitcoin-2140-a-coruna.webp",
     "latLon": {
@@ -18324,8 +18213,9 @@
     "urls": {
       "telegram": "https://t.me/+EDA7YP0n0dc0MDU0",
       "linkedin": "https://www.linkedin.com/company/devmad/",
-      "meetup": "https://www.meetup.com/devmad",
-      "youtube": "https://www.youtube.com/@DevelopersInMadrid"
+      "youtube": "https://www.youtube.com/@DevelopersInMadrid",
+      "eventsUrl": "https://www.meetup.com/devmad",
+      "linkAggregator": "https://linktr.ee/devmad"
     },
     "thumbnailUrl": "images/devmad-developers.webp",
     "latLon": {
@@ -18366,11 +18256,10 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/valencia-codes/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/valencia-codes/",
       "instagram": "https://instagram.com/valencia.codes",
       "linkedin": "https://www.linkedin.com/company/valencia-codes/",
       "telegram": "https://t.me/+0bW1pv0LTGYwNDQ0",
-      "twitter": "https://twitter.com/Meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/valencia-codes/"
     },
     "thumbnailUrl": "images/valencia-codes.webp",
     "latLon": {
@@ -18410,9 +18299,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/haskell-mad/",
     "urls": {
-      "meetup": "https://www.meetup.com/haskell-mad/",
       "twitter": "http://twitter.com/haskellMAD/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/haskell-mad/"
     },
     "thumbnailUrl": "images/haskellmad.webp",
     "latLon": {
@@ -18523,7 +18411,7 @@
       "instagram": "https://www.instagram.com/techriders_es/",
       "twitter": "https://x.com/TechRiders_es",
       "youtube": "http://youtube.com/@TechRiders_es",
-      "meetup": "https://www.meetup.com/es-ES/TechRiders_es/"
+      "eventsUrl": "https://www.meetup.com/es-ES/TechRiders_es/"
     },
     "thumbnailUrl": "images/tech-riders.webp",
     "latLon": {
@@ -18546,7 +18434,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/Coruna-Agile/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es-ES/Coruna-Agile/"
+    },
     "thumbnailUrl": "images/corua-agile.webp",
     "latLon": {
       "lat": 43.3709703,
@@ -18569,7 +18459,6 @@
     "contactInfo": "",
     "communityUrl": "https://canallacon.com/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/andresnaranjoxxl",
       "twitter": "https://x.com/TheXXLMAN?t=3Cht1xoLqLNLGSC5PLyYvQ&s=08"
     },
     "thumbnailUrl": "images/canallacon.webp",
@@ -18612,10 +18501,10 @@
     "contactInfo": "",
     "communityUrl": "https://cloudnativesevilla.com/",
     "urls": {
-      "meetup": "https://www.meetup.com/cloud-native-sevilla/",
       "linkedin": "https://www.linkedin.com/groups/13076051/",
       "youtube": "https://www.youtube.com/@CloudNativeSevilla",
-      "telegram": "https://t.me/+IKebP_J4X2Y0OGI0"
+      "telegram": "https://t.me/+IKebP_J4X2Y0OGI0",
+      "eventsUrl": "https://www.meetup.com/cloud-native-sevilla/"
     },
     "thumbnailUrl": "images/cloud-native-sevilla.webp",
     "latLon": {
@@ -18652,11 +18541,9 @@
     "contactInfo": "",
     "communityUrl": "https://web.archive.org/web/20240917072042/https://www.meetup.com/es-ES/Ethereum-Meetup-Sevilla/",
     "urls": {
-      "meetup": "https://web.archive.org/web/20240917072042/https://www.meetup.com/es-ES/Ethereum-Meetup-Sevilla/",
       "telegram": "https://t.me/+0UFC-yM_mT82YmVk",
       "github": "https://github.com/Colm3na",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://web.archive.org/web/20240917072042/https://www.meetup.com/es-ES/Ethereum-Meetup-Sevilla/"
     },
     "thumbnailUrl": "images/ethereum-meetup-sevilla.webp",
     "latLon": {
@@ -18688,7 +18575,7 @@
     "urls": {
       "github": "https://github.com/GeoinquietosSevilla",
       "twitter": "https://twitter.com/geoinquietossvq",
-      "meetup": "http://www.meetup.com/Geoinquietos-Sevilla/"
+      "eventsUrl": "http://www.meetup.com/Geoinquietos-Sevilla/"
     },
     "thumbnailUrl": "images/geoinquietos-sevilla.webp",
     "latLon": {
@@ -18712,9 +18599,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/seville-mongodb-meetup-group/",
     "urls": {
-      "meetup": "https://www.meetup.com/seville-mongodb-meetup-group/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/seville-mongodb-meetup-group/"
     },
     "thumbnailUrl": "images/mongodb-sevilla.webp",
     "latLon": {
@@ -18737,7 +18622,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-es/hacking-sevillaqk14/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es-es/hacking-sevillaqk14/"
+    },
     "thumbnailUrl": "images/hacking-sevilla.webp",
     "latLon": {
       "lat": 37.3886303,
@@ -18762,8 +18649,8 @@
     "urls": {
       "twitter": "https://x.com/python_sevilla",
       "github": "https://github.com/python-sevilla/meetups",
-      "meetup": "https://www.meetup.com/es-es/python-sevilla/",
-      "telegram": "https://t.me/pythonsevilla"
+      "telegram": "https://t.me/pythonsevilla",
+      "eventsUrl": "https://www.meetup.com/es-es/python-sevilla/"
     },
     "thumbnailUrl": "images/python-sevilla.webp",
     "latLon": {
@@ -18830,7 +18717,7 @@
     "urls": {
       "twitter": "https://x.com/MakerSocietySVQ",
       "web": "https://sevillamakers.org/",
-      "meetup": "https://www.meetup.com/es-es/maker-society/"
+      "eventsUrl": "https://www.meetup.com/es-es/maker-society/"
     },
     "thumbnailUrl": "images/sevilla-maker-societ.webp",
     "latLon": {
@@ -18867,9 +18754,7 @@
     "contactInfo": "pingprogramadoras@gmail.com",
     "communityUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/"
     },
     "thumbnailUrl": "images/ping-a-programadoras.webp",
     "latLon": {
@@ -18901,7 +18786,8 @@
     "communityUrl": "https://trailblazercommunitygroups.com/salesforce-developer-group-sevilla-spain/",
     "urls": {
       "twitter": "https://twitter.com/search?q=%23trailblazercommunity&src=typd",
-      "youtube": "https://www.youtube.com/channel/UCUpquzY878NEaZm5bc7m2sQ"
+      "youtube": "https://www.youtube.com/channel/UCUpquzY878NEaZm5bc7m2sQ",
+      "eventsUrl": "https://trailblazercommunitygroups.com/salesforce-developer-group-sevilla-spain/"
     },
     "thumbnailUrl": "images/salesforce-developer-group-sevilla.webp",
     "latLon": {
@@ -18924,7 +18810,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/SevillaQA/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es-ES/SevillaQA/"
+    },
     "thumbnailUrl": "images/sevillaqa.webp",
     "latLon": {
       "lat": 37.3886303,
@@ -18960,9 +18848,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/SevillaDotNet/",
     "urls": {
-      "meetup": "https://www.meetup.com/es-ES/SevillaDotNet/",
       "twitter": "http://twitter.com/SevillaNetDevs/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/es-ES/SevillaDotNet/"
     },
     "thumbnailUrl": "images/sevilladotnet.webp",
     "latLon": {
@@ -18985,7 +18872,9 @@
     "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/Sevilla-Ruby-On-Rails-Meetup/",
-    "urls": {},
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/es-ES/Sevilla-Ruby-On-Rails-Meetup/"
+    },
     "thumbnailUrl": "images/sevilla-ruby-on-rails.webp",
     "latLon": {
       "lat": 37.3886303,
@@ -19026,9 +18915,8 @@
     "communityUrl": "https://www.thethingsnetwork.org/community/sevilla/",
     "urls": {
       "twitter": "https://x.com/ttn_sevilla",
-      "meetup": "https://www.meetup.com/",
-      "linkedin": "https://www.linkedin.com/in/santiagopm/",
-      "web": "https://www.thethingsnetwork.org/community/sevilla/"
+      "web": "https://www.thethingsnetwork.org/community/sevilla/",
+      "eventsUrl": "https://www.meetup.com/"
     },
     "thumbnailUrl": "images/the-things-network-sevilla.webp",
     "latLon": {
@@ -19053,7 +18941,7 @@
     "communityUrl": "https://x.com/SVQTypeScript",
     "urls": {
       "twitter": "https://x.com/SVQTypeScript",
-      "meetup": "https://www.meetup.com/es-es/sevilla-typescript/"
+      "eventsUrl": "https://www.meetup.com/es-es/sevilla-typescript/"
     },
     "thumbnailUrl": "images/sevilla-typescript.webp",
     "latLon": {
@@ -19099,10 +18987,9 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/bitnami-sevilla/",
     "urls": {
-      "meetup": "https://www.meetup.com/bitnami-sevilla/",
       "twitter": "https://twitter.com/bitnami",
       "linkedin": "https://www.linkedin.com/company/bitnami/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/bitnami-sevilla/"
     },
     "thumbnailUrl": "images/bitnami-by-vmware-sevilla.webp",
     "latLon": {
@@ -19139,9 +19026,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/golang-sevilla/",
     "urls": {
-      "meetup": "https://www.meetup.com/golang-sevilla/",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/golang-sevilla/"
     },
     "thumbnailUrl": "images/golang-sevilla.webp",
     "latLon": {
@@ -19191,11 +19076,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/ia-generativa-sevilla/",
     "urls": {
-      "meetup": "https://www.meetup.com/ia-generativa-sevilla/",
-      "linkedin": "https://www.linkedin.com/in/adperezmorales/",
       "youtube": "https://www.youtube.com/@IAGenerativaSevilla",
-      "twitter": "https://twitter.com/Meetup/",
-      "instagram": "https://www.instagram.com/meetup/"
+      "eventsUrl": "https://www.meetup.com/ia-generativa-sevilla/"
     },
     "thumbnailUrl": "images/ia-generativa-sevilla.webp",
     "latLon": {
@@ -19223,9 +19105,7 @@
     ],
     "contactInfo": "",
     "communityUrl": "https://saturdays.ai/cities/",
-    "urls": {
-      "linkedin": "https://es.linkedin.com/in/mmarcosanchez"
-    },
+    "urls": {},
     "thumbnailUrl": "images/saturdaysai.webp",
     "latLon": {
       "lat": null,
@@ -19300,7 +19180,6 @@
     "urls": {
       "telegram": "https://t.me/hackbcn",
       "github": "https://github.com/ernesto-xload",
-      "linkedin": "https://www.linkedin.com/in/josepalbors/",
       "twitter": "https://x.com/hackbcn",
       "web": "https://hackbcn.org/"
     },
@@ -19382,7 +19261,8 @@
     "communityUrl": "https://gdg.community.dev/gdg-alicante/",
     "urls": {
       "twitter": "https://www.twitter.com/GDGAlicante",
-      "linkedin": "https://www.linkedin.com/groups/13743861"
+      "linkedin": "https://www.linkedin.com/groups/13743861",
+      "eventsUrl": "https://gdg.community.dev/gdg-alicante/"
     },
     "thumbnailUrl": "images/gdg-alicante.webp",
     "latLon": {
@@ -19733,7 +19613,7 @@
     "humanValidated": false
   },
   {
-    "id": 598,
+    "id": 599,
     "name": "Upscale Conf",
     "status": "Activa",
     "lastReviewed": "3/11/2025",
