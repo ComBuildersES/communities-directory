@@ -339,6 +339,8 @@ export function getCommunityDraft(community, nextId = null) {
     return getEmptyCommunityDraft(nextId);
   }
 
+  const isUmbrella = community.communityType === "Organización paraguas";
+
   return {
     ...getEmptyCommunityDraft(nextId),
     ...community,
@@ -352,6 +354,7 @@ export function getCommunityDraft(community, nextId = null) {
     },
     displayOnMap: Boolean(community.displayOnMap),
     humanValidated: Boolean(community.humanValidated),
+    ...(isUmbrella && { location: "n/a" }),
   };
 }
 

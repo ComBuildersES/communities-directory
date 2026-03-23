@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useCommunityActions } from "../../stores/community.store";
 import { buildContributionPath } from "../../lib/communitySubmission";
 import "./CommunityModal.css";
@@ -25,6 +25,14 @@ const URL_CONFIG = [
   { key: "twitch",         label: "Twitch",             icon: "fab fa-twitch" },
 ];
 
+const URL_CONFIG_BY_KEY = Object.fromEntries(URL_CONFIG.map(c => [c.key, c]));
+
+const URL_GROUPS = [
+  { key: "comunidad",  label: "Comunidad",       icon: "fas fa-globe",        keys: ["web", "eventsUrl", "linkAggregator", "mailingList", "github"], defaultOpen: false },
+  { key: "chat",       label: "Chat",             icon: "fas fa-comments",     keys: ["discord", "telegram", "whatsapp", "slack"],                    defaultOpen: false },
+  { key: "social",     label: "Redes y vídeo",   icon: "fas fa-share-nodes",  keys: ["youtube", "linkedin", "twitter", "tiktok", "instagram", "facebook", "mastodon", "bluesky", "twitch"], defaultOpen: false },
+];
+
 const STATUS_CLASS = {
   Activa:      "modal-badge modal-badge--active",
   Inactiva:    "modal-badge modal-badge--inactive",
@@ -35,8 +43,20 @@ function isArchivedUrl(url) {
   return typeof url === "string" && url.includes("web.archive.org/web/");
 }
 
+const INVALID_LOCATION_VALUES = new Set(["n/a", "n.a.", "n.a", "sin completar", "sin localidad"]);
+
+function normalizeLocation(location) {
+  const v = location?.trim();
+  return v && !INVALID_LOCATION_VALUES.has(v.toLowerCase()) ? v : null;
+}
+
 export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = [], onClose }) {
   const { filterComunities } = useCommunityActions();
+  const [tagsExpanded, setTagsExpanded] = useState(false);
+  const [audienceExpanded, setAudienceExpanded] = useState(false);
+  const [openUrlGroup, setOpenUrlGroup] = useState(null);
+
+  const CHIPS_THRESHOLD = 3;
 
   const applyFilter = (key, value) => {
     filterComunities(key, value);
@@ -50,6 +70,16 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
     return () => document.removeEventListener("keydown", onKey);
   }, [onClose]);
 
+  // Cerrar dropdown de enlaces al clicar fuera
+  useEffect(() => {
+    if (!openUrlGroup) return;
+    const handler = (e) => {
+      if (!e.target.closest(".community-modal-url-groups")) setOpenUrlGroup(null);
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [openUrlGroup]);
+
   // Bloquear scroll del body
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -61,7 +91,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
     status,
     communityType,
     eventFormat,
-    location,
+    location: rawLocation = "",
     shortDescription,
     lastReviewed,
     contactInfo,
@@ -72,6 +102,8 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
     thumbnailUrl,
     humanValidated,
   } = community;
+
+  const location = normalizeLocation(rawLocation);
 
   // URLs a mostrar: las del objeto urls, y communityUrl como fallback si no hay ninguna web
   const urlEntries = URL_CONFIG.filter(({ key }) => urls[key]);
@@ -108,7 +140,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
               >
                 {status}
               </button>
-              {communityType && (
+              {communityType && communityType.toLowerCase() !== "n/a" && (
                 <button
                   type="button"
                   className="modal-badge modal-badge--type"
@@ -129,6 +161,20 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                 </button>
               )}
             </div>
+            <div className="community-modal-header-meta">
+              {location && (
+                <span><i className="fas fa-location-dot"></i> {location}</span>
+              )}
+              {lastReviewed && (
+                <span><i className="fas fa-clock-rotate-left"></i> Revisada: {lastReviewed}</span>
+              )}
+              {contactInfo && (
+                <span>
+                  <i className="fas fa-envelope"></i>{" "}
+                  <a href={`mailto:${contactInfo}`}>{contactInfo}</a>
+                </span>
+              )}
+            </div>
           </div>
           <button className="community-modal-close" onClick={onClose} aria-label="Cerrar">
             <i className="fas fa-times"></i>
@@ -146,56 +192,53 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
             </p>
           </div>
 
-          {/* Localización y última revisión */}
-          <div className="community-modal-meta">
-            {location && (
-              <span>
-                <i className="fas fa-location-dot"></i> {location}
-              </span>
-            )}
-            {lastReviewed && (
-              <span>
-                <i className="fas fa-clock-rotate-left"></i> Revisada: {lastReviewed}
-              </span>
-            )}
-            {contactInfo && (
-              <span>
-                <i className="fas fa-envelope"></i>{" "}
-                <a href={`mailto:${contactInfo}`}>{contactInfo}</a>
-              </span>
-            )}
-          </div>
 
-          {/* URLs */}
+          {/* URLs agrupadas */}
           {(urlEntries.length > 0 || showFallbackUrl) && (
             <div className="community-modal-section">
               <h3 className="community-modal-section-title">
                 <i className="fas fa-link"></i> Enlaces
               </h3>
-              <div className="community-modal-urls">
-                {urlEntries.map(({ key, label, icon }) => (
-                  <a
-                    key={key}
-                    href={urls[key]}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="community-modal-url-item"
-                  >
-                    <i className={icon}></i>
-                    <span>{label}</span>
-                  </a>
-                ))}
-                {showFallbackUrl && (
-                  <a
-                    href={communityUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="community-modal-url-item"
-                  >
-                    <i className="fas fa-arrow-up-right-from-square"></i>
-                    <span>Enlace principal</span>
-                  </a>
-                )}
+              <div className="community-modal-url-groups">
+                {URL_GROUPS.map(({ key: groupKey, label, icon, keys }) => {
+                  const groupEntries = keys
+                    .filter(k => urls[k])
+                    .map(k => URL_CONFIG_BY_KEY[k]);
+                  const includeFallback = groupKey === "comunidad" && showFallbackUrl;
+                  if (groupEntries.length === 0 && !includeFallback) return null;
+                  const count = groupEntries.length + (includeFallback ? 1 : 0);
+                  const isOpen = openUrlGroup === groupKey;
+                  return (
+                    <div key={groupKey} className="community-modal-url-group">
+                      <button
+                        type="button"
+                        className={`community-modal-url-group-btn${isOpen ? " is-open" : ""}`}
+                        onClick={() => setOpenUrlGroup(isOpen ? null : groupKey)}
+                      >
+                        <i className={icon}></i>
+                        <span>{label}</span>
+                        <span className="community-modal-url-group-count">{count}</span>
+                        <i className="fas fa-chevron-down community-modal-url-group-chevron"></i>
+                      </button>
+                      {isOpen && (
+                        <div className="community-modal-url-dropdown">
+                          {groupEntries.map(({ key, label: urlLabel, icon: urlIcon }) => (
+                            <a key={key} href={urls[key]} target="_blank" rel="noopener noreferrer" className="community-modal-url-dropdown-item">
+                              <i className={urlIcon}></i>
+                              <span>{urlLabel}</span>
+                            </a>
+                          ))}
+                          {includeFallback && (
+                            <a href={communityUrl} target="_blank" rel="noopener noreferrer" className="community-modal-url-dropdown-item">
+                              <i className="fas fa-arrow-up-right-from-square"></i>
+                              <span>Enlace principal</span>
+                            </a>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </div>
               {communityUrlIsArchived && (
                 <p className="community-modal-url-note">
@@ -205,10 +248,85 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
             </div>
           )}
 
-          {humanValidated && (
+          {/* Temáticas + Público objetivo en dos columnas */}
+          {(tags.length > 0 || targetAudience.length > 0) && (
+            <div className="community-modal-two-col">
+              {tags.length > 0 && (
+                <div className="community-modal-section">
+                  <h3 className="community-modal-section-title">
+                    <i className="fas fa-tags"></i> Temáticas
+                  </h3>
+                  <div className="community-modal-chips">
+                    {(tagsExpanded ? tags : tags.slice(0, CHIPS_THRESHOLD)).map((tagId) => (
+                      <button
+                        key={tagId}
+                        type="button"
+                        className="community-modal-chip community-modal-chip--tag"
+                        onClick={() => applyFilter("tags", tagId)}
+                        title={`Filtrar por ${tagsMap[tagId] || tagId}`}
+                      >
+                        {tagsMap[tagId] || tagId}
+                      </button>
+                    ))}
+                    {!tagsExpanded && tags.length > CHIPS_THRESHOLD && (
+                      <button type="button" className="community-modal-chip community-modal-chip--more" onClick={() => setTagsExpanded(true)}>
+                        +{tags.length - CHIPS_THRESHOLD} más
+                      </button>
+                    )}
+                    {tagsExpanded && tags.length > CHIPS_THRESHOLD && (
+                      <button type="button" className="community-modal-chip community-modal-chip--more" onClick={() => setTagsExpanded(false)}>
+                        Mostrar menos
+                      </button>
+                    )}
+                  </div>
+                </div>
+              )}
+              {targetAudience.length > 0 && (
+                <div className="community-modal-section">
+                  <h3 className="community-modal-section-title">
+                    <i className="fas fa-users"></i> Público objetivo
+                  </h3>
+                  <div className="community-modal-chips">
+                    {(audienceExpanded ? targetAudience : targetAudience.slice(0, CHIPS_THRESHOLD)).map((audId) => (
+                      <button
+                        key={audId}
+                        type="button"
+                        className="community-modal-chip community-modal-chip--audience"
+                        onClick={() => applyFilter("targetAudience", audId)}
+                        title={`Filtrar por ${audienceMap[audId] || audId}`}
+                      >
+                        {audienceMap[audId] || audId}
+                      </button>
+                    ))}
+                    {!audienceExpanded && targetAudience.length > CHIPS_THRESHOLD && (
+                      <button type="button" className="community-modal-chip community-modal-chip--more" onClick={() => setAudienceExpanded(true)}>
+                        +{targetAudience.length - CHIPS_THRESHOLD} más
+                      </button>
+                    )}
+                    {audienceExpanded && targetAudience.length > CHIPS_THRESHOLD && (
+                      <button type="button" className="community-modal-chip community-modal-chip--more" onClick={() => setAudienceExpanded(false)}>
+                        Mostrar menos
+                      </button>
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+
+          {/* Colaborar + Community Builders */}
+          <div className="community-modal-two-col">
             <div className="community-modal-section">
               <h3 className="community-modal-section-title">
                 <i className="fas fa-pen-to-square"></i> Colaborar
+                {!humanValidated && (
+                  <span className="community-modal-cb-tooltip-anchor">
+                    <i className="fa-solid fa-robot community-modal-cb-info-icon"></i>
+                    <span className="community-modal-cb-tooltip">
+                      Datos enriquecidos automáticamente, pendientes de validación humana. Bajo CC BY 4.0, tu aportación beneficiará también a quien reutilice este directorio.
+                    </span>
+                  </span>
+                )}
               </h3>
               <div className="community-modal-urls">
                 <a
@@ -216,130 +334,38 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                   className="community-modal-url-item"
                 >
                   <i className="fas fa-code-compare"></i>
-                  <span>Proponer cambios</span>
+                  <span>{humanValidated ? "Proponer cambios" : "Completar, validar o mejorar"}</span>
                 </a>
               </div>
             </div>
-          )}
-
-          {/* Temáticas */}
-          {tags.length > 0 && (
-            <div className="community-modal-section">
-              <h3 className="community-modal-section-title">
-                <i className="fas fa-tags"></i> Temáticas
-              </h3>
-              <div className="community-modal-chips">
-                {tags.map((tagId) => (
-                  <button
-                    key={tagId}
-                    type="button"
-                    className="community-modal-chip community-modal-chip--tag"
-                    onClick={() => applyFilter("tags", tagId)}
-                    title={`Filtrar por ${tagsMap[tagId] || tagId}`}
-                  >
-                    {tagsMap[tagId] || tagId}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Público objetivo */}
-          {targetAudience.length > 0 && (
-            <div className="community-modal-section">
-              <h3 className="community-modal-section-title">
-                <i className="fas fa-users"></i> Público objetivo
-              </h3>
-              <div className="community-modal-chips">
-                {targetAudience.map((audId) => (
-                  <button
-                    key={audId}
-                    type="button"
-                    className="community-modal-chip community-modal-chip--audience"
-                    onClick={() => applyFilter("targetAudience", audId)}
-                    title={`Filtrar por ${audienceMap[audId] || audId}`}
-                  >
-                    {audienceMap[audId] || audId}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Community Builders */}
-          {cbHandles.length === 0 && (
-            <div className="community-modal-cb-cta">
-              <i className="fa-solid fa-people-group"></i>
-              <span>
-                ¿Dinamizas o dinamizabas esta comunidad?{" "}
-                <a href="https://combuilderses.github.io/" target="_blank" rel="noopener noreferrer">
-                  Únete a Community Builders
-                </a>
-                , la meta-comunidad de organizadores de comunidades tech en España.
-              </span>
-            </div>
-          )}
-          {cbHandles.length > 0 && (
             <div className="community-modal-section">
               <h3 className="community-modal-section-title">
                 <i className="fa-solid fa-people-group"></i> Community Builders
-                <span className="community-modal-cb-tooltip-anchor">
-                  <i className="fa-solid fa-circle-info community-modal-cb-info-icon"></i>
-                  <span className="community-modal-cb-tooltip">
-                    Alguna de las personas que lidera o lideró esta comunidad forma parte de Community Builders, la meta-comunidad de organizadores de comunidades tech en España.
+                {cbHandles.length > 0 && (
+                  <span className="community-modal-cb-tooltip-anchor">
+                    <i className="fa-solid fa-circle-info community-modal-cb-info-icon"></i>
+                    <span className="community-modal-cb-tooltip">
+                      Alguna de las personas que lidera o lideró esta comunidad forma parte de Community Builders, la meta-comunidad de organizadores de comunidades tech en España.
+                    </span>
                   </span>
-                </span>
+                )}
               </h3>
-              <div className="community-modal-cb-members">
-                {cbHandles.map((handle) => (
-                  <a
-                    key={handle}
-                    href={`https://github.com/${handle}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="community-modal-cb-member"
-                    title={`@${handle} en GitHub`}
-                  >
-                    <img
-                      src={`https://github.com/${handle}.png?size=40`}
-                      alt={handle}
-                      className="community-modal-cb-avatar"
-                    />
-                    <span>@{handle}</span>
+              {cbHandles.length > 0 ? (
+                <div className="community-modal-cb-members">
+                  {cbHandles.map((handle) => (
+                    <a key={handle} href={`https://github.com/${handle}`} target="_blank" rel="noopener noreferrer" className="community-modal-cb-member" title={`@${handle} en GitHub`}>
+                      <img src={`https://github.com/${handle}.png?size=40`} alt={handle} className="community-modal-cb-avatar" />
+                      <span>@{handle}</span>
+                    </a>
+                  ))}
+                </div>
+              ) : (
+                <p className="community-modal-cb-inline-cta">
+                  ¿Dinamizas esta comunidad?{" "}
+                  <a href="https://combuilderses.github.io/" target="_blank" rel="noopener noreferrer">
+                    Únete a Community Builders
                   </a>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Validación humana */}
-          <div className={`community-modal-validation ${humanValidated ? "validated" : "not-validated"}`}>
-            <i className={`fas ${humanValidated ? "fa-circle-check" : "fa-circle-exclamation"}`}></i>
-            <div className="community-modal-validation-content">
-              <span className="community-modal-validation-text">
-                {humanValidated
-                  ? "Datos validados por una persona"
-                  : "Datos enriquecidos automáticamente, pendientes de validación humana"}
-              </span>
-              {!humanValidated && (
-                <>
-                  <a
-                    href={buildContributionPath({ mode: "edit", identifier: community.id })}
-                    className="button is-small community-modal-validation-cta"
-                  >
-                    Completar, validar o mejorar
-                  </a>
-                  <span className="community-modal-validation-note">
-                    Bajo CC BY 4.0, tu validación beneficiará también a quien reutilice este directorio. Aquí puedes encontrar los datos usados en este directorio en{" "}
-                    <a
-                      href="https://github.com/ComBuildersES/communities-directory/blob/master/public/data/communities.json"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      `communities.json`
-                    </a>.
-                  </span>
-                </>
+                </p>
               )}
             </div>
           </div>

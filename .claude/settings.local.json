@@ -8,7 +8,8 @@
       "Bash(node -e \"const data = require\\(''./public/data/communities.json''\\); data.filter\\(c => c.communityUrl && c.communityUrl.includes\\(''sirviendo''\\)\\).forEach\\(c => console.log\\(c.id, c.name, c.communityUrl\\)\\);\")",
       "Bash(node -e \"const data = require\\(''./public/data/communities.json''\\); data.filter\\(c => c.communityUrl && c.communityUrl.includes\\(''wtmgdg''\\)\\).forEach\\(c => console.log\\(c.id, c.name, c.communityUrl\\)\\);\")",
       "Bash(node -e \"const data = require\\(''./public/data/communities.json''\\); data.filter\\(c => \\(c.communityUrl && c.communityUrl.includes\\(''mesdeqa''\\)\\) || c.name.toLowerCase\\(\\).includes\\(''mes de qa''\\) || c.name.toLowerCase\\(\\).includes\\(''mesdeqa''\\)\\).forEach\\(c => console.log\\(c.id, c.name, c.communityUrl\\)\\);\")",
-      "mcp__playwright__browser_evaluate"
+      "mcp__playwright__browser_evaluate",
+      "mcp__playwright__browser_take_screenshot"
     ]
   }
 }
