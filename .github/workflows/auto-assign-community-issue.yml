@@ -4,9 +4,6 @@ on:
   issues:
     types: [opened, edited, labeled]
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   auto-assign:
     if: contains(github.event.issue.body, 'community-directory-submission:v2') || contains(github.event.issue.labels.*.name, 'nueva-comunidad')
@@ -17,15 +14,16 @@ jobs:
 
     steps:
       - name: Checkout del repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Configurar Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24.0.2
+          cache: npm
 
       - name: Instalar dependencias mínimas
-        run: npm ci --ignore-scripts
+        run: npm install --ignore-scripts
 
       - name: Guardar cuerpo del issue
         run: |
@@ -40,7 +38,7 @@ jobs:
           echo "result=$RESULT" >> "$GITHUB_OUTPUT"
 
       - name: Aplicar assignees y etiquetas
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         env:
           RESOLUTION: ${{ steps.resolve.outputs.result }}
         with:

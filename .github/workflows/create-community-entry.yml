@@ -4,9 +4,6 @@ on:
   issues:
     types: [opened, labeled]
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   create-pr:
     if: contains(github.event.issue.body, 'community-directory-submission:v2') || contains(github.event.issue.labels.*.name, 'nueva-comunidad')
@@ -18,15 +15,16 @@ jobs:
 
     steps:
       - name: Checkout del repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Configurar Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: 22
+          node-version: 24.0.2
+          cache: npm
 
       - name: Instalar dependencias
-        run: npm ci --ignore-scripts
+        run: npm install --ignore-scripts
 
       - name: Obtener datos del issue
         run: |
@@ -60,7 +58,7 @@ jobs:
 
       - name: Crear Pull Request
         id: cpr
-        uses: peter-evans/create-pull-request@v5
+        uses: peter-evans/create-pull-request@v8
         with:
           add-paths: |
             public/data/
@@ -79,7 +77,7 @@ jobs:
 
       - name: Sincronizar responsables en la PR
         if: steps.cpr.outputs.pull-request-number != ''
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         env:
           RESOLUTION: ${{ steps.resolve.outputs.result }}
           PR_NUMBER: ${{ steps.cpr.outputs.pull-request-number }}
