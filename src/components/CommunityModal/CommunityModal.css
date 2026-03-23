@@ -216,6 +216,17 @@ button.modal-badge:focus-visible {
   margin: 0;
 }
 
+.community-modal-summary {
+  margin: 0;
+  color: #4a4a4a;
+  line-height: 1.55;
+}
+
+.community-modal-summary--missing {
+  color: #7a7a7a;
+  font-style: italic;
+}
+
 /* URLs */
 .community-modal-urls {
   display: flex;

@@ -5,9 +5,67 @@ import {
   useAudience,
   useAllCommunities,
   useCommunityActions,
+  useFilters,
 } from "../../stores/community.store";
 import { bajaString } from "../../constants";
+import {
+  buildDirectoryFilterPath,
+  buildDirectoryStatePath,
+  slugifyCommunityName,
+} from "../../lib/communitySubmission";
 import "./TagSearch.css";
+
+const INVALID_LOCATION_VALUES = new Set([
+  "",
+  "n/a",
+  "n.a.",
+  "n.a",
+  "sin completar",
+  "sin localidad",
+]);
+
+const STATUS_BADGE_CLASS = {
+  Activa: "tag-option-badge tag-option-badge--active",
+  Inactiva: "tag-option-badge tag-option-badge--inactive",
+  Desconocido: "tag-option-badge tag-option-badge--unknown",
+};
+
+const COMMUNITY_SUGGESTION_STATUS_ORDER = {
+  Activa: 0,
+  Desconocido: 1,
+  Inactiva: 2,
+};
+
+function normalizeLocation(location) {
+  const normalized = location?.trim();
+
+  if (!normalized) return null;
+
+  return INVALID_LOCATION_VALUES.has(normalized.toLowerCase()) ? null : normalized;
+}
+
+function buildCommunityMeta(community) {
+  const location = normalizeLocation(community.location);
+
+  return [
+    community.status && {
+      value: community.status,
+      className: STATUS_BADGE_CLASS[community.status] || STATUS_BADGE_CLASS.Desconocido,
+    },
+    community.communityType && {
+      value: community.communityType,
+      className: "tag-option-badge tag-option-badge--type",
+    },
+    community.eventFormat && {
+      value: community.eventFormat,
+      className: "tag-option-badge tag-option-badge--format",
+    },
+    location && {
+      value: location,
+      className: "tag-option-badge tag-option-badge--location",
+    },
+  ].filter(Boolean);
+}
 
 export function TagSearch() {
   const [query, setQuery] = useState("");
@@ -16,6 +74,7 @@ export function TagSearch() {
   const allTags = useTags();
   const allAudience = useAudience();
   const allCommunities = useAllCommunities();
+  const filters = useFilters();
   const { filterComunities } = useCommunityActions();
   const inputRef = useRef(null);
   const containerRef = useRef(null);
@@ -76,13 +135,25 @@ export function TagSearch() {
             if (activeFilterIds.has(`name:${community.name}`)) return false;
             return community.name?.toLowerCase().includes(q);
           })
+          .sort((left, right) => {
+            const leftOrder = COMMUNITY_SUGGESTION_STATUS_ORDER[left.status] ?? 1;
+            const rightOrder = COMMUNITY_SUGGESTION_STATUS_ORDER[right.status] ?? 1;
+
+            if (leftOrder !== rightOrder) {
+              return leftOrder - rightOrder;
+            }
+
+            return left.name.localeCompare(right.name, "es", { sensitivity: "base" });
+          })
           .slice(0, 12)
           .map((community) => ({
             group: "Comunidades",
             key: "name",
             value: community.name,
             label: community.name,
-            description: community.location || community.communityType || "Comunidad",
+            description: "Comunidad",
+            meta: buildCommunityMeta(community),
+            communityIdentifier: community.id || slugifyCommunityName(community.name),
           })),
       ];
 
@@ -97,6 +168,43 @@ export function TagSearch() {
     setQuery("");
     setShowDropdown(false);
     inputRef.current?.focus();
+  };
+
+  const openFilterInNewTab = (filter) => {
+    const currentValues = filters[filter.key];
+    const nextValues = Array.isArray(currentValues)
+      ? currentValues
+      : currentValues
+        ? [currentValues]
+        : [];
+    const values = nextValues.includes(filter.value)
+      ? nextValues
+      : [...nextValues, filter.value];
+    const path = buildDirectoryFilterPath({
+      filters: {
+        ...filters,
+        [filter.key]: values,
+      },
+    });
+
+    window.open(path, "_blank", "noopener,noreferrer");
+  };
+
+  const openCommunityDetails = (suggestion, openInNewTab = false) => {
+    const path = buildDirectoryStatePath({
+      filters,
+      communityIdentifier: suggestion.communityIdentifier,
+    });
+
+    if (openInNewTab) {
+      window.open(path, "_blank", "noopener,noreferrer");
+      return;
+    }
+
+    window.history.pushState({}, "", path);
+    window.dispatchEvent(new PopStateEvent("popstate"));
+    setQuery("");
+    setShowDropdown(false);
   };
 
   const removeFilter = (filterToRemove) => {
@@ -172,11 +280,32 @@ export function TagSearch() {
                   className="tag-search-option"
                   onMouseDown={(e) => {
                     e.preventDefault();
+
+                    if (suggestion.communityIdentifier) {
+                      openCommunityDetails(suggestion, e.metaKey || e.ctrlKey);
+                      return;
+                    }
+
+                    if (e.metaKey || e.ctrlKey) {
+                      openFilterInNewTab(suggestion);
+                      return;
+                    }
+
                     addFilter(suggestion);
                   }}
                 >
                   <span className="tag-option-label">{suggestion.label}</span>
-                  <span className="tag-option-desc">{suggestion.description}</span>
+                  {suggestion.meta?.length ? (
+                    <span className="tag-option-meta" aria-hidden="true">
+                      {suggestion.meta.map((item) => (
+                        <span key={`${suggestion.key}:${suggestion.value}:${item.value}`} className={item.className}>
+                          {item.value}
+                        </span>
+                      ))}
+                    </span>
+                  ) : (
+                    <span className="tag-option-desc">{suggestion.description}</span>
+                  )}
                 </button>
               ))}
             </div>

@@ -37,7 +37,16 @@ export const URL_PLATFORM_OPTIONS = [
 
 const CONTRIBUTION_MODE_PARAM = "contribute";
 const EDIT_PARAM = "edit";
+const COMMUNITY_PARAM = "community";
 const CONTRIBUTION_DRAFT_STORAGE_PREFIX = "community-directory-contribution-draft";
+const DIRECTORY_FILTER_KEYS = [
+  "status",
+  "communityType",
+  "eventFormat",
+  "tags",
+  "targetAudience",
+  "name",
+];
 
 function getTodayDate() {
   return new Date().toLocaleDateString("es-ES");
@@ -182,6 +191,57 @@ export function buildContributionPath({ mode = "new", identifier = null, pathnam
 
   if (mode === "new") {
     params.set(CONTRIBUTION_MODE_PARAM, "new");
+  }
+
+  const query = params.toString();
+  return query ? `${pathname}?${query}` : pathname;
+}
+
+export function parseSelectedCommunityIdentifier(search = window.location.search) {
+  const params = new URLSearchParams(search);
+  return params.get(COMMUNITY_PARAM);
+}
+
+export function parseDirectoryFilters(search = window.location.search) {
+  const params = new URLSearchParams(search);
+
+  return DIRECTORY_FILTER_KEYS.reduce((filters, key) => {
+    const values = params.getAll(key).filter(Boolean);
+
+    if (values.length > 0) {
+      filters[key] = values;
+    }
+
+    return filters;
+  }, {});
+}
+
+export function buildDirectoryFilterPath({ filters = {}, pathname = window.location.pathname } = {}) {
+  return buildDirectoryStatePath({ filters, pathname });
+}
+
+export function buildDirectoryStatePath({
+  filters = {},
+  pathname = window.location.pathname,
+  communityIdentifier = null,
+} = {}) {
+  const params = new URLSearchParams();
+
+  DIRECTORY_FILTER_KEYS.forEach((key) => {
+    const rawValues = filters[key];
+    const values = Array.isArray(rawValues)
+      ? rawValues
+      : rawValues
+        ? [rawValues]
+        : [];
+
+    values
+      .filter(Boolean)
+      .forEach((value) => params.append(key, String(value)));
+  });
+
+  if (communityIdentifier) {
+    params.set(COMMUNITY_PARAM, String(communityIdentifier));
   }
 
   const query = params.toString();

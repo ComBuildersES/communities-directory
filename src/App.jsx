@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { useCommunityActions } from "./stores/community.store";
 import { CommunitiesList } from "./components/CommunitiesList.jsx";
 import { CommunityContribution } from "./components/CommunityContribution/CommunityContribution.jsx";
+import { CommunityModal } from "./components/CommunityModal/CommunityModal.jsx";
 import { Footer } from "./components/Footer.jsx";
 import { Heading } from "./components/Heading.jsx";
 import Map from "./components/Map/Map.jsx";
@@ -11,11 +12,14 @@ import { FilterPanel } from "./components/FilterPanel.jsx";
 import {
   buildContributionPath,
   parseContributionRoute,
+  parseSelectedCommunityIdentifier,
   resolveCommunityFromIdentifier,
+  buildDirectoryStatePath,
 } from "./lib/communitySubmission";
 import {
   useAllCommunities,
   useAudience,
+  useFilters,
   useIsLoading,
   useTags,
 } from "./stores/community.store.js";
@@ -23,6 +27,7 @@ import {
 function App () {
   const [view, setView] = useState("list");
   const [route, setRoute] = useState(() => parseContributionRoute());
+  const [selectedCommunityIdentifier, setSelectedCommunityIdentifier] = useState(() => parseSelectedCommunityIdentifier());
   const [contributionState, setContributionState] = useState({
     isDirty: false,
     issueOpened: false,
@@ -36,9 +41,20 @@ function App () {
   const communities = useAllCommunities();
   const allTags = useTags();
   const allAudience = useAudience();
+  const filters = useFilters();
   const isLoading = useIsLoading();
   const routeRef = useRef(route);
   const contributionStateRef = useRef(contributionState);
+
+  const tagsMap = useMemo(
+    () => Object.fromEntries(allTags.map((tag) => [tag.id, tag.label])),
+    [allTags]
+  );
+
+  const audienceMap = useMemo(
+    () => Object.fromEntries(allAudience.map((audience) => [audience.id, audience.label])),
+    [allAudience]
+  );
 
   useEffect(() => {
     routeRef.current = route;
@@ -79,6 +95,7 @@ function App () {
       }
 
       setRoute(nextRoute);
+      setSelectedCommunityIdentifier(parseSelectedCommunityIdentifier());
     };
 
     window.addEventListener("popstate", handlePopState);
@@ -92,6 +109,7 @@ function App () {
   const navigateTo = (path) => {
     window.history.pushState({}, "", path);
     setRoute(parseContributionRoute());
+    setSelectedCommunityIdentifier(parseSelectedCommunityIdentifier());
   };
 
   const navigateWithGuard = (path, options = {}) => {
@@ -144,7 +162,16 @@ function App () {
   const communityToEdit = route.mode === "edit"
     ? resolveCommunityFromIdentifier(communities, route.identifier)
     : null;
+  const selectedCommunity = route.mode === "directory"
+    ? resolveCommunityFromIdentifier(communities, selectedCommunityIdentifier)
+    : null;
   const showContributionView = route.mode !== "directory";
+
+  const closeCommunityModal = () => {
+    const path = buildDirectoryStatePath({ filters });
+    window.history.pushState({}, "", path);
+    setSelectedCommunityIdentifier(null);
+  };
 
   useEffect(() => {
     if (showContributionView) return;
@@ -226,6 +253,14 @@ function App () {
             </div>
           </div>
         </div>
+      )}
+      {!showContributionView && selectedCommunity && (
+        <CommunityModal
+          community={selectedCommunity}
+          tagsMap={tagsMap}
+          audienceMap={audienceMap}
+          onClose={closeCommunityModal}
+        />
       )}
       <Footer />
     </>

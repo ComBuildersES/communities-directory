@@ -39,9 +39,11 @@ export function CommunityCard({ community, tagsMap = {}, audienceMap = {} }) {
             <figcaption className="community-card-overlay">
               <div className="community-card-overlay-content">
                 <span className="community-card-name">{comunidad}</span>
-                <span className={`community-card-description ${shortDescription ? "" : "community-card-description--missing"}`}>
-                  {shortDescription || "Sin descripcion breve todavia"}
-                </span>
+                {shortDescription && (
+                  <span className="community-card-description">
+                    {shortDescription}
+                  </span>
+                )}
               </div>
             </figcaption>
           </figure>

@@ -4,6 +4,7 @@ import { bajaString, URL } from "../constants";
 import { buildInverseIndex } from "../data/invertedindex";
 import { devtools } from "zustand/middleware";
 import { searchFaceted } from "../data/searchFaceted";
+import { parseDirectoryFilters } from "../lib/communitySubmission";
 
 const TAGS_URL = "data/tags.json";
 const AUDIENCE_URL = "data/audience.json";
@@ -44,14 +45,21 @@ const useCommunityStore = create(
           ]);
           const inverseIndex = buildInverseIndex(data);
           const defaultFilters = { status: ["Activa"] };
-          const communitiesFiltered = searchFaceted(data, inverseIndex, defaultFilters);
+          const urlFilters = parseDirectoryFilters();
+          const initialFilters = Object.keys(urlFilters).length > 0
+            ? {
+              ...(urlFilters.status ? {} : defaultFilters),
+              ...urlFilters,
+            }
+            : defaultFilters;
+          const communitiesFiltered = searchFaceted(data, inverseIndex, initialFilters);
           set({
             allCommunities: data,
             allTags: tags,
             allAudience: audience,
             invertedIndex: inverseIndex,
             communitiesFiltered,
-            filters: defaultFilters,
+            filters: initialFilters,
             isLoading: false,
             numberOFCommunities: communitiesFiltered.length,
             numberOFOnSiteCommunities: communitiesFiltered.filter(e => e.displayOnMap == true).length

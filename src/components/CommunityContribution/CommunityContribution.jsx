@@ -132,6 +132,26 @@ const FIELD_HELP = {
   },
 };
 
+const TAG_CATEGORY_ORDER = [
+  "Web y Frontend",
+  "Frameworks, Librerías y Stacks",
+  "Lenguajes de programación",
+  "Tech for Social Good",
+  "Datos, IA y Analítica",
+  "DevOps, Cloud e Infraestructura",
+  "Arquitectura y Paradigmas",
+  "Startups, Negocio y Producto",
+  "Bases de Datos y Almacenamiento",
+  "Ciberseguridad",
+  "Mobile y Sistemas Operativos",
+  "Hardware, IoT y Maker",
+  "DevTools",
+  "CMS",
+  "Tecnologías Descentralizadas",
+  "Realidad Extendida y 3D",
+  "Videojuegos",
+];
+
 function FieldHelp({ content, isOpen, onToggle, onClose }) {
   return (
     <div className={`contribution-field-help ${isOpen ? "is-open" : ""}`}>
@@ -216,6 +236,58 @@ function FieldHelpModal({ content, isOpen, onClose }) {
   );
 }
 
+function TaxonomyTooltip({ item, delay = 0, children }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const timeoutRef = useRef(null);
+
+  const clearTooltipTimer = () => {
+    if (!timeoutRef.current) return;
+    window.clearTimeout(timeoutRef.current);
+    timeoutRef.current = null;
+  };
+
+  const showTooltip = () => {
+    clearTooltipTimer();
+
+    if (!item.description) return;
+
+    if (delay <= 0) {
+      setIsVisible(true);
+      return;
+    }
+
+    timeoutRef.current = window.setTimeout(() => {
+      setIsVisible(true);
+      timeoutRef.current = null;
+    }, delay);
+  };
+
+  const hideTooltip = () => {
+    clearTooltipTimer();
+    setIsVisible(false);
+  };
+
+  useEffect(() => () => clearTooltipTimer(), []);
+
+  return (
+    <span
+      className="contribution-taxonomy-tooltip"
+      onMouseEnter={showTooltip}
+      onMouseLeave={hideTooltip}
+      onFocus={showTooltip}
+      onBlur={hideTooltip}
+    >
+      {children}
+      {item.description && isVisible && (
+        <span className="contribution-taxonomy-tooltip-bubble" role="tooltip">
+          <strong>{item.label}</strong>
+          <span>{item.description}</span>
+        </span>
+      )}
+    </span>
+  );
+}
+
 function TaxonomyPicker({
   title,
   description,
@@ -226,10 +298,14 @@ function TaxonomyPicker({
   onSearchChange,
   groupByCategory = false,
   defaultExpanded = false,
+  collapsibleGroups = false,
+  collapseGroupsByDefault = false,
+  categoryOrder = [],
   suggestionCta = null,
 }) {
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
   const [isManuallyExpanded, setIsManuallyExpanded] = useState(defaultExpanded);
+  const [collapsedGroups, setCollapsedGroups] = useState({});
 
   useEffect(() => {
     const hasSearch = searchValue.trim().length > 0;
@@ -278,6 +354,57 @@ function TaxonomyPicker({
     }));
   }, [groupByCategory, visibleItems]);
 
+  const orderedGroupedItems = useMemo(() => {
+    if (!groupByCategory || categoryOrder.length === 0) return groupedItems;
+
+    const orderMap = new Map(categoryOrder.map((label, index) => [label, index]));
+
+    return [...groupedItems].sort((left, right) => {
+      const leftOrder = orderMap.get(left.label) ?? Number.MAX_SAFE_INTEGER;
+      const rightOrder = orderMap.get(right.label) ?? Number.MAX_SAFE_INTEGER;
+
+      if (leftOrder !== rightOrder) {
+        return leftOrder - rightOrder;
+      }
+
+      return left.label.localeCompare(right.label, "es", { sensitivity: "base" });
+    });
+  }, [categoryOrder, groupByCategory, groupedItems]);
+
+  const availableGroupedItems = useMemo(
+    () => orderedGroupedItems
+      .map((group) => ({
+        ...group,
+        items: group.items.filter((item) => !selectedValues.includes(item.id)),
+      }))
+      .filter((group) => group.items.length > 0),
+    [orderedGroupedItems, selectedValues]
+  );
+
+  const itemsMap = useMemo(
+    () => new Map(items.map((item) => [item.id, item])),
+    [items]
+  );
+
+  useEffect(() => {
+    if (!collapsibleGroups || !groupByCategory) return;
+
+    setCollapsedGroups((current) => {
+      const nextState = { ...current };
+
+      availableGroupedItems.forEach((group) => {
+        if (!(group.label in nextState)) {
+          nextState[group.label] = collapseGroupsByDefault;
+        }
+      });
+
+      return nextState;
+    });
+  }, [availableGroupedItems, collapseGroupsByDefault, collapsibleGroups, groupByCategory]);
+
+  const hasActiveSearch = searchValue.trim().length > 0;
+  const useCollapsibleGroups = collapsibleGroups && groupByCategory && !hasActiveSearch;
+
   return (
     <section className="contribution-card">
       <div className="contribution-card-header">
@@ -313,23 +440,24 @@ function TaxonomyPicker({
         {selectedValues.length > 0 ? (
           <div className="contribution-selected-pills contribution-selected-pills--summary">
             {selectedValues.map((selectedId) => {
-              const item = items.find((entry) => entry.id === selectedId);
+              const item = itemsMap.get(selectedId);
               return (
-                <button
-                  key={selectedId}
-                  type="button"
-                  className="contribution-pill"
-                  onClick={() => {
-                    onToggle(selectedId);
-                    if (!isManuallyExpanded) {
-                      onSearchChange("");
-                      setIsExpanded(false);
-                    }
-                  }}
-                >
-                  {item?.label || selectedId}
-                  <span aria-hidden="true">×</span>
-                </button>
+                <TaxonomyTooltip key={selectedId} item={item ?? { id: selectedId, label: selectedId }} delay={1400}>
+                  <button
+                    type="button"
+                    className="contribution-pill"
+                    onClick={() => {
+                      onToggle(selectedId);
+                      if (!isManuallyExpanded) {
+                        onSearchChange("");
+                        setIsExpanded(false);
+                      }
+                    }}
+                  >
+                    {item?.label || selectedId}
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </TaxonomyTooltip>
               );
             })}
           </div>
@@ -341,30 +469,54 @@ function TaxonomyPicker({
       {isExpanded && (
         <>
           <div className="contribution-taxonomy-list">
-            {groupedItems.map((group) => (
+            {availableGroupedItems.map((group) => (
               <div key={group.label || "all"} className="contribution-taxonomy-group">
-                {group.label && <h4>{group.label}</h4>}
-                <div className="contribution-check-grid">
-                  {group.items.map((item) => (
-                    <label key={item.id} className="contribution-check-item">
-                      <input
-                        type="checkbox"
-                        checked={selectedValues.includes(item.id)}
-                        onChange={() => {
-                          onToggle(item.id);
-                          if (!isManuallyExpanded) {
-                            onSearchChange("");
-                            setIsExpanded(false);
-                          }
-                        }}
-                      />
-                      <span>
-                        <strong>{item.label}</strong>
-                        {item.description && <small>{item.description}</small>}
-                      </span>
-                    </label>
-                  ))}
-                </div>
+                {group.label && useCollapsibleGroups ? (
+                  <button
+                    type="button"
+                    className="contribution-taxonomy-group-toggle"
+                    onClick={() => {
+                      setCollapsedGroups((current) => ({
+                        ...current,
+                        [group.label]: !current[group.label],
+                      }));
+                    }}
+                    aria-expanded={!collapsedGroups[group.label]}
+                  >
+                    <span className="contribution-taxonomy-group-toggle-label">{group.label}</span>
+                    <span className="contribution-taxonomy-group-toggle-meta">
+                      {group.items.length}
+                      <i
+                        className={`fas ${collapsedGroups[group.label] ? "fa-chevron-down" : "fa-chevron-up"}`}
+                        aria-hidden="true"
+                      ></i>
+                    </span>
+                  </button>
+                ) : (
+                  group.label && <h4>{group.label}</h4>
+                )}
+                {(!useCollapsibleGroups || !collapsedGroups[group.label]) && (
+                  <div className="contribution-check-grid">
+                    {group.items.map((item) => (
+                      <TaxonomyTooltip key={item.id} item={item}>
+                        <button
+                          type="button"
+                          className="contribution-check-item"
+                          onClick={() => {
+                            onToggle(item.id);
+                            if (!isManuallyExpanded) {
+                              onSearchChange("");
+                              setIsExpanded(false);
+                            }
+                          }}
+                        >
+                          <span className="contribution-check-item-label">{item.label}</span>
+                          <span className="contribution-check-item-action">Añadir</span>
+                        </button>
+                      </TaxonomyTooltip>
+                    ))}
+                  </div>
+                )}
               </div>
             ))}
 
@@ -1250,6 +1402,9 @@ export function CommunityContribution({
         onSearchChange={setTagQuery}
         groupByCategory
         defaultExpanded={false}
+        collapsibleGroups={isEditMode}
+        collapseGroupsByDefault={isEditMode}
+        categoryOrder={TAG_CATEGORY_ORDER}
         suggestionCta={{
           text: "¿Echas en falta alguna etiqueta o quieres proponer una mejora en la taxonomía?",
           label: "Abrir issue",

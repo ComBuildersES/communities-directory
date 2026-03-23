@@ -58,6 +58,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, onClose }) {
     communityType,
     eventFormat,
     location,
+    shortDescription,
     lastReviewed,
     contactInfo,
     communityUrl,
@@ -131,6 +132,14 @@ export function CommunityModal({ community, tagsMap, audienceMap, onClose }) {
 
         {/* Cuerpo */}
         <div className="community-modal-body">
+          <div className="community-modal-section">
+            <h3 className="community-modal-section-title">
+              <i className="fas fa-align-left"></i> Descripcion breve
+            </h3>
+            <p className={`community-modal-summary ${shortDescription ? "" : "community-modal-summary--missing"}`}>
+              {shortDescription || "Sin descripcion breve todavia"}
+            </p>
+          </div>
 
           {/* Localización y última revisión */}
           <div className="community-modal-meta">
