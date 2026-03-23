@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Solicitar nueva comunidad
+    url: https://combuilderses.github.io/communities-directory/?contribute=new
+    about: Usa la nueva interfaz web para proponer una comunidad y generar el issue automáticamente.
