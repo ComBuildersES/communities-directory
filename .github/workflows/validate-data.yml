@@ -1,0 +1,30 @@
+name: Validate data and build
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24.0.2
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Validate communities data
+        run: npm run validate-data
+
+      - name: Build the project
+        run: npm run build

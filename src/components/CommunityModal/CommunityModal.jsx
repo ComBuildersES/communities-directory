@@ -27,6 +27,11 @@ const STATUS_CLASS = {
 export function CommunityModal({ community, tagsMap, audienceMap, onClose }) {
   const { filterComunities } = useCommunityActions();
 
+  const applyFilter = (key, value) => {
+    filterComunities(key, value);
+    onClose();
+  };
+
   // Cerrar con Escape
   useEffect(() => {
     const onKey = (e) => e.key === "Escape" && onClose();
@@ -82,14 +87,33 @@ export function CommunityModal({ community, tagsMap, audienceMap, onClose }) {
           <div className="community-modal-header-info">
             <h2 className="community-modal-name">{name}</h2>
             <div className="community-modal-badges">
-              <span className={STATUS_CLASS[status] || STATUS_CLASS.Desconocido}>
+              <button
+                type="button"
+                className={STATUS_CLASS[status] || STATUS_CLASS.Desconocido}
+                onClick={() => applyFilter("status", status)}
+                title={`Filtrar por estado ${status}`}
+              >
                 {status}
-              </span>
+              </button>
               {communityType && (
-                <span className="modal-badge modal-badge--type">{communityType}</span>
+                <button
+                  type="button"
+                  className="modal-badge modal-badge--type"
+                  onClick={() => applyFilter("communityType", communityType)}
+                  title={`Filtrar por tipo de comunidad ${communityType}`}
+                >
+                  {communityType}
+                </button>
               )}
               {eventFormat && (
-                <span className="modal-badge modal-badge--format">{eventFormat}</span>
+                <button
+                  type="button"
+                  className="modal-badge modal-badge--format"
+                  onClick={() => applyFilter("eventFormat", eventFormat)}
+                  title={`Filtrar por tipo de evento ${eventFormat}`}
+                >
+                  {eventFormat}
+                </button>
               )}
             </div>
           </div>
@@ -117,12 +141,6 @@ export function CommunityModal({ community, tagsMap, audienceMap, onClose }) {
               <span>
                 <i className="fas fa-envelope"></i>{" "}
                 <a href={`mailto:${contactInfo}`}>{contactInfo}</a>
-              </span>
-            )}
-            {communityUrl && (
-              <span>
-                <i className="fas fa-link"></i>{" "}
-                <a href={communityUrl} target="_blank" rel="noopener noreferrer">Enlace principal</a>
               </span>
             )}
           </div>
@@ -161,6 +179,67 @@ export function CommunityModal({ community, tagsMap, audienceMap, onClose }) {
             </div>
           )}
 
+          {humanValidated && (
+            <div className="community-modal-section">
+              <h3 className="community-modal-section-title">
+                <i className="fas fa-pen-to-square"></i> Colaborar
+              </h3>
+              <div className="community-modal-urls">
+                <a
+                  href={buildContributionPath({ mode: "edit", identifier: community.id })}
+                  className="community-modal-url-item"
+                >
+                  <i className="fas fa-code-compare"></i>
+                  <span>Proponer cambios</span>
+                </a>
+              </div>
+            </div>
+          )}
+
+          {/* Temáticas */}
+          {tags.length > 0 && (
+            <div className="community-modal-section">
+              <h3 className="community-modal-section-title">
+                <i className="fas fa-tags"></i> Temáticas
+              </h3>
+              <div className="community-modal-chips">
+                {tags.map((tagId) => (
+                  <button
+                    key={tagId}
+                    type="button"
+                    className="community-modal-chip community-modal-chip--tag"
+                    onClick={() => applyFilter("tags", tagId)}
+                    title={`Filtrar por ${tagsMap[tagId] || tagId}`}
+                  >
+                    {tagsMap[tagId] || tagId}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {/* Público objetivo */}
+          {targetAudience.length > 0 && (
+            <div className="community-modal-section">
+              <h3 className="community-modal-section-title">
+                <i className="fas fa-users"></i> Público objetivo
+              </h3>
+              <div className="community-modal-chips">
+                {targetAudience.map((audId) => (
+                  <button
+                    key={audId}
+                    type="button"
+                    className="community-modal-chip community-modal-chip--audience"
+                    onClick={() => applyFilter("targetAudience", audId)}
+                    title={`Filtrar por ${audienceMap[audId] || audId}`}
+                  >
+                    {audienceMap[audId] || audId}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Validación humana */}
           <div className={`community-modal-validation ${humanValidated ? "validated" : "not-validated"}`}>
             <i className={`fas ${humanValidated ? "fa-circle-check" : "fa-circle-exclamation"}`}></i>
@@ -192,58 +271,6 @@ export function CommunityModal({ community, tagsMap, audienceMap, onClose }) {
               )}
             </div>
           </div>
-
-          <div className="community-modal-section">
-            <h3 className="community-modal-section-title">
-              <i className="fas fa-pen-to-square"></i> Colaborar
-            </h3>
-            <div className="community-modal-urls">
-              <a
-                href={buildContributionPath({ mode: "edit", identifier: community.id })}
-                className="community-modal-url-item"
-              >
-                <i className="fas fa-code-compare"></i>
-                <span>Proponer cambios</span>
-              </a>
-            </div>
-          </div>
-
-          {/* Temáticas */}
-          {tags.length > 0 && (
-            <div className="community-modal-section">
-              <h3 className="community-modal-section-title">
-                <i className="fas fa-tags"></i> Temáticas
-              </h3>
-              <div className="community-modal-chips">
-                {tags.map((tagId) => (
-                  <button
-                    key={tagId}
-                    className="community-modal-chip community-modal-chip--tag"
-                    onClick={() => { filterComunities("tags", tagId); onClose(); }}
-                    title={`Filtrar por ${tagsMap[tagId] || tagId}`}
-                  >
-                    {tagsMap[tagId] || tagId}
-                  </button>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {/* Público objetivo */}
-          {targetAudience.length > 0 && (
-            <div className="community-modal-section">
-              <h3 className="community-modal-section-title">
-                <i className="fas fa-users"></i> Público objetivo
-              </h3>
-              <div className="community-modal-chips">
-                {targetAudience.map((audId) => (
-                  <span key={audId} className="community-modal-chip community-modal-chip--audience">
-                    {audienceMap[audId] || audId}
-                  </span>
-                ))}
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </div>

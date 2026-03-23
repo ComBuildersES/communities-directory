@@ -5,9 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "npm run validate-data && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
+    "validate-data": "node scripts/validate-community-data.js",
     "check-urls": "node scripts/check-urls.js",
     "process-to-communities-to-geojson": "node scripts/process-to-communities-to-geojson.js",
     "find-duplicates": "node scripts/find-duplicates.js",
