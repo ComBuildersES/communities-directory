@@ -12,6 +12,7 @@ export const COMMUNITY_TYPE_OPTIONS = [
 ];
 export const EVENT_FORMAT_OPTIONS = ["Presencial", "Online", "Híbridos", "Desconocido"];
 export const EVENT_FORMATS_WITH_LOCATION = ["Presencial", "Híbridos"];
+export const SHORT_DESCRIPTION_MAX_LENGTH = 280;
 
 export const URL_PLATFORM_OPTIONS = [
   { key: "web", label: "Web" },
@@ -99,6 +100,7 @@ export function getEmptyCommunityDraft(nextId = null) {
     communityType: "Tech Meetup",
     eventFormat: "Presencial",
     location: "",
+    shortDescription: "",
     topics: "",
     tags: [],
     targetAudience: [],
@@ -192,6 +194,7 @@ export function buildCommunityPayload(draft, existingCommunity = null) {
     communityType: cleanString(draft.communityType) || "Tech Meetup",
     eventFormat: normalizedEventFormat,
     location: normalizedLocation,
+    shortDescription: cleanString(draft.shortDescription),
     topics: cleanString(draft.topics),
     tags: Array.isArray(draft.tags) ? draft.tags : [],
     targetAudience: Array.isArray(draft.targetAudience) ? draft.targetAudience : [],

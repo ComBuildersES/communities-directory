@@ -10,6 +10,7 @@ import {
   EVENT_FORMATS_WITH_LOCATION,
   getCommunityDraft,
   getNextCommunityId,
+  SHORT_DESCRIPTION_MAX_LENGTH,
   toggleSelection,
   URL_PLATFORM_OPTIONS,
 } from "../../lib/communitySubmission";
@@ -111,6 +112,15 @@ const FIELD_HELP = {
       "Usa ciudad o región principal con un formato tipo `Ciudad, País`, por ejemplo `Barcelona, España`.",
       "Usa `Itinerante` cuando la comunidad cambia de ciudad o sede según la edición o el evento.",
       "Si no tienes claro qué valor poner, mejor abre un issue para comentarlo antes de enviarlo.",
+    ],
+  },
+  shortDescription: {
+    title: "Cómo escribir la descripción breve",
+    description: "Resume en una frase qué hace especial a esta comunidad.",
+    bullets: [
+      "Prioriza qué ofrece, su enfoque o su propuesta de valor.",
+      "Evita repetir solo etiquetas, tecnologías o público objetivo que ya hayas marcado arriba.",
+      "Una longitud ideal suele estar entre 140 y 220 caracteres.",
     ],
   },
 };
@@ -753,6 +763,35 @@ export function CommunityContribution({
               </div>
             </div>
           )}
+
+          <div className="field contribution-grid-span-2">
+            <label className="label contribution-label-with-help" htmlFor="community-short-description">
+              <span>Descripción breve</span>
+              <FieldHelp
+                content={FIELD_HELP.shortDescription}
+                isOpen={openHelpField === "shortDescription"}
+                onToggle={() => setOpenHelpField((current) => current === "shortDescription" ? null : "shortDescription")}
+                onClose={() => setOpenHelpField(null)}
+              />
+            </label>
+            <div className="control">
+              <textarea
+                id="community-short-description"
+                className="textarea"
+                value={draft.shortDescription ?? ""}
+                onChange={(event) => handleFieldChange("shortDescription", event.target.value.slice(0, SHORT_DESCRIPTION_MAX_LENGTH))}
+                placeholder="Describe en una frase qué ofrece esta comunidad, su enfoque o propuesta de valor. Evita repetir las etiquetas o el público objetivo ya seleccionados."
+                maxLength={SHORT_DESCRIPTION_MAX_LENGTH}
+                rows={3}
+              />
+            </div>
+            <p className="contribution-field-note">
+              Ejemplo: “Comunidad local que organiza encuentros mensuales para compartir experiencias reales de producto digital y liderazgo técnico.”
+            </p>
+            <p className="contribution-field-counter">
+              {(draft.shortDescription ?? "").length}/{SHORT_DESCRIPTION_MAX_LENGTH}
+            </p>
+          </div>
 
           <div className="field">
             <label className="label" htmlFor="community-contact">Contacto público</label>

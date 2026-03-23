@@ -5,7 +5,11 @@ import { CommunityModal } from "./CommunityModal/CommunityModal";
 export function CommunityCard({ community, tagsMap = {}, audienceMap = {} }) {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const { name: comunidad, thumbnailUrl: miniatura } = community;
+  const {
+    name: comunidad,
+    thumbnailUrl: miniatura,
+    shortDescription,
+  } = community;
   const openModal = () => setIsModalOpen(true);
 
   return (
@@ -33,7 +37,12 @@ export function CommunityCard({ community, tagsMap = {}, audienceMap = {} }) {
               alt={comunidad}
             />
             <figcaption className="community-card-overlay">
-              <span className="community-card-name">{comunidad}</span>
+              <div className="community-card-overlay-content">
+                <span className="community-card-name">{comunidad}</span>
+                <span className={`community-card-description ${shortDescription ? "" : "community-card-description--missing"}`}>
+                  {shortDescription || "Sin descripcion breve todavia"}
+                </span>
+              </div>
             </figcaption>
           </figure>
         </div>

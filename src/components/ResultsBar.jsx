@@ -5,6 +5,7 @@ import {
   useNumberOFOnSiteCommunities,
   useAllCommunities,
   useTags,
+  useAudience,
   useCommunityActions,
 } from "../stores/community.store";
 import { bajaString } from "../constants";
@@ -13,6 +14,9 @@ const FILTER_LABELS = {
   status: "Estado",
   eventFormat: "Formato",
   communityType: "Tipo",
+  tags: "Temática",
+  targetAudience: "Público",
+  name: "Comunidad",
 };
 
 /* eslint-disable react/prop-types */
@@ -22,6 +26,7 @@ export function ResultsBar({ view }) {
   const count = useNumberOfCommunities();
   const countOnSite = useNumberOFOnSiteCommunities();
   const allTags = useTags();
+  const allAudience = useAudience();
   const { filterComunities } = useCommunityActions();
 
   const tagsMap = useMemo(
@@ -29,11 +34,21 @@ export function ResultsBar({ view }) {
     [allTags]
   );
 
+  const audienceMap = useMemo(
+    () => Object.fromEntries(allAudience.map((a) => [a.id, a.label])),
+    [allAudience]
+  );
+
   const chips = Object.entries(filters).flatMap(([key, values]) =>
     values.map((value) => ({
       key,
       value,
-      label: key === "tags" ? (tagsMap[value] || value) : value,
+      label:
+        key === "tags"
+          ? (tagsMap[value] || value)
+          : key === "targetAudience"
+            ? (audienceMap[value] || value)
+            : value,
       category: FILTER_LABELS[key],
     }))
   );

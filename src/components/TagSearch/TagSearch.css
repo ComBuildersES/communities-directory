@@ -50,6 +50,14 @@
   white-space: nowrap;
 }
 
+.tag-chip--targetAudience {
+  background: #6c3dc9;
+}
+
+.tag-chip--name {
+  background: #257953;
+}
+
 .tag-chip-remove {
   background: none;
   border: none;

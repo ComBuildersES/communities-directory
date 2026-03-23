@@ -1,14 +1,21 @@
 /* eslint-disable react/prop-types */
 import { useState, useRef, useEffect } from "react";
-import { useTags, useCommunityActions } from "../../stores/community.store";
+import {
+  useTags,
+  useAudience,
+  useAllCommunities,
+  useCommunityActions,
+} from "../../stores/community.store";
 import { bajaString } from "../../constants";
 import "./TagSearch.css";
 
 export function TagSearch() {
   const [query, setQuery] = useState("");
-  const [activeTags, setActiveTags] = useState([]);
+  const [activeFilters, setActiveFilters] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
   const allTags = useTags();
+  const allAudience = useAudience();
+  const allCommunities = useAllCommunities();
   const { filterComunities } = useCommunityActions();
   const inputRef = useRef(null);
   const containerRef = useRef(null);
@@ -23,56 +30,104 @@ export function TagSearch() {
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
-  const activeTagIds = new Set(activeTags.map((t) => t.id));
+  const activeFilterIds = new Set(
+    activeFilters.map((filter) => `${filter.key}:${filter.value}`)
+  );
 
-  const suggestions =
-    query.trim().length < 2
-      ? []
-      : allTags.filter((tag) => {
-          if (activeTagIds.has(tag.id)) return false;
-          const q = query.toLowerCase();
-          return (
-            tag.label.toLowerCase().includes(q) ||
-            tag.description?.toLowerCase().includes(q) ||
-            tag.synonyms?.some((s) => s.toLowerCase().includes(q))
-          );
-        });
+  const q = query.trim().toLowerCase();
 
-  const grouped = suggestions.reduce((acc, tag) => {
-    (acc[tag.category] = acc[tag.category] || []).push(tag);
+  const suggestions = q.length < 2
+    ? []
+    : [
+        ...allTags
+          .filter((tag) => {
+            if (activeFilterIds.has(`tags:${tag.id}`)) return false;
+            return (
+              tag.label.toLowerCase().includes(q) ||
+              tag.description?.toLowerCase().includes(q) ||
+              tag.synonyms?.some((synonym) => synonym.toLowerCase().includes(q))
+            );
+          })
+          .map((tag) => ({
+            group: tag.category || "Temáticas",
+            key: "tags",
+            value: tag.id,
+            label: tag.label,
+            description: tag.description,
+          })),
+        ...allAudience
+          .filter((audience) => {
+            if (activeFilterIds.has(`targetAudience:${audience.id}`)) return false;
+            return (
+              audience.label.toLowerCase().includes(q) ||
+              audience.description?.toLowerCase().includes(q) ||
+              audience.synonyms?.some((synonym) => synonym.toLowerCase().includes(q))
+            );
+          })
+          .map((audience) => ({
+            group: "Público objetivo",
+            key: "targetAudience",
+            value: audience.id,
+            label: audience.label,
+            description: audience.description,
+          })),
+        ...allCommunities
+          .filter((community) => {
+            if (activeFilterIds.has(`name:${community.name}`)) return false;
+            return community.name?.toLowerCase().includes(q);
+          })
+          .slice(0, 12)
+          .map((community) => ({
+            group: "Comunidades",
+            key: "name",
+            value: community.name,
+            label: community.name,
+            description: community.location || community.communityType || "Comunidad",
+          })),
+      ];
+
+  const grouped = suggestions.reduce((acc, suggestion) => {
+    (acc[suggestion.group] = acc[suggestion.group] || []).push(suggestion);
     return acc;
   }, {});
 
-  const addTag = (tag) => {
-    setActiveTags((prev) => [...prev, { id: tag.id, label: tag.label }]);
-    filterComunities("tags", tag.id);
+  const addFilter = (filter) => {
+    setActiveFilters((prev) => [...prev, filter]);
+    filterComunities(filter.key, filter.value);
     setQuery("");
     setShowDropdown(false);
     inputRef.current?.focus();
   };
 
-  const removeTag = (tag) => {
-    setActiveTags((prev) => prev.filter((t) => t.id !== tag.id));
-    filterComunities("tags", bajaString + tag.id);
+  const removeFilter = (filterToRemove) => {
+    setActiveFilters((prev) =>
+      prev.filter(
+        (filter) =>
+          !(filter.key === filterToRemove.key && filter.value === filterToRemove.value)
+      )
+    );
+    filterComunities(filterToRemove.key, bajaString + filterToRemove.value);
   };
 
   const clearAll = () => {
-    activeTags.forEach((t) => filterComunities("tags", bajaString + t.id));
-    setActiveTags([]);
+    activeFilters.forEach((filter) =>
+      filterComunities(filter.key, bajaString + filter.value)
+    );
+    setActiveFilters([]);
   };
 
   return (
     <div className="tag-search-bar" ref={containerRef}>
       <div className="tag-search-inner">
-        <i className="fas fa-tags tag-search-icon"></i>
+        <i className="fas fa-search tag-search-icon"></i>
         <div className="tag-search-chips">
-          {activeTags.map((tag) => (
-            <span key={tag.id} className="tag-chip">
-              {tag.label}
+          {activeFilters.map((filter) => (
+            <span key={`${filter.key}:${filter.value}`} className={`tag-chip tag-chip--${filter.key}`}>
+              {filter.label}
               <button
                 className="tag-chip-remove"
-                onClick={() => removeTag(tag)}
-                aria-label={`Quitar ${tag.label}`}
+                onClick={() => removeFilter(filter)}
+                aria-label={`Quitar ${filter.label}`}
               >
                 <i className="fas fa-times"></i>
               </button>
@@ -83,9 +138,9 @@ export function TagSearch() {
             className="tag-search-input"
             type="text"
             placeholder={
-              activeTags.length === 0
-                ? "Filtrar por temática…"
-                : "Añadir otra temática…"
+              activeFilters.length === 0
+                ? "Filtrar por temática, público o comunidad…"
+                : "Añadir otro filtro…"
             }
             value={query}
             onChange={(e) => {
@@ -95,11 +150,11 @@ export function TagSearch() {
             onFocus={() => query.trim().length >= 2 && setShowDropdown(true)}
           />
         </div>
-        {activeTags.length > 0 && (
+        {activeFilters.length > 0 && (
           <button
             className="tag-search-clear"
             onClick={clearAll}
-            title="Limpiar filtros de temática"
+            title="Limpiar filtros"
           >
             <i className="fas fa-times-circle"></i>
           </button>
@@ -111,17 +166,17 @@ export function TagSearch() {
           {Object.entries(grouped).map(([category, tags]) => (
             <div key={category} className="tag-search-group">
               <div className="tag-search-group-label">{category}</div>
-              {tags.map((tag) => (
+              {tags.map((suggestion) => (
                 <button
-                  key={tag.id}
+                  key={`${suggestion.key}:${suggestion.value}`}
                   className="tag-search-option"
                   onMouseDown={(e) => {
                     e.preventDefault();
-                    addTag(tag);
+                    addFilter(suggestion);
                   }}
                 >
-                  <span className="tag-option-label">{tag.label}</span>
-                  <span className="tag-option-desc">{tag.description}</span>
+                  <span className="tag-option-label">{suggestion.label}</span>
+                  <span className="tag-option-desc">{suggestion.description}</span>
                 </button>
               ))}
             </div>

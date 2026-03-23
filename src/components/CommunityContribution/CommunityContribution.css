@@ -347,6 +347,17 @@
   line-height: 1.5;
 }
 
+.contribution-field-note,
+.contribution-field-counter {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: #75624b;
+}
+
+.contribution-field-counter {
+  text-align: right;
+}
+
 .contribution-thumbnail-control {
   width: 100%;
 }
