@@ -19793,15 +19793,14 @@
     "name": "Cloud Español",
     "status": "Inactiva",
     "lastReviewed": "23/03/2026",
-    "communityType": "Comunidad de práctica",
+    "communityType": "Tech Meetup",
     "eventFormat": "Desconocido",
     "location": "España",
     "topics": "",
     "tags": [
-      "cloud",
       "aws",
       "azure",
-      "google-cloud"
+      "gcp"
     ],
     "targetAudience": [
       "cloud-engineer",
@@ -19810,7 +19809,7 @@
     "contactInfo": "",
     "communityUrl": "https://web.archive.org/web/20251207160627/https://www.xn--cloudespaol-9db.com/",
     "urls": {},
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://bulma.io/assets/images/placeholders/1280x960.png",
     "latLon": {
       "lat": null,
       "lon": null
@@ -19823,7 +19822,7 @@
     "name": "Artificial Intelligence Network",
     "status": "Activa",
     "lastReviewed": "23/03/2026",
-    "communityType": "Comunidad de práctica",
+    "communityType": "Tech Meetup",
     "eventFormat": "Desconocido",
     "location": "España",
     "topics": "",
@@ -19843,41 +19842,12 @@
     "urls": {
       "linkedin": "https://www.linkedin.com/company/artificial-intelligence-network/"
     },
-    "thumbnailUrl": "",
+    "thumbnailUrl": "https://bulma.io/assets/images/placeholders/1280x960.png",
     "latLon": {
       "lat": null,
       "lon": null
     },
     "displayOnMap": false,
-    "humanValidated": false
-  },
-  {
-    "id": 603,
-    "name": "HackUDC",
-    "status": "Activa",
-    "lastReviewed": "23/03/2026",
-    "communityType": "Hackathon",
-    "eventFormat": "Presencial",
-    "location": "A Coruña",
-    "topics": "",
-    "tags": [
-      "open-source",
-      "hackathon"
-    ],
-    "targetAudience": [
-      "student"
-    ],
-    "contactInfo": "",
-    "communityUrl": "https://hackudc.gpul.org",
-    "urls": {
-      "web": "https://hackudc.gpul.org"
-    },
-    "thumbnailUrl": "",
-    "latLon": {
-      "lat": 43.3623,
-      "lon": -8.4115
-    },
-    "displayOnMap": true,
     "humanValidated": false
   }
 ]
