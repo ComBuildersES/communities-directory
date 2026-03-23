@@ -99,7 +99,7 @@ export function Heading ({
                     >
                       responsables provinciales
                     </a>{" "}
-                    que quieran ayudar sobre todo con el mantenimiento de los datos de las comunidades y la revisión de PRs de nuevas comunidades.
+                    que quieran ayudar sobre todo con el mantenimiento de los datos de las comunidades.
                   </p>
                   <p className="heading-support-copy">
                     Nuevas ideas, bugs y cualquier otra forma de colaboración también son bienvenidas; tienes la guía en{" "}
