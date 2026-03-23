@@ -18,6 +18,13 @@ export function isIosDevice () {
   return /iphone|ipad|ipod/i.test(window.navigator.userAgent);
 }
 
+export function shouldShowInstallPrompt () {
+  const isTouchDevice = window.matchMedia("(pointer: coarse)").matches;
+  const isMobileViewport = window.matchMedia("(max-width: 1023px)").matches;
+
+  return isTouchDevice || isMobileViewport || isIosDevice();
+}
+
 export function getInstallBannerState () {
   return window.localStorage.getItem(INSTALL_BANNER_STORAGE_KEY);
 }

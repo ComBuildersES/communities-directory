@@ -4,29 +4,29 @@ import {
   isIosDevice,
   isStandaloneMode,
   setInstallBannerState,
+  shouldShowInstallPrompt,
 } from "../lib/pwa";
 
 const DISMISSED_STATE = "dismissed";
 const INSTALLED_STATE = "installed";
 
 export function InstallPromptBar () {
-  const [isVisible, setIsVisible] = useState(false);
+  const isIos = useMemo(() => isIosDevice(), []);
+  const [isVisible, setIsVisible] = useState(() => isIos);
   const [deferredPrompt, setDeferredPrompt] = useState(null);
   const [isInstallAvailable, setIsInstallAvailable] = useState(false);
   const [isInstalled, setIsInstalled] = useState(() => isStandaloneMode());
-  const isIos = useMemo(() => isIosDevice(), []);
 
   useEffect(() => {
-    if (getInstallBannerState() || isStandaloneMode()) {
+    if (getInstallBannerState() || isStandaloneMode() || !shouldShowInstallPrompt()) {
       return;
     }
-
-    setIsVisible(true);
 
     const handleBeforeInstallPrompt = (event) => {
       event.preventDefault();
       setDeferredPrompt(event);
       setIsInstallAvailable(true);
+      setIsVisible(true);
     };
 
     const handleInstalled = () => {
@@ -36,6 +36,10 @@ export function InstallPromptBar () {
       setDeferredPrompt(null);
       setIsInstallAvailable(false);
     };
+
+    if (isIos) {
+      setIsVisible(true);
+    }
 
     window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
     window.addEventListener("appinstalled", handleInstalled);
@@ -78,26 +82,18 @@ export function InstallPromptBar () {
   return (
     <section className="install-prompt-bar" role="status" aria-live="polite">
       <div className="install-prompt-bar__content">
-        <div>
-          <p className="install-prompt-bar__eyebrow">Instálala en tu móvil</p>
-          <p className="install-prompt-bar__text">
-            Guarda el directorio en la pantalla de inicio para abrirlo como una app y volver más rápido.
-          </p>
-        </div>
+        <p className="install-prompt-bar__text">
+          Guarda esta web como app para abrir el directorio más rápido desde tu móvil.
+        </p>
         <div className="install-prompt-bar__actions">
           {isInstallAvailable && (
-            <button type="button" className="button is-primary is-small" onClick={handleInstall}>
-              Instalar app
+            <button type="button" className="button is-primary is-small install-prompt-bar__button" onClick={handleInstall}>
+              Instalar
             </button>
           )}
           {!isInstallAvailable && isIos && (
             <p className="install-prompt-bar__hint">
-              En Safari: Compartir <span aria-hidden="true">→</span> Añadir a pantalla de inicio
-            </p>
-          )}
-          {!isInstallAvailable && !isIos && (
-            <p className="install-prompt-bar__hint">
-              Si tu navegador lo permite, verás la opción de instalarla desde el menú.
+              Safari: Compartir <span aria-hidden="true">→</span> Añadir a pantalla de inicio
             </p>
           )}
           <button
