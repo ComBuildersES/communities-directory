@@ -35,6 +35,9 @@ jobs:
       - name: Run process-to-communities-to-geojson script
         run: node scripts/process-to-communities-to-geojson.js
 
+      - name: Validate generated data
+        run: npm run validate-data
+
       - name: Read generated coordinates
         id: coords
         run: |

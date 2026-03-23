@@ -65,6 +65,16 @@ Y una vez hecho esto, puede arrancar el entorno de desarrollo con:
 
 Esto iniciará la app en `http://localhost:5174/communities-directory/dist/`, donde podrás explorar el directorio interactivo.
 
+Si vas a tocar `public/data/`, puedes comprobar el dataset manualmente con `npm run validate-data`. Además, `npm install` configura un hook local para validar las contribuciones antes de cada commit.
+
+Para sanear URLs rotas o caídas:
+
+```bash
+npm run check-urls -- --report report.txt  # audita todas las URLs
+npm run archive-broken-urls -- --dry-run   # busca snapshots en Wayback Machine
+npm run archive-broken-urls                # aplica las URLs archivadas
+```
+
 ## Contribuir
 ¿Te gustaría añadir una comunidad, mejorar datos existentes o proponer ideas?
 

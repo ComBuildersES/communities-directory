@@ -13,6 +13,8 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -25,6 +27,14 @@ jobs:
 
       - name: Validate communities data
         run: npm run validate-data
+
+      - name: Fetch PR base branch
+        if: github.event_name == 'pull_request'
+        run: git fetch origin ${{ github.base_ref }} --depth=1
+
+      - name: Validate changed communities against base branch
+        if: github.event_name == 'pull_request'
+        run: node scripts/validate-community-data.js --strict-changed --baseline-ref origin/${{ github.base_ref }}
 
       - name: Build the project
         run: npm run build

@@ -6,10 +6,14 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run validate-data && vite build",
+    "prepare": "node scripts/setup-git-hooks.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "validate-data": "node scripts/validate-community-data.js",
+    "validate-data:staged": "node scripts/validate-community-data.js --strict-changed --baseline-ref HEAD",
     "check-urls": "node scripts/check-urls.js",
+    "check-urls:changed": "node scripts/check-urls.js --changed-only --baseline-ref HEAD",
+    "check-urls:strict": "node scripts/check-urls.js --strict",
     "process-to-communities-to-geojson": "node scripts/process-to-communities-to-geojson.js",
     "find-duplicates": "node scripts/find-duplicates.js",
     "ensure-id-autoincrement": "node scripts/ensure-id-autoincrement.js",
@@ -18,6 +22,7 @@
     "scrape-community-data": "node scripts/scrape-community-data.js",
     "apply-suggestions": "node scripts/apply-suggestions.js",
     "apply-url-mapping": "node scripts/apply-url-mapping.js",
+    "archive-broken-urls": "node scripts/archive-broken-urls.js",
     "build-preview": "vite build --mode localdev && npx http-server . -p 8080 -o dist/",
     "test-geojson": "npx http-server . -p 8080 -o public/viewer"
   },

@@ -221,11 +221,21 @@ EL fichero [communities.json](https://github.com/ComBuildersES/communities-direc
 
 Algunos scripts útiles para mantener los datos de las comunidades:
 
-* `npm run find-duplicates`: busca comunidades potentialmente duplicadas en el JSON.
-* `npm run check-urls`: comprueba si las URLs de las comunidades siguen siendo accesbiles.
+* `npm run find-duplicates`: busca comunidades potencialmente duplicadas en el JSON.
+* `npm run check-urls`: comprueba la salud de las URLs y genera warnings para enlaces caídos, archivados o con respuestas dudosas. Omite automáticamente dominios que bloquean bots (twitter.com, x.com). Admite `--report <ruta>` para guardar el informe en Markdown.
+* `npm run archive-broken-urls`: para cada URL rota del informe generado por `check-urls`, busca un snapshot en [Wayback Machine](https://web.archive.org/) y actualiza `communities.json` con la URL archivada. Procesa por defecto HTTP 404, `fetch failed` y HTTP 403. Admite `--dry-run`, `--from-report <ruta>`, `--include-warnings` y `--concurrency <n>`.
 * `npm run ensure-id-autoincrement`: sobrescribe los IDs de las comunidades para asegurar que sean consecutivos.
-* `npm run process-to-communities-to-geojson`:  parsea el fichero communities.json y genera el communities.geojson.
+* `npm run process-to-communities-to-geojson`: parsea el fichero communities.json y genera el communities.geojson.
 * `npm test-geojson`: abre un visor para explorar las ubicaciones del fichero geojson fácilmente.
+
+Flujo recomendado para sanear URLs:
+
+```bash
+npm run check-urls -- --report report.txt   # genera el informe
+npm run archive-broken-urls -- --dry-run    # previsualiza qué cambiaría
+npm run archive-broken-urls                 # aplica los cambios
+npm run check-urls -- --report report.txt   # verifica el resultado
+```
 
 ---
 
@@ -247,6 +257,7 @@ npm install
 ```
 
 > **Nota**: Asegúrate de tener Node.js 20 instalado.
+> **Nota**: `npm install` deja configurados los hooks locales de Git para validar los datos antes de cada commit.
 
 Ejecutar el entorno local:
 
@@ -267,6 +278,13 @@ Esto abrirá la aplicación en `http://localhost:5173` por defecto (puede variar
 - Usamos ESLint con configuración personalizada (`eslint.config.js`) y plugins para React y hooks.
 - Ejecuta `npm run lint` para verificar que todo esté bien antes de hacer un PR.
 
+### Validación de datos
+
+- Ejecuta `npm run validate-data` para validar el dataset completo, taxonomías y referencias cruzadas.
+- Cada `git commit` lanza automáticamente `npm run validate-data:staged` y bloquea el commit si las comunidades nuevas o modificadas incumplen campos obligatorios, fechas, URLs o taxonomías.
+- La comprobación de URLs accesibles no bloquea el `pre-commit`, porque depende de red y puede dar falsos negativos. En su lugar se usa `npm run check-urls` como auditoría específica y se ejecuta también en GitHub Actions.
+- El dataset histórico todavía tiene algunas advertencias heredadas; esas advertencias se muestran, pero no bloquean la contribución salvo que introduzcas nuevas inconsistencias.
+
 ### Automatismos
 
 #### Crear PR tras añadir comunidades
@@ -276,7 +294,15 @@ El flujo principal recomendado es usar el formulario integrado en la web del dir
 Cuando se crea ese issue, se ejecuta [create-community-entry.yml](https://github.com/ComBuildersES/communities-directory/blob/master/.github/workflows/create-community-entry.yml), que:
 - Procesa el issue y genera un PR añadiendo o actualizando los datos ([process-community-issue.js](https://github.com/ComBuildersES/communities-directory/blob/master/scripts/process-community-issue.js)).
 - Ejecuta [process-to-communities-to-geojson.js](https://github.com/ComBuildersES/communities-directory/blob/master/scripts/process-to-communities-to-geojson.js) que procesa los datos anteriores y actualiza el fichero [communities.geojson](https://github.com/ComBuildersES/communities-directory/blob/master/public/data/communities.geojson) que contiene las comunidades presenciales e híbridas.
+- Valida el JSON generado antes de abrir el PR.
 - Abre un PR con todos los cambios.
+
+Además, cualquier `pull request` ejecuta de nuevo la validación en GitHub Actions:
+
+- `npm run validate-data` comprueba la integridad global del dataset y de las taxonomías.
+- Se valida de forma estricta cualquier comunidad nueva o modificada frente a la rama base del PR.
+- Se ejecuta un chequeo no bloqueante de las URLs cambiadas y se sube un informe con warnings y sugerencias de `web.archive.org` cuando haya enlaces caídos o archivados.
+- El build vuelve a ejecutarse para evitar que se mergeen cambios que rompan la app.
 
 La creación de issues desde GitHub queda ahora orientada a propuestas abiertas; para altas nuevas la entrada recomendada es el formulario web.
 

@@ -31,6 +31,10 @@ const STATUS_CLASS = {
   Desconocido: "modal-badge modal-badge--unknown",
 };
 
+function isArchivedUrl(url) {
+  return typeof url === "string" && url.includes("web.archive.org/web/");
+}
+
 export function CommunityModal({ community, tagsMap, audienceMap, onClose }) {
   const { filterComunities } = useCommunityActions();
 
@@ -73,6 +77,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, onClose }) {
   const urlEntries = URL_CONFIG.filter(({ key }) => urls[key]);
   const hasCommunityUrlInUrls = Object.values(urls).includes(communityUrl);
   const showFallbackUrl = communityUrl && !hasCommunityUrlInUrls;
+  const communityUrlIsArchived = isArchivedUrl(communityUrl);
 
   return (
     <div className="community-modal-overlay" onClick={onClose}>
@@ -192,6 +197,11 @@ export function CommunityModal({ community, tagsMap, audienceMap, onClose }) {
                   </a>
                 )}
               </div>
+              {communityUrlIsArchived && (
+                <p className="community-modal-url-note">
+                  El enlace principal apunta a una copia archivada en web.archive.org porque la fuente original ya no parece estar disponible.
+                </p>
+              )}
             </div>
           )}
 

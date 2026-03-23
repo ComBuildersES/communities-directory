@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "Validando taxonomías y comunidades antes del commit..."
+npm run validate-data:staged

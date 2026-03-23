@@ -561,7 +561,7 @@
     "communityUrl": "http://agilevalencia.com/",
     "urls": {
       "twitter": "https://x.com/AgileValencia",
-      "web": "http://agilevalencia.com/"
+      "web": "http://web.archive.org/web/20250108134602/https://agilevalencia.com/"
     },
     "thumbnailUrl": "images/agilevalencia.webp",
     "latLon": {
@@ -583,7 +583,7 @@
     "tags": [],
     "targetAudience": [],
     "contactInfo": "president@ai4med.org",
-    "communityUrl": "https://www.ai4med.org/ ",
+    "communityUrl": "http://web.archive.org/web/20260118231740/https://ai4med.org/",
     "urls": {},
     "thumbnailUrl": "images/ai4med-ia-para-medicina.webp",
     "latLon": {
@@ -1829,7 +1829,7 @@
     "communityUrl": "https://bigagileos.wixsite.com/website",
     "urls": {
       "twitter": "https://x.com/bigagileos",
-      "web": "https://bigagileos.wixsite.com/website"
+      "web": "http://web.archive.org/web/20230608075207/https://bigagileos.wixsite.com/website"
     },
     "thumbnailUrl": "images/big-agile-open-spac.webp",
     "latLon": {
@@ -1854,7 +1854,7 @@
     "communityUrl": "http://biggirlstheory.es/",
     "urls": {
       "twitter": "https://x.com/biggirlstheory",
-      "web": "http://biggirlstheory.es/",
+      "web": "http://web.archive.org/web/20220327085309/https://biggirlstheory.es/",
       "youtube": "https://www.youtube.com/channel/UCD910SAxi1tblfQaAqid-bw"
     },
     "thumbnailUrl": "images/big-girls-theory.webp",
@@ -3152,7 +3152,7 @@
     "communityUrl": "http://codersagora.org/",
     "urls": {
       "twitter": "https://x.com/codersagora_org",
-      "web": "http://codersagora.org/"
+      "web": "http://web.archive.org/web/20220529082820/http://codersagora.org/"
     },
     "thumbnailUrl": "images/coders-agora.webp",
     "latLon": {
@@ -3678,7 +3678,7 @@
     "tags": [],
     "targetAudience": [],
     "contactInfo": "",
-    "communityUrl": "https://www.corunajug.org/",
+    "communityUrl": "http://web.archive.org/web/20260206220648/https://corunajug.org/",
     "urls": {},
     "thumbnailUrl": "images/corunajug.webp",
     "latLon": {
@@ -3826,7 +3826,7 @@
     "tags": [],
     "targetAudience": [],
     "contactInfo": "",
-    "communityUrl": "https://ctosummit.geekshubs.com/",
+    "communityUrl": "http://web.archive.org/web/20250518065709/https://ctosummit.geekshubs.com/",
     "urls": {},
     "thumbnailUrl": "images/cto-summit-infojobs.webp",
     "latLon": {
@@ -4119,7 +4119,7 @@
     "communityUrl": "http://databeersgrx.com/",
     "urls": {
       "twitter": "https://x.com/databeersgrx",
-      "web": "http://databeersgrx.com/"
+      "web": "http://web.archive.org/web/20191208235749/http://databeersgrx.com/"
     },
     "thumbnailUrl": "images/databeers-granada.webp",
     "latLon": {
@@ -4355,7 +4355,7 @@
       "community-manager"
     ],
     "contactInfo": "",
-    "communityUrl": "https://www.des-show.com/",
+    "communityUrl": "http://web.archive.org/web/20260211193651/https://www.des-show.com/",
     "urls": {
       "youtube": "https://youtu.be/ijoqFxMcrHM",
       "instagram": "https://www.instagram.com/des_show/",
@@ -4542,7 +4542,7 @@
     "contactInfo": "",
     "communityUrl": "https://devwomen.com/",
     "urls": {
-      "web": "https://devwomen.com/",
+      "web": "http://web.archive.org/web/20240221104701/http://devwomen.com/",
       "instagram": "https://www.instagram.com/devwomen_es/"
     },
     "thumbnailUrl": "images/devwomen.webp",
@@ -4896,7 +4896,7 @@
     "urls": {
       "twitter": "https://x.com/droidcon?lang=en",
       "linkedin": "https://www.linkedin.com/company/droidcon/",
-      "youtube": "https://www.youtube.com/@DroidconDe"
+      "youtube": "http://web.archive.org/web/20251224100413/https://www.youtube.com/@DroidconDe"
     },
     "thumbnailUrl": "images/droidcon.webp",
     "latLon": {
@@ -4960,7 +4960,7 @@
     "tags": [],
     "targetAudience": [],
     "contactInfo": "help@drupal.org",
-    "communityUrl": "https://groups.drupal.org/almeria",
+    "communityUrl": "http://web.archive.org/web/20250531043545/https://groups.drupal.org/almeria",
     "urls": {},
     "latLon": {
       "lat": 36.8400939,
@@ -4981,7 +4981,7 @@
     "tags": [],
     "targetAudience": [],
     "contactInfo": "help@drupal.org",
-    "communityUrl": "https://groups.drupal.org/asturias-spain",
+    "communityUrl": "http://web.archive.org/web/20230529034252/https://groups.drupal.org/asturias-spain",
     "urls": {},
     "thumbnailUrl": "images/drupal-asturias.webp",
     "latLon": {
@@ -5045,7 +5045,7 @@
     "tags": [],
     "targetAudience": [],
     "contactInfo": "help@drupal.org",
-    "communityUrl": "https://groups.drupal.org/castillayleon",
+    "communityUrl": "http://web.archive.org/web/20230529035455/https://groups.drupal.org/castillayleon",
     "urls": {},
     "latLon": {
       "lat": 41.754270024781,
@@ -5090,7 +5090,7 @@
     "tags": [],
     "targetAudience": [],
     "contactInfo": "help@drupal.org",
-    "communityUrl": "https://groups.drupal.org/comunitat-catalana-del-drupal",
+    "communityUrl": "http://web.archive.org/web/20240112154928/https://groups.drupal.org/comunitat-catalana-del-drupal",
     "urls": {},
     "latLon": {
       "lat": null,
@@ -5133,7 +5133,7 @@
     "tags": [],
     "targetAudience": [],
     "contactInfo": "help@drupal.org",
-    "communityUrl": "https://groups.drupal.org/basque-country",
+    "communityUrl": "http://web.archive.org/web/20201225095243/https://groups.drupal.org/basque-country",
     "urls": {},
     "latLon": {
       "lat": 43.043147818644,
@@ -5154,7 +5154,7 @@
     "tags": [],
     "targetAudience": [],
     "contactInfo": "help@drupal.org",
-    "communityUrl": "https://groups.drupal.org/extremadura",
+    "communityUrl": "http://web.archive.org/web/20240112162119/https://groups.drupal.org/extremadura",
     "urls": {},
     "latLon": {
       "lat": 39.191324883543,
@@ -5323,7 +5323,7 @@
     "tags": [],
     "targetAudience": [],
     "contactInfo": "help@drupal.org",
-    "communityUrl": "https://groups.drupal.org/zaragoza",
+    "communityUrl": "http://web.archive.org/web/20230529035656/https://groups.drupal.org/zaragoza",
     "urls": {},
     "latLon": {
       "lat": 41.656837,
@@ -5376,7 +5376,7 @@
     "tags": [],
     "targetAudience": [],
     "contactInfo": "",
-    "communityUrl": "https://dyplofest.com/",
+    "communityUrl": "http://web.archive.org/web/20250521164517/http://dyplofest.com/",
     "urls": {},
     "thumbnailUrl": "images/dyplofest.webp",
     "latLon": {
@@ -6191,7 +6191,7 @@
     "communityUrl": "https://gcubo.org/",
     "urls": {
       "twitter": "https://x.com/gcubo_linux",
-      "web": "https://gcubo.org/"
+      "web": "http://web.archive.org/web/20250316120847/http://www.gcubo.org/"
     },
     "thumbnailUrl": "images/gcubo.webp",
     "latLon": {
@@ -9666,7 +9666,7 @@
     ],
     "targetAudience": [],
     "contactInfo": "",
-    "communityUrl": "https://latinasintech.org/chapter/madrid",
+    "communityUrl": "http://web.archive.org/web/20251205170100/https://latinasintech.org/chapter/madrid",
     "urls": {},
     "thumbnailUrl": "images/latinas-in-tech-madrid.webp",
     "latLon": {
@@ -10124,7 +10124,7 @@
     "tags": [],
     "targetAudience": [],
     "contactInfo": "",
-    "communityUrl": "https://madridtechtalks.com/",
+    "communityUrl": "http://web.archive.org/web/20250813111202/https://madridtechtalks.com/",
     "urls": {},
     "thumbnailUrl": "images/madrid-tech-talks.webp",
     "latLon": {
@@ -11303,7 +11303,7 @@
       "tech-lead"
     ],
     "contactInfo": "hola@mytechplan.com",
-    "communityUrl": "https://mytechplan.com/comunidad/",
+    "communityUrl": "http://web.archive.org/web/20251209100656/https://mytechplan.com/comunidad/",
     "urls": {
       "linkedin": "https://www.linkedin.com/company/my-tech-plan",
       "twitter": "https://x.com/my_tech_plan",
@@ -11423,7 +11423,7 @@
     "communityUrl": "https://www.noconname.org/",
     "urls": {
       "twitter": "https://x.com/noconname",
-      "web": "https://www.noconname.org/",
+      "web": "http://web.archive.org/web/20260312054722/https://www.noconname.org/",
       "telegram": "https://t.me/noconname"
     },
     "thumbnailUrl": "images/no-con-name.webp",
@@ -11446,7 +11446,7 @@
     "tags": [],
     "targetAudience": [],
     "contactInfo": "",
-    "communityUrl": "https://www.nocodefest.es/",
+    "communityUrl": "http://web.archive.org/web/20251214071738/https://www.nocodefest.es/",
     "urls": {},
     "thumbnailUrl": "images/nocodefest.webp",
     "latLon": {
@@ -11744,7 +11744,7 @@
     "tags": [],
     "targetAudience": [],
     "contactInfo": "",
-    "communityUrl": "http://osweekends.com",
+    "communityUrl": "http://web.archive.org/web/20251105160740/https://osweekends.com/",
     "urls": {},
     "latLon": {
       "lat": 40.4167047,
@@ -11765,7 +11765,7 @@
     "tags": [],
     "targetAudience": [],
     "contactInfo": "",
-    "communityUrl": "https://openexpoeurope.com/",
+    "communityUrl": "http://web.archive.org/web/20250812184530/https://openexpoeurope.com/",
     "urls": {},
     "thumbnailUrl": "images/openexpo-europe.webp",
     "latLon": {
@@ -13574,10 +13574,10 @@
     "tags": [],
     "targetAudience": [],
     "contactInfo": "",
-    "communityUrl": "https://socracan.com/",
+    "communityUrl": "http://web.archive.org/web/20230929223744/https://www.socracan.com/",
     "urls": {
       "twitter": "https://x.com/socracan",
-      "web": "https://socracan.com/"
+      "web": "http://web.archive.org/web/20230929223744/https://www.socracan.com/"
     },
     "thumbnailUrl": "images/socracan-socrates-canaries.webp",
     "latLon": {
@@ -14179,7 +14179,7 @@
     "tags": [],
     "targetAudience": [],
     "contactInfo": "",
-    "communityUrl": "https://techclubasturias.com/",
+    "communityUrl": "http://web.archive.org/web/20260211153131/http://www.techclubasturias.com/",
     "urls": {},
     "thumbnailUrl": "images/tech-club-asturias.webp",
     "latLon": {
@@ -14372,7 +14372,7 @@
     "communityUrl": "http://www.tomatinacon.com/",
     "urls": {
       "twitter": "https://x.com/tomatinacon",
-      "web": "http://www.tomatinacon.com/"
+      "web": "http://web.archive.org/web/20220921150143/http://tomatinacon.com/"
     },
     "thumbnailUrl": "images/tomatinacon.webp",
     "latLon": {
@@ -14397,7 +14397,7 @@
     "communityUrl": "http://www.tomellosotech.org",
     "urls": {
       "twitter": "https://x.com/TomellosoTech",
-      "web": "http://www.tomellosotech.org"
+      "web": "http://web.archive.org/web/20201130180149/https://www.tomellosotech.org/"
     },
     "latLon": {
       "lat": 39.157747,
@@ -15309,7 +15309,7 @@
     "communityUrl": "https://www.wonderhack.es/",
     "urls": {
       "twitter": "https://x.com/wonderhackes",
-      "web": "https://www.wonderhack.es/"
+      "web": "http://web.archive.org/web/20220818234122/https://www.wonderhack.es/"
     },
     "thumbnailUrl": "images/wonderhack-event.webp",
     "latLon": {
@@ -19361,7 +19361,7 @@
     "contactInfo": "soporte@fourvenues.com",
     "communityUrl": "https://web.fourvenues.com/en/product-beers",
     "urls": {
-      "web": "https://web.fourvenues.com/en/product-beers",
+      "web": "http://web.archive.org/web/20250804192128/https://web.fourvenues.com/en/product-beers",
       "linkedin": "https://www.linkedin.com/company/valencia-product-beers/",
       "telegram": "https://t.me/valenciaproductbeers/1"
     },
@@ -19385,7 +19385,7 @@
     "tags": [],
     "targetAudience": [],
     "contactInfo": "",
-    "communityUrl": "https://2024.awscommunity.es/en",
+    "communityUrl": "http://web.archive.org/web/20260123140024/https://2024.awscommunity.es/en",
     "urls": {},
     "thumbnailUrl": "images/aws-community-day.webp",
     "latLon": {

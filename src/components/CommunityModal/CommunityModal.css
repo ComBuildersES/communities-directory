@@ -255,6 +255,17 @@ button.modal-badge:focus-visible {
   color: #3273dc;
 }
 
+.community-modal-url-note {
+  margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #7a5d00;
+  background: #fffbeb;
+  border: 1px solid #f1df9b;
+  border-radius: 6px;
+  padding: 0.6rem 0.75rem;
+}
+
 /* Chips */
 .community-modal-chips {
   display: flex;

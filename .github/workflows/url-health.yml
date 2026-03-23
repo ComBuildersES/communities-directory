@@ -1,0 +1,91 @@
+name: URL health
+
+on:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 7 * * 1"
+
+jobs:
+  check-urls:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24.0.2
+          cache: npm
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Fetch PR base branch
+        if: github.event_name == 'pull_request'
+        run: git fetch origin ${{ github.base_ref }} --depth=1
+
+      - name: Check changed URLs in PR
+        if: github.event_name == 'pull_request'
+        continue-on-error: true
+        run: node scripts/check-urls.js --changed-only --baseline-ref origin/${{ github.base_ref }} --report tmp/url-health-report.md
+
+      - name: Check all URLs on schedule or manual run
+        if: github.event_name != 'pull_request'
+        continue-on-error: true
+        run: node scripts/check-urls.js --report tmp/url-health-report.md
+
+      - name: Post URL health report as PR comment
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const reportPath = 'tmp/url-health-report.md';
+            if (!fs.existsSync(reportPath)) {
+              console.log('No report file found, skipping comment.');
+              return;
+            }
+            const body = fs.readFileSync(reportPath, 'utf8').trim();
+            if (!body) {
+              console.log('Report is empty, skipping comment.');
+              return;
+            }
+
+            const marker = '<!-- url-health-report -->';
+            const comment = `${marker}\n${body}`;
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+            });
+
+            const existing = comments.find(c => c.body.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                comment_id: existing.id,
+                body: comment,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                body: comment,
+              });
+            }
+
+      - name: Upload URL health report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: url-health-report
+          path: tmp/url-health-report.md
+          if-no-files-found: ignore
