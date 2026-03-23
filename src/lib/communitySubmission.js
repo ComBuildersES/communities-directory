@@ -56,6 +56,10 @@ function cleanString(value) {
   return typeof value === "string" ? value.trim() : "";
 }
 
+function hasQueryParamValue(value) {
+  return value !== null && value !== undefined && String(value).trim() !== "";
+}
+
 export function normalizeComparableText(value = "") {
   return cleanString(value)
     .normalize("NFD")
@@ -185,7 +189,7 @@ export function parseContributionRoute(search = window.location.search) {
 export function buildContributionPath({ mode = "new", identifier = null, pathname = window.location.pathname } = {}) {
   const params = new URLSearchParams();
 
-  if (mode === "edit" && identifier) {
+  if (mode === "edit" && hasQueryParamValue(identifier)) {
     params.set(EDIT_PARAM, String(identifier));
   }
 
@@ -240,7 +244,7 @@ export function buildDirectoryStatePath({
       .forEach((value) => params.append(key, String(value)));
   });
 
-  if (communityIdentifier) {
+  if (hasQueryParamValue(communityIdentifier)) {
     params.set(COMMUNITY_PARAM, String(communityIdentifier));
   }
 
@@ -249,7 +253,7 @@ export function buildDirectoryStatePath({
 }
 
 export function getContributionDraftStorageKey({ mode = "new", identifier = null } = {}) {
-  const normalizedMode = mode === "edit" && identifier ? "edit" : "new";
+  const normalizedMode = mode === "edit" && hasQueryParamValue(identifier) ? "edit" : "new";
   const normalizedIdentifier = normalizedMode === "edit" ? String(identifier) : "new";
   return `${CONTRIBUTION_DRAFT_STORAGE_PREFIX}:${normalizedMode}:${normalizedIdentifier}`;
 }
@@ -289,7 +293,7 @@ export function clearContributionDraft(storageKey) {
 }
 
 export function resolveCommunityFromIdentifier(communities, identifier) {
-  if (!identifier) return null;
+  if (!hasQueryParamValue(identifier)) return null;
 
   const rawIdentifier = String(identifier).trim();
   return communities.find((community) => {

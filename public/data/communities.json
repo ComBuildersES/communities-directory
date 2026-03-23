@@ -72,7 +72,6 @@
     "contactInfo": "devnulltalks@gmail.com",
     "communityUrl": "https://devnulltalks.github.io/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/nicol%C3%A1s-palumbo-9372615/",
       "github": "https://github.com/orderedlist",
       "eventsUrl": "https://www.meetup.com/dev-null/"
     },
@@ -194,7 +193,6 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/AIndustriosa/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/orestesca/",
       "twitter": "http://twitter.com/aindustriosa",
       "eventsUrl": "https://www.meetup.com/es-ES/AIndustriosa/"
     },
@@ -831,7 +829,6 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/andalucia-startup-founder/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/paulobrien/",
       "twitter": "https://twitter.com/founding",
       "eventsUrl": "https://www.meetup.com/andalucia-startup-founder/"
     },
@@ -1238,7 +1235,6 @@
     "communityUrl": "https://linktr.ee/asturcontech",
     "urls": {
       "instagram": "https://www.instagram.com/asturcontech/",
-      "linkedin": "https://www.linkedin.com/company/86026888/admin/",
       "twitter": "https://twitter.com/AsturCONtech",
       "telegram": "https://t.me/+wRE1sHSRAhdjZjc0",
       "youtube": "https://www.youtube.com/@asturcontech?sub_confirmation=1",
@@ -2144,7 +2140,6 @@
     "contactInfo": "info@bsides.barcelona",
     "communityUrl": "https://bsides.barcelona/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/luanapascu/",
       "twitter": "https://x.com/BarcelonaBsides/",
       "youtube": "https://www.youtube.com/channel/UC6ZFHgp_gWbORaibgQgJn7g"
     },
@@ -2913,7 +2908,6 @@
     "contactInfo": "organizers@cloudnativevalencia.com",
     "communityUrl": "https://community.cncf.io/cloud-native-valencia/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/company/102956974/admin/feed/posts/",
       "twitter": "https://twitter.com/cloudnativefdn",
       "instagram": "https://www.instagram.com/humans.of.cloudnative/",
       "youtube": "https://www.youtube.com/c/cloudnativefdn",
@@ -3231,8 +3225,7 @@
     "contactInfo": "",
     "communityUrl": "https://collaborativemodeling.carrd.co/",
     "urls": {
-      "telegram": "https://t.me/+oQdISHfNKQJjODJk",
-      "linkedin": "https://www.linkedin.com/in/lopezdeavila/"
+      "telegram": "https://t.me/+oQdISHfNKQJjODJk"
     },
     "thumbnailUrl": "images/collaborative-modeling-como-madrid.webp",
     "latLon": {
@@ -3272,11 +3265,7 @@
     "communityUrl": "https://commit-conf.com/",
     "urls": {
       "youtube": "https://youtu.be/MaHQ2y1dryE",
-      "twitter": "https://x.com/agilegirls",
-      "telegram": "https://t.me/phpcoruna",
-      "linkedin": "https://www.linkedin.com/company/red-mujeres-ia/",
-      "bluesky": "https://bsky.app/profile/commit-conf.com",
-      "eventsUrl": "https://www.meetup.com/es-ES/Front-end-Developers-Madrid/"
+      "bluesky": "https://bsky.app/profile/commit-conf.com"
     },
     "thumbnailUrl": "images/commitconf.webp",
     "latLon": {
@@ -3448,7 +3437,6 @@
     "communityUrl": "https://caearagon.org/#conferencia",
     "urls": {
       "twitter": "http://twitter.com/iagilidad",
-      "linkedin": "https://www.linkedin.com/in/conferencia-agilidad-empresa-aragonesa/",
       "youtube": "https://www.youtube.com/channel/UCZkVhc0TGy_mgFhIkel7Khw"
     },
     "thumbnailUrl": "images/conferencia-de-agilidad-en-la-empresa-aragonesa.webp",
@@ -3482,7 +3470,6 @@
     "contactInfo": "3rquer@sevillar.es",
     "communityUrl": "https://imus.us.es/congresos/IIIRqueR/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/rosanaferrero/?originalSubdomain=es",
       "github": "https://github.com/Enchufa2",
       "twitter": "https://twitter.com/imus_us",
       "instagram": "https://www.instagram.com/instituto_matematicas_us/?hl=es",
@@ -4556,8 +4543,7 @@
     "communityUrl": "https://devwomen.com/",
     "urls": {
       "web": "https://devwomen.com/",
-      "instagram": "https://www.instagram.com/devwomen_es/",
-      "linkedin": "https://www.linkedin.com/showcase/devwomen/about/"
+      "instagram": "https://www.instagram.com/devwomen_es/"
     },
     "thumbnailUrl": "images/devwomen.webp",
     "latLon": {
@@ -4692,7 +4678,6 @@
     "contactInfo": "marketing@plainconcepts.com",
     "communityUrl": "https://dotnetconfspain.com/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/glenncon/",
       "twitter": "https://x.com/dotNetConfSpain/status/1805173122225639729"
     },
     "thumbnailUrl": "images/dotnet-conf-spain.webp",
@@ -6952,7 +6937,6 @@
     "urls": {
       "youtube": "https://www.youtube.com/c/GlobalAISpain/",
       "twitter": "https://x.com/mariasotocast",
-      "linkedin": "https://www.linkedin.com/in/mariasotocastro",
       "github": "https://github.com/alejandrolmeida"
     },
     "thumbnailUrl": "images/global-ai-bootcamp-madrid.webp",
@@ -6991,7 +6975,6 @@
     "communityUrl": "https://www.coderetreat.org/",
     "urls": {
       "twitter": "https://twitter.com/racingDeveloper/status/665529557961830400",
-      "linkedin": "https://www.linkedin.com/in/colindean/",
       "mastodon": "https://hachyderm.io/@coderetreat",
       "github": "https://github.com/coderetreat"
     },
@@ -7831,7 +7814,6 @@
     "communityUrl": "https://hackbarna.com",
     "urls": {
       "youtube": "https://www.youtube.com/@rivela_",
-      "linkedin": "https://www.linkedin.com/in/igor-sakhankov/",
       "eventsUrl": "https://www.meetup.com/es-ES/ai-engineers-barcelona/"
     },
     "thumbnailUrl": "images/hackbarna.webp",
@@ -9273,7 +9255,6 @@
     "communityUrl": "https://www.jonthebeach.com/",
     "urls": {
       "youtube": "https://www.youtube.com/c/Jonthebeach",
-      "linkedin": "https://www.linkedin.com/company/j-on-the-beach/posts/?feedView=all",
       "twitter": "https://x.com/jotbconf"
     },
     "thumbnailUrl": "images/j-on-the-breach.webp",
@@ -9444,7 +9425,6 @@
     "communityUrl": "https://jsdaycanarias.com/",
     "urls": {
       "twitter": "https://twitter.com/canariasjs",
-      "linkedin": "https://linkedin.com/in/canariasjs",
       "youtube": "https://youtube.com/c/canariasjs",
       "instagram": "https://www.instagram.com/canariasjs"
     },
@@ -9538,7 +9518,6 @@
     "urls": {
       "github": "https://github.com/LaJaqueria",
       "instagram": "https://instagram.com/lajaqueria",
-      "linkedin": "https://www.linkedin.com/in/lajaqueria",
       "twitter": "https://www.twitter.com/LaJaqueria",
       "youtube": "https://youtube.com/channel/UCYKcbF-qtcpfLj4WpUNOH2w"
     },
@@ -10769,8 +10748,7 @@
     "urls": {
       "discord": "https://discord.gg/midudev",
       "twitter": "https://x.com/midudev",
-      "instagram": "https://www.instagram.com/midu.dev",
-      "linkedin": "https://www.linkedin.com/in/midudev"
+      "instagram": "https://www.instagram.com/midu.dev"
     },
     "thumbnailUrl": "images/miduconf.webp",
     "latLon": {
@@ -10880,7 +10858,6 @@
     "contactInfo": "",
     "communityUrl": "https://morcillaconf.es/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/conchi-lillo-delgado-72356212",
       "twitter": "https://x.com/GrimerLoner",
       "instagram": "https://www.instagram.com/grimerloner",
       "eventsUrl": "https://www.meetup.com/es-ES/gdg-burgos/"
@@ -11359,7 +11336,6 @@
     "contactInfo": "contacto@navajanegra.com",
     "communityUrl": "https://www.navajanegra.com/2024/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/ainoa-guill%C3%A9n-gonzalez-92a787128/",
       "twitter": "https://x.com/alexfrancow",
       "youtube": "https://youtube.com/c/NavajaNegra",
       "instagram": "https://www.instagram.com/navajanegra_ab",
@@ -11411,7 +11387,6 @@
     "contactInfo": "",
     "communityUrl": "https://netcoreconf.com/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/adriandiazcervera/",
       "twitter": "https://x.com/AdrianDiaz81",
       "github": "https://github.com/AdrianDiaz81"
     },
@@ -11448,7 +11423,6 @@
     "communityUrl": "https://www.noconname.org/",
     "urls": {
       "twitter": "https://x.com/noconname",
-      "linkedin": "https://www.linkedin.com/in/marco-cofano/%20-%20https://www.linkedin.com/in/alina-hirschmann-65211714/",
       "web": "https://www.noconname.org/",
       "telegram": "https://t.me/noconname"
     },
@@ -11749,9 +11723,7 @@
     ],
     "contactInfo": "osl@ugr.es",
     "communityUrl": "https://osl.ugr.es/",
-    "urls": {
-      "linkedin": "https://www.linkedin.com/in/bryanmp/"
-    },
+    "urls": {},
     "thumbnailUrl": "images/oficina-de-software-libre-granada.webp",
     "latLon": {
       "lat": 37.1831938,
@@ -12103,7 +12075,6 @@
     "communityUrl": "https://pamplonaswcraft.com/",
     "urls": {
       "twitter": "https://x.com/fran_mosteiro",
-      "linkedin": "http://es.linkedin.com/in/mariaberenguer",
       "bluesky": "https://bsky.app/profile/pamplonaswcraft.bsky.social"
     },
     "thumbnailUrl": "images/pamplona-iruna-software-crafters.webp",
@@ -12566,8 +12537,7 @@
     "urls": {
       "telegram": "https://t.me/pycampes",
       "twitter": "https://twitter.com/PyCampES",
-      "github": "https://github.com/PyCampES",
-      "linkedin": "https://www.linkedin.com/in/pycampes/"
+      "github": "https://github.com/PyCampES"
     },
     "thumbnailUrl": "images/pycamp-espana.webp",
     "latLon": {
@@ -13352,7 +13322,6 @@
     "communityUrl": "https://salmorejo.tech/2024/",
     "urls": {
       "twitter": "https://twitter.com/jesusescribanos",
-      "linkedin": "https://www.linkedin.com/in/jes%C3%BAs-escribano-serena-4223b2211",
       "github": "https://github.com/jes106",
       "instagram": "https://www.instagram.com/aulasoftwarelibre/?hl=es",
       "telegram": "https://t.me/AulaSoftwareLibreUCO",
@@ -13447,7 +13416,6 @@
       "youtube": "https://www.youtube.com/channel/UC4_SN0le5WFMu_LFaIufLbA",
       "twitter": "https://twitter.com/_SevillaR",
       "github": "https://github.com/SevillaR",
-      "linkedin": "https://linkedin.com/in/gruposevillar",
       "telegram": "https://t.me/+HE3IBL13swTfZwYI",
       "eventsUrl": "https://www.meetup.com/es-ES/Sevilla-R-users/"
     },
@@ -13653,7 +13621,6 @@
     "communityUrl": "https://softwarecrafters.barcelona/",
     "urls": {
       "twitter": "https://twitter.com/alchemist_devel",
-      "linkedin": "https://www.linkedin.com/in/sandra-d-367b1785/",
       "github": "https://github.com/bowserchris",
       "youtube": "https://www.youtube.com/channel/UCksw6qsw6vk7cp8sVwIpNrQ",
       "eventsUrl": "https://www.meetup.com/software-crafters-barcelona/events/313142147/"
@@ -13879,7 +13846,6 @@
     "contactInfo": "",
     "communityUrl": "https://startupole.eu/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/emiliocorchadogicap/",
       "twitter": "https://x.com/Startup_OLE",
       "instagram": "https://instagram.com/startupoleaccelerator",
       "youtube": "https://youtube.com/c/StartupOLE"
@@ -14471,7 +14437,6 @@
     "urls": {
       "twitter": "https://x.com/search?q=%23trgx&src=typed_query&f=live",
       "youtube": "https://www.youtube.com/@CodelyTV",
-      "linkedin": "https://www.linkedin.com/in/juantomasgarcia/",
       "instagram": "https://www.instagram.com/raul_muro/"
     },
     "thumbnailUrl": "images/trgcon.webp",
@@ -14703,7 +14668,6 @@
     "contactInfo": "vicon@galicia.com",
     "communityUrl": "https://www.vicon.gal/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/carolina-gomez-uriarte/",
       "twitter": "https://twitter.com/vicongal",
       "instagram": "https://instagram.com/vicon.gal"
     },
@@ -15298,7 +15262,6 @@
     "communityUrl": "https://wtmgdgmadrid.github.io/wtm-madrid-landing/",
     "urls": {
       "twitter": "https://twitter.com/_mtnieto",
-      "linkedin": "https://www.linkedin.com/in/mariateresanieto/",
       "bluesky": "https://bsky.app/profile/mtnieto.es",
       "instagram": "https://www.instagram.com/wtmmadrid/"
     },
@@ -16374,7 +16337,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/wordpress-malaga/",
     "urls": {
-      "twitter": "http://twitter.com/https://twitter.com/wpmalaga/",
+      "twitter": "https://twitter.com/wpmalaga/",
       "eventsUrl": "https://www.meetup.com/es-ES/wordpress-malaga/"
     },
     "thumbnailUrl": "images/wordpress-malaga.webp",
@@ -17282,7 +17245,6 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/wunderdog-malaga-meetup/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/company/sevendos/posts/?feedView=al",
       "eventsUrl": "https://www.meetup.com/wunderdog-malaga-meetup/"
     },
     "thumbnailUrl": "images/wunderdog-malaga-meetup.webp",
@@ -17435,9 +17397,8 @@
     "contactInfo": "",
     "communityUrl": "https://www.yeswetech.org/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/laualm/",
-      "twitter": "https://www.google.com/url?q=https%3A%2F%2Fwww.twitter.com%2Fyeswetech_org&sa=D&sntz=1&usg=AOvVaw1ygGAZ9JQjIr1QqbJjJiyn",
-      "instagram": "https://www.google.com/url?q=https%3A%2F%2Fwww.instagram.com%2Fyeswetech_org%2F&sa=D&sntz=1&usg=AOvVaw2pWAunS_SCYJ9kqZ0RgrQM"
+      "twitter": "https://twitter.com/yeswetech_org",
+      "instagram": "https://www.instagram.com/yeswetech_org/"
     },
     "thumbnailUrl": "images/yes-we-tech.webp",
     "latLon": {
@@ -17544,8 +17505,7 @@
     "contactInfo": "miduga@gmail.com",
     "communityUrl": "https://www.jsconf.es/",
     "urls": {
-      "twitter": "https://x.com/erickwendel_/",
-      "linkedin": "https://www.linkedin.com/in/anna-via/?originalSubdomain=es"
+      "twitter": "https://x.com/erickwendel_/"
     },
     "thumbnailUrl": "images/jsconf.webp",
     "latLon": {
@@ -17669,7 +17629,6 @@
     "communityUrl": "https://www.lareiraconf.es/",
     "urls": {
       "instagram": "https://www.instagram.com/freak_gzm/",
-      "linkedin": "https://www.linkedin.com/in/ignacioespositobusto",
       "github": "https://github.com/Aquelarre-Dixital",
       "twitter": "https://x.com/lareiraconf",
       "telegram": "https://t.me/Qrow01"
@@ -18500,7 +18459,6 @@
     "contactInfo": "",
     "communityUrl": "https://canallacon.com/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/andresnaranjoxxl",
       "twitter": "https://x.com/TheXXLMAN?t=3Cht1xoLqLNLGSC5PLyYvQ&s=08"
     },
     "thumbnailUrl": "images/canallacon.webp",
@@ -18957,7 +18915,6 @@
     "communityUrl": "https://www.thethingsnetwork.org/community/sevilla/",
     "urls": {
       "twitter": "https://x.com/ttn_sevilla",
-      "linkedin": "https://www.linkedin.com/in/santiagopm/",
       "web": "https://www.thethingsnetwork.org/community/sevilla/",
       "eventsUrl": "https://www.meetup.com/"
     },
@@ -19119,7 +19076,6 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/ia-generativa-sevilla/",
     "urls": {
-      "linkedin": "https://www.linkedin.com/in/adperezmorales/",
       "youtube": "https://www.youtube.com/@IAGenerativaSevilla",
       "eventsUrl": "https://www.meetup.com/ia-generativa-sevilla/"
     },
@@ -19149,9 +19105,7 @@
     ],
     "contactInfo": "",
     "communityUrl": "https://saturdays.ai/cities/",
-    "urls": {
-      "linkedin": "https://es.linkedin.com/in/mmarcosanchez"
-    },
+    "urls": {},
     "thumbnailUrl": "images/saturdaysai.webp",
     "latLon": {
       "lat": null,
@@ -19226,7 +19180,6 @@
     "urls": {
       "telegram": "https://t.me/hackbcn",
       "github": "https://github.com/ernesto-xload",
-      "linkedin": "https://www.linkedin.com/in/josepalbors/",
       "twitter": "https://x.com/hackbcn",
       "web": "https://hackbcn.org/"
     },

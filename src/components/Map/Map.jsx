@@ -25,7 +25,7 @@ import './Map.css'
 // React Imports
 import { useEffect, useState, useRef } from 'react'
 
-function Map () {
+function Map ({ showListView = null }) {
   const [activeView, setActiveView] = useState(null)
   const [provincesFeatures, setProvincesFeatures] = useState([])
   const [provincesCenter, setProvincesCenter] = useState()
@@ -45,6 +45,10 @@ function Map () {
   const communities = useMemo(() => {
     return rawCommunities.filter(c => c.displayOnMap);
   }, [rawCommunities]);
+  const hiddenFromMapCount = useMemo(
+    () => rawCommunities.filter((community) => !community.displayOnMap).length,
+    [rawCommunities]
+  );
 
 
 
@@ -473,7 +477,25 @@ function Map () {
         zoom="4"
         onarcgisViewReadyChange={activeViewChange}
       ></arcgis-map>
-      <div className="mb-2 has-text-centered	">Encontradas: {numVisible} comunidades en este área<br /><small>⚠️ <i>Para ver comunidades online ir a "Ver lista"</i></small></div>
+      <div className="map-results-note">
+        <strong>{numVisible}</strong> comunidades visibles en esta zona.
+        {hiddenFromMapCount > 0 && (
+          <>
+            {" "}
+            <span className="map-results-note-secondary">
+              Además, <strong>{hiddenFromMapCount}</strong> {hiddenFromMapCount === 1 ? "comunidad encaja" : "comunidades encajan"} con los filtros actuales pero no {hiddenFromMapCount === 1 ? "se muestra" : "se muestran"} en el mapa porque no {hiddenFromMapCount === 1 ? "tiene" : "tienen"} una ubicación fija.
+            </span>
+            {" "}
+            <button
+              type="button"
+              className="map-results-link"
+              onClick={() => showListView?.()}
+            >
+              Verlas en la lista
+            </button>
+          </>
+        )}
+      </div>
       <div className="communitieslist">
         {/* {communities.map((community) => {
 

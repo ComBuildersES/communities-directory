@@ -222,7 +222,7 @@ function App () {
           </section>
         )}
         {!showContributionView && view === "list" && <CommunitiesList />}
-        {!showContributionView && view === "map" && <Map />}
+        {!showContributionView && view === "map" && <Map showListView={() => setView("list")} />}
       </div>
       {pendingNavigation && (
         <div className="navigation-guard-overlay">

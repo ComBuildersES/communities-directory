@@ -11,11 +11,11 @@
 .contribution-hero,
 .contribution-card {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(250, 250, 248, 0.98)),
-    radial-gradient(circle at top right, rgba(255, 212, 163, 0.3), transparent 35%);
-  border: 1px solid #e7e0d4;
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(246, 249, 253, 0.98)),
+    radial-gradient(circle at top right, rgba(50, 115, 220, 0.12), transparent 35%);
+  border: 1px solid #dde6f2;
   border-radius: 22px;
-  box-shadow: 0 18px 40px rgba(70, 49, 18, 0.08);
+  box-shadow: 0 18px 40px rgba(35, 61, 99, 0.08);
 }
 
 .contribution-hero {
@@ -31,19 +31,19 @@
   letter-spacing: 0.1em;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #8e5f1f;
+  color: #3b6fb6;
 }
 
 .contribution-hero h2,
 .contribution-card h3 {
   margin: 0;
-  color: #2b1d0c;
+  color: #21324a;
 }
 
 .contribution-hero p,
 .contribution-card p {
   margin: 0.22rem 0 0;
-  color: #6a5a48;
+  color: #5b6b7f;
 }
 
 .contribution-hero-actions,
@@ -83,7 +83,7 @@
 
 .contribution-field-help-trigger {
   cursor: pointer;
-  color: #8e5f1f;
+  color: #3b6fb6;
   line-height: 1;
   border: none;
   background: transparent;
@@ -107,17 +107,17 @@
   width: min(360px, 75vw);
   padding: 0.85rem 0.95rem;
   border-radius: 14px;
-  background: #fffdf8;
-  border: 1px solid #e7d7bb;
-  box-shadow: 0 18px 40px rgba(70, 49, 18, 0.14);
-  color: #5d4b35;
+  background: #f8fbff;
+  border: 1px solid #d7e3f3;
+  box-shadow: 0 18px 40px rgba(35, 61, 99, 0.14);
+  color: #56677d;
   z-index: 60;
 }
 
 .contribution-field-help-popover strong {
   display: block;
   margin-bottom: 0.35rem;
-  color: #2b1d0c;
+  color: #21324a;
 }
 
 .contribution-field-help-popover p {
@@ -138,7 +138,7 @@
 }
 
 .contribution-field-help-popover li::marker {
-  color: #8e5f1f;
+  color: #3b6fb6;
 }
 
 .contribution-field-help-popover li + li {
@@ -148,7 +148,7 @@
 .contribution-help-modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(32, 22, 10, 0.35);
+  background: rgba(24, 42, 68, 0.35);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,9 +161,9 @@
   max-height: 85vh;
   overflow: auto;
   border-radius: 22px;
-  background: #fffdf8;
-  border: 1px solid #e7d7bb;
-  box-shadow: 0 24px 60px rgba(70, 49, 18, 0.18);
+  background: #f8fbff;
+  border: 1px solid #d7e3f3;
+  box-shadow: 0 24px 60px rgba(35, 61, 99, 0.18);
 }
 
 .contribution-help-modal-header {
@@ -171,24 +171,24 @@
   justify-content: space-between;
   gap: 1rem;
   padding: 1.1rem 1.2rem 0.8rem;
-  border-bottom: 1px solid #f0e2c9;
+  border-bottom: 1px solid #e2eaf5;
 }
 
 .contribution-help-modal-header h4 {
   margin: 0;
-  color: #2b1d0c;
+  color: #21324a;
   font-size: 1.15rem;
 }
 
 .contribution-help-modal-header p {
   margin: 0.35rem 0 0;
-  color: #6a5a48;
+  color: #5b6b7f;
 }
 
 .contribution-help-modal-close {
   border: none;
   background: transparent;
-  color: #8e5f1f;
+  color: #3b6fb6;
   cursor: pointer;
   padding: 0;
   font-size: 1rem;
@@ -205,13 +205,13 @@
 }
 
 .contribution-help-modal-list-item {
-  color: #5d4b35;
+  color: #56677d;
   line-height: 1.5;
   font-size: 0.95rem;
 }
 
 .contribution-help-modal-list-item::marker {
-  color: #8e5f1f;
+  color: #3b6fb6;
 }
 
 .contribution-help-modal-list-item + .contribution-help-modal-list-item {
@@ -219,11 +219,11 @@
 }
 
 .contribution-help-modal-list-item strong {
-  color: #2b1d0c;
+  color: #21324a;
 }
 
 .contribution-help-modal-examples a {
-  color: #8e5f1f;
+  color: #3273dc;
   text-decoration: underline;
 }
 
@@ -251,13 +251,13 @@
   margin-top: 0.45rem;
   padding: 0.7rem 0.8rem;
   border-radius: 14px;
-  background: #fff6db;
-  border: 1px solid #ead28e;
+  background: #edf4ff;
+  border: 1px solid #c7d9f3;
 }
 
 .contribution-inline-warning p {
   margin: 0;
-  color: #6b4e0a;
+  color: #32527a;
   font-size: 0.9rem;
 }
 
@@ -271,13 +271,13 @@
   gap: 0.5rem;
   align-items: center;
   flex-wrap: wrap;
-  color: #7a6851;
+  color: #63758b;
   font-size: 0.9rem;
 }
 
 .contribution-metadata span,
 .contribution-selection-count {
-  background: #f7f0e4;
+  background: #edf3fb;
   border-radius: 999px;
   padding: 0.35rem 0.75rem;
 }
@@ -323,7 +323,7 @@
 }
 
 .contribution-extra-platform-note {
-  color: #75624b;
+  color: #62748a;
   line-height: 1.5;
 }
 
@@ -374,7 +374,7 @@
 .contribution-field-counter {
   margin: 0.35rem 0 0;
   font-size: 0.85rem;
-  color: #75624b;
+  color: #62748a;
 }
 
 .contribution-field-counter {
@@ -398,7 +398,7 @@
 .contribution-taxonomy-group h4 {
   margin: 0 0 0.55rem;
   font-size: 0.88rem;
-  color: #8e5f1f;
+  color: #3b6fb6;
 }
 
 .contribution-taxonomy-group-toggle {
@@ -409,10 +409,10 @@
   gap: 0.8rem;
   margin-bottom: 0.55rem;
   padding: 0.75rem 0.9rem;
-  border: 1px solid #eadcc5;
+  border: 1px solid #d9e4f2;
   border-radius: 16px;
-  background: #fffaf2;
-  color: #6b4e0a;
+  background: #f5f9ff;
+  color: #32527a;
   cursor: pointer;
   text-align: left;
   transition: background 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
@@ -420,9 +420,9 @@
 
 .contribution-taxonomy-group-toggle:hover,
 .contribution-taxonomy-group-toggle:focus-visible {
-  background: #fff4df;
-  border-color: #d8b575;
-  box-shadow: 0 10px 18px rgba(108, 76, 24, 0.1);
+  background: #edf4ff;
+  border-color: #a9c4eb;
+  box-shadow: 0 10px 18px rgba(50, 115, 220, 0.1);
   outline: none;
 }
 
@@ -435,7 +435,7 @@
   display: inline-flex;
   align-items: center;
   gap: 0.55rem;
-  color: #8e5f1f;
+  color: #3b6fb6;
   font-size: 0.82rem;
   font-weight: 700;
 }
@@ -447,8 +447,8 @@
   gap: 0.75rem;
   padding: 0.8rem 0.9rem;
   border-radius: 14px;
-  background: #fff8ee;
-  border: 1px dashed #e7d7bb;
+  background: #f5f9ff;
+  border: 1px dashed #c9d9ef;
 }
 
 .contribution-taxonomy-suggestion p {
@@ -468,9 +468,9 @@
   gap: 0.45rem;
   padding: 0.55rem 0.8rem;
   border-radius: 999px;
-  background: #fff8ee;
-  border: 1px solid #e9d8b4;
-  color: #5f4a2f;
+  background: #f5f9ff;
+  border: 1px solid #d5e2f4;
+  color: #41556f;
   cursor: pointer;
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
   font-size: 0.88rem;
@@ -479,9 +479,9 @@
 
 .contribution-check-item:hover,
 .contribution-check-item:focus-visible {
-  background: #fff3dd;
-  border-color: #d8b575;
-  box-shadow: 0 10px 18px rgba(108, 76, 24, 0.12);
+  background: #edf4ff;
+  border-color: #a9c4eb;
+  box-shadow: 0 10px 18px rgba(50, 115, 220, 0.12);
   transform: translateY(-1px);
   outline: none;
 }
@@ -495,8 +495,8 @@
   align-items: center;
   border-radius: 999px;
   padding: 0.16rem 0.46rem;
-  background: rgba(142, 95, 31, 0.1);
-  color: #8e5f1f;
+  background: rgba(50, 115, 220, 0.12);
+  color: #3273dc;
   font-size: 0.72rem;
   font-weight: 700;
 }
@@ -512,8 +512,8 @@
   border: none;
   border-radius: 999px;
   padding: 0.34rem 0.68rem;
-  background: #2b1d0c;
-  color: #fff8ef;
+  background: #244a86;
+  color: #f7fbff;
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
@@ -523,8 +523,8 @@
 
 .contribution-pill:hover,
 .contribution-pill:focus-visible {
-  background: #3a2813;
-  box-shadow: 0 10px 18px rgba(43, 29, 12, 0.18);
+  background: #1f3f72;
+  box-shadow: 0 10px 18px rgba(36, 74, 134, 0.18);
   outline: none;
 }
 
@@ -541,9 +541,9 @@
   width: min(280px, 70vw);
   padding: 0.7rem 0.8rem;
   border-radius: 14px;
-  background: #2b1d0c;
-  color: #fff8ef;
-  box-shadow: 0 16px 36px rgba(27, 17, 5, 0.22);
+  background: #244a86;
+  color: #f7fbff;
+  box-shadow: 0 16px 36px rgba(28, 56, 102, 0.22);
   z-index: 20;
   display: flex;
   flex-direction: column;
@@ -559,7 +559,7 @@
   transform: translateX(-50%);
   border-width: 8px 8px 0;
   border-style: solid;
-  border-color: #2b1d0c transparent transparent;
+  border-color: #244a86 transparent transparent;
 }
 
 .contribution-taxonomy-tooltip-bubble strong {
@@ -568,14 +568,14 @@
 }
 
 .contribution-taxonomy-tooltip-bubble span {
-  color: rgba(255, 248, 239, 0.9);
+  color: rgba(247, 251, 255, 0.92);
   font-size: 0.8rem;
   line-height: 1.45;
 }
 
 .contribution-json-preview {
-  background: #1f1a16;
-  color: #f8edd8;
+  background: #1f2f45;
+  color: #edf4ff;
   border-radius: 16px;
   padding: 0.85rem;
   overflow-x: auto;
@@ -613,6 +613,32 @@
 .contribution-card .label {
   margin-bottom: 0.3rem;
   font-size: 0.84rem;
+}
+
+.contribution-shell .button.is-light {
+  background: #f1f6fd;
+  border-color: #d5e2f4;
+  color: #32527a;
+}
+
+.contribution-shell .button.is-light:hover,
+.contribution-shell .button.is-light:focus-visible {
+  background: #e7f0fb;
+  border-color: #a9c4eb;
+  color: #244a86;
+}
+
+.contribution-shell .button.is-primary {
+  background: #3273dc;
+  border-color: #3273dc;
+  color: #fff;
+}
+
+.contribution-shell .button.is-primary:hover,
+.contribution-shell .button.is-primary:focus-visible {
+  background: #245cb5;
+  border-color: #245cb5;
+  color: #fff;
 }
 
 .contribution-card .input,

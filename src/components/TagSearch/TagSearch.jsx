@@ -153,7 +153,7 @@ export function TagSearch() {
             label: community.name,
             description: "Comunidad",
             meta: buildCommunityMeta(community),
-            communityIdentifier: community.id || slugifyCommunityName(community.name),
+            communityIdentifier: community.id ?? slugifyCommunityName(community.name),
           })),
       ];
 
@@ -281,7 +281,7 @@ export function TagSearch() {
                   onMouseDown={(e) => {
                     e.preventDefault();
 
-                    if (suggestion.communityIdentifier) {
+                    if (suggestion.communityIdentifier !== null && suggestion.communityIdentifier !== undefined) {
                       openCommunityDetails(suggestion, e.metaKey || e.ctrlKey);
                       return;
                     }

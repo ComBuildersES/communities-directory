@@ -101,8 +101,8 @@ html {
   flex: 1;
   /* column-gap: 20px; */
   background:
-    radial-gradient(circle at top left, rgba(255, 235, 204, 0.65), transparent 36%),
-    linear-gradient(180deg, #fffdf8 0%, #f7f4ed 100%);
+    radial-gradient(circle at top left, rgba(50, 115, 220, 0.12), transparent 34%),
+    linear-gradient(180deg, #fbfcfe 0%, #eef2f7 100%);
 }
 
 .contribution-loading {
