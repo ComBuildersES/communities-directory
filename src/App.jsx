@@ -5,6 +5,7 @@ import { CommunityContribution } from "./components/CommunityContribution/Commun
 import { CommunityModal } from "./components/CommunityModal/CommunityModal.jsx";
 import { Footer } from "./components/Footer.jsx";
 import { Heading } from "./components/Heading.jsx";
+import { InstallPromptBar } from "./components/InstallPromptBar.jsx";
 import Map from "./components/Map/Map.jsx";
 import { TagSearch } from "./components/TagSearch/TagSearch.jsx";
 import { ResultsBar } from "./components/ResultsBar.jsx";
@@ -22,6 +23,7 @@ import {
   useFilters,
   useIsLoading,
   useTags,
+  useCBMembersMap,
 } from "./stores/community.store.js";
 
 function App () {
@@ -43,6 +45,7 @@ function App () {
   const allAudience = useAudience();
   const filters = useFilters();
   const isLoading = useIsLoading();
+  const cbMembersMap = useCBMembersMap();
   const routeRef = useRef(route);
   const contributionStateRef = useRef(contributionState);
 
@@ -189,6 +192,7 @@ function App () {
 
   return (
     <>
+      {!showContributionView && <InstallPromptBar />}
       <Heading
         view={view}
         toggleView={toggleView}
@@ -259,6 +263,7 @@ function App () {
           community={selectedCommunity}
           tagsMap={tagsMap}
           audienceMap={audienceMap}
+          cbHandles={cbMembersMap.get(selectedCommunity.id) || []}
           onClose={closeCommunityModal}
         />
       )}

@@ -6,6 +6,77 @@ html {
   height: 100vh;
   /* overflow: hidden; */
 }
+
+body {
+  margin: 0;
+  background: #eef2f7;
+}
+
+.install-prompt-bar {
+  z-index: 20020;
+  padding: 0.7rem 1rem;
+  background: linear-gradient(135deg, #1f5fbf 0%, #3273dc 45%, #4d92ff 100%);
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(23, 50, 92, 0.2);
+}
+
+.install-prompt-bar__content {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.install-prompt-bar__eyebrow {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.install-prompt-bar__text {
+  margin: 0.2rem 0 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+.install-prompt-bar__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.install-prompt-bar__hint {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.install-prompt-bar__dismiss {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  cursor: pointer;
+}
+
+.install-prompt-bar__dismiss:hover,
+.install-prompt-bar__dismiss:focus-visible {
+  background: rgba(255, 255, 255, 0.18);
+}
+
 #title {
   position: sticky;
   top: 0;
@@ -196,6 +267,17 @@ html {
 }
 
 @media (max-width: 768px) {
+  .install-prompt-bar {
+    padding: 0.75rem 0.9rem;
+  }
+  .install-prompt-bar__content {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .install-prompt-bar__actions {
+    width: 100%;
+    justify-content: space-between;
+  }
   .filter-group-divider {
     display: none;
   }
