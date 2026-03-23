@@ -1,0 +1,3741 @@
+{
+  "n/a": {
+    "fetchedAt": "2026-03-23T18:53:33.975Z",
+    "provinceId": null,
+    "nominatim": {
+      "place_id": 99327054,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 946527393,
+      "lat": "51.5668740",
+      "lon": "4.9284972",
+      "category": "military",
+      "type": "airfield",
+      "place_rank": 30,
+      "importance": 0.38307540422660474,
+      "addresstype": "military",
+      "name": "Vliegbasis Gilze-Rijen",
+      "display_name": "Vliegbasis Gilze-Rijen, Lijndonk, Verhoven, Gilze, Gilze en Rijen, Brabante Septentrional, Países Bajos, 5126 MC, Países Bajos",
+      "address": {
+        "military": "Vliegbasis Gilze-Rijen",
+        "road": "Lijndonk",
+        "hamlet": "Verhoven",
+        "village": "Gilze",
+        "municipality": "Gilze en Rijen",
+        "state": "Brabante Septentrional",
+        "ISO3166-2-lvl4": "NL-NB",
+        "country": "Países Bajos",
+        "postcode": "5126 MC",
+        "country_code": "nl"
+      },
+      "boundingbox": [
+        "51.5540656",
+        "51.5799348",
+        "4.8965496",
+        "4.9514819"
+      ]
+    }
+  },
+  "Sevilla": {
+    "fetchedAt": "2026-03-23T18:53:35.857Z",
+    "provinceId": "sevilla",
+    "nominatim": {
+      "place_id": 423706277,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 342563,
+      "lat": "37.3886303",
+      "lon": "-5.9953403",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.7297329708417591,
+      "addresstype": "city",
+      "name": "Sevilla",
+      "display_name": "Sevilla, Andalucía, España",
+      "address": {
+        "city": "Sevilla",
+        "province": "Sevilla",
+        "ISO3166-2-lvl6": "ES-SE",
+        "state": "Andalucía",
+        "ISO3166-2-lvl4": "ES-AN",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "37.3002036",
+        "37.4529579",
+        "-6.0329183",
+        "-5.8191571"
+      ]
+    }
+  },
+  "Coruña (Santiago de Compostela)": {
+    "fetchedAt": "2026-03-23T18:53:37.186Z",
+    "provinceId": null,
+    "nominatim": {
+      "place_id": 265782665,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 346204,
+      "lat": "42.8804219",
+      "lon": "-8.5458608",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6559569243417259,
+      "addresstype": "municipality",
+      "name": "Santiago de Compostela",
+      "display_name": "Santiago de Compostela, Santiago, La Coruña, Galicia, España",
+      "address": {
+        "municipality": "Santiago de Compostela",
+        "county": "Santiago",
+        "state_district": "La Coruña",
+        "ISO3166-2-lvl6": "ES-C",
+        "state": "Galicia",
+        "ISO3166-2-lvl4": "ES-GA",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "42.8241442",
+        "42.9896310",
+        "-8.6320116",
+        "-8.3900878"
+      ]
+    }
+  },
+  "Vigo, Galicia": {
+    "fetchedAt": "2026-03-23T18:53:38.650Z",
+    "provinceId": "pontevedra",
+    "nominatim": {
+      "place_id": 264360096,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 341381,
+      "lat": "42.2376602",
+      "lon": "-8.7247205",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6338889849730289,
+      "addresstype": "municipality",
+      "name": "Vigo",
+      "display_name": "Vigo, Pontevedra, Galicia, España",
+      "address": {
+        "municipality": "Vigo",
+        "county": "Vigo",
+        "province": "Pontevedra",
+        "ISO3166-2-lvl6": "ES-PO",
+        "state": "Galicia",
+        "ISO3166-2-lvl4": "ES-GA",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "42.1324303",
+        "42.2647043",
+        "-8.9182906",
+        "-8.6270302"
+      ]
+    }
+  },
+  "Barcelona": {
+    "fetchedAt": "2026-03-23T18:53:40.065Z",
+    "provinceId": "barcelona",
+    "nominatim": {
+      "place_id": 76094835,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 347950,
+      "lat": "41.3825802",
+      "lon": "2.1770730",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.8035003209691789,
+      "addresstype": "city",
+      "name": "Barcelona",
+      "display_name": "Barcelona, Barcelonés, Barcelona, Cataluña, España",
+      "address": {
+        "city": "Barcelona",
+        "county": "Barcelonés",
+        "province": "Barcelona",
+        "ISO3166-2-lvl6": "ES-B",
+        "state": "Cataluña",
+        "ISO3166-2-lvl4": "ES-CT",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "41.3170353",
+        "41.4679135",
+        "2.0524977",
+        "2.2283555"
+      ]
+    }
+  },
+  "Zaragoza": {
+    "fetchedAt": "2026-03-23T18:53:41.493Z",
+    "provinceId": "zaragoza",
+    "nominatim": {
+      "place_id": 422698727,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 345740,
+      "lat": "41.6521342",
+      "lon": "-0.8809428",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6926461578884906,
+      "addresstype": "city",
+      "name": "Zaragoza",
+      "display_name": "Zaragoza, Aragón, España",
+      "address": {
+        "city": "Zaragoza",
+        "county": "Zaragoza",
+        "province": "Zaragoza",
+        "ISO3166-2-lvl6": "ES-Z",
+        "state": "Aragón",
+        "ISO3166-2-lvl4": "ES-AR",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "41.4516625",
+        "41.9314873",
+        "-1.1737289",
+        "-0.6803895"
+      ]
+    }
+  },
+  "Vigo": {
+    "fetchedAt": "2026-03-23T18:53:42.842Z",
+    "provinceId": "pontevedra",
+    "nominatim": {
+      "place_id": 265202375,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 341381,
+      "lat": "42.2376602",
+      "lon": "-8.7247205",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6338889849730289,
+      "addresstype": "municipality",
+      "name": "Vigo",
+      "display_name": "Vigo, Pontevedra, Galicia, España",
+      "address": {
+        "municipality": "Vigo",
+        "county": "Vigo",
+        "province": "Pontevedra",
+        "ISO3166-2-lvl6": "ES-PO",
+        "state": "Galicia",
+        "ISO3166-2-lvl4": "ES-GA",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "42.1324303",
+        "42.2647043",
+        "-8.9182906",
+        "-8.6270302"
+      ]
+    }
+  },
+  "Madrid, Valencia, Barcelona, Bilbao": {
+    "fetchedAt": "2026-03-23T18:53:44.932Z",
+    "provinceId": null,
+    "nominatim": null
+  },
+  "Granada": {
+    "fetchedAt": "2026-03-23T18:58:29.484Z",
+    "provinceId": "granada",
+    "nominatim": {
+      "place_id": 272763773,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 344685,
+      "lat": "37.1734995",
+      "lon": "-3.5995337",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6774297385595041,
+      "addresstype": "city",
+      "name": "Granada",
+      "display_name": "Granada, Comarca de la Vega de Granada, Granada, Andalucía, España",
+      "address": {
+        "city": "Granada",
+        "county": "Comarca de la Vega de Granada",
+        "province": "Granada",
+        "ISO3166-2-lvl6": "ES-GR",
+        "state": "Andalucía",
+        "ISO3166-2-lvl4": "ES-AN",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "37.1367032",
+        "37.2250172",
+        "-3.7003616",
+        "-3.4963241"
+      ]
+    }
+  },
+  "Almería": {
+    "fetchedAt": "2026-03-23T18:58:30.922Z",
+    "provinceId": "almeria",
+    "nominatim": {
+      "place_id": 272396314,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 347796,
+      "lat": "36.8414197",
+      "lon": "-2.4628135",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6295518492517769,
+      "addresstype": "city",
+      "name": "Almería",
+      "display_name": "Almería, Andalucía, España",
+      "address": {
+        "city": "Almería",
+        "province": "Almería",
+        "ISO3166-2-lvl6": "ES-AL",
+        "state": "Andalucía",
+        "ISO3166-2-lvl4": "ES-AN",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "35.9376398",
+        "37.0000125",
+        "-3.0372135",
+        "-2.2022024"
+      ]
+    }
+  },
+  "Córdoba": {
+    "fetchedAt": "2026-03-23T18:58:32.387Z",
+    "provinceId": "cordoba",
+    "nominatim": {
+      "place_id": 272888156,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 343207,
+      "lat": "37.8845813",
+      "lon": "-4.7760138",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6509038959948756,
+      "addresstype": "city",
+      "name": "Córdoba",
+      "display_name": "Córdoba, Andalucía, España",
+      "address": {
+        "city": "Córdoba",
+        "province": "Córdoba",
+        "ISO3166-2-lvl6": "ES-CO",
+        "state": "Andalucía",
+        "ISO3166-2-lvl4": "ES-AN",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "37.6658228",
+        "38.0315171",
+        "-4.9985994",
+        "-4.3514283"
+      ]
+    }
+  },
+  "Madrid, Valencia, Barcelona, Medellín, Lima, México D.F": {
+    "fetchedAt": "2026-03-23T18:58:35.564Z",
+    "provinceId": null,
+    "nominatim": null
+  },
+  "Madrid": {
+    "fetchedAt": "2026-03-23T18:58:37.042Z",
+    "provinceId": "madrid",
+    "nominatim": {
+      "place_id": 425949479,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 5326784,
+      "lat": "40.4167820",
+      "lon": "-3.7035070",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.8186903991321961,
+      "addresstype": "city",
+      "name": "Madrid",
+      "display_name": "Madrid, Comunidad de Madrid, España",
+      "address": {
+        "city": "Madrid",
+        "state": "Comunidad de Madrid",
+        "ISO3166-2-lvl4": "ES-MD",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "40.3119774",
+        "40.6437293",
+        "-3.8889539",
+        "-3.5183264"
+      ]
+    }
+  },
+  "Logrono": {
+    "fetchedAt": "2026-03-23T18:58:38.472Z",
+    "provinceId": "la-rioja",
+    "nominatim": {
+      "place_id": 267609441,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 340516,
+      "lat": "42.4661196",
+      "lon": "-2.4396676",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6093247710973847,
+      "addresstype": "city",
+      "name": "Logroño",
+      "display_name": "Logroño, La Rioja, España",
+      "address": {
+        "city": "Logroño",
+        "state": "La Rioja",
+        "ISO3166-2-lvl4": "ES-RI",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "42.4288461",
+        "42.5199157",
+        "-2.5422727",
+        "-2.3419680"
+      ]
+    }
+  },
+  "Coruña": {
+    "fetchedAt": "2026-03-23T18:58:40.251Z",
+    "provinceId": null,
+    "nominatim": {
+      "place_id": 265383431,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 346810,
+      "lat": "43.3709703",
+      "lon": "-8.3959425",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6470440546938139,
+      "addresstype": "municipality",
+      "name": "La Coruña",
+      "display_name": "La Coruña, Galicia, España",
+      "address": {
+        "municipality": "La Coruña",
+        "county": "La Coruña",
+        "state_district": "La Coruña",
+        "ISO3166-2-lvl6": "ES-C",
+        "state": "Galicia",
+        "ISO3166-2-lvl4": "ES-GA",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "43.3032370",
+        "43.3900162",
+        "-8.4691619",
+        "-8.3743767"
+      ]
+    }
+  },
+  "Asturias": {
+    "fetchedAt": "2026-03-23T18:58:41.635Z",
+    "provinceId": "asturias",
+    "nominatim": {
+      "place_id": 418032640,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 349033,
+      "lat": "43.3133868",
+      "lon": "-5.9419200",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 8,
+      "importance": 0.6747666477186688,
+      "addresstype": "state",
+      "name": "Asturias",
+      "display_name": "Asturias, España",
+      "address": {
+        "state": "Asturias",
+        "ISO3166-2-lvl4": "ES-AS",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "42.8825428",
+        "43.6665324",
+        "-7.1831688",
+        "-4.5105944"
+      ]
+    }
+  },
+  "Albacete": {
+    "fetchedAt": "2026-03-23T18:58:43.075Z",
+    "provinceId": "albacete",
+    "nominatim": {
+      "place_id": 272910498,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 346317,
+      "lat": "38.9950921",
+      "lon": "-1.8559154",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.5963799306738187,
+      "addresstype": "city",
+      "name": "Albacete",
+      "display_name": "Albacete, Castilla-La Mancha, España",
+      "address": {
+        "city": "Albacete",
+        "province": "Albacete",
+        "ISO3166-2-lvl6": "ES-AB",
+        "state": "Castilla-La Mancha",
+        "ISO3166-2-lvl4": "ES-CM",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "38.6721754",
+        "39.1862627",
+        "-2.1803886",
+        "-1.6227933"
+      ]
+    }
+  },
+  "Málaga": {
+    "fetchedAt": "2026-03-23T18:58:44.609Z",
+    "provinceId": "malaga",
+    "nominatim": {
+      "place_id": 432971480,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 340746,
+      "lat": "36.7213028",
+      "lon": "-4.4216366",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6776065694245125,
+      "addresstype": "municipality",
+      "name": "Málaga",
+      "display_name": "Málaga, Málaga-Costa del Sol, Málaga, Andalucía, España",
+      "address": {
+        "municipality": "Málaga",
+        "county": "Málaga-Costa del Sol",
+        "province": "Málaga",
+        "ISO3166-2-lvl6": "ES-MA",
+        "state": "Andalucía",
+        "ISO3166-2-lvl4": "ES-AN",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "36.6356619",
+        "36.8940412",
+        "-4.5878887",
+        "-4.2604897"
+      ]
+    }
+  },
+  "Oviedo, Asturias": {
+    "fetchedAt": "2026-03-23T18:58:46.019Z",
+    "provinceId": "asturias",
+    "nominatim": {
+      "place_id": 269519837,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 346397,
+      "lat": "43.3533452",
+      "lon": "-5.8795096",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.63342010644616,
+      "addresstype": "city",
+      "name": "Oviedo",
+      "display_name": "Oviedo, Asturias, España",
+      "address": {
+        "city": "Oviedo",
+        "province": "Asturias",
+        "ISO3166-2-lvl6": "ES-O",
+        "state": "Asturias",
+        "ISO3166-2-lvl4": "ES-AS",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "43.2791441",
+        "43.4273246",
+        "-6.0169359",
+        "-5.7423940"
+      ]
+    }
+  },
+  "Oviedo/Gijón (Asturias)": {
+    "fetchedAt": "2026-03-23T18:58:47.393Z",
+    "provinceId": "asturias",
+    "nominatim": {
+      "place_id": 268852088,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 260186752,
+      "lat": "43.5175729",
+      "lon": "-5.6867411",
+      "category": "highway",
+      "type": "primary",
+      "place_rank": 26,
+      "importance": 0.053400473792629854,
+      "addresstype": "road",
+      "name": "Avenida de Oviedo",
+      "display_name": "Avenida de Oviedo, Roces Urbano, Gijón, Asturias, 33211, España",
+      "address": {
+        "road": "Avenida de Oviedo",
+        "suburb": "Roces Urbano",
+        "city_district": "Gijón",
+        "city": "Gijón",
+        "province": "Asturias",
+        "ISO3166-2-lvl6": "ES-O",
+        "state": "Asturias",
+        "ISO3166-2-lvl4": "ES-AS",
+        "postcode": "33211",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "43.5156445",
+        "43.5192587",
+        "-5.6872171",
+        "-5.6855312"
+      ]
+    }
+  },
+  "Galicia": {
+    "fetchedAt": "2026-03-23T18:58:48.867Z",
+    "provinceId": null,
+    "nominatim": {
+      "place_id": 267361468,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 349036,
+      "lat": "42.6194600",
+      "lon": "-7.8631120",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 8,
+      "importance": 0.7107915871120353,
+      "addresstype": "state",
+      "name": "Galicia",
+      "display_name": "Galicia, España",
+      "address": {
+        "state": "Galicia",
+        "ISO3166-2-lvl4": "ES-GA",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "41.8073642",
+        "43.7904220",
+        "-9.3015367",
+        "-6.7339533"
+      ]
+    }
+  },
+  "Bilbao": {
+    "fetchedAt": "2026-03-23T18:58:50.229Z",
+    "provinceId": "bizkaia",
+    "nominatim": {
+      "place_id": 270194986,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 339549,
+      "lat": "43.2630018",
+      "lon": "-2.9350039",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6816014772836319,
+      "addresstype": "city",
+      "name": "Bilbao",
+      "display_name": "Bilbao, Vizcaya, País Vasco, España",
+      "address": {
+        "city": "Bilbao",
+        "province": "Vizcaya",
+        "ISO3166-2-lvl6": "ES-BI",
+        "state": "País Vasco",
+        "ISO3166-2-lvl4": "ES-PV",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "43.2137176",
+        "43.2901315",
+        "-2.9859808",
+        "-2.8802639"
+      ]
+    }
+  },
+  "Alicante": {
+    "fetchedAt": "2026-03-23T18:58:51.534Z",
+    "provinceId": "alicante",
+    "nominatim": {
+      "place_id": 270604297,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 342792,
+      "lat": "38.3436365",
+      "lon": "-0.4881708",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6545671055665687,
+      "addresstype": "city",
+      "name": "Alicante",
+      "display_name": "Alicante, L'Alacantí, Alicante, Comunidad Valenciana, España",
+      "address": {
+        "city": "Alicante",
+        "region": "L'Alacantí",
+        "province": "Alicante",
+        "ISO3166-2-lvl6": "ES-A",
+        "state": "Comunidad Valenciana",
+        "ISO3166-2-lvl4": "ES-VC",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "38.1604664",
+        "38.5370661",
+        "-0.6566950",
+        "-0.3750868"
+      ]
+    }
+  },
+  "Ávila": {
+    "fetchedAt": "2026-03-23T18:58:52.962Z",
+    "provinceId": "avila",
+    "nominatim": {
+      "place_id": 270262616,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 348905,
+      "lat": "40.6564780",
+      "lon": "-4.7002172",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.605842874120702,
+      "addresstype": "city",
+      "name": "Ávila",
+      "display_name": "Ávila, Castilla y León, España",
+      "address": {
+        "city": "Ávila",
+        "province": "Ávila",
+        "ISO3166-2-lvl6": "ES-AV",
+        "state": "Castilla y León",
+        "ISO3166-2-lvl4": "ES-CL",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "40.5607574",
+        "40.7536666",
+        "-4.8164528",
+        "-4.4536129"
+      ]
+    }
+  },
+  "Cáceres": {
+    "fetchedAt": "2026-03-23T18:58:54.311Z",
+    "provinceId": "caceres",
+    "nominatim": {
+      "place_id": 273533786,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 1899973,
+      "lat": "39.4745175",
+      "lon": "-6.3716761",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6016638377156303,
+      "addresstype": "city",
+      "name": "Cáceres",
+      "display_name": "Cáceres, Extremadura, España",
+      "address": {
+        "city": "Cáceres",
+        "province": "Cáceres",
+        "ISO3166-2-lvl6": "ES-CC",
+        "state": "Extremadura",
+        "ISO3166-2-lvl4": "ES-EX",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "39.1552618",
+        "39.6488278",
+        "-6.8020698",
+        "-6.0787446"
+      ]
+    }
+  },
+  "Cádiz": {
+    "fetchedAt": "2026-03-23T18:58:55.688Z",
+    "provinceId": "cadiz",
+    "nominatim": {
+      "place_id": 274225896,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 346956,
+      "lat": "36.5297438",
+      "lon": "-6.2928976",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6623123188691791,
+      "addresstype": "city",
+      "name": "Cádiz",
+      "display_name": "Cádiz, Bahía de Cádiz, Cádiz, Andalucía, España",
+      "address": {
+        "city": "Cádiz",
+        "county": "Bahía de Cádiz",
+        "province": "Cádiz",
+        "ISO3166-2-lvl6": "ES-CA",
+        "state": "Andalucía",
+        "ISO3166-2-lvl4": "ES-AN",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "36.4439926",
+        "36.5454594",
+        "-6.3175626",
+        "-6.2250607"
+      ]
+    }
+  },
+  "Tenerife": {
+    "fetchedAt": "2026-03-23T18:58:56.930Z",
+    "provinceId": "santa-cruz-de-tenerife",
+    "nominatim": {
+      "place_id": 274863925,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 2108882,
+      "lat": "28.2935785",
+      "lon": "-16.6214471",
+      "category": "place",
+      "type": "island",
+      "place_rank": 17,
+      "importance": 0.6366770906573485,
+      "addresstype": "island",
+      "name": "Tenerife",
+      "display_name": "Tenerife, Canarias, España",
+      "address": {
+        "island": "Tenerife",
+        "state": "Canarias",
+        "ISO3166-2-lvl4": "ES-CN",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "27.9980751",
+        "28.6053951",
+        "-16.9259266",
+        "-16.1193833"
+      ]
+    }
+  },
+  "Huelva": {
+    "fetchedAt": "2026-03-23T18:58:58.305Z",
+    "provinceId": "huelva",
+    "nominatim": {
+      "place_id": 273702253,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 347727,
+      "lat": "37.2575874",
+      "lon": "-6.9484945",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6036534504938581,
+      "addresstype": "city",
+      "name": "Huelva",
+      "display_name": "Huelva, Comarca Metropolitana de Huelva, Huelva, Andalucía, España",
+      "address": {
+        "city": "Huelva",
+        "county": "Comarca Metropolitana de Huelva",
+        "province": "Huelva",
+        "ISO3166-2-lvl6": "ES-H",
+        "state": "Andalucía",
+        "ISO3166-2-lvl4": "ES-AN",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "37.1078884",
+        "37.3672858",
+        "-7.0055804",
+        "-6.8321061"
+      ]
+    }
+  },
+  "Coruña, Galicia": {
+    "fetchedAt": "2026-03-23T18:58:59.721Z",
+    "provinceId": null,
+    "nominatim": {
+      "place_id": 264020455,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 346810,
+      "lat": "43.3709703",
+      "lon": "-8.3959425",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6470440546938139,
+      "addresstype": "municipality",
+      "name": "La Coruña",
+      "display_name": "La Coruña, Galicia, España",
+      "address": {
+        "municipality": "La Coruña",
+        "county": "La Coruña",
+        "state_district": "La Coruña",
+        "ISO3166-2-lvl6": "ES-C",
+        "state": "Galicia",
+        "ISO3166-2-lvl4": "ES-GA",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "43.3032370",
+        "43.3900162",
+        "-8.4691619",
+        "-8.3743767"
+      ]
+    }
+  },
+  "Mallorca": {
+    "fetchedAt": "2026-03-23T18:59:02.608Z",
+    "provinceId": "balears",
+    "nominatim": {
+      "place_id": 46792908,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 2178883,
+      "lat": "39.6134320",
+      "lon": "2.8829185",
+      "category": "boundary",
+      "type": "political",
+      "place_rank": 25,
+      "importance": 0.6572605210074169,
+      "addresstype": "political",
+      "name": "Mallorca",
+      "display_name": "Mallorca, Islas Baleares, España",
+      "address": {
+        "political": "Mallorca",
+        "state": "Islas Baleares",
+        "ISO3166-2-lvl4": "ES-IB",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "39.1207284",
+        "39.9625085",
+        "2.3030461",
+        "3.4787522"
+      ]
+    }
+  },
+  "Logroño La Rioja": {
+    "fetchedAt": "2026-03-23T18:59:04.084Z",
+    "provinceId": "la-rioja",
+    "nominatim": {
+      "place_id": 268433706,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 340516,
+      "lat": "42.4661196",
+      "lon": "-2.4396676",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6093247710973847,
+      "addresstype": "city",
+      "name": "Logroño",
+      "display_name": "Logroño, La Rioja, España",
+      "address": {
+        "city": "Logroño",
+        "state": "La Rioja",
+        "ISO3166-2-lvl4": "ES-RI",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "42.4288461",
+        "42.5199157",
+        "-2.5422727",
+        "-2.3419680"
+      ]
+    }
+  },
+  "Valencia": {
+    "fetchedAt": "2026-03-23T18:59:05.511Z",
+    "provinceId": "valencia",
+    "nominatim": {
+      "place_id": 272633887,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 344953,
+      "lat": "39.4697065",
+      "lon": "-0.3763353",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.7306288056783602,
+      "addresstype": "city",
+      "name": "Valencia",
+      "display_name": "Valencia, Comarca de Valencia, Valencia, Comunidad Valenciana, España",
+      "address": {
+        "city": "Valencia",
+        "county": "Comarca de Valencia",
+        "province": "Valencia",
+        "ISO3166-2-lvl6": "ES-V",
+        "state": "Comunidad Valenciana",
+        "ISO3166-2-lvl4": "ES-VC",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "39.2784496",
+        "39.5666090",
+        "-0.4325512",
+        "-0.2725205"
+      ]
+    }
+  },
+  "Madrid (Boadilla del Monte)": {
+    "fetchedAt": "2026-03-23T18:59:07.022Z",
+    "provinceId": "madrid",
+    "nominatim": {
+      "place_id": 271557754,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 345607,
+      "lat": "40.4053485",
+      "lon": "-3.8764663",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.5301328984142111,
+      "addresstype": "town",
+      "name": "Boadilla del Monte",
+      "display_name": "Boadilla del Monte, Comunidad de Madrid, España",
+      "address": {
+        "town": "Boadilla del Monte",
+        "state": "Comunidad de Madrid",
+        "ISO3166-2-lvl4": "ES-MD",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "40.3780030",
+        "40.4563321",
+        "-3.9525689",
+        "-3.8378336"
+      ]
+    }
+  },
+  "Málaga (Fuengirola)": {
+    "fetchedAt": "2026-03-23T18:59:08.289Z",
+    "provinceId": "malaga",
+    "nominatim": {
+      "place_id": 273392365,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 345414,
+      "lat": "36.5388398",
+      "lon": "-4.6233974",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.5257237258429168,
+      "addresstype": "city",
+      "name": "Fuengirola",
+      "display_name": "Fuengirola, Costa del Sol Occidental, Málaga, Andalucía, 29640, España",
+      "address": {
+        "city": "Fuengirola",
+        "county": "Costa del Sol Occidental",
+        "province": "Málaga",
+        "ISO3166-2-lvl6": "ES-MA",
+        "state": "Andalucía",
+        "ISO3166-2-lvl4": "ES-AN",
+        "postcode": "29640",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "36.5190239",
+        "36.5896933",
+        "-4.6366187",
+        "-4.5898352"
+      ]
+    }
+  },
+  "Las Palmas (Fuerteventura)": {
+    "fetchedAt": "2026-03-23T18:59:09.560Z",
+    "provinceId": "las-palmas",
+    "nominatim": {
+      "place_id": 390106381,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 1338224488,
+      "lat": "28.5065839",
+      "lon": "-13.8451575",
+      "category": "landuse",
+      "type": "industrial",
+      "place_rank": 22,
+      "importance": 0.10671837567711907,
+      "addresstype": "industrial",
+      "name": "Fuerteventura (CAAF)",
+      "display_name": "Fuerteventura (CAAF), Las Salinas, Puerto del Rosario, Las Palmas, Canarias, España",
+      "address": {
+        "industrial": "Fuerteventura (CAAF)",
+        "suburb": "Las Salinas",
+        "town": "Puerto del Rosario",
+        "province": "Las Palmas",
+        "ISO3166-2-lvl6": "ES-GC",
+        "state": "Canarias",
+        "ISO3166-2-lvl4": "ES-CN",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "28.5054554",
+        "28.5075284",
+        "-13.8475168",
+        "-13.8437108"
+      ]
+    }
+  },
+  "Valladolid": {
+    "fetchedAt": "2026-03-23T18:59:10.906Z",
+    "provinceId": "valladolid",
+    "nominatim": {
+      "place_id": 269363151,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 348849,
+      "lat": "41.6521807",
+      "lon": "-4.7286050",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6679664703202588,
+      "addresstype": "city",
+      "name": "Valladolid",
+      "display_name": "Valladolid, Castilla y León, España",
+      "address": {
+        "city": "Valladolid",
+        "province": "Valladolid",
+        "ISO3166-2-lvl6": "ES-VA",
+        "state": "Castilla y León",
+        "ISO3166-2-lvl4": "ES-CL",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "41.5231281",
+        "41.8155086",
+        "-4.9281803",
+        "-4.6308064"
+      ]
+    }
+  },
+  "La RIoja": {
+    "fetchedAt": "2026-03-23T18:59:12.179Z",
+    "provinceId": "la-rioja",
+    "nominatim": {
+      "place_id": 269828257,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 6426654,
+      "lat": "42.2814642",
+      "lon": "-2.4828050",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 10,
+      "importance": 0.6272025409301499,
+      "addresstype": "province",
+      "name": "La Rioja",
+      "display_name": "La Rioja, España",
+      "address": {
+        "province": "La Rioja",
+        "ISO3166-2-lvl6": "ES-LO",
+        "state": "La Rioja",
+        "ISO3166-2-lvl4": "ES-RI",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "41.9190340",
+        "42.6442647",
+        "-3.1342714",
+        "-1.6787015"
+      ]
+    }
+  },
+  "Álava (Vitoria-Gasteiz)": {
+    "fetchedAt": "2026-03-23T18:59:13.512Z",
+    "provinceId": "araba",
+    "nominatim": {
+      "place_id": 268931998,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 344337,
+      "lat": "42.8465088",
+      "lon": "-2.6724025",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6315559539674708,
+      "addresstype": "municipality",
+      "name": "Vitoria",
+      "display_name": "Vitoria, Cuadrilla de Vitoria, Álava, País Vasco, España",
+      "address": {
+        "municipality": "Vitoria",
+        "county": "Cuadrilla de Vitoria",
+        "province": "Álava",
+        "ISO3166-2-lvl6": "ES-VI",
+        "state": "País Vasco",
+        "ISO3166-2-lvl4": "ES-PV",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "42.7645559",
+        "42.9367099",
+        "-2.8535510",
+        "-2.5437580"
+      ]
+    }
+  },
+  "Castellón de la Plana": {
+    "fetchedAt": "2026-03-23T18:59:14.736Z",
+    "provinceId": "castellon",
+    "nominatim": {
+      "place_id": 47995593,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 344858,
+      "lat": "39.9860347",
+      "lon": "-0.0377354",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.593441969256709,
+      "addresstype": "city",
+      "name": "Castellón de la Plana",
+      "display_name": "Castellón de la Plana, La Plana Alta, Castellón, Comunidad Valenciana, España",
+      "address": {
+        "city": "Castellón de la Plana",
+        "region": "La Plana Alta",
+        "province": "Castellón",
+        "ISO3166-2-lvl6": "ES-CS",
+        "state": "Comunidad Valenciana",
+        "ISO3166-2-lvl4": "ES-VC",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "39.8502940",
+        "40.0644134",
+        "-0.1644067",
+        "0.6903174"
+      ]
+    }
+  },
+  "Castilla y León": {
+    "fetchedAt": "2026-03-23T18:59:16.133Z",
+    "provinceId": "leon",
+    "nominatim": {
+      "place_id": 270885759,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 349041,
+      "lat": "41.5500500",
+      "lon": "-5.1387401",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 8,
+      "importance": 0.7163928329093151,
+      "addresstype": "state",
+      "name": "Castilla y León",
+      "display_name": "Castilla y León, España",
+      "address": {
+        "state": "Castilla y León",
+        "ISO3166-2-lvl4": "ES-CL",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "40.0824504",
+        "43.2382034",
+        "-7.0770689",
+        "-1.7753716"
+      ]
+    }
+  },
+  "Comunidad Valenciana": {
+    "fetchedAt": "2026-03-23T18:59:17.486Z",
+    "provinceId": "valencia",
+    "nominatim": {
+      "place_id": 272032913,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 349043,
+      "lat": "39.6819591",
+      "lon": "-0.7654406",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 8,
+      "importance": 0.6906579481640391,
+      "addresstype": "state",
+      "name": "Comunidad Valenciana",
+      "display_name": "Comunidad Valenciana, España",
+      "address": {
+        "state": "Comunidad Valenciana",
+        "ISO3166-2-lvl4": "ES-VC",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "37.8437887",
+        "40.7886312",
+        "-1.5289448",
+        "0.6903174"
+      ]
+    }
+  },
+  "País Vasco": {
+    "fetchedAt": "2026-03-23T18:59:18.793Z",
+    "provinceId": null,
+    "nominatim": {
+      "place_id": 397204588,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 349042,
+      "lat": "42.9911816",
+      "lon": "-2.5543023",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 8,
+      "importance": 0.6732699352371964,
+      "addresstype": "state",
+      "name": "País Vasco",
+      "display_name": "País Vasco, España",
+      "address": {
+        "state": "País Vasco",
+        "ISO3166-2-lvl4": "ES-PV",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "42.4713392",
+        "43.4568595",
+        "-3.4509120",
+        "-1.7292688"
+      ]
+    }
+  },
+  "Extremadura": {
+    "fetchedAt": "2026-03-23T18:59:20.569Z",
+    "provinceId": null,
+    "nominatim": {
+      "place_id": 273617570,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 349050,
+      "lat": "39.1748426",
+      "lon": "-6.1529891",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 8,
+      "importance": 0.6582172277069487,
+      "addresstype": "state",
+      "name": "Extremadura",
+      "display_name": "Extremadura, España",
+      "address": {
+        "state": "Extremadura",
+        "ISO3166-2-lvl4": "ES-EX",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "37.9410260",
+        "40.4866514",
+        "-7.5416802",
+        "-4.6475774"
+      ]
+    }
+  },
+  "León": {
+    "fetchedAt": "2026-03-23T18:59:21.898Z",
+    "provinceId": null,
+    "nominatim": {
+      "place_id": 86240033,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 120965,
+      "lat": "45.7578137",
+      "lon": "4.8320114",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.7489604368049191,
+      "addresstype": "city",
+      "name": "Lion",
+      "display_name": "Lion, Lyon, Métropole de Lyon, Rhône, Auvergne-Rhône-Alpes, Francia metropolitana, Francia",
+      "address": {
+        "city": "Lion",
+        "municipality": "Lyon",
+        "county": "Métropole de Lyon",
+        "ISO3166-2-lvl6": "FR-69M",
+        "state_district": "Rhône",
+        "state": "Auvergne-Rhône-Alpes",
+        "ISO3166-2-lvl4": "FR-ARA",
+        "region": "Francia metropolitana",
+        "country": "Francia",
+        "country_code": "fr"
+      },
+      "boundingbox": [
+        "45.7073666",
+        "45.8082628",
+        "4.7718132",
+        "4.8984245"
+      ]
+    }
+  },
+  "Malaga": {
+    "fetchedAt": "2026-03-23T18:59:23.345Z",
+    "provinceId": "malaga",
+    "nominatim": {
+      "place_id": 432971480,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 340746,
+      "lat": "36.7213028",
+      "lon": "-4.4216366",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6776065694245125,
+      "addresstype": "municipality",
+      "name": "Málaga",
+      "display_name": "Málaga, Málaga-Costa del Sol, Málaga, Andalucía, España",
+      "address": {
+        "municipality": "Málaga",
+        "county": "Málaga-Costa del Sol",
+        "province": "Málaga",
+        "ISO3166-2-lvl6": "ES-MA",
+        "state": "Andalucía",
+        "ISO3166-2-lvl4": "ES-AN",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "36.6356619",
+        "36.8940412",
+        "-4.5878887",
+        "-4.2604897"
+      ]
+    }
+  },
+  "Region de Murcia y Cartagena": {
+    "fetchedAt": "2026-03-23T18:59:27.598Z",
+    "provinceId": "murcia",
+    "nominatim": {
+      "place_id": 271665449,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 344228,
+      "lat": "37.6155018",
+      "lon": "-0.9875110",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6134387764870111,
+      "addresstype": "city",
+      "name": "Cartagena",
+      "display_name": "Cartagena, Campo de Cartagena y Mar Menor, Región de Murcia, España",
+      "address": {
+        "city": "Cartagena",
+        "county": "Campo de Cartagena y Mar Menor",
+        "province": "Región de Murcia",
+        "ISO3166-2-lvl6": "ES-MU",
+        "state": "Región de Murcia",
+        "ISO3166-2-lvl4": "ES-MC",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "37.5338600",
+        "37.7308788",
+        "-1.2261481",
+        "-0.6479296"
+      ]
+    }
+  },
+  "Zaragoza y alrededores": {
+    "fetchedAt": "2026-03-23T18:59:28.849Z",
+    "provinceId": null,
+    "nominatim": null
+  },
+  "Guipúzcoa (San Sebastián)": {
+    "fetchedAt": "2026-03-23T18:59:30.397Z",
+    "provinceId": "gipuzkoa",
+    "nominatim": {
+      "place_id": 267513346,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 346465,
+      "lat": "43.3224219",
+      "lon": "-1.9838889",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6747161326907494,
+      "addresstype": "city",
+      "name": "San Sebastián",
+      "display_name": "San Sebastián, Guipúzcoa, País Vasco, España",
+      "address": {
+        "city": "San Sebastián",
+        "province": "Guipúzcoa",
+        "ISO3166-2-lvl6": "ES-SS",
+        "state": "País Vasco",
+        "ISO3166-2-lvl4": "ES-PV",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "43.2178373",
+        "43.3381594",
+        "-2.0868082",
+        "-1.8878839"
+      ]
+    }
+  },
+  "Gijón, Asturias": {
+    "fetchedAt": "2026-03-23T18:59:31.863Z",
+    "provinceId": "asturias",
+    "nominatim": {
+      "place_id": 270227898,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 345576,
+      "lat": "43.5449422",
+      "lon": "-5.6627500",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6201511478999338,
+      "addresstype": "city",
+      "name": "Gijón",
+      "display_name": "Gijón, Asturias, España",
+      "address": {
+        "city": "Gijón",
+        "province": "Asturias",
+        "ISO3166-2-lvl6": "ES-O",
+        "state": "Asturias",
+        "ISO3166-2-lvl4": "ES-AS",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "43.4415087",
+        "43.5867678",
+        "-5.8213224",
+        "-5.5628763"
+      ]
+    }
+  },
+  "Lérida (Lleida)": {
+    "fetchedAt": "2026-03-23T18:59:33.637Z",
+    "provinceId": "lleida",
+    "nominatim": {
+      "place_id": 76608262,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 346345,
+      "lat": "41.6147605",
+      "lon": "0.6267842",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6311437715257927,
+      "addresstype": "city",
+      "name": "Lérida",
+      "display_name": "Lérida, Segriá, Lérida, Cataluña, España",
+      "address": {
+        "city": "Lérida",
+        "county": "Segriá",
+        "province": "Lérida",
+        "ISO3166-2-lvl6": "ES-L",
+        "state": "Cataluña",
+        "ISO3166-2-lvl4": "ES-CT",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "41.5103479",
+        "41.7395668",
+        "0.3635957",
+        "0.7419770"
+      ]
+    }
+  },
+  "Jaén ": {
+    "fetchedAt": "2026-03-23T18:59:34.969Z",
+    "provinceId": "jaen",
+    "nominatim": {
+      "place_id": 271915024,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 348998,
+      "lat": "37.9553976",
+      "lon": "-3.4937431",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 10,
+      "importance": 0.5929690562866567,
+      "addresstype": "province",
+      "name": "Jaén",
+      "display_name": "Jaén, Andalucía, España",
+      "address": {
+        "province": "Jaén",
+        "ISO3166-2-lvl6": "ES-J",
+        "state": "Andalucía",
+        "ISO3166-2-lvl4": "ES-AN",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "37.3782781",
+        "38.5325672",
+        "-4.2876404",
+        "-2.4344367"
+      ]
+    }
+  },
+  "Málaga (Marbella)": {
+    "fetchedAt": "2026-03-23T18:59:36.331Z",
+    "provinceId": "malaga",
+    "nominatim": {
+      "place_id": 271762464,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 340756,
+      "lat": "36.5089760",
+      "lon": "-4.8856200",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.5882079788811715,
+      "addresstype": "city",
+      "name": "Marbella",
+      "display_name": "Marbella, Costa del Sol Occidental, Málaga, Andalucía, España",
+      "address": {
+        "city": "Marbella",
+        "county": "Costa del Sol Occidental",
+        "province": "Málaga",
+        "ISO3166-2-lvl6": "ES-MA",
+        "state": "Andalucía",
+        "ISO3166-2-lvl4": "ES-AN",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "36.4600069",
+        "36.5549709",
+        "-5.0146669",
+        "-4.7305677"
+      ]
+    }
+  },
+  "Ponferrada": {
+    "fetchedAt": "2026-03-23T18:59:37.639Z",
+    "provinceId": "leon",
+    "nominatim": {
+      "place_id": 268610856,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 343993,
+      "lat": "42.5454124",
+      "lon": "-6.5938719",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.5648070040729226,
+      "addresstype": "town",
+      "name": "Ponferrada",
+      "display_name": "Ponferrada, El Bierzo, León, Castilla y León, España",
+      "address": {
+        "town": "Ponferrada",
+        "county": "El Bierzo",
+        "province": "León",
+        "ISO3166-2-lvl6": "ES-LE",
+        "state": "Castilla y León",
+        "ISO3166-2-lvl4": "ES-CL",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "42.3862245",
+        "42.6127002",
+        "-6.7141113",
+        "-6.4071706"
+      ]
+    }
+  },
+  "Toledo": {
+    "fetchedAt": "2026-03-23T18:59:39.083Z",
+    "provinceId": "toledo",
+    "nominatim": {
+      "place_id": 273694782,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 342999,
+      "lat": "39.8558913",
+      "lon": "-4.0242650",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6642457688416626,
+      "addresstype": "city",
+      "name": "Toledo",
+      "display_name": "Toledo, Castilla-La Mancha, España",
+      "address": {
+        "city": "Toledo",
+        "province": "Toledo",
+        "ISO3166-2-lvl6": "ES-TO",
+        "state": "Castilla-La Mancha",
+        "ISO3166-2-lvl4": "ES-CM",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "39.8108202",
+        "39.9254339",
+        "-4.1796695",
+        "-3.8147929"
+      ]
+    }
+  },
+  "Murcia": {
+    "fetchedAt": "2026-03-23T18:59:40.464Z",
+    "provinceId": "murcia",
+    "nominatim": {
+      "place_id": 269737083,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 340611,
+      "lat": "37.9923795",
+      "lon": "-1.1305431",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6453838288699771,
+      "addresstype": "city",
+      "name": "Murcia",
+      "display_name": "Murcia, Área Metropolitana de Murcia, Región de Murcia, España",
+      "address": {
+        "city": "Murcia",
+        "county": "Área Metropolitana de Murcia",
+        "province": "Región de Murcia",
+        "ISO3166-2-lvl6": "ES-MU",
+        "state": "Región de Murcia",
+        "ISO3166-2-lvl4": "ES-MC",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "37.7158719",
+        "38.1178925",
+        "-1.3855482",
+        "-0.8508899"
+      ]
+    }
+  },
+  "Logroño": {
+    "fetchedAt": "2026-03-23T18:59:41.824Z",
+    "provinceId": "la-rioja",
+    "nominatim": {
+      "place_id": 267609441,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 340516,
+      "lat": "42.4661196",
+      "lon": "-2.4396676",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6093247710973847,
+      "addresstype": "city",
+      "name": "Logroño",
+      "display_name": "Logroño, La Rioja, España",
+      "address": {
+        "city": "Logroño",
+        "state": "La Rioja",
+        "ISO3166-2-lvl4": "ES-RI",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "42.4288461",
+        "42.5199157",
+        "-2.5422727",
+        "-2.3419680"
+      ]
+    }
+  },
+  "La Rioja": {
+    "fetchedAt": "2026-03-23T18:59:43.190Z",
+    "provinceId": "la-rioja",
+    "nominatim": {
+      "place_id": 268639414,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 6426654,
+      "lat": "42.2814642",
+      "lon": "-2.4828050",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 10,
+      "importance": 0.6272025409301499,
+      "addresstype": "province",
+      "name": "La Rioja",
+      "display_name": "La Rioja, España",
+      "address": {
+        "province": "La Rioja",
+        "ISO3166-2-lvl6": "ES-LO",
+        "state": "La Rioja",
+        "ISO3166-2-lvl4": "ES-RI",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "41.9190340",
+        "42.6442647",
+        "-3.1342714",
+        "-1.6787015"
+      ]
+    }
+  },
+  "Badajoz": {
+    "fetchedAt": "2026-03-23T18:59:44.991Z",
+    "provinceId": "badajoz",
+    "nominatim": {
+      "place_id": 274432528,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 342316,
+      "lat": "38.8781870",
+      "lon": "-6.9701115",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6141738820372612,
+      "addresstype": "city",
+      "name": "Badajoz",
+      "display_name": "Badajoz, Extremadura, España",
+      "address": {
+        "city": "Badajoz",
+        "province": "Badajoz",
+        "ISO3166-2-lvl6": "ES-BA",
+        "state": "Extremadura",
+        "ISO3166-2-lvl4": "ES-EX",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "38.5548501",
+        "39.1940413",
+        "-7.1592952",
+        "-6.5595629"
+      ]
+    }
+  },
+  "Burgos": {
+    "fetchedAt": "2026-03-23T18:59:46.406Z",
+    "provinceId": "burgos",
+    "nominatim": {
+      "place_id": 269171803,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 344165,
+      "lat": "42.3439260",
+      "lon": "-3.6969770",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6475913942820225,
+      "addresstype": "city",
+      "name": "Burgos",
+      "display_name": "Burgos, Castilla y León, España",
+      "address": {
+        "city": "Burgos",
+        "province": "Burgos",
+        "ISO3166-2-lvl6": "ES-BU",
+        "state": "Castilla y León",
+        "ISO3166-2-lvl4": "ES-CL",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "42.2852754",
+        "42.4042841",
+        "-3.7943724",
+        "-3.5853379"
+      ]
+    }
+  },
+  "Cantabria": {
+    "fetchedAt": "2026-03-23T18:59:47.835Z",
+    "provinceId": "cantabria",
+    "nominatim": {
+      "place_id": 417648211,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 6426101,
+      "lat": "43.1595664",
+      "lon": "-4.0878382",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 10,
+      "importance": 0.654372553894989,
+      "addresstype": "province",
+      "name": "Cantabria",
+      "display_name": "Cantabria, España",
+      "address": {
+        "province": "Cantabria",
+        "ISO3166-2-lvl6": "ES-S",
+        "state": "Cantabria",
+        "ISO3166-2-lvl4": "ES-CB",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "42.7580499",
+        "43.5137067",
+        "-4.8517354",
+        "-3.1496520"
+      ]
+    }
+  },
+  "Ciudad Real": {
+    "fetchedAt": "2026-03-23T18:59:49.707Z",
+    "provinceId": "ciudad-real",
+    "nominatim": {
+      "place_id": 272334695,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 349019,
+      "lat": "38.9597348",
+      "lon": "-3.8828744",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 10,
+      "importance": 0.5742687995041402,
+      "addresstype": "province",
+      "name": "Ciudad Real",
+      "display_name": "Ciudad Real, Castilla-La Mancha, España",
+      "address": {
+        "province": "Ciudad Real",
+        "ISO3166-2-lvl6": "ES-CR",
+        "state": "Castilla-La Mancha",
+        "ISO3166-2-lvl4": "ES-CM",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "38.3427566",
+        "39.5767615",
+        "-5.0469484",
+        "-2.6364936"
+      ]
+    }
+  },
+  "Gerona (Girona)": {
+    "fetchedAt": "2026-03-23T18:59:51.057Z",
+    "provinceId": "girona",
+    "nominatim": {
+      "place_id": 75505669,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 343535,
+      "lat": "41.9793006",
+      "lon": "2.8199439",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6383659916367134,
+      "addresstype": "city",
+      "name": "Gerona",
+      "display_name": "Gerona, Gironés, Gerona, Cataluña, España",
+      "address": {
+        "city": "Gerona",
+        "county": "Gironés",
+        "province": "Gerona",
+        "ISO3166-2-lvl6": "ES-GI",
+        "state": "Cataluña",
+        "ISO3166-2-lvl4": "ES-CT",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "41.9392441",
+        "42.0297266",
+        "2.7831004",
+        "2.8982394"
+      ]
+    }
+  },
+  "Guadalajara": {
+    "fetchedAt": "2026-03-23T18:59:52.432Z",
+    "provinceId": "guadalajara",
+    "nominatim": {
+      "place_id": 288044278,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 1663173902,
+      "lat": "20.6720375",
+      "lon": "-103.3383960",
+      "category": "place",
+      "type": "city",
+      "place_rank": 16,
+      "importance": 0.6713669673177,
+      "addresstype": "city",
+      "name": "Guadalajara",
+      "display_name": "Guadalajara, Región Centro, Jalisco, 44450, México",
+      "address": {
+        "city": "Guadalajara",
+        "county": "Guadalajara",
+        "state_district": "Región Centro",
+        "state": "Jalisco",
+        "ISO3166-2-lvl4": "MX-JAL",
+        "postcode": "44450",
+        "country": "México",
+        "country_code": "mx"
+      },
+      "boundingbox": [
+        "20.5120375",
+        "20.8320375",
+        "-103.4983960",
+        "-103.1783960"
+      ]
+    }
+  },
+  "Huesca": {
+    "fetchedAt": "2026-03-23T18:59:53.748Z",
+    "provinceId": "huesca",
+    "nominatim": {
+      "place_id": 269478373,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 349022,
+      "lat": "42.1360615",
+      "lon": "-0.0298027",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 10,
+      "importance": 0.612553565312004,
+      "addresstype": "province",
+      "name": "Huesca",
+      "display_name": "Huesca, Aragón, España",
+      "address": {
+        "province": "Huesca",
+        "ISO3166-2-lvl6": "ES-HU",
+        "state": "Aragón",
+        "ISO3166-2-lvl4": "ES-AR",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "41.3478056",
+        "42.9244952",
+        "-0.9344305",
+        "0.7713067"
+      ]
+    }
+  },
+  "Las Palmas": {
+    "fetchedAt": "2026-03-23T18:59:55.213Z",
+    "provinceId": "las-palmas",
+    "nominatim": {
+      "place_id": 275454708,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 340783,
+      "lat": "28.1288694",
+      "lon": "-15.4349015",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.617007958099539,
+      "addresstype": "city",
+      "name": "Las Palmas de Gran Canaria",
+      "display_name": "Las Palmas de Gran Canaria, Las Palmas, Canarias, España",
+      "address": {
+        "city": "Las Palmas de Gran Canaria",
+        "province": "Las Palmas",
+        "ISO3166-2-lvl6": "ES-GC",
+        "state": "Canarias",
+        "ISO3166-2-lvl4": "ES-CN",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "28.0244326",
+        "28.1814260",
+        "-15.5272490",
+        "-15.3948989"
+      ]
+    }
+  },
+  "Navarra": {
+    "fetchedAt": "2026-03-23T18:59:56.500Z",
+    "provinceId": "navarra",
+    "nominatim": {
+      "place_id": 391318813,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 6429242,
+      "lat": "42.7027944",
+      "lon": "-1.7086231",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 10,
+      "importance": 0.6883117991009994,
+      "addresstype": "province",
+      "name": "Navarra",
+      "display_name": "Navarra, España",
+      "address": {
+        "province": "Navarra",
+        "ISO3166-2-lvl6": "ES-NA",
+        "state": "Navarra",
+        "ISO3166-2-lvl4": "ES-NC",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "41.9098937",
+        "43.3149461",
+        "-2.4999443",
+        "-0.7233404"
+      ]
+    }
+  },
+  "Palencia": {
+    "fetchedAt": "2026-03-23T18:59:57.856Z",
+    "provinceId": "palencia",
+    "nominatim": {
+      "place_id": 269939488,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 349032,
+      "lat": "42.4096322",
+      "lon": "-4.6161004",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 10,
+      "importance": 0.5954919888552032,
+      "addresstype": "province",
+      "name": "Palencia",
+      "display_name": "Palencia, Castilla y León, España",
+      "address": {
+        "province": "Palencia",
+        "ISO3166-2-lvl6": "ES-P",
+        "state": "Castilla y León",
+        "ISO3166-2-lvl4": "ES-CL",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "41.7581663",
+        "43.0610220",
+        "-5.0318945",
+        "-3.8896224"
+      ]
+    }
+  },
+  "Salamanca": {
+    "fetchedAt": "2026-03-23T18:59:59.222Z",
+    "provinceId": "salamanca",
+    "nominatim": {
+      "place_id": 271289906,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 344342,
+      "lat": "40.9651572",
+      "lon": "-5.6640182",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6605904836657436,
+      "addresstype": "city",
+      "name": "Salamanca",
+      "display_name": "Salamanca, Castilla y León, España",
+      "address": {
+        "city": "Salamanca",
+        "province": "Salamanca",
+        "ISO3166-2-lvl6": "ES-SA",
+        "state": "Castilla y León",
+        "ISO3166-2-lvl4": "ES-CL",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "40.9146276",
+        "40.9931932",
+        "-5.7358020",
+        "-5.6226215"
+      ]
+    }
+  },
+  "Teruel": {
+    "fetchedAt": "2026-03-23T19:00:00.465Z",
+    "provinceId": "teruel",
+    "nominatim": {
+      "place_id": 413134093,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 349002,
+      "lat": "40.6005259",
+      "lon": "-0.9229282",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 10,
+      "importance": 0.5996375756210616,
+      "addresstype": "province",
+      "name": "Teruel",
+      "display_name": "Teruel, Aragón, España",
+      "address": {
+        "province": "Teruel",
+        "ISO3166-2-lvl6": "ES-TE",
+        "state": "Aragón",
+        "ISO3166-2-lvl4": "ES-AR",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "39.8467782",
+        "41.3543894",
+        "-1.8064422",
+        "0.2935008"
+      ]
+    }
+  },
+  "Cuenca": {
+    "fetchedAt": "2026-03-23T19:00:01.791Z",
+    "provinceId": "cuenca",
+    "nominatim": {
+      "place_id": 428041611,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 344096,
+      "lat": "40.0661031",
+      "lon": "-2.1313528",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6038936162581632,
+      "addresstype": "city",
+      "name": "Cuenca",
+      "display_name": "Cuenca, Castilla-La Mancha, España",
+      "address": {
+        "city": "Cuenca",
+        "province": "Cuenca",
+        "ISO3166-2-lvl6": "ES-CU",
+        "state": "Castilla-La Mancha",
+        "ISO3166-2-lvl4": "ES-CM",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "39.8264384",
+        "40.5230033",
+        "-2.3550224",
+        "-1.6972386"
+      ]
+    }
+  },
+  "Murcia, Murcia": {
+    "fetchedAt": "2026-03-23T19:00:03.194Z",
+    "provinceId": "murcia",
+    "nominatim": {
+      "place_id": 269737083,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 340611,
+      "lat": "37.9923795",
+      "lon": "-1.1305431",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6453838288699771,
+      "addresstype": "city",
+      "name": "Murcia",
+      "display_name": "Murcia, Área Metropolitana de Murcia, Región de Murcia, España",
+      "address": {
+        "city": "Murcia",
+        "county": "Área Metropolitana de Murcia",
+        "province": "Región de Murcia",
+        "ISO3166-2-lvl6": "ES-MU",
+        "state": "Región de Murcia",
+        "ISO3166-2-lvl4": "ES-MC",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "37.7158719",
+        "38.1178925",
+        "-1.3855482",
+        "-0.8508899"
+      ]
+    }
+  },
+  "Logroño, La Rioja": {
+    "fetchedAt": "2026-03-23T19:00:04.556Z",
+    "provinceId": "la-rioja",
+    "nominatim": {
+      "place_id": 267609441,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 340516,
+      "lat": "42.4661196",
+      "lon": "-2.4396676",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6093247710973847,
+      "addresstype": "city",
+      "name": "Logroño",
+      "display_name": "Logroño, La Rioja, España",
+      "address": {
+        "city": "Logroño",
+        "state": "La Rioja",
+        "ISO3166-2-lvl4": "ES-RI",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "42.4288461",
+        "42.5199157",
+        "-2.5422727",
+        "-2.3419680"
+      ]
+    }
+  },
+  "Santander": {
+    "fetchedAt": "2026-03-23T19:00:05.970Z",
+    "provinceId": "cantabria",
+    "nominatim": {
+      "place_id": 269910683,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 340797,
+      "lat": "43.4618932",
+      "lon": "-3.8100255",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6285012944656246,
+      "addresstype": "city",
+      "name": "Santander",
+      "display_name": "Santander, Cantabria, España",
+      "address": {
+        "city": "Santander",
+        "state": "Cantabria",
+        "ISO3166-2-lvl6": "ES-S",
+        "ISO3166-2-lvl4": "ES-CB",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "43.4344240",
+        "43.4948754",
+        "-3.8890298",
+        "-3.7632476"
+      ]
+    }
+  },
+  "Pamplona": {
+    "fetchedAt": "2026-03-23T19:00:07.736Z",
+    "provinceId": "navarra",
+    "nominatim": {
+      "place_id": 271596219,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 344401,
+      "lat": "42.8181992",
+      "lon": "-1.6440089",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6733529923620195,
+      "addresstype": "city",
+      "name": "Pamplona",
+      "display_name": "Pamplona, Comarca de Pamplona, Navarra, España",
+      "address": {
+        "city": "Pamplona",
+        "county": "Comarca de Pamplona",
+        "state": "Navarra",
+        "ISO3166-2-lvl6": "ES-NA",
+        "ISO3166-2-lvl4": "ES-NC",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "42.7887572",
+        "42.8424401",
+        "-1.6953841",
+        "-1.6044942"
+      ]
+    }
+  },
+  "Canarias": {
+    "fetchedAt": "2026-03-23T19:00:09.083Z",
+    "provinceId": null,
+    "nominatim": {
+      "place_id": 276021967,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 349048,
+      "lat": "28.2935785",
+      "lon": "-16.6214471",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 8,
+      "importance": 0.7055625284878216,
+      "addresstype": "state",
+      "name": "Canarias",
+      "display_name": "Canarias, España",
+      "address": {
+        "state": "Canarias",
+        "ISO3166-2-lvl4": "ES-CN",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "27.6377389",
+        "29.4160647",
+        "-18.1611809",
+        "-13.3320145"
+      ]
+    }
+  },
+  "Ciudad Real (Tomelloso)": {
+    "fetchedAt": "2026-03-23T19:00:10.390Z",
+    "provinceId": "ciudad-real",
+    "nominatim": {
+      "place_id": 272214765,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 344646,
+      "lat": "39.1585549",
+      "lon": "-3.0214851",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.5050627705713222,
+      "addresstype": "town",
+      "name": "Tomelloso",
+      "display_name": "Tomelloso, Ciudad Real, Castilla-La Mancha, 13700, España",
+      "address": {
+        "town": "Tomelloso",
+        "province": "Ciudad Real",
+        "ISO3166-2-lvl6": "ES-CR",
+        "state": "Castilla-La Mancha",
+        "ISO3166-2-lvl4": "ES-CM",
+        "postcode": "13700",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "39.0900596",
+        "39.3508993",
+        "-3.0559037",
+        "-2.8743583"
+      ]
+    }
+  },
+  "Madrid (Tielmes)": {
+    "fetchedAt": "2026-03-23T19:00:11.770Z",
+    "provinceId": "madrid",
+    "nominatim": {
+      "place_id": 271384508,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 343611,
+      "lat": "40.2466579",
+      "lon": "-3.3137700",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.5155027826222693,
+      "addresstype": "village",
+      "name": "Tielmes",
+      "display_name": "Tielmes, Comunidad de Madrid, 28550, España",
+      "address": {
+        "village": "Tielmes",
+        "state": "Comunidad de Madrid",
+        "ISO3166-2-lvl4": "ES-MD",
+        "postcode": "28550",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "40.1906467",
+        "40.2634819",
+        "-3.3365672",
+        "-3.2703868"
+      ]
+    }
+  },
+  "Málaga (Alhaurín de la Torre, )": {
+    "fetchedAt": "2026-03-23T19:00:13.079Z",
+    "provinceId": "malaga",
+    "nominatim": {
+      "place_id": 273815413,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 341769,
+      "lat": "36.6627542",
+      "lon": "-4.5627530",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.5030694912114784,
+      "addresstype": "town",
+      "name": "Alhaurín de la Torre",
+      "display_name": "Alhaurín de la Torre, Valle del Guadalhorce, Málaga, Andalucía, 29130, España",
+      "address": {
+        "town": "Alhaurín de la Torre",
+        "county": "Valle del Guadalhorce",
+        "province": "Málaga",
+        "ISO3166-2-lvl6": "ES-MA",
+        "state": "Andalucía",
+        "ISO3166-2-lvl4": "ES-AN",
+        "postcode": "29130",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "36.6118261",
+        "36.7166610",
+        "-4.6407041",
+        "-4.5162473"
+      ]
+    }
+  },
+  "Madrid (Griñón)": {
+    "fetchedAt": "2026-03-23T19:00:14.388Z",
+    "provinceId": "madrid",
+    "nominatim": {
+      "place_id": 417524690,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 345226,
+      "lat": "40.2136607",
+      "lon": "-3.8581479",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.5168392288901857,
+      "addresstype": "town",
+      "name": "Griñón",
+      "display_name": "Griñón, Comunidad de Madrid, 28971, España",
+      "address": {
+        "town": "Griñón",
+        "state": "Comunidad de Madrid",
+        "ISO3166-2-lvl4": "ES-MD",
+        "postcode": "28971",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "40.1990204",
+        "40.2384320",
+        "-3.8844029",
+        "-3.8032364"
+      ]
+    }
+  },
+  "Madrid (Alcalá de Henares)": {
+    "fetchedAt": "2026-03-23T19:00:15.897Z",
+    "provinceId": "madrid",
+    "nominatim": {
+      "place_id": 270942852,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 345879,
+      "lat": "40.4819540",
+      "lon": "-3.3639810",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6094201167508334,
+      "addresstype": "city",
+      "name": "Alcalá de Henares",
+      "display_name": "Alcalá de Henares, Comunidad de Madrid, España",
+      "address": {
+        "city": "Alcalá de Henares",
+        "state": "Comunidad de Madrid",
+        "ISO3166-2-lvl4": "ES-MD",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "40.4458937",
+        "40.5451001",
+        "-3.4473982",
+        "-3.2837755"
+      ]
+    }
+  },
+  "Benidorm": {
+    "fetchedAt": "2026-03-23T19:00:17.295Z",
+    "provinceId": "alicante",
+    "nominatim": {
+      "place_id": 272979154,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 341148,
+      "lat": "38.5406255",
+      "lon": "-0.1290929",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.5625562143172986,
+      "addresstype": "town",
+      "name": "Benidorm",
+      "display_name": "Benidorm, La Marina Baixa, Alicante, Comunidad Valenciana, España",
+      "address": {
+        "town": "Benidorm",
+        "region": "La Marina Baixa",
+        "province": "Alicante",
+        "ISO3166-2-lvl6": "ES-A",
+        "state": "Comunidad Valenciana",
+        "ISO3166-2-lvl4": "ES-VC",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "38.5011769",
+        "38.6101333",
+        "-0.1869109",
+        "-0.0667580"
+      ]
+    }
+  },
+  "Cartagena, Murcia": {
+    "fetchedAt": "2026-03-23T19:00:19.163Z",
+    "provinceId": "murcia",
+    "nominatim": {
+      "place_id": 273164196,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 344228,
+      "lat": "37.6155018",
+      "lon": "-0.9875110",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6134387764870111,
+      "addresstype": "city",
+      "name": "Cartagena",
+      "display_name": "Cartagena, Campo de Cartagena y Mar Menor, Región de Murcia, España",
+      "address": {
+        "city": "Cartagena",
+        "county": "Campo de Cartagena y Mar Menor",
+        "province": "Región de Murcia",
+        "ISO3166-2-lvl6": "ES-MU",
+        "state": "Región de Murcia",
+        "ISO3166-2-lvl4": "ES-MC",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "37.5338600",
+        "37.7308788",
+        "-1.2261481",
+        "-0.6479296"
+      ]
+    }
+  },
+  "Chiclana, Cádiz": {
+    "fetchedAt": "2026-03-23T19:00:20.441Z",
+    "provinceId": "cadiz",
+    "nominatim": {
+      "place_id": 273561680,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "way",
+      "osm_id": 276982544,
+      "lat": "36.2944874",
+      "lon": "-6.0927908",
+      "category": "building",
+      "type": "yes",
+      "place_rank": 30,
+      "importance": 0.00005341496910043515,
+      "addresstype": "building",
+      "name": "Chiclana",
+      "display_name": "Chiclana, Tulipan 228 - 261, Casa de Postas, Conil de la Frontera, La Janda, Cádiz, Andalucía, 11140, España",
+      "address": {
+        "building": "Chiclana",
+        "road": "Tulipan 228 - 261",
+        "village": "Casa de Postas",
+        "town": "Conil de la Frontera",
+        "county": "La Janda",
+        "province": "Cádiz",
+        "ISO3166-2-lvl6": "ES-CA",
+        "state": "Andalucía",
+        "ISO3166-2-lvl4": "ES-AN",
+        "postcode": "11140",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "36.2944147",
+        "36.2945600",
+        "-6.0928986",
+        "-6.0926829"
+      ]
+    }
+  },
+  "Madrid (Collado Villalba)": {
+    "fetchedAt": "2026-03-23T19:00:21.835Z",
+    "provinceId": "madrid",
+    "nominatim": {
+      "place_id": 270672103,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 6486855,
+      "lat": "40.6432432",
+      "lon": "-3.9923530",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 18,
+      "importance": 0.5389899979075999,
+      "addresstype": "suburb",
+      "name": "Collado Villalba",
+      "display_name": "Collado Villalba, Comunidad de Madrid, España",
+      "address": {
+        "suburb": "Collado Villalba",
+        "city": "Collado Villalba",
+        "state": "Comunidad de Madrid",
+        "ISO3166-2-lvl4": "ES-MD",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "40.6272799",
+        "40.6541616",
+        "-4.0162635",
+        "-3.9829165"
+      ]
+    }
+  },
+  "Alicante (Denia)": {
+    "fetchedAt": "2026-03-23T19:00:23.235Z",
+    "provinceId": "alicante",
+    "nominatim": {
+      "place_id": 399408417,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 347678,
+      "lat": "38.8408382",
+      "lon": "0.1061105",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.5594509886169574,
+      "addresstype": "town",
+      "name": "Dénia",
+      "display_name": "Dénia, La Marina Alta, Alicante, Comunidad Valenciana, España",
+      "address": {
+        "town": "Dénia",
+        "region": "La Marina Alta",
+        "province": "Alicante",
+        "ISO3166-2-lvl6": "ES-A",
+        "state": "Comunidad Valenciana",
+        "ISO3166-2-lvl4": "ES-VC",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "38.7469130",
+        "38.8870567",
+        "-0.0443868",
+        "0.1672828"
+      ]
+    }
+  },
+  "Coruña (Ferrol)": {
+    "fetchedAt": "2026-03-23T19:00:25.007Z",
+    "provinceId": null,
+    "nominatim": {
+      "place_id": 264529839,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 346812,
+      "lat": "43.4845713",
+      "lon": "-8.2329968",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.5788984426163818,
+      "addresstype": "municipality",
+      "name": "Ferrol",
+      "display_name": "Ferrol, La Coruña, Galicia, España",
+      "address": {
+        "municipality": "Ferrol",
+        "county": "Ferrol",
+        "state_district": "La Coruña",
+        "ISO3166-2-lvl6": "ES-C",
+        "state": "Galicia",
+        "ISO3166-2-lvl4": "ES-GA",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "43.4531949",
+        "43.5693020",
+        "-8.3481026",
+        "-8.1860636"
+      ]
+    }
+  },
+  "Barcelona (Granollers)": {
+    "fetchedAt": "2026-03-23T19:00:26.389Z",
+    "provinceId": "barcelona",
+    "nominatim": {
+      "place_id": 75572908,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 346608,
+      "lat": "41.6079555",
+      "lon": "2.2876008",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.5733043280218857,
+      "addresstype": "town",
+      "name": "Granollers",
+      "display_name": "Granollers, Vallés Oriental, Barcelona, Cataluña, España",
+      "address": {
+        "town": "Granollers",
+        "county": "Vallés Oriental",
+        "province": "Barcelona",
+        "ISO3166-2-lvl6": "ES-B",
+        "state": "Cataluña",
+        "ISO3166-2-lvl4": "ES-CT",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "41.5642729",
+        "41.6225765",
+        "2.2564393",
+        "2.3040077"
+      ]
+    }
+  },
+  "Barcelona (Igualada)": {
+    "fetchedAt": "2026-03-23T19:00:27.727Z",
+    "provinceId": "barcelona",
+    "nominatim": {
+      "place_id": 76761370,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 345402,
+      "lat": "41.5790182",
+      "lon": "1.6173460",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.5726603239240856,
+      "addresstype": "town",
+      "name": "Igualada",
+      "display_name": "Igualada, Anoia, Barcelona, Cataluña, 08700, España",
+      "address": {
+        "town": "Igualada",
+        "county": "Anoia",
+        "province": "Barcelona",
+        "ISO3166-2-lvl6": "ES-B",
+        "state": "Cataluña",
+        "ISO3166-2-lvl4": "ES-CT",
+        "postcode": "08700",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "41.5716260",
+        "41.6003244",
+        "1.5769436",
+        "1.6404303"
+      ]
+    }
+  },
+  "Lugo": {
+    "fetchedAt": "2026-03-23T19:00:29.088Z",
+    "provinceId": "lugo",
+    "nominatim": {
+      "place_id": 270158518,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 348992,
+      "lat": "43.0395266",
+      "lon": "-7.4567985",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 10,
+      "importance": 0.5909793961145025,
+      "addresstype": "province",
+      "name": "Lugo",
+      "display_name": "Lugo, Galicia, España",
+      "address": {
+        "province": "Lugo",
+        "ISO3166-2-lvl6": "ES-LU",
+        "state": "Galicia",
+        "ISO3166-2-lvl4": "ES-GA",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "42.3260122",
+        "43.7616680",
+        "-7.9997779",
+        "-6.8140568"
+      ]
+    }
+  },
+  "Barcelona (Mataró)": {
+    "fetchedAt": "2026-03-23T19:00:30.449Z",
+    "provinceId": "barcelona",
+    "nominatim": {
+      "place_id": 74694659,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 345587,
+      "lat": "41.5398348",
+      "lon": "2.4448926",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.5931525246942015,
+      "addresstype": "city",
+      "name": "Mataró",
+      "display_name": "Mataró, Maresme, Barcelona, Cataluña, España",
+      "address": {
+        "city": "Mataró",
+        "county": "Maresme",
+        "province": "Barcelona",
+        "ISO3166-2-lvl6": "ES-B",
+        "state": "Cataluña",
+        "ISO3166-2-lvl4": "ES-CT",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "41.5192159",
+        "41.5805188",
+        "2.4155398",
+        "2.4873518"
+      ]
+    }
+  },
+  "Pontevedra": {
+    "fetchedAt": "2026-03-23T19:00:31.837Z",
+    "provinceId": "pontevedra",
+    "nominatim": {
+      "place_id": 265001102,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 341736,
+      "lat": "42.4318876",
+      "lon": "-8.6431592",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.5959105070625417,
+      "addresstype": "municipality",
+      "name": "Pontevedra",
+      "display_name": "Pontevedra, Galicia, España",
+      "address": {
+        "municipality": "Pontevedra",
+        "county": "Pontevedra",
+        "province": "Pontevedra",
+        "ISO3166-2-lvl6": "ES-PO",
+        "state": "Galicia",
+        "ISO3166-2-lvl4": "ES-GA",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "42.3432344",
+        "42.5130550",
+        "-8.6991584",
+        "-8.5551062"
+      ]
+    }
+  },
+  "Tarragona": {
+    "fetchedAt": "2026-03-23T19:00:33.203Z",
+    "provinceId": "tarragona",
+    "nominatim": {
+      "place_id": 76604236,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 339887,
+      "lat": "41.1172364",
+      "lon": "1.2546057",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6459487453629906,
+      "addresstype": "city",
+      "name": "Tarragona",
+      "display_name": "Tarragona, Tarragonés, Tarragona, Cataluña, España",
+      "address": {
+        "city": "Tarragona",
+        "county": "Tarragonés",
+        "province": "Tarragona",
+        "ISO3166-2-lvl6": "ES-T",
+        "state": "Cataluña",
+        "ISO3166-2-lvl4": "ES-CT",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "41.0786393",
+        "41.1668803",
+        "1.1870606",
+        "1.3752004"
+      ]
+    }
+  },
+  "Barcelona (Terrassa)": {
+    "fetchedAt": "2026-03-23T19:00:34.642Z",
+    "provinceId": "barcelona",
+    "nominatim": {
+      "place_id": 75959445,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 342210,
+      "lat": "41.5629623",
+      "lon": "2.0100492",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6057964681781254,
+      "addresstype": "city",
+      "name": "Terrassa",
+      "display_name": "Terrassa, Vallés Occidental, Barcelona, Cataluña, España",
+      "address": {
+        "city": "Terrassa",
+        "county": "Vallés Occidental",
+        "province": "Barcelona",
+        "ISO3166-2-lvl6": "ES-B",
+        "state": "Cataluña",
+        "ISO3166-2-lvl4": "ES-CT",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "41.5162980",
+        "41.6487234",
+        "1.9435767",
+        "2.0688191"
+      ]
+    }
+  },
+  "Tarragona (Tortosa)": {
+    "fetchedAt": "2026-03-23T19:00:36.045Z",
+    "provinceId": "tarragona",
+    "nominatim": {
+      "place_id": 76247510,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 344613,
+      "lat": "40.8110158",
+      "lon": "0.5209333",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.5831245117105273,
+      "addresstype": "town",
+      "name": "Tortosa",
+      "display_name": "Tortosa, Bajo Ebro, Tarragona, Cataluña, España",
+      "address": {
+        "town": "Tortosa",
+        "county": "Bajo Ebro",
+        "province": "Tarragona",
+        "ISO3166-2-lvl6": "ES-T",
+        "state": "Cataluña",
+        "ISO3166-2-lvl4": "ES-CT",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "40.7328857",
+        "40.8976220",
+        "0.2328099",
+        "0.6642326"
+      ]
+    }
+  },
+  "Madrid (Torrelodones)": {
+    "fetchedAt": "2026-03-23T19:00:37.396Z",
+    "provinceId": "madrid",
+    "nominatim": {
+      "place_id": 278515951,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 347854,
+      "lat": "40.5762809",
+      "lon": "-3.9286030",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.5345675491893419,
+      "addresstype": "town",
+      "name": "Torrelodones",
+      "display_name": "Torrelodones, Comunidad de Madrid, 28250, España",
+      "address": {
+        "town": "Torrelodones",
+        "state": "Comunidad de Madrid",
+        "ISO3166-2-lvl4": "ES-MD",
+        "postcode": "28250",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "40.5479514",
+        "40.5972686",
+        "-3.9597362",
+        "-3.8834272"
+      ]
+    }
+  },
+  "Jaén": {
+    "fetchedAt": "2026-03-23T19:00:38.729Z",
+    "provinceId": "jaen",
+    "nominatim": {
+      "place_id": 273903510,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 348998,
+      "lat": "37.9553976",
+      "lon": "-3.4937431",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 10,
+      "importance": 0.5929690562866567,
+      "addresstype": "province",
+      "name": "Jaén",
+      "display_name": "Jaén, Andalucía, España",
+      "address": {
+        "province": "Jaén",
+        "ISO3166-2-lvl6": "ES-J",
+        "state": "Andalucía",
+        "ISO3166-2-lvl4": "ES-AN",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "37.3782781",
+        "38.5325672",
+        "-4.2876404",
+        "-2.4344367"
+      ]
+    }
+  },
+  "Madrid y resto de España": {
+    "fetchedAt": "2026-03-23T19:00:40.153Z",
+    "provinceId": null,
+    "nominatim": null
+  },
+  "Menorca": {
+    "fetchedAt": "2026-03-23T19:00:41.468Z",
+    "provinceId": "balears",
+    "nominatim": {
+      "place_id": 46494078,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 2182003,
+      "lat": "39.9492572",
+      "lon": "4.0499642",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 12,
+      "importance": 0.6077617346091506,
+      "addresstype": "county",
+      "name": "Menorca",
+      "display_name": "Menorca, Islas Baleares, España",
+      "address": {
+        "county": "Menorca",
+        "province": "Islas Baleares",
+        "ISO3166-2-lvl6": "ES-PM",
+        "state": "Islas Baleares",
+        "ISO3166-2-lvl4": "ES-IB",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "39.7991483",
+        "40.0945867",
+        "3.7908505",
+        "4.3280260"
+      ]
+    }
+  },
+  "Orense (Ourense)": {
+    "fetchedAt": "2026-03-23T19:00:42.911Z",
+    "provinceId": "ourense",
+    "nominatim": {
+      "place_id": 270975528,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 343932,
+      "lat": "42.3438932",
+      "lon": "-7.8571792",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.5814301526658203,
+      "addresstype": "municipality",
+      "name": "Ourense",
+      "display_name": "Ourense, Galicia, España",
+      "address": {
+        "municipality": "Ourense",
+        "county": "Ourense",
+        "province": "Ourense",
+        "ISO3166-2-lvl6": "ES-OR",
+        "state": "Galicia",
+        "ISO3166-2-lvl4": "ES-GA",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "42.2895131",
+        "42.3983001",
+        "-8.0034978",
+        "-7.8059450"
+      ]
+    }
+  },
+  "A Coruña, España": {
+    "fetchedAt": "2026-03-23T19:00:44.354Z",
+    "provinceId": null,
+    "nominatim": {
+      "place_id": 263365730,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 346810,
+      "lat": "43.3709703",
+      "lon": "-8.3959425",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6470440546938139,
+      "addresstype": "municipality",
+      "name": "La Coruña",
+      "display_name": "La Coruña, Galicia, España",
+      "address": {
+        "municipality": "La Coruña",
+        "county": "La Coruña",
+        "state_district": "La Coruña",
+        "ISO3166-2-lvl6": "ES-C",
+        "state": "Galicia",
+        "ISO3166-2-lvl4": "ES-GA",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "43.3032370",
+        "43.3900162",
+        "-8.4691619",
+        "-8.3743767"
+      ]
+    }
+  },
+  "Roquetas de Mar, Almería": {
+    "fetchedAt": "2026-03-23T19:00:45.659Z",
+    "provinceId": "almeria",
+    "nominatim": {
+      "place_id": 271761589,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 347557,
+      "lat": "36.7630203",
+      "lon": "-2.6115886",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.5220817052134927,
+      "addresstype": "town",
+      "name": "Roquetas de Mar",
+      "display_name": "Roquetas de Mar, Almería, Andalucía, España",
+      "address": {
+        "town": "Roquetas de Mar",
+        "province": "Almería",
+        "ISO3166-2-lvl6": "ES-AL",
+        "state": "Andalucía",
+        "ISO3166-2-lvl4": "ES-AN",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "36.6978570",
+        "36.8566415",
+        "-2.6645061",
+        "-2.5518514"
+      ]
+    }
+  },
+  "Sevilla, España": {
+    "fetchedAt": "2026-03-23T19:00:47.423Z",
+    "provinceId": "sevilla",
+    "nominatim": {
+      "place_id": 424040738,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 342563,
+      "lat": "37.3886303",
+      "lon": "-5.9953403",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.7297329708417591,
+      "addresstype": "city",
+      "name": "Sevilla",
+      "display_name": "Sevilla, Andalucía, España",
+      "address": {
+        "city": "Sevilla",
+        "province": "Sevilla",
+        "ISO3166-2-lvl6": "ES-SE",
+        "state": "Andalucía",
+        "ISO3166-2-lvl4": "ES-AN",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "37.3002036",
+        "37.4529579",
+        "-6.0329183",
+        "-5.8191571"
+      ]
+    }
+  },
+  "Sevilla España": {
+    "fetchedAt": "2026-03-23T19:00:48.933Z",
+    "provinceId": "sevilla",
+    "nominatim": {
+      "place_id": 423872148,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 342563,
+      "lat": "37.3886303",
+      "lon": "-5.9953403",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.7297329708417591,
+      "addresstype": "city",
+      "name": "Sevilla",
+      "display_name": "Sevilla, Andalucía, España",
+      "address": {
+        "city": "Sevilla",
+        "province": "Sevilla",
+        "ISO3166-2-lvl6": "ES-SE",
+        "state": "Andalucía",
+        "ISO3166-2-lvl4": "ES-AN",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "37.3002036",
+        "37.4529579",
+        "-6.0329183",
+        "-5.8191571"
+      ]
+    }
+  },
+  "Sevilla, Spain": {
+    "fetchedAt": "2026-03-23T19:00:50.371Z",
+    "provinceId": "sevilla",
+    "nominatim": {
+      "place_id": 423877308,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 342563,
+      "lat": "37.3886303",
+      "lon": "-5.9953403",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.7297329708417591,
+      "addresstype": "city",
+      "name": "Sevilla",
+      "display_name": "Sevilla, Andalucía, España",
+      "address": {
+        "city": "Sevilla",
+        "province": "Sevilla",
+        "ISO3166-2-lvl6": "ES-SE",
+        "state": "Andalucía",
+        "ISO3166-2-lvl4": "ES-AN",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "37.3002036",
+        "37.4529579",
+        "-6.0329183",
+        "-5.8191571"
+      ]
+    }
+  },
+  "Anceu, Pontevedra": {
+    "fetchedAt": "2026-03-23T19:00:51.783Z",
+    "provinceId": "pontevedra",
+    "nominatim": {
+      "place_id": 273662334,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "node",
+      "osm_id": 8770494021,
+      "lat": "42.3604762",
+      "lon": "-8.4652171",
+      "category": "place",
+      "type": "hamlet",
+      "place_rank": 20,
+      "importance": 0.13338678034637977,
+      "addresstype": "hamlet",
+      "name": "Anceu",
+      "display_name": "Anceu, Ponte Caldelas, Pontevedra, Galicia, 36829, España",
+      "address": {
+        "hamlet": "Anceu",
+        "civil_parish": "Anceu",
+        "town": "Ponte Caldelas",
+        "county": "Pontevedra",
+        "province": "Pontevedra",
+        "ISO3166-2-lvl6": "ES-PO",
+        "state": "Galicia",
+        "ISO3166-2-lvl4": "ES-GA",
+        "postcode": "36829",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "42.3404762",
+        "42.3804762",
+        "-8.4852171",
+        "-8.4452171"
+      ]
+    }
+  },
+  "Barcelona, Spain": {
+    "fetchedAt": "2026-03-23T19:00:53.220Z",
+    "provinceId": "barcelona",
+    "nominatim": {
+      "place_id": 75980625,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 347950,
+      "lat": "41.3825802",
+      "lon": "2.1770730",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.8035003209691789,
+      "addresstype": "city",
+      "name": "Barcelona",
+      "display_name": "Barcelona, Barcelonés, Barcelona, Cataluña, España",
+      "address": {
+        "city": "Barcelona",
+        "county": "Barcelonés",
+        "province": "Barcelona",
+        "ISO3166-2-lvl6": "ES-B",
+        "state": "Cataluña",
+        "ISO3166-2-lvl4": "ES-CT",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "41.3170353",
+        "41.4679135",
+        "2.0524977",
+        "2.2283555"
+      ]
+    }
+  },
+  "Valencia, Spain": {
+    "fetchedAt": "2026-03-23T19:00:54.701Z",
+    "provinceId": "valencia",
+    "nominatim": {
+      "place_id": 272633887,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 344953,
+      "lat": "39.4697065",
+      "lon": "-0.3763353",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.7306288056783602,
+      "addresstype": "city",
+      "name": "Valencia",
+      "display_name": "Valencia, Comarca de Valencia, Valencia, Comunidad Valenciana, España",
+      "address": {
+        "city": "Valencia",
+        "county": "Comarca de Valencia",
+        "province": "Valencia",
+        "ISO3166-2-lvl6": "ES-V",
+        "state": "Comunidad Valenciana",
+        "ISO3166-2-lvl4": "ES-VC",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "39.2784496",
+        "39.5666090",
+        "-0.4325512",
+        "-0.2725205"
+      ]
+    }
+  },
+  "Viator, Almería": {
+    "fetchedAt": "2026-03-23T19:00:56.016Z",
+    "provinceId": "almeria",
+    "nominatim": {
+      "place_id": 271714728,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 346704,
+      "lat": "36.8887282",
+      "lon": "-2.4251246",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.49935099456949633,
+      "addresstype": "village",
+      "name": "Viator",
+      "display_name": "Viator, Almería, Andalucía, 04240, España",
+      "address": {
+        "village": "Viator",
+        "province": "Almería",
+        "ISO3166-2-lvl6": "ES-AL",
+        "state": "Andalucía",
+        "ISO3166-2-lvl4": "ES-AN",
+        "postcode": "04240",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "36.8658604",
+        "36.9269917",
+        "-2.4352633",
+        "-2.3674128"
+      ]
+    }
+  },
+  "Gijón, Spain": {
+    "fetchedAt": "2026-03-23T19:00:57.368Z",
+    "provinceId": "asturias",
+    "nominatim": {
+      "place_id": 270227898,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 345576,
+      "lat": "43.5449422",
+      "lon": "-5.6627500",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6201511478999338,
+      "addresstype": "city",
+      "name": "Gijón",
+      "display_name": "Gijón, Asturias, España",
+      "address": {
+        "city": "Gijón",
+        "province": "Asturias",
+        "ISO3166-2-lvl6": "ES-O",
+        "state": "Asturias",
+        "ISO3166-2-lvl4": "ES-AS",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "43.4415087",
+        "43.5867678",
+        "-5.8213224",
+        "-5.5628763"
+      ]
+    }
+  },
+  "Madrid, España": {
+    "fetchedAt": "2026-03-23T19:00:59.601Z",
+    "provinceId": "madrid",
+    "nominatim": {
+      "place_id": 425777657,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 5326784,
+      "lat": "40.4167820",
+      "lon": "-3.7035070",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.8186903991321961,
+      "addresstype": "city",
+      "name": "Madrid",
+      "display_name": "Madrid, Comunidad de Madrid, España",
+      "address": {
+        "city": "Madrid",
+        "state": "Comunidad de Madrid",
+        "ISO3166-2-lvl4": "ES-MD",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "40.3119774",
+        "40.6437293",
+        "-3.8889539",
+        "-3.5183264"
+      ]
+    }
+  },
+  "Barcelona, España": {
+    "fetchedAt": "2026-03-23T19:01:01.198Z",
+    "provinceId": "barcelona",
+    "nominatim": {
+      "place_id": 75980625,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 347950,
+      "lat": "41.3825802",
+      "lon": "2.1770730",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.8035003209691789,
+      "addresstype": "city",
+      "name": "Barcelona",
+      "display_name": "Barcelona, Barcelonés, Barcelona, Cataluña, España",
+      "address": {
+        "city": "Barcelona",
+        "county": "Barcelonés",
+        "province": "Barcelona",
+        "ISO3166-2-lvl6": "ES-B",
+        "state": "Cataluña",
+        "ISO3166-2-lvl4": "ES-CT",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "41.3170353",
+        "41.4679135",
+        "2.0524977",
+        "2.2283555"
+      ]
+    }
+  },
+  "Málaga, Spain": {
+    "fetchedAt": "2026-03-23T19:01:02.651Z",
+    "provinceId": "malaga",
+    "nominatim": {
+      "place_id": 432809657,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 340746,
+      "lat": "36.7213028",
+      "lon": "-4.4216366",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6776065694245125,
+      "addresstype": "municipality",
+      "name": "Málaga",
+      "display_name": "Málaga, Málaga-Costa del Sol, Málaga, Andalucía, España",
+      "address": {
+        "municipality": "Málaga",
+        "county": "Málaga-Costa del Sol",
+        "province": "Málaga",
+        "ISO3166-2-lvl6": "ES-MA",
+        "state": "Andalucía",
+        "ISO3166-2-lvl4": "ES-AN",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "36.6356619",
+        "36.8940412",
+        "-4.5878887",
+        "-4.2604897"
+      ]
+    }
+  },
+  "Girona": {
+    "fetchedAt": "2026-03-23T19:01:04.432Z",
+    "provinceId": "girona",
+    "nominatim": {
+      "place_id": 75333216,
+      "licence": "Data © OpenStreetMap contributors, ODbL 1.0. http://osm.org/copyright",
+      "osm_type": "relation",
+      "osm_id": 343535,
+      "lat": "41.9793006",
+      "lon": "2.8199439",
+      "category": "boundary",
+      "type": "administrative",
+      "place_rank": 16,
+      "importance": 0.6383659916367134,
+      "addresstype": "city",
+      "name": "Gerona",
+      "display_name": "Gerona, Gironés, Gerona, Cataluña, España",
+      "address": {
+        "city": "Gerona",
+        "county": "Gironés",
+        "province": "Gerona",
+        "ISO3166-2-lvl6": "ES-GI",
+        "state": "Cataluña",
+        "ISO3166-2-lvl4": "ES-CT",
+        "country": "España",
+        "country_code": "es"
+      },
+      "boundingbox": [
+        "41.9392441",
+        "42.0297266",
+        "2.7831004",
+        "2.8982394"
+      ]
+    }
+  }
+}

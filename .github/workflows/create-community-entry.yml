@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      issues: read
+      issues: write
       pull-requests: write
 
     steps:
@@ -23,11 +23,19 @@ jobs:
           node-version: 20
 
       - name: Instalar dependencias
-        run: npm install node-fetch sharp
+        run: npm ci --ignore-scripts
 
       - name: Obtener datos del issue
         run: |
-          echo "${{ github.event.issue.body }}" > issue-body.txt
+          cat <<'EOF' > issue-body.txt
+          ${{ github.event.issue.body }}
+          EOF
+
+      - name: Resolver responsables
+        id: resolve
+        run: |
+          RESULT=$(node scripts/resolve-issue-assignees.js issue-body.txt)
+          echo "result=$RESULT" >> "$GITHUB_OUTPUT"
       
       - name: Generar entrada de comunidad y actualizar JSON
         run: node scripts/process-community-issue.js "$(cat issue-body.txt)"
@@ -48,6 +56,7 @@ jobs:
           echo "LON=$LON" >> $GITHUB_OUTPUT
 
       - name: Crear Pull Request
+        id: cpr
         uses: peter-evans/create-pull-request@v5
         with:
           add-paths: |
@@ -62,3 +71,52 @@ jobs:
             📍 Check location on maps:
             - [OpenStreetMap](https://www.openstreetmap.org/?mlat=${{ steps.coords.outputs.LAT }}&mlon=${{ steps.coords.outputs.LON }}&zoom=15)
             - [Google Maps](https://www.google.com/maps/search/?api=1&query=${{ steps.coords.outputs.LAT }},${{ steps.coords.outputs.LON }})
+
+      - name: Sincronizar responsables en la PR
+        if: steps.cpr.outputs.pull-request-number != ''
+        uses: actions/github-script@v7
+        env:
+          RESOLUTION: ${{ steps.resolve.outputs.result }}
+          PR_NUMBER: ${{ steps.cpr.outputs.pull-request-number }}
+        with:
+          script: |
+            const resolution = JSON.parse(process.env.RESOLUTION);
+            const pull_number = Number(process.env.PR_NUMBER);
+
+            if (!pull_number || resolution.assignees.length === 0) {
+              return;
+            }
+
+            await github.rest.issues.addAssignees({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: pull_number,
+              assignees: resolution.assignees,
+            });
+
+            try {
+              await github.rest.pulls.requestReviewers({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                pull_number,
+                reviewers: resolution.assignees,
+              });
+            } catch (error) {
+              core.warning(`No se pudieron solicitar reviewers para la PR #${pull_number}: ${error.message}`);
+            }
+
+      - name: Publicar resumen del workflow
+        if: steps.cpr.outputs.pull-request-number != ''
+        env:
+          RESOLUTION: ${{ steps.resolve.outputs.result }}
+          PR_NUMBER: ${{ steps.cpr.outputs.pull-request-number }}
+        run: |
+          node - <<'NODE' >> "$GITHUB_STEP_SUMMARY"
+          const resolution = JSON.parse(process.env.RESOLUTION);
+          console.log("## PR automática");
+          console.log(`- pullRequestNumber: ${process.env.PR_NUMBER}`);
+          console.log(`- assignees: ${resolution.assignees.join(", ") || "-"}`);
+          console.log(`- usedFallback: ${resolution.usedFallback}`);
+          console.log(`- fallbackReason: ${resolution.fallbackReason ?? "-"}`);
+          console.log(`- provinceId: ${resolution.provinceId ?? "null"}`);
+          NODE

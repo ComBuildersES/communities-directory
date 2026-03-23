@@ -21,6 +21,7 @@ import {
   toggleSelection,
   URL_PLATFORM_OPTIONS,
 } from "../../lib/communitySubmission";
+import { inferProvinceIdFromNominatim } from "../../lib/provinceNormalization";
 import "./CommunityContribution.css";
 
 const FIELD_HELP = {
@@ -890,6 +891,7 @@ export function CommunityContribution({
   const [hasOpenedIssue, setHasOpenedIssue] = useState(false);
   const [hasRestoredDraft, setHasRestoredDraft] = useState(false);
   const [restoredDraftMeta, setRestoredDraftMeta] = useState(null);
+  const inferredProvinceIdRef = useRef("");
   const datasetSignature = useMemo(() => buildDatasetSignature(communities), [communities]);
   const latestBaseDraft = useMemo(() => getCommunityDraft(existingCommunity, nextId), [existingCommunity, nextId]);
   const currentCommunityBaselineSignature = useMemo(
@@ -1028,6 +1030,63 @@ export function CommunityContribution({
     [latestBaseDraft]
   );
   const currentDraftSignature = useMemo(() => JSON.stringify(draft), [draft]);
+
+  useEffect(() => {
+    inferredProvinceIdRef.current = draft.provinceId;
+  }, [draft.provinceId]);
+
+  useEffect(() => {
+    const normalizedLocation = draft.location.trim();
+    const supportsLocation = EVENT_FORMATS_WITH_LOCATION.includes(draft.eventFormat);
+    const isUmbrellaOrganization = draft.communityType === "Organización paraguas";
+
+    if (!supportsLocation || isUmbrellaOrganization || normalizedLocation.length < 3) {
+      if (inferredProvinceIdRef.current) {
+        setDraft((current) => current.provinceId ? { ...current, provinceId: "" } : current);
+      }
+      return undefined;
+    }
+
+    const controller = new AbortController();
+    const timeoutId = window.setTimeout(async () => {
+      try {
+        const params = new URLSearchParams({
+          q: normalizedLocation,
+          format: "jsonv2",
+          limit: "1",
+          addressdetails: "1",
+          "accept-language": "es",
+        });
+        const response = await fetch(`https://nominatim.openstreetmap.org/search?${params.toString()}`, {
+          signal: controller.signal,
+          headers: {
+            Accept: "application/json",
+          },
+        });
+
+        if (!response.ok) return;
+
+        const results = await response.json();
+        const provinceId = inferProvinceIdFromNominatim(results?.[0]);
+
+        setDraft((current) => {
+          const nextProvinceId = provinceId ?? "";
+          return current.provinceId === nextProvinceId
+            ? current
+            : { ...current, provinceId: nextProvinceId };
+        });
+      } catch (error) {
+        if (error.name !== "AbortError") {
+          setDraft((current) => current.provinceId ? { ...current, provinceId: "" } : current);
+        }
+      }
+    }, 1200);
+
+    return () => {
+      controller.abort();
+      window.clearTimeout(timeoutId);
+    };
+  }, [draft.communityType, draft.eventFormat, draft.location]);
   const isDirty = currentDraftSignature !== baseDraftSignature;
 
   useEffect(() => {

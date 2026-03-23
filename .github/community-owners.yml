@@ -1,0 +1,295 @@
+defaults:
+  assignees:
+    - hhkaos
+    - alvarosaugar
+
+provinces:
+  albacete:
+    assignees: []
+    aliases:
+      - Albacete
+  alicante:
+    assignees:
+      - soydachi
+    aliases:
+      - Alicante
+      - Alacant
+      - Alicante/Alacant
+      - Benidorm
+  almeria:
+    assignees:
+      - hhkaos
+    aliases:
+      - Almería
+      - Almeria
+  araba:
+    assignees: []
+    aliases:
+      - Araba
+      - Álava
+      - Alava
+      - Vitoria-Gasteiz
+  asturias:
+    assignees:
+      - dizapico
+    aliases:
+      - Asturias
+      - Principado de Asturias
+      - Gijón
+      - Gijon
+      - Gijón, Asturias
+      - Gijón, Spain
+      - Oviedo
+      - Oviedo, Asturias
+      - Oviedo/Gijón (Asturias)
+  avila:
+    assignees: []
+    aliases:
+      - Ávila
+      - Avila
+  badajoz:
+    assignees: []
+    aliases:
+      - Badajoz
+  balears:
+    assignees: []
+    aliases:
+      - Balears
+      - Illes Balears
+      - Balears, Illes
+      - Islas Baleares
+      - Mallorca
+      - Menorca
+  a-coruna:
+    assignees:
+      - kdarrey
+    aliases:
+      - A Coruña
+      - A Coruna
+      - Coruña, A
+      - Coruna, A
+      - La Coruña
+      - La Coruna
+      - Coruña
+      - Coruña, Galicia
+      - Coruña (Santiago de Compostela)
+      - Coruña (Ferrol)
+      - A Coruña, España
+  barcelona:
+    assignees:
+      - dzknl
+    aliases:
+      - Barcelona
+  bizkaia:
+    assignees: []
+    aliases:
+      - Bizkaia
+      - Vizcaya
+      - Bilbao
+  burgos:
+    assignees: []
+    aliases:
+      - Burgos
+  caceres:
+    assignees:
+      - guldoe
+    aliases:
+      - Cáceres
+      - Caceres
+  cadiz:
+    assignees: []
+    aliases:
+      - Cádiz
+      - Cadiz
+  cantabria:
+    assignees: []
+    aliases:
+      - Cantabria
+      - Santander
+  castellon:
+    assignees: []
+    aliases:
+      - Castellón
+      - Castellon
+      - Castelló
+      - Castellón/Castelló
+      - Castellon/Castello
+      - Castellón de la Plana
+  ciudad-real:
+    assignees: []
+    aliases:
+      - Ciudad Real
+  cordoba:
+    assignees: []
+    aliases:
+      - Córdoba
+      - Cordoba
+  cuenca:
+    assignees: []
+    aliases:
+      - Cuenca
+  gipuzkoa:
+    assignees: []
+    aliases:
+      - Gipuzkoa
+      - Guipúzcoa
+      - Guipuzcoa
+      - San Sebastián
+      - Donostia
+  granada:
+    assignees:
+      - DraXus
+    aliases:
+      - Granada
+  girona:
+    assignees: []
+    aliases:
+      - Girona
+      - Gerona
+  guadalajara:
+    assignees: []
+    aliases:
+      - Guadalajara
+  huelva:
+    assignees: []
+    aliases:
+      - Huelva
+  huesca:
+    assignees: []
+    aliases:
+      - Huesca
+  jaen:
+    assignees: []
+    aliases:
+      - Jaén
+      - Jaen
+  la-rioja:
+    assignees:
+      - mario-ezquerro
+    aliases:
+      - La Rioja
+      - Rioja, La
+      - Rioja La
+      - Logroño
+      - Logrono
+      - Logroño, La Rioja
+      - Logroño La Rioja
+  las-palmas:
+    assignees: []
+    aliases:
+      - Las Palmas
+      - Palmas, Las
+  leon:
+    assignees:
+      - davidpnf
+    aliases:
+      - León
+      - Leon
+      - Ponferrada
+  lleida:
+    assignees: []
+    aliases:
+      - Lleida
+      - Lérida
+      - Lerida
+  lugo:
+    assignees: []
+    aliases:
+      - Lugo
+  madrid:
+    assignees:
+      - crystian
+      - hhkaos
+      - soydachi
+      - astrojuanlu
+    aliases:
+      - Madrid
+      - Comunidad de Madrid
+  malaga:
+    assignees:
+      - deors
+    aliases:
+      - Málaga
+      - Malaga
+  murcia:
+    assignees:
+      - soydachi
+    aliases:
+      - Murcia
+      - Región de Murcia
+      - Region de Murcia
+  navarra:
+    assignees: []
+    aliases:
+      - Navarra
+      - Pamplona
+  ourense:
+    assignees: []
+    aliases:
+      - Ourense
+      - Orense
+  palencia:
+    assignees: []
+    aliases:
+      - Palencia
+  pontevedra:
+    assignees: []
+    aliases:
+      - Pontevedra
+      - Vigo
+      - Vigo, Galicia
+  salamanca:
+    assignees: []
+    aliases:
+      - Salamanca
+  santa-cruz-de-tenerife:
+    assignees: []
+    aliases:
+      - Santa Cruz de Tenerife
+      - Tenerife
+  segovia:
+    assignees: []
+    aliases:
+      - Segovia
+  sevilla:
+    assignees: []
+    aliases:
+      - Sevilla
+      - Sevilla, España
+      - Sevilla, Spain
+      - Sevilla España
+  soria:
+    assignees: []
+    aliases:
+      - Soria
+  tarragona:
+    assignees: []
+    aliases:
+      - Tarragona
+  teruel:
+    assignees: []
+    aliases:
+      - Teruel
+  toledo:
+    assignees: []
+    aliases:
+      - Toledo
+  valencia:
+    assignees:
+      - julietazalduendo
+    aliases:
+      - Valencia
+      - València
+      - Valencia/València
+  valladolid:
+    assignees: []
+    aliases:
+      - Valladolid
+  zamora:
+    assignees: []
+    aliases:
+      - Zamora
+  zaragoza:
+    assignees: []
+    aliases:
+      - Zaragoza

@@ -109,6 +109,17 @@ Puedes colaborar con los datos de varias formas:
 - Buscando formas de mejorar el procesamiento automatizado y validación  de datos (normalización de nombres, detección de duplicados...).
 - Aportando al debate de cómo mejorar [las convenciones establecidas](https://github.com/ComBuildersES/communities-directory/issues/63).
 
+#### Asignación automática de issues y PRs
+
+Los issues de alta o edición de comunidades creados desde la web intentan inferir automáticamente una `provinceId` a partir del campo `location`.
+
+- La lista viva de responsables por provincia está en [`.github/community-owners.yml`](./.github/community-owners.yml).
+- Ese fichero es la fuente de verdad para automatizar asignaciones; el issue [#53](https://github.com/ComBuildersES/communities-directory/issues/53) se mantiene como punto de coordinación para que nuevas personas se ofrezcan voluntarias.
+- Cuando una persona se ofrece para una zona, hay que actualizar también `community-owners.yml` para que la automatización la tenga en cuenta.
+- Al abrir un issue de comunidad, se asigna automáticamente a las personas responsables de esa provincia.
+- Cuando ese issue genera una PR automática, la PR se asigna a las mismas personas y además se les solicita revisión.
+- Si no se puede resolver la provincia o no hay responsables configurados para esa provincia, se asigna a `@hhkaos` y `@alvarosaugar` y se añade la etiqueta `needs-area-owner`.
+
 #### Convenciones de datos
 
 ##### Qué comunidades tienen cabida en el repo
@@ -154,7 +165,10 @@ Actualmente usamos tres tipos:
 
 ##### Quién revisa los datos
 
-Tenemos una lista de [personas voluntarias que se encargan de revisar los PRs](https://github.com/ComBuildersES/communities-directory/issues/53) a las que te animamos unirte (cuantas más, mejor).
+Tenemos una lista de personas voluntarias que se encargan de revisar issues y PRs de comunidades por provincia.
+
+- La fuente principal para la automatización es [`.github/community-owners.yml`](./.github/community-owners.yml).
+- El issue [#53](https://github.com/ComBuildersES/communities-directory/issues/53) sigue siendo el lugar donde coordinar nuevas incorporaciones o cambios en el reparto.
 
 > **Nota**: cada vez que llegue un PR asignaremos a todas las personas que correspondan, y daremos un par de días de plazo para revisarlos, pasados esos días, si no ha habido ninguna pega procederemos a mergear.
 

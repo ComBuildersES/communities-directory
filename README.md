@@ -93,6 +93,8 @@ Echa un vistazo a los *[milestones](https://github.com/ComBuildersES/communities
 
 ¿Quieres unirte? -> [CONTRIBUTING.md](https://github.com/ComBuildersES/communities-directory/blob/master/CONTRIBUTING.md)
 
+Los issues y PRs automáticos de comunidades se asignan por provincia usando [`.github/community-owners.yml`](./.github/community-owners.yml). Si quieres ayudar a revisar una zona concreta, puedes ofrecerte en el [issue #53](https://github.com/ComBuildersES/communities-directory/issues/53).
+
 Echa un vistazo a algunas de las tareas por las que podrías empezar a ayudar: 
 
 [![GitHub issues by-label](https://img.shields.io/github/issues/ComBuildersES/communities-directory/good%20first%20issue)](https://github.com/ComBuildersES/communities-directory/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)

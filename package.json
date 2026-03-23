@@ -22,6 +22,7 @@
     "scrape-community-data": "node scripts/scrape-community-data.js",
     "apply-suggestions": "node scripts/apply-suggestions.js",
     "apply-url-mapping": "node scripts/apply-url-mapping.js",
+    "simulate-community-owner-assignment": "node scripts/simulate-community-owner-assignment.js",
     "archive-broken-urls": "node scripts/archive-broken-urls.js",
     "build-preview": "vite build --mode localdev && npx http-server . -p 8080 -o dist/",
     "test-geojson": "npx http-server . -p 8080 -o public/viewer"
@@ -45,6 +46,7 @@
     "globals": "15.11.0",
     "playwright": "^1.58.2",
     "sharp": "^0.34.1",
-    "vite": "5.4.10"
+    "vite": "5.4.10",
+    "yaml": "^2.8.1"
   }
 }

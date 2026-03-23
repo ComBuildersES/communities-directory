@@ -1,0 +1,78 @@
+name: Autoasignar issues de comunidad
+
+on:
+  issues:
+    types: [opened, edited, labeled]
+
+jobs:
+  auto-assign:
+    if: contains(github.event.issue.body, 'community-directory-submission:v2') || contains(github.event.issue.labels.*.name, 'nueva-comunidad')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Instalar dependencias mínimas
+        run: npm ci --ignore-scripts
+
+      - name: Guardar cuerpo del issue
+        run: |
+          cat <<'EOF' > issue-body.txt
+          ${{ github.event.issue.body }}
+          EOF
+
+      - name: Resolver responsables
+        id: resolve
+        run: |
+          RESULT=$(node scripts/resolve-issue-assignees.js issue-body.txt)
+          echo "result=$RESULT" >> "$GITHUB_OUTPUT"
+
+      - name: Aplicar assignees y etiquetas
+        uses: actions/github-script@v7
+        env:
+          RESOLUTION: ${{ steps.resolve.outputs.result }}
+        with:
+          script: |
+            const resolution = JSON.parse(process.env.RESOLUTION);
+            const issue_number = context.payload.issue.number;
+
+            if (resolution.assignees.length > 0) {
+              await github.rest.issues.addAssignees({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number,
+                assignees: resolution.assignees,
+              });
+            }
+
+            if (resolution.labels.length > 0) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number,
+                labels: resolution.labels,
+              });
+            }
+
+      - name: Publicar resumen del workflow
+        env:
+          RESOLUTION: ${{ steps.resolve.outputs.result }}
+        run: |
+          node - <<'NODE' >> "$GITHUB_STEP_SUMMARY"
+          const resolution = JSON.parse(process.env.RESOLUTION);
+          console.log("## Autoasignación de issue");
+          console.log(`- provinceId: ${resolution.provinceId ?? "null"}`);
+          console.log(`- assignees: ${resolution.assignees.join(", ") || "-"}`);
+          console.log(`- usedFallback: ${resolution.usedFallback}`);
+          console.log(`- fallbackReason: ${resolution.fallbackReason ?? "-"}`);
+          console.log(`- labels: ${resolution.labels.join(", ") || "-"}`);
+          NODE
