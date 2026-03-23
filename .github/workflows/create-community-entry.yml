@@ -68,6 +68,8 @@ jobs:
           body: |
             Esta PR ha sido generada automáticamente a partir del issue #${{ github.event.issue.number }}.
             
+            Closes #${{ github.event.issue.number }}
+            
             📍 Check location on maps:
             - [OpenStreetMap](https://www.openstreetmap.org/?mlat=${{ steps.coords.outputs.LAT }}&mlon=${{ steps.coords.outputs.LON }}&zoom=15)
             - [Google Maps](https://www.google.com/maps/search/?api=1&query=${{ steps.coords.outputs.LAT }},${{ steps.coords.outputs.LON }})
