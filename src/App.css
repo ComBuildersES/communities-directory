@@ -28,6 +28,29 @@ html {
   min-width: 0;
 }
 
+.heading-brand-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+.heading-brand-button:hover .heading-title,
+.heading-brand-button:focus-visible .heading-title {
+  color: #3273dc;
+}
+
+.heading-brand-button:focus-visible {
+  outline: 2px solid rgba(50, 115, 220, 0.35);
+  outline-offset: 6px;
+  border-radius: 12px;
+}
+
 .heading-icon {
   width: 2.25rem;
   height: 2.25rem;
@@ -84,6 +107,45 @@ html {
 
 .contribution-loading {
   padding: 2rem;
+}
+
+.navigation-guard-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20010;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(32, 22, 10, 0.4);
+  padding: 1rem;
+}
+
+.navigation-guard-modal {
+  width: min(560px, 100%);
+  border-radius: 22px;
+  background: #fffdf8;
+  border: 1px solid #e7d7bb;
+  box-shadow: 0 24px 60px rgba(70, 49, 18, 0.18);
+  padding: 1.2rem;
+}
+
+.navigation-guard-modal h3 {
+  margin: 0;
+  color: #2b1d0c;
+}
+
+.navigation-guard-modal p {
+  margin: 0.55rem 0 0;
+  color: #6a5a48;
+  line-height: 1.5;
+}
+
+.navigation-guard-actions {
+  display: flex;
+  gap: 0.6rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 /* Filter panel */

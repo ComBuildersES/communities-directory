@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useCommunityActions } from "./stores/community.store";
 import { CommunitiesList } from "./components/CommunitiesList.jsx";
 import { CommunityContribution } from "./components/CommunityContribution/CommunityContribution.jsx";
@@ -23,18 +23,64 @@ import {
 function App () {
   const [view, setView] = useState("list");
   const [route, setRoute] = useState(() => parseContributionRoute());
+  const [contributionState, setContributionState] = useState({
+    isDirty: false,
+    issueOpened: false,
+  });
+  const [draftActions, setDraftActions] = useState({
+    saveDraft: null,
+    clearDraft: null,
+  });
+  const [pendingNavigation, setPendingNavigation] = useState(null);
   const { fetchCommunities } = useCommunityActions();
   const communities = useAllCommunities();
   const allTags = useTags();
   const allAudience = useAudience();
   const isLoading = useIsLoading();
+  const routeRef = useRef(route);
+  const contributionStateRef = useRef(contributionState);
+
+  useEffect(() => {
+    routeRef.current = route;
+  }, [route]);
+
+  useEffect(() => {
+    contributionStateRef.current = contributionState;
+  }, [contributionState]);
 
   useEffect(() => {
     fetchCommunities(); // Only fetch once on initial load
   }, [fetchCommunities]);
 
   useEffect(() => {
-    const handlePopState = () => setRoute(parseContributionRoute());
+    const handlePopState = () => {
+      const nextRoute = parseContributionRoute();
+      const currentRoute = routeRef.current;
+      const isLeavingContribution = currentRoute.mode !== "directory" && (
+        nextRoute.mode !== currentRoute.mode ||
+        nextRoute.identifier !== currentRoute.identifier
+      );
+      const shouldBlockNavigation = isLeavingContribution &&
+        contributionStateRef.current.isDirty &&
+        !contributionStateRef.current.issueOpened;
+
+      if (shouldBlockNavigation) {
+        window.history.pushState({}, "", buildContributionPath({
+          mode: currentRoute.mode,
+          identifier: currentRoute.identifier,
+        }));
+        setPendingNavigation({
+          path: buildContributionPath({
+            mode: nextRoute.mode,
+            identifier: nextRoute.identifier,
+          }),
+        });
+        return;
+      }
+
+      setRoute(nextRoute);
+    };
+
     window.addEventListener("popstate", handlePopState);
     return () => window.removeEventListener("popstate", handlePopState);
   }, []);
@@ -48,14 +94,71 @@ function App () {
     setRoute(parseContributionRoute());
   };
 
+  const navigateWithGuard = (path, options = {}) => {
+    const shouldBlockNavigation = route.mode !== "directory" &&
+      contributionState.isDirty &&
+      !contributionState.issueOpened;
+
+    if (shouldBlockNavigation) {
+      setPendingNavigation({ path, options });
+      return;
+    }
+
+    if (route.mode !== "directory") {
+      draftActions.clearDraft?.();
+    }
+
+    if (options.resetView) {
+      setView("list");
+    }
+
+    navigateTo(path);
+  };
+
   const closeContributionForm = () => {
-    navigateTo(buildContributionPath({ mode: "directory" }));
+    navigateWithGuard(buildContributionPath({ mode: "directory" }));
+  };
+
+  const goToHome = () => {
+    navigateWithGuard(buildContributionPath({ mode: "directory" }), { resetView: true });
+  };
+
+  const continuePendingNavigation = ({ saveDraft } = {}) => {
+    if (!pendingNavigation?.path) return;
+
+    if (saveDraft) {
+      draftActions.saveDraft?.();
+    } else {
+      draftActions.clearDraft?.();
+    }
+
+    const targetPath = pendingNavigation.path;
+    const targetOptions = pendingNavigation.options ?? {};
+    setPendingNavigation(null);
+    if (targetOptions.resetView) {
+      setView("list");
+    }
+    navigateTo(targetPath);
   };
 
   const communityToEdit = route.mode === "edit"
     ? resolveCommunityFromIdentifier(communities, route.identifier)
     : null;
   const showContributionView = route.mode !== "directory";
+
+  useEffect(() => {
+    if (showContributionView) return;
+
+    setContributionState({
+      isDirty: false,
+      issueOpened: false,
+    });
+    setDraftActions({
+      saveDraft: null,
+      clearDraft: null,
+    });
+    setPendingNavigation(null);
+  }, [showContributionView]);
 
   return (
     <>
@@ -64,6 +167,7 @@ function App () {
         toggleView={toggleView}
         isContributionView={showContributionView}
         closeContributionForm={closeContributionForm}
+        goToHome={goToHome}
       />
       {!showContributionView && <TagSearch />}
       {!showContributionView && <ResultsBar view={view} />}
@@ -75,6 +179,9 @@ function App () {
             allTags={allTags}
             allAudience={allAudience}
             existingCommunity={communityToEdit}
+            onDirtyChange={(isDirty) => setContributionState((current) => ({ ...current, isDirty }))}
+            onIssueOpenedChange={(issueOpened) => setContributionState((current) => ({ ...current, issueOpened }))}
+            onDraftActionsChange={setDraftActions}
           />
         )}
         {showContributionView && isLoading && <p className="contribution-loading">Cargando formulario...</p>}
@@ -90,6 +197,36 @@ function App () {
         {!showContributionView && view === "list" && <CommunitiesList />}
         {!showContributionView && view === "map" && <Map />}
       </div>
+      {pendingNavigation && (
+        <div className="navigation-guard-overlay">
+          <div className="navigation-guard-modal" role="dialog" aria-modal="true" aria-label="Cambios sin guardar">
+            <h3>Hay cambios sin guardar</h3>
+            <p>
+              Si sales ahora perderás lo que has escrito en el formulario. Puedes seguir editando,
+              guardar un borrador local en este navegador o salir sin guardarlo.
+            </p>
+            <div className="navigation-guard-actions">
+              <button type="button" className="button is-light" onClick={() => setPendingNavigation(null)}>
+                Seguir editando
+              </button>
+              <button
+                type="button"
+                className="button is-warning is-light"
+                onClick={() => continuePendingNavigation({ saveDraft: true })}
+              >
+                Guardar borrador y salir
+              </button>
+              <button
+                type="button"
+                className="button is-danger"
+                onClick={() => continuePendingNavigation({ saveDraft: false })}
+              >
+                Salir sin guardar
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
       <Footer />
     </>
   );

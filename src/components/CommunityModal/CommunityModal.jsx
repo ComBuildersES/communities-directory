@@ -17,6 +17,7 @@ const URL_CONFIG = [
   { key: "youtube",        label: "YouTube",            icon: "fab fa-youtube" },
   { key: "linkedin",       label: "LinkedIn",           icon: "fab fa-linkedin" },
   { key: "twitter",        label: "Twitter/X",          icon: "fab fa-x-twitter" },
+  { key: "tiktok",         label: "TikTok",             icon: "fab fa-tiktok" },
   { key: "instagram",      label: "Instagram",          icon: "fab fa-instagram" },
   { key: "facebook",       label: "Facebook",           icon: "fab fa-facebook" },
   { key: "mastodon",       label: "Mastodon",           icon: "fab fa-mastodon" },

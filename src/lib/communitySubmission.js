@@ -27,6 +27,7 @@ export const URL_PLATFORM_OPTIONS = [
   { key: "youtube", label: "YouTube" },
   { key: "linkedin", label: "LinkedIn" },
   { key: "twitter", label: "Twitter/X" },
+  { key: "tiktok", label: "TikTok" },
   { key: "instagram", label: "Instagram" },
   { key: "facebook", label: "Facebook" },
   { key: "mastodon", label: "Mastodon" },
@@ -36,6 +37,7 @@ export const URL_PLATFORM_OPTIONS = [
 
 const CONTRIBUTION_MODE_PARAM = "contribute";
 const EDIT_PARAM = "edit";
+const CONTRIBUTION_DRAFT_STORAGE_PREFIX = "community-directory-contribution-draft";
 
 function getTodayDate() {
   return new Date().toLocaleDateString("es-ES");
@@ -43,6 +45,106 @@ function getTodayDate() {
 
 function cleanString(value) {
   return typeof value === "string" ? value.trim() : "";
+}
+
+export function normalizeComparableText(value = "") {
+  return cleanString(value)
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase();
+}
+
+export function compactComparableText(value = "") {
+  return normalizeComparableText(value).replace(/[^a-z0-9]+/g, "");
+}
+
+function getLevenshteinDistance(source = "", target = "") {
+  if (source === target) return 0;
+  if (!source.length) return target.length;
+  if (!target.length) return source.length;
+
+  const previousRow = Array.from({ length: target.length + 1 }, (_, index) => index);
+
+  for (let i = 0; i < source.length; i += 1) {
+    let previousDiagonal = previousRow[0];
+    previousRow[0] = i + 1;
+
+    for (let j = 0; j < target.length; j += 1) {
+      const temp = previousRow[j + 1];
+      const substitutionCost = source[i] === target[j] ? 0 : 1;
+
+      previousRow[j + 1] = Math.min(
+        previousRow[j + 1] + 1,
+        previousRow[j] + 1,
+        previousDiagonal + substitutionCost
+      );
+
+      previousDiagonal = temp;
+    }
+  }
+
+  return previousRow[target.length];
+}
+
+export function areCommunityNamesSimilar(source = "", target = "") {
+  const normalizedSource = normalizeComparableText(source);
+  const normalizedTarget = normalizeComparableText(target);
+  const compactSource = compactComparableText(source);
+  const compactTarget = compactComparableText(target);
+
+  if (!compactSource || !compactTarget) return false;
+  if (normalizedSource === normalizedTarget) return true;
+  if (compactSource === compactTarget) return true;
+
+  const shortestLength = Math.min(compactSource.length, compactTarget.length);
+  const longestLength = Math.max(compactSource.length, compactTarget.length);
+
+  if (shortestLength < 6) return false;
+  if (compactSource.includes(compactTarget) || compactTarget.includes(compactSource)) {
+    return longestLength - shortestLength <= 3;
+  }
+
+  const distance = getLevenshteinDistance(compactSource, compactTarget);
+
+  if (longestLength <= 10) {
+    return distance <= 1;
+  }
+
+  if (longestLength <= 18) {
+    return distance <= 2;
+  }
+
+  return distance <= 3;
+}
+
+export function normalizeUrlForComparison(value = "") {
+  const cleanedValue = cleanString(value);
+  if (!cleanedValue) return "";
+
+  try {
+    const parsedUrl = new URL(cleanedValue);
+    parsedUrl.hash = "";
+
+    const pathname = parsedUrl.pathname.replace(/\/+$/, "");
+    const search = parsedUrl.search === "?" ? "" : parsedUrl.search;
+    const host = parsedUrl.hostname.toLowerCase().replace(/^www\./, "");
+
+    return `${parsedUrl.protocol.toLowerCase()}//${host}${pathname}${search}`.toLowerCase();
+  } catch {
+    return cleanedValue
+      .toLowerCase()
+      .replace(/^www\./, "")
+      .replace(/\/+$/, "");
+  }
+}
+
+export function getComparableCommunityUrls(community = {}) {
+  return [
+    community.communityUrl,
+    ...Object.values(normalizeUrls(community.urls ?? {})),
+  ]
+    .map((url) => normalizeUrlForComparison(url))
+    .filter(Boolean);
 }
 
 export function slugifyCommunityName(value = "") {
@@ -84,6 +186,46 @@ export function buildContributionPath({ mode = "new", identifier = null, pathnam
 
   const query = params.toString();
   return query ? `${pathname}?${query}` : pathname;
+}
+
+export function getContributionDraftStorageKey({ mode = "new", identifier = null } = {}) {
+  const normalizedMode = mode === "edit" && identifier ? "edit" : "new";
+  const normalizedIdentifier = normalizedMode === "edit" ? String(identifier) : "new";
+  return `${CONTRIBUTION_DRAFT_STORAGE_PREFIX}:${normalizedMode}:${normalizedIdentifier}`;
+}
+
+export function loadContributionDraft(storageKey) {
+  if (!storageKey || typeof window === "undefined") return null;
+
+  try {
+    const rawDraft = window.localStorage.getItem(storageKey);
+    if (!rawDraft) return null;
+    return JSON.parse(rawDraft);
+  } catch {
+    return null;
+  }
+}
+
+export function saveContributionDraft(storageKey, draft) {
+  if (!storageKey || typeof window === "undefined") return false;
+
+  try {
+    window.localStorage.setItem(storageKey, JSON.stringify(draft));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export function clearContributionDraft(storageKey) {
+  if (!storageKey || typeof window === "undefined") return false;
+
+  try {
+    window.localStorage.removeItem(storageKey);
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 export function resolveCommunityFromIdentifier(communities, identifier) {

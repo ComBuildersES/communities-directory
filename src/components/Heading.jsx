@@ -7,6 +7,7 @@ export function Heading ({
   toggleView,
   isContributionView = false,
   closeContributionForm,
+  goToHome,
 }) {
   const { toggleSidebar } = useSidebarActions();
   const isVisible = useSideBarVisible();
@@ -14,13 +15,15 @@ export function Heading ({
   return (
     <header id="title">
       <div className="heading-brand">
-        <div className="heading-icon">
-          <i className="fas fa-people-group"></i>
-        </div>
-        <div>
-          <h1 className="heading-title">Comunidades Tech</h1>
-          <p className="heading-subtitle">Directorio de comunidades tecnológicas de España</p>
-        </div>
+        <button type="button" className="heading-brand-button" onClick={goToHome}>
+          <div className="heading-icon">
+            <i className="fas fa-people-group"></i>
+          </div>
+          <div>
+            <h1 className="heading-title">Comunidades Tech</h1>
+            <p className="heading-subtitle">Directorio de comunidades tecnológicas de España</p>
+          </div>
+        </button>
       </div>
 
       <div className="heading-actions">

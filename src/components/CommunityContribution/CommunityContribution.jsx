@@ -4,12 +4,19 @@ import {
   buildCommunityPayload,
   buildContributionPath,
   buildGitHubIssueUrl,
+  clearContributionDraft,
   COMMUNITY_STATUS_OPTIONS,
   COMMUNITY_TYPE_OPTIONS,
   EVENT_FORMAT_OPTIONS,
   EVENT_FORMATS_WITH_LOCATION,
+  areCommunityNamesSimilar,
+  getComparableCommunityUrls,
   getCommunityDraft,
+  getContributionDraftStorageKey,
   getNextCommunityId,
+  loadContributionDraft,
+  normalizeUrlForComparison,
+  saveContributionDraft,
   SHORT_DESCRIPTION_MAX_LENGTH,
   toggleSelection,
   URL_PLATFORM_OPTIONS,
@@ -384,6 +391,139 @@ function TaxonomyPicker({
 function UrlFields({ primaryUrl, onPrimaryUrlChange, urls, onUrlChange }) {
   const [expandedPlatforms, setExpandedPlatforms] = useState([]);
   const [isPrimaryHelpOpen, setIsPrimaryHelpOpen] = useState(false);
+  const [openPlatformHelp, setOpenPlatformHelp] = useState(null);
+  const platformHelpContent = {
+    web: {
+      title: "URL web",
+      description: "Añade la web principal o landing más estable de la comunidad.",
+      bullets: [
+        "Ejemplos: web propia, página oficial o microsite persistente.",
+        "Si ya la has usado como URL principal, no hace falta repetirla aquí.",
+      ],
+    },
+    eventsUrl: {
+      title: "URL de eventos",
+      description: "Enlace a la plataforma donde publican convocatorias o entradas.",
+      bullets: [
+        "Ejemplos: Meetup, Eventbrite, Luma, saraos.tech, Google Calendar o una agenda propia.",
+        "Úsalo cuando la actividad viva sobre todo en ese calendario o plataforma.",
+      ],
+    },
+    linkAggregator: {
+      title: "Agregador de links",
+      description: "Enlace a una página que reúne varios perfiles o recursos de la comunidad.",
+      bullets: [
+        "Ejemplos: Linktree, Beacons, Bento o una página similar.",
+        "Es útil cuando la comunidad centraliza su presencia en un único agregador.",
+      ],
+    },
+    mailingList: {
+      title: "Lista de correo",
+      description: "Enlace para suscribirse o consultar la lista de correo de la comunidad.",
+      bullets: [
+        "Ejemplos: Google Groups, Buttondown, Substack o Mailchimp.",
+        "Añádelo si el email es un canal relevante para seguir la actividad o interactuar con otros miembros.",
+      ],
+    },
+    github: {
+      title: "GitHub",
+      description: "Perfil u organización de GitHub usada por la comunidad.",
+      bullets: [
+        "Ejemplos: organización, perfil principal o repositorio central.",
+      ],
+    },
+    discord: {
+      title: "Discord",
+      description: "Invitación o acceso al servidor de Discord de la comunidad.",
+      bullets: [
+        "Ejemplos: enlaces `discord.gg` o invitaciones permanentes.",
+      ],
+    },
+    telegram: {
+      title: "Telegram",
+      description: "Canal, grupo o enlace público de Telegram.",
+      bullets: [
+        "Ejemplos: `t.me/canal` o un grupo oficial de la comunidad.",
+      ],
+    },
+    whatsapp: {
+      title: "WhatsApp",
+      description: "Grupo o comunidad pública de WhatsApp.",
+      bullets: [
+        "Ejemplos: invitaciones `chat.whatsapp.com` o enlaces a comunidades públicas.",
+      ],
+    },
+    slack: {
+      title: "Slack",
+      description: "Workspace o enlace de acceso a Slack.",
+      bullets: [
+        "Ejemplos: URL del workspace o página oficial para unirse.",
+      ],
+    },
+    youtube: {
+      title: "YouTube",
+      description: "Canal o perfil de YouTube donde publican vídeos o directos.",
+      bullets: [
+        "Ejemplos: canal oficial, usuario o lista de reproducción principal.",
+      ],
+    },
+    linkedin: {
+      title: "LinkedIn",
+      description: "Página o perfil de LinkedIn asociado a la comunidad.",
+      bullets: [
+        "Ejemplos: página de empresa, showcase o grupo oficial.",
+      ],
+    },
+    twitter: {
+      title: "Twitter/X",
+      description: "Perfil principal en X o Twitter.",
+      bullets: [
+        "Ejemplos: `x.com/usuario` o el handle oficial de la comunidad.",
+      ],
+    },
+    tiktok: {
+      title: "TikTok",
+      description: "Perfil oficial de TikTok de la comunidad.",
+      bullets: [
+        "Ejemplos: `tiktok.com/@usuario`.",
+      ],
+    },
+    instagram: {
+      title: "Instagram",
+      description: "Perfil oficial en Instagram.",
+      bullets: [
+        "Ejemplos: cuenta principal de la comunidad o del evento.",
+      ],
+    },
+    facebook: {
+      title: "Facebook",
+      description: "Página, grupo o perfil oficial en Facebook.",
+      bullets: [
+        "Ejemplos: fan page o grupo público de la comunidad.",
+      ],
+    },
+    mastodon: {
+      title: "Mastodon",
+      description: "Perfil oficial en Mastodon.",
+      bullets: [
+        "Ejemplos: `mastodon.social/@usuario` o cualquier instancia equivalente.",
+      ],
+    },
+    bluesky: {
+      title: "Bluesky",
+      description: "Perfil oficial en Bluesky.",
+      bullets: [
+        "Ejemplos: `bsky.app/profile/usuario`.",
+      ],
+    },
+    twitch: {
+      title: "Twitch",
+      description: "Canal de Twitch donde la comunidad emite o publica contenido.",
+      bullets: [
+        "Ejemplos: `twitch.tv/canal`.",
+      ],
+    },
+  };
   const visiblePlatforms = useMemo(
     () => URL_PLATFORM_OPTIONS.filter(({ key }) => (urls[key] ?? "").trim() || expandedPlatforms.includes(key)),
     [expandedPlatforms, urls]
@@ -447,7 +587,17 @@ function UrlFields({ primaryUrl, onPrimaryUrlChange, urls, onUrlChange }) {
       <div className="contribution-grid contribution-grid--compact">
         {visiblePlatforms.map(({ key, label }) => (
           <div className="field" key={key}>
-            <label className="label" htmlFor={`url-${key}`}>{label}</label>
+            <label className="label contribution-label-with-help" htmlFor={`url-${key}`}>
+              <span>{label}</span>
+              {platformHelpContent[key] && (
+                <FieldHelp
+                  content={platformHelpContent[key]}
+                  isOpen={openPlatformHelp === key}
+                  onToggle={() => setOpenPlatformHelp((current) => current === key ? null : key)}
+                  onClose={() => setOpenPlatformHelp(null)}
+                />
+              )}
+            </label>
             <div className="control">
               <input
                 id={`url-${key}`}
@@ -477,10 +627,67 @@ function UrlFields({ primaryUrl, onPrimaryUrlChange, urls, onUrlChange }) {
               </button>
             ))}
           </div>
+          <p className="contribution-extra-platform-note">
+            Si echas en falta algún tipo de plataforma,{" "}
+            <a
+              href="https://github.com/ComBuildersES/communities-directory/issues"
+              target="_blank"
+              rel="noreferrer"
+            >
+              abre un issue en el repositorio
+            </a>{" "}
+            para que podamos seguir mejorando las opciones ofrecidas.
+          </p>
         </div>
       )}
     </section>
   );
+}
+
+function DuplicateWarning({ matches, emptyMessage }) {
+  if (!matches.length) return null;
+
+  return (
+    <div className="contribution-inline-warning" role="status" aria-live="polite">
+      <p>{emptyMessage}</p>
+      <ul className="contribution-inline-list">
+        {matches.map((community) => (
+          <li key={community.id}>
+            <a href={buildContributionPath({ mode: "edit", identifier: community.id })}>
+              {community.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function buildCommunityBaselineSignature(community) {
+  return JSON.stringify(community ?? null);
+}
+
+function buildDatasetSignature(communities = []) {
+  return JSON.stringify(
+    communities.map((community) => ({
+      id: community.id,
+      name: community.name,
+      lastReviewed: community.lastReviewed,
+      updatedCommunityUrl: community.communityUrl,
+    }))
+  );
+}
+
+function formatDraftSavedAt(savedAt) {
+  if (!savedAt) return null;
+
+  const parsedDate = new Date(savedAt);
+  if (Number.isNaN(parsedDate.getTime())) return null;
+
+  return new Intl.DateTimeFormat("es-ES", {
+    dateStyle: "medium",
+    timeStyle: "short",
+  }).format(parsedDate);
 }
 
 export function CommunityContribution({
@@ -488,19 +695,78 @@ export function CommunityContribution({
   allTags,
   allAudience,
   existingCommunity,
+  onDirtyChange,
+  onIssueOpenedChange,
+  onDraftActionsChange,
 }) {
   const formRef = useRef(null);
   const nextId = useMemo(() => getNextCommunityId(communities), [communities]);
+  const isEditMode = Boolean(existingCommunity);
+  const storageKey = useMemo(
+    () => getContributionDraftStorageKey({
+      mode: isEditMode ? "edit" : "new",
+      identifier: existingCommunity?.id ?? null,
+    }),
+    [existingCommunity?.id, isEditMode]
+  );
   const [draft, setDraft] = useState(() => getCommunityDraft(existingCommunity, nextId));
   const [tagQuery, setTagQuery] = useState("");
   const [audienceQuery, setAudienceQuery] = useState("");
   const [openHelpField, setOpenHelpField] = useState(null);
   const [isCommunityTypeModalOpen, setIsCommunityTypeModalOpen] = useState(false);
   const [isJsonExpanded, setIsJsonExpanded] = useState(false);
+  const [hasOpenedIssue, setHasOpenedIssue] = useState(false);
+  const [hasRestoredDraft, setHasRestoredDraft] = useState(false);
+  const [restoredDraftMeta, setRestoredDraftMeta] = useState(null);
+  const datasetSignature = useMemo(() => buildDatasetSignature(communities), [communities]);
+  const latestBaseDraft = useMemo(() => getCommunityDraft(existingCommunity, nextId), [existingCommunity, nextId]);
+  const currentCommunityBaselineSignature = useMemo(
+    () => buildCommunityBaselineSignature(existingCommunity),
+    [existingCommunity]
+  );
 
   useEffect(() => {
-    setDraft(getCommunityDraft(existingCommunity, nextId));
-  }, [existingCommunity, nextId]);
+    const baseDraft = latestBaseDraft;
+    const storedDraft = loadContributionDraft(storageKey);
+
+    if (storedDraft) {
+      const storedPayload = storedDraft.draft ?? storedDraft;
+      const storedSavedAt = storedDraft.savedAt ?? null;
+      const datasetChanged = Boolean(
+        storedDraft.datasetSignature &&
+        storedDraft.datasetSignature !== datasetSignature
+      );
+      const communityChanged = Boolean(
+        storedDraft.baselineCommunitySignature &&
+        storedDraft.baselineCommunitySignature !== currentCommunityBaselineSignature
+      );
+
+      setDraft({
+        ...baseDraft,
+        ...storedPayload,
+        tags: Array.isArray(storedPayload.tags) ? storedPayload.tags : baseDraft.tags,
+        targetAudience: Array.isArray(storedPayload.targetAudience) ? storedPayload.targetAudience : baseDraft.targetAudience,
+        urls: storedPayload.urls ?? baseDraft.urls,
+        latLon: {
+          lat: storedPayload.latLon?.lat ?? baseDraft.latLon.lat,
+          lon: storedPayload.latLon?.lon ?? baseDraft.latLon.lon,
+        },
+      });
+      setHasRestoredDraft(true);
+      setRestoredDraftMeta({
+        savedAt: storedSavedAt,
+        datasetChanged,
+        communityChanged,
+        isLegacyDraft: !storedDraft.draft,
+      });
+    } else {
+      setDraft(baseDraft);
+      setHasRestoredDraft(false);
+      setRestoredDraftMeta(null);
+    }
+
+    setHasOpenedIssue(false);
+  }, [currentCommunityBaselineSignature, datasetSignature, latestBaseDraft, nextId, storageKey]);
 
   useEffect(() => {
     if (draft.communityType !== "Organización paraguas") return;
@@ -523,7 +789,6 @@ export function CommunityContribution({
     }));
   }, [draft.communityType, draft.eventFormat, draft.location]);
 
-  const isEditMode = Boolean(existingCommunity);
   const sharePath = buildContributionPath({
     mode: isEditMode ? "edit" : "new",
     identifier: isEditMode ? existingCommunity.id : null,
@@ -547,21 +812,90 @@ export function CommunityContribution({
     [isEditMode, payload, shareUrl]
   );
 
-  const duplicateMatches = useMemo(() => {
-    if (isEditMode) return [];
+  const duplicates = useMemo(() => {
+    const comparableName = payload.name.trim();
+    const comparableUrls = new Set([
+      normalizeUrlForComparison(payload.communityUrl),
+      ...Object.values(payload.urls ?? {}).map((url) => normalizeUrlForComparison(url)),
+    ].filter(Boolean));
 
-    const normalizedName = payload.name.trim().toLowerCase();
-    const normalizedUrl = payload.communityUrl.trim().toLowerCase();
-    if (!normalizedName && !normalizedUrl) return [];
+    if (!comparableName && comparableUrls.size === 0) {
+      return {
+        byName: [],
+        byUrl: [],
+        combined: [],
+      };
+    }
 
-    return communities
-      .filter((community) => {
-        const sameName = normalizedName && community.name?.trim().toLowerCase() === normalizedName;
-        const sameUrl = normalizedUrl && community.communityUrl?.trim().toLowerCase() === normalizedUrl;
-        return sameName || sameUrl;
-      })
+    const byName = [];
+    const byUrl = [];
+
+    communities.forEach((community) => {
+      if (existingCommunity && community.id === existingCommunity.id) return;
+
+      const sameName = comparableName && areCommunityNamesSimilar(community.name, comparableName);
+      const communityUrls = getComparableCommunityUrls(community);
+      const sameUrl = communityUrls.some((url) => comparableUrls.has(url));
+
+      if (sameName) byName.push(community);
+      if (sameUrl) byUrl.push(community);
+    });
+
+    const combined = Array.from(new Map([...byName, ...byUrl].map((community) => [community.id, community])).values())
       .slice(0, 5);
-  }, [communities, isEditMode, payload.communityUrl, payload.name]);
+
+    return {
+      byName: byName.slice(0, 5),
+      byUrl: byUrl.slice(0, 5),
+      combined,
+    };
+  }, [communities, existingCommunity, payload.name, payload.communityUrl, payload.urls]);
+
+  const baseDraftSignature = useMemo(
+    () => JSON.stringify(latestBaseDraft),
+    [latestBaseDraft]
+  );
+  const currentDraftSignature = useMemo(() => JSON.stringify(draft), [draft]);
+  const isDirty = currentDraftSignature !== baseDraftSignature;
+
+  useEffect(() => {
+    onDirtyChange?.(isDirty);
+  }, [isDirty, onDirtyChange]);
+
+  useEffect(() => {
+    onIssueOpenedChange?.(hasOpenedIssue);
+  }, [hasOpenedIssue, onIssueOpenedChange]);
+
+  useEffect(() => {
+    onDraftActionsChange?.({
+      saveDraft: () => saveContributionDraft(storageKey, {
+        savedAt: new Date().toISOString(),
+        draft,
+        datasetSignature,
+        baselineCommunitySignature: currentCommunityBaselineSignature,
+      }),
+      clearDraft: () => clearContributionDraft(storageKey),
+    });
+
+    return () => {
+      onDraftActionsChange?.({
+        saveDraft: null,
+        clearDraft: null,
+      });
+    };
+  }, [currentCommunityBaselineSignature, datasetSignature, draft, onDraftActionsChange, storageKey]);
+
+  useEffect(() => {
+    if (!isDirty || hasOpenedIssue) return;
+
+    const handleBeforeUnload = (event) => {
+      event.preventDefault();
+      event.returnValue = "";
+    };
+
+    window.addEventListener("beforeunload", handleBeforeUnload);
+    return () => window.removeEventListener("beforeunload", handleBeforeUnload);
+  }, [hasOpenedIssue, isDirty]);
 
   const handleFieldChange = (key, value) => {
     setDraft((current) => ({ ...current, [key]: value }));
@@ -592,8 +926,24 @@ export function CommunityContribution({
       return;
     }
 
+    clearContributionDraft(storageKey);
+    setHasOpenedIssue(true);
+    setHasRestoredDraft(false);
     window.open(githubIssueUrl, "_blank", "noopener,noreferrer");
   };
+
+  const handleDiscardRestoredDraft = () => {
+    clearContributionDraft(storageKey);
+    setDraft(latestBaseDraft);
+    setHasRestoredDraft(false);
+    setRestoredDraftMeta(null);
+    setHasOpenedIssue(false);
+  };
+
+  const restoredDraftSavedAt = formatDraftSavedAt(restoredDraftMeta?.savedAt);
+  const hasDatasetChangesSinceDraft = Boolean(
+    restoredDraftMeta?.datasetChanged || restoredDraftMeta?.communityChanged
+  );
 
   return (
     <form ref={formRef} className="contribution-shell" onSubmit={handleSubmit}>
@@ -614,12 +964,36 @@ export function CommunityContribution({
         </div>
       </section>
 
-      {duplicateMatches.length > 0 && (
+      {hasRestoredDraft && (
+        <article className="message is-info contribution-message">
+          <div className="message-body">
+            <p>
+              He recuperado un borrador guardado localmente
+              {restoredDraftSavedAt ? ` del ${restoredDraftSavedAt}` : ""}.
+            </p>
+            <p>
+              {hasDatasetChangesSinceDraft
+                ? "El dataset ha cambiado desde entonces. Revisa con cuidado antes de enviar para no pisar cambios más recientes."
+                : "No he detectado cambios en el dataset desde que se guardó este borrador."}
+            </p>
+            {restoredDraftMeta?.isLegacyDraft && (
+              <p>Este borrador es anterior al nuevo sistema de metadatos, así que la comprobación puede ser incompleta.</p>
+            )}
+            <div className="contribution-restored-draft-actions">
+              <button type="button" className="button is-light is-small" onClick={handleDiscardRestoredDraft}>
+                Descartar borrador local y cargar la versión más reciente
+              </button>
+            </div>
+          </div>
+        </article>
+      )}
+
+      {duplicates.combined.length > 0 && (
         <article className="message is-warning contribution-message">
           <div className="message-body">
-            Hay comunidades con nombre o URL coincidente. Quizá te interese abrir una edición sobre una existente en lugar de crear otra nueva:
+            He encontrado comunidades con un nombre o una URL coincidente. Revisa si conviene editar una existente antes de continuar:
             <ul className="contribution-inline-list">
-              {duplicateMatches.map((community) => (
+              {duplicates.combined.map((community) => (
                 <li key={community.id}>
                   <a href={buildContributionPath({ mode: "edit", identifier: community.id })}>
                     {community.name}
@@ -657,6 +1031,10 @@ export function CommunityContribution({
                 required
               />
             </div>
+            <DuplicateWarning
+              matches={duplicates.byName}
+              emptyMessage="Ya existe al menos una comunidad con este nombre o uno equivalente:"
+            />
           </div>
 
           <div className="field">
@@ -855,6 +1233,11 @@ export function CommunityContribution({
         onPrimaryUrlChange={(value) => handleFieldChange("communityUrl", value)}
         urls={draft.urls}
         onUrlChange={handleUrlChange}
+      />
+
+      <DuplicateWarning
+        matches={duplicates.byUrl}
+        emptyMessage="Ya existe al menos una comunidad con alguna de estas URLs:"
       />
 
       <TaxonomyPicker
