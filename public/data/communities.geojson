@@ -5592,10 +5592,11 @@
       "properties": {
         "id": 366,
         "name": "NodeJSMadrid",
-        "status": "Inactiva",
+        "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Madrid",
-        "communityUrl": "https://www.meetup.com/es-ES/node-js-madrid/"
+        "communityUrl": "https://www.meetup.com/es-ES/node-js-madrid/",
+        "thumbnailUrl": ""
       }
     },
     {
