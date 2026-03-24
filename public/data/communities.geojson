@@ -9022,10 +9022,10 @@
         "id": 312,
         "name": "Lambda World",
         "status": "Activa",
-        "lastReviewed": "18/10/2024",
+        "lastReviewed": "24/03/2026",
         "communityType": "Conferencia",
         "eventFormat": "Presencial",
-        "location": "Cádiz",
+        "location": "Torremolinos",
         "topics": "",
         "tags": [
           "aws",
@@ -9047,7 +9047,7 @@
           "web": "https://www.lambda.world/"
         },
         "thumbnailUrl": "images/lambda-world.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
