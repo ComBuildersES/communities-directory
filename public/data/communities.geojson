@@ -13644,7 +13644,7 @@
         "id": 450,
         "name": "Tomelloso Tech",
         "status": "Inactiva",
-        "lastReviewed": "26/05/2025",
+        "lastReviewed": "24/03/2026",
         "communityType": "Grupo colaborativo",
         "eventFormat": "Presencial",
         "location": "Ciudad Real (Tomelloso)",
@@ -19089,6 +19089,43 @@
         },
         "thumbnailUrl": "images/a11yconf.webp",
         "humanValidated": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.4628135,
+          36.8414197
+        ]
+      },
+      "properties": {
+        "id": 603,
+        "name": "AlmerIA SUMMIT",
+        "status": "Activa",
+        "lastReviewed": "24/03/2026",
+        "communityType": "Tech Meetup",
+        "eventFormat": "Presencial",
+        "location": "Almería",
+        "topics": "",
+        "tags": [
+          "generative-ai",
+          "startups",
+          "innovation"
+        ],
+        "targetAudience": [
+          "entrepreneur",
+          "business-innovation-manager"
+        ],
+        "contactInfo": "",
+        "communityUrl": "https://iaenalmeria.com/",
+        "urls": {
+          "instagram": "https://www.instagram.com/iaenalmeria/",
+          "whatsapp": "https://chat.whatsapp.com/CPrkjmfpdR6LbLct23hi4Y"
+        },
+        "thumbnailUrl": "images/almeria-summit.webp",
+        "humanValidated": true
       }
     }
   ]
