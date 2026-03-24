@@ -6141,7 +6141,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Madrid",
-        "communityUrl": "https://www.meetup.com/PyData-Madrid/",
+        "communityUrl": "https://guild.host/pydata-madrid",
         "thumbnailUrl": "images/pydata-madrid.webp"
       }
     },
