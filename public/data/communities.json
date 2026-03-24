@@ -19971,5 +19971,38 @@
     },
     "displayOnMap": false,
     "humanValidated": false
+  },
+  {
+    "id": 603,
+    "name": "AlmerIA SUMMIT",
+    "status": "Activa",
+    "lastReviewed": "24/03/2026",
+    "communityType": "Tech Meetup",
+    "eventFormat": "Presencial",
+    "location": "Almería",
+    "shortDescription": "Punto de encuentro para profesionales, empresas e instituciones que quieren comprender el presente de la inteligencia artificial y anticipar su futuro. Un evento diseñado para conectar conocimiento, territorio y oportunidad real.",
+    "topics": "",
+    "tags": [
+      "generative-ai",
+      "startups",
+      "innovation"
+    ],
+    "targetAudience": [
+      "entrepreneur",
+      "business-innovation-manager"
+    ],
+    "contactInfo": "",
+    "communityUrl": "https://iaenalmeria.com/",
+    "urls": {
+      "instagram": "https://www.instagram.com/iaenalmeria/",
+      "whatsapp": "https://chat.whatsapp.com/CPrkjmfpdR6LbLct23hi4Y"
+    },
+    "thumbnailUrl": "images/almeria-summit.webp",
+    "latLon": {
+      "lat": 36.8414197,
+      "lon": -2.4628135
+    },
+    "displayOnMap": true,
+    "humanValidated": true
   }
 ]
