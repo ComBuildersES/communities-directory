@@ -9712,7 +9712,7 @@
     "lastReviewed": "24/03/2026",
     "communityType": "Conferencia",
     "eventFormat": "Presencial",
-    "location": "Cádiz",
+    "location": "Torremolinos",
     "topics": "",
     "tags": [
       "functional-programming",
@@ -9744,7 +9744,7 @@
     },
     "displayOnMap": true,
     "humanValidated": true,
-    "shortDescription": ""
+    "shortDescription": "Evento internacional sobre programación funcional."
   },
   {
     "id": 313,
