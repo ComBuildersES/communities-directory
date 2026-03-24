@@ -1,10 +1,12 @@
 import { useEffect, useMemo, useState } from "react";
 import {
+  applyServiceWorkerUpdate,
   getInstallBannerState,
   isIosDevice,
   isStandaloneMode,
   setInstallBannerState,
   shouldShowInstallPrompt,
+  subscribeToServiceWorkerUpdate,
 } from "../lib/pwa";
 
 const DISMISSED_STATE = "dismissed";
@@ -16,6 +18,33 @@ export function InstallPromptBar () {
   const [deferredPrompt, setDeferredPrompt] = useState(null);
   const [isInstallAvailable, setIsInstallAvailable] = useState(false);
   const [isInstalled, setIsInstalled] = useState(() => isStandaloneMode());
+  const [isUpdateAvailable, setIsUpdateAvailable] = useState(false);
+  const [isReloadingUpdate, setIsReloadingUpdate] = useState(false);
+
+  useEffect(() => {
+    let hasReloadedForUpdate = false;
+
+    const unsubscribe = subscribeToServiceWorkerUpdate(() => {
+      setIsUpdateAvailable(true);
+      setIsVisible(true);
+    });
+
+    const handleControllerChange = () => {
+      if (hasReloadedForUpdate) {
+        return;
+      }
+
+      hasReloadedForUpdate = true;
+      window.location.reload();
+    };
+
+    navigator.serviceWorker?.addEventListener("controllerchange", handleControllerChange);
+
+    return () => {
+      unsubscribe();
+      navigator.serviceWorker?.removeEventListener("controllerchange", handleControllerChange);
+    };
+  }, []);
 
   useEffect(() => {
     if (getInstallBannerState() || isStandaloneMode() || !shouldShowInstallPrompt()) {
@@ -48,13 +77,18 @@ export function InstallPromptBar () {
       window.removeEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
       window.removeEventListener("appinstalled", handleInstalled);
     };
-  }, []);
+  }, [isIos]);
 
-  if (!isVisible || isInstalled) {
+  if (!isVisible || (isInstalled && !isUpdateAvailable)) {
     return null;
   }
 
   const dismissBanner = () => {
+    if (isUpdateAvailable) {
+      setIsVisible(false);
+      return;
+    }
+
     setInstallBannerState(DISMISSED_STATE);
     setIsVisible(false);
   };
@@ -79,19 +113,42 @@ export function InstallPromptBar () {
     setIsInstallAvailable(false);
   };
 
+  const handleUpdate = () => {
+    const hasSentUpdateSignal = applyServiceWorkerUpdate();
+
+    if (!hasSentUpdateSignal) {
+      window.location.reload();
+      return;
+    }
+
+    setIsReloadingUpdate(true);
+  };
+
   return (
     <section className="install-prompt-bar" role="status" aria-live="polite">
       <div className="install-prompt-bar__content">
         <p className="install-prompt-bar__text">
-          Guarda esta web como app para abrir el directorio más rápido desde tu móvil.
+          {isUpdateAvailable
+            ? "Hay una nueva versión del directorio lista para cargar con los datos y mejoras más recientes."
+            : "Guarda esta web como app para abrir el directorio más rápido desde tu móvil."}
         </p>
         <div className="install-prompt-bar__actions">
+          {isUpdateAvailable && (
+            <button
+              type="button"
+              className="button is-primary is-small install-prompt-bar__button"
+              onClick={handleUpdate}
+              disabled={isReloadingUpdate}
+            >
+              {isReloadingUpdate ? "Actualizando..." : "Recargar"}
+            </button>
+          )}
           {isInstallAvailable && (
             <button type="button" className="button is-primary is-small install-prompt-bar__button" onClick={handleInstall}>
               Instalar
             </button>
           )}
-          {!isInstallAvailable && isIos && (
+          {!isUpdateAvailable && !isInstallAvailable && isIos && (
             <p className="install-prompt-bar__hint">
               Safari: Compartir <span aria-hidden="true">→</span> Añadir a pantalla de inicio
             </p>

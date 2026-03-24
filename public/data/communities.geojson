@@ -3620,8 +3620,8 @@
       "properties": {
         "id": 129,
         "name": "Databeers Máaga",
-        "status": "Activa",
-        "lastReviewed": "18/10/2024",
+        "status": "Inactiva",
+        "lastReviewed": "24/03/2026",
         "communityType": "Tech Meetup",
         "eventFormat": "Presencial",
         "location": "Málaga",
@@ -3650,7 +3650,7 @@
           "eventsUrl": "https://www.meetup.com/es-es/databeers-malaga/"
         },
         "thumbnailUrl": "images/databeers-maaga.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
@@ -6706,10 +6706,10 @@
         "id": 228,
         "name": "Grupo de Programadores e Usuarios de Linux (GPUL)",
         "status": "Activa",
-        "lastReviewed": "22/10/2024",
+        "lastReviewed": "24/03/2026",
         "communityType": "Grupo colaborativo",
         "eventFormat": "Presencial",
-        "location": "Coruña",
+        "location": "A Coruña",
         "topics": "",
         "tags": [
           "free-software",
@@ -6718,11 +6718,11 @@
           "linux",
           "3d-printing",
           "open-hardware",
-          "c",
           "tech-ethics"
         ],
         "targetAudience": [
-          "software-architect"
+          "software-architect",
+          "student"
         ],
         "contactInfo": "info@gpul.org",
         "communityUrl": "https://gpul.org/",
@@ -6731,10 +6731,15 @@
           "bluesky": "https://bsky.app/profile/gpul.org",
           "github": "https://github.com/gpul-org",
           "telegram": "https://t.me/+PrK44xhqJ9eP9ZUf",
-          "twitter": "https://x.com/gpul_"
+          "twitter": "https://x.com/gpul_",
+          "mailingList": "https://lists.gpul.org/",
+          "linkAggregator": "https://links.gpul.org/",
+          "instagram": "https://www.instagram.com/gpul_/",
+          "linkedin": "https://www.linkedin.com/company/gpul",
+          "youtube": "https://www.youtube.com/@gpul_coruna"
         },
         "thumbnailUrl": "images/grupo-de-programadores-e-usuarios-de-linux-gpul.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
@@ -9028,15 +9033,19 @@
         "location": "Torremolinos",
         "topics": "",
         "tags": [
-          "aws",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "event-driven",
-          "functional-programming"
+          "functional-programming",
+          "scala",
+          "haskell",
+          "elixir",
+          "kotlin",
+          "rust",
+          "erlang"
         ],
         "targetAudience": [
-          "community-manager"
+          "backend-developer",
+          "frontend-developer",
+          "fullstack-developer",
+          "senior-staff"
         ],
         "contactInfo": "lambda@yayyay.events",
         "communityUrl": "https://www.lambda.world/",
@@ -13703,14 +13712,13 @@
         "id": 451,
         "name": "TRGCON",
         "status": "Activa",
-        "lastReviewed": "02/06/2025",
+        "lastReviewed": "24/03/2026",
         "communityType": "Conferencia",
         "eventFormat": "Presencial",
         "location": "Madrid",
         "topics": "",
         "tags": [
           "innovation",
-          "c",
           "design-patterns",
           "game-design",
           "software-architecture",
@@ -13719,7 +13727,17 @@
           "free-software",
           "iot",
           "startups",
-          "digital-marketing"
+          "digital-marketing",
+          "accessibility",
+          "web-standards",
+          "ux-ui",
+          "design-systems",
+          "tech4good",
+          "digital-activism",
+          "open-source",
+          "open-data",
+          "product-management",
+          "tech-ethics"
         ],
         "targetAudience": [
           "software-architect",
@@ -13733,7 +13751,7 @@
           "instagram": "https://www.instagram.com/raul_muro/"
         },
         "thumbnailUrl": "images/trgcon.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {

@@ -39,6 +39,7 @@ export const URL_PLATFORM_OPTIONS = [
 const CONTRIBUTION_MODE_PARAM = "contribute";
 const EDIT_PARAM = "edit";
 const COMMUNITY_PARAM = "community";
+const PROPOSAL_PARAM = "proposal";
 const CONTRIBUTION_DRAFT_STORAGE_PREFIX = "community-directory-contribution-draft";
 const DIRECTORY_FILTER_KEYS = [
   "status",
@@ -62,6 +63,10 @@ function cleanString(value) {
 
 function hasQueryParamValue(value) {
   return value !== null && value !== undefined && String(value).trim() !== "";
+}
+
+function isPlainObject(value) {
+  return Boolean(value) && typeof value === "object" && !Array.isArray(value);
 }
 
 export function normalizeComparableText(value = "") {
@@ -178,19 +183,25 @@ export function parseContributionRoute(search = window.location.search) {
   const params = new URLSearchParams(search);
   const contributeMode = params.get(CONTRIBUTION_MODE_PARAM);
   const editIdentifier = params.get(EDIT_PARAM);
+  const proposalDraft = parseProposalDraft(params);
 
   if (editIdentifier) {
-    return { mode: "edit", identifier: editIdentifier };
+    return { mode: "edit", identifier: editIdentifier, proposalDraft };
   }
 
   if (contributeMode === "new") {
-    return { mode: "new", identifier: null };
+    return { mode: "new", identifier: null, proposalDraft };
   }
 
-  return { mode: "directory", identifier: null };
+  return { mode: "directory", identifier: null, proposalDraft: null };
 }
 
-export function buildContributionPath({ mode = "new", identifier = null, pathname = window.location.pathname } = {}) {
+export function buildContributionPath({
+  mode = "new",
+  identifier = null,
+  proposalDraft = null,
+  pathname = window.location.pathname,
+} = {}) {
   const params = new URLSearchParams();
 
   if (mode === "edit" && hasQueryParamValue(identifier)) {
@@ -199,6 +210,11 @@ export function buildContributionPath({ mode = "new", identifier = null, pathnam
 
   if (mode === "new") {
     params.set(CONTRIBUTION_MODE_PARAM, "new");
+  }
+
+  const serializedProposalDraft = serializeProposalDraft(proposalDraft);
+  if (serializedProposalDraft) {
+    params.set(PROPOSAL_PARAM, serializedProposalDraft);
   }
 
   const query = params.toString();
@@ -377,6 +393,32 @@ export function normalizeUrls(urls = {}) {
       .map(([key, value]) => [cleanString(key), cleanString(value)])
       .filter(([key, value]) => key && value)
   );
+}
+
+export function serializeProposalDraft(proposalDraft) {
+  if (!isPlainObject(proposalDraft)) return "";
+
+  try {
+    return JSON.stringify(proposalDraft);
+  } catch {
+    return "";
+  }
+}
+
+export function parseProposalDraft(paramsOrSearch = window.location.search) {
+  const params = typeof paramsOrSearch === "string"
+    ? new URLSearchParams(paramsOrSearch)
+    : paramsOrSearch;
+  const rawProposal = params.get(PROPOSAL_PARAM);
+
+  if (!hasQueryParamValue(rawProposal)) return null;
+
+  try {
+    const parsedProposal = JSON.parse(rawProposal);
+    return isPlainObject(parsedProposal) ? parsedProposal : null;
+  } catch {
+    return null;
+  }
 }
 
 function normalizeLatLon(value) {
