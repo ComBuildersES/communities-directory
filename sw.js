@@ -1,11 +1,33 @@
-const CACHE_NAME = "community-builders-shell-v1";
+const CACHE_NAME = "community-builders-shell-v2";
 const APP_SHELL = ["./", "./manifest.webmanifest"];
+const DATA_FILE_PATTERN = /\/data\/.+\.(json|geojson)$/;
+
+async function networkFirst(request) {
+  try {
+    const networkResponse = await fetch(request);
+
+    if (networkResponse?.ok) {
+      const responseClone = networkResponse.clone();
+      const cache = await caches.open(CACHE_NAME);
+      cache.put(request, responseClone);
+    }
+
+    return networkResponse;
+  } catch (error) {
+    const cachedResponse = await caches.match(request);
+
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+
+    throw error;
+  }
+}
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => cache.addAll(APP_SHELL))
   );
-  self.skipWaiting();
 });
 
 self.addEventListener("activate", (event) => {
@@ -39,6 +61,11 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
+  if (DATA_FILE_PATTERN.test(requestUrl.pathname)) {
+    event.respondWith(networkFirst(event.request));
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
       if (cachedResponse) {
@@ -56,4 +83,10 @@ self.addEventListener("fetch", (event) => {
       });
     })
   );
+});
+
+self.addEventListener("message", (event) => {
+  if (event.data?.type === "SKIP_WAITING") {
+    self.skipWaiting();
+  }
 });
