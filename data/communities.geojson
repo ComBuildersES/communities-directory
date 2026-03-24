@@ -13649,15 +13649,45 @@
         "eventFormat": "Presencial",
         "location": "Ciudad Real (Tomelloso)",
         "topics": "",
-        "tags": [],
-        "targetAudience": [],
+        "tags": [
+          "web-performance",
+          "javascript",
+          "seo",
+          "tech4good",
+          "digital-activism",
+          "open-source",
+          "stem",
+          "java",
+          "kotlin",
+          "swift",
+          "virtual-reality"
+        ],
+        "targetAudience": [
+          "junior-developer",
+          "student",
+          "career-changer",
+          "senior-staff",
+          "frontend-developer",
+          "backend-developer",
+          "fullstack-developer",
+          "mobile-developer",
+          "digital-marketer",
+          "entrepreneur"
+        ],
         "contactInfo": "hhkaos@gmail.com",
         "communityUrl": "http://www.tomellosotech.org",
         "urls": {
           "twitter": "https://x.com/TomellosoTech",
-          "web": "http://web.archive.org/web/20201130180149/https://www.tomellosotech.org/"
+          "web": "http://web.archive.org/web/20201130180149/https://www.tomellosotech.org/",
+          "linkedin": "https://www.linkedin.com/company/tomellosotech/",
+          "youtube": "https://www.youtube.com/@TomellosoTech",
+          "telegram": "https://t.me/TomeTech",
+          "github": "https://github.com/TomellosoTech",
+          "facebook": "https://www.facebook.com/tomellosotech/",
+          "eventsUrl": "https://web.archive.org/web/20200814030945/https://www.meetup.com/es-ES/TomellosoTech/"
         },
-        "humanValidated": false
+        "thumbnailUrl": "",
+        "humanValidated": true
       }
     },
     {

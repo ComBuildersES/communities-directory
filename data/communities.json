@@ -14527,25 +14527,56 @@
     "id": 450,
     "name": "Tomelloso Tech",
     "status": "Inactiva",
-    "lastReviewed": "26/05/2025",
+    "lastReviewed": "24/03/2026",
     "communityType": "Grupo colaborativo",
     "eventFormat": "Presencial",
     "location": "Ciudad Real (Tomelloso)",
     "topics": "",
-    "tags": [],
-    "targetAudience": [],
+    "tags": [
+      "web-performance",
+      "javascript",
+      "seo",
+      "tech4good",
+      "digital-activism",
+      "open-source",
+      "stem",
+      "java",
+      "kotlin",
+      "swift",
+      "virtual-reality"
+    ],
+    "targetAudience": [
+      "junior-developer",
+      "student",
+      "career-changer",
+      "senior-staff",
+      "frontend-developer",
+      "backend-developer",
+      "fullstack-developer",
+      "mobile-developer",
+      "digital-marketer",
+      "entrepreneur"
+    ],
     "contactInfo": "hhkaos@gmail.com",
     "communityUrl": "http://www.tomellosotech.org",
     "urls": {
       "twitter": "https://x.com/TomellosoTech",
-      "web": "http://web.archive.org/web/20201130180149/https://www.tomellosotech.org/"
+      "web": "http://web.archive.org/web/20201130180149/https://www.tomellosotech.org/",
+      "linkedin": "https://www.linkedin.com/company/tomellosotech/",
+      "youtube": "https://www.youtube.com/@TomellosoTech",
+      "telegram": "https://t.me/TomeTech",
+      "github": "https://github.com/TomellosoTech",
+      "facebook": "https://www.facebook.com/tomellosotech/",
+      "eventsUrl": "https://web.archive.org/web/20200814030945/https://www.meetup.com/es-ES/TomellosoTech/"
     },
     "latLon": {
       "lat": 39.157747,
       "lon": -3.0208068
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "Asociación sin ánimo de lucro formada por una comunidad de personas apasionadas la tecnología y el emprendimiento. Nuestro fin es divulgar todos los beneficios que puede aportar la tecnología.",
+    "thumbnailUrl": ""
   },
   {
     "id": 451,
