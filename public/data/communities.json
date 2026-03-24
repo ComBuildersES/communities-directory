@@ -7477,10 +7477,10 @@
     "id": 228,
     "name": "Grupo de Programadores e Usuarios de Linux (GPUL)",
     "status": "Activa",
-    "lastReviewed": "22/10/2024",
+    "lastReviewed": "24/03/2026",
     "communityType": "Grupo colaborativo",
     "eventFormat": "Presencial",
-    "location": "Coruña",
+    "location": "A Coruña",
     "topics": "",
     "tags": [
       "free-software",
@@ -7489,11 +7489,11 @@
       "linux",
       "3d-printing",
       "open-hardware",
-      "c",
       "tech-ethics"
     ],
     "targetAudience": [
-      "software-architect"
+      "software-architect",
+      "student"
     ],
     "contactInfo": "info@gpul.org",
     "communityUrl": "https://gpul.org/",
@@ -7502,7 +7502,12 @@
       "bluesky": "https://bsky.app/profile/gpul.org",
       "github": "https://github.com/gpul-org",
       "telegram": "https://t.me/+PrK44xhqJ9eP9ZUf",
-      "twitter": "https://x.com/gpul_"
+      "twitter": "https://x.com/gpul_",
+      "mailingList": "https://lists.gpul.org/",
+      "linkAggregator": "https://links.gpul.org/",
+      "instagram": "https://www.instagram.com/gpul_/",
+      "linkedin": "https://www.linkedin.com/company/gpul",
+      "youtube": "https://www.youtube.com/@gpul_coruna"
     },
     "thumbnailUrl": "images/grupo-de-programadores-e-usuarios-de-linux-gpul.webp",
     "latLon": {
@@ -7510,7 +7515,8 @@
       "lon": -8.3958532
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "Colectivo sin ánimo de lucro que organiza diversos tipos de encuentros, conferencias y hackathones para divulgar el software y la cultura libres."
   },
   {
     "id": 229,
