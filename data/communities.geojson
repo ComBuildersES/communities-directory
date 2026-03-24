@@ -8732,7 +8732,7 @@
         "id": 301,
         "name": "J On The Beach",
         "status": "Activa",
-        "lastReviewed": "18/10/2024",
+        "lastReviewed": "24/03/2026",
         "communityType": "Conferencia",
         "eventFormat": "Presencial",
         "location": "Málaga",
@@ -8742,17 +8742,21 @@
           "data-lake",
           "data-pipelines",
           "big-data",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "open-data"
+          "open-data",
+          "distributed-systems",
+          "mlops",
+          "dataops",
+          "data-science",
+          "machine-learning"
         ],
         "targetAudience": [
-          "community-manager",
           "data-engineer",
           "data-scientist",
           "data-analyst",
-          "data-journalist"
+          "data-journalist",
+          "backend-developer",
+          "fullstack-developer",
+          "software-architect"
         ],
         "contactInfo": "info@yayyay.events",
         "communityUrl": "https://www.jonthebeach.com/",
@@ -8761,7 +8765,7 @@
           "twitter": "https://x.com/jotbconf"
         },
         "thumbnailUrl": "images/j-on-the-breach.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
