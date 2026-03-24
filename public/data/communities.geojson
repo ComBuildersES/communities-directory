@@ -8727,7 +8727,7 @@
         "id": 301,
         "name": "J On The Beach",
         "status": "Activa",
-        "lastReviewed": "18/10/2024",
+        "lastReviewed": "24/03/2026",
         "communityType": "Conferencia",
         "eventFormat": "Presencial",
         "location": "Málaga",
@@ -8756,7 +8756,7 @@
           "twitter": "https://x.com/jotbconf"
         },
         "thumbnailUrl": "images/j-on-the-breach.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {

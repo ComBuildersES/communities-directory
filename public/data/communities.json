@@ -9325,7 +9325,7 @@
     "id": 301,
     "name": "J On The Beach",
     "status": "Activa",
-    "lastReviewed": "18/10/2024",
+    "lastReviewed": "24/03/2026",
     "communityType": "Conferencia",
     "eventFormat": "Presencial",
     "location": "Málaga",
@@ -9359,7 +9359,8 @@
       "lon": -4.4200007
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "Conferencia internacional sobre sistemas distribuidos, DevOps, y muuuuchos datos."
   },
   {
     "id": 302,
