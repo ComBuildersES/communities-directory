@@ -10700,9 +10700,9 @@
     "id": 344,
     "name": "MálagaJUG",
     "status": "Activa",
-    "lastReviewed": "31/05/2024",
+    "lastReviewed": "24/03/2026",
     "communityType": "Tech Meetup",
-    "eventFormat": "Presencial",
+    "eventFormat": "Híbridos",
     "location": "Málaga",
     "topics": "",
     "tags": [
@@ -10721,10 +10721,11 @@
     ],
     "targetAudience": [],
     "contactInfo": "",
-    "communityUrl": "https://www.meetup.com/es-ES/MalagaJUG/",
+    "communityUrl": "https://malagajug.wordpress.com",
     "urls": {
       "twitter": "https://twitter.com/MalagaJUG",
-      "eventsUrl": "https://www.meetup.com/es-ES/MalagaJUG/"
+      "eventsUrl": "https://www.meetup.com/es-ES/MalagaJUG/",
+      "web": "https://malagajug.wordpress.com"
     },
     "thumbnailUrl": "images/malagajug.webp",
     "latLon": {
@@ -10732,7 +10733,8 @@
       "lon": -4.4200007
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "Comunidad para compartir conocimiento y experiencias sobre el lenguaje y plataforma Java y otros lenguajes de la JVM."
   },
   {
     "id": 345,
