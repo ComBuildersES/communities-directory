@@ -5273,7 +5273,8 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Málaga",
-        "communityUrl": "https://www.meetup.com/es-ES/Malaga-Scala/"
+        "communityUrl": "https://www.meetup.com/es-ES/Malaga-Scala/",
+        "thumbnailUrl": ""
       }
     },
     {
