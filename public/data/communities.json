@@ -12729,7 +12729,7 @@
     "id": 401,
     "name": "PyData Madrid",
     "status": "Activa",
-    "lastReviewed": "31/05/2024",
+    "lastReviewed": "24/03/2026",
     "communityType": "Tech Meetup",
     "eventFormat": "Presencial",
     "location": "Madrid",
@@ -12757,12 +12757,12 @@
       "sysadmin",
       "ml-engineer"
     ],
-    "contactInfo": "leah@numfocus.org",
-    "communityUrl": "https://www.meetup.com/PyData-Madrid/",
+    "contactInfo": "madrid-organizers@pydata.org",
+    "communityUrl": "https://guild.host/pydata-madrid",
     "urls": {
       "linkedin": "https://www.linkedin.com/company/pydata-madrid/",
       "bluesky": "https://bsky.app/profile/madrid.pydata.org",
-      "eventsUrl": "https://www.meetup.com/PyData-Madrid/"
+      "eventsUrl": "https://guild.host/pydata-madrid/events"
     },
     "thumbnailUrl": "images/pydata-madrid.webp",
     "latLon": {
@@ -12770,7 +12770,8 @@
       "lon": -3.7035825
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": ""
   },
   {
     "id": 402,
