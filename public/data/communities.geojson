@@ -14275,7 +14275,7 @@
         "id": 468,
         "name": "Wey Wey Web",
         "status": "Activa",
-        "lastReviewed": "17/10/2024",
+        "lastReviewed": "24/03/2026",
         "communityType": "Conferencia",
         "eventFormat": "Presencial",
         "location": "Málaga",
@@ -14298,7 +14298,7 @@
           "twitter": "https://twitter.com/WeyWeyWeb"
         },
         "thumbnailUrl": "images/wey-wey-web.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {

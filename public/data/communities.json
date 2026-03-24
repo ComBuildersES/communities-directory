@@ -15103,7 +15103,7 @@
     "id": 468,
     "name": "Wey Wey Web",
     "status": "Activa",
-    "lastReviewed": "17/10/2024",
+    "lastReviewed": "24/03/2026",
     "communityType": "Conferencia",
     "eventFormat": "Presencial",
     "location": "Málaga",
@@ -15131,7 +15131,8 @@
       "lon": -4.4200007
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "Conferencia internacional sobre interfaces de usuario."
   },
   {
     "id": 469,
