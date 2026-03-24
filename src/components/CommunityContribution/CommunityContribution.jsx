@@ -868,6 +868,36 @@ function buildEditableDraftSignature(draft) {
   });
 }
 
+function mergeDraftWithProposal(baseDraft, proposalDraft) {
+  if (!proposalDraft || typeof proposalDraft !== "object") {
+    return baseDraft;
+  }
+
+  return {
+    ...baseDraft,
+    ...proposalDraft,
+    tags: Array.isArray(proposalDraft.tags) ? proposalDraft.tags : baseDraft.tags,
+    targetAudience: Array.isArray(proposalDraft.targetAudience) ? proposalDraft.targetAudience : baseDraft.targetAudience,
+    urls: proposalDraft.urls ?? baseDraft.urls,
+    latLon: {
+      lat: proposalDraft.latLon?.lat ?? baseDraft.latLon?.lat ?? "",
+      lon: proposalDraft.latLon?.lon ?? baseDraft.latLon?.lon ?? "",
+    },
+    replaceThumbnail: false,
+  };
+}
+
+function hashDraftSignature(value = "") {
+  let hash = 0;
+
+  for (let index = 0; index < value.length; index += 1) {
+    hash = ((hash << 5) - hash) + value.charCodeAt(index);
+    hash |= 0;
+  }
+
+  return Math.abs(hash).toString(36);
+}
+
 function formatDraftSavedAt(savedAt) {
   if (!savedAt) return null;
 
@@ -885,6 +915,7 @@ export function CommunityContribution({
   allTags,
   allAudience,
   existingCommunity,
+  proposalDraft,
   onDirtyChange,
   onIssueOpenedChange,
   onDraftActionsChange,
@@ -899,14 +930,21 @@ export function CommunityContribution({
     })),
     [allAudience]
   );
+  const hasExternalProposal = Boolean(proposalDraft && typeof proposalDraft === "object");
+  const proposalSignature = useMemo(
+    () => hasExternalProposal ? hashDraftSignature(buildEditableDraftSignature(proposalDraft)) : "base",
+    [hasExternalProposal, proposalDraft]
+  );
   const storageKey = useMemo(
     () => getContributionDraftStorageKey({
       mode: isEditMode ? "edit" : "new",
-      identifier: existingCommunity?.id ?? null,
+      identifier: hasExternalProposal
+        ? `${existingCommunity?.id ?? "new"}:${proposalSignature}`
+        : (existingCommunity?.id ?? null),
     }),
-    [existingCommunity?.id, isEditMode]
+    [existingCommunity?.id, hasExternalProposal, isEditMode, proposalSignature]
   );
-  const [draft, setDraft] = useState(() => getCommunityDraft(existingCommunity, nextId));
+  const [draft, setDraft] = useState(() => mergeDraftWithProposal(getCommunityDraft(existingCommunity, nextId), proposalDraft));
   const [tagQuery, setTagQuery] = useState("");
   const [audienceQuery, setAudienceQuery] = useState("");
   const [openHelpField, setOpenHelpField] = useState(null);
@@ -918,7 +956,10 @@ export function CommunityContribution({
   const [hasUserInteracted, setHasUserInteracted] = useState(false);
   const inferredProvinceIdRef = useRef("");
   const datasetSignature = useMemo(() => buildDatasetSignature(communities), [communities]);
-  const latestBaseDraft = useMemo(() => getCommunityDraft(existingCommunity, nextId), [existingCommunity, nextId]);
+  const latestBaseDraft = useMemo(
+    () => mergeDraftWithProposal(getCommunityDraft(existingCommunity, nextId), proposalDraft),
+    [existingCommunity, nextId, proposalDraft]
+  );
   const currentCommunityBaselineSignature = useMemo(
     () => buildCommunityBaselineSignature(existingCommunity),
     [existingCommunity]
@@ -1224,6 +1265,14 @@ export function CommunityContribution({
           </p>
         </div>
       </section>
+
+      {hasExternalProposal && !hasRestoredDraft && (
+        <article className="message is-info contribution-message">
+          <div className="message-body">
+            He cargado la propuesta incluida en este enlace. Puedes ajustarla y volver a abrir un issue con una versión mejorada.
+          </div>
+        </article>
+      )}
 
       {hasRestoredDraft && (
         <article className="message is-info contribution-message">

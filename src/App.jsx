@@ -216,6 +216,7 @@ function App () {
             allTags={allTags}
             allAudience={allAudience}
             existingCommunity={communityToEdit}
+            proposalDraft={route.proposalDraft}
             onDirtyChange={(isDirty) => setContributionState((current) => ({ ...current, isDirty }))}
             onIssueOpenedChange={(issueOpened) => setContributionState((current) => ({ ...current, issueOpened }))}
             onDraftActionsChange={setDraftActions}
