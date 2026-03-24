@@ -2795,8 +2795,8 @@
     "id": 87,
     "name": "Cloud Native (CNCF) Rioja",
     "status": "Activa",
-    "lastReviewed": "14/11/2024",
-    "communityType": "Tech Meetup",
+    "lastReviewed": "24/03/2026",
+    "communityType": "Grupo colaborativo",
     "eventFormat": "Presencial",
     "location": "Logroño La Rioja",
     "topics": "",
@@ -2836,7 +2836,8 @@
       "lon": -2.44998
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": ""
   },
   {
     "id": 88,
