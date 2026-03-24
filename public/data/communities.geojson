@@ -5309,9 +5309,9 @@
         "id": 344,
         "name": "MálagaJUG",
         "status": "Activa",
-        "eventFormat": "Presencial",
+        "eventFormat": "Híbridos",
         "location": "Málaga",
-        "communityUrl": "https://www.meetup.com/es-ES/MalagaJUG/",
+        "communityUrl": "https://malagajug.wordpress.com",
         "thumbnailUrl": "images/malagajug.webp"
       }
     },
