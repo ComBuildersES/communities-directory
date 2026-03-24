@@ -63,7 +63,7 @@ Y una vez hecho esto, puede arrancar el entorno de desarrollo con:
 
 `npm run dev`
 
-Esto iniciará la app en `http://localhost:5174/communities-directory/dist/`, donde podrás explorar el directorio interactivo.
+Esto iniciará la app en `http://localhost:5173` por defecto, donde podrás explorar el directorio interactivo.
 
 Si vas a tocar `public/data/`, puedes comprobar el dataset manualmente con `npm run validate-data`. Además, `npm install` configura un hook local para validar las contribuciones antes de cada commit.
 

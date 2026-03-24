@@ -174,7 +174,9 @@ Tenemos una lista de personas voluntarias que se encargan de revisar issues y PR
 
 #### Estructura de los datos
 
-EL fichero [communities.json](https://github.com/ComBuildersES/communities-directory/blob/master/public/data/communities.json) es un array donde cada comunidad es un objeto con la siguiente información:
+> **Referencia técnica para desarrolladores.** Si quieres añadir o editar una comunidad, usa el [formulario web del directorio](https://combuilderses.github.io/communities-directory/), que guía el proceso y genera el issue automáticamente. Los valores válidos de los enums (`status`, `communityType`, `eventFormat`) están disponibles en el propio formulario; los que se documentan aquí incluyen matices adicionales que no caben en un desplegable.
+
+El fichero [communities.json](https://github.com/ComBuildersES/communities-directory/blob/master/public/data/communities.json) es un array donde cada comunidad es un objeto con la siguiente estructura:
 
 ```json
 {
@@ -192,7 +194,7 @@ EL fichero [communities.json](https://github.com/ComBuildersES/communities-direc
   "communityUrl": "<absolute URL>",
   "urls": {
     "web": "<absolute URL or omit>",
-    "meetup": "<absolute URL or omit>",
+    "eventsUrl": "<absolute URL or omit>",
     "linkedin": "<absolute URL or omit>",
     "twitter": "<absolute URL or omit>",
     "instagram": "<absolute URL or omit>",
@@ -201,48 +203,61 @@ EL fichero [communities.json](https://github.com/ComBuildersES/communities-direc
     "telegram": "<absolute URL or omit>",
     "github": "<absolute URL or omit>",
     "mastodon": "<absolute URL or omit>",
-    "bluesky": "<absolute URL or omit>"
+    "bluesky": "<absolute URL or omit>",
+    "linkAggregator": "<absolute URL or omit>",
+    "mailingList": "<absolute URL or omit>",
+    "facebook": "<absolute URL or omit>"
   },
   "thumbnailUrl": "images/<slugify-name>.webp",
   "latLon": {
     "lat": <float or null>,
     "lon": <float or null>
   },
-  "displayOnMap": <true or false>
+  "displayOnMap": <true or false>,
+  "humanValidated": <true or false>
 },
 ```
 
-- **id**<sup>*</sup>: Identificador (autoincremental)
-- **nombre**<sup>*</sup>: Nombre de la comunidad.
-- **status**<sup>*</sup>: Estado en el que se encuentra la comunidad ([enum](campo-status-estado-de-las-comunidades)).
-- **lastReviewed**<sup>*</sup>: Última fecha en la que alguien modificó o validó los datos.
-- **communityType**<sup>*</sup>: Tipo de comunidad (meetup, organización paraguas, etc.)
-- **eventFormat**<sup>*</sup>: Formato de eventos (presencial, online, híbrido)
-- **location**: Sólo para las comunidades presenciales o híbridas. Ciudad o región principal en formato tipo `Ciudad, País` (si no tiene ubicación fija puede usarse `Itinerante`; en organizaciones paraguas se usa `n/a`)
-- **topics**: Lista de temáticas en texto libre separada por comas (campo heredado, [ver issue](https://github.com/ComBuildersES/communities-directory/issues/6))
-- **tags**: Array de IDs de etiquetas temáticas de la taxonomía definida en [`public/data/tags.json`](../public/data/tags.json). Ejemplo: `["python", "data-science", "machine-learning"]`
-- **targetAudience**: Array de IDs de perfiles de público objetivo definidos en [`public/data/audience.json`](../public/data/audience.json). Ejemplo: `["data-scientist", "ml-engineer"]`
+- **id** _(*)_: Identificador (autoincremental, gestionado por `ensure-id-autoincrement`)
+- **name** _(*)_: Nombre de la comunidad.
+- **status** _(*)_: Estado en el que se encuentra la comunidad (ver [Campo `status`](#campo-status-estado-de-las-comunidades)).
+- **lastReviewed** _(*)_: Última fecha en la que alguien modificó o validó los datos (`dd/mm/yyyy`).
+- **communityType** _(*)_: Tipo de comunidad (ver [Campo `communityType`](#campo-communitytype-taxonomía-de-comunidades)).
+- **eventFormat** _(*)_: Formato de eventos (ver [Campo `eventFormat`](#campo-eventformat-formato-de-eventos)).
+- **location**: Ciudad o región principal en formato `Ciudad` o `Ciudad, País`. Para comunidades sin ubicación fija: `Itinerante`. Para organizaciones paraguas: `n/a`. Solo para comunidades presenciales o híbridas.
+- **topics**: Lista de temáticas en texto libre separada por comas (campo heredado, [ver issue](https://github.com/ComBuildersES/communities-directory/issues/6)).
+- **tags**: Array de IDs de etiquetas temáticas definidas en [`public/data/tags.json`](../public/data/tags.json). Ejemplo: `["python", "data-science", "machine-learning"]`.
+- **targetAudience**: Array de IDs de perfiles de público objetivo definidos en [`public/data/audience.json`](../public/data/audience.json). Ejemplo: `["data-scientist", "ml-engineer"]`.
 - **contactInfo**: Email o URL de contacto.
-- **communityUrl**<sup>*</sup>: URL principal donde encontrar información de la comunidad. Se usa como enlace principal en la tarjeta y en el mapa.
-- **urls**: Objeto con URLs adicionales por plataforma. Solo incluir las claves que tengan valor (omitir las que no apliquen). Plataformas soportadas: `web`, `meetup`, `linkedin`, `twitter`, `instagram`, `youtube`, `discord`, `telegram`, `github`, `mastodon`, `bluesky`.
-- **thumbnailUrl**<sup>*</sup>: URL con la imagen a mostrar en el directorio (tener en cuenta que el fondo de la web es blanco)
-- **latLon**: En caso de ser una comunidad presencial o híbrida añadir en el JSON las coordenadas. Si ya hay comunidades en esa ubicación, se recomienda que sean exactamente las mismas. Si no, dejar en _null_, _null_
-- **displayOnMap**: A `true` en caso de ser una comunidad presencial o híbrida, para que se muestre en el mapa.
+- **communityUrl** _(*)_: URL principal de la comunidad. Se usa como enlace en la tarjeta y en el mapa. Preferencia: web propia > plataforma más activa.
+- **urls**: Objeto con URLs adicionales por plataforma. Solo incluir las claves que tengan valor. Claves principales: `web`, `eventsUrl` (Meetup, Lu.ma, etc.), `linkedin`, `twitter`, `instagram`, `youtube`, `discord`, `telegram`, `github`, `mastodon`, `bluesky`. Claves menos comunes: `linkAggregator`, `mailingList`, `facebook`.
+- **thumbnailUrl** _(*)_: Ruta relativa a la imagen de la comunidad (`images/<slug>.webp`). El fondo de la web es blanco.
+- **latLon**: Coordenadas geográficas para comunidades presenciales o híbridas. Si ya hay comunidades en esa ciudad, usar las mismas coordenadas. Si no aplica: `{ "lat": null, "lon": null }`.
+- **displayOnMap**: `true` para comunidades presenciales o híbridas.
+- **humanValidated**: `true` si los datos han sido revisados por una persona. `false` indica que fueron enriquecidos automáticamente por el scraper y están pendientes de validación humana.
 
-> **(*)**: Estos campos son obligatorios
+> _(*): Campos obligatorios_
 
 #### Utilidades
 
-Algunos scripts útiles para mantener los datos de las comunidades:
+Scripts de mantenimiento del dataset, agrupados por caso de uso.
 
+##### Validación e integridad
+
+Útiles antes de hacer un PR o al revisar contribuciones:
+
+* `npm run validate-data`: valida el dataset completo, taxonomías y referencias cruzadas.
 * `npm run find-duplicates`: busca comunidades potencialmente duplicadas en el JSON.
-* `npm run check-urls`: comprueba la salud de las URLs y genera warnings para enlaces caídos, archivados o con respuestas dudosas. Omite automáticamente dominios que bloquean bots (twitter.com, x.com). Admite `--report <ruta>` para guardar el informe en Markdown.
-* `npm run archive-broken-urls`: para cada URL rota del informe generado por `check-urls`, busca un snapshot en [Wayback Machine](https://web.archive.org/) y actualiza `communities.json` con la URL archivada. Procesa por defecto HTTP 404, `fetch failed` y HTTP 403. Admite `--dry-run`, `--from-report <ruta>`, `--include-warnings` y `--concurrency <n>`.
-* `npm run ensure-id-autoincrement`: sobrescribe los IDs de las comunidades para asegurar que sean consecutivos.
-* `npm run process-to-communities-to-geojson`: parsea el fichero communities.json y genera el communities.geojson.
-* `npm test-geojson`: abre un visor para explorar las ubicaciones del fichero geojson fácilmente.
+* `npm run ensure-id-autoincrement`: reescribe los IDs para asegurar que son consecutivos (ejecutar si se añaden o eliminan entradas manualmente).
 
-Flujo recomendado para sanear URLs:
+##### Salud de URLs
+
+Útiles periódicamente para detectar enlaces caídos o archivados:
+
+* `npm run check-urls`: comprueba la salud de las URLs. Omite dominios que bloquean bots (twitter.com, x.com). Admite `--report <ruta>` para guardar el informe en Markdown.
+* `npm run archive-broken-urls`: para cada URL rota del informe, busca un snapshot en [Wayback Machine](https://web.archive.org/) y actualiza `communities.json`. Admite `--dry-run`, `--from-report <ruta>`, `--include-warnings` y `--concurrency <n>`.
+
+Flujo recomendado:
 
 ```bash
 npm run check-urls -- --report report.txt   # genera el informe
@@ -250,6 +265,25 @@ npm run archive-broken-urls -- --dry-run    # previsualiza qué cambiaría
 npm run archive-broken-urls                 # aplica los cambios
 npm run check-urls -- --report report.txt   # verifica el resultado
 ```
+
+##### Enriquecimiento de datos
+
+Útiles para mejorar datos de comunidades existentes (tags, URLs de redes sociales, estado):
+
+* `npm run scrape-community-data`: visita las webs de las comunidades con Playwright y extrae redes sociales, tags sugeridos e indicios de estado activo/inactivo. Genera `suggestions.json` para revisión antes de aplicar. Opciones: `--start <n>`, `--end <n>`, `--id <n>`, `--resume`.
+* `npm run apply-suggestions`: aplica `suggestions.json` a `communities.json` tras revisión humana. Admite `--dry-run` y `--only-approved`.
+* `npm run apply-url-mapping`: aplica el mapeo manual `url-mapping.json` (URLs alternativas curadas). Admite `--dry-run` y `--force-status`.
+
+##### Mapa y GeoJSON
+
+* `npm run process-to-communities-to-geojson`: regenera `communities.geojson` a partir de `communities.json`. Ejecutar tras modificar coordenadas o el campo `displayOnMap`.
+* `npm run test-geojson`: abre un visor local para explorar las ubicaciones del GeoJSON.
+
+##### Automatismos (uso interno)
+
+Scripts que usa la automatización de GitHub Actions o que sirven para depurar el flujo de asignación:
+
+* `npm run simulate-community-owner-assignment`: simula la asignación de responsables por provincia a partir de `community-owners.yml`, sin abrir issues ni PRs. Útil para probar cambios en el fichero de propietarios.
 
 ---
 
@@ -270,7 +304,7 @@ Instala las dependencias:
 npm install
 ```
 
-> **Nota**: Asegúrate de tener Node.js 20 instalado.
+> **Nota**: Asegúrate de tener Node.js 24 instalado.
 > **Nota**: `npm install` deja configurados los hooks locales de Git para validar los datos antes de cada commit.
 
 Ejecutar el entorno local:
