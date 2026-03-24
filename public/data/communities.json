@@ -10638,7 +10638,7 @@
     "id": 342,
     "name": "Malaga-Scala",
     "status": "Inactiva",
-    "lastReviewed": "31/05/2024",
+    "lastReviewed": "24/03/2026",
     "communityType": "Tech Meetup",
     "eventFormat": "Presencial",
     "location": "Málaga",
@@ -10655,7 +10655,9 @@
       "lon": -4.4200007
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "Comunidad para compartir conocimiento y experiencias sobre el lenguaje de programación Scala.",
+    "thumbnailUrl": ""
   },
   {
     "id": 343,
