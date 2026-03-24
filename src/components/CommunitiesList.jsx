@@ -6,30 +6,14 @@ import {
   useIsLoading,
   useIsError,
   useCommunitiesFiltered,
-  useTags,
-  useAudience,
   useCBMemberIds,
-  useCBMembersMap,
 } from "../stores/community.store.js";
 
-export function CommunitiesList() {
+export function CommunitiesList({ onOpenCommunity }) {
   const isLoading = useIsLoading();
   const isError = useIsError();
   const communitiesFiltered = useCommunitiesFiltered();
-  const allTags = useTags();
-  const allAudience = useAudience();
   const cbMemberIds = useCBMemberIds();
-  const cbMembersMap = useCBMembersMap();
-
-  const tagsMap = useMemo(
-    () => Object.fromEntries(allTags.map((t) => [t.id, t.label])),
-    [allTags]
-  );
-
-  const audienceMap = useMemo(
-    () => Object.fromEntries(allAudience.map((a) => [a.id, a.label])),
-    [allAudience]
-  );
 
   const sortedCommunities = useMemo(
     () => [...communitiesFiltered].sort((a, b) => {
@@ -47,7 +31,7 @@ export function CommunitiesList() {
     <div className="communitieslist-container">
       <div className="communitieslist">
         {sortedCommunities.map((community) => (
-          <CommunityCard key={community.id} community={community} tagsMap={tagsMap} audienceMap={audienceMap} hasCBMember={cbMemberIds.has(community.id)} cbHandles={cbMembersMap.get(community.id) || []} />
+          <CommunityCard key={community.id} community={community} hasCBMember={cbMemberIds.has(community.id)} onOpen={onOpenCommunity} />
         ))}
       </div>
       <AddCommunityCTA />

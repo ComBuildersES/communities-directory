@@ -170,6 +170,12 @@ function App () {
     : null;
   const showContributionView = route.mode !== "directory";
 
+  const openCommunityModal = (communityId) => {
+    const path = buildDirectoryStatePath({ filters, communityIdentifier: communityId });
+    window.history.pushState({}, "", path);
+    setSelectedCommunityIdentifier(String(communityId));
+  };
+
   const closeCommunityModal = () => {
     const path = buildDirectoryStatePath({ filters });
     window.history.pushState({}, "", path);
@@ -225,7 +231,7 @@ function App () {
             </article>
           </section>
         )}
-        {!showContributionView && view === "list" && <CommunitiesList />}
+        {!showContributionView && view === "list" && <CommunitiesList onOpenCommunity={openCommunityModal} />}
         {!showContributionView && view === "map" && <Map showListView={() => setView("list")} />}
       </div>
       {pendingNavigation && (

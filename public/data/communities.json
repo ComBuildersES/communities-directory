@@ -3281,19 +3281,34 @@
     "id": 101,
     "name": "Community Builders",
     "status": "Activa",
-    "lastReviewed": "24/02/2025",
+    "lastReviewed": "24/03/2026",
     "communityType": "Meta comunidad",
     "eventFormat": "Online",
-    "location": "n/a",
+    "location": "",
     "topics": "",
-    "tags": [],
+    "tags": [
+      "tech4good",
+      "mentoring",
+      "open-data",
+      "open-source"
+    ],
     "targetAudience": [
-      "community-manager"
+      "community-manager",
+      "mentee",
+      "mentor"
     ],
     "contactInfo": "communitybuilders.es@gmail.com",
     "communityUrl": "https://linktr.ee/ComBuilders_ES",
     "urls": {
-      "linkAggregator": "https://linktr.ee/ComBuilders_ES"
+      "linkAggregator": "https://linktr.ee/ComBuilders_ES",
+      "web": "https://combuilderses.github.io/",
+      "eventsUrl": "https://calendar.google.com/calendar/u/0/r",
+      "mailingList": "https://groups.google.com/g/community-builders-es",
+      "github": "https://github.com/ComBuildersES",
+      "youtube": "https://www.youtube.com/@ComBuilders_ES",
+      "linkedin": "https://www.linkedin.com/company/combuilders-es/",
+      "twitter": "https://x.com/ComBuilders_ES",
+      "bluesky": "https://bsky.app/profile/communitybuilders.bsky.social"
     },
     "thumbnailUrl": "images/community-builders.webp",
     "latLon": {
@@ -3301,7 +3316,8 @@
       "lon": null
     },
     "displayOnMap": false,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "Somos un colectivo que reúne a personas que dinamizan comunidades tech de habla hispana con el objetivo de ser un lugar de referencia donde se facilite la colaboración y el intercambio de experiencias."
   },
   {
     "id": 102,
@@ -4134,8 +4150,8 @@
   {
     "id": 129,
     "name": "Databeers Máaga",
-    "status": "Activa",
-    "lastReviewed": "18/10/2024",
+    "status": "Inactiva",
+    "lastReviewed": "24/03/2026",
     "communityType": "Tech Meetup",
     "eventFormat": "Presencial",
     "location": "Málaga",
@@ -4169,7 +4185,8 @@
       "lon": -4.4200007
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": ""
   },
   {
     "id": 130,
@@ -7476,10 +7493,10 @@
     "id": 228,
     "name": "Grupo de Programadores e Usuarios de Linux (GPUL)",
     "status": "Activa",
-    "lastReviewed": "22/10/2024",
+    "lastReviewed": "24/03/2026",
     "communityType": "Grupo colaborativo",
     "eventFormat": "Presencial",
-    "location": "Coruña",
+    "location": "A Coruña",
     "topics": "",
     "tags": [
       "free-software",
@@ -7488,11 +7505,11 @@
       "linux",
       "3d-printing",
       "open-hardware",
-      "c",
       "tech-ethics"
     ],
     "targetAudience": [
-      "software-architect"
+      "software-architect",
+      "student"
     ],
     "contactInfo": "info@gpul.org",
     "communityUrl": "https://gpul.org/",
@@ -7501,7 +7518,12 @@
       "bluesky": "https://bsky.app/profile/gpul.org",
       "github": "https://github.com/gpul-org",
       "telegram": "https://t.me/+PrK44xhqJ9eP9ZUf",
-      "twitter": "https://x.com/gpul_"
+      "twitter": "https://x.com/gpul_",
+      "mailingList": "https://lists.gpul.org/",
+      "linkAggregator": "https://links.gpul.org/",
+      "instagram": "https://www.instagram.com/gpul_/",
+      "linkedin": "https://www.linkedin.com/company/gpul",
+      "youtube": "https://www.youtube.com/@gpul_coruna"
     },
     "thumbnailUrl": "images/grupo-de-programadores-e-usuarios-de-linux-gpul.webp",
     "latLon": {
@@ -7509,7 +7531,8 @@
       "lon": -8.3958532
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "Colectivo sin ánimo de lucro que organiza diversos tipos de encuentros, conferencias y hackathones para divulgar el software y la cultura libres."
   },
   {
     "id": 229,
@@ -14589,7 +14612,6 @@
     "topics": "",
     "tags": [
       "innovation",
-      "c",
       "design-patterns",
       "game-design",
       "software-architecture",
@@ -14598,7 +14620,17 @@
       "free-software",
       "iot",
       "startups",
-      "digital-marketing"
+      "digital-marketing",
+      "accessibility",
+      "web-standards",
+      "ux-ui",
+      "design-systems",
+      "tech4good",
+      "digital-activism",
+      "open-source",
+      "open-data",
+      "product-management",
+      "tech-ethics"
     ],
     "targetAudience": [
       "software-architect",

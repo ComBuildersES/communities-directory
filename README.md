@@ -10,19 +10,21 @@ También actúa como punto de encuentro para quienes desean dinamizar comunidade
 
 Además, muestra qué comunidades ya están representadas en **Community Builders**.
 
-[![Pantallazo de la app](./public/images/directorio-de-comunidades-tecnicas-de-españa-1280-800.webp)](https://combuilderses.github.io/communities-directory/)
+[![Pantallazo de la app](./public/images/directorio-de-comunidades-tecnicas-de-españa-1920-1080.webp)](https://combuilderses.github.io/communities-directory/)
 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 ## 📖 Índice
 
-- [¿Por qué este proyecto?](#por-qué-este-proyecto)
-- [Instalación y uso en local](#instalaci%C3%B3n-y-uso-en-local)
-- [Roadmap](#roadmap)
-- [Licencias](#licencias)
-- [Contribuir](#contribuir)
-- [Contributors](#contributors)
+- [Communities directory](#communities-directory)
+  - [📖 Índice](#-índice)
+  - [Por qué este proyecto](#por-qué-este-proyecto)
+  - [Instalación y uso en local](#instalación-y-uso-en-local)
+  - [Roadmap](#roadmap)
+  - [Licencias](#licencias)
+  - [Contribuir](#contribuir)
+  - [Contributors](#contributors)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
