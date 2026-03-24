@@ -810,8 +810,8 @@
       "properties": {
         "id": 66,
         "name": "BoquerónSec",
-        "status": "Activa",
-        "eventFormat": "Desconocido",
+        "status": "Inactiva",
+        "eventFormat": "Híbridos",
         "location": "Málaga",
         "communityUrl": "https://www.meetup.com/es-ES/BoqueronSec/",
         "thumbnailUrl": "images/boqueronsec.webp"
@@ -5273,7 +5273,8 @@
         "status": "Inactiva",
         "eventFormat": "Presencial",
         "location": "Málaga",
-        "communityUrl": "https://www.meetup.com/es-ES/Malaga-Scala/"
+        "communityUrl": "https://www.meetup.com/es-ES/Malaga-Scala/",
+        "thumbnailUrl": ""
       }
     },
     {
@@ -5308,9 +5309,9 @@
         "id": 344,
         "name": "MálagaJUG",
         "status": "Activa",
-        "eventFormat": "Presencial",
+        "eventFormat": "Híbridos",
         "location": "Málaga",
-        "communityUrl": "https://www.meetup.com/es-ES/MalagaJUG/",
+        "communityUrl": "https://malagajug.wordpress.com",
         "thumbnailUrl": "images/malagajug.webp"
       }
     },
@@ -5592,10 +5593,11 @@
       "properties": {
         "id": 366,
         "name": "NodeJSMadrid",
-        "status": "Inactiva",
+        "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Madrid",
-        "communityUrl": "https://www.meetup.com/es-ES/node-js-madrid/"
+        "communityUrl": "https://www.meetup.com/es-ES/node-js-madrid/",
+        "thumbnailUrl": ""
       }
     },
     {
@@ -5782,7 +5784,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Málaga",
-        "communityUrl": "https://www.opensouthcode.org/conferences/opensouthcode2024",
+        "communityUrl": "https://www.opensouthcode.org/",
         "thumbnailUrl": "images/opensouthcode.webp"
       }
     },
@@ -6139,7 +6141,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Madrid",
-        "communityUrl": "https://www.meetup.com/PyData-Madrid/",
+        "communityUrl": "https://guild.host/pydata-madrid",
         "thumbnailUrl": "images/pydata-madrid.webp"
       }
     },
@@ -8914,7 +8916,7 @@
         "status": "Activa",
         "eventFormat": "Presencial",
         "location": "Sevilla, España",
-        "communityUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/",
+        "communityUrl": "https://www.linkedin.com/company/pingaprogramadoras/",
         "thumbnailUrl": "images/ping-a-programadoras.webp"
       }
     },

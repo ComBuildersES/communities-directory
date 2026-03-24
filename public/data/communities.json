@@ -2068,10 +2068,10 @@
   {
     "id": 66,
     "name": "BoquerónSec",
-    "status": "Activa",
-    "lastReviewed": "31/05/2024",
+    "status": "Inactiva",
+    "lastReviewed": "24/03/2026",
     "communityType": "Tech Meetup",
-    "eventFormat": "Desconocido",
+    "eventFormat": "Híbridos",
     "location": "Málaga",
     "topics": "",
     "tags": [],
@@ -2087,7 +2087,8 @@
       "lon": -4.4200007
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "Comunidad local para compartir conocimiento y experiencias sobre ciberseguridad."
   },
   {
     "id": 67,
@@ -2795,8 +2796,8 @@
     "id": 87,
     "name": "Cloud Native (CNCF) Rioja",
     "status": "Activa",
-    "lastReviewed": "14/11/2024",
-    "communityType": "Tech Meetup",
+    "lastReviewed": "24/03/2026",
+    "communityType": "Grupo colaborativo",
     "eventFormat": "Presencial",
     "location": "Logroño La Rioja",
     "topics": "",
@@ -2836,7 +2837,8 @@
       "lon": -2.44998
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": ""
   },
   {
     "id": 88,
@@ -10638,7 +10640,7 @@
     "id": 342,
     "name": "Malaga-Scala",
     "status": "Inactiva",
-    "lastReviewed": "31/05/2024",
+    "lastReviewed": "24/03/2026",
     "communityType": "Tech Meetup",
     "eventFormat": "Presencial",
     "location": "Málaga",
@@ -10655,7 +10657,9 @@
       "lon": -4.4200007
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "Comunidad para compartir conocimiento y experiencias sobre el lenguaje de programación Scala.",
+    "thumbnailUrl": ""
   },
   {
     "id": 343,
@@ -10697,9 +10701,9 @@
     "id": 344,
     "name": "MálagaJUG",
     "status": "Activa",
-    "lastReviewed": "31/05/2024",
+    "lastReviewed": "24/03/2026",
     "communityType": "Tech Meetup",
-    "eventFormat": "Presencial",
+    "eventFormat": "Híbridos",
     "location": "Málaga",
     "topics": "",
     "tags": [
@@ -10718,10 +10722,11 @@
     ],
     "targetAudience": [],
     "contactInfo": "",
-    "communityUrl": "https://www.meetup.com/es-ES/MalagaJUG/",
+    "communityUrl": "https://malagajug.wordpress.com",
     "urls": {
       "twitter": "https://twitter.com/MalagaJUG",
-      "eventsUrl": "https://www.meetup.com/es-ES/MalagaJUG/"
+      "eventsUrl": "https://www.meetup.com/es-ES/MalagaJUG/",
+      "web": "https://malagajug.wordpress.com"
     },
     "thumbnailUrl": "images/malagajug.webp",
     "latLon": {
@@ -10729,7 +10734,8 @@
       "lon": -4.4200007
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "Comunidad para compartir conocimiento y experiencias sobre el lenguaje y plataforma Java y otros lenguajes de la JVM."
   },
   {
     "id": 345,
@@ -11515,8 +11521,8 @@
   {
     "id": 366,
     "name": "NodeJSMadrid",
-    "status": "Inactiva",
-    "lastReviewed": "31/05/2024",
+    "status": "Activa",
+    "lastReviewed": "24/03/2026",
     "communityType": "Tech Meetup",
     "eventFormat": "Presencial",
     "location": "Madrid",
@@ -11541,7 +11547,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/node-js-madrid/",
     "urls": {
-      "twitter": "https://twitter.com/NodeJsMadrid",
+      "twitter": "https://x.com/MadridNodeJs",
       "eventsUrl": "https://www.meetup.com/es-ES/node-js-madrid/"
     },
     "latLon": {
@@ -11549,7 +11555,9 @@
       "lon": -3.7035825
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "",
+    "thumbnailUrl": ""
   },
   {
     "id": 367,
@@ -11835,14 +11843,12 @@
     "id": 377,
     "name": "OpenSouthCode",
     "status": "Activa",
-    "lastReviewed": "18/10/2024",
+    "lastReviewed": "24/03/2026",
     "communityType": "Conferencia",
     "eventFormat": "Presencial",
     "location": "Málaga",
     "topics": "",
     "tags": [
-      "free-software",
-      "open-source",
       "software-architecture",
       "software-craftsmanship",
       "tech-ethics",
@@ -11852,23 +11858,62 @@
       "product-management",
       "c",
       "tdd",
-      "python"
+      "python",
+      "free-software",
+      "open-source",
+      "open-hardware",
+      "nodejs",
+      "java",
+      "javascript",
+      "typescript",
+      "angular",
+      "react",
+      "flutter",
+      "php"
     ],
     "targetAudience": [
       "software-architect",
       "community-manager",
       "business-innovation-manager",
       "open-source-contributor",
-      "product-manager"
+      "product-manager",
+      "student",
+      "junior-developer",
+      "senior-staff",
+      "frontend-developer",
+      "backend-developer",
+      "fullstack-developer",
+      "mobile-developer",
+      "game-developer",
+      "data-engineer",
+      "data-scientist",
+      "ml-engineer",
+      "devops-engineer",
+      "cloud-engineer",
+      "sre",
+      "sysadmin",
+      "cybersecurity-engineer",
+      "pentester",
+      "qa-engineer",
+      "test-automation-engineer",
+      "agile-practitioner",
+      "project-manager",
+      "tech-lead",
+      "ux-designer",
+      "ui-designer",
+      "digital-marketer",
+      "embedded-iot-engineer",
+      "robotics-engineer",
+      "maker"
     ],
     "contactInfo": "sponsors@opensouthcode.org",
-    "communityUrl": "https://www.opensouthcode.org/conferences/opensouthcode2024",
+    "communityUrl": "https://www.opensouthcode.org/",
     "urls": {
       "twitter": "https://twitter.com/opensouthcode",
       "linkedin": "https://www.linkedin.com/company/opensouthcode/",
       "youtube": "https://www.youtube.com/@opensouthcode",
-      "instagram": "https://www.instagram.com/tws_theworkshop/",
-      "eventsUrl": "https://www.meetup.com/es-ES/malagajug/"
+      "instagram": "https://www.instagram.com/opensouthcode",
+      "eventsUrl": "https://www.opensouthcode.org/"
     },
     "thumbnailUrl": "images/opensouthcode.webp",
     "latLon": {
@@ -11876,7 +11921,8 @@
       "lon": -4.4200007
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "Conferencia anual alrededor de la cultura y tecnologías abiertas. Incluye tracks profesionales para todos los niveles de conocimiento, y evento paralelo para niños y adolescentes, OpenSouthKids. Con contenido en español e inglés."
   },
   {
     "id": 378,
@@ -12729,7 +12775,7 @@
     "id": 401,
     "name": "PyData Madrid",
     "status": "Activa",
-    "lastReviewed": "31/05/2024",
+    "lastReviewed": "24/03/2026",
     "communityType": "Tech Meetup",
     "eventFormat": "Presencial",
     "location": "Madrid",
@@ -12757,12 +12803,12 @@
       "sysadmin",
       "ml-engineer"
     ],
-    "contactInfo": "leah@numfocus.org",
-    "communityUrl": "https://www.meetup.com/PyData-Madrid/",
+    "contactInfo": "madrid-organizers@pydata.org",
+    "communityUrl": "https://guild.host/pydata-madrid",
     "urls": {
       "linkedin": "https://www.linkedin.com/company/pydata-madrid/",
       "bluesky": "https://bsky.app/profile/madrid.pydata.org",
-      "eventsUrl": "https://www.meetup.com/PyData-Madrid/"
+      "eventsUrl": "https://guild.host/pydata-madrid/events"
     },
     "thumbnailUrl": "images/pydata-madrid.webp",
     "latLon": {
@@ -12770,7 +12816,8 @@
       "lon": -3.7035825
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": ""
   },
   {
     "id": 402,
@@ -18787,30 +18834,29 @@
     "id": 573,
     "name": "Ping A Programadoras",
     "status": "Activa",
-    "lastReviewed": "26/05/2025",
-    "communityType": "Grupo de ayuda mutua",
+    "lastReviewed": "24/03/2026",
+    "communityType": "Tech Meetup",
     "eventFormat": "Presencial",
     "location": "Sevilla, España",
     "topics": "",
     "tags": [
       "tech-ethics",
       "networking",
-      "r-lang",
-      "augmented-reality",
       "data-science",
-      "c",
       "tech4good",
-      "women-in-tech",
       "software-architecture",
-      "haskell",
       "functional-programming",
-      "oop"
+      "oop",
+      "women-in-tech",
+      "javascript",
+      "java",
+      "mentoring"
     ],
     "targetAudience": [],
     "contactInfo": "pingprogramadoras@gmail.com",
-    "communityUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/",
+    "communityUrl": "https://www.linkedin.com/company/pingaprogramadoras/",
     "urls": {
-      "eventsUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/"
+      "eventsUrl": "https://meetup.com/ping-a-programadoras"
     },
     "thumbnailUrl": "images/ping-a-programadoras.webp",
     "latLon": {
@@ -18818,7 +18864,8 @@
       "lon": -5.9953403
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "Grupo de mujeres informáticas de Sevilla, donde nos reunimos para conocernos, compartir experiencias y aprender unas de otras"
   },
   {
     "id": 574,
