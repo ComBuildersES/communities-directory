@@ -29,6 +29,22 @@ import {
   useCBMembersMap,
 } from "./stores/community.store.js";
 
+function dismissActiveInput() {
+  if (typeof document === "undefined") return;
+
+  const activeElement = document.activeElement;
+
+  if (!(activeElement instanceof HTMLElement)) return;
+
+  if (
+    activeElement.tagName === "INPUT" ||
+    activeElement.tagName === "TEXTAREA" ||
+    activeElement.isContentEditable
+  ) {
+    activeElement.blur();
+  }
+}
+
 function App () {
   const [view, setView] = useState("list");
   const [route, setRoute] = useState(() => parseContributionRoute());
@@ -208,6 +224,7 @@ function App () {
   const shouldBlockCommunityEdit = route.mode === "edit" && shouldBlockCommunityDetails;
 
   const openCommunityModal = (communityId) => {
+    dismissActiveInput();
     const path = buildDirectoryStatePath({ filters, communityIdentifier: communityId });
     window.history.pushState({}, "", path);
     setSelectedCommunityIdentifier(String(communityId));
@@ -232,6 +249,12 @@ function App () {
     });
     setPendingNavigation(null);
   }, [showContributionView]);
+
+  useEffect(() => {
+    if (!selectedCommunity) return;
+
+    dismissActiveInput();
+  }, [selectedCommunity]);
 
   return (
     <>
