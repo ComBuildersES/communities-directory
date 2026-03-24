@@ -14289,20 +14289,25 @@
         "id": 468,
         "name": "Wey Wey Web",
         "status": "Activa",
-        "lastReviewed": "17/10/2024",
+        "lastReviewed": "24/03/2026",
         "communityType": "Conferencia",
         "eventFormat": "Presencial",
         "location": "Málaga",
         "topics": "",
         "tags": [
-          "event-driven",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "ddd"
+          "ux-ui",
+          "css",
+          "html",
+          "accessibility",
+          "javascript-frameworks",
+          "web-performance",
+          "frontend-tooling",
+          "design-systems"
         ],
         "targetAudience": [
-          "community-manager"
+          "ux-designer",
+          "frontend-developer",
+          "fullstack-developer"
         ],
         "contactInfo": "info@weyweyweb.com",
         "communityUrl": "https://weyweyweb.com/",
@@ -14312,7 +14317,7 @@
           "twitter": "https://twitter.com/WeyWeyWeb"
         },
         "thumbnailUrl": "images/wey-wey-web.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
