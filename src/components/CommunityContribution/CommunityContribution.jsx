@@ -126,6 +126,7 @@ const FIELD_HELP = {
     title: "Cómo escribir la descripción breve",
     description: "Resume en una frase qué hace especial a esta comunidad.",
     bullets: [
+      "Indica la forma organizativa si la conoces: colectivo (sin entidad jurídica), asociación sin ánimo de lucro, fundación, cooperativa, empresa con actividad comunitaria, grupo de usuarios, etc.",
       "Prioriza qué ofrece, su enfoque o su propuesta de valor.",
       "Evita repetir solo etiquetas, tecnologías o público objetivo que ya hayas marcado arriba.",
       "Una longitud ideal suele estar entre 140 y 220 caracteres.",
@@ -1424,7 +1425,7 @@ export function CommunityContribution({
               />
             </div>
             <p className="contribution-field-note">
-              Ejemplo: “Comunidad local que organiza encuentros mensuales para compartir experiencias reales de producto digital y liderazgo técnico.”
+              Ejemplo: “Colectivo sin ánimo de lucro que organiza encuentros mensuales para compartir experiencias prácticas sobre arquitectura de software e ingeniería de plataforma.”
             </p>
             <p className="contribution-field-counter">
               {(draft.shortDescription ?? "").length}/{SHORT_DESCRIPTION_MAX_LENGTH}

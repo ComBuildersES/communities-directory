@@ -86,11 +86,22 @@ function extractLegacyPayload() {
   };
 }
 
+function extractProposalType() {
+  const match = body.match(/##\s*Tipo de propuesta\s*\n+([^\n#]+)/i);
+  if (!match) return null;
+  const value = match[1].trim().toLowerCase();
+  if (value.includes('editar') || value.includes('edit')) return 'edit';
+  if (value.includes('nueva') || value.includes('new') || value.includes('añadir')) return 'create';
+  return null;
+}
+
 function readSubmission() {
   const jsonPayload = extractJsonPayload();
   if (jsonPayload) {
+    const proposalType = extractProposalType();
+    const modeFromType = proposalType ?? (jsonPayload.id === null || jsonPayload.id === undefined ? 'create' : 'edit');
     return {
-      mode: jsonPayload.id === null || jsonPayload.id === undefined ? 'create' : 'edit',
+      mode: modeFromType,
       payload: jsonPayload,
     };
   }
@@ -220,7 +231,7 @@ async function main() {
   const newId = Math.max(...communities.map((community) => Number(community.id) || 0)) + 1;
   const resolvedCoordinates = await resolveCoordinates(payload);
   fs.writeFileSync(path.join('.geo', 'last-coordinates.json'), JSON.stringify(resolvedCoordinates, null, 2));
-  fs.writeFileSync(path.join('.geo', 'community-name.txt'), payload.name);
+  fs.writeFileSync(path.join('.geo', 'community-meta.json'), JSON.stringify({ name: payload.name, mode }));
 
   let thumbnailUrl = payload.thumbnailUrl;
   try {

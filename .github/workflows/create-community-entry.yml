@@ -55,7 +55,15 @@ jobs:
           LON=$(echo "$COORDS" | jq -r .lon)
           echo "LAT=$LAT" >> $GITHUB_OUTPUT
           echo "LON=$LON" >> $GITHUB_OUTPUT
-          echo "COMMUNITY_NAME=$(cat .geo/community-name.txt)" >> $GITHUB_OUTPUT
+          META=$(cat .geo/community-meta.json)
+          COMMUNITY_NAME=$(echo "$META" | jq -r .name)
+          COMMUNITY_MODE=$(echo "$META" | jq -r .mode)
+          if [ "$COMMUNITY_MODE" = "edit" ]; then
+            PR_TITLE="Propuesta: aplicar cambios a $COMMUNITY_NAME (issue #${{ github.event.issue.number }})"
+          else
+            PR_TITLE="Propuesta: añadir $COMMUNITY_NAME (issue #${{ github.event.issue.number }})"
+          fi
+          echo "PR_TITLE=$PR_TITLE" >> $GITHUB_OUTPUT
 
       - name: Crear Pull Request
         id: cpr
@@ -66,7 +74,7 @@ jobs:
             public/images/
           commit-message: "Aplicar propuesta de comunidad desde issue #${{ github.event.issue.number }}"
           branch: "community-issue-${{ github.event.issue.number }}"
-          title: "Propuesta: ${{ steps.coords.outputs.COMMUNITY_NAME }} (issue #${{ github.event.issue.number }})"
+          title: "${{ steps.coords.outputs.PR_TITLE }}"
           body: |
             Esta PR ha sido generada automáticamente a partir del issue #${{ github.event.issue.number }}.
             

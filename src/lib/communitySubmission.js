@@ -33,6 +33,7 @@ export const URL_PLATFORM_OPTIONS = [
   { key: "mastodon", label: "Mastodon" },
   { key: "bluesky", label: "Bluesky" },
   { key: "twitch", label: "Twitch" },
+  { key: "flickr", label: "Flickr" },
 ];
 
 const CONTRIBUTION_MODE_PARAM = "contribute";
