@@ -11515,8 +11515,8 @@
   {
     "id": 366,
     "name": "NodeJSMadrid",
-    "status": "Inactiva",
-    "lastReviewed": "31/05/2024",
+    "status": "Activa",
+    "lastReviewed": "24/03/2026",
     "communityType": "Tech Meetup",
     "eventFormat": "Presencial",
     "location": "Madrid",
@@ -11541,7 +11541,7 @@
     "contactInfo": "",
     "communityUrl": "https://www.meetup.com/es-ES/node-js-madrid/",
     "urls": {
-      "twitter": "https://twitter.com/NodeJsMadrid",
+      "twitter": "https://x.com/MadridNodeJs",
       "eventsUrl": "https://www.meetup.com/es-ES/node-js-madrid/"
     },
     "latLon": {
@@ -11549,7 +11549,9 @@
       "lon": -3.7035825
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "",
+    "thumbnailUrl": ""
   },
   {
     "id": 367,
