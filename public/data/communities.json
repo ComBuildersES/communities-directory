@@ -3281,19 +3281,34 @@
     "id": 101,
     "name": "Community Builders",
     "status": "Activa",
-    "lastReviewed": "24/02/2025",
+    "lastReviewed": "24/03/2026",
     "communityType": "Meta comunidad",
     "eventFormat": "Online",
-    "location": "n/a",
+    "location": "",
     "topics": "",
-    "tags": [],
+    "tags": [
+      "tech4good",
+      "mentoring",
+      "open-data",
+      "open-source"
+    ],
     "targetAudience": [
-      "community-manager"
+      "community-manager",
+      "mentee",
+      "mentor"
     ],
     "contactInfo": "communitybuilders.es@gmail.com",
     "communityUrl": "https://linktr.ee/ComBuilders_ES",
     "urls": {
-      "linkAggregator": "https://linktr.ee/ComBuilders_ES"
+      "linkAggregator": "https://linktr.ee/ComBuilders_ES",
+      "web": "https://combuilderses.github.io/",
+      "eventsUrl": "https://calendar.google.com/calendar/u/0/r",
+      "mailingList": "https://groups.google.com/g/community-builders-es",
+      "github": "https://github.com/ComBuildersES",
+      "youtube": "https://www.youtube.com/@ComBuilders_ES",
+      "linkedin": "https://www.linkedin.com/company/combuilders-es/",
+      "twitter": "https://x.com/ComBuilders_ES",
+      "bluesky": "https://bsky.app/profile/communitybuilders.bsky.social"
     },
     "thumbnailUrl": "images/community-builders.webp",
     "latLon": {
@@ -3301,7 +3316,8 @@
       "lon": null
     },
     "displayOnMap": false,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "Somos un colectivo que reúne a personas que dinamizan comunidades tech de habla hispana con el objetivo de ser un lugar de referencia donde se facilite la colaboración y el intercambio de experiencias."
   },
   {
     "id": 102,
