@@ -9027,21 +9027,25 @@
         "id": 312,
         "name": "Lambda World",
         "status": "Activa",
-        "lastReviewed": "18/10/2024",
+        "lastReviewed": "24/03/2026",
         "communityType": "Conferencia",
         "eventFormat": "Presencial",
         "location": "Cádiz",
         "topics": "",
         "tags": [
-          "aws",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "event-driven",
-          "functional-programming"
+          "functional-programming",
+          "scala",
+          "haskell",
+          "elixir",
+          "kotlin",
+          "rust",
+          "erlang"
         ],
         "targetAudience": [
-          "community-manager"
+          "backend-developer",
+          "frontend-developer",
+          "fullstack-developer",
+          "senior-staff"
         ],
         "contactInfo": "lambda@yayyay.events",
         "communityUrl": "https://www.lambda.world/",
@@ -9052,7 +9056,7 @@
           "web": "https://www.lambda.world/"
         },
         "thumbnailUrl": "images/lambda-world.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
