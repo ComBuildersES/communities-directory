@@ -1,16 +1,11 @@
-import { useState } from "react";
-import { CommunityModal } from "./CommunityModal/CommunityModal";
-
 /* eslint-disable react/prop-types */
-export function CommunityCard({ community, tagsMap = {}, audienceMap = {}, hasCBMember = false, cbHandles = [] }) {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
+export function CommunityCard({ community, hasCBMember = false, onOpen }) {
   const {
     name: comunidad,
     thumbnailUrl: miniatura,
     shortDescription,
   } = community;
-  const openModal = () => setIsModalOpen(true);
+  const openModal = () => onOpen?.(community.id);
 
   return (
     <>
@@ -59,15 +54,6 @@ export function CommunityCard({ community, tagsMap = {}, audienceMap = {}, hasCB
         </div>
       </div>
 
-      {isModalOpen && (
-        <CommunityModal
-          community={community}
-          tagsMap={tagsMap}
-          audienceMap={audienceMap}
-          cbHandles={cbHandles}
-          onClose={() => setIsModalOpen(false)}
-        />
-      )}
     </>
   );
 }
