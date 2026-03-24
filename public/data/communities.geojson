@@ -3620,8 +3620,8 @@
       "properties": {
         "id": 129,
         "name": "Databeers Máaga",
-        "status": "Activa",
-        "lastReviewed": "18/10/2024",
+        "status": "Inactiva",
+        "lastReviewed": "24/03/2026",
         "communityType": "Tech Meetup",
         "eventFormat": "Presencial",
         "location": "Málaga",
@@ -3650,7 +3650,7 @@
           "eventsUrl": "https://www.meetup.com/es-es/databeers-malaga/"
         },
         "thumbnailUrl": "images/databeers-maaga.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
