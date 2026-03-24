@@ -20,8 +20,11 @@ import {
 import {
   useAllCommunities,
   useAudience,
+  useFreshnessError,
   useFilters,
+  useHasFreshData,
   useIsLoading,
+  useIsRefreshingFreshData,
   useTags,
   useCBMembersMap,
 } from "./stores/community.store.js";
@@ -39,6 +42,9 @@ function App () {
     clearDraft: null,
   });
   const [pendingNavigation, setPendingNavigation] = useState(null);
+  const [isOnline, setIsOnline] = useState(() =>
+    typeof navigator === "undefined" ? true : navigator.onLine
+  );
   const { fetchCommunities } = useCommunityActions();
   const communities = useAllCommunities();
   const allTags = useTags();
@@ -46,6 +52,9 @@ function App () {
   const filters = useFilters();
   const isLoading = useIsLoading();
   const cbMembersMap = useCBMembersMap();
+  const hasFreshData = useHasFreshData();
+  const isRefreshingFreshData = useIsRefreshingFreshData();
+  const freshnessError = useFreshnessError();
   const routeRef = useRef(route);
   const contributionStateRef = useRef(contributionState);
 
@@ -68,7 +77,33 @@ function App () {
   }, [contributionState]);
 
   useEffect(() => {
-    fetchCommunities(); // Only fetch once on initial load
+    fetchCommunities();
+  }, [fetchCommunities]);
+
+  useEffect(() => {
+    const syncOnlineStatus = () => setIsOnline(navigator.onLine);
+    const refreshFreshData = () => {
+      if (routeRef.current.mode === "edit") return;
+      if (!navigator.onLine) return;
+      fetchCommunities({ preserveData: true });
+    };
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "visible") {
+        refreshFreshData();
+      }
+    };
+
+    window.addEventListener("online", syncOnlineStatus);
+    window.addEventListener("online", refreshFreshData);
+    window.addEventListener("offline", syncOnlineStatus);
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    return () => {
+      window.removeEventListener("online", syncOnlineStatus);
+      window.removeEventListener("online", refreshFreshData);
+      window.removeEventListener("offline", syncOnlineStatus);
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
   }, [fetchCommunities]);
 
   useEffect(() => {
@@ -169,6 +204,8 @@ function App () {
     ? resolveCommunityFromIdentifier(communities, selectedCommunityIdentifier)
     : null;
   const showContributionView = route.mode !== "directory";
+  const shouldBlockCommunityDetails = isOnline && (isRefreshingFreshData || !hasFreshData);
+  const shouldBlockCommunityEdit = route.mode === "edit" && shouldBlockCommunityDetails;
 
   const openCommunityModal = (communityId) => {
     const path = buildDirectoryStatePath({ filters, communityIdentifier: communityId });
@@ -209,8 +246,19 @@ function App () {
       {!showContributionView && <TagSearch />}
       {!showContributionView && <ResultsBar view={view} />}
       {!showContributionView && <FilterPanel />}
+      {!showContributionView && shouldBlockCommunityDetails && communities.length > 0 && (
+        <section className="contribution-shell">
+          <article className="message is-info contribution-message">
+            <div className="message-body">
+              {isRefreshingFreshData
+                ? "Comprobando si hay una version mas reciente del directorio antes de abrir detalles o proponer cambios."
+                : freshnessError}
+            </div>
+          </article>
+        </section>
+      )}
       <div className="main">
-        {showContributionView && !isLoading && (
+        {showContributionView && !isLoading && !shouldBlockCommunityEdit && (
           <CommunityContribution
             communities={communities}
             allTags={allTags}
@@ -222,8 +270,14 @@ function App () {
             onDraftActionsChange={setDraftActions}
           />
         )}
-        {showContributionView && isLoading && <p className="contribution-loading">Cargando formulario...</p>}
-        {showContributionView && route.mode === "edit" && !isLoading && !communityToEdit && (
+        {showContributionView && (isLoading || shouldBlockCommunityEdit) && (
+          <p className="contribution-loading">
+            {shouldBlockCommunityEdit
+              ? "Sincronizando la ultima version antes de permitir la edicion..."
+              : "Cargando formulario..."}
+          </p>
+        )}
+        {showContributionView && route.mode === "edit" && !isLoading && !shouldBlockCommunityEdit && !communityToEdit && (
           <section className="contribution-shell">
             <article className="message is-warning contribution-message">
               <div className="message-body">
@@ -265,7 +319,7 @@ function App () {
           </div>
         </div>
       )}
-      {!showContributionView && selectedCommunity && (
+      {!showContributionView && selectedCommunity && !shouldBlockCommunityDetails && (
         <CommunityModal
           community={selectedCommunity}
           tagsMap={tagsMap}

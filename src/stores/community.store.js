@@ -31,6 +31,9 @@ const initialState = {
   numberOFOnSiteCommunities: 0, // Estado para el numero de com. presenciales
   cbMemberIds: new Set(), // IDs de comunidades con miembro en Community Builders
   cbMembersMap: new Map(), // communityId -> [github handles]
+  hasFreshData: false, // Datos confirmados desde red cuando hay conexión
+  isRefreshingFreshData: false, // Revalidación online en curso
+  freshnessError: null, // Aviso cuando solo hay datos de cache
 };
 
 // Define el store Zustand
@@ -38,15 +41,45 @@ const useCommunityStore = create(
   devtools((set, get) => ({
     ...initialState,
     actions: {
-      fetchCommunities: async () => {
-        set({ isLoading: true, error: null });
+      fetchCommunities: async ({ preserveData = false } = {}) => {
+        const currentState = get();
+
+        if (currentState.isLoading || currentState.isRefreshingFreshData) {
+          return;
+        }
+
+        const shouldRequireFreshData = typeof navigator === "undefined" ? true : navigator.onLine;
+        const loadAllResources = (requestInit) => Promise.all([
+          getAllCommunities(URL, requestInit),
+          getAllCommunities(TAGS_URL, requestInit),
+          getAllCommunities(AUDIENCE_URL, requestInit),
+          getAllCommunities(CB_MEMBERS_URL, requestInit),
+        ]);
+
+        set((state) => ({
+          isLoading: preserveData && state.allCommunities.length > 0 ? false : true,
+          error: null,
+          hasFreshData: shouldRequireFreshData ? false : true,
+          isRefreshingFreshData: shouldRequireFreshData,
+          freshnessError: null,
+        }));
+
         try {
-          const [data, tags, audience, cbMembers] = await Promise.all([
-            getAllCommunities(URL),
-            getAllCommunities(TAGS_URL),
-            getAllCommunities(AUDIENCE_URL),
-            getAllCommunities(CB_MEMBERS_URL),
-          ]);
+          let resources;
+          let hasFreshData = !shouldRequireFreshData;
+
+          if (shouldRequireFreshData) {
+            try {
+              resources = await loadAllResources({ cache: "no-store" });
+              hasFreshData = true;
+            } catch {
+              resources = await loadAllResources();
+            }
+          } else {
+            resources = await loadAllResources();
+          }
+
+          const [data, tags, audience, cbMembers] = resources;
           const cbMemberIds = new Set(cbMembers.map((m) => m.communityId));
           const cbMembersMap = cbMembers.reduce((map, { communityId, github }) => {
             if (!map.has(communityId)) map.set(communityId, []);
@@ -72,12 +105,22 @@ const useCommunityStore = create(
             filters: initialFilters,
             cbMemberIds,
             cbMembersMap,
+            hasFreshData,
+            isRefreshingFreshData: false,
+            freshnessError: hasFreshData
+              ? null
+              : "No he podido confirmar la ultima version del directorio. Mientras haya conexion, los detalles y la edicion quedan bloqueados hasta sincronizar.",
             isLoading: false,
             numberOFCommunities: communitiesFiltered.length,
             numberOFOnSiteCommunities: communitiesFiltered.filter(e => e.displayOnMap == true).length
           });
         } catch (error) {
-          set({ error: error.message, isLoading: false });
+          set({
+            error: error.message,
+            isLoading: false,
+            hasFreshData: false,
+            isRefreshingFreshData: false,
+          });
         }
       },
       filterComunities: (key, value) => {
@@ -184,6 +227,13 @@ export const useAudience = () => useCommunityStore((state) => state.allAudience)
 export const useCBMemberIds = () => useCommunityStore((state) => state.cbMemberIds);
 
 export const useCBMembersMap = () => useCommunityStore((state) => state.cbMembersMap);
+
+export const useHasFreshData = () => useCommunityStore((state) => state.hasFreshData);
+
+export const useIsRefreshingFreshData = () =>
+  useCommunityStore((state) => state.isRefreshingFreshData);
+
+export const useFreshnessError = () => useCommunityStore((state) => state.freshnessError);
 
 // Selector de las acciones
 

@@ -1,5 +1,28 @@
-const CACHE_NAME = "community-builders-shell-v1";
+const CACHE_NAME = "community-builders-shell-v2";
 const APP_SHELL = ["./", "./manifest.webmanifest"];
+const DATA_FILE_PATTERN = /\/data\/.+\.(json|geojson)$/;
+
+async function networkFirst(request) {
+  try {
+    const networkResponse = await fetch(request);
+
+    if (networkResponse?.ok) {
+      const responseClone = networkResponse.clone();
+      const cache = await caches.open(CACHE_NAME);
+      cache.put(request, responseClone);
+    }
+
+    return networkResponse;
+  } catch (error) {
+    const cachedResponse = await caches.match(request);
+
+    if (cachedResponse) {
+      return cachedResponse;
+    }
+
+    throw error;
+  }
+}
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -36,6 +59,11 @@ self.addEventListener("fetch", (event) => {
     event.respondWith(
       fetch(event.request).catch(() => caches.match("./"))
     );
+    return;
+  }
+
+  if (DATA_FILE_PATTERN.test(requestUrl.pathname)) {
+    event.respondWith(networkFirst(event.request));
     return;
   }
 
