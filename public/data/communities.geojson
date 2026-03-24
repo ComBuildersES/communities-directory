@@ -13703,7 +13703,7 @@
         "id": 451,
         "name": "TRGCON",
         "status": "Activa",
-        "lastReviewed": "02/06/2025",
+        "lastReviewed": "24/03/2026",
         "communityType": "Conferencia",
         "eventFormat": "Presencial",
         "location": "Madrid",
@@ -13733,7 +13733,7 @@
           "instagram": "https://www.instagram.com/raul_muro/"
         },
         "thumbnailUrl": "images/trgcon.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
