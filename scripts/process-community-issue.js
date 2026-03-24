@@ -220,6 +220,7 @@ async function main() {
   const newId = Math.max(...communities.map((community) => Number(community.id) || 0)) + 1;
   const resolvedCoordinates = await resolveCoordinates(payload);
   fs.writeFileSync(path.join('.geo', 'last-coordinates.json'), JSON.stringify(resolvedCoordinates, null, 2));
+  fs.writeFileSync(path.join('.geo', 'community-name.txt'), payload.name);
 
   let thumbnailUrl = payload.thumbnailUrl;
   try {

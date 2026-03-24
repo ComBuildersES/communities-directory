@@ -23,10 +23,18 @@ async function generateGeoJSON() {
           id: c.id,
           name: c.name,
           status: c.status,
+          lastReviewed: c.lastReviewed,
+          communityType: c.communityType,
           eventFormat: c.eventFormat,
           location: c.location,
+          topics: c.topics,
+          tags: c.tags,
+          targetAudience: c.targetAudience,
+          contactInfo: c.contactInfo,
           communityUrl: c.communityUrl,
-          thumbnailUrl: c.thumbnailUrl
+          urls: c.urls,
+          thumbnailUrl: c.thumbnailUrl,
+          humanValidated: c.humanValidated
         }
       }));
 
