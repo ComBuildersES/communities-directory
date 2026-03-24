@@ -13703,14 +13703,13 @@
         "id": 451,
         "name": "TRGCON",
         "status": "Activa",
-        "lastReviewed": "02/06/2025",
+        "lastReviewed": "24/03/2026",
         "communityType": "Conferencia",
         "eventFormat": "Presencial",
         "location": "Madrid",
         "topics": "",
         "tags": [
           "innovation",
-          "c",
           "design-patterns",
           "game-design",
           "software-architecture",
@@ -13719,7 +13718,17 @@
           "free-software",
           "iot",
           "startups",
-          "digital-marketing"
+          "digital-marketing",
+          "accessibility",
+          "web-standards",
+          "ux-ui",
+          "design-systems",
+          "tech4good",
+          "digital-activism",
+          "open-source",
+          "open-data",
+          "product-management",
+          "tech-ethics"
         ],
         "targetAudience": [
           "software-architect",
@@ -13733,7 +13742,7 @@
           "instagram": "https://www.instagram.com/raul_muro/"
         },
         "thumbnailUrl": "images/trgcon.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
