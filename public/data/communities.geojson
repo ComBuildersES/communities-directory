@@ -810,8 +810,8 @@
       "properties": {
         "id": 66,
         "name": "BoquerónSec",
-        "status": "Activa",
-        "eventFormat": "Desconocido",
+        "status": "Inactiva",
+        "eventFormat": "Híbridos",
         "location": "Málaga",
         "communityUrl": "https://www.meetup.com/es-ES/BoqueronSec/",
         "thumbnailUrl": "images/boqueronsec.webp"
