@@ -572,6 +572,32 @@ button.modal-badge:focus-visible {
   text-decoration: underline;
 }
 
+/* Compartir */
+.community-modal-share-btn {
+  cursor: pointer;
+  background: none;
+  border: 1px solid #e0e0e0;
+  font-family: inherit;
+  font-size: 0.82rem;
+}
+
+.community-modal-share-btn.is-open,
+.community-modal-share-btn:hover {
+  background: #e8f0fe;
+  border-color: #3273dc;
+  color: #3273dc;
+}
+
+.community-modal-share-btn.is-open .community-modal-url-group-chevron {
+  transform: rotate(180deg);
+}
+
+.community-modal-share-dropdown {
+  bottom: calc(100% + 4px);
+  top: auto;
+  left: 0;
+}
+
 /* Responsive */
 @media (max-width: 480px) {
   .community-modal-two-col {

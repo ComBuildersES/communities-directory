@@ -27,7 +27,7 @@ export function CommunityCard({ community, hasCBMember = false, onOpen }) {
             {hasCBMember && (
               <span
                 className="cb-badge"
-                title="Esta comunidad está representada en Community Builders"
+                title="Personas que dinamizan esta comunidad también forman parte de la comunidad Community Builders que impulsa este directorio"
                 onClick={(e) => e.stopPropagation()}
               >
                 <i className="fa-solid fa-people-group" aria-hidden="true"></i>

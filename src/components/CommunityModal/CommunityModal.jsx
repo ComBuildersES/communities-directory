@@ -1,8 +1,76 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useCommunityActions } from "../../stores/community.store";
 import { buildContributionPath } from "../../lib/communitySubmission";
 import "./CommunityModal.css";
+
+const APP_URL = "https://combuilderses.github.io/communities-directory/";
+const CB_HANDLES = {
+  twitter: "@ComBuilders_ES",
+  bluesky: "@communitybuilders.bsky.social",
+};
+
+function extractSocialHandle(platform, url) {
+  if (!url) return null;
+  try {
+    const u = new URL(url);
+    const segments = u.pathname.replace(/\/$/, "").split("/").filter(Boolean);
+    if (!segments.length) return null;
+    if (platform === "mastodon") {
+      return `@${segments[segments.length - 1].replace(/^@/, "")}@${u.hostname}`;
+    }
+    return `@${segments[segments.length - 1].replace(/^@/, "")}`;
+  } catch {
+    return null;
+  }
+}
+
+function buildShareLinks(community) {
+  const urls = community.urls || {};
+  const directLink = `${APP_URL}?community=${community.id}`;
+  const enc = encodeURIComponent;
+
+  function msg(subject, ccHandle) {
+    const cc = ccHandle ? ` // cc: ${ccHandle}` : "";
+    return `Esta ficha de ${subject} resume lo que encontrarás allí de un vistazo: ${directLink}${cc}`;
+  }
+
+  const twitterHandle = extractSocialHandle("generic", urls.twitter);
+  const bskyHandle    = extractSocialHandle("generic", urls.bluesky);
+
+  return [
+    {
+      key: "twitter",
+      label: "X / Twitter",
+      icon: "fa-brands fa-x-twitter",
+      href: `https://twitter.com/intent/tweet?text=${enc(msg(twitterHandle || community.name, CB_HANDLES.twitter))}`,
+    },
+    {
+      key: "bluesky",
+      label: "Bluesky",
+      icon: "fa-brands fa-bluesky",
+      href: `https://bsky.app/intent/compose?text=${enc(msg(bskyHandle || community.name, CB_HANDLES.bluesky))}`,
+    },
+    {
+      key: "linkedin",
+      label: "LinkedIn",
+      icon: "fa-brands fa-linkedin-in",
+      href: `https://www.linkedin.com/sharing/share-offsite/?url=${enc(directLink)}`,
+    },
+    {
+      key: "whatsapp",
+      label: "WhatsApp",
+      icon: "fa-brands fa-whatsapp",
+      href: `https://api.whatsapp.com/send?text=${enc(msg(community.name, null))}`,
+    },
+    {
+      key: "telegram",
+      label: "Telegram",
+      icon: "fa-brands fa-telegram",
+      href: `https://t.me/share/url?url=${enc(directLink)}&text=${enc(msg(community.name, null))}`,
+    },
+  ];
+}
 
 const URL_CONFIG = [
   { key: "web",            label: "Web",                icon: "fas fa-globe" },
@@ -55,6 +123,8 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
   const [tagsExpanded, setTagsExpanded] = useState(false);
   const [audienceExpanded, setAudienceExpanded] = useState(false);
   const [openUrlGroup, setOpenUrlGroup] = useState(null);
+  const [isShareOpen, setIsShareOpen] = useState(false);
+  const shareRef = useRef(null);
 
   const CHIPS_THRESHOLD = 3;
 
@@ -79,6 +149,16 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
   }, [openUrlGroup]);
+
+  // Cerrar dropdown de compartir al clicar fuera
+  useEffect(() => {
+    if (!isShareOpen) return;
+    const handler = (e) => {
+      if (!shareRef.current?.contains(e.target)) setIsShareOpen(false);
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [isShareOpen]);
 
   // Bloquear scroll del body
   useEffect(() => {
@@ -334,8 +414,35 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                   className="community-modal-url-item"
                 >
                   <i className="fas fa-code-compare"></i>
-                  <span>{humanValidated ? "Proponer cambios" : "Completar, validar o mejorar"}</span>
+                  <span>Proponer cambios</span>
                 </a>
+                <div className="community-modal-url-group" ref={shareRef}>
+                  <button
+                    type="button"
+                    className={`community-modal-url-item community-modal-share-btn${isShareOpen ? " is-open" : ""}`}
+                    onClick={() => setIsShareOpen((v) => !v)}
+                  >
+                    <i className="fas fa-share-nodes"></i>
+                    <span>Compartir</span>
+                    <i className="fas fa-chevron-down community-modal-url-group-chevron"></i>
+                  </button>
+                  {isShareOpen && (
+                    <div className="community-modal-url-dropdown community-modal-share-dropdown">
+                      {buildShareLinks(community).map(({ key, label, icon, href }) => (
+                        <a
+                          key={key}
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="community-modal-url-dropdown-item"
+                        >
+                          <i className={icon}></i>
+                          <span>{label}</span>
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
             <div className="community-modal-section">
