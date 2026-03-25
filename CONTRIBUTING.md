@@ -306,6 +306,7 @@ npm install
 
 > **Nota**: Asegúrate de tener Node.js 24 instalado.
 > **Nota**: `npm install` deja configurados los hooks locales de Git para validar los datos antes de cada commit.
+> **Nota**: esos hooks también regeneran `CHANGELOG.md` automáticamente después de cada commit y lo incorporan al propio commit si ha cambiado.
 
 Ejecutar el entorno local:
 
@@ -338,6 +339,14 @@ Esto abrirá la aplicación en `http://localhost:5173` por defecto (puede variar
 #### Crear PR tras añadir comunidades
 
 El flujo principal recomendado es usar el formulario integrado en la web del directorio. Ese formulario abre un issue en GitHub con el JSON propuesto ya preparado para revisión.
+
+#### Changelog automático
+
+- `CHANGELOG.md` se genera a partir del historial Git y se agrupa por mes y tipo de cambio.
+- Los commits con prefijos tipo `feat:`, `fix:`, `docs:`, `refactor:`, `chore:` o `ci:` se clasifican automáticamente en su sección correspondiente.
+- Los commits de datos como `Aplicar propuesta de comunidad desde issue #...` se agrupan en `Data`.
+- Cada `git commit` regenera el changelog mediante el hook `post-commit` y, si cambia, lo añade automáticamente al mismo commit.
+- Si necesitas regenerarlo manualmente, usa `npm run changelog`.
 
 Cuando se crea ese issue, se ejecuta [create-community-entry.yml](https://github.com/ComBuildersES/communities-directory/blob/master/.github/workflows/create-community-entry.yml), que:
 - Procesa el issue y genera un PR añadiendo o actualizando los datos ([process-community-issue.js](https://github.com/ComBuildersES/communities-directory/blob/master/scripts/process-community-issue.js)).

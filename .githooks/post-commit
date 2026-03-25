@@ -1,0 +1,21 @@
+#!/bin/sh
+
+if [ "$GIT_CHANGELOG_AUTOUPDATE" = "1" ]; then
+  exit 0
+fi
+
+node scripts/generate-changelog.js || exit 1
+
+if git diff --quiet -- CHANGELOG.md; then
+  exit 0
+fi
+
+git add CHANGELOG.md || exit 1
+
+if GIT_CHANGELOG_AUTOUPDATE=1 git commit --amend --no-edit --no-verify >/dev/null 2>&1; then
+  echo "CHANGELOG.md actualizado automáticamente."
+  exit 0
+fi
+
+echo "No se pudo incluir CHANGELOG.md automáticamente en el último commit. Revísalo manualmente."
+exit 0

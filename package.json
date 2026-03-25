@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "npm run validate-data && vite build",
+    "changelog": "node scripts/generate-changelog.js",
     "prepare": "node scripts/setup-git-hooks.js",
     "lint": "eslint .",
     "preview": "vite preview",
