@@ -2637,14 +2637,15 @@
         "id": 96,
         "name": "CodeRioja",
         "status": "Activa",
-        "lastReviewed": "14/11/2024",
+        "lastReviewed": "25/03/2026",
         "communityType": "Conferencia",
         "eventFormat": "Híbridos",
         "location": "Logroño La Rioja",
         "topics": "",
         "tags": [
           "tech-ethics",
-          "free-software"
+          "free-software",
+          "open-source"
         ],
         "targetAudience": [],
         "contactInfo": "coderiojamail@gmail.com",
@@ -2656,7 +2657,7 @@
           "youtube": "https://youtu.be/88m4uHDIzRs"
         },
         "thumbnailUrl": "images/coderioja.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
