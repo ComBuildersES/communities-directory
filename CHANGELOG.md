@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-25 `c8918ab` enhance community sorting logic by prioritizing validation status after member presence
+- 2026-03-25 `1160d40` enhance community sorting logic by prioritizing validation status after member presence
 - 2026-03-25 `2e77d94` update community thumbnails with new images for better representation
 - 2026-03-25 `9efcad4` improve social share reminder workflow by enhancing community detection logic and error handling
 - 2026-03-25 `9b8dad7` enhance community ID management by adding logic to determine next community ID based on existing communities
@@ -49,6 +49,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-03-25 `34b5828` [Actualizada CoruñaJUG](https://combuilderses.github.io/communities-directory/?community=114) ([PR #247](https://github.com/ComBuildersES/communities-directory/pull/247))
+- 2026-03-25 `30b0c67` [Actualizada GDG A Coruña](https://combuilderses.github.io/communities-directory/?community=195) ([PR #246](https://github.com/ComBuildersES/communities-directory/pull/246))
 - 2026-03-25 `a71f623` [Añadida GDG Girona](https://combuilderses.github.io/communities-directory/?community=604) ([PR #242](https://github.com/ComBuildersES/communities-directory/pull/242))
 - 2026-03-25 `32dc185` [Actualizada CommitConf](https://combuilderses.github.io/communities-directory/?community=100) ([PR #240](https://github.com/ComBuildersES/communities-directory/pull/240))
 - 2026-03-25 `779747f` [Actualizada AiBirras](https://combuilderses.github.io/communities-directory/?community=20) ([PR #238](https://github.com/ComBuildersES/communities-directory/pull/238))
@@ -85,6 +87,9 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-25 `aa1977b` update changelog [skip ci]
+- 2026-03-25 `ddfc66e` update changelog [skip ci]
+- 2026-03-25 `47f9f99` update changelog [skip ci]
 - 2026-03-25 `a87d162` update changelog [skip ci]
 - 2026-03-25 `56e5c92` update changelog [skip ci]
 - 2026-03-25 `26f4fe9` update changelog [skip ci]
