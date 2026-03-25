@@ -266,21 +266,34 @@
         "id": 20,
         "name": "AiBirras",
         "status": "Activa",
-        "lastReviewed": "18/10/2024",
+        "lastReviewed": "25/03/2026",
         "communityType": "Tech Meetup",
         "eventFormat": "Presencial",
-        "location": "Granada",
+        "location": "Granada, España",
         "topics": "",
         "tags": [
           "generative-ai",
-          "cloud-security"
+          "cloud-security",
+          "llm",
+          "rag",
+          "deep-learning",
+          "machine-learning"
         ],
-        "targetAudience": [],
+        "targetAudience": [
+          "ml-engineer",
+          "data-scientist",
+          "data-analyst",
+          "data-journalist",
+          "entrepreneur",
+          "business-innovation-manager"
+        ],
         "contactInfo": "info@aibirras.org",
         "communityUrl": "https://aibirras.org/",
-        "urls": {},
+        "urls": {
+          "linkedin": "https://www.linkedin.com/company/aibirras/"
+        },
         "thumbnailUrl": "images/aibirras.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {

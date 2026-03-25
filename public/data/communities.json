@@ -597,26 +597,40 @@
     "id": 20,
     "name": "AiBirras",
     "status": "Activa",
-    "lastReviewed": "18/10/2024",
+    "lastReviewed": "25/03/2026",
     "communityType": "Tech Meetup",
     "eventFormat": "Presencial",
-    "location": "Granada",
+    "location": "Granada, España",
     "topics": "",
     "tags": [
       "generative-ai",
-      "cloud-security"
+      "cloud-security",
+      "llm",
+      "rag",
+      "deep-learning",
+      "machine-learning"
     ],
-    "targetAudience": [],
+    "targetAudience": [
+      "ml-engineer",
+      "data-scientist",
+      "data-analyst",
+      "data-journalist",
+      "entrepreneur",
+      "business-innovation-manager"
+    ],
     "contactInfo": "info@aibirras.org",
     "communityUrl": "https://aibirras.org/",
-    "urls": {},
+    "urls": {
+      "linkedin": "https://www.linkedin.com/company/aibirras/"
+    },
     "thumbnailUrl": "images/aibirras.webp",
     "latLon": {
       "lat": 37.1831938,
       "lon": -3.604747
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "AiBirras es un punto de encuentro único para desarrolladores, investigadores y entusiastas de la IA para discutir lo último en inteligencia artificial, compartir ideas y disfrutar de una buena cerveza."
   },
   {
     "id": 21,
