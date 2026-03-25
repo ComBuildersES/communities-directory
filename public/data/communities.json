@@ -6270,13 +6270,15 @@
     "id": 196,
     "name": "GDG Cloud Español",
     "status": "Activa",
-    "lastReviewed": "18/11/2024",
+    "lastReviewed": "25/03/2026",
     "communityType": "Organización paraguas",
     "eventFormat": "Híbridos",
-    "location": "sin localidad",
+    "location": "n/a",
     "topics": "",
     "tags": [
-      "gcp"
+      "gcp",
+      "aws",
+      "virtualization"
     ],
     "targetAudience": [
       "cloud-engineer",
@@ -6296,11 +6298,12 @@
     },
     "thumbnailUrl": "images/gdg-cloud-espanol.webp",
     "latLon": {
-      "lat": null,
-      "lon": null
+      "lat": 41.9005351,
+      "lon": 12.4568794
     },
-    "displayOnMap": false,
-    "humanValidated": false
+    "displayOnMap": true,
+    "humanValidated": true,
+    "shortDescription": "Los Grupos de Desarrolladores de Google (GDG) reúnen a desarrolladores y tecnólogos para que se conecten, aprendan y crezcan junto con las tecnologías y los expertos de Google. Estos grupos apoyan la innovación y el crecimiento en el mundo de la tecnología."
   },
   {
     "id": 197,
