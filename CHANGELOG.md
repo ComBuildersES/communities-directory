@@ -109,6 +109,9 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-25 `ac9c4ec` update .all-contributorsrc [skip ci]
+- 2026-03-25 `1359c3c` update README.md [skip ci]
+- 2026-03-25 `e7851fc` update changelog [skip ci]
 - 2026-03-25 `e523576` update changelog [skip ci]
 - 2026-03-25 `74b4366` update changelog [skip ci]
 - 2026-03-25 `d0a82a6` update changelog [skip ci]
