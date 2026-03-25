@@ -1641,13 +1641,20 @@
         "id": 67,
         "name": "BricoLabs",
         "status": "Activa",
-        "lastReviewed": "17/10/2024",
+        "lastReviewed": "25/03/2026",
         "communityType": "Hacklab",
         "eventFormat": "Presencial",
         "location": "Coruña",
         "topics": "",
         "tags": [
-          "robotics"
+          "robotics",
+          "open-hardware",
+          "arduino",
+          "raspberry-pi",
+          "iot",
+          "sensors",
+          "3d-printing",
+          "makerspace"
         ],
         "targetAudience": [],
         "contactInfo": "contacto@bricolabs.cc",
@@ -1657,7 +1664,7 @@
           "twitter": "https://twitter.com/Brico_Labs"
         },
         "thumbnailUrl": "images/bricolabs.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
