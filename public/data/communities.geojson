@@ -6778,7 +6778,7 @@
         "id": 228,
         "name": "Grupo de Programadores e Usuarios de Linux (GPUL)",
         "status": "Activa",
-        "lastReviewed": "24/03/2026",
+        "lastReviewed": "25/03/2026",
         "communityType": "Grupo colaborativo",
         "eventFormat": "Presencial",
         "location": "A Coruña",
@@ -6790,7 +6790,9 @@
           "linux",
           "3d-printing",
           "open-hardware",
-          "tech-ethics"
+          "tech-ethics",
+          "open-source",
+          "github"
         ],
         "targetAudience": [
           "software-architect",
