@@ -192,10 +192,35 @@ function writeJsonFile(filePath, value) {
   fs.writeFileSync(filePath, `${JSON.stringify(value, null, 2)}\n`);
 }
 
-function getNextCommunityIdFromMeta(meta) {
-  return Number.isInteger(meta?.nextCommunityId) && meta.nextCommunityId > 0
+function getMaxKnownCommunityId(communities, deletedCommunities) {
+  const ids = [];
+
+  if (Array.isArray(communities)) {
+    for (const community of communities) {
+      if (Number.isInteger(community?.id)) {
+        ids.push(community.id);
+      }
+    }
+  }
+
+  if (Array.isArray(deletedCommunities)) {
+    for (const community of deletedCommunities) {
+      if (Number.isInteger(community?.id)) {
+        ids.push(community.id);
+      }
+    }
+  }
+
+  return ids.length > 0 ? Math.max(...ids) : 0;
+}
+
+function getNextCommunityIdFromMeta(meta, communities, deletedCommunities) {
+  const nextCommunityIdFromMeta = Number.isInteger(meta?.nextCommunityId) && meta.nextCommunityId > 0
     ? meta.nextCommunityId
     : 1;
+  const minimumNextCommunityId = getMaxKnownCommunityId(communities, deletedCommunities) + 1;
+
+  return Math.max(nextCommunityIdFromMeta, minimumNextCommunityId);
 }
 
 function updateNextCommunityId(meta, nextCommunityId) {
@@ -301,7 +326,7 @@ async function main() {
     throw new Error(`No se encontró la comunidad con ID ${payload.id} para ${mode === ISSUE_MODES.DELETE ? 'eliminar' : 'editar'}`);
   }
 
-  const nextCommunityId = getNextCommunityIdFromMeta(communitiesMeta);
+  const nextCommunityId = getNextCommunityIdFromMeta(communitiesMeta, communities, deletedCommunities);
   const resolvedCoordinates = mode === ISSUE_MODES.DELETE
     ? { lat: null, lon: null }
     : await resolveCoordinates(payload);
