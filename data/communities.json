@@ -13006,7 +13006,7 @@
     "id": 403,
     "name": "Python Coruña",
     "status": "Activa",
-    "lastReviewed": "31/05/2024",
+    "lastReviewed": "25/03/2026",
     "communityType": "Tech Meetup",
     "eventFormat": "Presencial",
     "location": "Coruña",
@@ -13023,7 +13023,8 @@
       "nlp",
       "networking",
       "ethical-hacking",
-      "cloud-security"
+      "cloud-security",
+      "django"
     ],
     "targetAudience": [
       "software-architect"
@@ -13045,7 +13046,9 @@
       "lon": -8.3958532
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "Somos una comunidad apasionada por el lenguaje de programación Python y su amplia gama de aplicaciones en diferentes áreas, desde el desarrollo web y móvil hasta la ciencia de datos y el aprendizaje automático.",
+    "removalReason": ""
   },
   {
     "id": 404,
