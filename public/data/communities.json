@@ -17865,7 +17865,7 @@
     "id": 541,
     "name": "Lareira Conf",
     "status": "Activa",
-    "lastReviewed": "02/06/2025",
+    "lastReviewed": "25/03/2026",
     "communityType": "Conferencia",
     "eventFormat": "Presencial",
     "location": "Coruña",
@@ -17873,25 +17873,32 @@
     "tags": [
       "sql-databases",
       "nosql-databases",
-      "graph-databases",
       "data-science",
       "data-engineering",
       "data-visualization",
-      "vector-databases",
       "c",
       "tech-ethics",
       "robotics",
       "functional-programming",
-      "oop"
+      "oop",
+      "react",
+      "javascript",
+      "typescript",
+      "cybersecurity",
+      "free-software",
+      "startups",
+      "open-source",
+      "accessibility"
     ],
     "targetAudience": [],
-    "contactInfo": "javiayude@gmail.com",
+    "contactInfo": "info@lareiraconf.es",
     "communityUrl": "https://www.lareiraconf.es/",
     "urls": {
-      "instagram": "https://www.instagram.com/freak_gzm/",
-      "github": "https://github.com/Aquelarre-Dixital",
+      "instagram": "https://www.instagram.com/lareiraconf",
+      "github": "https://github.com/Gallegarmy/LareiraConf-MainPage/",
       "twitter": "https://x.com/lareiraconf",
-      "telegram": "https://t.me/Qrow01"
+      "linkedin": "https://www.linkedin.com/company/lareiraconf",
+      "youtube": "https://www.youtube.com/@LareiraConf"
     },
     "thumbnailUrl": "images/lareira-conf.webp",
     "latLon": {
@@ -17899,7 +17906,9 @@
       "lon": -8.3958532
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "Lareira Conf es una conferencia tecnológica en A Coruña pensada para reunir a la comunidad, aprender, conectar y vivir una experiencia distinta, con buen rollo y mucha energía.",
+    "removalReason": ""
   },
   {
     "id": 542,
