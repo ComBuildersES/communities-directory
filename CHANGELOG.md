@@ -45,6 +45,19 @@ Se organiza por mes y por tipo de cambio.
 - 2026-03-23 `fffd231` update community details and remove outdated member entry
 - 2026-03-23 `618debe` enhance community features with Community Builders integration and new community data
 - 2026-03-23 `83be7d4` add closing reference to issue in PR body for automated community entries
+- 2026-03-23 `2470d7a` update date formatting in getTodayDate function to DD/MM/YYYY
+- 2026-03-23 `8b4f5b8` add health report for URLs and improve community data processing
+- 2026-03-23 `25c1ab0` Enhance URL checking script with concurrency and timeout options
+- 2026-03-23 `b3813f5` update community data by removing outdated LinkedIn links and enhancing UI styles for better user experience
+- 2026-03-23 `40fb55a` enhance community contribution component with audience categorization and grouping
+- 2026-03-23 `6b90f9c` enhance community contribution features with new taxonomy tooltip, filters, and modal updates
+- 2026-03-23 `5fc392d` add TikTok support and enhance community contribution features with navigation guards and draft management
+- 2026-03-23 `26813e5` update URL mappings and taxonomy for community data
+- 2026-03-23 `ea51e9c` add short description field to community draft and payload; set max length for short description docs: create report for suspicious social URLs in communities.json
+- 2026-03-23 `0868565` Enhance community validation and build process with new scripts and workflows
+- 2026-03-23 `1be16e2` Remove outdated community entry template and add new config for issue submission
+- 2026-03-23 `d2dc519` Add CommunityContribution component for community submissions
+- 2026-03-23 `e307fd5` add CommunityModal component with styling and functionality
 
 ### Fixes
 
@@ -56,6 +69,7 @@ Se organiza por mes y por tipo de cambio.
 ### Data
 
 - 2026-03-25 `538b845` [Actualizada AtlánticaConf](https://combuilderses.github.io/communities-directory/?community=45) ([PR #264](https://github.com/ComBuildersES/communities-directory/pull/264))
+- 2026-03-25 `b5a3f1b` [Actualizada Lareira Conf](https://combuilderses.github.io/communities-directory/?community=541) ([PR #260](https://github.com/ComBuildersES/communities-directory/pull/260))
 - 2026-03-25 `1b66f47` [Actualizada BricoLabs](https://combuilderses.github.io/communities-directory/?community=67) ([PR #256](https://github.com/ComBuildersES/communities-directory/pull/256))
 - 2026-03-25 `6e80c7e` [Actualizada Grupo de Programadores e Usuarios de Linux (GPUL)](https://combuilderses.github.io/communities-directory/?community=228) ([PR #254](https://github.com/ComBuildersES/communities-directory/pull/254))
 - 2026-03-25 `63e4acb` [Actualizada Python Coruña](https://combuilderses.github.io/communities-directory/?community=403) ([PR #252](https://github.com/ComBuildersES/communities-directory/pull/252))
@@ -96,9 +110,11 @@ Se organiza por mes y por tipo de cambio.
 - 2026-03-24 `3c74c5a` [Actualizada BoquerónSec](https://combuilderses.github.io/communities-directory/?community=66) ([PR #167](https://github.com/ComBuildersES/communities-directory/pull/167))
 - 2026-03-24 `8830e6a` [Actualizada NodeJSMadrid](https://combuilderses.github.io/communities-directory/?community=366) ([PR #165](https://github.com/ComBuildersES/communities-directory/pull/165))
 - 2026-03-23 `452ed6d` [Actualizada GeoDevelopers](https://combuilderses.github.io/communities-directory/?community=211) ([PR #162](https://github.com/ComBuildersES/communities-directory/pull/162))
+- 2026-03-23 `6c31303` [Actualizada GeoDevelopers](https://combuilderses.github.io/communities-directory/?community=211) ([PR #154](https://github.com/ComBuildersES/communities-directory/pull/154))
 
 ### Docs
 
+- 2026-03-25 `23e12dc` update changelog [skip ci]
 - 2026-03-25 `478531b` update changelog [skip ci]
 - 2026-03-25 `ac9c4ec` update .all-contributorsrc [skip ci]
 - 2026-03-25 `1359c3c` update README.md [skip ci]
@@ -133,3 +149,289 @@ Se organiza por mes y por tipo de cambio.
 - 2026-03-24 `1cee0e1` Update Twitter URL to new X.com format
 - 2026-03-24 `3c03ca4` Refactor code structure for improved readability and maintainability
 - 2026-03-23 `889b8c8` Remove outdated reports on suspect social URLs and URL health status
+- 2026-03-23 `f21489a` Refactor code structure for improved readability and maintainability
+
+## 2026-02
+
+### Data
+
+- 2026-02-12 `126385d` Update communities.json
+- 2026-02-09 `4e61449` Update public/data/communities.json
+
+### Other
+
+- 2026-02-06 `0907898` Añadir nueva comunidad desde issue (#149)
+
+## 2026-01
+
+### Data
+
+- 2026-01-14 `13fe5c3` Fix JSON formatting in communities.json
+
+## 2025-12
+
+### Data
+
+- 2025-12-12 `eea012d` Update topics and contact info in communities.json
+
+### Other
+
+- 2025-12-14 `3c0ea79` Updated lastReviewed date for CoruñaJUG
+- 2025-12-12 `126a1df` Añadir nueva comunidad desde issue (#146)
+- 2025-12-12 `4c6df43` Update Women Techmakers Madrid community details
+- 2025-12-12 `f117f75` Change displayOnMap to false for a community
+- 2025-12-12 `d81153d` Remove 'Upscale Conf' community entry
+- 2025-12-11 `bcd2b16` Añadir nueva comunidad desde issue (#144)
+
+## 2025-11
+
+### Other
+
+- 2025-11-03 `29b0121` Añadir nueva comunidad desde issue (#142)
+
+## 2025-09
+
+### Docs
+
+- 2025-09-03 `0b5b77f` update .all-contributorsrc [skip ci]
+- 2025-09-03 `3ba477f` update README.md [skip ci]
+- 2025-09-03 `f56f624` update .all-contributorsrc [skip ci]
+- 2025-09-03 `d3895a4` update README.md [skip ci]
+
+### Other
+
+- 2025-09-12 `23e369e` Añadir nueva comunidad desde issue (#140)
+- 2025-09-03 `e8e4631` Update CONTRIBUTING.md
+- 2025-09-03 `a9f0165` Update CoruñaJUG info
+- 2025-09-01 `d21258c` Añadir nueva comunidad desde issue (#135)
+
+## 2025-08
+
+### Features
+
+- 2025-08-02 `764e6fa` add community cta
+
+### Docs
+
+- 2025-08-24 `67faef2` update .all-contributorsrc [skip ci]
+- 2025-08-24 `b8a4f11` update README.md [skip ci]
+
+### Other
+
+- 2025-08-26 `cadcfe2` Añadir nueva comunidad desde issue (#132)
+- 2025-08-26 `cd6862e` Añadir nueva comunidad desde issue (#130)
+- 2025-08-24 `9147fb7` Añadir nueva comunidad desde issue (#127)
+- 2025-08-24 `f6d93ab` Añadir nueva comunidad desde issue (#125)
+- 2025-08-20 `5d8eb55` Add link to "good first issues" on Readme
+
+## 2025-06
+
+### Data
+
+- 2025-06-13 `273eba8` Update communities.json
+
+### Other
+
+- 2025-06-24 `a6dc7a5` Update README.md
+- 2025-06-20 `265bf1c` Update Global AI Community
+- 2025-06-18 `0ae2526` Fixing DevFest Sevilla & Drupal Day
+- 2025-06-18 `2078972` Adding contactinfo to devnulltalks
+- 2025-06-18 `5d067eb` Changing /dev/null talks to meetup
+- 2025-06-14 `295ccef` Añadir nueva comunidad desde issue (#121)
+- 2025-06-14 `beac65f` Añadir nueva comunidad desde issue (#119)
+- 2025-06-09 `291c7c9` Update community_entry.yml
+- 2025-06-07 `80fd1a3` Añadir nueva comunidad desde issue (#116)
+- 2025-06-07 `d544b47` Añadir nueva comunidad desde issue (#114)
+
+## 2025-05
+
+### Features
+
+- 2025-05-12 `55bfd3c` update React dependencies to version 19.1.0 and implement provinces feature layer in Map component
+- 2025-05-12 `f260764` integrate ArcGIS map components into the application
+
+### Data
+
+- 2025-05-26 `3d0848b` Update communities.json
+- 2025-05-26 `197a99c` Update communities.json
+- 2025-05-26 `db4c603` Update communities.json
+- 2025-05-26 `9f68465` Update communities.json
+- 2025-05-26 `5e295de` Update process-community-issue.js
+- 2025-05-26 `2d988d7` Update communities.json
+- 2025-05-26 `abc771f` Update communities.json
+
+### Improvements
+
+- 2025-05-16 `3426c57` clean up cluster popup field labels by removing 'SUM_' prefix and formatting names
+
+### Docs
+
+- 2025-05-14 `3c13e86` update .all-contributorsrc [skip ci]
+- 2025-05-14 `ff98013` update README.md [skip ci]
+- 2025-05-14 `a82ca32` update .all-contributorsrc [skip ci]
+- 2025-05-14 `2297afc` update README.md [skip ci]
+- 2025-05-14 `3db473b` update .all-contributorsrc [skip ci]
+- 2025-05-14 `b5df8f1` update README.md [skip ci]
+- 2025-05-14 `2235870` create .all-contributorsrc [skip ci]
+- 2025-05-14 `cac73e2` update README.md [skip ci]
+
+### Other
+
+- 2025-05-26 `a19db28` Añadir nueva comunidad desde issue (#108)
+- 2025-05-26 `ac92a03` HackellMAD X account is not maintained
+- 2025-05-26 `d5a7e95` Adding missing and fixing broken images for active communities
+- 2025-05-26 `248bf6b` Updating communities
+- 2025-05-26 `ae0367d` Añadir nueva comunidad desde issue (#106)
+- 2025-05-26 `423b18b` Añadir nueva comunidad desde issue (#104)
+- 2025-05-26 `79cd98c` Añadir nueva comunidad desde issue (#102)
+- 2025-05-26 `cd82d05` Añadir nueva comunidad desde issue (#100)
+- 2025-05-26 `166a209` Añadir nueva comunidad desde issue (#98)
+- 2025-05-26 `730db6f` Añadir nueva comunidad desde issue (#96)
+- 2025-05-26 `14d5267` Añadir nueva comunidad desde issue (#94)
+- 2025-05-26 `1a76176` Añadir nueva comunidad desde issue (#92)
+- 2025-05-26 `0de035c` Añadir nueva comunidad desde issue (#90)
+- 2025-05-26 `58cda3f` Añadir nueva comunidad desde issue (#88)
+- 2025-05-26 `527194d` Añadir nueva comunidad desde issue (#86)
+- 2025-05-26 `b7b668a` Añadir nueva comunidad desde issue (#84)
+- 2025-05-26 `fb7dc55` Añadir nueva comunidad desde issue (#81)
+- 2025-05-26 `5d8c980` Añadir nueva comunidad desde issue (#79)
+- 2025-05-26 `42a8395` Añadir nueva comunidad desde issue (#77)
+- 2025-05-26 `5c6b483` Añadir nueva comunidad desde issue (#75)
+- 2025-05-26 `118966b` Añadir nueva comunidad desde issue (#73)
+- 2025-05-26 `5dd13e7` Añadir nueva comunidad desde issue (#71)
+- 2025-05-26 `3dc46bf` Añadir nueva comunidad desde issue (#69)
+- 2025-05-26 `68e2973` Fixing autoincrement, starting at 0
+- 2025-05-26 `0891d6c` Fixing autoincrement, starting at 0
+- 2025-05-26 `ea0fa1f` Añadir nueva comunidad desde issue (#67)
+- 2025-05-26 `9b0e9af` Añadir nueva comunidad desde issue (#65)
+- 2025-05-26 `f5b5fb6` Adding minor change in layout
+- 2025-05-26 `6b5ceca` Adding warnings and defaul view as  discussed in (#45)
+- 2025-05-26 `f0067df` Improve CONTRIBUTING.md: data structures, writing, and curation scripts. (#2)
+- 2025-05-26 `21ee2d7` Adding all aux scripts
+- 2025-05-26 `8525ab1` Adding all aux scripts
+- 2025-05-26 `80b0e7b` Reviewing data
+- 2025-05-26 `11e4ae1` Adding scripts to manually review data - fixes (#64)
+- 2025-05-25 `ad0ae15` Arreglando datos
+- 2025-05-25 `bacf7bf` Añadiendo convenciones al repo (#2)
+- 2025-05-23 `6710cf9` Añadir nueva comunidad desde issue (#59)
+- 2025-05-23 `eff5291` Add Granada Tech Logo
+- 2025-05-23 `63beeca` Add thumbnailUrl  to Granada Tech
+- 2025-05-19 `f130100` Minor improvement to contributing.md
+- 2025-05-19 `6fae5c5` Adding minor change to data
+- 2025-05-19 `c9c1526` Añadir nueva comunidad desde issue (#51)
+- 2025-05-19 `1ccfa35` Updating data
+- 2025-05-19 `fe3f560` Changing node version to lastest
+- 2025-05-19 `4b37d59` Improving local testing workflow and contributing.md
+- 2025-05-18 `c48c4c3` Fixing responsive and contributing.md
+- 2025-05-18 `d2f1431` Changing chart colors
+- 2025-05-18 `83f989a` Improving responsive
+- 2025-05-18 `6cf017f` Using production data
+- 2025-05-18 `8f16d5b` Improving UI
+- 2025-05-17 `57540c1` Fixing data
+- 2025-05-17 `e70159e` spatial filter with map extent implemented
+- 2025-05-17 `5cbc10e` changes to the map filtering (right now not working with zustand store filtering)
+- 2025-05-17 `087560c` consuming new data
+- 2025-05-17 `9b2d73c` Established map filtering
+- 2025-05-17 `3677695` New data with displayOnMap
+- 2025-05-17 `8c9fd5b` Fixing some location data
+- 2025-05-17 `349dd13` Fixing geojson and location data
+- 2025-05-17 `e6e9a57` Reviewing dataset
+- 2025-05-16 `8b28e47` Añadir nueva comunidad desde issue (#42)
+- 2025-05-16 `97cda92` Fixing ids and changing them to integer
+- 2025-05-16 `60061c6` Añadir nueva comunidad desde issue (#40)
+- 2025-05-16 `158fd2d` Trying to fix issue with geolocation
+- 2025-05-16 `816e53d` Adding sharp to process conver images
+- 2025-05-16 `694ad09` Adding mMissing step in the workflow
+- 2025-05-16 `3ab1417` Fixing bug with paths in automation
+- 2025-05-16 `5d1e4bf` Fixing bug with paths in automation
+- 2025-05-16 `1beb9bf` Fixing bug with action
+- 2025-05-16 `ee5916e` Adding property displayOnMap and an auxiliar leaflet viewer
+- 2025-05-16 `25b2633` Improving data and data structure
+- 2025-05-16 `57bb34f` Improving data and data structure
+- 2025-05-16 `e343cc7` Consume the zustand store and create the custom hook to use the community store and filters correctly in both app views
+- 2025-05-16 `bf67191` integrated toggle button in the app and the heading component to keep consistency throughout the app
+- 2025-05-16 `5b73c6b` Added the view toggle button to change between the communitiesList and the map
+- 2025-05-16 `121a57f` Add new datasource from geojson file
+- 2025-05-16 `a6ab1b5` Fixing wrong geolocaltes communities
+- 2025-05-16 `cc37797` Adding script to process and geolocate communities when merge
+- 2025-05-16 `7b37be2` GraphicsLayer to FeatureLayer and add Renderers (failing right now)
+- 2025-05-16 `58538a2` Changing contributing.mdm
+- 2025-05-15 `15ddefe` Update README.md
+- 2025-05-15 `0231dfb` Working on new CONTRIBUTING.md
+- 2025-05-14 `a1ebf0b` Update vite.config.js
+- 2025-05-14 `5543833` Update Switch.jsx
+- 2025-05-14 `b9bf062` Add CommunitiesPopup component and styles; implement community markers on map
+- 2025-05-14 `7a4d537` Update deploy.yml
+- 2025-05-14 `95ce771` Deploy to gh-pages on merge acttion
+- 2025-05-14 `41e35c5` Update README.md
+- 2025-05-14 `d6d4932` Update README.md
+- 2025-05-14 `47f248d` Create .all-contributorsrc
+- 2025-05-14 `c40b10f` Update README.md
+- 2025-05-14 `adc30da` Updating footer
+- 2025-05-14 `a174207` Changing data source to new JSON file (#20)
+- 2025-05-14 `dda4f53` Fixing URLs pointing to the wrong images
+- 2025-05-14 `9d2de88` Adding mixing images
+- 2025-05-13 `ed0e9b4` Añadir nueva comunidad desde issue (#17)
+- 2025-05-13 `3d2f882` Update create-community-entry.yml (#4)
+- 2025-05-13 `8ef354b` Changing require -> import
+- 2025-05-13 `d7a8106` Adding new DB curation workflow
+- 2025-05-09 `97c096b` Update README.md
+- 2025-05-09 `954f4fb` Update README.md
+
+## 2025-03
+
+### Other
+
+- 2025-03-27 `27cdeee` Update README.md
+- 2025-03-27 `00ed798` Update README.md
+- 2025-03-27 `d591332` Create CONTRIBUTING.md
+- 2025-03-27 `78f9e18` Update README.md
+
+## 2025-02
+
+### Other
+
+- 2025-02-23 `3d6f53b` añadido resultados dinamicos al filtrar
+- 2025-02-19 `77ea171` Fixing path to local assets
+- 2025-02-19 `db109f7` Adding dist folder
+- 2025-02-19 `682d410` Removing dist from gitignore
+- 2025-02-12 `ce7f913` Minor UI suggestions
+
+## 2025-01
+
+### Other
+
+- 2025-01-05 `89bedc5` Añadidos switches metacomunidad y Organizacion paraguas
+- 2025-01-05 `ca80cd8` añadido link al titulo de la card
+- 2025-01-05 `694177b` fixed layout to scroll card
+- 2025-01-05 `252c177` primera aproximacion footer
+
+## 2024-12
+
+### Other
+
+- 2024-12-02 `24b652c` remove imports
+- 2024-12-02 `753b921` integrado estado zustand con componentes boton y SideBar
+- 2024-12-02 `8eaa7e5` Estado zustand para manejar el SideBar
+
+## 2024-11
+
+### Other
+
+- 2024-11-30 `9bbc670` arreglado bug de multiples criterios para la misma key
+- 2024-11-30 `848bc67` Diseño MVP SideBar
+- 2024-11-27 `4124257` filtros implementados en la store
+- 2024-11-27 `c61d326` Refactorizado Switch con Store, y primer approach a filtros
+- 2024-11-26 `1bfd7a4` cambio de useEffect por useMemo
+- 2024-11-26 `90b6a15` agregado al estado comunidades filtradas
+- 2024-11-26 `e37fac9` refactor hook con selectores y estado
+- 2024-11-26 `80b0232` incorporado devtools al estado
+- 2024-11-26 `13af3f4` Extraido estado inicial de la store
+- 2024-11-26 `4d7fc47` Primera aproximacion de fetching de datos a Zustand
+- 2024-11-25 `cdb9a2d` Implementado Indice Inverso y busqueda facetada con estructuras Sets
+- 2024-11-25 `c10776f` add build inverseIndex with Sets
+- 2024-11-22 `3d069b5` fixed faceted search and invertedIndex
+- 2024-11-22 `2110a95` debugeando busqueda facetada
+- 2024-11-22 `9e1a3da` normalizando valores y quirar funcion indice inverso antigua
+- 2024-11-22 `a12bfa8` quitado codigo comentado de CommunitiesList
+- 2024-11-20 `bddbfff` Initial commit
