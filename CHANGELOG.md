@@ -70,6 +70,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-03-25 `00a06a6` [Actualizada Asturias Software Crafters](https://combuilderses.github.io/communities-directory/?community=41) ([PR #267](https://github.com/ComBuildersES/communities-directory/pull/267))
 - 2026-03-25 `538b845` [Actualizada AtlánticaConf](https://combuilderses.github.io/communities-directory/?community=45) ([PR #264](https://github.com/ComBuildersES/communities-directory/pull/264))
 - 2026-03-25 `b5a3f1b` [Actualizada Lareira Conf](https://combuilderses.github.io/communities-directory/?community=541) ([PR #260](https://github.com/ComBuildersES/communities-directory/pull/260))
 - 2026-03-25 `1b66f47` [Actualizada BricoLabs](https://combuilderses.github.io/communities-directory/?community=67) ([PR #256](https://github.com/ComBuildersES/communities-directory/pull/256))
@@ -116,6 +117,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-25 `97976af` update changelog [skip ci]
 - 2026-03-25 `0adb77b` update changelog [skip ci]
 - 2026-03-25 `1558781` update changelog [skip ci]
 - 2026-03-25 `23e12dc` update changelog [skip ci]
