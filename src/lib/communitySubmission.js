@@ -36,6 +36,12 @@ export const URL_PLATFORM_OPTIONS = [
   { key: "flickr", label: "Flickr" },
 ];
 
+export const COMMUNITY_ISSUE_MODES = {
+  CREATE: "create",
+  EDIT: "edit",
+  DELETE: "delete",
+};
+
 const CONTRIBUTION_MODE_PARAM = "contribute";
 const EDIT_PARAM = "edit";
 const COMMUNITY_PARAM = "community";
@@ -380,6 +386,15 @@ export function getNextCommunityId(communities) {
   return Math.max(...communities.map((community) => Number(community.id) || 0)) + 1;
 }
 
+export function getCommunityDeletionPayload(community, reason = "") {
+  return {
+    id: community?.id ?? null,
+    name: cleanString(community?.name),
+    communityUrl: cleanString(community?.communityUrl),
+    removalReason: cleanString(reason),
+  };
+}
+
 export function toggleSelection(list, value) {
   if (list.includes(value)) {
     return list.filter((item) => item !== value);
@@ -475,22 +490,46 @@ export function buildCommunityPayload(draft, existingCommunity = null) {
 }
 
 export function buildIssueContent({ payload, mode, shareUrl }) {
-  const issueTypeLabel = mode === "edit" ? "Edición" : "Nueva comunidad";
-  const issueTitlePrefix = mode === "edit" ? "Editar comunidad" : "Añadir comunidad";
+  const issueTypeLabel = mode === COMMUNITY_ISSUE_MODES.EDIT
+    ? "Edición"
+    : mode === COMMUNITY_ISSUE_MODES.DELETE
+      ? "Baja"
+      : "Nueva comunidad";
+  const issueTitlePrefix = mode === COMMUNITY_ISSUE_MODES.EDIT
+    ? "Editar comunidad"
+    : mode === COMMUNITY_ISSUE_MODES.DELETE
+      ? "Eliminar comunidad"
+      : "Añadir comunidad";
   const title = `[${issueTitlePrefix}] ${payload.name || "Sin nombre"}`;
-  const body = [
+  const bodyLines = [
     "<!-- community-directory-submission:v2 -->",
-    `## Tipo de propuesta`,
+    "## Tipo de propuesta",
     issueTypeLabel,
-    "",
-    "## Enlace de edición",
-    shareUrl,
+  ];
+
+  if (mode === COMMUNITY_ISSUE_MODES.DELETE) {
+    bodyLines.push(
+      "",
+      "## Motivo de la baja",
+      payload.removalReason || "Explica brevemente por qué conviene eliminar esta comunidad del directorio.",
+    );
+  } else {
+    bodyLines.push(
+      "",
+      "## Enlace de edición",
+      shareUrl,
+    );
+  }
+
+  bodyLines.push(
     "",
     "## JSON propuesto",
     "```json",
     JSON.stringify(payload, null, 2),
     "```",
-  ].join("\n");
+  );
+
+  const body = bodyLines.join("\n");
 
   return { title, body };
 }
@@ -501,4 +540,14 @@ export function buildGitHubIssueUrl({ payload, mode, shareUrl }) {
   url.searchParams.set("title", title);
   url.searchParams.set("body", body);
   return url.toString();
+}
+
+export function buildCommunityDeletionIssueUrl({ community, reason = "" }) {
+  const payload = getCommunityDeletionPayload(community, reason);
+  const shareUrl = `${window.location.origin}${window.location.pathname}?community=${community?.id ?? ""}`;
+  return buildGitHubIssueUrl({
+    payload,
+    mode: COMMUNITY_ISSUE_MODES.DELETE,
+    shareUrl,
+  });
 }

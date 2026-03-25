@@ -2,6 +2,8 @@ import fs from "node:fs";
 import { execFileSync } from "node:child_process";
 
 const COMMUNITIES_PATH = "public/data/communities.json";
+const COMMUNITIES_META_PATH = "public/data/communities.meta.json";
+const DELETED_COMMUNITIES_PATH = "public/data/deleted-communities.json";
 const TAGS_PATH = "public/data/tags.json";
 const AUDIENCE_PATH = "public/data/audience.json";
 
@@ -544,16 +546,123 @@ function printIssues(title, entries) {
   }
 }
 
+function validateCommunitiesMeta(meta, issues, communities, deletedCommunities) {
+  if (!isPlainObject(meta)) {
+    pushIssue(issues.errors, "error", "communities.meta.json debe ser un objeto.");
+    return;
+  }
+
+  if (!Number.isInteger(meta.nextCommunityId) || meta.nextCommunityId < 1) {
+    pushIssue(issues.errors, "error", "communities.meta.json.nextCommunityId debe ser un entero mayor que 0.");
+    return;
+  }
+
+  const allIds = [];
+  if (Array.isArray(communities)) {
+    for (const community of communities) {
+      if (isPlainObject(community) && Number.isInteger(community.id)) {
+        allIds.push(community.id);
+      }
+    }
+  }
+
+  if (Array.isArray(deletedCommunities)) {
+    for (const entry of deletedCommunities) {
+      if (isPlainObject(entry) && Number.isInteger(entry.id)) {
+        allIds.push(entry.id);
+      }
+    }
+  }
+
+  const maxKnownId = allIds.length > 0 ? Math.max(...allIds) : 0;
+  if (meta.nextCommunityId <= maxKnownId) {
+    pushIssue(
+      issues.errors,
+      "error",
+      `communities.meta.json.nextCommunityId debe ser mayor que cualquier ID conocido. Valor actual: ${meta.nextCommunityId}, máximo detectado: ${maxKnownId}.`,
+    );
+  }
+}
+
+function validateDeletedCommunities(entries, issues, activeCommunities) {
+  if (!Array.isArray(entries)) {
+    pushIssue(issues.errors, "error", "deleted-communities.json debe ser un array JSON.");
+    return;
+  }
+
+  const activeIds = new Set(
+    Array.isArray(activeCommunities)
+      ? activeCommunities
+        .filter((community) => isPlainObject(community) && Number.isInteger(community.id))
+        .map((community) => community.id)
+      : [],
+  );
+  const repeatedDeletedIds = new Map();
+
+  entries.forEach((entry, index) => {
+    const prefix = `deletedCommunities[${index}]`;
+
+    if (!isPlainObject(entry)) {
+      pushIssue(issues.errors, "error", `${prefix} debe ser un objeto.`);
+      return;
+    }
+
+    if (!Number.isInteger(entry.id) || entry.id < 0) {
+      pushIssue(issues.errors, "error", `${prefix}.id debe ser un entero mayor o igual que 0.`);
+    }
+
+    if (!isNonEmptyString(entry.name)) {
+      pushIssue(issues.errors, "error", `${prefix}.name debe ser un string no vacío.`);
+    }
+
+    if (!isValidCalendarDate(entry.deletedAt ?? "")) {
+      pushIssue(issues.errors, "error", `${prefix}.deletedAt debe usar el formato dd/mm/yyyy y ser una fecha real.`);
+    }
+
+    if (!isNonEmptyString(entry.removalReason)) {
+      pushIssue(issues.warnings, "warning", `${prefix}.removalReason conviene rellenarlo para mantener trazabilidad.`);
+    }
+
+    if ("communityUrl" in entry && entry.communityUrl !== "" && !isValidUrl(entry.communityUrl)) {
+      pushIssue(issues.errors, "error", `${prefix}.communityUrl debe ser una URL absoluta válida cuando exista.`);
+    }
+
+    if ("deletedFromIssue" in entry && entry.deletedFromIssue !== null) {
+      if (!Number.isInteger(entry.deletedFromIssue) || entry.deletedFromIssue < 1) {
+        pushIssue(issues.errors, "error", `${prefix}.deletedFromIssue debe ser null o un entero mayor que 0.`);
+      }
+    }
+
+    if (Number.isInteger(entry.id)) {
+      repeatedDeletedIds.set(entry.id, (repeatedDeletedIds.get(entry.id) ?? 0) + 1);
+
+      if (activeIds.has(entry.id)) {
+        pushIssue(issues.errors, "error", `${prefix}.id entra en conflicto con una comunidad activa.`);
+      }
+    }
+  });
+
+  for (const [id, count] of repeatedDeletedIds.entries()) {
+    if (count > 1) {
+      pushIssue(issues.errors, "error", `deleted-communities.json contiene el ID duplicado ${id} (${count} veces).`);
+    }
+  }
+}
+
 function main() {
   const options = parseArgs(process.argv.slice(2));
   const issues = { errors: [], warnings: [] };
 
   let communities;
+  let communitiesMeta;
+  let deletedCommunities;
   let tags;
   let audience;
 
   try {
     communities = readJson(COMMUNITIES_PATH);
+    communitiesMeta = readJson(COMMUNITIES_META_PATH);
+    deletedCommunities = readJson(DELETED_COMMUNITIES_PATH);
     tags = readJson(TAGS_PATH);
     audience = readJson(AUDIENCE_PATH);
   } catch (error) {
@@ -565,6 +674,8 @@ function main() {
   const audienceIssues = validateTaxonomy(audience, "audience");
   issues.errors.push(...tagIssues.errors, ...audienceIssues.errors);
   issues.warnings.push(...tagIssues.warnings, ...audienceIssues.warnings);
+  validateDeletedCommunities(deletedCommunities, issues, communities);
+  validateCommunitiesMeta(communitiesMeta, issues, communities, deletedCommunities);
 
   if (!Array.isArray(communities)) {
     issues.errors.push({

@@ -39,6 +39,8 @@ jobs:
           echo "result=$RESULT" >> "$GITHUB_OUTPUT"
       
       - name: Generar entrada de comunidad y actualizar JSON
+        env:
+          GITHUB_ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: node scripts/process-community-issue.js "$(cat issue-body.txt)"
       
       - name: Run process-to-communities-to-geojson script
@@ -62,8 +64,47 @@ jobs:
           echo "PROPOSAL_EDITOR_URL=$PROPOSAL_EDITOR_URL" >> $GITHUB_OUTPUT
           if [ "$COMMUNITY_MODE" = "edit" ]; then
             PR_TITLE="Propuesta: aplicar cambios a $COMMUNITY_NAME (issue #${{ github.event.issue.number }})"
+            cat <<EOF >> $GITHUB_OUTPUT
+PR_BODY<<__BODY__
+Esta PR ha sido generada automáticamente a partir del issue #${{ github.event.issue.number }}.
+
+Closes #${{ github.event.issue.number }}
+
+✍️ Seguir mejorando esta propuesta:
+- [Abrir en el editor con los datos de la propuesta]($PROPOSAL_EDITOR_URL)
+
+📍 Check location on maps:
+- [OpenStreetMap](https://www.openstreetmap.org/?mlat=$LAT&mlon=$LON&zoom=15)
+- [Google Maps](https://www.google.com/maps/search/?api=1&query=$LAT,$LON)
+__BODY__
+EOF
+          elif [ "$COMMUNITY_MODE" = "delete" ]; then
+            PR_TITLE="Propuesta: dar de baja $COMMUNITY_NAME (issue #${{ github.event.issue.number }})"
+            cat <<EOF >> $GITHUB_OUTPUT
+PR_BODY<<__BODY__
+Esta PR ha sido generada automáticamente a partir del issue #${{ github.event.issue.number }}.
+
+Closes #${{ github.event.issue.number }}
+
+🗑️ Esta propuesta elimina la comunidad del directorio y conserva una traza en \`public/data/deleted-communities.json\`.
+__BODY__
+EOF
           else
             PR_TITLE="Propuesta: añadir $COMMUNITY_NAME (issue #${{ github.event.issue.number }})"
+            cat <<EOF >> $GITHUB_OUTPUT
+PR_BODY<<__BODY__
+Esta PR ha sido generada automáticamente a partir del issue #${{ github.event.issue.number }}.
+
+Closes #${{ github.event.issue.number }}
+
+✍️ Seguir mejorando esta propuesta:
+- [Abrir en el editor con los datos de la propuesta]($PROPOSAL_EDITOR_URL)
+
+📍 Check location on maps:
+- [OpenStreetMap](https://www.openstreetmap.org/?mlat=$LAT&mlon=$LON&zoom=15)
+- [Google Maps](https://www.google.com/maps/search/?api=1&query=$LAT,$LON)
+__BODY__
+EOF
           fi
           echo "PR_TITLE=$PR_TITLE" >> $GITHUB_OUTPUT
 
@@ -77,17 +118,7 @@ jobs:
           commit-message: "Aplicar propuesta de comunidad desde issue #${{ github.event.issue.number }}"
           branch: "community-issue-${{ github.event.issue.number }}"
           title: "${{ steps.coords.outputs.PR_TITLE }}"
-          body: |
-            Esta PR ha sido generada automáticamente a partir del issue #${{ github.event.issue.number }}.
-            
-            Closes #${{ github.event.issue.number }}
-
-            ✍️ Seguir mejorando esta propuesta:
-            - [Abrir en el editor con los datos de la propuesta](${{ steps.coords.outputs.PROPOSAL_EDITOR_URL }})
-            
-            📍 Check location on maps:
-            - [OpenStreetMap](https://www.openstreetmap.org/?mlat=${{ steps.coords.outputs.LAT }}&mlon=${{ steps.coords.outputs.LON }}&zoom=15)
-            - [Google Maps](https://www.google.com/maps/search/?api=1&query=${{ steps.coords.outputs.LAT }},${{ steps.coords.outputs.LON }})
+          body: ${{ steps.coords.outputs.PR_BODY }}
 
       - name: Sincronizar responsables en la PR
         if: steps.cpr.outputs.pull-request-number != ''

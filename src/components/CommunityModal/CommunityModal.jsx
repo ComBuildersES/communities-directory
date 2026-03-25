@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
 import { useCommunityActions } from "../../stores/community.store";
-import { buildContributionPath } from "../../lib/communitySubmission";
+import { buildCommunityDeletionIssueUrl, buildContributionPath } from "../../lib/communitySubmission";
 import "./CommunityModal.css";
 
 const APP_URL = "https://combuilderses.github.io/communities-directory/";
@@ -124,6 +124,8 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
   const [audienceExpanded, setAudienceExpanded] = useState(false);
   const [openUrlGroup, setOpenUrlGroup] = useState(null);
   const [isShareOpen, setIsShareOpen] = useState(false);
+  const [isEditOpen, setIsEditOpen] = useState(false);
+  const editRef = useRef(null);
   const shareRef = useRef(null);
 
   const CHIPS_THRESHOLD = 3;
@@ -160,6 +162,15 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
     return () => document.removeEventListener("mousedown", handler);
   }, [isShareOpen]);
 
+  useEffect(() => {
+    if (!isEditOpen) return;
+    const handler = (e) => {
+      if (!editRef.current?.contains(e.target)) setIsEditOpen(false);
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [isEditOpen]);
+
   // Bloquear scroll del body
   useEffect(() => {
     document.body.style.overflow = "hidden";
@@ -184,6 +195,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
   } = community;
 
   const location = normalizeLocation(rawLocation);
+  const deletionIssueUrl = buildCommunityDeletionIssueUrl({ community });
 
   // URLs a mostrar: las del objeto urls, y communityUrl como fallback si no hay ninguna web
   const urlEntries = URL_CONFIG.filter(({ key }) => urls[key]);
@@ -409,13 +421,37 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                 )}
               </h3>
               <div className="community-modal-urls">
-                <a
-                  href={buildContributionPath({ mode: "edit", identifier: community.id })}
-                  className="community-modal-url-item"
-                >
-                  <i className="fas fa-code-compare"></i>
-                  <span>Proponer cambios</span>
-                </a>
+                <div className="community-modal-url-group" ref={editRef}>
+                  <button
+                    type="button"
+                    className={`community-modal-url-item community-modal-share-btn${isEditOpen ? " is-open" : ""}`}
+                    onClick={() => setIsEditOpen((v) => !v)}
+                  >
+                    <i className="fas fa-pen-to-square"></i>
+                    <span>Editar</span>
+                    <i className="fas fa-chevron-down community-modal-url-group-chevron"></i>
+                  </button>
+                  {isEditOpen && (
+                    <div className="community-modal-url-dropdown community-modal-share-dropdown">
+                      <a
+                        href={buildContributionPath({ mode: "edit", identifier: community.id })}
+                        className="community-modal-url-dropdown-item"
+                      >
+                        <i className="fas fa-code-compare"></i>
+                        <span>Proponer cambios</span>
+                      </a>
+                      <a
+                        href={deletionIssueUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="community-modal-url-dropdown-item"
+                      >
+                        <i className="fas fa-trash-can"></i>
+                        <span>Solicitar baja</span>
+                      </a>
+                    </div>
+                  )}
+                </div>
                 <div className="community-modal-url-group" ref={shareRef}>
                   <button
                     type="button"

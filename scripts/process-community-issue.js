@@ -7,8 +7,15 @@ import sharp from 'sharp';
 
 const body = process.argv[2] ?? '';
 const communitiesPath = './public/data/communities.json';
+const communitiesMetaPath = './public/data/communities.meta.json';
+const deletedCommunitiesPath = './public/data/deleted-communities.json';
 const imagesFolder = './public/images';
 const appBaseUrl = process.env.COMMUNITY_DIRECTORY_APP_URL ?? 'https://combuilderses.github.io/communities-directory/';
+const ISSUE_MODES = {
+  CREATE: 'create',
+  EDIT: 'edit',
+  DELETE: 'delete',
+};
 
 function extractField(field) {
   const regex = new RegExp(`### ${field}\\s+([\\s\\S]*?)(?:\\n###|$)`, 'i');
@@ -93,10 +100,21 @@ function extractProposalType() {
   const value = match[1].trim().toLowerCase();
   if (value.includes('editar') || value.includes('edit')) return 'edit';
   if (value.includes('nueva') || value.includes('new') || value.includes('añadir')) return 'create';
+  if (value.includes('baja') || value.includes('eliminar') || value.includes('delete')) return 'delete';
   return null;
 }
 
+function extractRemovalReason() {
+  const match = body.match(/##\s*Motivo de la baja\s*\n+([\s\S]*?)(?:\n##|\n```|$)/i);
+  if (!match) return '';
+  return normalizeString(match[1]);
+}
+
 function buildProposalEditorUrl({ mode, payload }) {
+  if (mode === ISSUE_MODES.DELETE) {
+    return '';
+  }
+
   const url = new URL(appBaseUrl);
 
   if (mode === 'edit' && payload.id !== null && payload.id !== undefined && String(payload.id).trim() !== '') {
@@ -113,10 +131,13 @@ function readSubmission() {
   const jsonPayload = extractJsonPayload();
   if (jsonPayload) {
     const proposalType = extractProposalType();
-    const modeFromType = proposalType ?? (jsonPayload.id === null || jsonPayload.id === undefined ? 'create' : 'edit');
+    const modeFromType = proposalType ?? (jsonPayload.id === null || jsonPayload.id === undefined ? ISSUE_MODES.CREATE : ISSUE_MODES.EDIT);
     return {
       mode: modeFromType,
-      payload: jsonPayload,
+      payload: {
+        ...jsonPayload,
+        removalReason: jsonPayload.removalReason ?? extractRemovalReason(),
+      },
     };
   }
 
@@ -152,12 +173,48 @@ export function normalizePayload(payload) {
         .filter(([key, value]) => key && value)
     ),
     thumbnailUrl: normalizeString(payload.thumbnailUrl),
+    removalReason: normalizeString(payload.removalReason),
     latLon: {
       lat: normalizeLatLon(payload.latLon?.lat),
       lon: normalizeLatLon(payload.latLon?.lon),
     },
     displayOnMap: normalizeBoolean(payload.displayOnMap),
     humanValidated: Boolean(payload.humanValidated),
+  };
+}
+
+function readJsonFile(filePath, fallbackValue = null) {
+  if (!fs.existsSync(filePath)) return fallbackValue;
+  return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+}
+
+function writeJsonFile(filePath, value) {
+  fs.writeFileSync(filePath, `${JSON.stringify(value, null, 2)}\n`);
+}
+
+function getNextCommunityIdFromMeta(meta) {
+  return Number.isInteger(meta?.nextCommunityId) && meta.nextCommunityId > 0
+    ? meta.nextCommunityId
+    : 1;
+}
+
+function updateNextCommunityId(meta, nextCommunityId) {
+  return {
+    ...(meta ?? {}),
+    nextCommunityId,
+  };
+}
+
+function buildDeletedCommunityEntry(community, removalReason) {
+  const deletedFromIssue = Number.parseInt(process.env.GITHUB_ISSUE_NUMBER ?? '', 10);
+
+  return {
+    id: community.id,
+    name: community.name,
+    communityUrl: community.communityUrl,
+    deletedAt: todayDDMMYYYY(),
+    removalReason,
+    deletedFromIssue: Number.isInteger(deletedFromIssue) ? deletedFromIssue : null,
   };
 }
 
@@ -226,30 +283,44 @@ async function main() {
     process.exit(1);
   }
 
-  const data = fs.readFileSync(communitiesPath, 'utf-8');
-  const communities = JSON.parse(data);
+  const communities = readJsonFile(communitiesPath, []);
+  const communitiesMeta = readJsonFile(communitiesMetaPath, { nextCommunityId: 1 });
+  const deletedCommunities = readJsonFile(deletedCommunitiesPath, []);
   const { mode, payload: rawPayload } = readSubmission();
   const payload = normalizePayload(rawPayload);
   const proposalEditorUrl = buildProposalEditorUrl({ mode, payload });
 
   fs.mkdirSync('.geo', { recursive: true });
 
-  if (mode === 'create') {
+  if (mode === ISSUE_MODES.CREATE) {
     ensureNoDuplicateCreate(communities, payload);
   }
 
   const existingIndex = communities.findIndex((community) => String(community.id) === String(payload.id));
-  if (mode === 'edit' && existingIndex === -1) {
-    throw new Error(`No se encontró la comunidad con ID ${payload.id} para editar`);
+  if ((mode === ISSUE_MODES.EDIT || mode === ISSUE_MODES.DELETE) && existingIndex === -1) {
+    throw new Error(`No se encontró la comunidad con ID ${payload.id} para ${mode === ISSUE_MODES.DELETE ? 'eliminar' : 'editar'}`);
   }
 
-  const newId = Math.max(...communities.map((community) => Number(community.id) || 0)) + 1;
-  const resolvedCoordinates = await resolveCoordinates(payload);
+  const nextCommunityId = getNextCommunityIdFromMeta(communitiesMeta);
+  const resolvedCoordinates = mode === ISSUE_MODES.DELETE
+    ? { lat: null, lon: null }
+    : await resolveCoordinates(payload);
   fs.writeFileSync(path.join('.geo', 'last-coordinates.json'), JSON.stringify(resolvedCoordinates, null, 2));
   fs.writeFileSync(
     path.join('.geo', 'community-meta.json'),
     JSON.stringify({ name: payload.name, mode, proposalEditorUrl }, null, 2)
   );
+
+  if (mode === ISSUE_MODES.DELETE) {
+    const removedCommunity = communities[existingIndex];
+    communities.splice(existingIndex, 1);
+    deletedCommunities.push(buildDeletedCommunityEntry(removedCommunity, payload.removalReason));
+    writeJsonFile(communitiesPath, communities);
+    writeJsonFile(deletedCommunitiesPath, deletedCommunities);
+    writeJsonFile(communitiesMetaPath, updateNextCommunityId(communitiesMeta, nextCommunityId));
+    console.log(`✔ Comunidad eliminada: ${removedCommunity.name} (ID ${removedCommunity.id})`);
+    return;
+  }
 
   let thumbnailUrl = payload.thumbnailUrl;
   try {
@@ -260,23 +331,25 @@ async function main() {
 
   const normalizedCommunity = {
     ...payload,
-    id: mode === 'create' ? newId : communities[existingIndex].id,
+    id: mode === ISSUE_MODES.CREATE ? nextCommunityId : communities[existingIndex].id,
     latLon: resolvedCoordinates,
     thumbnailUrl,
   };
 
-  if (mode === 'edit') {
+  if (mode === ISSUE_MODES.EDIT) {
     communities[existingIndex] = {
       ...communities[existingIndex],
       ...normalizedCommunity,
     };
-    fs.writeFileSync(communitiesPath, JSON.stringify(communities, null, 2));
+    writeJsonFile(communitiesPath, communities);
+    writeJsonFile(communitiesMetaPath, updateNextCommunityId(communitiesMeta, nextCommunityId));
     console.log(`✔ Comunidad actualizada: ${normalizedCommunity.name} (ID ${normalizedCommunity.id})`);
     return;
   }
 
   communities.push(normalizedCommunity);
-  fs.writeFileSync(communitiesPath, JSON.stringify(communities, null, 2));
+  writeJsonFile(communitiesPath, communities);
+  writeJsonFile(communitiesMetaPath, updateNextCommunityId(communitiesMeta, nextCommunityId + 1));
   console.log(`✔ Comunidad añadida: ${normalizedCommunity.name} (ID ${normalizedCommunity.id})`);
 }
 
