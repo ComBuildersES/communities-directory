@@ -12036,10 +12036,10 @@
         "id": 400,
         "name": "PyData Granada",
         "status": "Activa",
-        "lastReviewed": "15/10/2024",
+        "lastReviewed": "25/03/2026",
         "communityType": "Tech Meetup",
         "eventFormat": "Presencial",
-        "location": "Granada",
+        "location": "Granada, España",
         "topics": "",
         "tags": [
           "data-science",
@@ -12076,7 +12076,7 @@
           "eventsUrl": "https://www.meetup.com/es-ES/pydatagrx/"
         },
         "thumbnailUrl": "images/pydata-granada.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
