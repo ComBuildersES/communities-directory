@@ -3129,18 +3129,23 @@
         "id": 114,
         "name": "CoruñaJUG",
         "status": "Activa",
-        "lastReviewed": "03/09/2025",
+        "lastReviewed": "25/03/2026",
         "communityType": "Tech Meetup",
         "eventFormat": "Presencial",
         "location": "Coruña",
         "topics": "",
-        "tags": [],
+        "tags": [
+          "java",
+          "kotlin",
+          "scala",
+          "groovy"
+        ],
         "targetAudience": [],
         "contactInfo": "",
-        "communityUrl": "http://web.archive.org/web/20260206220648/https://corunajug.org/",
+        "communityUrl": "https://corunajug.org/",
         "urls": {},
         "thumbnailUrl": "images/corunajug.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
@@ -5714,7 +5719,7 @@
         "id": 195,
         "name": "GDG A Coruña",
         "status": "Activa",
-        "lastReviewed": "03/03/2025",
+        "lastReviewed": "25/03/2026",
         "communityType": "Tech Meetup",
         "eventFormat": "Presencial",
         "location": "Coruña",
@@ -5727,11 +5732,11 @@
           "data-lake",
           "data-pipelines",
           "big-data",
-          "open-data",
-          "c",
           "go",
-          "business-intelligence",
-          "open-source"
+          "open-source",
+          "android",
+          "angular",
+          "flutter"
         ],
         "targetAudience": [
           "data-engineer",
@@ -5740,14 +5745,14 @@
           "data-journalist"
         ],
         "contactInfo": "",
-        "communityUrl": "https://www.meetup.com/es-ES/gdg-coruna/",
+        "communityUrl": "https://gdg.community.dev/gdg-a-coruna/",
         "urls": {
           "twitter": "https://twitter.com/gdgcoruna",
           "linkedin": "https://www.linkedin.com/company/gdg-coruna/",
           "eventsUrl": "https://www.meetup.com/es-ES/gdg-coruna/"
         },
         "thumbnailUrl": "images/gdg-a-coruna.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
