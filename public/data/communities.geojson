@@ -12266,7 +12266,7 @@
         "id": 403,
         "name": "Python Coruña",
         "status": "Activa",
-        "lastReviewed": "31/05/2024",
+        "lastReviewed": "25/03/2026",
         "communityType": "Tech Meetup",
         "eventFormat": "Presencial",
         "location": "Coruña",
@@ -12283,7 +12283,8 @@
           "nlp",
           "networking",
           "ethical-hacking",
-          "cloud-security"
+          "cloud-security",
+          "django"
         ],
         "targetAudience": [
           "software-architect"
@@ -12300,7 +12301,7 @@
           "linkAggregator": "https://linktr.ee/pythoncoruna"
         },
         "thumbnailUrl": "images/python-coruna.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
