@@ -2,6 +2,12 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ViewToggleButton } from "./ViewToggleButton.jsx";
 import { useSidebarActions, useSideBarVisible } from "../stores/sidebar.store";
+import allContributorsRaw from "../../.all-contributorsrc?raw";
+const allContributorsRc = JSON.parse(allContributorsRaw);
+
+const CONTRIBUTORS_URL = "https://github.com/ComBuildersES/communities-directory?tab=readme-ov-file#contributors";
+const MAX_CONTRIBUTORS_IN_POPOVER = 24;
+const contributors = allContributorsRc.contributors.slice(0, MAX_CONTRIBUTORS_IN_POPOVER);
 
 const APP_URL = "https://combuilderses.github.io/communities-directory/";
 
@@ -173,6 +179,32 @@ export function Heading ({
                         </a>
                       ))}
                     </div>
+                  </div>
+                  <div className="heading-support-contributors">
+                    <p className="heading-support-share-label">Gracias a todos los que nos apoyáis</p>
+                    <div className="heading-support-contributors-grid">
+                      {contributors.map((c) => (
+                        <a
+                          key={c.login}
+                          href={c.profile}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="heading-support-contributor"
+                          title={c.name || c.login}
+                          aria-label={c.name || c.login}
+                        >
+                          <img src={c.avatar_url} alt={c.name || c.login} />
+                        </a>
+                      ))}
+                    </div>
+                    <a
+                      href={CONTRIBUTORS_URL}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="heading-support-contributors-more"
+                    >
+                      Ver todos los contribuidores <i className="fas fa-arrow-right"></i>
+                    </a>
                   </div>
                 </div>
               )}
