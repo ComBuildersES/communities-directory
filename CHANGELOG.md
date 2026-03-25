@@ -66,6 +66,7 @@ Se organiza por mes y por tipo de cambio.
 
 - 2026-03-25 `538b845` [Actualizada AtlánticaConf](https://combuilderses.github.io/communities-directory/?community=45) ([PR #264](https://github.com/ComBuildersES/communities-directory/pull/264))
 - 2026-03-25 `6e80c7e` [Actualizada Grupo de Programadores e Usuarios de Linux (GPUL)](https://combuilderses.github.io/communities-directory/?community=228) ([PR #254](https://github.com/ComBuildersES/communities-directory/pull/254))
+- 2026-03-25 `07ec649` [Actualizada Coruña WTF](https://combuilderses.github.io/communities-directory/?community=112) ([PR #251](https://github.com/ComBuildersES/communities-directory/pull/251))
 - 2026-03-25 `3b895f2` [Actualizada Sysarmy Galicia](https://combuilderses.github.io/communities-directory/?community=439) ([PR #249](https://github.com/ComBuildersES/communities-directory/pull/249))
 - 2026-03-25 `34b5828` [Actualizada CoruñaJUG](https://combuilderses.github.io/communities-directory/?community=114) ([PR #247](https://github.com/ComBuildersES/communities-directory/pull/247))
 - 2026-03-25 `30b0c67` [Actualizada GDG A Coruña](https://combuilderses.github.io/communities-directory/?community=195) ([PR #246](https://github.com/ComBuildersES/communities-directory/pull/246))
@@ -106,6 +107,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-25 `d0a82a6` update changelog [skip ci]
 - 2026-03-25 `7416979` update changelog [skip ci]
 - 2026-03-25 `cad5725` update changelog [skip ci]
 - 2026-03-25 `c6896c9` update changelog [skip ci]
