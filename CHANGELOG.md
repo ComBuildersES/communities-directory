@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-25 `f45fcd5` add .gitattributes to set merge strategy for CHANGELOG.md
+- 2026-03-25 `f869961` add notification for all-contributors bot to credit data contributors
+- 2026-03-25 `79943fb` add .gitattributes to set merge strategy for CHANGELOG.md
 - 2026-03-25 `4fd0efb` update community details for CoruñaJUG and GDG A Coruña with new tags, URLs, and validation status
 - 2026-03-25 `1160d40` enhance community sorting logic by prioritizing validation status after member presence
 - 2026-03-25 `2e77d94` update community thumbnails with new images for better representation
@@ -90,6 +91,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-25 `c6896c9` update changelog [skip ci]
 - 2026-03-25 `aa1977b` update changelog [skip ci]
 - 2026-03-25 `ddfc66e` update changelog [skip ci]
 - 2026-03-25 `47f9f99` update changelog [skip ci]

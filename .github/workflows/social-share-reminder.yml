@@ -243,3 +243,57 @@ jobs:
                 core.warning(`No se pudo comentar en issue #${issueNumber}: ${e.message}`);
               }
             }
+
+            // Notify all-contributors bot for the issue opener (unless already credited for data)
+            if (issueNumbers.length === 0) {
+              core.info('No se encontraron issues enlazados; se omite el comentario all-contributors.');
+              return;
+            }
+
+            const linkedIssueNumber = issueNumbers[0];
+            let issueAuthor;
+            try {
+              const { data: linkedIssue } = await github.rest.issues.get({
+                owner,
+                repo,
+                issue_number: linkedIssueNumber,
+              });
+              issueAuthor = linkedIssue.user.login;
+            } catch (e) {
+              core.warning(`No se pudo obtener el issue #${linkedIssueNumber}: ${e.message}`);
+              return;
+            }
+
+            // Check if contributor already has 'data' in .all-contributorsrc
+            let alreadyCredited = false;
+            try {
+              const { data: rcFile } = await github.rest.repos.getContent({
+                owner,
+                repo,
+                path: '.all-contributorsrc',
+              });
+              const rcContent = JSON.parse(Buffer.from(rcFile.content, 'base64').toString('utf8'));
+              const existing = rcContent.contributors.find(
+                c => c.login.toLowerCase() === issueAuthor.toLowerCase()
+              );
+              alreadyCredited = existing?.contributions?.includes('data') ?? false;
+            } catch (e) {
+              core.warning(`No se pudo leer .all-contributorsrc: ${e.message}`);
+            }
+
+            if (alreadyCredited) {
+              core.info(`@${issueAuthor} ya figura como contribuidor de datos; se omite el comentario all-contributors.`);
+              return;
+            }
+
+            try {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: 22,
+                body: `@all-contributors please add @${issueAuthor} for data`,
+              });
+              core.info(`Comentario all-contributors publicado para @${issueAuthor} en issue #22`);
+            } catch (e) {
+              core.warning(`No se pudo comentar en issue #22: ${e.message}`);
+            }
