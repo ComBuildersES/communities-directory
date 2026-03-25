@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-21-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Communities directory
@@ -119,6 +119,21 @@ Echa un vistazo a algunas de las tareas por las que podrías empezar a ayudar:
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://jonthebeach.com"><img src="https://avatars.githubusercontent.com/u/12547113?v=4?s=100" width="100px;" alt="Luis Sánchez de Ybargüen"/><br /><sub><b>Luis Sánchez de Ybargüen</b></sub></a><br /><a href="#data-lsybarguen" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/DraXus"><img src="https://avatars.githubusercontent.com/u/2436?v=4?s=100" width="100px;" alt="Manuel Martín"/><br /><sub><b>Manuel Martín</b></sub></a><br /><a href="#data-DraXus" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/mario-ezquerro"><img src="https://avatars.githubusercontent.com/u/4250161?v=4?s=100" width="100px;" alt="Mario"/><br /><sub><b>Mario</b></sub></a><br /><a href="#data-mario-ezquerro" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/deors"><img src="https://avatars.githubusercontent.com/u/4376867?v=4?s=100" width="100px;" alt="Jorge Hidalgo"/><br /><sub><b>Jorge Hidalgo</b></sub></a><br /><a href="#data-deors" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/jorgeteixe"><img src="https://avatars.githubusercontent.com/u/45232371?v=4?s=100" width="100px;" alt="Jorge Teixeira"/><br /><sub><b>Jorge Teixeira</b></sub></a><br /><a href="#data-jorgeteixe" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/dbonillaf"><img src="https://avatars.githubusercontent.com/u/293330?v=4?s=100" width="100px;" alt="David Bonilla"/><br /><sub><b>David Bonilla</b></sub></a><br /><a href="#data-dbonillaf" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/astrojuanlu"><img src="https://avatars.githubusercontent.com/u/316517?v=4?s=100" width="100px;" alt="Juan Luis Cano Rodríguez"/><br /><sub><b>Juan Luis Cano Rodríguez</b></sub></a><br /><a href="#data-astrojuanlu" title="Data">🔣</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/manufosela"><img src="https://avatars.githubusercontent.com/u/1101670?v=4?s=100" width="100px;" alt="Mánu Fosela"/><br /><sub><b>Mánu Fosela</b></sub></a><br /><a href="#data-manufosela" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ivigilm"><img src="https://avatars.githubusercontent.com/u/34597019?v=4?s=100" width="100px;" alt="Isabel Vigil Morán"/><br /><sub><b>Isabel Vigil Morán</b></sub></a><br /><a href="#data-ivigilm" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/nucliweb"><img src="https://avatars.githubusercontent.com/u/1307927?v=4?s=100" width="100px;" alt="Joan León"/><br /><sub><b>Joan León</b></sub></a><br /><a href="#data-nucliweb" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/AbrahamOtero"><img src="https://avatars.githubusercontent.com/u/5107030?v=4?s=100" width="100px;" alt="AbrahamOtero"/><br /><sub><b>AbrahamOtero</b></sub></a><br /><a href="#data-AbrahamOtero" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/alvarosaugar"><img src="https://avatars.githubusercontent.com/u/37780691?v=4?s=100" width="100px;" alt="Álvaro Saugar"/><br /><sub><b>Álvaro Saugar</b></sub></a><br /><a href="#data-alvarosaugar" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/yupipi93"><img src="https://avatars.githubusercontent.com/u/26326882?v=4?s=100" width="100px;" alt="Sergio Conejero Vicente"/><br /><sub><b>Sergio Conejero Vicente</b></sub></a><br /><a href="#data-yupipi93" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/aguadotzn"><img src="https://avatars.githubusercontent.com/u/22575055?v=4?s=100" width="100px;" alt="Adrián"/><br /><sub><b>Adrián</b></sub></a><br /><a href="#data-aguadotzn" title="Data">🔣</a></td>
     </tr>
   </tbody>
 </table>
