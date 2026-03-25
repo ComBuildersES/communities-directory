@@ -45,12 +45,16 @@ jobs:
 
             const baseMap = new Map(baseCommunities.map(c => [c.id, c]));
 
-            // Find added or modified communities
-            const changedCommunities = currentCommunities.filter(c => {
-              const base = baseMap.get(c.id);
-              if (!base) return true; // nueva
-              return JSON.stringify(c) !== JSON.stringify(base); // modificada
-            });
+            // Find actually modified community IDs via git diff (avoids false positives from reformatting)
+            const diffOutput = execSync(`git diff ${baseSha} HEAD -- public/data/communities.json`).toString();
+            const changedIds = new Set();
+            for (const line of diffOutput.split('\n')) {
+              if ((line.startsWith('+') || line.startsWith('-')) && !line.startsWith('+++') && !line.startsWith('---')) {
+                const match = line.match(/"id"\s*:\s*(\d+)/);
+                if (match) changedIds.add(Number(match[1]));
+              }
+            }
+            const changedCommunities = currentCommunities.filter(c => changedIds.has(c.id));
 
             if (changedCommunities.length === 0) {
               core.info('No se detectaron comunidades añadidas o modificadas en esta PR.');
