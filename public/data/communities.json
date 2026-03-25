@@ -1375,10 +1375,10 @@
     "id": 45,
     "name": "AtlánticaConf",
     "status": "Activa",
-    "lastReviewed": "02/06/2025",
+    "lastReviewed": "25/03/2026",
     "communityType": "Conferencia",
     "eventFormat": "Presencial",
-    "location": "Coruña",
+    "location": "A Coruña",
     "topics": "",
     "tags": [
       "sysadmin",
@@ -1389,9 +1389,6 @@
       "distributed-systems",
       "sql-databases",
       "php",
-      "graph-databases",
-      "vector-databases",
-      "c",
       "react"
     ],
     "targetAudience": [
@@ -1404,16 +1401,17 @@
       "sysadmin",
       "open-source-contributor",
       "devops-engineer",
-      "software-architect"
+      "software-architect",
+      "student"
     ],
     "contactInfo": "info@atlanticaconf.com",
     "communityUrl": "https://atlanticaconf.com/",
     "urls": {
-      "twitter": "https://twitter.com/CorunaDev",
-      "discord": "https://discord.gg/yHxUpYJMzM",
+      "twitter": "https://x.com/atlanticaconf",
       "linkedin": "https://www.linkedin.com/company/atlanticaconf/",
       "bluesky": "https://bsky.app/profile/atlanticaconf.com",
-      "eventsUrl": "https://www.meetup.com/es-ES/WordPressCoruna/"
+      "eventsUrl": "https://www.meetup.com/es-ES/gpul-labs",
+      "youtube": "https://www.youtube.com/@Atlantica-conf"
     },
     "thumbnailUrl": "images/atlanticaconf.webp",
     "latLon": {
@@ -1421,7 +1419,9 @@
       "lon": -8.3958532
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "AtlanticaConf es un evento que nació para ser el punto de encuentro de la comunidad tecnológica gallega, un lugar en donde empresas, profesionales, estudiantes y comunidades puedan juntarse y crear ecosistema.",
+    "removalReason": ""
   },
   {
     "id": 46,
