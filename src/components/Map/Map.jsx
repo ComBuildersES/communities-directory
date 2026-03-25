@@ -25,7 +25,7 @@ import './Map.css'
 // React Imports
 import { useEffect, useState, useRef } from 'react'
 
-function Map ({ showListView = null }) {
+function Map ({ showListView = null, onOpenCommunity = null }) {
   const [activeView, setActiveView] = useState(null)
   const [provincesFeatures, setProvincesFeatures] = useState([])
   const [provincesCenter, setProvincesCenter] = useState()
@@ -509,7 +509,7 @@ function Map ({ showListView = null }) {
           <CommunityCard key={community.id} community={community} />
         ))} */}
         {visibleCommunities.map((community) => (
-          <CommunityCard key={community.id} community={community} />
+          <CommunityCard key={community.id} community={community} onOpen={onOpenCommunity} />
         ))}
 
 

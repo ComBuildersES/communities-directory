@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-25 `9318a1a` add script to find stale add-community branches and update package.json
+- 2026-03-25 `10cec30` pass onOpenCommunity prop to Map component for community interaction
+- 2026-03-25 `b5310c2` add script to find stale add-community branches and update package.json
 - 2026-03-25 `78401b9` add GitHub Action to automatically update CHANGELOG.md on merge
 - 2026-03-25 `690dd14` enhance changelog generation with automatic community entry updates
 - 2026-03-25 `00210f2` add automatic changelog generation and update post-commit hook

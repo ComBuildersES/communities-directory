@@ -310,7 +310,7 @@ function App () {
           </section>
         )}
         {!showContributionView && view === "list" && <CommunitiesList onOpenCommunity={openCommunityModal} />}
-        {!showContributionView && view === "map" && <Map showListView={() => setView("list")} />}
+        {!showContributionView && view === "map" && <Map showListView={() => setView("list")} onOpenCommunity={openCommunityModal} />}
       </div>
       {pendingNavigation && (
         <div className="navigation-guard-overlay">
