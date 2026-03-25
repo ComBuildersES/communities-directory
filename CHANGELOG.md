@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-25 `9d7f258` enhance mobile navigation and service worker management
+- 2026-03-25 `ceb95ea` add tooltip for communities without fixed location in map component
+- 2026-03-25 `6bcf7fb` enhance mobile navigation and service worker management
 - 2026-03-25 `23cf7b7` add contributor support section with grid layout and links to profiles
 - 2026-03-25 `7b4f649` add new contributors Manuel Martín, Mario, Jorge Hidalgo, Jorge Teixeira, David Bonilla, Juan Luis Cano Rodríguez, Mánu Fosela, Isabel Vigil Morán, Joan León, Abraham Otero, Álvaro Saugar, and Sergio Conejero Vicente to community data
 - 2026-03-25 `1fdfc3d` add notification for all-contributors bot to credit data contributors

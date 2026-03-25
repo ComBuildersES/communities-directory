@@ -482,17 +482,20 @@ function Map ({ showListView = null, onOpenCommunity = null }) {
         {hiddenFromMapCount > 0 && (
           <>
             {" "}
-            <span className="map-results-note-secondary">
-              Además, <strong>{hiddenFromMapCount}</strong> {hiddenFromMapCount === 1 ? "comunidad encaja" : "comunidades encajan"} con los filtros actuales pero no {hiddenFromMapCount === 1 ? "se muestra" : "se muestran"} en el mapa porque no {hiddenFromMapCount === 1 ? "tiene" : "tienen"} una ubicación fija.
+            <span className="map-hidden-hint">
+              +{hiddenFromMapCount} sin ubicación fija
+              <span className="map-hidden-tooltip" role="tooltip">
+                {hiddenFromMapCount === 1 ? "1 comunidad encaja" : `${hiddenFromMapCount} comunidades encajan`} con los filtros pero no {hiddenFromMapCount === 1 ? "aparece" : "aparecen"} en el mapa por no tener ubicación fija.{" "}
+                <button
+                  type="button"
+                  className="map-results-link"
+                  onClick={() => showListView?.()}
+                >
+                  Verlas en la lista
+                </button>
+              </span>
+              <i className="fa-solid fa-circle-info map-hidden-icon" aria-hidden="true"></i>
             </span>
-            {" "}
-            <button
-              type="button"
-              className="map-results-link"
-              onClick={() => showListView?.()}
-            >
-              Verlas en la lista
-            </button>
           </>
         )}
       </div>

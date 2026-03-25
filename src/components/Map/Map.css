@@ -46,3 +46,59 @@ arcgis-map {
   color: #245cb5;
   outline: none;
 }
+
+.map-hidden-hint {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #7a8fa6;
+  font-size: 0.85em;
+  cursor: default;
+}
+
+.map-hidden-icon {
+  font-size: 0.9em;
+  color: #9ab0c8;
+}
+
+.map-hidden-hint:hover .map-hidden-tooltip,
+.map-hidden-hint:focus-within .map-hidden-tooltip {
+  display: block;
+}
+
+.map-hidden-tooltip {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: #21324a;
+  color: #e8edf2;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  white-space: nowrap;
+  z-index: 10;
+  pointer-events: auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.map-hidden-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #21324a;
+}
+
+.map-hidden-tooltip .map-results-link {
+  color: #7eb8f7;
+}
+
+.map-hidden-tooltip .map-results-link:hover {
+  color: #a8d0ff;
+}
