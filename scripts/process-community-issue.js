@@ -8,6 +8,7 @@ import sharp from 'sharp';
 const body = process.argv[2] ?? '';
 const communitiesPath = './public/data/communities.json';
 const imagesFolder = './public/images';
+const appBaseUrl = process.env.COMMUNITY_DIRECTORY_APP_URL ?? 'https://combuilderses.github.io/communities-directory/';
 
 function extractField(field) {
   const regex = new RegExp(`### ${field}\\s+([\\s\\S]*?)(?:\\n###|$)`, 'i');
@@ -93,6 +94,19 @@ function extractProposalType() {
   if (value.includes('editar') || value.includes('edit')) return 'edit';
   if (value.includes('nueva') || value.includes('new') || value.includes('añadir')) return 'create';
   return null;
+}
+
+function buildProposalEditorUrl({ mode, payload }) {
+  const url = new URL(appBaseUrl);
+
+  if (mode === 'edit' && payload.id !== null && payload.id !== undefined && String(payload.id).trim() !== '') {
+    url.searchParams.set('edit', String(payload.id));
+  } else {
+    url.searchParams.set('contribute', 'new');
+  }
+
+  url.searchParams.set('proposal', JSON.stringify(payload));
+  return url.toString();
 }
 
 function readSubmission() {
@@ -216,6 +230,7 @@ async function main() {
   const communities = JSON.parse(data);
   const { mode, payload: rawPayload } = readSubmission();
   const payload = normalizePayload(rawPayload);
+  const proposalEditorUrl = buildProposalEditorUrl({ mode, payload });
 
   fs.mkdirSync('.geo', { recursive: true });
 
@@ -231,7 +246,10 @@ async function main() {
   const newId = Math.max(...communities.map((community) => Number(community.id) || 0)) + 1;
   const resolvedCoordinates = await resolveCoordinates(payload);
   fs.writeFileSync(path.join('.geo', 'last-coordinates.json'), JSON.stringify(resolvedCoordinates, null, 2));
-  fs.writeFileSync(path.join('.geo', 'community-meta.json'), JSON.stringify({ name: payload.name, mode }));
+  fs.writeFileSync(
+    path.join('.geo', 'community-meta.json'),
+    JSON.stringify({ name: payload.name, mode, proposalEditorUrl }, null, 2)
+  );
 
   let thumbnailUrl = payload.thumbnailUrl;
   try {

@@ -1,0 +1,217 @@
+name: Recordatorio de difusión en redes sociales
+
+on:
+  pull_request:
+    types: [closed]
+    paths:
+      - 'public/data/communities.json'
+
+jobs:
+  social-share-reminder:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+      contents: read
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Detectar comunidades modificadas y publicar comentario
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const { execSync } = require('child_process');
+            const fs = require('fs');
+
+            const APP_BASE_URL = 'https://combuilderses.github.io/communities-directory/';
+            const baseSha = context.payload.pull_request.base.sha;
+            const prNumber = context.payload.pull_request.number;
+            const prBody = context.payload.pull_request.body || '';
+
+            // Load communities from base commit
+            let baseCommunities = [];
+            try {
+              const baseJson = execSync(`git show ${baseSha}:public/data/communities.json`).toString();
+              baseCommunities = JSON.parse(baseJson);
+            } catch (e) {
+              core.warning(`No se pudo leer communities.json en el commit base: ${e.message}`);
+            }
+            const currentCommunities = JSON.parse(fs.readFileSync('public/data/communities.json', 'utf8'));
+
+            const baseMap = new Map(baseCommunities.map(c => [c.id, c]));
+
+            // Find added or modified communities
+            const changedCommunities = currentCommunities.filter(c => {
+              const base = baseMap.get(c.id);
+              if (!base) return true; // nueva
+              return JSON.stringify(c) !== JSON.stringify(base); // modificada
+            });
+
+            if (changedCommunities.length === 0) {
+              core.info('No se detectaron comunidades añadidas o modificadas en esta PR.');
+              return;
+            }
+
+            // Extract social handle from a URL
+            function extractHandle(platform, url) {
+              if (!url) return null;
+              try {
+                const u = new URL(url);
+                const pathname = u.pathname.replace(/\/$/, '');
+                const segments = pathname.split('/').filter(Boolean);
+                if (!segments.length) return null;
+                if (platform === 'mastodon') {
+                  const handle = segments[segments.length - 1].replace(/^@/, '');
+                  return `@${handle}@${u.hostname}`;
+                }
+                const handle = segments[segments.length - 1].replace(/^@/, '');
+                return `@${handle}`;
+              } catch {
+                return null;
+              }
+            }
+
+            // Community Builders handles extracted from communities.json
+            const cbEntry = currentCommunities.find(c => c.name === 'Community Builders');
+            const cbUrls = cbEntry?.urls || {};
+            const cbTwitterHandle = cbUrls.twitter ? extractHandle('generic', cbUrls.twitter) : null;
+            const cbBskyHandle    = cbUrls.bluesky ? extractHandle('generic', cbUrls.bluesky) : null;
+
+            // Build share intent URLs for each platform
+            function buildShareLinks(community, isNew, directLink) {
+              const urls = community.urls || {};
+
+              function enc(text) { return encodeURIComponent(text); }
+
+              // Builds the share text for a given platform.
+              // communityHandle: the community's handle on that platform (or null).
+              // cbHandle: CB's handle on that platform (or null → fallback to "Community Builders").
+              function shareText(communityHandle, cbHandle) {
+                const verb    = isNew ? 'añadir a' : 'actualizar los datos de';
+                const subject = communityHandle || community.name;
+                const cbRef   = cbHandle || 'Community Builders';
+                const discover = communityHandle
+                  ? `Descubre más sobre ${community.name} en: ${directLink}`
+                  : `Descubre más en: ${directLink}`;
+                return `Acabamos de ${verb} ${subject} en el directorio de comunidades de ${cbRef}. ${discover}`;
+              }
+
+              const communityTwitterHandle = urls.twitter  ? extractHandle('generic',  urls.twitter)  : null;
+              const communityBskyHandle    = urls.bluesky  ? extractHandle('generic',  urls.bluesky)  : null;
+
+              const twitterText = shareText(communityTwitterHandle, cbTwitterHandle);
+              const bskyText    = shareText(communityBskyHandle,    cbBskyHandle);
+              const plainText   = shareText(null, null); // LinkedIn/WhatsApp/Telegram: no handles
+
+              return [
+                `[𝕏 Twitter](https://twitter.com/intent/tweet?text=${enc(twitterText)})`,
+                `[🦋 Bluesky](https://bsky.app/intent/compose?text=${enc(bskyText)})`,
+                `[💼 LinkedIn](https://www.linkedin.com/sharing/share-offsite/?url=${enc(directLink)})`,
+                `[💬 WhatsApp](https://api.whatsapp.com/send?text=${enc(plainText)})`,
+                `[✈️ Telegram](https://t.me/share/url?url=${enc(directLink)}&text=${enc(plainText)})`,
+              ].join(' · ');
+            }
+
+            // Build the block for a single community
+            function buildCommunitySection(community) {
+              const isNew = !baseMap.has(community.id);
+              const directLink = `${APP_BASE_URL}?community=${community.id}`;
+              const urls = community.urls || {};
+
+              const lines = [];
+              lines.push(`### ${isNew ? '🆕' : '✏️'} ${community.name}`);
+              lines.push('');
+              lines.push(`🔗 **Ver en el directorio:** ${directLink}`);
+
+              const socialPlatforms = [
+                { key: 'twitter',   label: 'X / Twitter', isMastodon: false },
+                { key: 'bluesky',   label: 'Bluesky',     isMastodon: false },
+                { key: 'mastodon',  label: 'Mastodon',    isMastodon: true  },
+                { key: 'linkedin',  label: 'LinkedIn',    isMastodon: false },
+                { key: 'instagram', label: 'Instagram',   isMastodon: false },
+              ];
+
+              const socialLines = [];
+
+              for (const { key, label, isMastodon } of socialPlatforms) {
+                if (!urls[key]) continue;
+                const handle = extractHandle(isMastodon ? 'mastodon' : 'generic', urls[key]);
+                socialLines.push(handle
+                  ? `- **${label}:** [${handle}](${urls[key]})`
+                  : `- **${label}:** ${urls[key]}`
+                );
+              }
+
+              if (socialLines.length > 0) {
+                lines.push('');
+                lines.push('**Cuentas de la comunidad:**');
+                lines.push(...socialLines);
+              }
+
+              lines.push('');
+              lines.push('**Compartir:**');
+              lines.push(buildShareLinks(community, isNew, directLink));
+
+              return lines.join('\n');
+            }
+
+            const isAnyNew    = changedCommunities.some(c => !baseMap.has(c.id));
+            const isAnyUpdate = changedCommunities.some(c => baseMap.has(c.id));
+
+            let intro;
+            if (isAnyNew && !isAnyUpdate) {
+              intro = changedCommunities.length === 1
+                ? `🎉 ¡**${changedCommunities[0].name}** ya está en el directorio!`
+                : `🎉 ¡${changedCommunities.length} nuevas comunidades ya están en el directorio!`;
+            } else if (isAnyUpdate && !isAnyNew) {
+              intro = changedCommunities.length === 1
+                ? `✅ ¡Los datos de **${changedCommunities[0].name}** han sido actualizados en el directorio!`
+                : `✅ ¡Se han actualizado los datos de ${changedCommunities.length} comunidades en el directorio!`;
+            } else {
+              intro = `🎉 ¡El directorio ha sido actualizado con ${changedCommunities.length} comunidades nuevas o modificadas!`;
+            }
+
+            const communitySections = changedCommunities.map(buildCommunitySection).join('\n\n---\n\n');
+
+            const commentBody = [
+              intro,
+              '',
+              '¿Quieres compartir la actualización? Comparte la actualización en redes sociales 📣',
+              '',
+              communitySections,
+              '',
+              '---',
+              '_#CommunityBuilders #TechComunidades_',
+            ].join('\n');
+
+            // Post on the PR
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: prNumber,
+              body: commentBody,
+            });
+            core.info(`Comentario publicado en PR #${prNumber}`);
+
+            // Find linked issues in the PR body (Closes/Fixes/Resolves #N)
+            const issueMatches = [...prBody.matchAll(/(?:closes?|fixes?|resolves?)\s+#(\d+)/gi)];
+            const issueNumbers = [...new Set(issueMatches.map(m => Number(m[1])))];
+
+            for (const issueNumber of issueNumbers) {
+              try {
+                await github.rest.issues.createComment({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: issueNumber,
+                  body: commentBody,
+                });
+                core.info(`Comentario publicado en issue #${issueNumber}`);
+              } catch (e) {
+                core.warning(`No se pudo comentar en issue #${issueNumber}: ${e.message}`);
+              }
+            }

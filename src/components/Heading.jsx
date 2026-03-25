@@ -3,6 +3,40 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { ViewToggleButton } from "./ViewToggleButton.jsx";
 import { useSidebarActions, useSideBarVisible } from "../stores/sidebar.store";
 
+const APP_URL = "https://combuilderses.github.io/communities-directory/";
+
+function shareText(handle) {
+  return `Este directorio de ${handle} no puede faltar en vuestra barra de favoritos, es el mayor listado de meetups, conferencias y comunidades técnicas de España: ${APP_URL} (y encima es open source & opendata! :D)`;
+}
+
+const SHARE_LINKS = [
+  {
+    label: "X / Twitter",
+    icon: "fa-brands fa-x-twitter",
+    href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText("@ComBuilders_ES"))}`,
+  },
+  {
+    label: "Bluesky",
+    icon: "fa-brands fa-bluesky",
+    href: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText("@communitybuilders.bsky.social"))}`,
+  },
+  {
+    label: "LinkedIn",
+    icon: "fa-brands fa-linkedin-in",
+    href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(APP_URL)}`,
+  },
+  {
+    label: "WhatsApp",
+    icon: "fa-brands fa-whatsapp",
+    href: `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText("Community Builders"))}`,
+  },
+  {
+    label: "Telegram",
+    icon: "fa-brands fa-telegram",
+    href: `https://t.me/share/url?url=${encodeURIComponent(APP_URL)}&text=${encodeURIComponent(shareText("Community Builders"))}`,
+  },
+];
+
 export function Heading ({
   view,
   toggleView,
@@ -102,7 +136,15 @@ export function Heading ({
                     que quieran ayudar sobre todo con el mantenimiento de los datos de las comunidades.
                   </p>
                   <p className="heading-support-copy">
-                    Nuevas ideas, bugs y cualquier otra forma de colaboración también son bienvenidas; tienes la guía en{" "}
+                    Nuevas ideas, bugs y cualquier otra forma de colaboración también son bienvenidas; puedes abrir un{" "}
+                    <a
+                      href="https://github.com/ComBuildersES/communities-directory/issues"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      issue
+                    </a>{" "}
+                    o consultar la guía en{" "}
                     <a
                       href="https://github.com/ComBuildersES/communities-directory/blob/master/CONTRIBUTING.md"
                       target="_blank"
@@ -114,6 +156,24 @@ export function Heading ({
                   <p className="heading-support-copy">
                     Si quieres volver rápido, guarda esta página en favoritos con <strong>{bookmarkShortcut}</strong>.
                   </p>
+                  <div className="heading-support-share">
+                    <p className="heading-support-share-label">Comparte el directorio</p>
+                    <div className="heading-support-share-buttons">
+                      {SHARE_LINKS.map(({ label, icon, href }) => (
+                        <a
+                          key={label}
+                          href={href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="heading-support-share-btn"
+                          title={`Compartir en ${label}`}
+                          aria-label={`Compartir en ${label}`}
+                        >
+                          <i className={icon}></i>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               )}
             </div>

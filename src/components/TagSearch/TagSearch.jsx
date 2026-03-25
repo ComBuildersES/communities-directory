@@ -67,6 +67,22 @@ function buildCommunityMeta(community) {
   ].filter(Boolean);
 }
 
+function dismissActiveInput() {
+  if (typeof document === "undefined") return;
+
+  const activeElement = document.activeElement;
+
+  if (!(activeElement instanceof HTMLElement)) return;
+
+  if (
+    activeElement.tagName === "INPUT" ||
+    activeElement.tagName === "TEXTAREA" ||
+    activeElement.isContentEditable
+  ) {
+    activeElement.blur();
+  }
+}
+
 export function TagSearch() {
   const [query, setQuery] = useState("");
   const [activeFilters, setActiveFilters] = useState([]);
@@ -201,6 +217,7 @@ export function TagSearch() {
       return;
     }
 
+    dismissActiveInput();
     window.history.pushState({}, "", path);
     window.dispatchEvent(new PopStateEvent("popstate"));
     setQuery("");

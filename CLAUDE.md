@@ -189,3 +189,35 @@ VITE_BASE=/communities-directory/ # .env.production
 - Build genera `dist/` con HTML/CSS/JS
 - Base path dinámico según variable `VITE_BASE`
 - Entry: `index.html` → monta en `<div id="search_app">`
+
+## PWA — Detección de actualizaciones
+
+La app es una PWA con service worker en `public/sw.js`. Para que los usuarios reciban la notificación "Hay una nueva versión" al refrescar, **el fichero `sw.js` debe cambiar en cada build**.
+
+### Mecanismo implementado
+
+`public/sw.js` contiene el placeholder literal `__BUILD_VERSION__` en el `CACHE_NAME`:
+
+```js
+const CACHE_NAME = "community-builders-shell-__BUILD_VERSION__";
+```
+
+El plugin `injectSwBuildVersion` en `vite.config.js` lo reemplaza por `Date.now()` al hacer `npm run build`, generando p.ej.:
+
+```js
+const CACHE_NAME = "community-builders-shell-1748123456789";
+```
+
+Como el `CACHE_NAME` cambia en cada build:
+
+1. El navegador detecta un SW diferente → instala el nuevo en segundo plano
+2. `InstallPromptBar` muestra "Hay una nueva versión lista"
+3. El usuario pulsa "Recargar" → el nuevo SW se activa, borra la caché antigua y recarga
+
+### Regla crítica
+
+> **Nunca cambies `__BUILD_VERSION__` por un valor fijo en `public/sw.js`.** Ese placeholder debe mantenerse intacto para que el plugin lo sustituya en cada build. Si lo reemplazas manualmente, todos los builds futuros generarán el mismo `CACHE_NAME` y la detección de actualizaciones dejará de funcionar.
+
+### Por qué `{ cache: "no-cache" }` en navegación
+
+GitHub Pages sirve `index.html` con `Cache-Control: max-age=600`. Sin `{ cache: "no-cache" }` en el fetch de navegación del SW, el navegador devuelve el HTML cacheado durante esos 10 minutos aunque el SW sea "network-first". La opción `no-cache` fuerza revalidación con el servidor en cada navegación.
