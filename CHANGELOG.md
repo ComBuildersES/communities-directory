@@ -51,6 +51,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-03-25 `538b845` [Actualizada AtlánticaConf](https://combuilderses.github.io/communities-directory/?community=45) ([PR #264](https://github.com/ComBuildersES/communities-directory/pull/264))
 - 2026-03-25 `34b5828` [Actualizada CoruñaJUG](https://combuilderses.github.io/communities-directory/?community=114) ([PR #247](https://github.com/ComBuildersES/communities-directory/pull/247))
 - 2026-03-25 `30b0c67` [Actualizada GDG A Coruña](https://combuilderses.github.io/communities-directory/?community=195) ([PR #246](https://github.com/ComBuildersES/communities-directory/pull/246))
 - 2026-03-25 `a71f623` [Añadida GDG Girona](https://combuilderses.github.io/communities-directory/?community=604) ([PR #242](https://github.com/ComBuildersES/communities-directory/pull/242))
