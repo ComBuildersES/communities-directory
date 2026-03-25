@@ -58,6 +58,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-03-25 `32dc185` [Actualizada CommitConf](https://combuilderses.github.io/communities-directory/?community=100) ([PR #240](https://github.com/ComBuildersES/communities-directory/pull/240))
 - 2026-03-25 `779747f` [Actualizada AiBirras](https://combuilderses.github.io/communities-directory/?community=20) ([PR #238](https://github.com/ComBuildersES/communities-directory/pull/238))
 - 2026-03-25 `04038ad` [Actualizada PyData Granada](https://combuilderses.github.io/communities-directory/?community=400) ([PR #236](https://github.com/ComBuildersES/communities-directory/pull/236))
 - 2026-03-25 `2cb100c` [Actualizada Granada Tech](https://combuilderses.github.io/communities-directory/?community=226) ([PR #234](https://github.com/ComBuildersES/communities-directory/pull/234))
@@ -93,6 +94,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-25 `0b2144a` update changelog [skip ci]
 - 2026-03-25 `a80b087` update changelog [skip ci]
 - 2026-03-25 `bd7d509` update changelog [skip ci]
 - 2026-03-25 `86d7da1` update changelog [skip ci]
