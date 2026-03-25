@@ -13418,7 +13418,7 @@
         "id": 439,
         "name": "Sysarmy Galicia",
         "status": "Activa",
-        "lastReviewed": "26/05/2025",
+        "lastReviewed": "25/03/2026",
         "communityType": "Grupo de ayuda mutua",
         "eventFormat": "Presencial",
         "location": "Coruña",
@@ -13427,7 +13427,8 @@
           "git",
           "open-source",
           "cybersecurity",
-          "bash"
+          "bash",
+          "sysadmin"
         ],
         "targetAudience": [
           "frontend-developer",
@@ -13442,10 +13443,12 @@
         "contactInfo": "",
         "communityUrl": "https://github.com/Gallegarmy",
         "urls": {
-          "github": "https://github.com/Gallegarmy"
+          "github": "https://github.com/Gallegarmy",
+          "telegram": "https://t.me/Gallegarmy",
+          "eventsUrl": "https://www.eventbrite.com/o/101517364781"
         },
         "thumbnailUrl": "images/sysarmy-galicia.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
