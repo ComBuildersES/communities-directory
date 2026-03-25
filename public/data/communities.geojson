@@ -19198,6 +19198,67 @@
         "thumbnailUrl": "images/almeria-summit.webp",
         "humanValidated": true
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.8199439,
+          41.9793006
+        ]
+      },
+      "properties": {
+        "id": 604,
+        "name": "GDG Girona",
+        "status": "Activa",
+        "lastReviewed": "25/03/2026",
+        "communityType": "Tech Meetup",
+        "eventFormat": "Híbridos",
+        "location": "Girona",
+        "topics": "",
+        "tags": [
+          "web-performance",
+          "cybersecurity",
+          "ethical-hacking",
+          "android",
+          "gcp",
+          "web-analytics",
+          "free-software",
+          "mentoring",
+          "women-in-tech",
+          "diversity",
+          "javascript",
+          "typescript",
+          "javascript-frameworks",
+          "nodejs",
+          "web-standards"
+        ],
+        "targetAudience": [
+          "junior-developer",
+          "student",
+          "career-changer",
+          "senior-staff",
+          "frontend-developer",
+          "backend-developer",
+          "fullstack-developer",
+          "mobile-developer",
+          "game-developer",
+          "qa-engineer",
+          "tech-lead",
+          "product-manager",
+          "community-manager"
+        ],
+        "contactInfo": "gdggirona@gmail.com",
+        "communityUrl": "https://gdg.community.dev/gdg-girona/",
+        "urls": {
+          "twitter": "https://x.com/GDGGirona",
+          "youtube": "https://www.youtube.com/@GDGGirona",
+          "bluesky": "https://bsky.app/profile/gdggirona.bsky.social"
+        },
+        "thumbnailUrl": "images/gdg-girona.webp",
+        "humanValidated": true
+      }
     }
   ]
 }
