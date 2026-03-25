@@ -2355,7 +2355,7 @@
         "id": 87,
         "name": "Cloud Native (CNCF) Rioja",
         "status": "Activa",
-        "lastReviewed": "24/03/2026",
+        "lastReviewed": "25/03/2026",
         "communityType": "Grupo colaborativo",
         "eventFormat": "Presencial",
         "location": "Logroño La Rioja",
@@ -8732,7 +8732,7 @@
         "id": 301,
         "name": "J On The Beach",
         "status": "Activa",
-        "lastReviewed": "18/10/2024",
+        "lastReviewed": "24/03/2026",
         "communityType": "Conferencia",
         "eventFormat": "Presencial",
         "location": "Málaga",
@@ -8742,17 +8742,21 @@
           "data-lake",
           "data-pipelines",
           "big-data",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "open-data"
+          "open-data",
+          "distributed-systems",
+          "mlops",
+          "dataops",
+          "data-science",
+          "machine-learning"
         ],
         "targetAudience": [
-          "community-manager",
           "data-engineer",
           "data-scientist",
           "data-analyst",
-          "data-journalist"
+          "data-journalist",
+          "backend-developer",
+          "fullstack-developer",
+          "software-architect"
         ],
         "contactInfo": "info@yayyay.events",
         "communityUrl": "https://www.jonthebeach.com/",
@@ -8761,7 +8765,7 @@
           "twitter": "https://x.com/jotbconf"
         },
         "thumbnailUrl": "images/j-on-the-breach.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
@@ -9027,21 +9031,25 @@
         "id": 312,
         "name": "Lambda World",
         "status": "Activa",
-        "lastReviewed": "18/10/2024",
+        "lastReviewed": "24/03/2026",
         "communityType": "Conferencia",
         "eventFormat": "Presencial",
-        "location": "Cádiz",
+        "location": "Torremolinos",
         "topics": "",
         "tags": [
-          "aws",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "event-driven",
-          "functional-programming"
+          "functional-programming",
+          "scala",
+          "haskell",
+          "elixir",
+          "kotlin",
+          "rust",
+          "erlang"
         ],
         "targetAudience": [
-          "community-manager"
+          "backend-developer",
+          "frontend-developer",
+          "fullstack-developer",
+          "senior-staff"
         ],
         "contactInfo": "lambda@yayyay.events",
         "communityUrl": "https://www.lambda.world/",
@@ -9052,7 +9060,7 @@
           "web": "https://www.lambda.world/"
         },
         "thumbnailUrl": "images/lambda-world.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
@@ -14289,20 +14297,25 @@
         "id": 468,
         "name": "Wey Wey Web",
         "status": "Activa",
-        "lastReviewed": "17/10/2024",
+        "lastReviewed": "24/03/2026",
         "communityType": "Conferencia",
         "eventFormat": "Presencial",
         "location": "Málaga",
         "topics": "",
         "tags": [
-          "event-driven",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "ddd"
+          "ux-ui",
+          "css",
+          "html",
+          "accessibility",
+          "javascript-frameworks",
+          "web-performance",
+          "frontend-tooling",
+          "design-systems"
         ],
         "targetAudience": [
-          "community-manager"
+          "ux-designer",
+          "frontend-developer",
+          "fullstack-developer"
         ],
         "contactInfo": "info@weyweyweb.com",
         "communityUrl": "https://weyweyweb.com/",
@@ -14312,7 +14325,7 @@
           "twitter": "https://twitter.com/WeyWeyWeb"
         },
         "thumbnailUrl": "images/wey-wey-web.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
