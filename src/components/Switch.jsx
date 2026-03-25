@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import "./switch.css"; // Estilos personalizados
-import { useCommunityActions, useFilters } from "../stores/community.store";
+import { useCommunityActions, useFilters } from "../stores/community.store.js";
 import { bajaString } from "../constants";
 
 export function Switch({ name = "nombre", value = "valor" }) {

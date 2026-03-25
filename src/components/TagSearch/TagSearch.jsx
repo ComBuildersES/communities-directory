@@ -6,7 +6,7 @@ import {
   useAllCommunities,
   useCommunityActions,
   useFilters,
-} from "../../stores/community.store";
+} from "../../stores/community.store.js";
 import { bajaString } from "../../constants";
 import {
   buildDirectoryFilterPath,

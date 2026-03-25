@@ -7,7 +7,7 @@ import {
   useTags,
   useAudience,
   useCommunityActions,
-} from "../stores/community.store";
+} from "../stores/community.store.js";
 import { bajaString } from "../constants";
 
 const FILTER_LABELS = {

@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
-import { useCommunityActions } from "../../stores/community.store";
+import { useCommunityActions } from "../../stores/community.store.js";
 import { buildCommunityDeletionIssueUrl, buildContributionPath } from "../../lib/communitySubmission";
 import "./CommunityModal.css";
 

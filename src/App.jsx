@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useRef, useState } from "react";
-import { useCommunityActions } from "./stores/community.store";
 import { CommunitiesList } from "./components/CommunitiesList.jsx";
 import { CommunityContribution } from "./components/CommunityContribution/CommunityContribution.jsx";
 import { CommunityModal } from "./components/CommunityModal/CommunityModal.jsx";
@@ -20,6 +19,7 @@ import {
 import {
   useAllCommunities,
   useAudience,
+  useCommunityActions,
   useFreshnessError,
   useFilters,
   useHasFreshData,
@@ -195,6 +195,10 @@ function App () {
     navigateWithGuard(buildContributionPath({ mode: "directory" }), { resetView: true });
   };
 
+  const goToContribution = () => {
+    navigateWithGuard(buildContributionPath({ mode: "new" }));
+  };
+
   const continuePendingNavigation = ({ saveDraft } = {}) => {
     if (!pendingNavigation?.path) return;
 
@@ -265,6 +269,7 @@ function App () {
         isContributionView={showContributionView}
         closeContributionForm={closeContributionForm}
         goToHome={goToHome}
+        goToContribution={goToContribution}
       />
       {!showContributionView && <TagSearch />}
       {!showContributionView && <ResultsBar view={view} />}

@@ -1,5 +1,5 @@
 import { Switch } from "./Switch";
-import { useSideBarVisible } from "../stores/sidebar.store";
+import { useSideBarVisible } from "../stores/sidebar.store.js";
 
 export function FilterPanel() {
   const isVisible = useSideBarVisible();

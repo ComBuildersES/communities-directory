@@ -26,6 +26,9 @@ export default ({ mode }) => {
         outDir: 'dist'
     },
     publicDir: 'public',
-    base: env.VITE_BASE // build at gh-pages
+    base: env.VITE_BASE, // build at gh-pages
+    resolve: {
+      dedupe: ['react', 'react-dom'],
+    },
   })
 }

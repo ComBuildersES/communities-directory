@@ -10,7 +10,7 @@ import Graphic from "@arcgis/core/Graphic"
 import Popup from "@arcgis/core/widgets/Popup"
 import * as clusterLabelCreator from "@arcgis/core/smartMapping/labels/clusters.js";
 import * as pieChartRendererCreator from "@arcgis/core/smartMapping/renderers/pieChart.js";
-import { useCommunitiesFiltered } from "../../stores/community.store";
+import { useCommunitiesFiltered } from "../../stores/community.store.js";
 // import { MapCard } from "../MapCard.jsx"
 import { CommunityCard } from "../CommunityCard.jsx"
 

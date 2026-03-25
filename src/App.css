@@ -155,6 +155,23 @@ body {
   flex-shrink: 0;
 }
 
+/* Desktop: inner wrapper is a normal inline flex row */
+.heading-actions-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Hamburger toggle: hidden on desktop */
+.heading-hamburger {
+  display: none;
+}
+
+/* Backdrop: only used on mobile, hidden on desktop */
+.heading-support-backdrop {
+  display: none;
+}
+
 .heading-support {
   position: relative;
 }
@@ -399,9 +416,72 @@ body {
 }
 
 @media (max-width: 768px) {
-  .heading-support {
+  /* Hamburger visible, inner actions collapse into dropdown */
+  .heading-hamburger {
+    display: inline-flex;
+  }
+
+  .heading-actions-inner {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: stretch;
+    background: #fff;
+    border-bottom: 1px solid #e8e8e8;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    gap: 0.25rem;
+    z-index: 1;
+  }
+
+  .heading-actions-inner--open {
+    display: flex;
+  }
+
+  /* Show text labels inside the mobile dropdown */
+  .heading-actions-inner .heading-btn-label {
+    display: inline;
+  }
+
+  /* Full-width buttons inside the mobile dropdown */
+  .heading-actions-inner > .button,
+  .heading-actions-inner .heading-support-button {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  /* Backdrop behind the Apoyar bottom sheet */
+  .heading-support-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(2px);
+    z-index: 20029;
+  }
+
+  /* Apoyar popover becomes a centered modal on mobile */
+  .heading-actions-inner .heading-support-popover {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    width: calc(100vw - 2rem);
+    max-height: calc(100vh - 4rem);
+    overflow-y: auto;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(31, 51, 84, 0.22);
+  }
+
+  .heading-actions-inner .heading-support-popover::before {
     display: none;
   }
+
   .install-prompt-bar {
     padding: 0.45rem 0.9rem;
   }

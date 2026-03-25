@@ -1,5 +1,5 @@
 import { Switch } from "./Switch";
-import { useSideBarVisible, useSidebarActions } from "../stores/sidebar.store";
+import { useSideBarVisible, useSidebarActions } from "../stores/sidebar.store.js";
 
 export const Sidebar = () => {
   const isSidebarVisible = useSideBarVisible();

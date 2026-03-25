@@ -1,6 +1,28 @@
 const CACHE_NAME = "community-builders-shell-__BUILD_VERSION__";
+const APP_CACHE_PREFIX = "community-builders-shell-";
 const APP_SHELL = ["./", "./manifest.webmanifest"];
 const DATA_FILE_PATTERN = /\/data\/.+\.(json|geojson)$/;
+const LOCAL_DEV_HOSTNAMES = new Set(["localhost", "127.0.0.1", "[::1]"]);
+const IS_LOCAL_DEVELOPMENT = LOCAL_DEV_HOSTNAMES.has(self.location.hostname);
+
+if (IS_LOCAL_DEVELOPMENT) {
+  self.addEventListener("install", () => {
+    self.skipWaiting();
+  });
+
+  self.addEventListener("activate", (event) => {
+    event.waitUntil(
+      (async () => {
+        const cacheNames = await caches.keys();
+        const appCaches = cacheNames.filter((cacheName) => cacheName.startsWith(APP_CACHE_PREFIX));
+        await Promise.all(appCaches.map((cacheName) => caches.delete(cacheName)));
+        await self.registration.unregister();
+        const clients = await self.clients.matchAll({ type: "window" });
+        await Promise.all(clients.map((client) => client.navigate(client.url)));
+      })()
+    );
+  });
+} else {
 
 async function networkFirst(request) {
   try {
@@ -90,3 +112,4 @@ self.addEventListener("message", (event) => {
     self.skipWaiting();
   }
 });
+}

@@ -1,7 +1,26 @@
 const INSTALL_BANNER_STORAGE_KEY = "pwa-install-banner-v1";
 const SW_UPDATE_EVENT = "community-builders:sw-update";
+const APP_CACHE_PREFIX = "community-builders-shell-";
+const LOCAL_DEV_HOSTNAMES = new Set(["localhost", "127.0.0.1", "[::1]"]);
 
 let currentWaitingWorker = null;
+
+function isLocalDevelopmentHost() {
+  return LOCAL_DEV_HOSTNAMES.has(window.location.hostname);
+}
+
+async function cleanupDevelopmentServiceWorkers() {
+  if ("serviceWorker" in navigator) {
+    const registrations = await navigator.serviceWorker.getRegistrations();
+    await Promise.all(registrations.map((registration) => registration.unregister()));
+  }
+
+  if ("caches" in window) {
+    const cacheNames = await caches.keys();
+    const appCaches = cacheNames.filter((cacheName) => cacheName.startsWith(APP_CACHE_PREFIX));
+    await Promise.all(appCaches.map((cacheName) => caches.delete(cacheName)));
+  }
+}
 
 function emitServiceWorkerUpdate(worker) {
   if (!worker) {
@@ -34,6 +53,13 @@ function watchServiceWorkerRegistration(registration) {
 
 export function registerServiceWorker () {
   if (!("serviceWorker" in navigator)) {
+    return;
+  }
+
+  if (import.meta.env.DEV || isLocalDevelopmentHost()) {
+    cleanupDevelopmentServiceWorkers().catch((error) => {
+      console.error("No se pudo limpiar el service worker de desarrollo", error);
+    });
     return;
   }
 
