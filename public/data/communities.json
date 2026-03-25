@@ -2108,13 +2108,20 @@
     "id": 67,
     "name": "BricoLabs",
     "status": "Activa",
-    "lastReviewed": "17/10/2024",
+    "lastReviewed": "25/03/2026",
     "communityType": "Hacklab",
     "eventFormat": "Presencial",
     "location": "Coruña",
     "topics": "",
     "tags": [
-      "robotics"
+      "robotics",
+      "open-hardware",
+      "arduino",
+      "raspberry-pi",
+      "iot",
+      "sensors",
+      "3d-printing",
+      "makerspace"
     ],
     "targetAudience": [],
     "contactInfo": "contacto@bricolabs.cc",
@@ -2129,7 +2136,9 @@
       "lon": -8.3958532
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "BricoLabs es una asociación que reúne semanalmente a todos aquellos que quieran colaborar en el diseño, construcción y pruebas de todo tipo de aparatos y gadgets, propuestos por los propios participantes y al estilo de otros HackerSpaces y FabLabs del mundo.",
+    "removalReason": ""
   },
   {
     "id": 68,
@@ -3641,16 +3650,30 @@
     "id": 112,
     "name": "Coruña WTF",
     "status": "Activa",
-    "lastReviewed": "03/03/2025",
+    "lastReviewed": "25/03/2026",
     "communityType": "Tech Meetup",
     "eventFormat": "Presencial",
     "location": "Coruña",
     "topics": "",
     "tags": [
       "design-patterns",
-      "game-development",
-      "game-design",
-      "tech-ethics"
+      "tech-ethics",
+      "html",
+      "css",
+      "accessibility",
+      "web-performance",
+      "web-standards",
+      "frontend-tooling",
+      "ux-ui",
+      "react",
+      "angular",
+      "vue",
+      "javascript-frameworks",
+      "astro",
+      "design-systems",
+      "javascript",
+      "typescript",
+      "seo"
     ],
     "targetAudience": [],
     "contactInfo": "hellocorunawtf@gmail.com",
@@ -3668,7 +3691,9 @@
       "lon": -8.3958532
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "CoruñaWTF somos una comunidad de personas de A Coruña y alrededores, que se reúnen para compartir, aprender y disfrutar alrededor del desarrollo y diseño web.",
+    "removalReason": ""
   },
   {
     "id": 113,
@@ -7540,7 +7565,7 @@
     "id": 228,
     "name": "Grupo de Programadores e Usuarios de Linux (GPUL)",
     "status": "Activa",
-    "lastReviewed": "24/03/2026",
+    "lastReviewed": "25/03/2026",
     "communityType": "Grupo colaborativo",
     "eventFormat": "Presencial",
     "location": "A Coruña",
@@ -7552,7 +7577,9 @@
       "linux",
       "3d-printing",
       "open-hardware",
-      "tech-ethics"
+      "tech-ethics",
+      "open-source",
+      "github"
     ],
     "targetAudience": [
       "software-architect",
@@ -7579,7 +7606,8 @@
     },
     "displayOnMap": true,
     "humanValidated": true,
-    "shortDescription": "Colectivo sin ánimo de lucro que organiza diversos tipos de encuentros, conferencias y hackathones para divulgar el software y la cultura libres."
+    "shortDescription": "Colectivo sin ánimo de lucro que organiza diversos tipos de encuentros, conferencias y hackathones para divulgar el software y la cultura libres.",
+    "removalReason": ""
   },
   {
     "id": 229,
@@ -12987,7 +13015,7 @@
     "id": 403,
     "name": "Python Coruña",
     "status": "Activa",
-    "lastReviewed": "31/05/2024",
+    "lastReviewed": "25/03/2026",
     "communityType": "Tech Meetup",
     "eventFormat": "Presencial",
     "location": "Coruña",
@@ -13004,7 +13032,8 @@
       "nlp",
       "networking",
       "ethical-hacking",
-      "cloud-security"
+      "cloud-security",
+      "django"
     ],
     "targetAudience": [
       "software-architect"
@@ -13026,7 +13055,9 @@
       "lon": -8.3958532
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "Somos una comunidad apasionada por el lenguaje de programación Python y su amplia gama de aplicaciones en diferentes áreas, desde el desarrollo web y móvil hasta la ciencia de datos y el aprendizaje automático.",
+    "removalReason": ""
   },
   {
     "id": 404,
@@ -14296,7 +14327,7 @@
     "id": 439,
     "name": "Sysarmy Galicia",
     "status": "Activa",
-    "lastReviewed": "26/05/2025",
+    "lastReviewed": "25/03/2026",
     "communityType": "Grupo de ayuda mutua",
     "eventFormat": "Presencial",
     "location": "Coruña",
@@ -14305,7 +14336,8 @@
       "git",
       "open-source",
       "cybersecurity",
-      "bash"
+      "bash",
+      "sysadmin"
     ],
     "targetAudience": [
       "frontend-developer",
@@ -14320,7 +14352,9 @@
     "contactInfo": "",
     "communityUrl": "https://github.com/Gallegarmy",
     "urls": {
-      "github": "https://github.com/Gallegarmy"
+      "github": "https://github.com/Gallegarmy",
+      "telegram": "https://t.me/Gallegarmy",
+      "eventsUrl": "https://www.eventbrite.com/o/101517364781"
     },
     "thumbnailUrl": "images/sysarmy-galicia.webp",
     "latLon": {
@@ -14328,7 +14362,9 @@
       "lon": -8.3958532
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "Sysarmy es la comunidad de sistemas que junta profesionales del área para favorecer el contacto y el intercambio de conocimiento de manera informal.",
+    "removalReason": ""
   },
   {
     "id": 440,

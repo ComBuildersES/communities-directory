@@ -1641,13 +1641,20 @@
         "id": 67,
         "name": "BricoLabs",
         "status": "Activa",
-        "lastReviewed": "17/10/2024",
+        "lastReviewed": "25/03/2026",
         "communityType": "Hacklab",
         "eventFormat": "Presencial",
         "location": "Coruña",
         "topics": "",
         "tags": [
-          "robotics"
+          "robotics",
+          "open-hardware",
+          "arduino",
+          "raspberry-pi",
+          "iot",
+          "sensors",
+          "3d-printing",
+          "makerspace"
         ],
         "targetAudience": [],
         "contactInfo": "contacto@bricolabs.cc",
@@ -1657,7 +1664,7 @@
           "twitter": "https://twitter.com/Brico_Labs"
         },
         "thumbnailUrl": "images/bricolabs.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
@@ -3053,16 +3060,30 @@
         "id": 112,
         "name": "Coruña WTF",
         "status": "Activa",
-        "lastReviewed": "03/03/2025",
+        "lastReviewed": "25/03/2026",
         "communityType": "Tech Meetup",
         "eventFormat": "Presencial",
         "location": "Coruña",
         "topics": "",
         "tags": [
           "design-patterns",
-          "game-development",
-          "game-design",
-          "tech-ethics"
+          "tech-ethics",
+          "html",
+          "css",
+          "accessibility",
+          "web-performance",
+          "web-standards",
+          "frontend-tooling",
+          "ux-ui",
+          "react",
+          "angular",
+          "vue",
+          "javascript-frameworks",
+          "astro",
+          "design-systems",
+          "javascript",
+          "typescript",
+          "seo"
         ],
         "targetAudience": [],
         "contactInfo": "hellocorunawtf@gmail.com",
@@ -3075,7 +3096,7 @@
           "linkAggregator": "https://linktr.ee/corunawtf"
         },
         "thumbnailUrl": "images/coruna-wtf.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
@@ -6781,7 +6802,7 @@
         "id": 228,
         "name": "Grupo de Programadores e Usuarios de Linux (GPUL)",
         "status": "Activa",
-        "lastReviewed": "24/03/2026",
+        "lastReviewed": "25/03/2026",
         "communityType": "Grupo colaborativo",
         "eventFormat": "Presencial",
         "location": "A Coruña",
@@ -6793,7 +6814,9 @@
           "linux",
           "3d-printing",
           "open-hardware",
-          "tech-ethics"
+          "tech-ethics",
+          "open-source",
+          "github"
         ],
         "targetAudience": [
           "software-architect",
@@ -12269,7 +12292,7 @@
         "id": 403,
         "name": "Python Coruña",
         "status": "Activa",
-        "lastReviewed": "31/05/2024",
+        "lastReviewed": "25/03/2026",
         "communityType": "Tech Meetup",
         "eventFormat": "Presencial",
         "location": "Coruña",
@@ -12286,7 +12309,8 @@
           "nlp",
           "networking",
           "ethical-hacking",
-          "cloud-security"
+          "cloud-security",
+          "django"
         ],
         "targetAudience": [
           "software-architect"
@@ -12303,7 +12327,7 @@
           "linkAggregator": "https://linktr.ee/pythoncoruna"
         },
         "thumbnailUrl": "images/python-coruna.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
@@ -13418,7 +13442,7 @@
         "id": 439,
         "name": "Sysarmy Galicia",
         "status": "Activa",
-        "lastReviewed": "26/05/2025",
+        "lastReviewed": "25/03/2026",
         "communityType": "Grupo de ayuda mutua",
         "eventFormat": "Presencial",
         "location": "Coruña",
@@ -13427,7 +13451,8 @@
           "git",
           "open-source",
           "cybersecurity",
-          "bash"
+          "bash",
+          "sysadmin"
         ],
         "targetAudience": [
           "frontend-developer",
@@ -13442,10 +13467,12 @@
         "contactInfo": "",
         "communityUrl": "https://github.com/Gallegarmy",
         "urls": {
-          "github": "https://github.com/Gallegarmy"
+          "github": "https://github.com/Gallegarmy",
+          "telegram": "https://t.me/Gallegarmy",
+          "eventsUrl": "https://www.eventbrite.com/o/101517364781"
         },
         "thumbnailUrl": "images/sysarmy-galicia.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
