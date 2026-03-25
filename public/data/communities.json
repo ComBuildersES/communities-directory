@@ -3641,16 +3641,30 @@
     "id": 112,
     "name": "Coruña WTF",
     "status": "Activa",
-    "lastReviewed": "03/03/2025",
+    "lastReviewed": "25/03/2026",
     "communityType": "Tech Meetup",
     "eventFormat": "Presencial",
     "location": "Coruña",
     "topics": "",
     "tags": [
       "design-patterns",
-      "game-development",
-      "game-design",
-      "tech-ethics"
+      "tech-ethics",
+      "html",
+      "css",
+      "accessibility",
+      "web-performance",
+      "web-standards",
+      "frontend-tooling",
+      "ux-ui",
+      "react",
+      "angular",
+      "vue",
+      "javascript-frameworks",
+      "astro",
+      "design-systems",
+      "javascript",
+      "typescript",
+      "seo"
     ],
     "targetAudience": [],
     "contactInfo": "hellocorunawtf@gmail.com",
@@ -3668,7 +3682,9 @@
       "lon": -8.3958532
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "CoruñaWTF somos una comunidad de personas de A Coruña y alrededores, que se reúnen para compartir, aprender y disfrutar alrededor del desarrollo y diseño web.",
+    "removalReason": ""
   },
   {
     "id": 113,
