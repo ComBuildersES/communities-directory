@@ -5664,21 +5664,27 @@
         "id": 194,
         "name": "Gcubo",
         "status": "Inactiva",
-        "lastReviewed": "21/10/2024",
+        "lastReviewed": "25/03/2026",
         "communityType": "Grupo colaborativo",
         "eventFormat": "Presencial",
         "location": "Granada",
         "topics": "",
-        "tags": [],
-        "targetAudience": [],
+        "tags": [
+          "linux",
+          "free-software"
+        ],
+        "targetAudience": [
+          "open-source-contributor"
+        ],
         "contactInfo": "",
         "communityUrl": "https://gcubo.org/",
         "urls": {
           "twitter": "https://x.com/gcubo_linux",
-          "web": "http://web.archive.org/web/20250316120847/http://www.gcubo.org/"
+          "web": "http://web.archive.org/web/20250316120847/http://www.gcubo.org/",
+          "facebook": "https://www.facebook.com/gcubo"
         },
         "thumbnailUrl": "images/gcubo.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
