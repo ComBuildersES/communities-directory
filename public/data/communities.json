@@ -2108,13 +2108,20 @@
     "id": 67,
     "name": "BricoLabs",
     "status": "Activa",
-    "lastReviewed": "17/10/2024",
+    "lastReviewed": "25/03/2026",
     "communityType": "Hacklab",
     "eventFormat": "Presencial",
     "location": "Coruña",
     "topics": "",
     "tags": [
-      "robotics"
+      "robotics",
+      "open-hardware",
+      "arduino",
+      "raspberry-pi",
+      "iot",
+      "sensors",
+      "3d-printing",
+      "makerspace"
     ],
     "targetAudience": [],
     "contactInfo": "contacto@bricolabs.cc",
@@ -2129,7 +2136,9 @@
       "lon": -8.3958532
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "BricoLabs es una asociación que reúne semanalmente a todos aquellos que quieran colaborar en el diseño, construcción y pruebas de todo tipo de aparatos y gadgets, propuestos por los propios participantes y al estilo de otros HackerSpaces y FabLabs del mundo.",
+    "removalReason": ""
   },
   {
     "id": 68,
