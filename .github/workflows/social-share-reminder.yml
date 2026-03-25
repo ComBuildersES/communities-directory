@@ -26,35 +26,59 @@ jobs:
         with:
           script: |
             const { execSync } = require('child_process');
-            const fs = require('fs');
 
             const APP_BASE_URL = 'https://combuilderses.github.io/communities-directory/';
-            const baseSha = context.payload.pull_request.base.sha;
-            const prNumber = context.payload.pull_request.number;
-            const prBody = context.payload.pull_request.body || '';
+            const prNumber = context.payload.pull_request?.number ?? context.issue.number;
+            const prBody = context.payload.pull_request?.body || '';
+            const { owner, repo } = context.repo;
 
-            // Load communities from base commit
+            const changedFiles = await github.paginate(github.rest.pulls.listFiles, {
+              owner,
+              repo,
+              pull_number: prNumber,
+              per_page: 100,
+            });
+
+            const communitiesFileChanged = changedFiles.some(
+              file => file.filename === 'public/data/communities.json'
+            );
+
+            if (!communitiesFileChanged) {
+              core.info('La PR no modificó public/data/communities.json; no se publica recordatorio.');
+              return;
+            }
+
+            // Compare the merged commit against its first parent.
+            // In this repository PRs are merged into the base branch, so that diff
+            // represents the actual net changes introduced by the PR.
+            const currentSha = execSync('git rev-parse HEAD').toString().trim();
+            let baseSha;
+            try {
+              baseSha = execSync('git rev-parse HEAD^1').toString().trim();
+            } catch (e) {
+              core.setFailed(`No se pudo resolver el commit base del merge: ${e.message}`);
+              return;
+            }
+
             let baseCommunities = [];
+            let currentCommunities = [];
             try {
               const baseJson = execSync(`git show ${baseSha}:public/data/communities.json`).toString();
+              const currentJson = execSync(`git show ${currentSha}:public/data/communities.json`).toString();
               baseCommunities = JSON.parse(baseJson);
+              currentCommunities = JSON.parse(currentJson);
             } catch (e) {
-              core.warning(`No se pudo leer communities.json en el commit base: ${e.message}`);
+              core.setFailed(`No se pudo comparar communities.json entre ${baseSha} y ${currentSha}: ${e.message}`);
+              return;
             }
-            const currentCommunities = JSON.parse(fs.readFileSync('public/data/communities.json', 'utf8'));
 
             const baseMap = new Map(baseCommunities.map(c => [c.id, c]));
 
-            // Find actually modified community IDs via git diff (avoids false positives from reformatting)
-            const diffOutput = execSync(`git diff ${baseSha} HEAD -- public/data/communities.json`).toString();
-            const changedIds = new Set();
-            for (const line of diffOutput.split('\n')) {
-              if ((line.startsWith('+') || line.startsWith('-')) && !line.startsWith('+++') && !line.startsWith('---')) {
-                const match = line.match(/"id"\s*:\s*(\d+)/);
-                if (match) changedIds.add(Number(match[1]));
-              }
-            }
-            const changedCommunities = currentCommunities.filter(c => changedIds.has(c.id));
+            const changedCommunities = currentCommunities.filter(c => {
+              const base = baseMap.get(c.id);
+              if (!base) return true;
+              return JSON.stringify(c) !== JSON.stringify(base);
+            });
 
             if (changedCommunities.length === 0) {
               core.info('No se detectaron comunidades añadidas o modificadas en esta PR.');
@@ -195,8 +219,8 @@ jobs:
 
             // Post on the PR
             await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
+              owner,
+              repo,
               issue_number: prNumber,
               body: commentBody,
             });
@@ -209,8 +233,8 @@ jobs:
             for (const issueNumber of issueNumbers) {
               try {
                 await github.rest.issues.createComment({
-                  owner: context.repo.owner,
-                  repo: context.repo.repo,
+                  owner,
+                  repo,
                   issue_number: issueNumber,
                   body: commentBody,
                 });

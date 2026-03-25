@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-25 `ca9cc61` enhance community ID management by adding logic to determine next community ID based on existing communities
+- 2026-03-25 `78db1d0` improve social share reminder workflow by enhancing community detection logic and error handling
+- 2026-03-25 `9b8dad7` enhance community ID management by adding logic to determine next community ID based on existing communities
 - 2026-03-25 `4f42f5f` pass onOpenCommunity prop to Map component for community interaction
 - 2026-03-25 `b5310c2` add script to find stale add-community branches and update package.json
 - 2026-03-25 `78401b9` add GitHub Action to automatically update CHANGELOG.md on merge
