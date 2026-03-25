@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-25 `10cec30` pass onOpenCommunity prop to Map component for community interaction
+- 2026-03-25 `4f42f5f` pass onOpenCommunity prop to Map component for community interaction
 - 2026-03-25 `b5310c2` add script to find stale add-community branches and update package.json
 - 2026-03-25 `78401b9` add GitHub Action to automatically update CHANGELOG.md on merge
 - 2026-03-25 `690dd14` enhance changelog generation with automatic community entry updates
@@ -45,6 +45,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-03-25 `779747f` [Actualizada AiBirras](https://combuilderses.github.io/communities-directory/?community=20) ([PR #238](https://github.com/ComBuildersES/communities-directory/pull/238))
+- 2026-03-25 `04038ad` [Actualizada PyData Granada](https://combuilderses.github.io/communities-directory/?community=400) ([PR #236](https://github.com/ComBuildersES/communities-directory/pull/236))
 - 2026-03-25 `2cb100c` [Actualizada Granada Tech](https://combuilderses.github.io/communities-directory/?community=226) ([PR #234](https://github.com/ComBuildersES/communities-directory/pull/234))
 - 2026-03-25 `36a0818` [Actualizada Gcubo](https://combuilderses.github.io/communities-directory/?community=194) ([PR #232](https://github.com/ComBuildersES/communities-directory/pull/232))
 - 2026-03-25 `8bd8f59` [Actualizada GDG La Rioja](https://combuilderses.github.io/communities-directory/?community=201) ([PR #230](https://github.com/ComBuildersES/communities-directory/pull/230))
@@ -77,6 +79,9 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-25 `a80b087` update changelog [skip ci]
+- 2026-03-25 `bd7d509` update changelog [skip ci]
+- 2026-03-25 `86d7da1` update changelog [skip ci]
 - 2026-03-25 `c3d4e2e` update changelog [skip ci]
 - 2026-03-25 `b900edc` update changelog [skip ci]
 
