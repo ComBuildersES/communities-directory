@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-03-25 `f9538c2` add new contributors Manuel Martín, Mario, Jorge Hidalgo, Jorge Teixeira, David Bonilla, Juan Luis Cano Rodríguez, Mánu Fosela, Isabel Vigil Morán, Joan León, Abraham Otero, Álvaro Saugar, and Sergio Conejero Vicente to community data
 - 2026-03-25 `1fdfc3d` add notification for all-contributors bot to credit data contributors
 - 2026-03-25 `79943fb` add .gitattributes to set merge strategy for CHANGELOG.md
 - 2026-03-25 `4fd0efb` update community details for CoruñaJUG and GDG A Coruña with new tags, URLs, and validation status
