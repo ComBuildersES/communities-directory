@@ -61,7 +61,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Fixes
 
-- 2026-03-25 `203abd0` update support message for inclusivity
+- 2026-03-25 `c227942` update support message for inclusivity
 - 2026-03-24 `731af6c` correct GitHub username for communityId 543 in community-builders-members.json
 - 2026-03-24 `749c63d` update contact information for Atlanticaconf community
 - 2026-03-23 `4c2f65d` refine support message for community data maintenance
@@ -114,6 +114,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-25 `1558781` update changelog [skip ci]
 - 2026-03-25 `23e12dc` update changelog [skip ci]
 - 2026-03-25 `478531b` update changelog [skip ci]
 - 2026-03-25 `ac9c4ec` update .all-contributorsrc [skip ci]
