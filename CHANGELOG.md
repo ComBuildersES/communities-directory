@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-25 `11c37bc` enhance changelog generation with automatic community entry updates
+- 2026-03-25 `d8e1ca0` add GitHub Action to automatically update CHANGELOG.md on merge
+- 2026-03-25 `690dd14` enhance changelog generation with automatic community entry updates
 - 2026-03-25 `00210f2` add automatic changelog generation and update post-commit hook
 - 2026-03-25 `b901e61` improve community detection logic in social share reminder workflow
 - 2026-03-25 `1be60b7` implement community deletion functionality and enhance community management scripts

@@ -346,6 +346,7 @@ El flujo principal recomendado es usar el formulario integrado en la web del dir
 - Los commits con prefijos tipo `feat:`, `fix:`, `docs:`, `refactor:`, `chore:` o `ci:` se clasifican automáticamente en su sección correspondiente.
 - Los commits de datos como `Aplicar propuesta de comunidad desde issue #...` se agrupan en `Data`.
 - Cada `git commit` regenera el changelog mediante el hook `post-commit` y, si cambia, lo añade automáticamente al mismo commit.
+- Cuando un PR se mergea directamente en GitHub, una GitHub Action vuelve a regenerar `CHANGELOG.md` en `master`/`main` y hace commit automático si detecta cambios.
 - Si necesitas regenerarlo manualmente, usa `npm run changelog`.
 
 Cuando se crea ese issue, se ejecuta [create-community-entry.yml](https://github.com/ComBuildersES/communities-directory/blob/master/.github/workflows/create-community-entry.yml), que:
