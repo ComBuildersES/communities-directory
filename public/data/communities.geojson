@@ -5735,6 +5735,49 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          12.4568794,
+          41.9005351
+        ]
+      },
+      "properties": {
+        "id": 196,
+        "name": "GDG Cloud Español",
+        "status": "Activa",
+        "lastReviewed": "25/03/2026",
+        "communityType": "Organización paraguas",
+        "eventFormat": "Híbridos",
+        "location": "n/a",
+        "topics": "",
+        "tags": [
+          "gcp",
+          "aws",
+          "virtualization"
+        ],
+        "targetAudience": [
+          "cloud-engineer",
+          "community-manager",
+          "frontend-developer",
+          "backend-developer",
+          "fullstack-developer",
+          "mobile-developer",
+          "game-developer"
+        ],
+        "contactInfo": "cloudespanol@gmail.com",
+        "communityUrl": "https://gdg.community.dev/gdg-cloud-espanol/",
+        "urls": {
+          "twitter": "https://www.twitter.com/gdg_cloud",
+          "linkedin": "https://www.linkedin.com/groups/13640206/",
+          "eventsUrl": "https://gdg.community.dev/gdg-cloud-espanol/"
+        },
+        "thumbnailUrl": "images/gdg-cloud-espanol.webp",
+        "humanValidated": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -3.7035825,
           40.4167047
         ]
