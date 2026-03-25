@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-25 `8d2cf35` update community thumbnails with new images for better representation
+- 2026-03-25 `c8918ab` enhance community sorting logic by prioritizing validation status after member presence
+- 2026-03-25 `2e77d94` update community thumbnails with new images for better representation
 - 2026-03-25 `9efcad4` improve social share reminder workflow by enhancing community detection logic and error handling
 - 2026-03-25 `9b8dad7` enhance community ID management by adding logic to determine next community ID based on existing communities
 - 2026-03-25 `4f42f5f` pass onOpenCommunity prop to Map component for community interaction

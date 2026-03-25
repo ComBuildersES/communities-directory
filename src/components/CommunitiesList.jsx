@@ -19,7 +19,10 @@ export function CommunitiesList({ onOpenCommunity }) {
     () => [...communitiesFiltered].sort((a, b) => {
       const aHasCB = cbMemberIds.has(a.id) ? 0 : 1;
       const bHasCB = cbMemberIds.has(b.id) ? 0 : 1;
-      return aHasCB - bHasCB;
+      if (aHasCB !== bHasCB) return aHasCB - bHasCB;
+      const aValidated = a.humanValidated ? 0 : 1;
+      const bValidated = b.humanValidated ? 0 : 1;
+      return aValidated - bValidated;
     }),
     [communitiesFiltered, cbMemberIds]
   );
