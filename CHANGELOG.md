@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-25 `2ee4167` add contributor support section with grid layout and links to profiles
+- 2026-03-25 `23cf7b7` add contributor support section with grid layout and links to profiles
 - 2026-03-25 `7b4f649` add new contributors Manuel Martín, Mario, Jorge Hidalgo, Jorge Teixeira, David Bonilla, Juan Luis Cano Rodríguez, Mánu Fosela, Isabel Vigil Morán, Joan León, Abraham Otero, Álvaro Saugar, and Sergio Conejero Vicente to community data
 - 2026-03-25 `1fdfc3d` add notification for all-contributors bot to credit data contributors
 - 2026-03-25 `79943fb` add .gitattributes to set merge strategy for CHANGELOG.md
@@ -48,6 +48,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Fixes
 
+- 2026-03-25 `203abd0` update support message for inclusivity
 - 2026-03-24 `731af6c` correct GitHub username for communityId 543 in community-builders-members.json
 - 2026-03-24 `749c63d` update contact information for Atlanticaconf community
 - 2026-03-23 `4c2f65d` refine support message for community data maintenance
@@ -98,6 +99,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-25 `478531b` update changelog [skip ci]
 - 2026-03-25 `ac9c4ec` update .all-contributorsrc [skip ci]
 - 2026-03-25 `1359c3c` update README.md [skip ci]
 - 2026-03-25 `e7851fc` update changelog [skip ci]

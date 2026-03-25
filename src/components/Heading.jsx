@@ -181,7 +181,7 @@ export function Heading ({
                     </div>
                   </div>
                   <div className="heading-support-contributors">
-                    <p className="heading-support-share-label">Gracias a todos los que nos apoyáis</p>
+                    <p className="heading-support-share-label">Gracias a todas las personas que nos apoyáis</p>
                     <div className="heading-support-contributors-grid">
                       {contributors.map((c) => (
                         <a
