@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-25 `e3f865a` update community details for CoruñaJUG and GDG A Coruña with new tags, URLs, and validation status
+- 2026-03-25 `f45fcd5` add .gitattributes to set merge strategy for CHANGELOG.md
+- 2026-03-25 `4fd0efb` update community details for CoruñaJUG and GDG A Coruña with new tags, URLs, and validation status
 - 2026-03-25 `1160d40` enhance community sorting logic by prioritizing validation status after member presence
 - 2026-03-25 `2e77d94` update community thumbnails with new images for better representation
 - 2026-03-25 `9efcad4` improve social share reminder workflow by enhancing community detection logic and error handling
