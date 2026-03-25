@@ -2796,7 +2796,7 @@
     "id": 87,
     "name": "Cloud Native (CNCF) Rioja",
     "status": "Activa",
-    "lastReviewed": "24/03/2026",
+    "lastReviewed": "25/03/2026",
     "communityType": "Grupo colaborativo",
     "eventFormat": "Presencial",
     "location": "Logroño La Rioja",
@@ -2838,7 +2838,7 @@
     },
     "displayOnMap": true,
     "humanValidated": true,
-    "shortDescription": ""
+    "shortDescription": "Este Community Group perteneciente a la CNCF se dedica a construir una comunidad de desarrolladores fuerte, abierta y diversa en torno a la plataforma y tecnologías Cloud Native en La Rioja."
   },
   {
     "id": 88,
