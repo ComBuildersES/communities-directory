@@ -2756,7 +2756,7 @@
         "id": 100,
         "name": "CommitConf",
         "status": "Activa",
-        "lastReviewed": "31/05/2024",
+        "lastReviewed": "25/03/2026",
         "communityType": "Conferencia",
         "eventFormat": "Presencial",
         "location": "Madrid (Boadilla del Monte)",
@@ -2785,7 +2785,7 @@
           "bluesky": "https://bsky.app/profile/commit-conf.com"
         },
         "thumbnailUrl": "images/commitconf.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {

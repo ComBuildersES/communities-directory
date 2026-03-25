@@ -3243,7 +3243,7 @@
     "id": 100,
     "name": "CommitConf",
     "status": "Activa",
-    "lastReviewed": "31/05/2024",
+    "lastReviewed": "25/03/2026",
     "communityType": "Conferencia",
     "eventFormat": "Presencial",
     "location": "Madrid (Boadilla del Monte)",
@@ -3277,7 +3277,8 @@
       "lon": -3.8769548
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "Conferencia tecnológica española centrada en desarrollo de software, Cloud, Intteligencia Artificial y cultura técnica. Se celebra anualmente en Madrid, siendo un punto de encuentro clave para profesionales del sector IT."
   },
   {
     "id": 101,
