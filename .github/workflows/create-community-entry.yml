@@ -64,47 +64,47 @@ jobs:
           echo "PROPOSAL_EDITOR_URL=$PROPOSAL_EDITOR_URL" >> $GITHUB_OUTPUT
           if [ "$COMMUNITY_MODE" = "edit" ]; then
             PR_TITLE="Propuesta: aplicar cambios a $COMMUNITY_NAME (issue #${{ github.event.issue.number }})"
-            cat <<EOF >> $GITHUB_OUTPUT
-PR_BODY<<__BODY__
-Esta PR ha sido generada automáticamente a partir del issue #${{ github.event.issue.number }}.
-
-Closes #${{ github.event.issue.number }}
-
-✍️ Seguir mejorando esta propuesta:
-- [Abrir en el editor con los datos de la propuesta]($PROPOSAL_EDITOR_URL)
-
-📍 Check location on maps:
-- [OpenStreetMap](https://www.openstreetmap.org/?mlat=$LAT&mlon=$LON&zoom=15)
-- [Google Maps](https://www.google.com/maps/search/?api=1&query=$LAT,$LON)
-__BODY__
-EOF
+            {
+              echo "PR_BODY<<__BODY__"
+              echo "Esta PR ha sido generada automáticamente a partir del issue #${{ github.event.issue.number }}."
+              echo
+              echo "Closes #${{ github.event.issue.number }}"
+              echo
+              echo "✍️ Seguir mejorando esta propuesta:"
+              echo "- [Abrir en el editor con los datos de la propuesta]($PROPOSAL_EDITOR_URL)"
+              echo
+              echo "📍 Check location on maps:"
+              echo "- [OpenStreetMap](https://www.openstreetmap.org/?mlat=$LAT&mlon=$LON&zoom=15)"
+              echo "- [Google Maps](https://www.google.com/maps/search/?api=1&query=$LAT,$LON)"
+              echo "__BODY__"
+            } >> "$GITHUB_OUTPUT"
           elif [ "$COMMUNITY_MODE" = "delete" ]; then
             PR_TITLE="Propuesta: dar de baja $COMMUNITY_NAME (issue #${{ github.event.issue.number }})"
-            cat <<EOF >> $GITHUB_OUTPUT
-PR_BODY<<__BODY__
-Esta PR ha sido generada automáticamente a partir del issue #${{ github.event.issue.number }}.
-
-Closes #${{ github.event.issue.number }}
-
-🗑️ Esta propuesta elimina la comunidad del directorio y conserva una traza en \`public/data/deleted-communities.json\`.
-__BODY__
-EOF
+            {
+              echo "PR_BODY<<__BODY__"
+              echo "Esta PR ha sido generada automáticamente a partir del issue #${{ github.event.issue.number }}."
+              echo
+              echo "Closes #${{ github.event.issue.number }}"
+              echo
+              echo "🗑️ Esta propuesta elimina la comunidad del directorio y conserva una traza en \`public/data/deleted-communities.json\`."
+              echo "__BODY__"
+            } >> "$GITHUB_OUTPUT"
           else
             PR_TITLE="Propuesta: añadir $COMMUNITY_NAME (issue #${{ github.event.issue.number }})"
-            cat <<EOF >> $GITHUB_OUTPUT
-PR_BODY<<__BODY__
-Esta PR ha sido generada automáticamente a partir del issue #${{ github.event.issue.number }}.
-
-Closes #${{ github.event.issue.number }}
-
-✍️ Seguir mejorando esta propuesta:
-- [Abrir en el editor con los datos de la propuesta]($PROPOSAL_EDITOR_URL)
-
-📍 Check location on maps:
-- [OpenStreetMap](https://www.openstreetmap.org/?mlat=$LAT&mlon=$LON&zoom=15)
-- [Google Maps](https://www.google.com/maps/search/?api=1&query=$LAT,$LON)
-__BODY__
-EOF
+            {
+              echo "PR_BODY<<__BODY__"
+              echo "Esta PR ha sido generada automáticamente a partir del issue #${{ github.event.issue.number }}."
+              echo
+              echo "Closes #${{ github.event.issue.number }}"
+              echo
+              echo "✍️ Seguir mejorando esta propuesta:"
+              echo "- [Abrir en el editor con los datos de la propuesta]($PROPOSAL_EDITOR_URL)"
+              echo
+              echo "📍 Check location on maps:"
+              echo "- [OpenStreetMap](https://www.openstreetmap.org/?mlat=$LAT&mlon=$LON&zoom=15)"
+              echo "- [Google Maps](https://www.google.com/maps/search/?api=1&query=$LAT,$LON)"
+              echo "__BODY__"
+            } >> "$GITHUB_OUTPUT"
           fi
           echo "PR_TITLE=$PR_TITLE" >> $GITHUB_OUTPUT
 

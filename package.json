@@ -17,6 +17,7 @@
     "check-urls:strict": "node scripts/check-urls.js --strict",
     "process-to-communities-to-geojson": "node scripts/process-to-communities-to-geojson.js",
     "find-duplicates": "node scripts/find-duplicates.js",
+    "find-stale-add-community-branches": "node scripts/find-stale-add-community-branches.js",
     "scrape-community-data": "node scripts/scrape-community-data.js",
     "apply-suggestions": "node scripts/apply-suggestions.js",
     "apply-url-mapping": "node scripts/apply-url-mapping.js",
