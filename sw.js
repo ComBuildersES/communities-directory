@@ -1,4 +1,4 @@
-const CACHE_NAME = "community-builders-shell-1774435661283";
+const CACHE_NAME = "community-builders-shell-1774435795941";
 const APP_SHELL = ["./", "./manifest.webmanifest"];
 const DATA_FILE_PATTERN = /\/data\/.+\.(json|geojson)$/;
 

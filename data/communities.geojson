@@ -5942,7 +5942,7 @@
         "id": 201,
         "name": "GDG La Rioja",
         "status": "Activa",
-        "lastReviewed": "14/11/2024",
+        "lastReviewed": "25/03/2026",
         "communityType": "Tech Meetup",
         "eventFormat": "Híbridos",
         "location": "Logroño La Rioja",
@@ -5968,7 +5968,7 @@
           "eventsUrl": "https://gdg.community.dev/gdg-la-rioja/"
         },
         "thumbnailUrl": "images/gdg-la-rioja.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
