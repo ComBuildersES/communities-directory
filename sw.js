@@ -1,4 +1,4 @@
-const CACHE_NAME = "community-builders-shell-v2";
+const CACHE_NAME = "community-builders-shell-1774426971819";
 const APP_SHELL = ["./", "./manifest.webmanifest"];
 const DATA_FILE_PATTERN = /\/data\/.+\.(json|geojson)$/;
 
@@ -56,7 +56,7 @@ self.addEventListener("fetch", (event) => {
 
   if (event.request.mode === "navigate") {
     event.respondWith(
-      fetch(event.request).catch(() => caches.match("./"))
+      fetch(event.request, { cache: "no-cache" }).catch(() => caches.match("./"))
     );
     return;
   }
