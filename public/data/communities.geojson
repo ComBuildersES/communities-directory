@@ -3129,18 +3129,23 @@
         "id": 114,
         "name": "CoruñaJUG",
         "status": "Activa",
-        "lastReviewed": "03/09/2025",
+        "lastReviewed": "25/03/2026",
         "communityType": "Tech Meetup",
         "eventFormat": "Presencial",
         "location": "Coruña",
         "topics": "",
-        "tags": [],
+        "tags": [
+          "java",
+          "kotlin",
+          "scala",
+          "groovy"
+        ],
         "targetAudience": [],
         "contactInfo": "",
-        "communityUrl": "http://web.archive.org/web/20260206220648/https://corunajug.org/",
+        "communityUrl": "https://corunajug.org/",
         "urls": {},
         "thumbnailUrl": "images/corunajug.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
