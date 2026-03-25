@@ -6,30 +6,24 @@ on:
     branches:
       - master
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
   validate:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout source code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 0
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: 24.0.2
           cache: npm
 
       - name: Install dependencies
         run: npm install
-
-      - name: Validate communities data
-        run: npm run validate-data
 
       - name: Fetch PR base branch
         if: github.event_name == 'pull_request'

@@ -87,6 +87,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Maintenance
 
+- 2026-03-25 `6771d2f` update GitHub Actions to use latest versions of checkout and setup-node
 - 2026-03-24 `c785cd1` remove settings.local.json and update .gitignore to include .claude directory
 
 ### Other
