@@ -11666,7 +11666,7 @@
     "displayOnMap": true,
     "humanValidated": true,
     "shortDescription": "",
-    "thumbnailUrl": ""
+    "thumbnailUrl": "images/nodejs-madrid.webp"
   },
   {
     "id": 367,
@@ -20052,7 +20052,7 @@
     "urls": {
       "linkedin": "https://www.linkedin.com/company/artificial-intelligence-network/"
     },
-    "thumbnailUrl": "https://bulma.io/assets/images/placeholders/1280x960.png",
+    "thumbnailUrl": "images/artificial-intelligence-network.webp",
     "latLon": {
       "lat": null,
       "lon": null
