@@ -95,6 +95,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-25 `56e5c92` update changelog [skip ci]
 - 2026-03-25 `26f4fe9` update changelog [skip ci]
 - 2026-03-25 `0b2144a` update changelog [skip ci]
 - 2026-03-25 `a80b087` update changelog [skip ci]
@@ -105,7 +106,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Maintenance
 
-- 2026-03-25 `6771d2f` update GitHub Actions to use latest versions of checkout and setup-node
+- 2026-03-25 `4789783` update GitHub Actions to use latest versions of checkout and setup-node
 - 2026-03-24 `c785cd1` remove settings.local.json and update .gitignore to include .claude directory
 
 ### Other
