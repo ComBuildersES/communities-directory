@@ -56,6 +56,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-03-25 `2cb100c` [Actualizada Granada Tech](https://combuilderses.github.io/communities-directory/?community=226) ([PR #234](https://github.com/ComBuildersES/communities-directory/pull/234))
 - 2026-03-25 `36a0818` [Actualizada Gcubo](https://combuilderses.github.io/communities-directory/?community=194) ([PR #232](https://github.com/ComBuildersES/communities-directory/pull/232))
 - 2026-03-25 `8bd8f59` [Actualizada GDG La Rioja](https://combuilderses.github.io/communities-directory/?community=201) ([PR #230](https://github.com/ComBuildersES/communities-directory/pull/230))
 - 2026-03-25 `1a8df4f` [Actualizada GDG Cloud Español](https://combuilderses.github.io/communities-directory/?community=196) ([PR #228](https://github.com/ComBuildersES/communities-directory/pull/228))
@@ -85,6 +86,10 @@ Se organiza por mes y por tipo de cambio.
 - 2026-03-24 `8830e6a` [Actualizada NodeJSMadrid](https://combuilderses.github.io/communities-directory/?community=366) ([PR #165](https://github.com/ComBuildersES/communities-directory/pull/165))
 - 2026-03-23 `452ed6d` [Actualizada GeoDevelopers](https://combuilderses.github.io/communities-directory/?community=211) ([PR #162](https://github.com/ComBuildersES/communities-directory/pull/162))
 - 2026-03-23 `6c31303` [Actualizada GeoDevelopers](https://combuilderses.github.io/communities-directory/?community=211) ([PR #154](https://github.com/ComBuildersES/communities-directory/pull/154))
+
+### Docs
+
+- 2026-03-25 `b900edc` update changelog [skip ci]
 
 ### Maintenance
 
