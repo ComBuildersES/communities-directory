@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-21-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-23-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Communities directory
@@ -134,7 +134,10 @@ Echa un vistazo a algunas de las tareas por las que podrías empezar a ayudar:
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/alvarosaugar"><img src="https://avatars.githubusercontent.com/u/37780691?v=4?s=100" width="100px;" alt="Álvaro Saugar"/><br /><sub><b>Álvaro Saugar</b></sub></a><br /><a href="#data-alvarosaugar" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/yupipi93"><img src="https://avatars.githubusercontent.com/u/26326882?v=4?s=100" width="100px;" alt="Sergio Conejero Vicente"/><br /><sub><b>Sergio Conejero Vicente</b></sub></a><br /><a href="#data-yupipi93" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/aguadotzn"><img src="https://avatars.githubusercontent.com/u/22575055?v=4?s=100" width="100px;" alt="Adrián"/><br /><sub><b>Adrián</b></sub></a><br /><a href="#data-aguadotzn" title="Data">🔣</a></td>
+    </tr>
+    <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/eun-plata"><img src="https://avatars.githubusercontent.com/u/25737523?v=4?s=100" width="100px;" alt="Eun Young Cho (Plata)"/><br /><sub><b>Eun Young Cho (Plata)</b></sub></a><br /><a href="#data-eun-plata" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.mytechplan.com/"><img src="https://avatars.githubusercontent.com/u/98886279?v=4?s=100" width="100px;" alt="Julieta Zalduendo"/><br /><sub><b>Julieta Zalduendo</b></sub></a><br /><a href="#data-julietazalduendo" title="Data">🔣</a></td>
     </tr>
   </tbody>
 </table>
