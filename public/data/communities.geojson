@@ -9344,51 +9344,6 @@
         ]
       },
       "properties": {
-        "id": 317,
-        "name": "Liferay Spain User Group (LUGSpain)",
-        "status": "Activa",
-        "lastReviewed": "18/10/2024",
-        "communityType": "Tech Meetup",
-        "eventFormat": "Híbridos",
-        "location": "Madrid",
-        "topics": "",
-        "tags": [
-          "liferay",
-          "open-source",
-          "distributed-systems",
-          "sysadmin",
-          "c",
-          "r-lang",
-          "open-hardware",
-          "augmented-reality",
-          "product-management",
-          "android",
-          "stem",
-          "ios"
-        ],
-        "targetAudience": [
-          "open-source-contributor"
-        ],
-        "contactInfo": "",
-        "communityUrl": "https://www.meetup.com/liferay-spain-user-group/",
-        "urls": {
-          "twitter": "http://twitter.com/LugSpain/",
-          "eventsUrl": "https://www.meetup.com/liferay-spain-user-group/"
-        },
-        "thumbnailUrl": "images/liferay-spain-user-group-lugspain.webp",
-        "humanValidated": false
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          -3.7035825,
-          40.4167047
-        ]
-      },
-      "properties": {
         "id": 318,
         "name": "Machine Learning Spain",
         "status": "Activa",
