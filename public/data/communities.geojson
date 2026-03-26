@@ -6268,6 +6268,25 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          12.4568794,
+          41.9005351
+        ]
+      },
+      "properties": {
+        "id": 207,
+        "name": "GDG Spain",
+        "status": "Activa",
+        "eventFormat": "Presencial",
+        "location": "n/a",
+        "communityUrl": "https://gdg.es/",
+        "thumbnailUrl": "images/gdg-spain.webp"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -4.024544270483665,
           39.85966175170025
         ]
