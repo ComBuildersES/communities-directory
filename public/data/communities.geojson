@@ -13516,13 +13516,17 @@
         "id": 440,
         "name": "T3chFest",
         "status": "Activa",
-        "lastReviewed": "13/08/2024",
+        "lastReviewed": "26/03/2026",
         "communityType": "Conferencia",
         "eventFormat": "Presencial",
         "location": "Madrid",
         "topics": "",
         "tags": [],
-        "targetAudience": [],
+        "targetAudience": [
+          "junior-developer",
+          "student",
+          "senior-staff"
+        ],
         "contactInfo": "info@t3chfest.es",
         "communityUrl": "https://t3chfest.es/",
         "urls": {
@@ -13534,7 +13538,7 @@
           "telegram": "https://t.me/t3chfest_canal"
         },
         "thumbnailUrl": "images/t3chfest.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
