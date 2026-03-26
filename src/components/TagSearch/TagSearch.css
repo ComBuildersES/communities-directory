@@ -221,13 +221,28 @@
 .results-bar {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 0.5rem;
-  padding: 0.4rem 1rem 0.5rem;
+  padding: 0.35rem 1rem;
   background: #fff;
   border-bottom: 1px solid #e8e8e8;
   font-size: 0.85rem;
   color: #555;
+}
+
+.results-bar__info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  min-width: 0;
+}
+
+.results-bar__controls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-shrink: 0;
 }
 
 .results-count strong {

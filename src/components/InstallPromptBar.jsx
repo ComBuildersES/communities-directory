@@ -153,14 +153,16 @@ export function InstallPromptBar () {
               Safari: Compartir <span aria-hidden="true">→</span> Añadir a pantalla de inicio
             </p>
           )}
-          <button
-            type="button"
-            className="install-prompt-bar__dismiss"
-            onClick={dismissBanner}
-            aria-label="Cerrar aviso de instalación"
-          >
-            <i className="fas fa-times" aria-hidden="true"></i>
-          </button>
+          {!isUpdateAvailable && (
+            <button
+              type="button"
+              className="install-prompt-bar__dismiss"
+              onClick={dismissBanner}
+              aria-label="Cerrar aviso de instalación"
+            >
+              <i className="fas fa-times" aria-hidden="true"></i>
+            </button>
+          )}
         </div>
       </div>
     </section>

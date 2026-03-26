@@ -162,9 +162,6 @@ body {
   gap: 0.5rem;
 }
 
-.heading-refresh-button {
-  min-width: 0;
-}
 
 /* Hamburger toggle: hidden on desktop */
 .heading-hamburger {
@@ -174,6 +171,53 @@ body {
 /* Backdrop: only used on mobile, hidden on desktop */
 .heading-support-backdrop {
   display: none;
+}
+
+.heading-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.38rem 0.75rem;
+  background: transparent;
+  border: 1px solid #dde6f5;
+  border-radius: 8px;
+  color: #5577a8;
+  font-size: 0.84rem;
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.heading-action-btn:hover {
+  background: #f0f4fb;
+  border-color: #aac3e8;
+  color: #2a4f8c;
+}
+
+.heading-action-btn--active {
+  background: #3273dc;
+  border-color: #3273dc;
+  color: #fff;
+}
+
+.heading-action-btn--active:hover {
+  background: #2563c4;
+  border-color: #2563c4;
+  color: #fff;
+}
+
+.heading-action-btn--cta {
+  background: #eef4ff;
+  border-color: #ccdaf7;
+  color: #3273dc;
+}
+
+.heading-action-btn--cta:hover {
+  background: #dce9ff;
+  border-color: #aac3f0;
+  color: #1d5fd1;
 }
 
 .heading-support {
@@ -212,6 +256,21 @@ body {
   font-size: 0.9rem;
   font-weight: 700;
   color: #20304c;
+}
+
+.heading-support-section {
+  margin-top: 0.75rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid #e8edf5;
+}
+
+.heading-support-section-title {
+  margin: 0 0 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #8899bb;
 }
 
 .heading-support-copy {
@@ -279,13 +338,6 @@ body {
   margin-top: 0.75rem;
   padding-top: 0.65rem;
   border-top: 1px solid #e8edf5;
-}
-
-.heading-support-share-label {
-  margin: 0 0 0.45rem;
-  font-size: 0.83rem;
-  font-weight: 600;
-  color: #4b5f80;
 }
 
 .heading-support-share-buttons {
@@ -452,7 +504,7 @@ body {
 
   /* Full-width buttons inside the mobile dropdown */
   .heading-actions-inner > .button,
-  .heading-actions-inner .heading-support-button {
+  .heading-actions-inner .heading-action-btn {
     width: 100%;
     justify-content: flex-start;
   }

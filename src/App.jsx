@@ -264,15 +264,13 @@ function App () {
     <>
       {!showContributionView && <InstallPromptBar />}
       <Heading
-        view={view}
-        toggleView={toggleView}
         isContributionView={showContributionView}
         closeContributionForm={closeContributionForm}
         goToHome={goToHome}
         goToContribution={goToContribution}
       />
       {!showContributionView && <TagSearch />}
-      {!showContributionView && <ResultsBar view={view} />}
+      {!showContributionView && <ResultsBar view={view} toggleView={toggleView} />}
       {!showContributionView && <FilterPanel />}
       {!showContributionView && shouldBlockCommunityDetails && communities.length > 0 && (
         <section className="contribution-shell">

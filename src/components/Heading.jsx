@@ -1,8 +1,5 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useMemo, useRef, useState } from "react";
-import { ViewToggleButton } from "./ViewToggleButton.jsx";
-import { useSidebarActions, useSideBarVisible } from "../stores/sidebar.store.js";
-import { forceRefreshApp } from "../lib/pwa";
 import allContributorsRaw from "../../.all-contributorsrc?raw";
 const allContributorsRc = JSON.parse(allContributorsRaw);
 
@@ -11,6 +8,8 @@ const MAX_CONTRIBUTORS_IN_POPOVER = 24;
 const contributors = allContributorsRc.contributors.slice(0, MAX_CONTRIBUTORS_IN_POPOVER);
 
 const APP_URL = "https://combuilderses.github.io/communities-directory/";
+const GITHUB_URL = "https://github.com/ComBuildersES/communities-directory";
+const DATA_URL = "https://github.com/ComBuildersES/communities-directory/tree/master/public/data";
 
 function shareText(handle) {
   return `Este directorio de ${handle} no puede faltar en vuestra barra de favoritos, es el mayor listado de meetups, conferencias y comunidades técnicas de España: ${APP_URL} (y encima es open source & opendata! :D)`;
@@ -45,36 +44,31 @@ const SHARE_LINKS = [
 ];
 
 export function Heading ({
-  view,
-  toggleView,
   isContributionView = false,
   closeContributionForm,
   goToHome,
   goToContribution,
 }) {
-  const { toggleSidebar } = useSidebarActions();
-  const isVisible = useSideBarVisible();
-  const [isSupportOpen, setIsSupportOpen] = useState(false);
+  const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isRefreshingApp, setIsRefreshingApp] = useState(false);
-  const supportRef = useRef(null);
+  const aboutRef = useRef(null);
   const mobileMenuRef = useRef(null);
   const bookmarkShortcut = useMemo(() => (
     /mac/i.test(window.navigator.userAgent) ? "Cmd + D" : "Ctrl + D"
   ), []);
 
   useEffect(() => {
-    if (!isSupportOpen) return;
+    if (!isAboutOpen) return;
 
     const handlePointerDown = (event) => {
-      if (!supportRef.current?.contains(event.target)) {
-        setIsSupportOpen(false);
+      if (!aboutRef.current?.contains(event.target)) {
+        setIsAboutOpen(false);
       }
     };
 
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
-        setIsSupportOpen(false);
+        setIsAboutOpen(false);
       }
     };
 
@@ -85,7 +79,7 @@ export function Heading ({
       document.removeEventListener("mousedown", handlePointerDown);
       document.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isSupportOpen]);
+  }, [isAboutOpen]);
 
   useEffect(() => {
     if (!isMobileMenuOpen) return;
@@ -99,7 +93,7 @@ export function Heading ({
     const handleKeyDown = (event) => {
       if (event.key === "Escape") {
         setIsMobileMenuOpen(false);
-        setIsSupportOpen(false);
+        setIsAboutOpen(false);
       }
     };
 
@@ -113,18 +107,6 @@ export function Heading ({
   }, [isMobileMenuOpen]);
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
-  const handleForceRefresh = async () => {
-    if (isRefreshingApp) return;
-
-    setIsRefreshingApp(true);
-
-    try {
-      await forceRefreshApp();
-    } catch (error) {
-      console.error("No se pudo forzar la recarga de la app", error);
-      window.location.reload();
-    }
-  };
 
   return (
     <header id="title">
@@ -142,8 +124,8 @@ export function Heading ({
 
       <div className="heading-actions" ref={mobileMenuRef}>
         {isContributionView ? (
-          <button className="button is-light" onClick={closeContributionForm}>
-            <span className="icon"><i className="fas fa-arrow-left"></i></span>
+          <button className="heading-action-btn" onClick={closeContributionForm}>
+            <i className="fas fa-arrow-left"></i>
             <span>Volver</span>
           </button>
         ) : (
@@ -161,68 +143,71 @@ export function Heading ({
             </button>
 
             <div className={`heading-actions-inner${isMobileMenuOpen ? " heading-actions-inner--open" : ""}`}>
-              <div className="heading-support" ref={supportRef}>
+              <div className="heading-support" ref={aboutRef}>
                 <button
                   type="button"
-                  className={`button ${isSupportOpen ? "is-primary" : "is-light"} heading-support-button`}
-                  onClick={() => setIsSupportOpen((current) => !current)}
-                  title="Guardar o apoyar el proyecto"
-                  aria-expanded={isSupportOpen}
+                  className={`heading-action-btn${isAboutOpen ? " heading-action-btn--active" : ""}`}
+                  onClick={() => setIsAboutOpen((current) => !current)}
+                  title="Sobre el proyecto"
+                  aria-expanded={isAboutOpen}
                   aria-haspopup="dialog"
                 >
-                  <span className="icon"><i className="fas fa-star"></i></span>
-                  <span className="heading-btn-label">Apoyar</span>
+                  <i className="fas fa-circle-info"></i>
+                  <span className="heading-btn-label">Sobre el proyecto</span>
                 </button>
-                {isSupportOpen && (
+                {isAboutOpen && (
                   <>
-                  <div className="heading-support-backdrop" onClick={() => setIsSupportOpen(false)} aria-hidden="true" />
-                  <div className="heading-support-popover" role="dialog" aria-label="Opciones para apoyar el proyecto">
-                    <p className="heading-support-title">Guarda y apoya el proyecto</p>
+                  <div className="heading-support-backdrop" onClick={() => setIsAboutOpen(false)} aria-hidden="true" />
+                  <div className="heading-support-popover" role="dialog" aria-label="Sobre el proyecto">
+                    <p className="heading-support-title">Sobre el proyecto</p>
                     <p className="heading-support-copy">
-                      Si te resulta útil, puedes mostrar tu apoyo dándole una ⭐ en{" "}
-                      <a
-                        href="https://github.com/ComBuildersES/communities-directory"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        GitHub
-                      </a>{" "}
-                      al proyecto.
+                      Nuestro objetivo es mantener el mayor directorio de comunidades tecnológicas de España. Iniciativa de{" "}
+                      <a href="https://communitybuilders.es" target="_blank" rel="noopener noreferrer">Community Builders ES</a>,{" "}
+                      con{" "}
+                      <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">código abierto</a>{" "}
+                      y{" "}
+                      <a href={DATA_URL} target="_blank" rel="noopener noreferrer">datos abiertos</a>.
+                      Si te resulta útil, dale una ⭐ en{" "}
+                      <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">GitHub</a>.
                     </p>
                     <p className="heading-support-copy">
-                      También buscamos{" "}
-                      <a
-                        href="https://github.com/ComBuildersES/communities-directory/issues/53"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        responsables provinciales
-                      </a>{" "}
-                      que quieran ayudar sobre todo con el mantenimiento de los datos de las comunidades.
+                      Y no te olvides de guardar en favoritos: <strong>{bookmarkShortcut}</strong>.
                     </p>
-                    <p className="heading-support-copy">
-                      Nuevas ideas, bugs y cualquier otra forma de colaboración también son bienvenidas; puedes abrir un{" "}
-                      <a
-                        href="https://github.com/ComBuildersES/communities-directory/issues"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        issue
-                      </a>{" "}
-                      o consultar la guía en{" "}
-                      <a
-                        href="https://github.com/ComBuildersES/communities-directory/blob/master/CONTRIBUTING.md"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        CONTRIBUTING
-                      </a>.
-                    </p>
-                    <p className="heading-support-copy">
-                      Si quieres volver rápido, guarda esta página en favoritos con <strong>{bookmarkShortcut}</strong>.
-                    </p>
+                    <div className="heading-support-section">
+                      <p className="heading-support-section-title">Colabora</p>
+                      <p className="heading-support-copy">
+                        Nuevas ideas, bugs y cualquier otra colaboración son bienvenidas —{" "}
+                        <a
+                          href="https://github.com/ComBuildersES/communities-directory/issues"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          abre un issue
+                        </a>{" "}
+                        o consulta{" "}
+                        <a
+                          href="https://github.com/ComBuildersES/communities-directory/blob/master/CONTRIBUTING.md"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          CONTRIBUTING
+                        </a>.
+                      </p>
+                      <p className="heading-support-copy">
+                        Buscamos{" "}
+                        <a
+                          href="https://github.com/ComBuildersES/communities-directory/issues/53"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          responsables provinciales
+                        </a>{" "}
+                        que ayuden a mantener los datos de las comunidades locales.
+                      </p>
+                    </div>
+
                     <div className="heading-support-share">
-                      <p className="heading-support-share-label">Comparte el directorio</p>
+                      <p className="heading-support-section-title">¿Nos ayudas a difundirlo?</p>
                       <div className="heading-support-share-buttons">
                         {SHARE_LINKS.map(({ label, icon, href }) => (
                           <a
@@ -239,8 +224,9 @@ export function Heading ({
                         ))}
                       </div>
                     </div>
+
                     <div className="heading-support-contributors">
-                      <p className="heading-support-share-label">Gracias a todas las personas que nos apoyáis</p>
+                      <p className="heading-support-section-title">La comunidad que lo hace posible</p>
                       <div className="heading-support-contributors-grid">
                         {contributors.map((c) => (
                           <a
@@ -262,7 +248,7 @@ export function Heading ({
                         rel="noopener noreferrer"
                         className="heading-support-contributors-more"
                       >
-                        Ver todos los contribuidores <i className="fas fa-arrow-right"></i>
+                        Ver a todas las personas que contribuyen <i className="fas fa-arrow-right"></i>
                       </a>
                     </div>
                   </div>
@@ -271,31 +257,12 @@ export function Heading ({
               </div>
               <button
                 type="button"
-                className="button is-light"
+                className="heading-action-btn heading-action-btn--cta"
                 onClick={() => { goToContribution(); closeMobileMenu(); }}
                 title="Añadir una nueva comunidad al directorio"
               >
-                <span className="icon"><i className="fas fa-plus"></i></span>
+                <i className="fas fa-plus"></i>
                 <span className="heading-btn-label">Añadir comunidad</span>
-              </button>
-              <button
-                className={`button ${isVisible ? "is-primary" : "is-light"}`}
-                onClick={() => { toggleSidebar(); closeMobileMenu(); }}
-                title={isVisible ? "Ocultar filtros" : "Mostrar filtros"}
-              >
-                <span className="icon"><i className="fas fa-sliders"></i></span>
-                <span className="heading-btn-label">Filtros</span>
-              </button>
-              <ViewToggleButton view={view} toggleView={() => { toggleView(); closeMobileMenu(); }} />
-              <button
-                type="button"
-                className="button is-light heading-refresh-button"
-                onClick={handleForceRefresh}
-                title="Forzar recarga limpiando la caché local de la app"
-                aria-label="Forzar recarga limpiando la caché local de la app"
-                disabled={isRefreshingApp}
-              >
-                <span className="icon"><i className={`fas ${isRefreshingApp ? "fa-spinner fa-spin" : "fa-rotate-right"}`}></i></span>
               </button>
             </div>
           </>

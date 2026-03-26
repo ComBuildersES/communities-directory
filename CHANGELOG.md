@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-26 `0b29ed1` implement force refresh functionality for PWA and enhance CommunityContribution styles
+- 2026-03-26 `9e8255c` enhance UI components with new styles and improve functionality in Heading, ResultsBar, and InstallPromptBar
+- 2026-03-26 `a6c142e` implement force refresh functionality for PWA and enhance CommunityContribution styles
 - 2026-03-26 `f4ec2f6` add deletion request functionality and UI enhancements in CommunityContribution component
 - 2026-03-25 `9a3e3a5` add tooltip for communities without fixed location in map component
 - 2026-03-25 `6bcf7fb` enhance mobile navigation and service worker management

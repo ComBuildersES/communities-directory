@@ -8,6 +8,8 @@ import {
   useAudience,
   useCommunityActions,
 } from "../stores/community.store.js";
+import { useSidebarActions, useSideBarVisible } from "../stores/sidebar.store.js";
+import { ViewToggleButton } from "./ViewToggleButton.jsx";
 import { bajaString } from "../constants";
 
 const FILTER_LABELS = {
@@ -20,7 +22,7 @@ const FILTER_LABELS = {
 };
 
 /* eslint-disable react/prop-types */
-export function ResultsBar({ view }) {
+export function ResultsBar({ view, toggleView }) {
   const filters = useFilters();
   const total = useAllCommunities().length;
   const count = useNumberOfCommunities();
@@ -28,6 +30,8 @@ export function ResultsBar({ view }) {
   const allTags = useTags();
   const allAudience = useAudience();
   const { filterComunities } = useCommunityActions();
+  const { toggleSidebar } = useSidebarActions();
+  const isVisible = useSideBarVisible();
 
   const tagsMap = useMemo(
     () => Object.fromEntries(allTags.map((t) => [t.id, t.label])),
@@ -60,32 +64,47 @@ export function ResultsBar({ view }) {
 
   return (
     <div className="results-bar">
-      <span className="results-count">
-        <strong>{displayCount}</strong>
-        {showTotal && <span className="results-count-total"> de {total}</span>}
-        {" "}{suffix}
-      </span>
+      <div className="results-bar__info">
+        <span className="results-count">
+          <strong>{displayCount}</strong>
+          {showTotal && <span className="results-count-total"> de {total}</span>}
+          {" "}{suffix}
+        </span>
 
-      {chips.length > 0 && (
-        <>
-          <span className="results-bar-sep">·</span>
-          <div className="results-chips">
-            {chips.map(({ key, value, label, category }) => (
-              <span key={`${key}-${value}`} className="results-chip">
-                {category && <span className="results-chip-category">{category}:</span>}
-                {label}
-                <button
-                  className="results-chip-remove"
-                  onClick={() => filterComunities(key, bajaString + value)}
-                  aria-label={`Quitar filtro ${label}`}
-                >
-                  <i className="fas fa-times"></i>
-                </button>
-              </span>
-            ))}
-          </div>
-        </>
-      )}
+        {chips.length > 0 && (
+          <>
+            <span className="results-bar-sep">·</span>
+            <div className="results-chips">
+              {chips.map(({ key, value, label, category }) => (
+                <span key={`${key}-${value}`} className="results-chip">
+                  {category && <span className="results-chip-category">{category}:</span>}
+                  {label}
+                  <button
+                    className="results-chip-remove"
+                    onClick={() => filterComunities(key, bajaString + value)}
+                    aria-label={`Quitar filtro ${label}`}
+                  >
+                    <i className="fas fa-times"></i>
+                  </button>
+                </span>
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+
+      <div className="results-bar__controls">
+        <button
+          type="button"
+          className={`button is-small ${isVisible ? "is-primary" : "is-light"}`}
+          onClick={toggleSidebar}
+          title={isVisible ? "Ocultar filtros" : "Mostrar filtros"}
+        >
+          <span className="icon"><i className="fas fa-sliders"></i></span>
+          <span>Filtros</span>
+        </button>
+        <ViewToggleButton view={view} toggleView={toggleView} />
+      </div>
     </div>
   );
 }
