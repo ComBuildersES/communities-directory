@@ -6794,7 +6794,7 @@
     "id": 208,
     "name": "GDG Toledo",
     "status": "Activa",
-    "lastReviewed": "31/05/2024",
+    "lastReviewed": "25/03/2026",
     "communityType": "Tech Meetup",
     "eventFormat": "Presencial",
     "location": "Toledo",
@@ -6807,21 +6807,25 @@
       "software-craftsmanship",
       "gcp",
       "docker",
-      "free-software"
+      "free-software",
+      "accessibility",
+      "diversity",
+      "open-source"
     ],
     "targetAudience": [
       "backend-developer",
       "frontend-developer",
       "fullstack-developer",
       "mobile-developer",
-      "game-developer",
       "sre",
-      "community-manager",
-      "embedded-iot-engineer",
-      "robotics-engineer",
-      "data-engineer",
-      "ml-engineer",
-      "devops-engineer"
+      "devops-engineer",
+      "student",
+      "junior-developer",
+      "qa-engineer",
+      "test-automation-engineer",
+      "software-architect",
+      "tech-lead",
+      "open-source-contributor"
     ],
     "contactInfo": "",
     "communityUrl": "https://gdg.community.dev/gdg-toledo/",
@@ -6829,7 +6833,8 @@
       "twitter": "https://www.twitter.com/gdgtoledo_es",
       "linkedin": "https://www.linkedin.com/company/103971769",
       "discord": "https://discord.gg/KkvcV3krCY",
-      "eventsUrl": "https://gdg.community.dev/gdg-toledo/"
+      "eventsUrl": "https://gdg.community.dev/gdg-toledo/",
+      "youtube": "https://www.youtube.com/@gdgtoledo1846"
     },
     "thumbnailUrl": "images/gdg-toledo.webp",
     "latLon": {
@@ -6837,7 +6842,9 @@
       "lon": -4.024544270483665
     },
     "displayOnMap": true,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "",
+    "removalReason": ""
   },
   {
     "id": 209,
