@@ -2607,7 +2607,7 @@
         "id": 94,
         "name": "Codemotion",
         "status": "Activa",
-        "lastReviewed": "17/10/2024",
+        "lastReviewed": "24/03/2026",
         "communityType": "Conferencia",
         "eventFormat": "Presencial",
         "location": "Madrid",
@@ -2622,17 +2622,20 @@
         ],
         "targetAudience": [
           "community-manager",
-          "backend-developer"
+          "backend-developer",
+          "frontend-developer",
+          "fullstack-developer",
+          "software-architect"
         ],
         "contactInfo": "Community+es@codemotion.it",
-        "communityUrl": "https://conferences.codemotion.com/madrid2024/",
+        "communityUrl": "https://conferences.codemotion.com/madrid/",
         "urls": {
           "instagram": "https://www.instagram.com/codemotion_esp/",
           "linkedin": "https://www.linkedin.com/company/codemotion/?originalSubdomain=it",
           "twitter": "https://twitter.com/CodemoMadrid"
         },
         "thumbnailUrl": "images/codemotion.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
