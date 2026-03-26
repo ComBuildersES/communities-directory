@@ -943,7 +943,7 @@
         "id": 41,
         "name": "Asturias Software Crafters",
         "status": "Activa",
-        "lastReviewed": "12/02/2026",
+        "lastReviewed": "25/03/2026",
         "communityType": "Tech Meetup",
         "eventFormat": "Presencial",
         "location": "Oviedo/Gijón (Asturias)",
@@ -956,7 +956,29 @@
           "lean-startup"
         ],
         "targetAudience": [
-          "software-architect"
+          "software-architect",
+          "junior-developer",
+          "student",
+          "senior-staff",
+          "career-changer",
+          "frontend-developer",
+          "backend-developer",
+          "fullstack-developer",
+          "mobile-developer",
+          "data-engineer",
+          "data-scientist",
+          "devops-engineer",
+          "cloud-engineer",
+          "sre",
+          "cybersecurity-engineer",
+          "qa-engineer",
+          "open-source-contributor",
+          "robotics-engineer",
+          "educator",
+          "sysadmin",
+          "data-analyst",
+          "tech-lead",
+          "product-manager"
         ],
         "contactInfo": "asturiascrafters@gmail.com",
         "communityUrl": "https://saraos.tech/@asturias-software-crafters",
@@ -964,10 +986,11 @@
           "twitter": "https://x.com/asturiaswcraft",
           "bluesky": "https://bsky.app/profile/asturiascrafters.com",
           "linkedin": "https://linkedin.com/company/asturiaswcraft",
-          "eventsUrl": "https://saraos.tech/@asturias-software-crafters"
+          "eventsUrl": "https://saraos.tech/@asturias-software-crafters",
+          "telegram": "https://t.me/+F_0R2L0OowljMGY0"
         },
         "thumbnailUrl": "images/asturias-software-crafters.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
@@ -6253,7 +6276,7 @@
         "id": 208,
         "name": "GDG Toledo",
         "status": "Activa",
-        "lastReviewed": "31/05/2024",
+        "lastReviewed": "25/03/2026",
         "communityType": "Tech Meetup",
         "eventFormat": "Presencial",
         "location": "Toledo",
@@ -6266,21 +6289,25 @@
           "software-craftsmanship",
           "gcp",
           "docker",
-          "free-software"
+          "free-software",
+          "accessibility",
+          "diversity",
+          "open-source"
         ],
         "targetAudience": [
           "backend-developer",
           "frontend-developer",
           "fullstack-developer",
           "mobile-developer",
-          "game-developer",
           "sre",
-          "community-manager",
-          "embedded-iot-engineer",
-          "robotics-engineer",
-          "data-engineer",
-          "ml-engineer",
-          "devops-engineer"
+          "devops-engineer",
+          "student",
+          "junior-developer",
+          "qa-engineer",
+          "test-automation-engineer",
+          "software-architect",
+          "tech-lead",
+          "open-source-contributor"
         ],
         "contactInfo": "",
         "communityUrl": "https://gdg.community.dev/gdg-toledo/",
@@ -6288,10 +6315,11 @@
           "twitter": "https://www.twitter.com/gdgtoledo_es",
           "linkedin": "https://www.linkedin.com/company/103971769",
           "discord": "https://discord.gg/KkvcV3krCY",
-          "eventsUrl": "https://gdg.community.dev/gdg-toledo/"
+          "eventsUrl": "https://gdg.community.dev/gdg-toledo/",
+          "youtube": "https://www.youtube.com/@gdgtoledo1846"
         },
         "thumbnailUrl": "images/gdg-toledo.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
@@ -11028,7 +11056,7 @@
           "twitter": "https://x.com/MadridNodeJs",
           "eventsUrl": "https://www.meetup.com/es-ES/node-js-madrid/"
         },
-        "thumbnailUrl": "",
+        "thumbnailUrl": "images/nodejs-madrid.webp",
         "humanValidated": true
       }
     },
