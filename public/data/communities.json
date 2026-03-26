@@ -20213,5 +20213,33 @@
     },
     "displayOnMap": true,
     "humanValidated": true
+  },
+  {
+    "id": 605,
+    "name": "Rust Girona",
+    "status": "Activa",
+    "lastReviewed": "26/03/2026",
+    "communityType": "Tech Meetup",
+    "eventFormat": "Presencial",
+    "location": "Girona",
+    "shortDescription": "Català\nComunitat técnica del llenguatge de programación Rust de Girona\n\nEspañol\nComunidad técnica del lenguage de programación Rust de Girona\n\nEnglish\nTech community of the Rust programming language of Gironas",
+    "topics": "",
+    "tags": [
+      "rust"
+    ],
+    "targetAudience": [],
+    "contactInfo": "",
+    "communityUrl": "https://luma.com/rust-girona",
+    "urls": {
+      "github": "https://github.com/rust-girona/"
+    },
+    "thumbnailUrl": "",
+    "removalReason": "",
+    "latLon": {
+      "lat": 41.9793006,
+      "lon": 2.8199439
+    },
+    "displayOnMap": true,
+    "humanValidated": true
   }
 ]
