@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   buildCommunityPayload,
+  buildCommunityDeletionIssueUrl,
   buildContributionPath,
   buildGitHubIssueUrl,
   clearContributionDraft,
@@ -166,6 +167,52 @@ const AUDIENCE_CATEGORY_ORDER = [
   "Hardware, sistemas y robótica",
   "Investigación, educación y academia",
 ];
+
+const NOT_TECH_DISCUSSION_URL = "https://github.com/ComBuildersES/communities-directory/issues/62";
+
+const DELETION_REASON_OPTIONS = [
+  {
+    value: "duplicate",
+    label: "La comunidad está duplicada",
+  },
+  {
+    value: "never-existed",
+    label: "La comunidad nunca ha existido",
+  },
+  {
+    value: "not-tech",
+    label: "Esta comunidad no debería ser considerada tech",
+  },
+  {
+    value: "other",
+    label: "Otra razón",
+  },
+];
+
+function buildDeletionReason({
+  reasonType,
+  duplicateCommunity,
+  duplicateCommunityEditUrl,
+  otherReason,
+}) {
+  if (reasonType === "duplicate" && duplicateCommunity) {
+    return `La comunidad está duplicada y conviene consolidarla en ${duplicateCommunity.name} (${duplicateCommunityEditUrl}).`;
+  }
+
+  if (reasonType === "never-existed") {
+    return "La comunidad nunca ha existido como comunidad real y conviene retirarla del directorio.";
+  }
+
+  if (reasonType === "not-tech") {
+    return `Esta comunidad no debería ser considerada tech. Ver criterios y conversación de referencia: ${NOT_TECH_DISCUSSION_URL}`;
+  }
+
+  if (reasonType === "other") {
+    return otherReason.trim();
+  }
+
+  return "";
+}
 
 function FieldHelp({ content, isOpen, onToggle, onClose }) {
   return (
@@ -954,6 +1001,11 @@ export function CommunityContribution({
   const [hasRestoredDraft, setHasRestoredDraft] = useState(false);
   const [restoredDraftMeta, setRestoredDraftMeta] = useState(null);
   const [hasUserInteracted, setHasUserInteracted] = useState(false);
+  const [isDeletionFormVisible, setIsDeletionFormVisible] = useState(false);
+  const [deletionReasonType, setDeletionReasonType] = useState("");
+  const [duplicateTargetId, setDuplicateTargetId] = useState("");
+  const [duplicateTargetQuery, setDuplicateTargetQuery] = useState("");
+  const [otherDeletionReason, setOtherDeletionReason] = useState("");
   const inferredProvinceIdRef = useRef("");
   const datasetSignature = useMemo(() => buildDatasetSignature(communities), [communities]);
   const latestBaseDraft = useMemo(
@@ -1007,6 +1059,11 @@ export function CommunityContribution({
 
     setHasOpenedIssue(false);
     setHasUserInteracted(false);
+    setIsDeletionFormVisible(false);
+    setDeletionReasonType("");
+    setDuplicateTargetId("");
+    setDuplicateTargetQuery("");
+    setOtherDeletionReason("");
   }, [currentCommunityBaselineSignature, datasetSignature, latestBaseDraft, nextId, storageKey]);
 
   useEffect(() => {
@@ -1051,6 +1108,65 @@ export function CommunityContribution({
   const githubIssueUrl = useMemo(
     () => buildGitHubIssueUrl({ payload, mode: isEditMode ? "edit" : "new", shareUrl }),
     [isEditMode, payload, shareUrl]
+  );
+  const duplicateCandidates = useMemo(
+    () => communities
+      .filter((community) => !existingCommunity || community.id !== existingCommunity.id)
+      .slice()
+      .sort((left, right) => left.name.localeCompare(right.name, "es")),
+    [communities, existingCommunity]
+  );
+  const duplicateTargetCommunity = useMemo(
+    () => duplicateCandidates.find((community) => String(community.id) === String(duplicateTargetId)) ?? null,
+    [duplicateCandidates, duplicateTargetId]
+  );
+  const filteredDuplicateCandidates = useMemo(() => {
+    const normalizedQuery = duplicateTargetQuery.trim().toLowerCase();
+
+    if (!normalizedQuery) {
+      return duplicateCandidates.slice(0, 12);
+    }
+
+    return duplicateCandidates
+      .filter((community) => {
+        const haystack = [
+          community.name,
+          community.location,
+          community.communityUrl,
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+
+        return haystack.includes(normalizedQuery);
+      })
+      .slice(0, 12);
+  }, [duplicateCandidates, duplicateTargetQuery]);
+  const deletionReason = useMemo(
+    () => buildDeletionReason({
+      reasonType: deletionReasonType,
+      duplicateCommunity: duplicateTargetCommunity,
+      duplicateCommunityEditUrl: duplicateTargetCommunity
+        ? `${window.location.origin}${buildContributionPath({
+          mode: "edit",
+          identifier: duplicateTargetCommunity.id,
+        })}`
+        : "",
+      otherReason: otherDeletionReason,
+    }),
+    [deletionReasonType, duplicateTargetCommunity, otherDeletionReason]
+  );
+  const deletionIssueUrl = useMemo(
+    () => buildCommunityDeletionIssueUrl({
+      community: existingCommunity,
+      reason: deletionReason,
+    }),
+    [deletionReason, existingCommunity]
+  );
+  const isDeletionRequestValid = Boolean(
+    deletionReasonType &&
+    (deletionReasonType !== "duplicate" || duplicateTargetCommunity) &&
+    (deletionReasonType !== "other" || otherDeletionReason.trim())
   );
 
   const duplicates = useMemo(() => {
@@ -1241,6 +1357,28 @@ export function CommunityContribution({
     setHasOpenedIssue(false);
     setHasUserInteracted(false);
   };
+  const handleDeletionReasonTypeChange = (value) => {
+    setDeletionReasonType(value);
+
+    if (value !== "duplicate") {
+      setDuplicateTargetId("");
+      setDuplicateTargetQuery("");
+    }
+
+    if (value !== "other") {
+      setOtherDeletionReason("");
+    }
+  };
+  const handleOpenDeletionIssue = () => {
+    if (!isDeletionRequestValid) return;
+
+    setHasOpenedIssue(true);
+    window.open(deletionIssueUrl, "_blank", "noopener,noreferrer");
+  };
+  const handleDuplicateTargetSelect = (community) => {
+    setDuplicateTargetId(String(community.id));
+    setDuplicateTargetQuery(community.name);
+  };
 
   const restoredDraftSavedAt = formatDraftSavedAt(restoredDraftMeta?.savedAt);
   const hasDatasetChangesSinceDraft = Boolean(
@@ -1324,8 +1462,126 @@ export function CommunityContribution({
           <div className="contribution-metadata">
             <span>ID {payload.id ?? "pendiente"}</span>
             <span>{isEditMode ? "Edición" : "Alta nueva"}</span>
+            {isEditMode && (
+              <button
+                type="button"
+                className={`button is-small contribution-delete-toggle${isDeletionFormVisible ? " is-active" : ""}`}
+                onClick={() => setIsDeletionFormVisible((current) => !current)}
+              >
+                <i className="fas fa-trash-can" aria-hidden="true"></i>
+                <span>Solicitar eliminación</span>
+              </button>
+            )}
           </div>
         </div>
+
+        {isEditMode && isDeletionFormVisible && (
+          <div className="contribution-delete-panel">
+            <p className="contribution-delete-note">
+              Si la comunidad sigue existiendo pero ya no está activa, no hace falta solicitar su eliminación:
+              cambia el campo <strong>Estado</strong> a <strong>Inactiva</strong> y abre una propuesta de edición.
+            </p>
+
+            <div className="contribution-delete-reasons" role="radiogroup" aria-label="Motivo de eliminación">
+              {DELETION_REASON_OPTIONS.map((option) => (
+                <label key={option.value} className="contribution-delete-reason-option">
+                  <input
+                    type="radio"
+                    name="deletion-reason"
+                    value={option.value}
+                    checked={deletionReasonType === option.value}
+                    onChange={(event) => handleDeletionReasonTypeChange(event.target.value)}
+                  />
+                  <span>{option.label}</span>
+                </label>
+              ))}
+            </div>
+
+            {deletionReasonType === "duplicate" && (
+              <div className="field contribution-delete-field">
+                <label className="label" htmlFor="duplicate-community-target">Comunidad canónica</label>
+                <div className="control">
+                  <input
+                    id="duplicate-community-target"
+                    className="input"
+                    type="search"
+                    value={duplicateTargetQuery}
+                    onChange={(event) => {
+                      setDuplicateTargetQuery(event.target.value);
+                      setDuplicateTargetId("");
+                    }}
+                    placeholder="Escribe el nombre de la comunidad"
+                    autoComplete="off"
+                  />
+                </div>
+                <div className="contribution-duplicate-results" role="listbox" aria-label="Resultados de comunidades">
+                  {filteredDuplicateCandidates.length > 0 ? (
+                    filteredDuplicateCandidates.map((community) => (
+                      <button
+                        key={community.id}
+                        type="button"
+                        className={`contribution-duplicate-result${duplicateTargetId === String(community.id) ? " is-selected" : ""}`}
+                        onClick={() => handleDuplicateTargetSelect(community)}
+                      >
+                        <span className="contribution-duplicate-result-name">{community.name}</span>
+                        <span className="contribution-duplicate-result-meta">
+                          ID {community.id}
+                          {community.location ? ` · ${community.location}` : ""}
+                        </span>
+                      </button>
+                    ))
+                  ) : (
+                    <p className="contribution-delete-field-note">
+                      No hay coincidencias con ese texto.
+                    </p>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {deletionReasonType === "not-tech" && (
+              <p className="contribution-delete-field-note">
+                Se incluirá como referencia el hilo de criterios sobre qué comunidades consideramos tech:
+                {" "}
+                <a href={NOT_TECH_DISCUSSION_URL} target="_blank" rel="noreferrer">
+                  issue #62
+                </a>
+                .
+              </p>
+            )}
+
+            {deletionReasonType === "other" && (
+              <div className="field contribution-delete-field">
+                <label className="label" htmlFor="other-deletion-reason">Explica brevemente el motivo</label>
+                <div className="control">
+                  <textarea
+                    id="other-deletion-reason"
+                    className="textarea"
+                    rows={3}
+                    value={otherDeletionReason}
+                    onChange={(event) => setOtherDeletionReason(event.target.value)}
+                    placeholder="Indica por qué conviene retirar esta comunidad del directorio."
+                    required
+                  />
+                </div>
+              </div>
+            )}
+
+            <div className="contribution-delete-actions">
+              <button
+                type="button"
+                className="button is-danger is-light"
+                onClick={handleOpenDeletionIssue}
+                disabled={!isDeletionRequestValid}
+              >
+                Abrir issue de eliminación
+              </button>
+              <p className="contribution-delete-helper">
+                Solo se activará cuando hayas indicado un motivo válido.
+              </p>
+            </div>
+          </div>
+        )}
 
         <div className="contribution-grid">
           <div className="field">

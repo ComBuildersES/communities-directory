@@ -136,7 +136,7 @@ function readSubmission() {
       mode: modeFromType,
       payload: {
         ...jsonPayload,
-        removalReason: jsonPayload.removalReason ?? extractRemovalReason(),
+        removalReason: normalizeString(jsonPayload.removalReason) || extractRemovalReason(),
       },
     };
   }

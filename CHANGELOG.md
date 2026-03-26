@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-25 `ceb95ea` add tooltip for communities without fixed location in map component
+- 2026-03-26 `2d7fc80` add deletion request functionality and UI enhancements in CommunityContribution component
+- 2026-03-25 `9a3e3a5` add tooltip for communities without fixed location in map component
 - 2026-03-25 `6bcf7fb` enhance mobile navigation and service worker management
 - 2026-03-25 `23cf7b7` add contributor support section with grid layout and links to profiles
 - 2026-03-25 `7b4f649` add new contributors Manuel Martín, Mario, Jorge Hidalgo, Jorge Teixeira, David Bonilla, Juan Luis Cano Rodríguez, Mánu Fosela, Isabel Vigil Morán, Joan León, Abraham Otero, Álvaro Saugar, and Sergio Conejero Vicente to community data
@@ -102,6 +103,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-25 `0adb77b` update changelog [skip ci]
 - 2026-03-25 `1558781` update changelog [skip ci]
 - 2026-03-25 `23e12dc` update changelog [skip ci]
 - 2026-03-25 `478531b` update changelog [skip ci]

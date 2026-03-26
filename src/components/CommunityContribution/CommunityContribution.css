@@ -282,6 +282,134 @@
   padding: 0.35rem 0.75rem;
 }
 
+.contribution-delete-toggle {
+  border-radius: 999px;
+  border-color: #e7c7cf;
+  background: #fff6f8;
+  color: #8c2c42;
+}
+
+.contribution-delete-toggle:hover,
+.contribution-delete-toggle:focus-visible,
+.contribution-delete-toggle.is-active {
+  border-color: #d7a8b4;
+  background: #fff0f4;
+  color: #7a2338;
+}
+
+.contribution-delete-panel {
+  margin-bottom: 0.9rem;
+  padding: 0.95rem 1rem;
+  border-radius: 18px;
+  border: 1px solid #ead7dd;
+  background:
+    linear-gradient(180deg, rgba(255, 250, 251, 0.98), rgba(255, 244, 246, 0.98)),
+    radial-gradient(circle at top right, rgba(181, 74, 97, 0.08), transparent 36%);
+}
+
+.contribution-delete-note {
+  margin: 0;
+  color: #5f4550;
+  line-height: 1.5;
+}
+
+.contribution-delete-reasons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+}
+
+.contribution-delete-reason-option {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.75rem 0.85rem;
+  border-radius: 16px;
+  border: 1px solid #ead7dd;
+  background: rgba(255, 255, 255, 0.76);
+  color: #4b3b42;
+  cursor: pointer;
+}
+
+.contribution-delete-reason-option input {
+  margin: 0;
+  accent-color: #b54a61;
+}
+
+.contribution-delete-reason-option span {
+  line-height: 1.35;
+}
+
+.contribution-delete-field {
+  margin-top: 0.9rem;
+}
+
+.contribution-duplicate-results {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: 0.7rem;
+  max-height: 16rem;
+  overflow: auto;
+}
+
+.contribution-duplicate-result {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.18rem;
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #ead7dd;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #4b3b42;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+}
+
+.contribution-duplicate-result:hover,
+.contribution-duplicate-result:focus-visible,
+.contribution-duplicate-result.is-selected {
+  border-color: #d191a0;
+  background: #fff3f6;
+  box-shadow: 0 10px 18px rgba(181, 74, 97, 0.08);
+  outline: none;
+}
+
+.contribution-duplicate-result-name {
+  font-weight: 700;
+  color: #3f2d34;
+}
+
+.contribution-duplicate-result-meta {
+  font-size: 0.85rem;
+  color: #7a5a65;
+}
+
+.contribution-delete-field-note {
+  margin-top: 0.85rem;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #654955;
+}
+
+.contribution-delete-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-top: 0.95rem;
+}
+
+.contribution-delete-helper {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #7a5a65;
+}
+
 .contribution-taxonomy-summary {
   display: flex;
   align-items: flex-start;
@@ -641,6 +769,25 @@
   color: #fff;
 }
 
+.contribution-shell .button.is-danger.is-light {
+  background: #fff1f4;
+  border-color: #e4b8c2;
+  color: #922d45;
+}
+
+.contribution-shell .button.is-danger.is-light:hover,
+.contribution-shell .button.is-danger.is-light:focus-visible {
+  background: #ffe7ed;
+  border-color: #d89aa9;
+  color: #7f2037;
+}
+
+.contribution-shell .button.is-danger.is-light[disabled] {
+  background: #faf4f6;
+  border-color: #eddde2;
+  color: #b59aa3;
+}
+
 .contribution-card .input,
 .contribution-card .textarea,
 .contribution-card .select select {
@@ -656,7 +803,8 @@
 @media (max-width: 768px) {
   .contribution-hero,
   .contribution-card-header,
-  .contribution-submit-row {
+  .contribution-submit-row,
+  .contribution-delete-actions {
     flex-direction: column;
     align-items: flex-start;
   }
