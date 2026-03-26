@@ -73,6 +73,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-03-26 `efae707` [Añadida Rust Girona](https://combuilderses.github.io/communities-directory/?community=605) ([PR #281](https://github.com/ComBuildersES/communities-directory/pull/281))
 - 2026-03-26 `4931d4f` [Actualizada Sysarmy Galicia](https://combuilderses.github.io/communities-directory/?community=439) ([PR #279](https://github.com/ComBuildersES/communities-directory/pull/279))
 - 2026-03-26 `3c4a91f` [Actualizada Gen AI Community](https://combuilderses.github.io/communities-directory/?community=361) ([PR #277](https://github.com/ComBuildersES/communities-directory/pull/277))
 - 2026-03-26 `be4a31a` Eliminada Cloud Español ([PR #273](https://github.com/ComBuildersES/communities-directory/pull/273))
@@ -124,6 +125,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-26 `bf29141` update changelog [skip ci]
 - 2026-03-26 `7903302` update .all-contributorsrc [skip ci]
 - 2026-03-26 `dbece01` update README.md [skip ci]
 - 2026-03-26 `eca1e95` update changelog [skip ci]
