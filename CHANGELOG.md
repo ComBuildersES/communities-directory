@@ -70,6 +70,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-03-26 `be4a31a` Eliminada Cloud Español ([PR #273](https://github.com/ComBuildersES/communities-directory/pull/273))
 - 2026-03-25 `4eebfd1` [Actualizada GDG Toledo](https://combuilderses.github.io/communities-directory/?community=208) ([PR #270](https://github.com/ComBuildersES/communities-directory/pull/270))
 - 2026-03-25 `00a06a6` [Actualizada Asturias Software Crafters](https://combuilderses.github.io/communities-directory/?community=41) ([PR #267](https://github.com/ComBuildersES/communities-directory/pull/267))
 - 2026-03-25 `538b845` [Actualizada AtlánticaConf](https://combuilderses.github.io/communities-directory/?community=45) ([PR #264](https://github.com/ComBuildersES/communities-directory/pull/264))
@@ -118,6 +119,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-26 `d615de9` update changelog [skip ci]
 - 2026-03-26 `c26217a` update changelog [skip ci]
 - 2026-03-26 `a4f0643` update .all-contributorsrc [skip ci]
 - 2026-03-26 `183bf2e` update README.md [skip ci]
@@ -159,6 +161,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
+- 2026-03-26 `4c02445` Update removal reason for Cloud Español community
 - 2026-03-24 `0e62bf3` Add short description to community entry
 - 2026-03-24 `1cee0e1` Update Twitter URL to new X.com format
 - 2026-03-24 `3c03ca4` Refactor code structure for improved readability and maintainability
