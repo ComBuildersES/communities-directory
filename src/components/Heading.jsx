@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { ViewToggleButton } from "./ViewToggleButton.jsx";
 import { useSidebarActions, useSideBarVisible } from "../stores/sidebar.store.js";
+import { forceRefreshApp } from "../lib/pwa";
 import allContributorsRaw from "../../.all-contributorsrc?raw";
 const allContributorsRc = JSON.parse(allContributorsRaw);
 
@@ -55,6 +56,7 @@ export function Heading ({
   const isVisible = useSideBarVisible();
   const [isSupportOpen, setIsSupportOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isRefreshingApp, setIsRefreshingApp] = useState(false);
   const supportRef = useRef(null);
   const mobileMenuRef = useRef(null);
   const bookmarkShortcut = useMemo(() => (
@@ -111,6 +113,18 @@ export function Heading ({
   }, [isMobileMenuOpen]);
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
+  const handleForceRefresh = async () => {
+    if (isRefreshingApp) return;
+
+    setIsRefreshingApp(true);
+
+    try {
+      await forceRefreshApp();
+    } catch (error) {
+      console.error("No se pudo forzar la recarga de la app", error);
+      window.location.reload();
+    }
+  };
 
   return (
     <header id="title">
@@ -273,6 +287,16 @@ export function Heading ({
                 <span className="heading-btn-label">Filtros</span>
               </button>
               <ViewToggleButton view={view} toggleView={() => { toggleView(); closeMobileMenu(); }} />
+              <button
+                type="button"
+                className="button is-light heading-refresh-button"
+                onClick={handleForceRefresh}
+                title="Forzar recarga limpiando la caché local de la app"
+                aria-label="Forzar recarga limpiando la caché local de la app"
+                disabled={isRefreshingApp}
+              >
+                <span className="icon"><i className={`fas ${isRefreshingApp ? "fa-spinner fa-spin" : "fa-rotate-right"}`}></i></span>
+              </button>
             </div>
           </>
         )}

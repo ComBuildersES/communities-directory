@@ -1465,7 +1465,7 @@ export function CommunityContribution({
             {isEditMode && (
               <button
                 type="button"
-                className={`button is-small contribution-delete-toggle${isDeletionFormVisible ? " is-active" : ""}`}
+                className={`contribution-delete-toggle${isDeletionFormVisible ? " is-active" : ""}`}
                 onClick={() => setIsDeletionFormVisible((current) => !current)}
               >
                 <i className="fas fa-trash-can" aria-hidden="true"></i>

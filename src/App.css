@@ -162,6 +162,10 @@ body {
   gap: 0.5rem;
 }
 
+.heading-refresh-button {
+  min-width: 0;
+}
+
 /* Hamburger toggle: hidden on desktop */
 .heading-hamburger {
   display: none;

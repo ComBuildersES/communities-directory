@@ -22,6 +22,23 @@ async function cleanupDevelopmentServiceWorkers() {
   }
 }
 
+export async function forceRefreshApp() {
+  if ("serviceWorker" in navigator) {
+    const registrations = await navigator.serviceWorker.getRegistrations();
+    await Promise.all(registrations.map((registration) => registration.unregister()));
+  }
+
+  if ("caches" in window) {
+    const cacheNames = await caches.keys();
+    const appCaches = cacheNames.filter((cacheName) => cacheName.startsWith(APP_CACHE_PREFIX));
+    await Promise.all(appCaches.map((cacheName) => caches.delete(cacheName)));
+  }
+
+  const refreshUrl = new URL(window.location.href);
+  refreshUrl.searchParams.set("_refresh", String(Date.now()));
+  window.location.replace(refreshUrl.toString());
+}
+
 function emitServiceWorkerUpdate(worker) {
   if (!worker) {
     return;
