@@ -24,27 +24,15 @@ Companion to `I18N_SPEC.md`. Each phase ends with a **user checkpoint** before t
 
 ---
 
-## Phase 1 — Extract UI Strings (ES only, one component at a time)
+## Phase 1 — Extract UI Strings _(done 2026-03-27)_ ✅
 
 **What:** Move every hardcoded Spanish string into `es.json` via `t()`. English not enabled yet.
 
-**Sub-steps (each reviewed before the next):**
-1. `Footer.jsx`
-2. `InstallPromptBar.jsx`
-3. `AddCommunityCTA/AddCommunityCTA.jsx` + `ViewToggleButton.jsx`
-4. `Heading.jsx`
-5. `ResultsBar.jsx`
-6. `TagSearch/TagSearch.jsx` — UI labels only (skip enum-keyed dicts)
-7. `CommunityCard.jsx`
-8. `CommunityModal/CommunityModal.jsx` — labels only (skip `STATUS_CLASS` keys)
-9. `App.jsx`
-10. `SideBar.jsx` + `FilterPanel.jsx` — section headers only (skip filter value strings)
-11. `CommunityContribution/CommunityContribution.jsx` — ~1900 lines, all labels + help text
+All components migrated: `Footer`, `InstallPromptBar`, `AddCommunityCTA`, `ViewToggleButton`, `Heading`, `ResultsBar`, `TagSearch`, `CommunityCard`, `CommunityModal`, `App`, `SideBar`, `FilterPanel`, `CommunityContribution` (including sub-components `FieldHelpModal`, `TaxonomyPicker`, `UrlFields`).
 
-**✅ You test after each sub-step:**
-- Component renders identically to before
-- No console errors
-- `npm test` passes after all sub-steps
+Enum value strings (`"Activa"`, `"Presencial"`, `"Tech Meetup"`, etc.) intentionally left in place — Phase 2 scope.
+
+`npm test` — 15/15 pass.
 
 ---
 

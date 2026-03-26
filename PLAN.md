@@ -107,7 +107,9 @@
 - `Map.jsx` ya tenía un bug de doble barra: `"${BASE_URL}/${thumbnailUrl}"` → corregido a `"${community.thumbnailUrl}"` (ya absoluta tras normalización)
 - La detección de locale en el redirect de `main.jsx` no puede depender de `i18n.resolvedLanguage` (puede no estar disponible de forma síncrona) — implementada detección directa con `localStorage` + `navigator.languages`
 
-#### FASE 1 — Extracción de strings UI → Pendiente
+#### FASE 1 — Extracción de strings UI ✅ (2026-03-27)
+
+Todos los strings hardcodeados del UI extraídos a `src/i18n/locales/es.json` usando `t()`. Componentes migrados: `Footer`, `InstallPromptBar`, `AddCommunityCTA`, `ViewToggleButton`, `Heading`, `ResultsBar`, `TagSearch`, `CommunityCard`, `CommunityModal`, `App`, `SideBar`, `FilterPanel`, `CommunityContribution` (incluyendo sub-componentes `FieldHelpModal`, `TaxonomyPicker`, `UrlFields`). Las claves de enum (`"Activa"`, `"Presencial"`, etc.) se han dejado intactas para la Fase 2.
 
 #### FASE 2 — Migración de claves de enum → Pendiente
 

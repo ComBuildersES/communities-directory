@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-27 `3c975bf` integrate i18next for internationalization support
+- 2026-03-27 `b08d37d` complete extraction of hardcoded UI strings to i18n for Spanish localization
+- 2026-03-27 `967b2ac` integrate i18next for internationalization support
 - 2026-03-26 `9b0f09a` enhance CommunityModal and Map components with location handling and focus management
 - 2026-03-26 `f6c0520` enhance UI components with new styles and improve functionality in Heading, ResultsBar, and InstallPromptBar
 - 2026-03-26 `a6c142e` implement force refresh functionality for PWA and enhance CommunityContribution styles
