@@ -47,6 +47,7 @@ function dismissActiveInput() {
 
 function App () {
   const [view, setView] = useState("list");
+  const [mapFocusTarget, setMapFocusTarget] = useState(null);
   const [route, setRoute] = useState(() => parseContributionRoute());
   const [selectedCommunityIdentifier, setSelectedCommunityIdentifier] = useState(() => parseSelectedCommunityIdentifier());
   const [contributionState, setContributionState] = useState({
@@ -157,7 +158,14 @@ function App () {
   }, []);
 
   const toggleView = () => {
+    setMapFocusTarget(null);
     setView((prev) => (prev === "map" ? "list" : "map"));
+  };
+
+  const goToMapLocation = (latLon) => {
+    closeCommunityModal();
+    setMapFocusTarget(latLon);
+    setView("map");
   };
 
   const navigateTo = (path) => {
@@ -313,7 +321,7 @@ function App () {
           </section>
         )}
         {!showContributionView && view === "list" && <CommunitiesList onOpenCommunity={openCommunityModal} />}
-        {!showContributionView && view === "map" && <Map showListView={() => setView("list")} onOpenCommunity={openCommunityModal} />}
+        {!showContributionView && view === "map" && <Map showListView={() => setView("list")} onOpenCommunity={openCommunityModal} initialFocus={mapFocusTarget} />}
       </div>
       {pendingNavigation && (
         <div className="navigation-guard-overlay">
@@ -352,6 +360,7 @@ function App () {
           audienceMap={audienceMap}
           cbHandles={cbMembersMap.get(selectedCommunity.id) || []}
           onClose={closeCommunityModal}
+          onGoToMap={goToMapLocation}
         />
       )}
       <Footer />

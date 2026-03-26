@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-03-26 `5a34176` enhance CommunityModal and Map components with location handling and focus management
 - 2026-03-26 `f6c0520` enhance UI components with new styles and improve functionality in Heading, ResultsBar, and InstallPromptBar
 - 2026-03-26 `a6c142e` implement force refresh functionality for PWA and enhance CommunityContribution styles
 - 2026-03-26 `f4ec2f6` add deletion request functionality and UI enhancements in CommunityContribution component
@@ -111,6 +112,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-26 `1820169` update changelog [skip ci]
 - 2026-03-26 `bf29141` update changelog [skip ci]
 - 2026-03-26 `7903302` update .all-contributorsrc [skip ci]
 - 2026-03-26 `dbece01` update README.md [skip ci]
@@ -164,7 +166,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
-- 2026-03-26 `bee9337` Add thumbnail for Rust Girona community and include image file
+- 2026-03-26 `49c9eaf` Add thumbnail for Rust Girona community and include image file
 - 2026-03-26 `4c02445` Update removal reason for Cloud Español community
 - 2026-03-24 `0e62bf3` Add short description to community entry
 - 2026-03-24 `1cee0e1` Update Twitter URL to new X.com format

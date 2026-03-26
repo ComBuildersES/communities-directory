@@ -118,7 +118,7 @@ function normalizeLocation(location) {
   return v && !INVALID_LOCATION_VALUES.has(v.toLowerCase()) ? v : null;
 }
 
-export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = [], onClose }) {
+export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = [], onClose, onGoToMap }) {
   const { filterComunities } = useCommunityActions();
   const [tagsExpanded, setTagsExpanded] = useState(false);
   const [audienceExpanded, setAudienceExpanded] = useState(false);
@@ -181,7 +181,10 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
     targetAudience = [],
     thumbnailUrl,
     humanValidated,
+    latLon,
   } = community;
+
+  const hasMapCoords = latLon?.lat != null && latLon?.lon != null;
 
   const location = normalizeLocation(rawLocation);
   // URLs a mostrar: las del objeto urls, y communityUrl como fallback si no hay ninguna web
@@ -239,11 +242,22 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                   {eventFormat}
                 </button>
               )}
+              {location && hasMapCoords && onGoToMap ? (
+                <button
+                  type="button"
+                  className="modal-badge modal-badge--location"
+                  onClick={() => onGoToMap(latLon)}
+                  title="Ver en el mapa"
+                >
+                  <i className="fas fa-location-dot"></i> {location}
+                </button>
+              ) : location ? (
+                <span className="modal-badge modal-badge--location modal-badge--location-static">
+                  <i className="fas fa-location-dot"></i> {location}
+                </span>
+              ) : null}
             </div>
             <div className="community-modal-header-meta">
-              {location && (
-                <span><i className="fas fa-location-dot"></i> {location}</span>
-              )}
               {lastReviewed && (
                 <span><i className="fas fa-clock-rotate-left"></i> Revisada: {lastReviewed}</span>
               )}

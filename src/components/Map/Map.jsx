@@ -25,7 +25,7 @@ import './Map.css'
 // React Imports
 import { useEffect, useState, useRef } from 'react'
 
-function Map ({ showListView = null, onOpenCommunity = null }) {
+function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null }) {
   const [activeView, setActiveView] = useState(null)
   const [provincesFeatures, setProvincesFeatures] = useState([])
   const [provincesCenter, setProvincesCenter] = useState()
@@ -473,8 +473,8 @@ function Map ({ showListView = null, onOpenCommunity = null }) {
     <div id="map" className="column" style={{ display: "flex", flexDirection: "column" }}>
       <arcgis-map
         basemap="gray"
-        center="-4, 40"
-        zoom="4"
+        center={initialFocus ? `${initialFocus.lon}, ${initialFocus.lat}` : "-4, 40"}
+        zoom={initialFocus ? "8" : "4"}
         onarcgisViewReadyChange={activeViewChange}
       ></arcgis-map>
       <div className="map-results-note">
