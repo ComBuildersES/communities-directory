@@ -19352,6 +19352,37 @@
         "thumbnailUrl": "images/gdg-girona.webp",
         "humanValidated": true
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.8199439,
+          41.9793006
+        ]
+      },
+      "properties": {
+        "id": 605,
+        "name": "Rust Girona",
+        "status": "Activa",
+        "lastReviewed": "26/03/2026",
+        "communityType": "Tech Meetup",
+        "eventFormat": "Presencial",
+        "location": "Girona",
+        "topics": "",
+        "tags": [
+          "rust"
+        ],
+        "targetAudience": [],
+        "contactInfo": "",
+        "communityUrl": "https://luma.com/rust-girona",
+        "urls": {
+          "github": "https://github.com/rust-girona/"
+        },
+        "thumbnailUrl": "",
+        "humanValidated": true
+      }
     }
   ]
 }
