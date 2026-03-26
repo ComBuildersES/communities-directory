@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-26 `2d7fc80` add deletion request functionality and UI enhancements in CommunityContribution component
+- 2026-03-26 `f4ec2f6` add deletion request functionality and UI enhancements in CommunityContribution component
 - 2026-03-25 `9a3e3a5` add tooltip for communities without fixed location in map component
 - 2026-03-25 `6bcf7fb` enhance mobile navigation and service worker management
 - 2026-03-25 `23cf7b7` add contributor support section with grid layout and links to profiles
@@ -120,6 +120,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-26 `2872a05` update changelog [skip ci]
 - 2026-03-26 `d615de9` update changelog [skip ci]
 - 2026-03-26 `c26217a` update changelog [skip ci]
 - 2026-03-26 `a4f0643` update .all-contributorsrc [skip ci]
