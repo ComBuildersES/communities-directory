@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { CommunitiesList } from "./components/CommunitiesList.jsx";
 import { CommunityContribution } from "./components/CommunityContribution/CommunityContribution.jsx";
 import { CommunityModal } from "./components/CommunityModal/CommunityModal.jsx";
@@ -46,6 +47,7 @@ function dismissActiveInput() {
 }
 
 function App () {
+  const { t } = useTranslation();
   const [view, setView] = useState("list");
   const [mapFocusTarget, setMapFocusTarget] = useState(null);
   const [route, setRoute] = useState(() => parseContributionRoute());
@@ -285,7 +287,7 @@ function App () {
           <article className="message is-info contribution-message">
             <div className="message-body">
               {isRefreshingFreshData
-                ? "Comprobando si hay una version mas reciente del directorio antes de abrir detalles o proponer cambios."
+                ? t("app.checkingFreshData")
                 : freshnessError}
             </div>
           </article>
@@ -307,15 +309,15 @@ function App () {
         {showContributionView && (isLoading || shouldBlockCommunityEdit) && (
           <p className="contribution-loading">
             {shouldBlockCommunityEdit
-              ? "Sincronizando la ultima version antes de permitir la edicion..."
-              : "Cargando formulario..."}
+              ? t("app.syncingBeforeEdit")
+              : t("app.loadingForm")}
           </p>
         )}
         {showContributionView && route.mode === "edit" && !isLoading && !shouldBlockCommunityEdit && !communityToEdit && (
           <section className="contribution-shell">
             <article className="message is-warning contribution-message">
               <div className="message-body">
-                No he encontrado la comunidad que intentabas editar. Puedes volver al directorio o abrir el formulario vacío para crear una nueva.
+                {t("app.communityNotFound")}
               </div>
             </article>
           </section>
@@ -325,29 +327,26 @@ function App () {
       </div>
       {pendingNavigation && (
         <div className="navigation-guard-overlay">
-          <div className="navigation-guard-modal" role="dialog" aria-modal="true" aria-label="Cambios sin guardar">
-            <h3>Hay cambios sin guardar</h3>
-            <p>
-              Si sales ahora perderás lo que has escrito en el formulario. Puedes seguir editando,
-              guardar un borrador local en este navegador o salir sin guardarlo.
-            </p>
+          <div className="navigation-guard-modal" role="dialog" aria-modal="true" aria-label={t("app.unsavedChanges")}>
+            <h3>{t("app.unsavedChanges")}</h3>
+            <p>{t("app.unsavedChangesBody")}</p>
             <div className="navigation-guard-actions">
               <button type="button" className="button is-light" onClick={() => setPendingNavigation(null)}>
-                Seguir editando
+                {t("app.keepEditing")}
               </button>
               <button
                 type="button"
                 className="button is-warning is-light"
                 onClick={() => continuePendingNavigation({ saveDraft: true })}
               >
-                Guardar borrador y salir
+                {t("app.saveDraftAndExit")}
               </button>
               <button
                 type="button"
                 className="button is-danger"
                 onClick={() => continuePendingNavigation({ saveDraft: false })}
               >
-                Salir sin guardar
+                {t("app.exitWithoutSaving")}
               </button>
             </div>
           </div>

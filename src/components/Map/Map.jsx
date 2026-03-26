@@ -14,8 +14,6 @@ import { useCommunitiesFiltered } from "../../stores/community.store.js";
 // import { MapCard } from "../MapCard.jsx"
 import { CommunityCard } from "../CommunityCard.jsx"
 
-const BASE_URL = import.meta.env.BASE_URL
-
 // import communities from "/public/data/communities.json"
 //import communities from "/public/data/communities.geojson"
 
@@ -250,10 +248,10 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
       )
       .join("")
 
-    const img = `<img 
-                  src="${BASE_URL}/${community.thumbnailUrl}" 
-                  alt="${community.name}" 
-                  style="width: 100%  border-radius: 8px  margin-bottom: 12px " 
+    const img = `<img
+                  src="${community.thumbnailUrl}"
+                  alt="${community.name}"
+                  style="width: 100%  border-radius: 8px  margin-bottom: 12px "
                 />`
 
 

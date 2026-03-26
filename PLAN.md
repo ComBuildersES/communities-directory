@@ -84,6 +84,41 @@
 
 ---
 
+## Iniciativa i18n — Internacionalización (iniciada 2026-03-26)
+
+### Documentos de referencia
+- `I18N_SPEC.md` — estrategia completa (decisiones de arquitectura, modelo de datos, fases)
+- `IMPLEMENTATION_PLAN.md` — plan de implementación con checkpoints por fase
+
+### Estado
+
+#### FASE 0 — Infraestructura i18n ✅ (2026-03-26)
+
+- `i18next` + `react-i18next` + `i18next-browser-languagedetector` instalados
+- `src/i18n/index.js` — config con detección por orden: URL path → localStorage → `navigator.languages`
+- `src/i18n/locales/es.json` + `en.json` — vacíos, listos para recibir claves
+- `src/main.jsx` — redirect al locale detectado si la URL no tiene prefijo de locale
+- `public/404.html` — fallback SPA para GitHub Pages (codifica path en `?_spa=`)
+- `index.html` — snippet de restauración de path (antes de que arranque React)
+
+**Bugs encontrados y corregidos durante Phase 0:**
+- Todas las URLs de fetch de datos (`communities.json`, `tags.json`, `audience.json`, `community-builders-members.json`) eran relativas y se resolvían contra `/es/` → `404`. Corregidas con `import.meta.env.BASE_URL` como prefijo
+- `thumbnailUrl` en los registros también era relativo — normalizado a ruta absoluta en el store al cargar datos (componentes reciben URL lista para usar)
+- `Map.jsx` ya tenía un bug de doble barra: `"${BASE_URL}/${thumbnailUrl}"` → corregido a `"${community.thumbnailUrl}"` (ya absoluta tras normalización)
+- La detección de locale en el redirect de `main.jsx` no puede depender de `i18n.resolvedLanguage` (puede no estar disponible de forma síncrona) — implementada detección directa con `localStorage` + `navigator.languages`
+
+#### FASE 1 — Extracción de strings UI → Pendiente
+
+#### FASE 2 — Migración de claves de enum → Pendiente
+
+#### FASE 3 — Traducción inglés + selector de idioma → Pendiente
+
+#### FASE 4 — Taxonomías i18n + store locale-aware → Pendiente
+
+#### FASE 5 — Campo `langs` en comunidades + filtro → Pendiente
+
+---
+
 ## Próximos pasos
 
 ### FASE 1 — Completar enriquecimiento de datos

@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState, useRef, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import {
   useTags,
   useAudience,
@@ -84,6 +85,7 @@ function dismissActiveInput() {
 }
 
 export function TagSearch() {
+  const { t } = useTranslation();
   const [query, setQuery] = useState("");
   const [activeFilters, setActiveFilters] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
@@ -124,7 +126,7 @@ export function TagSearch() {
             );
           })
           .map((tag) => ({
-            group: tag.category || "Temáticas",
+            group: tag.category || t("tagSearch.groupTopics"),
             key: "tags",
             value: tag.id,
             label: tag.label,
@@ -140,7 +142,7 @@ export function TagSearch() {
             );
           })
           .map((audience) => ({
-            group: "Público objetivo",
+            group: t("tagSearch.groupAudience"),
             key: "targetAudience",
             value: audience.id,
             label: audience.label,
@@ -163,11 +165,11 @@ export function TagSearch() {
           })
           .slice(0, 12)
           .map((community) => ({
-            group: "Comunidades",
+            group: t("tagSearch.groupCommunities"),
             key: "name",
             value: community.name,
             label: community.name,
-            description: "Comunidad",
+            description: t("tagSearch.communityLabel"),
             meta: buildCommunityMeta(community),
             communityIdentifier: community.id ?? slugifyCommunityName(community.name),
           })),
@@ -252,7 +254,7 @@ export function TagSearch() {
               <button
                 className="tag-chip-remove"
                 onClick={() => removeFilter(filter)}
-                aria-label={`Quitar ${filter.label}`}
+                aria-label={t("tagSearch.removeChip", { label: filter.label })}
               >
                 <i className="fas fa-times"></i>
               </button>
@@ -264,8 +266,8 @@ export function TagSearch() {
             type="text"
             placeholder={
               activeFilters.length === 0
-                ? "Filtrar por temática, público o comunidad…"
-                : "Añadir otro filtro…"
+                ? t("tagSearch.placeholder")
+                : t("tagSearch.placeholderMore")
             }
             value={query}
             onChange={(e) => {
@@ -279,7 +281,7 @@ export function TagSearch() {
           <button
             className="tag-search-clear"
             onClick={clearAll}
-            title="Limpiar filtros"
+            title={t("tagSearch.clearFilters")}
           >
             <i className="fas fa-times-circle"></i>
           </button>

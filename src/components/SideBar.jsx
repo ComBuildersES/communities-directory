@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 import { Switch } from "./Switch";
 import { useSideBarVisible, useSidebarActions } from "../stores/sidebar.store.js";
 
 export const Sidebar = () => {
+  const { t } = useTranslation();
   const isSidebarVisible = useSideBarVisible();
   const { toggleSidebar } = useSidebarActions();
 
@@ -15,11 +17,11 @@ export const Sidebar = () => {
         <button
           className="sidebar-toggle-btn"
           onClick={toggleSidebar}
-          title={isSidebarVisible ? "Ocultar filtros" : "Mostrar filtros"}
+          title={isSidebarVisible ? t("resultsBar.hideFilters") : t("resultsBar.showFilters")}
         >
           <i className={`fas ${isSidebarVisible ? "fa-chevron-right" : "fa-filter"}`}></i>
         </button>
-        <p className="menu-label">Tipo de Comunidad</p>
+        <p className="menu-label">{t("sidebar.communityType")}</p>
       </div>
       <div className="sidebar-content">
       <ul className="menu-list">
@@ -67,7 +69,7 @@ export const Sidebar = () => {
         </li>
       </ul>
 
-      <p className="menu-label">Tipo de Eventos</p>
+      <p className="menu-label">{t("sidebar.eventFormat")}</p>
       <ul className="menu-list">
         <li className="menu-item">
           <div className="option-item is-size-7">
@@ -95,7 +97,7 @@ export const Sidebar = () => {
         </li>
       </ul>
 
-      <p className="menu-label">Estado de la comunidad</p>
+      <p className="menu-label">{t("sidebar.status")}</p>
       {/*Aqui podia definir un list box de seleccion multiple con 
         las distintas provincias como opciones */}
       <ul className="menu-list">

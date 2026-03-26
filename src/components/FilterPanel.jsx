@@ -1,14 +1,16 @@
+import { useTranslation } from "react-i18next";
 import { Switch } from "./Switch";
 import { useSideBarVisible } from "../stores/sidebar.store.js";
 
 export function FilterPanel() {
+  const { t } = useTranslation();
   const isVisible = useSideBarVisible();
 
   return (
     <div className={`filter-panel ${isVisible ? "filter-panel--open" : ""}`}>
       <div className="filter-panel-inner">
         <div className="filter-group">
-          <p className="filter-group-label">Tipo de Comunidad</p>
+          <p className="filter-group-label">{t("sidebar.communityType")}</p>
           <div className="filter-group-items">
             <div className="option-item is-size-7"><p>Tech Meetup</p><Switch name="communityType" value="Tech Meetup" /></div>
             <div className="option-item is-size-7"><p>Conferencia</p><Switch name="communityType" value="Conferencia" /></div>
@@ -23,7 +25,7 @@ export function FilterPanel() {
         <div className="filter-group-divider" />
 
         <div className="filter-group">
-          <p className="filter-group-label">Tipo de Eventos</p>
+          <p className="filter-group-label">{t("sidebar.eventFormat")}</p>
           <div className="filter-group-items">
             <div className="option-item is-size-7"><p>Híbridos</p><Switch name="eventFormat" value="Híbridos" /></div>
             <div className="option-item is-size-7"><p>Online</p><Switch name="eventFormat" value="Online" /></div>
@@ -35,7 +37,7 @@ export function FilterPanel() {
         <div className="filter-group-divider" />
 
         <div className="filter-group">
-          <p className="filter-group-label">Estado</p>
+          <p className="filter-group-label">{t("sidebar.status")}</p>
           <div className="filter-group-items">
             <div className="option-item is-size-7"><p>Activa</p><Switch name="status" value="Activa" /></div>
             <div className="option-item is-size-7"><p>Inactiva</p><Switch name="status" value="Inactiva" /></div>

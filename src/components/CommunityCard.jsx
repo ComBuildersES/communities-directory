@@ -1,5 +1,8 @@
 /* eslint-disable react/prop-types */
+import { useTranslation } from "react-i18next";
+
 export function CommunityCard({ community, hasCBMember = false, onOpen }) {
+  const { t } = useTranslation();
   const {
     name: comunidad,
     thumbnailUrl: miniatura,
@@ -20,14 +23,14 @@ export function CommunityCard({ community, hasCBMember = false, onOpen }) {
         }}
         role="button"
         tabIndex={0}
-        title={`Ver detalles de ${comunidad}`}
+        title={t("communityCard.viewDetails", { name: comunidad })}
       >
         <div className="card-image card-image--clickable">
           <figure className="image is-1by1 community-card-media">
             {hasCBMember && (
               <span
                 className="cb-badge"
-                title="Personas que dinamizan esta comunidad también forman parte de la comunidad Community Builders que impulsa este directorio"
+                title={t("communityCard.cbBadgeTitle")}
                 onClick={(e) => e.stopPropagation()}
               >
                 <i className="fa-solid fa-people-group" aria-hidden="true"></i>

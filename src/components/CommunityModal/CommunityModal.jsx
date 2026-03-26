@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { useCommunityActions } from "../../stores/community.store.js";
 import { buildContributionPath } from "../../lib/communitySubmission";
 import "./CommunityModal.css";
@@ -25,14 +26,14 @@ function extractSocialHandle(platform, url) {
   }
 }
 
-function buildShareLinks(community) {
+function buildShareLinks(community, t) {
   const urls = community.urls || {};
   const directLink = `${APP_URL}?community=${community.id}`;
   const enc = encodeURIComponent;
 
   function msg(subject, ccHandle) {
     const cc = ccHandle ? ` // cc: ${ccHandle}` : "";
-    return `Esta ficha de ${subject} resume lo que encontrarás allí de un vistazo: ${directLink}${cc}`;
+    return t("communityModal.shareMsg", { subject, link: directLink, cc });
   }
 
   const twitterHandle = extractSocialHandle("generic", urls.twitter);
@@ -72,33 +73,31 @@ function buildShareLinks(community) {
   ];
 }
 
-const URL_CONFIG = [
-  { key: "web",            label: "Web",                icon: "fas fa-globe" },
-  { key: "eventsUrl",      label: "Eventos",            icon: "fas fa-calendar-days" },
-  { key: "linkAggregator", label: "Agregador de links", icon: "fas fa-link" },
-  { key: "mailingList",    label: "Lista de correo",    icon: "fas fa-envelope" },
-  { key: "github",         label: "GitHub",             icon: "fab fa-github" },
-  { key: "discord",        label: "Discord",            icon: "fab fa-discord" },
-  { key: "telegram",       label: "Telegram",           icon: "fab fa-telegram" },
-  { key: "whatsapp",       label: "WhatsApp",           icon: "fab fa-whatsapp" },
-  { key: "slack",          label: "Slack",              icon: "fab fa-slack" },
-  { key: "youtube",        label: "YouTube",            icon: "fab fa-youtube" },
-  { key: "linkedin",       label: "LinkedIn",           icon: "fab fa-linkedin" },
-  { key: "twitter",        label: "Twitter/X",          icon: "fab fa-x-twitter" },
-  { key: "tiktok",         label: "TikTok",             icon: "fab fa-tiktok" },
-  { key: "instagram",      label: "Instagram",          icon: "fab fa-instagram" },
-  { key: "facebook",       label: "Facebook",           icon: "fab fa-facebook" },
-  { key: "mastodon",       label: "Mastodon",           icon: "fab fa-mastodon" },
-  { key: "bluesky",        label: "Bluesky",            icon: "fas fa-cloud" },
-  { key: "twitch",         label: "Twitch",             icon: "fab fa-twitch" },
+const URL_CONFIG_KEYS = [
+  { key: "web",            labelKey: "communityModal.url.web",            icon: "fas fa-globe" },
+  { key: "eventsUrl",      labelKey: "communityModal.url.events",         icon: "fas fa-calendar-days" },
+  { key: "linkAggregator", labelKey: "communityModal.url.linkAggregator", icon: "fas fa-link" },
+  { key: "mailingList",    labelKey: "communityModal.url.mailingList",     icon: "fas fa-envelope" },
+  { key: "github",         labelKey: "communityModal.url.github",          icon: "fab fa-github" },
+  { key: "discord",        labelKey: "communityModal.url.discord",         icon: "fab fa-discord" },
+  { key: "telegram",       labelKey: "communityModal.url.telegram",        icon: "fab fa-telegram" },
+  { key: "whatsapp",       labelKey: "communityModal.url.whatsapp",        icon: "fab fa-whatsapp" },
+  { key: "slack",          labelKey: "communityModal.url.slack",           icon: "fab fa-slack" },
+  { key: "youtube",        labelKey: "communityModal.url.youtube",         icon: "fab fa-youtube" },
+  { key: "linkedin",       labelKey: "communityModal.url.linkedin",        icon: "fab fa-linkedin" },
+  { key: "twitter",        labelKey: "communityModal.url.twitter",         icon: "fab fa-x-twitter" },
+  { key: "tiktok",         labelKey: "communityModal.url.tiktok",          icon: "fab fa-tiktok" },
+  { key: "instagram",      labelKey: "communityModal.url.instagram",       icon: "fab fa-instagram" },
+  { key: "facebook",       labelKey: "communityModal.url.facebook",        icon: "fab fa-facebook" },
+  { key: "mastodon",       labelKey: "communityModal.url.mastodon",        icon: "fab fa-mastodon" },
+  { key: "bluesky",        labelKey: "communityModal.url.bluesky",         icon: "fas fa-cloud" },
+  { key: "twitch",         labelKey: "communityModal.url.twitch",          icon: "fab fa-twitch" },
 ];
 
-const URL_CONFIG_BY_KEY = Object.fromEntries(URL_CONFIG.map(c => [c.key, c]));
-
-const URL_GROUPS = [
-  { key: "comunidad",  label: "Comunidad",       icon: "fas fa-globe",        keys: ["web", "eventsUrl", "linkAggregator", "mailingList", "github"], defaultOpen: false },
-  { key: "chat",       label: "Chat",             icon: "fas fa-comments",     keys: ["discord", "telegram", "whatsapp", "slack"],                    defaultOpen: false },
-  { key: "social",     label: "Redes y vídeo",   icon: "fas fa-share-nodes",  keys: ["youtube", "linkedin", "twitter", "tiktok", "instagram", "facebook", "mastodon", "bluesky", "twitch"], defaultOpen: false },
+const URL_GROUP_DEFS = [
+  { key: "comunidad", labelKey: "communityModal.urlGroup.community", icon: "fas fa-globe",       keys: ["web", "eventsUrl", "linkAggregator", "mailingList", "github"] },
+  { key: "chat",      labelKey: "communityModal.urlGroup.chat",      icon: "fas fa-comments",    keys: ["discord", "telegram", "whatsapp", "slack"] },
+  { key: "social",    labelKey: "communityModal.urlGroup.social",    icon: "fas fa-share-nodes", keys: ["youtube", "linkedin", "twitter", "tiktok", "instagram", "facebook", "mastodon", "bluesky", "twitch"] },
 ];
 
 const STATUS_CLASS = {
@@ -119,6 +118,7 @@ function normalizeLocation(location) {
 }
 
 export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = [], onClose, onGoToMap }) {
+  const { t } = useTranslation();
   const { filterComunities } = useCommunityActions();
   const [tagsExpanded, setTagsExpanded] = useState(false);
   const [audienceExpanded, setAudienceExpanded] = useState(false);
@@ -127,6 +127,10 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
   const shareRef = useRef(null);
 
   const CHIPS_THRESHOLD = 3;
+
+  const URL_CONFIG = URL_CONFIG_KEYS.map(({ key, labelKey, icon }) => ({ key, label: t(labelKey), icon }));
+  const URL_CONFIG_BY_KEY = Object.fromEntries(URL_CONFIG.map(c => [c.key, c]));
+  const URL_GROUPS = URL_GROUP_DEFS.map(({ key, labelKey, icon, keys }) => ({ key, label: t(labelKey), icon, keys }));
 
   const applyFilter = (key, value) => {
     filterComunities(key, value);
@@ -218,7 +222,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                 type="button"
                 className={STATUS_CLASS[status] || STATUS_CLASS.Desconocido}
                 onClick={() => applyFilter("status", status)}
-                title={`Filtrar por estado ${status}`}
+                title={t("communityModal.filterByStatus", { status })}
               >
                 {status}
               </button>
@@ -227,7 +231,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                   type="button"
                   className="modal-badge modal-badge--type"
                   onClick={() => applyFilter("communityType", communityType)}
-                  title={`Filtrar por tipo de comunidad ${communityType}`}
+                  title={t("communityModal.filterByType", { communityType })}
                 >
                   {communityType}
                 </button>
@@ -237,7 +241,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                   type="button"
                   className="modal-badge modal-badge--format"
                   onClick={() => applyFilter("eventFormat", eventFormat)}
-                  title={`Filtrar por tipo de evento ${eventFormat}`}
+                  title={t("communityModal.filterByFormat", { eventFormat })}
                 >
                   {eventFormat}
                 </button>
@@ -247,7 +251,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                   type="button"
                   className="modal-badge modal-badge--location"
                   onClick={() => onGoToMap(latLon)}
-                  title="Ver en el mapa"
+                  title={t("communityModal.viewOnMap")}
                 >
                   <i className="fas fa-location-dot"></i> {location}
                 </button>
@@ -259,7 +263,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
             </div>
             <div className="community-modal-header-meta">
               {lastReviewed && (
-                <span><i className="fas fa-clock-rotate-left"></i> Revisada: {lastReviewed}</span>
+                <span><i className="fas fa-clock-rotate-left"></i> {t("communityModal.reviewed", { date: lastReviewed })}</span>
               )}
               {contactInfo && (
                 <span>
@@ -269,7 +273,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
               )}
             </div>
           </div>
-          <button className="community-modal-close" onClick={onClose} aria-label="Cerrar">
+          <button className="community-modal-close" onClick={onClose} aria-label={t("communityModal.close")}>
             <i className="fas fa-times"></i>
           </button>
         </div>
@@ -278,10 +282,10 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
         <div className="community-modal-body">
           <div className="community-modal-section">
             <h3 className="community-modal-section-title">
-              <i className="fas fa-align-left"></i> Descripcion breve
+              <i className="fas fa-align-left"></i> {t("communityModal.shortDescription")}
             </h3>
             <p className={`community-modal-summary ${shortDescription ? "" : "community-modal-summary--missing"}`}>
-              {shortDescription || "Sin descripcion breve todavia"}
+              {shortDescription || t("communityModal.noDescription")}
             </p>
           </div>
 
@@ -290,7 +294,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
           {(urlEntries.length > 0 || showFallbackUrl) && (
             <div className="community-modal-section">
               <h3 className="community-modal-section-title">
-                <i className="fas fa-link"></i> Enlaces
+                <i className="fas fa-link"></i> {t("communityModal.links")}
               </h3>
               <div className="community-modal-url-groups">
                 {URL_GROUPS.map(({ key: groupKey, label, icon, keys }) => {
@@ -324,7 +328,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                           {includeFallback && (
                             <a href={communityUrl} target="_blank" rel="noopener noreferrer" className="community-modal-url-dropdown-item">
                               <i className="fas fa-arrow-up-right-from-square"></i>
-                              <span>Enlace principal</span>
+                              <span>{t("communityModal.mainLink")}</span>
                             </a>
                           )}
                         </div>
@@ -335,7 +339,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
               </div>
               {communityUrlIsArchived && (
                 <p className="community-modal-url-note">
-                  El enlace principal apunta a una copia archivada en web.archive.org porque la fuente original ya no parece estar disponible.
+                  {t("communityModal.archivedUrlNote")}
                 </p>
               )}
             </div>
@@ -347,7 +351,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
               {tags.length > 0 && (
                 <div className="community-modal-section">
                   <h3 className="community-modal-section-title">
-                    <i className="fas fa-tags"></i> Temáticas
+                    <i className="fas fa-tags"></i> {t("communityModal.topics")}
                   </h3>
                   <div className="community-modal-chips">
                     {(tagsExpanded ? tags : tags.slice(0, CHIPS_THRESHOLD)).map((tagId) => (
@@ -356,19 +360,19 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                         type="button"
                         className="community-modal-chip community-modal-chip--tag"
                         onClick={() => applyFilter("tags", tagId)}
-                        title={`Filtrar por ${tagsMap[tagId] || tagId}`}
+                        title={t("communityModal.filterByTag", { tag: tagsMap[tagId] || tagId })}
                       >
                         {tagsMap[tagId] || tagId}
                       </button>
                     ))}
                     {!tagsExpanded && tags.length > CHIPS_THRESHOLD && (
                       <button type="button" className="community-modal-chip community-modal-chip--more" onClick={() => setTagsExpanded(true)}>
-                        +{tags.length - CHIPS_THRESHOLD} más
+                        {t("communityModal.showMore", { count: tags.length - CHIPS_THRESHOLD })}
                       </button>
                     )}
                     {tagsExpanded && tags.length > CHIPS_THRESHOLD && (
                       <button type="button" className="community-modal-chip community-modal-chip--more" onClick={() => setTagsExpanded(false)}>
-                        Mostrar menos
+                        {t("communityModal.showLess")}
                       </button>
                     )}
                   </div>
@@ -377,7 +381,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
               {targetAudience.length > 0 && (
                 <div className="community-modal-section">
                   <h3 className="community-modal-section-title">
-                    <i className="fas fa-users"></i> Público objetivo
+                    <i className="fas fa-users"></i> {t("communityModal.audience")}
                   </h3>
                   <div className="community-modal-chips">
                     {(audienceExpanded ? targetAudience : targetAudience.slice(0, CHIPS_THRESHOLD)).map((audId) => (
@@ -386,19 +390,19 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                         type="button"
                         className="community-modal-chip community-modal-chip--audience"
                         onClick={() => applyFilter("targetAudience", audId)}
-                        title={`Filtrar por ${audienceMap[audId] || audId}`}
+                        title={t("communityModal.filterByAudience", { audience: audienceMap[audId] || audId })}
                       >
                         {audienceMap[audId] || audId}
                       </button>
                     ))}
                     {!audienceExpanded && targetAudience.length > CHIPS_THRESHOLD && (
                       <button type="button" className="community-modal-chip community-modal-chip--more" onClick={() => setAudienceExpanded(true)}>
-                        +{targetAudience.length - CHIPS_THRESHOLD} más
+                        {t("communityModal.showMore", { count: targetAudience.length - CHIPS_THRESHOLD })}
                       </button>
                     )}
                     {audienceExpanded && targetAudience.length > CHIPS_THRESHOLD && (
                       <button type="button" className="community-modal-chip community-modal-chip--more" onClick={() => setAudienceExpanded(false)}>
-                        Mostrar menos
+                        {t("communityModal.showLess")}
                       </button>
                     )}
                   </div>
@@ -411,12 +415,12 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
           <div className="community-modal-two-col">
             <div className="community-modal-section">
               <h3 className="community-modal-section-title">
-                <i className="fas fa-pen-to-square"></i> Colaborar
+                <i className="fas fa-pen-to-square"></i> {t("communityModal.collaborate")}
                 {!humanValidated && (
                   <span className="community-modal-cb-tooltip-anchor">
                     <i className="fa-solid fa-robot community-modal-cb-info-icon"></i>
                     <span className="community-modal-cb-tooltip">
-                      Datos enriquecidos automáticamente, pendientes de validación humana. Bajo CC BY 4.0, tu aportación beneficiará también a quien reutilice este directorio.
+                      {t("communityModal.aiDataTooltip")}
                     </span>
                   </span>
                 )}
@@ -427,7 +431,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                   className="community-modal-url-item community-modal-share-btn"
                 >
                     <i className="fas fa-pen-to-square"></i>
-                    <span>Editar</span>
+                    <span>{t("communityModal.edit")}</span>
                 </a>
                 <div className="community-modal-url-group" ref={shareRef}>
                   <button
@@ -436,12 +440,12 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                     onClick={() => setIsShareOpen((v) => !v)}
                   >
                     <i className="fas fa-share-nodes"></i>
-                    <span>Compartir</span>
+                    <span>{t("communityModal.share")}</span>
                     <i className="fas fa-chevron-down community-modal-url-group-chevron"></i>
                   </button>
                   {isShareOpen && (
                     <div className="community-modal-url-dropdown community-modal-share-dropdown">
-                      {buildShareLinks(community).map(({ key, label, icon, href }) => (
+                      {buildShareLinks(community, t).map(({ key, label, icon, href }) => (
                         <a
                           key={key}
                           href={href}
@@ -465,7 +469,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                   <span className="community-modal-cb-tooltip-anchor">
                     <i className="fa-solid fa-circle-info community-modal-cb-info-icon"></i>
                     <span className="community-modal-cb-tooltip">
-                      Alguna de las personas que lidera o lideró esta comunidad forma parte de Community Builders, la meta-comunidad de organizadores de comunidades tech en España.
+                      {t("communityModal.cbTooltip")}
                     </span>
                   </span>
                 )}
@@ -473,7 +477,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
               {cbHandles.length > 0 ? (
                 <div className="community-modal-cb-members">
                   {cbHandles.map((handle) => (
-                    <a key={handle} href={`https://github.com/${handle}`} target="_blank" rel="noopener noreferrer" className="community-modal-cb-member" title={`@${handle} en GitHub`}>
+                    <a key={handle} href={`https://github.com/${handle}`} target="_blank" rel="noopener noreferrer" className="community-modal-cb-member" title={t("communityModal.githubHandle", { handle })}>
                       <img src={`https://github.com/${handle}.png?size=40`} alt={handle} className="community-modal-cb-avatar" />
                       <span>@{handle}</span>
                     </a>
@@ -481,9 +485,9 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                 </div>
               ) : (
                 <p className="community-modal-cb-inline-cta">
-                  ¿Dinamizas esta comunidad?{" "}
+                  {t("communityModal.cbCta")}{" "}
                   <a href="https://combuilderses.github.io/" target="_blank" rel="noopener noreferrer">
-                    Únete a Community Builders
+                    {t("communityModal.cbCtaLink")}
                   </a>
                 </p>
               )}

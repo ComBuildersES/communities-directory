@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   applyServiceWorkerUpdate,
   getInstallBannerState,
@@ -13,6 +14,7 @@ const DISMISSED_STATE = "dismissed";
 const INSTALLED_STATE = "installed";
 
 export function InstallPromptBar () {
+  const { t } = useTranslation();
   const isIos = useMemo(() => isIosDevice(), []);
   const [isVisible, setIsVisible] = useState(() => isIos);
   const [deferredPrompt, setDeferredPrompt] = useState(null);
@@ -129,8 +131,8 @@ export function InstallPromptBar () {
       <div className="install-prompt-bar__content">
         <p className="install-prompt-bar__text">
           {isUpdateAvailable
-            ? "Hay una nueva versión del directorio lista para cargar con los datos y mejoras más recientes."
-            : "Guarda esta web como app para abrir el directorio más rápido desde tu móvil."}
+            ? t("installPromptBar.updateAvailable")
+            : t("installPromptBar.installHint")}
         </p>
         <div className="install-prompt-bar__actions">
           {isUpdateAvailable && (
@@ -140,17 +142,17 @@ export function InstallPromptBar () {
               onClick={handleUpdate}
               disabled={isReloadingUpdate}
             >
-              {isReloadingUpdate ? "Actualizando..." : "Recargar"}
+              {isReloadingUpdate ? t("installPromptBar.updating") : t("installPromptBar.reload")}
             </button>
           )}
           {isInstallAvailable && (
             <button type="button" className="button is-primary is-small install-prompt-bar__button" onClick={handleInstall}>
-              Instalar
+              {t("installPromptBar.install")}
             </button>
           )}
           {!isUpdateAvailable && !isInstallAvailable && isIos && (
             <p className="install-prompt-bar__hint">
-              Safari: Compartir <span aria-hidden="true">→</span> Añadir a pantalla de inicio
+              {t("installPromptBar.iosHintPrefix")} <span aria-hidden="true">→</span> {t("installPromptBar.iosHintSuffix")}
             </p>
           )}
           {!isUpdateAvailable && (
@@ -158,7 +160,7 @@ export function InstallPromptBar () {
               type="button"
               className="install-prompt-bar__dismiss"
               onClick={dismissBanner}
-              aria-label="Cerrar aviso de instalación"
+              aria-label={t("installPromptBar.closeAriaLabel")}
             >
               <i className="fas fa-times" aria-hidden="true"></i>
             </button>

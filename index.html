@@ -34,6 +34,22 @@
     <meta name="twitter:image:alt" content="Directorio de Comunidades Técnicas de España — +500 meetups, conferencias y más" />
   </head>
   <body>
+    <!-- Path-restore: when GitHub Pages 404.html encodes a deep link into
+         ?_spa=, this script restores it before React boots so the locale
+         path prefix (/es/, /en/) is visible to i18next on first paint. -->
+    <script>
+      (function () {
+        var spa = new URLSearchParams(window.location.search).get('_spa');
+        if (spa) {
+          var base = window.location.pathname.replace(/\/$/, '');
+          window.history.replaceState(
+            null,
+            '',
+            base + decodeURIComponent(spa)
+          );
+        }
+      })();
+    </script>
     <div id="search_app"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

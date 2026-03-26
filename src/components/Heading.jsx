@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import allContributorsRaw from "../../.all-contributorsrc?raw";
 const allContributorsRc = JSON.parse(allContributorsRaw);
 
@@ -11,37 +12,39 @@ const APP_URL = "https://combuilderses.github.io/communities-directory/";
 const GITHUB_URL = "https://github.com/ComBuildersES/communities-directory";
 const DATA_URL = "https://github.com/ComBuildersES/communities-directory/tree/master/public/data";
 
-function shareText(handle) {
-  return `Este directorio de ${handle} no puede faltar en vuestra barra de favoritos, es el mayor listado de meetups, conferencias y comunidades técnicas de España: ${APP_URL} (y encima es open source & opendata! :D)`;
+function shareText(handle, t) {
+  return t("heading.shareText", { handle, url: APP_URL });
 }
 
-const SHARE_LINKS = [
-  {
-    label: "X / Twitter",
-    icon: "fa-brands fa-x-twitter",
-    href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText("@ComBuilders_ES"))}`,
-  },
-  {
-    label: "Bluesky",
-    icon: "fa-brands fa-bluesky",
-    href: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText("@communitybuilders.bsky.social"))}`,
-  },
-  {
-    label: "LinkedIn",
-    icon: "fa-brands fa-linkedin-in",
-    href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(APP_URL)}`,
-  },
-  {
-    label: "WhatsApp",
-    icon: "fa-brands fa-whatsapp",
-    href: `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText("Community Builders"))}`,
-  },
-  {
-    label: "Telegram",
-    icon: "fa-brands fa-telegram",
-    href: `https://t.me/share/url?url=${encodeURIComponent(APP_URL)}&text=${encodeURIComponent(shareText("Community Builders"))}`,
-  },
-];
+function buildShareLinks(t) {
+  return [
+    {
+      label: "X / Twitter",
+      icon: "fa-brands fa-x-twitter",
+      href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText("@ComBuilders_ES", t))}`,
+    },
+    {
+      label: "Bluesky",
+      icon: "fa-brands fa-bluesky",
+      href: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText("@communitybuilders.bsky.social", t))}`,
+    },
+    {
+      label: "LinkedIn",
+      icon: "fa-brands fa-linkedin-in",
+      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(APP_URL)}`,
+    },
+    {
+      label: "WhatsApp",
+      icon: "fa-brands fa-whatsapp",
+      href: `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText("Community Builders", t))}`,
+    },
+    {
+      label: "Telegram",
+      icon: "fa-brands fa-telegram",
+      href: `https://t.me/share/url?url=${encodeURIComponent(APP_URL)}&text=${encodeURIComponent(shareText("Community Builders", t))}`,
+    },
+  ];
+}
 
 export function Heading ({
   isContributionView = false,
@@ -49,6 +52,7 @@ export function Heading ({
   goToHome,
   goToContribution,
 }) {
+  const { t } = useTranslation();
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const aboutRef = useRef(null);
@@ -56,6 +60,7 @@ export function Heading ({
   const bookmarkShortcut = useMemo(() => (
     /mac/i.test(window.navigator.userAgent) ? "Cmd + D" : "Ctrl + D"
   ), []);
+  const SHARE_LINKS = useMemo(() => buildShareLinks(t), [t]);
 
   useEffect(() => {
     if (!isAboutOpen) return;
@@ -116,8 +121,8 @@ export function Heading ({
             <i className="fas fa-people-group"></i>
           </div>
           <div>
-            <h1 className="heading-title">Comunidades Tech</h1>
-            <p className="heading-subtitle">Directorio de comunidades tecnológicas de España</p>
+            <h1 className="heading-title">{t("heading.title")}</h1>
+            <p className="heading-subtitle">{t("heading.subtitle")}</p>
           </div>
         </button>
       </div>
@@ -126,7 +131,7 @@ export function Heading ({
         {isContributionView ? (
           <button className="heading-action-btn" onClick={closeContributionForm}>
             <i className="fas fa-arrow-left"></i>
-            <span>Volver</span>
+            <span>{t("heading.back")}</span>
           </button>
         ) : (
           <>
@@ -134,7 +139,7 @@ export function Heading ({
               type="button"
               className="button is-light heading-hamburger"
               onClick={() => setIsMobileMenuOpen((prev) => !prev)}
-              aria-label={isMobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+              aria-label={isMobileMenuOpen ? t("heading.closeMenu") : t("heading.openMenu")}
               aria-expanded={isMobileMenuOpen}
             >
               <span className="icon">
@@ -148,43 +153,43 @@ export function Heading ({
                   type="button"
                   className={`heading-action-btn${isAboutOpen ? " heading-action-btn--active" : ""}`}
                   onClick={() => setIsAboutOpen((current) => !current)}
-                  title="Sobre el proyecto"
+                  title={t("heading.about")}
                   aria-expanded={isAboutOpen}
                   aria-haspopup="dialog"
                 >
                   <i className="fas fa-circle-info"></i>
-                  <span className="heading-btn-label">Sobre el proyecto</span>
+                  <span className="heading-btn-label">{t("heading.about")}</span>
                 </button>
                 {isAboutOpen && (
                   <>
                   <div className="heading-support-backdrop" onClick={() => setIsAboutOpen(false)} aria-hidden="true" />
-                  <div className="heading-support-popover" role="dialog" aria-label="Sobre el proyecto">
-                    <p className="heading-support-title">Sobre el proyecto</p>
+                  <div className="heading-support-popover" role="dialog" aria-label={t("heading.about")}>
+                    <p className="heading-support-title">{t("heading.about")}</p>
                     <p className="heading-support-copy">
-                      Nuestro objetivo es mantener el mayor directorio de comunidades tecnológicas de España. Iniciativa de{" "}
+                      {t("heading.aboutCopy1")}{" "}
                       <a href="https://communitybuilders.es" target="_blank" rel="noopener noreferrer">Community Builders ES</a>,{" "}
-                      con{" "}
-                      <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">código abierto</a>{" "}
-                      y{" "}
-                      <a href={DATA_URL} target="_blank" rel="noopener noreferrer">datos abiertos</a>.
-                      Si te resulta útil, dale una ⭐ en{" "}
+                      {t("heading.aboutCopy2")}{" "}
+                      <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">{t("heading.openSource")}</a>{" "}
+                      {t("heading.aboutCopy3")}{" "}
+                      <a href={DATA_URL} target="_blank" rel="noopener noreferrer">{t("heading.openData")}</a>.
+                      {" "}{t("heading.aboutStar")}{" "}
                       <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">GitHub</a>.
                     </p>
                     <p className="heading-support-copy">
-                      Y no te olvides de guardar en favoritos: <strong>{bookmarkShortcut}</strong>.
+                      {t("heading.bookmarkHint", { shortcut: bookmarkShortcut })}
                     </p>
                     <div className="heading-support-section">
-                      <p className="heading-support-section-title">Colabora</p>
+                      <p className="heading-support-section-title">{t("heading.collaborate")}</p>
                       <p className="heading-support-copy">
-                        Nuevas ideas, bugs y cualquier otra colaboración son bienvenidas —{" "}
+                        {t("heading.collaborateCopy1")}{" "}
                         <a
                           href="https://github.com/ComBuildersES/communities-directory/issues"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          abre un issue
+                          {t("heading.openIssue")}
                         </a>{" "}
-                        o consulta{" "}
+                        {t("heading.collaborateCopy2")}{" "}
                         <a
                           href="https://github.com/ComBuildersES/communities-directory/blob/master/CONTRIBUTING.md"
                           target="_blank"
@@ -194,20 +199,20 @@ export function Heading ({
                         </a>.
                       </p>
                       <p className="heading-support-copy">
-                        Buscamos{" "}
+                        {t("heading.seekingPart1")}{" "}
                         <a
                           href="https://github.com/ComBuildersES/communities-directory/issues/53"
                           target="_blank"
                           rel="noopener noreferrer"
                         >
-                          responsables provinciales
+                          {t("heading.provincialMaintainers")}
                         </a>{" "}
-                        que ayuden a mantener los datos de las comunidades locales.
+                        {t("heading.seekingPart2")}
                       </p>
                     </div>
 
                     <div className="heading-support-share">
-                      <p className="heading-support-section-title">¿Nos ayudas a difundirlo?</p>
+                      <p className="heading-support-section-title">{t("heading.shareQuestion")}</p>
                       <div className="heading-support-share-buttons">
                         {SHARE_LINKS.map(({ label, icon, href }) => (
                           <a
@@ -216,8 +221,8 @@ export function Heading ({
                             target="_blank"
                             rel="noopener noreferrer"
                             className="heading-support-share-btn"
-                            title={`Compartir en ${label}`}
-                            aria-label={`Compartir en ${label}`}
+                            title={t("heading.shareOn", { platform: label })}
+                            aria-label={t("heading.shareOn", { platform: label })}
                           >
                             <i className={icon}></i>
                           </a>
@@ -226,7 +231,7 @@ export function Heading ({
                     </div>
 
                     <div className="heading-support-contributors">
-                      <p className="heading-support-section-title">La comunidad que lo hace posible</p>
+                      <p className="heading-support-section-title">{t("heading.contributorsTitle")}</p>
                       <div className="heading-support-contributors-grid">
                         {contributors.map((c) => (
                           <a
@@ -248,7 +253,7 @@ export function Heading ({
                         rel="noopener noreferrer"
                         className="heading-support-contributors-more"
                       >
-                        Ver a todas las personas que contribuyen <i className="fas fa-arrow-right"></i>
+                        {t("heading.seeAllContributors")} <i className="fas fa-arrow-right"></i>
                       </a>
                     </div>
                   </div>
@@ -259,10 +264,10 @@ export function Heading ({
                 type="button"
                 className="heading-action-btn heading-action-btn--cta"
                 onClick={() => { goToContribution(); closeMobileMenu(); }}
-                title="Añadir una nueva comunidad al directorio"
+                title={t("heading.addCommunityTitle")}
               >
                 <i className="fas fa-plus"></i>
-                <span className="heading-btn-label">Añadir comunidad</span>
+                <span className="heading-btn-label">{t("heading.addCommunity")}</span>
               </button>
             </div>
           </>

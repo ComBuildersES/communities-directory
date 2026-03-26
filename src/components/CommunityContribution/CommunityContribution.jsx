@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import {
   buildCommunityPayload,
   buildCommunityDeletionIssueUrl,
@@ -25,115 +26,117 @@ import {
 import { inferProvinceIdFromNominatim } from "../../lib/provinceNormalization";
 import "./CommunityContribution.css";
 
-const FIELD_HELP = {
-  status: {
-    title: "Cómo elegir el estado",
-    description: "Usa el estado según la actividad reciente de la comunidad.",
-    bullets: [
-      "Activa: hay personas dinamizando la comunidad y ha tenido actividad recientemente.",
-      "Inactiva: en meetups suele aplicarse si lleva más de un año sin actividad; en conferencias, si ha superado su cadencia habitual.",
-      "Desconocido: úsalo si no está claro.",
-    ],
-  },
-  communityType: {
-    title: "Cómo elegir el tipo",
-    description: "Elige el tipo principal que mejor describe cómo funciona la comunidad.",
-    items: [
-      {
-        label: "Tech Meetup",
-        detail: "Encuentros periódicos, normalmente en formato charla y tamaño contenido.",
-        examples: [
-          { name: "/dev/null talks", url: "https://devnulltalks.github.io/" },
-          { name: "Arcasiles Community Madrid", url: "https://arcasiles.com/" },
-          { name: "AiBirras", url: "https://aibirras.com/" },
-        ],
-      },
-      {
-        label: "Conferencia",
-        detail: "Evento normalmente anual, más grande y con varias ponencias o tracks.",
-        examples: [
-          { name: "Lareira Conf", url: "https://www.lareiraconf.es/" },
-          { name: "CommitConf", url: "https://commit-conf.com/" },
-          { name: "TRGCON", url: "https://trgcon.com/" },
-        ],
-      },
-      {
-        label: "Organización paraguas",
-        detail: "Agrupa comunidades locales bajo una marca o estructura común.",
-        examples: [
-          { name: "GDG Spain", url: "https://gdg.es/" },
-          { name: "Python España", url: "https://es.python.org" },
-          { name: "Sysarmy", url: "https://sysarmy.com/" },
-        ],
-      },
-      {
-        label: "Hacklab",
-        detail: "Comunidad maker con espacio físico y recursos compartidos.",
-        examples: [
-          { name: "A Industriosa", url: "https://www.meetup.com/es-ES/AIndustriosa/" },
-          { name: "AKASHA Hub", url: "https://akasha.barcelona/" },
-          { name: "BricoLabs", url: "https://bricolabs.cc/" },
-        ],
-      },
-      {
-        label: "Grupo colaborativo",
-        detail: "Personas que colaboran en proyectos, eventos, contenidos u otras iniciativas comunes.",
-        examples: [
-          { name: "Adopta un Junior", url: "https://adoptaunjunior.es/" },
-          { name: "Asociación Atlantics", url: "https://asociacionatlantics.org/" },
-          { name: "Aula de Software Libre Córdoba", url: "https://www.uco.es/aulasoftwarelibre/" },
-        ],
-      },
-      {
-        label: "Meta comunidad",
-        detail: "Organización que agrupa a personas que dinamizan o representan otras comunidades.",
-        examples: [
-          { name: "Community Builders", url: "https://linktr.ee/ComBuilders_ES" },
-          { name: "Granada Tech", url: "https://www.granadatech.org/" },
-          { name: "SVQTech", url: "https://svqtech.com/" },
-        ],
-      },
-      {
-        label: "Grupo de ayuda mutua",
-        detail: "La prioridad es ayudarse mutuamente mediante foros, chats, listas u otros canales.",
-        examples: [
-          { name: "BCN Engineering", url: "https://bcneng.org/" },
-          { name: "Midudev", url: "https://discord.com/invite/midudev" },
-          { name: "Mouredev", url: "https://discord.com/invite/mouredev" },
-        ],
-      },
-    ],
-  },
-  eventFormat: {
-    title: "Cómo elegir el formato",
-    description: "Piensa en cómo ocurre habitualmente la actividad principal de la comunidad.",
-    bullets: [
-      "Presencial: hacen encuentros en persona y no suelen retransmitirlos en directo.",
-      "Online: su actividad es principalmente en línea.",
-      "Híbridos: hay encuentros presenciales y además suelen retransmitirse.",
-      "Desconocido: si no tienes suficiente contexto.",
-    ],
-  },
-  location: {
-    title: "Cómo indicar la localización",
-    description: "Indica la referencia geográfica más útil para entender dónde ocurre la actividad.",
-    bullets: [
-      "Usa ciudad o región principal con un formato tipo `Ciudad, País`, por ejemplo `Barcelona, España`.",
-      "Usa `Itinerante` cuando la comunidad cambia de ciudad o sede según la edición o el evento.",
-      "Si no tienes claro qué valor poner, mejor abre un issue para comentarlo antes de enviarlo.",
-    ],
-  },
-  shortDescription: {
-    title: "Cómo escribir la descripción breve",
-    description: "Resume en una frase qué hace especial a esta comunidad.",
-    bullets: [
-      "Indica la forma organizativa si la conoces: colectivo (sin entidad jurídica), asociación sin ánimo de lucro, fundación, cooperativa, empresa con actividad comunitaria, grupo de usuarios, etc.",
-      "Prioriza qué ofrece, su enfoque o su propuesta de valor.",
-      "Evita repetir solo etiquetas, tecnologías o público objetivo que ya hayas marcado arriba.",
-      "Una longitud ideal suele estar entre 140 y 220 caracteres.",
-    ],
-  },
-};
+function getFieldHelp(t) {
+  return {
+    status: {
+      title: t("contribution.fieldHelp.status.title"),
+      description: t("contribution.fieldHelp.status.description"),
+      bullets: [
+        t("contribution.fieldHelp.status.bullet0"),
+        t("contribution.fieldHelp.status.bullet1"),
+        t("contribution.fieldHelp.status.bullet2"),
+      ],
+    },
+    communityType: {
+      title: t("contribution.fieldHelp.communityType.title"),
+      description: t("contribution.fieldHelp.communityType.description"),
+      items: [
+        {
+          label: "Tech Meetup",
+          detail: t("contribution.fieldHelp.communityType.techMeetup"),
+          examples: [
+            { name: "/dev/null talks", url: "https://devnulltalks.github.io/" },
+            { name: "Arcasiles Community Madrid", url: "https://arcasiles.com/" },
+            { name: "AiBirras", url: "https://aibirras.com/" },
+          ],
+        },
+        {
+          label: "Conferencia",
+          detail: t("contribution.fieldHelp.communityType.conference"),
+          examples: [
+            { name: "Lareira Conf", url: "https://www.lareiraconf.es/" },
+            { name: "CommitConf", url: "https://commit-conf.com/" },
+            { name: "TRGCON", url: "https://trgcon.com/" },
+          ],
+        },
+        {
+          label: "Organización paraguas",
+          detail: t("contribution.fieldHelp.communityType.umbrellaOrg"),
+          examples: [
+            { name: "GDG Spain", url: "https://gdg.es/" },
+            { name: "Python España", url: "https://es.python.org" },
+            { name: "Sysarmy", url: "https://sysarmy.com/" },
+          ],
+        },
+        {
+          label: "Hacklab",
+          detail: t("contribution.fieldHelp.communityType.hacklab"),
+          examples: [
+            { name: "A Industriosa", url: "https://www.meetup.com/es-ES/AIndustriosa/" },
+            { name: "AKASHA Hub", url: "https://akasha.barcelona/" },
+            { name: "BricoLabs", url: "https://bricolabs.cc/" },
+          ],
+        },
+        {
+          label: "Grupo colaborativo",
+          detail: t("contribution.fieldHelp.communityType.collaborativeGroup"),
+          examples: [
+            { name: "Adopta un Junior", url: "https://adoptaunjunior.es/" },
+            { name: "Asociación Atlantics", url: "https://asociacionatlantics.org/" },
+            { name: "Aula de Software Libre Córdoba", url: "https://www.uco.es/aulasoftwarelibre/" },
+          ],
+        },
+        {
+          label: "Meta comunidad",
+          detail: t("contribution.fieldHelp.communityType.metaCommunity"),
+          examples: [
+            { name: "Community Builders", url: "https://linktr.ee/ComBuilders_ES" },
+            { name: "Granada Tech", url: "https://www.granadatech.org/" },
+            { name: "SVQTech", url: "https://svqtech.com/" },
+          ],
+        },
+        {
+          label: "Grupo de ayuda mutua",
+          detail: t("contribution.fieldHelp.communityType.mutualAid"),
+          examples: [
+            { name: "BCN Engineering", url: "https://bcneng.org/" },
+            { name: "Midudev", url: "https://discord.com/invite/midudev" },
+            { name: "Mouredev", url: "https://discord.com/invite/mouredev" },
+          ],
+        },
+      ],
+    },
+    eventFormat: {
+      title: t("contribution.fieldHelp.eventFormat.title"),
+      description: t("contribution.fieldHelp.eventFormat.description"),
+      bullets: [
+        t("contribution.fieldHelp.eventFormat.bullet0"),
+        t("contribution.fieldHelp.eventFormat.bullet1"),
+        t("contribution.fieldHelp.eventFormat.bullet2"),
+        t("contribution.fieldHelp.eventFormat.bullet3"),
+      ],
+    },
+    location: {
+      title: t("contribution.fieldHelp.location.title"),
+      description: t("contribution.fieldHelp.location.description"),
+      bullets: [
+        t("contribution.fieldHelp.location.bullet0"),
+        t("contribution.fieldHelp.location.bullet1"),
+        t("contribution.fieldHelp.location.bullet2"),
+      ],
+    },
+    shortDescription: {
+      title: t("contribution.fieldHelp.shortDescription.title"),
+      description: t("contribution.fieldHelp.shortDescription.description"),
+      bullets: [
+        t("contribution.fieldHelp.shortDescription.bullet0"),
+        t("contribution.fieldHelp.shortDescription.bullet1"),
+        t("contribution.fieldHelp.shortDescription.bullet2"),
+        t("contribution.fieldHelp.shortDescription.bullet3"),
+      ],
+    },
+  };
+}
 
 const TAG_CATEGORY_ORDER = [
   "Web y Frontend",
@@ -170,41 +173,32 @@ const AUDIENCE_CATEGORY_ORDER = [
 
 const NOT_TECH_DISCUSSION_URL = "https://github.com/ComBuildersES/communities-directory/issues/62";
 
-const DELETION_REASON_OPTIONS = [
-  {
-    value: "duplicate",
-    label: "La comunidad está duplicada",
-  },
-  {
-    value: "never-existed",
-    label: "La comunidad nunca ha existido",
-  },
-  {
-    value: "not-tech",
-    label: "Esta comunidad no debería ser considerada tech",
-  },
-  {
-    value: "other",
-    label: "Otra razón",
-  },
-];
+function getDeletionReasonOptions(t) {
+  return [
+    { value: "duplicate",     label: t("contribution.deletion.reasonDuplicate") },
+    { value: "never-existed", label: t("contribution.deletion.reasonNeverExisted") },
+    { value: "not-tech",      label: t("contribution.deletion.reasonNotTech") },
+    { value: "other",         label: t("contribution.deletion.reasonOther") },
+  ];
+}
 
 function buildDeletionReason({
   reasonType,
   duplicateCommunity,
   duplicateCommunityEditUrl,
   otherReason,
+  t,
 }) {
   if (reasonType === "duplicate" && duplicateCommunity) {
-    return `La comunidad está duplicada y conviene consolidarla en ${duplicateCommunity.name} (${duplicateCommunityEditUrl}).`;
+    return t("contribution.deletion.reasonDuplicateMsg", { name: duplicateCommunity.name, url: duplicateCommunityEditUrl });
   }
 
   if (reasonType === "never-existed") {
-    return "La comunidad nunca ha existido como comunidad real y conviene retirarla del directorio.";
+    return t("contribution.deletion.reasonNeverExistedMsg");
   }
 
   if (reasonType === "not-tech") {
-    return `Esta comunidad no debería ser considerada tech. Ver criterios y conversación de referencia: ${NOT_TECH_DISCUSSION_URL}`;
+    return t("contribution.deletion.reasonNotTechMsg", { url: NOT_TECH_DISCUSSION_URL });
   }
 
   if (reasonType === "other") {
@@ -249,6 +243,7 @@ function RequiredMark() {
 }
 
 function FieldHelpModal({ content, isOpen, onClose }) {
+  const { t } = useTranslation();
   if (!isOpen) return null;
 
   return (
@@ -265,7 +260,7 @@ function FieldHelpModal({ content, isOpen, onClose }) {
             <h4>{content.title}</h4>
             <p>{content.description}</p>
           </div>
-          <button type="button" className="contribution-help-modal-close" onClick={onClose} aria-label="Cerrar ayuda">
+          <button type="button" className="contribution-help-modal-close" onClick={onClose} aria-label={t("contribution.closeHelp")}>
             <i className="fas fa-times" aria-hidden="true"></i>
           </button>
         </div>
@@ -277,7 +272,7 @@ function FieldHelpModal({ content, isOpen, onClose }) {
                 <strong>{item.label}:</strong> <span>{item.detail}</span>
                 {item.examples?.length > 0 && (
                   <span className="contribution-help-modal-examples">
-                    {" "}Ejemplos:{" "}
+                    {" "}{t("contribution.examples")}{" "}
                     {item.examples.map((example, index) => (
                       <span key={example.name}>
                         <a href={example.url} target="_blank" rel="noopener noreferrer">
@@ -365,6 +360,7 @@ function TaxonomyPicker({
   categoryOrder = [],
   suggestionCta = null,
 }) {
+  const { t } = useTranslation();
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
   const [isManuallyExpanded, setIsManuallyExpanded] = useState(defaultExpanded);
   const [collapsedGroups, setCollapsedGroups] = useState({});
@@ -405,7 +401,7 @@ function TaxonomyPicker({
 
     const groups = new Map();
     visibleItems.forEach((item) => {
-      const category = item.category || "Sin categoría";
+      const category = item.category || t("contribution.taxonomy.noCategory");
       if (!groups.has(category)) groups.set(category, []);
       groups.get(category).push(item);
     });
@@ -414,7 +410,7 @@ function TaxonomyPicker({
       label,
       items: groupItems,
     }));
-  }, [groupByCategory, visibleItems]);
+  }, [groupByCategory, visibleItems, t]);
 
   const orderedGroupedItems = useMemo(() => {
     if (!groupByCategory || categoryOrder.length === 0) return groupedItems;
@@ -484,18 +480,18 @@ function TaxonomyPicker({
           }}
           aria-expanded={isExpanded}
         >
-          {isExpanded ? "Mostrar menos" : "Mostrar todos"}
+          {isExpanded ? t("contribution.taxonomy.showLess") : t("contribution.taxonomy.showAll")}
         </button>
       </div>
 
-      <label className="label" htmlFor={`${title}-search`}>Buscar</label>
+      <label className="label" htmlFor={`${title}-search`}>{t("contribution.taxonomy.searchLabel")}</label>
       <input
         id={`${title}-search`}
         className="input"
         type="search"
         value={searchValue}
         onChange={(event) => onSearchChange(event.target.value)}
-        placeholder="Filtra por nombre, descripción o sinónimos"
+        placeholder={t("contribution.taxonomy.searchPlaceholder")}
       />
 
       <div className="contribution-taxonomy-summary">
@@ -524,7 +520,7 @@ function TaxonomyPicker({
             })}
           </div>
         ) : (
-          <p>Todavía no has seleccionado ninguna.</p>
+          <p>{t("contribution.taxonomy.noneSelected")}</p>
         )}
       </div>
 
@@ -573,7 +569,7 @@ function TaxonomyPicker({
                           }}
                         >
                           <span className="contribution-check-item-label">{item.label}</span>
-                          <span className="contribution-check-item-action">Añadir</span>
+                          <span className="contribution-check-item-action">{t("contribution.taxonomy.add")}</span>
                         </button>
                       </TaxonomyTooltip>
                     ))}
@@ -603,140 +599,29 @@ function TaxonomyPicker({
 }
 
 function UrlFields({ primaryUrl, onPrimaryUrlChange, urls, onUrlChange }) {
+  const { t } = useTranslation();
   const [expandedPlatforms, setExpandedPlatforms] = useState([]);
   const [isPrimaryHelpOpen, setIsPrimaryHelpOpen] = useState(false);
   const [openPlatformHelp, setOpenPlatformHelp] = useState(null);
   const platformHelpContent = {
-    web: {
-      title: "URL web",
-      description: "Añade la web principal o landing más estable de la comunidad.",
-      bullets: [
-        "Ejemplos: web propia, página oficial o microsite persistente.",
-        "Si ya la has usado como URL principal, no hace falta repetirla aquí.",
-      ],
-    },
-    eventsUrl: {
-      title: "URL de eventos",
-      description: "Enlace a la plataforma donde publican convocatorias o entradas.",
-      bullets: [
-        "Ejemplos: Meetup, Eventbrite, Luma, saraos.tech, Google Calendar o una agenda propia.",
-        "Úsalo cuando la actividad viva sobre todo en ese calendario o plataforma.",
-      ],
-    },
-    linkAggregator: {
-      title: "Agregador de links",
-      description: "Enlace a una página que reúne varios perfiles o recursos de la comunidad.",
-      bullets: [
-        "Ejemplos: Linktree, Beacons, Bento o una página similar.",
-        "Es útil cuando la comunidad centraliza su presencia en un único agregador.",
-      ],
-    },
-    mailingList: {
-      title: "Lista de correo",
-      description: "Enlace para suscribirse o consultar la lista de correo de la comunidad.",
-      bullets: [
-        "Ejemplos: Google Groups, Buttondown, Substack o Mailchimp.",
-        "Añádelo si el email es un canal relevante para seguir la actividad o interactuar con otros miembros.",
-      ],
-    },
-    github: {
-      title: "GitHub",
-      description: "Perfil u organización de GitHub usada por la comunidad.",
-      bullets: [
-        "Ejemplos: organización, perfil principal o repositorio central.",
-      ],
-    },
-    discord: {
-      title: "Discord",
-      description: "Invitación o acceso al servidor de Discord de la comunidad.",
-      bullets: [
-        "Ejemplos: enlaces `discord.gg` o invitaciones permanentes.",
-      ],
-    },
-    telegram: {
-      title: "Telegram",
-      description: "Canal, grupo o enlace público de Telegram.",
-      bullets: [
-        "Ejemplos: `t.me/canal` o un grupo oficial de la comunidad.",
-      ],
-    },
-    whatsapp: {
-      title: "WhatsApp",
-      description: "Grupo o comunidad pública de WhatsApp.",
-      bullets: [
-        "Ejemplos: invitaciones `chat.whatsapp.com` o enlaces a comunidades públicas.",
-      ],
-    },
-    slack: {
-      title: "Slack",
-      description: "Workspace o enlace de acceso a Slack.",
-      bullets: [
-        "Ejemplos: URL del workspace o página oficial para unirse.",
-      ],
-    },
-    youtube: {
-      title: "YouTube",
-      description: "Canal o perfil de YouTube donde publican vídeos o directos.",
-      bullets: [
-        "Ejemplos: canal oficial, usuario o lista de reproducción principal.",
-      ],
-    },
-    linkedin: {
-      title: "LinkedIn",
-      description: "Página o perfil de LinkedIn asociado a la comunidad.",
-      bullets: [
-        "Ejemplos: página de empresa, showcase o grupo oficial.",
-      ],
-    },
-    twitter: {
-      title: "Twitter/X",
-      description: "Perfil principal en X o Twitter.",
-      bullets: [
-        "Ejemplos: `x.com/usuario` o el handle oficial de la comunidad.",
-      ],
-    },
-    tiktok: {
-      title: "TikTok",
-      description: "Perfil oficial de TikTok de la comunidad.",
-      bullets: [
-        "Ejemplos: `tiktok.com/@usuario`.",
-      ],
-    },
-    instagram: {
-      title: "Instagram",
-      description: "Perfil oficial en Instagram.",
-      bullets: [
-        "Ejemplos: cuenta principal de la comunidad o del evento.",
-      ],
-    },
-    facebook: {
-      title: "Facebook",
-      description: "Página, grupo o perfil oficial en Facebook.",
-      bullets: [
-        "Ejemplos: fan page o grupo público de la comunidad.",
-      ],
-    },
-    mastodon: {
-      title: "Mastodon",
-      description: "Perfil oficial en Mastodon.",
-      bullets: [
-        "Ejemplos: `mastodon.social/@usuario` o cualquier instancia equivalente.",
-      ],
-    },
-    bluesky: {
-      title: "Bluesky",
-      description: "Perfil oficial en Bluesky.",
-      bullets: [
-        "Ejemplos: `bsky.app/profile/usuario`.",
-      ],
-    },
-    twitch: {
-      title: "Twitch",
-      description: "Canal de Twitch donde la comunidad emite o publica contenido.",
-      bullets: [
-        "Ejemplos: `twitch.tv/canal`.",
-      ],
-    },
+    web:            { title: t("contribution.urlHelp.web.title"),            description: t("contribution.urlHelp.web.description"),            bullets: [t("contribution.urlHelp.web.bullet0"),            t("contribution.urlHelp.web.bullet1")] },
+    eventsUrl:      { title: t("contribution.urlHelp.eventsUrl.title"),      description: t("contribution.urlHelp.eventsUrl.description"),      bullets: [t("contribution.urlHelp.eventsUrl.bullet0"),      t("contribution.urlHelp.eventsUrl.bullet1")] },
+    linkAggregator: { title: t("contribution.urlHelp.linkAggregator.title"), description: t("contribution.urlHelp.linkAggregator.description"), bullets: [t("contribution.urlHelp.linkAggregator.bullet0"), t("contribution.urlHelp.linkAggregator.bullet1")] },
+    mailingList:    { title: t("contribution.urlHelp.mailingList.title"),    description: t("contribution.urlHelp.mailingList.description"),    bullets: [t("contribution.urlHelp.mailingList.bullet0"),    t("contribution.urlHelp.mailingList.bullet1")] },
+    github:         { title: t("contribution.urlHelp.github.title"),         description: t("contribution.urlHelp.github.description"),         bullets: [t("contribution.urlHelp.github.bullet0")] },
+    discord:        { title: t("contribution.urlHelp.discord.title"),        description: t("contribution.urlHelp.discord.description"),        bullets: [t("contribution.urlHelp.discord.bullet0")] },
+    telegram:       { title: t("contribution.urlHelp.telegram.title"),       description: t("contribution.urlHelp.telegram.description"),       bullets: [t("contribution.urlHelp.telegram.bullet0")] },
+    whatsapp:       { title: t("contribution.urlHelp.whatsapp.title"),       description: t("contribution.urlHelp.whatsapp.description"),       bullets: [t("contribution.urlHelp.whatsapp.bullet0")] },
+    slack:          { title: t("contribution.urlHelp.slack.title"),          description: t("contribution.urlHelp.slack.description"),          bullets: [t("contribution.urlHelp.slack.bullet0")] },
+    youtube:        { title: t("contribution.urlHelp.youtube.title"),        description: t("contribution.urlHelp.youtube.description"),        bullets: [t("contribution.urlHelp.youtube.bullet0")] },
+    linkedin:       { title: t("contribution.urlHelp.linkedin.title"),       description: t("contribution.urlHelp.linkedin.description"),       bullets: [t("contribution.urlHelp.linkedin.bullet0")] },
+    twitter:        { title: t("contribution.urlHelp.twitter.title"),        description: t("contribution.urlHelp.twitter.description"),        bullets: [t("contribution.urlHelp.twitter.bullet0")] },
+    tiktok:         { title: t("contribution.urlHelp.tiktok.title"),         description: t("contribution.urlHelp.tiktok.description"),         bullets: [t("contribution.urlHelp.tiktok.bullet0")] },
+    instagram:      { title: t("contribution.urlHelp.instagram.title"),      description: t("contribution.urlHelp.instagram.description"),      bullets: [t("contribution.urlHelp.instagram.bullet0")] },
+    facebook:       { title: t("contribution.urlHelp.facebook.title"),       description: t("contribution.urlHelp.facebook.description"),       bullets: [t("contribution.urlHelp.facebook.bullet0")] },
+    mastodon:       { title: t("contribution.urlHelp.mastodon.title"),       description: t("contribution.urlHelp.mastodon.description"),       bullets: [t("contribution.urlHelp.mastodon.bullet0")] },
+    bluesky:        { title: t("contribution.urlHelp.bluesky.title"),        description: t("contribution.urlHelp.bluesky.description"),        bullets: [t("contribution.urlHelp.bluesky.bullet0")] },
+    twitch:         { title: t("contribution.urlHelp.twitch.title"),         description: t("contribution.urlHelp.twitch.description"),         bullets: [t("contribution.urlHelp.twitch.bullet0")] },
   };
   const visiblePlatforms = useMemo(
     () => URL_PLATFORM_OPTIONS.filter(({ key }) => (urls[key] ?? "").trim() || expandedPlatforms.includes(key)),
@@ -763,22 +648,22 @@ function UrlFields({ primaryUrl, onPrimaryUrlChange, urls, onUrlChange }) {
     <section className="contribution-card">
       <div className="contribution-card-header">
         <div>
-          <h3>URLs</h3>
-          <p>Añade la URL principal y, si quieres, más perfiles o enlaces relevantes de la comunidad.</p>
+          <h3>{t("contribution.urls.title")}</h3>
+          <p>{t("contribution.urls.description")}</p>
         </div>
       </div>
 
       <div className="field contribution-grid-span-2">
         <label className="label contribution-label-with-help" htmlFor="community-url">
-          <span>URL principal <RequiredMark /></span>
+          <span>{t("contribution.urls.primaryLabel")} <RequiredMark /></span>
           <FieldHelp
             content={{
-              title: "Cómo elegir la URL principal",
-              description: "Usa como URL principal la referencia más estable de la comunidad a largo plazo.",
+              title: t("contribution.urls.primaryHelp.title"),
+              description: t("contribution.urls.primaryHelp.description"),
               bullets: [
-                "Prioriza una web propia o landing estable frente a enlaces más efímeros.",
-                "Si no existe web propia, usa el enlace que mejor represente a la comunidad y tenga menos probabilidad de expirar.",
-                "El resto de perfiles pueden añadirse como URLs adicionales.",
+                t("contribution.urls.primaryHelp.bullet0"),
+                t("contribution.urls.primaryHelp.bullet1"),
+                t("contribution.urls.primaryHelp.bullet2"),
               ],
             }}
             isOpen={isPrimaryHelpOpen}
@@ -828,7 +713,7 @@ function UrlFields({ primaryUrl, onPrimaryUrlChange, urls, onUrlChange }) {
 
       {hiddenPlatforms.length > 0 && (
         <div className="contribution-extra-platforms">
-          <p>¿Quieres añadir más perfiles?</p>
+          <p>{t("contribution.urls.addMoreProfiles")}</p>
           <div className="contribution-extra-platform-list">
             {hiddenPlatforms.map(({ key, label }) => (
               <button
@@ -842,15 +727,15 @@ function UrlFields({ primaryUrl, onPrimaryUrlChange, urls, onUrlChange }) {
             ))}
           </div>
           <p className="contribution-extra-platform-note">
-            Si echas en falta algún tipo de plataforma,{" "}
+            {t("contribution.urls.missingPlatformNote")}{" "}
             <a
               href="https://github.com/ComBuildersES/communities-directory/issues"
               target="_blank"
               rel="noreferrer"
             >
-              abre un issue en el repositorio
+              {t("contribution.urls.openIssue")}
             </a>{" "}
-            para que podamos seguir mejorando las opciones ofrecidas.
+            {t("contribution.urls.missingPlatformNoteSuffix")}
           </p>
         </div>
       )}
@@ -967,15 +852,18 @@ export function CommunityContribution({
   onIssueOpenedChange,
   onDraftActionsChange,
 }) {
+  const { t } = useTranslation();
+  const FIELD_HELP = useMemo(() => getFieldHelp(t), [t]);
+  const DELETION_REASON_OPTIONS = useMemo(() => getDeletionReasonOptions(t), [t]);
   const formRef = useRef(null);
   const nextId = useMemo(() => getNextCommunityId(communities), [communities]);
   const isEditMode = Boolean(existingCommunity);
   const groupedAudience = useMemo(
     () => allAudience.map((item) => ({
       ...item,
-      category: item.category || "Otros perfiles",
+      category: item.category || t("contribution.taxonomy.otherProfiles"),
     })),
-    [allAudience]
+    [allAudience, t]
   );
   const hasExternalProposal = Boolean(proposalDraft && typeof proposalDraft === "object");
   const proposalSignature = useMemo(
@@ -1153,8 +1041,9 @@ export function CommunityContribution({
         })}`
         : "",
       otherReason: otherDeletionReason,
+      t,
     }),
-    [deletionReasonType, duplicateTargetCommunity, otherDeletionReason]
+    [deletionReasonType, duplicateTargetCommunity, otherDeletionReason, t]
   );
   const deletionIssueUrl = useMemo(
     () => buildCommunityDeletionIssueUrl({
@@ -1395,11 +1284,11 @@ export function CommunityContribution({
 
       <section className="contribution-hero">
         <div>
-          <p className="contribution-eyebrow">Gracias por contribuir 💛</p>
+          <p className="contribution-eyebrow">{t("contribution.hero.eyebrow")}</p>
           <p>
             {isEditMode
-              ? 'Actualiza los datos de esta comunidad en el formulario y dale al botón "Actualizar" para crear un issue en el repositorio.'
-              : 'Completa los datos de la nueva comunidad en el formulario y dale al botón "Sugerir nueva comunidad" para crear un issue en el repositorio.'}
+              ? t("contribution.hero.descriptionEdit")
+              : t("contribution.hero.descriptionNew")}
           </p>
         </div>
       </section>
@@ -1407,7 +1296,7 @@ export function CommunityContribution({
       {hasExternalProposal && !hasRestoredDraft && (
         <article className="message is-info contribution-message">
           <div className="message-body">
-            He cargado la propuesta incluida en este enlace. Puedes ajustarla y volver a abrir un issue con una versión mejorada.
+            {t("contribution.proposal.loaded")}
           </div>
         </article>
       )}
@@ -1416,20 +1305,20 @@ export function CommunityContribution({
         <article className="message is-info contribution-message">
           <div className="message-body">
             <p>
-              He recuperado un borrador guardado localmente
-              {restoredDraftSavedAt ? ` del ${restoredDraftSavedAt}` : ""}.
+              {t("contribution.draft.restoredPrefix")}
+              {restoredDraftSavedAt ? t("contribution.draft.restoredSavedAt", { date: restoredDraftSavedAt }) : ""}.
             </p>
             <p>
               {hasDatasetChangesSinceDraft
-                ? "El dataset ha cambiado desde entonces. Revisa con cuidado antes de enviar para no pisar cambios más recientes."
-                : "No he detectado cambios en el dataset desde que se guardó este borrador."}
+                ? t("contribution.draft.datasetChanged")
+                : t("contribution.draft.datasetUnchanged")}
             </p>
             {restoredDraftMeta?.isLegacyDraft && (
-              <p>Este borrador es anterior al nuevo sistema de metadatos, así que la comprobación puede ser incompleta.</p>
+              <p>{t("contribution.draft.legacyWarning")}</p>
             )}
             <div className="contribution-restored-draft-actions">
               <button type="button" className="button is-light is-small" onClick={handleDiscardRestoredDraft}>
-                Descartar borrador local y cargar la versión más reciente
+                {t("contribution.draft.discard")}
               </button>
             </div>
           </div>
@@ -1439,7 +1328,7 @@ export function CommunityContribution({
       {duplicates.combined.length > 0 && (
         <article className="message is-warning contribution-message">
           <div className="message-body">
-            He encontrado comunidades con un nombre o una URL coincidente. Revisa si conviene editar una existente antes de continuar:
+            {t("contribution.duplicate.warning")}
             <ul className="contribution-inline-list">
               {duplicates.combined.map((community) => (
                 <li key={community.id}>
@@ -1456,12 +1345,12 @@ export function CommunityContribution({
       <section className="contribution-card">
         <div className="contribution-card-header">
           <div>
-            <h3>Datos base</h3>
-            <p>Campos principales que componen cada comunidad del directorio.</p>
+            <h3>{t("contribution.form.baseDataTitle")}</h3>
+            <p>{t("contribution.form.baseDataDescription")}</p>
           </div>
           <div className="contribution-metadata">
-            <span>ID {payload.id ?? "pendiente"}</span>
-            <span>{isEditMode ? "Edición" : "Alta nueva"}</span>
+            <span>ID {payload.id ?? t("contribution.form.pendingId")}</span>
+            <span>{isEditMode ? t("contribution.form.editMode") : t("contribution.form.newMode")}</span>
             {isEditMode && (
               <button
                 type="button"
@@ -1469,7 +1358,7 @@ export function CommunityContribution({
                 onClick={() => setIsDeletionFormVisible((current) => !current)}
               >
                 <i className="fas fa-trash-can" aria-hidden="true"></i>
-                <span>Solicitar eliminación</span>
+                <span>{t("contribution.form.requestDeletion")}</span>
               </button>
             )}
           </div>
@@ -1478,11 +1367,10 @@ export function CommunityContribution({
         {isEditMode && isDeletionFormVisible && (
           <div className="contribution-delete-panel">
             <p className="contribution-delete-note">
-              Si la comunidad sigue existiendo pero ya no está activa, no hace falta solicitar su eliminación:
-              cambia el campo <strong>Estado</strong> a <strong>Inactiva</strong> y abre una propuesta de edición.
+              {t("contribution.deletion.notActiveNote")}
             </p>
 
-            <div className="contribution-delete-reasons" role="radiogroup" aria-label="Motivo de eliminación">
+            <div className="contribution-delete-reasons" role="radiogroup" aria-label={t("contribution.deletion.reasonGroupLabel")}>
               {DELETION_REASON_OPTIONS.map((option) => (
                 <label key={option.value} className="contribution-delete-reason-option">
                   <input
@@ -1499,7 +1387,7 @@ export function CommunityContribution({
 
             {deletionReasonType === "duplicate" && (
               <div className="field contribution-delete-field">
-                <label className="label" htmlFor="duplicate-community-target">Comunidad canónica</label>
+                <label className="label" htmlFor="duplicate-community-target">{t("contribution.deletion.canonicalCommunityLabel")}</label>
                 <div className="control">
                   <input
                     id="duplicate-community-target"
@@ -1510,11 +1398,11 @@ export function CommunityContribution({
                       setDuplicateTargetQuery(event.target.value);
                       setDuplicateTargetId("");
                     }}
-                    placeholder="Escribe el nombre de la comunidad"
+                    placeholder={t("contribution.deletion.searchPlaceholder")}
                     autoComplete="off"
                   />
                 </div>
-                <div className="contribution-duplicate-results" role="listbox" aria-label="Resultados de comunidades">
+                <div className="contribution-duplicate-results" role="listbox" aria-label={t("contribution.deletion.resultsLabel")}>
                   {filteredDuplicateCandidates.length > 0 ? (
                     filteredDuplicateCandidates.map((community) => (
                       <button
@@ -1532,7 +1420,7 @@ export function CommunityContribution({
                     ))
                   ) : (
                     <p className="contribution-delete-field-note">
-                      No hay coincidencias con ese texto.
+                      {t("contribution.deletion.noMatches")}
                     </p>
                   )}
                 </div>
@@ -1541,8 +1429,7 @@ export function CommunityContribution({
 
             {deletionReasonType === "not-tech" && (
               <p className="contribution-delete-field-note">
-                Se incluirá como referencia el hilo de criterios sobre qué comunidades consideramos tech:
-                {" "}
+                {t("contribution.deletion.notTechNote")}{" "}
                 <a href={NOT_TECH_DISCUSSION_URL} target="_blank" rel="noreferrer">
                   issue #62
                 </a>
@@ -1552,7 +1439,7 @@ export function CommunityContribution({
 
             {deletionReasonType === "other" && (
               <div className="field contribution-delete-field">
-                <label className="label" htmlFor="other-deletion-reason">Explica brevemente el motivo</label>
+                <label className="label" htmlFor="other-deletion-reason">{t("contribution.deletion.otherReasonLabel")}</label>
                 <div className="control">
                   <textarea
                     id="other-deletion-reason"
@@ -1560,7 +1447,7 @@ export function CommunityContribution({
                     rows={3}
                     value={otherDeletionReason}
                     onChange={(event) => setOtherDeletionReason(event.target.value)}
-                    placeholder="Indica por qué conviene retirar esta comunidad del directorio."
+                    placeholder={t("contribution.deletion.otherReasonPlaceholder")}
                     required
                   />
                 </div>
@@ -1574,10 +1461,10 @@ export function CommunityContribution({
                 onClick={handleOpenDeletionIssue}
                 disabled={!isDeletionRequestValid}
               >
-                Abrir issue de eliminación
+                {t("contribution.deletion.openIssue")}
               </button>
               <p className="contribution-delete-helper">
-                Solo se activará cuando hayas indicado un motivo válido.
+                {t("contribution.deletion.helper")}
               </p>
             </div>
           </div>
@@ -1585,7 +1472,7 @@ export function CommunityContribution({
 
         <div className="contribution-grid">
           <div className="field">
-            <label className="label" htmlFor="community-name">Nombre <RequiredMark /></label>
+            <label className="label" htmlFor="community-name">{t("contribution.form.nameLabel")} <RequiredMark /></label>
             <div className="control">
               <input
                 id="community-name"
@@ -1593,19 +1480,19 @@ export function CommunityContribution({
                 type="text"
                 value={draft.name}
                 onChange={(event) => handleFieldChange("name", event.target.value)}
-                placeholder="Ejemplo: Geo Developers"
+                placeholder={t("contribution.form.namePlaceholder")}
                 required
               />
             </div>
             <DuplicateWarning
               matches={duplicates.byName}
-              emptyMessage="Ya existe al menos una comunidad con este nombre o uno equivalente:"
+              emptyMessage={t("contribution.duplicate.byNameWarning")}
             />
           </div>
 
           <div className="field">
             <label className="label contribution-label-with-help" htmlFor="community-status">
-              <span>Estado <RequiredMark /></span>
+              <span>{t("contribution.form.statusLabel")} <RequiredMark /></span>
               <FieldHelp
                 content={FIELD_HELP.status}
                 isOpen={openHelpField === "status"}
@@ -1631,7 +1518,7 @@ export function CommunityContribution({
 
           <div className="field">
             <label className="label contribution-label-with-help" htmlFor="community-type">
-              <span>Tipo de comunidad <RequiredMark /></span>
+              <span>{t("contribution.form.communityTypeLabel")} <RequiredMark /></span>
               <button
                 type="button"
                 className="contribution-field-help-trigger contribution-field-help-trigger--button"
@@ -1659,7 +1546,7 @@ export function CommunityContribution({
 
           <div className="field">
             <label className="label contribution-label-with-help" htmlFor="community-format">
-              <span>Formato <RequiredMark /></span>
+              <span>{t("contribution.form.formatLabel")} <RequiredMark /></span>
                 <FieldHelp
                   content={FIELD_HELP.eventFormat}
                   isOpen={openHelpField === "eventFormat"}
@@ -1686,7 +1573,7 @@ export function CommunityContribution({
           {shouldShowLocationField && (
             <div className="field">
               <label className="label contribution-label-with-help" htmlFor="community-location">
-                <span>Localización <RequiredMark /></span>
+                <span>{t("contribution.form.locationLabel")} <RequiredMark /></span>
                 <FieldHelp
                   content={FIELD_HELP.location}
                   isOpen={openHelpField === "location"}
@@ -1701,7 +1588,7 @@ export function CommunityContribution({
                   type="text"
                   value={draft.location}
                   onChange={(event) => handleFieldChange("location", event.target.value)}
-                  placeholder="Madrid, España o Itinerante"
+                  placeholder={t("contribution.form.locationPlaceholder")}
                   required
                 />
               </div>
@@ -1710,7 +1597,7 @@ export function CommunityContribution({
 
           <div className="field contribution-grid-span-2">
             <label className="label contribution-label-with-help" htmlFor="community-short-description">
-              <span>Descripción breve</span>
+              <span>{t("contribution.form.shortDescriptionLabel")}</span>
               <FieldHelp
                 content={FIELD_HELP.shortDescription}
                 isOpen={openHelpField === "shortDescription"}
@@ -1724,13 +1611,13 @@ export function CommunityContribution({
                 className="textarea"
                 value={draft.shortDescription ?? ""}
                 onChange={(event) => handleFieldChange("shortDescription", event.target.value.slice(0, SHORT_DESCRIPTION_MAX_LENGTH))}
-                placeholder="Describe en una frase qué ofrece esta comunidad, su enfoque o propuesta de valor. Evita repetir las etiquetas o el público objetivo ya seleccionados."
+                placeholder={t("contribution.form.shortDescriptionPlaceholder")}
                 maxLength={SHORT_DESCRIPTION_MAX_LENGTH}
                 rows={3}
               />
             </div>
             <p className="contribution-field-note">
-              Ejemplo: “Colectivo sin ánimo de lucro que organiza encuentros mensuales para compartir experiencias prácticas sobre arquitectura de software e ingeniería de plataforma.”
+              {t("contribution.form.shortDescriptionExample")}
             </p>
             <p className="contribution-field-counter">
               {(draft.shortDescription ?? "").length}/{SHORT_DESCRIPTION_MAX_LENGTH}
@@ -1738,7 +1625,7 @@ export function CommunityContribution({
           </div>
 
           <div className="field">
-            <label className="label" htmlFor="community-contact">Contacto público</label>
+            <label className="label" htmlFor="community-contact">{t("contribution.form.contactLabel")}</label>
             <div className="control">
               <input
                 id="community-contact"
@@ -1746,20 +1633,20 @@ export function CommunityContribution({
                 type="text"
                 value={draft.contactInfo}
                 onChange={(event) => handleFieldChange("contactInfo", event.target.value)}
-                placeholder="email@comunidad.org o URL de contacto"
+                placeholder={t("contribution.form.contactPlaceholder")}
               />
             </div>
           </div>
 
           <div className="field contribution-grid-span-2">
-            <label className="label" htmlFor="community-thumbnail">Thumbnail o logo</label>
+            <label className="label" htmlFor="community-thumbnail">{t("contribution.form.thumbnailLabel")}</label>
             <div className="contribution-thumbnail-field">
               {previewThumbnailUrl ? (
                 <div className="contribution-thumbnail-preview">
-                  <img src={previewThumbnailUrl} alt={`Thumbnail de ${draft.name || "la comunidad"}`} />
+                  <img src={previewThumbnailUrl} alt={t("contribution.form.thumbnailAlt", { name: draft.name || "" })} />
                 </div>
               ) : (
-                <p className="contribution-thumbnail-empty">No hay imagen configurada actualmente.</p>
+                <p className="contribution-thumbnail-empty">{t("contribution.form.thumbnailEmpty")}</p>
               )}
 
               <button
@@ -1767,13 +1654,13 @@ export function CommunityContribution({
                 className="button is-light is-small"
                 onClick={handleReplaceThumbnailToggle}
               >
-                {draft.replaceThumbnail ? "Mantener imagen actual" : "Reemplazar imagen"}
+                {draft.replaceThumbnail ? t("contribution.form.keepImage") : t("contribution.form.replaceImage")}
               </button>
 
               {draft.replaceThumbnail && (
                 <>
                   <p className="contribution-thumbnail-help">
-                    Para reemplazar la imagen necesitas una URL pública. Si prefieres, abre el issue, sube allí la imagen manualmente y comenta que se use esa.
+                    {t("contribution.form.thumbnailHelp")}
                   </p>
                   <div className="control contribution-thumbnail-control">
                     <input
@@ -1803,12 +1690,12 @@ export function CommunityContribution({
 
       <DuplicateWarning
         matches={duplicates.byUrl}
-        emptyMessage="Ya existe al menos una comunidad con alguna de estas URLs:"
+        emptyMessage={t("contribution.duplicate.byUrlWarning")}
       />
 
       <TaxonomyPicker
-        title="Etiquetas"
-        description="Selecciona las etiquetas del catálogo para mejorar descubrimiento y filtros."
+        title={t("contribution.tags.title")}
+        description={t("contribution.tags.description")}
         items={allTags}
         selectedValues={draft.tags}
         onToggle={(value) => {
@@ -1823,15 +1710,15 @@ export function CommunityContribution({
         collapseGroupsByDefault={isEditMode}
         categoryOrder={TAG_CATEGORY_ORDER}
         suggestionCta={{
-          text: "¿Echas en falta alguna etiqueta o quieres proponer una mejora en la taxonomía?",
-          label: "Abrir issue",
+          text: t("contribution.tags.suggestionText"),
+          label: t("contribution.tags.openIssue"),
           href: "https://github.com/ComBuildersES/communities-directory/issues/new",
         }}
       />
 
       <TaxonomyPicker
-        title="Público objetivo"
-        description="Indica a quién va especialmente dirigida la comunidad."
+        title={t("contribution.audience.title")}
+        description={t("contribution.audience.description")}
         items={groupedAudience}
         selectedValues={draft.targetAudience}
         onToggle={(value) => {
@@ -1847,8 +1734,8 @@ export function CommunityContribution({
         defaultExpanded={false}
         categoryOrder={AUDIENCE_CATEGORY_ORDER}
         suggestionCta={{
-          text: "¿Echas en falta algún público o quieres proponer una mejora en la taxonomía?",
-          label: "Abrir issue",
+          text: t("contribution.audience.suggestionText"),
+          label: t("contribution.audience.openIssue"),
           href: "https://github.com/ComBuildersES/communities-directory/issues/new",
         }}
       />
@@ -1856,8 +1743,8 @@ export function CommunityContribution({
       <section className="contribution-card">
         <div className="contribution-card-header">
           <div>
-            <h3>JSON generado</h3>
-            <p>Este es el bloque que viajará dentro del issue de GitHub.</p>
+            <h3>{t("contribution.json.title")}</h3>
+            <p>{t("contribution.json.description")}</p>
           </div>
           <button
             type="button"
@@ -1865,7 +1752,7 @@ export function CommunityContribution({
             onClick={() => setIsJsonExpanded((current) => !current)}
             aria-expanded={isJsonExpanded}
           >
-            {isJsonExpanded ? "Ocultar" : "Mostrar JSON"}
+            {isJsonExpanded ? t("contribution.json.hide") : t("contribution.json.show")}
           </button>
         </div>
 
@@ -1877,10 +1764,10 @@ export function CommunityContribution({
 
         <div className="contribution-submit-row">
           <button type="submit" className="button is-primary is-medium contribution-submit-button">
-            {isEditMode ? "Actualizar" : "Sugerir nueva comunidad"}
+            {isEditMode ? t("contribution.submit.edit") : t("contribution.submit.new")}
           </button>
           <p className="contribution-submit-note">
-            Se abrirá GitHub con el título y el cuerpo del issue precargados.
+            {t("contribution.submit.note")}
           </p>
         </div>
       </section>

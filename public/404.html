@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script>
+    // SPA fallback for GitHub Pages.
+    // GitHub Pages serves this file for any path that doesn't exist as a file.
+    // We encode the requested path into ?_spa= and redirect to index.html,
+    // which restores it before React boots (see index.html path-restore snippet).
+    (function () {
+      var l = window.location;
+      var pathParts = l.pathname.split('/').filter(Boolean);
+      // Determine the base: if the first segment is a known locale, the app is
+      // deployed at root (/); otherwise the first segment is the repo/base path.
+      var knownLocales = ['es', 'en'];
+      var base = knownLocales.includes(pathParts[0]) ? '' : ('/' + pathParts[0]);
+      var rest = l.pathname.slice(base.length) || '/';
+      l.replace(
+        l.origin + base +
+        '/?_spa=' + encodeURIComponent(rest + l.search + l.hash)
+      );
+    })();
+  </script>
+</head>
+</html>

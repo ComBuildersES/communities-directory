@@ -14,6 +14,7 @@ Directorio interactivo de comunidades tecnológicas españolas. Permite a usuari
 | Mapas | ArcGIS (`@arcgis/core`, `@arcgis/map-components`) |
 | Estilos | Bulma CSS (CDN) + CSS por componente |
 | Iconos | Font Awesome 6 |
+| i18n | `i18next` + `react-i18next` + `i18next-browser-languagedetector` |
 | Linting | ESLint 9 con plugins React |
 | Despliegue | GitHub Pages (estático) |
 
@@ -170,6 +171,77 @@ npm run apply-url-mapping -- --force-status            # actualiza status aunque
 VITE_BASE=/dist/                  # .env.localdev
 VITE_BASE=/communities-directory/ # .env.production
 ```
+
+## Rutas de assets y ficheros de datos
+
+**Regla crítica: todas las rutas de ficheros locales deben ser absolutas.**
+
+El app se despliega bajo un base path configurable (`/communities-directory/` en producción) y usa prefijos de locale en la URL (`/es/`, `/en/`). Las rutas relativas como `"data/foo.json"` se resuelven contra la URL actual y se rompen cuando el pathname no es `/`.
+
+### Patrón correcto
+
+```js
+// ✅ Absoluta usando BASE_URL (ya incluye la barra final)
+const URL = `${import.meta.env.BASE_URL}data/communities.json`;
+
+// ❌ Relativa — se rompe en /es/, /en/, etc.
+const URL = "data/communities.json";
+```
+
+`import.meta.env.BASE_URL` ya termina en `/` — no añadir barra extra.
+
+### Normalización de thumbnailUrl
+
+Los registros de `communities.json` tienen `thumbnailUrl` como ruta relativa (`"images/foo.webp"`). Se normalizan a ruta absoluta **en el store al cargar los datos**, no en los componentes:
+
+```js
+// community.store.js — al procesar rawData
+const data = rawData.map((c) => {
+  const { thumbnailUrl } = c;
+  if (!thumbnailUrl || thumbnailUrl.startsWith("http") || thumbnailUrl.startsWith("/")) return c;
+  return { ...c, thumbnailUrl: `${import.meta.env.BASE_URL}${thumbnailUrl}` };
+});
+```
+
+Los componentes (`CommunityCard`, `CommunityModal`, `Map`) reciben URLs ya resueltas y no necesitan saber nada de `BASE_URL`.
+
+---
+
+## Flujo de trabajo con fases i18n
+
+**Antes de empezar una nueva fase del plan i18n, pedir permiso al usuario.** Las fases se ejecutan una a una, con checkpoint de revisión y prueba entre ellas. No avanzar a la siguiente fase sin confirmación explícita.
+
+---
+
+## i18n y locale routing
+
+La app usa prefijos de locale en la URL (`/es/`, `/en/`). Ver `I18N_SPEC.md` e `IMPLEMENTATION_PLAN.md` para la estrategia completa.
+
+### Detección de locale
+
+`src/i18n/index.js` — orden: URL path → `localStorage` (`preferred-locale`) → `navigator.languages` → fallback `es`.
+
+```js
+// lookupFromPathIndex = número de segmentos del base path
+// /communities-directory/es/ → BASE_SEGMENTS=1 → lookupFromPathIndex=1
+// /es/                       → BASE_SEGMENTS=0 → lookupFromPathIndex=0
+const BASE_SEGMENTS = import.meta.env.BASE_URL.split('/').filter(Boolean).length;
+```
+
+### Redirect al locale en main.jsx
+
+El redirect que añade el prefijo de locale a la URL **no puede depender de `i18n.resolvedLanguage`** (puede no estar disponible de forma síncrona). Implementar detección directa con `localStorage` + `navigator.languages`.
+
+### Constante de locales soportados
+
+```js
+// src/i18n/index.js
+export const SUPPORTED_LOCALES = ['es', 'en'];
+```
+
+Importar desde aquí en cualquier código que necesite validar o iterar los locales; no duplicar la lista.
+
+---
 
 ## Patrones y convenciones
 

@@ -6,9 +6,9 @@ import { devtools } from "zustand/middleware";
 import { searchFaceted } from "../data/searchFaceted";
 import { parseDirectoryFilters } from "../lib/communitySubmission";
 
-const TAGS_URL = "data/tags.json";
-const AUDIENCE_URL = "data/audience.json";
-const CB_MEMBERS_URL = "data/community-builders-members.json";
+const TAGS_URL = `${import.meta.env.BASE_URL}data/tags.json`;
+const AUDIENCE_URL = `${import.meta.env.BASE_URL}data/audience.json`;
+const CB_MEMBERS_URL = `${import.meta.env.BASE_URL}data/community-builders-members.json`;
 
 export const filtros = {
   Estado: ["Activa"],
@@ -79,7 +79,17 @@ const useCommunityStore = create(
             resources = await loadAllResources();
           }
 
-          const [data, tags, audience, cbMembers] = resources;
+          const [rawData, tags, audience, cbMembers] = resources;
+          // Resolve relative thumbnailUrl values to absolute paths.
+          // Components receive ready-to-use URLs; no BASE_URL handling needed per-component.
+          const baseUrl = import.meta.env.BASE_URL;
+          const data = rawData.map((c) => {
+            const { thumbnailUrl } = c;
+            if (!thumbnailUrl || thumbnailUrl.startsWith("http") || thumbnailUrl.startsWith("//") || thumbnailUrl.startsWith("/")) {
+              return c;
+            }
+            return { ...c, thumbnailUrl: `${baseUrl}${thumbnailUrl}` };
+          });
           const cbMemberIds = new Set(cbMembers.map((m) => m.communityId));
           const cbMembersMap = cbMembers.reduce((map, { communityId, github }) => {
             if (!map.has(communityId)) map.set(communityId, []);
