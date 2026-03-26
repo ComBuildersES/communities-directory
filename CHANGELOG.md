@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-26 `5a34176` enhance CommunityModal and Map components with location handling and focus management
+- 2026-03-26 `9b0f09a` enhance CommunityModal and Map components with location handling and focus management
 - 2026-03-26 `f6c0520` enhance UI components with new styles and improve functionality in Heading, ResultsBar, and InstallPromptBar
 - 2026-03-26 `a6c142e` implement force refresh functionality for PWA and enhance CommunityContribution styles
 - 2026-03-26 `f4ec2f6` add deletion request functionality and UI enhancements in CommunityContribution component
@@ -127,6 +127,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-26 `5e30bb0` update changelog [skip ci]
 - 2026-03-26 `85d1e05` update changelog [skip ci]
 - 2026-03-26 `cee1e66` update changelog [skip ci]
 - 2026-03-26 `1a3ac52` update .all-contributorsrc [skip ci]
