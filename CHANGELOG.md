@@ -73,6 +73,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-03-26 `a1249fc` [Actualizada Liferay Spain User Group (LUGSpain)](https://combuilderses.github.io/communities-directory/?community=317) ([PR #285](https://github.com/ComBuildersES/communities-directory/pull/285))
 - 2026-03-26 `efae707` [Añadida Rust Girona](https://combuilderses.github.io/communities-directory/?community=605) ([PR #281](https://github.com/ComBuildersES/communities-directory/pull/281))
 - 2026-03-26 `4931d4f` [Actualizada Sysarmy Galicia](https://combuilderses.github.io/communities-directory/?community=439) ([PR #279](https://github.com/ComBuildersES/communities-directory/pull/279))
 - 2026-03-26 `3c4a91f` [Actualizada Gen AI Community](https://combuilderses.github.io/communities-directory/?community=361) ([PR #277](https://github.com/ComBuildersES/communities-directory/pull/277))
@@ -125,6 +126,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-26 `85d1e05` update changelog [skip ci]
 - 2026-03-26 `cee1e66` update changelog [skip ci]
 - 2026-03-26 `1a3ac52` update .all-contributorsrc [skip ci]
 - 2026-03-26 `0571e53` update README.md [skip ci]
