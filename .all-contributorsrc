@@ -234,6 +234,15 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "ifraixedes",
+      "name": "Ivan Fraixedes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1731633?v=4",
+      "profile": "https://ivan.fraixed.es",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
