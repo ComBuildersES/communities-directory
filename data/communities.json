@@ -14366,10 +14366,10 @@
     "id": 439,
     "name": "Sysarmy Galicia",
     "status": "Activa",
-    "lastReviewed": "25/03/2026",
-    "communityType": "Grupo de ayuda mutua",
+    "lastReviewed": "26/03/2026",
+    "communityType": "Grupo colaborativo",
     "eventFormat": "Presencial",
-    "location": "Coruña",
+    "location": "Galicia",
     "topics": "",
     "tags": [
       "git",
@@ -14389,7 +14389,7 @@
       "community-manager"
     ],
     "contactInfo": "",
-    "communityUrl": "https://github.com/Gallegarmy",
+    "communityUrl": "https://sysarmy.galicia.dev",
     "urls": {
       "github": "https://github.com/Gallegarmy",
       "telegram": "https://t.me/Gallegarmy",
