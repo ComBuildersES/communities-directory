@@ -9987,24 +9987,16 @@
     "id": 317,
     "name": "Liferay Spain User Group (LUGSpain)",
     "status": "Activa",
-    "lastReviewed": "18/10/2024",
+    "lastReviewed": "26/03/2026",
     "communityType": "Tech Meetup",
-    "eventFormat": "Híbridos",
-    "location": "Madrid",
+    "eventFormat": "Online",
+    "location": "",
     "topics": "",
     "tags": [
-      "liferay",
       "open-source",
-      "distributed-systems",
       "sysadmin",
-      "c",
-      "r-lang",
-      "open-hardware",
-      "augmented-reality",
       "product-management",
-      "android",
-      "stem",
-      "ios"
+      "liferay"
     ],
     "targetAudience": [
       "open-source-contributor"
@@ -10013,15 +10005,18 @@
     "communityUrl": "https://www.meetup.com/liferay-spain-user-group/",
     "urls": {
       "twitter": "http://twitter.com/LugSpain/",
-      "eventsUrl": "https://www.meetup.com/liferay-spain-user-group/"
+      "eventsUrl": "https://www.meetup.com/liferay-spain-user-group/",
+      "linkedin": "https://es.linkedin.com/in/lugspain"
     },
     "thumbnailUrl": "images/liferay-spain-user-group-lugspain.webp",
     "latLon": {
-      "lat": 40.4167047,
-      "lon": -3.7035825
+      "lat": null,
+      "lon": null
     },
-    "displayOnMap": true,
-    "humanValidated": false
+    "displayOnMap": false,
+    "humanValidated": true,
+    "shortDescription": "Grupo de usuario para hablar sobre Liferay (uso, tecnologías, etc )",
+    "removalReason": ""
   },
   {
     "id": 318,
