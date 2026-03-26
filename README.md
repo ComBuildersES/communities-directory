@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-23-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-24-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Communities directory
@@ -138,6 +138,7 @@ Echa un vistazo a algunas de las tareas por las que podrías empezar a ayudar:
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/eun-plata"><img src="https://avatars.githubusercontent.com/u/25737523?v=4?s=100" width="100px;" alt="Eun Young Cho (Plata)"/><br /><sub><b>Eun Young Cho (Plata)</b></sub></a><br /><a href="#data-eun-plata" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.mytechplan.com/"><img src="https://avatars.githubusercontent.com/u/98886279?v=4?s=100" width="100px;" alt="Julieta Zalduendo"/><br /><sub><b>Julieta Zalduendo</b></sub></a><br /><a href="#data-julietazalduendo" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Qwor01"><img src="https://avatars.githubusercontent.com/u/113616553?v=4?s=100" width="100px;" alt="Ignacio Espósito"/><br /><sub><b>Ignacio Espósito</b></sub></a><br /><a href="#data-Qwor01" title="Data">🔣</a></td>
     </tr>
   </tbody>
 </table>
