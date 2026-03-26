@@ -20085,35 +20085,6 @@
     "humanValidated": false
   },
   {
-    "id": 601,
-    "name": "Cloud Español",
-    "status": "Inactiva",
-    "lastReviewed": "23/03/2026",
-    "communityType": "Tech Meetup",
-    "eventFormat": "Desconocido",
-    "location": "España",
-    "topics": "",
-    "tags": [
-      "aws",
-      "azure",
-      "gcp"
-    ],
-    "targetAudience": [
-      "cloud-engineer",
-      "devops-engineer"
-    ],
-    "contactInfo": "",
-    "communityUrl": "https://web.archive.org/web/20251207160627/https://www.xn--cloudespaol-9db.com/",
-    "urls": {},
-    "thumbnailUrl": "https://bulma.io/assets/images/placeholders/1280x960.png",
-    "latLon": {
-      "lat": null,
-      "lon": null
-    },
-    "displayOnMap": false,
-    "humanValidated": false
-  },
-  {
     "id": 602,
     "name": "Artificial Intelligence Network",
     "status": "Activa",
