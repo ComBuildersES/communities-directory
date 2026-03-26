@@ -11524,38 +11524,45 @@
   },
   {
     "id": 361,
-    "name": "My Tech Plan",
+    "name": "Gen AI Community",
     "status": "Activa",
-    "lastReviewed": "26/05/2025",
+    "lastReviewed": "26/03/2026",
     "communityType": "Grupo de ayuda mutua",
     "eventFormat": "Online",
-    "location": "n/a",
+    "location": "",
     "topics": "",
     "tags": [
       "tech-ethics",
-      "robotics",
       "innovation",
       "tech4good",
       "women-in-tech",
-      "healthtech"
+      "healthtech",
+      "generative-ai"
     ],
     "targetAudience": [
-      "tech-lead"
+      "tech-lead",
+      "ml-engineer",
+      "data-analyst",
+      "data-engineer",
+      "cloud-engineer",
+      "data-scientist"
     ],
-    "contactInfo": "hola@mytechplan.com",
-    "communityUrl": "http://web.archive.org/web/20251209100656/https://mytechplan.com/comunidad/",
+    "contactInfo": "community@genaisummit.eu",
+    "communityUrl": "https://chat.whatsapp.com/BdHQI2a11lRFGsa8BjkOX3",
     "urls": {
-      "linkedin": "https://www.linkedin.com/company/my-tech-plan",
-      "twitter": "https://x.com/my_tech_plan",
-      "youtube": "https://www.youtube.com/@mytechplan"
+      "linkedin": "https://www.linkedin.com/groups/9079599/",
+      "eventsUrl": "https://genaisummit.eu/",
+      "whatsapp": "https://chat.whatsapp.com/BdHQI2a11lRFGsa8BjkOX3"
     },
-    "thumbnailUrl": "images/my-tech-plan.webp",
+    "thumbnailUrl": "images/gen-ai-community.webp",
     "latLon": {
       "lat": null,
       "lon": null
     },
     "displayOnMap": false,
-    "humanValidated": false
+    "humanValidated": true,
+    "shortDescription": "Gen AI Community es un espacio hands-on para profesionales que trabajan con IA y que no solo quieren debatir, sino también probar, compartir y aplicar. Para quienes tienen más preguntas que respuestas y quieren pensar en colectivo y construir el futuro de la humanidad.",
+    "removalReason": ""
   },
   {
     "id": 362,
