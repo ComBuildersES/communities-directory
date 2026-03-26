@@ -8429,22 +8429,46 @@
     "id": 254,
     "name": "Iniciador",
     "status": "Inactiva",
-    "lastReviewed": "18/10/2024",
+    "lastReviewed": "24/03/2026",
     "communityType": "Organización paraguas",
     "eventFormat": "Desconocido",
     "location": "n/a",
     "topics": "",
-    "tags": [],
-    "targetAudience": [],
-    "contactInfo": "",
+    "tags": [
+      "startups",
+      "product-management",
+      "growth",
+      "lean-startup",
+      "innovation",
+      "seo",
+      "digital-marketing"
+    ],
+    "targetAudience": [
+      "product-manager",
+      "entrepreneur",
+      "business-innovation-manager",
+      "community-manager",
+      "mentee",
+      "mentor",
+      "digital-marketer",
+      "ux-designer",
+      "ui-designer"
+    ],
+    "contactInfo": "gerencia@iniciador.com",
     "communityUrl": "https://iniciador.com/",
-    "urls": {},
-    "latLon": {
-      "lat": null,
-      "lon": null
+    "urls": {
+      "twitter": "https://x.com/iniciador",
+      "web": "https://www.flickr.com/groups/iniciador/",
+      "linkedin": "https://www.linkedin.com/company/iniciador/"
     },
-    "displayOnMap": false,
-    "humanValidated": false
+    "latLon": {
+      "lat": 41.9005351,
+      "lon": 12.4568794
+    },
+    "displayOnMap": true,
+    "humanValidated": true,
+    "shortDescription": "La Fundación Iniciador tenía como objetivo principal ayudar a las personas que desean emprender, principalmente centrado (aunque no exclusivamente) en empresas con base tecnológica. Llegó a contar con +50 grupos locales y +185 voluntarios",
+    "thumbnailUrl": ""
   },
   {
     "id": 255,

@@ -7615,6 +7615,55 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
+          12.4568794,
+          41.9005351
+        ]
+      },
+      "properties": {
+        "id": 254,
+        "name": "Iniciador",
+        "status": "Inactiva",
+        "lastReviewed": "24/03/2026",
+        "communityType": "Organización paraguas",
+        "eventFormat": "Desconocido",
+        "location": "n/a",
+        "topics": "",
+        "tags": [
+          "startups",
+          "product-management",
+          "growth",
+          "lean-startup",
+          "innovation",
+          "seo",
+          "digital-marketing"
+        ],
+        "targetAudience": [
+          "product-manager",
+          "entrepreneur",
+          "business-innovation-manager",
+          "community-manager",
+          "mentee",
+          "mentor",
+          "digital-marketer",
+          "ux-designer",
+          "ui-designer"
+        ],
+        "contactInfo": "gerencia@iniciador.com",
+        "communityUrl": "https://iniciador.com/",
+        "urls": {
+          "twitter": "https://x.com/iniciador",
+          "web": "https://www.flickr.com/groups/iniciador/",
+          "linkedin": "https://www.linkedin.com/company/iniciador/"
+        },
+        "thumbnailUrl": "",
+        "humanValidated": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
           -1.8600675,
           38.9976623
         ]
