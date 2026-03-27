@@ -89,7 +89,7 @@ Echa un vistazo a los *[milestones](https://github.com/ComBuildersES/communities
 ## Licencias
 
 * El código fuente está disponible bajo la licencia [Apache 2.0](./LICENSE).
-* Los datos en el directorio `public/data/` están bajo la licencia [CC BY 4.0](./LICENSE.data).
+* Los datos en el directorio `public/data/` están bajo la licencia [CC BY 4.0](./DATA_LICENSE.md).
 
 ## Contribuir
 

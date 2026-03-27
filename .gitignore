@@ -27,8 +27,10 @@ issue-body.txt
 .obsidian
 .geo
 issue-body-test.txt
+report.txt
 dist
 tmp
 
 # Claude Code
 .claude/
+.playwright-mcp/

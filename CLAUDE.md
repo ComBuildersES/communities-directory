@@ -216,7 +216,7 @@ Los componentes (`CommunityCard`, `CommunityModal`, `Map`) reciben URLs ya resue
 
 ## i18n y locale routing
 
-La app usa prefijos de locale en la URL (`/es/`, `/en/`). Ver `I18N_SPEC.md` e `IMPLEMENTATION_PLAN.md` para la estrategia completa.
+La app usa prefijos de locale en la URL (`/es/`, `/en/`). Ver `docs/i18n-spec.md` y `docs/archive/2026-03-i18n-plan.md` para la estrategia completa.
 
 ### Detección de locale
 

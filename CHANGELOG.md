@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-27 `4f8f4d0` update taxonomy component for improved group handling and add localization for new buttons
+- 2026-03-27 `4820679` update taxonomy component for improved group handling and add localization for new buttons
 - 2026-03-27 `ae2b7a9` add language support for communities
 - 2026-03-27 `baa3bce` complete English translation and implement language switcher functionality
 - 2026-03-27 `a73035c` enhance community fetching with locale support and add taxonomy reload
@@ -195,6 +195,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
+- 2026-03-27 `c319103` Remove obsolete image files and health report document
 - 2026-03-27 `b431402` Refactor community types, statuses, and event formats to use consistent keys and translations
 - 2026-03-26 `49c9eaf` Add thumbnail for Rust Girona community and include image file
 - 2026-03-26 `4c02445` Update removal reason for Cloud Español community
