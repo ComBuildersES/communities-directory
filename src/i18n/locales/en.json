@@ -393,7 +393,8 @@
       "suggestionText": "Missing a tag or want to suggest an improvement to the taxonomy?",
       "openIssue": "Open issue",
       "matchesAllLabel": "Generalist community — covers all tech topics",
-      "matchesAllNotice": "This community will appear in results for any tag filter. No need to select specific tags."
+      "matchesAllNotice": "Checking this option means the community will appear in results for any tag filter. This implies applying all tags in the catalog:",
+      "matchesAllWarning": "Please make sure this accurately reflects your community to avoid creating false expectations for others."
     },
     "audience": {
       "title": "Target audience",
@@ -401,7 +402,8 @@
       "suggestionText": "Missing an audience profile or want to suggest an improvement to the taxonomy?",
       "openIssue": "Open issue",
       "matchesAllLabel": "Open to any audience profile",
-      "matchesAllNotice": "This community will appear in results for any audience filter. No need to select specific profiles."
+      "matchesAllNotice": "Checking this option means the community will appear in results for any audience filter. This implies applying all profiles in the catalog:",
+      "matchesAllWarning": "Please make sure this accurately reflects your community to avoid creating false expectations for others."
     },
     "json": {
       "title": "Generated JSON",

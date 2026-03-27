@@ -298,6 +298,29 @@ function FieldHelpModal({ content, isOpen, onClose }) {
   );
 }
 
+function GroupChip({ label, items }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const tooltipText = items.map((i) => i.label).join(", ");
+
+  return (
+    <span
+      className="contribution-matches-all-group-chip"
+      onMouseEnter={() => setIsVisible(true)}
+      onMouseLeave={() => setIsVisible(false)}
+      onFocus={() => setIsVisible(true)}
+      onBlur={() => setIsVisible(false)}
+      tabIndex={0}
+    >
+      {label} ({items.length})
+      {isVisible && (
+        <span className="contribution-matches-all-group-tooltip" role="tooltip">
+          {tooltipText}
+        </span>
+      )}
+    </span>
+  );
+}
+
 function TaxonomyTooltip({ item, delay = 0, children }) {
   const [isVisible, setIsVisible] = useState(false);
   const timeoutRef = useRef(null);
@@ -446,34 +469,23 @@ function TaxonomyPicker({
           <h3>{title}</h3>
           <p>{description}</p>
         </div>
-        <button
-          type="button"
-          className="button is-light contribution-collapse-toggle"
-          onClick={() => {
-            const nextExpanded = !isExpanded;
-            setIsManuallyExpanded(nextExpanded);
-            setIsExpanded(nextExpanded);
-          }}
-          aria-expanded={isExpanded}
-        >
-          {isExpanded ? t("contribution.taxonomy.showLess") : t("contribution.taxonomy.showAll")}
-        </button>
+        {!matchesAllToggle?.checked && (
+          <button
+            type="button"
+            className="button is-light contribution-collapse-toggle"
+            onClick={() => {
+              const nextExpanded = !isExpanded;
+              setIsManuallyExpanded(nextExpanded);
+              setIsExpanded(nextExpanded);
+            }}
+            aria-expanded={isExpanded}
+          >
+            {isExpanded ? t("contribution.taxonomy.showLess") : t("contribution.taxonomy.showAll")}
+          </button>
+        )}
       </div>
 
-      {matchesAllToggle && (
-        <label className="contribution-matches-all-label">
-          <input
-            type="checkbox"
-            checked={matchesAllToggle.checked}
-            onChange={(e) => matchesAllToggle.onChange(e.target.checked)}
-          />
-          <span>{matchesAllToggle.label}</span>
-        </label>
-      )}
-
-      {matchesAllToggle?.checked ? (
-        <p className="contribution-matches-all-notice">{matchesAllToggle.notice}</p>
-      ) : (
+      {!matchesAllToggle?.checked && (
         <>
           <label className="label" htmlFor={`${title}-search`}>{t("contribution.taxonomy.searchLabel")}</label>
           <input
@@ -516,6 +528,31 @@ function TaxonomyPicker({
           <p>{t("contribution.taxonomy.noneSelected")}</p>
         )}
       </div>
+
+      {matchesAllToggle && (
+        <label className="contribution-matches-all-label">
+          <input
+            type="checkbox"
+            checked={matchesAllToggle.checked}
+            onChange={(e) => matchesAllToggle.onChange(e.target.checked)}
+          />
+          <span>{matchesAllToggle.label}</span>
+        </label>
+      )}
+
+      {matchesAllToggle?.checked && (
+        <div className="contribution-matches-all-notice">
+          <p>{matchesAllToggle.notice}</p>
+          {allGroupedItems.length > 0 && (
+            <div className="contribution-matches-all-groups">
+              {allGroupedItems.map((group) => (
+                <GroupChip key={group.label || "ungrouped"} label={group.label} items={group.items} />
+              ))}
+            </div>
+          )}
+          <p className="contribution-matches-all-warning">{matchesAllToggle.warning}</p>
+        </div>
+      )}
 
       {isExpanded && !matchesAllToggle?.checked && (
         <>
@@ -1777,6 +1814,7 @@ export function CommunityContribution({
           },
           label: t("contribution.tags.matchesAllLabel"),
           notice: t("contribution.tags.matchesAllNotice"),
+          warning: t("contribution.tags.matchesAllWarning"),
         }}
       />
 
@@ -1810,6 +1848,7 @@ export function CommunityContribution({
           },
           label: t("contribution.audience.matchesAllLabel"),
           notice: t("contribution.audience.matchesAllNotice"),
+          warning: t("contribution.audience.matchesAllWarning"),
         }}
       />
 
