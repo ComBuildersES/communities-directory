@@ -14584,7 +14584,7 @@
         "id": 440,
         "name": "T3chFest",
         "status": "active",
-        "lastReviewed": "13/08/2024",
+        "lastReviewed": "27/03/2026",
         "communityType": "conference",
         "eventFormat": "in-person",
         "location": "Madrid",
@@ -14604,8 +14604,8 @@
           "instagram": "https://instagram.com/t3chfest",
           "telegram": "https://t.me/t3chfest_canal"
         },
-        "thumbnailUrl": "images/t3chfest.webp",
-        "humanValidated": false
+        "thumbnailUrl": "/communities-directory/images/t3chfest.webp",
+        "humanValidated": true
       }
     },
     {
