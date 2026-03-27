@@ -349,6 +349,7 @@ export function TagSearch() {
                     className="tag-search-show-more"
                     onMouseDown={(e) => {
                       e.preventDefault();
+                      e.stopPropagation();
                       setExpandedSections((prev) => new Set([...prev, sectionKey]));
                     }}
                   >

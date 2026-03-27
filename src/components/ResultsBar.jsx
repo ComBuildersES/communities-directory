@@ -79,34 +79,11 @@ export function ResultsBar({ view, toggleView }) {
 
   return (
     <div className="results-bar">
-      <div className="results-bar__info">
-        <span className="results-count">
-          <strong>{displayCount}</strong>
-          {showTotal && <span className="results-count-total"> {t("resultsBar.ofTotal", { total })}</span>}
-          {" "}{suffix}
-        </span>
-
-        {chips.length > 0 && (
-          <>
-            <span className="results-bar-sep">·</span>
-            <div className="results-chips">
-              {chips.map(({ key, value, label, category }) => (
-                <span key={`${key}-${value}`} className="results-chip">
-                  {category && <span className="results-chip-category">{category}:</span>}
-                  {label}
-                  <button
-                    className="results-chip-remove"
-                    onClick={() => filterComunities(key, bajaString + value)}
-                    aria-label={t("resultsBar.removeFilter", { label })}
-                  >
-                    <i className="fas fa-times"></i>
-                  </button>
-                </span>
-              ))}
-            </div>
-          </>
-        )}
-      </div>
+      <span className="results-count">
+        <strong>{displayCount}</strong>
+        {showTotal && <span className="results-count-total"> {t("resultsBar.ofTotal", { total })}</span>}
+        {" "}{suffix}
+      </span>
 
       <div className="results-bar__controls">
         <button
@@ -120,6 +97,24 @@ export function ResultsBar({ view, toggleView }) {
         </button>
         <ViewToggleButton view={view} toggleView={toggleView} />
       </div>
+
+      {chips.length > 0 && (
+        <div className="results-chips">
+          {chips.map(({ key, value, label, category }) => (
+            <span key={`${key}-${value}`} className="results-chip">
+              {category && <span className="results-chip-category">{category}:</span>}
+              {label}
+              <button
+                className="results-chip-remove"
+                onClick={() => filterComunities(key, bajaString + value)}
+                aria-label={t("resultsBar.removeFilter", { label })}
+              >
+                <i className="fas fa-times"></i>
+              </button>
+            </span>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

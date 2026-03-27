@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-27 `f26ea2f` implement fuzzy matching for tag and community search with scoring system
+- 2026-03-27 `f34701e` implement fuzzy matching for tag and community search with scoring system
 - 2026-03-27 `4820679` update taxonomy component for improved group handling and add localization for new buttons
 - 2026-03-27 `ae2b7a9` add language support for communities
 - 2026-03-27 `baa3bce` complete English translation and implement language switcher functionality
@@ -133,6 +133,10 @@ Se organiza por mes y por tipo de cambio.
 - 2026-03-24 `8830e6a` [Actualizada NodeJSMadrid](https://combuilderses.github.io/communities-directory/?community=366) ([PR #165](https://github.com/ComBuildersES/communities-directory/pull/165))
 - 2026-03-23 `452ed6d` [Actualizada GeoDevelopers](https://combuilderses.github.io/communities-directory/?community=211) ([PR #162](https://github.com/ComBuildersES/communities-directory/pull/162))
 - 2026-03-23 `6c31303` [Actualizada GeoDevelopers](https://combuilderses.github.io/communities-directory/?community=211) ([PR #154](https://github.com/ComBuildersES/communities-directory/pull/154))
+
+### Improvements
+
+- 2026-03-27 `e8822c2` simplify results bar layout and improve chip display responsiveness
 
 ### Docs
 

@@ -246,9 +246,9 @@
 /* Results bar */
 .results-bar {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
-  gap: 0.5rem;
+  gap: 0.35rem 0.5rem;
   padding: 0.35rem 1rem;
   background: #fff;
   border-bottom: 1px solid #e8e8e8;
@@ -256,11 +256,8 @@
   color: #555;
 }
 
-.results-bar__info {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+.results-count {
+  flex: 1;
   min-width: 0;
 }
 
@@ -280,11 +277,8 @@
   color: #888;
 }
 
-.results-bar-sep {
-  color: #ccc;
-}
-
 .results-chips {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
