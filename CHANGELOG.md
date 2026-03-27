@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-27 `71abd93` add matchesAllTags functionality with UI components and localization updates
+- 2026-03-27 `8d0d8eb` add conditional inclusion for matchesAllTags and matchesAllAudience in normalizePayload
+- 2026-03-27 `4ed1487` add matchesAllTags functionality with UI components and localization updates
 - 2026-03-27 `259e21a` add matchesAllTags and matchesAllAudience functionality with UI updates and tests
 - 2026-03-27 `f34701e` implement fuzzy matching for tag and community search with scoring system
 - 2026-03-27 `4820679` update taxonomy component for improved group handling and add localization for new buttons
@@ -145,6 +146,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-27 `395dbbc` update changelog [skip ci]
 - 2026-03-27 `aa0d44b` update changelog [skip ci]
 - 2026-03-27 `7dc56e6` update changelog [skip ci]
 - 2026-03-27 `f4cb6f6` update changelog [skip ci]

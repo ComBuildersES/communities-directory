@@ -84,4 +84,16 @@ describe("normalizePayload", () => {
     expect(normalizePayload({ ...base, humanValidated: false }).humanValidated).toBe(false);
     expect(normalizePayload({ ...base, humanValidated: undefined }).humanValidated).toBe(false);
   });
+
+  it("matchesAllTags solo aparece en el resultado cuando es true", () => {
+    expect(normalizePayload({ ...base, matchesAllTags: true }).matchesAllTags).toBe(true);
+    expect(normalizePayload({ ...base, matchesAllTags: false })).not.toHaveProperty("matchesAllTags");
+    expect(normalizePayload({ ...base })).not.toHaveProperty("matchesAllTags");
+  });
+
+  it("matchesAllAudience solo aparece en el resultado cuando es true", () => {
+    expect(normalizePayload({ ...base, matchesAllAudience: true }).matchesAllAudience).toBe(true);
+    expect(normalizePayload({ ...base, matchesAllAudience: false })).not.toHaveProperty("matchesAllAudience");
+    expect(normalizePayload({ ...base })).not.toHaveProperty("matchesAllAudience");
+  });
 });

@@ -224,6 +224,8 @@ export function normalizePayload(payload) {
     },
     displayOnMap: normalizeBoolean(payload.displayOnMap),
     humanValidated: Boolean(payload.humanValidated),
+    ...(normalizeBoolean(payload.matchesAllTags) ? { matchesAllTags: true } : {}),
+    ...(normalizeBoolean(payload.matchesAllAudience) ? { matchesAllAudience: true } : {}),
   };
 }
 
