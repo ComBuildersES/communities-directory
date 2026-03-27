@@ -20840,30 +20840,33 @@
   {
     "id": 573,
     "name": "Ping A Programadoras",
-    "status": "active",
+    "status": "Activa",
     "lastReviewed": "24/03/2026",
-    "communityType": "tech-meetup",
-    "eventFormat": "in-person",
+    "communityType": "Grupo de ayuda mutua",
+    "eventFormat": "Presencial",
     "location": "Sevilla, España",
     "topics": "",
     "tags": [
       "tech-ethics",
       "networking",
+      "r-lang",
+      "augmented-reality",
       "data-science",
+      "c",
       "tech4good",
-      "software-architecture",
-      "functional-programming",
-      "oop",
       "women-in-tech",
-      "javascript",
-      "java",
-      "mentoring"
+      "software-architecture",
+      "haskell",
+      "functional-programming",
+      "oop"
     ],
     "targetAudience": [],
     "contactInfo": "pingprogramadoras@gmail.com",
-    "communityUrl": "https://www.linkedin.com/company/pingaprogramadoras/",
+    "communityUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/",
     "urls": {
-      "eventsUrl": "https://meetup.com/ping-a-programadoras"
+      "eventsUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/",
+      "twitter": "https://x.com/pingmujeres",
+      "linkedin": "https://www.linkedin.com/company/pingaprogramadoras"
     },
     "thumbnailUrl": "images/ping-a-programadoras.webp",
     "latLon": {
@@ -20872,10 +20875,11 @@
     },
     "displayOnMap": true,
     "humanValidated": true,
-    "shortDescription": "Grupo de mujeres informáticas de Sevilla, donde nos reunimos para conocernos, compartir experiencias y aprender unas de otras",
+    "shortDescription": "Mujeres y personas de género no binario interesadas en hacer y pensar juntas con los ordenadores, desde una perspectiva crítica y de empoderamiento.",
     "langs": [
       "es"
-    ]
+    ],
+    "removalReason": ""
   },
   {
     "id": 574,
