@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-27 `3144d1b` add search placeholder translations for map component feat(App): set document language based on resolved language
+- 2026-03-27 `87a9d16` add search placeholder translations for map component feat(App): set document language based on resolved language
 - 2026-03-27 `d62161c` add generalist community notes and update translations
 - 2026-03-27 `9e1fe76` add conditional inclusion for matchesAllTags and matchesAllAudience in normalizePayload
 - 2026-03-27 `4ed1487` add matchesAllTags functionality with UI components and localization updates
@@ -150,6 +150,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-27 `2dbb483` update changelog [skip ci]
 - 2026-03-27 `a3fee7b` update changelog [skip ci]
 - 2026-03-27 `b22b82c` update changelog [skip ci]
 - 2026-03-27 `c33101a` update changelog [skip ci]
