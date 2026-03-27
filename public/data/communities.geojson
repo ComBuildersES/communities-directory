@@ -916,7 +916,7 @@
         "id": 37,
         "name": "Asociación de Webmasters de Granada",
         "status": "inactive",
-        "lastReviewed": "18/10/2024",
+        "lastReviewed": "27/03/2026",
         "communityType": "tech-meetup",
         "eventFormat": "in-person",
         "location": "Granada",
@@ -924,16 +924,59 @@
         "langs": [
           "es"
         ],
-        "tags": [],
-        "targetAudience": [],
+        "tags": [
+          "html",
+          "css",
+          "accessibility",
+          "web-performance",
+          "web-standards",
+          "frontend-tooling",
+          "browser-apis",
+          "ux-ui",
+          "javascript",
+          "php",
+          "python",
+          "symfony",
+          "django",
+          "seo",
+          "ruby",
+          "rails",
+          "tech4good",
+          "free-software",
+          "open-data",
+          "open-source",
+          "sysadmin",
+          "software-architecture",
+          "startups",
+          "digital-marketing",
+          "sql-databases",
+          "wordpress",
+          "woocommerce",
+          "prestashop",
+          "drupal"
+        ],
+        "targetAudience": [
+          "junior-developer",
+          "student",
+          "career-changer",
+          "senior-staff",
+          "frontend-developer",
+          "backend-developer",
+          "fullstack-developer",
+          "ux-designer",
+          "ui-designer",
+          "digital-marketer"
+        ],
         "contactInfo": "hhkaos@gmail.com",
-        "communityUrl": "https://webmastergranada.es/",
+        "communityUrl": "https://web.archive.org/web/20120627123011/http://www.webmastergranada.es/",
         "urls": {
           "twitter": "https://x.com/webgranada",
-          "web": "https://webmastergranada.es/"
+          "web": "https://webmastergranada.es/",
+          "facebook": "https://www.facebook.com/100063929263670/about/",
+          "linkedin": "https://linkedin.com/company/asociaci-n-de-webmasters-de-granada/"
         },
-        "thumbnailUrl": "images/asociacion-de-webmasters-de-granada.webp",
-        "humanValidated": false
+        "thumbnailUrl": "/communities-directory/images/asociacion-de-webmasters-de-granada.webp",
+        "humanValidated": true
       }
     },
     {
