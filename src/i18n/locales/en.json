@@ -391,13 +391,17 @@
       "title": "Tags",
       "description": "Select tags from the catalog to improve discoverability and filters.",
       "suggestionText": "Missing a tag or want to suggest an improvement to the taxonomy?",
-      "openIssue": "Open issue"
+      "openIssue": "Open issue",
+      "matchesAllLabel": "Generalist community — covers all tech topics",
+      "matchesAllNotice": "This community will appear in results for any tag filter. No need to select specific tags."
     },
     "audience": {
       "title": "Target audience",
       "description": "Indicate who the community is especially aimed at.",
       "suggestionText": "Missing an audience profile or want to suggest an improvement to the taxonomy?",
-      "openIssue": "Open issue"
+      "openIssue": "Open issue",
+      "matchesAllLabel": "Open to any audience profile",
+      "matchesAllNotice": "This community will appear in results for any audience filter. No need to select specific profiles."
     },
     "json": {
       "title": "Generated JSON",

@@ -391,13 +391,17 @@
       "title": "Etiquetas",
       "description": "Selecciona las etiquetas del catálogo para mejorar descubrimiento y filtros.",
       "suggestionText": "¿Echas en falta alguna etiqueta o quieres proponer una mejora en la taxonomía?",
-      "openIssue": "Abrir issue"
+      "openIssue": "Abrir issue",
+      "matchesAllLabel": "Comunidad generalista — cubre todos los temas tecnológicos",
+      "matchesAllNotice": "Esta comunidad aparecerá en los resultados de cualquier filtro de etiqueta. No hace falta seleccionar etiquetas específicas."
     },
     "audience": {
       "title": "Público objetivo",
       "description": "Indica a quién va especialmente dirigida la comunidad.",
       "suggestionText": "¿Echas en falta algún público o quieres proponer una mejora en la taxonomía?",
-      "openIssue": "Abrir issue"
+      "openIssue": "Abrir issue",
+      "matchesAllLabel": "Comunidad abierta a cualquier perfil",
+      "matchesAllNotice": "Esta comunidad aparecerá en los resultados de cualquier filtro de público objetivo. No hace falta seleccionar perfiles específicos."
     },
     "json": {
       "title": "JSON generado",

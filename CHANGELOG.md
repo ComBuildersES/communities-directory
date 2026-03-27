@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-03-27 `81b1689` add matchesAllTags and matchesAllAudience functionality with UI updates and tests
 - 2026-03-27 `f34701e` implement fuzzy matching for tag and community search with scoring system
 - 2026-03-27 `4820679` update taxonomy component for improved group handling and add localization for new buttons
 - 2026-03-27 `ae2b7a9` add language support for communities
@@ -139,10 +140,11 @@ Se organiza por mes y por tipo de cambio.
 
 ### Improvements
 
-- 2026-03-27 `e8822c2` simplify results bar layout and improve chip display responsiveness
+- 2026-03-27 `f4f251a` simplify results bar layout and improve chip display responsiveness
 
 ### Docs
 
+- 2026-03-27 `aa0d44b` update changelog [skip ci]
 - 2026-03-27 `7dc56e6` update changelog [skip ci]
 - 2026-03-27 `f4cb6f6` update changelog [skip ci]
 - 2026-03-27 `501a3be` update changelog [skip ci]

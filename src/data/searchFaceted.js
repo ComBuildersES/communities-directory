@@ -52,6 +52,13 @@ export const searchFaceted = (data, inverseIndex, filters) => {
 
   if (filterKeys.length === 0) return data;
 
+  const matchAllTagsIds = new Set(
+    data.filter((c) => c.matchesAllTags).map((c) => c.id)
+  );
+  const matchAllAudienceIds = new Set(
+    data.filter((c) => c.matchesAllAudience).map((c) => c.id)
+  );
+
   let filteredIDs = null;
 
   filterKeys.forEach((key) => {
@@ -67,6 +74,15 @@ export const searchFaceted = (data, inverseIndex, filters) => {
       .filter((ids) => ids.size > 0); // Filtrar los conjuntos vacios
 
     const combinedIds = new Set(setIDsBykey.flatMap((set) => [...set])); // Combinar conjuntos en un único Set
+
+    // Communities with matchesAllTags/matchesAllAudience bypass that dimension's filter but still respect all other filters
+    if (key === 'tags') {
+      matchAllTagsIds.forEach((id) => combinedIds.add(id));
+    }
+    if (key === 'targetAudience') {
+      matchAllAudienceIds.forEach((id) => combinedIds.add(id));
+    }
+
     // console.log(`Combined IDs para filtro "${key}":`, [...combinedIds]);
 
     if (filteredIDs === null) {

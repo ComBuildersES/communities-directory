@@ -47,7 +47,7 @@ function getFieldHelp(t) {
       description: t("contribution.fieldHelp.communityType.description"),
       items: [
         {
-          label: "Tech Meetup",
+          label: t("communityType.tech-meetup"),
           detail: t("contribution.fieldHelp.communityType.techMeetup"),
           examples: [
             { name: "/dev/null talks", url: "https://devnulltalks.github.io/" },
@@ -56,7 +56,7 @@ function getFieldHelp(t) {
           ],
         },
         {
-          label: "Conferencia",
+          label: t("communityType.conference"),
           detail: t("contribution.fieldHelp.communityType.conference"),
           examples: [
             { name: "Lareira Conf", url: "https://www.lareiraconf.es/" },
@@ -65,7 +65,7 @@ function getFieldHelp(t) {
           ],
         },
         {
-          label: "Organización paraguas",
+          label: t("communityType.umbrella-org"),
           detail: t("contribution.fieldHelp.communityType.umbrellaOrg"),
           examples: [
             { name: "GDG Spain", url: "https://gdg.es/" },
@@ -74,7 +74,7 @@ function getFieldHelp(t) {
           ],
         },
         {
-          label: "Hacklab",
+          label: t("communityType.hacklab"),
           detail: t("contribution.fieldHelp.communityType.hacklab"),
           examples: [
             { name: "A Industriosa", url: "https://www.meetup.com/es-ES/AIndustriosa/" },
@@ -83,7 +83,7 @@ function getFieldHelp(t) {
           ],
         },
         {
-          label: "Grupo colaborativo",
+          label: t("communityType.collaborative-group"),
           detail: t("contribution.fieldHelp.communityType.collaborativeGroup"),
           examples: [
             { name: "Adopta un Junior", url: "https://adoptaunjunior.es/" },
@@ -92,7 +92,7 @@ function getFieldHelp(t) {
           ],
         },
         {
-          label: "Meta comunidad",
+          label: t("communityType.meta-community"),
           detail: t("contribution.fieldHelp.communityType.metaCommunity"),
           examples: [
             { name: "Community Builders", url: "https://linktr.ee/ComBuilders_ES" },
@@ -101,7 +101,7 @@ function getFieldHelp(t) {
           ],
         },
         {
-          label: "Grupo de ayuda mutua",
+          label: t("communityType.mutual-aid"),
           detail: t("contribution.fieldHelp.communityType.mutualAid"),
           examples: [
             { name: "BCN Engineering", url: "https://bcneng.org/" },
@@ -364,6 +364,7 @@ function TaxonomyPicker({
   collapseGroupsByDefault = false,
   categoryOrder = [],
   suggestionCta = null,
+  matchesAllToggle = null,
 }) {
   const { t } = useTranslation();
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
@@ -459,17 +460,34 @@ function TaxonomyPicker({
         </button>
       </div>
 
-      <label className="label" htmlFor={`${title}-search`}>{t("contribution.taxonomy.searchLabel")}</label>
-      <input
-        id={`${title}-search`}
-        className="input"
-        type="search"
-        value={searchValue}
-        onChange={(event) => onSearchChange(event.target.value)}
-        placeholder={t("contribution.taxonomy.searchPlaceholder")}
-      />
+      {matchesAllToggle && (
+        <label className="contribution-matches-all-label">
+          <input
+            type="checkbox"
+            checked={matchesAllToggle.checked}
+            onChange={(e) => matchesAllToggle.onChange(e.target.checked)}
+          />
+          <span>{matchesAllToggle.label}</span>
+        </label>
+      )}
 
-      <div className="contribution-taxonomy-summary">
+      {matchesAllToggle?.checked ? (
+        <p className="contribution-matches-all-notice">{matchesAllToggle.notice}</p>
+      ) : (
+        <>
+          <label className="label" htmlFor={`${title}-search`}>{t("contribution.taxonomy.searchLabel")}</label>
+          <input
+            id={`${title}-search`}
+            className="input"
+            type="search"
+            value={searchValue}
+            onChange={(event) => onSearchChange(event.target.value)}
+            placeholder={t("contribution.taxonomy.searchPlaceholder")}
+          />
+        </>
+      )}
+
+      <div className="contribution-taxonomy-summary" style={matchesAllToggle?.checked ? { display: "none" } : undefined}>
         {selectedValues.length > 0 ? (
           <div className="contribution-selected-pills contribution-selected-pills--summary">
             {selectedValues.map((selectedId) => {
@@ -499,7 +517,7 @@ function TaxonomyPicker({
         )}
       </div>
 
-      {isExpanded && (
+      {isExpanded && !matchesAllToggle?.checked && (
         <>
           <div className="contribution-taxonomy-list">
             {allGroupedItems.map((group) => {
@@ -785,6 +803,8 @@ function buildEditableDraftSignature(draft) {
     replaceThumbnail: draft.replaceThumbnail,
     latLon: draft.latLon,
     displayOnMap: draft.displayOnMap,
+    matchesAllTags: draft.matchesAllTags,
+    matchesAllAudience: draft.matchesAllAudience,
   });
 }
 
@@ -1749,6 +1769,15 @@ export function CommunityContribution({
           label: t("contribution.tags.openIssue"),
           href: "https://github.com/ComBuildersES/communities-directory/issues/new",
         }}
+        matchesAllToggle={{
+          checked: Boolean(draft.matchesAllTags),
+          onChange: (checked) => {
+            setHasUserInteracted(true);
+            setDraft((current) => ({ ...current, matchesAllTags: checked }));
+          },
+          label: t("contribution.tags.matchesAllLabel"),
+          notice: t("contribution.tags.matchesAllNotice"),
+        }}
       />
 
       <TaxonomyPicker
@@ -1772,6 +1801,15 @@ export function CommunityContribution({
           text: t("contribution.audience.suggestionText"),
           label: t("contribution.audience.openIssue"),
           href: "https://github.com/ComBuildersES/communities-directory/issues/new",
+        }}
+        matchesAllToggle={{
+          checked: Boolean(draft.matchesAllAudience),
+          onChange: (checked) => {
+            setHasUserInteracted(true);
+            setDraft((current) => ({ ...current, matchesAllAudience: checked }));
+          },
+          label: t("contribution.audience.matchesAllLabel"),
+          notice: t("contribution.audience.matchesAllNotice"),
         }}
       />
 

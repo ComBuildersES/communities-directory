@@ -242,6 +242,32 @@
   margin: 0;
 }
 
+.contribution-matches-all-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contribution-matches-all-label input[type="checkbox"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.contribution-matches-all-notice {
+  background: #eff5fb;
+  border-left: 3px solid #3273dc;
+  border-radius: 4px;
+  padding: 0.6rem 0.8rem;
+  font-size: 0.875rem;
+  color: #363636;
+  margin-bottom: 0.5rem;
+}
+
 .contribution-inline-list {
   margin: 0.5rem 0 0;
   padding-left: 1.25rem;

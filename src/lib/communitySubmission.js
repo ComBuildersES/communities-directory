@@ -383,6 +383,8 @@ export function getEmptyCommunityDraft(nextId = null) {
     },
     displayOnMap: true,
     humanValidated: true,
+    matchesAllTags: false,
+    matchesAllAudience: false,
   };
 }
 
@@ -407,6 +409,8 @@ export function getCommunityDraft(community, nextId = null) {
     },
     displayOnMap: Boolean(community.displayOnMap),
     humanValidated: Boolean(community.humanValidated),
+    matchesAllTags: Boolean(community.matchesAllTags),
+    matchesAllAudience: Boolean(community.matchesAllAudience),
     ...(isUmbrella && { location: "n/a" }),
   };
 }
@@ -517,6 +521,8 @@ export function buildCommunityPayload(draft, existingCommunity = null) {
     },
     displayOnMap: Boolean(normalizedLocation),
     humanValidated: true,
+    matchesAllTags: Boolean(draft.matchesAllTags),
+    matchesAllAudience: Boolean(draft.matchesAllAudience),
   };
 }
 
