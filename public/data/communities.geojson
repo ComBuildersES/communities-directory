@@ -11931,19 +11931,15 @@
         "tags": [
           "nodejs",
           "javascript",
-          "c",
-          "software-architecture",
-          "event-driven",
           "software-craftsmanship",
           "free-software",
-          "r-lang",
-          "augmented-reality",
-          "java",
-          "typescript",
-          "haskell"
+          "software-architecture"
         ],
         "targetAudience": [
-          "software-architect"
+          "software-architect",
+          "backend-developer",
+          "fullstack-developer",
+          "tech-lead"
         ],
         "contactInfo": "mjfosela@gmail.com",
         "communityUrl": "https://www.meetup.com/es-ES/node-js-madrid/",
