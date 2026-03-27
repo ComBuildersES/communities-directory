@@ -442,6 +442,19 @@ button.modal-badge:focus-visible {
   border-color: #bbb;
 }
 
+/* Generalist note (allTopics / allAudience) */
+.community-modal-generalist-note {
+  font-size: 0.85rem;
+  color: #555;
+  font-style: italic;
+  margin: 0;
+}
+
+.community-modal-generalist-note .fas {
+  margin-right: 0.3em;
+  opacity: 0.6;
+}
+
 /* Community Builders */
 .community-modal-cb-cta {
   display: flex;

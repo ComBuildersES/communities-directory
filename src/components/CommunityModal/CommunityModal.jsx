@@ -185,6 +185,8 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
     urls = {},
     tags = [],
     targetAudience = [],
+    matchesAllTags = false,
+    matchesAllAudience = false,
     thumbnailUrl,
     humanValidated,
     latLon,
@@ -360,66 +362,78 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
           )}
 
           {/* Temáticas + Público objetivo en dos columnas */}
-          {(tags.length > 0 || targetAudience.length > 0) && (
+          {(tags.length > 0 || matchesAllTags || targetAudience.length > 0 || matchesAllAudience) && (
             <div className="community-modal-two-col">
-              {tags.length > 0 && (
+              {(tags.length > 0 || matchesAllTags) && (
                 <div className="community-modal-section">
                   <h3 className="community-modal-section-title">
                     <i className="fas fa-tags"></i> {t("communityModal.topics")}
                   </h3>
-                  <div className="community-modal-chips">
-                    {(tagsExpanded ? tags : tags.slice(0, CHIPS_THRESHOLD)).map((tagId) => (
-                      <button
-                        key={tagId}
-                        type="button"
-                        className="community-modal-chip community-modal-chip--tag"
-                        onClick={() => applyFilter("tags", tagId)}
-                        title={t("communityModal.filterByTag", { tag: tagsMap[tagId] || tagId })}
-                      >
-                        {tagsMap[tagId] || tagId}
-                      </button>
-                    ))}
-                    {!tagsExpanded && tags.length > CHIPS_THRESHOLD && (
-                      <button type="button" className="community-modal-chip community-modal-chip--more" onClick={() => setTagsExpanded(true)}>
-                        {t("communityModal.showMore", { count: tags.length - CHIPS_THRESHOLD })}
-                      </button>
-                    )}
-                    {tagsExpanded && tags.length > CHIPS_THRESHOLD && (
-                      <button type="button" className="community-modal-chip community-modal-chip--more" onClick={() => setTagsExpanded(false)}>
-                        {t("communityModal.showLess")}
-                      </button>
-                    )}
-                  </div>
+                  {matchesAllTags && tags.length === 0 ? (
+                    <p className="community-modal-generalist-note">
+                      <i className="fas fa-infinity"></i> {t("communityModal.allTopics")}
+                    </p>
+                  ) : (
+                    <div className="community-modal-chips">
+                      {(tagsExpanded ? tags : tags.slice(0, CHIPS_THRESHOLD)).map((tagId) => (
+                        <button
+                          key={tagId}
+                          type="button"
+                          className="community-modal-chip community-modal-chip--tag"
+                          onClick={() => applyFilter("tags", tagId)}
+                          title={t("communityModal.filterByTag", { tag: tagsMap[tagId] || tagId })}
+                        >
+                          {tagsMap[tagId] || tagId}
+                        </button>
+                      ))}
+                      {!tagsExpanded && tags.length > CHIPS_THRESHOLD && (
+                        <button type="button" className="community-modal-chip community-modal-chip--more" onClick={() => setTagsExpanded(true)}>
+                          {t("communityModal.showMore", { count: tags.length - CHIPS_THRESHOLD })}
+                        </button>
+                      )}
+                      {tagsExpanded && tags.length > CHIPS_THRESHOLD && (
+                        <button type="button" className="community-modal-chip community-modal-chip--more" onClick={() => setTagsExpanded(false)}>
+                          {t("communityModal.showLess")}
+                        </button>
+                      )}
+                    </div>
+                  )}
                 </div>
               )}
-              {targetAudience.length > 0 && (
+              {(targetAudience.length > 0 || matchesAllAudience) && (
                 <div className="community-modal-section">
                   <h3 className="community-modal-section-title">
                     <i className="fas fa-users"></i> {t("communityModal.audience")}
                   </h3>
-                  <div className="community-modal-chips">
-                    {(audienceExpanded ? targetAudience : targetAudience.slice(0, CHIPS_THRESHOLD)).map((audId) => (
-                      <button
-                        key={audId}
-                        type="button"
-                        className="community-modal-chip community-modal-chip--audience"
-                        onClick={() => applyFilter("targetAudience", audId)}
-                        title={t("communityModal.filterByAudience", { audience: audienceMap[audId] || audId })}
-                      >
-                        {audienceMap[audId] || audId}
-                      </button>
-                    ))}
-                    {!audienceExpanded && targetAudience.length > CHIPS_THRESHOLD && (
-                      <button type="button" className="community-modal-chip community-modal-chip--more" onClick={() => setAudienceExpanded(true)}>
-                        {t("communityModal.showMore", { count: targetAudience.length - CHIPS_THRESHOLD })}
-                      </button>
-                    )}
-                    {audienceExpanded && targetAudience.length > CHIPS_THRESHOLD && (
-                      <button type="button" className="community-modal-chip community-modal-chip--more" onClick={() => setAudienceExpanded(false)}>
-                        {t("communityModal.showLess")}
-                      </button>
-                    )}
-                  </div>
+                  {matchesAllAudience && targetAudience.length === 0 ? (
+                    <p className="community-modal-generalist-note">
+                      <i className="fas fa-infinity"></i> {t("communityModal.allAudience")}
+                    </p>
+                  ) : (
+                    <div className="community-modal-chips">
+                      {(audienceExpanded ? targetAudience : targetAudience.slice(0, CHIPS_THRESHOLD)).map((audId) => (
+                        <button
+                          key={audId}
+                          type="button"
+                          className="community-modal-chip community-modal-chip--audience"
+                          onClick={() => applyFilter("targetAudience", audId)}
+                          title={t("communityModal.filterByAudience", { audience: audienceMap[audId] || audId })}
+                        >
+                          {audienceMap[audId] || audId}
+                        </button>
+                      ))}
+                      {!audienceExpanded && targetAudience.length > CHIPS_THRESHOLD && (
+                        <button type="button" className="community-modal-chip community-modal-chip--more" onClick={() => setAudienceExpanded(true)}>
+                          {t("communityModal.showMore", { count: targetAudience.length - CHIPS_THRESHOLD })}
+                        </button>
+                      )}
+                      {audienceExpanded && targetAudience.length > CHIPS_THRESHOLD && (
+                        <button type="button" className="community-modal-chip community-modal-chip--more" onClick={() => setAudienceExpanded(false)}>
+                          {t("communityModal.showLess")}
+                        </button>
+                      )}
+                    </div>
+                  )}
                 </div>
               )}
             </div>

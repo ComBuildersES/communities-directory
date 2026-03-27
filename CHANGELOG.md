@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-03-27 `fb70d75` add generalist community notes and update translations
 - 2026-03-27 `9e1fe76` add conditional inclusion for matchesAllTags and matchesAllAudience in normalizePayload
 - 2026-03-27 `4ed1487` add matchesAllTags functionality with UI components and localization updates
 - 2026-03-27 `259e21a` add matchesAllTags and matchesAllAudience functionality with UI updates and tests
@@ -147,6 +148,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-27 `a3fee7b` update changelog [skip ci]
 - 2026-03-27 `b22b82c` update changelog [skip ci]
 - 2026-03-27 `c33101a` update changelog [skip ci]
 - 2026-03-27 `395dbbc` update changelog [skip ci]
