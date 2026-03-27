@@ -86,6 +86,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-03-27 `4bb5096` [Actualizada T3chFest](https://combuilderses.github.io/communities-directory/?community=440) ([PR #298](https://github.com/ComBuildersES/communities-directory/pull/298))
 - 2026-03-27 `67c651d` [Actualizada NodeJSMadrid](https://combuilderses.github.io/communities-directory/?community=366) ([PR #294](https://github.com/ComBuildersES/communities-directory/pull/294))
 - 2026-03-27 `76ec93b` [Actualizada Asociación de Webmasters de Granada](https://combuilderses.github.io/communities-directory/?community=37) ([PR #292](https://github.com/ComBuildersES/communities-directory/pull/292))
 - 2026-03-27 `4dc1b5f` [Actualizada NodeJSMadrid](https://combuilderses.github.io/communities-directory/?community=366) ([PR #290](https://github.com/ComBuildersES/communities-directory/pull/290))
@@ -146,6 +147,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-27 `b22b82c` update changelog [skip ci]
 - 2026-03-27 `c33101a` update changelog [skip ci]
 - 2026-03-27 `395dbbc` update changelog [skip ci]
 - 2026-03-27 `aa0d44b` update changelog [skip ci]
