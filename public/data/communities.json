@@ -19567,10 +19567,10 @@
   {
     "id": 540,
     "name": "Datolada",
-    "status": "active",
-    "lastReviewed": "02/06/2025",
-    "communityType": "conference",
-    "eventFormat": "in-person",
+    "status": "Activa",
+    "lastReviewed": "25/03/2026",
+    "communityType": "Conferencia",
+    "eventFormat": "Presencial",
     "location": "Coruña",
     "topics": "",
     "tags": [
@@ -19604,10 +19604,12 @@
       "lon": -8.3958532
     },
     "displayOnMap": true,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "El evento de referencia en analítica y datos del mundo digital, donde nos juntamos para compartir, aprender y celebrar el valor de la comunidad.",
+    "removalReason": ""
   },
   {
     "id": 541,
