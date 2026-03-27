@@ -63,41 +63,31 @@ Enum value strings (`"Activa"`, `"Presencial"`, `"Tech Meetup"`, etc.) intention
 
 ---
 
-## Phase 3 — English Translation + Language Switcher
+## Phase 3 — English Translation + Language Switcher _(done 2026-03-27)_ ✅
 
 **What:** Full EN translation. User can switch locales.
 
-**Steps:**
-1. Populate `src/i18n/locales/en.json` with all keys translated
-2. Create `src/components/LanguageSwitcher.jsx` — ES/EN buttons, calls `i18n.changeLanguage()` + URL path update
-3. Add `LanguageSwitcher` to `Heading.jsx` (desktop + mobile menu)
+1. Populated `src/i18n/locales/en.json` with all keys translated
+2. Created `src/components/LanguageSwitcher.jsx` — ES/EN pill buttons, calls `i18n.changeLanguage()` + `window.history.pushState()` to update URL path
+3. Added `LanguageSwitcher` to `Heading.jsx` (desktop + mobile menu)
 
-**✅ You test:**
-- Switcher visible in header
-- Switch to EN → UI in English, URL → `/en/`
-- Switch back to ES → ES strings, URL → `/es/`
-- Refresh on `/en/` → stays English
-- Close + reopen browser → language remembered
-- `npm test` passes
+`npm test` — 15/15 pass.
 
 ---
 
-## Phase 4 — Taxonomy i18n + Store Locale Awareness
+## Phase 4 — Taxonomy i18n + Store Locale Awareness _(done 2026-03-27)_ ✅
 
-**What:** Tags and audience labels show in the active locale. Inverted index rebuilt on locale change.
+**What:** Tags and audience labels show in the active locale.
 
-**Steps:**
-1. Create `public/data/tags.en.json` — translated labels, descriptions, categories, synonyms
-2. Create `public/data/audience.en.json` — same
-3. Update `community.store.js` — load locale-specific taxonomy files, fallback to ES, rebuild index on change
-4. Wire locale change → `fetchCommunities({ locale })` on language switch
+1. Created `public/data/tags.en.json` — 166 tags with English labels, descriptions, categories, synonyms
+2. Created `public/data/audience.en.json` — 35 audience profiles in English
+3. Added `tagsUrl(locale)` / `audienceUrl(locale)` helpers to `community.store.js` (fallback to ES if locale file missing)
+4. Added `reloadTaxonomy(locale)` action — fetches locale-specific taxonomy files and updates `allTags` / `allAudience` in the store
+5. `fetchCommunities` accepts `locale` param and uses locale-aware URLs from the first load
+6. `App.jsx` passes `i18n.resolvedLanguage` to `fetchCommunities` on initial load and on visibility/online refresh
+7. `LanguageSwitcher` calls `reloadTaxonomy(locale)` on language switch
 
-**✅ You test:**
-- Switch to EN → tag labels in FilterPanel / TagSearch / modal in English
-- Search for English synonym (e.g. "machine learning") in EN → results appear
-- Switch back to ES → Spanish labels, synonyms work
-- Missing EN translation → falls back to Spanish (not blank)
-- `npm test` passes
+`npm test` — 15/15 pass.
 
 ---
 

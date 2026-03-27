@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-27 `83b246e` enhance community fetching with locale support and add taxonomy reload
+- 2026-03-27 `a329156` complete English translation and implement language switcher functionality
+- 2026-03-27 `a73035c` enhance community fetching with locale support and add taxonomy reload
 - 2026-03-27 `ef32561` add language switcher component and styles for localization support
 - 2026-03-27 `b32930b` standardize community status and type values to English and update URL formats
 - 2026-03-27 `e7795eb` complete extraction of hardcoded UI strings to i18n for Spanish localization
