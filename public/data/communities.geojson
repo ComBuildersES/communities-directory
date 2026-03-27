@@ -18359,10 +18359,10 @@
       "properties": {
         "id": 540,
         "name": "Datolada",
-        "status": "active",
-        "lastReviewed": "02/06/2025",
-        "communityType": "conference",
-        "eventFormat": "in-person",
+        "status": "Activa",
+        "lastReviewed": "25/03/2026",
+        "communityType": "Conferencia",
+        "eventFormat": "Presencial",
         "location": "Coruña",
         "topics": "",
         "langs": [
@@ -18394,7 +18394,7 @@
           "bluesky": "https://bsky.app/profile/datola.es"
         },
         "thumbnailUrl": "images/datolada.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
