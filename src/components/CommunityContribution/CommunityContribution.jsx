@@ -28,6 +28,7 @@ import {
   normalizeCommunityLangs,
 } from "../../lib/communityLanguages.js";
 import { inferProvinceIdFromNominatim } from "../../lib/provinceNormalization";
+import { scoreItem } from "../../lib/fuzzyMatch";
 import "./CommunityContribution.css";
 
 function getFieldHelp(t) {
@@ -380,22 +381,14 @@ function TaxonomyPicker({
   }, [isManuallyExpanded, searchValue]);
 
   const visibleItems = useMemo(() => {
-    const normalizedQuery = searchValue.trim().toLowerCase();
-    if (!normalizedQuery) return items;
+    const q = searchValue.trim();
+    if (!q) return items;
 
-    return items.filter((item) => {
-      const haystack = [
-        item.label,
-        item.description,
-        item.category,
-        ...(item.synonyms ?? []),
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-
-      return haystack.includes(normalizedQuery);
-    });
+    return items
+      .map((item) => ({ item, score: scoreItem(q, item) }))
+      .filter(({ score }) => score !== null)
+      .sort((a, b) => b.score - a.score)
+      .map(({ item }) => item);
   }, [items, searchValue]);
 
   const groupedItems = useMemo(() => {

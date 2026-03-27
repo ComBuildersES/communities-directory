@@ -114,7 +114,8 @@
     "groupTopics": "Temáticas",
     "groupAudience": "Público objetivo",
     "groupCommunities": "Comunidades",
-    "communityLabel": "Comunidad"
+    "communityLabel": "Comunidad",
+    "showMore": "+{{count}} más"
   },
   "communityCard": {
     "viewDetails": "Ver detalles de {{name}}",

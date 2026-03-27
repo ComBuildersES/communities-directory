@@ -217,6 +217,32 @@
   border-color: #d8dbea;
 }
 
+.tag-option-badge--category {
+  background: #f0f4ff;
+  color: #3a5dc7;
+  border-color: #c5d4f5;
+}
+
+.tag-search-show-more {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  border-top: 1px solid #f0f0f0;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #3273dc;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+}
+
+.tag-search-show-more:hover {
+  background: #f0f4ff;
+  color: #2157a8;
+}
+
 /* Results bar */
 .results-bar {
   display: flex;

@@ -114,7 +114,8 @@
     "groupTopics": "Topics",
     "groupAudience": "Target Audience",
     "groupCommunities": "Communities",
-    "communityLabel": "Community"
+    "communityLabel": "Community",
+    "showMore": "+{{count}} more"
   },
   "communityCard": {
     "viewDetails": "View details for {{name}}",

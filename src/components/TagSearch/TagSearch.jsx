@@ -14,6 +14,7 @@ import {
   buildDirectoryStatePath,
   slugifyCommunityName,
 } from "../../lib/communitySubmission";
+import { scoreItem, scoreCommunity } from "../../lib/fuzzyMatch";
 import "./TagSearch.css";
 
 const INVALID_LOCATION_VALUES = new Set([
@@ -35,6 +36,13 @@ const COMMUNITY_SUGGESTION_STATUS_ORDER = {
   active:   0,
   unknown:  1,
   inactive: 2,
+};
+
+// Max items shown per section before "Ver más" appears
+const SECTION_LIMITS = {
+  topics:      3,
+  audience:    3,
+  communities: 3,
 };
 
 function normalizeLocation(location) {
@@ -89,6 +97,7 @@ export function TagSearch() {
   const [query, setQuery] = useState("");
   const [activeFilters, setActiveFilters] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [expandedSections, setExpandedSections] = useState(new Set());
   const allTags = useTags();
   const allAudience = useAudience();
   const allCommunities = useAllCommunities();
@@ -107,78 +116,80 @@ export function TagSearch() {
     return () => document.removeEventListener("mousedown", handleClick);
   }, []);
 
+  // Reset expanded sections when the query changes
+  useEffect(() => {
+    setExpandedSections(new Set());
+  }, [query]);
+
   const activeFilterIds = new Set(
     activeFilters.map((filter) => `${filter.key}:${filter.value}`)
   );
 
-  const q = query.trim().toLowerCase();
+  const q = query.trim();
 
-  const suggestions = q.length < 2
+  const tagSuggestions = q.length < 2
     ? []
-    : [
-        ...allTags
-          .filter((tag) => {
-            if (activeFilterIds.has(`tags:${tag.id}`)) return false;
-            return (
-              tag.label.toLowerCase().includes(q) ||
-              tag.description?.toLowerCase().includes(q) ||
-              tag.synonyms?.some((synonym) => synonym.toLowerCase().includes(q))
-            );
-          })
-          .map((tag) => ({
-            group: tag.category || t("tagSearch.groupTopics"),
-            key: "tags",
-            value: tag.id,
-            label: tag.label,
-            description: tag.description,
-          })),
-        ...allAudience
-          .filter((audience) => {
-            if (activeFilterIds.has(`targetAudience:${audience.id}`)) return false;
-            return (
-              audience.label.toLowerCase().includes(q) ||
-              audience.description?.toLowerCase().includes(q) ||
-              audience.synonyms?.some((synonym) => synonym.toLowerCase().includes(q))
-            );
-          })
-          .map((audience) => ({
-            group: t("tagSearch.groupAudience"),
-            key: "targetAudience",
-            value: audience.id,
-            label: audience.label,
-            description: audience.description,
-          })),
-        ...allCommunities
-          .filter((community) => {
-            if (activeFilterIds.has(`name:${community.name}`)) return false;
-            return community.name?.toLowerCase().includes(q);
-          })
-          .sort((left, right) => {
-            const leftOrder = COMMUNITY_SUGGESTION_STATUS_ORDER[left.status] ?? 1;
-            const rightOrder = COMMUNITY_SUGGESTION_STATUS_ORDER[right.status] ?? 1;
+    : allTags
+        .filter((tag) => !activeFilterIds.has(`tags:${tag.id}`))
+        .map((tag) => ({ tag, score: scoreItem(q, tag) }))
+        .filter(({ score }) => score !== null)
+        .sort((a, b) => b.score - a.score)
+        .map(({ tag }) => ({
+          sectionKey: "topics",
+          group: t("tagSearch.groupTopics"),
+          key: "tags",
+          value: tag.id,
+          label: tag.label,
+          description: tag.description,
+        }));
 
-            if (leftOrder !== rightOrder) {
-              return leftOrder - rightOrder;
-            }
+  const audienceSuggestions = q.length < 2
+    ? []
+    : allAudience
+        .filter((audience) => !activeFilterIds.has(`targetAudience:${audience.id}`))
+        .map((audience) => ({ audience, score: scoreItem(q, audience) }))
+        .filter(({ score }) => score !== null)
+        .sort((a, b) => b.score - a.score)
+        .map(({ audience }) => ({
+          sectionKey: "audience",
+          group: t("tagSearch.groupAudience"),
+          key: "targetAudience",
+          value: audience.id,
+          label: audience.label,
+          description: audience.description,
+        }));
 
-            return left.name.localeCompare(right.name, "es", { sensitivity: "base" });
-          })
-          .slice(0, 12)
-          .map((community) => ({
-            group: t("tagSearch.groupCommunities"),
-            key: "name",
-            value: community.name,
-            label: community.name,
-            description: t("tagSearch.communityLabel"),
-            meta: buildCommunityMeta(community, t),
-            communityIdentifier: community.id ?? slugifyCommunityName(community.name),
-          })),
-      ];
+  const communitySuggestions = q.length < 2
+    ? []
+    : allCommunities
+        .filter((community) => !activeFilterIds.has(`name:${community.name}`))
+        .map((community) => ({ community, score: scoreCommunity(q, community.name) }))
+        .filter(({ score }) => score !== null)
+        .sort((a, b) => {
+          // Primary: relevance score descending
+          if (b.score !== a.score) return b.score - a.score;
+          // Secondary: status order
+          const leftOrder = COMMUNITY_SUGGESTION_STATUS_ORDER[a.community.status] ?? 1;
+          const rightOrder = COMMUNITY_SUGGESTION_STATUS_ORDER[b.community.status] ?? 1;
+          if (leftOrder !== rightOrder) return leftOrder - rightOrder;
+          return a.community.name.localeCompare(b.community.name, "es", { sensitivity: "base" });
+        })
+        .map(({ community }) => ({
+          sectionKey: "communities",
+          group: t("tagSearch.groupCommunities"),
+          key: "name",
+          value: community.name,
+          label: community.name,
+          description: t("tagSearch.communityLabel"),
+          meta: buildCommunityMeta(community, t),
+          communityIdentifier: community.id ?? slugifyCommunityName(community.name),
+        }));
 
-  const grouped = suggestions.reduce((acc, suggestion) => {
-    (acc[suggestion.group] = acc[suggestion.group] || []).push(suggestion);
-    return acc;
-  }, {});
+  const sections = [
+    { key: "topics",      label: t("tagSearch.groupTopics"),      suggestions: tagSuggestions },
+    { key: "audience",    label: t("tagSearch.groupAudience"),     suggestions: audienceSuggestions },
+    { key: "communities", label: t("tagSearch.groupCommunities"),  suggestions: communitySuggestions },
+  ].filter((s) => s.suggestions.length > 0);
 
   const addFilter = (filter) => {
     setActiveFilters((prev) => [...prev, filter]);
@@ -288,47 +299,65 @@ export function TagSearch() {
         )}
       </div>
 
-      {showDropdown && Object.keys(grouped).length > 0 && (
+      {showDropdown && sections.length > 0 && (
         <div className="tag-search-dropdown">
-          {Object.entries(grouped).map(([category, tags]) => (
-            <div key={category} className="tag-search-group">
-              <div className="tag-search-group-label">{category}</div>
-              {tags.map((suggestion) => (
-                <button
-                  key={`${suggestion.key}:${suggestion.value}`}
-                  className="tag-search-option"
-                  onMouseDown={(e) => {
-                    e.preventDefault();
+          {sections.map(({ key: sectionKey, label: sectionLabel, suggestions }) => {
+            const limit = SECTION_LIMITS[sectionKey] ?? 5;
+            const isExpanded = expandedSections.has(sectionKey);
+            const displayed = isExpanded ? suggestions : suggestions.slice(0, limit);
+            const hiddenCount = suggestions.length - limit;
 
-                    if (suggestion.communityIdentifier !== null && suggestion.communityIdentifier !== undefined) {
-                      openCommunityDetails(suggestion, e.metaKey || e.ctrlKey);
-                      return;
-                    }
+            return (
+              <div key={sectionKey} className="tag-search-group">
+                <div className="tag-search-group-label">{sectionLabel}</div>
+                {displayed.map((suggestion) => (
+                  <button
+                    key={`${suggestion.key}:${suggestion.value}`}
+                    className="tag-search-option"
+                    onMouseDown={(e) => {
+                      e.preventDefault();
 
-                    if (e.metaKey || e.ctrlKey) {
-                      openFilterInNewTab(suggestion);
-                      return;
-                    }
+                      if (suggestion.communityIdentifier !== null && suggestion.communityIdentifier !== undefined) {
+                        openCommunityDetails(suggestion, e.metaKey || e.ctrlKey);
+                        return;
+                      }
 
-                    addFilter(suggestion);
-                  }}
-                >
-                  <span className="tag-option-label">{suggestion.label}</span>
-                  {suggestion.meta?.length ? (
-                    <span className="tag-option-meta" aria-hidden="true">
-                      {suggestion.meta.map((item) => (
-                        <span key={`${suggestion.key}:${suggestion.value}:${item.value}`} className={item.className}>
-                          {item.value}
-                        </span>
-                      ))}
-                    </span>
-                  ) : (
-                    <span className="tag-option-desc">{suggestion.description}</span>
-                  )}
-                </button>
-              ))}
-            </div>
-          ))}
+                      if (e.metaKey || e.ctrlKey) {
+                        openFilterInNewTab(suggestion);
+                        return;
+                      }
+
+                      addFilter(suggestion);
+                    }}
+                  >
+                    <span className="tag-option-label">{suggestion.label}</span>
+                    {suggestion.meta?.length ? (
+                      <span className="tag-option-meta" aria-hidden="true">
+                        {suggestion.meta.map((item) => (
+                          <span key={`${suggestion.key}:${suggestion.value}:${item.value}`} className={item.className}>
+                            {item.value}
+                          </span>
+                        ))}
+                      </span>
+                    ) : (
+                      <span className="tag-option-desc">{suggestion.description}</span>
+                    )}
+                  </button>
+                ))}
+                {!isExpanded && hiddenCount > 0 && (
+                  <button
+                    className="tag-search-show-more"
+                    onMouseDown={(e) => {
+                      e.preventDefault();
+                      setExpandedSections((prev) => new Set([...prev, sectionKey]));
+                    }}
+                  >
+                    {t("tagSearch.showMore", { count: hiddenCount })}
+                  </button>
+                )}
+              </div>
+            );
+          })}
         </div>
       )}
     </div>
