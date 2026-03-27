@@ -493,9 +493,15 @@ export function buildCommunityPayload(draft, existingCommunity = null) {
     : supportsLocation
       ? cleanString(draft.location)
       : "";
-  const normalizedThumbnailUrl = draft.replaceThumbnail
+  const rawThumbnailUrl = draft.replaceThumbnail
     ? cleanString(draft.thumbnailUrl)
     : cleanString(existingCommunity?.thumbnailUrl ?? draft.thumbnailUrl);
+  // The store normalizes thumbnailUrl to an absolute path (e.g. /communities-directory/images/foo.webp).
+  // Strip the BASE_URL prefix so the JSON payload always stores the relative path (images/foo.webp).
+  const baseUrl = import.meta.env.BASE_URL;
+  const normalizedThumbnailUrl = rawThumbnailUrl?.startsWith(baseUrl)
+    ? rawThumbnailUrl.slice(baseUrl.length)
+    : rawThumbnailUrl;
 
   return {
     id: resolvedId,

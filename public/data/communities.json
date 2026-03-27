@@ -1320,7 +1320,7 @@
       "facebook": "https://www.facebook.com/100063929263670/about/",
       "linkedin": "https://linkedin.com/company/asociaci-n-de-webmasters-de-granada/"
     },
-    "thumbnailUrl": "/communities-directory/images/asociacion-de-webmasters-de-granada.webp",
+    "thumbnailUrl": "images/asociacion-de-webmasters-de-granada.webp",
     "latLon": {
       "lat": 37.1831938,
       "lon": -3.604747
@@ -12876,7 +12876,7 @@
     "displayOnMap": true,
     "humanValidated": true,
     "shortDescription": "Grupo de meetup donde hablamos principalmente de Node.js y temas relacionados con el mundo del desarrollo de software.",
-    "thumbnailUrl": "/communities-directory/images/nodejs-madrid.webp",
+    "thumbnailUrl": "images/nodejs-madrid.webp",
     "langs": [
       "es"
     ],
@@ -15783,7 +15783,7 @@
       "instagram": "https://instagram.com/t3chfest",
       "telegram": "https://t.me/t3chfest_canal"
     },
-    "thumbnailUrl": "/communities-directory/images/t3chfest.webp",
+    "thumbnailUrl": "images/t3chfest.webp",
     "latLon": {
       "lat": 40.4167047,
       "lon": -3.7035825
