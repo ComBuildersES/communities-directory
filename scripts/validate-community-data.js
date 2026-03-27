@@ -7,21 +7,21 @@ const DELETED_COMMUNITIES_PATH = "public/data/deleted-communities.json";
 const TAGS_PATH = "public/data/tags.json";
 const AUDIENCE_PATH = "public/data/audience.json";
 
-const CANONICAL_STATUS = new Set(["Activa", "Inactiva", "Desconocido"]);
+const CANONICAL_STATUS = new Set(["active", "inactive", "unknown"]);
 const CANONICAL_COMMUNITY_TYPES = new Set([
-  "Conferencia",
-  "Grupo colaborativo",
-  "Grupo de ayuda mutua",
-  "Hacklab",
-  "Meta comunidad",
-  "Organización paraguas",
-  "Tech Meetup",
+  "conference",
+  "collaborative-group",
+  "mutual-aid",
+  "hacklab",
+  "meta-community",
+  "umbrella-org",
+  "tech-meetup",
 ]);
 const CANONICAL_EVENT_FORMATS = new Set([
-  "Desconocido",
-  "Híbridos",
-  "Online",
-  "Presencial",
+  "unknown",
+  "hybrid",
+  "online",
+  "in-person",
 ]);
 const ALLOWED_URL_KEYS = new Set([
   "bluesky",
@@ -39,6 +39,7 @@ const ALLOWED_URL_KEYS = new Set([
   "twitch",
   "twitter",
   "web",
+  "whatsapp",
   "youtube",
 ]);
 
@@ -394,10 +395,10 @@ function validateCommunityStrict(community, index, issues, isNew = true) {
     pushIssue(issues.errors, "error", `${label}: id debe ser un entero mayor o igual que 0.`);
   }
 
-  const requiredFields = ["name", "status", "lastReviewed", "communityType", "eventFormat", "communityUrl"];
+  const requiredFields = ["name", "status", "lastReviewed", "communityType", "eventFormat"];
 
   if (isNew) {
-    requiredFields.push("thumbnailUrl");
+    requiredFields.push("communityUrl", "thumbnailUrl");
   }
 
   for (const field of requiredFields) {
@@ -442,7 +443,7 @@ function validateCommunityStrict(community, index, issues, isNew = true) {
     );
   }
 
-  if (!isValidUrl(community.communityUrl)) {
+  if (isNonEmptyString(community.communityUrl) && !isValidUrl(community.communityUrl)) {
     pushIssue(
       issues.errors,
       "error",

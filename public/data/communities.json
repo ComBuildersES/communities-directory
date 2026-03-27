@@ -6210,7 +6210,7 @@
     "communityUrl": "https://www.galpon.org/",
     "urls": {
       "telegram": "https://t.me/galpon",
-      "mastodon": "galpon@mastodon.gal"
+      "mastodon": "https://mastodon.gal/@galpon"
     },
     "thumbnailUrl": "images/galpon.webp",
     "latLon": {
@@ -6389,7 +6389,7 @@
   {
     "id": 197,
     "name": "GDG Cloud Madrid",
-    "status": "Inactivo",
+    "status": "inactive",
     "lastReviewed": "26/05/2025",
     "communityType": "tech-meetup",
     "eventFormat": "in-person",
@@ -8892,7 +8892,7 @@
     "contactInfo": "iniciador-granada@googlegroups.com; hhkaos@gmail.com",
     "communityUrl": "https://iniciador.com/Granada",
     "urls": {
-      "mailingList": "iniciador-granada@googlegroups.com"
+      "mailingList": "https://groups.google.com/g/iniciador-granada"
     },
     "latLon": {
       "lat": 37.1831938,
@@ -9062,7 +9062,7 @@
     "contactInfo": "iniciador-malaga@googlegroups.com; hhkaos@gmail.com",
     "communityUrl": "https://iniciador.com/Malaga",
     "urls": {
-      "mailingList": "iniciador-malaga@googlegroups.com"
+      "mailingList": "https://groups.google.com/g/iniciador-malaga"
     },
     "latLon": {
       "lat": 36.7196292,
@@ -18189,7 +18189,7 @@
       "twitter": "https://twitter.com/PyBCN",
       "youtube": "https://www.youtube.com/c/PythonBarcelona",
       "eventsUrl": "https://www.meetup.com/python-barcelona/",
-      "mailingList": "pybcn@googlegroups.com"
+      "mailingList": "https://groups.google.com/g/pybcn"
     },
     "thumbnailUrl": "images/python-barcelona.webp",
     "latLon": {
@@ -18231,7 +18231,7 @@
       "twitter": "https://twitter.com/PyBCN",
       "youtube": "https://www.youtube.com/c/PythonBarcelona",
       "eventsUrl": "https://www.meetup.com/python-barcelona/",
-      "mailingList": "pyladies-bcn@googlegroups.com"
+      "mailingList": "https://groups.google.com/g/pyladies-bcn"
     },
     "thumbnailUrl": "images/pyladies-barcelona.webp",
     "latLon": {
