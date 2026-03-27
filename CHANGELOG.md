@@ -80,7 +80,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Fixes
 
-- 2026-03-27 `2d878df` evitar que el editor de propuestas persista rutas absolutas en communities.json
+- 2026-03-27 `050317e` evitar que el editor de propuestas persista rutas absolutas en communities.json
 - 2026-03-25 `c227942` update support message for inclusivity
 - 2026-03-24 `731af6c` correct GitHub username for communityId 543 in community-builders-members.json
 - 2026-03-24 `749c63d` update contact information for Atlanticaconf community
