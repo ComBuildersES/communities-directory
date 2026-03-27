@@ -29,7 +29,7 @@ import './Map.css'
 import { useEffect, useState, useRef } from 'react'
 
 function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null, initialMapState = null, onMapStateChange = null }) {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [activeView, setActiveView] = useState(null)
   const [provincesFeatures, setProvincesFeatures] = useState([])
   const [provincesCenter, setProvincesCenter] = useState()
@@ -39,8 +39,6 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
   const popupRef = useRef(null)
   const communityLayerRef = useRef(null);
   const mapStateDebounceRef = useRef(null);
-  const searchRef = useRef(null);
-
 
   {/* <  const communities = useCommunitiesFiltered().filter((community) => {
 
@@ -71,12 +69,6 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
 
 
 
-
-  useEffect(() => {
-    if (!searchRef.current) return;
-    searchRef.current.setAttribute('popup-disabled', '');
-    searchRef.current.setAttribute('result-graphic-disabled', '');
-  }, []);
 
   // Setup Effect for the Provinces Feature Layer
   useEffect(() => {
@@ -544,7 +536,13 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
         }
         onarcgisViewReadyChange={activeViewChange}
       >
-        <arcgis-search slot="top-right" ref={searchRef}></arcgis-search>
+        <arcgis-search
+          key={i18n.resolvedLanguage}
+          slot="top-right"
+          popup-disabled
+          result-graphic-disabled
+          all-placeholder={t("map.searchPlaceholder")}
+        ></arcgis-search>
       </arcgis-map>
       </div>
       <button className="map-toggle-btn" onClick={() => setMapCollapsed(c => !c)}>

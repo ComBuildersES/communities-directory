@@ -223,7 +223,8 @@
       "type": "Tipo",
       "total": "Total",
       "other": "Otro"
-    }
+    },
+    "searchPlaceholder": "Buscar dirección o lugar"
   },
   "contribution": {
     "closeHelp": "Cerrar ayuda",

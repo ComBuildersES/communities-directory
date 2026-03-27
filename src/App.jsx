@@ -105,6 +105,10 @@ function App () {
   }, [fetchCommunities, i18n.resolvedLanguage]);
 
   useEffect(() => {
+    document.documentElement.lang = i18n.resolvedLanguage || "es";
+  }, [i18n.resolvedLanguage]);
+
+  useEffect(() => {
     const syncOnlineStatus = () => setIsOnline(navigator.onLine);
     const refreshFreshData = () => {
       if (routeRef.current.mode === "edit") return;

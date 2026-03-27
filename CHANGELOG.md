@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-03-27 `3144d1b` add search placeholder translations for map component feat(App): set document language based on resolved language
 - 2026-03-27 `d62161c` add generalist community notes and update translations
 - 2026-03-27 `9e1fe76` add conditional inclusion for matchesAllTags and matchesAllAudience in normalizePayload
 - 2026-03-27 `4ed1487` add matchesAllTags functionality with UI components and localization updates
@@ -80,7 +81,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Fixes
 
-- 2026-03-27 `2d878df` evitar que el editor de propuestas persista rutas absolutas en communities.json
+- 2026-03-27 `050317e` evitar que el editor de propuestas persista rutas absolutas en communities.json
 - 2026-03-25 `c227942` update support message for inclusivity
 - 2026-03-24 `731af6c` correct GitHub username for communityId 543 in community-builders-members.json
 - 2026-03-24 `749c63d` update contact information for Atlanticaconf community
