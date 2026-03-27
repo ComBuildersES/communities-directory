@@ -1,9 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import { SUPPORTED_LOCALES } from '../i18n/index.js';
+import { useReloadTaxonomy } from '../stores/community.store.js';
 
 export function LanguageSwitcher() {
   const { i18n } = useTranslation();
   const currentLocale = i18n.resolvedLanguage;
+  const reloadTaxonomy = useReloadTaxonomy();
 
   const switchLanguage = (locale) => {
     if (locale === currentLocale) return;
@@ -21,6 +23,7 @@ export function LanguageSwitcher() {
 
     window.history.pushState(null, '', `${base}/${segments.join('/')}${search}${hash}`);
     i18n.changeLanguage(locale);
+    reloadTaxonomy(locale);
   };
 
   return (

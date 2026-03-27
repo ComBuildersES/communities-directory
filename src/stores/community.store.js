@@ -8,6 +8,17 @@ import { parseDirectoryFilters } from "../lib/communitySubmission";
 
 const TAGS_URL = `${import.meta.env.BASE_URL}data/tags.json`;
 const AUDIENCE_URL = `${import.meta.env.BASE_URL}data/audience.json`;
+
+function tagsUrl(locale) {
+  return locale && locale !== 'es'
+    ? `${import.meta.env.BASE_URL}data/tags.${locale}.json`
+    : TAGS_URL;
+}
+function audienceUrl(locale) {
+  return locale && locale !== 'es'
+    ? `${import.meta.env.BASE_URL}data/audience.${locale}.json`
+    : AUDIENCE_URL;
+}
 const CB_MEMBERS_URL = `${import.meta.env.BASE_URL}data/community-builders-members.json`;
 
 export const filtros = {
@@ -41,7 +52,7 @@ const useCommunityStore = create(
   devtools((set, get) => ({
     ...initialState,
     actions: {
-      fetchCommunities: async ({ preserveData = false } = {}) => {
+      fetchCommunities: async ({ preserveData = false, locale = 'es' } = {}) => {
         const currentState = get();
 
         if (currentState.isLoading || currentState.isRefreshingFreshData) {
@@ -51,8 +62,8 @@ const useCommunityStore = create(
         const shouldRequireFreshData = typeof navigator === "undefined" ? true : navigator.onLine;
         const loadAllResources = (requestInit) => Promise.all([
           getAllCommunities(URL, requestInit),
-          getAllCommunities(TAGS_URL, requestInit),
-          getAllCommunities(AUDIENCE_URL, requestInit),
+          getAllCommunities(tagsUrl(locale), requestInit),
+          getAllCommunities(audienceUrl(locale), requestInit),
           getAllCommunities(CB_MEMBERS_URL, requestInit),
         ]);
 
@@ -132,6 +143,25 @@ const useCommunityStore = create(
             isRefreshingFreshData: false,
           });
         }
+      },
+      reloadTaxonomy: async (locale) => {
+        const fetchWithFallback = async (url, fallbackUrl) => {
+          try {
+            const res = await fetch(url, { cache: 'no-store' });
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            return res.json();
+          } catch {
+            const res = await fetch(fallbackUrl);
+            return res.json();
+          }
+        };
+
+        const [tags, audience] = await Promise.all([
+          fetchWithFallback(tagsUrl(locale), TAGS_URL),
+          fetchWithFallback(audienceUrl(locale), AUDIENCE_URL),
+        ]);
+
+        set({ allTags: tags, allAudience: audience });
       },
       filterComunities: (key, value) => {
         const { allCommunities, filters, invertedIndex } = get();
@@ -249,3 +279,6 @@ export const useFreshnessError = () => useCommunityStore((state) => state.freshn
 
 export const useCommunityActions = () =>
   useCommunityStore((state) => state.actions);
+
+export const useReloadTaxonomy = () =>
+  useCommunityStore((state) => state.actions.reloadTaxonomy);

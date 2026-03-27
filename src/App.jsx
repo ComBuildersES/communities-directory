@@ -48,7 +48,7 @@ function dismissActiveInput() {
 }
 
 function App () {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [view, setView] = useState(() => {
     const params = new URLSearchParams(window.location.search);
     return params.get("view") === "map" ? "map" : "list";
@@ -101,15 +101,15 @@ function App () {
   }, [contributionState]);
 
   useEffect(() => {
-    fetchCommunities();
-  }, [fetchCommunities]);
+    fetchCommunities({ locale: i18n.resolvedLanguage });
+  }, [fetchCommunities, i18n.resolvedLanguage]);
 
   useEffect(() => {
     const syncOnlineStatus = () => setIsOnline(navigator.onLine);
     const refreshFreshData = () => {
       if (routeRef.current.mode === "edit") return;
       if (!navigator.onLine) return;
-      fetchCommunities({ preserveData: true });
+      fetchCommunities({ preserveData: true, locale: i18n.resolvedLanguage });
     };
     const handleVisibilityChange = () => {
       if (document.visibilityState === "visible") {
