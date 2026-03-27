@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-27 `ee07d2f` standardize community status and type values to English and update URL formats
+- 2026-03-27 `3969351` add language switcher component and styles for localization support
+- 2026-03-27 `b32930b` standardize community status and type values to English and update URL formats
 - 2026-03-27 `e7795eb` complete extraction of hardcoded UI strings to i18n for Spanish localization
 - 2026-03-27 `967b2ac` integrate i18next for internationalization support
 - 2026-03-26 `9b0f09a` enhance CommunityModal and Map components with location handling and focus management

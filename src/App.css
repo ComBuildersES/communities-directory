@@ -220,6 +220,46 @@ body {
   color: #1d5fd1;
 }
 
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #dde6f5;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.language-switcher-btn {
+  padding: 0.38rem 0.6rem;
+  background: transparent;
+  border: none;
+  border-right: 1px solid #dde6f5;
+  color: #5577a8;
+  font-size: 0.78rem;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.language-switcher-btn:last-child {
+  border-right: none;
+}
+
+.language-switcher-btn:hover {
+  background: #f0f4fb;
+  color: #2a4f8c;
+}
+
+.language-switcher-btn--active {
+  background: #3273dc;
+  color: #fff;
+}
+
+.language-switcher-btn--active:hover {
+  background: #2563c4;
+  color: #fff;
+}
+
 .heading-support {
   position: relative;
 }

@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "./LanguageSwitcher.jsx";
 import allContributorsRaw from "../../.all-contributorsrc?raw";
 const allContributorsRc = JSON.parse(allContributorsRaw);
 
@@ -260,6 +261,7 @@ export function Heading ({
                   </>
                 )}
               </div>
+              <LanguageSwitcher />
               <button
                 type="button"
                 className="heading-action-btn heading-action-btn--cta"

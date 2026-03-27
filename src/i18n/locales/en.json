@@ -1,2 +1,385 @@
 {
+  "status": {
+    "active": "Active",
+    "inactive": "Inactive",
+    "unknown": "Unknown"
+  },
+  "eventFormat": {
+    "in-person": "In Person",
+    "online": "Online",
+    "hybrid": "Hybrid",
+    "unknown": "Unknown"
+  },
+  "communityType": {
+    "tech-meetup": "Tech Meetup",
+    "conference": "Conference",
+    "umbrella-org": "Umbrella Organization",
+    "hacklab": "Hacklab",
+    "collaborative-group": "Collaborative Group",
+    "meta-community": "Meta-community",
+    "mutual-aid": "Mutual Aid Group"
+  },
+  "footer": {
+    "maintainedWith": "Project maintained with 💖",
+    "byCommunity": "by the community",
+    "codeUnder": "Code under",
+    "dataUnder": "& data under"
+  },
+  "installPromptBar": {
+    "updateAvailable": "A new version of the directory is ready to load with the latest data and improvements.",
+    "installHint": "Save this website as an app to open the directory faster from your phone.",
+    "updating": "Updating...",
+    "reload": "Reload",
+    "install": "Install",
+    "iosHintPrefix": "Safari: Share",
+    "iosHintSuffix": "Add to Home Screen",
+    "closeAriaLabel": "Close install notice"
+  },
+  "addCommunityCTA": {
+    "question": "Missing a community?",
+    "button": "Request a new community here"
+  },
+  "viewToggle": {
+    "list": "List",
+    "map": "Map"
+  },
+  "heading": {
+    "title": "Tech Communities",
+    "subtitle": "Directory of Spanish technology communities",
+    "back": "Back",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "about": "About",
+    "aboutCopy1": "Our goal is to maintain the largest directory of Spanish technology communities. An initiative by",
+    "aboutCopy2": "with",
+    "aboutCopy3": "and",
+    "openSource": "open source",
+    "openData": "open data",
+    "aboutStar": "If you find it useful, give it a ⭐ on",
+    "bookmarkHint": "And don't forget to bookmark it: {{shortcut}}.",
+    "collaborate": "Contribute",
+    "collaborateCopy1": "New ideas, bugs and any other contribution are welcome —",
+    "openIssue": "open an issue",
+    "collaborateCopy2": "or check",
+    "seekingPart1": "We're looking for",
+    "provincialMaintainers": "provincial maintainers",
+    "seekingPart2": "to help keep local community data up to date.",
+    "shareQuestion": "Help us spread the word?",
+    "shareOn": "Share on {{platform}}",
+    "shareText": "This {{handle}} directory shouldn't be missing from your bookmarks — it's the largest listing of meetups, conferences and tech communities in Spain: {{url}} (and it's open source & open data! :D)",
+    "contributorsTitle": "The community that makes it possible",
+    "seeAllContributors": "See all contributors",
+    "addCommunityTitle": "Add a new community to the directory",
+    "addCommunity": "Add community"
+  },
+  "resultsBar": {
+    "suffixList": "communities",
+    "suffixMap": "in-person and hybrid communities",
+    "ofTotal": "of {{total}}",
+    "removeFilter": "Remove filter {{label}}",
+    "filters": "Filters",
+    "showFilters": "Show filters",
+    "hideFilters": "Hide filters",
+    "filterLabel": {
+      "status": "Status",
+      "eventFormat": "Format",
+      "communityType": "Type",
+      "tags": "Topics",
+      "targetAudience": "Audience",
+      "name": "Community"
+    }
+  },
+  "tagSearch": {
+    "placeholder": "Filter by topic, audience or community…",
+    "placeholderMore": "Add another filter…",
+    "clearFilters": "Clear filters",
+    "removeChip": "Remove {{label}}",
+    "groupTopics": "Topics",
+    "groupAudience": "Target Audience",
+    "groupCommunities": "Communities",
+    "communityLabel": "Community"
+  },
+  "communityCard": {
+    "viewDetails": "View details for {{name}}",
+    "cbBadgeTitle": "People who run this community are also part of the Community Builders community that drives this directory"
+  },
+  "sidebar": {
+    "communityType": "Community Type",
+    "eventFormat": "Event Type",
+    "status": "Community Status"
+  },
+  "app": {
+    "checkingFreshData": "Checking for a more recent version of the directory before opening details or suggesting changes.",
+    "syncingBeforeEdit": "Syncing the latest version before allowing edits...",
+    "loadingForm": "Loading form...",
+    "communityNotFound": "I couldn't find the community you were trying to edit. You can return to the directory or open an empty form to create a new one.",
+    "unsavedChanges": "Unsaved changes",
+    "unsavedChangesBody": "If you leave now, what you've written in the form will be lost. You can keep editing, save a local draft in this browser, or exit without saving.",
+    "keepEditing": "Keep editing",
+    "saveDraftAndExit": "Save draft and exit",
+    "exitWithoutSaving": "Exit without saving"
+  },
+  "communityModal": {
+    "close": "Close",
+    "filterByStatus": "Filter by status {{status}}",
+    "filterByType": "Filter by community type {{communityType}}",
+    "filterByFormat": "Filter by event type {{eventFormat}}",
+    "filterByTag": "Filter by {{tag}}",
+    "filterByAudience": "Filter by {{audience}}",
+    "viewOnMap": "View on map",
+    "reviewed": "Reviewed: {{date}}",
+    "shortDescription": "Short description",
+    "noDescription": "No short description yet",
+    "links": "Links",
+    "mainLink": "Main link",
+    "archivedUrlNote": "The main link points to an archived copy on web.archive.org because the original source no longer seems to be available.",
+    "topics": "Topics",
+    "audience": "Target audience",
+    "showMore": "+{{count}} more",
+    "showLess": "Show less",
+    "collaborate": "Collaborate",
+    "aiDataTooltip": "Data enriched automatically, pending human validation. Under CC BY 4.0, your contribution will also benefit those who reuse this directory.",
+    "edit": "Edit",
+    "share": "Share",
+    "cbTooltip": "One of the people who leads or led this community is part of Community Builders, the meta-community of tech community organizers in Spain.",
+    "githubHandle": "@{{handle}} on GitHub",
+    "cbCta": "Do you run this community?",
+    "cbCtaLink": "Join Community Builders",
+    "shareMsg": "This profile of {{subject}} summarizes what you'll find there at a glance: {{link}}{{cc}}",
+    "url": {
+      "web": "Website",
+      "events": "Events",
+      "linkAggregator": "Link aggregator",
+      "mailingList": "Mailing list",
+      "github": "GitHub",
+      "discord": "Discord",
+      "telegram": "Telegram",
+      "whatsapp": "WhatsApp",
+      "slack": "Slack",
+      "youtube": "YouTube",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter/X",
+      "tiktok": "TikTok",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "mastodon": "Mastodon",
+      "bluesky": "Bluesky",
+      "twitch": "Twitch"
+    },
+    "urlGroup": {
+      "community": "Community",
+      "chat": "Chat",
+      "social": "Social & Video"
+    }
+  },
+  "map": {
+    "showMap": "Show map",
+    "hideMap": "Hide map",
+    "visibleInArea": "communities visible in this area.",
+    "noFixedLocation": "no fixed location",
+    "hiddenTooltip_one": "1 community matches the filters but doesn't appear on the map because it has no fixed location.",
+    "hiddenTooltip_other": "{{count}} communities match the filters but don't appear on the map because they have no fixed location.",
+    "viewInList": "View in list",
+    "popup": {
+      "status": "Status",
+      "lastReviewed": "Reviewed",
+      "communityType": "Community type",
+      "eventFormat": "Event format",
+      "location": "Location",
+      "topics": "Topics",
+      "contact": "Contact",
+      "website": "Website",
+      "visit": "Visit"
+    },
+    "cluster": {
+      "title": "Communities",
+      "countText": "<b>{cluster_count}</b> Communities.",
+      "type": "Type",
+      "total": "Total",
+      "other": "Other"
+    }
+  },
+  "contribution": {
+    "closeHelp": "Close help",
+    "examples": "Examples:",
+    "taxonomy": {
+      "noCategory": "Uncategorized",
+      "showLess": "Show less",
+      "showAll": "Show all",
+      "searchLabel": "Search",
+      "searchPlaceholder": "Filter by name, description or synonyms",
+      "noneSelected": "You haven't selected any yet.",
+      "add": "Add",
+      "otherProfiles": "Other profiles"
+    },
+    "urls": {
+      "title": "URLs",
+      "description": "Add the main URL and, if you want, more profiles or relevant links for the community.",
+      "primaryLabel": "Main URL",
+      "primaryHelp": {
+        "title": "How to choose the main URL",
+        "description": "Use the most stable long-term reference for the community as the main URL.",
+        "bullet0": "Prioritize an own website or stable landing page over more ephemeral links.",
+        "bullet1": "If there's no own website, use the link that best represents the community and is least likely to expire.",
+        "bullet2": "Other profiles can be added as additional URLs."
+      },
+      "addMoreProfiles": "Want to add more profiles?",
+      "missingPlatformNote": "If you're missing a platform type,",
+      "openIssue": "open an issue in the repository",
+      "missingPlatformNoteSuffix": "so we can keep improving the available options."
+    },
+    "urlHelp": {
+      "web":            { "title": "Website URL",      "description": "Add the community's main website or most stable landing page.",                              "bullet0": "Examples: own website, official page or persistent microsite.",                                                                  "bullet1": "If you've already used it as the main URL, there's no need to repeat it here." },
+      "eventsUrl":      { "title": "Events URL",       "description": "Link to the platform where they post events or tickets.",                                    "bullet0": "Examples: Meetup, Eventbrite, Luma, saraos.tech, Google Calendar or own agenda.",                                             "bullet1": "Use it when activity mainly lives on that calendar or platform." },
+      "linkAggregator": { "title": "Link aggregator",  "description": "Link to a page that brings together several profiles or resources of the community.",        "bullet0": "Examples: Linktree, Beacons, Bento or similar page.",                                                                        "bullet1": "Useful when the community centralizes its presence in a single aggregator." },
+      "mailingList":    { "title": "Mailing list",     "description": "Link to subscribe or view the community's mailing list.",                                    "bullet0": "Examples: Google Groups, Buttondown, Substack or Mailchimp.",                                                                "bullet1": "Add it if email is a relevant channel for following activity or interacting with other members." },
+      "github":         { "title": "GitHub",           "description": "GitHub profile or organization used by the community.",                                      "bullet0": "Examples: organization, main profile or central repository." },
+      "discord":        { "title": "Discord",          "description": "Invitation or access to the community's Discord server.",                                    "bullet0": "Examples: `discord.gg` links or permanent invitations." },
+      "telegram":       { "title": "Telegram",         "description": "Telegram channel, group or public link.",                                                    "bullet0": "Examples: `t.me/channel` or an official community group." },
+      "whatsapp":       { "title": "WhatsApp",         "description": "Public WhatsApp group or community.",                                                        "bullet0": "Examples: `chat.whatsapp.com` invitations or links to public communities." },
+      "slack":          { "title": "Slack",            "description": "Workspace or access link to Slack.",                                                         "bullet0": "Examples: workspace URL or official join page." },
+      "youtube":        { "title": "YouTube",          "description": "YouTube channel or profile where they publish videos or streams.",                           "bullet0": "Examples: official channel, user or main playlist." },
+      "linkedin":       { "title": "LinkedIn",         "description": "LinkedIn page or profile associated with the community.",                                    "bullet0": "Examples: company page, showcase or official group." },
+      "twitter":        { "title": "Twitter/X",        "description": "Main profile on X or Twitter.",                                                              "bullet0": "Examples: `x.com/user` or the community's official handle." },
+      "tiktok":         { "title": "TikTok",           "description": "Community's official TikTok profile.",                                                       "bullet0": "Examples: `tiktok.com/@user`." },
+      "instagram":      { "title": "Instagram",        "description": "Official Instagram profile.",                                                                "bullet0": "Examples: community's or event's main account." },
+      "facebook":       { "title": "Facebook",         "description": "Official Facebook page, group or profile.",                                                  "bullet0": "Examples: fan page or public community group." },
+      "mastodon":       { "title": "Mastodon",         "description": "Official Mastodon profile.",                                                                 "bullet0": "Examples: `mastodon.social/@user` or any equivalent instance." },
+      "bluesky":        { "title": "Bluesky",          "description": "Official Bluesky profile.",                                                                  "bullet0": "Examples: `bsky.app/profile/user`." },
+      "twitch":         { "title": "Twitch",           "description": "Twitch channel where the community broadcasts or publishes content.",                        "bullet0": "Examples: `twitch.tv/channel`." }
+    },
+    "fieldHelp": {
+      "status": {
+        "title": "How to choose the status",
+        "description": "Use the status based on the community's recent activity.",
+        "bullet0": "Active: there are people running the community and it has had recent activity.",
+        "bullet1": "Inactive: for meetups, usually applies if there has been no activity for more than a year; for conferences, if it has exceeded its usual cadence.",
+        "bullet2": "Unknown: use it if it's unclear."
+      },
+      "communityType": {
+        "title": "How to choose the type",
+        "description": "Choose the main type that best describes how the community operates.",
+        "techMeetup": "Periodic meetups, usually in talk format and contained size.",
+        "conference": "Typically annual event, larger and with several talks or tracks.",
+        "umbrellaOrg": "Groups local communities under a common brand or structure.",
+        "hacklab": "Maker community with physical space and shared resources.",
+        "collaborativeGroup": "People who collaborate on projects, events, content or other common initiatives.",
+        "metaCommunity": "Organization that groups people who run or represent other communities.",
+        "mutualAid": "The priority is mutual support through forums, chats, lists or other channels."
+      },
+      "eventFormat": {
+        "title": "How to choose the format",
+        "description": "Think about how the community's main activity usually happens.",
+        "bullet0": "In person: they have in-person meetups and usually don't livestream them.",
+        "bullet1": "Online: their activity is mainly online.",
+        "bullet2": "Hybrid: there are in-person meetups and they are usually also livestreamed.",
+        "bullet3": "Unknown: if you don't have enough context."
+      },
+      "location": {
+        "title": "How to indicate the location",
+        "description": "Indicate the most useful geographic reference for understanding where the activity happens.",
+        "bullet0": "Use city or main region in a format like `City, Country`, for example `Barcelona, Spain`.",
+        "bullet1": "Use `Itinerant` when the community changes city or venue depending on the edition or event.",
+        "bullet2": "If you're not sure what value to put, it's better to open an issue to discuss it first."
+      },
+      "shortDescription": {
+        "title": "How to write the short description",
+        "description": "Summarize in one sentence what makes this community special.",
+        "bullet0": "Indicate the organizational form if you know it: collective (without legal entity), non-profit association, foundation, cooperative, company with community activity, user group, etc.",
+        "bullet1": "Prioritize what it offers, its focus or value proposition.",
+        "bullet2": "Avoid repeating only labels, technologies or target audience that you've already marked above.",
+        "bullet3": "An ideal length is usually between 140 and 220 characters."
+      }
+    },
+    "deletion": {
+      "reasonDuplicate": "The community is duplicated",
+      "reasonNeverExisted": "The community never existed",
+      "reasonNotTech": "This community should not be considered tech",
+      "reasonOther": "Other reason",
+      "reasonDuplicateMsg": "The community is duplicated and should be consolidated into {{name}} ({{url}}).",
+      "reasonNeverExistedMsg": "The community never existed as a real community and should be removed from the directory.",
+      "reasonNotTechMsg": "This community should not be considered tech. See criteria and reference discussion: {{url}}",
+      "notActiveNote": "If the community still exists but is no longer active, there's no need to request deletion: change the Status field to Inactive and submit an edit proposal.",
+      "reasonGroupLabel": "Reason for deletion",
+      "canonicalCommunityLabel": "Canonical community",
+      "searchPlaceholder": "Type the community name",
+      "resultsLabel": "Community results",
+      "noMatches": "No matches for that text.",
+      "notTechNote": "The criteria thread about which communities we consider tech will be included as a reference:",
+      "otherReasonLabel": "Briefly explain the reason",
+      "otherReasonPlaceholder": "Explain why this community should be removed from the directory.",
+      "openIssue": "Open deletion issue",
+      "helper": "It will only be activated when you have provided a valid reason."
+    },
+    "hero": {
+      "eyebrow": "Thank you for contributing 💛",
+      "descriptionEdit": "Update this community's data in the form and click \"Update\" to create an issue in the repository.",
+      "descriptionNew": "Fill in the new community's data in the form and click \"Suggest new community\" to create an issue in the repository."
+    },
+    "proposal": {
+      "loaded": "I've loaded the proposal included in this link. You can adjust it and reopen an issue with an improved version."
+    },
+    "draft": {
+      "restoredPrefix": "I've restored a locally saved draft",
+      "restoredSavedAt": " from {{date}}",
+      "datasetChanged": "The dataset has changed since then. Review carefully before submitting to avoid overwriting more recent changes.",
+      "datasetUnchanged": "No changes detected in the dataset since this draft was saved.",
+      "legacyWarning": "This draft predates the new metadata system, so the check may be incomplete.",
+      "discard": "Discard local draft and load the latest version"
+    },
+    "duplicate": {
+      "warning": "I found communities with a matching name or URL. Check if it's worth editing an existing one before continuing:",
+      "byNameWarning": "At least one community with this name or an equivalent one already exists:",
+      "byUrlWarning": "At least one community with one of these URLs already exists:"
+    },
+    "form": {
+      "baseDataTitle": "Base data",
+      "baseDataDescription": "Main fields that make up each community in the directory.",
+      "pendingId": "pending",
+      "editMode": "Edit",
+      "newMode": "New entry",
+      "requestDeletion": "Request deletion",
+      "nameLabel": "Name",
+      "namePlaceholder": "Example: Geo Developers",
+      "statusLabel": "Status",
+      "communityTypeLabel": "Community type",
+      "formatLabel": "Format",
+      "locationLabel": "Location",
+      "locationPlaceholder": "Madrid, Spain or Itinerant",
+      "shortDescriptionLabel": "Short description",
+      "shortDescriptionPlaceholder": "Describe in one sentence what this community offers, its focus or value proposition. Avoid repeating the tags or target audience already selected.",
+      "shortDescriptionExample": "Example: \"Non-profit collective that organizes monthly meetups to share practical experiences on software architecture and platform engineering.\"",
+      "contactLabel": "Public contact",
+      "contactPlaceholder": "email@community.org or contact URL",
+      "thumbnailLabel": "Thumbnail or logo",
+      "thumbnailAlt": "Thumbnail of {{name}}",
+      "thumbnailEmpty": "No image configured currently.",
+      "keepImage": "Keep current image",
+      "replaceImage": "Replace image",
+      "thumbnailHelp": "To replace the image you need a public URL. If you prefer, open the issue, upload the image there manually and comment that it should be used."
+    },
+    "tags": {
+      "title": "Tags",
+      "description": "Select tags from the catalog to improve discoverability and filters.",
+      "suggestionText": "Missing a tag or want to suggest an improvement to the taxonomy?",
+      "openIssue": "Open issue"
+    },
+    "audience": {
+      "title": "Target audience",
+      "description": "Indicate who the community is especially aimed at.",
+      "suggestionText": "Missing an audience profile or want to suggest an improvement to the taxonomy?",
+      "openIssue": "Open issue"
+    },
+    "json": {
+      "title": "Generated JSON",
+      "description": "This is the block that will travel inside the GitHub issue.",
+      "hide": "Hide",
+      "show": "Show JSON"
+    },
+    "submit": {
+      "edit": "Update",
+      "new": "Suggest new community",
+      "note": "GitHub will open with the issue title and body pre-filled."
+    }
+  }
 }
