@@ -975,7 +975,7 @@
           "facebook": "https://www.facebook.com/100063929263670/about/",
           "linkedin": "https://linkedin.com/company/asociaci-n-de-webmasters-de-granada/"
         },
-        "thumbnailUrl": "/communities-directory/images/asociacion-de-webmasters-de-granada.webp",
+        "thumbnailUrl": "images/asociacion-de-webmasters-de-granada.webp",
         "humanValidated": true
       }
     },
@@ -11947,7 +11947,7 @@
           "twitter": "https://x.com/MadridNodeJs",
           "eventsUrl": "https://www.meetup.com/es-ES/node-js-madrid/"
         },
-        "thumbnailUrl": "/communities-directory/images/nodejs-madrid.webp",
+        "thumbnailUrl": "images/nodejs-madrid.webp",
         "humanValidated": true
       }
     },
@@ -14604,7 +14604,7 @@
           "instagram": "https://instagram.com/t3chfest",
           "telegram": "https://t.me/t3chfest_canal"
         },
-        "thumbnailUrl": "/communities-directory/images/t3chfest.webp",
+        "thumbnailUrl": "images/t3chfest.webp",
         "humanValidated": true
       }
     },
@@ -20875,6 +20875,47 @@
           "github": "https://github.com/rust-girona/"
         },
         "thumbnailUrl": "images/rust-girona.webp",
+        "humanValidated": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          12.4568794,
+          41.9005351
+        ]
+      },
+      "properties": {
+        "id": 606,
+        "name": "GEG Spain",
+        "status": "active",
+        "lastReviewed": "27/03/2026",
+        "communityType": "umbrella-org",
+        "eventFormat": "in-person",
+        "location": "n/a",
+        "topics": "",
+        "langs": [
+          "es"
+        ],
+        "tags": [
+          "generative-ai"
+        ],
+        "targetAudience": [
+          "educator"
+        ],
+        "contactInfo": "",
+        "communityUrl": "https://transformacioneducativa.es",
+        "urls": {
+          "twitter": "https://x.com/GEGSpain",
+          "instagram": "https://www.instagram.com/gegspain/",
+          "youtube": "https://www.youtube.com/c/GEGSpain",
+          "linkedin": "https://www.linkedin.com/company/transformaci%C3%B3n-educativa-geg-spain/",
+          "web": "https://transformacioneducativa.es/meetup/",
+          "eventsUrl": "https://transformacioneducativa.es/agenda/"
+        },
+        "thumbnailUrl": "images/geg-spain.webp",
         "humanValidated": true
       }
     }

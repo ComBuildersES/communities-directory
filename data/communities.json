@@ -22094,5 +22094,43 @@
     "langs": [
       "es"
     ]
+  },
+  {
+    "id": 606,
+    "name": "GEG Spain",
+    "status": "active",
+    "lastReviewed": "27/03/2026",
+    "communityType": "umbrella-org",
+    "eventFormat": "in-person",
+    "location": "n/a",
+    "shortDescription": "Google Educator Group Spain (GEG Spain) es una comunidad de educadores dedicada a promover la innovación y la eficacia colectiva en la educación. Profesores, directores, pedagogos y apasionados de la enseñanza con meetups en varias ciudades",
+    "topics": "",
+    "langs": [
+      "es"
+    ],
+    "tags": [
+      "generative-ai"
+    ],
+    "targetAudience": [
+      "educator"
+    ],
+    "contactInfo": "",
+    "communityUrl": "https://transformacioneducativa.es",
+    "urls": {
+      "twitter": "https://x.com/GEGSpain",
+      "instagram": "https://www.instagram.com/gegspain/",
+      "youtube": "https://www.youtube.com/c/GEGSpain",
+      "linkedin": "https://www.linkedin.com/company/transformaci%C3%B3n-educativa-geg-spain/",
+      "web": "https://transformacioneducativa.es/meetup/",
+      "eventsUrl": "https://transformacioneducativa.es/agenda/"
+    },
+    "thumbnailUrl": "images/geg-spain.webp",
+    "removalReason": "",
+    "latLon": {
+      "lat": 41.9005351,
+      "lon": 12.4568794
+    },
+    "displayOnMap": true,
+    "humanValidated": true
   }
 ]
