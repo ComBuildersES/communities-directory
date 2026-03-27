@@ -367,7 +367,7 @@ function TaxonomyPicker({
   const { t } = useTranslation();
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
   const [isManuallyExpanded, setIsManuallyExpanded] = useState(defaultExpanded);
-  const [collapsedGroups, setCollapsedGroups] = useState({});
+  const [expandedGroups, setExpandedGroups] = useState({});
 
   useEffect(() => {
     const hasSearch = searchValue.trim().length > 0;
@@ -433,14 +433,9 @@ function TaxonomyPicker({
     });
   }, [categoryOrder, groupByCategory, groupedItems]);
 
-  const availableGroupedItems = useMemo(
-    () => orderedGroupedItems
-      .map((group) => ({
-        ...group,
-        items: group.items.filter((item) => !selectedValues.includes(item.id)),
-      }))
-      .filter((group) => group.items.length > 0),
-    [orderedGroupedItems, selectedValues]
+  const allGroupedItems = useMemo(
+    () => orderedGroupedItems.filter((group) => group.items.length > 0),
+    [orderedGroupedItems]
   );
 
   const itemsMap = useMemo(
@@ -448,24 +443,7 @@ function TaxonomyPicker({
     [items]
   );
 
-  useEffect(() => {
-    if (!collapsibleGroups || !groupByCategory) return;
-
-    setCollapsedGroups((current) => {
-      const nextState = { ...current };
-
-      availableGroupedItems.forEach((group) => {
-        if (!(group.label in nextState)) {
-          nextState[group.label] = collapseGroupsByDefault;
-        }
-      });
-
-      return nextState;
-    });
-  }, [availableGroupedItems, collapseGroupsByDefault, collapsibleGroups, groupByCategory]);
-
   const hasActiveSearch = searchValue.trim().length > 0;
-  const useCollapsibleGroups = collapsibleGroups && groupByCategory && !hasActiveSearch;
 
   return (
     <section className="contribution-card">
@@ -531,56 +509,61 @@ function TaxonomyPicker({
       {isExpanded && (
         <>
           <div className="contribution-taxonomy-list">
-            {availableGroupedItems.map((group) => (
-              <div key={group.label || "all"} className="contribution-taxonomy-group">
-                {group.label && useCollapsibleGroups ? (
-                  <button
-                    type="button"
-                    className="contribution-taxonomy-group-toggle"
-                    onClick={() => {
-                      setCollapsedGroups((current) => ({
-                        ...current,
-                        [group.label]: !current[group.label],
-                      }));
-                    }}
-                    aria-expanded={!collapsedGroups[group.label]}
-                  >
-                    <span className="contribution-taxonomy-group-toggle-label">{group.label}</span>
-                    <span className="contribution-taxonomy-group-toggle-meta">
-                      {group.items.length}
-                      <i
-                        className={`fas ${collapsedGroups[group.label] ? "fa-chevron-down" : "fa-chevron-up"}`}
-                        aria-hidden="true"
-                      ></i>
-                    </span>
-                  </button>
-                ) : (
-                  group.label && <h4>{group.label}</h4>
-                )}
-                {(!useCollapsibleGroups || !collapsedGroups[group.label]) && (
-                  <div className="contribution-check-grid">
-                    {group.items.map((item) => (
-                      <TaxonomyTooltip key={item.id} item={item}>
+            {allGroupedItems.map((group) => {
+              const ITEMS_DEFAULT = 5;
+              const isGroupExpanded = expandedGroups[group.label];
+              const visibleGroupItems = isGroupExpanded ? group.items : group.items.slice(0, ITEMS_DEFAULT);
+              const hiddenCount = group.items.length - ITEMS_DEFAULT;
+              const unselectedItems = group.items.filter((item) => !selectedValues.includes(item.id));
+
+              return (
+                <div key={group.label || "all"} className="contribution-taxonomy-group">
+                  {group.label && (
+                    <div className="contribution-taxonomy-group-header">
+                      <h4>{group.label}</h4>
+                      {unselectedItems.length > 0 && (
                         <button
                           type="button"
-                          className="contribution-check-item"
-                          onClick={() => {
-                            onToggle(item.id);
-                            if (!isManuallyExpanded) {
-                              onSearchChange("");
-                              setIsExpanded(false);
-                            }
-                          }}
+                          className="button is-small is-light contribution-taxonomy-add-all"
+                          onClick={() => unselectedItems.forEach((item) => onToggle(item.id))}
                         >
-                          <span className="contribution-check-item-label">{item.label}</span>
-                          <span className="contribution-check-item-action">{t("contribution.taxonomy.add")}</span>
+                          {t("contribution.taxonomy.addAll")}
                         </button>
-                      </TaxonomyTooltip>
-                    ))}
+                      )}
+                    </div>
+                  )}
+                  <div className="contribution-check-grid">
+                    {visibleGroupItems.map((item) => {
+                      const isSelected = selectedValues.includes(item.id);
+                      return (
+                        <TaxonomyTooltip key={item.id} item={item}>
+                          <button
+                            type="button"
+                            className="contribution-check-item"
+                            aria-pressed={isSelected}
+                            onClick={() => onToggle(item.id)}
+                          >
+                            <span className="contribution-check-item-label">{item.label}</span>
+                            <span className="contribution-check-item-action" aria-hidden="true">{isSelected ? "−" : "+"}</span>
+                          </button>
+                        </TaxonomyTooltip>
+                      );
+                    })}
                   </div>
-                )}
-              </div>
-            ))}
+                  {hiddenCount > 0 && (
+                    <button
+                      type="button"
+                      className="contribution-taxonomy-show-more"
+                      onClick={() => setExpandedGroups((prev) => ({ ...prev, [group.label]: !prev[group.label] }))}
+                    >
+                      {isGroupExpanded
+                        ? t("contribution.taxonomy.showLess")
+                        : t("contribution.taxonomy.showMoreGroup", { count: hiddenCount })}
+                    </button>
+                  )}
+                </div>
+              );
+            })}
 
             {searchValue.trim() && suggestionCta && (
               <div className="contribution-taxonomy-suggestion">

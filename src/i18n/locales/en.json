@@ -170,6 +170,7 @@
     "url": {
       "web": "Website",
       "events": "Events",
+      "eventsUrl": "Events",
       "linkAggregator": "Link aggregator",
       "mailingList": "Mailing list",
       "github": "GitHub",
@@ -185,7 +186,8 @@
       "facebook": "Facebook",
       "mastodon": "Mastodon",
       "bluesky": "Bluesky",
-      "twitch": "Twitch"
+      "twitch": "Twitch",
+      "flickr": "Flickr"
     },
     "urlGroup": {
       "community": "Community",
@@ -231,6 +233,8 @@
       "searchPlaceholder": "Filter by name, description or synonyms",
       "noneSelected": "You haven't selected any yet.",
       "add": "Add",
+      "addAll": "Add all",
+      "showMoreGroup": "+{{count}} more",
       "otherProfiles": "Other profiles"
     },
     "urls": {
