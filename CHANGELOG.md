@@ -81,6 +81,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-03-27 `76ec93b` [Actualizada Asociación de Webmasters de Granada](https://combuilderses.github.io/communities-directory/?community=37) ([PR #292](https://github.com/ComBuildersES/communities-directory/pull/292))
 - 2026-03-27 `4dc1b5f` [Actualizada NodeJSMadrid](https://combuilderses.github.io/communities-directory/?community=366) ([PR #290](https://github.com/ComBuildersES/communities-directory/pull/290))
 - 2026-03-26 `a1249fc` [Actualizada Liferay Spain User Group (LUGSpain)](https://combuilderses.github.io/communities-directory/?community=317) ([PR #285](https://github.com/ComBuildersES/communities-directory/pull/285))
 - 2026-03-26 `efae707` [Añadida Rust Girona](https://combuilderses.github.io/communities-directory/?community=605) ([PR #281](https://github.com/ComBuildersES/communities-directory/pull/281))
@@ -135,6 +136,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-27 `f4cb6f6` update changelog [skip ci]
 - 2026-03-27 `501a3be` update changelog [skip ci]
 - 2026-03-26 `4e0eec6` update changelog [skip ci]
 - 2026-03-26 `5e30bb0` update changelog [skip ci]
