@@ -156,10 +156,10 @@ export function normalizePayload(payload) {
   return {
     id: payload.id ?? null,
     name: normalizeString(payload.name),
-    status: normalizeString(payload.status) || 'Desconocido',
+    status: normalizeString(payload.status) || 'unknown',
     lastReviewed: normalizeString(payload.lastReviewed) || todayDDMMYYYY(),
-    communityType: normalizeString(payload.communityType) || 'Tech Meetup',
-    eventFormat: normalizeString(payload.eventFormat) || 'Desconocido',
+    communityType: normalizeString(payload.communityType) || 'tech-meetup',
+    eventFormat: normalizeString(payload.eventFormat) || 'unknown',
     location: normalizeString(payload.location),
     shortDescription: normalizeString(payload.shortDescription),
     topics: normalizeString(payload.topics),

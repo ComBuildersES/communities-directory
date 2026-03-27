@@ -101,9 +101,9 @@ const URL_GROUP_DEFS = [
 ];
 
 const STATUS_CLASS = {
-  Activa:      "modal-badge modal-badge--active",
-  Inactiva:    "modal-badge modal-badge--inactive",
-  Desconocido: "modal-badge modal-badge--unknown",
+  active:   "modal-badge modal-badge--active",
+  inactive: "modal-badge modal-badge--inactive",
+  unknown:  "modal-badge modal-badge--unknown",
 };
 
 function isArchivedUrl(url) {
@@ -220,20 +220,20 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
             <div className="community-modal-badges">
               <button
                 type="button"
-                className={STATUS_CLASS[status] || STATUS_CLASS.Desconocido}
+                className={STATUS_CLASS[status] || STATUS_CLASS.unknown}
                 onClick={() => applyFilter("status", status)}
-                title={t("communityModal.filterByStatus", { status })}
+                title={t("communityModal.filterByStatus", { status: t(`status.${status}`) })}
               >
-                {status}
+                {t(`status.${status}`)}
               </button>
               {communityType && communityType.toLowerCase() !== "n/a" && (
                 <button
                   type="button"
                   className="modal-badge modal-badge--type"
                   onClick={() => applyFilter("communityType", communityType)}
-                  title={t("communityModal.filterByType", { communityType })}
+                  title={t("communityModal.filterByType", { communityType: t(`communityType.${communityType}`) })}
                 >
-                  {communityType}
+                  {t(`communityType.${communityType}`)}
                 </button>
               )}
               {eventFormat && (
@@ -241,9 +241,9 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                   type="button"
                   className="modal-badge modal-badge--format"
                   onClick={() => applyFilter("eventFormat", eventFormat)}
-                  title={t("communityModal.filterByFormat", { eventFormat })}
+                  title={t("communityModal.filterByFormat", { eventFormat: t(`eventFormat.${eventFormat}`) })}
                 >
-                  {eventFormat}
+                  {t(`eventFormat.${eventFormat}`)}
                 </button>
               )}
               {location && hasMapCoords && onGoToMap ? (

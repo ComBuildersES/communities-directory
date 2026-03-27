@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-27 `b08d37d` complete extraction of hardcoded UI strings to i18n for Spanish localization
+- 2026-03-27 `e7795eb` complete extraction of hardcoded UI strings to i18n for Spanish localization
 - 2026-03-27 `967b2ac` integrate i18next for internationalization support
 - 2026-03-26 `9b0f09a` enhance CommunityModal and Map components with location handling and focus management
 - 2026-03-26 `f6c0520` enhance UI components with new styles and improve functionality in Heading, ResultsBar, and InstallPromptBar
@@ -174,6 +174,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
+- 2026-03-27 `c3adc6f` Refactor community types, statuses, and event formats to use consistent keys and translations
 - 2026-03-26 `49c9eaf` Add thumbnail for Rust Girona community and include image file
 - 2026-03-26 `4c02445` Update removal reason for Cloud Español community
 - 2026-03-24 `0e62bf3` Add short description to community entry

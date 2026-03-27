@@ -1,4 +1,24 @@
 {
+  "status": {
+    "active": "Activa",
+    "inactive": "Inactiva",
+    "unknown": "Desconocido"
+  },
+  "eventFormat": {
+    "in-person": "Presencial",
+    "online": "Online",
+    "hybrid": "Híbridos",
+    "unknown": "Desconocido"
+  },
+  "communityType": {
+    "tech-meetup": "Tech Meetup",
+    "conference": "Conferencia",
+    "umbrella-org": "Organización paraguas",
+    "hacklab": "Hacklab",
+    "collaborative-group": "Grupo colaborativo",
+    "meta-community": "Meta comunidad",
+    "mutual-aid": "Grupo de ayuda mutua"
+  },
   "footer": {
     "maintainedWith": "Proyecto mantenido con 💖",
     "byCommunity": "por la comunidad",
@@ -150,6 +170,33 @@
       "community": "Comunidad",
       "chat": "Chat",
       "social": "Redes y vídeo"
+    }
+  },
+  "map": {
+    "showMap": "Mostrar mapa",
+    "hideMap": "Ocultar mapa",
+    "visibleInArea": "comunidades visibles en esta zona.",
+    "noFixedLocation": "sin ubicación fija",
+    "hiddenTooltip_one": "1 comunidad encaja con los filtros pero no aparece en el mapa por no tener ubicación fija.",
+    "hiddenTooltip_other": "{{count}} comunidades encajan con los filtros pero no aparecen en el mapa por no tener ubicación fija.",
+    "viewInList": "Verlas en la lista",
+    "popup": {
+      "status": "Estado",
+      "lastReviewed": "Revisada",
+      "communityType": "Tipo de comunidad",
+      "eventFormat": "Formato de evento",
+      "location": "Localización",
+      "topics": "Temas",
+      "contact": "Contacto",
+      "website": "Website",
+      "visit": "Visitar"
+    },
+    "cluster": {
+      "title": "Comunidades",
+      "countText": "<b>{cluster_count}</b> Comunidades.",
+      "type": "Tipo",
+      "total": "Total",
+      "other": "Otro"
     }
   },
   "contribution": {

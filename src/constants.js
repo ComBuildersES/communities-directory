@@ -5,12 +5,12 @@ export const URL = `${import.meta.env.BASE_URL}data/communities.json`;
 
 export const TAG_TYPES = {
   default: "is-white",
-  "Tech Meetup": "is-warning",
-  Conferencia: "is-link",
-  "Grupo colaborativo": "is-info",
-  "Organización paraguas": "is-success",
-  "Grupo de ayuda mutua": "is-info is-light",
-  Hacklab: "is-danger",
+  "tech-meetup": "is-warning",
+  "conference": "is-link",
+  "collaborative-group": "is-info",
+  "umbrella-org": "is-success",
+  "mutual-aid": "is-info is-light",
+  "hacklab": "is-danger",
   "Escuela de formación": "is-link is-light",
   Podcast: "is-danger is-light",
   Fundación: "is-success is-light",
@@ -18,10 +18,10 @@ export const TAG_TYPES = {
 };
 
 export const TAG_EVENTS = {
-  Desconocido: "is-white",
-  Presencial: "is-warning",
-  Online: "is-link",
-  Hibridos: "is-info",
+  unknown: "is-white",
+  "in-person": "is-warning",
+  online: "is-link",
+  hybrid: "is-info",
 };
 
 export const bajaString = "BAJA";

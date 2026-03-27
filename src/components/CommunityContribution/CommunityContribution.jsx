@@ -965,7 +965,7 @@ export function CommunityContribution({
   }, [draft.communityType, draft.location]);
 
   useEffect(() => {
-    if (draft.communityType === "Organización paraguas") return;
+    if (draft.communityType === "umbrella-org") return;
     if (EVENT_FORMATS_WITH_LOCATION.includes(draft.eventFormat)) return;
     if (!draft.location) return;
 
@@ -1110,7 +1110,7 @@ export function CommunityContribution({
   useEffect(() => {
     const normalizedLocation = draft.location.trim();
     const supportsLocation = EVENT_FORMATS_WITH_LOCATION.includes(draft.eventFormat);
-    const isUmbrellaOrganization = draft.communityType === "Organización paraguas";
+    const isUmbrellaOrganization = draft.communityType === "umbrella-org";
 
     if (!supportsLocation || isUmbrellaOrganization || normalizedLocation.length < 3) {
       if (inferredProvinceIdRef.current) {
@@ -1509,7 +1509,7 @@ export function CommunityContribution({
                   required
                 >
                   {COMMUNITY_STATUS_OPTIONS.map((option) => (
-                    <option key={option} value={option}>{option}</option>
+                    <option key={option} value={option}>{t(`status.${option}`)}</option>
                   ))}
                 </select>
               </div>
@@ -1537,7 +1537,7 @@ export function CommunityContribution({
                   required
                 >
                   {COMMUNITY_TYPE_OPTIONS.map((option) => (
-                    <option key={option} value={option}>{option}</option>
+                    <option key={option} value={option}>{t(`communityType.${option}`)}</option>
                   ))}
                 </select>
               </div>
@@ -1563,7 +1563,7 @@ export function CommunityContribution({
                   required
                 >
                   {EVENT_FORMAT_OPTIONS.map((option) => (
-                    <option key={option} value={option}>{option}</option>
+                    <option key={option} value={option}>{t(`eventFormat.${option}`)}</option>
                   ))}
                 </select>
               </div>

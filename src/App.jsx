@@ -14,6 +14,7 @@ import {
   buildContributionPath,
   parseContributionRoute,
   parseSelectedCommunityIdentifier,
+  parseMapState,
   resolveCommunityFromIdentifier,
   buildDirectoryStatePath,
 } from "./lib/communitySubmission";
@@ -48,10 +49,14 @@ function dismissActiveInput() {
 
 function App () {
   const { t } = useTranslation();
-  const [view, setView] = useState("list");
+  const [view, setView] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("view") === "map" ? "map" : "list";
+  });
   const [mapFocusTarget, setMapFocusTarget] = useState(null);
   const [route, setRoute] = useState(() => parseContributionRoute());
   const [selectedCommunityIdentifier, setSelectedCommunityIdentifier] = useState(() => parseSelectedCommunityIdentifier());
+  const [mapState, setMapState] = useState(() => parseMapState());
   const [contributionState, setContributionState] = useState({
     isDirty: false,
     issueOpened: false,
@@ -153,6 +158,8 @@ function App () {
 
       setRoute(nextRoute);
       setSelectedCommunityIdentifier(parseSelectedCommunityIdentifier());
+      setView(new URLSearchParams(window.location.search).get("view") === "map" ? "map" : "list");
+      setMapState(parseMapState());
     };
 
     window.addEventListener("popstate", handlePopState);
@@ -270,6 +277,28 @@ function App () {
     dismissActiveInput();
   }, [selectedCommunity]);
 
+  useEffect(() => {
+    if (showContributionView) return;
+    if (communities.length === 0) return;
+    const path = buildDirectoryStatePath({
+      filters,
+      communityIdentifier: selectedCommunityIdentifier,
+    });
+    const extraParams = [];
+    if (view === "map") {
+      extraParams.push("view=map");
+      if (mapState?.lat != null && mapState?.lon != null && mapState?.zoom != null) {
+        const lat = Number(mapState.lat).toFixed(2);
+        const lon = Number(mapState.lon).toFixed(2);
+        const zoom = Math.round(mapState.zoom);
+        extraParams.push(`m=${lat},${lon},${zoom}`);
+      }
+    }
+    const sep = path.includes("?") ? "&" : "?";
+    const fullPath = extraParams.length > 0 ? `${path}${sep}${extraParams.join("&")}` : path;
+    window.history.replaceState({}, "", fullPath);
+  }, [filters, view, selectedCommunityIdentifier, showContributionView, communities, mapState]);
+
   return (
     <>
       {!showContributionView && <InstallPromptBar />}
@@ -323,7 +352,7 @@ function App () {
           </section>
         )}
         {!showContributionView && view === "list" && <CommunitiesList onOpenCommunity={openCommunityModal} />}
-        {!showContributionView && view === "map" && <Map showListView={() => setView("list")} onOpenCommunity={openCommunityModal} initialFocus={mapFocusTarget} />}
+        {!showContributionView && view === "map" && <Map showListView={() => setView("list")} onOpenCommunity={openCommunityModal} initialFocus={mapFocusTarget} initialMapState={mapState} onMapStateChange={setMapState} />}
       </div>
       {pendingNavigation && (
         <div className="navigation-guard-overlay">

@@ -97,7 +97,7 @@ const useCommunityStore = create(
             return map;
           }, new Map());
           const inverseIndex = buildInverseIndex(data);
-          const defaultFilters = { status: ["Activa"] };
+          const defaultFilters = { status: ["active"] };
           const urlFilters = parseDirectoryFilters();
           const initialFilters = Object.keys(urlFilters).length > 0
             ? {

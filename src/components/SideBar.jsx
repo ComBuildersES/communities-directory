@@ -27,44 +27,44 @@ export const Sidebar = () => {
       <ul className="menu-list">
         <li className="menu-item">
           <div className="option-item is-size-7">
-            <p>Tech Meetup</p>
-            <Switch name="communityType" value="Tech Meetup" />
+            <p>{t("communityType.tech-meetup")}</p>
+            <Switch name="communityType" value="tech-meetup" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
-            <p>Conferencia</p>
-            <Switch name="communityType" value="Conferencia" />
+            <p>{t("communityType.conference")}</p>
+            <Switch name="communityType" value="conference" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
-            <p>Grupo Colaborativo</p>
-            <Switch name="communityType" value="Grupo colaborativo" />
+            <p>{t("communityType.collaborative-group")}</p>
+            <Switch name="communityType" value="collaborative-group" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
-            <p>Grupo de Ayuda Mutua</p>
-            <Switch name="communityType" value="Grupo de ayuda mutua" />
+            <p>{t("communityType.mutual-aid")}</p>
+            <Switch name="communityType" value="mutual-aid" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
-            <p>Hacklab</p>
-            <Switch name="communityType" value="Hacklab" />
+            <p>{t("communityType.hacklab")}</p>
+            <Switch name="communityType" value="hacklab" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
-            <p>Organización paraguas</p>
-            <Switch name="communityType" value="Organización paraguas" />
+            <p>{t("communityType.umbrella-org")}</p>
+            <Switch name="communityType" value="umbrella-org" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
-            <p>Meta comunidad</p>
-            <Switch name="communityType" value="Meta comunidad" />
+            <p>{t("communityType.meta-community")}</p>
+            <Switch name="communityType" value="meta-community" />
           </div>
         </li>
       </ul>
@@ -73,50 +73,50 @@ export const Sidebar = () => {
       <ul className="menu-list">
         <li className="menu-item">
           <div className="option-item is-size-7">
-            <p>Híbridos</p>
-            <Switch name="eventFormat" value="Híbridos" />
+            <p>{t("eventFormat.hybrid")}</p>
+            <Switch name="eventFormat" value="hybrid" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
-            <p>Online</p>
-            <Switch name="eventFormat" value="Online" />
+            <p>{t("eventFormat.online")}</p>
+            <Switch name="eventFormat" value="online" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
-            <p>Presencial</p>
-            <Switch name="eventFormat" value="Presencial" />
+            <p>{t("eventFormat.in-person")}</p>
+            <Switch name="eventFormat" value="in-person" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
-            <p>Desconocidos</p>
-            <Switch name="eventFormat" value="Desconocido" />
+            <p>{t("eventFormat.unknown")}</p>
+            <Switch name="eventFormat" value="unknown" />
           </div>
         </li>
       </ul>
 
       <p className="menu-label">{t("sidebar.status")}</p>
-      {/*Aqui podia definir un list box de seleccion multiple con 
+      {/*Aqui podia definir un list box de seleccion multiple con
         las distintas provincias como opciones */}
       <ul className="menu-list">
         <li className="menu-item">
           <div className="option-item is-size-7">
-            <p>Activa</p>
-            <Switch name="status" value="Activa" />
+            <p>{t("status.active")}</p>
+            <Switch name="status" value="active" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
-            <p>Inactiva</p>
-            <Switch name="status" value="Inactiva" />
+            <p>{t("status.inactive")}</p>
+            <Switch name="status" value="inactive" />
           </div>
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
-            <p>Desconocido</p>
-            <Switch name="status" value="Desconocido" />
+            <p>{t("status.unknown")}</p>
+            <Switch name="status" value="unknown" />
           </div>
         </li>
       </ul>

@@ -26,15 +26,15 @@ const INVALID_LOCATION_VALUES = new Set([
 ]);
 
 const STATUS_BADGE_CLASS = {
-  Activa: "tag-option-badge tag-option-badge--active",
-  Inactiva: "tag-option-badge tag-option-badge--inactive",
-  Desconocido: "tag-option-badge tag-option-badge--unknown",
+  active:   "tag-option-badge tag-option-badge--active",
+  inactive: "tag-option-badge tag-option-badge--inactive",
+  unknown:  "tag-option-badge tag-option-badge--unknown",
 };
 
 const COMMUNITY_SUGGESTION_STATUS_ORDER = {
-  Activa: 0,
-  Desconocido: 1,
-  Inactiva: 2,
+  active:   0,
+  unknown:  1,
+  inactive: 2,
 };
 
 function normalizeLocation(location) {
@@ -45,20 +45,20 @@ function normalizeLocation(location) {
   return INVALID_LOCATION_VALUES.has(normalized.toLowerCase()) ? null : normalized;
 }
 
-function buildCommunityMeta(community) {
+function buildCommunityMeta(community, t) {
   const location = normalizeLocation(community.location);
 
   return [
     community.status && {
-      value: community.status,
-      className: STATUS_BADGE_CLASS[community.status] || STATUS_BADGE_CLASS.Desconocido,
+      value: t(`status.${community.status}`),
+      className: STATUS_BADGE_CLASS[community.status] || STATUS_BADGE_CLASS.unknown,
     },
     community.communityType && {
-      value: community.communityType,
+      value: t(`communityType.${community.communityType}`),
       className: "tag-option-badge tag-option-badge--type",
     },
     community.eventFormat && {
-      value: community.eventFormat,
+      value: t(`eventFormat.${community.eventFormat}`),
       className: "tag-option-badge tag-option-badge--format",
     },
     location && {
@@ -170,7 +170,7 @@ export function TagSearch() {
             value: community.name,
             label: community.name,
             description: t("tagSearch.communityLabel"),
-            meta: buildCommunityMeta(community),
+            meta: buildCommunityMeta(community, t),
             communityIdentifier: community.id ?? slugifyCommunityName(community.name),
           })),
       ];

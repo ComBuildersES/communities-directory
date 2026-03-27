@@ -36,7 +36,7 @@ Enum value strings (`"Activa"`, `"Presencial"`, `"Tech Meetup"`, etc.) intention
 
 ---
 
-## Phase 2 — Enum Key Migration _(highest-risk)_
+## Phase 2 — Enum Key Migration _(done 2026-03-27)_ ✅
 
 **What:** Replace Spanish enum strings everywhere with language-neutral keys (`"Activa"` → `"active"`, `"Presencial"` → `"in-person"`, etc.). Data migration + code changes done together.
 

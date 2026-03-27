@@ -54,7 +54,9 @@ export function ResultsBar({ view, toggleView }) {
           ? (tagsMap[value] || value)
           : key === "targetAudience"
             ? (audienceMap[value] || value)
-            : value,
+            : key === "status" || key === "eventFormat" || key === "communityType"
+              ? t(`${key}.${value}`, { defaultValue: value })
+              : value,
       category: FILTER_LABEL_KEYS[key] ? t(FILTER_LABEL_KEYS[key]) : key,
     }))
   );

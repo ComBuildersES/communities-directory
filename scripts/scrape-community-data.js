@@ -246,7 +246,7 @@ async function extractContactEmail(page) {
 
 /**
  * Intenta detectar si una página de meetup.com tiene eventos recientes.
- * Devuelve 'Activa', 'Inactiva', o null si no puede determinarlo.
+ * Devuelve 'active', 'inactive', o null si no puede determinarlo.
  */
 async function detectMeetupStatus(page) {
   try {
@@ -269,10 +269,10 @@ async function detectMeetupStatus(page) {
       if (!isNaN(d.getTime())) {
         const diff = now - d.getTime();
         // Si hay un evento futuro o reciente (< 1 año), está activa
-        if (diff < ONE_YEAR_MS) return 'Activa';
+        if (diff < ONE_YEAR_MS) return 'active';
       }
     }
-    return 'Inactiva';
+    return 'inactive';
   } catch {
     return null;
   }
@@ -315,7 +315,7 @@ async function main() {
   // Saltar comunidades inactivas (a menos que se pida una concreta con --id)
   if (idArg === null) {
     const before = targets.length;
-    targets = targets.filter(c => c.status !== 'Inactiva');
+    targets = targets.filter(c => c.status !== 'inactive');
     const skipped = before - targets.length;
     if (skipped > 0) console.log(`⏭  ${skipped} comunidades inactivas omitidas.`);
   }

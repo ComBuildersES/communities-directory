@@ -86,7 +86,7 @@ async function main() {
 
     // Status: solo actualizar si el actual es "Desconocido" y hay sugerencia
     let newStatus = community.status;
-    if (sugStatus && community.status === 'Desconocido') {
+    if (sugStatus && community.status === 'unknown') {
       newStatus = sugStatus;
       changed = true;
     }

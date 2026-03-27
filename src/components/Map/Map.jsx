@@ -1,7 +1,9 @@
 import { useMemo } from 'react'
+import { useTranslation } from 'react-i18next'
 
 // ArcGIS SDK Imports
 import '@arcgis/map-components/dist/components/arcgis-map'
+import '@arcgis/map-components/dist/components/arcgis-search'
 import FeatureLayer from "@arcgis/core/layers/FeatureLayer"
 import SimpleFillSymbol from "@arcgis/core/symbols/SimpleFillSymbol"
 import SimpleRenderer from "@arcgis/core/renderers/SimpleRenderer"
@@ -23,14 +25,18 @@ import './Map.css'
 // React Imports
 import { useEffect, useState, useRef } from 'react'
 
-function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null }) {
+function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null, initialMapState = null, onMapStateChange = null }) {
+  const { t } = useTranslation()
   const [activeView, setActiveView] = useState(null)
   const [provincesFeatures, setProvincesFeatures] = useState([])
   const [provincesCenter, setProvincesCenter] = useState()
   const [visibleCommunities, setVisibleCommunities] = useState([]);
+  const [mapCollapsed, setMapCollapsed] = useState(false);
 
   const popupRef = useRef(null)
   const communityLayerRef = useRef(null);
+  const mapStateDebounceRef = useRef(null);
+  const searchRef = useRef(null);
 
 
   {/* <  const communities = useCommunitiesFiltered().filter((community) => {
@@ -51,13 +57,20 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
 
 
 
+  useEffect(() => {
+    if (!searchRef.current) return;
+    searchRef.current.setAttribute('popup-disabled', '');
+    searchRef.current.setAttribute('result-graphic-disabled', '');
+  }, []);
+
   // Setup Effect for the Provinces Feature Layer
   useEffect(() => {
     if (activeView) {
       const provincesSymbol = new SimpleFillSymbol({
+        color: [0, 0, 0, 0],
         outline: {
           cap: "round",
-          color: [0, 255, 204, 0.3],
+          color: [88, 118, 165, 0.5],
           join: "round",
           miterLimit: 1,
           style: "solid",
@@ -160,19 +173,19 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
       },
       uniqueValueInfos: [
         {
-          value: "Tech Meetup",
+          value: "tech-meetup",
           symbol: { type: "simple-marker", style: "circle", size: "8px", color: "#ff595e" },
         },
         {
-          value: "Conferencia",
+          value: "conference",
           symbol: { type: "simple-marker", style: "circle", size: "8px", color: "#ffca3a" },
         },
         {
-          value: "Grupo colaborativo",
+          value: "collaborative-group",
           symbol: { type: "simple-marker", style: "circle", size: "8px", color: "#8ac926" },
         },
         {
-          value: "Hacklab",
+          value: "hacklab",
           symbol: { type: "simple-marker", style: "circle", size: "8px", color: "#1982c4" },
         },
       ],
@@ -217,11 +230,12 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
     if (!popupRef.current) {
       popupRef.current = new Popup({
         view,
-        alignment: "top-left",
-        dockEnabled: false,
+        dockEnabled: true,
         dockOptions: {
-          buttonEnabled: false
-        }
+          buttonEnabled: false,
+          breakpoint: false,
+          position: "top-left",
+        },
       })
 
       view.popup = popupRef.current
@@ -229,14 +243,14 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
 
     // Build conditional info rows
     const infoRows = [
-      { label: "Estado", value: community.status },
-      { label: "Revisada", value: community.lastReviewed },
-      { label: "Tipo de comunidad", value: community.communityType },
-      { label: "Formato de evento", value: community.eventFormat },
-      { label: "Localización", value: community.location },
-      { label: "Temas", value: community.topics },
-      { label: "Contacto", value: community.contactInfo },
-      { label: "Website", value: community.communityUrl ? `<a href="${community.communityUrl}" target="_blank">Visitar</a>` : null }
+      { label: t("map.popup.status"), value: community.status },
+      { label: t("map.popup.lastReviewed"), value: community.lastReviewed },
+      { label: t("map.popup.communityType"), value: community.communityType },
+      { label: t("map.popup.eventFormat"), value: community.eventFormat },
+      { label: t("map.popup.location"), value: community.location },
+      { label: t("map.popup.topics"), value: community.topics },
+      { label: t("map.popup.contact"), value: community.contactInfo },
+      { label: t("map.popup.website"), value: community.communityUrl ? `<a href="${community.communityUrl}" target="_blank">${t("map.popup.visit")}</a>` : null }
     ]
       .filter((item) => item.value && item.value !== "Sin completar" && item.value !== "") // clean logic
       .map(
@@ -277,7 +291,9 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
   }
 
   function activeViewChange (activeViewEvent) {
-    setActiveView(() => activeViewEvent.target.view)
+    const view = activeViewEvent.target.view;
+    view.map.basemap.referenceLayers.removeAll();
+    setActiveView(() => view);
   }
 
   async function generarConfiguracionCluster (layer, view) {
@@ -289,8 +305,10 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
 
     const labelSymbol = labelingInfo[0].symbol;
     labelSymbol.color = [255, 255, 255, 1];
-    labelSymbol.haloColor = [255, 255, 255, 0.3];
+    labelSymbol.haloColor = [33, 50, 74, 0.9];
+    labelSymbol.haloSize = 1.5;
     labelSymbol.font.size = 10;
+    labelingInfo[0].labelPlacement = "center-center";
 
     const { renderer, fields } =
       await pieChartRendererCreator.createRendererForClustering({
@@ -319,43 +337,43 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
     const tablaHtmlPopup = `<table style="width: 100%; font-family: sans-serif; font-size: 14px; border-collapse: collapse;">
   <thead>
     <tr>
-      <th style="text-align: left; padding: 6px; color: #ffff">Tipo</th>
-      <th style="text-align: right; padding: 6px; color: #ffff">Total</th>
+      <th style="text-align: left; padding: 6px; color: #ffff">${t("map.cluster.type")}</th>
+      <th style="text-align: right; padding: 6px; color: #ffff">${t("map.cluster.total")}</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td style="padding: 6px;">
         <span style="display: inline-block; width: 10px; height: 10px; background-color: #ff595e; border-radius: 50%; margin-right: 6px;"></span>
-        Tech Meetup
+        ${t("communityType.tech-meetup")}
       </td>
-      <td style="padding: 6px; text-align: right;"><b>{SUM_Tech_Meetup}</b></td>
+      <td style="padding: 6px; text-align: right;"><b>{SUM_tech_meetup}</b></td>
     </tr>
     <tr>
       <td style="padding: 6px;">
         <span style="display: inline-block; width: 10px; height: 10px; background-color: #ffca3a; border-radius: 50%; margin-right: 6px;"></span>
-        Conferencia
+        ${t("communityType.conference")}
       </td>
-      <td style="padding: 6px; text-align: right;"><b>{SUM_Conferencia}</b></td>
+      <td style="padding: 6px; text-align: right;"><b>{SUM_conference}</b></td>
     </tr>
     <tr>
       <td style="padding: 6px;">
         <span style="display: inline-block; width: 10px; height: 10px; background-color: #8ac926; border-radius: 50%; margin-right: 6px;"></span>
-        Grupo colaborativo
+        ${t("communityType.collaborative-group")}
       </td>
-      <td style="padding: 6px; text-align: right;"><b>{SUM_Grupo_colaborativo}</b></td>
+      <td style="padding: 6px; text-align: right;"><b>{SUM_collaborative_group}</b></td>
     </tr>
     <tr>
       <td style="padding: 6px;">
         <span style="display: inline-block; width: 10px; height: 10px; background-color: #1982c4; border-radius: 50%; margin-right: 6px;"></span>
-        Hacklab
+        ${t("communityType.hacklab")}
       </td>
-      <td style="padding: 6px; text-align: right;"><b>{SUM_Hacklab}</b></td>
+      <td style="padding: 6px; text-align: right;"><b>{SUM_hacklab}</b></td>
     </tr>
     <tr>
       <td style="padding: 6px;">
         <span style="display: inline-block; width: 10px; height: 10px; background-color: #6a4c93; border-radius: 50%; margin-right: 6px;"></span>
-        Otro
+        ${t("map.cluster.other")}
       </td>
       <td style="padding: 6px; text-align: right;"><b>{SUM_Otro}</b></td>
     </tr>
@@ -364,11 +382,11 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
 `
 
     const popupTemplate = {
-      title: "Comunidades",
+      title: t("map.cluster.title"),
       content: [
         {
           type: "text",
-          text: "<b>{cluster_count}</b> Comunidades.",
+          text: t("map.cluster.countText"),
         },
         {
           type: "media",
@@ -451,6 +469,17 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
         });
 
         setVisibleCommunities(visible);
+
+        if (onMapStateChange) {
+          clearTimeout(mapStateDebounceRef.current);
+          mapStateDebounceRef.current = setTimeout(() => {
+            onMapStateChange({
+              lat: activeView.center.latitude,
+              lon: activeView.center.longitude,
+              zoom: activeView.zoom,
+            });
+          }, 500);
+        }
       });
     };
 
@@ -463,33 +492,54 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
     return () => {
       handle.remove();
       cancelAnimationFrame(rafId);
+      clearTimeout(mapStateDebounceRef.current);
     };
-  }, [activeView, communities]);
+  }, [activeView, communities, onMapStateChange]);
 
   const numVisible = visibleCommunities.length;
   return (
     <div id="map" className="column" style={{ display: "flex", flexDirection: "column" }}>
+      <div className={`map-canvas${mapCollapsed ? " map-canvas--collapsed" : ""}`}>
       <arcgis-map
         basemap="gray"
-        center={initialFocus ? `${initialFocus.lon}, ${initialFocus.lat}` : "-4, 40"}
-        zoom={initialFocus ? "8" : "4"}
+        center={
+          initialFocus
+            ? `${initialFocus.lon}, ${initialFocus.lat}`
+            : initialMapState
+              ? `${initialMapState.lon}, ${initialMapState.lat}`
+              : "-4, 40"
+        }
+        zoom={
+          initialFocus
+            ? "8"
+            : initialMapState
+              ? String(Math.round(initialMapState.zoom))
+              : "4"
+        }
         onarcgisViewReadyChange={activeViewChange}
-      ></arcgis-map>
+      >
+        <arcgis-search slot="top-right" ref={searchRef}></arcgis-search>
+      </arcgis-map>
+      </div>
+      <button className="map-toggle-btn" onClick={() => setMapCollapsed(c => !c)}>
+        <i className={`fas ${mapCollapsed ? "fa-chevron-down" : "fa-chevron-up"}`}></i>
+        {mapCollapsed ? t("map.showMap") : t("map.hideMap")}
+      </button>
       <div className="map-results-note">
-        <strong>{numVisible}</strong> comunidades visibles en esta zona.
+        <strong>{numVisible}</strong>{" "}{t("map.visibleInArea")}
         {hiddenFromMapCount > 0 && (
           <>
             {" "}
             <span className="map-hidden-hint">
-              +{hiddenFromMapCount} sin ubicación fija
+              +{hiddenFromMapCount} {t("map.noFixedLocation")}
               <span className="map-hidden-tooltip" role="tooltip">
-                {hiddenFromMapCount === 1 ? "1 comunidad encaja" : `${hiddenFromMapCount} comunidades encajan`} con los filtros pero no {hiddenFromMapCount === 1 ? "aparece" : "aparecen"} en el mapa por no tener ubicación fija.{" "}
+                {t("map.hiddenTooltip", { count: hiddenFromMapCount })}{" "}
                 <button
                   type="button"
                   className="map-results-link"
                   onClick={() => showListView?.()}
                 >
-                  Verlas en la lista
+                  {t("map.viewInList")}
                 </button>
               </span>
               <i className="fa-solid fa-circle-info map-hidden-icon" aria-hidden="true"></i>

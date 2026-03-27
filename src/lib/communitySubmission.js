@@ -1,17 +1,17 @@
 const GITHUB_NEW_ISSUE_URL = "https://github.com/ComBuildersES/communities-directory/issues/new";
 
-export const COMMUNITY_STATUS_OPTIONS = ["Activa", "Inactiva", "Desconocido"];
+export const COMMUNITY_STATUS_OPTIONS = ["active", "inactive", "unknown"];
 export const COMMUNITY_TYPE_OPTIONS = [
-  "Tech Meetup",
-  "Conferencia",
-  "Organización paraguas",
-  "Hacklab",
-  "Grupo colaborativo",
-  "Meta comunidad",
-  "Grupo de ayuda mutua",
+  "tech-meetup",
+  "conference",
+  "umbrella-org",
+  "hacklab",
+  "collaborative-group",
+  "meta-community",
+  "mutual-aid",
 ];
-export const EVENT_FORMAT_OPTIONS = ["Presencial", "Online", "Híbridos", "Desconocido"];
-export const EVENT_FORMATS_WITH_LOCATION = ["Presencial", "Híbridos"];
+export const EVENT_FORMAT_OPTIONS = ["in-person", "online", "hybrid", "unknown"];
+export const EVENT_FORMATS_WITH_LOCATION = ["in-person", "hybrid"];
 export const SHORT_DESCRIPTION_MAX_LENGTH = 280;
 
 export const URL_PLATFORM_OPTIONS = [
@@ -55,6 +55,14 @@ const DIRECTORY_FILTER_KEYS = [
   "targetAudience",
   "name",
 ];
+const FILTER_KEY_SHORT = {
+  status: "s",
+  communityType: "ct",
+  eventFormat: "ef",
+  tags: "t",
+  targetAudience: "ta",
+  name: "n",
+};
 
 function getTodayDate() {
   const d = new Date();
@@ -232,11 +240,25 @@ export function parseSelectedCommunityIdentifier(search = window.location.search
   return params.get(COMMUNITY_PARAM);
 }
 
+export function parseMapState(search = window.location.search) {
+  const params = new URLSearchParams(search);
+  const raw = params.get("m");
+  if (!raw) return null;
+
+  const parts = raw.split(",").map(Number);
+  if (parts.length !== 3 || parts.some((n) => !Number.isFinite(n))) return null;
+
+  const [lat, lon, zoom] = parts;
+  return { lat, lon, zoom };
+}
+
 export function parseDirectoryFilters(search = window.location.search) {
   const params = new URLSearchParams(search);
 
   return DIRECTORY_FILTER_KEYS.reduce((filters, key) => {
-    const values = params.getAll(key).filter(Boolean);
+    // Accept short key (current format) or long key (backwards compat)
+    const raw = params.get(FILTER_KEY_SHORT[key]) ?? params.get(key);
+    const values = raw ? raw.split(",").map((v) => v.trim()).filter(Boolean) : [];
 
     if (values.length > 0) {
       filters[key] = values;
@@ -265,16 +287,18 @@ export function buildDirectoryStatePath({
         ? [rawValues]
         : [];
 
-    values
-      .filter(Boolean)
-      .forEach((value) => params.append(key, String(value)));
+    const filtered = values.filter(Boolean);
+    if (filtered.length === 0) return;
+    // Omit status=active (default) to keep URLs short
+    if (key === "status" && filtered.length === 1 && filtered[0] === "active") return;
+    params.set(FILTER_KEY_SHORT[key], filtered.join(","));
   });
 
   if (hasQueryParamValue(communityIdentifier)) {
     params.set(COMMUNITY_PARAM, String(communityIdentifier));
   }
 
-  const query = params.toString();
+  const query = params.toString().replace(/%2C/gi, ",");
   return query ? `${pathname}?${query}` : pathname;
 }
 
@@ -333,10 +357,10 @@ export function getEmptyCommunityDraft(nextId = null) {
   return {
     id: nextId,
     name: "",
-    status: "Activa",
+    status: "active",
     lastReviewed: getTodayDate(),
-    communityType: "Tech Meetup",
-    eventFormat: "Presencial",
+    communityType: "tech-meetup",
+    eventFormat: "in-person",
     location: "",
     provinceId: "",
     shortDescription: "",
@@ -362,7 +386,7 @@ export function getCommunityDraft(community, nextId = null) {
     return getEmptyCommunityDraft(nextId);
   }
 
-  const isUmbrella = community.communityType === "Organización paraguas";
+  const isUmbrella = community.communityType === "umbrella-org";
 
   return {
     ...getEmptyCommunityDraft(nextId),
@@ -451,9 +475,9 @@ export function buildCommunityPayload(draft, existingCommunity = null) {
   const lon = normalizeLatLon(draft.latLon?.lon);
   const resolvedId = existingCommunity?.id ?? draft.id ?? null;
   const currentReviewDate = getTodayDate();
-  const normalizedEventFormat = cleanString(draft.eventFormat) || "Desconocido";
+  const normalizedEventFormat = cleanString(draft.eventFormat) || "unknown";
   const supportsLocation = EVENT_FORMATS_WITH_LOCATION.includes(normalizedEventFormat);
-  const isUmbrellaOrganization = cleanString(draft.communityType) === "Organización paraguas";
+  const isUmbrellaOrganization = cleanString(draft.communityType) === "umbrella-org";
   const normalizedLocation = isUmbrellaOrganization
     ? "n/a"
     : supportsLocation
@@ -466,9 +490,9 @@ export function buildCommunityPayload(draft, existingCommunity = null) {
   return {
     id: resolvedId,
     name: cleanString(draft.name),
-    status: cleanString(draft.status) || "Desconocido",
+    status: cleanString(draft.status) || "unknown",
     lastReviewed: currentReviewDate,
-    communityType: cleanString(draft.communityType) || "Tech Meetup",
+    communityType: cleanString(draft.communityType) || "tech-meetup",
     eventFormat: normalizedEventFormat,
     location: normalizedLocation,
     provinceId: cleanString(draft.provinceId),

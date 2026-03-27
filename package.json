@@ -20,6 +20,7 @@
     "find-stale-add-community-branches": "node scripts/find-stale-add-community-branches.js",
     "scrape-community-data": "node scripts/scrape-community-data.js",
     "apply-suggestions": "node scripts/apply-suggestions.js",
+    "migrate-enum-keys": "node scripts/migrate-enum-keys.js",
     "apply-url-mapping": "node scripts/apply-url-mapping.js",
     "simulate-community-owner-assignment": "node scripts/simulate-community-owner-assignment.js",
     "archive-broken-urls": "node scripts/archive-broken-urls.js",

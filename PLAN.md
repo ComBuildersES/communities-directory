@@ -111,7 +111,9 @@
 
 Todos los strings hardcodeados del UI extraídos a `src/i18n/locales/es.json` usando `t()`. Componentes migrados: `Footer`, `InstallPromptBar`, `AddCommunityCTA`, `ViewToggleButton`, `Heading`, `ResultsBar`, `TagSearch`, `CommunityCard`, `CommunityModal`, `App`, `SideBar`, `FilterPanel`, `CommunityContribution` (incluyendo sub-componentes `FieldHelpModal`, `TaxonomyPicker`, `UrlFields`). Las claves de enum (`"Activa"`, `"Presencial"`, etc.) se han dejado intactas para la Fase 2.
 
-#### FASE 2 — Migración de claves de enum → Pendiente
+#### FASE 2 — Migración de claves de enum ✅ (2026-03-27)
+
+Todas las claves de enum españolas reemplazadas por claves neutrales al idioma en todo el código, scripts, tests y datos. Mappings: `Activa→active`, `Inactiva→inactive`, `Desconocido→unknown`, `Presencial→in-person`, `Híbridos→hybrid`, `Online→online`, `Tech Meetup→tech-meetup`, etc. Migration script aplicado a `communities.json` (604 registros) y `communities.geojson` (500 features).
 
 #### FASE 3 — Traducción inglés + selector de idioma → Pendiente
 

@@ -1,13 +1,45 @@
-@import url("https://js.arcgis.com/4.32/@arcgis/core/assets/esri/themes/dark/main.css");
+@import url("https://js.arcgis.com/4.32/@arcgis/core/assets/esri/themes/light/main.css");
 @import url("https://js.arcgis.com/calcite-components/3.0.3/calcite.css");
 @import url("https://js.arcgis.com/map-components/4.32/arcgis-map-components.css");
 
+.map-canvas {
+  max-height: 50vh;
+  overflow: hidden;
+  transition: max-height 0.3s ease, opacity 0.2s ease;
+  opacity: 1;
+}
+
+.map-canvas--collapsed {
+  max-height: 0;
+  opacity: 0;
+}
+
 arcgis-map {
-  /* Modificar para que entre correctamente en el div, Hablar con Manu para ver como lo quiere implementar */
-  height: calc(100vh - 60vh);
+  height: 40vh;
   width: 100%;
   border-radius: 10px;
-  margin-bottom: 20px;
+}
+
+.map-toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 100%;
+  padding: 0.3rem 0.75rem;
+  margin-bottom: 0.75rem;
+  background: #fff;
+  border: 1px solid #dde4ef;
+  border-radius: 6px;
+  cursor: pointer;
+  color: #5876a5;
+  font-size: 0.82rem;
+  font-family: inherit;
+}
+
+.map-toggle-btn:hover {
+  background: #f0f4fa;
+  color: #30507d;
 }
 
 #map{

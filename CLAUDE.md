@@ -42,7 +42,6 @@ src/
     API.js             # fetch wrapper para communities.json
     invertedindex.js   # Construcción del índice invertido
     searchFaceted.js   # Búsqueda facetada por intersección de sets
-    mockdata.js        # Datos de prueba
 
 public/data/
   communities.json     # Fuente de datos principal (600 comunidades)
@@ -70,10 +69,10 @@ scripts/               # Utilidades de mantenimiento de datos
 {
   id: number,
   name: string,
-  status: "Activa" | "Inactiva" | "Desconocido",
+  status: "active" | "inactive" | "unknown",
   lastReviewed: "DD/MM/YYYY",
-  communityType: string,        // tipo de comunidad
-  eventFormat: "Presencial" | "Online" | "Híbridos" | "Desconocido",
+  communityType: "tech-meetup" | "conference" | "umbrella-org" | "hacklab" | "collaborative-group" | "meta-community" | "mutual-aid",
+  eventFormat: "in-person" | "online" | "hybrid" | "unknown",
   location: string,
   topics: string,               // texto libre heredado, separado por comas
   tags: string[],               // IDs referenciando public/data/tags.json
@@ -143,6 +142,7 @@ npm run migrate-add-new-fields        # Añade urls/tags/targetAudience a commun
 npm run scrape-community-data         # Scraping con Playwright (ver opciones en el script)
 npm run apply-suggestions             # Aplica suggestions.json revisado a communities.json
 npm run apply-url-mapping             # Aplica url-mapping.json a communities.json
+npm run migrate-enum-keys             # Migra claves de enum españolas a claves neutrales (idempotente)
 ```
 
 ### Opciones del scraping
@@ -154,7 +154,8 @@ npm run scrape-community-data -- --resume              # saltar ya procesadas
 npm run apply-suggestions -- --dry-run                 # previsualizar cambios
 npm run apply-suggestions -- --only-approved           # solo approved: true
 npm run apply-url-mapping -- --dry-run
-npm run apply-url-mapping -- --force-status            # actualiza status aunque sea "Activa"
+npm run apply-url-mapping -- --force-status            # actualiza status aunque sea "active"
+npm run migrate-enum-keys -- --dry-run                 # previsualizar migración de claves de enum
 ```
 
 ### Comportamiento del scraper
@@ -163,7 +164,7 @@ npm run apply-url-mapping -- --force-status            # actualiza status aunque
 - **Fallback `urls.web`**: si `communityUrl` falla o es una red social, el scraper intenta `community.urls.web`.
 - **Enriquecimiento meetup**: si tras scrapar la URL principal se conoce una URL de meetup (en `community.urls.meetup` o descubierta en los links), se visita para extraer topics estructurados (`/find/?keywords=`) y detectar estado activo/inactivo.
 - **Topics estructurados**: los topics de meetup se mapean al catálogo `tags.json` por coincidencia en `label` y `synonyms` — más preciso que el matching de texto libre.
-- **Inactivas omitidas**: comunidades con `status: "Inactiva"` se saltan por defecto; usar `--id` para forzar una concreta.
+- **Inactivas omitidas**: comunidades con `status: "inactive"` se saltan por defecto; usar `--id` para forzar una concreta.
 
 ## Variables de entorno
 

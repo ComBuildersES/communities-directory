@@ -4,9 +4,9 @@ import { getCommunityDraft } from "../src/lib/communitySubmission.js";
 const baseCommunity = {
   id: 1,
   name: "Test",
-  status: "Activa",
-  communityType: "Tech Meetup",
-  eventFormat: "Presencial",
+  status: "active",
+  communityType: "tech-meetup",
+  eventFormat: "in-person",
   location: "Madrid",
   shortDescription: "Una comunidad tech",
   topics: "",
@@ -25,7 +25,7 @@ describe("getCommunityDraft", () => {
   it("normaliza location a n/a para Organización paraguas", () => {
     const community = {
       ...baseCommunity,
-      communityType: "Organización paraguas",
+      communityType: "umbrella-org",
       location: "España",
     };
     const draft = getCommunityDraft(community, null);
@@ -40,7 +40,7 @@ describe("getCommunityDraft", () => {
   it("preserva location n/a si ya estaba en Organización paraguas", () => {
     const community = {
       ...baseCommunity,
-      communityType: "Organización paraguas",
+      communityType: "umbrella-org",
       location: "n/a",
     };
     const draft = getCommunityDraft(community, null);

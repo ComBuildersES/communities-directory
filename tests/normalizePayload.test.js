@@ -3,9 +3,9 @@ import { normalizePayload } from "../scripts/process-community-issue.js";
 
 const base = {
   name: "Test Community",
-  status: "Activa",
-  communityType: "Tech Meetup",
-  eventFormat: "Presencial",
+  status: "active",
+  communityType: "tech-meetup",
+  eventFormat: "in-person",
   location: "Madrid",
   shortDescription: "",
   topics: "",
@@ -58,9 +58,9 @@ describe("normalizePayload", () => {
     expect(result.tags).toEqual([]);
   });
 
-  it("status por defecto es Desconocido si no se proporciona", () => {
+  it("status por defecto es unknown si no se proporciona", () => {
     const result = normalizePayload({ ...base, status: "" });
-    expect(result.status).toBe("Desconocido");
+    expect(result.status).toBe("unknown");
   });
 
   it("filtra tags duplicados y vacíos", () => {

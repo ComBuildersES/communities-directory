@@ -12,13 +12,13 @@ export function FilterPanel() {
         <div className="filter-group">
           <p className="filter-group-label">{t("sidebar.communityType")}</p>
           <div className="filter-group-items">
-            <div className="option-item is-size-7"><p>Tech Meetup</p><Switch name="communityType" value="Tech Meetup" /></div>
-            <div className="option-item is-size-7"><p>Conferencia</p><Switch name="communityType" value="Conferencia" /></div>
-            <div className="option-item is-size-7"><p>Grupo Colaborativo</p><Switch name="communityType" value="Grupo colaborativo" /></div>
-            <div className="option-item is-size-7"><p>Grupo de Ayuda Mutua</p><Switch name="communityType" value="Grupo de ayuda mutua" /></div>
-            <div className="option-item is-size-7"><p>Hacklab</p><Switch name="communityType" value="Hacklab" /></div>
-            <div className="option-item is-size-7"><p>Organización paraguas</p><Switch name="communityType" value="Organización paraguas" /></div>
-            <div className="option-item is-size-7"><p>Meta comunidad</p><Switch name="communityType" value="Meta comunidad" /></div>
+            <div className="option-item is-size-7"><p>{t("communityType.tech-meetup")}</p><Switch name="communityType" value="tech-meetup" /></div>
+            <div className="option-item is-size-7"><p>{t("communityType.conference")}</p><Switch name="communityType" value="conference" /></div>
+            <div className="option-item is-size-7"><p>{t("communityType.collaborative-group")}</p><Switch name="communityType" value="collaborative-group" /></div>
+            <div className="option-item is-size-7"><p>{t("communityType.mutual-aid")}</p><Switch name="communityType" value="mutual-aid" /></div>
+            <div className="option-item is-size-7"><p>{t("communityType.hacklab")}</p><Switch name="communityType" value="hacklab" /></div>
+            <div className="option-item is-size-7"><p>{t("communityType.umbrella-org")}</p><Switch name="communityType" value="umbrella-org" /></div>
+            <div className="option-item is-size-7"><p>{t("communityType.meta-community")}</p><Switch name="communityType" value="meta-community" /></div>
           </div>
         </div>
 
@@ -27,10 +27,10 @@ export function FilterPanel() {
         <div className="filter-group">
           <p className="filter-group-label">{t("sidebar.eventFormat")}</p>
           <div className="filter-group-items">
-            <div className="option-item is-size-7"><p>Híbridos</p><Switch name="eventFormat" value="Híbridos" /></div>
-            <div className="option-item is-size-7"><p>Online</p><Switch name="eventFormat" value="Online" /></div>
-            <div className="option-item is-size-7"><p>Presencial</p><Switch name="eventFormat" value="Presencial" /></div>
-            <div className="option-item is-size-7"><p>Desconocido</p><Switch name="eventFormat" value="Desconocido" /></div>
+            <div className="option-item is-size-7"><p>{t("eventFormat.hybrid")}</p><Switch name="eventFormat" value="hybrid" /></div>
+            <div className="option-item is-size-7"><p>{t("eventFormat.online")}</p><Switch name="eventFormat" value="online" /></div>
+            <div className="option-item is-size-7"><p>{t("eventFormat.in-person")}</p><Switch name="eventFormat" value="in-person" /></div>
+            <div className="option-item is-size-7"><p>{t("eventFormat.unknown")}</p><Switch name="eventFormat" value="unknown" /></div>
           </div>
         </div>
 
@@ -39,9 +39,9 @@ export function FilterPanel() {
         <div className="filter-group">
           <p className="filter-group-label">{t("sidebar.status")}</p>
           <div className="filter-group-items">
-            <div className="option-item is-size-7"><p>Activa</p><Switch name="status" value="Activa" /></div>
-            <div className="option-item is-size-7"><p>Inactiva</p><Switch name="status" value="Inactiva" /></div>
-            <div className="option-item is-size-7"><p>Desconocido</p><Switch name="status" value="Desconocido" /></div>
+            <div className="option-item is-size-7"><p>{t("status.active")}</p><Switch name="status" value="active" /></div>
+            <div className="option-item is-size-7"><p>{t("status.inactive")}</p><Switch name="status" value="inactive" /></div>
+            <div className="option-item is-size-7"><p>{t("status.unknown")}</p><Switch name="status" value="unknown" /></div>
           </div>
         </div>
       </div>
