@@ -1,0 +1,1164 @@
+[
+  {
+    "id": "c",
+    "label": "C",
+    "description": "General-purpose programming language used in systems and low-level software.",
+    "category": "Programming Languages",
+    "synonyms": ["c language", "c programming"]
+  },
+  {
+    "id": "cpp",
+    "label": "C++",
+    "description": "Object-oriented extension of C, widely used in systems, video games and high-performance software.",
+    "category": "Programming Languages",
+    "synonyms": ["c plus plus", "cplusplus"]
+  },
+  {
+    "id": "csharp",
+    "label": "C#",
+    "description": "Language in the .NET ecosystem for desktop, web and cloud applications.",
+    "category": "Programming Languages",
+    "synonyms": ["c sharp", "dotnet", ".net"]
+  },
+  {
+    "id": "go",
+    "label": "Go",
+    "description": "Efficient language for distributed systems and high-performance services.",
+    "category": "Programming Languages",
+    "synonyms": ["golang"]
+  },
+  {
+    "id": "java",
+    "label": "Java",
+    "description": "Complete ecosystem for enterprise and mobile applications.",
+    "category": "Programming Languages",
+    "synonyms": ["jvm", "java ee", "jakarta ee"]
+  },
+  {
+    "id": "javascript",
+    "label": "JavaScript",
+    "description": "Key language for web development and interactive applications.",
+    "category": "Programming Languages",
+    "synonyms": ["js", "ecmascript", "es6"]
+  },
+  {
+    "id": "typescript",
+    "label": "TypeScript",
+    "description": "Typed superset of JavaScript for scalable projects.",
+    "category": "Programming Languages",
+    "synonyms": ["ts", "typed javascript"]
+  },
+  {
+    "id": "python",
+    "label": "Python",
+    "description": "Versatile language used in data science, web, automation and more.",
+    "category": "Programming Languages",
+    "synonyms": ["py", "python3"]
+  },
+  {
+    "id": "php",
+    "label": "PHP",
+    "description": "Popular language for backend and content management systems.",
+    "category": "Programming Languages",
+    "synonyms": ["php8", "lamp"]
+  },
+  {
+    "id": "ruby",
+    "label": "Ruby",
+    "description": "Agile and expressive language used in web development.",
+    "category": "Programming Languages",
+    "synonyms": ["ruby lang"]
+  },
+  {
+    "id": "r-lang",
+    "label": "R",
+    "description": "Language for statistics and advanced data analysis.",
+    "category": "Programming Languages",
+    "synonyms": ["r language", "rlang", "statistics r"]
+  },
+  {
+    "id": "rust",
+    "label": "Rust",
+    "description": "Modern language focused on safety and memory efficiency.",
+    "category": "Programming Languages",
+    "synonyms": ["rust lang", "safe systems"]
+  },
+  {
+    "id": "kotlin",
+    "label": "Kotlin",
+    "description": "Modern language for Android and the JVM.",
+    "category": "Programming Languages",
+    "synonyms": ["android kotlin", "jvm kotlin"]
+  },
+  {
+    "id": "swift",
+    "label": "Swift",
+    "description": "Official language for developing on iOS and macOS.",
+    "category": "Programming Languages",
+    "synonyms": ["swift ios", "apple swift"]
+  },
+  {
+    "id": "objective-c",
+    "label": "Objective-C",
+    "description": "Traditional language for the Apple ecosystem, predecessor to Swift.",
+    "category": "Programming Languages",
+    "synonyms": ["objc", "objective c"]
+  },
+  {
+    "id": "scala",
+    "label": "Scala",
+    "description": "Functional and object-oriented language for the JVM, used in big data and distributed systems.",
+    "category": "Programming Languages",
+    "synonyms": ["scala jvm", "spark scala"]
+  },
+  {
+    "id": "dart",
+    "label": "Dart",
+    "description": "Language used with Flutter for cross-platform apps.",
+    "category": "Programming Languages",
+    "synonyms": ["flutter dart", "dart lang"]
+  },
+  {
+    "id": "haskell",
+    "label": "Haskell",
+    "description": "Pure functional language with an advanced type system.",
+    "category": "Programming Languages",
+    "synonyms": ["functional haskell", "pure functional programming"]
+  },
+  {
+    "id": "erlang",
+    "label": "Erlang",
+    "description": "Language for distributed and fault-tolerant systems.",
+    "category": "Programming Languages",
+    "synonyms": ["erlang vm", "beam erlang"]
+  },
+  {
+    "id": "elixir",
+    "label": "Elixir",
+    "description": "Functional language based on the Erlang virtual machine, focused on concurrency and fault tolerance.",
+    "category": "Programming Languages",
+    "synonyms": ["elixir lang", "phoenix elixir", "beam elixir"]
+  },
+  {
+    "id": "smalltalk",
+    "label": "Smalltalk",
+    "description": "Object-oriented language pioneering modern programming, known for its interactive environment and focus on simplicity.",
+    "category": "Programming Languages",
+    "synonyms": ["smalltalk lang", "pharo", "squeak"]
+  },
+  {
+    "id": "groovy",
+    "label": "Groovy",
+    "description": "JVM language with flexible and dynamic syntax, used in automation, scripting and frameworks like Grails.",
+    "category": "Programming Languages",
+    "synonyms": ["groovy jvm", "grails", "gradle groovy"]
+  },
+  {
+    "id": "vbnet",
+    "label": "VB.NET",
+    "description": "Programming language in the .NET ecosystem used for desktop, web and automation applications in the Microsoft environment.",
+    "category": "Programming Languages",
+    "synonyms": ["visual basic", "vb.net", "dotnet visual basic"]
+  },
+  {
+    "id": "angular",
+    "label": "Angular",
+    "description": "Framework for building scalable web applications, developed by Google.",
+    "category": "Frameworks, Libraries & Stacks",
+    "synonyms": ["angularjs", "angular framework"]
+  },
+  {
+    "id": "react",
+    "label": "React",
+    "description": "Component-based user interface library, developed by Meta.",
+    "category": "Frameworks, Libraries & Stacks",
+    "synonyms": ["reactjs", "react.js"]
+  },
+  {
+    "id": "vue",
+    "label": "Vue.js",
+    "description": "Progressive framework for web interfaces, lightweight and easy to adopt.",
+    "category": "Frameworks, Libraries & Stacks",
+    "synonyms": ["vuejs", "vue js", "vue framework"]
+  },
+  {
+    "id": "ionic",
+    "label": "Ionic",
+    "description": "Framework for mobile apps using web technologies.",
+    "category": "Frameworks, Libraries & Stacks",
+    "synonyms": ["ionic framework", "hybrid apps"]
+  },
+  {
+    "id": "flutter",
+    "label": "Flutter",
+    "description": "Google's framework for creating cross-platform apps with Dart.",
+    "category": "Frameworks, Libraries & Stacks",
+    "synonyms": ["flutter dart", "flutter framework", "cross-platform apps"]
+  },
+  {
+    "id": "django",
+    "label": "Django",
+    "description": "Robust backend framework for web applications in Python.",
+    "category": "Frameworks, Libraries & Stacks",
+    "synonyms": ["django python", "django rest framework", "drf"]
+  },
+  {
+    "id": "nodejs",
+    "label": "Node.js",
+    "description": "Environment for running JavaScript on the server, based on the V8 engine.",
+    "category": "Frameworks, Libraries & Stacks",
+    "synonyms": ["node", "nodejs", "express", "expressjs"]
+  },
+  {
+    "id": "rails",
+    "label": "Ruby on Rails",
+    "description": "Web framework that favors productivity and convention over configuration.",
+    "category": "Frameworks, Libraries & Stacks",
+    "synonyms": ["ror", "ruby rails", "rails framework"]
+  },
+  {
+    "id": "symfony",
+    "label": "Symfony",
+    "description": "PHP framework for robust and scalable backend development.",
+    "category": "Frameworks, Libraries & Stacks",
+    "synonyms": ["symfony php", "symfony framework"]
+  },
+  {
+    "id": "aspnet",
+    "label": "ASP.NET",
+    "description": "Microsoft's framework for web applications in .NET.",
+    "category": "Frameworks, Libraries & Stacks",
+    "synonyms": ["asp.net", "asp net", "dotnet web", "blazor"]
+  },
+  {
+    "id": "xamarin",
+    "label": "Xamarin",
+    "description": "Microsoft's framework for cross-platform mobile apps with C#.",
+    "category": "Frameworks, Libraries & Stacks",
+    "synonyms": ["xamarin forms", "maui", ".net maui"]
+  },
+  {
+    "id": "akka",
+    "label": "Akka",
+    "description": "Toolkit and runtime for building distributed systems and highly concurrent applications based on the actor model.",
+    "category": "Frameworks, Libraries & Stacks",
+    "synonyms": ["akka toolkit", "actor model", "akka streams"]
+  },
+  {
+    "id": "sinatra",
+    "label": "Sinatra",
+    "description": "Minimalist Ruby framework for creating web services and APIs in a lightweight and fast way.",
+    "category": "Frameworks, Libraries & Stacks",
+    "synonyms": ["sinatra ruby", "ruby microframework"]
+  },
+  {
+    "id": "svelte",
+    "label": "Svelte",
+    "description": "JavaScript framework that compiles components into efficient imperative code, without virtual DOM.",
+    "category": "Frameworks, Libraries & Stacks",
+    "synonyms": ["sveltejs", "sveltekit", "svelte framework"]
+  },
+  {
+    "id": "nextjs",
+    "label": "Next.js",
+    "description": "React framework for web applications with server-side rendering (SSR), static generation (SSG) and App Router.",
+    "category": "Frameworks, Libraries & Stacks",
+    "synonyms": ["next js", "nextjs framework", "react ssr", "vercel framework"]
+  },
+  {
+    "id": "nuxt",
+    "label": "Nuxt",
+    "description": "Vue.js framework for web applications with SSR, SSG and a full-stack development experience.",
+    "category": "Frameworks, Libraries & Stacks",
+    "synonyms": ["nuxtjs", "nuxt js", "vue ssr", "nuxt framework"]
+  },
+  {
+    "id": "astro",
+    "label": "Astro",
+    "description": "Content-oriented web framework that generates static HTML by default and allows using components from any framework.",
+    "category": "Frameworks, Libraries & Stacks",
+    "synonyms": ["astro framework", "astro build", "islands architecture"]
+  },
+  {
+    "id": "htmx",
+    "label": "HTMX",
+    "description": "Library that allows accessing AJAX, WebSockets and Server-Sent Events directly from HTML without writing JavaScript.",
+    "category": "Frameworks, Libraries & Stacks",
+    "synonyms": ["htmx library", "hypermedia", "html over the wire"]
+  },
+  {
+    "id": "javascript-frameworks",
+    "label": "JavaScript Frameworks",
+    "description": "Ecosystem of JavaScript frameworks and libraries for developing modern web applications, both on the client and server side.",
+    "category": "Frameworks, Libraries & Stacks",
+    "synonyms": ["js frameworks", "frontend frameworks", "react", "vue", "angular", "svelte", "next.js", "nuxt", "remix", "astro", "javascript ecosystem"]
+  },
+  {
+    "id": "software-architecture",
+    "label": "Software Architecture",
+    "description": "High-level design of systems and their components, including structural and quality decisions.",
+    "category": "Architecture & Paradigms",
+    "synonyms": ["software design", "system design", "systems design"]
+  },
+  {
+    "id": "event-driven",
+    "label": "Event-Driven Architecture",
+    "description": "Event-based architecture for decoupled and reactive systems.",
+    "category": "Architecture & Paradigms",
+    "synonyms": ["eda", "event sourcing", "messaging"]
+  },
+  {
+    "id": "ddd",
+    "label": "Domain-Driven Design",
+    "description": "Design approach that models software around the domain and business logic.",
+    "category": "Architecture & Paradigms",
+    "synonyms": ["domain driven design", "bounded context", "aggregates"]
+  },
+  {
+    "id": "microservices",
+    "label": "Microservices",
+    "description": "Distributed architecture based on independent, separately deployable services.",
+    "category": "Architecture & Paradigms",
+    "synonyms": ["microservices architecture", "distributed services"]
+  },
+  {
+    "id": "bdd",
+    "label": "Behavior-Driven Development",
+    "description": "Development methodology that defines system behavior using business-understandable examples.",
+    "category": "Architecture & Paradigms",
+    "synonyms": ["bdd", "behaviour driven development", "gherkin", "cucumber"]
+  },
+  {
+    "id": "tdd",
+    "label": "Test-Driven Development",
+    "description": "Practice of writing tests before production code to guide design and prevent regressions.",
+    "category": "Architecture & Paradigms",
+    "synonyms": ["test driven development", "red green refactor"]
+  },
+  {
+    "id": "software-craftsmanship",
+    "label": "Software Craftsmanship",
+    "description": "Movement that promotes quality, good practices and professional responsibility in software development.",
+    "category": "Architecture & Paradigms",
+    "synonyms": ["software craftsmanship", "clean code", "software quality"]
+  },
+  {
+    "id": "functional-programming",
+    "label": "Functional Programming",
+    "description": "Paradigm based on pure functions, immutability and composition.",
+    "category": "Architecture & Paradigms",
+    "synonyms": ["fp", "functional", "functional programming", "pure functions"]
+  },
+  {
+    "id": "oop",
+    "label": "Object-Oriented Programming",
+    "description": "Paradigm based on classes, objects, inheritance and encapsulation.",
+    "category": "Architecture & Paradigms",
+    "synonyms": ["object oriented programming", "oop", "object oriented"]
+  },
+  {
+    "id": "clean-code",
+    "label": "Clean Code",
+    "description": "Best practices for writing readable, maintainable code free of technical debt.",
+    "category": "Architecture & Paradigms",
+    "synonyms": ["clean code", "refactoring", "technical debt"]
+  },
+  {
+    "id": "design-patterns",
+    "label": "Design Patterns",
+    "description": "Reusable solutions to common software design problems.",
+    "category": "Architecture & Paradigms",
+    "synonyms": ["design patterns", "gof patterns", "gang of four patterns"]
+  },
+  {
+    "id": "distributed-systems",
+    "label": "Distributed Systems",
+    "description": "Techniques and architectures for building systems that run across multiple coordinated nodes, with emphasis on scalability and fault tolerance.",
+    "category": "Architecture & Paradigms",
+    "synonyms": ["distributed computing", "distributed systems", "scalability"]
+  },
+  {
+    "id": "low-code-no-code",
+    "label": "Low-code / No-code",
+    "description": "Application development paradigm that minimizes or eliminates traditional code writing through visual interfaces, configurable workflows and pre-built components.",
+    "category": "Architecture & Paradigms",
+    "synonyms": ["low-code", "no-code", "nocode", "lowcode", "visual programming", "bubble", "webflow", "airtable", "zapier", "make"]
+  },
+  {
+    "id": "aws",
+    "label": "AWS",
+    "description": "Amazon Web Services. Amazon's cloud services platform.",
+    "category": "DevOps, Cloud & Infrastructure",
+    "synonyms": ["amazon web services", "amazon cloud", "s3", "ec2", "lambda"]
+  },
+  {
+    "id": "azure",
+    "label": "Microsoft Azure",
+    "description": "Microsoft's cloud platform for computing, storage and managed services.",
+    "category": "DevOps, Cloud & Infrastructure",
+    "synonyms": ["azure", "microsoft cloud", "azure devops"]
+  },
+  {
+    "id": "gcp",
+    "label": "Google Cloud",
+    "description": "Google's cloud infrastructure and services.",
+    "category": "DevOps, Cloud & Infrastructure",
+    "synonyms": ["google cloud platform", "gcp", "bigquery cloud", "google kubernetes engine"]
+  },
+  {
+    "id": "docker",
+    "label": "Docker",
+    "description": "Container platform for packaging and deploying applications in a reproducible way.",
+    "category": "DevOps, Cloud & Infrastructure",
+    "synonyms": ["containers", "docker compose", "containerization"]
+  },
+  {
+    "id": "kubernetes",
+    "label": "Kubernetes",
+    "description": "Container orchestrator for scalable and fault-tolerant deployments.",
+    "category": "DevOps, Cloud & Infrastructure",
+    "synonyms": ["k8s", "container orchestration", "helm", "kubectl"]
+  },
+  {
+    "id": "terraform",
+    "label": "Terraform",
+    "description": "Infrastructure-as-code tool for managing cloud resources declaratively.",
+    "category": "DevOps, Cloud & Infrastructure",
+    "synonyms": ["iac", "infrastructure as code", "hashicorp"]
+  },
+  {
+    "id": "ci-cd",
+    "label": "CI/CD",
+    "description": "Automation of software build, testing and continuous deployment.",
+    "category": "DevOps, Cloud & Infrastructure",
+    "synonyms": ["continuous integration", "continuous delivery", "continuous deployment", "github actions", "gitlab ci", "pipelines"]
+  },
+  {
+    "id": "jenkins",
+    "label": "Jenkins",
+    "description": "Open-source continuous integration tool widely used in CI/CD pipelines.",
+    "category": "DevOps, Cloud & Infrastructure",
+    "synonyms": ["jenkins ci", "jenkins pipeline"]
+  },
+  {
+    "id": "virtualization",
+    "label": "Virtualization",
+    "description": "Virtual machine technology for running multiple systems on the same hardware.",
+    "category": "DevOps, Cloud & Infrastructure",
+    "synonyms": ["virtual machines", "vm", "hypervisor", "vmware", "virtualbox"]
+  },
+  {
+    "id": "networking",
+    "label": "Networking & Connectivity",
+    "description": "Networks, protocols and connectivity between systems.",
+    "category": "DevOps, Cloud & Infrastructure",
+    "synonyms": ["networks", "protocols", "tcp/ip", "networking", "network engineering"]
+  },
+  {
+    "id": "sysadmin",
+    "label": "Systems Administration",
+    "description": "Management and maintenance of IT systems, servers and production environments.",
+    "category": "DevOps, Cloud & Infrastructure",
+    "synonyms": ["system administration", "sysadmin", "linux admin", "server management"]
+  },
+  {
+    "id": "bash",
+    "label": "Bash / Shell Scripting",
+    "description": "Scripting language for Unix systems that allows automating tasks and managing the system via the command line.",
+    "category": "DevOps, Cloud & Infrastructure",
+    "synonyms": ["shell", "scripting", "linux scripting", "bash scripting", "command line"]
+  },
+  {
+    "id": "servers",
+    "label": "Servers",
+    "description": "Administration, configuration and maintenance of physical or virtual servers for deploying and operating applications and services.",
+    "category": "DevOps, Cloud & Infrastructure",
+    "synonyms": ["server administration", "sysadmin", "linux servers", "web servers", "nginx", "apache", "server management", "bare metal", "vps"]
+  },
+  {
+    "id": "git",
+    "label": "Git",
+    "description": "Distributed version control system for managing history and collaboration in software projects.",
+    "category": "DevTools",
+    "synonyms": ["version control", "vcs", "github", "gitlab", "version control system"]
+  },
+  {
+    "id": "vscode",
+    "label": "Visual Studio Code",
+    "description": "Lightweight and extensible code editor from Microsoft, widely used for web development, Python and other languages.",
+    "category": "DevTools",
+    "synonyms": ["vs code", "vscode editor", "visual studio code"]
+  },
+  {
+    "id": "n8n",
+    "label": "n8n",
+    "description": "Open-source workflow automation platform focused on API integration and no-code processes.",
+    "category": "DevTools",
+    "synonyms": ["workflow automation", "no-code automation"]
+  },
+  {
+    "id": "ai-coding-agents",
+    "label": "AI Coding Agents",
+    "description": "Artificial intelligence tools for assisting in writing, reviewing and generating code, such as Claude Code, GitHub Copilot, Cursor or Codex.",
+    "category": "DevTools",
+    "synonyms": ["copilot", "cursor", "codex", "claude code", "ai coding", "coding assistant", "code generation"]
+  },
+  {
+    "id": "github",
+    "label": "GitHub",
+    "description": "Repository hosting platform and collaboration in software projects, with features for code review, issues, discussions and GitHub Actions.",
+    "category": "DevTools",
+    "synonyms": ["github platform", "gh", "github actions", "github discussions", "open source hosting"]
+  },
+  {
+    "id": "sql-databases",
+    "label": "SQL Databases",
+    "description": "Relational databases based on the tabular model and SQL language, such as PostgreSQL, MySQL, Oracle or SQL Server.",
+    "category": "Databases & Storage",
+    "synonyms": ["relational databases", "postgresql", "mysql", "sql server", "oracle"]
+  },
+  {
+    "id": "nosql-databases",
+    "label": "NoSQL Databases",
+    "description": "Non-relational databases designed for high scalability, flexibility or distributed data, such as MongoDB, Cassandra, Redis or DynamoDB.",
+    "category": "Databases & Storage",
+    "synonyms": ["mongodb", "cassandra", "redis", "dynamodb", "non-relational", "document database"]
+  },
+  {
+    "id": "graph-databases",
+    "label": "Graph Databases",
+    "description": "Technologies oriented to modeling complex relationships between entities using nodes and edges, such as Neo4j or JanusGraph.",
+    "category": "Databases & Storage",
+    "synonyms": ["neo4j", "graph db", "janusgraph", "graph database"]
+  },
+  {
+    "id": "distributed-storage",
+    "label": "Distributed Storage",
+    "description": "Systems for storing data replicated or partitioned across multiple nodes, offering resilience and horizontal scalability.",
+    "category": "Databases & Storage",
+    "synonyms": ["hdfs", "ceph", "distributed storage", "cloud storage"]
+  },
+  {
+    "id": "data-warehouse",
+    "label": "Data Warehouse",
+    "description": "Platforms optimized for business analytics, complex queries and historical models of large data volumes.",
+    "category": "Databases & Storage",
+    "synonyms": ["dwh", "redshift", "bigquery", "snowflake", "analytics database"]
+  },
+  {
+    "id": "data-lake",
+    "label": "Data Lake",
+    "description": "Massive repositories that store data in its original format for subsequent analysis and machine learning.",
+    "category": "Databases & Storage",
+    "synonyms": ["datalake", "raw data", "data storage", "delta lake"]
+  },
+  {
+    "id": "data-pipelines",
+    "label": "ETL & Data Pipelines",
+    "description": "Processes and tools for moving, transforming and integrating data between systems in an automated way.",
+    "category": "Databases & Storage",
+    "synonyms": ["etl", "elt", "data integration", "airflow", "spark", "data pipelines", "data ingestion"]
+  },
+  {
+    "id": "dataops",
+    "label": "DataOps",
+    "description": "Practices for ensuring quality, governance and automation in the data lifecycle, applying DevOps principles to the data world.",
+    "category": "Databases & Storage",
+    "synonyms": ["data governance", "data quality", "data observability"]
+  },
+  {
+    "id": "spatial-databases",
+    "label": "Spatial Databases",
+    "description": "Database systems specialized in storing, indexing and querying geospatial and cartographic data.",
+    "category": "Databases & Storage",
+    "synonyms": ["postgis", "spatial data", "geopackage", "geodatabase", "geospatial data", "gis databases", "geospatial databases"]
+  },
+  {
+    "id": "data-science",
+    "label": "Data Science",
+    "description": "Extraction of knowledge and value from data using statistics, machine learning and visualization.",
+    "category": "Data, AI & Analytics",
+    "synonyms": ["data science", "data analysis"]
+  },
+  {
+    "id": "statistics",
+    "label": "Statistics",
+    "description": "Quantitative analysis and modeling to understand and predict phenomena from data.",
+    "category": "Data, AI & Analytics",
+    "synonyms": ["stats", "quantitative analytics", "probability"]
+  },
+  {
+    "id": "data-engineering",
+    "label": "Data Engineering",
+    "description": "Building and maintaining data pipelines, platforms and architectures.",
+    "category": "Data, AI & Analytics",
+    "synonyms": ["data engineering", "data platforms"]
+  },
+  {
+    "id": "big-data",
+    "label": "Big Data",
+    "description": "Management and processing of large data volumes with tools like Hadoop or Apache Spark.",
+    "category": "Data, AI & Analytics",
+    "synonyms": ["hadoop", "spark", "large scale data"]
+  },
+  {
+    "id": "data-visualization",
+    "label": "Data Visualization",
+    "description": "Visual representation of information to communicate insights clearly and effectively.",
+    "category": "Data, AI & Analytics",
+    "synonyms": ["dataviz", "tableau", "power bi", "grafana", "d3.js", "dashboards"]
+  },
+  {
+    "id": "machine-learning",
+    "label": "Machine Learning",
+    "description": "Algorithms and models that learn patterns from data to make predictions or decisions.",
+    "category": "Data, AI & Analytics",
+    "synonyms": ["ml", "machine learning", "sklearn", "scikit-learn"]
+  },
+  {
+    "id": "deep-learning",
+    "label": "Deep Learning",
+    "description": "Deep learning models based on neural networks for vision, language and more.",
+    "category": "Data, AI & Analytics",
+    "synonyms": ["dl", "neural networks", "tensorflow", "pytorch"]
+  },
+  {
+    "id": "nlp",
+    "label": "Natural Language Processing",
+    "description": "Techniques for computers to understand, generate and analyze text or speech in human language.",
+    "category": "Data, AI & Analytics",
+    "synonyms": ["natural language processing", "text mining", "text analysis", "nlp", "sentiment analysis"]
+  },
+  {
+    "id": "business-intelligence",
+    "label": "Business Intelligence",
+    "description": "Strategies, tools and practices for transforming data into actionable information for decision-making.",
+    "category": "Data, AI & Analytics",
+    "synonyms": ["bi", "reporting", "dashboards", "kpi"]
+  },
+  {
+    "id": "geospatial",
+    "label": "Geospatial / GIS",
+    "description": "Location intelligence, geolocation, maps, spatial analysis and geographic information systems.",
+    "category": "Data, AI & Analytics",
+    "synonyms": ["gis", "geolocation", "maps", "location intelligence", "spatial analysis", "cartography"]
+  },
+  {
+    "id": "mlops",
+    "label": "MLOps",
+    "description": "Set of practices for automating and managing the machine learning model lifecycle in production, combining ML with DevOps principles.",
+    "category": "Data, AI & Analytics",
+    "synonyms": ["machine learning operations", "model deployment", "model monitoring", "ml pipelines"]
+  },
+  {
+    "id": "generative-ai",
+    "label": "Generative AI",
+    "description": "AI field focused on models capable of generating text, images, code or other content, such as GPT, Stable Diffusion or DALL-E.",
+    "category": "Data, AI & Analytics",
+    "synonyms": ["genai", "gen ai", "generative ai", "gpt", "stable diffusion", "dall-e", "imagen"]
+  },
+  {
+    "id": "llm",
+    "label": "Large Language Models",
+    "description": "Large-scale language models trained on large text corpora to understand and generate natural language.",
+    "category": "Data, AI & Analytics",
+    "synonyms": ["llms", "gpt", "transformers", "bert", "language models"]
+  },
+  {
+    "id": "rag",
+    "label": "Retrieval-Augmented Generation",
+    "description": "Technique that combines information retrieval with language models to generate responses grounded in relevant data.",
+    "category": "Data, AI & Analytics",
+    "synonyms": ["retrieval augmented generation", "rag pipeline", "knowledge retrieval"]
+  },
+  {
+    "id": "vector-databases",
+    "label": "Vector Databases",
+    "description": "Storage systems specialized in embeddings and semantic similarity search, used in AI and RAG applications.",
+    "category": "Data, AI & Analytics",
+    "synonyms": ["vector db", "embeddings", "pinecone", "weaviate", "chromadb", "qdrant", "similarity search"]
+  },
+  {
+    "id": "web-analytics",
+    "label": "Web Analytics",
+    "description": "Techniques and tools for measuring, analyzing and interpreting user behavior on websites and applications, with the goal of optimizing experience and performance.",
+    "category": "Data, AI & Analytics",
+    "synonyms": ["web analytics", "google analytics", "matomo", "plausible", "analytics", "web metrics", "tracking", "conversion"]
+  },
+  {
+    "id": "cybersecurity",
+    "label": "Cybersecurity",
+    "description": "Protection of systems, networks and data against attacks, unauthorized access and vulnerabilities.",
+    "category": "Cybersecurity",
+    "synonyms": ["security", "infosec", "information security"]
+  },
+  {
+    "id": "ethical-hacking",
+    "label": "Ethical Hacking",
+    "description": "Authorized penetration testing to detect vulnerabilities before malicious actors do.",
+    "category": "Cybersecurity",
+    "synonyms": ["ethical hacking", "offensive security", "bug bounty"]
+  },
+  {
+    "id": "pentesting",
+    "label": "Pentesting",
+    "description": "Security assessment of systems through controlled attacks and hacking techniques.",
+    "category": "Cybersecurity",
+    "synonyms": ["penetration testing", "pen test"]
+  },
+  {
+    "id": "cloud-security",
+    "label": "Cloud Security",
+    "description": "Protection of cloud environments, data and services against threats and insecure configurations.",
+    "category": "Cybersecurity",
+    "synonyms": ["cloud security", "aws security", "azure security", "cloud compliance"]
+  },
+  {
+    "id": "web-security",
+    "label": "Web Security",
+    "description": "Practices and techniques to protect web applications against common attacks such as XSS, SQLi or CSRF.",
+    "category": "Cybersecurity",
+    "synonyms": ["owasp", "xss", "sql injection", "web vulnerabilities", "appsec"]
+  },
+  {
+    "id": "cryptography",
+    "label": "Cryptography",
+    "description": "Mathematical techniques to protect information through encryption, digital signatures and secure protocols.",
+    "category": "Cybersecurity",
+    "synonyms": ["encryption", "crypto", "tls", "pki"]
+  },
+  {
+    "id": "digital-forensics",
+    "label": "Digital Forensics",
+    "description": "Forensic analysis of systems and devices to investigate security incidents.",
+    "category": "Cybersecurity",
+    "synonyms": ["forensics", "incident response", "malware analysis", "dfir"]
+  },
+  {
+    "id": "arduino",
+    "label": "Arduino",
+    "description": "Open-source hardware and software platform for electronic prototyping.",
+    "category": "Hardware, IoT & Maker",
+    "synonyms": ["microcontrollers", "arduino uno", "arduino nano"]
+  },
+  {
+    "id": "raspberry-pi",
+    "label": "Raspberry Pi",
+    "description": "Low-cost microcomputer widely used in educational, maker and IoT projects.",
+    "category": "Hardware, IoT & Maker",
+    "synonyms": ["rpi", "raspberry", "single board computer", "sbc"]
+  },
+  {
+    "id": "iot",
+    "label": "Internet of Things",
+    "description": "Connected devices and systems that collect, send and process data from the physical environment.",
+    "category": "Hardware, IoT & Maker",
+    "synonyms": ["internet of things", "connected devices", "smart devices"]
+  },
+  {
+    "id": "sensors",
+    "label": "Sensors",
+    "description": "Smart sensors for measurements of the physical environment, used in IoT, industry and maker projects.",
+    "category": "Hardware, IoT & Maker",
+    "synonyms": ["smart sensors", "telemetry"]
+  },
+  {
+    "id": "robotics",
+    "label": "Robotics",
+    "description": "Design, construction and programming of robots and autonomous systems.",
+    "category": "Hardware, IoT & Maker",
+    "synonyms": ["robots", "autonomous systems", "ros", "robot operating system"]
+  },
+  {
+    "id": "3d-printing",
+    "label": "3D Printing",
+    "description": "Additive manufacturing to create physical prototypes and parts from digital models.",
+    "category": "Hardware, IoT & Maker",
+    "synonyms": ["additive manufacturing", "fdm", "resin printing", "3d printer"]
+  },
+  {
+    "id": "makerspace",
+    "label": "Makerspace",
+    "description": "Shared creation, experimentation and manufacturing spaces where the maker community gathers.",
+    "category": "Hardware, IoT & Maker",
+    "synonyms": ["fablab", "hackerspace", "maker culture", "fab lab"]
+  },
+  {
+    "id": "android",
+    "label": "Android",
+    "description": "Google's mobile platform for developing applications on smartphones and tablets.",
+    "category": "Mobile & Operating Systems",
+    "synonyms": ["android development", "android sdk", "android studio"]
+  },
+  {
+    "id": "ios",
+    "label": "iOS",
+    "description": "Apple's operating system for iPhone and iPad, with development in Swift or Objective-C.",
+    "category": "Mobile & Operating Systems",
+    "synonyms": ["iphone", "ipad", "apple mobile", "ios development"]
+  },
+  {
+    "id": "linux",
+    "label": "Linux",
+    "description": "Open-source operating system widely used in servers, cloud and development.",
+    "category": "Mobile & Operating Systems",
+    "synonyms": ["ubuntu", "debian", "fedora", "unix", "gnu linux"]
+  },
+  {
+    "id": "windows",
+    "label": "Windows",
+    "description": "Microsoft's operating system widely used in personal and enterprise environments.",
+    "category": "Mobile & Operating Systems",
+    "synonyms": ["microsoft windows", "win32", "windows server"]
+  },
+  {
+    "id": "macos",
+    "label": "macOS",
+    "description": "Apple's operating system for Mac computers, Unix-based and oriented to productivity and development.",
+    "category": "Mobile & Operating Systems",
+    "synonyms": ["osx", "os x", "apple desktop", "mac"]
+  },
+  {
+    "id": "virtual-reality",
+    "label": "Virtual Reality",
+    "description": "Immersive experiences through VR devices that simulate digital environments.",
+    "category": "Extended Reality & 3D",
+    "synonyms": ["vr", "oculus", "metaverse", "virtual reality", "quest"]
+  },
+  {
+    "id": "augmented-reality",
+    "label": "Augmented Reality",
+    "description": "Overlay of digital information on the physical environment in real time.",
+    "category": "Extended Reality & 3D",
+    "synonyms": ["ar", "arkit", "arcore", "augmented reality"]
+  },
+  {
+    "id": "mixed-reality",
+    "label": "Mixed Reality",
+    "description": "Technologies that combine virtual and augmented reality to create immersive experiences that integrate physical and digital objects.",
+    "category": "Extended Reality & 3D",
+    "synonyms": ["mr", "xr", "extended reality", "hololens", "mixed reality"]
+  },
+  {
+    "id": "3d-modeling",
+    "label": "3D Modeling",
+    "description": "Creation of three-dimensional models for video games, visualization, architecture or manufacturing.",
+    "category": "Extended Reality & 3D",
+    "synonyms": ["blender", "3ds max", "cad", "3d design", "three.js"]
+  },
+  {
+    "id": "vfx",
+    "label": "Visual Effects (VFX)",
+    "description": "Digital visual effects for film, video games and audiovisual production.",
+    "category": "Extended Reality & 3D",
+    "synonyms": ["visual effects", "motion graphics", "after effects", "compositing"]
+  },
+  {
+    "id": "game-development",
+    "label": "Game Development",
+    "description": "Design, programming and production of video games for any platform.",
+    "category": "Video Games",
+    "synonyms": ["game dev", "gamedev", "game development"]
+  },
+  {
+    "id": "game-design",
+    "label": "Game Design",
+    "description": "Design of mechanics, levels, narrative and gameplay in video games.",
+    "category": "Video Games",
+    "synonyms": ["game mechanics", "level design", "game designer"]
+  },
+  {
+    "id": "indie-games",
+    "label": "Indie Games",
+    "description": "Independent video game development without backing from major publishers.",
+    "category": "Video Games",
+    "synonyms": ["indie dev", "independent games", "indie developer"]
+  },
+  {
+    "id": "unity",
+    "label": "Unity",
+    "description": "Engine for developing games and interactive experiences in 2D and 3D.",
+    "category": "Video Games",
+    "synonyms": ["unity3d", "unity engine", "unity game engine"]
+  },
+  {
+    "id": "unreal-engine",
+    "label": "Unreal Engine",
+    "description": "Advanced video game engine used to create 3D experiences, video games, simulations and high-quality interactive content.",
+    "category": "Video Games",
+    "synonyms": ["ue4", "ue5", "epic games", "unreal"]
+  },
+  {
+    "id": "wordpress",
+    "label": "WordPress",
+    "description": "World's most used content management system, ideal for blogs, corporate websites and stores.",
+    "category": "CMS",
+    "synonyms": ["wp", "cms wordpress", "wordpress.org"]
+  },
+  {
+    "id": "woocommerce",
+    "label": "WooCommerce",
+    "description": "E-commerce plugin for WordPress, widely used in online stores.",
+    "category": "CMS",
+    "synonyms": ["wordpress ecommerce", "woo", "woocommerce shop"]
+  },
+  {
+    "id": "prestashop",
+    "label": "PrestaShop",
+    "description": "Open-source platform to create online stores, very popular in Europe.",
+    "category": "CMS",
+    "synonyms": ["ecommerce prestashop", "online store"]
+  },
+  {
+    "id": "drupal",
+    "label": "Drupal",
+    "description": "Flexible and modular CMS for web portals and applications with complex requirements.",
+    "category": "CMS",
+    "synonyms": ["drupal cms", "drupal 10"]
+  },
+  {
+    "id": "liferay",
+    "label": "Liferay",
+    "description": "Enterprise platform for digital portals, content management and corporate intranets.",
+    "category": "CMS",
+    "synonyms": ["liferay portal", "enterprise portal", "liferay dxp"]
+  },
+  {
+    "id": "joomla",
+    "label": "Joomla!",
+    "description": "Open-source content management system (CMS), widely used to build corporate websites, portals and web applications.",
+    "category": "CMS",
+    "synonyms": ["joomla cms", "joomla!", "joomla extensions", "joomla content manager"]
+  },
+  {
+    "id": "tech4good",
+    "label": "Tech for Good",
+    "description": "Technology initiatives focused on positive social impact and the common good.",
+    "category": "Tech for Social Good",
+    "synonyms": ["technology for social good", "social impact", "social technology"]
+  },
+  {
+    "id": "digital-activism",
+    "label": "Digital Activism",
+    "description": "Use of technologies to promote social causes and defend online rights.",
+    "category": "Tech for Social Good",
+    "synonyms": ["digital rights", "online activism"]
+  },
+  {
+    "id": "tech-ethics",
+    "label": "Tech Ethics",
+    "description": "Reflection and practice of moral principles, responsibility and good practices in technology.",
+    "category": "Tech for Social Good",
+    "synonyms": ["ai ethics", "responsible ai", "technology ethics"]
+  },
+  {
+    "id": "diversity",
+    "label": "Diversity & Inclusion",
+    "description": "Initiatives that foster participation of people of different genders, races and backgrounds in technology.",
+    "category": "Tech for Social Good",
+    "synonyms": ["inclusion", "dei", "diversity and inclusion"]
+  },
+  {
+    "id": "women-in-tech",
+    "label": "Women in Tech",
+    "description": "Movements and groups that support the participation and visibility of women in technology.",
+    "category": "Tech for Social Good",
+    "synonyms": ["womenintech", "women in technology", "girls in tech"]
+  },
+  {
+    "id": "healthtech",
+    "label": "Health Tech",
+    "description": "Applications and technologies applied to the medical, health and wellness field.",
+    "category": "Tech for Social Good",
+    "synonyms": ["ehealth", "digital health", "medtech", "healthcare technology"]
+  },
+  {
+    "id": "stem",
+    "label": "STEM",
+    "description": "Areas of science, technology, engineering and mathematics focused on education, outreach and vocations.",
+    "category": "Tech for Social Good",
+    "synonyms": ["science technology engineering mathematics", "steam", "stem education"]
+  },
+  {
+    "id": "mentoring",
+    "label": "Mentoring",
+    "description": "Initiatives focused on connecting mentors and learners for professional development in technology.",
+    "category": "Tech for Social Good",
+    "synonyms": ["mentorship", "coaching", "career development"]
+  },
+  {
+    "id": "free-software",
+    "label": "Free Software",
+    "description": "Groups that promote software freedom, open licenses and community development.",
+    "category": "Tech for Social Good",
+    "synonyms": ["free software", "gnu", "fsf", "open licensing", "copyleft"]
+  },
+  {
+    "id": "open-data",
+    "label": "Open Data",
+    "description": "Use, publication and analysis of open data for social, institutional or transparency projects.",
+    "category": "Tech for Social Good",
+    "synonyms": ["open data", "open government", "transparency", "open dataset"]
+  },
+  {
+    "id": "open-hardware",
+    "label": "Open Hardware",
+    "description": "Movement that promotes open hardware design, allowing anyone to study, modify and manufacture devices freely.",
+    "category": "Tech for Social Good",
+    "synonyms": ["free hardware", "open source hardware", "oshw"]
+  },
+  {
+    "id": "open-source",
+    "label": "Open Source",
+    "description": "Software developed with open code, available to be used, modified and distributed by anyone.",
+    "category": "Tech for Social Good",
+    "synonyms": ["oss", "foss", "open source software"]
+  },
+  {
+    "id": "startups",
+    "label": "Startups",
+    "description": "Entrepreneurial communities focused on launching and growing new technology companies.",
+    "category": "Startups, Business & Product",
+    "synonyms": ["entrepreneurship", "venture", "scaleup"]
+  },
+  {
+    "id": "product-management",
+    "label": "Product Management",
+    "description": "Strategic management of digital products, from vision to roadmap evolution.",
+    "category": "Startups, Business & Product",
+    "synonyms": ["pm", "product manager", "product owner"]
+  },
+  {
+    "id": "growth",
+    "label": "Growth",
+    "description": "Strategies and experiments to drive user growth, retention and revenue.",
+    "category": "Startups, Business & Product",
+    "synonyms": ["growth hacking", "growth marketing", "user acquisition"]
+  },
+  {
+    "id": "lean-startup",
+    "label": "Lean Startup",
+    "description": "Methodology to create and validate products efficiently, based on rapid learning cycles.",
+    "category": "Startups, Business & Product",
+    "synonyms": ["lean methodology", "mvp", "minimum viable product", "build measure learn"]
+  },
+  {
+    "id": "innovation",
+    "label": "Innovation",
+    "description": "Exploration and application of new ideas, technologies and business models to generate value.",
+    "category": "Startups, Business & Product",
+    "synonyms": ["innovation management", "disruptive innovation", "technology innovation"]
+  },
+  {
+    "id": "seo",
+    "label": "SEO",
+    "description": "Search engine optimization to improve visibility and organic traffic.",
+    "category": "Startups, Business & Product",
+    "synonyms": ["search engine optimization", "seo technical", "search optimization"]
+  },
+  {
+    "id": "digital-marketing",
+    "label": "Digital Marketing",
+    "description": "Online promotion strategies, including social media, content, email and digital advertising.",
+    "category": "Startups, Business & Product",
+    "synonyms": ["online marketing", "social media marketing", "content marketing"]
+  },
+  {
+    "id": "gamification",
+    "label": "Gamification",
+    "description": "Application of game dynamics, mechanics and design elements in non-game contexts to motivate behaviors, improve learning or increase engagement.",
+    "category": "Startups, Business & Product",
+    "synonyms": ["gamification", "game mechanics", "points and rewards", "badges", "leaderboards", "game dynamics"]
+  },
+  {
+    "id": "blockchain",
+    "label": "Blockchain",
+    "description": "Distributed and immutable ledger technology for transactions and contracts without intermediaries.",
+    "category": "Decentralized Technologies",
+    "synonyms": ["distributed ledger", "web3 blockchain"]
+  },
+  {
+    "id": "cryptocurrencies",
+    "label": "Cryptocurrencies",
+    "description": "Decentralized digital assets based on cryptography, such as Bitcoin or Ethereum.",
+    "category": "Decentralized Technologies",
+    "synonyms": ["crypto", "bitcoin", "digital currency"]
+  },
+  {
+    "id": "ethereum",
+    "label": "Ethereum",
+    "description": "Decentralized platform for smart contracts and distributed applications (dApps).",
+    "category": "Decentralized Technologies",
+    "synonyms": ["eth", "solidity", "smart contracts", "dapps ethereum"]
+  },
+  {
+    "id": "web3",
+    "label": "Web3",
+    "description": "Ecosystem of decentralized technologies based on blockchain that allows creating applications, identities and services without intermediaries.",
+    "category": "Decentralized Technologies",
+    "synonyms": ["decentralized web", "dapps", "defi", "nft", "web 3"]
+  },
+  {
+    "id": "html",
+    "label": "HTML",
+    "description": "Standard markup language for structuring content in web pages and applications.",
+    "category": "Web & Frontend",
+    "synonyms": ["html5", "markup", "web markup", "hypertext markup language"]
+  },
+  {
+    "id": "css",
+    "label": "CSS",
+    "description": "Style language that controls the visual presentation of HTML documents: colors, typography, layouts and animations.",
+    "category": "Web & Frontend",
+    "synonyms": ["css3", "stylesheets", "cascading style sheets", "web styles"]
+  },
+  {
+    "id": "accessibility",
+    "label": "Web Accessibility",
+    "description": "Design and development of websites and applications usable by people with functional diversity, following WCAG guidelines.",
+    "category": "Web & Frontend",
+    "synonyms": ["a11y", "wcag", "aria", "web accessibility", "inclusive design"]
+  },
+  {
+    "id": "web-performance",
+    "label": "Web Performance",
+    "description": "Optimization of load speed, runtime performance and real user metrics (Core Web Vitals).",
+    "category": "Web & Frontend",
+    "synonyms": ["performance web", "core web vitals", "cwv", "lighthouse", "page speed"]
+  },
+  {
+    "id": "web-standards",
+    "label": "Web Standards",
+    "description": "W3C, WHATWG and TC39 specifications that define how browsers and the web platform should work.",
+    "category": "Web & Frontend",
+    "synonyms": ["w3c", "whatwg", "web platform", "web specs", "open web"]
+  },
+  {
+    "id": "frontend-tooling",
+    "label": "Frontend Tooling",
+    "description": "Frontend ecosystem tools: bundlers, transpilers, linters, formatters and development environments.",
+    "category": "Web & Frontend",
+    "synonyms": ["webpack", "vite", "esbuild", "rollup", "babel", "eslint", "bundlers", "build tools"]
+  },
+  {
+    "id": "browser-apis",
+    "label": "Browser APIs",
+    "description": "Native browser APIs: Web Workers, Service Workers, WebSockets, WebRTC, Fetch, Storage and others.",
+    "category": "Web & Frontend",
+    "synonyms": ["web apis", "service worker", "web workers", "webrtc", "fetch api", "pwa apis"]
+  },
+  {
+    "id": "design-systems",
+    "label": "Design Systems",
+    "description": "Collections of reusable components, style guides and design principles that unify digital products.",
+    "category": "Web & Frontend",
+    "synonyms": ["design system", "component library", "ui kit", "storybook", "design tokens"]
+  },
+  {
+    "id": "ux-ui",
+    "label": "UX/UI",
+    "description": "Design disciplines focused on user experience and the visual interface of digital products.",
+    "category": "Web & Frontend",
+    "synonyms": ["user experience", "user interface", "ux design", "ui design", "product design"]
+  }
+]

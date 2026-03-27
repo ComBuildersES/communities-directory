@@ -32,10 +32,26 @@
     <meta name="twitter:description" content="Descubre y filtra más de 500 comunidades tech de toda España: meetups, grupos de usuarios, conferencias y más. Busca por ciudad, tema o formato. Open source y open data." />
     <meta name="twitter:image" content="https://combuilderses.github.io/communities-directory/images/directorio-de-comunidades-tecnicas-de-espa%C3%B1a-1920-630.webp" />
     <meta name="twitter:image:alt" content="Directorio de Comunidades Técnicas de España — +500 meetups, conferencias y más" />
-    <script type="module" crossorigin src="/communities-directory/assets/index-BCOGzAQP.js"></script>
-    <link rel="stylesheet" crossorigin href="/communities-directory/assets/index-CAyHY6QD.css">
+    <script type="module" crossorigin src="/communities-directory/assets/index-NFloF446.js"></script>
+    <link rel="stylesheet" crossorigin href="/communities-directory/assets/index-B6bZlgvd.css">
   </head>
   <body>
+    <!-- Path-restore: when GitHub Pages 404.html encodes a deep link into
+         ?_spa=, this script restores it before React boots so the locale
+         path prefix (/es/, /en/) is visible to i18next on first paint. -->
+    <script>
+      (function () {
+        var spa = new URLSearchParams(window.location.search).get('_spa');
+        if (spa) {
+          var base = window.location.pathname.replace(/\/$/, '');
+          window.history.replaceState(
+            null,
+            '',
+            base + decodeURIComponent(spa)
+          );
+        }
+      })();
+    </script>
     <div id="search_app"></div>
   </body>
 </html>

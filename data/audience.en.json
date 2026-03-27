@@ -1,0 +1,303 @@
+[
+  {
+    "id": "junior-developer",
+    "label": "Junior / Early-career",
+    "category": "Career Stage",
+    "description": "Person taking their first professional steps in technology or looking for a community to learn, get guidance and grow.",
+    "synonyms": ["junior", "entry level", "career starter", "early career", "trainee"]
+  },
+  {
+    "id": "student",
+    "label": "Student",
+    "category": "Career Stage",
+    "description": "Person who is studying and looking for communities to learn, explore career paths or start connecting with the tech ecosystem.",
+    "synonyms": ["student", "university student", "bootcamp student"]
+  },
+  {
+    "id": "career-changer",
+    "label": "Career Changer / Transitioning into Tech",
+    "category": "Career Stage",
+    "description": "Person coming from another sector or career path and making the leap into technology.",
+    "synonyms": ["career changer", "career switcher", "tech transition", "reskilling", "upskilling"]
+  },
+  {
+    "id": "mentee",
+    "label": "Mentee",
+    "category": "Career Stage",
+    "description": "Person looking for accompaniment, guidance or support from more experienced people in their professional development.",
+    "synonyms": ["mentee", "apprentice", "guidance seeker"]
+  },
+  {
+    "id": "mentor",
+    "label": "Mentor",
+    "category": "Career Stage",
+    "description": "Person who accompanies, guides or shares experience to help others grow professionally.",
+    "synonyms": ["mentor", "career mentor", "technical mentor"]
+  },
+  {
+    "id": "senior-staff",
+    "label": "Senior / Staff",
+    "category": "Career Stage",
+    "description": "Experienced professional looking for communities to continue deepening knowledge, sharing expertise or leading technical conversations.",
+    "synonyms": ["senior", "staff", "principal", "senior engineer", "staff engineer", "experienced professional"]
+  },
+  {
+    "id": "frontend-developer",
+    "label": "Frontend Developer",
+    "category": "Software Development",
+    "description": "Person who develops web interfaces and interactive experiences.",
+    "synonyms": ["frontend dev", "ui developer", "frontend engineer"]
+  },
+  {
+    "id": "backend-developer",
+    "label": "Backend Developer",
+    "category": "Software Development",
+    "description": "Professional who works on server-side logic, APIs and data management.",
+    "synonyms": ["backend dev", "server side developer", "backend engineer"]
+  },
+  {
+    "id": "fullstack-developer",
+    "label": "Full-stack Developer",
+    "category": "Software Development",
+    "description": "Person who develops both the frontend and backend of an application.",
+    "synonyms": ["full stack", "fullstack dev", "fullstack engineer"]
+  },
+  {
+    "id": "mobile-developer",
+    "label": "Mobile Developer",
+    "category": "Software Development",
+    "description": "Professional who creates native or cross-platform mobile applications.",
+    "synonyms": ["mobile dev", "app developer", "mobile engineer"]
+  },
+  {
+    "id": "game-developer",
+    "label": "Game Developer",
+    "category": "Software Development",
+    "description": "Person who designs and develops video games.",
+    "synonyms": ["gamedev", "indie developer", "game engineer"]
+  },
+  {
+    "id": "embedded-iot-engineer",
+    "label": "Embedded & IoT Engineer",
+    "category": "Hardware, Systems & Robotics",
+    "description": "Professional who works with embedded systems, electronics and the Internet of Things.",
+    "synonyms": ["embedded systems", "firmware engineer", "iot developer"]
+  },
+  {
+    "id": "robotics-engineer",
+    "label": "Robotics Engineer",
+    "category": "Hardware, Systems & Robotics",
+    "description": "Person who designs and programs robots and autonomous systems.",
+    "synonyms": ["robotics dev", "robot programmer", "robotics engineering"]
+  },
+  {
+    "id": "data-engineer",
+    "label": "Data Engineer",
+    "category": "Data & Artificial Intelligence",
+    "description": "Professional who builds and maintains data pipelines and platforms.",
+    "synonyms": ["data engineering", "pipeline engineer"]
+  },
+  {
+    "id": "data-scientist",
+    "label": "Data Scientist",
+    "category": "Data & Artificial Intelligence",
+    "description": "Person who analyzes data and creates models to obtain actionable knowledge.",
+    "synonyms": ["data analysis expert"]
+  },
+  {
+    "id": "ml-engineer",
+    "label": "Machine Learning Engineer",
+    "category": "Data & Artificial Intelligence",
+    "description": "Professional who develops, trains and deploys machine learning models.",
+    "synonyms": ["ml engineer", "ai engineer", "machine learning engineer"]
+  },
+  {
+    "id": "data-analyst",
+    "label": "Data Analyst",
+    "category": "Data & Artificial Intelligence",
+    "description": "Person who analyzes data to generate insights and support business decisions.",
+    "synonyms": ["business analyst", "analyst"]
+  },
+  {
+    "id": "devops-engineer",
+    "label": "DevOps & Platform Engineer",
+    "category": "Platform, Cloud & Operations",
+    "description": "Professional who automates deployments and builds internal platforms for development teams.",
+    "synonyms": ["devops", "platform engineer", "site reliability", "infrastructure"]
+  },
+  {
+    "id": "cloud-engineer",
+    "label": "Cloud Engineer",
+    "category": "Platform, Cloud & Operations",
+    "description": "Person specialized in designing and operating cloud solutions.",
+    "synonyms": ["cloud architect", "cloud developer"]
+  },
+  {
+    "id": "sre",
+    "label": "Site Reliability Engineer",
+    "category": "Platform, Cloud & Operations",
+    "description": "Professional focused on the reliability, performance and observability of systems.",
+    "synonyms": ["sre", "reliability engineer", "observability engineer"]
+  },
+  {
+    "id": "sysadmin",
+    "label": "Systems & Network Administrator",
+    "category": "Platform, Cloud & Operations",
+    "description": "Person responsible for administering servers, systems and networks.",
+    "synonyms": ["system admin", "sysadmin", "network admin", "systems administrator"]
+  },
+  {
+    "id": "cybersecurity-engineer",
+    "label": "Cybersecurity Engineer",
+    "category": "Quality, Security & Architecture",
+    "description": "Professional specialized in protecting systems, networks and applications against threats.",
+    "synonyms": ["security engineer", "infosec engineer", "cybersecurity"]
+  },
+  {
+    "id": "pentester",
+    "label": "Penetration Tester",
+    "category": "Quality, Security & Architecture",
+    "description": "Person who performs penetration testing to identify vulnerabilities.",
+    "synonyms": ["pentester", "ethical hacker", "pen tester", "red team"]
+  },
+  {
+    "id": "qa-engineer",
+    "label": "QA Engineer",
+    "category": "Quality, Security & Architecture",
+    "description": "Professional who plans and executes tests to ensure software quality.",
+    "synonyms": ["quality assurance", "tester", "quality engineer", "qa"]
+  },
+  {
+    "id": "test-automation-engineer",
+    "label": "Test Automation Engineer",
+    "category": "Quality, Security & Architecture",
+    "description": "Person who automates functional, regression and performance tests.",
+    "synonyms": ["automation tester", "sdet", "test automation"]
+  },
+  {
+    "id": "software-architect",
+    "label": "Software Architect",
+    "category": "Quality, Security & Architecture",
+    "description": "Professional responsible for defining the technical architecture of systems and applications.",
+    "synonyms": ["solutions architect", "technical architect"]
+  },
+  {
+    "id": "tech-lead",
+    "label": "Technical Lead",
+    "category": "Leadership, Product & Delivery",
+    "description": "Person who leads technical decisions and guides the development team.",
+    "synonyms": ["tech lead", "engineering lead", "lead developer"]
+  },
+  {
+    "id": "product-manager",
+    "label": "Product Manager",
+    "category": "Leadership, Product & Delivery",
+    "description": "Professional who defines the vision, strategy and evolution of digital products.",
+    "synonyms": ["pm", "product owner", "product management"]
+  },
+  {
+    "id": "project-manager",
+    "label": "Project Manager",
+    "category": "Leadership, Product & Delivery",
+    "description": "Person who coordinates teams, resources and timelines in technology projects.",
+    "synonyms": ["pmo", "project lead"]
+  },
+  {
+    "id": "agile-practitioner",
+    "label": "Agile Practitioner",
+    "category": "Leadership, Product & Delivery",
+    "description": "Professional who facilitates and promotes the use of agile methodologies in teams.",
+    "synonyms": ["scrum master", "agile coach", "scrum", "kanban", "agile methodologies"]
+  },
+  {
+    "id": "ux-designer",
+    "label": "UX Designer",
+    "category": "Design, Experience & Content",
+    "description": "Person who designs experiences centered on the real needs of users.",
+    "synonyms": ["user experience", "ux research", "human centered design"]
+  },
+  {
+    "id": "ui-designer",
+    "label": "UI Designer",
+    "category": "Design, Experience & Content",
+    "description": "Professional who defines the visual, graphic and interactive part of digital interfaces.",
+    "synonyms": ["user interface", "visual designer", "interaction design"]
+  },
+  {
+    "id": "digital-marketer",
+    "label": "Digital Marketer",
+    "category": "Design, Experience & Content",
+    "description": "Professional specialized in digital marketing, positioning and online acquisition.",
+    "synonyms": ["digital marketing", "growth marketer", "seo specialist", "content marketer"]
+  },
+  {
+    "id": "community-manager",
+    "label": "Community & Social Media Manager",
+    "category": "Business, Community & Impact",
+    "description": "Person who manages digital communities and social media presence.",
+    "synonyms": ["community manager", "social media manager", "community management"]
+  },
+  {
+    "id": "entrepreneur",
+    "label": "Entrepreneur / Startup Founder",
+    "category": "Business, Community & Impact",
+    "description": "Person who creates, drives or leads technology projects and companies.",
+    "synonyms": ["founder", "startup founder", "ceo", "entrepreneur"]
+  },
+  {
+    "id": "business-innovation-manager",
+    "label": "Business & Innovation Manager",
+    "category": "Business, Community & Impact",
+    "description": "Professional who drives innovation initiatives, partnerships and business development.",
+    "synonyms": ["business developer", "innovation manager", "bd", "business development"]
+  },
+  {
+    "id": "researcher",
+    "label": "Researcher",
+    "category": "Research, Education & Academia",
+    "description": "Professional who researches in technological, scientific or academic fields.",
+    "synonyms": ["academic researcher", "r&d", "research"]
+  },
+  {
+    "id": "educator",
+    "label": "Educator / Tech Teacher",
+    "category": "Research, Education & Academia",
+    "description": "Person who teaches technology in formal or informal contexts and looks for communities to share resources, practices and experiences.",
+    "synonyms": ["educator", "teacher", "teaching", "trainer", "instructor"]
+  },
+  {
+    "id": "phd-doctoral",
+    "label": "PhD / Doctoral Researcher",
+    "category": "Research, Education & Academia",
+    "description": "Person in the doctoral or advanced research stage looking to connect with related communities, share work and expand their professional network.",
+    "synonyms": ["phd", "doctoral researcher", "predoc", "doctoral research"]
+  },
+  {
+    "id": "maker",
+    "label": "Maker",
+    "category": "Hardware, Systems & Robotics",
+    "description": "Person who creates hardware, electronics or digital fabrication projects.",
+    "synonyms": ["hardware maker", "diy", "digital fabrication", "creative hacker"]
+  },
+  {
+    "id": "open-source-contributor",
+    "label": "Open Source Contributor",
+    "category": "Business, Community & Impact",
+    "description": "Person who contributes to free or open source software projects.",
+    "synonyms": ["oss contributor", "foss contributor"]
+  },
+  {
+    "id": "data-journalist",
+    "label": "Data Journalist",
+    "category": "Data & Artificial Intelligence",
+    "description": "Professional who combines data analysis and journalistic narrative to investigate, visualize and communicate information of public interest.",
+    "synonyms": ["data journalism", "investigative journalism"]
+  },
+  {
+    "id": "minors",
+    "label": "Minors / Youth",
+    "category": "Career Stage",
+    "description": "Children and teenagers under 18 who participate in technology communities focused on education, programming or computational thinking.",
+    "synonyms": ["kids", "teenagers", "youth", "coding for kids", "stem kids"]
+  }
+]
