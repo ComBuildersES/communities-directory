@@ -9,6 +9,7 @@ const base = {
   location: "Madrid",
   shortDescription: "",
   topics: "",
+  langs: ["es"],
   tags: [],
   targetAudience: [],
   contactInfo: "",
@@ -35,7 +36,8 @@ describe("normalizePayload", () => {
   });
 
   it("shortDescription ausente se normaliza a cadena vacía", () => {
-    const { shortDescription: _, ...withoutDesc } = base;
+    const withoutDesc = { ...base };
+    delete withoutDesc.shortDescription;
     const result = normalizePayload(withoutDesc);
     expect(result.shortDescription).toBe("");
   });
@@ -69,6 +71,12 @@ describe("normalizePayload", () => {
       tags: ["react", "react", "", "javascript"],
     });
     expect(result.tags).toEqual(["react", "javascript"]);
+  });
+
+  it("normaliza langs con fallback a español", () => {
+    expect(normalizePayload({ ...base, langs: ["en", "en", "es"] }).langs).toEqual(["en", "es"]);
+    expect(normalizePayload({ ...base, langs: [] }).langs).toEqual(["es"]);
+    expect(normalizePayload({ ...base, langs: undefined }).langs).toEqual(["es"]);
   });
 
   it("normaliza humanValidated a booleano", () => {

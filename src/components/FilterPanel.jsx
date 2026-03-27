@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Switch } from "./Switch";
 import { useSideBarVisible } from "../stores/sidebar.store.js";
+import { COMMUNITY_LANGUAGE_OPTIONS } from "../lib/communityLanguages.js";
 
 export function FilterPanel() {
   const { t } = useTranslation();
@@ -42,6 +43,20 @@ export function FilterPanel() {
             <div className="option-item is-size-7"><p>{t("status.active")}</p><Switch name="status" value="active" /></div>
             <div className="option-item is-size-7"><p>{t("status.inactive")}</p><Switch name="status" value="inactive" /></div>
             <div className="option-item is-size-7"><p>{t("status.unknown")}</p><Switch name="status" value="unknown" /></div>
+          </div>
+        </div>
+
+        <div className="filter-group-divider" />
+
+        <div className="filter-group">
+          <p className="filter-group-label">{t("sidebar.langs")}</p>
+          <div className="filter-group-items">
+            {COMMUNITY_LANGUAGE_OPTIONS.map((code) => (
+              <div key={code} className="option-item is-size-7">
+                <p>{t(`language.${code}`)}</p>
+                <Switch name="langs" value={code} />
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -12,7 +12,10 @@ import Graphic from "@arcgis/core/Graphic"
 import Popup from "@arcgis/core/widgets/Popup"
 import * as clusterLabelCreator from "@arcgis/core/smartMapping/labels/clusters.js";
 import * as pieChartRendererCreator from "@arcgis/core/smartMapping/renderers/pieChart.js";
-import { useCommunitiesFiltered } from "../../stores/community.store.js";
+import {
+  useCBMemberIds,
+  useCommunitiesFiltered,
+} from "../../stores/community.store.js";
 // import { MapCard } from "../MapCard.jsx"
 import { CommunityCard } from "../CommunityCard.jsx"
 
@@ -46,9 +49,21 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
     return comunidad
   });> */}
   const rawCommunities = useCommunitiesFiltered(); // already filtered by sidebar
+  const cbMemberIds = useCBMemberIds();
   const communities = useMemo(() => {
     return rawCommunities.filter(c => c.displayOnMap);
   }, [rawCommunities]);
+  const sortedVisibleCommunities = useMemo(
+    () => [...visibleCommunities].sort((a, b) => {
+      const aHasCB = cbMemberIds.has(a.id) ? 0 : 1;
+      const bHasCB = cbMemberIds.has(b.id) ? 0 : 1;
+      if (aHasCB !== bHasCB) return aHasCB - bHasCB;
+      const aValidated = a.humanValidated ? 0 : 1;
+      const bValidated = b.humanValidated ? 0 : 1;
+      return aValidated - bValidated;
+    }),
+    [visibleCommunities, cbMemberIds]
+  );
   const hiddenFromMapCount = useMemo(
     () => rawCommunities.filter((community) => !community.displayOnMap).length,
     [rawCommunities]
@@ -241,6 +256,16 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
       view.popup = popupRef.current
     }
 
+    const hasCBMember = cbMemberIds.has(community.id);
+    const cbBadge = hasCBMember
+      ? `
+        <div style="margin: 0 0 10px; display: inline-flex; align-items: center; gap: 6px; padding: 5px 9px; border-radius: 999px; background: #2e6be6; color: #fff; font-size: 12px; font-weight: 600;" title="${t("communityCard.cbBadgeTitle")}">
+          <i class="fa-solid fa-people-group" aria-hidden="true"></i>
+          <span>Community Builders</span>
+        </div>
+      `
+      : "";
+
     // Build conditional info rows
     const infoRows = [
       { label: t("map.popup.status"), value: community.status },
@@ -283,6 +308,7 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
       ">
 
         ${img}
+        ${cbBadge}
 
         ${infoRows}
       </div>
@@ -559,8 +585,13 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
         {/* {communities.map((community) => (
           <CommunityCard key={community.id} community={community} />
         ))} */}
-        {visibleCommunities.map((community) => (
-          <CommunityCard key={community.id} community={community} onOpen={onOpenCommunity} />
+        {sortedVisibleCommunities.map((community) => (
+          <CommunityCard
+            key={community.id}
+            community={community}
+            hasCBMember={cbMemberIds.has(community.id)}
+            onOpen={onOpenCommunity}
+          />
         ))}
 
 

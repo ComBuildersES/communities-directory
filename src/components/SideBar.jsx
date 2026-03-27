@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { Switch } from "./Switch";
 import { useSideBarVisible, useSidebarActions } from "../stores/sidebar.store.js";
+import { COMMUNITY_LANGUAGE_OPTIONS } from "../lib/communityLanguages.js";
 
 export const Sidebar = () => {
   const { t } = useTranslation();
@@ -119,6 +120,18 @@ export const Sidebar = () => {
             <Switch name="status" value="unknown" />
           </div>
         </li>
+      </ul>
+
+      <p className="menu-label">{t("sidebar.langs")}</p>
+      <ul className="menu-list">
+        {COMMUNITY_LANGUAGE_OPTIONS.map((code) => (
+          <li key={code} className="menu-item">
+            <div className="option-item is-size-7">
+              <p>{t(`language.${code}`)}</p>
+              <Switch name="langs" value={code} />
+            </div>
+          </li>
+        ))}
       </ul>
 
       {/* <p className="menu-label">Localizacion habitual</p> */}

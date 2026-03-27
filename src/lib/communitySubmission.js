@@ -1,3 +1,5 @@
+import { normalizeCommunityLangs } from "./communityLanguages.js";
+
 const GITHUB_NEW_ISSUE_URL = "https://github.com/ComBuildersES/communities-directory/issues/new";
 
 export const COMMUNITY_STATUS_OPTIONS = ["active", "inactive", "unknown"];
@@ -15,25 +17,25 @@ export const EVENT_FORMATS_WITH_LOCATION = ["in-person", "hybrid"];
 export const SHORT_DESCRIPTION_MAX_LENGTH = 280;
 
 export const URL_PLATFORM_OPTIONS = [
-  { key: "web", label: "Web" },
-  { key: "eventsUrl", label: "Eventos" },
-  { key: "linkAggregator", label: "Agregador de links" },
-  { key: "mailingList", label: "Lista de correo" },
-  { key: "github", label: "GitHub" },
-  { key: "discord", label: "Discord" },
-  { key: "telegram", label: "Telegram" },
-  { key: "whatsapp", label: "WhatsApp" },
-  { key: "slack", label: "Slack" },
-  { key: "youtube", label: "YouTube" },
-  { key: "linkedin", label: "LinkedIn" },
-  { key: "twitter", label: "Twitter/X" },
-  { key: "tiktok", label: "TikTok" },
-  { key: "instagram", label: "Instagram" },
-  { key: "facebook", label: "Facebook" },
-  { key: "mastodon", label: "Mastodon" },
-  { key: "bluesky", label: "Bluesky" },
-  { key: "twitch", label: "Twitch" },
-  { key: "flickr", label: "Flickr" },
+  { key: "web" },
+  { key: "eventsUrl" },
+  { key: "linkAggregator" },
+  { key: "mailingList" },
+  { key: "github" },
+  { key: "discord" },
+  { key: "telegram" },
+  { key: "whatsapp" },
+  { key: "slack" },
+  { key: "youtube" },
+  { key: "linkedin" },
+  { key: "twitter" },
+  { key: "tiktok" },
+  { key: "instagram" },
+  { key: "facebook" },
+  { key: "mastodon" },
+  { key: "bluesky" },
+  { key: "twitch" },
+  { key: "flickr" },
 ];
 
 export const COMMUNITY_ISSUE_MODES = {
@@ -51,6 +53,7 @@ const DIRECTORY_FILTER_KEYS = [
   "status",
   "communityType",
   "eventFormat",
+  "langs",
   "tags",
   "targetAudience",
   "name",
@@ -59,6 +62,7 @@ const FILTER_KEY_SHORT = {
   status: "s",
   communityType: "ct",
   eventFormat: "ef",
+  langs: "langs",
   tags: "t",
   targetAudience: "ta",
   name: "n",
@@ -365,6 +369,7 @@ export function getEmptyCommunityDraft(nextId = null) {
     provinceId: "",
     shortDescription: "",
     topics: "",
+    langs: ["es"],
     tags: [],
     targetAudience: [],
     contactInfo: "",
@@ -391,6 +396,7 @@ export function getCommunityDraft(community, nextId = null) {
   return {
     ...getEmptyCommunityDraft(nextId),
     ...community,
+    langs: normalizeCommunityLangs(community.langs),
     tags: Array.isArray(community.tags) ? community.tags : [],
     targetAudience: Array.isArray(community.targetAudience) ? community.targetAudience : [],
     urls: community.urls ?? {},
@@ -498,6 +504,7 @@ export function buildCommunityPayload(draft, existingCommunity = null) {
     provinceId: cleanString(draft.provinceId),
     shortDescription: cleanString(draft.shortDescription),
     topics: cleanString(draft.topics),
+    langs: normalizeCommunityLangs(draft.langs),
     tags: Array.isArray(draft.tags) ? draft.tags : [],
     targetAudience: Array.isArray(draft.targetAudience) ? draft.targetAudience : [],
     contactInfo: cleanString(draft.contactInfo),

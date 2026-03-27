@@ -19,6 +19,22 @@
     "meta-community": "Meta comunidad",
     "mutual-aid": "Grupo de ayuda mutua"
   },
+  "language": {
+    "es": "Español",
+    "en": "Inglés",
+    "ca": "Catalán",
+    "eu": "Euskera",
+    "gl": "Gallego",
+    "oc": "Aranés"
+  },
+  "languageShort": {
+    "es": "ES",
+    "en": "EN",
+    "ca": "CA",
+    "eu": "EU",
+    "gl": "GL",
+    "oc": "OC"
+  },
   "footer": {
     "maintainedWith": "Proyecto mantenido con 💖",
     "byCommunity": "por la comunidad",
@@ -84,6 +100,7 @@
       "status": "Estado",
       "eventFormat": "Formato",
       "communityType": "Tipo",
+      "langs": "Idioma",
       "tags": "Temática",
       "targetAudience": "Público",
       "name": "Comunidad"
@@ -101,12 +118,15 @@
   },
   "communityCard": {
     "viewDetails": "Ver detalles de {{name}}",
-    "cbBadgeTitle": "Personas que dinamizan esta comunidad también forman parte de la comunidad Community Builders que impulsa este directorio"
+    "cbBadgeTitle": "Personas que dinamizan esta comunidad también forman parte de la comunidad Community Builders que impulsa este directorio",
+    "languagesBadgeLabel": "Idiomas de la comunidad",
+    "languageBadgeTitle": "La comunidad opera en {{language}}"
   },
   "sidebar": {
     "communityType": "Tipo de Comunidad",
     "eventFormat": "Tipo de Eventos",
-    "status": "Estado de la comunidad"
+    "status": "Estado de la comunidad",
+    "langs": "Idiomas"
   },
   "app": {
     "checkingFreshData": "Comprobando si hay una versión más reciente del directorio antes de abrir detalles o proponer cambios.",
@@ -124,6 +144,7 @@
     "filterByStatus": "Filtrar por estado {{status}}",
     "filterByType": "Filtrar por tipo de comunidad {{communityType}}",
     "filterByFormat": "Filtrar por tipo de evento {{eventFormat}}",
+    "filterByLanguage": "Filtrar por idioma {{language}}",
     "filterByTag": "Filtrar por {{tag}}",
     "filterByAudience": "Filtrar por {{audience}}",
     "viewOnMap": "Ver en el mapa",
@@ -346,6 +367,9 @@
       "formatLabel": "Formato",
       "locationLabel": "Localización",
       "locationPlaceholder": "Madrid, España o Itinerante",
+      "langsLabel": "Idiomas",
+      "langsHelp": "Marca los idiomas en los que la comunidad se comunica u organiza habitualmente. Si dudas, deja al menos Español.",
+      "langSelected": "Seleccionado",
       "shortDescriptionLabel": "Descripción breve",
       "shortDescriptionPlaceholder": "Describe en una frase qué ofrece esta comunidad, su enfoque o propuesta de valor. Evita repetir las etiquetas o el público objetivo ya seleccionados.",
       "shortDescriptionExample": "Ejemplo: \"Colectivo sin ánimo de lucro que organiza encuentros mensuales para compartir experiencias prácticas sobre arquitectura de software e ingeniería de plataforma.\"",
@@ -383,4 +407,3 @@
     }
   }
 }
-

@@ -4,6 +4,7 @@ import path from 'path';
 import process from 'node:process';
 import { Buffer } from 'node:buffer';
 import sharp from 'sharp';
+import { normalizeCommunityLangs } from '../src/lib/communityLanguages.js';
 
 const body = process.argv[2] ?? '';
 const communitiesPath = './public/data/communities.json';
@@ -51,6 +52,47 @@ function normalizeLatLon(value) {
   return Number.isFinite(parsed) ? parsed : null;
 }
 
+const LEGACY_LANGUAGE_MAP = {
+  es: 'es',
+  español: 'es',
+  espanol: 'es',
+  castellano: 'es',
+  en: 'en',
+  english: 'en',
+  ingles: 'en',
+  inglés: 'en',
+  ca: 'ca',
+  catala: 'ca',
+  català: 'ca',
+  catalan: 'ca',
+  catalán: 'ca',
+  eu: 'eu',
+  euskera: 'eu',
+  euskara: 'eu',
+  basque: 'eu',
+  gl: 'gl',
+  galego: 'gl',
+  gallego: 'gl',
+  galician: 'gl',
+  oc: 'oc',
+  aranes: 'oc',
+  aranés: 'oc',
+  aranese: 'oc',
+  occitan: 'oc',
+};
+
+function parseLegacyLangs(value) {
+  if (!value) return normalizeCommunityLangs(undefined);
+
+  const normalizedValues = value
+    .split(/[\n,;/]+/)
+    .map((item) => item.trim().toLowerCase())
+    .filter(Boolean)
+    .map((item) => LEGACY_LANGUAGE_MAP[item] ?? item);
+
+  return normalizeCommunityLangs(normalizedValues);
+}
+
 function isRemoteUrl(value) {
   return /^https?:\/\//i.test(value);
 }
@@ -79,6 +121,7 @@ function extractLegacyPayload() {
     eventFormat: extractField('Formato'),
     location: extractField('Ciudad o región principal'),
     topics: extractField('Temas que trata'),
+    langs: parseLegacyLangs(extractField('Idiomas de la comunidad')),
     tags: [],
     targetAudience: [],
     contactInfo: extractField('Correo de contacto (público)'),
@@ -163,6 +206,7 @@ export function normalizePayload(payload) {
     location: normalizeString(payload.location),
     shortDescription: normalizeString(payload.shortDescription),
     topics: normalizeString(payload.topics),
+    langs: normalizeCommunityLangs(payload.langs),
     tags: Array.isArray(payload.tags) ? [...new Set(payload.tags.filter(Boolean))] : [],
     targetAudience: Array.isArray(payload.targetAudience) ? [...new Set(payload.targetAudience.filter(Boolean))] : [],
     contactInfo: normalizeString(payload.contactInfo),

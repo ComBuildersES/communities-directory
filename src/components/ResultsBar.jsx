@@ -12,11 +12,13 @@ import {
 import { useSidebarActions, useSideBarVisible } from "../stores/sidebar.store.js";
 import { ViewToggleButton } from "./ViewToggleButton.jsx";
 import { bajaString } from "../constants";
+import { COMMUNITY_LANGUAGE_OPTIONS } from "../lib/communityLanguages.js";
 
 const FILTER_LABEL_KEYS = {
   status: "resultsBar.filterLabel.status",
   eventFormat: "resultsBar.filterLabel.eventFormat",
   communityType: "resultsBar.filterLabel.communityType",
+  langs: "resultsBar.filterLabel.langs",
   tags: "resultsBar.filterLabel.tags",
   targetAudience: "resultsBar.filterLabel.targetAudience",
   name: "resultsBar.filterLabel.name",
@@ -44,12 +46,21 @@ export function ResultsBar({ view, toggleView }) {
     () => Object.fromEntries(allAudience.map((a) => [a.id, a.label])),
     [allAudience]
   );
+  const languagesMap = useMemo(
+    () => Object.fromEntries(
+      COMMUNITY_LANGUAGE_OPTIONS.map((code) => [code, t(`language.${code}`, { defaultValue: code.toUpperCase() })])
+    ),
+    [t]
+  );
 
   const chips = Object.entries(filters).flatMap(([key, values]) =>
     values.map((value) => ({
       key,
       value,
       label:
+        key === "langs"
+          ? (languagesMap[value] || value.toUpperCase())
+          :
         key === "tags"
           ? (tagsMap[value] || value)
           : key === "targetAudience"

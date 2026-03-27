@@ -10,6 +10,7 @@ const baseCommunity = {
   location: "Madrid",
   shortDescription: "Una comunidad tech",
   topics: "",
+  langs: ["es", "en"],
   tags: ["javascript"],
   targetAudience: ["frontend-developer"],
   contactInfo: "",
@@ -63,9 +64,20 @@ describe("getCommunityDraft", () => {
     expect(draft.tags).toEqual(["javascript"]);
   });
 
+  it("preserva langs existentes", () => {
+    const draft = getCommunityDraft(baseCommunity, null);
+    expect(draft.langs).toEqual(["es", "en"]);
+  });
+
+  it("inicializa langs con español si faltan", () => {
+    const draft = getCommunityDraft({ ...baseCommunity, langs: undefined }, null);
+    expect(draft.langs).toEqual(["es"]);
+  });
+
   it("devuelve draft vacío si no se pasa comunidad", () => {
     const draft = getCommunityDraft(null, 42);
     expect(draft.id).toBe(42);
     expect(draft.name).toBe("");
+    expect(draft.langs).toEqual(["es"]);
   });
 });

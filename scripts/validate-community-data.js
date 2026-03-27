@@ -1,5 +1,7 @@
 import fs from "node:fs";
 import { execFileSync } from "node:child_process";
+import process from "node:process";
+import { COMMUNITY_LANGUAGE_SET } from "../src/lib/communityLanguages.js";
 
 const COMMUNITIES_PATH = "public/data/communities.json";
 const COMMUNITIES_META_PATH = "public/data/communities.meta.json";
@@ -87,7 +89,7 @@ function readJsonFromGit(ref, filePath) {
     });
 
     return JSON.parse(raw);
-  } catch (error) {
+  } catch {
     return null;
   }
 }
@@ -299,6 +301,37 @@ function validateCommunityGlobal(community, index, knownTagIds, knownAudienceIds
     }
   }
 
+  if (!Array.isArray(community.langs)) {
+    pushIssue(issues.errors, "error", `${label}: langs debe ser un array.`);
+  } else {
+    const seenLangs = new Set();
+
+    for (const langCode of community.langs) {
+      if (!isNonEmptyString(langCode)) {
+        pushIssue(issues.errors, "error", `${label}: langs solo puede contener strings no vacíos.`);
+        continue;
+      }
+
+      if (!COMMUNITY_LANGUAGE_SET.has(langCode)) {
+        pushIssue(
+          issues.errors,
+          "error",
+          `${label}: langs contiene un código no soportado: "${langCode}".`,
+        );
+      }
+
+      if (seenLangs.has(langCode)) {
+        pushIssue(
+          issues.errors,
+          "error",
+          `${label}: langs contiene el código duplicado "${langCode}".`,
+        );
+      }
+
+      seenLangs.add(langCode);
+    }
+  }
+
   if (!isPlainObject(community.latLon) || !("lat" in community.latLon) || !("lon" in community.latLon)) {
     pushIssue(
       issues.errors,
@@ -460,6 +493,14 @@ function validateCommunityStrict(community, index, issues, isNew = true) {
       issues.errors,
       "error",
       `${label}: targetAudience es obligatorio y debe ser un array.`,
+    );
+  }
+
+  if (!Array.isArray(community.langs) || community.langs.length === 0) {
+    pushIssue(
+      issues.errors,
+      "error",
+      `${label}: langs es obligatorio y debe ser un array con al menos un idioma.`,
     );
   }
 

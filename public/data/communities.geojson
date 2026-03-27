@@ -19,6 +19,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "iot",
           "tech-ethics",
@@ -67,6 +70,9 @@
         "eventFormat": "in-person",
         "location": "Coruña (Santiago de Compostela)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -94,6 +100,9 @@
         "eventFormat": "in-person",
         "location": "Vigo, Galicia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "free-software",
           "software-architecture",
@@ -139,6 +148,9 @@
         "eventFormat": "unknown",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -168,6 +180,9 @@
         "eventFormat": "in-person",
         "location": "Zaragoza",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -198,6 +213,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "lean-startup",
@@ -241,6 +259,9 @@
         "eventFormat": "in-person",
         "location": "Vigo",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -271,6 +292,9 @@
         "eventFormat": "in-person",
         "location": "Granada, España",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "generative-ai",
           "cloud-security",
@@ -314,6 +338,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "innovation",
           "design-patterns",
@@ -365,6 +392,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "startups",
           "game-development",
@@ -402,6 +432,9 @@
         "eventFormat": "in-person",
         "location": "Almería",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -432,6 +465,9 @@
         "eventFormat": "in-person",
         "location": "Almería",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -462,6 +498,9 @@
         "eventFormat": "in-person",
         "location": "Almería",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "3d-printing",
           "c",
@@ -521,6 +560,9 @@
         "eventFormat": "in-person",
         "location": "Córdoba",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "lean-startup",
           "startups",
@@ -566,6 +608,9 @@
         "eventFormat": "unknown",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -595,6 +640,9 @@
         "eventFormat": "unknown",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "angular",
           "c",
@@ -638,6 +686,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "APIs, Cloud, MIcroservicios",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech-ethics",
           "robotics",
@@ -686,6 +737,9 @@
         "eventFormat": "hybrid",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "innovation",
           "c",
@@ -722,6 +776,9 @@
         "eventFormat": "in-person",
         "location": "Logrono",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -749,6 +806,9 @@
         "eventFormat": "in-person",
         "location": "Coruña",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "iot",
           "networking"
@@ -781,6 +841,9 @@
         "eventFormat": "hybrid",
         "location": "Asturias",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -811,6 +874,9 @@
         "eventFormat": "in-person",
         "location": "Albacete",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "r-lang",
           "statistics",
@@ -855,6 +921,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "hhkaos@gmail.com",
@@ -885,6 +954,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "hhkaos@gmail.com",
@@ -915,6 +987,9 @@
         "eventFormat": "in-person",
         "location": "Oviedo, Asturias",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -948,6 +1023,9 @@
         "eventFormat": "in-person",
         "location": "Oviedo/Gijón (Asturias)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "software-architecture",
           "software-craftsmanship",
@@ -1011,6 +1089,9 @@
         "eventFormat": "in-person",
         "location": "A Coruña",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "sysadmin",
           "linux",
@@ -1066,6 +1147,9 @@
         "eventFormat": "in-person",
         "location": "Córdoba",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "free-software",
           "software-architecture",
@@ -1108,6 +1192,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "aws"
         ],
@@ -1137,6 +1224,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "azure",
           "event-driven",
@@ -1193,6 +1283,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "azure",
           "robotics",
@@ -1245,6 +1338,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -1274,6 +1370,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -1302,6 +1401,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "r-lang",
           "data-warehouse",
@@ -1350,6 +1452,9 @@
         "eventFormat": "in-person",
         "location": "Galicia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -1380,6 +1485,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -1410,6 +1518,9 @@
         "eventFormat": "in-person",
         "location": "Bilbao",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech4good",
           "women-in-tech",
@@ -1451,6 +1562,9 @@
         "eventFormat": "in-person",
         "location": "Alicante",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -1483,6 +1597,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "c",
@@ -1543,6 +1660,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "blockchain",
           "ethereum",
@@ -1584,6 +1704,9 @@
         "eventFormat": "unknown",
         "location": "Vigo, Galicia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -1611,6 +1734,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -1640,6 +1766,9 @@
         "eventFormat": "hybrid",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -1669,6 +1798,9 @@
         "eventFormat": "in-person",
         "location": "Coruña",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "robotics",
           "open-hardware",
@@ -1708,6 +1840,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "cybersecurity",
           "event-driven",
@@ -1748,6 +1883,9 @@
         "eventFormat": "in-person",
         "location": "Ávila",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "cybersecurity",
           "digital-forensics",
@@ -1787,6 +1925,9 @@
         "eventFormat": "in-person",
         "location": "Cáceres",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "tech-ethics",
@@ -1823,6 +1964,9 @@
         "eventFormat": "in-person",
         "location": "Cádiz",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "game-development"
         ],
@@ -1860,6 +2004,9 @@
         "eventFormat": "unknown",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -1889,6 +2036,9 @@
         "eventFormat": "in-person",
         "location": "Tenerife",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -1918,6 +2068,9 @@
         "eventFormat": "hybrid",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "azure",
           "c",
@@ -1961,6 +2114,9 @@
         "eventFormat": "in-person",
         "location": "Tenerife",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech-ethics",
           "robotics",
@@ -1997,6 +2153,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "game-development",
           "game-design",
@@ -2038,6 +2197,9 @@
         "eventFormat": "in-person",
         "location": "Huelva",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -2067,6 +2229,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "linux",
@@ -2121,6 +2286,9 @@
         "eventFormat": "in-person",
         "location": "Bilbao",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "linux"
         ],
@@ -2159,6 +2327,9 @@
         "eventFormat": "hybrid",
         "location": "Coruña, Galicia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "tech-ethics",
@@ -2202,6 +2373,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "tech-ethics",
@@ -2250,6 +2424,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "linux",
@@ -2304,6 +2481,9 @@
         "eventFormat": "hybrid",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "event-driven",
@@ -2350,6 +2530,9 @@
         "eventFormat": "in-person",
         "location": "Mallorca",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "linux",
@@ -2401,6 +2584,9 @@
         "eventFormat": "in-person",
         "location": "Logroño La Rioja",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "linux",
@@ -2453,6 +2639,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "open-source",
@@ -2501,6 +2690,9 @@
         "eventFormat": "in-person",
         "location": "Valencia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "open-source",
@@ -2547,6 +2739,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -2574,6 +2769,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "git",
           "tech4good",
@@ -2612,6 +2810,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "diversity",
           "c",
@@ -2653,6 +2854,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -2683,6 +2887,9 @@
         "eventFormat": "hybrid",
         "location": "Logroño La Rioja",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech-ethics",
           "free-software",
@@ -2719,6 +2926,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -2748,6 +2958,9 @@
         "eventFormat": "hybrid",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "software-architecture",
           "software-craftsmanship",
@@ -2802,6 +3015,9 @@
         "eventFormat": "in-person",
         "location": "Madrid (Boadilla del Monte)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech-ethics",
           "robotics",
@@ -2847,6 +3063,9 @@
         "eventFormat": "unknown",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -2876,6 +3095,9 @@
         "eventFormat": "in-person",
         "location": "Zaragoza",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [
           "sre"
@@ -2908,6 +3130,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "r-lang",
           "c",
@@ -2949,6 +3174,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -2976,6 +3204,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "networking"
         ],
@@ -3007,6 +3238,9 @@
         "eventFormat": "in-person",
         "location": "Córdoba",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "event-driven",
           "software-architecture",
@@ -3050,6 +3284,9 @@
         "eventFormat": "in-person",
         "location": "Coruña",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "distributed-storage",
           "tech-ethics",
@@ -3088,6 +3325,9 @@
         "eventFormat": "in-person",
         "location": "Coruña",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "design-patterns",
           "tech-ethics",
@@ -3140,6 +3380,9 @@
         "eventFormat": "unknown",
         "location": "Coruña",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "3d-printing",
           "data-science",
@@ -3176,6 +3419,9 @@
         "eventFormat": "in-person",
         "location": "Coruña",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "java",
           "kotlin",
@@ -3208,6 +3454,9 @@
         "eventFormat": "in-person",
         "location": "Vigo, Galicia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "ai-coding-agents",
           "clean-code",
@@ -3253,6 +3502,9 @@
         "eventFormat": "in-person",
         "location": "Málaga (Fuengirola)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "cryptocurrencies",
           "tech-ethics",
@@ -3292,6 +3544,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "organizacion@xover.es",
@@ -3322,6 +3577,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -3349,6 +3607,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "cybersecurity",
           "digital-forensics",
@@ -3401,6 +3662,9 @@
         "eventFormat": "in-person",
         "location": "Las Palmas (Fuerteventura)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -3430,6 +3694,9 @@
         "eventFormat": "in-person",
         "location": "Valladolid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -3456,6 +3723,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech-ethics",
           "stem",
@@ -3496,6 +3766,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "rpertusalopez@gmail.com",
@@ -3525,6 +3798,9 @@
         "eventFormat": "online",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "big-data",
           "data-pipelines",
@@ -3576,6 +3852,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "big-data",
           "data-pipelines",
@@ -3628,6 +3907,9 @@
         "eventFormat": "in-person",
         "location": "Almería",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -3657,6 +3939,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -3687,6 +3972,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "data-visualization",
           "sql-databases",
@@ -3732,6 +4020,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "data-warehouse",
           "data-lake",
@@ -3780,6 +4071,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "functional-programming",
@@ -3824,6 +4118,9 @@
         "eventFormat": "in-person",
         "location": "Valencia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "data-warehouse",
           "data-lake",
@@ -3872,6 +4169,9 @@
         "eventFormat": "in-person",
         "location": "La RIoja",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -3903,6 +4203,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "digital-marketing",
           "digital-forensics",
@@ -3958,6 +4261,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "info@devbcn.com",
@@ -3991,6 +4297,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "tech-ethics",
@@ -4042,6 +4351,9 @@
         "eventFormat": "in-person",
         "location": "Cáceres",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "tech-ethics",
@@ -4087,6 +4399,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -4114,6 +4429,9 @@
         "eventFormat": "in-person",
         "location": "Álava (Vitoria-Gasteiz)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -4141,6 +4459,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "docker",
           "kubernetes",
@@ -4191,6 +4512,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "aspnet",
           "csharp",
@@ -4235,6 +4559,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "azure",
           "c",
@@ -4288,6 +4615,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "azure",
           "tech-ethics",
@@ -4343,6 +4673,9 @@
         "eventFormat": "in-person",
         "location": "Zaragoza",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "tech-ethics",
@@ -4386,6 +4719,9 @@
         "eventFormat": "in-person",
         "location": "Zaragoza",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "tech-ethics",
@@ -4429,6 +4765,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -4455,6 +4794,9 @@
         "eventFormat": "in-person",
         "location": "Alicante",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "help@drupal.org",
@@ -4481,6 +4823,9 @@
         "eventFormat": "in-person",
         "location": "Almería",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "help@drupal.org",
@@ -4507,6 +4852,9 @@
         "eventFormat": "in-person",
         "location": "Asturias",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "help@drupal.org",
@@ -4534,6 +4882,9 @@
         "eventFormat": "in-person",
         "location": "Cádiz",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "help@drupal.org",
@@ -4560,6 +4911,9 @@
         "eventFormat": "in-person",
         "location": "Castellón de la Plana",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "help@drupal.org",
@@ -4586,6 +4940,9 @@
         "eventFormat": "in-person",
         "location": "Castilla y León",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "help@drupal.org",
@@ -4612,6 +4969,9 @@
         "eventFormat": "in-person",
         "location": "Comunidad Valenciana",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "help@drupal.org",
@@ -4641,6 +5001,9 @@
         "eventFormat": "in-person",
         "location": "País Vasco",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "help@drupal.org",
@@ -4667,6 +5030,9 @@
         "eventFormat": "in-person",
         "location": "Extremadura",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "help@drupal.org",
@@ -4693,6 +5059,9 @@
         "eventFormat": "in-person",
         "location": "Galicia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "help@drupal.org",
@@ -4719,6 +5088,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "help@drupal.org",
@@ -4745,6 +5117,9 @@
         "eventFormat": "in-person",
         "location": "León",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "help@drupal.org",
@@ -4771,6 +5146,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "help@drupal.org",
@@ -4798,6 +5176,9 @@
         "eventFormat": "in-person",
         "location": "Malaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "help@drupal.org",
@@ -4824,6 +5205,9 @@
         "eventFormat": "in-person",
         "location": "Region de Murcia y Cartagena",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "help@drupal.org",
@@ -4850,6 +5234,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "help@drupal.org",
@@ -4876,6 +5263,9 @@
         "eventFormat": "in-person",
         "location": "Zaragoza y alrededores",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "help@drupal.org",
@@ -4902,6 +5292,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -4929,6 +5322,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "digital-marketing",
           "digital-forensics",
@@ -4976,6 +5372,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "digital-marketing",
           "digital-forensics",
@@ -5023,6 +5422,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "digital-marketing",
           "digital-forensics",
@@ -5071,6 +5473,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -5105,6 +5510,9 @@
         "eventFormat": "in-person",
         "location": "Guipúzcoa (San Sebastián)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "cybersecurity",
           "ethical-hacking",
@@ -5147,6 +5555,9 @@
         "eventFormat": "in-person",
         "location": "Cáceres",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "digital-forensics",
           "digital-activism",
@@ -5189,6 +5600,9 @@
         "eventFormat": "in-person",
         "location": "Gijón, Asturias",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -5216,6 +5630,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -5245,6 +5662,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "flutter",
           "c",
@@ -5285,6 +5705,9 @@
         "eventFormat": "in-person",
         "location": "Lérida (Lleida)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "flutter",
           "gcp",
@@ -5332,6 +5755,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "flutter",
           "open-source",
@@ -5378,6 +5804,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "flutter",
           "tech-ethics",
@@ -5423,6 +5852,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "flutter",
           "gcp",
@@ -5465,6 +5897,9 @@
         "eventFormat": "in-person",
         "location": "Valencia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "flutter",
           "bdd",
@@ -5522,6 +5957,9 @@
         "eventFormat": "hybrid",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "game-development",
           "c",
@@ -5567,6 +6005,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -5594,6 +6035,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -5625,6 +6069,9 @@
         "eventFormat": "in-person",
         "location": "Vigo, Galicia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "free-software",
           "software-architecture",
@@ -5647,7 +6094,7 @@
         "communityUrl": "https://www.galpon.org/",
         "urls": {
           "telegram": "https://t.me/galpon",
-          "mastodon": "galpon@mastodon.gal"
+          "mastodon": "https://mastodon.gal/@galpon"
         },
         "thumbnailUrl": "images/galpon.webp",
         "humanValidated": false
@@ -5671,6 +6118,9 @@
         "eventFormat": "in-person",
         "location": "Álava (Vitoria-Gasteiz)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -5698,6 +6148,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -5730,6 +6183,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "linux",
           "free-software"
@@ -5766,6 +6222,9 @@
         "eventFormat": "in-person",
         "location": "Coruña",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "r-lang",
           "gcp",
@@ -5815,6 +6274,9 @@
         "eventFormat": "hybrid",
         "location": "n/a",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "aws",
@@ -5852,12 +6314,15 @@
       "properties": {
         "id": 197,
         "name": "GDG Cloud Madrid",
-        "status": "Inactivo",
+        "status": "inactive",
         "lastReviewed": "26/05/2025",
         "communityType": "tech-meetup",
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -5887,6 +6352,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "Cloud, AI, Backend, Frontend, soft skills",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "digital-marketing",
@@ -5941,6 +6409,9 @@
         "eventFormat": "in-person",
         "location": "Huelva",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -5970,6 +6441,9 @@
         "eventFormat": "in-person",
         "location": "Jaén ",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech4good",
           "women-in-tech",
@@ -6013,6 +6487,9 @@
         "eventFormat": "hybrid",
         "location": "Logroño La Rioja",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp"
         ],
@@ -6055,6 +6532,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "tech4good",
@@ -6105,6 +6585,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "tech-ethics",
@@ -6151,6 +6634,9 @@
         "eventFormat": "in-person",
         "location": "Málaga (Marbella)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "flutter",
@@ -6203,6 +6689,9 @@
         "eventFormat": "hybrid",
         "location": "Ponferrada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "innovation",
           "tech-ethics"
@@ -6238,6 +6727,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "tech-ethics",
@@ -6281,6 +6773,9 @@
         "eventFormat": "in-person",
         "location": "Toledo",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech4good",
           "women-in-tech",
@@ -6340,6 +6835,9 @@
         "eventFormat": "in-person",
         "location": "Valencia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "flutter",
           "generative-ai",
@@ -6398,6 +6896,9 @@
         "eventFormat": "in-person",
         "location": "Vigo, Galicia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -6427,6 +6928,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "azure",
           "generative-ai",
@@ -6470,6 +6974,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "software-architecture",
           "software-craftsmanship",
@@ -6534,6 +7041,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "go",
           "innovation",
@@ -6578,6 +7088,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "game-design",
@@ -6622,6 +7135,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "sql-databases",
           "nosql-databases",
@@ -6666,6 +7182,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech-ethics",
           "design-patterns",
@@ -6707,6 +7226,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "game-development",
           "game-design",
@@ -6744,6 +7266,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -6770,6 +7295,9 @@
         "eventFormat": "hybrid",
         "location": "Granada, España",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech4good",
           "stem",
@@ -6806,6 +7334,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -6835,6 +7366,9 @@
         "eventFormat": "in-person",
         "location": "A Coruña",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "free-software",
           "software-architecture",
@@ -6886,6 +7420,9 @@
         "eventFormat": "in-person",
         "location": "Vigo, Galicia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "open-source",
           "wordpress"
@@ -6918,6 +7455,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "r-lang",
           "c",
@@ -6960,6 +7500,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -6989,6 +7532,9 @@
         "eventFormat": "unknown",
         "location": "Cataluña",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -7017,6 +7563,9 @@
         "eventFormat": "unknown",
         "location": "Logroño",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -7045,6 +7594,9 @@
         "eventFormat": "unknown",
         "location": "Canarias",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "r-lang",
           "machine-learning",
@@ -7079,6 +7631,9 @@
         "eventFormat": "in-person",
         "location": "Murcia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -7108,6 +7663,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "game-development",
           "indie-games",
@@ -7144,6 +7702,9 @@
         "eventFormat": "in-person",
         "location": "Tenerife",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech4good",
           "women-in-tech",
@@ -7188,6 +7749,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "ethical-hacking",
           "event-driven",
@@ -7231,6 +7795,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "design-patterns",
           "game-design",
@@ -7274,6 +7841,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "software-architecture",
           "software-craftsmanship",
@@ -7333,6 +7903,9 @@
         "eventFormat": "in-person",
         "location": "Castellón de la Plana",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -7362,6 +7935,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "data-engineering",
@@ -7404,6 +7980,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "ethical-hacking",
           "tech-ethics",
@@ -7450,6 +8029,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "robotics",
           "tech-ethics"
@@ -7480,6 +8062,9 @@
         "eventFormat": "hybrid",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "game-development",
           "gcp",
@@ -7529,6 +8114,9 @@
         "eventFormat": "in-person",
         "location": "Logroño",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -7556,6 +8144,9 @@
         "eventFormat": "in-person",
         "location": "La Rioja",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech-ethics",
           "robotics",
@@ -7601,6 +8192,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -7628,6 +8222,9 @@
         "eventFormat": "in-person",
         "location": "Albacete",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -7654,6 +8251,9 @@
         "eventFormat": "in-person",
         "location": "Alicante",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -7680,6 +8280,9 @@
         "eventFormat": "in-person",
         "location": "Almería",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -7706,6 +8309,9 @@
         "eventFormat": "in-person",
         "location": "Asturias",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -7732,6 +8338,9 @@
         "eventFormat": "in-person",
         "location": "Ávila",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -7758,6 +8367,9 @@
         "eventFormat": "in-person",
         "location": "Badajoz",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -7784,6 +8396,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -7810,6 +8425,9 @@
         "eventFormat": "in-person",
         "location": "Bilbao",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -7839,6 +8457,9 @@
         "eventFormat": "in-person",
         "location": "Burgos",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -7865,6 +8486,9 @@
         "eventFormat": "in-person",
         "location": "Cáceres",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -7894,6 +8518,9 @@
         "eventFormat": "in-person",
         "location": "Cádiz",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -7923,6 +8550,9 @@
         "eventFormat": "in-person",
         "location": "Cantabria",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -7949,6 +8579,9 @@
         "eventFormat": "in-person",
         "location": "Castellón de la Plana",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -7978,6 +8611,9 @@
         "eventFormat": "in-person",
         "location": "Ciudad Real",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8004,6 +8640,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8030,6 +8669,9 @@
         "eventFormat": "in-person",
         "location": "Córdoba",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8056,6 +8698,9 @@
         "eventFormat": "in-person",
         "location": "Guipúzcoa (San Sebastián)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8082,6 +8727,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8108,6 +8756,9 @@
         "eventFormat": "in-person",
         "location": "Las Palmas (Fuerteventura)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8134,6 +8785,9 @@
         "eventFormat": "in-person",
         "location": "Gerona (Girona)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8160,12 +8814,15 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "iniciador-granada@googlegroups.com; hhkaos@gmail.com",
         "communityUrl": "https://iniciador.com/Granada",
         "urls": {
-          "mailingList": "iniciador-granada@googlegroups.com"
+          "mailingList": "https://groups.google.com/g/iniciador-granada"
         },
         "humanValidated": false
       }
@@ -8188,6 +8845,9 @@
         "eventFormat": "in-person",
         "location": "Guadalajara",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8214,6 +8874,9 @@
         "eventFormat": "in-person",
         "location": "Huesca",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8240,6 +8903,9 @@
         "eventFormat": "in-person",
         "location": "La Rioja",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8266,6 +8932,9 @@
         "eventFormat": "in-person",
         "location": "Las Palmas",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8292,6 +8961,9 @@
         "eventFormat": "in-person",
         "location": "León",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8318,6 +8990,9 @@
         "eventFormat": "in-person",
         "location": "Lérida (Lleida)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8344,6 +9019,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8370,12 +9048,15 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "iniciador-malaga@googlegroups.com; hhkaos@gmail.com",
         "communityUrl": "https://iniciador.com/Malaga",
         "urls": {
-          "mailingList": "iniciador-malaga@googlegroups.com"
+          "mailingList": "https://groups.google.com/g/iniciador-malaga"
         },
         "humanValidated": false
       }
@@ -8398,6 +9079,9 @@
         "eventFormat": "in-person",
         "location": "Mallorca",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8424,6 +9108,9 @@
         "eventFormat": "in-person",
         "location": "Murcia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8450,6 +9137,9 @@
         "eventFormat": "in-person",
         "location": "Navarra",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8476,6 +9166,9 @@
         "eventFormat": "in-person",
         "location": "Palencia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8502,6 +9195,9 @@
         "eventFormat": "in-person",
         "location": "Salamanca",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8528,6 +9224,9 @@
         "eventFormat": "in-person",
         "location": "Coruña (Santiago de Compostela)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8554,6 +9253,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8580,6 +9282,9 @@
         "eventFormat": "in-person",
         "location": "Tenerife",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8606,6 +9311,9 @@
         "eventFormat": "in-person",
         "location": "Teruel",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8632,6 +9340,9 @@
         "eventFormat": "in-person",
         "location": "Toledo",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8658,6 +9369,9 @@
         "eventFormat": "in-person",
         "location": "Valencia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8684,6 +9398,9 @@
         "eventFormat": "in-person",
         "location": "Valladolid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8710,6 +9427,9 @@
         "eventFormat": "in-person",
         "location": "Zaragoza",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8736,6 +9456,9 @@
         "eventFormat": "hybrid",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech4good",
           "women-in-tech",
@@ -8781,6 +9504,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8807,6 +9533,9 @@
         "eventFormat": "unknown",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8835,6 +9564,9 @@
         "eventFormat": "unknown",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -8863,6 +9595,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "data-warehouse",
           "data-lake",
@@ -8912,6 +9647,9 @@
         "eventFormat": "in-person",
         "location": "Gerona (Girona)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "free-software",
           "data-science",
@@ -8947,6 +9685,9 @@
         "eventFormat": "in-person",
         "location": "Tenerife",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "networking",
           "software-architecture",
@@ -8987,6 +9728,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -9014,6 +9758,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "git"
@@ -9047,6 +9794,9 @@
         "eventFormat": "in-person",
         "location": "Almería",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "3d-printing",
           "stem",
@@ -9095,6 +9845,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "product-management",
           "c",
@@ -9136,6 +9889,9 @@
         "eventFormat": "online",
         "location": "La Rioja",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -9162,6 +9918,9 @@
         "eventFormat": "in-person",
         "location": "Torremolinos",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "functional-programming",
           "scala",
@@ -9207,6 +9966,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "llm",
           "bdd",
@@ -9240,6 +10002,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "women-in-tech",
           "tech4good",
@@ -9271,6 +10036,9 @@
         "eventFormat": "in-person",
         "location": "Valladolid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "tech-ethics",
@@ -9309,6 +10077,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "free-software",
           "open-hardware",
@@ -9352,6 +10123,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "machine-learning",
           "deep-learning",
@@ -9398,6 +10172,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -9425,6 +10202,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "open-hardware",
@@ -9468,6 +10248,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "elixir",
           "distributed-systems",
@@ -9514,6 +10297,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -9542,6 +10328,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "kubernetes",
           "c",
@@ -9591,6 +10380,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -9619,6 +10411,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -9645,6 +10440,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -9673,6 +10471,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -9701,6 +10502,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech4good",
           "women-in-tech",
@@ -9732,6 +10536,9 @@
         "eventFormat": "unknown",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -9759,6 +10566,9 @@
         "eventFormat": "hybrid",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "java",
           "kotlin",
@@ -9817,6 +10627,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "azure",
           "csharp",
@@ -9866,6 +10679,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "javascript",
@@ -9912,6 +10728,9 @@
         "eventFormat": "hybrid",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "java",
           "virtual-reality",
@@ -9957,6 +10776,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "scala",
           "oop",
@@ -10002,6 +10824,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -10030,6 +10855,9 @@
         "eventFormat": "in-person",
         "location": "Murcia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -10060,6 +10888,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "functional-programming",
           "open-hardware",
@@ -10108,6 +10939,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "indie-games",
           "c",
@@ -10151,6 +10985,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -10180,6 +11017,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "event-driven",
           "tech4good",
@@ -10224,6 +11064,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "business-intelligence",
           "generative-ai"
@@ -10263,6 +11106,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -10292,6 +11138,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "robotics",
           "game-development",
@@ -10333,6 +11182,9 @@
         "eventFormat": "hybrid",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "java",
           "tech-ethics",
@@ -10377,6 +11229,9 @@
         "eventFormat": "in-person",
         "location": "Burgos",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "tech-ethics",
@@ -10431,6 +11286,9 @@
         "eventFormat": "hybrid",
         "location": "Cuenca",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "cloud-security",
           "web-security",
@@ -10480,6 +11338,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "azure",
           "tech-ethics",
@@ -10522,6 +11383,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "gcp",
@@ -10574,6 +11438,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "open-source",
@@ -10616,6 +11483,9 @@
         "eventFormat": "in-person",
         "location": "Murcia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "open-source"
@@ -10655,6 +11525,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "open-source",
@@ -10695,6 +11568,9 @@
         "eventFormat": "in-person",
         "location": "Valencia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "open-source"
@@ -10735,6 +11611,9 @@
         "eventFormat": "hybrid",
         "location": "Murcia, Murcia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "innovation",
           "game-development",
@@ -10784,6 +11663,9 @@
         "eventFormat": "hybrid",
         "location": "Murcia, Murcia",
         "topics": "TDD, Pair Programming, Katas,...",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "software-architecture",
           "software-craftsmanship",
@@ -10829,6 +11711,9 @@
         "eventFormat": "in-person",
         "location": "Albacete",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech-ethics",
           "robotics",
@@ -10866,6 +11751,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech-ethics",
           "azure",
@@ -10920,6 +11808,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "cybersecurity",
           "wordpress",
@@ -10961,6 +11852,9 @@
         "eventFormat": "in-person",
         "location": "Valencia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -10988,6 +11882,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "nodejs",
           "javascript",
@@ -11033,6 +11930,9 @@
         "eventFormat": "in-person",
         "location": "Coruña (Santiago de Compostela)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "generative-ai",
@@ -11070,6 +11970,9 @@
         "eventFormat": "in-person",
         "location": "Coruña",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "contacto@alvarolozano.dev",
@@ -11097,6 +12000,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "innovation",
           "c",
@@ -11140,6 +12046,9 @@
         "eventFormat": "in-person",
         "location": "Logroño, La Rioja",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -11167,6 +12076,9 @@
         "eventFormat": "in-person",
         "location": "Santander",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -11193,6 +12105,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "innovation",
           "tech-ethics",
@@ -11242,6 +12157,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "free-software",
           "software-architecture",
@@ -11284,6 +12202,9 @@
         "eventFormat": "hybrid",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -11310,6 +12231,9 @@
         "eventFormat": "hybrid",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -11337,6 +12261,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "software-architecture",
           "software-craftsmanship",
@@ -11426,6 +12353,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "web-security",
           "cybersecurity",
@@ -11476,6 +12406,9 @@
         "eventFormat": "in-person",
         "location": "Logroño",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "web-security",
           "cybersecurity",
@@ -11526,6 +12459,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "web-security",
           "cloud-security",
@@ -11576,6 +12512,9 @@
         "eventFormat": "in-person",
         "location": "Valencia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -11606,6 +12545,9 @@
         "eventFormat": "in-person",
         "location": "Pamplona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "free-software",
           "software-architecture",
@@ -11662,6 +12604,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -11688,6 +12633,9 @@
         "eventFormat": "in-person",
         "location": "Coruña",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -11717,6 +12665,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "software-architecture"
@@ -11749,6 +12700,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "functional-programming",
           "php",
@@ -11789,6 +12743,9 @@
         "eventFormat": "unknown",
         "location": "Vigo, Galicia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -11818,6 +12775,9 @@
         "eventFormat": "in-person",
         "location": "Oviedo, Asturias",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech-ethics",
           "robotics",
@@ -11851,6 +12811,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "data-visualization",
           "data-engineering",
@@ -11899,6 +12862,9 @@
         "eventFormat": "in-person",
         "location": "Cádiz",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "azure",
           "c",
@@ -11943,6 +12909,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "prestashop",
           "c",
@@ -11989,6 +12958,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "product-management",
           "ddd",
@@ -12036,6 +13008,9 @@
         "eventFormat": "in-person",
         "location": "Valladolid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -12066,6 +13041,9 @@
         "eventFormat": "in-person",
         "location": "Vigo, Galicia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "software-craftsmanship",
           "software-architecture",
@@ -12122,6 +13100,9 @@
         "eventFormat": "in-person",
         "location": "Granada, España",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "data-science",
           "python",
@@ -12178,6 +13159,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "data-warehouse",
           "data-lake",
@@ -12230,6 +13214,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "data-science",
           "data-visualization",
@@ -12280,6 +13267,9 @@
         "eventFormat": "in-person",
         "location": "Coruña",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "python",
           "functional-programming",
@@ -12331,6 +13321,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "python"
         ],
@@ -12360,6 +13353,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "python",
           "diversity",
@@ -12408,6 +13404,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -12438,6 +13437,9 @@
         "eventFormat": "in-person",
         "location": "Vigo, Galicia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "python",
           "data-science",
@@ -12481,6 +13483,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "ci-cd",
           "software-architecture",
@@ -12526,6 +13531,9 @@
         "eventFormat": "in-person",
         "location": "Alicante",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "react",
           "women-in-tech",
@@ -12582,6 +13590,9 @@
         "eventFormat": "in-person",
         "location": "La Rioja",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "csharp",
           "big-data",
@@ -12630,6 +13641,9 @@
         "eventFormat": "online",
         "location": "La Rioja",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "git",
           "python",
@@ -12674,6 +13688,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -12702,6 +13719,9 @@
         "eventFormat": "in-person",
         "location": "Córdoba",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "free-software",
           "data-engineering",
@@ -12751,6 +13771,9 @@
         "eventFormat": "in-person",
         "location": "Vigo, Galicia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -12780,6 +13803,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "r-lang",
           "statistics",
@@ -12831,6 +13857,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "generative-ai",
           "tech4good",
@@ -12870,6 +13899,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "vscode",
           "python",
@@ -12914,6 +13946,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -12942,6 +13977,9 @@
         "eventFormat": "in-person",
         "location": "Canarias",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -12972,6 +14010,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "software-architecture",
           "software-craftsmanship",
@@ -13023,6 +14064,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "software-craftsmanship",
           "software-architecture",
@@ -13070,6 +14114,9 @@
         "eventFormat": "hybrid",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "software-architecture",
           "software-craftsmanship",
@@ -13114,6 +14161,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "startups"
         ],
@@ -13145,6 +14195,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "event-driven"
         ],
@@ -13183,6 +14236,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "lean-startup",
           "tech4good",
@@ -13237,6 +14293,9 @@
         "eventFormat": "in-person",
         "location": "Salamanca",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "lean-startup",
           "startups",
@@ -13278,6 +14337,9 @@
         "eventFormat": "hybrid",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "distributed-storage",
@@ -13327,6 +14389,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "java",
           "software-craftsmanship",
@@ -13375,6 +14440,9 @@
         "eventFormat": "unknown",
         "location": "Sevilla",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -13402,6 +14470,9 @@
         "eventFormat": "in-person",
         "location": "Vigo, Galicia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -13430,6 +14501,9 @@
         "eventFormat": "in-person",
         "location": "Galicia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "git",
           "open-source",
@@ -13476,6 +14550,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "info@t3chfest.es",
@@ -13510,6 +14587,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "generative-ai",
           "c",
@@ -13545,6 +14625,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -13573,6 +14656,9 @@
         "eventFormat": "hybrid",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "tech4good",
@@ -13611,6 +14697,9 @@
         "eventFormat": "in-person",
         "location": "Tenerife",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "game-development",
           "azure",
@@ -13655,6 +14744,9 @@
         "eventFormat": "in-person",
         "location": "Bilbao",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "free-software",
           "software-architecture",
@@ -13690,6 +14782,9 @@
         "eventFormat": "in-person",
         "location": "Burgos",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -13717,6 +14812,9 @@
         "eventFormat": "in-person",
         "location": "Valencia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -13747,6 +14845,9 @@
         "eventFormat": "in-person",
         "location": "Ciudad Real (Tomelloso)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "web-performance",
           "javascript",
@@ -13806,6 +14907,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "innovation",
           "design-patterns",
@@ -13861,6 +14965,9 @@
         "eventFormat": "in-person",
         "location": "Salamanca",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -13887,6 +14994,9 @@
         "eventFormat": "in-person",
         "location": "Valencia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -13916,6 +15026,9 @@
         "eventFormat": "in-person",
         "location": "Vigo, Galicia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -13945,6 +15058,9 @@
         "eventFormat": "hybrid",
         "location": "Valencia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "game-development",
           "indie-games",
@@ -13998,6 +15114,9 @@
         "eventFormat": "in-person",
         "location": "Valencia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "startups",
           "healthtech",
@@ -14055,6 +15174,9 @@
         "eventFormat": "in-person",
         "location": "Vigo, Galicia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "cybersecurity",
           "cloud-security",
@@ -14094,6 +15216,9 @@
         "eventFormat": "unknown",
         "location": "Vigo, Galicia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -14122,6 +15247,9 @@
         "eventFormat": "unknown",
         "location": "Vigo, Galicia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "python",
           "generative-ai"
@@ -14157,6 +15285,9 @@
         "communityType": "tech-meetup",
         "eventFormat": "unknown",
         "location": "Vigo, Galicia",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "urls": {},
@@ -14181,6 +15312,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -14211,6 +15345,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "vue",
           "javascript",
@@ -14254,6 +15391,9 @@
         "eventFormat": "in-person",
         "location": "Valencia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -14280,6 +15420,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "info@wasm.io",
@@ -14310,6 +15453,9 @@
         "eventFormat": "in-person",
         "location": "Tenerife",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "web3",
           "tech4good",
@@ -14360,6 +15506,9 @@
         "eventFormat": "in-person",
         "location": "Valladolid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -14387,6 +15536,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "ux-ui",
           "css",
@@ -14431,6 +15583,9 @@
         "eventFormat": "in-person",
         "location": "Almería",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "robotics",
           "tech-ethics"
@@ -14461,6 +15616,9 @@
         "eventFormat": "unknown",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -14489,6 +15647,9 @@
         "eventFormat": "hybrid",
         "location": "Madrid",
         "topics": "women-in-tech, diversity, mentoring, stem, tech4good",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "women-in-tech",
           "tech-ethics",
@@ -14530,6 +15691,9 @@
         "eventFormat": "in-person",
         "location": "Zaragoza",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -14556,6 +15720,9 @@
         "eventFormat": "in-person",
         "location": "Madrid (Tielmes)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -14586,6 +15753,9 @@
         "eventFormat": "in-person",
         "location": "Málaga (Alhaurín de la Torre, )",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -14616,6 +15786,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -14645,6 +15818,9 @@
         "eventFormat": "in-person",
         "location": "Madrid (Griñón)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "wordpress",
@@ -14696,6 +15872,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "c"
@@ -14728,6 +15907,9 @@
         "eventFormat": "in-person",
         "location": "Madrid (Alcalá de Henares)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -14775,6 +15957,9 @@
         "eventFormat": "in-person",
         "location": "Alicante",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -14824,6 +16009,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -14872,6 +16060,9 @@
         "eventFormat": "in-person",
         "location": "Benidorm",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -14919,6 +16110,9 @@
         "eventFormat": "in-person",
         "location": "Bilbao",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -14969,6 +16163,9 @@
         "eventFormat": "in-person",
         "location": "Cartagena, Murcia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -15017,6 +16214,9 @@
         "eventFormat": "in-person",
         "location": "Castellón de la Plana",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -15064,6 +16264,9 @@
         "eventFormat": "in-person",
         "location": "Chiclana, Cádiz",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -15109,6 +16312,9 @@
         "eventFormat": "in-person",
         "location": "Madrid (Collado Villalba)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -15137,6 +16343,9 @@
         "eventFormat": "in-person",
         "location": "Coruña",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "c",
@@ -15185,6 +16394,9 @@
         "eventFormat": "in-person",
         "location": "Alicante (Denia)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "innovation",
@@ -15236,6 +16448,9 @@
         "eventFormat": "in-person",
         "location": "Coruña (Ferrol)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -15283,6 +16498,9 @@
         "eventFormat": "in-person",
         "location": "Granada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "c",
@@ -15331,6 +16549,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona (Granollers)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "c",
@@ -15376,6 +16597,9 @@
         "eventFormat": "in-person",
         "location": "Madrid (Griñón)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -15425,6 +16649,9 @@
         "eventFormat": "in-person",
         "location": "Huelva",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -15473,6 +16700,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona (Igualada)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "robotics",
@@ -15518,6 +16748,9 @@
         "eventFormat": "in-person",
         "location": "León",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "digital-marketing",
@@ -15569,6 +16802,9 @@
         "eventFormat": "in-person",
         "location": "Logroño",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -15617,6 +16853,9 @@
         "eventFormat": "in-person",
         "location": "Lugo",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "c",
@@ -15664,6 +16903,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -15712,6 +16954,9 @@
         "eventFormat": "in-person",
         "location": "Mallorca",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -15760,6 +17005,9 @@
         "eventFormat": "in-person",
         "location": "Málaga (Marbella)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -15807,6 +17055,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona (Mataró)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "geospatial",
@@ -15854,6 +17105,9 @@
         "eventFormat": "in-person",
         "location": "Oviedo, Asturias",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -15902,6 +17156,9 @@
         "eventFormat": "hybrid",
         "location": "Ponferrada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -15949,6 +17206,9 @@
         "eventFormat": "in-person",
         "location": "Pontevedra",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -15998,6 +17258,9 @@
         "eventFormat": "in-person",
         "location": "Santander",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "c",
@@ -16045,6 +17308,9 @@
         "eventFormat": "in-person",
         "location": "Coruña (Santiago de Compostela)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "c",
@@ -16093,6 +17359,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "design-patterns",
@@ -16141,6 +17410,9 @@
         "eventFormat": "in-person",
         "location": "Tarragona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "c",
@@ -16188,6 +17460,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona (Terrassa)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "c",
@@ -16235,6 +17510,9 @@
         "eventFormat": "in-person",
         "location": "Toledo",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -16263,6 +17541,9 @@
         "eventFormat": "in-person",
         "location": "Tarragona (Tortosa)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -16311,6 +17592,9 @@
         "eventFormat": "in-person",
         "location": "Madrid (Torrelodones)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "generative-ai",
@@ -16358,6 +17642,9 @@
         "eventFormat": "in-person",
         "location": "Valencia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -16407,6 +17694,9 @@
         "eventFormat": "in-person",
         "location": "Valladolid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "c",
@@ -16454,6 +17744,9 @@
         "eventFormat": "in-person",
         "location": "Vigo, Galicia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "c",
@@ -16503,6 +17796,9 @@
         "eventFormat": "in-person",
         "location": "Álava (Vitoria-Gasteiz)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -16550,6 +17846,9 @@
         "eventFormat": "in-person",
         "location": "Zaragoza",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "open-source",
@@ -16600,6 +17899,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "deep-learning",
           "digital-forensics",
@@ -16648,6 +17950,9 @@
         "eventFormat": "in-person",
         "location": "Coruña (Santiago de Compostela)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "sql-databases",
           "nosql-databases",
@@ -16685,6 +17990,9 @@
         "eventFormat": "hybrid",
         "location": "Jaén",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech-ethics",
           "game-development"
@@ -16719,6 +18027,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "devops, platform-engineering, site-reliability-engineering, cloud, cloud-security, cybersecurity, ci/cd, infrastructure, automation, software-architecture",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "mlops"
         ],
@@ -16755,6 +18066,9 @@
         "eventFormat": "in-person",
         "location": "Coruña (Santiago de Compostela)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "free-software",
           "r-lang",
@@ -16789,6 +18103,9 @@
         "eventFormat": "in-person",
         "location": "Málaga",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "cybersecurity",
           "tech-ethics",
@@ -16826,6 +18143,9 @@
         "eventFormat": "in-person",
         "location": "Logroño, La Rioja",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -16856,6 +18176,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "java",
           "llm"
@@ -16893,6 +18216,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "javascript",
@@ -16948,6 +18274,9 @@
         "eventFormat": "in-person",
         "location": "Coruña",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "digital-marketing",
           "seo",
@@ -16997,6 +18326,9 @@
         "eventFormat": "in-person",
         "location": "Coruña",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "sql-databases",
           "nosql-databases",
@@ -17044,6 +18376,9 @@
         "eventFormat": "in-person",
         "location": "Coruña",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "sql-databases",
           "nosql-databases",
@@ -17096,6 +18431,9 @@
         "eventFormat": "hybrid",
         "location": "Madrid y resto de España",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "git",
           "game-development",
@@ -17148,6 +18486,9 @@
         "eventFormat": "in-person",
         "location": "Menorca",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "tech-ethics",
@@ -17191,6 +18532,9 @@
         "eventFormat": "in-person",
         "location": "Menorca",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "generative-ai",
           "tech-ethics",
@@ -17242,6 +18586,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "ai-coding-agents",
           "deep-learning",
@@ -17287,6 +18634,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "python",
           "django",
@@ -17307,7 +18657,7 @@
           "twitter": "https://twitter.com/PyBCN",
           "youtube": "https://www.youtube.com/c/PythonBarcelona",
           "eventsUrl": "https://www.meetup.com/python-barcelona/",
-          "mailingList": "pybcn@googlegroups.com"
+          "mailingList": "https://groups.google.com/g/pybcn"
         },
         "thumbnailUrl": "images/python-barcelona.webp",
         "humanValidated": false
@@ -17331,6 +18681,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "python",
           "django",
@@ -17354,7 +18707,7 @@
           "twitter": "https://twitter.com/PyBCN",
           "youtube": "https://www.youtube.com/c/PythonBarcelona",
           "eventsUrl": "https://www.meetup.com/python-barcelona/",
-          "mailingList": "pyladies-bcn@googlegroups.com"
+          "mailingList": "https://groups.google.com/g/pyladies-bcn"
         },
         "thumbnailUrl": "images/pyladies-barcelona.webp",
         "humanValidated": false
@@ -17378,6 +18731,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "healthtech",
           "tech4good",
@@ -17419,6 +18775,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -17446,6 +18805,9 @@
         "eventFormat": "in-person",
         "location": "Ponferrada",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "azure",
           "c",
@@ -17488,6 +18850,9 @@
         "eventFormat": "in-person",
         "location": "Coruña",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech-ethics",
           "tech4good",
@@ -17532,6 +18897,9 @@
         "eventFormat": "in-person",
         "location": "Orense (Ourense)",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "wordpress",
           "c",
@@ -17582,6 +18950,9 @@
         "eventFormat": "in-person",
         "location": "Coruña",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "cryptocurrencies",
           "tech-ethics",
@@ -17625,6 +18996,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -17655,6 +19029,9 @@
         "eventFormat": "in-person",
         "location": "Bilbao",
         "topics": "Python & Tech",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "git",
           "python",
@@ -17700,6 +19077,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech4good",
           "women-in-tech",
@@ -17755,6 +19135,9 @@
         "eventFormat": "in-person",
         "location": "Valencia",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "go",
           "software-architecture",
@@ -17804,6 +19187,9 @@
         "eventFormat": "in-person",
         "location": "",
         "topics": "Haskell, Programación funcional, Código abierto",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "haskell",
           "functional-programming",
@@ -17850,6 +19236,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "Web3",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "web3",
           "cryptocurrencies",
@@ -17894,6 +19283,9 @@
         "eventFormat": "in-person",
         "location": "Madrid",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "design-patterns"
         ],
@@ -17926,6 +19318,9 @@
         "eventFormat": "in-person",
         "location": "Asturias",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "azure",
           "windows",
@@ -17976,6 +19371,9 @@
         "eventFormat": "in-person",
         "location": "A Coruña, España",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -18005,6 +19403,9 @@
         "eventFormat": "in-person",
         "location": "Roquetas de Mar, Almería",
         "topics": "Seguridad, Hacking",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -18034,6 +19435,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla, España",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "tech4good",
@@ -18084,6 +19488,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla, España",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "ethereum",
           "distributed-systems",
@@ -18128,6 +19535,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla, España",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -18157,6 +19567,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla España",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -18186,6 +19599,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla, España",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -18218,6 +19634,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla, España",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "robotics",
           "game-development",
@@ -18264,6 +19683,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla, España",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -18295,6 +19717,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla, España",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech-ethics",
           "networking",
@@ -18336,6 +19761,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla, Spain",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [
           "community-manager",
@@ -18374,6 +19802,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla, Spain",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -18403,6 +19834,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla, Spain",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "c",
           "azure",
@@ -18446,6 +19880,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla, Spain",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -18475,6 +19912,9 @@
         "eventFormat": "hybrid",
         "location": "Sevilla, Spain",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "iot",
           "event-driven",
@@ -18523,6 +19963,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla, Spain",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -18553,6 +19996,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla, Spain",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "virtualization",
           "game-development",
@@ -18606,6 +20052,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla, Spain",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "go",
           "tech-ethics",
@@ -18648,6 +20097,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla, Spain",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "generative-ai",
           "llm",
@@ -18704,6 +20156,9 @@
         "eventFormat": "in-person",
         "location": "Anceu, Pontevedra",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech4good",
           "women-in-tech",
@@ -18742,6 +20197,9 @@
         "eventFormat": "hybrid",
         "location": "Barcelona, Spain",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "cybersecurity",
           "ethical-hacking",
@@ -18791,6 +20249,9 @@
         "eventFormat": "hybrid",
         "location": "Valencia, Spain",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "robotics",
           "tech-ethics",
@@ -18831,6 +20292,9 @@
         "eventFormat": "hybrid",
         "location": "Alicante",
         "topics": "ciencia, tecnología, comunidad, aprendizaje, conocimiento compartido, desarrollo personal, desarrollo profesional, metodologías de aprendizaje, innovación, formación, networking, colaboración, multidisciplinar, educación, divulgación científica, asociación sin ánimo de lucro",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "gcp",
           "tech-ethics",
@@ -18882,6 +20346,9 @@
         "eventFormat": "in-person",
         "location": "Alicante",
         "topics": "ciencia, tecnología, comunidad, aprendizaje, conocimiento compartido, desarrollo personal, desarrollo profesional, metodologías de aprendizaje, innovación, formación, networking, colaboración, multidisciplinar, educación, divulgación científica, asociación sin ánimo de lucro",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "game-development",
           "tech-ethics",
@@ -18931,6 +20398,9 @@
         "eventFormat": "in-person",
         "location": "Viator, Almería",
         "topics": "desarrollo de videojuegos,programación",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "indie-games",
           "functional-programming",
@@ -18967,6 +20437,9 @@
         "eventFormat": "in-person",
         "location": "Valencia",
         "topics": "Product Manager, product designer, Product owner",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "soporte@fourvenues.com",
@@ -18998,6 +20471,9 @@
         "eventFormat": "in-person",
         "location": "Gijón, Spain",
         "topics": "AWS",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -19025,6 +20501,9 @@
         "eventFormat": "in-person",
         "location": "Sevilla, España",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "sql-databases",
           "nosql-databases",
@@ -19062,6 +20541,9 @@
         "eventFormat": "in-person",
         "location": "Madrid, España",
         "topics": "disidencia, creatividad, tecnología crítica, diversidad, inclusión, comunidad tech, arte y tecnología, diseño experimental, inteligencia artificial, automatización, soft skills, narrativa, performance, innovación, innovación no normativa, enfoques híbridos, espacios seguros, colaboración, sensibilidad, identidades diversas, crítica cultural, tech con perspectiva humana",
+        "langs": [
+          "es"
+        ],
         "tags": [],
         "targetAudience": [],
         "contactInfo": "",
@@ -19091,6 +20573,9 @@
         "eventFormat": "in-person",
         "location": "Barcelona, España",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "event-driven",
           "tech4good",
@@ -19130,6 +20615,9 @@
         "eventFormat": "in-person",
         "location": "Málaga, Spain",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "tech-ethics",
           "c",
@@ -19182,6 +20670,9 @@
         "eventFormat": "in-person",
         "location": "Girona",
         "topics": "accessibility, diversity, ethics, tech4good, frontend-developer, ux-designer, ui-designer, web, inclusive-design",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "digital-forensics",
           "digital-activism",
@@ -19228,6 +20719,9 @@
         "eventFormat": "in-person",
         "location": "Almería",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "generative-ai",
           "startups",
@@ -19265,6 +20759,9 @@
         "eventFormat": "hybrid",
         "location": "Girona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "web-performance",
           "cybersecurity",
@@ -19326,6 +20823,9 @@
         "eventFormat": "in-person",
         "location": "Girona",
         "topics": "",
+        "langs": [
+          "es"
+        ],
         "tags": [
           "rust"
         ],
@@ -19335,7 +20835,7 @@
         "urls": {
           "github": "https://github.com/rust-girona/"
         },
-        "thumbnailUrl": "",
+        "thumbnailUrl": "images/rust-girona.webp",
         "humanValidated": true
       }
     }

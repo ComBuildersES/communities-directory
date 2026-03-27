@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useCommunityActions } from "../../stores/community.store.js";
 import { buildContributionPath } from "../../lib/communitySubmission";
+import { normalizeCommunityLangs } from "../../lib/communityLanguages.js";
 import "./CommunityModal.css";
 
 const APP_URL = "https://combuilderses.github.io/communities-directory/";
@@ -177,6 +178,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
     eventFormat,
     location: rawLocation = "",
     shortDescription,
+    langs,
     lastReviewed,
     contactInfo,
     communityUrl,
@@ -189,6 +191,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
   } = community;
 
   const hasMapCoords = latLon?.lat != null && latLon?.lon != null;
+  const languages = normalizeCommunityLangs(langs);
 
   const location = normalizeLocation(rawLocation);
   // URLs a mostrar: las del objeto urls, y communityUrl como fallback si no hay ninguna web
@@ -246,6 +249,17 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                   {t(`eventFormat.${eventFormat}`)}
                 </button>
               )}
+              {languages.map((code) => (
+                <button
+                  key={code}
+                  type="button"
+                  className="modal-badge modal-badge--language"
+                  onClick={() => applyFilter("langs", code)}
+                  title={t("communityModal.filterByLanguage", { language: t(`language.${code}`) })}
+                >
+                  {t(`language.${code}`)}
+                </button>
+              ))}
               {location && hasMapCoords && onGoToMap ? (
                 <button
                   type="button"

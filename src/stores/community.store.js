@@ -5,6 +5,7 @@ import { buildInverseIndex } from "../data/invertedindex";
 import { devtools } from "zustand/middleware";
 import { searchFaceted } from "../data/searchFaceted";
 import { parseDirectoryFilters } from "../lib/communitySubmission";
+import { normalizeCommunityLangs } from "../lib/communityLanguages.js";
 
 const TAGS_URL = `${import.meta.env.BASE_URL}data/tags.json`;
 const AUDIENCE_URL = `${import.meta.env.BASE_URL}data/audience.json`;
@@ -96,10 +97,16 @@ const useCommunityStore = create(
           const baseUrl = import.meta.env.BASE_URL;
           const data = rawData.map((c) => {
             const { thumbnailUrl } = c;
-            if (!thumbnailUrl || thumbnailUrl.startsWith("http") || thumbnailUrl.startsWith("//") || thumbnailUrl.startsWith("/")) {
-              return c;
-            }
-            return { ...c, thumbnailUrl: `${baseUrl}${thumbnailUrl}` };
+            const normalizedThumbnailUrl =
+              !thumbnailUrl || thumbnailUrl.startsWith("http") || thumbnailUrl.startsWith("//") || thumbnailUrl.startsWith("/")
+                ? thumbnailUrl
+                : `${baseUrl}${thumbnailUrl}`;
+
+            return {
+              ...c,
+              langs: normalizeCommunityLangs(c.langs),
+              thumbnailUrl: normalizedThumbnailUrl,
+            };
           });
           const cbMemberIds = new Set(cbMembers.map((m) => m.communityId));
           const cbMembersMap = cbMembers.reduce((map, { communityId, github }) => {

@@ -644,6 +644,18 @@
   outline: none;
 }
 
+.contribution-check-item[aria-pressed="true"] {
+  background: #244a86;
+  border-color: #244a86;
+  color: #f7fbff;
+  box-shadow: 0 12px 22px rgba(36, 74, 134, 0.18);
+}
+
+.contribution-check-item[aria-pressed="true"] .contribution-check-item-action {
+  background: rgba(247, 251, 255, 0.16);
+  color: #f7fbff;
+}
+
 .contribution-check-item-label {
   line-height: 1.2;
 }

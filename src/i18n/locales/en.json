@@ -19,6 +19,22 @@
     "meta-community": "Meta-community",
     "mutual-aid": "Mutual Aid Group"
   },
+  "language": {
+    "es": "Spanish",
+    "en": "English",
+    "ca": "Catalan",
+    "eu": "Basque",
+    "gl": "Galician",
+    "oc": "Aranese"
+  },
+  "languageShort": {
+    "es": "ES",
+    "en": "EN",
+    "ca": "CA",
+    "eu": "EU",
+    "gl": "GL",
+    "oc": "OC"
+  },
   "footer": {
     "maintainedWith": "Project maintained with 💖",
     "byCommunity": "by the community",
@@ -84,6 +100,7 @@
       "status": "Status",
       "eventFormat": "Format",
       "communityType": "Type",
+      "langs": "Language",
       "tags": "Topics",
       "targetAudience": "Audience",
       "name": "Community"
@@ -101,12 +118,15 @@
   },
   "communityCard": {
     "viewDetails": "View details for {{name}}",
-    "cbBadgeTitle": "People who run this community are also part of the Community Builders community that drives this directory"
+    "cbBadgeTitle": "People who run this community are also part of the Community Builders community that drives this directory",
+    "languagesBadgeLabel": "Community languages",
+    "languageBadgeTitle": "This community operates in {{language}}"
   },
   "sidebar": {
     "communityType": "Community Type",
     "eventFormat": "Event Type",
-    "status": "Community Status"
+    "status": "Community Status",
+    "langs": "Languages"
   },
   "app": {
     "checkingFreshData": "Checking for a more recent version of the directory before opening details or suggesting changes.",
@@ -124,6 +144,7 @@
     "filterByStatus": "Filter by status {{status}}",
     "filterByType": "Filter by community type {{communityType}}",
     "filterByFormat": "Filter by event type {{eventFormat}}",
+    "filterByLanguage": "Filter by language {{language}}",
     "filterByTag": "Filter by {{tag}}",
     "filterByAudience": "Filter by {{audience}}",
     "viewOnMap": "View on map",
@@ -346,6 +367,9 @@
       "formatLabel": "Format",
       "locationLabel": "Location",
       "locationPlaceholder": "Madrid, Spain or Itinerant",
+      "langsLabel": "Languages",
+      "langsHelp": "Select the languages the community usually communicates or organizes in. If unsure, keep at least Spanish selected.",
+      "langSelected": "Selected",
       "shortDescriptionLabel": "Short description",
       "shortDescriptionPlaceholder": "Describe in one sentence what this community offers, its focus or value proposition. Avoid repeating the tags or target audience already selected.",
       "shortDescriptionExample": "Example: \"Non-profit collective that organizes monthly meetups to share practical experiences on software architecture and platform engineering.\"",

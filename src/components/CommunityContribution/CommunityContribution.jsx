@@ -23,6 +23,10 @@ import {
   toggleSelection,
   URL_PLATFORM_OPTIONS,
 } from "../../lib/communitySubmission";
+import {
+  COMMUNITY_LANGUAGE_OPTIONS,
+  normalizeCommunityLangs,
+} from "../../lib/communityLanguages.js";
 import { inferProvinceIdFromNominatim } from "../../lib/provinceNormalization";
 import "./CommunityContribution.css";
 
@@ -623,22 +627,29 @@ function UrlFields({ primaryUrl, onPrimaryUrlChange, urls, onUrlChange }) {
     bluesky:        { title: t("contribution.urlHelp.bluesky.title"),        description: t("contribution.urlHelp.bluesky.description"),        bullets: [t("contribution.urlHelp.bluesky.bullet0")] },
     twitch:         { title: t("contribution.urlHelp.twitch.title"),         description: t("contribution.urlHelp.twitch.description"),         bullets: [t("contribution.urlHelp.twitch.bullet0")] },
   };
+  const localizedPlatformOptions = useMemo(
+    () => URL_PLATFORM_OPTIONS.map(({ key }) => ({
+      key,
+      label: t(`communityModal.url.${key}`, { defaultValue: key }),
+    })),
+    [t]
+  );
   const visiblePlatforms = useMemo(
-    () => URL_PLATFORM_OPTIONS.filter(({ key }) => (urls[key] ?? "").trim() || expandedPlatforms.includes(key)),
-    [expandedPlatforms, urls]
+    () => localizedPlatformOptions.filter(({ key }) => (urls[key] ?? "").trim() || expandedPlatforms.includes(key)),
+    [expandedPlatforms, localizedPlatformOptions, urls]
   );
   const hiddenPlatforms = useMemo(
-    () => URL_PLATFORM_OPTIONS.filter(({ key }) => !visiblePlatforms.some((platform) => platform.key === key)),
-    [visiblePlatforms]
+    () => localizedPlatformOptions.filter(({ key }) => !visiblePlatforms.some((platform) => platform.key === key)),
+    [localizedPlatformOptions, visiblePlatforms]
   );
 
   useEffect(() => {
-    const filledPlatforms = URL_PLATFORM_OPTIONS
+    const filledPlatforms = localizedPlatformOptions
       .filter(({ key }) => (urls[key] ?? "").trim())
       .map(({ key }) => key);
 
     setExpandedPlatforms((current) => [...new Set([...current, ...filledPlatforms])]);
-  }, [urls]);
+  }, [localizedPlatformOptions, urls]);
 
   const showPlatform = (key) => {
     setExpandedPlatforms((current) => [...new Set([...current, key])]);
@@ -788,6 +799,7 @@ function buildEditableDraftSignature(draft) {
     location: draft.location,
     shortDescription: draft.shortDescription,
     topics: draft.topics,
+    langs: draft.langs,
     tags: draft.tags,
     targetAudience: draft.targetAudience,
     contactInfo: draft.contactInfo,
@@ -808,6 +820,7 @@ function mergeDraftWithProposal(baseDraft, proposalDraft) {
   return {
     ...baseDraft,
     ...proposalDraft,
+    langs: Array.isArray(proposalDraft.langs) ? normalizeCommunityLangs(proposalDraft.langs) : baseDraft.langs,
     tags: Array.isArray(proposalDraft.tags) ? proposalDraft.tags : baseDraft.tags,
     targetAudience: Array.isArray(proposalDraft.targetAudience) ? proposalDraft.targetAudience : baseDraft.targetAudience,
     urls: proposalDraft.urls ?? baseDraft.urls,
@@ -882,6 +895,13 @@ export function CommunityContribution({
   const [draft, setDraft] = useState(() => mergeDraftWithProposal(getCommunityDraft(existingCommunity, nextId), proposalDraft));
   const [tagQuery, setTagQuery] = useState("");
   const [audienceQuery, setAudienceQuery] = useState("");
+  const languageOptions = useMemo(
+    () => COMMUNITY_LANGUAGE_OPTIONS.map((code) => ({
+      id: code,
+      label: t(`language.${code}`),
+    })),
+    [t]
+  );
   const [openHelpField, setOpenHelpField] = useState(null);
   const [isCommunityTypeModalOpen, setIsCommunityTypeModalOpen] = useState(false);
   const [isJsonExpanded, setIsJsonExpanded] = useState(false);
@@ -924,6 +944,7 @@ export function CommunityContribution({
       setDraft({
         ...baseDraft,
         ...storedPayload,
+        langs: Array.isArray(storedPayload.langs) ? normalizeCommunityLangs(storedPayload.langs) : baseDraft.langs,
         tags: Array.isArray(storedPayload.tags) ? storedPayload.tags : baseDraft.tags,
         targetAudience: Array.isArray(storedPayload.targetAudience) ? storedPayload.targetAudience : baseDraft.targetAudience,
         urls: storedPayload.urls ?? baseDraft.urls,
@@ -955,7 +976,7 @@ export function CommunityContribution({
   }, [currentCommunityBaselineSignature, datasetSignature, latestBaseDraft, nextId, storageKey]);
 
   useEffect(() => {
-    if (draft.communityType !== "Organización paraguas") return;
+    if (draft.communityType !== "umbrella-org") return;
     if (draft.location === "n/a") return;
 
     setDraft((current) => ({
@@ -987,7 +1008,7 @@ export function CommunityContribution({
   );
   const shouldShowLocationField = (
     EVENT_FORMATS_WITH_LOCATION.includes(draft.eventFormat) &&
-    draft.communityType !== "Organización paraguas"
+    draft.communityType !== "umbrella-org"
   );
   const previewThumbnailUrl = draft.replaceThumbnail
     ? draft.thumbnailUrl
@@ -1621,6 +1642,44 @@ export function CommunityContribution({
             </p>
             <p className="contribution-field-counter">
               {(draft.shortDescription ?? "").length}/{SHORT_DESCRIPTION_MAX_LENGTH}
+            </p>
+          </div>
+
+          <div className="field contribution-grid-span-2">
+            <label className="label" htmlFor="community-langs">
+              {t("contribution.form.langsLabel")} <RequiredMark />
+            </label>
+            <div id="community-langs" className="contribution-check-grid" role="group" aria-label={t("contribution.form.langsLabel")}>
+              {languageOptions.map((option) => {
+                const isSelected = draft.langs.includes(option.id);
+
+                return (
+                  <button
+                    key={option.id}
+                    type="button"
+                    className="contribution-check-item"
+                    aria-pressed={isSelected}
+                    onClick={() => {
+                      setHasUserInteracted(true);
+                      setDraft((current) => {
+                        const nextLangs = toggleSelection(current.langs, option.id);
+                        return {
+                          ...current,
+                          langs: nextLangs.length > 0 ? nextLangs : ["es"],
+                        };
+                      });
+                    }}
+                  >
+                    <span className="contribution-check-item-label">{option.label}</span>
+                    <span className="contribution-check-item-action">
+                      {isSelected ? t("contribution.form.langSelected") : t("contribution.taxonomy.add")}
+                    </span>
+                  </button>
+                );
+              })}
+            </div>
+            <p className="contribution-field-note">
+              {t("contribution.form.langsHelp")}
             </p>
           </div>
 

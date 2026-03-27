@@ -28,6 +28,7 @@ async function generateGeoJSON() {
           eventFormat: c.eventFormat,
           location: c.location,
           topics: c.topics,
+          langs: c.langs,
           tags: c.tags,
           targetAudience: c.targetAudience,
           contactInfo: c.contactInfo,
