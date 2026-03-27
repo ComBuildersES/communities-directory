@@ -16376,10 +16376,10 @@
       "properties": {
         "id": 497,
         "name": "WordPress Coruña",
-        "status": "active",
-        "lastReviewed": "18/10/2024",
-        "communityType": "tech-meetup",
-        "eventFormat": "in-person",
+        "status": "Activa",
+        "lastReviewed": "25/03/2026",
+        "communityType": "Tech Meetup",
+        "eventFormat": "Presencial",
         "location": "Coruña",
         "topics": "",
         "langs": [
@@ -16412,7 +16412,7 @@
           "eventsUrl": "https://www.meetup.com/es-ES/wordpresscoruna/"
         },
         "thumbnailUrl": "images/wordpress-coruna.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {

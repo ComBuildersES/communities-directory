@@ -17712,10 +17712,10 @@
   {
     "id": 497,
     "name": "WordPress Coruña",
-    "status": "active",
-    "lastReviewed": "18/10/2024",
-    "communityType": "tech-meetup",
-    "eventFormat": "in-person",
+    "status": "Activa",
+    "lastReviewed": "25/03/2026",
+    "communityType": "Tech Meetup",
+    "eventFormat": "Presencial",
     "location": "Coruña",
     "topics": "",
     "tags": [
@@ -17750,10 +17750,12 @@
       "lon": -8.3958532
     },
     "displayOnMap": true,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "Nuestro objetivo es difundir conocimientos sobre este CMS de código abierto y dar la oportunidad a asistentes y ponentes de compartir sus experiencias.\nTanto si usas WordPress de forma personal como si trabajas con él, podrás disfrutar de estas jornadas gratuitas en A Coruña.",
+    "removalReason": ""
   },
   {
     "id": 498,
