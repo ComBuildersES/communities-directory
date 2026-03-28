@@ -42,7 +42,7 @@ arcgis-map {
   color: #30507d;
 }
 
-#map{
+#map {
   /* min-width: 82.44%; */
   max-width: calc(100% - 1rem);
 }
@@ -114,7 +114,7 @@ arcgis-map {
   white-space: nowrap;
   z-index: 10;
   pointer-events: auto;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .map-hidden-tooltip::after {
@@ -133,4 +133,187 @@ arcgis-map {
 
 .map-hidden-tooltip .map-results-link:hover {
   color: #a8d0ff;
+}
+
+.map-cluster-popup {
+  display: flex;
+  width: 208px;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.2rem 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.map-cluster-popup__chart {
+  position: relative;
+  width: 164px;
+  height: 164px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.map-cluster-popup__svg {
+  display: block;
+  width: 164px;
+  height: 164px;
+}
+
+.map-cluster-popup__track {
+  fill: none;
+  stroke: #edf2f7;
+}
+
+.map-cluster-popup__segment {
+  fill: none;
+  stroke-linecap: butt;
+  cursor: pointer;
+  transition: filter 0.18s ease, opacity 0.18s ease;
+}
+
+.map-cluster-popup__segment:focus-visible,
+.map-cluster-popup__segment.is-active {
+  filter: brightness(1.08) saturate(1.1);
+  opacity: 0.96;
+  outline: none;
+}
+
+.map-cluster-popup__center {
+  position: absolute;
+  inset: 50%;
+  display: flex;
+  width: 76px;
+  height: 76px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 10px 24px rgba(33, 50, 74, 0.14);
+  text-align: center;
+  z-index: 1;
+}
+
+.map-cluster-popup__total {
+  color: #21324a;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.map-cluster-popup__total-label {
+  color: #5a6d84;
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.map-cluster-popup__detail {
+  display: inline-flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 1.35rem;
+  color: #44556b;
+  font-size: 0.82rem;
+  line-height: 1.2;
+}
+
+.map-cluster-popup__detail-label {
+  font-weight: 600;
+}
+
+.map-cluster-popup__detail-value {
+  color: #21324a;
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+
+.map-cluster-popup__badge {
+  position: absolute;
+  display: inline-flex;
+  min-width: 28px;
+  height: 28px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0.38rem;
+  margin: 0;
+  border: 2px solid #ffffff;
+  border-radius: 999px;
+  box-shadow: 0 8px 16px rgba(33, 50, 74, 0.18);
+  background: none;
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.map-cluster-popup__badge.is-active,
+.map-cluster-popup__badge:focus-visible {
+  box-shadow: 0 10px 20px rgba(33, 50, 74, 0.24);
+  transform: translate(-50%, -50%) scale(1.06);
+  outline: none;
+}
+
+.map-cluster-popup__legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 0.45rem;
+  width: 100%;
+}
+
+.map-cluster-popup__legend-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  max-width: 100%;
+  padding: 0.26rem 0.5rem;
+  border: 1px solid #dde4ef;
+  border-radius: 999px;
+  background: #f8fbff;
+  color: #44556b;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.74rem;
+  line-height: 1.1;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, color 0.18s ease;
+}
+
+.map-cluster-popup__legend-item.is-active,
+.map-cluster-popup__legend-item:focus-visible,
+.map-cluster-popup__legend-item:hover {
+  border-color: #a9bdd9;
+  box-shadow: 0 6px 14px rgba(33, 50, 74, 0.12);
+  color: #21324a;
+  outline: none;
+}
+
+.map-cluster-popup__legend-swatch {
+  display: inline-flex;
+  width: 0.68rem;
+  height: 0.68rem;
+  flex: 0 0 auto;
+  border-radius: 999px;
+}
+
+.map-cluster-popup__legend-text {
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.esri-features__container:not(:empty) {
+  padding: 0px !important;
 }
