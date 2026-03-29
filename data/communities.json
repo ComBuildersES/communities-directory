@@ -14418,7 +14418,7 @@
       "telegram": "https://t.me/PythonEsp",
       "discord": "https://discord.com/invite/35E3Ph7Fez"
     },
-    "thumbnailUrl": "images/python-espana.webp",
+    "thumbnailUrl": "images/python-canarias.webp",
     "latLon": {
       "lat": null,
       "lon": null
@@ -18692,7 +18692,7 @@
     "id": 517,
     "name": "WordPress Santiago de Compostela",
     "status": "active",
-    "lastReviewed": "18/10/2024",
+    "lastReviewed": "30/03/2026",
     "communityType": "tech-meetup",
     "eventFormat": "in-person",
     "location": "Coruña (Santiago de Compostela)",
@@ -18718,10 +18718,10 @@
       "digital-marketer"
     ],
     "contactInfo": "",
-    "communityUrl": "https://www.meetup.com/santiago-de-compostela-wordpress-meetup-group/",
+    "communityUrl": "https://www.meetup.com/es-es/santiago-de-compostela-wordpress-meetup-group/",
     "urls": {
       "telegram": "https://t.me/+6faPK40eIFw1Njc0",
-      "eventsUrl": "https://www.meetup.com/santiago-de-compostela-wordpress-meetup-group/"
+      "eventsUrl": "https://www.meetup.com/es-es/santiago-de-compostela-wordpress-meetup-group/"
     },
     "thumbnailUrl": "images/wordpress-santiago-de-compostela.webp",
     "latLon": {
@@ -18732,7 +18732,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 512
   },
   {
     "id": 518,
@@ -22203,5 +22204,305 @@
     },
     "displayOnMap": false,
     "humanValidated": true
+  },
+  {
+    "id": 607,
+    "name": "Python Canarias",
+    "status": "active",
+    "lastReviewed": "30/03/2026",
+    "communityType": "tech-meetup",
+    "eventFormat": "unknown",
+    "location": "Canarias",
+    "shortDescription": "Asociación y comunidad de usuarios de Python en Canarias.",
+    "topics": "",
+    "tags": [
+      "python"
+    ],
+    "targetAudience": [],
+    "contactInfo": "info@pythoncanarias.es",
+    "communityUrl": "https://pythoncanarias.es/",
+    "urls": {
+      "twitter": "https://x.com/pythoncanarias",
+      "telegram": "https://t.me/joinchat/AJ7pmT-X0xZVPgWDIzGA-A"
+    },
+    "thumbnailUrl": "images/python-alicante.webp",
+    "latLon": {
+      "lat": 28,
+      "lon": -15.5
+    },
+    "displayOnMap": true,
+    "humanValidated": false,
+    "langs": [
+      "es"
+    ],
+    "parentId": 404
+  },
+  {
+    "id": 608,
+    "name": "Python Alicante",
+    "status": "inactive",
+    "lastReviewed": "30/03/2026",
+    "communityType": "tech-meetup",
+    "eventFormat": "in-person",
+    "location": "Alicante",
+    "shortDescription": "Comunidad para gente a la que le gusta y quiere aprender a programar en Python desde Alicante.",
+    "topics": "",
+    "tags": [
+      "python"
+    ],
+    "targetAudience": [],
+    "contactInfo": "",
+    "communityUrl": "https://www.meetup.com/es-es/python_alc/",
+    "urls": {
+      "twitter": "https://x.com/python_alc",
+      "telegram": "https://t.me/python_alc",
+      "github": "https://github.com/pythonalicante",
+      "eventsUrl": "https://www.meetup.com/es-es/python_alc/"
+    },
+    "thumbnailUrl": "images/python-asturias.webp",
+    "latLon": {
+      "lat": 38.34521,
+      "lon": -0.4809945
+    },
+    "displayOnMap": true,
+    "humanValidated": false,
+    "langs": [
+      "es"
+    ],
+    "parentId": 404
+  },
+  {
+    "id": 609,
+    "name": "Python Asturias",
+    "status": "active",
+    "lastReviewed": "30/03/2026",
+    "communityType": "tech-meetup",
+    "eventFormat": "hybrid",
+    "location": "Asturias",
+    "shortDescription": "Grupo de usuarios de Python en Asturias con eventos tanto presenciales como online.",
+    "topics": "",
+    "tags": [
+      "python"
+    ],
+    "targetAudience": [],
+    "contactInfo": "",
+    "communityUrl": "https://www.meetup.com/es-es/python-asturias/",
+    "urls": {
+      "telegram": "https://t.me/pythonasturias",
+      "eventsUrl": "https://www.meetup.com/es-es/python-asturias/"
+    },
+    "thumbnailUrl": "images/python-valencia.webp",
+    "latLon": {
+      "lat": 43.3602825,
+      "lon": -5.8447919
+    },
+    "displayOnMap": true,
+    "humanValidated": false,
+    "langs": [
+      "es"
+    ],
+    "parentId": 404
+  },
+  {
+    "id": 610,
+    "name": "Python Valencia",
+    "status": "active",
+    "lastReviewed": "30/03/2026",
+    "communityType": "tech-meetup",
+    "eventFormat": "in-person",
+    "location": "Valencia",
+    "shortDescription": "La comunidad de Python Valencia es un grupo de entusiastas que comparten conocimientos y organizan charlas y talleres.",
+    "topics": "",
+    "tags": [
+      "python"
+    ],
+    "targetAudience": [],
+    "contactInfo": "valencia@es.python.org",
+    "communityUrl": "https://python-valencia.es/",
+    "urls": {
+      "twitter": "https://x.com/python_vlc",
+      "telegram": "https://t.me/python_vlc",
+      "eventsUrl": "https://www.meetup.com/es-es/python-valencia-meetup/"
+    },
+    "thumbnailUrl": "images/python-zaragoza.webp",
+    "latLon": {
+      "lat": 39.4702393,
+      "lon": -0.3768049
+    },
+    "displayOnMap": true,
+    "humanValidated": false,
+    "langs": [
+      "es"
+    ],
+    "parentId": 404
+  },
+  {
+    "id": 611,
+    "name": "Python Zaragoza",
+    "status": "active",
+    "lastReviewed": "30/03/2026",
+    "communityType": "tech-meetup",
+    "eventFormat": "in-person",
+    "location": "Zaragoza",
+    "shortDescription": "Comunidad local para aprender, compartir y reunirse alrededor de Python en Zaragoza.",
+    "topics": "",
+    "tags": [
+      "python"
+    ],
+    "targetAudience": [],
+    "contactInfo": "zaragoza@es.python.org",
+    "communityUrl": "https://www.meetup.com/es-es/python_zgz/",
+    "urls": {
+      "twitter": "https://x.com/PythonZaragoza/",
+      "telegram": "https://t.me/python_zgz",
+      "eventsUrl": "https://www.meetup.com/es-es/python_zgz/"
+    },
+    "thumbnailUrl": "images/python-murcia.webp",
+    "latLon": {
+      "lat": 41.656837,
+      "lon": -0.8794245
+    },
+    "displayOnMap": true,
+    "humanValidated": false,
+    "langs": [
+      "es"
+    ],
+    "parentId": 404
+  },
+  {
+    "id": 612,
+    "name": "Python Murcia",
+    "status": "unknown",
+    "lastReviewed": "30/03/2026",
+    "communityType": "tech-meetup",
+    "eventFormat": "unknown",
+    "location": "Murcia",
+    "shortDescription": "Comunidad de programadores Python en Murcia, España.",
+    "topics": "",
+    "tags": [
+      "python"
+    ],
+    "targetAudience": [],
+    "contactInfo": "",
+    "communityUrl": "https://x.com/pythonmurcia",
+    "urls": {
+      "twitter": "https://x.com/pythonmurcia",
+      "telegram": "https://t.me/pythonmurcia"
+    },
+    "thumbnailUrl": "images/python-espana.webp",
+    "latLon": {
+      "lat": 37.9835334,
+      "lon": -1.129905
+    },
+    "displayOnMap": true,
+    "humanValidated": false,
+    "langs": [
+      "es"
+    ],
+    "parentId": 404
+  },
+  {
+    "id": 613,
+    "name": "GDG Barcelona",
+    "status": "active",
+    "lastReviewed": "30/03/2026",
+    "communityType": "tech-meetup",
+    "eventFormat": "in-person",
+    "location": "Barcelona",
+    "shortDescription": "Google Developer Group de Barcelona con encuentros de comunidad y divulgacion tecnica.",
+    "topics": "",
+    "tags": [
+      "gcp"
+    ],
+    "targetAudience": [],
+    "contactInfo": "",
+    "communityUrl": "https://gdg.community.dev/gdg-barcelona/",
+    "urls": {
+      "instagram": "https://www.instagram.com/gdg_barcelona/",
+      "mailingList": "https://groups.google.com/g/gdg-barcelona",
+      "eventsUrl": "https://www.meetup.com/es-ES/gdg-barcelona/"
+    },
+    "thumbnailUrl": "images/gdg-barcelona.webp",
+    "latLon": {
+      "lat": 41.387917,
+      "lon": 2.1699187
+    },
+    "displayOnMap": true,
+    "humanValidated": false,
+    "langs": [
+      "es"
+    ],
+    "parentId": 207
+  },
+  {
+    "id": 614,
+    "name": "WordPress Madrid",
+    "status": "active",
+    "lastReviewed": "30/03/2026",
+    "communityType": "tech-meetup",
+    "eventFormat": "in-person",
+    "location": "Madrid",
+    "shortDescription": "Punto de encuentro en Madrid para usuarias, usuarios, disenadores, desarrolladores y empresas alrededor de WordPress.",
+    "topics": "",
+    "tags": [
+      "wordpress"
+    ],
+    "targetAudience": [],
+    "contactInfo": "",
+    "communityUrl": "https://www.meetup.com/es-es/wordpress-madrid/",
+    "urls": {
+      "telegram": "https://t.me/madridwordpress",
+      "linkAggregator": "https://linktr.ee/madridwordpress",
+      "instagram": "https://www.instagram.com/wpmadridoficial/",
+      "twitter": "https://x.com/madridwordpress",
+      "eventsUrl": "https://www.meetup.com/es-es/wordpress-madrid/"
+    },
+    "thumbnailUrl": "images/wordpress-madrid.webp",
+    "latLon": {
+      "lat": 40.4167047,
+      "lon": -3.7035825
+    },
+    "displayOnMap": true,
+    "humanValidated": false,
+    "langs": [
+      "es"
+    ],
+    "parentId": 512
+  },
+  {
+    "id": 615,
+    "name": "WordPress Murcia",
+    "status": "inactive",
+    "lastReviewed": "30/03/2026",
+    "communityType": "tech-meetup",
+    "eventFormat": "in-person",
+    "location": "Murcia",
+    "shortDescription": "Comunidad WordPress de Murcia para compartir conocimiento, encuentros y actividad local del ecosistema.",
+    "topics": "",
+    "tags": [
+      "wordpress"
+    ],
+    "targetAudience": [],
+    "contactInfo": "",
+    "communityUrl": "https://www.wpmurcia.org/",
+    "urls": {
+      "facebook": "https://www.facebook.com/WordPressMurcia/",
+      "twitter": "https://x.com/wpmurcia",
+      "instagram": "https://www.instagram.com/wpmurcia/",
+      "youtube": "https://www.youtube.com/channel/UCE0o9a_-p5aOzpwR0wasQ-A",
+      "eventsUrl": "https://www.meetup.com/es-es/wordpress-murcia/",
+      "web": "https://www.wpmurcia.org/"
+    },
+    "thumbnailUrl": "images/wordpress-murcia.webp",
+    "latLon": {
+      "lat": 37.9835334,
+      "lon": -1.129905
+    },
+    "displayOnMap": true,
+    "humanValidated": false,
+    "langs": [
+      "es"
+    ],
+    "parentId": 512
   }
 ]

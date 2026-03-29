@@ -17285,7 +17285,7 @@
         "id": 517,
         "name": "WordPress Santiago de Compostela",
         "status": "active",
-        "lastReviewed": "18/10/2024",
+        "lastReviewed": "30/03/2026",
         "communityType": "tech-meetup",
         "eventFormat": "in-person",
         "location": "Coruña (Santiago de Compostela)",
@@ -17314,10 +17314,10 @@
           "digital-marketer"
         ],
         "contactInfo": "",
-        "communityUrl": "https://www.meetup.com/santiago-de-compostela-wordpress-meetup-group/",
+        "communityUrl": "https://www.meetup.com/es-es/santiago-de-compostela-wordpress-meetup-group/",
         "urls": {
           "telegram": "https://t.me/+6faPK40eIFw1Njc0",
-          "eventsUrl": "https://www.meetup.com/santiago-de-compostela-wordpress-meetup-group/"
+          "eventsUrl": "https://www.meetup.com/es-es/santiago-de-compostela-wordpress-meetup-group/"
         },
         "thumbnailUrl": "images/wordpress-santiago-de-compostela.webp",
         "humanValidated": false
@@ -20819,6 +20819,333 @@
         },
         "thumbnailUrl": "images/rust-girona.webp",
         "humanValidated": true
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -15.5,
+          28
+        ]
+      },
+      "properties": {
+        "id": 607,
+        "name": "Python Canarias",
+        "status": "active",
+        "lastReviewed": "30/03/2026",
+        "communityType": "tech-meetup",
+        "eventFormat": "unknown",
+        "location": "Canarias",
+        "topics": "",
+        "langs": [
+          "es"
+        ],
+        "tags": [
+          "python"
+        ],
+        "targetAudience": [],
+        "contactInfo": "info@pythoncanarias.es",
+        "communityUrl": "https://pythoncanarias.es/",
+        "urls": {
+          "twitter": "https://x.com/pythoncanarias",
+          "telegram": "https://t.me/joinchat/AJ7pmT-X0xZVPgWDIzGA-A"
+        },
+        "thumbnailUrl": "images/python-alicante.webp",
+        "humanValidated": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.4809945,
+          38.34521
+        ]
+      },
+      "properties": {
+        "id": 608,
+        "name": "Python Alicante",
+        "status": "inactive",
+        "lastReviewed": "30/03/2026",
+        "communityType": "tech-meetup",
+        "eventFormat": "in-person",
+        "location": "Alicante",
+        "topics": "",
+        "langs": [
+          "es"
+        ],
+        "tags": [
+          "python"
+        ],
+        "targetAudience": [],
+        "contactInfo": "",
+        "communityUrl": "https://www.meetup.com/es-es/python_alc/",
+        "urls": {
+          "twitter": "https://x.com/python_alc",
+          "telegram": "https://t.me/python_alc",
+          "github": "https://github.com/pythonalicante",
+          "eventsUrl": "https://www.meetup.com/es-es/python_alc/"
+        },
+        "thumbnailUrl": "images/python-asturias.webp",
+        "humanValidated": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -5.8447919,
+          43.3602825
+        ]
+      },
+      "properties": {
+        "id": 609,
+        "name": "Python Asturias",
+        "status": "active",
+        "lastReviewed": "30/03/2026",
+        "communityType": "tech-meetup",
+        "eventFormat": "hybrid",
+        "location": "Asturias",
+        "topics": "",
+        "langs": [
+          "es"
+        ],
+        "tags": [
+          "python"
+        ],
+        "targetAudience": [],
+        "contactInfo": "",
+        "communityUrl": "https://www.meetup.com/es-es/python-asturias/",
+        "urls": {
+          "telegram": "https://t.me/pythonasturias",
+          "eventsUrl": "https://www.meetup.com/es-es/python-asturias/"
+        },
+        "thumbnailUrl": "images/python-valencia.webp",
+        "humanValidated": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.3768049,
+          39.4702393
+        ]
+      },
+      "properties": {
+        "id": 610,
+        "name": "Python Valencia",
+        "status": "active",
+        "lastReviewed": "30/03/2026",
+        "communityType": "tech-meetup",
+        "eventFormat": "in-person",
+        "location": "Valencia",
+        "topics": "",
+        "langs": [
+          "es"
+        ],
+        "tags": [
+          "python"
+        ],
+        "targetAudience": [],
+        "contactInfo": "valencia@es.python.org",
+        "communityUrl": "https://python-valencia.es/",
+        "urls": {
+          "twitter": "https://x.com/python_vlc",
+          "telegram": "https://t.me/python_vlc",
+          "eventsUrl": "https://www.meetup.com/es-es/python-valencia-meetup/"
+        },
+        "thumbnailUrl": "images/python-zaragoza.webp",
+        "humanValidated": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.8794245,
+          41.656837
+        ]
+      },
+      "properties": {
+        "id": 611,
+        "name": "Python Zaragoza",
+        "status": "active",
+        "lastReviewed": "30/03/2026",
+        "communityType": "tech-meetup",
+        "eventFormat": "in-person",
+        "location": "Zaragoza",
+        "topics": "",
+        "langs": [
+          "es"
+        ],
+        "tags": [
+          "python"
+        ],
+        "targetAudience": [],
+        "contactInfo": "zaragoza@es.python.org",
+        "communityUrl": "https://www.meetup.com/es-es/python_zgz/",
+        "urls": {
+          "twitter": "https://x.com/PythonZaragoza/",
+          "telegram": "https://t.me/python_zgz",
+          "eventsUrl": "https://www.meetup.com/es-es/python_zgz/"
+        },
+        "thumbnailUrl": "images/python-murcia.webp",
+        "humanValidated": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.129905,
+          37.9835334
+        ]
+      },
+      "properties": {
+        "id": 612,
+        "name": "Python Murcia",
+        "status": "unknown",
+        "lastReviewed": "30/03/2026",
+        "communityType": "tech-meetup",
+        "eventFormat": "unknown",
+        "location": "Murcia",
+        "topics": "",
+        "langs": [
+          "es"
+        ],
+        "tags": [
+          "python"
+        ],
+        "targetAudience": [],
+        "contactInfo": "",
+        "communityUrl": "https://x.com/pythonmurcia",
+        "urls": {
+          "twitter": "https://x.com/pythonmurcia",
+          "telegram": "https://t.me/pythonmurcia"
+        },
+        "thumbnailUrl": "images/python-espana.webp",
+        "humanValidated": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.1699187,
+          41.387917
+        ]
+      },
+      "properties": {
+        "id": 613,
+        "name": "GDG Barcelona",
+        "status": "active",
+        "lastReviewed": "30/03/2026",
+        "communityType": "tech-meetup",
+        "eventFormat": "in-person",
+        "location": "Barcelona",
+        "topics": "",
+        "langs": [
+          "es"
+        ],
+        "tags": [
+          "gcp"
+        ],
+        "targetAudience": [],
+        "contactInfo": "",
+        "communityUrl": "https://gdg.community.dev/gdg-barcelona/",
+        "urls": {
+          "instagram": "https://www.instagram.com/gdg_barcelona/",
+          "mailingList": "https://groups.google.com/g/gdg-barcelona",
+          "eventsUrl": "https://www.meetup.com/es-ES/gdg-barcelona/"
+        },
+        "thumbnailUrl": "images/gdg-barcelona.webp",
+        "humanValidated": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7035825,
+          40.4167047
+        ]
+      },
+      "properties": {
+        "id": 614,
+        "name": "WordPress Madrid",
+        "status": "active",
+        "lastReviewed": "30/03/2026",
+        "communityType": "tech-meetup",
+        "eventFormat": "in-person",
+        "location": "Madrid",
+        "topics": "",
+        "langs": [
+          "es"
+        ],
+        "tags": [
+          "wordpress"
+        ],
+        "targetAudience": [],
+        "contactInfo": "",
+        "communityUrl": "https://www.meetup.com/es-es/wordpress-madrid/",
+        "urls": {
+          "telegram": "https://t.me/madridwordpress",
+          "linkAggregator": "https://linktr.ee/madridwordpress",
+          "instagram": "https://www.instagram.com/wpmadridoficial/",
+          "twitter": "https://x.com/madridwordpress",
+          "eventsUrl": "https://www.meetup.com/es-es/wordpress-madrid/"
+        },
+        "thumbnailUrl": "images/wordpress-madrid.webp",
+        "humanValidated": false
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.129905,
+          37.9835334
+        ]
+      },
+      "properties": {
+        "id": 615,
+        "name": "WordPress Murcia",
+        "status": "inactive",
+        "lastReviewed": "30/03/2026",
+        "communityType": "tech-meetup",
+        "eventFormat": "in-person",
+        "location": "Murcia",
+        "topics": "",
+        "langs": [
+          "es"
+        ],
+        "tags": [
+          "wordpress"
+        ],
+        "targetAudience": [],
+        "contactInfo": "",
+        "communityUrl": "https://www.wpmurcia.org/",
+        "urls": {
+          "facebook": "https://www.facebook.com/WordPressMurcia/",
+          "twitter": "https://x.com/wpmurcia",
+          "instagram": "https://www.instagram.com/wpmurcia/",
+          "youtube": "https://www.youtube.com/channel/UCE0o9a_-p5aOzpwR0wasQ-A",
+          "eventsUrl": "https://www.meetup.com/es-es/wordpress-murcia/",
+          "web": "https://www.wpmurcia.org/"
+        },
+        "thumbnailUrl": "images/wordpress-murcia.webp",
+        "humanValidated": false
       }
     }
   ]

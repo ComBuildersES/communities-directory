@@ -1,0 +1,1 @@
+import{gc as m}from"./index-BccaXYuz.js";import{fromGeometryToGXGeometry as a,getSpatialReference as i}from"./jsonConverter-CVYUzV0s.js";import"./ProjectionTransformation-Clf_dgrb.js";import"./SimpleGeometryCursor-B92kdZ15.js";function u(t,c={}){const{unit:o}=c;let e=a(t).calculateLength2D();const r=i(t);return e&&o&&r&&(e=m(e,r,o)),e}export{u as execute};
