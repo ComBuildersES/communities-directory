@@ -243,6 +243,15 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "ilopmar",
+      "name": "Iván López",
+      "avatar_url": "https://avatars.githubusercontent.com/u/559192?v=4",
+      "profile": "https://github.com/ilopmar",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
