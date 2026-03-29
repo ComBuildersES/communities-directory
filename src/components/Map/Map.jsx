@@ -2,20 +2,21 @@ import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 
 // ArcGIS SDK Imports
-import '@arcgis/map-components/dist/components/arcgis-map'
-import '@arcgis/map-components/dist/components/arcgis-search'
-import FeatureLayer from "@arcgis/core/layers/FeatureLayer"
-import SimpleFillSymbol from "@arcgis/core/symbols/SimpleFillSymbol"
-import SimpleRenderer from "@arcgis/core/renderers/SimpleRenderer"
+import * as geometryEngine from "@arcgis/core/geometry/geometryEngine.js"
 import Point from "@arcgis/core/geometry/Point"
 import Graphic from "@arcgis/core/Graphic"
+import FeatureLayer from "@arcgis/core/layers/FeatureLayer"
+import SimpleRenderer from "@arcgis/core/renderers/SimpleRenderer"
+import * as clusterLabelCreator from "@arcgis/core/smartMapping/labels/clusters.js"
+import * as pieChartRendererCreator from "@arcgis/core/smartMapping/renderers/pieChart.js"
+import SimpleFillSymbol from "@arcgis/core/symbols/SimpleFillSymbol"
 import Popup from "@arcgis/core/widgets/Popup"
-import * as clusterLabelCreator from "@arcgis/core/smartMapping/labels/clusters.js";
-import * as pieChartRendererCreator from "@arcgis/core/smartMapping/renderers/pieChart.js";
+import '@arcgis/map-components/dist/components/arcgis-map'
+import '@arcgis/map-components/dist/components/arcgis-search'
 import {
   useCBMemberIds,
   useCommunitiesFiltered,
-} from "../../stores/community.store.js";
+} from "../../stores/community.store.js"
 // import { MapCard } from "../MapCard.jsx"
 import { CommunityCard } from "../CommunityCard.jsx"
 
@@ -26,7 +27,322 @@ import { CommunityCard } from "../CommunityCard.jsx"
 import './Map.css'
 
 // React Imports
-import { useEffect, useState, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
+
+const CLUSTER_SEGMENT_CONFIG = [
+  {
+    key: "tech-meetup",
+    fieldName: "SUM_tech_meetup",
+    labelKey: "communityType.tech-meetup",
+    color: "#ff595e",
+    textColor: "#ffffff",
+  },
+  {
+    key: "conference",
+    fieldName: "SUM_conference",
+    labelKey: "communityType.conference",
+    color: "#ffca3a",
+    textColor: "#21324a",
+  },
+  {
+    key: "collaborative-group",
+    fieldName: "SUM_collaborative_group",
+    labelKey: "communityType.collaborative-group",
+    color: "#8ac926",
+    textColor: "#21324a",
+  },
+  {
+    key: "hacklab",
+    fieldName: "SUM_hacklab",
+    labelKey: "communityType.hacklab",
+    color: "#1982c4",
+    textColor: "#ffffff",
+  },
+]
+
+const CLUSTER_OTHER_SEGMENT = {
+  key: "other",
+  color: "#6a4c93",
+  textColor: "#ffffff",
+}
+
+const POPUP_VISIBLE_ELEMENTS_DEFAULT = {
+  actionBar: true,
+  closeButton: true,
+  collapseButton: false,
+  featureMenuHeading: true,
+  featureNavigation: true,
+  featureListLayerTitle: true,
+  heading: true,
+  spinner: true,
+}
+
+const POPUP_VISIBLE_ELEMENTS_CLUSTER = {
+  actionBar: false,
+  closeButton: true,
+  collapseButton: false,
+  featureMenuHeading: false,
+  featureNavigation: false,
+  featureListLayerTitle: false,
+  heading: true,
+  spinner: true,
+}
+
+const CLUSTER_DONUT = {
+  size: 164,
+  center: 82,
+  radius: 46,
+  strokeWidth: 26,
+  badgeRadius: 56,
+}
+
+function toNumber (value) {
+  const parsed = Number(value)
+  return Number.isFinite(parsed) ? parsed : 0
+}
+
+function createSvgElement (tagName) {
+  return document.createElementNS("http://www.w3.org/2000/svg", tagName)
+}
+
+function getClusterPopupSegments (fields, attributes, t) {
+  const matchedFieldNames = new Set()
+
+  const segments = CLUSTER_SEGMENT_CONFIG.map((config) => {
+    const matchingField = fields.find((field) => field.name === config.fieldName)
+    const value = matchingField
+      ? toNumber(attributes?.[matchingField.name])
+      : toNumber(attributes?.[config.fieldName])
+
+    if (matchingField) {
+      matchedFieldNames.add(matchingField.name)
+    }
+
+    return {
+      ...config,
+      label: t(config.labelKey),
+      value,
+    }
+  })
+
+  const otherValue = fields.reduce((sum, field) => {
+    if (matchedFieldNames.has(field.name)) {
+      return sum
+    }
+
+    return sum + toNumber(attributes?.[field.name])
+  }, 0)
+
+  return [
+    ...segments,
+    {
+      ...CLUSTER_OTHER_SEGMENT,
+      label: t("map.cluster.other"),
+      value: otherValue,
+    },
+  ]
+}
+
+function buildClusterPopupAriaLabel (total, segments, t) {
+  const parts = [`${t("map.cluster.total")}: ${total}`]
+
+  segments
+    .filter((segment) => segment.value > 0)
+    .forEach((segment) => {
+      parts.push(`${segment.label}: ${segment.value}`)
+    })
+
+  return parts.join(". ")
+}
+
+function createClusterPopupContent (graphic, fields, t, popup, resolveClusterTitle) {
+  const attributes = graphic?.attributes ?? {}
+  const segments = getClusterPopupSegments(fields, attributes, t)
+  const visibleSegments = segments.filter((segment) => segment.value > 0)
+  const total = toNumber(attributes.cluster_count) || segments.reduce((sum, segment) => sum + segment.value, 0)
+  const circumference = 2 * Math.PI * CLUSTER_DONUT.radius
+  const detailId = `cluster-popup-detail-${Math.random().toString(36).slice(2, 9)}`
+
+  if (popup) {
+    popup.title = resolveClusterTitle?.(graphic?.geometry) ?? t("map.cluster.title")
+  }
+
+  const container = document.createElement("div")
+  container.className = "map-cluster-popup"
+  container.setAttribute("role", "group")
+  container.setAttribute("aria-label", buildClusterPopupAriaLabel(total, segments, t))
+
+  const chart = document.createElement("div")
+  chart.className = "map-cluster-popup__chart"
+
+  const detail = document.createElement("div")
+  detail.className = "map-cluster-popup__detail"
+  detail.id = detailId
+  detail.setAttribute("aria-live", "polite")
+
+  const detailLabel = document.createElement("span")
+  detailLabel.className = "map-cluster-popup__detail-label"
+
+  const detailValue = document.createElement("span")
+  detailValue.className = "map-cluster-popup__detail-value"
+
+  detail.append(detailLabel, detailValue)
+
+  const svg = createSvgElement("svg")
+  svg.classList.add("map-cluster-popup__svg")
+  svg.setAttribute("viewBox", `0 0 ${CLUSTER_DONUT.size} ${CLUSTER_DONUT.size}`)
+  svg.setAttribute("role", "presentation")
+
+  const track = createSvgElement("circle")
+  track.classList.add("map-cluster-popup__track")
+  track.setAttribute("cx", String(CLUSTER_DONUT.center))
+  track.setAttribute("cy", String(CLUSTER_DONUT.center))
+  track.setAttribute("r", String(CLUSTER_DONUT.radius))
+  track.setAttribute("stroke-width", String(CLUSTER_DONUT.strokeWidth))
+  svg.append(track)
+
+  const interactiveElements = []
+  let activeSegmentKey = null
+
+  const syncActiveSegment = () => {
+    interactiveElements.forEach((element) => {
+      element.classList.toggle("is-active", element.dataset.segmentKey === activeSegmentKey)
+    })
+  }
+
+  const setDetail = (label, value) => {
+    detailLabel.textContent = label
+    detailValue.textContent = String(value)
+  }
+
+  const resetDetail = () => {
+    activeSegmentKey = null
+    syncActiveSegment()
+    setDetail(t("map.cluster.total"), total)
+  }
+
+  const handleInteractionEnd = (event) => {
+    const nextTarget = event.relatedTarget
+
+    if (
+      nextTarget instanceof Element &&
+      container.contains(nextTarget) &&
+      nextTarget.getAttribute("data-segment-key")
+    ) {
+      return
+    }
+
+    resetDetail()
+  }
+
+  const activateSegment = (segment) => {
+    activeSegmentKey = segment.key
+    syncActiveSegment()
+    setDetail(segment.label, segment.value)
+  }
+
+  const registerInteractiveElement = (element, segment) => {
+    element.dataset.segmentKey = segment.key
+    element.setAttribute("aria-describedby", detailId)
+    element.setAttribute("aria-label", `${segment.label}: ${segment.value}`)
+    element.addEventListener("mouseenter", () => activateSegment(segment))
+    element.addEventListener("mouseleave", handleInteractionEnd)
+    element.addEventListener("focus", () => activateSegment(segment))
+    element.addEventListener("blur", handleInteractionEnd)
+    interactiveElements.push(element)
+  }
+
+  let currentOffset = 0
+  let currentAngle = -Math.PI / 2
+
+  visibleSegments.forEach((segment) => {
+    if (segment.value <= 0 || total <= 0) {
+      return
+    }
+
+    const segmentLength = (segment.value / total) * circumference
+    const segmentAngle = (segment.value / total) * Math.PI * 2
+
+    const circle = createSvgElement("circle")
+    circle.classList.add("map-cluster-popup__segment")
+    circle.setAttribute("cx", String(CLUSTER_DONUT.center))
+    circle.setAttribute("cy", String(CLUSTER_DONUT.center))
+    circle.setAttribute("r", String(CLUSTER_DONUT.radius))
+    circle.setAttribute("stroke", segment.color)
+    circle.setAttribute("stroke-width", String(CLUSTER_DONUT.strokeWidth))
+    circle.setAttribute("stroke-dasharray", `${segmentLength} ${Math.max(circumference - segmentLength, 0)}`)
+    circle.setAttribute("stroke-dashoffset", String(-currentOffset))
+    circle.setAttribute("transform", `rotate(-90 ${CLUSTER_DONUT.center} ${CLUSTER_DONUT.center})`)
+    circle.setAttribute("tabindex", "0")
+    svg.append(circle)
+    registerInteractiveElement(circle, segment)
+
+    const badge = document.createElement("button")
+    const midAngle = currentAngle + (segmentAngle / 2)
+    const badgeX = CLUSTER_DONUT.center + Math.cos(midAngle) * CLUSTER_DONUT.badgeRadius
+    const badgeY = CLUSTER_DONUT.center + Math.sin(midAngle) * CLUSTER_DONUT.badgeRadius
+
+    badge.className = "map-cluster-popup__badge"
+    badge.type = "button"
+    badge.textContent = String(segment.value)
+    badge.title = `${segment.label}: ${segment.value}`
+    badge.style.left = `${badgeX}px`
+    badge.style.top = `${badgeY}px`
+    badge.style.backgroundColor = segment.color
+    badge.style.color = segment.textColor
+
+    chart.append(badge)
+    registerInteractiveElement(badge, segment)
+
+    currentOffset += segmentLength
+    currentAngle += segmentAngle
+  })
+
+  const center = document.createElement("div")
+  center.className = "map-cluster-popup__center"
+
+  const totalValue = document.createElement("span")
+  totalValue.className = "map-cluster-popup__total"
+  totalValue.textContent = String(total)
+
+  const totalLabel = document.createElement("span")
+  totalLabel.className = "map-cluster-popup__total-label"
+  totalLabel.textContent = t("map.cluster.total")
+
+  const legend = document.createElement("div")
+  legend.className = "map-cluster-popup__legend"
+
+  visibleSegments.forEach((segment) => {
+    const legendItem = document.createElement("button")
+    const legendSwatch = document.createElement("span")
+    const legendText = document.createElement("span")
+
+    // legendItem.type = "button"
+    // legendItem.className = "map-cluster-popup__legend-item"
+
+    // legendSwatch.className = "map-cluster-popup__legend-swatch"
+    // legendSwatch.style.backgroundColor = segment.color
+
+    // legendText.className = "map-cluster-popup__legend-text"
+    // legendText.textContent = segment.label
+
+    legendItem.append(legendSwatch, legendText)
+    legend.append(legendItem)
+    registerInteractiveElement(legendItem, segment)
+  })
+
+  center.append(totalValue, totalLabel)
+  chart.append(svg, center)
+  container.append(chart, detail)
+
+  if (visibleSegments.length > 0) {
+    container.append(legend)
+  }
+
+  resetDetail()
+
+  return container
+}
 
 function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null, initialMapState = null, onMapStateChange = null }) {
   const { t, i18n } = useTranslation()
@@ -39,6 +355,7 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
   const popupRef = useRef(null)
   const communityLayerRef = useRef(null);
   const mapStateDebounceRef = useRef(null);
+  const popupSelectedFeatureHandleRef = useRef(null)
 
   {/* <  const communities = useCommunitiesFiltered().filter((community) => {
 
@@ -67,6 +384,114 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
     [rawCommunities]
   );
 
+  function resolveClusterPopupTitle (geometry) {
+    if (!geometry) {
+      return t("map.cluster.title")
+    }
+
+    const provinceName = provincesFeatures.find((feature) => {
+      if (!feature?.geometry) {
+        return false
+      }
+
+      try {
+        return (
+          geometryEngine.contains(feature.geometry, geometry) ||
+          geometryEngine.intersects(feature.geometry, geometry)
+        )
+      } catch {
+        const extent = feature.geometry.extent
+        return typeof extent?.contains === "function" ? extent.contains(geometry) : false
+      }
+    })?.attributes?.NAMEUNIT
+
+    if (provinceName) {
+      return provinceName
+    }
+
+    const fallbackProvince = provincesCenter?.reduce((closestProvince, province) => {
+      if (!province?.center || geometry.x == null || geometry.y == null) {
+        return closestProvince
+      }
+
+      const distance =
+        ((province.center.x ?? 0) - geometry.x) ** 2 +
+        ((province.center.y ?? 0) - geometry.y) ** 2
+
+      if (!closestProvince || distance < closestProvince.distance) {
+        return {
+          distance,
+          name: province.NAMEUNIT,
+        }
+      }
+
+      return closestProvince
+    }, null)
+
+    return fallbackProvince?.name || t("map.cluster.title")
+  }
+
+  function applyDefaultPopupChrome (popup) {
+    popup.includeDefaultActions = true
+    popup.visibleElements = POPUP_VISIBLE_ELEMENTS_DEFAULT
+  }
+
+  function applyClusterPopupChrome (popup) {
+    popup.includeDefaultActions = false
+    popup.featureMenuOpen = false
+    popup.visibleElements = POPUP_VISIBLE_ELEMENTS_CLUSTER
+  }
+
+  function ensurePopup (view) {
+    if (popupRef.current?.view === view) {
+      return popupRef.current
+    }
+
+    popupSelectedFeatureHandleRef.current?.remove()
+    popupSelectedFeatureHandleRef.current = null
+
+    if (popupRef.current && popupRef.current.view !== view) {
+      popupRef.current.destroy()
+    }
+
+    popupRef.current = new Popup({
+      view,
+      dockEnabled: true,
+      dockOptions: {
+        buttonEnabled: false,
+        breakpoint: false,
+        position: "top-left",
+      },
+      visibleElements: POPUP_VISIBLE_ELEMENTS_DEFAULT,
+      includeDefaultActions: true,
+    })
+
+    popupSelectedFeatureHandleRef.current = popupRef.current.watch("selectedFeature", (selectedFeature) => {
+      if (!popupRef.current) {
+        return
+      }
+
+      if (selectedFeature?.isAggregate) {
+        applyClusterPopupChrome(popupRef.current)
+        return
+      }
+
+      if (selectedFeature) {
+        applyDefaultPopupChrome(popupRef.current)
+      }
+    })
+
+    view.popup = popupRef.current
+
+    return popupRef.current
+  }
+
+  useEffect(() => {
+    return () => {
+      popupSelectedFeatureHandleRef.current?.remove()
+      popupRef.current?.destroy()
+    }
+  }, [])
 
 
 
@@ -234,19 +659,8 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
   // Effect for the change from cluster to single point symbols
 
   function abrirPopupArcGIS (community, view, geometry) {
-    if (!popupRef.current) {
-      popupRef.current = new Popup({
-        view,
-        dockEnabled: true,
-        dockOptions: {
-          buttonEnabled: false,
-          breakpoint: false,
-          position: "top-left",
-        },
-      })
-
-      view.popup = popupRef.current
-    }
+    const popup = ensurePopup(view)
+    applyDefaultPopupChrome(popup)
 
     const hasCBMember = cbMemberIds.has(community.id);
     const cbBadge = hasCBMember
@@ -286,7 +700,7 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
                 />`
 
 
-    popupRef.current.open({
+    popup.open({
       location: geometry,
       title: `<span style="color: #00eaff ">${community.name}</span>`,
       content: `
@@ -311,6 +725,7 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
   function activeViewChange (activeViewEvent) {
     const view = activeViewEvent.target.view;
     view.map.basemap.referenceLayers.removeAll();
+    ensurePopup(view)
     setActiveView(() => view);
   }
 
@@ -336,97 +751,25 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
 
     renderer.holePercentage = 0.66;
 
-    const fieldInfos = fields.map((field) => {
-      // console.log(field)
-      return {
-        fieldName: field.name,
-        label: field.alias,
-        format: {
-          places: 0,
-          digitSeparator: true,
-        },
-      };
-    });
-
-    const fieldNames = fieldInfos.map((field) => {
-      return field.fieldName;
-    });
-
-    const tablaHtmlPopup = `<table style="width: 100%; font-family: sans-serif; font-size: 14px; border-collapse: collapse;">
-  <thead>
-    <tr>
-      <th style="text-align: left; padding: 6px; color: #ffff">${t("map.cluster.type")}</th>
-      <th style="text-align: right; padding: 6px; color: #ffff">${t("map.cluster.total")}</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="padding: 6px;">
-        <span style="display: inline-block; width: 10px; height: 10px; background-color: #ff595e; border-radius: 50%; margin-right: 6px;"></span>
-        ${t("communityType.tech-meetup")}
-      </td>
-      <td style="padding: 6px; text-align: right;"><b>{SUM_tech_meetup}</b></td>
-    </tr>
-    <tr>
-      <td style="padding: 6px;">
-        <span style="display: inline-block; width: 10px; height: 10px; background-color: #ffca3a; border-radius: 50%; margin-right: 6px;"></span>
-        ${t("communityType.conference")}
-      </td>
-      <td style="padding: 6px; text-align: right;"><b>{SUM_conference}</b></td>
-    </tr>
-    <tr>
-      <td style="padding: 6px;">
-        <span style="display: inline-block; width: 10px; height: 10px; background-color: #8ac926; border-radius: 50%; margin-right: 6px;"></span>
-        ${t("communityType.collaborative-group")}
-      </td>
-      <td style="padding: 6px; text-align: right;"><b>{SUM_collaborative_group}</b></td>
-    </tr>
-    <tr>
-      <td style="padding: 6px;">
-        <span style="display: inline-block; width: 10px; height: 10px; background-color: #1982c4; border-radius: 50%; margin-right: 6px;"></span>
-        ${t("communityType.hacklab")}
-      </td>
-      <td style="padding: 6px; text-align: right;"><b>{SUM_hacklab}</b></td>
-    </tr>
-    <tr>
-      <td style="padding: 6px;">
-        <span style="display: inline-block; width: 10px; height: 10px; background-color: #6a4c93; border-radius: 50%; margin-right: 6px;"></span>
-        ${t("map.cluster.other")}
-      </td>
-      <td style="padding: 6px; text-align: right;"><b>{SUM_Otro}</b></td>
-    </tr>
-  </tbody>
-</table>
-`
+    const fieldNames = fields.map((field) => field.name);
 
     const popupTemplate = {
       title: t("map.cluster.title"),
+      overwriteActions: true,
+      actions: [],
       content: [
         {
-          type: "text",
-          text: t("map.cluster.countText"),
-        },
-        {
-          type: "media",
-          mediaInfos: [
-            {
-              //title: "Tipo de comunidad",
-              type: "pie-chart",
-              value: {
-                fields: fieldNames,
-              },
-            },
-          ],
-        },
-        // {
-        //   type: "fields",
-        // },
-        {
-          type: "text",
-          text: tablaHtmlPopup
+          type: "custom",
+          outFields: ["cluster_count", ...fieldNames],
+          creator: (event) => createClusterPopupContent(
+            event?.graphic,
+            fields,
+            t,
+            popupRef.current,
+            resolveClusterPopupTitle
+          ),
         }
       ],
-      fieldInfos,
     };
 
     return {
@@ -439,35 +782,6 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
       renderer,
     };
   }
-
-  // useEffect(() => {
-  //   if (!activeView) return;
-
-  //   const handleExtentChange = () => {
-  //     const extent = activeView.extent;
-
-  //     const filteredCommunities = communities//useCommunitiesFiltered(); // sidebar filtered ones
-
-  //     const visible = filteredCommunities.filter((c) => {
-  //       const { lon, lat } = c.latLon;
-  //       return extent.contains(new Point({ latitude: lat, longitude: lon }));
-  //     });
-
-  //     setVisibleCommunities(visible);
-
-
-  //   };
-
-  //   // Initial run
-  //   handleExtentChange();
-
-  //   // React to panning/zooming
-  //   const handle = activeView.watch("extent", handleExtentChange);
-
-  //   return () => {
-  //     handle.remove();
-  //   };
-  // }, [activeView, communities]);
 
   useEffect(() => {
     if (!activeView) return;
@@ -518,32 +832,32 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
   return (
     <div id="map" className="column" style={{ display: "flex", flexDirection: "column" }}>
       <div className={`map-canvas${mapCollapsed ? " map-canvas--collapsed" : ""}`}>
-      <arcgis-map
-        basemap="gray"
-        center={
-          initialFocus
-            ? `${initialFocus.lon}, ${initialFocus.lat}`
-            : initialMapState
-              ? `${initialMapState.lon}, ${initialMapState.lat}`
-              : "-4, 40"
-        }
-        zoom={
-          initialFocus
-            ? "8"
-            : initialMapState
-              ? String(Math.round(initialMapState.zoom))
-              : "4"
-        }
-        onarcgisViewReadyChange={activeViewChange}
-      >
-        <arcgis-search
-          key={i18n.resolvedLanguage}
-          slot="top-right"
-          popup-disabled
-          result-graphic-disabled
-          all-placeholder={t("map.searchPlaceholder")}
-        ></arcgis-search>
-      </arcgis-map>
+        <arcgis-map
+          basemap="gray"
+          center={
+            initialFocus
+              ? `${initialFocus.lon}, ${initialFocus.lat}`
+              : initialMapState
+                ? `${initialMapState.lon}, ${initialMapState.lat}`
+                : "-4, 40"
+          }
+          zoom={
+            initialFocus
+              ? "8"
+              : initialMapState
+                ? String(Math.round(initialMapState.zoom))
+                : "4"
+          }
+          onarcgisViewReadyChange={activeViewChange}
+        >
+          <arcgis-search
+            key={i18n.resolvedLanguage}
+            slot="top-right"
+            popup-disabled
+            result-graphic-disabled
+            all-placeholder={t("map.searchPlaceholder")}
+          ></arcgis-search>
+        </arcgis-map>
       </div>
       <button className="map-toggle-btn" onClick={() => setMapCollapsed(c => !c)}>
         <i className={`fas ${mapCollapsed ? "fa-chevron-down" : "fa-chevron-up"}`}></i>
@@ -572,17 +886,7 @@ function Map ({ showListView = null, onOpenCommunity = null, initialFocus = null
         )}
       </div>
       <div className="communitieslist">
-        {/* {communities.map((community) => {
 
-          let comunidad = community.displayOnMap ? <CommunityCard key={community.id} community={community} /> : null
-
-          return comunidad
-        })} */}
-
-
-        {/* {communities.map((community) => (
-          <CommunityCard key={community.id} community={community} />
-        ))} */}
         {sortedVisibleCommunities.map((community) => (
           <CommunityCard
             key={community.id}
