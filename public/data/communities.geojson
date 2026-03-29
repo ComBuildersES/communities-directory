@@ -10604,7 +10604,7 @@
         "id": 330,
         "name": "Madrid-Groovy User Group (GUG)",
         "status": "active",
-        "lastReviewed": "31/05/2024",
+        "lastReviewed": "29/03/2026",
         "communityType": "tech-meetup",
         "eventFormat": "hybrid",
         "location": "Madrid",
@@ -10615,16 +10615,9 @@
         "tags": [
           "java",
           "kotlin",
-          "c",
           "software-architecture",
           "software-craftsmanship",
-          "nlp",
-          "free-software",
-          "event-driven",
-          "tdd",
-          "python",
-          "bdd",
-          "data-warehouse"
+          "groovy"
         ],
         "targetAudience": [
           "data-engineer",
@@ -10646,10 +10639,11 @@
         "urls": {
           "twitter": "https://twitter.com/madridgug",
           "youtube": "https://www.youtube.com/channel/UCgvO2jxLdGaVqHqnfPdyYzw",
-          "eventsUrl": "http://www.meetup.com/madrid-gug"
+          "eventsUrl": "http://www.meetup.com/madrid-gug",
+          "bluesky": "https://bsky.app/profile/madridgug.com"
         },
         "thumbnailUrl": "images/madrid-groovy-user-group-gug.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
