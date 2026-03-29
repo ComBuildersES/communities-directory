@@ -10766,7 +10766,7 @@
         "id": 333,
         "name": "MadridJUG",
         "status": "active",
-        "lastReviewed": "31/05/2024",
+        "lastReviewed": "29/03/2026",
         "communityType": "tech-meetup",
         "eventFormat": "hybrid",
         "location": "Madrid",
@@ -10776,17 +10776,10 @@
         ],
         "tags": [
           "java",
-          "virtual-reality",
           "software-architecture",
-          "networking",
-          "statistics",
-          "nlp",
-          "game-development",
-          "tech-ethics",
-          "diversity",
-          "r-lang",
-          "augmented-reality",
-          "c"
+          "kotlin",
+          "groovy",
+          "scala"
         ],
         "targetAudience": [
           "community-manager"
@@ -10795,10 +10788,12 @@
         "communityUrl": "https://www.meetup.com/es-ES/madridjug/",
         "urls": {
           "twitter": "http://twitter.com/MadridJUG/",
-          "eventsUrl": "https://www.meetup.com/es-ES/madridjug/"
+          "eventsUrl": "https://www.meetup.com/es-ES/madridjug/",
+          "bluesky": "https://bsky.app/profile/madridjug.es",
+          "web": "https://madridjug.es/"
         },
         "thumbnailUrl": "images/madridjug.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
