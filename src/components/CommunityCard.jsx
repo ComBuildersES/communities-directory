@@ -2,7 +2,14 @@
 import { useTranslation } from "react-i18next";
 import { useCommunityActions } from "../stores/community.store.js";
 
-export function CommunityCard({ community, hasCBMember = false, onOpen, childCount = 0 }) {
+export function CommunityCard({
+  community,
+  hasCBMember = false,
+  isHighlighted = false,
+  isMuted = false,
+  onOpen,
+  childCount = 0,
+}) {
   const { t } = useTranslation();
   const { filterComunities } = useCommunityActions();
   const {
@@ -20,10 +27,20 @@ export function CommunityCard({ community, hasCBMember = false, onOpen, childCou
     filterComunities("parentId", String(id));
   };
 
+  const cardClassName = [
+    "card",
+    "mycard",
+    "mycard--simple",
+    isHighlighted ? "mycard--highlighted" : "",
+    isMuted ? "mycard--muted" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
     <>
       <div
-        className="card mycard mycard--simple"
+        className={cardClassName}
         onClick={openModal}
         onKeyDown={(event) => {
           if (event.key === "Enter" || event.key === " ") {

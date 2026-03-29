@@ -212,6 +212,15 @@
     "hiddenTooltip_one": "1 comunidad encaja con los filtros pero no aparece en el mapa por no tener ubicación fija.",
     "hiddenTooltip_other": "{{count}} comunidades encajan con los filtros pero no aparecen en el mapa por no tener ubicación fija.",
     "viewInList": "Verlas en la lista",
+    "legend": {
+      "title": "Leyenda por tipo",
+      "hint": "Pasa el ratón para resaltar tarjetas visibles. Haz clic para filtrar.",
+      "mobileSummary": "Leyenda · {{count}}",
+      "open": "Mostrar leyenda",
+      "close": "Ocultar leyenda",
+      "clickToFilter": "Filtrar por {{label}}",
+      "empty": "No hay comunidades visibles de tipo {{label}} en esta zona."
+    },
     "popup": {
       "status": "Estado",
       "lastReviewed": "Revisada",

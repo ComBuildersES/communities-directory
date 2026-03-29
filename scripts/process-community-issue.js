@@ -222,7 +222,7 @@ export function normalizePayload(payload) {
       lat: normalizeLatLon(payload.latLon?.lat),
       lon: normalizeLatLon(payload.latLon?.lon),
     },
-    displayOnMap: normalizeBoolean(payload.displayOnMap),
+    displayOnMap: normalizeBoolean(payload.displayOnMap) && normalizeString(payload.communityType) !== 'umbrella-org',
     humanValidated: Boolean(payload.humanValidated),
     ...(normalizeBoolean(payload.matchesAllTags) ? { matchesAllTags: true } : {}),
     ...(normalizeBoolean(payload.matchesAllAudience) ? { matchesAllAudience: true } : {}),
@@ -293,7 +293,7 @@ function buildDeletedCommunityEntry(community, removalReason) {
 }
 
 async function resolveCoordinates(payload) {
-  if (!payload.displayOnMap) {
+  if (!payload.displayOnMap || payload.communityType === 'umbrella-org') {
     return { lat: null, lon: null };
   }
 

@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-30 `a9ae62d` Implement parent-child relationship for communities
+- 2026-03-30 `2676e55` Implement parent-child relationship for communities
 - 2026-03-27 `87a9d16` add search placeholder translations for map component feat(App): set document language based on resolved language
 - 2026-03-27 `d62161c` add generalist community notes and update translations
 - 2026-03-27 `9e1fe76` add conditional inclusion for matchesAllTags and matchesAllAudience in normalizePayload
@@ -231,6 +231,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
+- 2026-03-29 `ebf11b6` Refactor Map component and enhance legend functionality
 - 2026-03-28 `3770cbf` - Updated Map.css for consistent styling and added new styles for cluster popups. (Override esri existing styles and ensure proper layout and appearance of cluster popups.) - Refactored Map.jsx to implement cluster popup functionality with SVG charts. - Introduced new constants for cluster segment configuration and popup visibility settings. - Enhanced popup handling for clusters and individual community features.
 - 2026-03-27 `6a2658b` Remove obsolete image files and health report document
 - 2026-03-27 `b431402` Refactor community types, statuses, and event formats to use consistent keys and translations
