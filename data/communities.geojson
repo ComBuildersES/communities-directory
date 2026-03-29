@@ -6304,52 +6304,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          12.4568794,
-          41.9005351
-        ]
-      },
-      "properties": {
-        "id": 196,
-        "name": "GDG Cloud Español",
-        "status": "active",
-        "lastReviewed": "25/03/2026",
-        "communityType": "umbrella-org",
-        "eventFormat": "hybrid",
-        "location": "n/a",
-        "topics": "",
-        "langs": [
-          "es"
-        ],
-        "tags": [
-          "gcp",
-          "aws",
-          "virtualization"
-        ],
-        "targetAudience": [
-          "cloud-engineer",
-          "community-manager",
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer"
-        ],
-        "contactInfo": "cloudespanol@gmail.com",
-        "communityUrl": "https://gdg.community.dev/gdg-cloud-espanol/",
-        "urls": {
-          "twitter": "https://www.twitter.com/gdg_cloud",
-          "linkedin": "https://www.linkedin.com/groups/13640206/",
-          "eventsUrl": "https://gdg.community.dev/gdg-cloud-espanol/"
-        },
-        "thumbnailUrl": "images/gdg-cloud-espanol.webp",
-        "humanValidated": true
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           -3.7035825,
           40.4167047
         ]
@@ -20864,47 +20818,6 @@
           "github": "https://github.com/rust-girona/"
         },
         "thumbnailUrl": "images/rust-girona.webp",
-        "humanValidated": true
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
-          12.4568794,
-          41.9005351
-        ]
-      },
-      "properties": {
-        "id": 606,
-        "name": "GEG Spain",
-        "status": "active",
-        "lastReviewed": "27/03/2026",
-        "communityType": "umbrella-org",
-        "eventFormat": "in-person",
-        "location": "n/a",
-        "topics": "",
-        "langs": [
-          "es"
-        ],
-        "tags": [
-          "generative-ai"
-        ],
-        "targetAudience": [
-          "educator"
-        ],
-        "contactInfo": "",
-        "communityUrl": "https://transformacioneducativa.es",
-        "urls": {
-          "twitter": "https://x.com/GEGSpain",
-          "instagram": "https://www.instagram.com/gegspain/",
-          "youtube": "https://www.youtube.com/c/GEGSpain",
-          "linkedin": "https://www.linkedin.com/company/transformaci%C3%B3n-educativa-geg-spain/",
-          "web": "https://transformacioneducativa.es/meetup/",
-          "eventsUrl": "https://transformacioneducativa.es/agenda/"
-        },
-        "thumbnailUrl": "images/geg-spain.webp",
         "humanValidated": true
       }
     }

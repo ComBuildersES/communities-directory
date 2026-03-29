@@ -1258,7 +1258,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 103
   },
   {
     "id": 37,
@@ -2876,7 +2877,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 79
   },
   {
     "id": 81,
@@ -2912,7 +2914,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 79
   },
   {
     "id": 82,
@@ -2953,7 +2956,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 79
   },
   {
     "id": 83,
@@ -2999,7 +3003,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 79
   },
   {
     "id": 84,
@@ -3051,7 +3056,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 79
   },
   {
     "id": 85,
@@ -3095,7 +3101,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 79
   },
   {
     "id": 86,
@@ -3144,7 +3151,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 79
   },
   {
     "id": 87,
@@ -3195,7 +3203,8 @@
     "shortDescription": "Este Community Group perteneciente a la CNCF se dedica a construir una comunidad de desarrolladores fuerte, abierta y diversa en torno a la plataforma y tecnologías Cloud Native en La Rioja.",
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 79
   },
   {
     "id": 88,
@@ -3241,7 +3250,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 79
   },
   {
     "id": 89,
@@ -3285,7 +3295,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 79
   },
   {
     "id": 90,
@@ -3421,7 +3432,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 92
   },
   {
     "id": 94,
@@ -4168,7 +4180,8 @@
     "removalReason": "",
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 302
   },
   {
     "id": 115,
@@ -5160,7 +5173,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 142
   },
   {
     "id": 142,
@@ -5537,7 +5551,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 39
   },
   {
     "id": 151,
@@ -5561,7 +5576,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 39
   },
   {
     "id": 152,
@@ -5586,7 +5602,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 39
   },
   {
     "id": 153,
@@ -5610,7 +5627,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 39
   },
   {
     "id": 154,
@@ -5634,7 +5652,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 39
   },
   {
     "id": 155,
@@ -5658,7 +5677,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 39
   },
   {
     "id": 156,
@@ -5685,7 +5705,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 39
   },
   {
     "id": 157,
@@ -5709,7 +5730,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 39
   },
   {
     "id": 158,
@@ -5758,7 +5780,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 39
   },
   {
     "id": 160,
@@ -5782,7 +5805,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 39
   },
   {
     "id": 161,
@@ -5806,7 +5830,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 39
   },
   {
     "id": 162,
@@ -5830,7 +5855,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 39
   },
   {
     "id": 163,
@@ -5854,7 +5880,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 39
   },
   {
     "id": 164,
@@ -5879,7 +5906,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 39
   },
   {
     "id": 165,
@@ -5903,7 +5931,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 39
   },
   {
     "id": 166,
@@ -5927,7 +5956,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 39
   },
   {
     "id": 167,
@@ -5951,7 +5981,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 39
   },
   {
     "id": 168,
@@ -5975,7 +6006,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 39
   },
   {
     "id": 169,
@@ -6978,7 +7010,8 @@
     "removalReason": "",
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 207
   },
   {
     "id": 196,
@@ -7012,10 +7045,10 @@
     },
     "thumbnailUrl": "images/gdg-cloud-espanol.webp",
     "latLon": {
-      "lat": 41.9005351,
-      "lon": 12.4568794
+      "lat": null,
+      "lon": null
     },
-    "displayOnMap": true,
+    "displayOnMap": false,
     "humanValidated": true,
     "shortDescription": "Los Grupos de Desarrolladores de Google (GDG) reúnen a desarrolladores y tecnólogos para que se conecten, aprendan y crezcan junto con las tecnologías y los expertos de Google. Estos grupos apoyan la innovación y el crecimiento en el mundo de la tecnología.",
     "langs": [
@@ -7047,7 +7080,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 196
   },
   {
     "id": 198,
@@ -7099,7 +7133,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 207
   },
   {
     "id": 199,
@@ -7167,7 +7202,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 207
   },
   {
     "id": 201,
@@ -7208,7 +7244,8 @@
     "shortDescription": "Los Grupos de Desarrolladores de Google (GDG) reúnen a desarrolladores y tecnólogos para que se conecten, aprendan y crezcan junto con las tecnologías y los expertos de Google. Estos grupos apoyan la innovación y el crecimiento en el mundo de la tecnología.",
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 207
   },
   {
     "id": 202,
@@ -7256,7 +7293,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 207
   },
   {
     "id": 203,
@@ -7300,7 +7338,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 207
   },
   {
     "id": 204,
@@ -7383,7 +7422,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 207
   },
   {
     "id": 206,
@@ -7424,7 +7464,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 207
   },
   {
     "id": 207,
@@ -7516,7 +7557,8 @@
     "removalReason": "",
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 207
   },
   {
     "id": 209,
@@ -7572,7 +7614,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 207
   },
   {
     "id": 210,
@@ -8320,7 +8363,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 302
   },
   {
     "id": 228,
@@ -8441,7 +8485,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 103
   },
   {
     "id": 231,
@@ -8552,7 +8597,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 103
   },
   {
     "id": 235,
@@ -11581,7 +11627,8 @@
       "es"
     ],
     "shortDescription": "",
-    "removalReason": ""
+    "removalReason": "",
+    "parentId": 302
   },
   {
     "id": 334,
@@ -11981,7 +12028,8 @@
     "shortDescription": "Comunidad para compartir conocimiento y experiencias sobre el lenguaje y plataforma Java y otros lenguajes de la JVM.",
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 302
   },
   {
     "id": 345,
@@ -12355,7 +12403,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 355
   },
   {
     "id": 354,
@@ -12395,7 +12444,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 355
   },
   {
     "id": 355,
@@ -14188,7 +14238,8 @@
     "shortDescription": "Comunidad donde compartir buenas prácticas, nuevos enfoques y tecnologías para la gestión, el procesamiento, el análisis y la visualización de datos. Abordan la ciencia de datos utilizando muchos lenguajes, incluyendo Python, Julia y R.",
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 399
   },
   {
     "id": 401,
@@ -14239,7 +14290,8 @@
     "shortDescription": "",
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 399
   },
   {
     "id": 402,
@@ -14338,7 +14390,8 @@
     "removalReason": "",
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 404
   },
   {
     "id": 404,
@@ -14401,7 +14454,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 404
   },
   {
     "id": 406,
@@ -14447,7 +14501,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 404
   },
   {
     "id": 407,
@@ -14475,7 +14530,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 404
   },
   {
     "id": 408,
@@ -14516,7 +14572,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 404
   },
   {
     "id": 409,
@@ -15753,7 +15810,8 @@
     "removalReason": "",
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 438
   },
   {
     "id": 440,
@@ -17203,7 +17261,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 483
   },
   {
     "id": 485,
@@ -17230,7 +17289,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 483
   },
   {
     "id": 486,
@@ -17279,7 +17339,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 483
   },
   {
     "id": 487,
@@ -17309,7 +17370,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 483
   },
   {
     "id": 488,
@@ -17401,7 +17463,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 512
   },
   {
     "id": 490,
@@ -17447,7 +17510,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 512
   },
   {
     "id": 491,
@@ -17540,7 +17604,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 512
   },
   {
     "id": 493,
@@ -17840,7 +17905,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 512
   },
   {
     "id": 500,
@@ -18712,7 +18778,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 512
   },
   {
     "id": 519,
@@ -18993,7 +19060,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 512
   },
   {
     "id": 526,
@@ -19178,7 +19246,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 512
   },
   {
     "id": 530,
@@ -19357,7 +19426,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 103
   },
   {
     "id": 535,
@@ -19455,7 +19525,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 302
   },
   {
     "id": 538,
@@ -19743,7 +19814,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 207
   },
   {
     "id": 544,
@@ -19877,7 +19949,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 404
   },
   {
     "id": 547,
@@ -20026,7 +20099,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 214
   },
   {
     "id": 551,
@@ -20228,7 +20302,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 404
   },
   {
     "id": 556,
@@ -20755,7 +20830,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 404
   },
   {
     "id": 571,
@@ -21418,7 +21494,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 207
   },
   {
     "id": 588,
@@ -22055,7 +22132,8 @@
     "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 207
   },
   {
     "id": 605,
@@ -22120,10 +22198,10 @@
     "thumbnailUrl": "images/geg-spain.webp",
     "removalReason": "",
     "latLon": {
-      "lat": 41.9005351,
-      "lon": 12.4568794
+      "lat": null,
+      "lon": null
     },
-    "displayOnMap": true,
+    "displayOnMap": false,
     "humanValidated": true
   }
 ]
