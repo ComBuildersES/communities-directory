@@ -1,0 +1,1 @@
+import{bk as r,gD as f,gB as c,gE as i}from"./index-BOasrM1b.js";async function u(a,s,t){const n=r(a),{data:o}=await f(n,c.from(s),t);return o.count}async function e(a,s,t){const n=r(a),{data:o}=await i(n,c.from(s),t);return o.objectIds??[]}export{e as a,u as s};
