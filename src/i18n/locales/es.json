@@ -104,7 +104,7 @@
       "tags": "Temática",
       "targetAudience": "Público",
       "name": "Comunidad",
-      "parentId": "Hijas de"
+      "parentId": ""
     }
   },
   "tagSearch": {
@@ -126,7 +126,7 @@
     "childrenCount_one": "{{count}} comunidad local",
     "childrenCount_other": "{{count}} comunidades locales",
     "viewChildren": "Ver todas",
-    "filteringChildren": "Comunidades hijas de: {{name}}",
+    "filteringChildren": "Comunidades locales de: {{name}}",
     "clearChildrenFilter": "Quitar filtro"
   },
   "sidebar": {

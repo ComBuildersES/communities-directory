@@ -78,7 +78,7 @@ export function ResultsBar({ view, toggleView }) {
                 : key === "parentId"
                   ? (parentIdNameMap[value] || value)
                   : value,
-      category: FILTER_LABEL_KEYS[key] ? t(FILTER_LABEL_KEYS[key]) : key,
+      category: key === "parentId" ? null : (FILTER_LABEL_KEYS[key] ? t(FILTER_LABEL_KEYS[key]) : key),
     }))
   );
 
