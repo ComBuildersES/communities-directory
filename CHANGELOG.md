@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-30 `a22a973` Add hidden children warning to ParentFilterBanner and update translations
+- 2026-03-30 `5ba0251` Update community data and add new Python and GDG groups with updated images
+- 2026-03-30 `15db54c` Add hidden children warning to ParentFilterBanner and update translations
 - 2026-03-30 `9cb4756` Enhance CommunityModal with parent network display and update translations
 - 2026-03-30 `2676e55` Implement parent-child relationship for communities
 - 2026-03-27 `87a9d16` add search placeholder translations for map component feat(App): set document language based on resolved language
