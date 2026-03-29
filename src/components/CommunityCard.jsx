@@ -1,7 +1,13 @@
 /* eslint-disable react/prop-types */
 import { useTranslation } from "react-i18next";
 
-export function CommunityCard({ community, hasCBMember = false, onOpen }) {
+export function CommunityCard({
+  community,
+  hasCBMember = false,
+  isHighlighted = false,
+  isMuted = false,
+  onOpen,
+}) {
   const { t } = useTranslation();
   const {
     name: comunidad,
@@ -9,11 +15,20 @@ export function CommunityCard({ community, hasCBMember = false, onOpen }) {
     shortDescription,
   } = community;
   const openModal = () => onOpen?.(community.id);
+  const cardClassName = [
+    "card",
+    "mycard",
+    "mycard--simple",
+    isHighlighted ? "mycard--highlighted" : "",
+    isMuted ? "mycard--muted" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
 
   return (
     <>
       <div
-        className="card mycard mycard--simple"
+        className={cardClassName}
         onClick={openModal}
         onKeyDown={(event) => {
           if (event.key === "Enter" || event.key === " ") {

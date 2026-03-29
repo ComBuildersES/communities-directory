@@ -3,6 +3,7 @@
 @import url("https://js.arcgis.com/map-components/4.32/arcgis-map-components.css");
 
 .map-canvas {
+  position: relative;
   max-height: 50vh;
   overflow: hidden;
   transition: max-height 0.3s ease, opacity 0.2s ease;
@@ -18,6 +19,142 @@ arcgis-map {
   height: 40vh;
   width: 100%;
   border-radius: 10px;
+}
+
+.map-legend {
+  position: absolute;
+  bottom: 1.9rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: max-content;
+  max-width: calc(100% - 1.5rem);
+  box-sizing: border-box;
+  padding: 0.4rem;
+  border: 1px solid rgba(221, 228, 239, 0.7);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 24px rgba(33, 50, 74, 0.12);
+  overflow: hidden;
+}
+
+.map-legend-toggle,
+.map-legend-backdrop {
+  display: none;
+}
+
+.map-legend__sheet-header {
+  display: none;
+}
+
+.map-legend__sheet-handle {
+  display: block;
+  width: 2.6rem;
+  height: 0.24rem;
+  margin: 0 auto 0.55rem;
+  border-radius: 999px;
+  background: rgba(136, 153, 178, 0.4);
+}
+
+.map-legend__sheet-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.map-legend__sheet-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #21324a;
+}
+
+.map-legend__sheet-close {
+  border: 1px solid rgba(200, 212, 229, 0.95);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  color: #30507d;
+  font: inherit;
+  font-size: 0.74rem;
+  font-weight: 700;
+  line-height: 1;
+  padding: 0.34rem 0.62rem;
+  cursor: pointer;
+}
+
+.map-legend__items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.32rem;
+}
+
+.map-legend__item {
+  display: inline-grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 0.42rem;
+  padding: 0.28rem 0.42rem;
+  border: 1px solid #dbe3ee;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.82);
+  color: #21324a;
+  cursor: pointer;
+  font: inherit;
+  text-align: left;
+  white-space: nowrap;
+  transition:
+    transform 0.18s ease,
+    border-color 0.18s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+.map-legend__item:hover,
+.map-legend__item:focus-visible,
+.map-legend__item.is-active {
+  border-color: #a9bdd9;
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(33, 50, 74, 0.12);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.map-legend__item.is-empty {
+  cursor: not-allowed;
+  opacity: 0.56;
+  box-shadow: none;
+  transform: none;
+}
+
+.map-legend__swatch {
+  display: inline-flex;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.38);
+}
+
+.map-legend__label {
+  min-width: 0;
+  font-size: 0.76rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.map-legend__count {
+  display: inline-flex;
+  min-width: 1.55rem;
+  justify-content: center;
+  padding: 0.1rem 0.34rem;
+  border-radius: 999px;
+  background: #e9f0fa;
+  color: #30507d;
+  font-size: 0.7rem;
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
 }
 
 .map-toggle-btn {
@@ -316,4 +453,120 @@ arcgis-map {
 
 .esri-features__container:not(:empty) {
   padding: 0px !important;
+}
+
+@media (max-width: 900px) {
+  .map-legend-toggle {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    z-index: 3;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.42rem;
+    transform: translateX(-50%);
+    padding: 0.42rem 0.72rem;
+    border: 1px solid rgba(221, 228, 239, 0.92);
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.82);
+    color: #21324a;
+    box-shadow: 0 12px 24px rgba(33, 50, 74, 0.16);
+    backdrop-filter: blur(12px);
+    font: inherit;
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    transition: opacity 0.18s ease, transform 0.18s ease;
+  }
+
+  .map-legend-toggle.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) translateY(0.6rem);
+  }
+
+  .map-legend-toggle__preview {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .map-legend-toggle__dot {
+    width: 0.62rem;
+    height: 0.62rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    margin-left: -0.14rem;
+    box-shadow: 0 2px 6px rgba(33, 50, 74, 0.16);
+  }
+
+  .map-legend-toggle__dot:first-child {
+    margin-left: 0;
+  }
+
+  .map-legend-backdrop {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: block;
+    border: 0;
+    background: transparent;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.18s ease;
+  }
+
+  .map-legend-backdrop.is-open {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .map-legend {
+    bottom: 2rem;
+    left: 0.75rem;
+    right: 0.75rem;
+    z-index: 3;
+    width: auto;
+    max-width: none;
+    max-height: min(18rem, calc(100% - 4.5rem));
+    padding: 0.55rem;
+    overflow: auto;
+    overscroll-behavior: contain;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(0.8rem);
+    transition:
+      opacity 0.18s ease,
+      transform 0.18s ease,
+      visibility 0.18s ease;
+  }
+
+  .map-legend.is-open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .map-legend__sheet-header {
+    display: block;
+    margin-bottom: 0.45rem;
+  }
+
+  .map-legend__items {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.38rem;
+  }
+
+  .map-legend__item {
+    padding: 0.34rem 0.48rem;
+    white-space: normal;
+    border-radius: 10px;
+  }
+
+  .map-legend__label {
+    font-size: 0.8rem;
+  }
 }

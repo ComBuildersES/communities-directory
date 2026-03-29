@@ -7012,10 +7012,10 @@
     },
     "thumbnailUrl": "images/gdg-cloud-espanol.webp",
     "latLon": {
-      "lat": 41.9005351,
-      "lon": 12.4568794
+      "lat": null,
+      "lon": null
     },
-    "displayOnMap": true,
+    "displayOnMap": false,
     "humanValidated": true,
     "shortDescription": "Los Grupos de Desarrolladores de Google (GDG) reúnen a desarrolladores y tecnólogos para que se conecten, aprendan y crezcan junto con las tecnologías y los expertos de Google. Estos grupos apoyan la innovación y el crecimiento en el mundo de la tecnología.",
     "langs": [
@@ -22120,10 +22120,10 @@
     "thumbnailUrl": "images/geg-spain.webp",
     "removalReason": "",
     "latLon": {
-      "lat": 41.9005351,
-      "lon": 12.4568794
+      "lat": null,
+      "lon": null
     },
-    "displayOnMap": true,
+    "displayOnMap": false,
     "humanValidated": true
   }
 ]

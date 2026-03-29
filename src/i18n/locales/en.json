@@ -206,6 +206,15 @@
     "hiddenTooltip_one": "1 community matches the filters but doesn't appear on the map because it has no fixed location.",
     "hiddenTooltip_other": "{{count}} communities match the filters but don't appear on the map because they have no fixed location.",
     "viewInList": "View in list",
+    "legend": {
+      "title": "Legend by type",
+      "hint": "Hover to highlight visible cards. Click to filter.",
+      "mobileSummary": "Legend · {{count}}",
+      "open": "Show legend",
+      "close": "Hide legend",
+      "clickToFilter": "Filter by {{label}}",
+      "empty": "There are no visible {{label}} communities in this area."
+    },
     "popup": {
       "status": "Status",
       "lastReviewed": "Reviewed",
