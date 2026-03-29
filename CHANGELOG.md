@@ -89,6 +89,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-03-29 `9f1c8b7` [Actualizada MadridJUG](https://combuilderses.github.io/communities-directory/?community=333) ([PR #306](https://github.com/ComBuildersES/communities-directory/pull/306))
 - 2026-03-27 `30e597a` [Añadida GEG Spain](https://combuilderses.github.io/communities-directory/?community=606) ([PR #301](https://github.com/ComBuildersES/communities-directory/pull/301))
 - 2026-03-27 `4bb5096` [Actualizada T3chFest](https://combuilderses.github.io/communities-directory/?community=440) ([PR #298](https://github.com/ComBuildersES/communities-directory/pull/298))
 - 2026-03-27 `67c651d` [Actualizada NodeJSMadrid](https://combuilderses.github.io/communities-directory/?community=366) ([PR #294](https://github.com/ComBuildersES/communities-directory/pull/294))
@@ -151,6 +152,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-29 `242ad83` update changelog [skip ci]
 - 2026-03-27 `768ad9d` update changelog [skip ci]
 - 2026-03-27 `3e56798` update changelog [skip ci]
 - 2026-03-27 `2dbb483` update changelog [skip ci]
