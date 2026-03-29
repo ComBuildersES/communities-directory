@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-30 `5ba0251` Update community data and add new Python and GDG groups with updated images
+- 2026-03-30 `e19fe3e` Update community data and add new Python and GDG groups with updated images
 - 2026-03-30 `15db54c` Add hidden children warning to ParentFilterBanner and update translations
 - 2026-03-30 `9cb4756` Enhance CommunityModal with parent network display and update translations
 - 2026-03-30 `2676e55` Implement parent-child relationship for communities
@@ -158,6 +158,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-29 `a871567` update changelog [skip ci]
 - 2026-03-29 `fdd41b7` update changelog [skip ci]
 - 2026-03-29 `04a360d` update changelog [skip ci]
 - 2026-03-29 `c3a4c89` update changelog [skip ci]
