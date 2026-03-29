@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-03-30 `a9ae62d` Implement parent-child relationship for communities
 - 2026-03-27 `87a9d16` add search placeholder translations for map component feat(App): set document language based on resolved language
 - 2026-03-27 `d62161c` add generalist community notes and update translations
 - 2026-03-27 `9e1fe76` add conditional inclusion for matchesAllTags and matchesAllAudience in normalizePayload
@@ -153,6 +154,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-29 `04a360d` update changelog [skip ci]
 - 2026-03-29 `c3a4c89` update changelog [skip ci]
 - 2026-03-29 `58b8b2c` update .all-contributorsrc [skip ci]
 - 2026-03-29 `2c75927` update README.md [skip ci]

@@ -908,6 +908,72 @@ body {
   font-style: italic;
 }
 
+.parent-filter-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1rem;
+  background: #eef4ff;
+  border-bottom: 1px solid #d7e4fb;
+  color: #30507d;
+  font-size: 0.85rem;
+}
+
+.parent-filter-banner__clear {
+  background: none;
+  border: 1px solid #4a6fa5;
+  border-radius: 999px;
+  color: #4a6fa5;
+  cursor: pointer;
+  font-size: 0.78rem;
+  padding: 0.1rem 0.6rem;
+  margin-left: auto;
+  transition: background 0.15s, color 0.15s;
+}
+
+.parent-filter-banner__clear:hover,
+.parent-filter-banner__clear:focus-visible {
+  background: #4a6fa5;
+  color: #fff;
+}
+
+.community-card-children {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.45rem 0.75rem;
+  background: #f0f4ff;
+  border-top: 1px solid #dce6fb;
+  border-radius: 0 0 8px 8px;
+  font-size: 0.78rem;
+}
+
+.community-card-children__count {
+  color: #4a6fa5;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.community-card-children__btn {
+  background: none;
+  border: 1px solid #4a6fa5;
+  border-radius: 999px;
+  color: #4a6fa5;
+  cursor: pointer;
+  font-size: 0.74rem;
+  padding: 0.15rem 0.6rem;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s;
+}
+
+.community-card-children__btn:hover,
+.community-card-children__btn:focus-visible {
+  background: #4a6fa5;
+  color: #fff;
+}
+
 .mycard--simple:hover .community-card-overlay,
 .mycard--simple:focus-visible .community-card-overlay,
 .mycard--simple:focus-within .community-card-overlay {

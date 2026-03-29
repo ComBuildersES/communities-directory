@@ -8,6 +8,7 @@ import {
   useTags,
   useAudience,
   useCommunityActions,
+  useChildrenByParentId,
 } from "../stores/community.store.js";
 import { useSidebarActions, useSideBarVisible } from "../stores/sidebar.store.js";
 import { ViewToggleButton } from "./ViewToggleButton.jsx";
@@ -22,18 +23,21 @@ const FILTER_LABEL_KEYS = {
   tags: "resultsBar.filterLabel.tags",
   targetAudience: "resultsBar.filterLabel.targetAudience",
   name: "resultsBar.filterLabel.name",
+  parentId: "resultsBar.filterLabel.parentId",
 };
 
 /* eslint-disable react/prop-types */
 export function ResultsBar({ view, toggleView }) {
   const { t } = useTranslation();
   const filters = useFilters();
-  const total = useAllCommunities().length;
+  const allCommunities = useAllCommunities();
+  const total = allCommunities.length;
   const count = useNumberOfCommunities();
   const countOnSite = useNumberOFOnSiteCommunities();
   const allTags = useTags();
   const allAudience = useAudience();
   const { filterComunities } = useCommunityActions();
+  const childrenByParentId = useChildrenByParentId();
   const { toggleSidebar } = useSidebarActions();
   const isVisible = useSideBarVisible();
 
@@ -53,6 +57,11 @@ export function ResultsBar({ view, toggleView }) {
     [t]
   );
 
+  const parentIdNameMap = useMemo(
+    () => Object.fromEntries(allCommunities.filter((c) => childrenByParentId.has(c.id)).map((c) => [String(c.id), c.name])),
+    [allCommunities, childrenByParentId]
+  );
+
   const chips = Object.entries(filters).flatMap(([key, values]) =>
     values.map((value) => ({
       key,
@@ -60,14 +69,15 @@ export function ResultsBar({ view, toggleView }) {
       label:
         key === "langs"
           ? (languagesMap[value] || value.toUpperCase())
-          :
-        key === "tags"
-          ? (tagsMap[value] || value)
-          : key === "targetAudience"
-            ? (audienceMap[value] || value)
-            : key === "status" || key === "eventFormat" || key === "communityType"
-              ? t(`${key}.${value}`, { defaultValue: value })
-              : value,
+          : key === "tags"
+            ? (tagsMap[value] || value)
+            : key === "targetAudience"
+              ? (audienceMap[value] || value)
+              : key === "status" || key === "eventFormat" || key === "communityType"
+                ? t(`${key}.${value}`, { defaultValue: value })
+                : key === "parentId"
+                  ? (parentIdNameMap[value] || value)
+                  : value,
       category: FILTER_LABEL_KEYS[key] ? t(FILTER_LABEL_KEYS[key]) : key,
     }))
   );

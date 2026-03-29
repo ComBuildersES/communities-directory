@@ -226,6 +226,9 @@ export function normalizePayload(payload) {
     humanValidated: Boolean(payload.humanValidated),
     ...(normalizeBoolean(payload.matchesAllTags) ? { matchesAllTags: true } : {}),
     ...(normalizeBoolean(payload.matchesAllAudience) ? { matchesAllAudience: true } : {}),
+    ...(normalizeString(payload.communityType) !== 'umbrella-org'
+      ? { parentId: payload.parentId != null ? Number(payload.parentId) : null }
+      : {}),
   };
 }
 

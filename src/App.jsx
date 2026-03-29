@@ -10,6 +10,7 @@ import Map from "./components/Map/Map.jsx";
 import { TagSearch } from "./components/TagSearch/TagSearch.jsx";
 import { ResultsBar } from "./components/ResultsBar.jsx";
 import { FilterPanel } from "./components/FilterPanel.jsx";
+import { ParentFilterBanner } from "./components/ParentFilterBanner.jsx";
 import {
   buildContributionPath,
   parseContributionRoute,
@@ -29,6 +30,7 @@ import {
   useIsRefreshingFreshData,
   useTags,
   useCBMembersMap,
+  useChildrenByParentId,
 } from "./stores/community.store.js";
 
 function dismissActiveInput() {
@@ -76,6 +78,7 @@ function App () {
   const filters = useFilters();
   const isLoading = useIsLoading();
   const cbMembersMap = useCBMembersMap();
+  const childrenByParentId = useChildrenByParentId();
   const hasFreshData = useHasFreshData();
   const isRefreshingFreshData = useIsRefreshingFreshData();
   const freshnessError = useFreshnessError();
@@ -315,6 +318,7 @@ function App () {
       {!showContributionView && <TagSearch />}
       {!showContributionView && <ResultsBar view={view} toggleView={toggleView} />}
       {!showContributionView && <FilterPanel />}
+      {!showContributionView && <ParentFilterBanner />}
       {!showContributionView && shouldBlockCommunityDetails && communities.length > 0 && (
         <section className="contribution-shell">
           <article className="message is-info contribution-message">
@@ -391,6 +395,7 @@ function App () {
           tagsMap={tagsMap}
           audienceMap={audienceMap}
           cbHandles={cbMembersMap.get(selectedCommunity.id) || []}
+          childCount={childrenByParentId.get(selectedCommunity.id) ?? 0}
           onClose={closeCommunityModal}
           onGoToMap={goToMapLocation}
         />

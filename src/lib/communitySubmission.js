@@ -57,6 +57,7 @@ const DIRECTORY_FILTER_KEYS = [
   "tags",
   "targetAudience",
   "name",
+  "parentId",
 ];
 const FILTER_KEY_SHORT = {
   status: "s",
@@ -66,6 +67,7 @@ const FILTER_KEY_SHORT = {
   tags: "t",
   targetAudience: "ta",
   name: "n",
+  parentId: "p",
 };
 
 function getTodayDate() {
@@ -385,6 +387,7 @@ export function getEmptyCommunityDraft(nextId = null) {
     humanValidated: true,
     matchesAllTags: false,
     matchesAllAudience: false,
+    parentId: null,
   };
 }
 
@@ -529,6 +532,7 @@ export function buildCommunityPayload(draft, existingCommunity = null) {
     humanValidated: true,
     matchesAllTags: Boolean(draft.matchesAllTags),
     matchesAllAudience: Boolean(draft.matchesAllAudience),
+    ...(isUmbrellaOrganization ? {} : { parentId: draft.parentId ?? null }),
   };
 }
 

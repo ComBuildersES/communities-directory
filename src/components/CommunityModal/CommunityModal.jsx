@@ -118,7 +118,7 @@ function normalizeLocation(location) {
   return v && !INVALID_LOCATION_VALUES.has(v.toLowerCase()) ? v : null;
 }
 
-export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = [], onClose, onGoToMap }) {
+export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = [], childCount = 0, onClose, onGoToMap }) {
   const { t } = useTranslation();
   const { filterComunities } = useCommunityActions();
   const [tagsExpanded, setTagsExpanded] = useState(false);
@@ -305,6 +305,22 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
             </p>
           </div>
 
+
+          {/* Comunidades hijas */}
+          {communityType === "umbrella-org" && childCount > 0 && (
+            <div className="community-modal-children">
+              <i className="fa-solid fa-sitemap" aria-hidden="true"></i>
+              <span>{t("communityCard.childrenCount", { count: childCount })}</span>
+              <button
+                type="button"
+                className="community-modal-children-btn"
+                onClick={() => { applyFilter("parentId", String(community.id)); }}
+              >
+                {t("communityCard.viewChildren")}
+                {" "}<i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
+              </button>
+            </div>
+          )}
 
           {/* URLs agrupadas */}
           {(urlEntries.length > 0 || showFallbackUrl) && (

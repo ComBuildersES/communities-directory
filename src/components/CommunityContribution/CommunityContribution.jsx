@@ -140,6 +140,11 @@ function getFieldHelp(t) {
         t("contribution.fieldHelp.shortDescription.bullet3"),
       ],
     },
+    parentOrg: {
+      title: t("contribution.fieldHelp.parentOrg.title"),
+      description: t("contribution.fieldHelp.parentOrg.description"),
+      bullets: [],
+    },
   };
 }
 
@@ -903,6 +908,10 @@ export function CommunityContribution({
   const DELETION_REASON_OPTIONS = useMemo(() => getDeletionReasonOptions(t), [t]);
   const formRef = useRef(null);
   const nextId = useMemo(() => getNextCommunityId(communities), [communities]);
+  const umbrellaOrgs = useMemo(
+    () => communities.filter((c) => c.communityType === "umbrella-org").sort((a, b) => a.name.localeCompare(b.name)),
+    [communities]
+  );
   const isEditMode = Boolean(existingCommunity);
   const groupedAudience = useMemo(
     () => allAudience.map((item) => ({
@@ -928,6 +937,9 @@ export function CommunityContribution({
   const [draft, setDraft] = useState(() => mergeDraftWithProposal(getCommunityDraft(existingCommunity, nextId), proposalDraft));
   const [tagQuery, setTagQuery] = useState("");
   const [audienceQuery, setAudienceQuery] = useState("");
+  const [parentOrgQuery, setParentOrgQuery] = useState(
+    () => communities.find((c) => c.id === existingCommunity?.parentId)?.name ?? ""
+  );
   const languageOptions = useMemo(
     () => COMMUNITY_LANGUAGE_OPTIONS.map((code) => ({
       id: code,
@@ -1597,6 +1609,46 @@ export function CommunityContribution({
               </div>
             </div>
           </div>
+
+          {draft.communityType !== "umbrella-org" && (
+            <div className="field">
+              <label className="label contribution-label-with-help" htmlFor="parent-org-input">
+                <span>{t("contribution.form.parentOrgLabel")}</span>
+                <FieldHelp
+                  content={FIELD_HELP.parentOrg}
+                  isOpen={openHelpField === "parentOrg"}
+                  onToggle={() => setOpenHelpField((current) => current === "parentOrg" ? null : "parentOrg")}
+                  onClose={() => setOpenHelpField(null)}
+                />
+              </label>
+              <div className="control">
+                <input
+                  id="parent-org-input"
+                  className="input"
+                  type="text"
+                  list="umbrella-orgs-datalist"
+                  value={parentOrgQuery}
+                  placeholder={t("contribution.form.parentOrgPlaceholder")}
+                  onChange={(e) => {
+                    const query = e.target.value;
+                    setParentOrgQuery(query);
+                    const match = umbrellaOrgs.find((c) => c.name === query);
+                    handleFieldChange("parentId", match ? match.id : null);
+                  }}
+                />
+                <datalist id="umbrella-orgs-datalist">
+                  {umbrellaOrgs.map((c) => (
+                    <option key={c.id} value={c.name} />
+                  ))}
+                </datalist>
+              </div>
+              {!draft.parentId && (
+                <p className="help is-italic" style={{ color: "#888" }}>
+                  {t("contribution.form.parentOrgNone")}
+                </p>
+              )}
+            </div>
+          )}
 
           <div className="field">
             <label className="label contribution-label-with-help" htmlFor="community-format">

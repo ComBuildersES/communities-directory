@@ -43,6 +43,7 @@ const initialState = {
   numberOFOnSiteCommunities: 0, // Estado para el numero de com. presenciales
   cbMemberIds: new Set(), // IDs de comunidades con miembro en Community Builders
   cbMembersMap: new Map(), // communityId -> [github handles]
+  childrenByParentId: new Map(), // parentId -> count of child communities
   hasFreshData: false, // Datos confirmados desde red cuando hay conexión
   isRefreshingFreshData: false, // Revalidación online en curso
   freshnessError: null, // Aviso cuando solo hay datos de cache
@@ -114,6 +115,12 @@ const useCommunityStore = create(
             map.get(communityId).push(github);
             return map;
           }, new Map());
+          const childrenByParentId = data.reduce((map, c) => {
+            if (c.parentId != null) {
+              map.set(c.parentId, (map.get(c.parentId) ?? 0) + 1);
+            }
+            return map;
+          }, new Map());
           const inverseIndex = buildInverseIndex(data);
           const defaultFilters = { status: ["active"] };
           const urlFilters = parseDirectoryFilters();
@@ -133,6 +140,7 @@ const useCommunityStore = create(
             filters: initialFilters,
             cbMemberIds,
             cbMembersMap,
+            childrenByParentId,
             hasFreshData,
             isRefreshingFreshData: false,
             freshnessError: hasFreshData
@@ -272,6 +280,8 @@ export const useTags = () => useCommunityStore((state) => state.allTags);
 export const useAudience = () => useCommunityStore((state) => state.allAudience);
 
 export const useCBMemberIds = () => useCommunityStore((state) => state.cbMemberIds);
+
+export const useChildrenByParentId = () => useCommunityStore((state) => state.childrenByParentId);
 
 export const useCBMembersMap = () => useCommunityStore((state) => state.cbMembersMap);
 

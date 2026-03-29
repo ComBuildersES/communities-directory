@@ -7,6 +7,7 @@ import {
   useIsError,
   useCommunitiesFiltered,
   useCBMemberIds,
+  useChildrenByParentId,
 } from "../stores/community.store.js";
 
 export function CommunitiesList({ onOpenCommunity }) {
@@ -14,6 +15,7 @@ export function CommunitiesList({ onOpenCommunity }) {
   const isError = useIsError();
   const communitiesFiltered = useCommunitiesFiltered();
   const cbMemberIds = useCBMemberIds();
+  const childrenByParentId = useChildrenByParentId();
 
   const sortedCommunities = useMemo(
     () => [...communitiesFiltered].sort((a, b) => {
@@ -34,7 +36,13 @@ export function CommunitiesList({ onOpenCommunity }) {
     <div className="communitieslist-container">
       <div className="communitieslist">
         {sortedCommunities.map((community) => (
-          <CommunityCard key={community.id} community={community} hasCBMember={cbMemberIds.has(community.id)} onOpen={onOpenCommunity} />
+          <CommunityCard
+            key={community.id}
+            community={community}
+            hasCBMember={cbMemberIds.has(community.id)}
+            onOpen={onOpenCommunity}
+            childCount={childrenByParentId.get(community.id) ?? 0}
+          />
         ))}
       </div>
       <AddCommunityCTA />

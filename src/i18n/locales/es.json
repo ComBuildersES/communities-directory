@@ -103,7 +103,8 @@
       "langs": "Idioma",
       "tags": "Temática",
       "targetAudience": "Público",
-      "name": "Comunidad"
+      "name": "Comunidad",
+      "parentId": "Hijas de"
     }
   },
   "tagSearch": {
@@ -121,7 +122,12 @@
     "viewDetails": "Ver detalles de {{name}}",
     "cbBadgeTitle": "Personas que dinamizan esta comunidad también forman parte de la comunidad Community Builders que impulsa este directorio",
     "languagesBadgeLabel": "Idiomas de la comunidad",
-    "languageBadgeTitle": "La comunidad opera en {{language}}"
+    "languageBadgeTitle": "La comunidad opera en {{language}}",
+    "childrenCount_one": "{{count}} comunidad local",
+    "childrenCount_other": "{{count}} comunidades locales",
+    "viewChildren": "Ver todas",
+    "filteringChildren": "Comunidades hijas de: {{name}}",
+    "clearChildrenFilter": "Quitar filtro"
   },
   "sidebar": {
     "communityType": "Tipo de Comunidad",
@@ -311,6 +317,10 @@
         "bullet1": "Usa `Itinerante` cuando la comunidad cambia de ciudad o sede según la edición o el evento.",
         "bullet2": "Si no tienes claro qué valor poner, mejor abre un issue para comentarlo antes de enviarlo."
       },
+      "parentOrg": {
+        "title": "¿Qué es una organización paraguas?",
+        "description": "Una organización paraguas es una entidad que agrupa varias comunidades locales bajo una misma red o marca (ej: GDG Spain, PyLadies, Codebar). Si tu comunidad pertenece a una de estas redes, selecciónala aquí. La gran mayoría de comunidades no tienen organización paraguas."
+      },
       "shortDescription": {
         "title": "Cómo escribir la descripción breve",
         "description": "Resume en una frase qué hace especial a esta comunidad.",
@@ -388,7 +398,11 @@
       "thumbnailEmpty": "No hay imagen configurada actualmente.",
       "keepImage": "Mantener imagen actual",
       "replaceImage": "Reemplazar imagen",
-      "thumbnailHelp": "Para reemplazar la imagen necesitas una URL pública. Si prefieres, abre el issue, sube allí la imagen manualmente y comenta que se use esa."
+      "thumbnailHelp": "Para reemplazar la imagen necesitas una URL pública. Si prefieres, abre el issue, sube allí la imagen manualmente y comenta que se use esa.",
+      "parentOrgLabel": "Organización paraguas",
+      "parentOrgNone": "Sin organización paraguas",
+      "parentOrgPlaceholder": "Busca por nombre…",
+      "parentOrgTooltip": "Una organización paraguas es una entidad que agrupa varias comunidades locales bajo una misma red o marca (ej: GDG Spain, PyLadies, Codebar). Si tu comunidad pertenece a una de estas redes, selecciónala aquí. La gran mayoría de comunidades no tienen organización paraguas."
     },
     "tags": {
       "title": "Etiquetas",

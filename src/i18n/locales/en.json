@@ -103,7 +103,8 @@
       "langs": "Language",
       "tags": "Topics",
       "targetAudience": "Audience",
-      "name": "Community"
+      "name": "Community",
+      "parentId": "Children of"
     }
   },
   "tagSearch": {
@@ -121,7 +122,12 @@
     "viewDetails": "View details for {{name}}",
     "cbBadgeTitle": "People who run this community are also part of the Community Builders community that drives this directory",
     "languagesBadgeLabel": "Community languages",
-    "languageBadgeTitle": "This community operates in {{language}}"
+    "languageBadgeTitle": "This community operates in {{language}}",
+    "childrenCount_one": "{{count}} local community",
+    "childrenCount_other": "{{count}} local communities",
+    "viewChildren": "View all",
+    "filteringChildren": "Member communities of: {{name}}",
+    "clearChildrenFilter": "Clear filter"
   },
   "sidebar": {
     "communityType": "Community Type",
@@ -311,6 +317,10 @@
         "bullet1": "Use `Itinerant` when the community changes city or venue depending on the edition or event.",
         "bullet2": "If you're not sure what value to put, it's better to open an issue to discuss it first."
       },
+      "parentOrg": {
+        "title": "What is an umbrella organization?",
+        "description": "An umbrella organization is an entity that groups several local communities under the same network or brand (e.g. GDG Spain, PyLadies, Codebar). If your community belongs to one of these networks, select it here. The vast majority of communities have no umbrella organization."
+      },
       "shortDescription": {
         "title": "How to write the short description",
         "description": "Summarize in one sentence what makes this community special.",
@@ -388,7 +398,11 @@
       "thumbnailEmpty": "No image configured currently.",
       "keepImage": "Keep current image",
       "replaceImage": "Replace image",
-      "thumbnailHelp": "To replace the image you need a public URL. If you prefer, open the issue, upload the image there manually and comment that it should be used."
+      "thumbnailHelp": "To replace the image you need a public URL. If you prefer, open the issue, upload the image there manually and comment that it should be used.",
+      "parentOrgLabel": "Umbrella organization",
+      "parentOrgNone": "No umbrella organization",
+      "parentOrgPlaceholder": "Search by name…",
+      "parentOrgTooltip": "An umbrella organization is an entity that groups several local communities under the same network or brand (e.g. GDG Spain, PyLadies, Codebar). If your community belongs to one of these networks, select it here. The vast majority of communities have no umbrella organization."
     },
     "tags": {
       "title": "Tags",
