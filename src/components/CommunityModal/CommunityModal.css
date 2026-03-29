@@ -246,13 +246,45 @@ button.modal-badge:focus-visible {
 
 .community-modal-summary {
   margin: 0;
-  color: #4a4a4a;
-  line-height: 1.55;
+  font-size: 0.875rem;
+  color: #555;
+  line-height: 1.65;
+  font-weight: 400;
 }
 
 .community-modal-summary--missing {
   color: #7a7a7a;
   font-style: italic;
+}
+
+/* Red paraguas (comunidad pertenece a una umbrella org) */
+.community-modal-parent-network {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.75rem;
+  padding: 0.3rem 0.7rem;
+  background: #f4f2ff;
+  border: 1px solid #d0c9ff;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #5a4fcf;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s, border-color 0.15s;
+  white-space: nowrap;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.community-modal-parent-network:hover {
+  background: #e8e4ff;
+  border-color: #b0a6f0;
+}
+
+.community-modal-parent-network__count {
+  color: #8a80cc;
 }
 
 /* Comunidades hijas */

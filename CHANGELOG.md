@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-03-30 `8cfb727` Enhance CommunityModal with parent network display and update translations
 - 2026-03-30 `2676e55` Implement parent-child relationship for communities
 - 2026-03-27 `87a9d16` add search placeholder translations for map component feat(App): set document language based on resolved language
 - 2026-03-27 `d62161c` add generalist community notes and update translations
@@ -82,7 +83,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Fixes
 
-- 2026-03-30 `cfbd587` Update parentId label to empty string in ResultsBar component and translations
+- 2026-03-30 `d96934d` Update parentId label to empty string in ResultsBar component and translations
 - 2026-03-27 `050317e` evitar que el editor de propuestas persista rutas absolutas en communities.json
 - 2026-03-25 `c227942` update support message for inclusivity
 - 2026-03-24 `731af6c` correct GitHub username for communityId 543 in community-builders-members.json

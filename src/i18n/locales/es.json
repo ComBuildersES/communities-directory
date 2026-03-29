@@ -156,6 +156,8 @@
     "filterByAudience": "Filtrar por {{audience}}",
     "viewOnMap": "Ver en el mapa",
     "reviewed": "Revisada: {{date}}",
+    "partOfNetwork": "Parte de la red de {{name}}",
+    "networkCount": "· {{count}} comunidades",
     "shortDescription": "Descripción breve",
     "noDescription": "Sin descripción breve todavía",
     "links": "Enlaces",

@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useCommunityActions } from "../../stores/community.store.js";
+import { useCommunityActions, useAllCommunities, useChildrenByParentId } from "../../stores/community.store.js";
 import { buildContributionPath } from "../../lib/communitySubmission";
 import { normalizeCommunityLangs } from "../../lib/communityLanguages.js";
 import "./CommunityModal.css";
@@ -121,6 +121,8 @@ function normalizeLocation(location) {
 export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = [], childCount = 0, onClose, onGoToMap }) {
   const { t } = useTranslation();
   const { filterComunities } = useCommunityActions();
+  const allCommunities = useAllCommunities();
+  const childrenByParentId = useChildrenByParentId();
   const [tagsExpanded, setTagsExpanded] = useState(false);
   const [audienceExpanded, setAudienceExpanded] = useState(false);
   const [openUrlGroup, setOpenUrlGroup] = useState(null);
@@ -190,7 +192,11 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
     thumbnailUrl,
     humanValidated,
     latLon,
+    parentId,
   } = community;
+
+  const parentCommunity = parentId != null ? allCommunities.find((c) => c.id === parentId) : null;
+  const siblingCount = parentId != null ? childrenByParentId.get(parentId) ?? 0 : 0;
 
   const hasMapCoords = latLon?.lat != null && latLon?.lon != null;
   const languages = normalizeCommunityLangs(langs);
@@ -296,6 +302,23 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
 
         {/* Cuerpo */}
         <div className="community-modal-body">
+          {parentCommunity && (
+            <button
+              type="button"
+              className="community-modal-parent-network"
+              onClick={() => applyFilter("parentId", String(parentCommunity.id))}
+            >
+              <i className="fa-solid fa-sitemap" aria-hidden="true"></i>
+              <span>{t("communityModal.partOfNetwork", { name: parentCommunity.name })}</span>
+              {siblingCount > 1 && (
+                <span className="community-modal-parent-network__count">
+                  {t("communityModal.networkCount", { count: siblingCount })}
+                </span>
+              )}
+              <i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          )}
+
           <div className="community-modal-section">
             <h3 className="community-modal-section-title">
               <i className="fas fa-align-left"></i> {t("communityModal.shortDescription")}
