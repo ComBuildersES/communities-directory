@@ -151,6 +151,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-27 `768ad9d` update changelog [skip ci]
 - 2026-03-27 `3e56798` update changelog [skip ci]
 - 2026-03-27 `2dbb483` update changelog [skip ci]
 - 2026-03-27 `a3fee7b` update changelog [skip ci]
@@ -221,7 +222,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
-- 2026-03-28 `e101724` - Updated Map.css for consistent styling and added new styles for cluster popups. (Override esri existing styles and ensure proper layout and appearance of cluster popups.) - Refactored Map.jsx to implement cluster popup functionality with SVG charts. - Introduced new constants for cluster segment configuration and popup visibility settings. - Enhanced popup handling for clusters and individual community features.
+- 2026-03-28 `3770cbf` - Updated Map.css for consistent styling and added new styles for cluster popups. (Override esri existing styles and ensure proper layout and appearance of cluster popups.) - Refactored Map.jsx to implement cluster popup functionality with SVG charts. - Introduced new constants for cluster segment configuration and popup visibility settings. - Enhanced popup handling for clusters and individual community features.
 - 2026-03-27 `6a2658b` Remove obsolete image files and health report document
 - 2026-03-27 `b431402` Refactor community types, statuses, and event formats to use consistent keys and translations
 - 2026-03-26 `49c9eaf` Add thumbnail for Rust Girona community and include image file
