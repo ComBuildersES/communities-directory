@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-30 `8cfb727` Enhance CommunityModal with parent network display and update translations
+- 2026-03-30 `a22a973` Add hidden children warning to ParentFilterBanner and update translations
+- 2026-03-30 `9cb4756` Enhance CommunityModal with parent network display and update translations
 - 2026-03-30 `2676e55` Implement parent-child relationship for communities
 - 2026-03-27 `87a9d16` add search placeholder translations for map component feat(App): set document language based on resolved language
 - 2026-03-27 `d62161c` add generalist community notes and update translations
@@ -156,6 +157,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-29 `fdd41b7` update changelog [skip ci]
 - 2026-03-29 `04a360d` update changelog [skip ci]
 - 2026-03-29 `c3a4c89` update changelog [skip ci]
 - 2026-03-29 `58b8b2c` update .all-contributorsrc [skip ci]

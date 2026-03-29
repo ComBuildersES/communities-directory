@@ -957,6 +957,19 @@ body {
   color: #fff;
 }
 
+.parent-filter-banner__hidden-warning {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.8rem;
+  color: #7a5c00;
+  background: #fff8e1;
+  border: 1px solid #ffe08a;
+  border-radius: 999px;
+  padding: 0.1rem 0.65rem;
+  white-space: nowrap;
+}
+
 .community-card-children {
   display: flex;
   align-items: center;

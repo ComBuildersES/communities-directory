@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
 import { useTranslation } from "react-i18next";
-import { useCommunityActions } from "../stores/community.store.js";
 
 export function CommunityCard({
   community,
@@ -8,24 +7,14 @@ export function CommunityCard({
   isHighlighted = false,
   isMuted = false,
   onOpen,
-  childCount = 0,
 }) {
   const { t } = useTranslation();
-  const { filterComunities } = useCommunityActions();
   const {
     name: comunidad,
     thumbnailUrl: miniatura,
     shortDescription,
-    communityType,
-    id,
   } = community;
   const openModal = () => onOpen?.(community.id);
-  const isUmbrellaOrg = communityType === "umbrella-org";
-
-  const handleViewChildren = (e) => {
-    e.stopPropagation();
-    filterComunities("parentId", String(id));
-  };
 
   const cardClassName = [
     "card",
@@ -82,21 +71,6 @@ export function CommunityCard({
             </figcaption>
           </figure>
         </div>
-        {isUmbrellaOrg && childCount > 0 && (
-          <div className="community-card-children" onClick={(e) => e.stopPropagation()}>
-            <span className="community-card-children__count">
-              <i className="fa-solid fa-sitemap" aria-hidden="true"></i>
-              {" "}{t("communityCard.childrenCount", { count: childCount })}
-            </span>
-            <button
-              className="community-card-children__btn"
-              onClick={handleViewChildren}
-            >
-              {t("communityCard.viewChildren")}
-              {" "}<i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
-            </button>
-          </div>
-        )}
       </div>
 
     </>

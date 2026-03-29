@@ -261,6 +261,7 @@ button.modal-badge:focus-visible {
 .community-modal-parent-network {
   display: inline-flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 0.4rem;
   margin-bottom: 0.75rem;
   padding: 0.3rem 0.7rem;
@@ -272,10 +273,8 @@ button.modal-badge:focus-visible {
   cursor: pointer;
   font-family: inherit;
   transition: background 0.15s, border-color 0.15s;
-  white-space: nowrap;
   max-width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  box-sizing: border-box;
 }
 
 .community-modal-parent-network:hover {

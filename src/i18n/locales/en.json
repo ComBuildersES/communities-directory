@@ -127,7 +127,9 @@
     "childrenCount_other": "{{count}} local communities",
     "viewChildren": "View all",
     "filteringChildren": "Member communities of: {{name}}",
-    "clearChildrenFilter": "Clear filter"
+    "clearChildrenFilter": "Clear filter",
+    "hiddenChildrenWarning_one": "{{count}} community hidden by active filters — reduce filters to see it",
+    "hiddenChildrenWarning_other": "{{count}} communities hidden by active filters — reduce filters to see them"
   },
   "sidebar": {
     "communityType": "Community Type",

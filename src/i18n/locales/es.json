@@ -127,7 +127,9 @@
     "childrenCount_other": "{{count}} comunidades locales",
     "viewChildren": "Ver todas",
     "filteringChildren": "Comunidades locales de: {{name}}",
-    "clearChildrenFilter": "Quitar filtro"
+    "clearChildrenFilter": "Quitar filtro",
+    "hiddenChildrenWarning_one": "{{count}} comunidad oculta por los filtros activos — reduce los filtros para verla",
+    "hiddenChildrenWarning_other": "{{count}} comunidades ocultas por los filtros activos — reduce los filtros para verlas"
   },
   "sidebar": {
     "communityType": "Tipo de Comunidad",

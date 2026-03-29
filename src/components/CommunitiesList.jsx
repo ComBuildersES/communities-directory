@@ -7,7 +7,6 @@ import {
   useIsError,
   useCommunitiesFiltered,
   useCBMemberIds,
-  useChildrenByParentId,
 } from "../stores/community.store.js";
 
 export function CommunitiesList({ onOpenCommunity }) {
@@ -15,7 +14,6 @@ export function CommunitiesList({ onOpenCommunity }) {
   const isError = useIsError();
   const communitiesFiltered = useCommunitiesFiltered();
   const cbMemberIds = useCBMemberIds();
-  const childrenByParentId = useChildrenByParentId();
 
   const sortedCommunities = useMemo(
     () => [...communitiesFiltered].sort((a, b) => {
@@ -41,7 +39,6 @@ export function CommunitiesList({ onOpenCommunity }) {
             community={community}
             hasCBMember={cbMemberIds.has(community.id)}
             onOpen={onOpenCommunity}
-            childCount={childrenByParentId.get(community.id) ?? 0}
           />
         ))}
       </div>
