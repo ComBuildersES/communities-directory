@@ -98,6 +98,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-03-30 `a138e10` [Actualizada Women Techmakers Madrid](https://combuilderses.github.io/communities-directory/?community=480) ([PR #330](https://github.com/ComBuildersES/communities-directory/pull/330))
 - 2026-03-30 `1565bec` [Actualizada WordPress Coruña](https://combuilderses.github.io/communities-directory/?community=497) ([PR #328](https://github.com/ComBuildersES/communities-directory/pull/328))
 - 2026-03-30 `30367be` [Actualizada Datolada](https://combuilderses.github.io/communities-directory/?community=540) ([PR #326](https://github.com/ComBuildersES/communities-directory/pull/326))
 - 2026-03-30 `9f9c7bc` [Actualizada Ping A Programadoras](https://combuilderses.github.io/communities-directory/?community=573) ([PR #323](https://github.com/ComBuildersES/communities-directory/pull/323))
@@ -170,6 +171,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-30 `42fd952` update changelog [skip ci]
 - 2026-03-30 `eb14a83` update changelog [skip ci]
 - 2026-03-30 `6e573bd` update changelog [skip ci]
 - 2026-03-30 `2116e74` update .all-contributorsrc [skip ci]
