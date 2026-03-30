@@ -7,7 +7,7 @@ const allContributorsRc = JSON.parse(allContributorsRaw);
 
 const CONTRIBUTORS_URL = "https://github.com/ComBuildersES/communities-directory?tab=readme-ov-file#contributors";
 const MAX_CONTRIBUTORS_IN_POPOVER = 24;
-const contributors = allContributorsRc.contributors.slice(0, MAX_CONTRIBUTORS_IN_POPOVER);
+const allContributors = allContributorsRc.contributors;
 
 const APP_URL = "https://combuilderses.github.io/communities-directory/";
 const GITHUB_URL = "https://github.com/ComBuildersES/communities-directory";
@@ -47,6 +47,17 @@ function buildShareLinks(t) {
   ];
 }
 
+function shuffleContributors(contributors) {
+  const shuffled = [...contributors];
+
+  for (let index = shuffled.length - 1; index > 0; index -= 1) {
+    const randomIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[index]];
+  }
+
+  return shuffled;
+}
+
 export function Heading ({
   isContributionView = false,
   closeContributionForm,
@@ -56,12 +67,23 @@ export function Heading ({
   const { t } = useTranslation();
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [visibleContributors, setVisibleContributors] = useState(() => (
+    shuffleContributors(allContributors).slice(0, MAX_CONTRIBUTORS_IN_POPOVER)
+  ));
   const aboutRef = useRef(null);
   const mobileMenuRef = useRef(null);
   const bookmarkShortcut = useMemo(() => (
     /mac/i.test(window.navigator.userAgent) ? "Cmd + D" : "Ctrl + D"
   ), []);
   const SHARE_LINKS = useMemo(() => buildShareLinks(t), [t]);
+
+  useEffect(() => {
+    if (isAboutOpen) {
+      setVisibleContributors(
+        shuffleContributors(allContributors).slice(0, MAX_CONTRIBUTORS_IN_POPOVER),
+      );
+    }
+  }, [isAboutOpen]);
 
   useEffect(() => {
     if (!isAboutOpen) return;
@@ -234,7 +256,7 @@ export function Heading ({
                     <div className="heading-support-contributors">
                       <p className="heading-support-section-title">{t("heading.contributorsTitle")}</p>
                       <div className="heading-support-contributors-grid">
-                        {contributors.map((c) => (
+                        {visibleContributors.map((c) => (
                           <a
                             key={c.login}
                             href={c.profile}
