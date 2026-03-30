@@ -170,7 +170,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Improvements
 
-- 2026-03-30 `a28f03b` disable snap-to-zoom constraint on ArcGIS map
+- 2026-03-30 `30a48ea` disable snap-to-zoom constraint on ArcGIS map
 - 2026-03-30 `a89d483` parallelise cluster config generation in Map
 - 2026-03-30 `57209f9` avoid FeatureLayer recreation on filter changes in Map
 - 2026-03-30 `1e9eb6f` lazy-load Map + ArcGIS (phase 5)
@@ -180,6 +180,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-30 `6125679` update changelog [skip ci]
 - 2026-03-30 `8329849` update changelog [skip ci]
 - 2026-03-30 `b11ec81` update changelog [skip ci]
 - 2026-03-30 `a6dcd43` update changelog [skip ci]
