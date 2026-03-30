@@ -4,7 +4,6 @@ import { CommunitiesList } from "./components/CommunitiesList.jsx";
 import { Footer } from "./components/Footer.jsx";
 import { Heading } from "./components/Heading.jsx";
 import { InstallPromptBar } from "./components/InstallPromptBar.jsx";
-import Map from "./components/Map/Map.jsx";
 import { TagSearch } from "./components/TagSearch/TagSearch.jsx";
 import { ResultsBar } from "./components/ResultsBar.jsx";
 import { FilterPanel } from "./components/FilterPanel.jsx";
@@ -31,6 +30,7 @@ import {
   useChildrenByParentId,
 } from "./stores/community.store.js";
 
+const Map = lazy(() => import("./components/Map/Map.jsx"));
 const CommunityContribution = lazy(() =>
   import("./components/CommunityContribution/CommunityContribution.jsx").then((m) => ({ default: m.CommunityContribution }))
 );
@@ -367,7 +367,11 @@ function App () {
           </section>
         )}
         {!showContributionView && view === "list" && <CommunitiesList onOpenCommunity={openCommunityModal} />}
-        {!showContributionView && view === "map" && <Map showListView={() => setView("list")} onOpenCommunity={openCommunityModal} initialFocus={mapFocusTarget} initialMapState={mapState} onMapStateChange={setMapState} />}
+        {!showContributionView && view === "map" && (
+          <Suspense fallback={<div className="map-loading-skeleton" aria-label="Cargando mapa…" />}>
+            <Map showListView={() => setView("list")} onOpenCommunity={openCommunityModal} initialFocus={mapFocusTarget} initialMapState={mapState} onMapStateChange={setMapState} />
+          </Suspense>
+        )}
       </div>
       {pendingNavigation && (
         <div className="navigation-guard-overlay">

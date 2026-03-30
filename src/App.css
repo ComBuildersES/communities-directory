@@ -1078,3 +1078,16 @@ body {
   background-size: 200% 100%;
   animation: skeleton-shimmer 1.4s ease-in-out infinite;
 }
+
+.map-loading-skeleton {
+  height: 40vh;
+  border-radius: 10px;
+  background: linear-gradient(
+    90deg,
+    #dde3ec 25%,
+    #edf1f7 50%,
+    #dde3ec 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
+}
