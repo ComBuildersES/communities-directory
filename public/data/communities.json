@@ -3437,31 +3437,23 @@
   },
   {
     "id": 94,
-    "name": "Codemotion",
+    "name": "Codemotion Madrid",
     "status": "active",
-    "lastReviewed": "17/10/2024",
+    "lastReviewed": "30/03/2026",
     "communityType": "conference",
     "eventFormat": "in-person",
     "location": "Madrid",
     "topics": "",
-    "tags": [
-      "diversity",
-      "c",
-      "software-architecture",
-      "software-craftsmanship",
-      "ai-coding-agents",
-      "virtual-reality"
-    ],
-    "targetAudience": [
-      "community-manager",
-      "backend-developer"
-    ],
+    "tags": [],
+    "targetAudience": [],
     "contactInfo": "Community+es@codemotion.it",
-    "communityUrl": "https://conferences.codemotion.com/madrid2024/",
+    "communityUrl": "https://conferences.codemotion.com/madrid/",
     "urls": {
       "instagram": "https://www.instagram.com/codemotion_esp/",
       "linkedin": "https://www.linkedin.com/company/codemotion/?originalSubdomain=it",
-      "twitter": "https://twitter.com/CodemoMadrid"
+      "twitter": "https://twitter.com/CodemoMadrid",
+      "web": "https://conferences.codemotion.com/madrid/",
+      "youtube": "https://www.youtube.com/@Codemotionworld/playlists"
     },
     "thumbnailUrl": "images/codemotion.webp",
     "latLon": {
@@ -3469,10 +3461,15 @@
       "lon": -3.7035825
     },
     "displayOnMap": true,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "Codemotion Madrid es uno de los eventos tecnológicos más relevantes en España, diseñado para reunir a desarrolladores, líderes técnicos y profesionales del sector digital en un mismo espacio.",
+    "removalReason": "",
+    "matchesAllTags": true,
+    "matchesAllAudience": true,
+    "parentId": null
   },
   {
     "id": 95,
@@ -7471,34 +7468,51 @@
     "id": 207,
     "name": "GDG Spain",
     "status": "active",
-    "lastReviewed": "31/05/2024",
+    "lastReviewed": "30/03/2026",
     "communityType": "umbrella-org",
     "eventFormat": "in-person",
     "location": "n/a",
     "topics": "",
     "tags": [
-      "gcp"
+      "gcp",
+      "kotlin",
+      "flutter",
+      "dart",
+      "generative-ai",
+      "ai-coding-agents",
+      "web-performance",
+      "frontend-tooling"
     ],
     "targetAudience": [
       "frontend-developer",
       "backend-developer",
       "fullstack-developer",
       "mobile-developer",
-      "game-developer"
+      "junior-developer",
+      "senior-staff"
     ],
     "contactInfo": "",
     "communityUrl": "https://gdg.es/",
-    "urls": {},
+    "urls": {
+      "web": "https://gdg.es/",
+      "twitter": "https://x.com/GDG_ES",
+      "youtube": "https://www.youtube.com/c/GDGSpain",
+      "facebook": "https://www.facebook.com/GDGSpain",
+      "instagram": "https://instagram.com/GDGSpain",
+      "github": "https://github.com/GDGSpain"
+    },
     "thumbnailUrl": "images/gdg-spain.webp",
     "latLon": {
       "lat": null,
       "lon": null
     },
     "displayOnMap": false,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "Organización que agrupa a todos los Google Developer Groups (GDGs) de España, entidades sin ánimo de lucro creada con el objetivo de mejorar la comunidad de entusiastas tecnológicos y aumentar el conocimiento y las relaciones entre las personas que se dedican a esta área.",
+    "removalReason": ""
   },
   {
     "id": 208,
@@ -9282,25 +9296,51 @@
     "id": 254,
     "name": "Iniciador",
     "status": "inactive",
-    "lastReviewed": "18/10/2024",
+    "lastReviewed": "30/03/2026",
     "communityType": "umbrella-org",
     "eventFormat": "unknown",
     "location": "n/a",
     "topics": "",
-    "tags": [],
-    "targetAudience": [],
-    "contactInfo": "",
+    "tags": [
+      "startups",
+      "product-management",
+      "growth",
+      "lean-startup",
+      "innovation",
+      "seo",
+      "digital-marketing",
+      "gamification"
+    ],
+    "targetAudience": [
+      "product-manager",
+      "entrepreneur",
+      "business-innovation-manager",
+      "community-manager",
+      "mentee",
+      "mentor",
+      "digital-marketer",
+      "ui-designer",
+      "ux-designer"
+    ],
+    "contactInfo": "gerencia@iniciador.com",
     "communityUrl": "https://iniciador.com/",
-    "urls": {},
+    "urls": {
+      "twitter": "https://x.com/iniciador",
+      "flickr": "https://www.flickr.com/groups/iniciador/",
+      "linkedin": "https://www.linkedin.com/company/iniciador/"
+    },
     "latLon": {
       "lat": null,
       "lon": null
     },
     "displayOnMap": false,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "La Fundación Iniciador tenía como objetivo principal ayudar a las personas que desean emprender, principalmente centrado (aunque no exclusivamente) en empresas con base tecnológica. Llegó a contar con +50 grupos locales y +185 voluntarios",
+    "thumbnailUrl": "",
+    "removalReason": ""
   },
   {
     "id": 255,
