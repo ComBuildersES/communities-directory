@@ -19730,30 +19730,8 @@
     "eventFormat": "in-person",
     "location": "Coruña",
     "topics": "",
-    "tags": [
-      "sql-databases",
-      "nosql-databases",
-      "data-science",
-      "data-engineering",
-      "data-visualization",
-      "c",
-      "tech-ethics",
-      "robotics",
-      "functional-programming",
-      "oop",
-      "react",
-      "javascript",
-      "typescript",
-      "cybersecurity",
-      "free-software",
-      "startups",
-      "open-source",
-      "accessibility"
-    ],
-    "targetAudience": [
-      "frontend-developer",
-      "fullstack-developer"
-    ],
+    "tags": [],
+    "targetAudience": [],
     "contactInfo": "info@lareiraconf.es",
     "communityUrl": "https://www.lareiraconf.es/",
     "urls": {
