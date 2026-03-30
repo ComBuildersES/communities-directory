@@ -2846,9 +2846,9 @@
       },
       "properties": {
         "id": 94,
-        "name": "Codemotion",
+        "name": "Codemotion Madrid",
         "status": "active",
-        "lastReviewed": "17/10/2024",
+        "lastReviewed": "30/03/2026",
         "communityType": "conference",
         "eventFormat": "in-person",
         "location": "Madrid",
@@ -2856,27 +2856,19 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "diversity",
-          "c",
-          "software-architecture",
-          "software-craftsmanship",
-          "ai-coding-agents",
-          "virtual-reality"
-        ],
-        "targetAudience": [
-          "community-manager",
-          "backend-developer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "Community+es@codemotion.it",
-        "communityUrl": "https://conferences.codemotion.com/madrid2024/",
+        "communityUrl": "https://conferences.codemotion.com/madrid/",
         "urls": {
           "instagram": "https://www.instagram.com/codemotion_esp/",
           "linkedin": "https://www.linkedin.com/company/codemotion/?originalSubdomain=it",
-          "twitter": "https://twitter.com/CodemoMadrid"
+          "twitter": "https://twitter.com/CodemoMadrid",
+          "web": "https://conferences.codemotion.com/madrid/",
+          "youtube": "https://www.youtube.com/@Codemotionworld/playlists"
         },
         "thumbnailUrl": "images/codemotion.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
