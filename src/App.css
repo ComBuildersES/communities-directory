@@ -1,5 +1,3 @@
-@import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
-@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css";
 
 body,
 html {
@@ -1060,4 +1058,23 @@ body {
       rgba(17, 24, 39, 0) 100%
     );
   }
+}
+
+/* Skeleton loading cards */
+@keyframes skeleton-shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
+
+.skeleton-card {
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+  background: linear-gradient(
+    90deg,
+    #dde3ec 25%,
+    #edf1f7 50%,
+    #dde3ec 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.4s ease-in-out infinite;
 }

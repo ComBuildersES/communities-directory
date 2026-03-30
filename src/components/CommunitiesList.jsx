@@ -27,7 +27,17 @@ export function CommunitiesList({ onOpenCommunity }) {
     [communitiesFiltered, cbMemberIds]
   );
 
-  if (isLoading) return <p>Cargando datos...</p>;
+  if (isLoading) {
+    return (
+      <div className="communitieslist-container">
+        <div className="communitieslist" aria-busy="true" aria-label="Cargando comunidades…">
+          {Array.from({ length: 20 }).map((_, i) => (
+            <div key={i} className="skeleton-card" aria-hidden="true" />
+          ))}
+        </div>
+      </div>
+    );
+  }
   if (isError) return <p>Error: {isError}</p>;
 
   return (

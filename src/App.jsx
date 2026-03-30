@@ -1,8 +1,7 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { CommunitiesList } from "./components/CommunitiesList.jsx";
 import { CommunityContribution } from "./components/CommunityContribution/CommunityContribution.jsx";
-import { CommunityModal } from "./components/CommunityModal/CommunityModal.jsx";
 import { Footer } from "./components/Footer.jsx";
 import { Heading } from "./components/Heading.jsx";
 import { InstallPromptBar } from "./components/InstallPromptBar.jsx";
@@ -32,6 +31,10 @@ import {
   useCBMembersMap,
   useChildrenByParentId,
 } from "./stores/community.store.js";
+
+const CommunityModal = lazy(() =>
+  import("./components/CommunityModal/CommunityModal.jsx").then((m) => ({ default: m.CommunityModal }))
+);
 
 function dismissActiveInput() {
   if (typeof document === "undefined") return;
@@ -390,15 +393,17 @@ function App () {
         </div>
       )}
       {!showContributionView && selectedCommunity && !shouldBlockCommunityDetails && (
-        <CommunityModal
-          community={selectedCommunity}
-          tagsMap={tagsMap}
-          audienceMap={audienceMap}
-          cbHandles={cbMembersMap.get(selectedCommunity.id) || []}
-          childCount={childrenByParentId.get(selectedCommunity.id) ?? 0}
-          onClose={closeCommunityModal}
-          onGoToMap={goToMapLocation}
-        />
+        <Suspense fallback={null}>
+          <CommunityModal
+            community={selectedCommunity}
+            tagsMap={tagsMap}
+            audienceMap={audienceMap}
+            cbHandles={cbMembersMap.get(selectedCommunity.id) || []}
+            childCount={childrenByParentId.get(selectedCommunity.id) ?? 0}
+            onClose={closeCommunityModal}
+            onGoToMap={goToMapLocation}
+          />
+        </Suspense>
       )}
       <Footer />
     </>

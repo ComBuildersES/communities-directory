@@ -170,6 +170,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Improvements
 
+- 2026-03-30 `fdbc0c0` initial load optimizations (phases 1-3)
 - 2026-03-27 `f4f251a` simplify results bar layout and improve chip display responsiveness
 
 ### Docs
@@ -276,7 +277,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
-- 2026-03-30 `35be45f` Clean noisy taxonomy on unvalidated communities
+- 2026-03-30 `fffd7e5` Clean noisy taxonomy on unvalidated communities
 - 2026-03-30 `09347b2` Clear tags and target audience from communities.geojson
 - 2026-03-29 `ebf11b6` Refactor Map component and enhance legend functionality
 - 2026-03-28 `3770cbf` - Updated Map.css for consistent styling and added new styles for cluster popups. (Override esri existing styles and ensure proper layout and appearance of cluster popups.) - Refactored Map.jsx to implement cluster popup functionality with SVG charts. - Introduced new constants for cluster segment configuration and popup visibility settings. - Enhanced popup handling for clusters and individual community features.
