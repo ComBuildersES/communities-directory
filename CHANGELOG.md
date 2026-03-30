@@ -98,6 +98,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-03-30 `9f9c7bc` [Actualizada Ping A Programadoras](https://combuilderses.github.io/communities-directory/?community=573) ([PR #323](https://github.com/ComBuildersES/communities-directory/pull/323))
 - 2026-03-30 `db40ef0` [Añadida GeoInquietos](https://combuilderses.github.io/communities-directory/?community=616) ([PR #321](https://github.com/ComBuildersES/communities-directory/pull/321))
 - 2026-03-30 `90976d9` [Actualizada GDG Spain](https://combuilderses.github.io/communities-directory/?community=207) ([PR #319](https://github.com/ComBuildersES/communities-directory/pull/319))
 - 2026-03-30 `0d62115` [Actualizada Iniciador](https://combuilderses.github.io/communities-directory/?community=254) ([PR #317](https://github.com/ComBuildersES/communities-directory/pull/317))
@@ -167,6 +168,9 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-30 `2116e74` update .all-contributorsrc [skip ci]
+- 2026-03-30 `58f77d0` update README.md [skip ci]
+- 2026-03-30 `cf6d747` update changelog [skip ci]
 - 2026-03-30 `221cda3` update changelog [skip ci]
 - 2026-03-30 `eac8b20` update changelog [skip ci]
 - 2026-03-30 `7e24890` update changelog [skip ci]
