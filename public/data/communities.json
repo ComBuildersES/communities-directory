@@ -19725,7 +19725,7 @@
     "id": 541,
     "name": "Lareira Conf",
     "status": "active",
-    "lastReviewed": "25/03/2026",
+    "lastReviewed": "30/03/2026",
     "communityType": "conference",
     "eventFormat": "in-person",
     "location": "Coruña",
@@ -19750,7 +19750,10 @@
       "open-source",
       "accessibility"
     ],
-    "targetAudience": [],
+    "targetAudience": [
+      "frontend-developer",
+      "fullstack-developer"
+    ],
     "contactInfo": "info@lareiraconf.es",
     "communityUrl": "https://www.lareiraconf.es/",
     "urls": {
@@ -19771,7 +19774,10 @@
     "removalReason": "",
     "langs": [
       "es"
-    ]
+    ],
+    "matchesAllTags": true,
+    "matchesAllAudience": true,
+    "parentId": null
   },
   {
     "id": 542,
