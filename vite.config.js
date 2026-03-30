@@ -26,6 +26,11 @@ export default ({ mode }) => {
         outDir: 'dist'
     },
     publicDir: 'public',
+    server: {
+      host: '0.0.0.0',
+      port: 5173,
+      strictPort: true,
+    },
     base: env.VITE_BASE, // build at gh-pages
     resolve: {
       dedupe: ['react', 'react-dom'],
