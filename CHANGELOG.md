@@ -97,6 +97,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-03-30 `9c377e8` [Actualizada GDG Spain](https://combuilderses.github.io/communities-directory/?community=207) ([PR #313](https://github.com/ComBuildersES/communities-directory/pull/313))
 - 2026-03-29 `07ff861` [Actualizada Madrid-Groovy User Group (GUG)](https://combuilderses.github.io/communities-directory/?community=330) ([PR #310](https://github.com/ComBuildersES/communities-directory/pull/310))
 - 2026-03-29 `9f1c8b7` [Actualizada MadridJUG](https://combuilderses.github.io/communities-directory/?community=333) ([PR #306](https://github.com/ComBuildersES/communities-directory/pull/306))
 - 2026-03-27 `30e597a` [Añadida GEG Spain](https://combuilderses.github.io/communities-directory/?community=606) ([PR #301](https://github.com/ComBuildersES/communities-directory/pull/301))
@@ -161,6 +162,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-30 `5930643` update changelog [skip ci]
 - 2026-03-30 `c18df01` update changelog [skip ci]
 - 2026-03-29 `4293ca4` update changelog [skip ci]
 - 2026-03-29 `a871567` update changelog [skip ci]
