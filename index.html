@@ -6,6 +6,14 @@
     <link rel="manifest" href="/communities-directory/manifest.webmanifest" />
     <link rel="apple-touch-icon" href="/communities-directory/icons/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Preconnect to CDNs to establish connections early -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <!-- CSS loaded as <link> (parallel, not blocking like @import inside CSS) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <!-- Preload main data file so the browser fetches it before React boots -->
+    <link rel="preload" href="/communities-directory/data/communities.json" as="fetch" crossorigin>
     <meta name="theme-color" content="#3273dc" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
@@ -32,8 +40,8 @@
     <meta name="twitter:description" content="Descubre y filtra más de 500 comunidades tech de toda España: meetups, grupos de usuarios, conferencias y más. Busca por ciudad, tema o formato. Open source y open data." />
     <meta name="twitter:image" content="https://combuilderses.github.io/communities-directory/images/directorio-de-comunidades-tecnicas-de-espa%C3%B1a-1920-630.webp" />
     <meta name="twitter:image:alt" content="Directorio de Comunidades Técnicas de España — +500 meetups, conferencias y más" />
-    <script type="module" crossorigin src="/communities-directory/assets/index-CZszxcL8.js"></script>
-    <link rel="stylesheet" crossorigin href="/communities-directory/assets/index-DRC6Swyc.css">
+    <script type="module" crossorigin src="/communities-directory/assets/index-iSDuo8Es.js"></script>
+    <link rel="stylesheet" crossorigin href="/communities-directory/assets/index-DGGoCCDQ.css">
   </head>
   <body>
     <!-- Path-restore: when GitHub Pages 404.html encodes a deep link into
