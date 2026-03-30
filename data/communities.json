@@ -19725,31 +19725,12 @@
     "id": 541,
     "name": "Lareira Conf",
     "status": "active",
-    "lastReviewed": "25/03/2026",
+    "lastReviewed": "30/03/2026",
     "communityType": "conference",
     "eventFormat": "in-person",
     "location": "Coruña",
     "topics": "",
-    "tags": [
-      "sql-databases",
-      "nosql-databases",
-      "data-science",
-      "data-engineering",
-      "data-visualization",
-      "c",
-      "tech-ethics",
-      "robotics",
-      "functional-programming",
-      "oop",
-      "react",
-      "javascript",
-      "typescript",
-      "cybersecurity",
-      "free-software",
-      "startups",
-      "open-source",
-      "accessibility"
-    ],
+    "tags": [],
     "targetAudience": [],
     "contactInfo": "info@lareiraconf.es",
     "communityUrl": "https://www.lareiraconf.es/",
@@ -19771,7 +19752,10 @@
     "removalReason": "",
     "langs": [
       "es"
-    ]
+    ],
+    "matchesAllTags": true,
+    "matchesAllAudience": true,
+    "parentId": null
   },
   {
     "id": 542,
