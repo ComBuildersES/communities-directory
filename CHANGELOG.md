@@ -98,6 +98,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-03-30 `73b9ac1` Clear tags and target audience from communities.json
+- 2026-03-30 `ffff85e` [Actualizada Lareira Conf](https://combuilderses.github.io/communities-directory/?community=541) ([PR #333](https://github.com/ComBuildersES/communities-directory/pull/333))
 - 2026-03-30 `a138e10` [Actualizada Women Techmakers Madrid](https://combuilderses.github.io/communities-directory/?community=480) ([PR #330](https://github.com/ComBuildersES/communities-directory/pull/330))
 - 2026-03-30 `1565bec` [Actualizada WordPress Coruña](https://combuilderses.github.io/communities-directory/?community=497) ([PR #328](https://github.com/ComBuildersES/communities-directory/pull/328))
 - 2026-03-30 `30367be` [Actualizada Datolada](https://combuilderses.github.io/communities-directory/?community=540) ([PR #326](https://github.com/ComBuildersES/communities-directory/pull/326))
@@ -171,6 +173,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-30 `a421a9f` update changelog [skip ci]
 - 2026-03-30 `70231c8` update changelog [skip ci]
 - 2026-03-30 `1829759` update .all-contributorsrc [skip ci]
 - 2026-03-30 `fb0bfaa` update README.md [skip ci]
@@ -267,6 +270,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
+- 2026-03-30 `09347b2` Clear tags and target audience from communities.geojson
 - 2026-03-29 `ebf11b6` Refactor Map component and enhance legend functionality
 - 2026-03-28 `3770cbf` - Updated Map.css for consistent styling and added new styles for cluster popups. (Override esri existing styles and ensure proper layout and appearance of cluster popups.) - Refactored Map.jsx to implement cluster popup functionality with SVG charts. - Introduced new constants for cluster segment configuration and popup visibility settings. - Enhanced popup handling for clusters and individual community features.
 - 2026-03-27 `6a2658b` Remove obsolete image files and health report document
