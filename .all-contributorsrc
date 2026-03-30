@@ -252,6 +252,15 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "cesalberca",
+      "name": "César Alberca",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7138463?v=4",
+      "profile": "http://cesalberca.com",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
