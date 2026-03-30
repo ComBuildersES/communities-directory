@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-30 `685b529` update devcontainer and Vite configuration for improved development setup
+- 2026-03-30 `cffa207` update devcontainer and Vite configuration for improved development setup
 - 2026-03-30 `9031b3b` add devcontainer configuration for Alpine environment
 - 2026-03-30 `3f078e1` shuffle contributors display and update visible contributors logic
 - 2026-03-30 `e19fe3e` Update community data and add new Python and GDG groups with updated images
