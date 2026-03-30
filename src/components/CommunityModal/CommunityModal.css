@@ -293,6 +293,13 @@ button.modal-badge:focus-visible {
   gap: 0.5rem;
 }
 
+.community-modal-children-count {
+  font-size: 0.875rem;
+  color: #555;
+  line-height: 1.65;
+  font-weight: 400;
+}
+
 .community-modal-children-btn {
   background: none;
   border: 1px solid #6c63ff;

@@ -333,7 +333,9 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
           {communityType === "umbrella-org" && childCount > 0 && (
             <div className="community-modal-children">
               <i className="fa-solid fa-sitemap" aria-hidden="true"></i>
-              <span>{t("communityCard.childrenCount", { count: childCount })}</span>
+              <span className="community-modal-children-count">
+                {t("communityCard.childrenCount", { count: childCount })}
+              </span>
               <button
                 type="button"
                 className="community-modal-children-btn"
