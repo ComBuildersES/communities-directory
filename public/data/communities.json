@@ -17157,7 +17157,7 @@
     "id": 480,
     "name": "Women Techmakers Madrid",
     "status": "active",
-    "lastReviewed": "12/12/2025",
+    "lastReviewed": "30/03/2026",
     "communityType": "tech-meetup",
     "eventFormat": "hybrid",
     "location": "Madrid",
@@ -17187,10 +17187,13 @@
       "lon": -3.7035825
     },
     "displayOnMap": true,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "WTM Madrid es la extensión local de la iniciativa global de Google que impulsa y apoya a mujeres en tecnología en la capital. Buscamos crear un ecosistema donde sean visibles, tengan comunidad sólida y acceso a recursos para crecer profesionalmente.",
+    "removalReason": "",
+    "parentId": null
   },
   {
     "id": 481,
@@ -17811,24 +17814,18 @@
     "id": 497,
     "name": "WordPress Coruña",
     "status": "active",
-    "lastReviewed": "18/10/2024",
+    "lastReviewed": "30/03/2026",
     "communityType": "tech-meetup",
     "eventFormat": "in-person",
     "location": "Coruña",
     "topics": "",
     "tags": [
       "wordpress",
-      "c",
       "tech4good",
       "women-in-tech",
-      "healthtech",
-      "design-patterns",
-      "game-design",
-      "game-development",
       "open-source",
-      "networking",
-      "robotics",
-      "tech-ethics"
+      "tech-ethics",
+      "woocommerce"
     ],
     "targetAudience": [
       "fullstack-developer",
@@ -17848,10 +17845,13 @@
       "lon": -8.3958532
     },
     "displayOnMap": true,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "Nuestro objetivo es difundir conocimientos sobre este CMS de código abierto y dar la oportunidad a asistentes y ponentes de compartir sus experiencias.\n\nTanto si usas WordPress de forma personal como si trabajas con él, podrás disfrutar de estas jornadas gratuitas en A Coruña.",
+    "removalReason": "",
+    "parentId": null
   },
   {
     "id": 498,
@@ -19673,7 +19673,7 @@
     "id": 540,
     "name": "Datolada",
     "status": "active",
-    "lastReviewed": "02/06/2025",
+    "lastReviewed": "30/03/2026",
     "communityType": "conference",
     "eventFormat": "in-person",
     "location": "Coruña",
@@ -19693,7 +19693,11 @@
       "digital-marketing"
     ],
     "targetAudience": [
-      "digital-marketer"
+      "data-engineer",
+      "data-scientist",
+      "ml-engineer",
+      "data-analyst",
+      "data-journalist"
     ],
     "contactInfo": "info@datola.es",
     "communityUrl": "https://eventos.datola.es/",
@@ -19709,40 +19713,24 @@
       "lon": -8.3958532
     },
     "displayOnMap": true,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "El evento de referencia en analítica y datos del mundo digital, donde nos juntamos para compartir, aprender y celebrar el valor de la comunidad.",
+    "removalReason": "",
+    "parentId": null
   },
   {
     "id": 541,
     "name": "Lareira Conf",
     "status": "active",
-    "lastReviewed": "25/03/2026",
+    "lastReviewed": "30/03/2026",
     "communityType": "conference",
     "eventFormat": "in-person",
     "location": "Coruña",
     "topics": "",
-    "tags": [
-      "sql-databases",
-      "nosql-databases",
-      "data-science",
-      "data-engineering",
-      "data-visualization",
-      "c",
-      "tech-ethics",
-      "robotics",
-      "functional-programming",
-      "oop",
-      "react",
-      "javascript",
-      "typescript",
-      "cybersecurity",
-      "free-software",
-      "startups",
-      "open-source",
-      "accessibility"
-    ],
+    "tags": [],
     "targetAudience": [],
     "contactInfo": "info@lareiraconf.es",
     "communityUrl": "https://www.lareiraconf.es/",
@@ -19764,7 +19752,10 @@
     "removalReason": "",
     "langs": [
       "es"
-    ]
+    ],
+    "matchesAllTags": true,
+    "matchesAllAudience": true,
+    "parentId": null
   },
   {
     "id": 542,
@@ -20951,8 +20942,8 @@
     "id": 573,
     "name": "Ping A Programadoras",
     "status": "active",
-    "lastReviewed": "24/03/2026",
-    "communityType": "tech-meetup",
+    "lastReviewed": "30/03/2026",
+    "communityType": "mutual-aid",
     "eventFormat": "in-person",
     "location": "Sevilla, España",
     "topics": "",
@@ -20963,17 +20954,20 @@
       "tech4good",
       "software-architecture",
       "functional-programming",
+      "c",
+      "r-lang",
       "oop",
-      "women-in-tech",
-      "javascript",
-      "java",
-      "mentoring"
+      "haskell",
+      "augmented-reality",
+      "women-in-tech"
     ],
     "targetAudience": [],
     "contactInfo": "pingprogramadoras@gmail.com",
-    "communityUrl": "https://www.linkedin.com/company/pingaprogramadoras/",
+    "communityUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/",
     "urls": {
-      "eventsUrl": "https://meetup.com/ping-a-programadoras"
+      "eventsUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/",
+      "linkedin": "https://www.linkedin.com/company/pingaprogramadoras/",
+      "twitter": "https://x.com/pingmujeres"
     },
     "thumbnailUrl": "images/ping-a-programadoras.webp",
     "latLon": {
@@ -20982,10 +20976,12 @@
     },
     "displayOnMap": true,
     "humanValidated": true,
-    "shortDescription": "Grupo de mujeres informáticas de Sevilla, donde nos reunimos para conocernos, compartir experiencias y aprender unas de otras",
+    "shortDescription": "Mujeres y personas de género no binario interesadas en hacer y pensar juntas con los ordenadores, desde una perspectiva crítica y de empoderamiento",
     "langs": [
       "es"
-    ]
+    ],
+    "removalReason": "",
+    "parentId": null
   },
   {
     "id": 574,
@@ -22544,5 +22540,59 @@
       "es"
     ],
     "parentId": 512
+  },
+  {
+    "id": 616,
+    "name": "GeoInquietos",
+    "status": "active",
+    "lastReviewed": "30/03/2026",
+    "communityType": "umbrella-org",
+    "eventFormat": "in-person",
+    "location": "n/a",
+    "shortDescription": "Grupos informales que se reúnen para conversar y aprender sobre cualquier tema relacionado con las ciencias de la tierra.",
+    "topics": "",
+    "langs": [
+      "es"
+    ],
+    "tags": [
+      "geospatial",
+      "data-science",
+      "data-engineering",
+      "data-visualization",
+      "free-software",
+      "open-source",
+      "open-data",
+      "spatial-databases"
+    ],
+    "targetAudience": [
+      "junior-developer",
+      "student",
+      "career-changer",
+      "mentee",
+      "mentor",
+      "senior-staff",
+      "minors",
+      "data-journalist",
+      "data-engineer",
+      "data-scientist",
+      "data-analyst",
+      "frontend-developer",
+      "backend-developer",
+      "fullstack-developer"
+    ],
+    "contactInfo": "",
+    "communityUrl": "https://geoinquietos.org/",
+    "urls": {
+      "mailingList": "https://lists.osgeo.org/mailman/listinfo/geoinquietos-es",
+      "github": "https://github.com/geoinquietos-org/"
+    },
+    "thumbnailUrl": "images/geoinquietos.webp",
+    "removalReason": "",
+    "latLon": {
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false,
+    "humanValidated": true
   }
 ]

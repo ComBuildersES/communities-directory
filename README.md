@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-26-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-29-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Communities directory
@@ -168,6 +168,11 @@ Echa un vistazo a algunas de las tareas por las que podrías empezar a ayudar:
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Qwor01"><img src="https://avatars.githubusercontent.com/u/113616553?v=4?s=100" width="100px;" alt="Ignacio Espósito"/><br /><sub><b>Ignacio Espósito</b></sub></a><br /><a href="#data-Qwor01" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://ivan.fraixed.es"><img src="https://avatars.githubusercontent.com/u/1731633?v=4?s=100" width="100px;" alt="Ivan Fraixedes"/><br /><sub><b>Ivan Fraixedes</b></sub></a><br /><a href="#data-ifraixedes" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ilopmar"><img src="https://avatars.githubusercontent.com/u/559192?v=4?s=100" width="100px;" alt="Iván López"/><br /><sub><b>Iván López</b></sub></a><br /><a href="#data-ilopmar" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://cesalberca.com"><img src="https://avatars.githubusercontent.com/u/7138463?v=4?s=100" width="100px;" alt="César Alberca"/><br /><sub><b>César Alberca</b></sub></a><br /><a href="#data-cesalberca" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/nadiaujovich/"><img src="https://avatars.githubusercontent.com/u/48018975?v=4?s=100" width="100px;" alt="Nadia Ujovich"/><br /><sub><b>Nadia Ujovich</b></sub></a><br /><a href="#data-nujovich" title="Data">🔣</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/amagan"><img src="https://avatars.githubusercontent.com/u/72810518?v=4?s=100" width="100px;" alt="Andrea"/><br /><sub><b>Andrea</b></sub></a><br /><a href="#data-amagan" title="Data">🔣</a></td>
     </tr>
   </tbody>
 </table>

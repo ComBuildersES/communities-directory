@@ -99,6 +99,13 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-03-30 `73b9ac1` Clear tags and target audience from communities.json
+- 2026-03-30 `ffff85e` [Actualizada Lareira Conf](https://combuilderses.github.io/communities-directory/?community=541) ([PR #333](https://github.com/ComBuildersES/communities-directory/pull/333))
+- 2026-03-30 `a138e10` [Actualizada Women Techmakers Madrid](https://combuilderses.github.io/communities-directory/?community=480) ([PR #330](https://github.com/ComBuildersES/communities-directory/pull/330))
+- 2026-03-30 `1565bec` [Actualizada WordPress Coruña](https://combuilderses.github.io/communities-directory/?community=497) ([PR #328](https://github.com/ComBuildersES/communities-directory/pull/328))
+- 2026-03-30 `30367be` [Actualizada Datolada](https://combuilderses.github.io/communities-directory/?community=540) ([PR #326](https://github.com/ComBuildersES/communities-directory/pull/326))
+- 2026-03-30 `9f9c7bc` [Actualizada Ping A Programadoras](https://combuilderses.github.io/communities-directory/?community=573) ([PR #323](https://github.com/ComBuildersES/communities-directory/pull/323))
+- 2026-03-30 `db40ef0` [Añadida GeoInquietos](https://combuilderses.github.io/communities-directory/?community=616) ([PR #321](https://github.com/ComBuildersES/communities-directory/pull/321))
 - 2026-03-30 `90976d9` [Actualizada GDG Spain](https://combuilderses.github.io/communities-directory/?community=207) ([PR #319](https://github.com/ComBuildersES/communities-directory/pull/319))
 - 2026-03-30 `0d62115` [Actualizada Iniciador](https://combuilderses.github.io/communities-directory/?community=254) ([PR #317](https://github.com/ComBuildersES/communities-directory/pull/317))
 - 2026-03-30 `5620213` [Actualizada Codemotion Madrid](https://combuilderses.github.io/communities-directory/?community=94) ([PR #315](https://github.com/ComBuildersES/communities-directory/pull/315))
@@ -167,6 +174,20 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-30 `a6dcd43` update changelog [skip ci]
+- 2026-03-30 `8e3d107` update .all-contributorsrc [skip ci]
+- 2026-03-30 `e84735b` update README.md [skip ci]
+- 2026-03-30 `a421a9f` update changelog [skip ci]
+- 2026-03-30 `70231c8` update changelog [skip ci]
+- 2026-03-30 `1829759` update .all-contributorsrc [skip ci]
+- 2026-03-30 `fb0bfaa` update README.md [skip ci]
+- 2026-03-30 `42fd952` update changelog [skip ci]
+- 2026-03-30 `eb14a83` update changelog [skip ci]
+- 2026-03-30 `6e573bd` update changelog [skip ci]
+- 2026-03-30 `2116e74` update .all-contributorsrc [skip ci]
+- 2026-03-30 `58f77d0` update README.md [skip ci]
+- 2026-03-30 `cf6d747` update changelog [skip ci]
+- 2026-03-30 `221cda3` update changelog [skip ci]
 - 2026-03-30 `eac8b20` update changelog [skip ci]
 - 2026-03-30 `7e24890` update changelog [skip ci]
 - 2026-03-30 `da763a6` update changelog [skip ci]
@@ -253,6 +274,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
+- 2026-03-30 `09347b2` Clear tags and target audience from communities.geojson
 - 2026-03-29 `ebf11b6` Refactor Map component and enhance legend functionality
 - 2026-03-28 `3770cbf` - Updated Map.css for consistent styling and added new styles for cluster popups. (Override esri existing styles and ensure proper layout and appearance of cluster popups.) - Refactored Map.jsx to implement cluster popup functionality with SVG charts. - Introduced new constants for cluster segment configuration and popup visibility settings. - Enhanced popup handling for clusters and individual community features.
 - 2026-03-27 `6a2658b` Remove obsolete image files and health report document

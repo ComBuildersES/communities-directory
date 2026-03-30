@@ -252,6 +252,33 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "cesalberca",
+      "name": "César Alberca",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7138463?v=4",
+      "profile": "http://cesalberca.com",
+      "contributions": [
+        "data"
+      ]
+    },
+    {
+      "login": "nujovich",
+      "name": "Nadia Ujovich",
+      "avatar_url": "https://avatars.githubusercontent.com/u/48018975?v=4",
+      "profile": "https://www.linkedin.com/in/nadiaujovich/",
+      "contributions": [
+        "data"
+      ]
+    },
+    {
+      "login": "amagan",
+      "name": "Andrea",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72810518?v=4",
+      "profile": "https://github.com/amagan",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,

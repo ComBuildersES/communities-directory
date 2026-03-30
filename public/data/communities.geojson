@@ -15616,7 +15616,7 @@
         "id": 480,
         "name": "Women Techmakers Madrid",
         "status": "active",
-        "lastReviewed": "12/12/2025",
+        "lastReviewed": "30/03/2026",
         "communityType": "tech-meetup",
         "eventFormat": "hybrid",
         "location": "Madrid",
@@ -15644,7 +15644,7 @@
           "instagram": "https://www.instagram.com/wtmmadrid/"
         },
         "thumbnailUrl": "images/women-techmakers-madrid.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
@@ -16312,7 +16312,7 @@
         "id": 497,
         "name": "WordPress Coruña",
         "status": "active",
-        "lastReviewed": "18/10/2024",
+        "lastReviewed": "30/03/2026",
         "communityType": "tech-meetup",
         "eventFormat": "in-person",
         "location": "Coruña",
@@ -16322,17 +16322,11 @@
         ],
         "tags": [
           "wordpress",
-          "c",
           "tech4good",
           "women-in-tech",
-          "healthtech",
-          "design-patterns",
-          "game-design",
-          "game-development",
           "open-source",
-          "networking",
-          "robotics",
-          "tech-ethics"
+          "tech-ethics",
+          "woocommerce"
         ],
         "targetAudience": [
           "fullstack-developer",
@@ -16347,7 +16341,7 @@
           "eventsUrl": "https://www.meetup.com/es-ES/wordpresscoruna/"
         },
         "thumbnailUrl": "images/wordpress-coruna.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
@@ -18295,7 +18289,7 @@
         "id": 540,
         "name": "Datolada",
         "status": "active",
-        "lastReviewed": "02/06/2025",
+        "lastReviewed": "30/03/2026",
         "communityType": "conference",
         "eventFormat": "in-person",
         "location": "Coruña",
@@ -18318,7 +18312,11 @@
           "digital-marketing"
         ],
         "targetAudience": [
-          "digital-marketer"
+          "data-engineer",
+          "data-scientist",
+          "ml-engineer",
+          "data-analyst",
+          "data-journalist"
         ],
         "contactInfo": "info@datola.es",
         "communityUrl": "https://eventos.datola.es/",
@@ -18329,7 +18327,7 @@
           "bluesky": "https://bsky.app/profile/datola.es"
         },
         "thumbnailUrl": "images/datolada.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
@@ -18345,7 +18343,7 @@
         "id": 541,
         "name": "Lareira Conf",
         "status": "active",
-        "lastReviewed": "25/03/2026",
+        "lastReviewed": "30/03/2026",
         "communityType": "conference",
         "eventFormat": "in-person",
         "location": "Coruña",
@@ -18353,26 +18351,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "sql-databases",
-          "nosql-databases",
-          "data-science",
-          "data-engineering",
-          "data-visualization",
-          "c",
-          "tech-ethics",
-          "robotics",
-          "functional-programming",
-          "oop",
-          "react",
-          "javascript",
-          "typescript",
-          "cybersecurity",
-          "free-software",
-          "startups",
-          "open-source",
-          "accessibility"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "info@lareiraconf.es",
         "communityUrl": "https://www.lareiraconf.es/",
@@ -19686,8 +19665,8 @@
         "id": 573,
         "name": "Ping A Programadoras",
         "status": "active",
-        "lastReviewed": "24/03/2026",
-        "communityType": "tech-meetup",
+        "lastReviewed": "30/03/2026",
+        "communityType": "mutual-aid",
         "eventFormat": "in-person",
         "location": "Sevilla, España",
         "topics": "",
@@ -19701,17 +19680,20 @@
           "tech4good",
           "software-architecture",
           "functional-programming",
+          "c",
+          "r-lang",
           "oop",
-          "women-in-tech",
-          "javascript",
-          "java",
-          "mentoring"
+          "haskell",
+          "augmented-reality",
+          "women-in-tech"
         ],
         "targetAudience": [],
         "contactInfo": "pingprogramadoras@gmail.com",
-        "communityUrl": "https://www.linkedin.com/company/pingaprogramadoras/",
+        "communityUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/",
         "urls": {
-          "eventsUrl": "https://meetup.com/ping-a-programadoras"
+          "eventsUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/",
+          "linkedin": "https://www.linkedin.com/company/pingaprogramadoras/",
+          "twitter": "https://x.com/pingmujeres"
         },
         "thumbnailUrl": "images/ping-a-programadoras.webp",
         "humanValidated": true
