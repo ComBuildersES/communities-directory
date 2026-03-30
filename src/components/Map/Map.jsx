@@ -524,6 +524,7 @@ function Map({
       <div className={`map-canvas${mapCollapsed ? " map-canvas--collapsed" : ""}`}>
         <arcgis-map
           basemap="gray"
+          constraints={{ snapToZoom: false }}
           center={
             initialFocus
               ? `${initialFocus.lon}, ${initialFocus.lat}`
