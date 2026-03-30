@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { startTransition, useEffect, useMemo, useRef, useState } from "react";
+import { startTransition, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 import Point from "@arcgis/core/geometry/Point";
@@ -174,6 +174,11 @@ function Map({
 
   const communityLayerRef = useRef(null);
   const communityLayerViewRef = useRef(null);
+  const onOpenCommunityRef = useRef(onOpenCommunity);
+  const onMapStateChangeRef = useRef(onMapStateChange);
+  const isFirstLayerSyncRef = useRef(true);
+  useLayoutEffect(() => { onOpenCommunityRef.current = onOpenCommunity; });
+  useLayoutEffect(() => { onMapStateChangeRef.current = onMapStateChange; });
 
   const rawCommunities = useCommunitiesFiltered();
   const cbMemberIds = useCBMemberIds();
@@ -196,6 +201,9 @@ function Map({
       })),
     [communities]
   );
+
+  const mappableCommunitiesRef = useRef(mappableCommunities);
+  useLayoutEffect(() => { mappableCommunitiesRef.current = mappableCommunities; });
 
   const highlightedCommunityIds = useMemo(() => {
     if (!hoveredLegendKey) {
@@ -297,6 +305,8 @@ function Map({
     };
   }, [activeView]);
 
+  // Effect A: creates the layer once per view, generates cluster config, wires click handler.
+  // Does NOT depend on mappableCommunities — data syncing is handled by Effect B.
   useEffect(() => {
     if (!activeView) {
       return undefined;
@@ -312,13 +322,6 @@ function Map({
 
     let cancelled = false;
     let clickHandle = null;
-
-    const graphics = mappableCommunities.map(({ community, point }) =>
-      new Graphic({
-        geometry: point,
-        attributes: community,
-      })
-    );
 
     const fields = [
       { name: "ObjectID", alias: "ObjectID", type: "oid" },
@@ -344,8 +347,14 @@ function Map({
       })),
     };
 
+    // Seed the layer with the current data so ArcGIS can infer the geometry type
+    // (required for generateClusterConfiguration). Effect B will handle subsequent syncs.
+    isFirstLayerSyncRef.current = true;
+    const initialGraphics = mappableCommunitiesRef.current.map(({ community, point }) =>
+      new Graphic({ geometry: point, attributes: community })
+    );
     const communityLayer = new FeatureLayer({
-      source: graphics,
+      source: initialGraphics,
       fields,
       renderer: communityBuildersRenderer,
       popupEnabled: false,
@@ -397,7 +406,7 @@ function Map({
         const communityId = graphic.attributes?.id;
 
         if (communityId != null) {
-          onOpenCommunity?.(communityId);
+          onOpenCommunityRef.current?.(communityId);
         }
       });
     });
@@ -414,7 +423,47 @@ function Map({
       activeView.map.remove(communityLayer);
       communityLayer.destroy();
     };
-  }, [activeView, mappableCommunities, onOpenCommunity]);
+  }, [activeView]);
+
+  // Effect B: syncs community graphics via applyEdits whenever the filtered set changes.
+  // Skips the first run after each layer creation (Effect A already seeded the layer).
+  // The cluster config on the layer is preserved across filter-driven syncs.
+  useEffect(() => {
+    const layer = communityLayerRef.current;
+    if (!layer) return undefined;
+
+    if (isFirstLayerSyncRef.current) {
+      isFirstLayerSyncRef.current = false;
+      return undefined;
+    }
+
+    let cancelled = false;
+
+    const newGraphics = mappableCommunities.map(({ community, point }) =>
+      new Graphic({ geometry: point, attributes: community })
+    );
+
+    const sync = async () => {
+      try {
+        await layer.load();
+        if (cancelled) return;
+
+        const { features: toDelete } = await layer.queryFeatures({
+          where: "1=1",
+          returnGeometry: false,
+          outFields: [layer.objectIdField],
+        });
+        if (cancelled) return;
+
+        await layer.applyEdits({ addFeatures: newGraphics, deleteFeatures: toDelete });
+      } catch {
+        // Layer was destroyed during teardown; ignore.
+      }
+    };
+
+    sync();
+    return () => { cancelled = true; };
+  }, [activeView, mappableCommunities]);
 
   useEffect(() => {
     if (!activeView) return undefined;
@@ -435,7 +484,7 @@ function Map({
         setVisibleCommunities(visible);
       });
 
-      onMapStateChange?.({
+      onMapStateChangeRef.current?.({
         lat: center.latitude,
         lon: center.longitude,
         zoom: activeView.zoom,
@@ -455,7 +504,7 @@ function Map({
     return () => {
       handle.remove();
     };
-  }, [activeView, mappableCommunities, onMapStateChange]);
+  }, [activeView, mappableCommunities]);
 
   function activeViewChange(activeViewEvent) {
     const view = activeViewEvent.target.view;

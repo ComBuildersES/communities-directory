@@ -170,7 +170,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Improvements
 
-- 2026-03-30 `013b773` lazy-load Map + ArcGIS (phase 5)
+- 2026-03-30 `ca8ba29` avoid FeatureLayer recreation on filter changes in Map
+- 2026-03-30 `1e9eb6f` lazy-load Map + ArcGIS (phase 5)
 - 2026-03-30 `aeb6ee8` lazy-load CommunityContribution (phase 4)
 - 2026-03-30 `549ffba` initial load optimizations (phases 1-3)
 - 2026-03-27 `f4f251a` simplify results bar layout and improve chip display responsiveness
