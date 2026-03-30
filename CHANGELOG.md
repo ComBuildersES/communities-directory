@@ -97,6 +97,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-03-30 `90976d9` [Actualizada GDG Spain](https://combuilderses.github.io/communities-directory/?community=207) ([PR #319](https://github.com/ComBuildersES/communities-directory/pull/319))
 - 2026-03-30 `0d62115` [Actualizada Iniciador](https://combuilderses.github.io/communities-directory/?community=254) ([PR #317](https://github.com/ComBuildersES/communities-directory/pull/317))
 - 2026-03-30 `5620213` [Actualizada Codemotion Madrid](https://combuilderses.github.io/communities-directory/?community=94) ([PR #315](https://github.com/ComBuildersES/communities-directory/pull/315))
 - 2026-03-30 `9c377e8` [Actualizada GDG Spain](https://combuilderses.github.io/communities-directory/?community=207) ([PR #313](https://github.com/ComBuildersES/communities-directory/pull/313))
@@ -164,6 +165,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-30 `7e24890` update changelog [skip ci]
 - 2026-03-30 `da763a6` update changelog [skip ci]
 - 2026-03-30 `cbe83ae` update changelog [skip ci]
 - 2026-03-30 `5930643` update changelog [skip ci]
