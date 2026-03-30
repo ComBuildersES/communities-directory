@@ -15616,7 +15616,7 @@
         "id": 480,
         "name": "Women Techmakers Madrid",
         "status": "active",
-        "lastReviewed": "12/12/2025",
+        "lastReviewed": "30/03/2026",
         "communityType": "tech-meetup",
         "eventFormat": "hybrid",
         "location": "Madrid",
@@ -15644,7 +15644,7 @@
           "instagram": "https://www.instagram.com/wtmmadrid/"
         },
         "thumbnailUrl": "images/women-techmakers-madrid.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
