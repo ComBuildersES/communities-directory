@@ -1,1 +1,0 @@
-import{I as f,G as t}from"./InterleavedLayout-Cg7o5-5C.js";function n(u,e){return e.push(u.buffer),{buffer:u.buffer,layout:new f(u.layout)}}function o(u){return new t(u.layout).createView(u.buffer)}export{o as t,n as u};
