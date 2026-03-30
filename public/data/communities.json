@@ -7471,34 +7471,50 @@
     "id": 207,
     "name": "GDG Spain",
     "status": "active",
-    "lastReviewed": "31/05/2024",
+    "lastReviewed": "30/03/2026",
     "communityType": "umbrella-org",
     "eventFormat": "in-person",
     "location": "n/a",
     "topics": "",
     "tags": [
-      "gcp"
+      "gcp",
+      "kotlin",
+      "flutter",
+      "dart",
+      "generative-ai",
+      "ai-coding-agents",
+      "web-performance",
+      "frontend-tooling"
     ],
     "targetAudience": [
       "frontend-developer",
       "backend-developer",
       "fullstack-developer",
       "mobile-developer",
-      "game-developer"
+      "junior-developer",
+      "senior-staff"
     ],
     "contactInfo": "",
     "communityUrl": "https://gdg.es/",
-    "urls": {},
+    "urls": {
+      "web": "https://gdg.es/",
+      "twitter": "https://x.com/GDG_ES",
+      "youtube": "https://www.youtube.com/c/GDGSpain",
+      "facebook": "https://www.facebook.com/GDGSpain",
+      "instagram": "https://instagram.com/GDGSpain"
+    },
     "thumbnailUrl": "images/gdg-spain.webp",
     "latLon": {
       "lat": null,
       "lon": null
     },
     "displayOnMap": false,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "Organización que agrupa a todos los Google Developer Groups (GDGs) de España, entidades sin ánimo de lucro creada con el objetivo de mejorar la comunidad de entusiastas tecnológicos y aumentar el conocimiento y las relaciones entre las personas que se dedican a esta área.",
+    "removalReason": ""
   },
   {
     "id": 208,
