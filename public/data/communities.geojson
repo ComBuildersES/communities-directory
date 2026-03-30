@@ -18295,7 +18295,7 @@
         "id": 540,
         "name": "Datolada",
         "status": "active",
-        "lastReviewed": "02/06/2025",
+        "lastReviewed": "30/03/2026",
         "communityType": "conference",
         "eventFormat": "in-person",
         "location": "Coruña",
@@ -18318,7 +18318,11 @@
           "digital-marketing"
         ],
         "targetAudience": [
-          "digital-marketer"
+          "data-engineer",
+          "data-scientist",
+          "ml-engineer",
+          "data-analyst",
+          "data-journalist"
         ],
         "contactInfo": "info@datola.es",
         "communityUrl": "https://eventos.datola.es/",
@@ -18329,7 +18333,7 @@
           "bluesky": "https://bsky.app/profile/datola.es"
         },
         "thumbnailUrl": "images/datolada.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
