@@ -19673,7 +19673,7 @@
     "id": 540,
     "name": "Datolada",
     "status": "active",
-    "lastReviewed": "02/06/2025",
+    "lastReviewed": "30/03/2026",
     "communityType": "conference",
     "eventFormat": "in-person",
     "location": "Coruña",
@@ -19693,7 +19693,11 @@
       "digital-marketing"
     ],
     "targetAudience": [
-      "digital-marketer"
+      "data-engineer",
+      "data-scientist",
+      "ml-engineer",
+      "data-analyst",
+      "data-journalist"
     ],
     "contactInfo": "info@datola.es",
     "communityUrl": "https://eventos.datola.es/",
@@ -19709,10 +19713,13 @@
       "lon": -8.3958532
     },
     "displayOnMap": true,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "El evento de referencia en analítica y datos del mundo digital, donde nos juntamos para compartir, aprender y celebrar el valor de la comunidad.",
+    "removalReason": "",
+    "parentId": null
   },
   {
     "id": 541,
