@@ -127,9 +127,15 @@ async function zoomToCluster(view, layerView, graphic) {
 }
 
 async function generateClusterConfiguration(layer, view) {
-  const primaryScheme = await clusterLabelCreator
-    .getLabelSchemes({ layer, view })
-    .then((labelSchemes) => labelSchemes?.primaryScheme);
+  const [primaryScheme, { renderer, fields }] = await Promise.all([
+    clusterLabelCreator
+      .getLabelSchemes({ layer, view })
+      .then((labelSchemes) => labelSchemes?.primaryScheme),
+    pieChartRendererCreator.createRendererForClustering({
+      layer,
+      shape: "donut",
+    }),
+  ]);
 
   const { labelingInfo, clusterMinSize } = primaryScheme;
   const labelSymbol = labelingInfo[0].symbol;
@@ -139,12 +145,6 @@ async function generateClusterConfiguration(layer, view) {
   labelSymbol.haloSize = 1.5;
   labelSymbol.font.size = 10;
   labelingInfo[0].labelPlacement = "center-center";
-
-  const { renderer, fields } =
-    await pieChartRendererCreator.createRendererForClustering({
-      layer,
-      shape: "donut",
-    });
 
   renderer.holePercentage = 0.66;
 
