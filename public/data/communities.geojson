@@ -19686,8 +19686,8 @@
         "id": 573,
         "name": "Ping A Programadoras",
         "status": "active",
-        "lastReviewed": "24/03/2026",
-        "communityType": "tech-meetup",
+        "lastReviewed": "30/03/2026",
+        "communityType": "mutual-aid",
         "eventFormat": "in-person",
         "location": "Sevilla, España",
         "topics": "",
@@ -19701,17 +19701,20 @@
           "tech4good",
           "software-architecture",
           "functional-programming",
+          "c",
+          "r-lang",
           "oop",
-          "women-in-tech",
-          "javascript",
-          "java",
-          "mentoring"
+          "haskell",
+          "augmented-reality",
+          "women-in-tech"
         ],
         "targetAudience": [],
         "contactInfo": "pingprogramadoras@gmail.com",
-        "communityUrl": "https://www.linkedin.com/company/pingaprogramadoras/",
+        "communityUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/",
         "urls": {
-          "eventsUrl": "https://meetup.com/ping-a-programadoras"
+          "eventsUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/",
+          "linkedin": "https://www.linkedin.com/company/pingaprogramadoras/",
+          "twitter": "https://x.com/pingmujeres"
         },
         "thumbnailUrl": "images/ping-a-programadoras.webp",
         "humanValidated": true
