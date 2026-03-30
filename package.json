@@ -5,6 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite --host 0.0.0.0",
+    "dev:clean": "node scripts/clean-vite-cache.js && vite --host 0.0.0.0",
+    "dev:local": "vite --host 127.0.0.1 --port 4173",
+    "dev:local:clean": "node scripts/clean-vite-cache.js && vite --host 127.0.0.1 --port 4173",
     "build": "npm run validate-data && vite build",
     "changelog": "node scripts/generate-changelog.js",
     "prepare": "node scripts/setup-git-hooks.js",

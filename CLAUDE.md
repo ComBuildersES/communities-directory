@@ -77,6 +77,8 @@ scripts/               # Utilidades de mantenimiento de datos
   topics: string,               // texto libre heredado, separado por comas
   tags: string[],               // IDs referenciando public/data/tags.json
   targetAudience: string[],     // IDs referenciando public/data/audience.json
+  matchesAllTags?: boolean,     // true = aplica a cualquier filtro de tags
+  matchesAllAudience?: boolean, // true = aplica a cualquier filtro de público
   contactInfo: string,          // email
   communityUrl: string,         // URL principal (web propia si existe, si no la más relevante)
   urls: {                       // URLs adicionales por plataforma (solo claves con valor)
@@ -129,6 +131,9 @@ Hooks exportados: `useAllCommunities`, `useCommunitiesFiltered`, `useIsLoading`,
 
 ```bash
 npm run dev                           # Servidor de desarrollo
+npm run dev:clean                     # Limpia caché local de Vite y arranca en 5173
+npm run dev:local                     # Arranca en 4173 para evitar conflictos con tunnels/forwarding
+npm run dev:local:clean               # Limpia caché local de Vite y arranca en 4173
 npm run build                         # Build de producción
 npm run build-preview                 # Build + preview local
 npm run lint                          # ESLint
@@ -205,6 +210,28 @@ const data = rawData.map((c) => {
 ```
 
 Los componentes (`CommunityCard`, `CommunityModal`, `Map`) reciben URLs ya resueltas y no necesitan saber nada de `BASE_URL`.
+
+## Edición de taxonomías
+
+`matchesAllTags` y `matchesAllAudience` representan comunidades generalistas o abiertas a cualquier perfil.
+
+- En el formulario, marcar esos checkboxes no debe borrar la selección visual actual de `tags` o `targetAudience`; así se evita perder trabajo por un clic accidental.
+- En el payload final y en el JSON que viaja al issue, si uno de esos flags está activo, el array correspondiente debe compactarse a `[]`.
+- Esa compactación ocurre al construir el payload y al procesar el issue, no en el estado visible del formulario.
+
+## Troubleshooting local
+
+Si `http://localhost:5173` muestra código que no coincide con lo que hay en disco, sospecha primero de un conflicto de puerto o de un port forwarding local.
+
+- En macOS con VS Code Remote puede aparecer `Code Helper` escuchando en `127.0.0.1:5173`; en ese caso el navegador puede estar entrando por el túnel, no por tu Vite local.
+- Confirmación rápida:
+
+```bash
+lsof -nP -iTCP:5173 -sTCP:LISTEN
+curl -s http://127.0.0.1:5173/src/lib/communitySubmission.js | rg "normalizeTaxonomySelection|buildCommunityPayload"
+```
+
+- Si la respuesta no contiene la firma esperada del código actual, usa `npm run dev:local:clean` y abre `http://127.0.0.1:4173`.
 
 ---
 

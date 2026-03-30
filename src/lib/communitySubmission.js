@@ -482,7 +482,39 @@ function normalizeLatLon(value) {
   return Number.isFinite(parsed) ? parsed : null;
 }
 
-export function buildCommunityPayload(draft, existingCommunity = null) {
+function normalizeTaxonomySelection(selectedValues, catalogItems, matchesAllFlag) {
+  const normalizedValues = Array.isArray(selectedValues)
+    ? [...new Set(selectedValues.filter(Boolean))]
+    : [];
+  const catalogIds = Array.isArray(catalogItems)
+    ? catalogItems.map((item) => cleanString(item?.id)).filter(Boolean)
+    : [];
+
+  if (catalogIds.length === 0) {
+    return {
+      values: normalizedValues,
+      matchesAll: Boolean(matchesAllFlag),
+    };
+  }
+
+  const selectedIds = new Set(normalizedValues);
+  const hasAllCatalogIds = catalogIds.every((id) => selectedIds.has(id));
+
+  if (Boolean(matchesAllFlag) || hasAllCatalogIds) {
+    return {
+      values: [],
+      matchesAll: true,
+    };
+  }
+
+  return {
+    values: normalizedValues,
+    matchesAll: false,
+  };
+}
+
+export function buildCommunityPayload(draft, existingCommunity = null, options = {}) {
+  const { allTags = [], allAudience = [] } = options;
   const normalizedUrls = normalizeUrls(draft.urls);
   const lat = normalizeLatLon(draft.latLon?.lat);
   const lon = normalizeLatLon(draft.latLon?.lon);
@@ -505,6 +537,12 @@ export function buildCommunityPayload(draft, existingCommunity = null) {
   const normalizedThumbnailUrl = rawThumbnailUrl?.startsWith(baseUrl)
     ? rawThumbnailUrl.slice(baseUrl.length)
     : rawThumbnailUrl;
+  const normalizedTags = normalizeTaxonomySelection(draft.tags, allTags, draft.matchesAllTags);
+  const normalizedAudience = normalizeTaxonomySelection(
+    draft.targetAudience,
+    allAudience,
+    draft.matchesAllAudience
+  );
 
   return {
     id: resolvedId,
@@ -518,8 +556,8 @@ export function buildCommunityPayload(draft, existingCommunity = null) {
     shortDescription: cleanString(draft.shortDescription),
     topics: cleanString(draft.topics),
     langs: normalizeCommunityLangs(draft.langs),
-    tags: Array.isArray(draft.tags) ? draft.tags : [],
-    targetAudience: Array.isArray(draft.targetAudience) ? draft.targetAudience : [],
+    tags: normalizedTags.values,
+    targetAudience: normalizedAudience.values,
     contactInfo: cleanString(draft.contactInfo),
     communityUrl: cleanString(draft.communityUrl),
     urls: normalizedUrls,
@@ -530,8 +568,8 @@ export function buildCommunityPayload(draft, existingCommunity = null) {
     },
     displayOnMap: Boolean(normalizedLocation),
     humanValidated: true,
-    matchesAllTags: Boolean(draft.matchesAllTags),
-    matchesAllAudience: Boolean(draft.matchesAllAudience),
+    matchesAllTags: normalizedTags.matchesAll,
+    matchesAllAudience: normalizedAudience.matchesAll,
     ...(isUmbrellaOrganization ? {} : { parentId: draft.parentId ?? null }),
   };
 }

@@ -67,6 +67,33 @@ Y una vez hecho esto, puede arrancar el entorno de desarrollo con:
 
 Esto iniciará la app en `http://localhost:5173` por defecto, donde podrás explorar el directorio interactivo.
 
+Si quieres limpiar la caché local de Vite antes de arrancar:
+
+```bash
+npm run dev:clean
+```
+
+Si `5173` está ocupado o tienes port forwarding de VS Code/Remote activo, usa un puerto alternativo local:
+
+```bash
+npm run dev:local:clean
+```
+
+Eso levanta la app en `http://127.0.0.1:4173`.
+
+### Problemas típicos con `localhost:5173`
+
+Si el navegador muestra una versión del código que no coincide con lo que tienes en disco, es posible que `5173` esté siendo interceptado por otro proceso local o por un túnel de VS Code.
+
+Puedes comprobar qué está sirviendo realmente ese puerto con:
+
+```bash
+lsof -nP -iTCP:5173 -sTCP:LISTEN
+curl -s http://127.0.0.1:5173/src/lib/communitySubmission.js | rg "normalizeTaxonomySelection|buildCommunityPayload"
+```
+
+Si no aparece la firma esperada del código actual, cambia temporalmente a `4173` con `npm run dev:local:clean`.
+
 Si vas a tocar `public/data/`, puedes comprobar el dataset manualmente con `npm run validate-data`. Además, `npm install` configura un hook local para validar las contribuciones antes de cada commit.
 
 Para sanear URLs rotas o caídas:

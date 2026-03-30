@@ -29,12 +29,13 @@ Directorio interactivo de comunidades tecnológicas españolas. Tiene dos vistas
 Cada comunidad tiene campos heredados y campos nuevos:
 
 - Base: `id`, `name`, `status`, `lastReviewed`, `communityType`, `eventFormat`, `location`, `topics`, `contactInfo`, `communityUrl`, `thumbnailUrl`, `latLon`
-- Nuevos: `tags`, `targetAudience`, `urls`, `displayOnMap`, `humanValidated`
+- Nuevos: `tags`, `targetAudience`, `matchesAllTags`, `matchesAllAudience`, `urls`, `displayOnMap`, `humanValidated`
 
 Notas:
 
 - `topics` sigue siendo texto libre heredado
 - `tags` y `targetAudience` referencian IDs de los catálogos JSON
+- `matchesAllTags` y `matchesAllAudience` compactan el payload final a arrays vacíos, pero no deben forzar a borrar la selección visible del formulario
 - `communityUrl` sigue siendo la URL principal/fallback
 - `urls` guarda URLs adicionales por plataforma
 
@@ -47,6 +48,9 @@ Notas:
 ## Scripts importantes
 
 - `npm run dev`: desarrollo
+- `npm run dev:clean`: limpia caché local de Vite y arranca
+- `npm run dev:local`: arranca en `127.0.0.1:4173`
+- `npm run dev:local:clean`: limpia caché local de Vite y arranca en `127.0.0.1:4173`
 - `npm run build`: build de producción
 - `npm run lint`: lint
 - `npm run process-to-communities-to-geojson`: genera GeoJSON
@@ -75,3 +79,4 @@ Notas:
 - Hay muchos cambios locales no relacionados en el repo; no revertir nada por defecto
 - El dataset es grande y mezcla datos manuales con enriquecimiento automático
 - ArcGIS hace el build pesado; un `build` correcto no implica que el mapa esté perfecto sin validación visual
+- `localhost:5173` puede estar interceptado por un port forwarding local de VS Code (`Code Helper`) aunque la URL parezca “local”; si el runtime no coincide con el código en disco, comprobar `lsof -nP -iTCP:5173 -sTCP:LISTEN` y considerar `npm run dev:local:clean`

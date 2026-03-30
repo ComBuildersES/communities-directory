@@ -11,6 +11,8 @@ const communitiesPath = './public/data/communities.json';
 const communitiesMetaPath = './public/data/communities.meta.json';
 const deletedCommunitiesPath = './public/data/deleted-communities.json';
 const imagesFolder = './public/images';
+const tagsPath = './public/data/tags.json';
+const audiencePath = './public/data/audience.json';
 const appBaseUrl = process.env.COMMUNITY_DIRECTORY_APP_URL ?? 'https://combuilderses.github.io/communities-directory/';
 const ISSUE_MODES = {
   CREATE: 'create',
@@ -51,6 +53,22 @@ function normalizeLatLon(value) {
   const parsed = Number(value);
   return Number.isFinite(parsed) ? parsed : null;
 }
+
+function readCatalogIds(filePath) {
+  if (!fs.existsSync(filePath)) return [];
+
+  try {
+    const data = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
+    return Array.isArray(data)
+      ? data.map((item) => normalizeString(item?.id)).filter(Boolean)
+      : [];
+  } catch {
+    return [];
+  }
+}
+
+const KNOWN_TAG_IDS = readCatalogIds(tagsPath);
+const KNOWN_AUDIENCE_IDS = readCatalogIds(audiencePath);
 
 const LEGACY_LANGUAGE_MAP = {
   es: 'es',
@@ -196,6 +214,13 @@ function readSubmission() {
 }
 
 export function normalizePayload(payload) {
+  const normalizedTags = Array.isArray(payload.tags) ? [...new Set(payload.tags.filter(Boolean))] : [];
+  const normalizedAudience = Array.isArray(payload.targetAudience) ? [...new Set(payload.targetAudience.filter(Boolean))] : [];
+  const hasAllKnownTags = KNOWN_TAG_IDS.length > 0 && KNOWN_TAG_IDS.every((id) => normalizedTags.includes(id));
+  const hasAllKnownAudience = KNOWN_AUDIENCE_IDS.length > 0 && KNOWN_AUDIENCE_IDS.every((id) => normalizedAudience.includes(id));
+  const matchesAllTags = normalizeBoolean(payload.matchesAllTags) || hasAllKnownTags;
+  const matchesAllAudience = normalizeBoolean(payload.matchesAllAudience) || hasAllKnownAudience;
+
   return {
     id: payload.id ?? null,
     name: normalizeString(payload.name),
@@ -207,8 +232,8 @@ export function normalizePayload(payload) {
     shortDescription: normalizeString(payload.shortDescription),
     topics: normalizeString(payload.topics),
     langs: normalizeCommunityLangs(payload.langs),
-    tags: Array.isArray(payload.tags) ? [...new Set(payload.tags.filter(Boolean))] : [],
-    targetAudience: Array.isArray(payload.targetAudience) ? [...new Set(payload.targetAudience.filter(Boolean))] : [],
+    tags: matchesAllTags ? [] : normalizedTags,
+    targetAudience: matchesAllAudience ? [] : normalizedAudience,
     contactInfo: normalizeString(payload.contactInfo),
     communityUrl: normalizeString(payload.communityUrl),
     urls: Object.fromEntries(
@@ -224,8 +249,8 @@ export function normalizePayload(payload) {
     },
     displayOnMap: normalizeBoolean(payload.displayOnMap) && normalizeString(payload.communityType) !== 'umbrella-org',
     humanValidated: Boolean(payload.humanValidated),
-    ...(normalizeBoolean(payload.matchesAllTags) ? { matchesAllTags: true } : {}),
-    ...(normalizeBoolean(payload.matchesAllAudience) ? { matchesAllAudience: true } : {}),
+    ...(matchesAllTags ? { matchesAllTags: true } : {}),
+    ...(matchesAllAudience ? { matchesAllAudience: true } : {}),
     ...(normalizeString(payload.communityType) !== 'umbrella-org'
       ? { parentId: payload.parentId != null ? Number(payload.parentId) : null }
       : {}),

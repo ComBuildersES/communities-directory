@@ -190,6 +190,8 @@ El fichero [communities.json](https://github.com/ComBuildersES/communities-direc
   "topics": "<comma separated values>",
   "tags": ["<tag-id>", "..."],
   "targetAudience": ["<audience-id>", "..."],
+  "matchesAllTags": <true or false>,
+  "matchesAllAudience": <true or false>,
   "contactInfo": "<email, contact form, ...>",
   "communityUrl": "<absolute URL>",
   "urls": {
@@ -228,6 +230,8 @@ El fichero [communities.json](https://github.com/ComBuildersES/communities-direc
 - **topics**: Lista de temáticas en texto libre separada por comas (campo heredado, [ver issue](https://github.com/ComBuildersES/communities-directory/issues/6)).
 - **tags**: Array de IDs de etiquetas temáticas definidas en [`public/data/tags.json`](../public/data/tags.json). Ejemplo: `["python", "data-science", "machine-learning"]`.
 - **targetAudience**: Array de IDs de perfiles de público objetivo definidos en [`public/data/audience.json`](../public/data/audience.json). Ejemplo: `["data-scientist", "ml-engineer"]`.
+- **matchesAllTags**: `true` cuando la comunidad debe aparecer en cualquier filtro de temática. En el payload final eso compacta `tags` a `[]`, aunque el formulario pueda seguir mostrando la selección visible mientras editas.
+- **matchesAllAudience**: `true` cuando la comunidad está abierta a cualquier perfil. En el payload final eso compacta `targetAudience` a `[]`.
 - **contactInfo**: Email o URL de contacto.
 - **communityUrl** _(*)_: URL principal de la comunidad. Se usa como enlace en la tarjeta y en el mapa. Preferencia: web propia > plataforma más activa.
 - **urls**: Objeto con URLs adicionales por plataforma. Solo incluir las claves que tengan valor. Claves principales: `web`, `eventsUrl` (Meetup, Lu.ma, etc.), `linkedin`, `twitter`, `instagram`, `youtube`, `discord`, `telegram`, `github`, `mastodon`, `bluesky`. Claves menos comunes: `linkAggregator`, `mailingList`, `facebook`.
@@ -316,11 +320,34 @@ npm run dev
 
 Esto abrirá la aplicación en `http://localhost:5173` por defecto (puede variar según el puerto libre).
 
+También hay scripts útiles para limpiar caché local de Vite o evitar conflictos de puerto:
+
+```bash
+npm run dev:clean
+npm run dev:local
+npm run dev:local:clean
+```
+
 ### Ejecutar el repo en local
 
 - Para desarrollar en local usa `npm run dev`
   - Los cambios se ven reflejados en tiempo real en el navegador al modificar el código.
+- Si sospechas de caché local de Vite, usa `npm run dev:clean`.
+- Si `5173` está ocupado o tienes un port forwarding local activo, usa `npm run dev:local:clean` y abre `http://127.0.0.1:4173`.
 - Para probar el build en local usa `npm run build-preview`
+
+### Troubleshooting local
+
+Si `localhost:5173` muestra una versión del código que no coincide con lo que tienes en el repo, revisa primero si hay otro proceso o un túnel local ocupando el puerto.
+
+Comprobaciones recomendadas:
+
+```bash
+lsof -nP -iTCP:5173 -sTCP:LISTEN
+curl -s http://127.0.0.1:5173/src/lib/communitySubmission.js | rg "normalizeTaxonomySelection|buildCommunityPayload"
+```
+
+Se ha visto un caso real en el que `Code Helper` de VS Code escuchaba en `127.0.0.1:5173` mientras `node` también escuchaba en `*:5173`. En ese escenario, el navegador podía acabar viendo el servidor remoto reenviado en vez del Vite local.
 
 ### Linting y estilo
 

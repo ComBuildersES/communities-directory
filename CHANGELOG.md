@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-03-30 `801ede5` add styling for children count in CommunityModal
+- 2026-03-30 `9a8623c` enhance community submission with taxonomy selection and cache management
+- 2026-03-30 `764f94f` add styling for children count in CommunityModal
 - 2026-03-30 `cffa207` update devcontainer and Vite configuration for improved development setup
 - 2026-03-30 `9031b3b` add devcontainer configuration for Alpine environment
 - 2026-03-30 `3f078e1` shuffle contributors display and update visible contributors logic
@@ -166,6 +167,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-30 `eac8b20` update changelog [skip ci]
 - 2026-03-30 `7e24890` update changelog [skip ci]
 - 2026-03-30 `da763a6` update changelog [skip ci]
 - 2026-03-30 `cbe83ae` update changelog [skip ci]

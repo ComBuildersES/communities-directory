@@ -1048,8 +1048,8 @@ export function CommunityContribution({
   const shareUrl = `${window.location.origin}${sharePath}`;
 
   const payload = useMemo(
-    () => buildCommunityPayload(draft, existingCommunity),
-    [draft, existingCommunity]
+    () => buildCommunityPayload(draft, existingCommunity, { allTags, allAudience }),
+    [allAudience, allTags, draft, existingCommunity]
   );
   const shouldShowLocationField = (
     EVENT_FORMATS_WITH_LOCATION.includes(draft.eventFormat) &&
