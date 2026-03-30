@@ -170,7 +170,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Improvements
 
-- 2026-03-30 `fdbc0c0` initial load optimizations (phases 1-3)
+- 2026-03-30 `a7ede17` lazy-load CommunityContribution (phase 4)
+- 2026-03-30 `549ffba` initial load optimizations (phases 1-3)
 - 2026-03-27 `f4f251a` simplify results bar layout and improve chip display responsiveness
 
 ### Docs

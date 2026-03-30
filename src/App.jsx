@@ -1,7 +1,6 @@
 import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { CommunitiesList } from "./components/CommunitiesList.jsx";
-import { CommunityContribution } from "./components/CommunityContribution/CommunityContribution.jsx";
 import { Footer } from "./components/Footer.jsx";
 import { Heading } from "./components/Heading.jsx";
 import { InstallPromptBar } from "./components/InstallPromptBar.jsx";
@@ -32,6 +31,9 @@ import {
   useChildrenByParentId,
 } from "./stores/community.store.js";
 
+const CommunityContribution = lazy(() =>
+  import("./components/CommunityContribution/CommunityContribution.jsx").then((m) => ({ default: m.CommunityContribution }))
+);
 const CommunityModal = lazy(() =>
   import("./components/CommunityModal/CommunityModal.jsx").then((m) => ({ default: m.CommunityModal }))
 );
@@ -335,16 +337,18 @@ function App () {
       )}
       <div className="main">
         {showContributionView && !isLoading && !shouldBlockCommunityEdit && (
-          <CommunityContribution
-            communities={communities}
-            allTags={allTags}
-            allAudience={allAudience}
-            existingCommunity={communityToEdit}
-            proposalDraft={route.proposalDraft}
-            onDirtyChange={(isDirty) => setContributionState((current) => ({ ...current, isDirty }))}
-            onIssueOpenedChange={(issueOpened) => setContributionState((current) => ({ ...current, issueOpened }))}
-            onDraftActionsChange={setDraftActions}
-          />
+          <Suspense fallback={<p className="contribution-loading">{t("app.loadingForm")}</p>}>
+            <CommunityContribution
+              communities={communities}
+              allTags={allTags}
+              allAudience={allAudience}
+              existingCommunity={communityToEdit}
+              proposalDraft={route.proposalDraft}
+              onDirtyChange={(isDirty) => setContributionState((current) => ({ ...current, isDirty }))}
+              onIssueOpenedChange={(issueOpened) => setContributionState((current) => ({ ...current, issueOpened }))}
+              onDraftActionsChange={setDraftActions}
+            />
+          </Suspense>
         )}
         {showContributionView && (isLoading || shouldBlockCommunityEdit) && (
           <p className="contribution-loading">
