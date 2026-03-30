@@ -22544,5 +22544,59 @@
       "es"
     ],
     "parentId": 512
+  },
+  {
+    "id": 616,
+    "name": "GeoInquietos",
+    "status": "active",
+    "lastReviewed": "30/03/2026",
+    "communityType": "umbrella-org",
+    "eventFormat": "in-person",
+    "location": "n/a",
+    "shortDescription": "Grupos informales que se reúnen para conversar y aprender sobre cualquier tema relacionado con las ciencias de la tierra.",
+    "topics": "",
+    "langs": [
+      "es"
+    ],
+    "tags": [
+      "geospatial",
+      "data-science",
+      "data-engineering",
+      "data-visualization",
+      "free-software",
+      "open-source",
+      "open-data",
+      "spatial-databases"
+    ],
+    "targetAudience": [
+      "junior-developer",
+      "student",
+      "career-changer",
+      "mentee",
+      "mentor",
+      "senior-staff",
+      "minors",
+      "data-journalist",
+      "data-engineer",
+      "data-scientist",
+      "data-analyst",
+      "frontend-developer",
+      "backend-developer",
+      "fullstack-developer"
+    ],
+    "contactInfo": "",
+    "communityUrl": "https://geoinquietos.org/",
+    "urls": {
+      "mailingList": "https://lists.osgeo.org/mailman/listinfo/geoinquietos-es",
+      "github": "https://github.com/geoinquietos-org/"
+    },
+    "thumbnailUrl": "images/geoinquietos.webp",
+    "removalReason": "",
+    "latLon": {
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false,
+    "humanValidated": true
   }
 ]
