@@ -99,6 +99,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-03-31 `2b3fc0d` [Actualizada Arcasiles Community Madrid](https://combuilderses.github.io/communities-directory/?community=31) ([PR #338](https://github.com/ComBuildersES/communities-directory/pull/338))
 - 2026-03-31 `cf3dd38` [Actualizada Makers iA](https://combuilderses.github.io/communities-directory/?community=554) ([PR #336](https://github.com/ComBuildersES/communities-directory/pull/336))
 - 2026-03-30 `73b9ac1` Clear tags and target audience from communities.json
 - 2026-03-30 `ffff85e` [Actualizada Lareira Conf](https://combuilderses.github.io/communities-directory/?community=541) ([PR #333](https://github.com/ComBuildersES/communities-directory/pull/333))
@@ -181,6 +182,10 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-31 `d9b1b17` update .all-contributorsrc [skip ci]
+- 2026-03-31 `edf0854` update changelog [skip ci]
+- 2026-03-31 `9c4a4cd` update README.md [skip ci]
+- 2026-03-31 `13c8bdd` update changelog [skip ci]
 - 2026-03-30 `4bf3a72` update changelog [skip ci]
 - 2026-03-30 `6125679` update changelog [skip ci]
 - 2026-03-30 `8329849` update changelog [skip ci]

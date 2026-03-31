@@ -609,7 +609,7 @@
         "id": 31,
         "name": "Arcasiles Community Madrid",
         "status": "active",
-        "lastReviewed": "31/05/2024",
+        "lastReviewed": "31/03/2026",
         "communityType": "tech-meetup",
         "eventFormat": "hybrid",
         "location": "Madrid",
@@ -624,10 +624,12 @@
         "urls": {
           "instagram": "https://www.instagram.com/arcasilesgroup/",
           "linkedin": "https://www.linkedin.com/company/arcasilesgroup/",
-          "web": "https://arcasiles.com/"
+          "web": "https://arcasiles.com/",
+          "eventsUrl": "https://luma.com/arcasilesgroup",
+          "github": "https://github.com/arcasilesgroup"
         },
         "thumbnailUrl": "images/arcasiles-community-madrid.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {

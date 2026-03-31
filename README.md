@@ -174,6 +174,7 @@ Echa un vistazo a algunas de las tareas por las que podrías empezar a ayudar:
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/amagan"><img src="https://avatars.githubusercontent.com/u/72810518?v=4?s=100" width="100px;" alt="Andrea"/><br /><sub><b>Andrea</b></sub></a><br /><a href="#data-amagan" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/crystian"><img src="https://avatars.githubusercontent.com/u/3886806?v=4?s=100" width="100px;" alt="Crystian"/><br /><sub><b>Crystian</b></sub></a><br /><a href="#data-crystian" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://soydachi.com/"><img src="https://avatars.githubusercontent.com/u/1771785?v=4?s=100" width="100px;" alt="Dachi Gogotchuri"/><br /><sub><b>Dachi Gogotchuri</b></sub></a><br /><a href="#data-soydachi" title="Data">🔣</a></td>
     </tr>
   </tbody>
 </table>
