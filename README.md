@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-29-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-30-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Communities directory
@@ -173,6 +173,7 @@ Echa un vistazo a algunas de las tareas por las que podrías empezar a ayudar:
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/amagan"><img src="https://avatars.githubusercontent.com/u/72810518?v=4?s=100" width="100px;" alt="Andrea"/><br /><sub><b>Andrea</b></sub></a><br /><a href="#data-amagan" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://soydachi.com/"><img src="https://avatars.githubusercontent.com/u/1771785?v=4?s=100" width="100px;" alt="Dachi Gogotchuri"/><br /><sub><b>Dachi Gogotchuri</b></sub></a><br /><a href="#data-soydachi" title="Data">🔣</a></td>
     </tr>
   </tbody>
 </table>
