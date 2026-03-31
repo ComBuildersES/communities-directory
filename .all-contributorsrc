@@ -279,6 +279,15 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "soydachi",
+      "name": "Dachi Gogotchuri",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1771785?v=4",
+      "profile": "https://soydachi.com/",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
