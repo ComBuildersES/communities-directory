@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
-- 2026-04-01 `c434726` update background styles and enhance community modal thumbnail display
+- 2026-04-01 `a6b96d3` update background styles and enhance community modal thumbnail display
 
 ## 2026-03
 
