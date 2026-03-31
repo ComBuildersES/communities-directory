@@ -10,6 +10,16 @@ body {
   background: #eef2f7;
 }
 
+.app-shell {
+  width: 100%;
+}
+
+.app-shell--modal-open {
+  position: fixed;
+  inset: calc(var(--modal-lock-scroll-y, 0px) * -1) 0 auto 0;
+  width: 100%;
+}
+
 .install-prompt-bar {
   padding: 0.45rem 1rem;
   background: #eef4ff;

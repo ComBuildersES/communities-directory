@@ -198,12 +198,6 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
     return () => document.removeEventListener("mousedown", handler);
   }, [isShareOpen]);
 
-  // Bloquear scroll del body
-  useEffect(() => {
-    document.body.style.overflow = "hidden";
-    return () => { document.body.style.overflow = ""; };
-  }, []);
-
   const {
     name,
     status,

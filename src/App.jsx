@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { CommunitiesList } from "./components/CommunitiesList.jsx";
 import { Footer } from "./components/Footer.jsx";
@@ -76,6 +76,7 @@ function App () {
   const [isOnline, setIsOnline] = useState(() =>
     typeof navigator === "undefined" ? true : navigator.onLine
   );
+  const [modalScrollLockY, setModalScrollLockY] = useState(null);
   const { fetchCommunities } = useCommunityActions();
   const communities = useAllCommunities();
   const allTags = useTags();
@@ -89,6 +90,7 @@ function App () {
   const freshnessError = useFreshnessError();
   const routeRef = useRef(route);
   const contributionStateRef = useRef(contributionState);
+  const pendingScrollRestoreRef = useRef(null);
 
   const tagsMap = useMemo(
     () => Object.fromEntries(allTags.map((tag) => [tag.id, tag.label])),
@@ -255,18 +257,32 @@ function App () {
   const showContributionView = route.mode !== "directory";
   const shouldBlockCommunityDetails = isOnline && (isRefreshingFreshData || !hasFreshData);
   const shouldBlockCommunityEdit = route.mode === "edit" && shouldBlockCommunityDetails;
+  const isCommunityModalOpen = !showContributionView && Boolean(selectedCommunity) && !shouldBlockCommunityDetails;
+  const effectiveModalScrollLockY = isCommunityModalOpen ? modalScrollLockY : null;
+  const appShellClassName = [
+    "app-shell",
+    effectiveModalScrollLockY != null ? "app-shell--modal-open" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+  const appShellStyle = effectiveModalScrollLockY != null
+    ? { "--modal-lock-scroll-y": `${effectiveModalScrollLockY}px` }
+    : undefined;
 
   const openCommunityModal = (communityId) => {
     dismissActiveInput();
+    setModalScrollLockY(window.scrollY);
     const path = buildDirectoryStatePath({ filters, communityIdentifier: communityId });
     window.history.pushState({}, "", path);
     setSelectedCommunityIdentifier(String(communityId));
   };
 
   const closeCommunityModal = () => {
+    pendingScrollRestoreRef.current = modalScrollLockY ?? window.scrollY;
     const path = buildDirectoryStatePath({ filters });
     window.history.pushState({}, "", path);
     setSelectedCommunityIdentifier(null);
+    setModalScrollLockY(null);
   };
 
   useEffect(() => {
@@ -288,6 +304,43 @@ function App () {
 
     dismissActiveInput();
   }, [selectedCommunity]);
+
+  useEffect(() => {
+    if (isCommunityModalOpen) {
+      setModalScrollLockY((current) => current ?? window.scrollY);
+      return;
+    }
+
+    setModalScrollLockY(null);
+  }, [isCommunityModalOpen]);
+
+  useLayoutEffect(() => {
+    if (effectiveModalScrollLockY == null) {
+      if (pendingScrollRestoreRef.current != null) {
+        window.scrollTo(0, pendingScrollRestoreRef.current);
+        pendingScrollRestoreRef.current = null;
+      }
+      return;
+    }
+
+    pendingScrollRestoreRef.current = effectiveModalScrollLockY;
+
+    const originalBodyStyle = {
+      overflow: document.body.style.overflow,
+      paddingRight: document.body.style.paddingRight,
+    };
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+    document.body.style.overflow = "hidden";
+    if (scrollbarWidth > 0) {
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
+    }
+
+    return () => {
+      document.body.style.overflow = originalBodyStyle.overflow;
+      document.body.style.paddingRight = originalBodyStyle.paddingRight;
+    };
+  }, [effectiveModalScrollLockY]);
 
   useEffect(() => {
     if (showContributionView) return;
@@ -313,93 +366,96 @@ function App () {
 
   return (
     <>
-      {!showContributionView && <InstallPromptBar />}
-      <Heading
-        isContributionView={showContributionView}
-        closeContributionForm={closeContributionForm}
-        goToHome={goToHome}
-        goToContribution={goToContribution}
-      />
-      {!showContributionView && <TagSearch />}
-      {!showContributionView && <ResultsBar view={view} toggleView={toggleView} />}
-      {!showContributionView && <FilterPanel />}
-      {!showContributionView && <ParentFilterBanner />}
-      {!showContributionView && shouldBlockCommunityDetails && communities.length > 0 && (
-        <section className="contribution-shell">
-          <article className="message is-info contribution-message">
-            <div className="message-body">
-              {isRefreshingFreshData
-                ? t("app.checkingFreshData")
-                : freshnessError}
-            </div>
-          </article>
-        </section>
-      )}
-      <div className="main">
-        {showContributionView && !isLoading && !shouldBlockCommunityEdit && (
-          <Suspense fallback={<p className="contribution-loading">{t("app.loadingForm")}</p>}>
-            <CommunityContribution
-              communities={communities}
-              allTags={allTags}
-              allAudience={allAudience}
-              existingCommunity={communityToEdit}
-              proposalDraft={route.proposalDraft}
-              onDirtyChange={(isDirty) => setContributionState((current) => ({ ...current, isDirty }))}
-              onIssueOpenedChange={(issueOpened) => setContributionState((current) => ({ ...current, issueOpened }))}
-              onDraftActionsChange={setDraftActions}
-            />
-          </Suspense>
-        )}
-        {showContributionView && (isLoading || shouldBlockCommunityEdit) && (
-          <p className="contribution-loading">
-            {shouldBlockCommunityEdit
-              ? t("app.syncingBeforeEdit")
-              : t("app.loadingForm")}
-          </p>
-        )}
-        {showContributionView && route.mode === "edit" && !isLoading && !shouldBlockCommunityEdit && !communityToEdit && (
+      <div className={appShellClassName} style={appShellStyle}>
+        {!showContributionView && <InstallPromptBar />}
+        <Heading
+          isContributionView={showContributionView}
+          closeContributionForm={closeContributionForm}
+          goToHome={goToHome}
+          goToContribution={goToContribution}
+        />
+        {!showContributionView && <TagSearch />}
+        {!showContributionView && <ResultsBar view={view} toggleView={toggleView} />}
+        {!showContributionView && <FilterPanel />}
+        {!showContributionView && <ParentFilterBanner />}
+        {!showContributionView && shouldBlockCommunityDetails && communities.length > 0 && (
           <section className="contribution-shell">
-            <article className="message is-warning contribution-message">
+            <article className="message is-info contribution-message">
               <div className="message-body">
-                {t("app.communityNotFound")}
+                {isRefreshingFreshData
+                  ? t("app.checkingFreshData")
+                  : freshnessError}
               </div>
             </article>
           </section>
         )}
-        {!showContributionView && view === "list" && <CommunitiesList onOpenCommunity={openCommunityModal} />}
-        {!showContributionView && view === "map" && (
-          <Suspense fallback={<div className="map-loading-skeleton" aria-label="Cargando mapa…" />}>
-            <Map showListView={() => setView("list")} onOpenCommunity={openCommunityModal} initialFocus={mapFocusTarget} initialMapState={mapState} onMapStateChange={setMapState} />
-          </Suspense>
-        )}
-      </div>
-      {pendingNavigation && (
-        <div className="navigation-guard-overlay">
-          <div className="navigation-guard-modal" role="dialog" aria-modal="true" aria-label={t("app.unsavedChanges")}>
-            <h3>{t("app.unsavedChanges")}</h3>
-            <p>{t("app.unsavedChangesBody")}</p>
-            <div className="navigation-guard-actions">
-              <button type="button" className="button is-light" onClick={() => setPendingNavigation(null)}>
-                {t("app.keepEditing")}
-              </button>
-              <button
-                type="button"
-                className="button is-warning is-light"
-                onClick={() => continuePendingNavigation({ saveDraft: true })}
-              >
-                {t("app.saveDraftAndExit")}
-              </button>
-              <button
-                type="button"
-                className="button is-danger"
-                onClick={() => continuePendingNavigation({ saveDraft: false })}
-              >
-                {t("app.exitWithoutSaving")}
-              </button>
+        <div className="main">
+          {showContributionView && !isLoading && !shouldBlockCommunityEdit && (
+            <Suspense fallback={<p className="contribution-loading">{t("app.loadingForm")}</p>}>
+              <CommunityContribution
+                communities={communities}
+                allTags={allTags}
+                allAudience={allAudience}
+                existingCommunity={communityToEdit}
+                proposalDraft={route.proposalDraft}
+                onDirtyChange={(isDirty) => setContributionState((current) => ({ ...current, isDirty }))}
+                onIssueOpenedChange={(issueOpened) => setContributionState((current) => ({ ...current, issueOpened }))}
+                onDraftActionsChange={setDraftActions}
+              />
+            </Suspense>
+          )}
+          {showContributionView && (isLoading || shouldBlockCommunityEdit) && (
+            <p className="contribution-loading">
+              {shouldBlockCommunityEdit
+                ? t("app.syncingBeforeEdit")
+                : t("app.loadingForm")}
+            </p>
+          )}
+          {showContributionView && route.mode === "edit" && !isLoading && !shouldBlockCommunityEdit && !communityToEdit && (
+            <section className="contribution-shell">
+              <article className="message is-warning contribution-message">
+                <div className="message-body">
+                  {t("app.communityNotFound")}
+                </div>
+              </article>
+            </section>
+          )}
+          {!showContributionView && view === "list" && <CommunitiesList onOpenCommunity={openCommunityModal} />}
+          {!showContributionView && view === "map" && (
+            <Suspense fallback={<div className="map-loading-skeleton" aria-label="Cargando mapa…" />}>
+              <Map showListView={() => setView("list")} onOpenCommunity={openCommunityModal} initialFocus={mapFocusTarget} initialMapState={mapState} onMapStateChange={setMapState} />
+            </Suspense>
+          )}
+        </div>
+        {pendingNavigation && (
+          <div className="navigation-guard-overlay">
+            <div className="navigation-guard-modal" role="dialog" aria-modal="true" aria-label={t("app.unsavedChanges")}>
+              <h3>{t("app.unsavedChanges")}</h3>
+              <p>{t("app.unsavedChangesBody")}</p>
+              <div className="navigation-guard-actions">
+                <button type="button" className="button is-light" onClick={() => setPendingNavigation(null)}>
+                  {t("app.keepEditing")}
+                </button>
+                <button
+                  type="button"
+                  className="button is-warning is-light"
+                  onClick={() => continuePendingNavigation({ saveDraft: true })}
+                >
+                  {t("app.saveDraftAndExit")}
+                </button>
+                <button
+                  type="button"
+                  className="button is-danger"
+                  onClick={() => continuePendingNavigation({ saveDraft: false })}
+                >
+                  {t("app.exitWithoutSaving")}
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      )}
+        )}
+        <Footer />
+      </div>
       {!showContributionView && selectedCommunity && !shouldBlockCommunityDetails && (
         <Suspense fallback={null}>
           <CommunityModal
@@ -413,7 +469,6 @@ function App () {
           />
         </Suspense>
       )}
-      <Footer />
     </>
   );
 }
