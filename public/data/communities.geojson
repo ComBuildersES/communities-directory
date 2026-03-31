@@ -22,26 +22,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "iot",
-          "tech-ethics",
-          "big-data",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "data-warehouse",
-          "data-lake",
-          "data-pipelines",
-          "open-data",
-          "git",
-          "c"
-        ],
-        "targetAudience": [
-          "data-scientist",
-          "data-engineer",
-          "data-analyst",
-          "data-journalist"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "devnulltalks@gmail.com",
         "communityUrl": "https://devnulltalks.github.io/",
         "urls": {
@@ -104,22 +86,12 @@
           "es"
         ],
         "tags": [
-          "free-software",
-          "software-architecture",
-          "software-craftsmanship",
           "makerspace",
-          "c",
           "3d-modeling",
-          "r-lang",
           "robotics",
-          "innovation",
-          "arduino",
-          "augmented-reality",
-          "haskell"
+          "arduino"
         ],
-        "targetAudience": [
-          "software-architect"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/AIndustriosa/",
         "urls": {
@@ -216,17 +188,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "c",
-          "lean-startup",
-          "r-lang",
-          "mentoring",
-          "go",
-          "macos",
-          "scala",
-          "augmented-reality",
-          "terraform"
-        ],
+        "tags": [],
         "targetAudience": [
           "agile-practitioner"
         ],
@@ -342,26 +304,11 @@
           "es"
         ],
         "tags": [
-          "innovation",
-          "design-patterns",
-          "game-design",
-          "tech4good",
           "digital-activism",
-          "tech-ethics",
-          "women-in-tech",
-          "healthtech",
-          "free-software",
-          "open-hardware",
-          "c",
-          "software-architecture"
+          "tech4good",
+          "open-hardware"
         ],
-        "targetAudience": [
-          "community-manager",
-          "researcher",
-          "sysadmin",
-          "software-architect",
-          "business-innovation-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "hub@akasha.barcelona",
         "communityUrl": "https://akasha.barcelona/",
         "urls": {
@@ -395,14 +342,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "startups",
-          "game-development",
-          "innovation"
-        ],
-        "targetAudience": [
-          "entrepreneur"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "hola@alhambrahub.es",
         "communityUrl": "https://alhambrahub.es/",
         "urls": {
@@ -501,34 +442,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "3d-printing",
-          "c",
-          "digital-forensics",
-          "digital-activism",
-          "digital-marketing",
-          "software-architecture",
-          "software-craftsmanship",
-          "tech-ethics",
-          "free-software",
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases"
-        ],
-        "targetAudience": [
-          "data-analyst",
-          "digital-marketer",
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer",
-          "software-architect",
-          "data-engineer",
-          "data-scientist",
-          "entrepreneur",
-          "data-journalist"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.almeriatech.es/",
         "urls": {
@@ -564,21 +479,10 @@
           "es"
         ],
         "tags": [
-          "lean-startup",
-          "startups",
-          "event-driven",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "ddd",
-          "deep-learning",
-          "r-lang",
-          "augmented-reality",
-          "c"
+          "startups"
         ],
         "targetAudience": [
-          "entrepreneur",
-          "business-innovation-manager"
+          "entrepreneur"
         ],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/andalucia-startup-founder/",
@@ -644,18 +548,7 @@
           "es"
         ],
         "tags": [
-          "angular",
-          "c",
-          "r-lang",
-          "augmented-reality",
-          "java",
-          "javascript",
-          "typescript",
-          "haskell",
-          "functional-programming",
-          "oop",
-          "macos",
-          "machine-learning"
+          "angular"
         ],
         "targetAudience": [],
         "contactInfo": "sponsor@angularmalaga.com",
@@ -689,24 +582,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "tech-ethics",
-          "robotics",
-          "gcp",
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases",
-          "data-science",
-          "data-engineering",
-          "data-visualization",
-          "business-intelligence",
-          "vector-databases",
-          "innovation"
-        ],
-        "targetAudience": [
-          "community-manager",
-          "business-innovation-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "contacta@apiaddicts.org",
         "communityUrl": "https://www.apiaddicts.org/apiaddictsdays/",
         "urls": {
@@ -740,12 +617,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "innovation",
-          "c",
-          "digital-marketing",
-          "tech-ethics"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "info@arcasiles.com",
         "communityUrl": "https://arcasiles.com/",
@@ -809,10 +681,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "iot",
-          "networking"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://asociacionatlantics.org/",
@@ -878,22 +747,9 @@
           "es"
         ],
         "tags": [
-          "r-lang",
-          "statistics",
-          "data-science",
-          "functional-programming",
-          "oop",
-          "data-engineering",
-          "nlp",
-          "game-development",
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases",
-          "data-visualization"
+          "r-lang"
         ],
-        "targetAudience": [
-          "researcher"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/asociacion-de-usuarios-de-r-de-castilla-la-mancha/",
         "urls": {
@@ -1194,15 +1050,9 @@
           "es"
         ],
         "tags": [
-          "free-software",
-          "software-architecture",
-          "software-craftsmanship",
-          "c",
-          "geospatial"
+          "free-software"
         ],
-        "targetAudience": [
-          "software-architect"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.uco.es/aulasoftwarelibre/",
         "urls": {
@@ -1271,31 +1121,9 @@
           "es"
         ],
         "tags": [
-          "azure",
-          "event-driven",
-          "git",
-          "machine-learning",
-          "wordpress",
-          "robotics",
-          "tech-ethics",
-          "gcp",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "data-warehouse"
+          "azure"
         ],
-        "targetAudience": [
-          "community-manager",
-          "devops-engineer",
-          "ml-engineer",
-          "business-innovation-manager",
-          "cloud-engineer",
-          "tech-lead",
-          "data-engineer",
-          "data-scientist",
-          "data-analyst",
-          "data-journalist"
-        ],
+        "targetAudience": [],
         "contactInfo": "azuremalaga@gmail.com",
         "communityUrl": "https://azuremalaga.com/",
         "urls": {
@@ -1330,28 +1158,9 @@
           "es"
         ],
         "tags": [
-          "azure",
-          "robotics",
-          "tech-ethics",
-          "event-driven",
-          "gcp",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "data-warehouse",
-          "data-lake",
-          "data-pipelines",
-          "big-data"
+          "azure"
         ],
-        "targetAudience": [
-          "community-manager",
-          "cloud-engineer",
-          "tech-lead",
-          "data-engineer",
-          "data-scientist",
-          "data-analyst",
-          "data-journalist"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/azuremalaga/",
         "urls": {
@@ -1448,26 +1257,9 @@
           "es"
         ],
         "tags": [
-          "r-lang",
-          "data-warehouse",
-          "data-lake",
-          "data-pipelines",
-          "big-data",
-          "open-data",
-          "data-science",
-          "wordpress",
-          "c",
-          "machine-learning",
-          "mlops",
-          "macos"
+          "r-lang"
         ],
-        "targetAudience": [
-          "data-engineer",
-          "data-scientist",
-          "data-analyst",
-          "community-manager",
-          "data-journalist"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/BarcelonaR/",
         "urls": {
@@ -1564,17 +1356,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "c",
-          "innovation"
-        ],
-        "targetAudience": [
-          "software-architect",
-          "entrepreneur"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "info@bilbostack.com",
         "communityUrl": "https://bilbostack.com/",
         "urls": {
@@ -1643,35 +1426,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "gcp",
-          "c",
-          "software-craftsmanship",
-          "tech-ethics",
-          "software-architecture",
-          "distributed-systems",
-          "free-software",
-          "clean-code",
-          "design-patterns",
-          "docker",
-          "sysadmin",
-          "data-engineering"
-        ],
-        "targetAudience": [
-          "devops-engineer",
-          "test-automation-engineer",
-          "backend-developer",
-          "fullstack-developer",
-          "cloud-engineer",
-          "software-architect",
-          "frontend-developer",
-          "embedded-iot-engineer",
-          "robotics-engineer",
-          "data-engineer",
-          "ml-engineer",
-          "sre",
-          "community-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "biznagafest@gmail.com",
         "communityUrl": "https://www.biznagafest.com/",
         "urls": {
@@ -1707,17 +1463,7 @@
           "es"
         ],
         "tags": [
-          "blockchain",
-          "ethereum",
-          "c",
-          "r-lang",
-          "stem",
-          "business-intelligence",
-          "cryptocurrencies",
-          "git",
-          "cryptography",
-          "typescript",
-          "augmented-reality"
+          "blockchain"
         ],
         "targetAudience": [],
         "contactInfo": "",
@@ -1886,18 +1632,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "cybersecurity",
-          "event-driven",
-          "ddd",
-          "bdd",
-          "tdd"
-        ],
-        "targetAudience": [
-          "community-manager",
-          "cybersecurity-engineer",
-          "business-innovation-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "info@bsides.barcelona",
         "communityUrl": "https://bsides.barcelona/",
         "urls": {
@@ -1929,15 +1665,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "cybersecurity",
-          "digital-forensics",
-          "digital-activism",
-          "digital-marketing"
-        ],
-        "targetAudience": [
-          "digital-marketer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://c1b3rwall.policia.es/",
         "urls": {
@@ -1971,11 +1700,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "c",
-          "tech-ethics",
-          "innovation"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://cacerestech.com/",
@@ -2013,9 +1738,7 @@
         "tags": [
           "game-development"
         ],
-        "targetAudience": [
-          "game-developer"
-        ],
+        "targetAudience": [],
         "contactInfo": "cadizgamedev@gmail.com",
         "communityUrl": "https://linktr.ee/cadizgamedev",
         "urls": {
@@ -2114,20 +1837,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "azure",
-          "c",
-          "kubernetes",
-          "cloud-security",
-          "r-lang",
-          "augmented-reality",
-          "csharp",
-          "aspnet",
-          "docker",
-          "vbnet",
-          "xamarin",
-          "robotics"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/CATzure/",
@@ -2160,12 +1870,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "tech-ethics",
-          "robotics",
-          "data-engineering",
-          "innovation"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.cesinfull.com/",
@@ -2199,18 +1904,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "game-development",
-          "game-design",
-          "indie-games",
-          "robotics",
-          "tech-ethics",
-          "innovation"
-        ],
-        "targetAudience": [
-          "game-developer",
-          "community-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "civis@vgwb.org",
         "communityUrl": "https://www.civis.vgwb.org/civis-game-jam/",
         "urls": {
@@ -2275,28 +1970,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "gcp",
-          "linux",
-          "data-visualization",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software"
-        ],
-        "targetAudience": [
-          "cloud-engineer",
-          "devops-engineer",
-          "sre",
-          "test-automation-engineer",
-          "project-manager",
-          "embedded-iot-engineer",
-          "robotics-engineer",
-          "data-engineer",
-          "ml-engineer",
-          "cybersecurity-engineer",
-          "qa-engineer",
-          "tech-lead"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://community.cncf.io/cloud-native-barcelona/",
         "urls": {
@@ -2332,12 +2007,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "linux"
-        ],
-        "targetAudience": [
-          "project-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://community.cncf.io/cloud-native-bilbao/",
         "urls": {
@@ -2373,17 +2044,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "gcp",
-          "tech-ethics",
-          "linux",
-          "c"
-        ],
-        "targetAudience": [
-          "cloud-engineer",
-          "project-manager",
-          "devops-engineer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://community.cncf.io/cloud-native-galicia/",
         "urls": {
@@ -2420,21 +2082,9 @@
           "es"
         ],
         "tags": [
-          "gcp",
-          "tech-ethics",
-          "linux",
-          "c",
-          "docker",
-          "robotics",
-          "open-source",
-          "innovation"
+          "docker"
         ],
-        "targetAudience": [
-          "cloud-engineer",
-          "project-manager",
-          "devops-engineer",
-          "sre"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://community.cncf.io/cloud-native-granada/",
         "urls": {
@@ -2470,28 +2120,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "gcp",
-          "linux",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "digital-marketing"
-        ],
-        "targetAudience": [
-          "cloud-engineer",
-          "project-manager",
-          "sre",
-          "test-automation-engineer",
-          "community-manager",
-          "embedded-iot-engineer",
-          "robotics-engineer",
-          "data-engineer",
-          "ml-engineer",
-          "devops-engineer",
-          "cybersecurity-engineer",
-          "qa-engineer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://community.cncf.io/cloud-native-madrid-1/",
         "urls": {
@@ -2527,20 +2157,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "gcp",
-          "event-driven",
-          "linux",
-          "virtual-reality",
-          "sql-databases"
-        ],
-        "targetAudience": [
-          "cloud-engineer",
-          "project-manager",
-          "devops-engineer",
-          "sre",
-          "test-automation-engineer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://community.cncf.io/malaga/",
         "urls": {
@@ -2576,25 +2194,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "gcp",
-          "linux",
-          "event-driven"
-        ],
-        "targetAudience": [
-          "cloud-engineer",
-          "devops-engineer",
-          "sre",
-          "embedded-iot-engineer",
-          "robotics-engineer",
-          "data-engineer",
-          "ml-engineer",
-          "cybersecurity-engineer",
-          "qa-engineer",
-          "test-automation-engineer",
-          "project-manager",
-          "community-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://community.cncf.io/cloud-native-mallorca/",
         "urls": {
@@ -2686,25 +2287,10 @@
           "es"
         ],
         "tags": [
-          "gcp",
-          "open-source",
-          "tech-ethics",
           "docker",
-          "kubernetes",
-          "linux",
-          "c",
-          "game-development",
-          "sysadmin",
-          "bash",
-          "r-lang",
-          "open-hardware"
+          "kubernetes"
         ],
-        "targetAudience": [
-          "cloud-engineer",
-          "open-source-contributor",
-          "devops-engineer",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/cloud-native-sevilla/",
         "urls": {
@@ -2736,21 +2322,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "gcp",
-          "open-source",
-          "linux",
-          "robotics"
-        ],
-        "targetAudience": [
-          "cloud-engineer",
-          "open-source-contributor",
-          "project-manager",
-          "devops-engineer",
-          "sre",
-          "tech-lead",
-          "community-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "organizers@cloudnativevalencia.com",
         "communityUrl": "https://community.cncf.io/cloud-native-valencia/",
         "urls": {
@@ -2815,15 +2388,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "git",
-          "tech4good",
-          "women-in-tech",
-          "healthtech"
-        ],
-        "targetAudience": [
-          "community-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "barcelona@codebar.io",
         "communityUrl": "https://codebar.io/barcelona",
         "urls": {
@@ -2996,33 +2562,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "ddd",
-          "nlp",
-          "design-patterns",
-          "vscode",
-          "3d-modeling",
-          "vfx",
-          "game-design",
-          "tech-ethics"
-        ],
-        "targetAudience": [
-          "software-architect",
-          "devops-engineer",
-          "embedded-iot-engineer",
-          "robotics-engineer",
-          "data-engineer",
-          "ml-engineer",
-          "cloud-engineer",
-          "sre",
-          "sysadmin",
-          "cybersecurity-engineer",
-          "qa-engineer",
-          "test-automation-engineer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://collaborativemodeling.carrd.co/",
         "urls": {
@@ -3058,7 +2599,6 @@
           "robotics",
           "diversity",
           "game-development",
-          "c",
           "javascript",
           "react",
           "software-architecture",
@@ -3134,9 +2674,7 @@
           "es"
         ],
         "tags": [],
-        "targetAudience": [
-          "sre"
-        ],
+        "targetAudience": [],
         "contactInfo": "congreso.aragon.agilidad@gmail.com",
         "communityUrl": "https://caearagon.org/#conferencia",
         "urls": {
@@ -3169,16 +2707,9 @@
           "es"
         ],
         "tags": [
-          "r-lang",
-          "c",
-          "statistics",
-          "machine-learning",
-          "data-science",
-          "tech4good"
+          "r-lang"
         ],
-        "targetAudience": [
-          "ml-engineer"
-        ],
+        "targetAudience": [],
         "contactInfo": "3rquer@sevillar.es",
         "communityUrl": "https://imus.us.es/congresos/IIIRqueR/",
         "urls": {
@@ -3242,9 +2773,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "networking"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://linktr.ee/tryit_upm",
@@ -3277,18 +2806,9 @@
           "es"
         ],
         "tags": [
-          "event-driven",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "digital-marketing",
-          "c"
+          "software-craftsmanship"
         ],
-        "targetAudience": [
-          "software-architect",
-          "devops-engineer",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.eventbrite.com/o/cordoba-software-crafters-48873988743",
         "urls": {
@@ -3322,16 +2842,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "distributed-storage",
-          "tech-ethics",
-          "statistics",
-          "iot",
-          "c",
-          "r-lang",
-          "robotics",
-          "digital-marketing"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "corunabloggers@gmail.com",
         "communityUrl": "https://corunabloggers.com/",
@@ -3418,12 +2929,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "3d-printing",
-          "data-science",
-          "tech-ethics",
-          "robotics"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "contacto@alvarolozano.dev",
         "communityUrl": "https://coruna.events/",
@@ -3493,18 +2999,7 @@
           "es"
         ],
         "tags": [
-          "ai-coding-agents",
-          "clean-code",
-          "c",
-          "software-craftsmanship",
-          "software-architecture",
-          "nlp",
-          "r-lang",
-          "augmented-reality",
-          "design-patterns",
-          "bdd",
-          "go",
-          "business-intelligence"
+          "software-craftsmanship"
         ],
         "targetAudience": [],
         "contactInfo": "",
@@ -3541,15 +3036,7 @@
           "es"
         ],
         "tags": [
-          "cryptocurrencies",
-          "tech-ethics",
-          "blockchain",
-          "r-lang",
-          "event-driven",
-          "c",
-          "stem",
-          "business-intelligence",
-          "ethereum"
+          "cryptocurrencies"
         ],
         "targetAudience": [],
         "contactInfo": "",
@@ -3645,28 +3132,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "cybersecurity",
-          "digital-forensics",
-          "digital-marketing",
-          "digital-activism",
-          "c",
-          "software-architecture",
-          "software-craftsmanship",
-          "business-intelligence",
-          "ethical-hacking",
-          "cloud-security",
-          "web-security",
-          "iot"
-        ],
-        "targetAudience": [
-          "tech-lead",
-          "digital-marketer",
-          "software-architect",
-          "cloud-engineer",
-          "sysadmin",
-          "researcher"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "cybercamp@uma.es",
         "communityUrl": "https://www.nics.uma.es/cybercamp-uma/",
         "urls": {
@@ -3761,18 +3228,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "tech-ethics",
-          "stem",
-          "data-science",
-          "robotics",
-          "c",
-          "design-patterns",
-          "game-design"
-        ],
-        "targetAudience": [
-          "maker"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "info@danaus.io",
         "communityUrl": "https://www.danaus.io/",
         "urls": {
@@ -3838,28 +3295,9 @@
         ],
         "tags": [
           "big-data",
-          "data-pipelines",
-          "data-warehouse",
-          "data-lake",
-          "open-data",
-          "deep-learning",
-          "machine-learning",
-          "gcp",
-          "event-driven",
-          "data-science",
-          "tech-ethics",
-          "c"
+          "machine-learning"
         ],
-        "targetAudience": [
-          "data-engineer",
-          "data-scientist",
-          "data-analyst",
-          "data-journalist",
-          "ml-engineer",
-          "community-manager",
-          "cloud-engineer",
-          "sysadmin"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/big-data-developers-in-barcelona/",
         "urls": {
@@ -3892,28 +3330,9 @@
         ],
         "tags": [
           "big-data",
-          "data-pipelines",
-          "data-warehouse",
-          "data-lake",
-          "open-data",
-          "deep-learning",
-          "machine-learning",
-          "gcp",
-          "event-driven",
-          "data-science",
-          "tech-ethics",
-          "c"
+          "machine-learning"
         ],
-        "targetAudience": [
-          "data-engineer",
-          "data-scientist",
-          "data-analyst",
-          "data-journalist",
-          "ml-engineer",
-          "community-manager",
-          "cloud-engineer",
-          "sysadmin"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/big-data-developers-in-madrid/",
         "urls": {
@@ -4019,7 +3438,6 @@
           "data-engineering",
           "vector-databases",
           "cybersecurity",
-          "c",
           "r-lang",
           "augmented-reality",
           "big-data"
@@ -4058,26 +3476,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "data-warehouse",
-          "data-lake",
-          "data-pipelines",
-          "big-data",
-          "open-data",
-          "event-driven",
-          "data-science",
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases",
-          "data-engineering",
-          "data-visualization"
-        ],
-        "targetAudience": [
-          "data-engineer",
-          "data-scientist",
-          "data-analyst",
-          "data-journalist"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://databeers.tumblr.com/",
         "urls": {
@@ -4109,20 +3509,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "c",
-          "functional-programming",
-          "oop",
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases",
-          "data-science",
-          "data-engineering",
-          "data-visualization",
-          "vector-databases",
-          "r-lang",
-          "innovation"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/databeersvq/",
@@ -4156,25 +3543,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "data-warehouse",
-          "data-lake",
-          "data-pipelines",
-          "big-data",
-          "open-data",
-          "event-driven",
-          "data-science",
-          "machine-learning",
-          "go"
-        ],
-        "targetAudience": [
-          "data-engineer",
-          "data-scientist",
-          "data-analyst",
-          "data-journalist",
-          "ml-engineer",
-          "community-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "vlc.databeers@gmail.com",
         "communityUrl": "https://databeersvlc.com/",
         "urls": {
@@ -4242,30 +3612,9 @@
           "es"
         ],
         "tags": [
-          "digital-marketing",
-          "digital-forensics",
-          "digital-activism",
-          "business-intelligence",
-          "event-driven",
-          "women-in-tech",
-          "tech4good",
-          "healthtech",
-          "gcp",
-          "data-warehouse",
-          "data-lake",
-          "data-pipelines"
+          "digital-marketing"
         ],
-        "targetAudience": [
-          "digital-marketer",
-          "business-innovation-manager",
-          "data-engineer",
-          "data-scientist",
-          "data-analyst",
-          "cloud-engineer",
-          "cybersecurity-engineer",
-          "data-journalist",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "http://web.archive.org/web/20260211193651/https://www.des-show.com/",
         "urls": {
@@ -4335,30 +3684,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "gcp",
-          "tech-ethics",
-          "event-driven",
-          "c",
-          "data-warehouse",
-          "data-lake",
-          "data-pipelines",
-          "big-data",
-          "open-data"
-        ],
-        "targetAudience": [
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer",
-          "data-scientist",
-          "data-engineer",
-          "community-manager",
-          "data-analyst",
-          "sre",
-          "data-journalist"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://gdg.community.dev/events/details/google-gdg-sevilla-presents-devfest-sevilla-2024/",
         "urls": {
@@ -4389,21 +3716,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "c",
-          "tech-ethics",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "statistics",
-          "game-development",
-          "robotics",
-          "open-source"
-        ],
-        "targetAudience": [
-          "software-architect",
-          "devops-engineer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://devopsdays.es/",
         "urls": {
@@ -4498,26 +3812,9 @@
           "es"
         ],
         "tags": [
-          "docker",
-          "kubernetes",
-          "machine-learning",
-          "deep-learning",
-          "event-driven",
-          "bdd",
-          "tdd",
-          "virtual-reality",
-          "sysadmin",
-          "bash",
-          "linux",
-          "c"
+          "docker"
         ],
-        "targetAudience": [
-          "community-manager",
-          "ml-engineer",
-          "devops-engineer",
-          "sysadmin",
-          "project-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/docker-madrid/",
         "urls": {
@@ -4551,22 +3848,9 @@
           "es"
         ],
         "tags": [
-          "aspnet",
-          "csharp",
-          "event-driven",
-          "xamarin",
-          "c",
-          "llm",
-          "distributed-storage",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "digital-marketing"
+          "csharp"
         ],
-        "targetAudience": [
-          "tech-lead",
-          "sysadmin"
-        ],
+        "targetAudience": [],
         "contactInfo": "marketing@plainconcepts.com",
         "communityUrl": "https://dotnetconfspain.com/",
         "urls": {
@@ -4598,30 +3882,9 @@
           "es"
         ],
         "tags": [
-          "azure",
-          "c",
-          "vscode",
-          "raspberry-pi",
-          "data-pipelines",
-          "tech-ethics",
-          "csharp",
-          "angular",
-          "aspnet",
-          "sql-databases",
-          "nosql-databases",
-          "bdd"
+          "csharp"
         ],
-        "targetAudience": [
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer",
-          "data-engineer",
-          "data-scientist",
-          "data-analyst",
-          "data-journalist"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/dotnetmalaga/",
         "urls": {
@@ -4653,32 +3916,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "azure",
-          "tech-ethics",
-          "xamarin",
-          "c",
-          "functional-programming",
-          "angular",
-          "gcp",
-          "git",
-          "vscode",
-          "sql-databases",
-          "data-warehouse",
-          "data-lake"
-        ],
-        "targetAudience": [
-          "data-engineer",
-          "data-scientist",
-          "data-analyst",
-          "cloud-engineer",
-          "data-journalist",
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "info@dotnetmalaga.es",
         "communityUrl": "https://dotnetmalaga.es/",
         "urls": {
@@ -4711,20 +3950,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "c",
-          "tech-ethics",
-          "aspnet",
-          "xamarin",
-          "azure",
-          "kubernetes",
-          "r-lang",
-          "nodejs",
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases",
-          "data-science"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/dotnetters/",
@@ -4757,20 +3983,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "c",
-          "tech-ethics",
-          "aspnet",
-          "xamarin",
-          "azure",
-          "kubernetes",
-          "r-lang",
-          "nodejs",
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases",
-          "data-science"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/dotnetters/",
@@ -5360,25 +4573,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "digital-marketing",
-          "digital-forensics",
-          "digital-activism",
-          "prestashop",
-          "event-driven",
-          "augmented-reality",
-          "innovation",
-          "c",
-          "data-science",
-          "business-intelligence",
-          "tech-ethics",
-          "sql-databases"
-        ],
-        "targetAudience": [
-          "digital-marketer",
-          "community-manager",
-          "business-innovation-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://eshow.es/barcelona",
         "urls": {
@@ -5410,25 +4606,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "digital-marketing",
-          "digital-forensics",
-          "digital-activism",
-          "prestashop",
-          "event-driven",
-          "augmented-reality",
-          "innovation",
-          "c",
-          "data-science",
-          "business-intelligence",
-          "tech-ethics",
-          "sql-databases"
-        ],
-        "targetAudience": [
-          "digital-marketer",
-          "community-manager",
-          "business-innovation-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://eshow.es/madrid",
         "urls": {
@@ -5462,21 +4641,10 @@
         ],
         "tags": [
           "digital-marketing",
-          "digital-forensics",
-          "digital-activism",
-          "c",
-          "networking",
-          "seo",
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases",
-          "data-science",
-          "data-engineering",
-          "data-visualization"
+          "seo"
         ],
         "targetAudience": [
-          "digital-marketer",
-          "community-manager"
+          "digital-marketer"
         ],
         "contactInfo": "info@econgressmalaga.es",
         "communityUrl": "https://econgressmalaga.es/",
@@ -5549,16 +4717,9 @@
           "es"
         ],
         "tags": [
-          "cybersecurity",
-          "ethical-hacking",
-          "event-driven",
-          "digital-forensics",
-          "tech4good"
+          "cybersecurity"
         ],
-        "targetAudience": [
-          "cybersecurity-engineer",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "javiermarin@olarain.com",
         "communityUrl": "https://www.euskalhack.org/securitycongress/index_en.html",
         "urls": {
@@ -5593,18 +4754,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "digital-forensics",
-          "digital-activism",
-          "digital-marketing",
-          "tech-ethics",
-          "robotics",
-          "innovation",
-          "c"
-        ],
-        "targetAudience": [
-          "digital-marketer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://extremaduradigitalday.com/",
         "urls": {
@@ -5701,14 +4852,7 @@
           "es"
         ],
         "tags": [
-          "flutter",
-          "c",
-          "r-lang",
-          "open-hardware",
-          "open-source",
-          "product-management",
-          "business-intelligence",
-          "augmented-reality"
+          "flutter"
         ],
         "targetAudience": [],
         "contactInfo": "",
@@ -5744,24 +4888,9 @@
           "es"
         ],
         "tags": [
-          "flutter",
-          "gcp",
-          "dart",
-          "c",
-          "open-hardware",
-          "open-source",
-          "r-lang",
-          "augmented-reality",
-          "product-management",
-          "business-intelligence",
-          "kotlin",
-          "android"
+          "flutter"
         ],
-        "targetAudience": [
-          "community-manager",
-          "sysadmin",
-          "project-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/flutter-lleida/",
         "urls": {
@@ -5794,23 +4923,9 @@
           "es"
         ],
         "tags": [
-          "flutter",
-          "open-source",
-          "gcp",
-          "c",
-          "android",
-          "ios",
-          "game-development",
-          "lean-startup",
-          "r-lang",
-          "dart",
-          "augmented-reality",
-          "product-management"
+          "flutter"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "entrepreneur"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/flutter-madrid/",
         "urls": {
@@ -5843,18 +4958,7 @@
           "es"
         ],
         "tags": [
-          "flutter",
-          "tech-ethics",
-          "networking",
-          "game-development",
-          "r-lang",
-          "ios",
-          "augmented-reality",
-          "swift",
-          "microservices",
-          "c",
-          "kotlin",
-          "android"
+          "flutter"
         ],
         "targetAudience": [],
         "contactInfo": "",
@@ -5891,18 +4995,7 @@
           "es"
         ],
         "tags": [
-          "flutter",
-          "gcp",
-          "design-patterns",
-          "game-design",
-          "c",
-          "product-management",
-          "business-intelligence",
-          "r-lang",
-          "ci-cd",
-          "android",
-          "ios",
-          "dart"
+          "flutter"
         ],
         "targetAudience": [],
         "contactInfo": "",
@@ -5936,33 +5029,9 @@
           "es"
         ],
         "tags": [
-          "flutter",
-          "bdd",
-          "tdd",
-          "event-driven",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "ai-coding-agents",
-          "machine-learning",
-          "deep-learning",
-          "r-lang",
-          "augmented-reality"
+          "flutter"
         ],
-        "targetAudience": [
-          "mobile-developer",
-          "community-manager",
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "game-developer",
-          "ml-engineer",
-          "sysadmin",
-          "software-architect",
-          "embedded-iot-engineer",
-          "robotics-engineer",
-          "data-engineer"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/flutter-valencia/",
         "urls": {
@@ -5995,23 +5064,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "game-development",
-          "c",
-          "tech-ethics",
-          "javascript",
-          "react",
-          "software-architecture",
-          "event-driven",
-          "ddd",
-          "functional-programming",
-          "oop",
-          "clean-code",
-          "design-patterns"
-        ],
-        "targetAudience": [
-          "backend-developer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/Front-Developers-Madrid/",
         "urls": {
@@ -6107,24 +5161,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "free-software",
-          "software-architecture",
-          "software-craftsmanship",
-          "linux",
-          "functional-programming",
-          "oop",
-          "r-lang",
-          "unreal-engine",
-          "digital-activism",
-          "distributed-systems",
-          "sysadmin",
-          "graph-databases"
-        ],
-        "targetAudience": [
-          "software-architect",
-          "community-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "galpon@mastodon.gal",
         "communityUrl": "https://www.galpon.org/",
         "urls": {
@@ -6344,31 +5382,10 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "gcp",
-          "digital-marketing",
-          "generative-ai",
-          "innovation",
-          "data-science",
-          "digital-forensics",
-          "digital-activism",
-          "software-architecture",
-          "software-craftsmanship",
-          "git",
-          "free-software",
-          "open-source"
-        ],
+        "tags": [],
         "targetAudience": [
-          "digital-marketer",
           "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer",
-          "software-architect",
-          "tech-lead",
-          "community-manager",
-          "open-source-contributor"
+          "backend-developer"
         ],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/granadagdg/",
@@ -6433,20 +5450,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "gcp"
-        ],
-        "targetAudience": [
-          "community-manager",
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://gdg.community.dev/gdg-jaen/",
         "urls": {
@@ -6524,26 +5529,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "gcp",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "tech-ethics",
-          "flutter",
-          "design-patterns",
-          "llm",
-          "game-design"
-        ],
-        "targetAudience": [
-          "community-manager",
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer",
-          "business-innovation-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://gdg.community.dev/gdg-madrid/",
         "urls": {
@@ -6577,21 +5564,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "gcp",
-          "tech-ethics",
-          "tech4good",
-          "women-in-tech",
-          "healthtech"
-        ],
-        "targetAudience": [
-          "community-manager",
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://gdg.community.dev/gdg-malaga/",
         "urls": {
@@ -6626,30 +5600,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "gcp",
-          "flutter",
-          "c",
-          "event-driven",
-          "ai-coding-agents",
-          "digital-forensics",
-          "game-development",
-          "tech4good",
-          "digital-activism",
-          "tech-ethics",
-          "women-in-tech",
-          "healthtech"
-        ],
-        "targetAudience": [
-          "community-manager",
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer",
-          "tech-lead",
-          "digital-marketer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/GDG-Marbella/",
         "urls": {
@@ -6681,10 +5633,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "innovation",
-          "tech-ethics"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://gdgponferrada.org",
@@ -6719,20 +5668,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "gcp",
-          "tech-ethics",
-          "free-software",
-          "design-patterns",
-          "game-design",
-          "c",
-          "r-lang",
-          "open-hardware",
-          "open-source",
-          "business-intelligence",
-          "product-management",
-          "augmented-reality"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/GDGSevilla/",
@@ -6768,7 +5704,6 @@
         "tags": [
           "tech4good",
           "women-in-tech",
-          "healthtech",
           "software-architecture",
           "software-craftsmanship",
           "gcp",
@@ -6828,34 +5763,9 @@
           "es"
         ],
         "tags": [
-          "flutter",
-          "generative-ai",
-          "software-architecture",
-          "software-craftsmanship",
-          "gcp",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "free-software",
-          "bdd",
-          "tdd",
-          "event-driven"
+          "flutter"
         ],
-        "targetAudience": [
-          "community-manager",
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer",
-          "sre",
-          "software-architect",
-          "ml-engineer",
-          "sysadmin",
-          "embedded-iot-engineer",
-          "robotics-engineer",
-          "data-engineer"
-        ],
+        "targetAudience": [],
         "contactInfo": "hola@gdgvalencia.es ",
         "communityUrl": "https://gdg.community.dev/gdg-valencia/",
         "urls": {
@@ -6920,20 +5830,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "azure",
-          "generative-ai",
-          "c",
-          "ai-coding-agents",
-          "tech-ethics",
-          "python",
-          "git",
-          "game-development"
-        ],
-        "targetAudience": [
-          "community-manager",
-          "fullstack-developer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "staff@globalai.es",
         "communityUrl": "https://globalai.es/",
         "urls": {
@@ -6967,40 +5865,9 @@
           "es"
         ],
         "tags": [
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "event-driven",
-          "business-intelligence",
-          "ddd",
-          "gcp",
-          "bdd",
-          "tdd",
-          "clean-code",
-          "data-warehouse",
-          "data-lake"
+          "software-architecture"
         ],
-        "targetAudience": [
-          "software-architect",
-          "business-innovation-manager",
-          "cloud-engineer",
-          "sysadmin",
-          "data-engineer",
-          "data-scientist",
-          "data-analyst",
-          "tech-lead",
-          "data-journalist",
-          "game-developer",
-          "community-manager",
-          "sre",
-          "devops-engineer",
-          "embedded-iot-engineer",
-          "robotics-engineer",
-          "ml-engineer",
-          "cybersecurity-engineer",
-          "qa-engineer",
-          "test-automation-engineer"
-        ],
+        "targetAudience": [],
         "contactInfo": "gsas@apiumhub.com",
         "communityUrl": "https://gsas.io/",
         "urls": {
@@ -7034,22 +5901,9 @@
           "es"
         ],
         "tags": [
-          "go",
-          "innovation",
-          "c",
-          "ai-coding-agents",
-          "open-source",
-          "sysadmin",
-          "bash",
-          "linux",
-          "r-lang",
-          "augmented-reality",
-          "haskell",
-          "functional-programming"
+          "go"
         ],
-        "targetAudience": [
-          "open-source-contributor"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/go-mad/",
         "urls": {
@@ -7080,20 +5934,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "c",
-          "game-design",
-          "gcp",
-          "virtual-reality",
-          "game-development",
-          "indie-games",
-          "design-patterns",
-          "r-lang",
-          "business-intelligence",
-          "product-management",
-          "augmented-reality",
-          "tech4good"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/gr-interactiva/",
@@ -7127,20 +5968,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases",
-          "data-science",
-          "data-engineering",
-          "data-visualization",
-          "vector-databases",
-          "robotics",
-          "game-development",
-          "tech-ethics",
-          "c",
-          "game-design"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "organizacion@xover.es",
         "communityUrl": "https://www.granadagaming.com/",
@@ -7174,14 +6002,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "tech-ethics",
-          "design-patterns",
-          "game-design",
-          "indie-games",
-          "c",
-          "game-development"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://linktr.ee/grinteractiva",
@@ -7218,15 +6039,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "game-development",
-          "game-design",
-          "indie-games",
-          "generative-ai"
-        ],
-        "targetAudience": [
-          "game-developer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://granadajam.com/",
         "urls": {
@@ -7412,13 +6226,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "open-source",
-          "wordpress"
-        ],
-        "targetAudience": [
-          "open-source-contributor"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.joomlavigo.es/",
         "urls": {},
@@ -7448,18 +6257,7 @@
           "es"
         ],
         "tags": [
-          "r-lang",
-          "c",
-          "iot",
-          "machine-learning",
-          "mlops",
-          "macos",
-          "augmented-reality",
-          "product-management",
-          "big-data",
-          "business-intelligence",
-          "data-science",
-          "open-hardware"
+          "r-lang"
         ],
         "targetAudience": [],
         "contactInfo": "r-madrid@r-es.org",
@@ -7587,15 +6385,9 @@
           "es"
         ],
         "tags": [
-          "r-lang",
-          "machine-learning",
-          "c",
-          "deep-learning",
-          "game-development"
+          "r-lang"
         ],
-        "targetAudience": [
-          "ml-engineer"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "http://canarias.r-es.org/",
         "urls": {},
@@ -7655,11 +6447,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "game-development",
-          "indie-games",
-          "game-design"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "guadalindie@malagajam.com",
         "communityUrl": "https://guadalindie.com/",
@@ -7694,20 +6482,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "azure",
-          "software-architecture",
-          "functional-programming",
-          "oop",
-          "robotics",
-          "tech-ethics",
-          "game-development",
-          "r-lang",
-          "c"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/guarandinga-tech/",
@@ -7741,19 +6516,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "ethical-hacking",
-          "event-driven",
-          "lean-startup",
-          "free-software",
-          "llm"
-        ],
-        "targetAudience": [
-          "entrepreneur",
-          "project-manager",
-          "maker",
-          "community-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "support@luma.com",
         "communityUrl": "https://lu.ma/6xew9jdf",
         "urls": {
@@ -7787,15 +6551,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "design-patterns",
-          "game-design",
-          "c",
-          "iot",
-          "tech-ethics",
-          "gcp",
-          "innovation"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "info@hackathonlovers.com",
         "communityUrl": "https://hackathonlovers.com/",
@@ -7834,36 +6590,9 @@
           "es"
         ],
         "tags": [
-          "software-architecture",
-          "software-craftsmanship",
-          "machine-learning",
-          "free-software",
-          "event-driven",
-          "product-management",
-          "ai-coding-agents",
-          "deep-learning",
-          "tech4good",
-          "c",
-          "r-lang",
-          "augmented-reality"
+          "machine-learning"
         ],
-        "targetAudience": [
-          "ml-engineer",
-          "fullstack-developer",
-          "embedded-iot-engineer",
-          "robotics-engineer",
-          "data-engineer",
-          "devops-engineer",
-          "cloud-engineer",
-          "sre",
-          "cybersecurity-engineer",
-          "qa-engineer",
-          "test-automation-engineer",
-          "frontend-developer",
-          "tech-lead",
-          "community-manager",
-          "project-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://hackbarna.com",
         "urls": {
@@ -7927,20 +6656,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "c",
-          "data-engineering",
-          "tech-ethics",
-          "data-science",
-          "robotics",
-          "game-development",
-          "game-design",
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases",
-          "data-visualization",
-          "generative-ai"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://hackersweek.es/",
@@ -7972,24 +6688,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "ethical-hacking",
-          "tech-ethics",
-          "web-security",
-          "robotics",
-          "free-software",
-          "software-architecture",
-          "software-craftsmanship",
-          "design-patterns",
-          "generative-ai",
-          "cloud-security",
-          "makerspace",
-          "game-development"
-        ],
-        "targetAudience": [
-          "researcher",
-          "software-architect"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/hackmadrid-27/",
         "urls": {
@@ -8021,10 +6721,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "robotics",
-          "tech-ethics"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://hbscon.com/",
@@ -8054,26 +6751,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "game-development",
-          "gcp",
-          "c",
-          "tech-ethics",
-          "javascript",
-          "ddd",
-          "functional-programming",
-          "oop",
-          "cloud-security",
-          "web-security",
-          "r-lang",
-          "augmented-reality"
-        ],
-        "targetAudience": [
-          "product-manager",
-          "project-manager",
-          "community-manager",
-          "business-innovation-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/HTML5-Spain/",
         "urls": {
@@ -8136,23 +6815,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "tech-ethics",
-          "robotics",
-          "game-development",
-          "game-design",
-          "innovation",
-          "indie-games",
-          "functional-programming",
-          "oop",
-          "digital-forensics",
-          "digital-activism",
-          "diversity",
-          "digital-marketing"
-        ],
-        "targetAudience": [
-          "digital-marketer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.indismatic.es/",
         "urls": {
@@ -9448,24 +8112,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "go",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "growth",
-          "geospatial",
-          "csharp",
-          "vbnet",
-          "aspnet"
-        ],
-        "targetAudience": [
-          "software-architect",
-          "community-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/intellias-spain-tech-talks/",
         "urls": {
@@ -9639,11 +8287,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "free-software",
-          "data-science",
-          "c"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "infosiglibre@udg.edu",
         "communityUrl": "https://www.jornadassiglibre.org/",
@@ -9678,16 +8322,9 @@
           "es"
         ],
         "tags": [
-          "networking",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
           "javascript"
         ],
-        "targetAudience": [
-          "software-architect",
-          "frontend-developer"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://jsdaycanarias.com/",
         "urls": {
@@ -9750,10 +8387,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "c",
-          "git"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "killerskills.me@gmail.com",
         "communityUrl": "https://killerskills.me/",
@@ -9786,24 +8420,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "3d-printing",
-          "stem",
-          "functional-programming",
-          "oop",
-          "c",
-          "game-design",
-          "python",
-          "design-patterns",
-          "aws",
-          "digital-forensics",
-          "arduino",
-          "game-development"
-        ],
-        "targetAudience": [
-          "software-architect",
-          "digital-marketer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "lajaqueria@gmail.com",
         "communityUrl": "https://lajaqueria.org/sesiones/",
         "urls": {
@@ -9837,18 +8455,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "product-management",
-          "c",
-          "r-lang",
-          "healthtech",
-          "ddd",
-          "digital-marketing"
-        ],
-        "targetAudience": [
-          "product-manager",
-          "community-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.laproductconf.com/",
         "urls": {
@@ -9958,14 +8566,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "llm",
-          "bdd",
-          "tdd"
-        ],
-        "targetAudience": [
-          "community-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "maarten@f1re.io",
         "communityUrl": "https://langdevcon.org/",
         "urls": {},
@@ -9994,11 +8596,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "women-in-tech",
-          "tech4good",
-          "healthtech"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "http://web.archive.org/web/20251205170100/https://latinasintech.org/chapter/madrid",
@@ -10028,13 +8626,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "c",
-          "tech-ethics",
-          "startups",
-          "game-development",
-          "free-software"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "info@lechazoconf.com",
         "communityUrl": "https://lechazoconf.com/",
@@ -10069,21 +8661,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "free-software",
-          "open-hardware",
-          "software-architecture",
-          "software-craftsmanship",
-          "functional-programming",
-          "tech-ethics",
-          "oop",
-          "robotics",
-          "data-engineering",
-          "game-development"
-        ],
-        "targetAudience": [
-          "software-architect"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "info@librelabgrx.cc",
         "communityUrl": "https://librelabgrx.cc/",
         "urls": {
@@ -10116,24 +8695,9 @@
           "es"
         ],
         "tags": [
-          "machine-learning",
-          "deep-learning",
-          "nlp",
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases",
-          "data-science",
-          "data-engineering",
-          "data-visualization",
-          "vector-databases",
-          "python",
-          "django"
+          "machine-learning"
         ],
-        "targetAudience": [
-          "ml-engineer",
-          "digital-marketer",
-          "data-analyst"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/machinelearningspain/",
         "urls": {
@@ -10194,17 +8758,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "c",
-          "open-hardware",
-          "r-lang",
-          "augmented-reality",
-          "lean-startup",
-          "macos",
-          "haskell",
-          "functional-programming",
-          "oop"
-        ],
+        "tags": [],
         "targetAudience": [
           "agile-practitioner"
         ],
@@ -10241,22 +8795,9 @@
           "es"
         ],
         "tags": [
-          "elixir",
-          "distributed-systems",
-          "functional-programming",
-          "nlp",
-          "erlang",
-          "c",
-          "llm",
-          "oop",
-          "design-patterns",
-          "sysadmin",
-          "virtual-reality",
-          "game-design"
+          "elixir"
         ],
-        "targetAudience": [
-          "embedded-iot-engineer"
-        ],
+        "targetAudience": [],
         "contactInfo": "hec@hecperez.com",
         "communityUrl": "https://www.meetup.com/es-ES/madrid-elixir/",
         "urls": {
@@ -10320,23 +8861,9 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "kubernetes",
-          "c",
-          "gcp",
-          "ai-coding-agents",
-          "docker",
-          "git",
-          "cloud-security",
-          "terraform",
-          "ci-cd",
-          "sysadmin",
-          "tdd",
-          "aws"
-        ],
+        "tags": [],
         "targetAudience": [
-          "devops-engineer",
-          "cloud-engineer"
+          "devops-engineer"
         ],
         "contactInfo": "",
         "communityUrl": "https://madrid.devops.es/",
@@ -10494,11 +9021,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "tech4good",
-          "women-in-tech",
-          "healthtech"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.madridtechshow.es/",
@@ -10614,26 +9137,9 @@
           "es"
         ],
         "tags": [
-          "azure",
-          "csharp",
-          "tech-ethics",
-          "git",
-          "vbnet",
-          "aspnet",
-          "xamarin",
-          "c",
-          "r-lang",
-          "robotics",
-          "windows",
-          "product-management"
+          "csharp"
         ],
-        "targetAudience": [
-          "fullstack-developer",
-          "frontend-developer",
-          "backend-developer",
-          "mobile-developer",
-          "game-developer"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/madriddotnet/",
         "urls": {
@@ -10666,22 +9172,9 @@
           "es"
         ],
         "tags": [
-          "c",
-          "javascript",
-          "git",
-          "typescript",
-          "3d-modeling",
-          "functional-programming",
-          "oop",
-          "tech-ethics",
-          "software-architecture",
-          "software-craftsmanship",
-          "game-development",
-          "free-software"
+          "javascript"
         ],
-        "targetAudience": [
-          "software-architect"
-        ],
+        "targetAudience": [],
         "contactInfo": "madridjs-list@meetup.com",
         "communityUrl": "https://www.meetup.com/es-ES/madridjs/",
         "urls": {
@@ -10758,22 +9251,9 @@
           "es"
         ],
         "tags": [
-          "scala",
-          "oop",
-          "functional-programming",
-          "nlp",
-          "game-development",
-          "tech-ethics",
-          "c",
-          "java",
-          "akka",
-          "distributed-systems",
-          "sysadmin",
-          "robotics"
+          "scala"
         ],
-        "targetAudience": [
-          "devops-engineer"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/Scala-Programming-Madrid/",
         "urls": {
@@ -10869,24 +9349,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "functional-programming",
-          "open-hardware",
-          "3d-printing",
-          "innovation",
-          "networking",
-          "iot",
-          "tech-ethics",
-          "digital-forensics",
-          "digital-activism",
-          "digital-marketing",
-          "game-development",
-          "c"
-        ],
-        "targetAudience": [
-          "maker",
-          "digital-marketer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://makespacemadrid.org/",
         "urls": {
@@ -10920,22 +9384,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "indie-games",
-          "c",
-          "lean-startup",
-          "r-lang",
-          "cybersecurity",
-          "product-management",
-          "cloud-security",
-          "augmented-reality",
-          "startups"
-        ],
-        "targetAudience": [
-          "community-manager",
-          "entrepreneur",
-          "sysadmin"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/malaga-indie-hackers/",
         "urls": {
@@ -10998,24 +9448,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "event-driven",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "machine-learning",
-          "deep-learning",
-          "geospatial",
-          "r-lang",
-          "c",
-          "tech-ethics",
-          "stem",
-          "augmented-reality"
-        ],
-        "targetAudience": [
-          "ml-engineer",
-          "community-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/malaga-techstars/",
         "urls": {
@@ -11045,13 +9479,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "business-intelligence",
-          "generative-ai"
-        ],
-        "targetAudience": [
-          "community-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "hello@malaga-ai.community",
         "communityUrl": "https://malaga-ai.community/",
         "urls": {
@@ -11119,16 +9548,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "robotics",
-          "game-development",
-          "tech-ethics",
-          "game-design",
-          "indie-games"
-        ],
-        "targetAudience": [
-          "game-developer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "info@malagajam.com",
         "communityUrl": "https://malagajam.com/",
         "urls": {
@@ -11171,7 +9592,6 @@
           "robotics",
           "javascript",
           "typescript",
-          "c",
           "go",
           "r-lang",
           "business-intelligence",
@@ -11210,31 +9630,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "c",
-          "tech-ethics",
-          "iot",
-          "gcp",
-          "networking",
-          "generative-ai",
-          "cryptography",
-          "startups",
-          "innovation",
-          "digital-forensics",
-          "digital-activism",
-          "digital-marketing"
-        ],
-        "targetAudience": [
-          "sre",
-          "digital-marketer",
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer",
-          "cloud-engineer",
-          "researcher"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://morcillaconf.es/",
         "urls": {
@@ -11267,25 +9664,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "cloud-security",
-          "web-security",
-          "cybersecurity",
-          "ethical-hacking",
-          "tech-ethics",
-          "robotics",
-          "digital-forensics",
-          "digital-activism",
-          "open-hardware",
-          "digital-marketing",
-          "r-lang",
-          "iot"
-        ],
-        "targetAudience": [
-          "cybersecurity-engineer",
-          "digital-marketer",
-          "researcher"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "contacto@morteruelo.net",
         "communityUrl": "https://www.morteruelo.net/",
         "urls": {
@@ -11319,20 +9699,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "azure",
-          "tech-ethics",
-          "design-patterns",
-          "game-design",
-          "csharp",
-          "vbnet",
-          "aspnet",
-          "xamarin",
-          "c",
-          "r-lang",
-          "augmented-reality",
-          "sql-databases"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/mscoders/",
@@ -11364,29 +9731,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "c",
-          "gcp",
-          "open-source",
-          "event-driven",
-          "nlp",
-          "llm",
-          "virtual-reality"
-        ],
-        "targetAudience": [
-          "cloud-engineer",
-          "devops-engineer",
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer",
-          "sre",
-          "data-engineer",
-          "ml-engineer",
-          "test-automation-engineer",
-          "open-source-contributor"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "info@mulesoft.com",
         "communityUrl": "https://meetups.mulesoft.com/barcelona",
         "urls": {
@@ -11419,19 +9765,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "gcp",
-          "open-source",
-          "virtual-reality",
-          "tech-ethics"
-        ],
-        "targetAudience": [
-          "cloud-engineer",
-          "devops-engineer",
-          "sre",
-          "software-architect",
-          "open-source-contributor"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "info@mulesoft.com",
         "communityUrl": "https://meetups.mulesoft.com/madrid",
         "urls": {
@@ -11464,16 +9799,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "gcp",
-          "open-source"
-        ],
-        "targetAudience": [
-          "cloud-engineer",
-          "devops-engineer",
-          "sre",
-          "open-source-contributor"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "info@mulesoft.com",
         "communityUrl": "https://meetups.mulesoft.com/murcia",
         "urls": {
@@ -11506,17 +9833,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "gcp",
-          "open-source",
-          "tech-ethics"
-        ],
-        "targetAudience": [
-          "cloud-engineer",
-          "devops-engineer",
-          "sre",
-          "open-source-contributor"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "info@mulesoft.com",
         "communityUrl": "https://meetups.mulesoft.com/sevilla",
         "urls": {
@@ -11549,17 +9867,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "gcp",
-          "open-source"
-        ],
-        "targetAudience": [
-          "cloud-engineer",
-          "devops-engineer",
-          "software-architect",
-          "sre",
-          "open-source-contributor"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "info@mulesoft.com",
         "communityUrl": "https://meetups.mulesoft.com/valencia",
         "urls": {
@@ -11592,24 +9901,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "innovation",
-          "game-development",
-          "tech-ethics",
-          "digital-forensics",
-          "digital-activism",
-          "digital-marketing",
-          "c",
-          "software-architecture",
-          "software-craftsmanship",
-          "functional-programming",
-          "oop",
-          "distributed-systems"
-        ],
-        "targetAudience": [
-          "digital-marketer",
-          "software-architect"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/murciadev/",
         "urls": {
@@ -11645,22 +9938,9 @@
           "es"
         ],
         "tags": [
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "c",
-          "r-lang",
-          "augmented-reality",
-          "macos",
-          "haskell",
-          "functional-programming",
-          "oop",
-          "go",
-          "clean-code"
+          "software-craftsmanship"
         ],
-        "targetAudience": [
-          "software-architect"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/software-craftsmanship-murcia/",
         "urls": {
@@ -11692,12 +9972,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "tech-ethics",
-          "robotics",
-          "cloud-security",
-          "web-security"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "contacto@navajanegra.com",
         "communityUrl": "https://www.navajanegra.com/2024/",
@@ -11732,32 +10007,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "tech-ethics",
-          "azure",
-          "innovation",
-          "data-warehouse",
-          "data-lake",
-          "data-pipelines",
-          "big-data",
-          "open-data",
-          "c",
-          "functional-programming",
-          "software-architecture",
-          "bdd"
-        ],
-        "targetAudience": [
-          "tech-lead",
-          "data-engineer",
-          "devops-engineer",
-          "data-scientist",
-          "data-analyst",
-          "data-journalist",
-          "sre",
-          "community-manager",
-          "cloud-engineer",
-          "software-architect"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://netcoreconf.com/",
         "urls": {
@@ -11789,18 +10040,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "cybersecurity",
-          "wordpress",
-          "c",
-          "event-driven",
-          "windows"
-        ],
-        "targetAudience": [
-          "cybersecurity-engineer",
-          "sysadmin",
-          "fullstack-developer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.noconname.org/",
         "urls": {
@@ -11907,15 +10148,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "c",
-          "generative-ai",
-          "startups",
-          "innovation",
-          "iot",
-          "tech-ethics",
-          "open-data"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "nosday23@gmail.com",
         "communityUrl": "https://nosday.com/",
@@ -11977,20 +10210,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "innovation",
-          "c",
-          "design-patterns",
-          "ios",
-          "macos",
-          "game-development",
-          "game-design",
-          "functional-programming",
-          "oop",
-          "r-lang",
-          "business-intelligence",
-          "swift"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/nscoder-night-madrid/",
@@ -12083,24 +10303,9 @@
           "es"
         ],
         "tags": [
-          "innovation",
-          "tech-ethics",
-          "blockchain",
-          "cryptocurrencies",
-          "cryptography",
-          "digital-forensics",
-          "digital-activism",
-          "digital-marketing",
-          "c",
-          "business-intelligence",
-          "iot",
-          "design-patterns"
+          "blockchain"
         ],
-        "targetAudience": [
-          "community-manager",
-          "digital-marketer",
-          "business-innovation-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/innovacion-web3-para-todos-con-super-pioneros/?eventOrigin=event_home_page",
         "urls": {
@@ -12135,22 +10340,9 @@
           "es"
         ],
         "tags": [
-          "free-software",
-          "software-architecture",
-          "software-craftsmanship",
-          "gcp",
-          "data-science",
-          "data-visualization",
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases",
-          "data-engineering",
-          "vector-databases",
-          "linux"
+          "free-software"
         ],
-        "targetAudience": [
-          "software-architect"
-        ],
+        "targetAudience": [],
         "contactInfo": "osl@ugr.es",
         "communityUrl": "https://osl.ugr.es/",
         "urls": {},
@@ -12246,7 +10438,6 @@
           "linux",
           "wordpress",
           "product-management",
-          "c",
           "tdd",
           "python",
           "free-software",
@@ -12332,23 +10523,9 @@
         ],
         "tags": [
           "web-security",
-          "cybersecurity",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "generative-ai",
-          "bdd",
-          "tdd",
-          "gcp",
-          "open-source"
+          "cybersecurity"
         ],
-        "targetAudience": [
-          "software-architect",
-          "community-manager",
-          "project-manager",
-          "mobile-developer",
-          "cybersecurity-engineer"
-        ],
+        "targetAudience": [],
         "contactInfo": "conor.rynne@owasp.org",
         "communityUrl": "https://owasp.org/www-chapter-barcelona/",
         "urls": {
@@ -12385,22 +10562,9 @@
         ],
         "tags": [
           "web-security",
-          "cybersecurity",
-          "cloud-security",
-          "software-architecture",
-          "software-craftsmanship",
-          "pentesting",
-          "free-software",
-          "open-source",
-          "c",
-          "networking",
-          "digital-forensics",
-          "3d-modeling"
+          "cybersecurity"
         ],
-        "targetAudience": [
-          "software-architect",
-          "digital-marketer"
-        ],
+        "targetAudience": [],
         "contactInfo": "oscar.orellana.artigas@owasp.org",
         "communityUrl": "https://owasp.org/www-chapter-logrono/",
         "urls": {
@@ -12438,23 +10602,9 @@
         ],
         "tags": [
           "web-security",
-          "cloud-security",
-          "game-development",
-          "software-architecture",
-          "software-craftsmanship",
-          "distributed-systems",
-          "sysadmin",
-          "cybersecurity",
-          "wordpress",
-          "free-software",
-          "open-source",
-          "networking"
+          "cybersecurity"
         ],
-        "targetAudience": [
-          "software-architect",
-          "community-manager",
-          "open-source-contributor"
-        ],
+        "targetAudience": [],
         "contactInfo": "juanjose.domenech@owasp.org",
         "communityUrl": "https://owasp.org/www-chapter-sevilla/",
         "urls": {
@@ -12523,33 +10673,9 @@
           "es"
         ],
         "tags": [
-          "free-software",
-          "software-architecture",
-          "software-craftsmanship",
-          "tech-ethics",
-          "game-development",
-          "ddd",
-          "iot",
-          "product-management",
-          "git",
-          "data-warehouse",
-          "data-lake",
-          "data-pipelines"
+          "software-craftsmanship"
         ],
-        "targetAudience": [
-          "software-architect",
-          "devops-engineer",
-          "data-engineer",
-          "product-manager",
-          "embedded-iot-engineer",
-          "robotics-engineer",
-          "ml-engineer",
-          "cloud-engineer",
-          "sre",
-          "cybersecurity-engineer",
-          "qa-engineer",
-          "test-automation-engineer"
-        ],
+        "targetAudience": [],
         "contactInfo": "pamplonaswcraft@540deg.com",
         "communityUrl": "https://pamplonaswcraft.com/",
         "urls": {
@@ -12642,10 +10768,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "c",
-          "software-architecture"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/phpmad/events/304894313/",
@@ -12678,18 +10801,9 @@
           "es"
         ],
         "tags": [
-          "functional-programming",
-          "php",
-          "oop",
-          "nlp",
-          "c",
-          "symfony",
-          "r-lang",
-          "augmented-reality"
+          "php"
         ],
-        "targetAudience": [
-          "frontend-developer"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/phpmad/",
         "urls": {
@@ -12752,13 +10866,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "tech-ethics",
-          "robotics",
-          "free-software",
-          "cryptography",
-          "iot"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "http://www.picahack.org/",
@@ -12789,26 +10897,9 @@
           "es"
         ],
         "tags": [
-          "data-visualization",
-          "data-engineering",
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases",
-          "data-science",
-          "vector-databases",
-          "data-warehouse",
-          "data-lake",
-          "data-pipelines",
-          "big-data",
-          "open-data"
+          "data-visualization"
         ],
-        "targetAudience": [
-          "data-engineer",
-          "data-scientist",
-          "data-analyst",
-          "data-journalist",
-          "devops-engineer"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/powerbi-fabricmalaga/",
         "urls": {
@@ -12839,23 +10930,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "azure",
-          "c",
-          "oop",
-          "tech-ethics",
-          "typescript",
-          "r-lang",
-          "robotics",
-          "data-visualization",
-          "business-intelligence",
-          "windows",
-          "augmented-reality"
-        ],
-        "targetAudience": [
-          "devops-engineer",
-          "community-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/PowerTips-Cadiz/",
         "urls": {
@@ -12887,24 +10963,9 @@
           "es"
         ],
         "tags": [
-          "prestashop",
-          "c",
-          "software-architecture",
-          "software-craftsmanship",
-          "design-patterns",
-          "game-design",
-          "free-software",
-          "open-source",
-          "startups",
-          "product-management",
-          "php",
-          "symfony"
+          "prestashop"
         ],
-        "targetAudience": [
-          "software-architect",
-          "open-source-contributor",
-          "product-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/PrestaShop-Malaga-Meetup/",
         "urls": {
@@ -12935,26 +10996,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "product-management",
-          "ddd",
-          "bdd",
-          "tdd",
-          "business-intelligence",
-          "c",
-          "event-driven",
-          "unreal-engine",
-          "tech4good",
-          "geospatial",
-          "r-lang",
-          "augmented-reality"
-        ],
-        "targetAudience": [
-          "product-manager",
-          "ux-designer",
-          "business-innovation-manager",
-          "community-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/producttank-malaga/",
         "urls": {
@@ -13018,32 +11061,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "software-craftsmanship",
-          "software-architecture",
-          "free-software",
-          "event-driven",
-          "r-lang",
-          "clean-code",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "llm"
-        ],
-        "targetAudience": [
-          "ml-engineer",
-          "software-architect",
-          "embedded-iot-engineer",
-          "robotics-engineer",
-          "data-engineer",
-          "devops-engineer",
-          "cloud-engineer",
-          "sre",
-          "cybersecurity-engineer",
-          "qa-engineer",
-          "test-automation-engineer",
-          "community-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "hello@pulpocon.es",
         "communityUrl": "https://pulpocon.es/",
         "urls": {
@@ -13082,7 +11101,6 @@
           "python",
           "data-visualization",
           "free-software",
-          "c",
           "sql-databases",
           "nosql-databases",
           "graph-databases",
@@ -13192,28 +11210,9 @@
           "es"
         ],
         "tags": [
-          "data-science",
-          "data-visualization",
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases",
-          "data-engineering",
-          "vector-databases",
-          "data-warehouse",
-          "data-lake",
-          "data-pipelines",
-          "big-data",
-          "open-data"
+          "data-science"
         ],
-        "targetAudience": [
-          "data-engineer",
-          "data-scientist",
-          "data-analyst",
-          "data-journalist",
-          "community-manager",
-          "ml-engineer",
-          "sysadmin"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/pydata-malaga/",
         "urls": {
@@ -13248,7 +11247,6 @@
           "python",
           "functional-programming",
           "oop",
-          "c",
           "r-lang",
           "software-architecture",
           "software-craftsmanship",
@@ -13331,25 +11329,9 @@
           "es"
         ],
         "tags": [
-          "python",
-          "diversity",
-          "digital-forensics",
-          "digital-activism",
-          "digital-marketing",
-          "c",
-          "functional-programming",
-          "machine-learning",
-          "software-architecture",
-          "software-craftsmanship",
-          "oop",
-          "nlp"
+          "python"
         ],
-        "targetAudience": [
-          "digital-marketer",
-          "ml-engineer",
-          "software-architect",
-          "cybersecurity-engineer"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/python-madrid",
         "urls": {
@@ -13415,17 +11397,7 @@
           "es"
         ],
         "tags": [
-          "python",
-          "data-science",
-          "c",
-          "software-architecture",
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases",
-          "data-engineering",
-          "data-visualization",
-          "nlp",
-          "vector-databases"
+          "python"
         ],
         "targetAudience": [],
         "contactInfo": "luisgf@luisgf.es",
@@ -13460,24 +11432,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "ci-cd",
-          "software-architecture",
-          "tdd",
-          "software-craftsmanship",
-          "free-software",
-          "r-lang",
-          "augmented-reality",
-          "product-management",
-          "machine-learning",
-          "deep-learning",
-          "mlops",
-          "c"
-        ],
-        "targetAudience": [
-          "test-automation-engineer",
-          "software-architect"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/qa-malaga/",
         "urls": {
@@ -13509,33 +11465,9 @@
           "es"
         ],
         "tags": [
-          "react",
-          "women-in-tech",
-          "software-architecture",
-          "bdd",
-          "tdd",
-          "software-craftsmanship",
-          "tech4good",
-          "free-software",
-          "machine-learning",
-          "healthtech",
-          "open-source",
-          "deep-learning"
+          "react"
         ],
-        "targetAudience": [
-          "ml-engineer",
-          "fullstack-developer",
-          "devops-engineer",
-          "frontend-developer",
-          "mobile-developer",
-          "robotics-engineer",
-          "embedded-iot-engineer",
-          "data-engineer",
-          "cloud-engineer",
-          "sre",
-          "cybersecurity-engineer",
-          "qa-engineer"
-        ],
+        "targetAudience": [],
         "contactInfo": "react-alicante@limenius.com",
         "communityUrl": "https://reactalicante.es/",
         "urls": {
@@ -13568,25 +11500,9 @@
           "es"
         ],
         "tags": [
-          "csharp",
-          "big-data",
-          "c",
-          "data-pipelines",
-          "tech-ethics",
-          "functional-programming",
-          "oop",
-          "docker",
-          "kubernetes",
-          "data-warehouse",
-          "data-lake",
-          "game-development"
+          "csharp"
         ],
-        "targetAudience": [
-          "data-engineer",
-          "data-scientist",
-          "data-analyst",
-          "data-journalist"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/riojadotnet/",
         "urls": {
@@ -13618,23 +11534,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "git",
-          "python",
-          "open-source",
-          "cybersecurity",
-          "generative-ai"
-        ],
-        "targetAudience": [
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer",
-          "devops-engineer",
-          "open-source-contributor",
-          "community-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "https://www.linkedin.com/posts/pabpereza_discord-a-new-way-to-chat-with-friends-activity-6763868171494559744-UXkr?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAFTWIUB408_I8M39G1F7ZzN47wVswa8PcA",
         "communityUrl": "https://github.com/Riojakers",
         "urls": {
@@ -13697,23 +11598,9 @@
           "es"
         ],
         "tags": [
-          "free-software",
-          "data-engineering",
-          "software-architecture",
-          "software-craftsmanship",
-          "robotics",
-          "tech-ethics",
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases",
-          "vector-databases",
-          "data-science",
-          "data-visualization"
+          "free-software"
         ],
-        "targetAudience": [
-          "software-architect",
-          "entrepreneur"
-        ],
+        "targetAudience": [],
         "contactInfo": "aulasoftwarelibre@uco.es",
         "communityUrl": "https://salmorejo.tech/2024/",
         "urls": {
@@ -13781,25 +11668,9 @@
           "es"
         ],
         "tags": [
-          "r-lang",
-          "statistics",
-          "functional-programming",
-          "oop",
-          "nlp",
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases",
-          "data-science",
-          "data-engineering",
-          "data-visualization",
-          "vector-databases"
+          "r-lang"
         ],
-        "targetAudience": [
-          "data-engineer",
-          "data-scientist",
-          "data-analyst",
-          "data-journalist"
-        ],
+        "targetAudience": [],
         "contactInfo": "sevillarug@gmail.com",
         "communityUrl": "https://sevillarusers.netlify.app/about/",
         "urls": {
@@ -13834,17 +11705,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "generative-ai",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "azure",
-          "innovation"
-        ],
-        "targetAudience": [
-          "software-architect"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "singularity@plainconcepts.com",
         "communityUrl": "https://singularitytechday.com/",
         "urls": {
@@ -13876,25 +11738,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "vscode",
-          "python",
-          "software-architecture",
-          "data-warehouse",
-          "data-lake",
-          "data-pipelines",
-          "big-data",
-          "robotics",
-          "tech-ethics",
-          "open-data"
-        ],
-        "targetAudience": [
-          "data-engineer",
-          "data-scientist",
-          "data-analyst",
-          "community-manager",
-          "data-journalist"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "sirviendocodigo@nextdigital.es",
         "communityUrl": "https://sirviendocodigo.com/",
         "urls": {},
@@ -13988,26 +11833,9 @@
           "es"
         ],
         "tags": [
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "event-driven",
-          "bdd",
-          "tdd",
-          "machine-learning",
-          "deep-learning",
-          "women-in-tech",
-          "product-management",
-          "lean-startup",
-          "functional-programming"
+          "software-craftsmanship"
         ],
-        "targetAudience": [
-          "software-architect",
-          "ml-engineer",
-          "community-manager",
-          "product-manager",
-          "agile-practitioner"
-        ],
+        "targetAudience": [],
         "contactInfo": "info@softwarecrafters.barcelona",
         "communityUrl": "https://softwarecrafters.barcelona/",
         "urls": {
@@ -14042,23 +11870,9 @@
           "es"
         ],
         "tags": [
-          "software-craftsmanship",
-          "software-architecture",
-          "free-software",
-          "functional-programming",
-          "oop",
-          "clean-code",
-          "design-patterns",
-          "distributed-systems",
-          "sysadmin",
-          "game-development",
-          "game-design",
-          "c"
+          "software-craftsmanship"
         ],
-        "targetAudience": [
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/madswcraft/",
         "urls": {
@@ -14091,21 +11905,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "data-engineering",
-          "tdd",
-          "networking",
-          "r-lang",
-          "augmented-reality",
-          "c"
-        ],
-        "targetAudience": [
-          "software-architect",
-          "test-automation-engineer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/software-testers-qa-experts-de-malaga/",
         "urls": {
@@ -14138,12 +11939,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "startups"
-        ],
-        "targetAudience": [
-          "business-innovation-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.southsummit.io/",
         "urls": {},
@@ -14172,16 +11969,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "event-driven"
-        ],
-        "targetAudience": [
-          "fullstack-developer",
-          "frontend-developer",
-          "backend-developer",
-          "mobile-developer",
-          "game-developer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "info@springio.net",
         "communityUrl": "https://2025.springio.net/",
         "urls": {
@@ -14213,33 +12002,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "lean-startup",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "event-driven",
-          "business-intelligence",
-          "product-management",
-          "data-pipelines",
-          "big-data",
-          "c",
-          "design-patterns",
-          "game-design"
-        ],
-        "targetAudience": [
-          "entrepreneur",
-          "business-innovation-manager",
-          "product-manager",
-          "data-scientist",
-          "devops-engineer",
-          "tech-lead",
-          "community-manager",
-          "data-engineer",
-          "data-analyst",
-          "test-automation-engineer",
-          "data-journalist"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/startup-oasis/",
         "urls": {
@@ -14271,17 +12035,9 @@
           "es"
         ],
         "tags": [
-          "lean-startup",
-          "startups",
-          "event-driven",
-          "tech4good",
-          "women-in-tech",
-          "healthtech"
+          "startups"
         ],
-        "targetAudience": [
-          "entrepreneur",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://startupole.eu/",
         "urls": {
@@ -14314,24 +12070,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "c",
-          "distributed-storage",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "robotics",
-          "tech-ethics",
-          "software-architecture",
-          "software-craftsmanship",
-          "statistics",
-          "free-software",
-          "iot"
-        ],
-        "targetAudience": [
-          "fullstack-developer",
-          "software-architect"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "infostep4ward@gmail.com",
         "communityUrl": "https://step4ward.es/",
         "urls": {
@@ -14366,26 +12106,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "java",
-          "software-craftsmanship",
-          "software-architecture",
-          "bdd",
-          "tdd",
-          "free-software",
-          "llm",
-          "r-lang",
-          "kotlin",
-          "android",
-          "c",
-          "javascript"
-        ],
-        "targetAudience": [
-          "fullstack-developer",
-          "software-architect",
-          "agile-practitioner",
-          "sysadmin"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "svqjug@gmail.com",
         "communityUrl": "https://www.meetup.com/svqjug",
         "urls": {
@@ -14564,13 +12286,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "generative-ai",
-          "c",
-          "augmented-reality",
-          "robotics",
-          "tech-ethics"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "info@taigranada.com",
         "communityUrl": "https://taigranada.com/",
@@ -14633,14 +12349,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "c",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "robotics",
-          "tech-ethics"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "info@techshessions.com",
         "communityUrl": "https://techshessions.com/",
@@ -14674,20 +12383,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "game-development",
-          "azure",
-          "blockchain",
-          "web3",
-          "c",
-          "r-lang",
-          "robotics",
-          "windows",
-          "csharp",
-          "vbnet",
-          "aspnet",
-          "xamarin"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/TenerifeDev/",
@@ -14721,14 +12417,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "free-software",
-          "software-architecture",
-          "software-craftsmanship"
-        ],
-        "targetAudience": [
-          "software-architect"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://theantievent.org/",
         "urls": {
@@ -15035,29 +12725,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "game-development",
-          "indie-games",
-          "stem",
-          "unity",
-          "c",
-          "design-patterns",
-          "vscode",
-          "game-design",
-          "product-management",
-          "r-lang",
-          "geospatial",
-          "augmented-reality"
-        ],
-        "targetAudience": [
-          "community-manager",
-          "game-developer",
-          "sysadmin",
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/valenciainteractive/",
         "urls": {
@@ -15091,33 +12760,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "startups",
-          "healthtech",
-          "tech4good",
-          "women-in-tech",
-          "lean-startup",
-          "business-intelligence",
-          "event-driven",
-          "product-management",
-          "tdd",
-          "data-warehouse",
-          "data-lake",
-          "data-pipelines"
-        ],
-        "targetAudience": [
-          "entrepreneur",
-          "business-innovation-manager",
-          "game-developer",
-          "data-engineer",
-          "data-scientist",
-          "data-analyst",
-          "devops-engineer",
-          "tech-lead",
-          "ux-designer",
-          "ui-designer",
-          "data-journalist"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://vds.tech/",
         "urls": {
@@ -15151,17 +12795,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "cybersecurity",
-          "cloud-security",
-          "web-security",
-          "tech-ethics",
-          "digital-forensics",
-          "robotics"
-        ],
-        "targetAudience": [
-          "cybersecurity-engineer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "vicon@galicia.com",
         "communityUrl": "https://www.vicon.gal/",
         "urls": {
@@ -15224,10 +12859,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "python",
-          "generative-ai"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "alliance@vigotech.org",
         "communityUrl": "https://vigotech.org/",
@@ -15324,17 +12956,7 @@
         ],
         "tags": [
           "vue",
-          "javascript",
-          "software-architecture",
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases",
-          "data-science",
-          "data-engineering",
-          "data-visualization",
-          "vector-databases",
-          "c",
-          "tech-ethics"
+          "javascript"
         ],
         "targetAudience": [],
         "contactInfo": "meetup-vuejs-list@meetup.com",
@@ -15431,24 +13053,9 @@
           "es"
         ],
         "tags": [
-          "web3",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "c",
-          "event-driven",
-          "product-management",
-          "blockchain",
-          "geospatial",
-          "r-lang",
-          "startups",
-          "augmented-reality"
+          "web3"
         ],
-        "targetAudience": [
-          "community-manager",
-          "sysadmin",
-          "product-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/web3-island-makers",
         "urls": {
@@ -15560,10 +13167,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "robotics",
-          "tech-ethics"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Almer%C3%ADa/Actividades",
@@ -15796,25 +13400,9 @@
           "es"
         ],
         "tags": [
-          "c",
-          "wordpress",
-          "networking",
-          "iot",
-          "innovation",
-          "digital-forensics",
-          "digital-activism",
-          "digital-marketing",
-          "open-source",
-          "software-architecture",
-          "software-craftsmanship",
-          "design-patterns"
+          "wordpress"
         ],
-        "targetAudience": [
-          "digital-marketer",
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://grinon.wordcamp.org/2024/",
         "urls": {
@@ -15849,10 +13437,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "wordpress",
-          "c"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://sevilla.wordcamp.org/2024/",
@@ -15885,25 +13470,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "woocommerce",
-          "geospatial",
-          "r-lang",
-          "augmented-reality",
-          "product-management",
-          "c",
-          "digital-marketing"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/alcala-de-henares-wordpress-meetup-group/",
         "urls": {
@@ -15935,25 +13504,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "c",
-          "game-development",
-          "game-design",
-          "indie-games",
-          "woocommerce",
-          "digital-marketing",
-          "geospatial"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/wordpress-alicante/",
         "urls": {
@@ -15987,25 +13540,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "c",
-          "digital-forensics",
-          "robotics",
-          "digital-activism",
-          "tech-ethics",
-          "innovation",
-          "digital-marketing",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "digital-marketer",
-          "software-architect"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/wordpressbcn/",
         "urls": {
@@ -16038,25 +13575,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "woocommerce",
-          "software-architecture",
-          "software-craftsmanship",
-          "design-patterns",
-          "game-design",
-          "free-software",
-          "c",
-          "open-hardware",
-          "stem",
-          "r-lang"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "community-manager",
-          "software-architect"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/wordpress-benidorm/",
         "urls": {
@@ -16088,25 +13609,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "innovation",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "r-lang",
-          "iot",
-          "game-development",
-          "woocommerce",
-          "open-hardware",
-          "augmented-reality"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "community-manager",
-          "devops-engineer",
-          "software-architect"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/wordpress-bilbao/",
         "urls": {
@@ -16141,25 +13646,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "innovation",
-          "c",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "javascript",
-          "php",
-          "design-patterns",
-          "networking",
-          "sql-databases"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/wordpress-cartagena/",
         "urls": {
@@ -16192,25 +13681,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "woocommerce",
-          "software-architecture",
-          "software-craftsmanship",
-          "design-patterns",
-          "game-design",
-          "free-software",
-          "seo",
-          "geospatial",
-          "r-lang",
-          "product-management"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "community-manager",
-          "software-architect"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/meetup-wordpress-castello/",
         "urls": {
@@ -16242,23 +13715,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "software-architecture",
-          "software-craftsmanship",
-          "woocommerce",
-          "free-software",
-          "seo",
-          "geospatial",
-          "r-lang",
-          "c"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/wordpress-meetup-chiclana/",
         "urls": {
@@ -16366,25 +13825,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "innovation",
-          "open-source",
-          "software-architecture",
-          "software-craftsmanship",
-          "design-patterns",
-          "game-design",
-          "free-software",
-          "networking",
-          "woocommerce",
-          "open-hardware",
-          "r-lang"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "meetup@wpdenia.com",
         "communityUrl": "https://wpdenia.com/",
         "urls": {
@@ -16420,25 +13863,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "design-patterns",
-          "game-design",
-          "c",
-          "r-lang",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "open-hardware",
-          "woocommerce",
-          "augmented-reality"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/ferrolterrawordpress/",
         "urls": {
@@ -16470,25 +13897,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "c",
-          "woocommerce",
-          "digital-marketing",
-          "design-patterns",
-          "game-design",
-          "game-development",
-          "open-source",
-          "generative-ai",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://wpgranada.es/",
         "urls": {
@@ -16521,22 +13932,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "c",
-          "open-source",
-          "software-architecture",
-          "software-craftsmanship",
-          "design-patterns",
-          "game-design",
-          "free-software",
-          "r-lang",
-          "woocommerce"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/wordpressgranollers/",
         "urls": {
@@ -16569,24 +13967,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "software-architecture",
-          "software-craftsmanship",
-          "design-patterns",
-          "game-design",
-          "free-software",
-          "seo",
-          "c",
-          "r-lang",
-          "augmented-reality",
-          "woocommerce"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/wordpress-grinon/",
         "urls": {
@@ -16621,25 +14004,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "innovation",
-          "software-architecture",
-          "software-craftsmanship",
-          "design-patterns",
-          "game-design",
-          "free-software",
-          "open-hardware",
-          "cybersecurity",
-          "woocommerce",
-          "geospatial"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/huelva-wordpress-meetup/",
         "urls": {
@@ -16672,23 +14039,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "robotics",
-          "tech-ethics",
-          "design-patterns",
-          "digital-forensics",
-          "game-design",
-          "woocommerce",
-          "digital-activism",
-          "open-hardware",
-          "digital-marketing",
-          "r-lang",
-          "augmented-reality"
+          "wordpress"
         ],
-        "targetAudience": [
-          "digital-marketer",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "info@wpigualada.com",
         "communityUrl": "https://wpigualada.com/",
         "urls": {
@@ -16720,26 +14073,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "digital-marketing",
-          "digital-forensics",
-          "digital-activism",
-          "open-source",
-          "software-architecture",
-          "software-craftsmanship",
-          "networking",
-          "woocommerce",
-          "free-software",
-          "startups",
-          "growth"
+          "wordpress"
         ],
-        "targetAudience": [
-          "digital-marketer",
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/leon-wordpress-meetup/",
         "urls": {
@@ -16774,25 +14110,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "software-architecture",
-          "software-craftsmanship",
-          "game-development",
-          "free-software",
-          "c",
-          "woocommerce",
-          "r-lang",
-          "open-hardware",
-          "geospatial",
-          "augmented-reality"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/wordpress-logrono/",
         "urls": {
@@ -16825,25 +14145,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "c",
-          "open-source",
-          "design-patterns",
-          "game-design",
-          "software-architecture",
-          "software-craftsmanship",
-          "gcp",
-          "free-software",
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "digital-marketer"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/wordpresslugo/",
         "urls": {
@@ -16875,25 +14179,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "innovation",
-          "c",
-          "software-architecture",
-          "software-craftsmanship",
-          "design-patterns",
-          "game-design",
-          "tech-ethics",
-          "free-software",
-          "open-hardware",
-          "woocommerce"
+          "wordpress"
         ],
-        "targetAudience": [
-          "community-manager",
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/wordpress-malaga/",
         "urls": {
@@ -16926,25 +14214,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "woocommerce",
-          "geospatial",
-          "r-lang",
-          "c",
-          "seo",
-          "product-management",
-          "augmented-reality"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/mallorca-wordpress-meetup/",
         "urls": {
@@ -16977,24 +14249,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "software-architecture",
-          "software-craftsmanship",
-          "gcp",
-          "free-software",
-          "c",
-          "woocommerce",
-          "open-hardware",
-          "seo",
-          "r-lang"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/wordpress-meetup-marbella/",
         "urls": {
@@ -17027,25 +14284,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "geospatial",
-          "open-source",
-          "c",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "design-patterns",
-          "game-development",
-          "game-design",
-          "woocommerce",
-          "product-management"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/wordpress-mataro/",
         "urls": {
@@ -17077,25 +14318,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "woocommerce",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "open-hardware",
-          "r-lang",
-          "c",
-          "stem",
-          "geospatial",
-          "augmented-reality"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/wordpress-oviedo/",
         "urls": {
@@ -17128,24 +14353,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "software-architecture",
-          "software-craftsmanship",
-          "design-patterns",
-          "game-design",
-          "free-software",
-          "open-hardware",
-          "c",
-          "geospatial",
-          "r-lang",
-          "product-management"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/ponferrada-wordpress-meetup/",
         "urls": {
@@ -17178,25 +14388,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "c",
-          "r-lang",
-          "software-architecture",
-          "software-craftsmanship",
-          "gcp",
-          "free-software",
-          "open-hardware",
-          "seo",
-          "geospatial",
-          "woocommerce"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/pontevedra-wordpress-meetup/",
         "urls": {
@@ -17230,25 +14424,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "c",
-          "open-source",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "open-hardware",
-          "woocommerce",
-          "tech-ethics",
-          "product-management",
-          "r-lang",
-          "augmented-reality"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/santander-wordpress-meetup/",
         "urls": {
@@ -17280,25 +14458,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "c",
-          "open-source",
-          "digital-marketing",
-          "software-architecture",
-          "software-craftsmanship",
-          "design-patterns",
-          "free-software",
-          "gcp",
-          "game-design",
-          "r-lang",
-          "digital-forensics"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "software-architect",
-          "devops-engineer",
-          "digital-marketer"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-es/santiago-de-compostela-wordpress-meetup-group/",
         "urls": {
@@ -17331,25 +14493,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "design-patterns",
-          "game-design",
-          "open-source",
-          "seo",
-          "software-architecture",
-          "software-craftsmanship",
-          "woocommerce",
-          "free-software",
-          "r-lang",
-          "c",
-          "augmented-reality"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://wpsevilla.org/",
         "urls": {
@@ -17382,25 +14528,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "c",
-          "open-source",
-          "software-architecture",
-          "software-craftsmanship",
-          "gcp",
-          "free-software",
-          "unreal-engine",
-          "woocommerce",
-          "seo",
-          "geospatial",
-          "r-lang"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/wordpresstarragona/",
         "urls": {
@@ -17432,25 +14562,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "c",
-          "open-source",
-          "design-patterns",
-          "game-design",
-          "robotics",
-          "tech-ethics",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "open-hardware",
-          "woocommerce"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/terrassa-wordpress-meetup/",
         "urls": {
@@ -17513,25 +14627,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "woocommerce",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "geospatial",
-          "product-management",
-          "c",
-          "unity",
-          "r-lang",
-          "augmented-reality"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "hola@wptortosa.com",
         "communityUrl": "https://www.meetup.com/tortosa-wordpress-meetup/",
         "urls": {
@@ -17564,24 +14662,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "generative-ai",
-          "c",
-          "open-source",
-          "software-architecture",
-          "software-craftsmanship",
-          "design-patterns",
-          "game-design",
-          "free-software",
-          "open-hardware",
-          "iot",
-          "geospatial"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/torrelodones-wordpress-meetup/",
         "urls": {
@@ -17614,24 +14697,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "design-patterns",
-          "gcp",
-          "game-design",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "geospatial",
-          "tech4good",
-          "women-in-tech",
-          "healthtech"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/wordpress-valencia-meetup/",
         "urls": {
@@ -17666,24 +14734,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "c",
-          "open-source",
-          "software-architecture",
-          "software-craftsmanship",
-          "design-patterns",
-          "game-design",
-          "free-software",
-          "open-hardware",
-          "seo",
-          "geospatial",
-          "r-lang"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/valladolid-wordpress-meetup/",
         "urls": {
@@ -17716,25 +14769,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "c",
-          "open-source",
-          "free-software",
-          "iot",
-          "r-lang",
-          "software-architecture",
-          "software-craftsmanship",
-          "design-patterns",
-          "gcp",
-          "game-design",
-          "open-hardware"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/vigo-wordpress-meetup/",
         "urls": {
@@ -17768,25 +14805,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "c",
-          "design-patterns",
-          "cybersecurity",
-          "game-design",
-          "woocommerce",
-          "geospatial",
-          "product-management"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/vitoria-gasteiz-wordpress-meetup/",
         "urls": {
@@ -17818,25 +14839,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "open-source",
-          "software-architecture",
-          "software-craftsmanship",
-          "networking",
-          "game-development",
-          "free-software",
-          "digital-marketing",
-          "woocommerce",
-          "c",
-          "r-lang",
-          "open-hardware"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/wpzaragoza/",
         "urls": {
@@ -17870,27 +14875,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "deep-learning",
-          "digital-forensics",
-          "digital-activism",
-          "digital-marketing",
-          "c",
-          "event-driven",
-          "ddd",
-          "bdd",
-          "tdd",
-          "git",
-          "graph-databases",
-          "machine-learning"
-        ],
-        "targetAudience": [
-          "digital-marketer",
-          "devops-engineer",
-          "ml-engineer",
-          "community-manager",
-          "open-source-contributor"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/wunderdog-malaga-meetup/",
         "urls": {
@@ -17921,15 +14907,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases",
-          "data-science",
-          "data-engineering",
-          "data-visualization",
-          "vector-databases"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://xantardev.org",
@@ -17961,10 +14939,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "tech-ethics",
-          "game-development"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://xauendevs.io/",
@@ -17998,9 +14973,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "mlops"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "info@xopsconference.com",
         "communityUrl": "https://linktr.ee/xopscon",
@@ -18038,14 +15011,9 @@
           "es"
         ],
         "tags": [
-          "free-software",
-          "r-lang",
-          "software-architecture",
-          "software-craftsmanship"
+          "r-lang"
         ],
-        "targetAudience": [
-          "software-architect"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.r-users.gal/",
         "urls": {},
@@ -18074,14 +15042,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "cybersecurity",
-          "tech-ethics",
-          "gcp",
-          "tech4good",
-          "women-in-tech",
-          "healthtech"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.yeswetech.org/",
@@ -18148,12 +15109,9 @@
           "es"
         ],
         "tags": [
-          "java",
-          "llm"
+          "java"
         ],
-        "targetAudience": [
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://barcelonajug.org/",
         "urls": {
@@ -18188,33 +15146,9 @@
           "es"
         ],
         "tags": [
-          "c",
-          "javascript",
-          "software-architecture",
-          "nodejs",
-          "game-development",
-          "react",
-          "software-craftsmanship",
-          "functional-programming",
-          "oop",
-          "free-software",
-          "typescript",
-          "cloud-security"
+          "javascript"
         ],
-        "targetAudience": [
-          "fullstack-developer",
-          "devops-engineer",
-          "cloud-engineer",
-          "software-architect",
-          "mobile-developer",
-          "embedded-iot-engineer",
-          "robotics-engineer",
-          "data-engineer",
-          "ml-engineer",
-          "sre",
-          "cybersecurity-engineer",
-          "qa-engineer"
-        ],
+        "targetAudience": [],
         "contactInfo": "miduga@gmail.com",
         "communityUrl": "https://www.jsconf.es/",
         "urls": {
@@ -18245,25 +15179,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "digital-marketing",
-          "seo",
-          "networking",
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases",
-          "data-science",
-          "data-engineering",
-          "data-visualization",
-          "generative-ai",
-          "vector-databases",
-          "c"
-        ],
-        "targetAudience": [
-          "digital-marketer",
-          "fullstack-developer",
-          "entrepreneur"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://raiolanetworks.com/rmcgalicia/",
         "urls": {
@@ -18388,26 +15305,9 @@
           "es"
         ],
         "tags": [
-          "git",
-          "game-development",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "c",
-          "open-hardware",
-          "data-engineering",
-          "tech-ethics",
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases"
+          "git"
         ],
-        "targetAudience": [
-          "community-manager",
-          "devops-engineer",
-          "software-architect",
-          "fullstack-developer",
-          "researcher"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://ghspain.github.io/",
         "urls": {
@@ -18442,20 +15342,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "gcp",
-          "tech-ethics",
-          "stem"
-        ],
-        "targetAudience": [
-          "community-manager",
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer",
-          "agile-practitioner"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://gdg.community.dev/gdg-menorca/",
         "urls": {
@@ -18489,28 +15377,9 @@
           "es"
         ],
         "tags": [
-          "generative-ai",
-          "tech-ethics",
-          "stem",
-          "c",
-          "robotics",
-          "ai-coding-agents",
-          "virtual-reality",
-          "networking",
-          "data-science",
-          "digital-forensics",
-          "tech4good",
-          "digital-activism"
+          "stem"
         ],
-        "targetAudience": [
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer",
-          "digital-marketer",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "info@gdgmenorca.dev",
         "communityUrl": "https://gdgmenorca.dev/",
         "urls": {
@@ -18543,22 +15412,9 @@
           "es"
         ],
         "tags": [
-          "ai-coding-agents",
-          "deep-learning",
-          "tech4good",
-          "c",
-          "r-lang",
-          "augmented-reality",
-          "product-management",
-          "machine-learning",
-          "startups",
-          "macos"
+          "machine-learning"
         ],
-        "targetAudience": [
-          "tech-lead",
-          "community-manager",
-          "project-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/ai-engineers-barcelona/",
         "urls": {
@@ -18591,15 +15447,7 @@
           "es"
         ],
         "tags": [
-          "python",
-          "django",
-          "product-management",
-          "go",
-          "c",
-          "data-science",
-          "r-lang",
-          "open-source",
-          "open-hardware"
+          "python"
         ],
         "targetAudience": [],
         "contactInfo": "pybcn@googlegroups.com",
@@ -18638,20 +15486,9 @@
           "es"
         ],
         "tags": [
-          "python",
-          "django",
-          "product-management",
-          "go",
-          "c",
-          "data-science",
-          "r-lang",
-          "open-source",
-          "open-hardware"
+          "python"
         ],
-        "targetAudience": [
-          "sysadmin",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "pyladies-bcn@googlegroups.com",
         "communityUrl": "https://pybcn.org/pyladies_bcn/about/",
         "urls": {
@@ -18687,19 +15524,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "healthtech",
-          "tech4good",
-          "women-in-tech",
-          "innovation",
-          "tech-ethics",
-          "c",
-          "product-management",
-          "r-lang",
-          "startups",
-          "stem",
-          "augmented-reality"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/meetup-group-nkodwxya/?eventOrigin=event_home_page",
@@ -18762,18 +15587,7 @@
           "es"
         ],
         "tags": [
-          "azure",
-          "c",
-          "tech4good",
-          "tech-ethics",
-          "women-in-tech",
-          "r-lang",
-          "augmented-reality",
-          "data-science",
-          "generative-ai",
-          "machine-learning",
-          "macos",
-          "big-data"
+          "machine-learning"
         ],
         "targetAudience": [],
         "contactInfo": "",
@@ -18806,22 +15620,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "tech-ethics",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "r-lang",
-          "angular",
-          "open-hardware",
-          "product-management",
-          "c",
-          "robotics",
-          "augmented-reality"
-        ],
-        "targetAudience": [
-          "product-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "galstechinfo@gmail.com",
         "communityUrl": "https://www.meetup.com/es-ES/galstech/",
         "urls": {
@@ -18854,26 +15654,9 @@
           "es"
         ],
         "tags": [
-          "wordpress",
-          "c",
-          "r-lang",
-          "open-source",
-          "digital-marketing",
-          "generative-ai",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "startups",
-          "digital-forensics",
-          "game-development"
+          "wordpress"
         ],
-        "targetAudience": [
-          "open-source-contributor",
-          "digital-marketer",
-          "devops-engineer",
-          "software-architect",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/WordPressOurense/",
         "urls": {
@@ -18907,17 +15690,7 @@
           "es"
         ],
         "tags": [
-          "cryptocurrencies",
-          "tech-ethics",
-          "c",
-          "r-lang",
-          "llm",
-          "tech4good",
-          "women-in-tech",
-          "cryptography",
-          "innovation",
-          "business-intelligence",
-          "event-driven"
+          "cryptocurrencies"
         ],
         "targetAudience": [],
         "contactInfo": "",
@@ -18944,9 +15717,9 @@
         "id": 554,
         "name": "Makers iA",
         "status": "active",
-        "lastReviewed": "03/09/2025",
+        "lastReviewed": "31/03/2026",
         "communityType": "tech-meetup",
-        "eventFormat": "in-person",
+        "eventFormat": "hybrid",
         "location": "Madrid",
         "topics": "",
         "langs": [
@@ -18958,10 +15731,11 @@
         "communityUrl": "https://makersia.com/",
         "urls": {
           "web": "https://makersia.com/",
-          "linkedin": "https://www.linkedin.com/company/makersia/"
+          "linkedin": "https://www.linkedin.com/company/makersia/",
+          "whatsapp": "https://makersia.com"
         },
         "thumbnailUrl": "images/makers-ia.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
@@ -18986,21 +15760,9 @@
           "es"
         ],
         "tags": [
-          "git",
-          "python",
-          "cybersecurity",
-          "open-source"
+          "python"
         ],
-        "targetAudience": [
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer",
-          "devops-engineer",
-          "community-manager",
-          "open-source-contributor"
-        ],
+        "targetAudience": [],
         "contactInfo": "bilbao@es.python.org",
         "communityUrl": "https://github.com/pythonbilbao",
         "urls": {
@@ -19033,30 +15795,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software",
-          "event-driven",
-          "ai-coding-agents",
-          "c",
-          "r-lang",
-          "product-management",
-          "java"
-        ],
-        "targetAudience": [
-          "community-manager",
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer",
-          "software-architect",
-          "tech-lead"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://linktr.ee/devmad",
         "urls": {
@@ -19091,25 +15831,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "go",
-          "software-architecture",
-          "software-craftsmanship",
-          "llm",
-          "free-software",
-          "python",
-          "rust",
-          "bdd",
-          "tdd",
-          "c",
-          "r-lang",
-          "business-intelligence"
-        ],
-        "targetAudience": [
-          "software-architect",
-          "community-manager",
-          "entrepreneur"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/es-ES/valencia-codes/",
         "urls": {
@@ -19145,22 +15868,9 @@
         ],
         "tags": [
           "haskell",
-          "functional-programming",
-          "oop",
-          "machine-learning",
-          "deep-learning",
-          "llm",
-          "r-lang",
-          "c",
-          "go",
-          "augmented-reality",
-          "product-management",
-          "open-hardware"
+          "functional-programming"
         ],
-        "targetAudience": [
-          "ml-engineer",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/haskell-mad/",
         "urls": {
@@ -19193,18 +15903,9 @@
           "es"
         ],
         "tags": [
-          "web3",
-          "cryptocurrencies",
-          "blockchain",
-          "generative-ai",
-          "digital-forensics",
-          "digital-activism",
-          "innovation",
-          "digital-marketing"
+          "web3"
         ],
-        "targetAudience": [
-          "digital-marketer"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.mmerge.io/",
         "urls": {
@@ -19239,9 +15940,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "design-patterns"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://beersstorming.com/",
@@ -19274,26 +15973,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "azure",
-          "windows",
-          "tech-ethics",
-          "xamarin",
-          "gcp",
-          "vscode",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "c",
-          "networking",
-          "csharp"
-        ],
-        "targetAudience": [
-          "fullstack-developer",
-          "cloud-engineer",
-          "devops-engineer",
-          "business-innovation-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://techriders.tajamar.es/",
         "urls": {
@@ -19392,25 +16073,10 @@
           "es"
         ],
         "tags": [
-          "gcp",
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "open-source",
-          "tech-ethics",
           "docker",
-          "kubernetes",
-          "linux",
-          "c",
-          "game-development",
-          "sysadmin"
+          "kubernetes"
         ],
-        "targetAudience": [
-          "cloud-engineer",
-          "open-source-contributor",
-          "devops-engineer",
-          "community-manager"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://cloudnativesevilla.com/",
         "urls": {
@@ -19445,18 +16111,7 @@
           "es"
         ],
         "tags": [
-          "ethereum",
-          "distributed-systems",
-          "robotics",
-          "sysadmin",
-          "tech-ethics",
-          "git",
-          "blockchain",
-          "cryptocurrencies",
-          "java",
-          "python",
-          "php",
-          "ruby"
+          "ethereum"
         ],
         "targetAudience": [],
         "contactInfo": "",
@@ -19590,22 +16245,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "robotics",
-          "game-development",
-          "tech-ethics",
-          "game-design",
-          "functional-programming",
-          "oop",
-          "indie-games",
-          "c",
-          "networking",
-          "generative-ai"
-        ],
-        "targetAudience": [
-          "researcher",
-          "community-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "info@programamos.es",
         "communityUrl": "https://programamos.es/",
         "urls": {
@@ -19680,7 +16321,6 @@
           "tech4good",
           "software-architecture",
           "functional-programming",
-          "c",
           "r-lang",
           "oop",
           "haskell",
@@ -19721,14 +16361,7 @@
           "es"
         ],
         "tags": [],
-        "targetAudience": [
-          "community-manager",
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://trailblazercommunitygroups.com/salesforce-developer-group-sevilla-spain/",
         "urls": {
@@ -19794,18 +16427,7 @@
           "es"
         ],
         "tags": [
-          "c",
-          "azure",
-          "tech-ethics",
-          "r-lang",
-          "robotics",
-          "windows",
-          "csharp",
-          "vbnet",
-          "aspnet",
-          "xamarin",
-          "augmented-reality",
-          "haskell"
+          "csharp"
         ],
         "targetAudience": [],
         "contactInfo": "",
@@ -19871,25 +16493,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "iot",
-          "event-driven",
-          "free-software",
-          "virtual-reality",
-          "augmented-reality",
-          "mixed-reality",
-          "c",
-          "sensors",
-          "business-intelligence",
-          "python",
-          "design-patterns",
-          "aws"
-        ],
-        "targetAudience": [
-          "sysadmin",
-          "community-manager",
-          "business-innovation-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "community@thethingsnetwork.org",
         "communityUrl": "https://www.thethingsnetwork.org/community/sevilla/",
         "urls": {
@@ -19955,30 +16560,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "virtualization",
-          "game-development",
-          "gcp",
-          "software-architecture",
-          "software-craftsmanship",
-          "tech-ethics",
-          "free-software",
-          "kubernetes",
-          "sysadmin",
-          "bash",
-          "linux",
-          "php"
-        ],
-        "targetAudience": [
-          "devops-engineer",
-          "cloud-engineer",
-          "software-architect",
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/bitnami-sevilla/",
         "urls": {
@@ -20012,20 +16595,9 @@
           "es"
         ],
         "tags": [
-          "go",
-          "tech-ethics",
-          "event-driven",
-          "c",
-          "r-lang",
-          "open-hardware",
-          "open-source",
-          "augmented-reality",
-          "product-management",
-          "startups"
+          "go"
         ],
-        "targetAudience": [
-          "fullstack-developer"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/golang-sevilla/",
         "urls": {
@@ -20057,33 +16629,9 @@
           "es"
         ],
         "tags": [
-          "generative-ai",
-          "llm",
-          "c",
-          "gcp",
-          "python",
-          "django",
-          "product-management",
-          "r-lang",
-          "nlp",
-          "data-science",
-          "augmented-reality",
-          "go"
+          "generative-ai"
         ],
-        "targetAudience": [
-          "ml-engineer",
-          "cloud-engineer",
-          "software-architect",
-          "devops-engineer",
-          "embedded-iot-engineer",
-          "robotics-engineer",
-          "data-engineer",
-          "sre",
-          "cybersecurity-engineer",
-          "qa-engineer",
-          "test-automation-engineer",
-          "tech-lead"
-        ],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.meetup.com/ia-generativa-sevilla/",
         "urls": {
@@ -20115,15 +16663,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "tech4good",
-          "women-in-tech",
-          "healthtech",
-          "open-source"
-        ],
-        "targetAudience": [
-          "business-innovation-manager"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://ruralhackers.com/",
         "urls": {
@@ -20156,25 +16697,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "cybersecurity",
-          "ethical-hacking",
-          "innovation",
-          "tech-ethics",
-          "robotics",
-          "game-development",
-          "sysadmin",
-          "cloud-security",
-          "web-security"
-        ],
-        "targetAudience": [
-          "project-manager",
-          "cybersecurity-engineer",
-          "product-manager",
-          "community-manager",
-          "business-innovation-manager",
-          "researcher"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "it@hackbcn.org",
         "communityUrl": "https://hackbcn.org/",
         "urls": {
@@ -20208,16 +16732,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "robotics",
-          "tech-ethics",
-          "software-architecture",
-          "software-craftsmanship",
-          "free-software"
-        ],
-        "targetAudience": [
-          "software-architect"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://vlctesting.es/",
         "urls": {
@@ -20251,28 +16767,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "gcp",
-          "tech-ethics",
-          "flutter",
-          "tech4good",
-          "women-in-tech",
-          "healthtech"
-        ],
-        "targetAudience": [
-          "frontend-developer",
-          "backend-developer",
-          "fullstack-developer",
-          "mobile-developer",
-          "game-developer",
-          "cloud-engineer",
-          "community-manager",
-          "tech-lead",
-          "data-engineer",
-          "devops-engineer",
-          "sre",
-          "ui-designer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://gdg.community.dev/gdg-alicante/",
         "urls": {
@@ -20305,24 +16801,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "game-development",
-          "tech-ethics",
-          "innovation",
-          "data-science",
-          "game-design",
-          "indie-games",
-          "digital-forensics",
-          "iot",
-          "digital-activism",
-          "healthtech",
-          "digital-marketing",
-          "c"
-        ],
-        "targetAudience": [
-          "digital-marketer",
-          "game-developer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "contacto@multitecua.com",
         "communityUrl": "https://multitecua.com/",
         "urls": {
@@ -20358,11 +16838,7 @@
           "es"
         ],
         "tags": [
-          "indie-games",
-          "functional-programming",
-          "oop",
-          "game-development",
-          "game-design"
+          "game-development"
         ],
         "targetAudience": [],
         "contactInfo": "",
@@ -20460,15 +16936,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "sql-databases",
-          "nosql-databases",
-          "graph-databases",
-          "data-science",
-          "data-engineering",
-          "data-visualization",
-          "vector-databases"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://www.youtube.com/@it_gals",
@@ -20532,16 +17000,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "event-driven",
-          "tech4good",
-          "women-in-tech",
-          "healthtech"
-        ],
-        "targetAudience": [
-          "business-innovation-manager",
-          "fullstack-developer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "info@aisummitbarcelona.com",
         "communityUrl": "https://aisummitbarcelona.com/",
         "urls": {
@@ -20574,31 +17034,8 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "tech-ethics",
-          "c",
-          "generative-ai",
-          "functional-programming",
-          "oop",
-          "data-science",
-          "digital-marketing",
-          "robotics",
-          "game-development",
-          "tech4good",
-          "women-in-tech",
-          "healthtech"
-        ],
-        "targetAudience": [
-          "devops-engineer",
-          "data-engineer",
-          "data-scientist",
-          "data-analyst",
-          "cloud-engineer",
-          "digital-marketer",
-          "data-journalist",
-          "backend-developer",
-          "tech-lead"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "info@codespaceacademy.com",
         "communityUrl": "https://codespaceacademy.com/code-fest-edicion-ii-2025/",
         "urls": {
@@ -20630,18 +17067,15 @@
           "es"
         ],
         "tags": [
-          "digital-forensics",
-          "digital-activism",
-          "digital-marketing",
           "tech-ethics",
-          "game-development",
           "diversity",
-          "c",
-          "design-patterns",
-          "game-design"
+          "accessibility",
+          "tech4good"
         ],
         "targetAudience": [
-          "digital-marketer"
+          "frontend-developer",
+          "ux-designer",
+          "ui-designer"
         ],
         "contactInfo": "info@a11yconf.com",
         "communityUrl": "https://www.a11yconf.com/es",
@@ -21030,9 +17464,7 @@
         "langs": [
           "es"
         ],
-        "tags": [
-          "gcp"
-        ],
+        "tags": [],
         "targetAudience": [],
         "contactInfo": "",
         "communityUrl": "https://gdg.community.dev/gdg-barcelona/",
