@@ -99,6 +99,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-03-31 `cf3dd38` [Actualizada Makers iA](https://combuilderses.github.io/communities-directory/?community=554) ([PR #336](https://github.com/ComBuildersES/communities-directory/pull/336))
 - 2026-03-30 `73b9ac1` Clear tags and target audience from communities.json
 - 2026-03-30 `ffff85e` [Actualizada Lareira Conf](https://combuilderses.github.io/communities-directory/?community=541) ([PR #333](https://github.com/ComBuildersES/communities-directory/pull/333))
 - 2026-03-30 `a138e10` [Actualizada Women Techmakers Madrid](https://combuilderses.github.io/communities-directory/?community=480) ([PR #330](https://github.com/ComBuildersES/communities-directory/pull/330))
@@ -180,6 +181,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-30 `4bf3a72` update changelog [skip ci]
 - 2026-03-30 `6125679` update changelog [skip ci]
 - 2026-03-30 `8329849` update changelog [skip ci]
 - 2026-03-30 `b11ec81` update changelog [skip ci]
