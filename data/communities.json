@@ -16527,9 +16527,9 @@
     "id": 554,
     "name": "Makers iA",
     "status": "active",
-    "lastReviewed": "03/09/2025",
+    "lastReviewed": "31/03/2026",
     "communityType": "tech-meetup",
-    "eventFormat": "in-person",
+    "eventFormat": "hybrid",
     "location": "Madrid",
     "topics": "",
     "tags": [],
@@ -16538,7 +16538,8 @@
     "communityUrl": "https://makersia.com/",
     "urls": {
       "web": "https://makersia.com/",
-      "linkedin": "https://www.linkedin.com/company/makersia/"
+      "linkedin": "https://www.linkedin.com/company/makersia/",
+      "whatsapp": "https://makersia.com"
     },
     "thumbnailUrl": "images/makers-ia.webp",
     "latLon": {
@@ -16546,10 +16547,13 @@
       "lon": -3.7035825
     },
     "displayOnMap": true,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "MakersIA es una comunidad hispanohablante de desarrolladores que trabajan activamente con inteligencia artificial. No solo usan IA, la construyen, la integran y la llevan a producción. Hasta el propio agente que gestiona la comunidad fue creado por sus miembros.",
+    "removalReason": "",
+    "parentId": null
   },
   {
     "id": 555,
