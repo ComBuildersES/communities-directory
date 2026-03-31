@@ -7,6 +7,36 @@ import { normalizeCommunityLangs } from "../../lib/communityLanguages.js";
 import "./CommunityModal.css";
 
 const APP_URL = "https://combuilderses.github.io/communities-directory/";
+
+function extractDominantColor(img) {
+  try {
+    const SIZE = 64;
+    const canvas = document.createElement("canvas");
+    canvas.width = SIZE;
+    canvas.height = SIZE;
+    const ctx = canvas.getContext("2d");
+    ctx.drawImage(img, 0, 0, SIZE, SIZE);
+    const { data } = ctx.getImageData(0, 0, SIZE, SIZE);
+    const buckets = {};
+    for (let i = 0; i < data.length; i += 4) {
+      if (data[i + 3] < 40) continue; // transparente
+      const r = data[i], g = data[i + 1], b = data[i + 2];
+      const lum = (r * 299 + g * 587 + b * 114) / 1000;
+      if (lum > 232 || lum < 18) continue; // near-white o near-black
+      const key = `${Math.round(r / 20) * 20},${Math.round(g / 20) * 20},${Math.round(b / 20) * 20}`;
+      buckets[key] = (buckets[key] || 0) + 1;
+    }
+    const top = Object.entries(buckets).sort((a, b) => b[1] - a[1])[0];
+    if (!top) return null;
+    const [r, g, b] = top[0].split(",").map(Number);
+    const lum = (r * 299 + g * 587 + b * 114) / 1000;
+    const ratio = 0.12 + (lum / 255) * 0.28; // colores claros → más pigmento (hasta 40%)
+    const mix = (c) => Math.round(c * ratio + 255 * (1 - ratio));
+    return `rgb(${mix(r)}, ${mix(g)}, ${mix(b)})`;
+  } catch {
+    return null;
+  }
+}
 const CB_HANDLES = {
   twitter: "@ComBuilders_ES",
   bluesky: "@communitybuilders.bsky.social",
@@ -127,6 +157,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
   const [audienceExpanded, setAudienceExpanded] = useState(false);
   const [openUrlGroup, setOpenUrlGroup] = useState(null);
   const [isShareOpen, setIsShareOpen] = useState(false);
+  const [thumbBg, setThumbBg] = useState(null);
   const shareRef = useRef(null);
 
   const CHIPS_THRESHOLD = 3;
@@ -220,11 +251,20 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
         {/* Cabecera */}
         <div className="community-modal-header">
           {thumbnailUrl && (
-            <img
-              src={thumbnailUrl}
-              alt={name}
-              className="community-modal-thumbnail"
-            />
+            <div
+              className="community-modal-thumbnail-wrap"
+              style={thumbBg ? { background: thumbBg, borderColor: thumbBg } : undefined}
+            >
+              <img
+                src={thumbnailUrl}
+                alt={name}
+                className="community-modal-thumbnail"
+                onLoad={(e) => {
+                  const color = extractDominantColor(e.currentTarget);
+                  if (color) setThumbBg(color);
+                }}
+              />
+            </div>
           )}
           <div className="community-modal-header-info">
             <h2 className="community-modal-name">{name}</h2>

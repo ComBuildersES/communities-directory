@@ -32,13 +32,25 @@
   flex-shrink: 0;
 }
 
-.community-modal-thumbnail {
+.community-modal-thumbnail-wrap {
   width: 88px;
   height: 88px;
-  object-fit: contain;
-  border-radius: 6px;
-  border: 1px solid #eee;
   flex-shrink: 0;
+  border-radius: 8px;
+  border: 1px solid #d8e1ef;
+  background: radial-gradient(circle at top, #edf1f8 0%, #e3eaf4 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  box-sizing: border-box;
+}
+
+.community-modal-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 4px;
 }
 
 .community-modal-header-info {
@@ -685,7 +697,7 @@ button.modal-badge:focus-visible {
     flex-wrap: wrap;
   }
 
-  .community-modal-thumbnail {
+  .community-modal-thumbnail-wrap {
     width: 56px;
     height: 56px;
   }

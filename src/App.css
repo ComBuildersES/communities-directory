@@ -414,9 +414,7 @@ body {
   display: flex;
   flex: 1;
   /* column-gap: 20px; */
-  background:
-    radial-gradient(circle at top left, rgba(50, 115, 220, 0.12), transparent 34%),
-    linear-gradient(180deg, #fbfcfe 0%, #eef2f7 100%);
+  background: #fff;
 }
 
 .contribution-loading {
@@ -708,7 +706,7 @@ body {
   margin: 0;
   padding: 0.8rem;
   background:
-    radial-gradient(circle at top, #ffffff 0%, #f7f9fc 72%, #eef2f7 100%);
+    radial-gradient(circle at top, #edf1f8 0%, #e3eaf4 72%, #d8e1ef 100%);
 }
 
 .mycard--simple img {
@@ -717,8 +715,8 @@ body {
   object-fit: contain;
   display: block;
   border-radius: 10px;
-  background: #fff;
   padding: 0.7rem;
+  filter: drop-shadow(0 1px 5px rgba(0, 0, 0, 0.20)) drop-shadow(0 0 2px rgba(0, 0, 0, 0.10));
 }
 
 .headingtag {

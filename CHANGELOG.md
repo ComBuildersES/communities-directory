@@ -3,6 +3,12 @@
 Historial generado automáticamente a partir de los commits del repositorio.
 Se organiza por mes y por tipo de cambio.
 
+## 2026-04
+
+### Other
+
+- 2026-04-01 `c434726` update background styles and enhance community modal thumbnail display
+
 ## 2026-03
 
 ### Features
@@ -182,6 +188,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-31 `9bf57af` update changelog [skip ci]
 - 2026-03-31 `dff738a` update changelog [skip ci]
 - 2026-03-31 `d9b1b17` update .all-contributorsrc [skip ci]
 - 2026-03-31 `edf0854` update changelog [skip ci]
