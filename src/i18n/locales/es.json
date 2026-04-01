@@ -412,6 +412,8 @@
       "keepImage": "Mantener imagen actual",
       "replaceImage": "Reemplazar imagen",
       "thumbnailHelp": "Para reemplazar la imagen necesitas una URL pública. Si prefieres, abre el issue, sube allí la imagen manualmente y comenta que se use esa.",
+      "thumbnailHint": "Las imágenes cuadradas se ven mejor en el directorio.",
+      "thumbnailAspectWarning": "Esta imagen es rectangular y puede verse peor en la tarjeta. Recomendamos usar una versión más cuadrada, por ejemplo el avatar de redes sociales o el logo oficial.",
       "parentOrgLabel": "Organización paraguas",
       "parentOrgNone": "Sin organización paraguas",
       "parentOrgPlaceholder": "Busca por nombre…",

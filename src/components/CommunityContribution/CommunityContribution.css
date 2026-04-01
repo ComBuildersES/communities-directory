@@ -614,6 +614,21 @@
   line-height: 1.5;
 }
 
+.contribution-thumbnail-hint,
+.contribution-thumbnail-aspect-warning {
+  margin: 0.15rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.contribution-thumbnail-aspect-warning {
+  color: #6b4c00;
+  background: #fff3cd;
+  border: 1px solid #ffe08a;
+  border-radius: 10px;
+  padding: 0.55rem 0.75rem;
+}
+
 .contribution-field-note,
 .contribution-field-counter {
   margin: 0.35rem 0 0;

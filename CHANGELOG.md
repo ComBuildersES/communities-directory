@@ -5,9 +5,13 @@ Se organiza por mes y por tipo de cambio.
 
 ## 2026-04
 
+### Features
+
+- 2026-04-01 `ecd4e68` add thumbnail optimization and aspect ratio warnings in community contribution
+
 ### Other
 
-- 2026-04-01 `cfd55ac` enhance community modal with animations and improve app shell layout
+- 2026-04-01 `6d7db6f` enhance community modal with animations and improve app shell layout
 - 2026-04-01 `a6b96d3` update background styles and enhance community modal thumbnail display
 
 ## 2026-03

@@ -959,6 +959,7 @@ export function CommunityContribution({
   const [duplicateTargetId, setDuplicateTargetId] = useState("");
   const [duplicateTargetQuery, setDuplicateTargetQuery] = useState("");
   const [otherDeletionReason, setOtherDeletionReason] = useState("");
+  const [thumbnailAspectWarning, setThumbnailAspectWarning] = useState(false);
   const inferredProvinceIdRef = useRef("");
   const datasetSignature = useMemo(() => buildDatasetSignature(communities), [communities]);
   const latestBaseDraft = useMemo(
@@ -1058,6 +1059,16 @@ export function CommunityContribution({
   const previewThumbnailUrl = draft.replaceThumbnail
     ? draft.thumbnailUrl
     : (existingCommunity?.thumbnailUrl ?? draft.thumbnailUrl);
+  const shouldWarnAboutThumbnailAspect = Boolean(draft.thumbnailUrl) && (!isEditMode || draft.replaceThumbnail);
+
+  useEffect(() => {
+    if (!shouldWarnAboutThumbnailAspect) {
+      setThumbnailAspectWarning(false);
+      return;
+    }
+
+    setThumbnailAspectWarning(false);
+  }, [draft.thumbnailUrl, draft.replaceThumbnail, shouldWarnAboutThumbnailAspect]);
 
   const githubIssueUrl = useMemo(
     () => buildGitHubIssueUrl({ payload, mode: isEditMode ? "edit" : "new", shareUrl }),
@@ -1784,10 +1795,30 @@ export function CommunityContribution({
 
           <div className="field contribution-grid-span-2">
             <label className="label" htmlFor="community-thumbnail">{t("contribution.form.thumbnailLabel")}</label>
+            <p className="help contribution-thumbnail-hint">{t("contribution.form.thumbnailHint")}</p>
             <div className="contribution-thumbnail-field">
               {previewThumbnailUrl ? (
                 <div className="contribution-thumbnail-preview">
-                  <img src={previewThumbnailUrl} alt={t("contribution.form.thumbnailAlt", { name: draft.name || "" })} />
+                  <img
+                    src={previewThumbnailUrl}
+                    alt={t("contribution.form.thumbnailAlt", { name: draft.name || "" })}
+                    onLoad={(event) => {
+                      if (!shouldWarnAboutThumbnailAspect) {
+                        setThumbnailAspectWarning(false);
+                        return;
+                      }
+
+                      const { naturalWidth, naturalHeight } = event.currentTarget;
+                      if (!naturalWidth || !naturalHeight) {
+                        setThumbnailAspectWarning(false);
+                        return;
+                      }
+
+                      const aspectRatio = naturalWidth / naturalHeight;
+                      setThumbnailAspectWarning(aspectRatio < 0.75 || aspectRatio > 1.4);
+                    }}
+                    onError={() => setThumbnailAspectWarning(false)}
+                  />
                 </div>
               ) : (
                 <p className="contribution-thumbnail-empty">{t("contribution.form.thumbnailEmpty")}</p>
@@ -1817,6 +1848,12 @@ export function CommunityContribution({
                       required
                     />
                   </div>
+                  {thumbnailAspectWarning && (
+                    <p className="help contribution-thumbnail-aspect-warning" role="status">
+                      <span aria-hidden="true">⚠️ </span>
+                      {t("contribution.form.thumbnailAspectWarning")}
+                    </p>
+                  )}
                 </>
               )}
             </div>

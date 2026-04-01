@@ -14,6 +14,24 @@ const imagesFolder = './public/images';
 const tagsPath = './public/data/tags.json';
 const audiencePath = './public/data/audience.json';
 const appBaseUrl = process.env.COMMUNITY_DIRECTORY_APP_URL ?? 'https://combuilderses.github.io/communities-directory/';
+const CARD_THUMBNAIL_MAX_DISPLAY_PX = 120;
+const MODAL_THUMBNAIL_MAX_DISPLAY_PX = 88;
+const CONTRIBUTION_PREVIEW_MAX_DISPLAY_PX = 112;
+const THUMBNAIL_TARGET_DPR = 2;
+const THUMBNAIL_DIMENSION_BUCKET_PX = 64;
+const MAX_UI_THUMBNAIL_DISPLAY_PX = Math.max(
+  CARD_THUMBNAIL_MAX_DISPLAY_PX,
+  MODAL_THUMBNAIL_MAX_DISPLAY_PX,
+  CONTRIBUTION_PREVIEW_MAX_DISPLAY_PX
+);
+// La UI muestra logos pequeños; guardamos un 2x redondeado para retina sin arrastrar ficheros enormes.
+export const THUMBNAIL_MAX_DIMENSION_PX = Math.ceil(
+  (MAX_UI_THUMBNAIL_DISPLAY_PX * THUMBNAIL_TARGET_DPR) / THUMBNAIL_DIMENSION_BUCKET_PX
+) * THUMBNAIL_DIMENSION_BUCKET_PX;
+const THUMBNAIL_WEBP_OPTIONS = {
+  quality: 82,
+  effort: 5,
+};
 const ISSUE_MODES = {
   CREATE: 'create',
   EDIT: 'edit',
@@ -342,6 +360,22 @@ async function resolveCoordinates(payload) {
   } : { lat: null, lon: null };
 }
 
+export function buildThumbnailTransform(image) {
+  return image
+    .rotate()
+    .resize({
+      width: THUMBNAIL_MAX_DIMENSION_PX,
+      height: THUMBNAIL_MAX_DIMENSION_PX,
+      fit: 'inside',
+      withoutEnlargement: true,
+    })
+    .webp(THUMBNAIL_WEBP_OPTIONS);
+}
+
+export async function optimizeThumbnailBuffer(inputBuffer) {
+  return buildThumbnailTransform(sharp(inputBuffer)).toBuffer();
+}
+
 async function resolveThumbnail(payload) {
   if (!payload.thumbnailUrl || !isRemoteUrl(payload.thumbnailUrl)) {
     return payload.thumbnailUrl;
@@ -352,10 +386,15 @@ async function resolveThumbnail(payload) {
   }
 
   const imgRes = await fetch(payload.thumbnailUrl);
-  const imgBuffer = await imgRes.arrayBuffer();
+  if (!imgRes.ok) {
+    throw new Error(`No se pudo descargar la imagen (${imgRes.status} ${imgRes.statusText})`);
+  }
+
+  const imgBuffer = Buffer.from(await imgRes.arrayBuffer());
+  const optimizedBuffer = await optimizeThumbnailBuffer(imgBuffer);
   const webpFilename = toWebpFileName(payload.name || `community-${Date.now()}`);
   const webpPath = path.join(imagesFolder, webpFilename);
-  await sharp(Buffer.from(imgBuffer)).webp().toFile(webpPath);
+  fs.writeFileSync(webpPath, optimizedBuffer);
   return `images/${webpFilename}`;
 }
 

@@ -412,6 +412,8 @@
       "keepImage": "Keep current image",
       "replaceImage": "Replace image",
       "thumbnailHelp": "To replace the image you need a public URL. If you prefer, open the issue, upload the image there manually and comment that it should be used.",
+      "thumbnailHint": "Square images look best in the directory.",
+      "thumbnailAspectWarning": "This image is rectangular and may look worse in the card. We recommend using a more square version, such as a social profile avatar or the official logo.",
       "parentOrgLabel": "Umbrella organization",
       "parentOrgNone": "No umbrella organization",
       "parentOrgPlaceholder": "Search by name…",
