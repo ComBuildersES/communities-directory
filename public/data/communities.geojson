@@ -17555,6 +17555,44 @@
         "thumbnailUrl": "images/wordpress-murcia.webp",
         "humanValidated": false
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.177073,
+          41.3825802
+        ]
+      },
+      "properties": {
+        "id": 617,
+        "name": "geomobBCN",
+        "status": "active",
+        "lastReviewed": "01/04/2026",
+        "communityType": "tech-meetup",
+        "eventFormat": "in-person",
+        "location": "Barcelona",
+        "topics": "",
+        "langs": [
+          "en"
+        ],
+        "tags": [
+          "tech4good",
+          "data-science",
+          "data-engineering",
+          "data-visualization",
+          "startups",
+          "product-management",
+          "innovation"
+        ],
+        "targetAudience": [],
+        "contactInfo": "edf@opencagedata.com",
+        "communityUrl": "https://thegeomob.com/",
+        "urls": {},
+        "thumbnailUrl": "images/geomobbcn.webp",
+        "humanValidated": true
+      }
     }
   ]
 }
