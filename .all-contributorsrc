@@ -297,6 +297,15 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "fmariv",
+      "name": "Fran Martin Rivas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41595271?v=4",
+      "profile": "https://franmartin.es",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
