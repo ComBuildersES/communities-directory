@@ -870,6 +870,17 @@ function mergeDraftWithProposal(baseDraft, proposalDraft) {
   };
 }
 
+function getInitialContributionDraft(existingCommunity, nextId, proposalDraft) {
+  const draft = mergeDraftWithProposal(getCommunityDraft(existingCommunity, nextId), proposalDraft);
+
+  if (existingCommunity) return draft;
+
+  return {
+    ...draft,
+    replaceThumbnail: true,
+  };
+}
+
 function hashDraftSignature(value = "") {
   let hash = 0;
 
@@ -934,7 +945,7 @@ export function CommunityContribution({
     }),
     [existingCommunity?.id, hasExternalProposal, isEditMode, proposalSignature]
   );
-  const [draft, setDraft] = useState(() => mergeDraftWithProposal(getCommunityDraft(existingCommunity, nextId), proposalDraft));
+  const [draft, setDraft] = useState(() => getInitialContributionDraft(existingCommunity, nextId, proposalDraft));
   const [tagQuery, setTagQuery] = useState("");
   const [audienceQuery, setAudienceQuery] = useState("");
   const [parentOrgQuery, setParentOrgQuery] = useState(
@@ -963,7 +974,7 @@ export function CommunityContribution({
   const inferredProvinceIdRef = useRef("");
   const datasetSignature = useMemo(() => buildDatasetSignature(communities), [communities]);
   const latestBaseDraft = useMemo(
-    () => mergeDraftWithProposal(getCommunityDraft(existingCommunity, nextId), proposalDraft),
+    () => getInitialContributionDraft(existingCommunity, nextId, proposalDraft),
     [existingCommunity, nextId, proposalDraft]
   );
   const currentCommunityBaselineSignature = useMemo(
@@ -1794,8 +1805,7 @@ export function CommunityContribution({
           </div>
 
           <div className="field contribution-grid-span-2">
-            <label className="label" htmlFor="community-thumbnail">{t("contribution.form.thumbnailLabel")}</label>
-            <p className="help contribution-thumbnail-hint">{t("contribution.form.thumbnailHint")}</p>
+            <label className="label" htmlFor="community-thumbnail">{t("contribution.form.thumbnailLabel")} <RequiredMark /></label>
             <div className="contribution-thumbnail-field">
               {previewThumbnailUrl ? (
                 <div className="contribution-thumbnail-preview">
@@ -1820,19 +1830,19 @@ export function CommunityContribution({
                     onError={() => setThumbnailAspectWarning(false)}
                   />
                 </div>
-              ) : (
-                <p className="contribution-thumbnail-empty">{t("contribution.form.thumbnailEmpty")}</p>
+              ) : null}
+
+              {isEditMode && (
+                <button
+                  type="button"
+                  className="button is-light is-small"
+                  onClick={handleReplaceThumbnailToggle}
+                >
+                  {draft.replaceThumbnail ? t("contribution.form.keepImage") : t("contribution.form.replaceImage")}
+                </button>
               )}
 
-              <button
-                type="button"
-                className="button is-light is-small"
-                onClick={handleReplaceThumbnailToggle}
-              >
-                {draft.replaceThumbnail ? t("contribution.form.keepImage") : t("contribution.form.replaceImage")}
-              </button>
-
-              {draft.replaceThumbnail && (
+              {(!isEditMode || draft.replaceThumbnail) && (
                 <>
                   <p className="contribution-thumbnail-help">
                     {t("contribution.form.thumbnailHelp")}
@@ -1848,6 +1858,9 @@ export function CommunityContribution({
                       required
                     />
                   </div>
+                  {!thumbnailAspectWarning && (
+                    <p className="help contribution-thumbnail-hint">{t("contribution.form.thumbnailHint")}</p>
+                  )}
                   {thumbnailAspectWarning && (
                     <p className="help contribution-thumbnail-aspect-warning" role="status">
                       <span aria-hidden="true">⚠️ </span>

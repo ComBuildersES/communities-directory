@@ -342,6 +342,12 @@ function App () {
     };
   }, [effectiveModalScrollLockY]);
 
+  useLayoutEffect(() => {
+    if (route.mode === "directory") return;
+
+    window.scrollTo(0, 0);
+  }, [route.mode, route.identifier]);
+
   useEffect(() => {
     if (showContributionView) return;
     if (communities.length === 0) return;

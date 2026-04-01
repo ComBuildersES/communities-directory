@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-04-01 `ecd4e68` add thumbnail optimization and aspect ratio warnings in community contribution
+- 2026-04-01 `8b4a9cc` implement initial contribution draft logic and enhance thumbnail handling in CommunityContribution
+- 2026-04-01 `d719feb` add thumbnail optimization and aspect ratio warnings in community contribution
 
 ### Other
 
