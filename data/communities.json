@@ -18456,5 +18456,42 @@
     },
     "displayOnMap": false,
     "humanValidated": true
+  },
+  {
+    "id": 617,
+    "name": "geomobBCN",
+    "status": "active",
+    "lastReviewed": "01/04/2026",
+    "communityType": "tech-meetup",
+    "eventFormat": "in-person",
+    "location": "Barcelona",
+    "shortDescription": "Geomob es una serie de eventos y un podcast para entusiastas de la información geoespacial. Nos reunimos cada pocos meses en diversas ciudades europeas y ofrecemos un foro distendido para debatir sobre la geoinnovación en todas sus formas, ya sea por diversión o con fines lucrat",
+    "topics": "",
+    "langs": [
+      "en"
+    ],
+    "tags": [
+      "tech4good",
+      "data-science",
+      "data-engineering",
+      "data-visualization",
+      "startups",
+      "product-management",
+      "innovation"
+    ],
+    "targetAudience": [],
+    "contactInfo": "edf@opencagedata.com",
+    "communityUrl": "https://thegeomob.com/",
+    "urls": {},
+    "thumbnailUrl": "images/geomobbcn.webp",
+    "removalReason": "",
+    "latLon": {
+      "lat": 41.3825802,
+      "lon": 2.177073
+    },
+    "displayOnMap": true,
+    "humanValidated": true,
+    "matchesAllAudience": true,
+    "parentId": null
   }
 ]
