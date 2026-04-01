@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-04-01 `8b4a9cc` implement initial contribution draft logic and enhance thumbnail handling in CommunityContribution
+- 2026-04-01 `e1733b0` implement initial contribution draft logic and enhance thumbnail handling in CommunityContribution
 - 2026-04-01 `d719feb` add thumbnail optimization and aspect ratio warnings in community contribution
 
 ### Other
@@ -194,6 +194,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-03-31 `306772c` update changelog [skip ci]
 - 2026-03-31 `9bf57af` update changelog [skip ci]
 - 2026-03-31 `dff738a` update changelog [skip ci]
 - 2026-03-31 `d9b1b17` update .all-contributorsrc [skip ci]
