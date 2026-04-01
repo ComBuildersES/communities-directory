@@ -10,6 +10,14 @@ Se organiza por mes y por tipo de cambio.
 - 2026-04-01 `e1733b0` implement initial contribution draft logic and enhance thumbnail handling in CommunityContribution
 - 2026-04-01 `d719feb` add thumbnail optimization and aspect ratio warnings in community contribution
 
+### Data
+
+- 2026-04-01 `29f375d` [Añadida geomobBCN](https://combuilderses.github.io/communities-directory/?community=617) ([PR #346](https://github.com/ComBuildersES/communities-directory/pull/346))
+
+### Docs
+
+- 2026-04-01 `91c25ba` update changelog [skip ci]
+
 ### Other
 
 - 2026-04-01 `6d7db6f` enhance community modal with animations and improve app shell layout
