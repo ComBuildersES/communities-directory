@@ -432,9 +432,9 @@
       },
       "properties": {
         "id": 25,
-        "name": "AlmeríaTech",
+        "name": "AlmeriaTech",
         "status": "active",
-        "lastReviewed": "31/05/2024",
+        "lastReviewed": "02/04/2026",
         "communityType": "tech-meetup",
         "eventFormat": "in-person",
         "location": "Almería",
@@ -454,7 +454,7 @@
           "github": "https://github.com/almeriatech"
         },
         "thumbnailUrl": "images/almeriatech.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
