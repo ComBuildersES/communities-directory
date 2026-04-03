@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-32-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-33-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Communities directory
@@ -176,6 +176,7 @@ Echa un vistazo a algunas de las tareas por las que podrías empezar a ayudar:
       <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/crystian"><img src="https://avatars.githubusercontent.com/u/3886806?v=4?s=100" width="100px;" alt="Crystian"/><br /><sub><b>Crystian</b></sub></a><br /><a href="#data-crystian" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://soydachi.com/"><img src="https://avatars.githubusercontent.com/u/1771785?v=4?s=100" width="100px;" alt="Dachi Gogotchuri"/><br /><sub><b>Dachi Gogotchuri</b></sub></a><br /><a href="#data-soydachi" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://franmartin.es"><img src="https://avatars.githubusercontent.com/u/41595271?v=4?s=100" width="100px;" alt="Fran Martin Rivas"/><br /><sub><b>Fran Martin Rivas</b></sub></a><br /><a href="#data-fmariv" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://ajimenez1503.github.io"><img src="https://avatars.githubusercontent.com/u/5960625?v=4?s=100" width="100px;" alt="Antonio Jimenez"/><br /><sub><b>Antonio Jimenez</b></sub></a><br /><a href="#data-ajimenez1503" title="Data">🔣</a></td>
     </tr>
   </tbody>
 </table>
