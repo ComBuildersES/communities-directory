@@ -12,10 +12,12 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-04-02 `96f65e8` [Actualizada AlmeriaTech](https://combuilderses.github.io/communities-directory/?community=25) ([PR #355](https://github.com/ComBuildersES/communities-directory/pull/355))
 - 2026-04-01 `29f375d` [Añadida geomobBCN](https://combuilderses.github.io/communities-directory/?community=617) ([PR #346](https://github.com/ComBuildersES/communities-directory/pull/346))
 
 ### Docs
 
+- 2026-04-01 `09ee6d9` update changelog [skip ci]
 - 2026-04-01 `26e8a37` update .all-contributorsrc [skip ci]
 - 2026-04-01 `f8c2468` update README.md [skip ci]
 - 2026-04-01 `2cc45e9` update changelog [skip ci]
