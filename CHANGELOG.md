@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-04-06 `e24c92c` enhance contributor display and update share prompts in multiple languages
 - 2026-04-06 `1321687` add parentId to multiple community entries for hierarchical structure
 - 2026-04-06 `3d8b0a4` enable strict port handling in local development and update Vite config
 - 2026-04-06 `081c220` add GitHub stars display and community reviewer request workflow

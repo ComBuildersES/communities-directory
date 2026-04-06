@@ -88,6 +88,10 @@ export function Heading ({
     /mac/i.test(window.navigator.userAgent) ? "Cmd + D" : "Ctrl + D"
   ), []);
   const SHARE_LINKS = useMemo(() => buildShareLinks(t), [t]);
+  const hiddenContributorsCount = Math.max(allContributors.length - visibleContributors.length, 0);
+  const contributorAvatars = hiddenContributorsCount > 0
+    ? visibleContributors.slice(0, Math.max(visibleContributors.length - 1, 0))
+    : visibleContributors;
 
   useEffect(() => {
     if (isAboutOpen) {
@@ -223,12 +227,29 @@ export function Heading ({
                       <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">{t("heading.openSource")}</a>{" "}
                       {t("heading.aboutCopy3")}{" "}
                       <a href={DATA_URL} target="_blank" rel="noopener noreferrer">{t("heading.openData")}</a>.
-                      {" "}{t("heading.aboutStar")}{" "}
-                      <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">GitHub</a>.
                     </p>
-                    <p className="heading-support-copy">
-                      {t("heading.bookmarkHint", { shortcut: bookmarkShortcut })}
-                    </p>
+                    <div className="heading-support-share">
+                      <p className="heading-support-section-title">{t("heading.shareQuestion")}</p>
+                      <p className="heading-support-copy">
+                        {t("heading.shareLead", { shortcut: bookmarkShortcut })}
+                      </p>
+                      <div className="heading-support-share-buttons">
+                        {SHARE_LINKS.map(({ label, icon, href }) => (
+                          <a
+                            key={label}
+                            href={href}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="heading-support-share-btn"
+                            title={t("heading.shareOn", { platform: label })}
+                            aria-label={t("heading.shareOn", { platform: label })}
+                          >
+                            <i className={icon}></i>
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+
                     <div className="heading-support-section">
                       <p className="heading-support-section-title">{t("heading.collaborate")}</p>
                       <p className="heading-support-copy">
@@ -262,29 +283,10 @@ export function Heading ({
                       </p>
                     </div>
 
-                    <div className="heading-support-share">
-                      <p className="heading-support-section-title">{t("heading.shareQuestion")}</p>
-                      <div className="heading-support-share-buttons">
-                        {SHARE_LINKS.map(({ label, icon, href }) => (
-                          <a
-                            key={label}
-                            href={href}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="heading-support-share-btn"
-                            title={t("heading.shareOn", { platform: label })}
-                            aria-label={t("heading.shareOn", { platform: label })}
-                          >
-                            <i className={icon}></i>
-                          </a>
-                        ))}
-                      </div>
-                    </div>
-
                     <div className="heading-support-contributors">
                       <p className="heading-support-section-title">{t("heading.contributorsTitle")}</p>
                       <div className="heading-support-contributors-grid">
-                        {visibleContributors.map((c) => (
+                        {contributorAvatars.map((c) => (
                           <a
                             key={c.login}
                             href={c.profile}
@@ -297,6 +299,18 @@ export function Heading ({
                             <img src={c.avatar_url} alt={c.name || c.login} />
                           </a>
                         ))}
+                        {hiddenContributorsCount > 0 && (
+                          <a
+                            href={CONTRIBUTORS_URL}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="heading-support-contributor heading-support-contributor--more"
+                            title={t("heading.seeAllContributors")}
+                            aria-label={t("heading.seeAllContributors")}
+                          >
+                            +{hiddenContributorsCount}
+                          </a>
+                        )}
                       </div>
                       <a
                         href={CONTRIBUTORS_URL}

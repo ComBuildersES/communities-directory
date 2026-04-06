@@ -379,6 +379,17 @@ body {
   object-fit: cover;
 }
 
+.heading-support-contributor--more {
+  align-items: center;
+  background: #f3f7ff;
+  color: #1d5fd1;
+  display: inline-flex;
+  font-size: 0.78rem;
+  font-weight: 700;
+  justify-content: center;
+  text-decoration: none;
+}
+
 .heading-support-contributors-more {
   font-size: 0.78rem;
   font-weight: 600;
@@ -402,6 +413,7 @@ body {
 .heading-support-share-buttons {
   display: flex;
   gap: 0.5rem;
+  margin-top: 0.35rem;
 }
 
 .heading-support-share-btn {
