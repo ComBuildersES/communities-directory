@@ -9035,7 +9035,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 469
   },
   {
     "id": 305,
@@ -14089,7 +14090,7 @@
     ],
     "shortDescription": "Colectivo que tiene como objetivo crear, mejorar y organizar todos los artículos relacionados con la provincia de Almería, en España, prestando especial atención a los más representativos, como las localidades, los monumentos, espacios naturales y las personalidades de Almería.",
     "removalReason": "",
-    "parentId": null
+    "parentId": 469
   },
   {
     "id": 471,
@@ -14114,7 +14115,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 469
   },
   {
     "id": 472,
@@ -14139,7 +14141,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 469
   },
   {
     "id": 473,
@@ -14164,7 +14167,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 469
   },
   {
     "id": 474,
@@ -14189,7 +14193,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 469
   },
   {
     "id": 475,
@@ -14214,7 +14219,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 469
   },
   {
     "id": 476,
@@ -14239,7 +14245,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 469
   },
   {
     "id": 477,
@@ -14264,7 +14271,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 469
   },
   {
     "id": 478,
@@ -14289,7 +14297,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 469
   },
   {
     "id": 479,
