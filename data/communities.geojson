@@ -8414,7 +8414,7 @@
         "id": 309,
         "name": "La Jaquería",
         "status": "active",
-        "lastReviewed": "23/10/2024",
+        "lastReviewed": "06/04/2026",
         "communityType": "hacklab",
         "eventFormat": "in-person",
         "location": "Almería",
@@ -8422,8 +8422,27 @@
         "langs": [
           "es"
         ],
-        "tags": [],
-        "targetAudience": [],
+        "tags": [
+          "tech4good",
+          "digital-activism",
+          "tech-ethics",
+          "stem",
+          "open-hardware",
+          "free-software",
+          "game-development",
+          "game-design",
+          "indie-games",
+          "robotics"
+        ],
+        "targetAudience": [
+          "junior-developer",
+          "student",
+          "senior-staff",
+          "career-changer",
+          "maker",
+          "robotics-engineer",
+          "embedded-iot-engineer"
+        ],
         "contactInfo": "lajaqueria@gmail.com",
         "communityUrl": "https://lajaqueria.org/sesiones/",
         "urls": {
@@ -8433,7 +8452,7 @@
           "youtube": "https://youtube.com/channel/UCYKcbF-qtcpfLj4WpUNOH2w"
         },
         "thumbnailUrl": "images/la-jaqueria.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
