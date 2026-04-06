@@ -13180,7 +13180,7 @@
         "id": 470,
         "name": "Wikiproyecto Almería",
         "status": "active",
-        "lastReviewed": "18/10/2024",
+        "lastReviewed": "06/04/2026",
         "communityType": "collaborative-group",
         "eventFormat": "in-person",
         "location": "Almería",
@@ -13188,13 +13188,30 @@
         "langs": [
           "es"
         ],
-        "tags": [],
-        "targetAudience": [],
+        "tags": [
+          "tech4good",
+          "open-data",
+          "tech-ethics",
+          "diversity",
+          "digital-activism"
+        ],
+        "targetAudience": [
+          "junior-developer",
+          "student",
+          "career-changer",
+          "senior-staff",
+          "data-journalist",
+          "researcher",
+          "phd-doctoral"
+        ],
         "contactInfo": "",
-        "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Almer%C3%ADa/Actividades",
-        "urls": {},
-        "thumbnailUrl": "images/wikiproyecto-almeria.webp",
-        "humanValidated": false
+        "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Almer%C3%ADa/",
+        "urls": {
+          "telegram": "https://t.me/WP_Almeria",
+          "eventsUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Almer%C3%ADa/Actividades"
+        },
+        "thumbnailUrl": "https://github.com/user-attachments/assets/d2860a02-fca1-469b-983a-6583722e6b7c",
+        "humanValidated": true
       }
     },
     {
