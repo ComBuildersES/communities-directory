@@ -16886,7 +16886,7 @@
         "id": 589,
         "name": "Jam Attack",
         "status": "active",
-        "lastReviewed": "14/06/2025",
+        "lastReviewed": "06/04/2026",
         "communityType": "conference",
         "eventFormat": "in-person",
         "location": "Viator, Almería",
@@ -16895,9 +16895,21 @@
           "es"
         ],
         "tags": [
-          "game-development"
+          "game-development",
+          "vfx",
+          "3d-modeling",
+          "game-design",
+          "indie-games",
+          "unity",
+          "unreal-engine"
         ],
-        "targetAudience": [],
+        "targetAudience": [
+          "game-developer",
+          "minors",
+          "junior-developer",
+          "student",
+          "career-changer"
+        ],
         "contactInfo": "",
         "communityUrl": "https://arcadejam.github.io/",
         "urls": {
@@ -16905,7 +16917,7 @@
           "instagram": "https://instagram.com/arcadebits"
         },
         "thumbnailUrl": "images/jam-attack.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
