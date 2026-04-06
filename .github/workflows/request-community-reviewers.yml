@@ -1,0 +1,207 @@
+name: Solicitar reviewers de comunidades editadas
+
+on:
+  pull_request_target:
+    types: [opened, reopened, synchronize, ready_for_review]
+    paths:
+      - public/data/communities.json
+
+jobs:
+  request-community-reviewers:
+    if: github.event.pull_request.draft == false || github.event.action == 'ready_for_review'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v6
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24.0.2
+
+      - name: Descargar snapshots base y head
+        uses: actions/github-script@v8
+        with:
+          script: |
+            const fs = require("node:fs");
+            const path = require("node:path");
+
+            const outputDir = path.join(process.env.GITHUB_WORKSPACE, "tmp", "pr-reviewers");
+            fs.mkdirSync(outputDir, { recursive: true });
+
+            async function fetchFile({ owner, repo, filePath, ref, outputName }) {
+              const response = await github.rest.repos.getContent({
+                owner,
+                repo,
+                path: filePath,
+                ref,
+              });
+
+              if (Array.isArray(response.data) || !("content" in response.data)) {
+                throw new Error(`No se pudo leer ${filePath} en ${owner}/${repo}@${ref}`);
+              }
+
+              const content = Buffer.from(response.data.content, "base64").toString("utf8");
+              fs.writeFileSync(path.join(outputDir, outputName), content, "utf8");
+            }
+
+            const base = context.payload.pull_request.base;
+            const head = context.payload.pull_request.head;
+
+            await fetchFile({
+              owner: base.repo.owner.login,
+              repo: base.repo.name,
+              filePath: "public/data/communities.json",
+              ref: base.sha,
+              outputName: "base-communities.json",
+            });
+
+            await fetchFile({
+              owner: head.repo.owner.login,
+              repo: head.repo.name,
+              filePath: "public/data/communities.json",
+              ref: head.sha,
+              outputName: "head-communities.json",
+            });
+
+            await fetchFile({
+              owner: base.repo.owner.login,
+              repo: base.repo.name,
+              filePath: "public/data/community-builders-members.json",
+              ref: base.sha,
+              outputName: "base-members.json",
+            });
+
+            await fetchFile({
+              owner: head.repo.owner.login,
+              repo: head.repo.name,
+              filePath: "public/data/community-builders-members.json",
+              ref: head.sha,
+              outputName: "head-members.json",
+            });
+
+      - name: Resolver reviewers de comunidad
+        id: resolve
+        run: |
+          RESULT=$(node scripts/resolve-pr-community-reviewers.js \
+            tmp/pr-reviewers/base-communities.json \
+            tmp/pr-reviewers/head-communities.json \
+            tmp/pr-reviewers/base-members.json \
+            tmp/pr-reviewers/head-members.json)
+          echo "result=$RESULT" >> "$GITHUB_OUTPUT"
+
+      - name: Solicitar reviewers adicionales
+        id: request
+        uses: actions/github-script@v8
+        env:
+          RESOLUTION: ${{ steps.resolve.outputs.result }}
+        with:
+          script: |
+            const resolution = JSON.parse(process.env.RESOLUTION);
+            const pull_number = context.payload.pull_request.number;
+            const normalizeLogin = (value = "") => String(value).trim().toLowerCase();
+
+            if (resolution.errors.length > 0) {
+              for (const error of resolution.errors) {
+                core.warning(`No se pudo resolver reviewers de comunidad: ${error}`);
+              }
+            }
+
+            if (resolution.communityReviewers.length === 0) {
+              core.setOutput("requested", JSON.stringify([]));
+              core.setOutput("skipped", JSON.stringify([]));
+              core.setOutput("skipped_limit", JSON.stringify([]));
+              return;
+            }
+
+            const requestedReviewers = await github.rest.pulls.listRequestedReviewers({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number,
+            });
+
+            const existingRequested = new Set(
+              requestedReviewers.data.users.map((user) => normalizeLogin(user.login))
+            );
+            const author = normalizeLogin(context.payload.pull_request.user?.login);
+            const dedupedCandidates = [];
+            const seenCandidates = new Set();
+
+            for (const reviewer of resolution.communityReviewers) {
+              const normalizedReviewer = normalizeLogin(reviewer);
+              if (!normalizedReviewer || normalizedReviewer === author) continue;
+              if (existingRequested.has(normalizedReviewer) || seenCandidates.has(normalizedReviewer)) continue;
+              seenCandidates.add(normalizedReviewer);
+              dedupedCandidates.push(reviewer);
+            }
+
+            const maxReviewers = 15;
+            const availableSlots = Math.max(0, maxReviewers - existingRequested.size);
+            const reviewersToRequest = dedupedCandidates.slice(0, availableSlots);
+            const skippedDueToLimit = dedupedCandidates.slice(availableSlots);
+            const requested = [];
+            const skipped = [];
+
+            for (const reviewer of reviewersToRequest) {
+              try {
+                await github.rest.pulls.requestReviewers({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  pull_number,
+                  reviewers: [reviewer],
+                });
+                requested.push(reviewer);
+              } catch (error) {
+                skipped.push({
+                  reviewer,
+                  reason: error.message,
+                });
+                core.warning(`No se pudo solicitar review a ${reviewer}: ${error.message}`);
+              }
+            }
+
+            core.setOutput("requested", JSON.stringify(requested));
+            core.setOutput("skipped", JSON.stringify(skipped));
+            core.setOutput("skipped_limit", JSON.stringify(skippedDueToLimit));
+
+      - name: Publicar resumen del workflow
+        env:
+          RESOLUTION: ${{ steps.resolve.outputs.result }}
+          REQUESTED: ${{ steps.request.outputs.requested }}
+          SKIPPED: ${{ steps.request.outputs.skipped }}
+          SKIPPED_LIMIT: ${{ steps.request.outputs.skipped_limit }}
+        run: |
+          node - <<'NODE' >> "$GITHUB_STEP_SUMMARY"
+          const resolution = JSON.parse(process.env.RESOLUTION);
+          const requested = JSON.parse(process.env.REQUESTED || "[]");
+          const skipped = JSON.parse(process.env.SKIPPED || "[]");
+          const skippedLimit = JSON.parse(process.env.SKIPPED_LIMIT || "[]");
+
+          console.log("## Reviewers por comunidad");
+          console.log(`- communitiesChanged: ${resolution.changedCommunities.length}`);
+          console.log(`- candidateReviewers: ${resolution.communityReviewers.join(", ") || "-"}`);
+          console.log(`- requested: ${requested.join(", ") || "-"}`);
+          console.log(`- skippedDueToLimit: ${skippedLimit.join(", ") || "-"}`);
+
+          if (resolution.changedCommunities.length > 0) {
+            console.log("- changedCommunities:");
+            for (const community of resolution.changedCommunities) {
+              console.log(`  - [${community.id}] ${community.name} (${community.changeType})`);
+            }
+          }
+
+          if (skipped.length > 0) {
+            console.log("- skipped:");
+            for (const item of skipped) {
+              console.log(`  - ${item.reviewer}: ${item.reason}`);
+            }
+          }
+
+          if (resolution.errors.length > 0) {
+            console.log(`- resolutionErrors: ${resolution.errors.join(" | ")}`);
+          }
+          NODE

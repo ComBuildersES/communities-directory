@@ -67,6 +67,18 @@ export function Heading ({
   const { t } = useTranslation();
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [githubStars, setGithubStars] = useState(null);
+
+  useEffect(() => {
+    fetch("https://api.github.com/repos/ComBuildersES/communities-directory")
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.stargazers_count != null) {
+          setGithubStars(data.stargazers_count);
+        }
+      })
+      .catch(() => {});
+  }, []);
   const [visibleContributors, setVisibleContributors] = useState(() => (
     shuffleContributors(allContributors).slice(0, MAX_CONTRIBUTORS_IN_POPOVER)
   ));
@@ -171,6 +183,22 @@ export function Heading ({
             </button>
 
             <div className={`heading-actions-inner${isMobileMenuOpen ? " heading-actions-inner--open" : ""}`}>
+              <a
+                href={GITHUB_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="heading-action-btn heading-github-stars"
+                title="GitHub"
+                aria-label="GitHub stars"
+              >
+                <i className="fa-brands fa-github"></i>
+                {githubStars != null && (
+                  <span className="heading-btn-label heading-github-stars-count">
+                    <i className="fas fa-star heading-github-stars-icon"></i>
+                    {githubStars}
+                  </span>
+                )}
+              </a>
               <div className="heading-support" ref={aboutRef}>
                 <button
                   type="button"

@@ -130,6 +130,7 @@ jobs:
           script: |
             const resolution = JSON.parse(process.env.RESOLUTION);
             const pull_number = Number(process.env.PR_NUMBER);
+            const normalizeLogin = (value = "") => String(value).trim().toLowerCase();
 
             if (!pull_number || resolution.assignees.length === 0) {
               return;
@@ -143,14 +144,41 @@ jobs:
             });
 
             try {
-              await github.rest.pulls.requestReviewers({
+              const requestedReviewers = await github.rest.pulls.listRequestedReviewers({
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 pull_number,
-                reviewers: resolution.assignees,
               });
+
+              const existingRequested = new Set(
+                requestedReviewers.data.users.map((user) => normalizeLogin(user.login))
+              );
+              const author = normalizeLogin(context.payload.sender?.login);
+              const reviewersToRequest = [];
+              const seenReviewers = new Set();
+
+              for (const reviewer of resolution.assignees) {
+                const normalizedReviewer = normalizeLogin(reviewer);
+                if (!normalizedReviewer || normalizedReviewer === author) continue;
+                if (existingRequested.has(normalizedReviewer) || seenReviewers.has(normalizedReviewer)) continue;
+                seenReviewers.add(normalizedReviewer);
+                reviewersToRequest.push(reviewer);
+              }
+
+              for (const reviewer of reviewersToRequest) {
+                try {
+                  await github.rest.pulls.requestReviewers({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    pull_number,
+                    reviewers: [reviewer],
+                  });
+                } catch (error) {
+                  core.warning(`No se pudo solicitar review a ${reviewer} en la PR #${pull_number}: ${error.message}`);
+                }
+              }
             } catch (error) {
-              core.warning(`No se pudieron solicitar reviewers para la PR #${pull_number}: ${error.message}`);
+              core.warning(`No se pudieron sincronizar reviewers para la PR #${pull_number}: ${error.message}`);
             }
 
       - name: Publicar resumen del workflow

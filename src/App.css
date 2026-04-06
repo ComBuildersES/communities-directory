@@ -228,6 +228,17 @@ body {
   color: #1d5fd1;
 }
 
+.heading-github-stars-icon {
+  font-size: 0.7rem;
+  color: #f5a623;
+}
+
+.heading-github-stars-count {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
 .language-switcher {
   display: inline-flex;
   align-items: center;
