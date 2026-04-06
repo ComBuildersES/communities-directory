@@ -741,9 +741,9 @@
   },
   {
     "id": 25,
-    "name": "AlmeríaTech",
+    "name": "AlmeriaTech",
     "status": "active",
-    "lastReviewed": "31/05/2024",
+    "lastReviewed": "02/04/2026",
     "communityType": "tech-meetup",
     "eventFormat": "in-person",
     "location": "Almería",
@@ -765,10 +765,15 @@
       "lon": -2.4679043
     },
     "displayOnMap": true,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "AlmeríaTech is a tech community based in Almería that connects digital professionals.\nIt organizes events, talks, and workshops on topics like AI, software development, and data.\nIts goal is to boost local talent and strengthen the tech ecosystem through collaboration and network",
+    "removalReason": "",
+    "matchesAllTags": true,
+    "matchesAllAudience": true,
+    "parentId": null
   },
   {
     "id": 26,
@@ -9030,7 +9035,8 @@
     "humanValidated": false,
     "langs": [
       "es"
-    ]
+    ],
+    "parentId": 469
   },
   {
     "id": 305,
@@ -9149,13 +9155,32 @@
     "id": 309,
     "name": "La Jaquería",
     "status": "active",
-    "lastReviewed": "23/10/2024",
+    "lastReviewed": "06/04/2026",
     "communityType": "hacklab",
     "eventFormat": "in-person",
     "location": "Almería",
     "topics": "",
-    "tags": [],
-    "targetAudience": [],
+    "tags": [
+      "tech4good",
+      "digital-activism",
+      "tech-ethics",
+      "stem",
+      "open-hardware",
+      "free-software",
+      "game-development",
+      "game-design",
+      "indie-games",
+      "robotics"
+    ],
+    "targetAudience": [
+      "junior-developer",
+      "student",
+      "senior-staff",
+      "career-changer",
+      "maker",
+      "robotics-engineer",
+      "embedded-iot-engineer"
+    ],
     "contactInfo": "lajaqueria@gmail.com",
     "communityUrl": "https://lajaqueria.org/sesiones/",
     "urls": {
@@ -9170,10 +9195,13 @@
       "lon": -2.4679043
     },
     "displayOnMap": true,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "Asociación cultural sin ánimo de lucro en Almería que promueve la experimentación tecnológica, científica y artística mediante colaboración y educación social. Difunde la cultura maker, acerca la ciencia a la ciudadanía y fomenta proyectos colectivos con impacto social.",
+    "removalReason": "",
+    "parentId": null
   },
   {
     "id": 310,
@@ -14023,26 +14051,45 @@
     "id": 470,
     "name": "Wikiproyecto Almería",
     "status": "active",
-    "lastReviewed": "18/10/2024",
+    "lastReviewed": "06/04/2026",
     "communityType": "collaborative-group",
     "eventFormat": "in-person",
     "location": "Almería",
     "topics": "",
-    "tags": [],
-    "targetAudience": [],
+    "tags": [
+      "tech4good",
+      "open-data",
+      "tech-ethics",
+      "diversity",
+      "digital-activism"
+    ],
+    "targetAudience": [
+      "junior-developer",
+      "student",
+      "career-changer",
+      "senior-staff",
+      "data-journalist",
+      "researcher",
+      "phd-doctoral"
+    ],
     "contactInfo": "",
-    "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Almer%C3%ADa/Actividades",
-    "urls": {},
-    "thumbnailUrl": "images/wikiproyecto-almeria.webp",
+    "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Almer%C3%ADa/",
+    "urls": {
+      "telegram": "https://t.me/WP_Almeria",
+      "eventsUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Almer%C3%ADa/Actividades"
+    },
+    "thumbnailUrl": "images/wikiproyecto-almera.webp",
     "latLon": {
       "lat": 36.8400939,
       "lon": -2.4679043
     },
     "displayOnMap": true,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
     ],
+    "shortDescription": "Colectivo que tiene como objetivo crear, mejorar y organizar todos los artículos relacionados con la provincia de Almería, en España, prestando especial atención a los más representativos, como las localidades, los monumentos, espacios naturales y las personalidades de Almería.",
+    "removalReason": "",
     "parentId": 469
   },
   {
@@ -16817,17 +16864,36 @@
     "id": 563,
     "name": "CanallaCon",
     "status": "active",
-    "lastReviewed": "23/05/2025",
+    "lastReviewed": "06/04/2026",
     "communityType": "conference",
     "eventFormat": "in-person",
     "location": "Roquetas de Mar, Almería",
     "topics": "Seguridad, Hacking",
-    "tags": [],
-    "targetAudience": [],
+    "tags": [
+      "cybersecurity",
+      "ethical-hacking",
+      "pentesting",
+      "cloud-security",
+      "web-security",
+      "cryptography",
+      "digital-forensics"
+    ],
+    "targetAudience": [
+      "cybersecurity-engineer",
+      "pentester",
+      "qa-engineer",
+      "test-automation-engineer",
+      "software-architect"
+    ],
     "contactInfo": "",
     "communityUrl": "https://canallacon.com/",
     "urls": {
-      "twitter": "https://x.com/TheXXLMAN?t=3Cht1xoLqLNLGSC5PLyYvQ&s=08"
+      "twitter": "https://x.com/CosasDeHackers",
+      "youtube": "https://www.youtube.com/@CosasDeHackers",
+      "twitch": "https://www.twitch.tv/cosasdehackers",
+      "instagram": "https://www.instagram.com/cosasdehackers/",
+      "linkedin": "https://www.linkedin.com/company/cosasdehackers/",
+      "telegram": "https://t.me/CosasDeHackers"
     },
     "thumbnailUrl": "images/canallacon.webp",
     "latLon": {
@@ -16835,10 +16901,13 @@
       "lon": -2.6115886
     },
     "displayOnMap": true,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "Congreso Internacional de ciberseguridad y transformación digital organizado por el equipo del podcast Cosas de Hackers.",
+    "removalReason": "",
+    "parentId": null
   },
   {
     "id": 565,
@@ -17558,15 +17627,27 @@
     "id": 589,
     "name": "Jam Attack",
     "status": "active",
-    "lastReviewed": "14/06/2025",
+    "lastReviewed": "06/04/2026",
     "communityType": "conference",
     "eventFormat": "in-person",
     "location": "Viator, Almería",
     "topics": "desarrollo de videojuegos,programación",
     "tags": [
-      "game-development"
+      "game-development",
+      "vfx",
+      "3d-modeling",
+      "game-design",
+      "indie-games",
+      "unity",
+      "unreal-engine"
     ],
-    "targetAudience": [],
+    "targetAudience": [
+      "game-developer",
+      "minors",
+      "junior-developer",
+      "student",
+      "career-changer"
+    ],
     "contactInfo": "",
     "communityUrl": "https://arcadejam.github.io/",
     "urls": {
@@ -17579,10 +17660,13 @@
       "lon": -2.4251246
     },
     "displayOnMap": true,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "Jornada de Videojuegos Indie y Programación \"Jam Attack\". Un pequeño encuentro que cuenta con una zona de juegos, una zona de exposición y presentaciones, donde algunos estudiantes y profesionales muestran sus juegos indie y creaciones personales, y una zona de charlas.",
+    "removalReason": "",
+    "parentId": null
   },
   {
     "id": 590,
@@ -18465,5 +18549,42 @@
     },
     "displayOnMap": false,
     "humanValidated": true
+  },
+  {
+    "id": 617,
+    "name": "geomobBCN",
+    "status": "active",
+    "lastReviewed": "01/04/2026",
+    "communityType": "tech-meetup",
+    "eventFormat": "in-person",
+    "location": "Barcelona",
+    "shortDescription": "Geomob es una serie de eventos y un podcast para entusiastas de la información geoespacial. Nos reunimos cada pocos meses en diversas ciudades europeas y ofrecemos un foro distendido para debatir sobre la geoinnovación en todas sus formas, ya sea por diversión o con fines lucrat",
+    "topics": "",
+    "langs": [
+      "en"
+    ],
+    "tags": [
+      "tech4good",
+      "data-science",
+      "data-engineering",
+      "data-visualization",
+      "startups",
+      "product-management",
+      "innovation"
+    ],
+    "targetAudience": [],
+    "contactInfo": "edf@opencagedata.com",
+    "communityUrl": "https://thegeomob.com/",
+    "urls": {},
+    "thumbnailUrl": "images/geomobbcn.webp",
+    "removalReason": "",
+    "latLon": {
+      "lat": 41.3825802,
+      "lon": 2.177073
+    },
+    "displayOnMap": true,
+    "humanValidated": true,
+    "matchesAllAudience": true,
+    "parentId": null
   }
 ]

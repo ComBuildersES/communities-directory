@@ -297,6 +297,24 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "fmariv",
+      "name": "Fran Martin Rivas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/41595271?v=4",
+      "profile": "https://franmartin.es",
+      "contributions": [
+        "data"
+      ]
+    },
+    {
+      "login": "ajimenez1503",
+      "name": "Antonio Jimenez",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5960625?v=4",
+      "profile": "https://ajimenez1503.github.io",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,

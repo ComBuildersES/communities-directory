@@ -7,11 +7,38 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-04-06 `8d76707` add parentId to multiple community entries for hierarchical structure
+- 2026-04-06 `1321687` add parentId to multiple community entries for hierarchical structure
 - 2026-04-06 `3d8b0a4` enable strict port handling in local development and update Vite config
 - 2026-04-06 `081c220` add GitHub stars display and community reviewer request workflow
 - 2026-04-01 `e1733b0` implement initial contribution draft logic and enhance thumbnail handling in CommunityContribution
 - 2026-04-01 `d719feb` add thumbnail optimization and aspect ratio warnings in community contribution
+
+### Data
+
+- 2026-04-06 `fa1f455` [Actualizada Wikiproyecto Almería](https://combuilderses.github.io/communities-directory/?community=470) ([PR #366](https://github.com/ComBuildersES/communities-directory/pull/366))
+- 2026-04-06 `ff24647` [Actualizada Jam Attack](https://combuilderses.github.io/communities-directory/?community=589) ([PR #364](https://github.com/ComBuildersES/communities-directory/pull/364))
+- 2026-04-06 `4cfd118` [Actualizada CanallaCon](https://combuilderses.github.io/communities-directory/?community=563) ([PR #362](https://github.com/ComBuildersES/communities-directory/pull/362))
+- 2026-04-06 `7c0f2ba` [Actualizada Wikiproyecto Almería](https://combuilderses.github.io/communities-directory/?community=470) ([PR #360](https://github.com/ComBuildersES/communities-directory/pull/360))
+- 2026-04-06 `1f3d6c4` [Actualizada La Jaquería](https://combuilderses.github.io/communities-directory/?community=309) ([PR #358](https://github.com/ComBuildersES/communities-directory/pull/358))
+- 2026-04-02 `96f65e8` [Actualizada AlmeriaTech](https://combuilderses.github.io/communities-directory/?community=25) ([PR #355](https://github.com/ComBuildersES/communities-directory/pull/355))
+- 2026-04-01 `29f375d` [Añadida geomobBCN](https://combuilderses.github.io/communities-directory/?community=617) ([PR #346](https://github.com/ComBuildersES/communities-directory/pull/346))
+
+### Docs
+
+- 2026-04-06 `900329f` update changelog [skip ci]
+- 2026-04-06 `68daed1` update changelog [skip ci]
+- 2026-04-06 `30c3803` update changelog [skip ci]
+- 2026-04-06 `bbe440b` update changelog [skip ci]
+- 2026-04-06 `6677806` update changelog [skip ci]
+- 2026-04-03 `86070d7` update changelog [skip ci]
+- 2026-04-03 `c4ed28a` update .all-contributorsrc [skip ci]
+- 2026-04-03 `850a515` update README.md [skip ci]
+- 2026-04-03 `4c84f4e` update changelog [skip ci]
+- 2026-04-01 `09ee6d9` update changelog [skip ci]
+- 2026-04-01 `26e8a37` update .all-contributorsrc [skip ci]
+- 2026-04-01 `f8c2468` update README.md [skip ci]
+- 2026-04-01 `2cc45e9` update changelog [skip ci]
+- 2026-04-01 `91c25ba` update changelog [skip ci]
 
 ### Other
 
