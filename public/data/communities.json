@@ -9154,13 +9154,32 @@
     "id": 309,
     "name": "La Jaquería",
     "status": "active",
-    "lastReviewed": "23/10/2024",
+    "lastReviewed": "06/04/2026",
     "communityType": "hacklab",
     "eventFormat": "in-person",
     "location": "Almería",
     "topics": "",
-    "tags": [],
-    "targetAudience": [],
+    "tags": [
+      "tech4good",
+      "digital-activism",
+      "tech-ethics",
+      "stem",
+      "open-hardware",
+      "free-software",
+      "game-development",
+      "game-design",
+      "indie-games",
+      "robotics"
+    ],
+    "targetAudience": [
+      "junior-developer",
+      "student",
+      "senior-staff",
+      "career-changer",
+      "maker",
+      "robotics-engineer",
+      "embedded-iot-engineer"
+    ],
     "contactInfo": "lajaqueria@gmail.com",
     "communityUrl": "https://lajaqueria.org/sesiones/",
     "urls": {
@@ -9175,10 +9194,13 @@
       "lon": -2.4679043
     },
     "displayOnMap": true,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "Asociación cultural sin ánimo de lucro en Almería que promueve la experimentación tecnológica, científica y artística mediante colaboración y educación social. Difunde la cultura maker, acerca la ciencia a la ciudadanía y fomenta proyectos colectivos con impacto social.",
+    "removalReason": "",
+    "parentId": null
   },
   {
     "id": 310,
