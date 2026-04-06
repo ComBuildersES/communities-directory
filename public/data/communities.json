@@ -3524,30 +3524,36 @@
     "id": 113,
     "name": "CorunaEvents",
     "status": "active",
-    "lastReviewed": "29/11/2024",
+    "lastReviewed": "06/04/2026",
     "communityType": "meta-community",
     "eventFormat": "unknown",
-    "location": "Coruña",
+    "location": "",
     "topics": "",
     "tags": [],
     "targetAudience": [],
-    "contactInfo": "contacto@alvarolozano.dev",
+    "contactInfo": "contacto@coruna.events",
     "communityUrl": "https://coruna.events/",
     "urls": {
       "instagram": "https://instagram.com/coruna.events",
       "linkedin": "https://www.linkedin.com/company/coruna.events",
-      "eventsUrl": "https://www.meetup.com/gpul-labs/events/313900823/"
+      "eventsUrl": "https://coruna.events/eventos"
     },
     "thumbnailUrl": "images/corunaevents.webp",
     "latLon": {
-      "lat": 43.3707332,
-      "lon": -8.3958532
+      "lat": null,
+      "lon": null
     },
-    "displayOnMap": true,
-    "humanValidated": false,
+    "displayOnMap": false,
+    "humanValidated": true,
     "langs": [
-      "es"
-    ]
+      "es",
+      "gl"
+    ],
+    "shortDescription": "Marca Coruñesa dedicada a apoyar y organizar todo tipo de eventos y comunidades en Coruña. Desde rutas de senderismo, manualidades a charlas tech, CorunaEvents es una iniciativa joven que apuesta por el ocio alternativo y saludable.",
+    "removalReason": "",
+    "matchesAllTags": true,
+    "matchesAllAudience": true,
+    "parentId": null
   },
   {
     "id": 114,
