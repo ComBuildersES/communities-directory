@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-04-06 `2a21c7e` add GitHub stars display and community reviewer request workflow
+- 2026-04-06 `ac40279` enable strict port handling in local development and update Vite config
+- 2026-04-06 `081c220` add GitHub stars display and community reviewer request workflow
 - 2026-04-01 `e1733b0` implement initial contribution draft logic and enhance thumbnail handling in CommunityContribution
 - 2026-04-01 `d719feb` add thumbnail optimization and aspect ratio warnings in community contribution
 

@@ -29,7 +29,7 @@ export default ({ mode }) => {
     server: {
       host: '0.0.0.0',
       port: 5173,
-      strictPort: true,
+      strictPort: env.VITE_STRICT_PORT === 'true',
     },
     base: env.VITE_BASE, // build at gh-pages
     resolve: {
