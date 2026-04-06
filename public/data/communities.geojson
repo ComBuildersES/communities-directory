@@ -11749,9 +11749,9 @@
       },
       "properties": {
         "id": 422,
-        "name": "Sirviendo código",
+        "name": "Sirviendo Código",
         "status": "active",
-        "lastReviewed": "16/10/2024",
+        "lastReviewed": "06/04/2026",
         "communityType": "tech-meetup",
         "eventFormat": "in-person",
         "location": "Madrid",
@@ -11763,9 +11763,14 @@
         "targetAudience": [],
         "contactInfo": "sirviendocodigo@nextdigital.es",
         "communityUrl": "https://sirviendocodigo.com/",
-        "urls": {},
+        "urls": {
+          "linkedin": "https://www.linkedin.com/company/sirviendo-codigo/",
+          "instagram": "https://www.instagram.com/sirviendo.codigo/",
+          "youtube": "https://www.youtube.com/@SirviendoC%C3%B3digo",
+          "tiktok": "https://www.tiktok.com/@sirviendo.codigo"
+        },
         "thumbnailUrl": "images/sirviendo-codigo.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {

@@ -12626,9 +12626,9 @@
   },
   {
     "id": 422,
-    "name": "Sirviendo código",
+    "name": "Sirviendo Código",
     "status": "active",
-    "lastReviewed": "16/10/2024",
+    "lastReviewed": "06/04/2026",
     "communityType": "tech-meetup",
     "eventFormat": "in-person",
     "location": "Madrid",
@@ -12637,17 +12637,27 @@
     "targetAudience": [],
     "contactInfo": "sirviendocodigo@nextdigital.es",
     "communityUrl": "https://sirviendocodigo.com/",
-    "urls": {},
+    "urls": {
+      "linkedin": "https://www.linkedin.com/company/sirviendo-codigo/",
+      "instagram": "https://www.instagram.com/sirviendo.codigo/",
+      "youtube": "https://www.youtube.com/@SirviendoC%C3%B3digo",
+      "tiktok": "https://www.tiktok.com/@sirviendo.codigo"
+    },
     "thumbnailUrl": "images/sirviendo-codigo.webp",
     "latLon": {
       "lat": 40.4167047,
       "lon": -3.7035825
     },
     "displayOnMap": true,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "Somos un espacio donde compartir conocimiento. Aquí encontrarás un lugar donde compartir tu conocimiento tecnológico y obtener conocimiento creado por otras personas. De manera gratuita, sencilla y en comunidad.",
+    "removalReason": "",
+    "matchesAllTags": true,
+    "matchesAllAudience": true,
+    "parentId": null
   },
   {
     "id": 423,
