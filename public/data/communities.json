@@ -16855,17 +16855,36 @@
     "id": 563,
     "name": "CanallaCon",
     "status": "active",
-    "lastReviewed": "23/05/2025",
+    "lastReviewed": "06/04/2026",
     "communityType": "conference",
     "eventFormat": "in-person",
     "location": "Roquetas de Mar, Almería",
     "topics": "Seguridad, Hacking",
-    "tags": [],
-    "targetAudience": [],
+    "tags": [
+      "cybersecurity",
+      "ethical-hacking",
+      "pentesting",
+      "cloud-security",
+      "web-security",
+      "cryptography",
+      "digital-forensics"
+    ],
+    "targetAudience": [
+      "cybersecurity-engineer",
+      "pentester",
+      "qa-engineer",
+      "test-automation-engineer",
+      "software-architect"
+    ],
     "contactInfo": "",
     "communityUrl": "https://canallacon.com/",
     "urls": {
-      "twitter": "https://x.com/TheXXLMAN?t=3Cht1xoLqLNLGSC5PLyYvQ&s=08"
+      "twitter": "https://x.com/CosasDeHackers",
+      "youtube": "https://www.youtube.com/@CosasDeHackers",
+      "twitch": "https://www.twitch.tv/cosasdehackers",
+      "instagram": "https://www.instagram.com/cosasdehackers/",
+      "linkedin": "https://www.linkedin.com/company/cosasdehackers/",
+      "telegram": "https://t.me/CosasDeHackers"
     },
     "thumbnailUrl": "images/canallacon.webp",
     "latLon": {
@@ -16873,10 +16892,13 @@
       "lon": -2.6115886
     },
     "displayOnMap": true,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "Congreso Internacional de ciberseguridad y transformación digital organizado por el equipo del podcast Cosas de Hackers.",
+    "removalReason": "",
+    "parentId": null
   },
   {
     "id": 565,
