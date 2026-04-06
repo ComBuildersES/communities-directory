@@ -242,13 +242,17 @@ arcgis-map {
   bottom: calc(100% + 6px);
   left: 50%;
   transform: translateX(-50%);
+  inline-size: min(28rem, calc(100vw - 2rem));
+  max-inline-size: calc(100vw - 2rem);
   background: #21324a;
   color: #e8edf2;
   font-size: 0.9rem;
   line-height: 1.45;
   padding: 0.5rem 0.75rem;
   border-radius: 6px;
-  white-space: nowrap;
+  box-sizing: border-box;
+  white-space: normal;
+  overflow-wrap: anywhere;
   z-index: 10;
   pointer-events: auto;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -568,5 +572,13 @@ arcgis-map {
 
   .map-legend__label {
     font-size: 0.8rem;
+  }
+
+  .map-hidden-tooltip {
+    left: 50%;
+    transform: translateX(-50%);
+    inline-size: calc(100vw - 2rem);
+    max-inline-size: calc(100vw - 2rem);
+    font-size: 0.84rem;
   }
 }

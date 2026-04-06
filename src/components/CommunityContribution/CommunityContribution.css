@@ -296,7 +296,8 @@
   left: 50%;
   bottom: calc(100% + 0.5rem);
   transform: translateX(-50%);
-  width: min(280px, 70vw);
+  width: min(280px, calc(100vw - 2.5rem));
+  max-width: calc(100vw - 2.5rem);
   padding: 0.55rem 0.75rem;
   border-radius: 10px;
   background: #244a86;
@@ -306,7 +307,9 @@
   box-shadow: 0 8px 24px rgba(28, 56, 102, 0.22);
   z-index: 20;
   pointer-events: none;
+  box-sizing: border-box;
   white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .contribution-matches-all-group-tooltip::after {
@@ -801,7 +804,8 @@
   left: 50%;
   bottom: calc(100% + 0.6rem);
   transform: translateX(-50%);
-  width: min(280px, 70vw);
+  width: min(280px, calc(100vw - 2.5rem));
+  max-width: calc(100vw - 2.5rem);
   padding: 0.7rem 0.8rem;
   border-radius: 14px;
   background: #244a86;
@@ -811,6 +815,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  box-sizing: border-box;
+  overflow-wrap: anywhere;
   pointer-events: none;
 }
 
@@ -951,5 +957,18 @@
   .contribution-grid-span-2 {
     grid-column: auto;
   }
-}
 
+  .contribution-matches-all-group-tooltip,
+  .contribution-taxonomy-tooltip-bubble {
+    left: 0;
+    transform: none;
+    width: min(280px, calc(100vw - 3rem));
+    max-width: calc(100vw - 3rem);
+  }
+
+  .contribution-matches-all-group-tooltip::after,
+  .contribution-taxonomy-tooltip-bubble::after {
+    left: 1rem;
+    transform: none;
+  }
+}

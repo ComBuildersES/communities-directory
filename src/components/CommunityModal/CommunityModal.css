@@ -603,7 +603,8 @@ button.modal-badge:focus-visible {
   bottom: calc(100% + 6px);
   left: 50%;
   transform: translateX(-50%);
-  width: 240px;
+  width: min(240px, calc(100vw - 3rem));
+  max-width: calc(100vw - 3rem);
   background: #333;
   color: #fff;
   font-size: 0.75rem;
@@ -613,6 +614,9 @@ button.modal-badge:focus-visible {
   border-radius: 6px;
   text-transform: none;
   letter-spacing: 0;
+  box-sizing: border-box;
+  white-space: normal;
+  overflow-wrap: anywhere;
   pointer-events: none;
   z-index: 100;
 }
@@ -730,6 +734,18 @@ button.modal-badge:focus-visible {
 
   .community-modal-name {
     font-size: 1.05rem;
+  }
+
+  .community-modal-cb-tooltip {
+    left: 0;
+    transform: none;
+    width: min(240px, calc(100vw - 3.5rem));
+    max-width: calc(100vw - 3.5rem);
+  }
+
+  .community-modal-cb-tooltip::after {
+    left: 1rem;
+    transform: none;
   }
 }
 
