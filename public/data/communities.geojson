@@ -10159,21 +10159,32 @@
         "id": 369,
         "name": "Notion Coruña",
         "status": "active",
-        "lastReviewed": "22/10/2024",
+        "lastReviewed": "06/04/2026",
         "communityType": "tech-meetup",
         "eventFormat": "in-person",
         "location": "Coruña",
         "topics": "",
         "langs": [
-          "es"
+          "es",
+          "gl"
         ],
         "tags": [],
-        "targetAudience": [],
-        "contactInfo": "contacto@alvarolozano.dev",
-        "communityUrl": "https://coruna-community.notion.site/Notion-Coru-a-39a383ce08424c419a6cef87daad52ce",
-        "urls": {},
+        "targetAudience": [
+          "digital-marketer",
+          "tech-lead",
+          "entrepreneur",
+          "student",
+          "project-manager",
+          "open-source-contributor",
+          "educator"
+        ],
+        "contactInfo": "contacto@coruna,events",
+        "communityUrl": "https://coruna.events/community/notion-coruna",
+        "urls": {
+          "telegram": "https://t.me/+QXyjeCBUPIAxYWNk#"
+        },
         "thumbnailUrl": "images/notion-coruna.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
