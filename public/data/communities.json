@@ -3096,34 +3096,24 @@
   },
   {
     "id": 100,
-    "name": "CommitConf",
+    "name": "Commit Conf",
     "status": "active",
-    "lastReviewed": "25/03/2026",
+    "lastReviewed": "07/04/2026",
     "communityType": "conference",
     "eventFormat": "in-person",
-    "location": "Madrid (Boadilla del Monte)",
+    "location": "Madrid",
     "topics": "",
-    "tags": [
-      "tech-ethics",
-      "robotics",
-      "diversity",
-      "game-development",
-      "javascript",
-      "react",
-      "software-architecture",
-      "event-driven",
-      "ddd",
-      "functional-programming",
-      "oop"
-    ],
-    "targetAudience": [
-      "backend-developer"
-    ],
+    "tags": [],
+    "targetAudience": [],
     "contactInfo": "info@commit-conf.com",
     "communityUrl": "https://commit-conf.com/",
     "urls": {
       "youtube": "https://youtu.be/MaHQ2y1dryE",
-      "bluesky": "https://bsky.app/profile/commit-conf.com"
+      "bluesky": "https://bsky.app/profile/commit-conf.com",
+      "twitter": "https://x.com/commitconf",
+      "web": "https://commit-conf.com/",
+      "linkedin": "https://www.linkedin.com/company/commit-conf/",
+      "flickr": "https://www.flickr.com/photos/145448896@N02/albums/"
     },
     "thumbnailUrl": "images/commitconf.webp",
     "latLon": {
@@ -3132,10 +3122,14 @@
     },
     "displayOnMap": true,
     "humanValidated": true,
-    "shortDescription": "Conferencia tecnológica española centrada en desarrollo de software, Cloud, Intteligencia Artificial y cultura técnica. Se celebra anualmente en Madrid, siendo un punto de encuentro clave para profesionales del sector IT.",
+    "shortDescription": "Conferencia tecnológica española centrada en desarrollo de software, Cloud, Inteligencia Artificial y cultura técnica. Se celebra anualmente en Madrid, siendo un punto de encuentro clave para profesionales del sector IT.",
     "langs": [
       "es"
-    ]
+    ],
+    "removalReason": "",
+    "matchesAllTags": true,
+    "matchesAllAudience": true,
+    "parentId": null
   },
   {
     "id": 101,
