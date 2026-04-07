@@ -180,6 +180,9 @@ Echa un vistazo a algunas de las tareas por las que podrías empezar a ayudar:
       <td align="center" valign="top" width="14.28%"><a href="http://olea.org/diario/"><img src="https://avatars.githubusercontent.com/u/141267?v=4?s=100" width="100px;" alt="Ismael Olea"/><br /><sub><b>Ismael Olea</b></sub></a><br /><a href="#data-olea" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/lauravignali"><img src="https://avatars.githubusercontent.com/u/20795005?v=4?s=100" width="100px;" alt="lauravignali"/><br /><sub><b>lauravignali</b></sub></a><br /><a href="#data-lauravignali" title="Data">🔣</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://alvarolozano.dev"><img src="https://avatars.githubusercontent.com/u/10405074?v=4?s=100" width="100px;" alt="Alvaro Lozano"/><br /><sub><b>Alvaro Lozano</b></sub></a><br /><a href="#data-alvarolozano" title="Data">🔣</a></td>
+    </tr>
   </tbody>
 </table>
 
