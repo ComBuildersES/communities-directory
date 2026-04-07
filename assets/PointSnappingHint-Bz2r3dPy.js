@@ -1,0 +1,1 @@
+import{Q as i}from"./Map-CO5ktsa6.js";import{a as n}from"./SketchOptions-ym-yvTIE.js";class o extends n{constructor(t,s,r){super(s,r),this.point=t}equals(t){return t instanceof o&&i(this.point,t.point)}}export{o as n};
