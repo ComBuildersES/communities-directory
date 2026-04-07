@@ -10979,26 +10979,40 @@
     "id": 369,
     "name": "Notion Coruña",
     "status": "active",
-    "lastReviewed": "22/10/2024",
+    "lastReviewed": "06/04/2026",
     "communityType": "tech-meetup",
     "eventFormat": "in-person",
     "location": "Coruña",
     "topics": "",
     "tags": [],
-    "targetAudience": [],
-    "contactInfo": "contacto@alvarolozano.dev",
-    "communityUrl": "https://coruna-community.notion.site/Notion-Coru-a-39a383ce08424c419a6cef87daad52ce",
-    "urls": {},
+    "targetAudience": [
+      "digital-marketer",
+      "tech-lead",
+      "entrepreneur",
+      "student",
+      "project-manager",
+      "open-source-contributor",
+      "educator"
+    ],
+    "contactInfo": "contacto@coruna,events",
+    "communityUrl": "https://coruna.events/community/notion-coruna",
+    "urls": {
+      "telegram": "https://t.me/+QXyjeCBUPIAxYWNk#"
+    },
     "thumbnailUrl": "images/notion-coruna.webp",
     "latLon": {
       "lat": 43.3707332,
       "lon": -8.3958532
     },
     "displayOnMap": true,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
-      "es"
-    ]
+      "es",
+      "gl"
+    ],
+    "shortDescription": "Grupo con sede en Coruña dedicado (inicialmente) al mundo de Notion, pero actualmente también sobre todo tipo de herramientas no-code e IA. Organizamos encuentros puntuales, ya sean charlas o cafés para charlar y compartir ideas.",
+    "removalReason": "",
+    "parentId": null
   },
   {
     "id": 370,
