@@ -315,6 +315,15 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "olea",
+      "name": "Ismael Olea",
+      "avatar_url": "https://avatars.githubusercontent.com/u/141267?v=4",
+      "profile": "http://olea.org/diario/",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
