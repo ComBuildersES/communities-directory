@@ -178,6 +178,7 @@ Echa un vistazo a algunas de las tareas por las que podrías empezar a ayudar:
       <td align="center" valign="top" width="14.28%"><a href="https://franmartin.es"><img src="https://avatars.githubusercontent.com/u/41595271?v=4?s=100" width="100px;" alt="Fran Martin Rivas"/><br /><sub><b>Fran Martin Rivas</b></sub></a><br /><a href="#data-fmariv" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://ajimenez1503.github.io"><img src="https://avatars.githubusercontent.com/u/5960625?v=4?s=100" width="100px;" alt="Antonio Jimenez"/><br /><sub><b>Antonio Jimenez</b></sub></a><br /><a href="#data-ajimenez1503" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://olea.org/diario/"><img src="https://avatars.githubusercontent.com/u/141267?v=4?s=100" width="100px;" alt="Ismael Olea"/><br /><sub><b>Ismael Olea</b></sub></a><br /><a href="#data-olea" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/lauravignali"><img src="https://avatars.githubusercontent.com/u/20795005?v=4?s=100" width="100px;" alt="lauravignali"/><br /><sub><b>lauravignali</b></sub></a><br /><a href="#data-lauravignali" title="Data">🔣</a></td>
     </tr>
   </tbody>
 </table>
