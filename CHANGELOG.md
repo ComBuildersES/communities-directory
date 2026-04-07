@@ -17,6 +17,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-04-06 `884d23e` [Actualizada Wikiproyecto Almería](https://combuilderses.github.io/communities-directory/?community=470) ([PR #368](https://github.com/ComBuildersES/communities-directory/pull/368))
 - 2026-04-06 `fa1f455` [Actualizada Wikiproyecto Almería](https://combuilderses.github.io/communities-directory/?community=470) ([PR #366](https://github.com/ComBuildersES/communities-directory/pull/366))
 - 2026-04-06 `ff24647` [Actualizada Jam Attack](https://combuilderses.github.io/communities-directory/?community=589) ([PR #364](https://github.com/ComBuildersES/communities-directory/pull/364))
 - 2026-04-06 `4cfd118` [Actualizada CanallaCon](https://combuilderses.github.io/communities-directory/?community=563) ([PR #362](https://github.com/ComBuildersES/communities-directory/pull/362))
@@ -27,6 +28,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-04-06 `e0d56e5` update changelog [skip ci]
 - 2026-04-06 `900329f` update changelog [skip ci]
 - 2026-04-06 `68daed1` update changelog [skip ci]
 - 2026-04-06 `30c3803` update changelog [skip ci]
