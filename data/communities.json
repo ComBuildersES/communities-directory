@@ -14056,22 +14056,8 @@
     "eventFormat": "in-person",
     "location": "Almería",
     "topics": "",
-    "tags": [
-      "tech4good",
-      "open-data",
-      "tech-ethics",
-      "diversity",
-      "digital-activism"
-    ],
-    "targetAudience": [
-      "junior-developer",
-      "student",
-      "career-changer",
-      "senior-staff",
-      "data-journalist",
-      "researcher",
-      "phd-doctoral"
-    ],
+    "tags": [],
+    "targetAudience": [],
     "contactInfo": "",
     "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Almer%C3%ADa/",
     "urls": {
@@ -14090,7 +14076,9 @@
     ],
     "shortDescription": "Colectivo que tiene como objetivo crear, mejorar y organizar todos los artículos relacionados con la provincia de Almería, en España, prestando especial atención a los más representativos, como las localidades, los monumentos, espacios naturales y las personalidades de Almería.",
     "removalReason": "",
-    "parentId": 469
+    "parentId": 469,
+    "matchesAllTags": true,
+    "matchesAllAudience": true
   },
   {
     "id": 471,
