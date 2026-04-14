@@ -18598,5 +18598,45 @@
     "humanValidated": true,
     "matchesAllAudience": true,
     "parentId": null
+  },
+  {
+    "id": 618,
+    "name": "Detrás del mapa",
+    "status": "active",
+    "lastReviewed": "14/04/2026",
+    "communityType": "collaborative-group",
+    "eventFormat": "online",
+    "location": "",
+    "shortDescription": "Una sala para compartir y debatir sobre los contenidos publicados en Nosolosig y en el boletín Nosolosig, además de proponer nuevos recursos.",
+    "topics": "",
+    "langs": [
+      "es"
+    ],
+    "tags": [
+      "geospatial",
+      "spatial-databases"
+    ],
+    "targetAudience": [
+      "junior-developer",
+      "student",
+      "career-changer",
+      "data-engineer",
+      "data-scientist",
+      "data-analyst"
+    ],
+    "contactInfo": "",
+    "communityUrl": "https://www.nosolosig.com/articulos/asi-es-detras-del-mapa-el-nuevo-grupo-de-telegram-creado-por-nosolosig-para-compartir-novedades-y-recursos-sobre-mapas-y-tecnologias-de-la-informacion-geografica",
+    "urls": {
+      "telegram": "https://t.me/detrasdelmapa"
+    },
+    "thumbnailUrl": "images/detrs-del-mapa.webp",
+    "removalReason": "",
+    "latLon": {
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false,
+    "humanValidated": true,
+    "parentId": null
   }
 ]
