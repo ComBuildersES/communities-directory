@@ -17,6 +17,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-04-14 `6138d5d` [Añadida Detrás del mapa](https://combuilderses.github.io/communities-directory/?community=618) ([PR #381](https://github.com/ComBuildersES/communities-directory/pull/381))
 - 2026-04-07 `e431127` [Actualizada Commit Conf](https://combuilderses.github.io/communities-directory/?community=100) ([PR #379](https://github.com/ComBuildersES/communities-directory/pull/379))
 - 2026-04-06 `6753781` [Actualizada Notion Coruña](https://combuilderses.github.io/communities-directory/?community=369) ([PR #374](https://github.com/ComBuildersES/communities-directory/pull/374))
 - 2026-04-06 `e3562e2` [Actualizada CorunaEvents](https://combuilderses.github.io/communities-directory/?community=113) ([PR #372](https://github.com/ComBuildersES/communities-directory/pull/372))
@@ -32,6 +33,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-04-07 `30abb3e` update changelog [skip ci]
 - 2026-04-07 `1bf80c3` update changelog [skip ci]
 - 2026-04-07 `650d4a5` update changelog [skip ci]
 - 2026-04-07 `5621f73` update changelog [skip ci]
