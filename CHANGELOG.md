@@ -3,6 +3,12 @@
 Historial generado automáticamente a partir de los commits del repositorio.
 Se organiza por mes y por tipo de cambio.
 
+## 2026-05
+
+### Data
+
+- 2026-05-22 `c20e2d9` [Añadida I Jornada sobre Software Libre e Inteligencia Artificial Abierta](https://combuilderses.github.io/communities-directory/?community=619) ([PR #383](https://github.com/ComBuildersES/communities-directory/pull/383))
+
 ## 2026-04
 
 ### Features
@@ -33,6 +39,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-04-14 `519448f` update changelog [skip ci]
 - 2026-04-07 `30abb3e` update changelog [skip ci]
 - 2026-04-07 `1bf80c3` update changelog [skip ci]
 - 2026-04-07 `650d4a5` update changelog [skip ci]
