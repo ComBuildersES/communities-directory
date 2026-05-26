@@ -17618,6 +17618,51 @@
         "thumbnailUrl": "images/geomobbcn.webp",
         "humanValidated": true
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.7923422,
+          40.282476
+        ]
+      },
+      "properties": {
+        "id": 619,
+        "name": "I Jornada sobre Software Libre e Inteligencia Artificial Abierta",
+        "status": "active",
+        "lastReviewed": "22/05/2026",
+        "communityType": "conference",
+        "eventFormat": "in-person",
+        "location": "Fuenlabrada, Madrid",
+        "topics": "",
+        "langs": [
+          "es",
+          "en"
+        ],
+        "tags": [
+          "ai-coding-agents",
+          "llm",
+          "free-software"
+        ],
+        "targetAudience": [
+          "ml-engineer",
+          "data-engineer",
+          "data-analyst",
+          "data-scientist",
+          "mobile-developer",
+          "fullstack-developer",
+          "backend-developer",
+          "frontend-developer",
+          "game-developer"
+        ],
+        "contactInfo": "",
+        "communityUrl": "https://selia.codeberg.page/",
+        "urls": {},
+        "thumbnailUrl": "images/i-jornada-sobre-software-libre-e-inteligencia-artificial-abierta.webp",
+        "humanValidated": true
+      }
     }
   ]
 }
