@@ -3,11 +3,21 @@
 Historial generado automáticamente a partir de los commits del repositorio.
 Se organiza por mes y por tipo de cambio.
 
+## 2026-06
+
+### Data
+
+- 2026-06-22 `c21faed` Update community-builders-members.json: add ADCP-dev to frik
+
 ## 2026-05
 
 ### Data
 
 - 2026-05-22 `c20e2d9` [Añadida I Jornada sobre Software Libre e Inteligencia Artificial Abierta](https://combuilderses.github.io/communities-directory/?community=619) ([PR #383](https://github.com/ComBuildersES/communities-directory/pull/383))
+
+### Docs
+
+- 2026-05-26 `c82946f` update changelog [skip ci]
 
 ## 2026-04
 
