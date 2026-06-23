@@ -18683,5 +18683,36 @@
     "displayOnMap": true,
     "humanValidated": true,
     "parentId": null
+  },
+  {
+    "id": 620,
+    "name": "The Things Network",
+    "status": "active",
+    "lastReviewed": "23/06/2026",
+    "communityType": "umbrella-org",
+    "eventFormat": "in-person",
+    "location": "n/a",
+    "shortDescription": "We are a global collaborative Internet of Things ecosystem that creates networks, devices, and solutions using LoRaWAN®.",
+    "topics": "",
+    "langs": [
+      "en"
+    ],
+    "tags": [
+      "networking"
+    ],
+    "targetAudience": [
+      "sysadmin"
+    ],
+    "contactInfo": "",
+    "communityUrl": "https://www.thethingsnetwork.org/",
+    "urls": {},
+    "thumbnailUrl": "images/the-things-network.webp",
+    "removalReason": "",
+    "latLon": {
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false,
+    "humanValidated": true
   }
 ]
