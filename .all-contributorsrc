@@ -342,6 +342,15 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "ComBuilders-ES",
+      "name": "Community Builders (usuario)",
+      "avatar_url": "https://avatars.githubusercontent.com/u/177937393?v=4",
+      "profile": "https://github.com/ComBuildersES",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
