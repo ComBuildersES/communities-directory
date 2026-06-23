@@ -17988,12 +17988,12 @@
   },
   {
     "id": 600,
-    "name": "MindHub Club",
+    "name": "Fr!k",
     "status": "active",
-    "lastReviewed": "06/02/2026",
+    "lastReviewed": "22/06/2026",
     "communityType": "umbrella-org",
     "eventFormat": "in-person",
-    "location": "",
+    "location": "n/a",
     "topics": "personal-growth, mentoring, ethics, tech4good, innovation, business-and-innovation-manager, community-and-social-media-manager, diversity, startups, entrepreneur-startup-founder",
     "tags": [],
     "targetAudience": [],
@@ -18010,10 +18010,12 @@
       "lon": null
     },
     "displayOnMap": false,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "",
+    "removalReason": ""
   },
   {
     "id": 602,
