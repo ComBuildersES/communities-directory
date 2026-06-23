@@ -7,7 +7,12 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-06-22 `8ef6d6b` [Actualizada Fr!k](https://combuilderses.github.io/communities-directory/?community=600) ([PR #385](https://github.com/ComBuildersES/communities-directory/pull/385))
 - 2026-06-22 `c21faed` Update community-builders-members.json: add ADCP-dev to frik
+
+### Docs
+
+- 2026-06-22 `ee87d6f` update changelog [skip ci]
 
 ## 2026-05
 
