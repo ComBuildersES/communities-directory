@@ -17663,6 +17663,43 @@
         "thumbnailUrl": "images/i-jornada-sobre-software-libre-e-inteligencia-artificial-abierta.webp",
         "humanValidated": true
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.703507,
+          40.416782
+        ]
+      },
+      "properties": {
+        "id": 621,
+        "name": "The Things Network Madrid",
+        "status": "active",
+        "lastReviewed": "23/06/2026",
+        "communityType": "tech-meetup",
+        "eventFormat": "in-person",
+        "location": "Madrid, Spain",
+        "topics": "",
+        "langs": [
+          "es"
+        ],
+        "tags": [
+          "networking"
+        ],
+        "targetAudience": [
+          "entrepreneur",
+          "sysadmin"
+        ],
+        "contactInfo": "",
+        "communityUrl": "https://www.thethingsnetwork.org/community/madrid/",
+        "urls": {
+          "eventsUrl": "https://www.meetup.com/es-es/the-things-network-madrid-community/"
+        },
+        "thumbnailUrl": "images/the-things-network-madrid.webp",
+        "humanValidated": true
+      }
     }
   ]
 }
