@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-06-25 `894c450` [Actualizada FR!K](https://combuilderses.github.io/communities-directory/?community=600) ([PR #392](https://github.com/ComBuildersES/communities-directory/pull/392))
 - 2026-06-23 `32a420e` [Añadida The Things Network Madrid](https://combuilderses.github.io/communities-directory/?community=621) ([PR #390](https://github.com/ComBuildersES/communities-directory/pull/390))
 - 2026-06-23 `4d7b680` [Añadida The Things Network](https://combuilderses.github.io/communities-directory/?community=620) ([PR #388](https://github.com/ComBuildersES/communities-directory/pull/388))
 - 2026-06-22 `8ef6d6b` [Actualizada Fr!k](https://combuilderses.github.io/communities-directory/?community=600) ([PR #385](https://github.com/ComBuildersES/communities-directory/pull/385))
@@ -14,6 +15,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-06-25 `6770b6b` update changelog [skip ci]
 - 2026-06-23 `8d01f03` update changelog [skip ci]
 - 2026-06-23 `35d4676` update changelog [skip ci]
 - 2026-06-22 `ee87d6f` update changelog [skip ci]
