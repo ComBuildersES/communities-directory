@@ -17988,23 +17988,24 @@
   },
   {
     "id": 600,
-    "name": "Fr!k",
+    "name": "FR!K",
     "status": "active",
-    "lastReviewed": "22/06/2026",
+    "lastReviewed": "25/06/2026",
     "communityType": "umbrella-org",
     "eventFormat": "in-person",
     "location": "n/a",
     "topics": "personal-growth, mentoring, ethics, tech4good, innovation, business-and-innovation-manager, community-and-social-media-manager, diversity, startups, entrepreneur-startup-founder",
     "tags": [],
     "targetAudience": [],
-    "contactInfo": "growth@mindhub.club",
-    "communityUrl": "https://mindhub.club/es",
+    "contactInfo": "hey@frik.you",
+    "communityUrl": "https://frik.global/es",
     "urls": {
-      "instagram": "https://instagram.com/mindhub_club",
-      "linkedin": "https://linkedin.com/company/mindhub-club",
-      "youtube": "https://youtube.com/@mindhub_club"
+      "instagram": "https://instagram.com/frik_spain",
+      "linkedin": "https://linkedin.com/company/frikglobal",
+      "youtube": "https://youtube.com/@frik.global",
+      "web": "https://frik.global/es"
     },
-    "thumbnailUrl": "images/mindhub-club.webp",
+    "thumbnailUrl": "images/frk.webp",
     "latLon": {
       "lat": null,
       "lon": null
@@ -18012,10 +18013,14 @@
     "displayOnMap": false,
     "humanValidated": true,
     "langs": [
-      "es"
+      "es",
+      "en",
+      "ca"
     ],
-    "shortDescription": "",
-    "removalReason": ""
+    "shortDescription": "Un espacio donde el conocimiento conecta con la pasión. Únete a tu club especializado donde profesionales como tú se reúnen para aprender de forma colaborativa. Desde Software, Diseño, IA, Marketing, Emprendedores y muchos más, cada club tiene su propia identidad y una comunidad",
+    "removalReason": "",
+    "matchesAllTags": true,
+    "matchesAllAudience": true
   },
   {
     "id": 602,
