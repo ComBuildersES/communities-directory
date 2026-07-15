@@ -4284,9 +4284,9 @@
   {
     "id": 139,
     "name": "DevOpsDays Vitória",
-    "status": "active",
-    "lastReviewed": "17/10/2024",
-    "communityType": "meta-community",
+    "status": "inactive",
+    "lastReviewed": "14/07/2026",
+    "communityType": "conference",
     "eventFormat": "in-person",
     "location": "Álava (Vitoria-Gasteiz)",
     "topics": "",
@@ -4301,10 +4301,13 @@
       "lon": -2.6715859
     },
     "displayOnMap": true,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "",
+    "removalReason": "",
+    "parentId": null
   },
   {
     "id": 140,
