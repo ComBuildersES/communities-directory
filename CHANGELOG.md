@@ -3,6 +3,12 @@
 Historial generado automáticamente a partir de los commits del repositorio.
 Se organiza por mes y por tipo de cambio.
 
+## 2026-07
+
+### Data
+
+- 2026-07-14 `ca02269` [Actualizada DevOpsDays Vitória](https://combuilderses.github.io/communities-directory/?community=139) ([PR #399](https://github.com/ComBuildersES/communities-directory/pull/399))
+
 ## 2026-06
 
 ### Data
@@ -15,6 +21,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-06-25 `f1d3d02` update changelog [skip ci]
 - 2026-06-25 `dd435a1` update changelog [skip ci]
 - 2026-06-25 `4b07f4a` update .all-contributorsrc [skip ci]
 - 2026-06-25 `300925c` update README.md [skip ci]
