@@ -7,7 +7,12 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-07-21 `3dcfbba` Update community-builders-members.json adding jcea
 - 2026-07-14 `ca02269` [Actualizada DevOpsDays Vitória](https://combuilderses.github.io/communities-directory/?community=139) ([PR #399](https://github.com/ComBuildersES/communities-directory/pull/399))
+
+### Docs
+
+- 2026-07-15 `7ee536b` update changelog [skip ci]
 
 ## 2026-06
 
