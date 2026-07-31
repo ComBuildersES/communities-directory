@@ -17743,37 +17743,69 @@
       },
       "properties": {
         "id": 623,
-        "name": "Geoinquietos Almería",
-        "status": "inactive",
+        "name": "Betabeers Almería",
+        "status": "active",
         "lastReviewed": "31/07/2026",
         "communityType": "tech-meetup",
         "eventFormat": "in-person",
-        "location": "Almería",
+        "location": "Almeria, Spain",
         "topics": "",
         "langs": [
           "es"
         ],
-        "tags": [
-          "geospatial",
-          "data-visualization",
-          "data-engineering",
-          "data-science",
-          "spatial-databases"
-        ],
-        "targetAudience": [
-          "data-scientist",
-          "data-engineer",
-          "frontend-developer",
-          "backend-developer"
-        ],
+        "tags": [],
+        "targetAudience": [],
         "contactInfo": "",
-        "communityUrl": "https://wiki.osgeo.org/wiki/Geoinquietos_Almer%C3%ADa",
+        "communityUrl": "https://betabeers.com/community/betabeers-almeria-25/",
         "urls": {
-          "twitter": "https://x.com/geoinquietosalm"
+          "twitter": "https://x.com/betabeersalm"
         },
-        "thumbnailUrl": "images/geoinquietos-almera.webp",
+        "thumbnailUrl": "images/betabeers-almera.webp",
         "humanValidated": true
       }
+    },
+    {
+      "id": 624,
+      "name": "Geoinquietos Almería",
+      "status": "inactive",
+      "lastReviewed": "31/07/2026",
+      "communityType": "tech-meetup",
+      "eventFormat": "in-person",
+      "location": "Almería",
+      "provinceId": "almeria",
+      "shortDescription": "Encuentros locales informales entre gente que comparte inquietudes, intereses, experiencias o cualquier idea en el ámbito de la geomática, el software libre y la tecnología geoespacial (todo aquello relacionado con el ámbito GEO y SIG).",
+      "topics": "",
+      "langs": [
+        "es"
+      ],
+      "tags": [
+        "geospatial",
+        "data-visualization",
+        "data-engineering",
+        "data-science",
+        "spatial-databases"
+      ],
+      "targetAudience": [
+        "data-scientist",
+        "data-engineer",
+        "frontend-developer",
+        "backend-developer"
+      ],
+      "contactInfo": "",
+      "communityUrl": "https://wiki.osgeo.org/wiki/Geoinquietos_Almer%C3%ADa",
+      "urls": {
+        "twitter": "https://x.com/geoinquietosalm"
+      },
+      "thumbnailUrl": "https://pbs.twimg.com/profile_images/909388251072487424/ITlJEvrd_400x400.jpg",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      },
+      "displayOnMap": true,
+      "humanValidated": true,
+      "matchesAllTags": false,
+      "matchesAllAudience": false,
+      "parentId": 616
     }
   ]
 }

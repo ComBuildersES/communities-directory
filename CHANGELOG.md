@@ -7,12 +7,14 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-07-31 `665adbd` [Añadida Betabeers Almería](https://combuilderses.github.io/communities-directory/?community=623) ([PR #404](https://github.com/ComBuildersES/communities-directory/pull/404))
 - 2026-07-31 `56f4d4f` [Añadida Coruña Tech](https://combuilderses.github.io/communities-directory/?community=622) ([PR #401](https://github.com/ComBuildersES/communities-directory/pull/401))
 - 2026-07-21 `3dcfbba` Update community-builders-members.json adding jcea
 - 2026-07-14 `ca02269` [Actualizada DevOpsDays Vitória](https://combuilderses.github.io/communities-directory/?community=139) ([PR #399](https://github.com/ComBuildersES/communities-directory/pull/399))
 
 ### Docs
 
+- 2026-07-31 `3cd900e` update changelog [skip ci]
 - 2026-07-21 `528fc05` update changelog [skip ci]
 - 2026-07-15 `7ee536b` update changelog [skip ci]
 
