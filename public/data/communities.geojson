@@ -17806,6 +17806,49 @@
         "thumbnailUrl": "images/geoinquietos-almera.webp",
         "humanValidated": true
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.177073,
+          41.3825802
+        ]
+      },
+      "properties": {
+        "id": 626,
+        "name": "Barcelona Free Software",
+        "status": "active",
+        "lastReviewed": "31/07/2026",
+        "communityType": "tech-meetup",
+        "eventFormat": "in-person",
+        "location": "Barcelona",
+        "topics": "",
+        "langs": [
+          "es"
+        ],
+        "tags": [
+          "free-software",
+          "open-hardware",
+          "linux",
+          "open-source"
+        ],
+        "targetAudience": [],
+        "contactInfo": "",
+        "communityUrl": "https://bcnfs.org/",
+        "urls": {
+          "eventsUrl": "https://www.meetup.com/barcelona-free-software/",
+          "web": "https://docs.fsfe.org/en/LocalGroups/Active/Barcelona",
+          "mailingList": "https://lists.bcnfs.org/mailman3/lists/comunicacio.bcnfs.org/",
+          "youtube": "https://www.youtube.com/playlist?list=PLnYTvqeUgaCH__pAycl1c31O2J-kYYpRz",
+          "mastodon": "https://fosstodon.org/@BCNFreeSoftware",
+          "linkedin": "https://www.linkedin.com/company/barcelona-free-software/",
+          "bluesky": "https://bsky.app/profile/BCNFreeSoftware.fosstodon.org.ap.brid.gy"
+        },
+        "thumbnailUrl": "images/barcelona-free-software.webp",
+        "humanValidated": true
+      }
     }
   ]
 }
