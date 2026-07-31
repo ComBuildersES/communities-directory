@@ -18857,5 +18857,35 @@
     "displayOnMap": true,
     "humanValidated": true,
     "parentId": 616
+  },
+  {
+    "id": 625,
+    "name": "Free Software Foundation Europe",
+    "status": "active",
+    "lastReviewed": "31/07/2026",
+    "communityType": "umbrella-org",
+    "eventFormat": "hybrid",
+    "location": "n/a",
+    "shortDescription": "La Fundación para el Software Libre de Europa ayuda a los entusiastas del software libre a compartir sus experiencias positivas, pedir recomendaciones sobre temas y programas relacionados con el software libre y resolver problemas de forma conjunta.",
+    "topics": "",
+    "langs": [
+      "es",
+      "en"
+    ],
+    "tags": [
+      "free-software"
+    ],
+    "targetAudience": [],
+    "contactInfo": "contact@fsfe.org",
+    "communityUrl": "https://fsfe.org/about/groups.en.html",
+    "urls": {},
+    "thumbnailUrl": "images/free-software-foundation-europe.webp",
+    "removalReason": "",
+    "latLon": {
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false,
+    "humanValidated": true
   }
 ]
