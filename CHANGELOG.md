@@ -15,10 +15,15 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-07-31 `be628a6` update changelog [skip ci]
 - 2026-07-31 `b1220bd` update changelog [skip ci]
 - 2026-07-31 `3cd900e` update changelog [skip ci]
 - 2026-07-21 `528fc05` update changelog [skip ci]
 - 2026-07-15 `7ee536b` update changelog [skip ci]
+
+### Other
+
+- 2026-07-31 `f5e3b8c` Update communities.meta.json
 
 ## 2026-06
 
