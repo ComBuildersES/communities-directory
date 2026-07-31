@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-07-31 `d3717b1` [Añadida Free Software Foundation Europe](https://combuilderses.github.io/communities-directory/?community=625) ([PR #408](https://github.com/ComBuildersES/communities-directory/pull/408))
 - 2026-07-31 `688c150` Update communities.json
 - 2026-07-31 `d925ff9` [Añadida Geoinquietos Almería](https://combuilderses.github.io/communities-directory/?community=623) ([PR #406](https://github.com/ComBuildersES/communities-directory/pull/406))
 - 2026-07-31 `665adbd` [Añadida Betabeers Almería](https://combuilderses.github.io/communities-directory/?community=623) ([PR #404](https://github.com/ComBuildersES/communities-directory/pull/404))
@@ -16,6 +17,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-07-31 `f88a5a5` update changelog [skip ci]
 - 2026-07-31 `3eb93d0` update changelog [skip ci]
 - 2026-07-31 `be628a6` update changelog [skip ci]
 - 2026-07-31 `b1220bd` update changelog [skip ci]
