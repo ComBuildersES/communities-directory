@@ -18887,5 +18887,46 @@
     },
     "displayOnMap": false,
     "humanValidated": true
+  },
+  {
+    "id": 626,
+    "name": "Barcelona Free Software",
+    "status": "active",
+    "lastReviewed": "31/07/2026",
+    "communityType": "tech-meetup",
+    "eventFormat": "in-person",
+    "location": "Barcelona",
+    "shortDescription": "Comunidad de creadores de software libre, también conocido como código abierto, con sede en Barcelona. Nuestra actividad principal es un grupo de Meetup, un encuentro abierto para desarrolladores y usuarios que comparten la pasión por la libertad del software.",
+    "topics": "",
+    "langs": [
+      "es"
+    ],
+    "tags": [
+      "free-software",
+      "open-hardware",
+      "linux",
+      "open-source"
+    ],
+    "targetAudience": [],
+    "contactInfo": "",
+    "communityUrl": "https://bcnfs.org/",
+    "urls": {
+      "eventsUrl": "https://www.meetup.com/barcelona-free-software/",
+      "web": "https://docs.fsfe.org/en/LocalGroups/Active/Barcelona",
+      "mailingList": "https://lists.bcnfs.org/mailman3/lists/comunicacio.bcnfs.org/",
+      "youtube": "https://www.youtube.com/playlist?list=PLnYTvqeUgaCH__pAycl1c31O2J-kYYpRz",
+      "mastodon": "https://fosstodon.org/@BCNFreeSoftware",
+      "linkedin": "https://www.linkedin.com/company/barcelona-free-software/",
+      "bluesky": "https://bsky.app/profile/BCNFreeSoftware.fosstodon.org.ap.brid.gy"
+    },
+    "thumbnailUrl": "images/barcelona-free-software.webp",
+    "removalReason": "",
+    "latLon": {
+      "lat": 41.3825802,
+      "lon": 2.177073
+    },
+    "displayOnMap": true,
+    "humanValidated": true,
+    "parentId": 625
   }
 ]
