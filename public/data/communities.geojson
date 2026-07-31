@@ -17731,6 +17731,49 @@
         "thumbnailUrl": "images/corua-tech.webp",
         "humanValidated": true
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.3120282,
+          36.8685739
+        ]
+      },
+      "properties": {
+        "id": 623,
+        "name": "Geoinquietos Almería",
+        "status": "inactive",
+        "lastReviewed": "31/07/2026",
+        "communityType": "tech-meetup",
+        "eventFormat": "in-person",
+        "location": "Almería",
+        "topics": "",
+        "langs": [
+          "es"
+        ],
+        "tags": [
+          "geospatial",
+          "data-visualization",
+          "data-engineering",
+          "data-science",
+          "spatial-databases"
+        ],
+        "targetAudience": [
+          "data-scientist",
+          "data-engineer",
+          "frontend-developer",
+          "backend-developer"
+        ],
+        "contactInfo": "",
+        "communityUrl": "https://wiki.osgeo.org/wiki/Geoinquietos_Almer%C3%ADa",
+        "urls": {
+          "twitter": "https://x.com/geoinquietosalm"
+        },
+        "thumbnailUrl": "images/geoinquietos-almera.webp",
+        "humanValidated": true
+      }
     }
   ]
 }
