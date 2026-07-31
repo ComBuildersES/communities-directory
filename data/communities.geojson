@@ -17700,6 +17700,37 @@
         "thumbnailUrl": "images/the-things-network-madrid.webp",
         "humanValidated": true
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -8.5805076,
+          43.1539943
+        ]
+      },
+      "properties": {
+        "id": 622,
+        "name": "Coruña Tech",
+        "status": "active",
+        "lastReviewed": "31/07/2026",
+        "communityType": "meta-community",
+        "eventFormat": "in-person",
+        "location": "Coruña, Spain",
+        "topics": "",
+        "langs": [
+          "es",
+          "gl"
+        ],
+        "tags": [],
+        "targetAudience": [],
+        "contactInfo": "",
+        "communityUrl": "https://corunatech.org/",
+        "urls": {},
+        "thumbnailUrl": "images/corua-tech.webp",
+        "humanValidated": true
+      }
     }
   ]
 }
