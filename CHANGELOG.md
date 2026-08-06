@@ -3,6 +3,12 @@
 Historial generado automáticamente a partir de los commits del repositorio.
 Se organiza por mes y por tipo de cambio.
 
+## 2026-08
+
+### Data
+
+- 2026-08-06 `dda7efe` [Añadida Claude Community Ambassadors](https://combuilderses.github.io/communities-directory/?community=627) ([PR #413](https://github.com/ComBuildersES/communities-directory/pull/413))
+
 ## 2026-07
 
 ### Data
@@ -18,6 +24,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-07-31 `70ce712` update changelog [skip ci]
 - 2026-07-31 `96a9bfd` update changelog [skip ci]
 - 2026-07-31 `f88a5a5` update changelog [skip ci]
 - 2026-07-31 `3eb93d0` update changelog [skip ci]
