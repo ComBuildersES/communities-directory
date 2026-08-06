@@ -1,6 +1,7 @@
 import { normalizeCommunityLangs } from "./communityLanguages.js";
 
 const GITHUB_NEW_ISSUE_URL = "https://github.com/ComBuildersES/communities-directory/issues/new";
+export const COMMUNITY_BUILDERS_EMAIL = "communitybuilders.es@gmail.com";
 
 export const COMMUNITY_STATUS_OPTIONS = ["active", "inactive", "unknown"];
 export const COMMUNITY_TYPE_OPTIONS = [
@@ -624,6 +625,20 @@ export function buildGitHubIssueUrl({ payload, mode, shareUrl }) {
   const url = new URL(GITHUB_NEW_ISSUE_URL);
   url.searchParams.set("title", title);
   url.searchParams.set("body", body);
+  return url.toString();
+}
+
+export function buildSubmissionEmailUrl({ payload, mode, shareUrl, recipient = COMMUNITY_BUILDERS_EMAIL }) {
+  const { title, body } = buildIssueContent({ payload, mode, shareUrl });
+  const url = new URL(`mailto:${recipient}`);
+  url.searchParams.set("subject", title);
+  url.searchParams.set("body", [
+    "Hola Community Builders,",
+    "",
+    "Comparto esta propuesta para el directorio. Si hace falta, podéis responder a este mismo correo.",
+    "",
+    body,
+  ].join("\n"));
   return url.toString();
 }
 

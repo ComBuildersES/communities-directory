@@ -5,9 +5,17 @@ Se organiza por mes y por tipo de cambio.
 
 ## 2026-08
 
+### Features
+
+- 2026-08-06 `f1720e9` allow community submissions by email
+
 ### Data
 
 - 2026-08-06 `dda7efe` [Añadida Claude Community Ambassadors](https://combuilderses.github.io/communities-directory/?community=627) ([PR #413](https://github.com/ComBuildersES/communities-directory/pull/413))
+
+### Docs
+
+- 2026-08-06 `1f248c3` update changelog [skip ci]
 
 ## 2026-07
 

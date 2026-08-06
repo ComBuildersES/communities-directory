@@ -366,7 +366,7 @@
     "hero": {
       "eyebrow": "Thank you for contributing 💛",
       "descriptionEdit": "Update this community's data in the form and click \"Update\" to create an issue in the repository.",
-      "descriptionNew": "Fill in the new community's data in the form and click \"Suggest new community\" to create an issue in the repository."
+      "descriptionNew": "Fill in the new community's data in the form and use \"Suggest new community\" or \"Send by email\" to send us the proposal."
     },
     "proposal": {
       "loaded": "I've loaded the proposal included in this link. You can adjust it and reopen an issue with an improved version."
@@ -446,7 +446,9 @@
     "submit": {
       "edit": "Update",
       "new": "Suggest new community",
-      "note": "GitHub will open with the issue title and body pre-filled."
+      "email": "Send by email",
+      "note": "GitHub will open with the issue title and body pre-filled.",
+      "noteWithEmail": "You can open a GitHub issue or prepare an email to Community Builders with the generated JSON. If your mail client truncates it, copy the JSON block manually."
     }
   }
 }

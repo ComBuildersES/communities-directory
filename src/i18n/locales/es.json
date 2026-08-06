@@ -366,7 +366,7 @@
     "hero": {
       "eyebrow": "Gracias por contribuir 💛",
       "descriptionEdit": "Actualiza los datos de esta comunidad en el formulario y dale al botón \"Actualizar\" para crear un issue en el repositorio.",
-      "descriptionNew": "Completa los datos de la nueva comunidad en el formulario y dale al botón \"Sugerir nueva comunidad\" para crear un issue en el repositorio."
+      "descriptionNew": "Completa los datos de la nueva comunidad en el formulario y usa \"Sugerir nueva comunidad\" o \"Enviar por email\" para hacernos llegar la propuesta."
     },
     "proposal": {
       "loaded": "He cargado la propuesta incluida en este enlace. Puedes ajustarla y volver a abrir un issue con una versión mejorada."
@@ -446,7 +446,9 @@
     "submit": {
       "edit": "Actualizar",
       "new": "Sugerir nueva comunidad",
-      "note": "Se abrirá GitHub con el título y el cuerpo del issue precargados."
+      "email": "Enviar por email",
+      "note": "Se abrirá GitHub con el título y el cuerpo del issue precargados.",
+      "noteWithEmail": "Puedes abrir un issue en GitHub o preparar un correo a Community Builders con el JSON generado. Si tu cliente de correo recorta el contenido, copia el bloque JSON manualmente."
     }
   }
 }

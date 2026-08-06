@@ -6,6 +6,7 @@ import {
   buildCommunityDeletionIssueUrl,
   buildContributionPath,
   buildGitHubIssueUrl,
+  buildSubmissionEmailUrl,
   clearContributionDraft,
   COMMUNITY_STATUS_OPTIONS,
   COMMUNITY_TYPE_OPTIONS,
@@ -1085,6 +1086,10 @@ export function CommunityContribution({
     () => buildGitHubIssueUrl({ payload, mode: isEditMode ? "edit" : "new", shareUrl }),
     [isEditMode, payload, shareUrl]
   );
+  const submissionEmailUrl = useMemo(
+    () => buildSubmissionEmailUrl({ payload, mode: isEditMode ? "edit" : "new", shareUrl }),
+    [isEditMode, payload, shareUrl]
+  );
   const duplicateCandidates = useMemo(
     () => communities
       .filter((community) => !existingCommunity || community.id !== existingCommunity.id)
@@ -1980,8 +1985,16 @@ export function CommunityContribution({
           <button type="submit" className="button is-primary is-medium contribution-submit-button">
             {isEditMode ? t("contribution.submit.edit") : t("contribution.submit.new")}
           </button>
+          {!isEditMode && (
+            <a
+              className="button is-light is-medium contribution-submit-button"
+              href={submissionEmailUrl}
+            >
+              {t("contribution.submit.email")}
+            </a>
+          )}
           <p className="contribution-submit-note">
-            {t("contribution.submit.note")}
+            {isEditMode ? t("contribution.submit.note") : t("contribution.submit.noteWithEmail")}
           </p>
         </div>
       </section>
