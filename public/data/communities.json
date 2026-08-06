@@ -18928,5 +18928,39 @@
     "displayOnMap": true,
     "humanValidated": true,
     "parentId": 625
+  },
+  {
+    "id": 627,
+    "name": "Claude Community Ambassadors",
+    "status": "active",
+    "lastReviewed": "06/08/2026",
+    "communityType": "umbrella-org",
+    "eventFormat": "in-person",
+    "location": "n/a",
+    "shortDescription": "Comunidad de Claude para compartir soluciones, ayudarse mutuamente y ampliar los límites de lo que es posible con la IA.",
+    "topics": "",
+    "langs": [
+      "es",
+      "en"
+    ],
+    "tags": [
+      "generative-ai",
+      "ai-coding-agents"
+    ],
+    "targetAudience": [],
+    "contactInfo": "",
+    "communityUrl": "https://claude.com/community/ambassadors",
+    "urls": {
+      "eventsUrl": "https://claude.com/community",
+      "discord": "https://discord.com/invite/6PPFFzqPDZ"
+    },
+    "thumbnailUrl": "images/claude-community-ambassadors.webp",
+    "removalReason": "",
+    "latLon": {
+      "lat": null,
+      "lon": null
+    },
+    "displayOnMap": false,
+    "humanValidated": true
   }
 ]
