@@ -35,8 +35,11 @@ jobs:
       - name: Build the project
         run: npm run build
 
+      - name: Clean Pages artifact
+        run: find dist -name ".DS_Store" -delete
+
       - name: Upload Pages artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v5
         with:
           path: dist
 
