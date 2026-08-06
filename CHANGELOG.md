@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-08-06 `f1720e9` allow community submissions by email
+- 2026-08-06 `d311262` allow community submissions by email
 
 ### Data
 
@@ -16,6 +16,10 @@ Se organiza por mes y por tipo de cambio.
 ### Docs
 
 - 2026-08-06 `1f248c3` update changelog [skip ci]
+
+### Maintenance
+
+- 2026-08-06 `1a338c4` deploy pages with github actions
 
 ## 2026-07
 
