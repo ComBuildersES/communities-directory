@@ -2,13 +2,20 @@ name: URL health
 
 on:
   pull_request:
+    paths:
+      - public/data/communities.json
   workflow_dispatch:
   schedule:
     - cron: "0 7 * * 1"
 
+concurrency:
+  group: url-health-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   check-urls:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
 
     steps:
       - name: Checkout source code

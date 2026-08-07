@@ -16,6 +16,12 @@ jobs:
     steps:
       - name: Checkout del repositorio
         uses: actions/checkout@v6
+        with:
+          # Sin ref explícito, un rerun reutiliza el SHA del evento original.
+          # Si master avanzó tocando .github/workflows/, la rama del PR parecería
+          # modificar workflows y el push se rechaza (GITHUB_TOKEN no tiene scope
+          # `workflows`). Anclar a master mantiene los reruns válidos.
+          ref: master
 
       - name: Configurar Node.js
         uses: actions/setup-node@v6

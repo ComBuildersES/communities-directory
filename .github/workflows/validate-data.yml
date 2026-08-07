@@ -2,9 +2,11 @@ name: Validate data and build
 
 on:
   pull_request:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   validate:
@@ -23,7 +25,7 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Fetch PR base branch
         if: github.event_name == 'pull_request'

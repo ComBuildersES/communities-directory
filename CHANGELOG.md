@@ -15,10 +15,13 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-08-06 `dd36cf9` update changelog [skip ci]
 - 2026-08-06 `1f248c3` update changelog [skip ci]
 
 ### Maintenance
 
+- 2026-08-07 `172584c` harden workflows against stale reruns and duplicate builds
+- 2026-08-06 `7c5af95` trim pages artifact upload
 - 2026-08-06 `1a338c4` deploy pages with github actions
 
 ## 2026-07
