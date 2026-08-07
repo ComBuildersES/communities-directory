@@ -18966,6 +18966,7 @@
   {
     "id": 628,
     "name": "Claude Madrid",
+    "hidden": true,
     "status": "active",
     "lastReviewed": "06/08/2026",
     "communityType": "tech-meetup",

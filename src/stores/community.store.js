@@ -96,7 +96,7 @@ const useCommunityStore = create(
           // Resolve relative thumbnailUrl values to absolute paths.
           // Components receive ready-to-use URLs; no BASE_URL handling needed per-component.
           const baseUrl = import.meta.env.BASE_URL;
-          const data = rawData.map((c) => {
+          const data = rawData.filter((c) => c.hidden !== true).map((c) => {
             const { thumbnailUrl } = c;
             const normalizedThumbnailUrl =
               !thumbnailUrl || thumbnailUrl.startsWith("http") || thumbnailUrl.startsWith("//") || thumbnailUrl.startsWith("/")

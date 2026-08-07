@@ -9,6 +9,10 @@ Se organiza por mes y por tipo de cambio.
 
 - 2026-08-06 `d311262` allow community submissions by email
 
+### Fixes
+
+- 2026-08-07 `e6119f6` hide unpublished Claude Madrid community
+
 ### Data
 
 - 2026-08-07 `1f5764e` [Añadida Claude Madrid](https://combuilderses.github.io/communities-directory/?community=628) ([PR #415](https://github.com/ComBuildersES/communities-directory/pull/415))
@@ -16,6 +20,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-08-07 `1bb6cf7` update changelog [skip ci]
 - 2026-08-07 `c71e0e5` update changelog [skip ci]
 - 2026-08-06 `dd36cf9` update changelog [skip ci]
 - 2026-08-06 `1f248c3` update changelog [skip ci]
