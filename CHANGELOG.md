@@ -11,10 +11,12 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-08-07 `1f5764e` [Añadida Claude Madrid](https://combuilderses.github.io/communities-directory/?community=628) ([PR #415](https://github.com/ComBuildersES/communities-directory/pull/415))
 - 2026-08-06 `dda7efe` [Añadida Claude Community Ambassadors](https://combuilderses.github.io/communities-directory/?community=627) ([PR #413](https://github.com/ComBuildersES/communities-directory/pull/413))
 
 ### Docs
 
+- 2026-08-07 `c71e0e5` update changelog [skip ci]
 - 2026-08-06 `dd36cf9` update changelog [skip ci]
 - 2026-08-06 `1f248c3` update changelog [skip ci]
 
