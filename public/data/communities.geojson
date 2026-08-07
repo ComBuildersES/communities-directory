@@ -17849,6 +17849,42 @@
         "thumbnailUrl": "images/barcelona-free-software.webp",
         "humanValidated": true
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.703507,
+          40.416782
+        ]
+      },
+      "properties": {
+        "id": 628,
+        "name": "Claude Madrid",
+        "status": "active",
+        "lastReviewed": "06/08/2026",
+        "communityType": "tech-meetup",
+        "eventFormat": "in-person",
+        "location": "Madrid, Spain",
+        "topics": "",
+        "langs": [
+          "es",
+          "en"
+        ],
+        "tags": [
+          "generative-ai",
+          "ai-coding-agents"
+        ],
+        "targetAudience": [],
+        "contactInfo": "",
+        "communityUrl": "https://claudemadrid.com/",
+        "urls": {
+          "eventsUrl": "https://claudemadrid.com/eventos"
+        },
+        "thumbnailUrl": "images/claude-madrid.webp",
+        "humanValidated": true
+      }
     }
   ]
 }
