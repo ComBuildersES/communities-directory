@@ -11,7 +11,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Fixes
 
-- 2026-08-07 `e6119f6` hide unpublished Claude Madrid community
+- 2026-08-07 `eb0afe0` hide unpublished Claude Madrid community
 
 ### Data
 
