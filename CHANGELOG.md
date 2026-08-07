@@ -11,6 +11,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Fixes
 
+- 2026-08-07 `79ab8a1` clear hidden community deep links
 - 2026-08-07 `eb0afe0` hide unpublished Claude Madrid community
 
 ### Data
@@ -20,6 +21,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-08-07 `b1fc089` update changelog [skip ci]
 - 2026-08-07 `1bb6cf7` update changelog [skip ci]
 - 2026-08-07 `c71e0e5` update changelog [skip ci]
 - 2026-08-06 `dd36cf9` update changelog [skip ci]

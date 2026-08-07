@@ -306,6 +306,15 @@ function App () {
   }, [selectedCommunity]);
 
   useEffect(() => {
+    if (showContributionView) return;
+    if (!selectedCommunityIdentifier) return;
+    if (isLoading || communities.length === 0) return;
+    if (selectedCommunity) return;
+
+    setSelectedCommunityIdentifier(null);
+  }, [communities, isLoading, selectedCommunity, selectedCommunityIdentifier, showContributionView]);
+
+  useEffect(() => {
     if (isCommunityModalOpen) {
       setModalScrollLockY((current) => current ?? window.scrollY);
       return;
