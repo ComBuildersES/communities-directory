@@ -20,7 +20,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Maintenance
 
-- 2026-08-07 `172584c` harden workflows against stale reruns and duplicate builds
+- 2026-08-07 `e01d35b` harden workflows against stale reruns and duplicate builds
 - 2026-08-06 `7c5af95` trim pages artifact upload
 - 2026-08-06 `1a338c4` deploy pages with github actions
 
