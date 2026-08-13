@@ -240,8 +240,8 @@ const SUPPORTED_LOCALES = [
 The active locale is embedded as the first path segment after the app base path:
 
 ```
-Production:   https://combuilderses.github.io/communities-directory/es/
-              https://combuilderses.github.io/communities-directory/en/
+Production:   https://directory.communitybuilders.dev/es/
+              https://directory.communitybuilders.dev/en/
 
 Local dev:    http://localhost:5173/es/
               http://localhost:5173/en/

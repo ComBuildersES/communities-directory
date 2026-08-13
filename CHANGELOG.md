@@ -11,16 +11,18 @@ Se organiza por mes y por tipo de cambio.
 
 ### Fixes
 
+- 2026-08-13 `3e6aedb` serve app at root for custom domain directory.communitybuilders.dev
 - 2026-08-07 `1d86fec` clear hidden community deep links
 - 2026-08-07 `eb0afe0` hide unpublished Claude Madrid community
 
 ### Data
 
-- 2026-08-07 `1f5764e` [Añadida Claude Madrid](https://combuilderses.github.io/communities-directory/?community=628) ([PR #415](https://github.com/ComBuildersES/communities-directory/pull/415))
-- 2026-08-06 `dda7efe` [Añadida Claude Community Ambassadors](https://combuilderses.github.io/communities-directory/?community=627) ([PR #413](https://github.com/ComBuildersES/communities-directory/pull/413))
+- 2026-08-07 `1f5764e` [Añadida Claude Madrid](https://directory.communitybuilders.dev/?community=628) ([PR #415](https://github.com/ComBuildersES/communities-directory/pull/415))
+- 2026-08-06 `dda7efe` [Añadida Claude Community Ambassadors](https://directory.communitybuilders.dev/?community=627) ([PR #413](https://github.com/ComBuildersES/communities-directory/pull/413))
 
 ### Docs
 
+- 2026-08-07 `70311ee` update changelog [skip ci]
 - 2026-08-07 `b1fc089` update changelog [skip ci]
 - 2026-08-07 `1bb6cf7` update changelog [skip ci]
 - 2026-08-07 `c71e0e5` update changelog [skip ci]
@@ -37,14 +39,14 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
-- 2026-07-31 `7a975dd` [Añadida Barcelona Free Software](https://combuilderses.github.io/communities-directory/?community=626) ([PR #410](https://github.com/ComBuildersES/communities-directory/pull/410))
-- 2026-07-31 `d3717b1` [Añadida Free Software Foundation Europe](https://combuilderses.github.io/communities-directory/?community=625) ([PR #408](https://github.com/ComBuildersES/communities-directory/pull/408))
+- 2026-07-31 `7a975dd` [Añadida Barcelona Free Software](https://directory.communitybuilders.dev/?community=626) ([PR #410](https://github.com/ComBuildersES/communities-directory/pull/410))
+- 2026-07-31 `d3717b1` [Añadida Free Software Foundation Europe](https://directory.communitybuilders.dev/?community=625) ([PR #408](https://github.com/ComBuildersES/communities-directory/pull/408))
 - 2026-07-31 `688c150` Update communities.json
-- 2026-07-31 `d925ff9` [Añadida Geoinquietos Almería](https://combuilderses.github.io/communities-directory/?community=623) ([PR #406](https://github.com/ComBuildersES/communities-directory/pull/406))
-- 2026-07-31 `665adbd` [Añadida Betabeers Almería](https://combuilderses.github.io/communities-directory/?community=623) ([PR #404](https://github.com/ComBuildersES/communities-directory/pull/404))
-- 2026-07-31 `56f4d4f` [Añadida Coruña Tech](https://combuilderses.github.io/communities-directory/?community=622) ([PR #401](https://github.com/ComBuildersES/communities-directory/pull/401))
+- 2026-07-31 `d925ff9` [Añadida Geoinquietos Almería](https://directory.communitybuilders.dev/?community=623) ([PR #406](https://github.com/ComBuildersES/communities-directory/pull/406))
+- 2026-07-31 `665adbd` [Añadida Betabeers Almería](https://directory.communitybuilders.dev/?community=623) ([PR #404](https://github.com/ComBuildersES/communities-directory/pull/404))
+- 2026-07-31 `56f4d4f` [Añadida Coruña Tech](https://directory.communitybuilders.dev/?community=622) ([PR #401](https://github.com/ComBuildersES/communities-directory/pull/401))
 - 2026-07-21 `3dcfbba` Update community-builders-members.json adding jcea
-- 2026-07-14 `ca02269` [Actualizada DevOpsDays Vitória](https://combuilderses.github.io/communities-directory/?community=139) ([PR #399](https://github.com/ComBuildersES/communities-directory/pull/399))
+- 2026-07-14 `ca02269` [Actualizada DevOpsDays Vitória](https://directory.communitybuilders.dev/?community=139) ([PR #399](https://github.com/ComBuildersES/communities-directory/pull/399))
 
 ### Docs
 
@@ -67,10 +69,10 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
-- 2026-06-25 `894c450` [Actualizada FR!K](https://combuilderses.github.io/communities-directory/?community=600) ([PR #392](https://github.com/ComBuildersES/communities-directory/pull/392))
-- 2026-06-23 `32a420e` [Añadida The Things Network Madrid](https://combuilderses.github.io/communities-directory/?community=621) ([PR #390](https://github.com/ComBuildersES/communities-directory/pull/390))
-- 2026-06-23 `4d7b680` [Añadida The Things Network](https://combuilderses.github.io/communities-directory/?community=620) ([PR #388](https://github.com/ComBuildersES/communities-directory/pull/388))
-- 2026-06-22 `8ef6d6b` [Actualizada Fr!k](https://combuilderses.github.io/communities-directory/?community=600) ([PR #385](https://github.com/ComBuildersES/communities-directory/pull/385))
+- 2026-06-25 `894c450` [Actualizada FR!K](https://directory.communitybuilders.dev/?community=600) ([PR #392](https://github.com/ComBuildersES/communities-directory/pull/392))
+- 2026-06-23 `32a420e` [Añadida The Things Network Madrid](https://directory.communitybuilders.dev/?community=621) ([PR #390](https://github.com/ComBuildersES/communities-directory/pull/390))
+- 2026-06-23 `4d7b680` [Añadida The Things Network](https://directory.communitybuilders.dev/?community=620) ([PR #388](https://github.com/ComBuildersES/communities-directory/pull/388))
+- 2026-06-22 `8ef6d6b` [Actualizada Fr!k](https://directory.communitybuilders.dev/?community=600) ([PR #385](https://github.com/ComBuildersES/communities-directory/pull/385))
 - 2026-06-22 `c21faed` Update community-builders-members.json: add ADCP-dev to frik
 
 ### Docs
@@ -88,7 +90,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
-- 2026-05-22 `c20e2d9` [Añadida I Jornada sobre Software Libre e Inteligencia Artificial Abierta](https://combuilderses.github.io/communities-directory/?community=619) ([PR #383](https://github.com/ComBuildersES/communities-directory/pull/383))
+- 2026-05-22 `c20e2d9` [Añadida I Jornada sobre Software Libre e Inteligencia Artificial Abierta](https://directory.communitybuilders.dev/?community=619) ([PR #383](https://github.com/ComBuildersES/communities-directory/pull/383))
 
 ### Docs
 
@@ -108,19 +110,19 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
-- 2026-04-14 `6138d5d` [Añadida Detrás del mapa](https://combuilderses.github.io/communities-directory/?community=618) ([PR #381](https://github.com/ComBuildersES/communities-directory/pull/381))
-- 2026-04-07 `e431127` [Actualizada Commit Conf](https://combuilderses.github.io/communities-directory/?community=100) ([PR #379](https://github.com/ComBuildersES/communities-directory/pull/379))
-- 2026-04-06 `6753781` [Actualizada Notion Coruña](https://combuilderses.github.io/communities-directory/?community=369) ([PR #374](https://github.com/ComBuildersES/communities-directory/pull/374))
-- 2026-04-06 `e3562e2` [Actualizada CorunaEvents](https://combuilderses.github.io/communities-directory/?community=113) ([PR #372](https://github.com/ComBuildersES/communities-directory/pull/372))
-- 2026-04-06 `0946955` [Actualizada Sirviendo Código](https://combuilderses.github.io/communities-directory/?community=422) ([PR #370](https://github.com/ComBuildersES/communities-directory/pull/370))
-- 2026-04-06 `884d23e` [Actualizada Wikiproyecto Almería](https://combuilderses.github.io/communities-directory/?community=470) ([PR #368](https://github.com/ComBuildersES/communities-directory/pull/368))
-- 2026-04-06 `fa1f455` [Actualizada Wikiproyecto Almería](https://combuilderses.github.io/communities-directory/?community=470) ([PR #366](https://github.com/ComBuildersES/communities-directory/pull/366))
-- 2026-04-06 `ff24647` [Actualizada Jam Attack](https://combuilderses.github.io/communities-directory/?community=589) ([PR #364](https://github.com/ComBuildersES/communities-directory/pull/364))
-- 2026-04-06 `4cfd118` [Actualizada CanallaCon](https://combuilderses.github.io/communities-directory/?community=563) ([PR #362](https://github.com/ComBuildersES/communities-directory/pull/362))
-- 2026-04-06 `7c0f2ba` [Actualizada Wikiproyecto Almería](https://combuilderses.github.io/communities-directory/?community=470) ([PR #360](https://github.com/ComBuildersES/communities-directory/pull/360))
-- 2026-04-06 `1f3d6c4` [Actualizada La Jaquería](https://combuilderses.github.io/communities-directory/?community=309) ([PR #358](https://github.com/ComBuildersES/communities-directory/pull/358))
-- 2026-04-02 `96f65e8` [Actualizada AlmeriaTech](https://combuilderses.github.io/communities-directory/?community=25) ([PR #355](https://github.com/ComBuildersES/communities-directory/pull/355))
-- 2026-04-01 `29f375d` [Añadida geomobBCN](https://combuilderses.github.io/communities-directory/?community=617) ([PR #346](https://github.com/ComBuildersES/communities-directory/pull/346))
+- 2026-04-14 `6138d5d` [Añadida Detrás del mapa](https://directory.communitybuilders.dev/?community=618) ([PR #381](https://github.com/ComBuildersES/communities-directory/pull/381))
+- 2026-04-07 `e431127` [Actualizada Commit Conf](https://directory.communitybuilders.dev/?community=100) ([PR #379](https://github.com/ComBuildersES/communities-directory/pull/379))
+- 2026-04-06 `6753781` [Actualizada Notion Coruña](https://directory.communitybuilders.dev/?community=369) ([PR #374](https://github.com/ComBuildersES/communities-directory/pull/374))
+- 2026-04-06 `e3562e2` [Actualizada CorunaEvents](https://directory.communitybuilders.dev/?community=113) ([PR #372](https://github.com/ComBuildersES/communities-directory/pull/372))
+- 2026-04-06 `0946955` [Actualizada Sirviendo Código](https://directory.communitybuilders.dev/?community=422) ([PR #370](https://github.com/ComBuildersES/communities-directory/pull/370))
+- 2026-04-06 `884d23e` [Actualizada Wikiproyecto Almería](https://directory.communitybuilders.dev/?community=470) ([PR #368](https://github.com/ComBuildersES/communities-directory/pull/368))
+- 2026-04-06 `fa1f455` [Actualizada Wikiproyecto Almería](https://directory.communitybuilders.dev/?community=470) ([PR #366](https://github.com/ComBuildersES/communities-directory/pull/366))
+- 2026-04-06 `ff24647` [Actualizada Jam Attack](https://directory.communitybuilders.dev/?community=589) ([PR #364](https://github.com/ComBuildersES/communities-directory/pull/364))
+- 2026-04-06 `4cfd118` [Actualizada CanallaCon](https://directory.communitybuilders.dev/?community=563) ([PR #362](https://github.com/ComBuildersES/communities-directory/pull/362))
+- 2026-04-06 `7c0f2ba` [Actualizada Wikiproyecto Almería](https://directory.communitybuilders.dev/?community=470) ([PR #360](https://github.com/ComBuildersES/communities-directory/pull/360))
+- 2026-04-06 `1f3d6c4` [Actualizada La Jaquería](https://directory.communitybuilders.dev/?community=309) ([PR #358](https://github.com/ComBuildersES/communities-directory/pull/358))
+- 2026-04-02 `96f65e8` [Actualizada AlmeriaTech](https://directory.communitybuilders.dev/?community=25) ([PR #355](https://github.com/ComBuildersES/communities-directory/pull/355))
+- 2026-04-01 `29f375d` [Añadida geomobBCN](https://directory.communitybuilders.dev/?community=617) ([PR #346](https://github.com/ComBuildersES/communities-directory/pull/346))
 
 ### Docs
 
@@ -255,76 +257,76 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
-- 2026-03-31 `2b3fc0d` [Actualizada Arcasiles Community Madrid](https://combuilderses.github.io/communities-directory/?community=31) ([PR #338](https://github.com/ComBuildersES/communities-directory/pull/338))
-- 2026-03-31 `cf3dd38` [Actualizada Makers iA](https://combuilderses.github.io/communities-directory/?community=554) ([PR #336](https://github.com/ComBuildersES/communities-directory/pull/336))
+- 2026-03-31 `2b3fc0d` [Actualizada Arcasiles Community Madrid](https://directory.communitybuilders.dev/?community=31) ([PR #338](https://github.com/ComBuildersES/communities-directory/pull/338))
+- 2026-03-31 `cf3dd38` [Actualizada Makers iA](https://directory.communitybuilders.dev/?community=554) ([PR #336](https://github.com/ComBuildersES/communities-directory/pull/336))
 - 2026-03-30 `73b9ac1` Clear tags and target audience from communities.json
-- 2026-03-30 `ffff85e` [Actualizada Lareira Conf](https://combuilderses.github.io/communities-directory/?community=541) ([PR #333](https://github.com/ComBuildersES/communities-directory/pull/333))
-- 2026-03-30 `a138e10` [Actualizada Women Techmakers Madrid](https://combuilderses.github.io/communities-directory/?community=480) ([PR #330](https://github.com/ComBuildersES/communities-directory/pull/330))
-- 2026-03-30 `1565bec` [Actualizada WordPress Coruña](https://combuilderses.github.io/communities-directory/?community=497) ([PR #328](https://github.com/ComBuildersES/communities-directory/pull/328))
-- 2026-03-30 `30367be` [Actualizada Datolada](https://combuilderses.github.io/communities-directory/?community=540) ([PR #326](https://github.com/ComBuildersES/communities-directory/pull/326))
-- 2026-03-30 `9f9c7bc` [Actualizada Ping A Programadoras](https://combuilderses.github.io/communities-directory/?community=573) ([PR #323](https://github.com/ComBuildersES/communities-directory/pull/323))
-- 2026-03-30 `db40ef0` [Añadida GeoInquietos](https://combuilderses.github.io/communities-directory/?community=616) ([PR #321](https://github.com/ComBuildersES/communities-directory/pull/321))
-- 2026-03-30 `90976d9` [Actualizada GDG Spain](https://combuilderses.github.io/communities-directory/?community=207) ([PR #319](https://github.com/ComBuildersES/communities-directory/pull/319))
-- 2026-03-30 `0d62115` [Actualizada Iniciador](https://combuilderses.github.io/communities-directory/?community=254) ([PR #317](https://github.com/ComBuildersES/communities-directory/pull/317))
-- 2026-03-30 `5620213` [Actualizada Codemotion Madrid](https://combuilderses.github.io/communities-directory/?community=94) ([PR #315](https://github.com/ComBuildersES/communities-directory/pull/315))
-- 2026-03-30 `9c377e8` [Actualizada GDG Spain](https://combuilderses.github.io/communities-directory/?community=207) ([PR #313](https://github.com/ComBuildersES/communities-directory/pull/313))
-- 2026-03-29 `07ff861` [Actualizada Madrid-Groovy User Group (GUG)](https://combuilderses.github.io/communities-directory/?community=330) ([PR #310](https://github.com/ComBuildersES/communities-directory/pull/310))
-- 2026-03-29 `9f1c8b7` [Actualizada MadridJUG](https://combuilderses.github.io/communities-directory/?community=333) ([PR #306](https://github.com/ComBuildersES/communities-directory/pull/306))
-- 2026-03-27 `30e597a` [Añadida GEG Spain](https://combuilderses.github.io/communities-directory/?community=606) ([PR #301](https://github.com/ComBuildersES/communities-directory/pull/301))
-- 2026-03-27 `4bb5096` [Actualizada T3chFest](https://combuilderses.github.io/communities-directory/?community=440) ([PR #298](https://github.com/ComBuildersES/communities-directory/pull/298))
-- 2026-03-27 `67c651d` [Actualizada NodeJSMadrid](https://combuilderses.github.io/communities-directory/?community=366) ([PR #294](https://github.com/ComBuildersES/communities-directory/pull/294))
-- 2026-03-27 `76ec93b` [Actualizada Asociación de Webmasters de Granada](https://combuilderses.github.io/communities-directory/?community=37) ([PR #292](https://github.com/ComBuildersES/communities-directory/pull/292))
-- 2026-03-27 `4dc1b5f` [Actualizada NodeJSMadrid](https://combuilderses.github.io/communities-directory/?community=366) ([PR #290](https://github.com/ComBuildersES/communities-directory/pull/290))
-- 2026-03-26 `a1249fc` [Actualizada Liferay Spain User Group (LUGSpain)](https://combuilderses.github.io/communities-directory/?community=317) ([PR #285](https://github.com/ComBuildersES/communities-directory/pull/285))
-- 2026-03-26 `efae707` [Añadida Rust Girona](https://combuilderses.github.io/communities-directory/?community=605) ([PR #281](https://github.com/ComBuildersES/communities-directory/pull/281))
-- 2026-03-26 `4931d4f` [Actualizada Sysarmy Galicia](https://combuilderses.github.io/communities-directory/?community=439) ([PR #279](https://github.com/ComBuildersES/communities-directory/pull/279))
-- 2026-03-26 `3c4a91f` [Actualizada Gen AI Community](https://combuilderses.github.io/communities-directory/?community=361) ([PR #277](https://github.com/ComBuildersES/communities-directory/pull/277))
+- 2026-03-30 `ffff85e` [Actualizada Lareira Conf](https://directory.communitybuilders.dev/?community=541) ([PR #333](https://github.com/ComBuildersES/communities-directory/pull/333))
+- 2026-03-30 `a138e10` [Actualizada Women Techmakers Madrid](https://directory.communitybuilders.dev/?community=480) ([PR #330](https://github.com/ComBuildersES/communities-directory/pull/330))
+- 2026-03-30 `1565bec` [Actualizada WordPress Coruña](https://directory.communitybuilders.dev/?community=497) ([PR #328](https://github.com/ComBuildersES/communities-directory/pull/328))
+- 2026-03-30 `30367be` [Actualizada Datolada](https://directory.communitybuilders.dev/?community=540) ([PR #326](https://github.com/ComBuildersES/communities-directory/pull/326))
+- 2026-03-30 `9f9c7bc` [Actualizada Ping A Programadoras](https://directory.communitybuilders.dev/?community=573) ([PR #323](https://github.com/ComBuildersES/communities-directory/pull/323))
+- 2026-03-30 `db40ef0` [Añadida GeoInquietos](https://directory.communitybuilders.dev/?community=616) ([PR #321](https://github.com/ComBuildersES/communities-directory/pull/321))
+- 2026-03-30 `90976d9` [Actualizada GDG Spain](https://directory.communitybuilders.dev/?community=207) ([PR #319](https://github.com/ComBuildersES/communities-directory/pull/319))
+- 2026-03-30 `0d62115` [Actualizada Iniciador](https://directory.communitybuilders.dev/?community=254) ([PR #317](https://github.com/ComBuildersES/communities-directory/pull/317))
+- 2026-03-30 `5620213` [Actualizada Codemotion Madrid](https://directory.communitybuilders.dev/?community=94) ([PR #315](https://github.com/ComBuildersES/communities-directory/pull/315))
+- 2026-03-30 `9c377e8` [Actualizada GDG Spain](https://directory.communitybuilders.dev/?community=207) ([PR #313](https://github.com/ComBuildersES/communities-directory/pull/313))
+- 2026-03-29 `07ff861` [Actualizada Madrid-Groovy User Group (GUG)](https://directory.communitybuilders.dev/?community=330) ([PR #310](https://github.com/ComBuildersES/communities-directory/pull/310))
+- 2026-03-29 `9f1c8b7` [Actualizada MadridJUG](https://directory.communitybuilders.dev/?community=333) ([PR #306](https://github.com/ComBuildersES/communities-directory/pull/306))
+- 2026-03-27 `30e597a` [Añadida GEG Spain](https://directory.communitybuilders.dev/?community=606) ([PR #301](https://github.com/ComBuildersES/communities-directory/pull/301))
+- 2026-03-27 `4bb5096` [Actualizada T3chFest](https://directory.communitybuilders.dev/?community=440) ([PR #298](https://github.com/ComBuildersES/communities-directory/pull/298))
+- 2026-03-27 `67c651d` [Actualizada NodeJSMadrid](https://directory.communitybuilders.dev/?community=366) ([PR #294](https://github.com/ComBuildersES/communities-directory/pull/294))
+- 2026-03-27 `76ec93b` [Actualizada Asociación de Webmasters de Granada](https://directory.communitybuilders.dev/?community=37) ([PR #292](https://github.com/ComBuildersES/communities-directory/pull/292))
+- 2026-03-27 `4dc1b5f` [Actualizada NodeJSMadrid](https://directory.communitybuilders.dev/?community=366) ([PR #290](https://github.com/ComBuildersES/communities-directory/pull/290))
+- 2026-03-26 `a1249fc` [Actualizada Liferay Spain User Group (LUGSpain)](https://directory.communitybuilders.dev/?community=317) ([PR #285](https://github.com/ComBuildersES/communities-directory/pull/285))
+- 2026-03-26 `efae707` [Añadida Rust Girona](https://directory.communitybuilders.dev/?community=605) ([PR #281](https://github.com/ComBuildersES/communities-directory/pull/281))
+- 2026-03-26 `4931d4f` [Actualizada Sysarmy Galicia](https://directory.communitybuilders.dev/?community=439) ([PR #279](https://github.com/ComBuildersES/communities-directory/pull/279))
+- 2026-03-26 `3c4a91f` [Actualizada Gen AI Community](https://directory.communitybuilders.dev/?community=361) ([PR #277](https://github.com/ComBuildersES/communities-directory/pull/277))
 - 2026-03-26 `be4a31a` Eliminada Cloud Español ([PR #273](https://github.com/ComBuildersES/communities-directory/pull/273))
-- 2026-03-25 `4eebfd1` [Actualizada GDG Toledo](https://combuilderses.github.io/communities-directory/?community=208) ([PR #270](https://github.com/ComBuildersES/communities-directory/pull/270))
-- 2026-03-25 `00a06a6` [Actualizada Asturias Software Crafters](https://combuilderses.github.io/communities-directory/?community=41) ([PR #267](https://github.com/ComBuildersES/communities-directory/pull/267))
-- 2026-03-25 `538b845` [Actualizada AtlánticaConf](https://combuilderses.github.io/communities-directory/?community=45) ([PR #264](https://github.com/ComBuildersES/communities-directory/pull/264))
-- 2026-03-25 `b5a3f1b` [Actualizada Lareira Conf](https://combuilderses.github.io/communities-directory/?community=541) ([PR #260](https://github.com/ComBuildersES/communities-directory/pull/260))
-- 2026-03-25 `1b66f47` [Actualizada BricoLabs](https://combuilderses.github.io/communities-directory/?community=67) ([PR #256](https://github.com/ComBuildersES/communities-directory/pull/256))
-- 2026-03-25 `6e80c7e` [Actualizada Grupo de Programadores e Usuarios de Linux (GPUL)](https://combuilderses.github.io/communities-directory/?community=228) ([PR #254](https://github.com/ComBuildersES/communities-directory/pull/254))
-- 2026-03-25 `63e4acb` [Actualizada Python Coruña](https://combuilderses.github.io/communities-directory/?community=403) ([PR #252](https://github.com/ComBuildersES/communities-directory/pull/252))
-- 2026-03-25 `07ec649` [Actualizada Coruña WTF](https://combuilderses.github.io/communities-directory/?community=112) ([PR #251](https://github.com/ComBuildersES/communities-directory/pull/251))
-- 2026-03-25 `3b895f2` [Actualizada Sysarmy Galicia](https://combuilderses.github.io/communities-directory/?community=439) ([PR #249](https://github.com/ComBuildersES/communities-directory/pull/249))
-- 2026-03-25 `34b5828` [Actualizada CoruñaJUG](https://combuilderses.github.io/communities-directory/?community=114) ([PR #247](https://github.com/ComBuildersES/communities-directory/pull/247))
-- 2026-03-25 `30b0c67` [Actualizada GDG A Coruña](https://combuilderses.github.io/communities-directory/?community=195) ([PR #246](https://github.com/ComBuildersES/communities-directory/pull/246))
-- 2026-03-25 `a71f623` [Añadida GDG Girona](https://combuilderses.github.io/communities-directory/?community=604) ([PR #242](https://github.com/ComBuildersES/communities-directory/pull/242))
-- 2026-03-25 `32dc185` [Actualizada CommitConf](https://combuilderses.github.io/communities-directory/?community=100) ([PR #240](https://github.com/ComBuildersES/communities-directory/pull/240))
-- 2026-03-25 `779747f` [Actualizada AiBirras](https://combuilderses.github.io/communities-directory/?community=20) ([PR #238](https://github.com/ComBuildersES/communities-directory/pull/238))
-- 2026-03-25 `04038ad` [Actualizada PyData Granada](https://combuilderses.github.io/communities-directory/?community=400) ([PR #236](https://github.com/ComBuildersES/communities-directory/pull/236))
-- 2026-03-25 `2cb100c` [Actualizada Granada Tech](https://combuilderses.github.io/communities-directory/?community=226) ([PR #234](https://github.com/ComBuildersES/communities-directory/pull/234))
-- 2026-03-25 `36a0818` [Actualizada Gcubo](https://combuilderses.github.io/communities-directory/?community=194) ([PR #232](https://github.com/ComBuildersES/communities-directory/pull/232))
-- 2026-03-25 `8bd8f59` [Actualizada GDG La Rioja](https://combuilderses.github.io/communities-directory/?community=201) ([PR #230](https://github.com/ComBuildersES/communities-directory/pull/230))
-- 2026-03-25 `1a8df4f` [Actualizada GDG Cloud Español](https://combuilderses.github.io/communities-directory/?community=196) ([PR #228](https://github.com/ComBuildersES/communities-directory/pull/228))
-- 2026-03-25 `02dfa04` [Actualizada CodeRioja](https://combuilderses.github.io/communities-directory/?community=96) ([PR #226](https://github.com/ComBuildersES/communities-directory/pull/226))
-- 2026-03-25 `041b032` [Actualizada Cloud Native (CNCF) Rioja](https://combuilderses.github.io/communities-directory/?community=87) ([PR #224](https://github.com/ComBuildersES/communities-directory/pull/224))
-- 2026-03-24 `027d524` [Actualizada J On The Beach](https://combuilderses.github.io/communities-directory/?community=301) ([PR #222](https://github.com/ComBuildersES/communities-directory/pull/222))
-- 2026-03-24 `e636fd8` [Actualizada Lambda World](https://combuilderses.github.io/communities-directory/?community=312) ([PR #220](https://github.com/ComBuildersES/communities-directory/pull/220))
-- 2026-03-24 `d90c41a` [Actualizada Wey Wey Web](https://combuilderses.github.io/communities-directory/?community=468) ([PR #218](https://github.com/ComBuildersES/communities-directory/pull/218))
-- 2026-03-24 `efebd68` [Actualizada Grupo de Programadores e Usuarios de Linux (GPUL)](https://combuilderses.github.io/communities-directory/?community=228) ([PR #216](https://github.com/ComBuildersES/communities-directory/pull/216))
-- 2026-03-24 `f6b3a9a` [Actualizada TRGCON](https://combuilderses.github.io/communities-directory/?community=451) ([PR #214](https://github.com/ComBuildersES/communities-directory/pull/214))
-- 2026-03-24 `60927d1` [Actualizada Community Builders](https://combuilderses.github.io/communities-directory/?community=101) ([PR #212](https://github.com/ComBuildersES/communities-directory/pull/212))
-- 2026-03-24 `b587e6b` [Actualizada Wey Wey Web](https://combuilderses.github.io/communities-directory/?community=468) ([PR #210](https://github.com/ComBuildersES/communities-directory/pull/210))
-- 2026-03-24 `4860806` [Actualizada Lambda World](https://combuilderses.github.io/communities-directory/?community=312) ([PR #208](https://github.com/ComBuildersES/communities-directory/pull/208))
-- 2026-03-24 `69ff79a` [Actualizada J On The Beach](https://combuilderses.github.io/communities-directory/?community=301) ([PR #206](https://github.com/ComBuildersES/communities-directory/pull/206))
-- 2026-03-24 `63c24fc` [Actualizada Databeers Máaga](https://combuilderses.github.io/communities-directory/?community=129) ([PR #204](https://github.com/ComBuildersES/communities-directory/pull/204))
-- 2026-03-24 `97be96d` [Actualizada TRGCON](https://combuilderses.github.io/communities-directory/?community=451) ([PR #198](https://github.com/ComBuildersES/communities-directory/pull/198))
-- 2026-03-24 `e2d838c` [Añadida AlmerIA SUMMIT](https://combuilderses.github.io/communities-directory/?community=603) ([PR #193](https://github.com/ComBuildersES/communities-directory/pull/193))
-- 2026-03-24 `cc1de8a` [Actualizada Tomelloso Tech](https://combuilderses.github.io/communities-directory/?community=450) ([PR #191](https://github.com/ComBuildersES/communities-directory/pull/191))
-- 2026-03-24 `220371e` [Actualizada GeoVoluntarios](https://combuilderses.github.io/communities-directory/?community=212) ([PR #185](https://github.com/ComBuildersES/communities-directory/pull/185))
-- 2026-03-24 `a6d3c46` [Actualizada Ping A Programadoras](https://combuilderses.github.io/communities-directory/?community=573) ([PR #179](https://github.com/ComBuildersES/communities-directory/pull/179))
-- 2026-03-24 `466e0d3` [Actualizada PyData Madrid](https://combuilderses.github.io/communities-directory/?community=401) ([PR #177](https://github.com/ComBuildersES/communities-directory/pull/177))
-- 2026-03-24 `2e7c2ea` [Actualizada Cloud Native (CNCF) Rioja](https://combuilderses.github.io/communities-directory/?community=87) ([PR #175](https://github.com/ComBuildersES/communities-directory/pull/175))
-- 2026-03-24 `b5b3894` [Actualizada OpenSouthCode](https://combuilderses.github.io/communities-directory/?community=377) ([PR #173](https://github.com/ComBuildersES/communities-directory/pull/173))
-- 2026-03-24 `bbf577c` [Actualizada MálagaJUG](https://combuilderses.github.io/communities-directory/?community=344) ([PR #171](https://github.com/ComBuildersES/communities-directory/pull/171))
-- 2026-03-24 `c6b7873` [Actualizada Malaga-Scala](https://combuilderses.github.io/communities-directory/?community=342) ([PR #169](https://github.com/ComBuildersES/communities-directory/pull/169))
-- 2026-03-24 `3c74c5a` [Actualizada BoquerónSec](https://combuilderses.github.io/communities-directory/?community=66) ([PR #167](https://github.com/ComBuildersES/communities-directory/pull/167))
-- 2026-03-24 `8830e6a` [Actualizada NodeJSMadrid](https://combuilderses.github.io/communities-directory/?community=366) ([PR #165](https://github.com/ComBuildersES/communities-directory/pull/165))
-- 2026-03-23 `452ed6d` [Actualizada GeoDevelopers](https://combuilderses.github.io/communities-directory/?community=211) ([PR #162](https://github.com/ComBuildersES/communities-directory/pull/162))
-- 2026-03-23 `6c31303` [Actualizada GeoDevelopers](https://combuilderses.github.io/communities-directory/?community=211) ([PR #154](https://github.com/ComBuildersES/communities-directory/pull/154))
+- 2026-03-25 `4eebfd1` [Actualizada GDG Toledo](https://directory.communitybuilders.dev/?community=208) ([PR #270](https://github.com/ComBuildersES/communities-directory/pull/270))
+- 2026-03-25 `00a06a6` [Actualizada Asturias Software Crafters](https://directory.communitybuilders.dev/?community=41) ([PR #267](https://github.com/ComBuildersES/communities-directory/pull/267))
+- 2026-03-25 `538b845` [Actualizada AtlánticaConf](https://directory.communitybuilders.dev/?community=45) ([PR #264](https://github.com/ComBuildersES/communities-directory/pull/264))
+- 2026-03-25 `b5a3f1b` [Actualizada Lareira Conf](https://directory.communitybuilders.dev/?community=541) ([PR #260](https://github.com/ComBuildersES/communities-directory/pull/260))
+- 2026-03-25 `1b66f47` [Actualizada BricoLabs](https://directory.communitybuilders.dev/?community=67) ([PR #256](https://github.com/ComBuildersES/communities-directory/pull/256))
+- 2026-03-25 `6e80c7e` [Actualizada Grupo de Programadores e Usuarios de Linux (GPUL)](https://directory.communitybuilders.dev/?community=228) ([PR #254](https://github.com/ComBuildersES/communities-directory/pull/254))
+- 2026-03-25 `63e4acb` [Actualizada Python Coruña](https://directory.communitybuilders.dev/?community=403) ([PR #252](https://github.com/ComBuildersES/communities-directory/pull/252))
+- 2026-03-25 `07ec649` [Actualizada Coruña WTF](https://directory.communitybuilders.dev/?community=112) ([PR #251](https://github.com/ComBuildersES/communities-directory/pull/251))
+- 2026-03-25 `3b895f2` [Actualizada Sysarmy Galicia](https://directory.communitybuilders.dev/?community=439) ([PR #249](https://github.com/ComBuildersES/communities-directory/pull/249))
+- 2026-03-25 `34b5828` [Actualizada CoruñaJUG](https://directory.communitybuilders.dev/?community=114) ([PR #247](https://github.com/ComBuildersES/communities-directory/pull/247))
+- 2026-03-25 `30b0c67` [Actualizada GDG A Coruña](https://directory.communitybuilders.dev/?community=195) ([PR #246](https://github.com/ComBuildersES/communities-directory/pull/246))
+- 2026-03-25 `a71f623` [Añadida GDG Girona](https://directory.communitybuilders.dev/?community=604) ([PR #242](https://github.com/ComBuildersES/communities-directory/pull/242))
+- 2026-03-25 `32dc185` [Actualizada CommitConf](https://directory.communitybuilders.dev/?community=100) ([PR #240](https://github.com/ComBuildersES/communities-directory/pull/240))
+- 2026-03-25 `779747f` [Actualizada AiBirras](https://directory.communitybuilders.dev/?community=20) ([PR #238](https://github.com/ComBuildersES/communities-directory/pull/238))
+- 2026-03-25 `04038ad` [Actualizada PyData Granada](https://directory.communitybuilders.dev/?community=400) ([PR #236](https://github.com/ComBuildersES/communities-directory/pull/236))
+- 2026-03-25 `2cb100c` [Actualizada Granada Tech](https://directory.communitybuilders.dev/?community=226) ([PR #234](https://github.com/ComBuildersES/communities-directory/pull/234))
+- 2026-03-25 `36a0818` [Actualizada Gcubo](https://directory.communitybuilders.dev/?community=194) ([PR #232](https://github.com/ComBuildersES/communities-directory/pull/232))
+- 2026-03-25 `8bd8f59` [Actualizada GDG La Rioja](https://directory.communitybuilders.dev/?community=201) ([PR #230](https://github.com/ComBuildersES/communities-directory/pull/230))
+- 2026-03-25 `1a8df4f` [Actualizada GDG Cloud Español](https://directory.communitybuilders.dev/?community=196) ([PR #228](https://github.com/ComBuildersES/communities-directory/pull/228))
+- 2026-03-25 `02dfa04` [Actualizada CodeRioja](https://directory.communitybuilders.dev/?community=96) ([PR #226](https://github.com/ComBuildersES/communities-directory/pull/226))
+- 2026-03-25 `041b032` [Actualizada Cloud Native (CNCF) Rioja](https://directory.communitybuilders.dev/?community=87) ([PR #224](https://github.com/ComBuildersES/communities-directory/pull/224))
+- 2026-03-24 `027d524` [Actualizada J On The Beach](https://directory.communitybuilders.dev/?community=301) ([PR #222](https://github.com/ComBuildersES/communities-directory/pull/222))
+- 2026-03-24 `e636fd8` [Actualizada Lambda World](https://directory.communitybuilders.dev/?community=312) ([PR #220](https://github.com/ComBuildersES/communities-directory/pull/220))
+- 2026-03-24 `d90c41a` [Actualizada Wey Wey Web](https://directory.communitybuilders.dev/?community=468) ([PR #218](https://github.com/ComBuildersES/communities-directory/pull/218))
+- 2026-03-24 `efebd68` [Actualizada Grupo de Programadores e Usuarios de Linux (GPUL)](https://directory.communitybuilders.dev/?community=228) ([PR #216](https://github.com/ComBuildersES/communities-directory/pull/216))
+- 2026-03-24 `f6b3a9a` [Actualizada TRGCON](https://directory.communitybuilders.dev/?community=451) ([PR #214](https://github.com/ComBuildersES/communities-directory/pull/214))
+- 2026-03-24 `60927d1` [Actualizada Community Builders](https://directory.communitybuilders.dev/?community=101) ([PR #212](https://github.com/ComBuildersES/communities-directory/pull/212))
+- 2026-03-24 `b587e6b` [Actualizada Wey Wey Web](https://directory.communitybuilders.dev/?community=468) ([PR #210](https://github.com/ComBuildersES/communities-directory/pull/210))
+- 2026-03-24 `4860806` [Actualizada Lambda World](https://directory.communitybuilders.dev/?community=312) ([PR #208](https://github.com/ComBuildersES/communities-directory/pull/208))
+- 2026-03-24 `69ff79a` [Actualizada J On The Beach](https://directory.communitybuilders.dev/?community=301) ([PR #206](https://github.com/ComBuildersES/communities-directory/pull/206))
+- 2026-03-24 `63c24fc` [Actualizada Databeers Máaga](https://directory.communitybuilders.dev/?community=129) ([PR #204](https://github.com/ComBuildersES/communities-directory/pull/204))
+- 2026-03-24 `97be96d` [Actualizada TRGCON](https://directory.communitybuilders.dev/?community=451) ([PR #198](https://github.com/ComBuildersES/communities-directory/pull/198))
+- 2026-03-24 `e2d838c` [Añadida AlmerIA SUMMIT](https://directory.communitybuilders.dev/?community=603) ([PR #193](https://github.com/ComBuildersES/communities-directory/pull/193))
+- 2026-03-24 `cc1de8a` [Actualizada Tomelloso Tech](https://directory.communitybuilders.dev/?community=450) ([PR #191](https://github.com/ComBuildersES/communities-directory/pull/191))
+- 2026-03-24 `220371e` [Actualizada GeoVoluntarios](https://directory.communitybuilders.dev/?community=212) ([PR #185](https://github.com/ComBuildersES/communities-directory/pull/185))
+- 2026-03-24 `a6d3c46` [Actualizada Ping A Programadoras](https://directory.communitybuilders.dev/?community=573) ([PR #179](https://github.com/ComBuildersES/communities-directory/pull/179))
+- 2026-03-24 `466e0d3` [Actualizada PyData Madrid](https://directory.communitybuilders.dev/?community=401) ([PR #177](https://github.com/ComBuildersES/communities-directory/pull/177))
+- 2026-03-24 `2e7c2ea` [Actualizada Cloud Native (CNCF) Rioja](https://directory.communitybuilders.dev/?community=87) ([PR #175](https://github.com/ComBuildersES/communities-directory/pull/175))
+- 2026-03-24 `b5b3894` [Actualizada OpenSouthCode](https://directory.communitybuilders.dev/?community=377) ([PR #173](https://github.com/ComBuildersES/communities-directory/pull/173))
+- 2026-03-24 `bbf577c` [Actualizada MálagaJUG](https://directory.communitybuilders.dev/?community=344) ([PR #171](https://github.com/ComBuildersES/communities-directory/pull/171))
+- 2026-03-24 `c6b7873` [Actualizada Malaga-Scala](https://directory.communitybuilders.dev/?community=342) ([PR #169](https://github.com/ComBuildersES/communities-directory/pull/169))
+- 2026-03-24 `3c74c5a` [Actualizada BoquerónSec](https://directory.communitybuilders.dev/?community=66) ([PR #167](https://github.com/ComBuildersES/communities-directory/pull/167))
+- 2026-03-24 `8830e6a` [Actualizada NodeJSMadrid](https://directory.communitybuilders.dev/?community=366) ([PR #165](https://github.com/ComBuildersES/communities-directory/pull/165))
+- 2026-03-23 `452ed6d` [Actualizada GeoDevelopers](https://directory.communitybuilders.dev/?community=211) ([PR #162](https://github.com/ComBuildersES/communities-directory/pull/162))
+- 2026-03-23 `6c31303` [Actualizada GeoDevelopers](https://directory.communitybuilders.dev/?community=211) ([PR #154](https://github.com/ComBuildersES/communities-directory/pull/154))
 
 ### Improvements
 

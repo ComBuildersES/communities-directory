@@ -7,8 +7,8 @@ import en from './locales/en.json';
 export const SUPPORTED_LOCALES = ['es', 'en'];
 
 // Number of non-empty path segments in the app base path.
-// /communities-directory/ → 1   (production)
-// /                        → 0   (local dev)
+// /                        → 0   (production: custom domain at root)
+// /communities-directory/  → 1   (e.g. deployed under a repo subpath)
 const BASE_SEGMENTS = import.meta.env.BASE_URL.split('/').filter(Boolean).length;
 
 i18n

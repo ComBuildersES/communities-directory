@@ -6,9 +6,9 @@ import { registerServiceWorker } from "./lib/pwa";
 import { SUPPORTED_LOCALES } from "./i18n/index.js";
 
 // Ensure the URL always has a valid locale path prefix.
-// e.g. /communities-directory/ → /communities-directory/es/
+// e.g. / → /es/
 // This runs after the index.html path-restore snippet, so deep links
-// like /communities-directory/en/ are already correct at this point.
+// like /en/ are already correct at this point.
 (function redirectToLocale() {
   const base = import.meta.env.BASE_URL.replace(/\/$/, "");
   const pathname = window.location.pathname;

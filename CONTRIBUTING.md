@@ -174,7 +174,7 @@ Tenemos una lista de personas voluntarias que se encargan de revisar issues y PR
 
 #### Estructura de los datos
 
-> **Referencia técnica para desarrolladores.** Si quieres añadir o editar una comunidad, usa el [formulario web del directorio](https://combuilderses.github.io/communities-directory/), que guía el proceso y genera el issue automáticamente. Los valores válidos de los enums (`status`, `communityType`, `eventFormat`) están disponibles en el propio formulario; los que se documentan aquí incluyen matices adicionales que no caben en un desplegable.
+> **Referencia técnica para desarrolladores.** Si quieres añadir o editar una comunidad, usa el [formulario web del directorio](https://directory.communitybuilders.dev/), que guía el proceso y genera el issue automáticamente. Los valores válidos de los enums (`status`, `communityType`, `eventFormat`) están disponibles en el propio formulario; los que se documentan aquí incluyen matices adicionales que no caben en un desplegable.
 
 El fichero [communities.json](https://github.com/ComBuildersES/communities-directory/blob/master/public/data/communities.json) es un array donde cada comunidad es un objeto con la siguiente estructura:
 

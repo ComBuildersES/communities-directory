@@ -10,7 +10,7 @@ También actúa como punto de encuentro para quienes desean dinamizar comunidade
 
 Además, muestra qué comunidades ya están representadas en **Community Builders**.
 
-[![Pantallazo de la app](./public/images/directorio-de-comunidades-tecnicas-de-españa-1920-1080.webp)](https://combuilderses.github.io/communities-directory/)
+[![Pantallazo de la app](./public/images/directorio-de-comunidades-tecnicas-de-españa-1920-1080.webp)](https://directory.communitybuilders.dev/)
 
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->

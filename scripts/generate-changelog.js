@@ -4,7 +4,7 @@ import { execFileSync } from "node:child_process";
 const CHANGELOG_PATH = "CHANGELOG.md";
 const COMMUNITIES_PATH = "public/data/communities.json";
 const DELETED_COMMUNITIES_PATH = "public/data/deleted-communities.json";
-const APP_COMMUNITY_URL = "https://combuilderses.github.io/communities-directory/?community=";
+const APP_COMMUNITY_URL = "https://directory.communitybuilders.dev/?community=";
 const GITHUB_PR_URL = "https://github.com/ComBuildersES/communities-directory/pull/";
 const CATEGORY_ORDER = [
   "Features",

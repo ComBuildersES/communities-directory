@@ -58,7 +58,7 @@
         const geoJsonLayer = L.geoJSON(data, {
           pointToLayer: (feature, latlng) => {
             console.log("feature.properties.thumbnailUrl=",feature.properties.thumbnailUrl);
-            const thumbnailUrl  = feature.properties.thumbnailUrl? `https://combuilderses.github.io/communities-directory/${feature.properties.thumbnailUrl}`: "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg";
+            const thumbnailUrl  = feature.properties.thumbnailUrl? `https://directory.communitybuilders.dev/${feature.properties.thumbnailUrl}`: "https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg";
             const iconHtml = `<img src="${thumbnailUrl}" class="custom-icon-img"/>`;
             const customIcon = L.divIcon({
               html: iconHtml,

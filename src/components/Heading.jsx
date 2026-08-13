@@ -9,7 +9,7 @@ const CONTRIBUTORS_URL = "https://github.com/ComBuildersES/communities-directory
 const MAX_CONTRIBUTORS_IN_POPOVER = 24;
 const allContributors = allContributorsRc.contributors;
 
-const APP_URL = "https://combuilderses.github.io/communities-directory/";
+const APP_URL = "https://directory.communitybuilders.dev/";
 const GITHUB_URL = "https://github.com/ComBuildersES/communities-directory";
 const DATA_URL = "https://github.com/ComBuildersES/communities-directory/tree/master/public/data";
 

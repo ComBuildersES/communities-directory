@@ -6,7 +6,7 @@ import { buildContributionPath } from "../../lib/communitySubmission";
 import { normalizeCommunityLangs } from "../../lib/communityLanguages.js";
 import "./CommunityModal.css";
 
-const APP_URL = "https://combuilderses.github.io/communities-directory/";
+const APP_URL = "https://directory.communitybuilders.dev/";
 
 function extractDominantColor(img) {
   try {
