@@ -17,11 +17,13 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-08-20 `41761e8` [Añadida PyTorch Madrid](https://directory.communitybuilders.dev/?community=629) ([PR #417](https://github.com/ComBuildersES/communities-directory/pull/417))
 - 2026-08-07 `1f5764e` [Añadida Claude Madrid](https://directory.communitybuilders.dev/?community=628) ([PR #415](https://github.com/ComBuildersES/communities-directory/pull/415))
 - 2026-08-06 `dda7efe` [Añadida Claude Community Ambassadors](https://directory.communitybuilders.dev/?community=627) ([PR #413](https://github.com/ComBuildersES/communities-directory/pull/413))
 
 ### Docs
 
+- 2026-08-13 `cd527eb` update changelog [skip ci]
 - 2026-08-07 `70311ee` update changelog [skip ci]
 - 2026-08-07 `b1fc089` update changelog [skip ci]
 - 2026-08-07 `1bb6cf7` update changelog [skip ci]
