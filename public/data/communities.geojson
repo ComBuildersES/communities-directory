@@ -17885,6 +17885,51 @@
         "thumbnailUrl": "images/claude-madrid.webp",
         "humanValidated": true
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.703507,
+          40.416782
+        ]
+      },
+      "properties": {
+        "id": 629,
+        "name": "PyTorch Madrid",
+        "status": "active",
+        "lastReviewed": "20/08/2026",
+        "communityType": "tech-meetup",
+        "eventFormat": "in-person",
+        "location": "Madrid",
+        "topics": "",
+        "langs": [
+          "es",
+          "en"
+        ],
+        "tags": [
+          "deep-learning",
+          "mlops",
+          "dataops"
+        ],
+        "targetAudience": [
+          "ml-engineer",
+          "devops-engineer",
+          "cloud-engineer",
+          "data-engineer",
+          "cybersecurity-engineer",
+          "tech-lead",
+          "robotics-engineer"
+        ],
+        "contactInfo": "",
+        "communityUrl": "https://madrid.pytorch.es/",
+        "urls": {
+          "eventsUrl": "https://luma.com/uys5qucv"
+        },
+        "thumbnailUrl": "images/pytorch-madrid.webp",
+        "humanValidated": true
+      }
     }
   ]
 }
