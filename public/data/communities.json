@@ -9357,7 +9357,7 @@
     "id": 315,
     "name": "LechazoConf",
     "status": "active",
-    "lastReviewed": "18/10/2024",
+    "lastReviewed": "20/09/2026",
     "communityType": "conference",
     "eventFormat": "in-person",
     "location": "Valladolid",
@@ -9378,10 +9378,14 @@
       "lon": -4.7283839
     },
     "displayOnMap": true,
-    "humanValidated": false,
+    "humanValidated": true,
     "langs": [
       "es"
-    ]
+    ],
+    "shortDescription": "La LechazoConf es una conferencia anual sobre tecnología, emprendimiento y startups que se celebra en Valladolid, España.\nDura un solo día y cuenta con una única línea de charlas (track único).Temática central (\"Un fracaso y un éxito\").",
+    "removalReason": "",
+    "matchesAllAudience": true,
+    "parentId": null
   },
   {
     "id": 316,

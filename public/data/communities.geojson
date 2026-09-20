@@ -8595,7 +8595,7 @@
         "id": 315,
         "name": "LechazoConf",
         "status": "active",
-        "lastReviewed": "18/10/2024",
+        "lastReviewed": "20/09/2026",
         "communityType": "conference",
         "eventFormat": "in-person",
         "location": "Valladolid",
@@ -8614,7 +8614,7 @@
           "telegram": "https://t.me/+kRYDuWehPvUzMjg0"
         },
         "thumbnailUrl": "images/lechazoconf.webp",
-        "humanValidated": false
+        "humanValidated": true
       }
     },
     {
