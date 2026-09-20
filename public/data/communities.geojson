@@ -17930,6 +17930,65 @@
         "thumbnailUrl": "images/pytorch-madrid.webp",
         "humanValidated": true
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -6.1377402,
+          36.6816936
+        ]
+      },
+      "properties": {
+        "id": 630,
+        "name": "GDG Jerez de la Frontera",
+        "status": "active",
+        "lastReviewed": "20/09/2026",
+        "communityType": "tech-meetup",
+        "eventFormat": "in-person",
+        "location": "Jerez de la Frontera, Cádiz",
+        "topics": "",
+        "langs": [
+          "es"
+        ],
+        "tags": [
+          "gcp",
+          "aws",
+          "azure",
+          "kubernetes",
+          "machine-learning",
+          "ai-coding-agents",
+          "innovation",
+          "android",
+          "ios"
+        ],
+        "targetAudience": [
+          "entrepreneur",
+          "student",
+          "junior-developer",
+          "career-changer",
+          "senior-staff",
+          "ml-engineer",
+          "ux-designer",
+          "ui-designer",
+          "maker",
+          "tech-lead",
+          "devops-engineer",
+          "cloud-engineer",
+          "frontend-developer",
+          "backend-developer",
+          "fullstack-developer",
+          "mobile-developer"
+        ],
+        "contactInfo": "",
+        "communityUrl": "https://gdg.community.dev/gdg-jerez-de-la-frontera/",
+        "urls": {
+          "linkedin": "https://www.linkedin.com/company/gdg-jerez-de-la-frontera/"
+        },
+        "thumbnailUrl": "images/gdg-jerez-de-la-frontera.webp",
+        "humanValidated": true
+      }
     }
   ]
 }

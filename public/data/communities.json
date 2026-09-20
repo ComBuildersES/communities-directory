@@ -19040,5 +19040,62 @@
     "displayOnMap": true,
     "humanValidated": true,
     "parentId": null
+  },
+  {
+    "id": 630,
+    "name": "GDG Jerez de la Frontera",
+    "status": "active",
+    "lastReviewed": "20/09/2026",
+    "communityType": "tech-meetup",
+    "eventFormat": "in-person",
+    "location": "Jerez de la Frontera, Cádiz",
+    "shortDescription": "Comunidad tech que conecta a profesionales, estudiantes, makers y entusiastas de toda la provincia de Cádiz para aprender, compartir y colaborar mediante charlas, talleres, networking y eventos sobre desarrollo, IA, cloud y otras tecnologías.",
+    "topics": "",
+    "langs": [
+      "es"
+    ],
+    "tags": [
+      "gcp",
+      "aws",
+      "azure",
+      "kubernetes",
+      "machine-learning",
+      "ai-coding-agents",
+      "innovation",
+      "android",
+      "ios"
+    ],
+    "targetAudience": [
+      "entrepreneur",
+      "student",
+      "junior-developer",
+      "career-changer",
+      "senior-staff",
+      "ml-engineer",
+      "ux-designer",
+      "ui-designer",
+      "maker",
+      "tech-lead",
+      "devops-engineer",
+      "cloud-engineer",
+      "frontend-developer",
+      "backend-developer",
+      "fullstack-developer",
+      "mobile-developer"
+    ],
+    "contactInfo": "",
+    "communityUrl": "https://gdg.community.dev/gdg-jerez-de-la-frontera/",
+    "urls": {
+      "linkedin": "https://www.linkedin.com/company/gdg-jerez-de-la-frontera/"
+    },
+    "thumbnailUrl": "images/gdg-jerez-de-la-frontera.webp",
+    "removalReason": "",
+    "latLon": {
+      "lat": 36.6816936,
+      "lon": -6.1377402
+    },
+    "displayOnMap": true,
+    "humanValidated": true,
+    "parentId": 207
   }
 ]
