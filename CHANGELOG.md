@@ -7,7 +7,12 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-09-20 `0cf5910` Update community-builders-members.json
 - 2026-09-20 `7ad99f4` [Añadida GDG Jerez de la Frontera](https://directory.communitybuilders.dev/?community=630) ([PR #420](https://github.com/ComBuildersES/communities-directory/pull/420))
+
+### Docs
+
+- 2026-09-20 `e006f02` update changelog [skip ci]
 
 ## 2026-08
 
