@@ -3,6 +3,12 @@
 Historial generado automáticamente a partir de los commits del repositorio.
 Se organiza por mes y por tipo de cambio.
 
+## 2026-09
+
+### Data
+
+- 2026-09-20 `7ad99f4` [Añadida GDG Jerez de la Frontera](https://directory.communitybuilders.dev/?community=630) ([PR #420](https://github.com/ComBuildersES/communities-directory/pull/420))
+
 ## 2026-08
 
 ### Features
@@ -23,6 +29,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-08-21 `4ecd73d` update changelog [skip ci]
 - 2026-08-21 `995f15f` update .all-contributorsrc [skip ci]
 - 2026-08-21 `b09fb53` update README.md [skip ci]
 - 2026-08-21 `b5cdef1` update changelog [skip ci]
