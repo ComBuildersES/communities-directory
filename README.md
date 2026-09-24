@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-38-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-39-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Communities directory
@@ -184,6 +184,7 @@ Echa un vistazo a algunas de las tareas por las que podrías empezar a ayudar:
       <td align="center" valign="top" width="14.28%"><a href="https://alvarolozano.dev"><img src="https://avatars.githubusercontent.com/u/10405074?v=4?s=100" width="100px;" alt="Alvaro Lozano"/><br /><sub><b>Alvaro Lozano</b></sub></a><br /><a href="#data-alvarolozano" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://mipigu.com"><img src="https://avatars.githubusercontent.com/u/21361339?v=4?s=100" width="100px;" alt="Sergio Márquez"/><br /><sub><b>Sergio Márquez</b></sub></a><br /><a href="#data-eypigu" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://dev.to/anajsana95/"><img src="https://avatars.githubusercontent.com/u/43671777?v=4?s=100" width="100px;" alt="Ana Jimenez Santamaria"/><br /><sub><b>Ana Jimenez Santamaria</b></sub></a><br /><a href="#data-anajsana" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/marotorod"><img src="https://avatars.githubusercontent.com/u/2428057?v=4?s=100" width="100px;" alt="marotorod"/><br /><sub><b>marotorod</b></sub></a><br /><a href="#data-marotorod" title="Data">🔣</a></td>
     </tr>
   </tbody>
 </table>
