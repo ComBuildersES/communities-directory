@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-09-24 `4eed5dc` [Actualizada Sirviendo Código](https://directory.communitybuilders.dev/?community=422) ([PR #427](https://github.com/ComBuildersES/communities-directory/pull/427))
 - 2026-09-24 `8f1b5fa` Update communities.json
 - 2026-09-23 `395efc0` [Actualizada Sirviendo Código](https://directory.communitybuilders.dev/?community=422) ([PR #425](https://github.com/ComBuildersES/communities-directory/pull/425))
 - 2026-09-20 `d537cc0` [Actualizada LechazoConf](https://directory.communitybuilders.dev/?community=315) ([PR #422](https://github.com/ComBuildersES/communities-directory/pull/422))
@@ -15,6 +16,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-09-24 `a70b177` update changelog [skip ci]
 - 2026-09-24 `74f2c27` update changelog [skip ci]
 - 2026-09-21 `aaae617` update .all-contributorsrc [skip ci]
 - 2026-09-21 `27a1b35` update README.md [skip ci]
