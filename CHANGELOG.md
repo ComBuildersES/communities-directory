@@ -7,17 +7,24 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-09-24 `8f1b5fa` Update communities.json
+- 2026-09-23 `395efc0` [Actualizada Sirviendo Código](https://directory.communitybuilders.dev/?community=422) ([PR #425](https://github.com/ComBuildersES/communities-directory/pull/425))
 - 2026-09-20 `d537cc0` [Actualizada LechazoConf](https://directory.communitybuilders.dev/?community=315) ([PR #422](https://github.com/ComBuildersES/communities-directory/pull/422))
 - 2026-09-20 `0cf5910` Update community-builders-members.json
 - 2026-09-20 `7ad99f4` [Añadida GDG Jerez de la Frontera](https://directory.communitybuilders.dev/?community=630) ([PR #420](https://github.com/ComBuildersES/communities-directory/pull/420))
 
 ### Docs
 
+- 2026-09-24 `74f2c27` update changelog [skip ci]
 - 2026-09-21 `aaae617` update .all-contributorsrc [skip ci]
 - 2026-09-21 `27a1b35` update README.md [skip ci]
 - 2026-09-21 `db089d2` update changelog [skip ci]
 - 2026-09-20 `a0277b8` update changelog [skip ci]
 - 2026-09-20 `e006f02` update changelog [skip ci]
+
+### Other
+
+- 2026-09-24 `498c571` Update communities.geojson
 
 ## 2026-08
 
