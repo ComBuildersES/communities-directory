@@ -3,6 +3,12 @@
 Historial generado automáticamente a partir de los commits del repositorio.
 Se organiza por mes y por tipo de cambio.
 
+## 2026-10
+
+### Data
+
+- 2026-10-27 `5e40d61` Update community-builders-members.json
+
 ## 2026-09
 
 ### Data
@@ -16,6 +22,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-09-24 `506216d` update changelog [skip ci]
 - 2026-09-24 `a70b177` update changelog [skip ci]
 - 2026-09-24 `74f2c27` update changelog [skip ci]
 - 2026-09-21 `aaae617` update .all-contributorsrc [skip ci]
