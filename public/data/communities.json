@@ -19101,5 +19101,35 @@
     "displayOnMap": true,
     "humanValidated": true,
     "parentId": 207
+  },
+  {
+    "id": 631,
+    "name": "MurciaTech",
+    "status": "active",
+    "lastReviewed": "27/10/2026",
+    "communityType": "tech-meetup",
+    "eventFormat": "in-person",
+    "location": "Murcia",
+    "shortDescription": "Una sola comunidad con actividades, eventos, divulgación y mucha tecnología para quien quiera aprender, crear y compartir.",
+    "topics": "",
+    "langs": [
+      "es"
+    ],
+    "tags": [],
+    "targetAudience": [],
+    "contactInfo": "",
+    "communityUrl": "https://murciatech.org/",
+    "urls": {
+      "linkedin": "https://www.linkedin.com/company/murciatech/home/"
+    },
+    "thumbnailUrl": "images/murciatech.webp",
+    "removalReason": "",
+    "latLon": {
+      "lat": 37.9347521,
+      "lon": -1.1131029
+    },
+    "displayOnMap": true,
+    "humanValidated": true,
+    "parentId": null
   }
 ]

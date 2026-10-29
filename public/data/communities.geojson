@@ -17989,6 +17989,38 @@
         "thumbnailUrl": "images/gdg-jerez-de-la-frontera.webp",
         "humanValidated": true
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.1131029,
+          37.9347521
+        ]
+      },
+      "properties": {
+        "id": 631,
+        "name": "MurciaTech",
+        "status": "active",
+        "lastReviewed": "27/10/2026",
+        "communityType": "tech-meetup",
+        "eventFormat": "in-person",
+        "location": "Murcia",
+        "topics": "",
+        "langs": [
+          "es"
+        ],
+        "tags": [],
+        "targetAudience": [],
+        "contactInfo": "",
+        "communityUrl": "https://murciatech.org/",
+        "urls": {
+          "linkedin": "https://www.linkedin.com/company/murciatech/home/"
+        },
+        "thumbnailUrl": "images/murciatech.webp",
+        "humanValidated": true
+      }
     }
   ]
 }
