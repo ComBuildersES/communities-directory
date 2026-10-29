@@ -7,11 +7,13 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-10-28 `89bb735` [Actualizada Data Saturdays Global](https://directory.communitybuilders.dev/?community=124) ([PR #431](https://github.com/ComBuildersES/communities-directory/pull/431))
 - 2026-10-27 `5e40d61` Update community-builders-members.json
 - 2026-10-27 `4fd44e9` [Añadida MurciaTech](https://directory.communitybuilders.dev/?community=631) ([PR #429](https://github.com/ComBuildersES/communities-directory/pull/429))
 
 ### Docs
 
+- 2026-10-29 `0deaf2f` update changelog [skip ci]
 - 2026-10-27 `629c087` update changelog [skip ci]
 
 ## 2026-09
