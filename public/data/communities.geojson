@@ -3203,38 +3203,6 @@
       "geometry": {
         "type": "Point",
         "coordinates": [
-          -3.7035825,
-          40.4167047
-        ]
-      },
-      "properties": {
-        "id": 124,
-        "name": "Data Saturdays",
-        "status": "active",
-        "lastReviewed": "25/10/2024",
-        "communityType": "conference",
-        "eventFormat": "in-person",
-        "location": "Madrid",
-        "topics": "",
-        "langs": [
-          "es"
-        ],
-        "tags": [],
-        "targetAudience": [],
-        "contactInfo": "rpertusalopez@gmail.com",
-        "communityUrl": "https://datasaturdays.com/Event/20241130-datasaturday0065#page-top",
-        "urls": {
-          "twitter": "https://twitter.com/"
-        },
-        "thumbnailUrl": "images/data-saturdays.webp",
-        "humanValidated": false
-      }
-    },
-    {
-      "type": "Feature",
-      "geometry": {
-        "type": "Point",
-        "coordinates": [
           2.1699187,
           41.387917
         ]
