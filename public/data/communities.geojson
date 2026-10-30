@@ -17989,6 +17989,48 @@
         "thumbnailUrl": "images/murciatech.webp",
         "humanValidated": true
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.703507,
+          40.416782
+        ]
+      },
+      "properties": {
+        "id": 632,
+        "name": "Data Saturdays Madrid",
+        "status": "active",
+        "lastReviewed": "30/10/2026",
+        "communityType": "conference",
+        "eventFormat": "in-person",
+        "location": "Madrid",
+        "topics": "",
+        "langs": [
+          "es"
+        ],
+        "tags": [
+          "sql-databases",
+          "big-data",
+          "data-engineering",
+          "data-science",
+          "business-intelligence",
+          "azure"
+        ],
+        "targetAudience": [
+          "data-engineer",
+          "data-analyst",
+          "data-scientist",
+          "senior-staff"
+        ],
+        "contactInfo": "",
+        "communityUrl": "https://datasaturdays.com/Event/20261107-datasaturday0095",
+        "urls": {},
+        "thumbnailUrl": "images/data-saturdays-madrid.webp",
+        "humanValidated": true
+      }
     }
   ]
 }
