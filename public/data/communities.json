@@ -19148,5 +19148,45 @@
     "displayOnMap": true,
     "humanValidated": true,
     "parentId": null
+  },
+  {
+    "id": 632,
+    "name": "Data Saturdays Madrid",
+    "status": "active",
+    "lastReviewed": "30/10/2026",
+    "communityType": "conference",
+    "eventFormat": "in-person",
+    "location": "Madrid",
+    "shortDescription": "El evento más grande de Datos en España con tecnologías Microsoft. Conferencia y exposición. Profesionales, futuros profesionales y referentes del mundo de los datos comparten y aprenden por igual.",
+    "topics": "",
+    "langs": [
+      "es"
+    ],
+    "tags": [
+      "sql-databases",
+      "big-data",
+      "data-engineering",
+      "data-science",
+      "business-intelligence",
+      "azure"
+    ],
+    "targetAudience": [
+      "data-engineer",
+      "data-analyst",
+      "data-scientist",
+      "senior-staff"
+    ],
+    "contactInfo": "",
+    "communityUrl": "https://datasaturdays.com/Event/20261107-datasaturday0095",
+    "urls": {},
+    "thumbnailUrl": "images/data-saturdays-madrid.webp",
+    "removalReason": "",
+    "latLon": {
+      "lat": 40.416782,
+      "lon": -3.703507
+    },
+    "displayOnMap": true,
+    "humanValidated": true,
+    "parentId": null
   }
 ]
