@@ -17989,6 +17989,48 @@
         "thumbnailUrl": "images/murciatech.webp",
         "humanValidated": true
       }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -3.703507,
+          40.416782
+        ]
+      },
+      "properties": {
+        "id": 632,
+        "name": "Women4TT",
+        "status": "active",
+        "lastReviewed": "30/10/2026",
+        "communityType": "collaborative-group",
+        "eventFormat": "hybrid",
+        "location": "Madrid",
+        "topics": "",
+        "langs": [
+          "es"
+        ],
+        "tags": [
+          "women-in-tech",
+          "diversity",
+          "stem"
+        ],
+        "targetAudience": [
+          "senior-staff",
+          "junior-developer",
+          "mentee",
+          "mentor"
+        ],
+        "contactInfo": "",
+        "communityUrl": "https://www.women4tt.com/",
+        "urls": {
+          "linkedin": "https://www.linkedin.com/company/women-for-technical-talks-w4tt/posts/",
+          "youtube": "https://www.youtube.com/@w4ttmujeresentecnologia728"
+        },
+        "thumbnailUrl": "images/women4tt.webp",
+        "humanValidated": true
+      }
     }
   ]
 }
