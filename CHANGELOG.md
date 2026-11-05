@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-06 `3c3b02e` añadir URLs de foro/blog/RSS/eventos.wiki/OTE y ámbito geográfico
+- 2026-11-06 `dd0431a` añadir URLs de foro/blog/RSS/eventos.wiki/OTE y ámbito geográfico
 - 2026-11-05 `1d4b6c3` archivar canales históricos de una comunidad (#353)
 
 ### Data
@@ -20,6 +20,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-11-06 `ddaa897` update changelog [skip ci]
+- 2026-11-05 `d63aab6` update changelog [skip ci]
 - 2026-11-05 `bfaedfa` update changelog [skip ci]
 - 2026-11-05 `d17ed7d` update changelog [skip ci]
 
@@ -29,7 +31,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
-- 2026-11-06 `872e0b2` enlazar 38 comunidades con eventos.wiki y OTE
+- 2026-11-06 `b99ae92` enlazar 38 comunidades con eventos.wiki y OTE
 - 2026-11-05 `b53ee77` añadir Data Saturdays Madrid y Women4TT
 
 ## 2026-10
