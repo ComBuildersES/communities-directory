@@ -1,0 +1,24 @@
+{
+  "id": 388,
+  "name": "PHPúrpura",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "mutual-aid",
+  "eventFormat": "online",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://jonatansanchez.org/portfolio/",
+  "urls": {},
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

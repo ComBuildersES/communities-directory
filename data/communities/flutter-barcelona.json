@@ -1,0 +1,31 @@
+{
+  "id": 181,
+  "name": "Flutter Barcelona",
+  "status": "active",
+  "lastReviewed": "30/01/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "flutter"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/flutter-barcelona/",
+  "urls": {
+    "twitter": "https://twitter.com/flutter_barcelo",
+    "linkedin": "https://www.linkedin.com/groups/9302385/",
+    "eventsUrl": "https://www.meetup.com/flutter-barcelona/"
+  },
+  "thumbnailUrl": "images/flutter-barcelona.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

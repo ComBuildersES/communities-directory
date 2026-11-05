@@ -1,0 +1,29 @@
+{
+  "id": 348,
+  "name": "Mobile Development",
+  "status": "inactive",
+  "lastReviewed": "25/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "online",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "xamarin"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/xamarin-madrid/?eventOrigin=topic_overview_nearest_groups",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/xamarin-madrid/?eventOrigin=topic_overview_nearest_groups"
+  },
+  "thumbnailUrl": "images/mobile-development.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

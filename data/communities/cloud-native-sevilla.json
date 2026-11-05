@@ -1,0 +1,33 @@
+{
+  "id": 565,
+  "name": "Cloud Native Sevilla",
+  "status": "active",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Sevilla, España",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "docker",
+    "kubernetes"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://cloudnativesevilla.com/",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/groups/13076051/",
+    "youtube": "https://www.youtube.com/@CloudNativeSevilla",
+    "telegram": "https://t.me/+IKebP_J4X2Y0OGI0",
+    "eventsUrl": "https://www.meetup.com/cloud-native-sevilla/"
+  },
+  "thumbnailUrl": "images/cloud-native-sevilla.webp",
+  "latLon": {
+    "lat": 37.3886303,
+    "lon": -5.9953403
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

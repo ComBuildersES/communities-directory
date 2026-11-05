@@ -1,0 +1,33 @@
+{
+  "id": 537,
+  "name": "Barcelona Java User Group",
+  "status": "active",
+  "lastReviewed": "06/02/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "parentId": 302,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "java"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://barcelonajug.org/",
+  "urls": {
+    "twitter": "https://twitter.com/BarcelonaJUG",
+    "linkedin": "https://www.linkedin.com/company/barcelonajug",
+    "youtube": "https://www.youtube.com/user/BarcelonaJUG",
+    "github": "https://github.com/barcelonajug"
+  },
+  "thumbnailUrl": "images/barcelona-java-user-group.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

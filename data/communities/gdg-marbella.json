@@ -1,0 +1,28 @@
+{
+  "id": 204,
+  "name": "GDG Marbella",
+  "status": "inactive",
+  "lastReviewed": "25/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Málaga (Marbella)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/GDG-Marbella/",
+  "urls": {
+    "twitter": "http://twitter.com/GDGMarbella/",
+    "eventsUrl": "https://www.meetup.com/GDG-Marbella/"
+  },
+  "thumbnailUrl": "images/gdg-marbella.webp",
+  "latLon": {
+    "lat": 36.5118318,
+    "lon": -4.8822775
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

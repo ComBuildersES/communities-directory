@@ -1,0 +1,31 @@
+{
+  "id": 588,
+  "name": "MultitecUA",
+  "status": "active",
+  "lastReviewed": "07/06/2025",
+  "communityType": "collaborative-group",
+  "eventFormat": "in-person",
+  "location": "Alicante",
+  "topics": "ciencia, tecnología, comunidad, aprendizaje, conocimiento compartido, desarrollo personal, desarrollo profesional, metodologías de aprendizaje, innovación, formación, networking, colaboración, multidisciplinar, educación, divulgación científica, asociación sin ánimo de lucro",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "contacto@multitecua.com",
+  "communityUrl": "https://multitecua.com/",
+  "urls": {
+    "instagram": "https://www.instagram.com/multitecua/",
+    "twitter": "https://twitter.com/MultiTecUA",
+    "linkedin": "https://www.linkedin.com/company/multitecua/",
+    "youtube": "https://www.youtube.com/channel/UComtzTLqL-jHvRhiQVrzPJg",
+    "telegram": "https://t.me/MultitecUA"
+  },
+  "thumbnailUrl": "images/multitecua.webp",
+  "latLon": {
+    "lat": 38.3436365,
+    "lon": -0.4881708
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

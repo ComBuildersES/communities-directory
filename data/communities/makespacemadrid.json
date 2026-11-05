@@ -1,0 +1,30 @@
+{
+  "id": 337,
+  "name": "MakespaceMadrid",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "hacklab",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://makespacemadrid.org/",
+  "urls": {
+    "telegram": "https://t.me/makespacemadrid",
+    "instagram": "https://www.instagram.com/makespacemadrid/",
+    "youtube": "https://youtu.be/94_uaafCR0w",
+    "eventsUrl": "https://www.meetup.com/es-ES/makespace-madrid/"
+  },
+  "thumbnailUrl": "images/makespacemadrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

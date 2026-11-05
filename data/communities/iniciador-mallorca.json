@@ -1,0 +1,24 @@
+{
+  "id": 284,
+  "name": "Iniciador Mallorca",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Mallorca",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://iniciador.com/Mallorca",
+  "urls": {},
+  "latLon": {
+    "lat": 39.578695,
+    "lon": 2.654489
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

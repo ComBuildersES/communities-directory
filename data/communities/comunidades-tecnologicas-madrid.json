@@ -1,0 +1,27 @@
+{
+  "id": 104,
+  "name": "Comunidades tecnológicas Madrid",
+  "status": "inactive",
+  "lastReviewed": "29/11/2024",
+  "communityType": "meta-community",
+  "eventFormat": "unknown",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/comunidades-tecnologicas-madrid/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es-ES/comunidades-tecnologicas-madrid/"
+  },
+  "thumbnailUrl": "images/namees-tecnologicas-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

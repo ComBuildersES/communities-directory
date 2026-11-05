@@ -1,0 +1,28 @@
+{
+  "id": 224,
+  "name": "Granada Jam",
+  "status": "active",
+  "lastReviewed": "30/01/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Granada",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://granadajam.com/",
+  "urls": {
+    "twitter": "https://twitter.com/GranadaGameJam",
+    "youtube": "https://www.youtube.com/channel/UCTqz9Db6koRqZmCn-O7EKoQ"
+  },
+  "thumbnailUrl": "images/granada-jam.webp",
+  "latLon": {
+    "lat": 37.1831938,
+    "lon": -3.604747
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,38 @@
+{
+  "id": 317,
+  "name": "Liferay Spain User Group (LUGSpain)",
+  "status": "active",
+  "lastReviewed": "26/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "online",
+  "location": "",
+  "shortDescription": "Grupo de usuario para hablar sobre Liferay (uso, tecnologías, etc )",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "open-source",
+    "sysadmin",
+    "product-management",
+    "liferay"
+  ],
+  "targetAudience": [
+    "open-source-contributor"
+  ],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/liferay-spain-user-group/",
+  "urls": {
+    "twitter": "http://twitter.com/LugSpain/",
+    "eventsUrl": "https://www.meetup.com/liferay-spain-user-group/",
+    "linkedin": "https://es.linkedin.com/in/lugspain"
+  },
+  "thumbnailUrl": "images/liferay-spain-user-group-lugspain.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": true,
+  "removalReason": ""
+}

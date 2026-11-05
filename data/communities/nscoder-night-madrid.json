@@ -1,0 +1,28 @@
+{
+  "id": 370,
+  "name": "NSCoder Night Madrid",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/nscoder-night-madrid/",
+  "urls": {
+    "twitter": "http://twitter.com/nscoder_mad/",
+    "eventsUrl": "https://www.meetup.com/nscoder-night-madrid/"
+  },
+  "thumbnailUrl": "images/nscoder-night-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

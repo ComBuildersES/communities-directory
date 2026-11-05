@@ -1,0 +1,24 @@
+{
+  "id": 287,
+  "name": "Iniciador Palencia",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Palencia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://iniciador.com/Palencia",
+  "urls": {},
+  "latLon": {
+    "lat": 42.0124584,
+    "lon": -4.5311748
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

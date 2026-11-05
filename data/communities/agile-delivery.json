@@ -1,0 +1,28 @@
+{
+  "id": 12,
+  "name": "Agile Delivery",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "online",
+  "location": "Sin completar",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://x.com/AgileDeliveryES",
+  "urls": {
+    "twitter": "https://x.com/AgileDeliveryES",
+    "eventsUrl": "https://www.meetup.com/es-es/agile-delivery-es/"
+  },
+  "thumbnailUrl": "images/agile-delivery.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

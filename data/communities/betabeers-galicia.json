@@ -1,0 +1,28 @@
+{
+  "id": 57,
+  "name": "Betabeers Galicia",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Galicia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://betabeers.com/community/betabeers-galicia-29/",
+  "urls": {
+    "twitter": "https://x.com/betabeersgal",
+    "web": "https://betabeers.com/community/betabeers-galicia-29/"
+  },
+  "thumbnailUrl": "images/betabeers-galicia.webp",
+  "latLon": {
+    "lat": 42.756588768824,
+    "lon": -7.910665567756
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

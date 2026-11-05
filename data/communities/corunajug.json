@@ -1,0 +1,33 @@
+{
+  "id": 114,
+  "name": "CoruñaJUG",
+  "status": "active",
+  "lastReviewed": "25/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Coruña",
+  "parentId": 302,
+  "shortDescription": "El Grupo de Usuarios de Java de A Coruña (o CoruñaJUG, para abreviar) es una comunidad tecnológica nacida en A Coruña con el propósito de reunir a programadores profesionales y aficionados y a personas no técnicas, que quieran aprender sobre todo lo que funciona en la JVM.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "java",
+    "kotlin",
+    "scala",
+    "groovy"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://corunajug.org/",
+  "urls": {},
+  "thumbnailUrl": "images/corunajug.webp",
+  "latLon": {
+    "lat": 43.3707332,
+    "lon": -8.3958532
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

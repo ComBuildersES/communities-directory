@@ -1,0 +1,27 @@
+{
+  "id": 562,
+  "name": "Coruña Agile",
+  "status": "inactive",
+  "lastReviewed": "19/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "A Coruña, España",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/Coruna-Agile/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es-ES/Coruna-Agile/"
+  },
+  "thumbnailUrl": "images/corua-agile.webp",
+  "latLon": {
+    "lat": 43.3709703,
+    "lon": -8.3959425
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

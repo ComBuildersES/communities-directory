@@ -1,0 +1,24 @@
+{
+  "id": 213,
+  "name": "Girls in Tech Spain",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Sin completar",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://web.archive.org/web/20190116132308/https://spain.girlsintech.org/",
+  "urls": {},
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

@@ -1,0 +1,25 @@
+{
+  "id": 549,
+  "name": "Women Techmakers Barcelona",
+  "status": "active",
+  "lastReviewed": "17/02/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://womentechmakersbcn.github.io/",
+  "urls": {},
+  "thumbnailUrl": "images/women-techmakers-barcelona.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

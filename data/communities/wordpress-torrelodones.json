@@ -1,0 +1,30 @@
+{
+  "id": 524,
+  "name": "WordPress Torrelodones",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid (Torrelodones)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/torrelodones-wordpress-meetup/",
+  "urls": {
+    "twitter": "http://twitter.com/WPTorrelodones/",
+    "eventsUrl": "https://www.meetup.com/torrelodones-wordpress-meetup/"
+  },
+  "thumbnailUrl": "images/wordpress-torrelodones.webp",
+  "latLon": {
+    "lat": 40.576519,
+    "lon": -3.9294568
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

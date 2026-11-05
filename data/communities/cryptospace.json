@@ -1,0 +1,30 @@
+{
+  "id": 118,
+  "name": "Cryptospace",
+  "status": "inactive",
+  "lastReviewed": "18/12/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Sin completar",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://www.cryptospace.es/",
+  "urls": {
+    "twitter": "https://x.com/CryptoSpaceCS",
+    "web": "http://www.cryptospace.es/",
+    "linkedin": "https://www.linkedin.com/company/cryptospacecs/",
+    "eventsUrl": "https://saraos.tech/@cryptospace"
+  },
+  "thumbnailUrl": "images/cryptospace.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

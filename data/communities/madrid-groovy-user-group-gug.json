@@ -1,0 +1,52 @@
+{
+  "id": 330,
+  "name": "Madrid-Groovy User Group (GUG)",
+  "status": "active",
+  "lastReviewed": "29/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Madrid",
+  "shortDescription": "",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "java",
+    "kotlin",
+    "software-architecture",
+    "software-craftsmanship",
+    "groovy"
+  ],
+  "targetAudience": [
+    "data-engineer",
+    "software-architect",
+    "data-scientist",
+    "data-analyst",
+    "test-automation-engineer",
+    "data-journalist",
+    "backend-developer",
+    "embedded-iot-engineer",
+    "robotics-engineer",
+    "ml-engineer",
+    "devops-engineer",
+    "cloud-engineer",
+    "community-manager"
+  ],
+  "contactInfo": "",
+  "communityUrl": "https://www.madridgug.com/",
+  "urls": {
+    "twitter": "https://twitter.com/madridgug",
+    "youtube": "https://www.youtube.com/channel/UCgvO2jxLdGaVqHqnfPdyYzw",
+    "eventsUrl": "http://www.meetup.com/madrid-gug",
+    "bluesky": "https://bsky.app/profile/madridgug.com"
+  },
+  "thumbnailUrl": "images/madrid-groovy-user-group-gug.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

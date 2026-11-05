@@ -1,0 +1,30 @@
+{
+  "id": 586,
+  "name": "#VLCTesting",
+  "status": "active",
+  "lastReviewed": "26/05/2025",
+  "communityType": "conference",
+  "eventFormat": "hybrid",
+  "location": "Valencia, Spain",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://vlctesting.es/",
+  "urls": {
+    "instagram": "https://www.instagram.com/iti.tic/",
+    "twitter": "https://x.com/ITI_TIC",
+    "linkedin": "https://www.linkedin.com/company/iti-instituto-tecnologico-de-informatica",
+    "youtube": "https://www.youtube.com/user/VIEWITIVIDEOS/featured"
+  },
+  "thumbnailUrl": "images/vlctesting.webp",
+  "latLon": {
+    "lat": 39.4697065,
+    "lon": -0.3763353
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

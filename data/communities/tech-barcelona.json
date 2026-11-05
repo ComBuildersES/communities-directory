@@ -1,0 +1,27 @@
+{
+  "id": 548,
+  "name": "Tech Barcelona",
+  "status": "active",
+  "lastReviewed": "17/02/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/meetup-group-nkodwxya/?eventOrigin=event_home_page",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/meetup-group-nkodwxya/?eventOrigin=event_home_page"
+  },
+  "thumbnailUrl": "images/tech-barcelona.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

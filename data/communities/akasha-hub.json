@@ -1,0 +1,34 @@
+{
+  "id": 21,
+  "name": "AKASHA Hub",
+  "status": "active",
+  "lastReviewed": "15/10/2024",
+  "communityType": "hacklab",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "digital-activism",
+    "tech4good",
+    "open-hardware"
+  ],
+  "targetAudience": [],
+  "contactInfo": "hub@akasha.barcelona",
+  "communityUrl": "https://akasha.barcelona/",
+  "urls": {
+    "telegram": "https://t.me/+BimXDWstf680Nzk8",
+    "instagram": "https://www.instagram.com/akasha.barcelona/",
+    "twitter": "https://twitter.com/AKASHAworldBCN",
+    "eventsUrl": "https://www.meetup.com/akashabarcelona/"
+  },
+  "thumbnailUrl": "images/akasha-hub.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

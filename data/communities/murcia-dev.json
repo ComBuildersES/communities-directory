@@ -1,0 +1,31 @@
+{
+  "id": 359,
+  "name": "murcia dev",
+  "status": "active",
+  "lastReviewed": "27/11/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Murcia, Murcia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/murciadev/",
+  "urls": {
+    "discord": "https://discord.gg/xRVKFGURaw",
+    "twitter": "https://twitter.com/MurciaDev",
+    "linkedin": "https://www.linkedin.com/company/11855563",
+    "telegram": "https://t.me/MurciaDev",
+    "eventsUrl": "https://www.meetup.com/es-ES/murciadev/"
+  },
+  "thumbnailUrl": "images/murcia-dev.webp",
+  "latLon": {
+    "lat": 37.9835334,
+    "lon": -1.129905
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

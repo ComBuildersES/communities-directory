@@ -1,0 +1,32 @@
+{
+  "id": 88,
+  "name": "Cloud Native (CNCF) Sevilla",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Sevilla",
+  "parentId": 79,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "docker",
+    "kubernetes"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/cloud-native-sevilla/",
+  "urls": {
+    "youtube": "https://www.youtube.com/@CloudNativeSevilla",
+    "eventsUrl": "https://www.meetup.com/cloud-native-sevilla/"
+  },
+  "thumbnailUrl": "images/cloud-native-cncf-sevilla.webp",
+  "latLon": {
+    "lat": 37.38264,
+    "lon": -5.9962951
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

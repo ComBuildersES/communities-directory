@@ -1,0 +1,32 @@
+{
+  "id": 115,
+  "name": "Crafters Vigo",
+  "status": "active",
+  "lastReviewed": "27/11/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Vigo, Galicia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "software-craftsmanship"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/craftersvigo/",
+  "urls": {
+    "twitter": "https://twitter.com/CraftersVigo",
+    "linkedin": "https://www.linkedin.com/company/craftersvigo",
+    "github": "https://github.com/craftersVigo",
+    "eventsUrl": "https://www.meetup.com/es-ES/craftersvigo/"
+  },
+  "thumbnailUrl": "images/crafters-vigo.webp",
+  "latLon": {
+    "lat": 42.2313601,
+    "lon": -8.7124252
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

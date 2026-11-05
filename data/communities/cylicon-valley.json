@@ -1,0 +1,24 @@
+{
+  "id": 122,
+  "name": "CyLicon Valley",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Valladolid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://cyliconvalley.es/",
+  "urls": {},
+  "latLon": {
+    "lat": 41.6529421,
+    "lon": -4.7283839
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

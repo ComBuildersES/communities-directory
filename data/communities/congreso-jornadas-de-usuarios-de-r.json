@@ -1,0 +1,32 @@
+{
+  "id": 107,
+  "name": "Congreso & Jornadas de Usuarios de R",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Sevilla",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "r-lang"
+  ],
+  "targetAudience": [],
+  "contactInfo": "3rquer@sevillar.es",
+  "communityUrl": "https://imus.us.es/congresos/IIIRqueR/",
+  "urls": {
+    "github": "https://github.com/Enchufa2",
+    "twitter": "https://twitter.com/imus_us",
+    "instagram": "https://www.instagram.com/instituto_matematicas_us/?hl=es",
+    "youtube": "https://www.youtube.com/channel/UCXrMiA5WYsWsa1iPg1rrjUA/featured"
+  },
+  "thumbnailUrl": "images/congreso-jornadas-de-usuarios-de-r.webp",
+  "latLon": {
+    "lat": 37.38264,
+    "lon": -5.9962951
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

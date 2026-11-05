@@ -1,0 +1,54 @@
+{
+  "id": 451,
+  "name": "TRGCON",
+  "status": "active",
+  "lastReviewed": "24/03/2026",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "shortDescription": "La conferencia de tecnología y negocio más awesómica del mundo. Un punto de encuentro para TODOS los profesionales del sector digital.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "innovation",
+    "design-patterns",
+    "game-design",
+    "software-architecture",
+    "software-craftsmanship",
+    "game-development",
+    "free-software",
+    "iot",
+    "startups",
+    "digital-marketing",
+    "accessibility",
+    "web-standards",
+    "ux-ui",
+    "design-systems",
+    "tech4good",
+    "digital-activism",
+    "open-source",
+    "open-data",
+    "product-management",
+    "tech-ethics"
+  ],
+  "targetAudience": [
+    "software-architect",
+    "tech-lead"
+  ],
+  "contactInfo": "tarugoconf@bonillaware.com",
+  "communityUrl": "https://trgcon.com/",
+  "urls": {
+    "twitter": "https://x.com/search?q=%23trgx&src=typed_query&f=live",
+    "youtube": "https://www.youtube.com/@CodelyTV",
+    "instagram": "https://www.instagram.com/raul_muro/"
+  },
+  "thumbnailUrl": "images/trgcon.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": true
+}

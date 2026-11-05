@@ -1,0 +1,29 @@
+{
+  "id": 145,
+  "name": "DotNetMálaga Conferencia",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "info@dotnetmalaga.es",
+  "communityUrl": "https://dotnetmalaga.es/",
+  "urls": {
+    "twitter": "http://twitter.com/dotnetmalaga",
+    "github": "https://github.com/dotnetmalaga",
+    "eventsUrl": "http://www.meetup.com/dotnetMALAGA/"
+  },
+  "thumbnailUrl": "images/dotnetmalaga-conferencia.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,27 @@
+{
+  "id": 235,
+  "name": "Grupo usuarios de R de Murcia",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Murcia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://gauss.inf.um.es/umur/",
+  "urls": {
+    "twitter": "https://x.com/UMUR_Murcia",
+    "web": "https://gauss.inf.um.es/umur/"
+  },
+  "latLon": {
+    "lat": 37.9835334,
+    "lon": -1.129905
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

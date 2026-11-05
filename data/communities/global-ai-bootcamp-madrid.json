@@ -1,0 +1,29 @@
+{
+  "id": 215,
+  "name": "Global AI Bootcamp Madrid",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "staff@globalai.es",
+  "communityUrl": "https://globalai.es/",
+  "urls": {
+    "youtube": "https://www.youtube.com/c/GlobalAISpain/",
+    "twitter": "https://x.com/mariasotocast",
+    "github": "https://github.com/alejandrolmeida"
+  },
+  "thumbnailUrl": "images/global-ai-bootcamp-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

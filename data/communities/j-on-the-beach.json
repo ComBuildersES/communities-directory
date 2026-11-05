@@ -1,0 +1,48 @@
+{
+  "id": 301,
+  "name": "J On The Beach",
+  "status": "active",
+  "lastReviewed": "24/03/2026",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "shortDescription": "Conferencia internacional sobre sistemas distribuidos, DevOps, y muuuuchos datos.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "data-warehouse",
+    "data-lake",
+    "data-pipelines",
+    "big-data",
+    "open-data",
+    "distributed-systems",
+    "mlops",
+    "dataops",
+    "data-science",
+    "machine-learning"
+  ],
+  "targetAudience": [
+    "data-engineer",
+    "data-scientist",
+    "data-analyst",
+    "data-journalist",
+    "backend-developer",
+    "fullstack-developer",
+    "software-architect"
+  ],
+  "contactInfo": "info@yayyay.events",
+  "communityUrl": "https://www.jonthebeach.com/",
+  "urls": {
+    "youtube": "https://www.youtube.com/c/Jonthebeach",
+    "twitter": "https://x.com/jotbconf"
+  },
+  "thumbnailUrl": "images/j-on-the-breach.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": true
+}

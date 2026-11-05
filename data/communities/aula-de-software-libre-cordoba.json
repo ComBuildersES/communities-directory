@@ -1,0 +1,34 @@
+{
+  "id": 46,
+  "name": "Aula de Software Libre Córdoba",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "collaborative-group",
+  "eventFormat": "in-person",
+  "location": "Córdoba",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "free-software"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.uco.es/aulasoftwarelibre/",
+  "urls": {
+    "telegram": "https://t.me/AulaSoftwareLibreUCO",
+    "twitter": "https://twitter.com/aulasl",
+    "github": "https://github.com/aulasoftwarelibre/",
+    "instagram": "https://www.instagram.com/aulasoftwarelibre/",
+    "youtube": "https://www.youtube.com/channel/UCfWiR5j-cbKcGTi9faK8P6w",
+    "linkedin": "https://www.linkedin.com/company/aulasoftwarelibre/"
+  },
+  "thumbnailUrl": "images/aula-de-software-libre-cordoba.webp",
+  "latLon": {
+    "lat": 37.888422,
+    "lon": -4.77513
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

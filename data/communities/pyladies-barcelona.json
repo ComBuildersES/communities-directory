@@ -1,0 +1,34 @@
+{
+  "id": 547,
+  "name": "PyLadies Barcelona",
+  "status": "active",
+  "lastReviewed": "17/02/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "python"
+  ],
+  "targetAudience": [],
+  "contactInfo": "pyladies-bcn@googlegroups.com",
+  "communityUrl": "https://pybcn.org/pyladies_bcn/about/",
+  "urls": {
+    "github": "https://github.com/pybcn",
+    "linkedin": "https://linkedin.com/company/pybcn",
+    "twitter": "https://twitter.com/PyBCN",
+    "youtube": "https://www.youtube.com/c/PythonBarcelona",
+    "eventsUrl": "https://www.meetup.com/python-barcelona/",
+    "mailingList": "https://groups.google.com/g/pyladies-bcn"
+  },
+  "thumbnailUrl": "images/pyladies-barcelona.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

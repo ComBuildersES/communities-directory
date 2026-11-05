@@ -1,0 +1,24 @@
+{
+  "id": 225,
+  "name": "Granada PHP",
+  "status": "inactive",
+  "lastReviewed": "15/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Granada",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://web.archive.org/web/20070217032309/http://www.agenciaq4.com:80/granadasitu/granada_php/",
+  "urls": {},
+  "latLon": {
+    "lat": 37.1831938,
+    "lon": -3.604747
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

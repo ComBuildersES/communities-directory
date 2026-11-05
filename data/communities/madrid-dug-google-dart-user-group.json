@@ -1,0 +1,26 @@
+{
+  "id": 324,
+  "name": "Madrid DUG (Google Dart User Group)",
+  "status": "inactive",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/madrid-dug/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es-ES/madrid-dug/"
+  },
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,25 @@
+{
+  "id": 64,
+  "name": "Blockchain.gal Vigo",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Vigo, Galicia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://github.com/blockchain-gal",
+  "urls": {},
+  "thumbnailUrl": "images/blockchaingal-vigo.webp",
+  "latLon": {
+    "lat": 42.2313601,
+    "lon": -8.7124252
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

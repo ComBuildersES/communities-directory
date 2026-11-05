@@ -1,0 +1,30 @@
+{
+  "id": 90,
+  "name": "Cloud Native Asturias",
+  "status": "inactive",
+  "lastReviewed": "18/12/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Sin completar",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://community.cncf.io/xxx-dormant-cloud-native-asturias/",
+  "urls": {
+    "twitter": "https://x.com/cloudnativeast",
+    "mastodon": "https://saraos.tech/@cloud-native-asturias",
+    "youtube": "https://www.youtube.com/@cloudnativeasturias5752",
+    "eventsUrl": "https://community.cncf.io/xxx-dormant-cloud-native-asturias/"
+  },
+  "thumbnailUrl": "images/cloud-native-asturias.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

@@ -1,0 +1,32 @@
+{
+  "id": 609,
+  "name": "Python Asturias",
+  "status": "active",
+  "lastReviewed": "30/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Asturias",
+  "parentId": 404,
+  "shortDescription": "Grupo de usuarios de Python en Asturias con eventos tanto presenciales como online.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "python"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-es/python-asturias/",
+  "urls": {
+    "telegram": "https://t.me/pythonasturias",
+    "eventsUrl": "https://www.meetup.com/es-es/python-asturias/"
+  },
+  "thumbnailUrl": "images/python-valencia.webp",
+  "latLon": {
+    "lat": 43.3602825,
+    "lon": -5.8447919
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

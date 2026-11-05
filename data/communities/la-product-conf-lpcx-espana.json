@@ -1,0 +1,29 @@
+{
+  "id": 310,
+  "name": "La Product Conf & LPCx España",
+  "status": "active",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.laproductconf.com/",
+  "urls": {
+    "youtube": "https://www.youtube.com/channel/UCO0OJyqS_POidtPlaEoR95Q",
+    "linkedin": "https://www.linkedin.com/company/la-product-conference/",
+    "instagram": "https://www.instagram.com/laproductconfparis/"
+  },
+  "thumbnailUrl": "images/la-product-conf-lpcx-espana.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

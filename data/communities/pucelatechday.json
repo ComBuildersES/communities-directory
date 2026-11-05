@@ -1,0 +1,28 @@
+{
+  "id": 395,
+  "name": "PucelaTechDay",
+  "status": "inactive",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Valladolid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://www.pucelatechday.com",
+  "urls": {
+    "twitter": "https://x.com/pucelatechday",
+    "web": "http://www.pucelatechday.com"
+  },
+  "thumbnailUrl": "images/pucelatechday.webp",
+  "latLon": {
+    "lat": 41.6529421,
+    "lon": -4.7283839
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

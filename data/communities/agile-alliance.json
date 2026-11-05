@@ -1,0 +1,32 @@
+{
+  "id": 10,
+  "name": "Agile Alliance",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "umbrella-org",
+  "eventFormat": "unknown",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [
+    "agile-practitioner"
+  ],
+  "contactInfo": "initiatives@agilealliance.org",
+  "communityUrl": "https://www.agilealliance.org/resources/initiatives/",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/company/agilealliance/",
+    "bluesky": "https://bsky.app/profile/agilealliance.bsky.social",
+    "instagram": "https://www.instagram.com/agilealliance",
+    "twitter": "https://twitter.com/AgileAlliance"
+  },
+  "thumbnailUrl": "images/agile-alliance.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

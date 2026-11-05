@@ -1,0 +1,31 @@
+{
+  "id": 126,
+  "name": "Data, Cloud and AI in Madrid",
+  "status": "active",
+  "lastReviewed": "24/03/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "big-data",
+    "machine-learning"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/big-data-developers-in-madrid/",
+  "urls": {
+    "youtube": "https://www.youtube.com/channel/UCxROk30xBNLZE1uCW3TqH2g",
+    "eventsUrl": "https://www.meetup.com/big-data-developers-in-madrid/"
+  },
+  "thumbnailUrl": "images/data-cloud-and-ai-in-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

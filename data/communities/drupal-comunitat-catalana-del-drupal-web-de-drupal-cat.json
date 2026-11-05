@@ -1,0 +1,25 @@
+{
+  "id": 157,
+  "name": "Drupal Comunitat catalana del Drupal | Web de Drupal.cat",
+  "status": "unknown",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Sin completar",
+  "parentId": 39,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "help@drupal.org",
+  "communityUrl": "http://web.archive.org/web/20240112154928/https://groups.drupal.org/comunitat-catalana-del-drupal",
+  "urls": {},
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

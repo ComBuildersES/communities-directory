@@ -1,0 +1,27 @@
+{
+  "id": 199,
+  "name": "GDG Huelva",
+  "status": "inactive",
+  "lastReviewed": "25/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Huelva",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/GDG-Huelva/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/GDG-Huelva/"
+  },
+  "thumbnailUrl": "images/gdg-huelva.webp",
+  "latLon": {
+    "lat": 37.2571454,
+    "lon": -6.9495382
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,30 @@
+{
+  "id": 70,
+  "name": "CaceresTech",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Cáceres",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://cacerestech.com/",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/company/cacerestech/",
+    "telegram": "https://t.me/cacerestech",
+    "twitter": "https://x.com/caceresfront",
+    "web": "https://cacerestech.com/"
+  },
+  "thumbnailUrl": "images/cacerestech.webp",
+  "latLon": {
+    "lat": 39.4762161,
+    "lon": -6.3708585
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

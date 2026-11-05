@@ -1,0 +1,24 @@
+{
+  "id": 384,
+  "name": "PASS Spain",
+  "status": "inactive",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://www.sqlpass.es",
+  "urls": {},
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,27 @@
+{
+  "id": 419,
+  "name": "Seo Galicia",
+  "status": "inactive",
+  "lastReviewed": "27/11/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Vigo, Galicia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es/SEO-Galicia/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es/SEO-Galicia/"
+  },
+  "thumbnailUrl": "images/seo-galicia.webp",
+  "latLon": {
+    "lat": 42.2313601,
+    "lon": -8.7124252
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,28 @@
+{
+  "id": 535,
+  "name": "Yes we tech",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.yeswetech.org/",
+  "urls": {
+    "twitter": "https://twitter.com/yeswetech_org",
+    "instagram": "https://www.instagram.com/yeswetech_org/"
+  },
+  "thumbnailUrl": "images/yes-we-tech.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

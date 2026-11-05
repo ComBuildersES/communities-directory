@@ -1,0 +1,34 @@
+{
+  "id": 302,
+  "name": "Java User Groups",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "umbrella-org",
+  "eventFormat": "unknown",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "java"
+  ],
+  "targetAudience": [],
+  "contactInfo": "java_devrel_grp@oracle.com",
+  "communityUrl": "https://dev.java/community/jugs/",
+  "urls": {
+    "twitter": "https://twitter.com/i/lists/221697230/members",
+    "linkedin": "https://www.linkedin.com/company/brabant-jug/",
+    "discord": "https://discord.gg/RFzqQAyaYV",
+    "github": "https://github.com/JavaDominicano",
+    "instagram": "https://www.instagram.com/jug_prayagraj",
+    "eventsUrl": "https://www.meetup.com/ru-RU/almaty-java-user-group/"
+  },
+  "thumbnailUrl": "images/java-user-groups.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

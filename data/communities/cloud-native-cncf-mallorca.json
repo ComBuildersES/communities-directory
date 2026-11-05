@@ -1,0 +1,33 @@
+{
+  "id": 86,
+  "name": "Cloud Native (CNCF) Mallorca",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Mallorca",
+  "parentId": 79,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://community.cncf.io/cloud-native-mallorca/",
+  "urls": {
+    "twitter": "https://twitter.com/cloudnativefdn",
+    "instagram": "https://www.instagram.com/humans.of.cloudnative/",
+    "linkedin": "https://www.linkedin.com/company/cloud-native-computing-foundation/",
+    "youtube": "https://www.youtube.com/c/cloudnativefdn",
+    "github": "https://github.com/cncf",
+    "eventsUrl": "https://community.cncf.io/cloud-native-mallorca/"
+  },
+  "thumbnailUrl": "images/cloud-native-cncf-mallorca.webp",
+  "latLon": {
+    "lat": 39.578695,
+    "lon": 2.654489
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

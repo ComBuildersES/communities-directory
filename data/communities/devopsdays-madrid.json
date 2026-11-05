@@ -1,0 +1,25 @@
+{
+  "id": 138,
+  "name": "DevopsDays Madrid",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://devopsdays.org/madrid",
+  "urls": {},
+  "thumbnailUrl": "images/devopsdays-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

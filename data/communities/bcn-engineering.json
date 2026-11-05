@@ -1,0 +1,29 @@
+{
+  "id": 55,
+  "name": "BCN Engineering",
+  "status": "active",
+  "lastReviewed": "29/10/2024",
+  "communityType": "mutual-aid",
+  "eventFormat": "online",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "contact@bcneng.org",
+  "communityUrl": "https://bcneng.org/",
+  "urls": {
+    "github": "https://github.com/bcneng",
+    "linkedin": "https://www.linkedin.com/company/bcneng/",
+    "twitter": "https://twitter.com/bcn_eng"
+  },
+  "thumbnailUrl": "images/bcn-engineering.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

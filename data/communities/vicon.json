@@ -1,0 +1,28 @@
+{
+  "id": 458,
+  "name": "viCON",
+  "status": "active",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Vigo, Galicia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "vicon@galicia.com",
+  "communityUrl": "https://www.vicon.gal/",
+  "urls": {
+    "twitter": "https://twitter.com/vicongal",
+    "instagram": "https://instagram.com/vicon.gal"
+  },
+  "thumbnailUrl": "images/vicon.webp",
+  "latLon": {
+    "lat": 42.2313601,
+    "lon": -8.7124252
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

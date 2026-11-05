@@ -1,0 +1,27 @@
+{
+  "id": 33,
+  "name": "Asociación Atlantics",
+  "status": "active",
+  "lastReviewed": "22/10/2024",
+  "communityType": "collaborative-group",
+  "eventFormat": "in-person",
+  "location": "Coruña",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://asociacionatlantics.org/",
+  "urls": {
+    "telegram": "https://telegram.me/AsocAtlanTICs"
+  },
+  "thumbnailUrl": "images/asociacion-atlantics.webp",
+  "latLon": {
+    "lat": 43.3707332,
+    "lon": -8.3958532
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

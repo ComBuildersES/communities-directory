@@ -1,0 +1,29 @@
+{
+  "id": 391,
+  "name": "Power BI & Fabric Malaga",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "data-visualization"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/powerbi-fabricmalaga/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/powerbi-fabricmalaga/"
+  },
+  "thumbnailUrl": "images/power-bi-fabric-malaga.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

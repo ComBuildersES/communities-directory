@@ -1,0 +1,24 @@
+{
+  "id": 375,
+  "name": "Open Source Weekends",
+  "status": "inactive",
+  "lastReviewed": "03/10/2024",
+  "communityType": "collaborative-group",
+  "eventFormat": "hybrid",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://web.archive.org/web/20251105160740/https://osweekends.com/",
+  "urls": {},
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

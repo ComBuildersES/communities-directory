@@ -1,0 +1,25 @@
+{
+  "id": 35,
+  "name": "Asociación de profesionales de Usabilidad",
+  "status": "inactive",
+  "lastReviewed": "15/10/2024",
+  "communityType": "mutual-aid",
+  "eventFormat": "unknown",
+  "location": "Sin completar",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://torresburriel.com/weblog/nuevo-sitio-web-de-upa-spain/",
+  "urls": {},
+  "thumbnailUrl": "images/asociacion-de-profesionales-de-usabilidad.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

@@ -1,0 +1,28 @@
+{
+  "id": 423,
+  "name": "Sistopics Distribuidos",
+  "status": "inactive",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Sin completar",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://web.archive.org/web/20180617225556/http://www.sug.cat/",
+  "urls": {
+    "linkedin": "http://www.linkedin.com/groups/SUGCAT-2883719",
+    "twitter": "https://twitter.com/SUG_Cat",
+    "eventsUrl": "http://www.meetup.com/SUG-CAT/"
+  },
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

@@ -2,18 +2,14 @@
 /**
  * apply-parent-ids.js
  * Aplica los vínculos parentId confirmados (✅) de docs/parentId-mapping-review.md
- * a public/data/communities.json.
+ * a los ficheros de data/communities/.
  *
  * Uso:
  *   node scripts/apply-parent-ids.js [--dry-run]
  */
 
-import { readFileSync, writeFileSync } from "fs";
-import { fileURLToPath } from "url";
-import path from "path";
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const DATA_PATH = path.resolve(__dirname, "../public/data/communities.json");
+// Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
+import { readCommunities, writeCommunities } from "./lib/communities-store.js";
 
 // Vínculos confirmados ✅ de parentId-mapping-review.md
 // { childId: parentId }
@@ -129,7 +125,7 @@ const PARENT_LINKS = {
 
 const isDryRun = process.argv.includes("--dry-run");
 
-const communities = JSON.parse(readFileSync(DATA_PATH, "utf-8"));
+const communities = readCommunities();
 const idSet = new Set(communities.map((c) => c.id));
 
 // Validate all IDs exist
@@ -173,8 +169,8 @@ const updated = communities.map((c) => {
 console.log(`\n${applied} vínculos ${isDryRun ? "a aplicar" : "aplicados"}, ${skipped} ya existían.`);
 
 if (!isDryRun) {
-  writeFileSync(DATA_PATH, JSON.stringify(updated, null, 2) + "\n", "utf-8");
-  console.log("communities.json actualizado.");
+  writeCommunities(updated);
+  console.log("data/communities/ actualizado.");
 }
 
 export { PARENT_LINKS };

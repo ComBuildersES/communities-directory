@@ -3,7 +3,7 @@ name: URL health
 on:
   pull_request:
     paths:
-      - public/data/communities.json
+      - data/communities/**
   workflow_dispatch:
   schedule:
     - cron: "0 7 * * 1"

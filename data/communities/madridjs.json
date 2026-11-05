@@ -1,0 +1,31 @@
+{
+  "id": 332,
+  "name": "MadridJS",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "javascript"
+  ],
+  "targetAudience": [],
+  "contactInfo": "madridjs-list@meetup.com",
+  "communityUrl": "https://www.meetup.com/es-ES/madridjs/",
+  "urls": {
+    "twitter": "https://twitter.com/madridjs",
+    "github": "https://github.com/madridjs",
+    "eventsUrl": "https://www.meetup.com/es-ES/madridjs/"
+  },
+  "thumbnailUrl": "images/madridjs.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

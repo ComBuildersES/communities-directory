@@ -1,0 +1,24 @@
+{
+  "id": 295,
+  "name": "Iniciador Valladolid",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Valladolid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://iniciador.com/Valladolid",
+  "urls": {},
+  "latLon": {
+    "lat": 41.6529421,
+    "lon": -4.7283839
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

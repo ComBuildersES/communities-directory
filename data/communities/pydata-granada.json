@@ -1,0 +1,55 @@
+{
+  "id": 400,
+  "name": "PyData Granada",
+  "status": "active",
+  "lastReviewed": "25/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Granada, España",
+  "parentId": 399,
+  "shortDescription": "Comunidad donde compartir buenas prácticas, nuevos enfoques y tecnologías para la gestión, el procesamiento, el análisis y la visualización de datos. Abordan la ciencia de datos utilizando muchos lenguajes, incluyendo Python, Julia y R.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "data-science",
+    "python",
+    "data-visualization",
+    "free-software",
+    "sql-databases",
+    "nosql-databases",
+    "graph-databases",
+    "data-engineering",
+    "vector-databases",
+    "data-warehouse",
+    "data-lake"
+  ],
+  "targetAudience": [
+    "data-engineer",
+    "data-scientist",
+    "data-analyst",
+    "data-journalist",
+    "ml-engineer",
+    "community-manager",
+    "software-architect",
+    "researcher",
+    "sysadmin"
+  ],
+  "contactInfo": "granada@pydata.org",
+  "communityUrl": "https://linksta.cc/@PyDataGRX",
+  "urls": {
+    "github": "https://github.com/PyDataGRX",
+    "twitter": "https://twitter.com/PyDataGRX",
+    "linkedin": "https://www.linkedin.com/company/pydata-grx/",
+    "discord": "https://discord.gg/XmZWeChMZd",
+    "eventsUrl": "https://www.meetup.com/es-ES/pydatagrx/"
+  },
+  "thumbnailUrl": "images/pydata-granada.webp",
+  "latLon": {
+    "lat": 37.1831938,
+    "lon": -3.604747
+  },
+  "displayOnMap": true,
+  "humanValidated": true
+}

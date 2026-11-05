@@ -1,0 +1,25 @@
+{
+  "id": 313,
+  "name": "LangDev Conference",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Sevilla",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "maarten@f1re.io",
+  "communityUrl": "https://langdevcon.org/",
+  "urls": {},
+  "thumbnailUrl": "images/langdev-conference.webp",
+  "latLon": {
+    "lat": 37.38264,
+    "lon": -5.9962951
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

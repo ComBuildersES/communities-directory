@@ -1,0 +1,32 @@
+{
+  "id": 223,
+  "name": "Granada Interactiva",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Granada",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://linktr.ee/grinteractiva",
+  "urls": {
+    "discord": "https://discord.gg/QMWd5uCHs6",
+    "twitter": "https://twitter.com/GRinteractiva",
+    "instagram": "https://www.instagram.com/grinteractiva/",
+    "linkedin": "https://www.linkedin.com/groups/12728039",
+    "eventsUrl": "https://www.meetup.com/gr-interactiva/events/306225253/?utm_medium=referral&utm_campaign=announceModal_savedevents_share_modal&utm_source=link",
+    "linkAggregator": "https://linktr.ee/grinteractiva"
+  },
+  "thumbnailUrl": "images/granada-interactiva.webp",
+  "latLon": {
+    "lat": 37.1831938,
+    "lon": -3.604747
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

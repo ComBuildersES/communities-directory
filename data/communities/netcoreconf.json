@@ -1,0 +1,28 @@
+{
+  "id": 363,
+  "name": "Netcoreconf",
+  "status": "active",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://netcoreconf.com/",
+  "urls": {
+    "twitter": "https://x.com/AdrianDiaz81",
+    "github": "https://github.com/AdrianDiaz81"
+  },
+  "thumbnailUrl": "images/netcoreconf.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

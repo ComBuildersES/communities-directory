@@ -1,0 +1,32 @@
+{
+  "id": 198,
+  "name": "GDG Granada",
+  "status": "active",
+  "lastReviewed": "24/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Granada",
+  "parentId": 207,
+  "topics": "Cloud, AI, Backend, Frontend, soft skills",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [
+    "frontend-developer",
+    "backend-developer"
+  ],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/granadagdg/",
+  "urls": {
+    "twitter": "http://twitter.com/GDGgranada/",
+    "eventsUrl": "https://www.meetup.com/es-ES/granadagdg/"
+  },
+  "thumbnailUrl": "images/gdg-granada.webp",
+  "latLon": {
+    "lat": 37.1831938,
+    "lon": -3.604747
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

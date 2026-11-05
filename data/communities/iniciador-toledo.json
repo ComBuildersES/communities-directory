@@ -1,0 +1,24 @@
+{
+  "id": 293,
+  "name": "Iniciador Toledo",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Toledo",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://iniciador.com/Toledo",
+  "urls": {},
+  "latLon": {
+    "lat": 39.85966175170025,
+    "lon": -4.024544270483665
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

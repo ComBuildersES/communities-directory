@@ -1,0 +1,32 @@
+{
+  "id": 49,
+  "name": "Azure Malaga",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "azure"
+  ],
+  "targetAudience": [],
+  "contactInfo": "azuremalaga@gmail.com",
+  "communityUrl": "https://azuremalaga.com/",
+  "urls": {
+    "twitter": "http://twitter.com/azuremalaga",
+    "github": "https://github.com/azuremalaga",
+    "linkedin": "https://www.linkedin.com/company/azuremalaga",
+    "eventsUrl": "https://www.meetup.com/es-ES/azuremalaga/"
+  },
+  "thumbnailUrl": "images/azure-malaga.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

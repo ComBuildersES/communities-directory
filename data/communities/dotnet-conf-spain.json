@@ -1,0 +1,29 @@
+{
+  "id": 143,
+  "name": "dotNET Conf Spain",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "csharp"
+  ],
+  "targetAudience": [],
+  "contactInfo": "marketing@plainconcepts.com",
+  "communityUrl": "https://dotnetconfspain.com/",
+  "urls": {
+    "twitter": "https://x.com/dotNetConfSpain/status/1805173122225639729"
+  },
+  "thumbnailUrl": "images/dotnet-conf-spain.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

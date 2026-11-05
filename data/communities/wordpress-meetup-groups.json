@@ -1,0 +1,33 @@
+{
+  "id": 512,
+  "name": "Wordpress Meetup Groups",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "umbrella-org",
+  "eventFormat": "unknown",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "support@wordcamp.org",
+  "communityUrl": "https://make.wordpress.org/community/meetups/",
+  "urls": {
+    "twitter": "https://www.x.com/WordPress",
+    "bluesky": "https://bsky.app/profile/wordpress.org",
+    "instagram": "https://www.instagram.com/wordpress/",
+    "linkedin": "https://www.linkedin.com/company/wordpress",
+    "eventsUrl": "https://www.meetup.com/pro/wordpress/"
+  },
+  "thumbnailUrl": "images/wordpress-meetup-groups.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

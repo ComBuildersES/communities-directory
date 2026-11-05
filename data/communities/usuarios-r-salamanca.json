@@ -1,0 +1,24 @@
+{
+  "id": 453,
+  "name": "Usuarios R Salamanca",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Salamanca",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://salamanca.r-es.org/",
+  "urls": {},
+  "latLon": {
+    "lat": 40.966674,
+    "lon": -5.665434
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

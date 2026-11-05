@@ -1,0 +1,31 @@
+{
+  "id": 433,
+  "name": "Step4ward",
+  "status": "active",
+  "lastReviewed": "17/10/2024",
+  "communityType": "collaborative-group",
+  "eventFormat": "hybrid",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "infostep4ward@gmail.com",
+  "communityUrl": "https://step4ward.es/",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/company/step4ward-es/",
+    "instagram": "https://www.instagram.com/step4ward_es/",
+    "twitter": "https://twitter.com/Step4ward_ES",
+    "youtube": "https://www.youtube.com/@step4ward_ES/streams",
+    "bluesky": "https://bsky.app/profile/step4ward-es.bsky.social"
+  },
+  "thumbnailUrl": "images/step4ward.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

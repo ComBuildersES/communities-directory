@@ -1,0 +1,42 @@
+{
+  "id": 201,
+  "name": "GDG La Rioja",
+  "status": "active",
+  "lastReviewed": "25/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Logroño La Rioja",
+  "parentId": 207,
+  "shortDescription": "Los Grupos de Desarrolladores de Google (GDG) reúnen a desarrolladores y tecnólogos para que se conecten, aprendan y crezcan junto con las tecnologías y los expertos de Google. Estos grupos apoyan la innovación y el crecimiento en el mundo de la tecnología.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "gcp"
+  ],
+  "targetAudience": [
+    "sre",
+    "mobile-developer",
+    "community-manager",
+    "frontend-developer",
+    "backend-developer",
+    "fullstack-developer",
+    "game-developer",
+    "devops-engineer",
+    "tech-lead"
+  ],
+  "contactInfo": "",
+  "communityUrl": "https://gdg.community.dev/gdg-la-rioja/",
+  "urls": {
+    "twitter": "https://www.twitter.com/GDGLaRioja",
+    "eventsUrl": "https://gdg.community.dev/gdg-la-rioja/"
+  },
+  "thumbnailUrl": "images/gdg-la-rioja.webp",
+  "latLon": {
+    "lat": 42.46569,
+    "lon": -2.44998
+  },
+  "displayOnMap": true,
+  "humanValidated": true
+}

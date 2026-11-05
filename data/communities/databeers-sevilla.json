@@ -1,0 +1,29 @@
+{
+  "id": 131,
+  "name": "Databeers Sevilla",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Sevilla",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/databeersvq/",
+  "urls": {
+    "twitter": "https://twitter.com/DatabeerSVQ/status/937029400331157504",
+    "youtube": "https://www.youtube.com/channel/UCOKXC8v78ONvwJhaC7tWuXA",
+    "eventsUrl": "https://www.meetup.com/databeersvq/"
+  },
+  "thumbnailUrl": "images/databeers-sevilla.webp",
+  "latLon": {
+    "lat": 37.38264,
+    "lon": -5.9962951
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

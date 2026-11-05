@@ -1,0 +1,28 @@
+{
+  "id": 534,
+  "name": "Xornada de Usuarios de R en Galicia",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Coruña (Santiago de Compostela)",
+  "parentId": 103,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "r-lang"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.r-users.gal/",
+  "urls": {},
+  "thumbnailUrl": "images/xornada-de-usuarios-de-r-en-galicia.webp",
+  "latLon": {
+    "lat": 42.8806228,
+    "lon": -8.5466071
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

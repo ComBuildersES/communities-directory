@@ -1,0 +1,31 @@
+{
+  "id": 517,
+  "name": "WordPress Santiago de Compostela",
+  "status": "active",
+  "lastReviewed": "30/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Coruña (Santiago de Compostela)",
+  "parentId": 512,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-es/santiago-de-compostela-wordpress-meetup-group/",
+  "urls": {
+    "telegram": "https://t.me/+6faPK40eIFw1Njc0",
+    "eventsUrl": "https://www.meetup.com/es-es/santiago-de-compostela-wordpress-meetup-group/"
+  },
+  "thumbnailUrl": "images/wordpress-santiago-de-compostela.webp",
+  "latLon": {
+    "lat": 42.8806228,
+    "lon": -8.5466071
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

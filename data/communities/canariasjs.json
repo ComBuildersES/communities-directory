@@ -1,0 +1,27 @@
+{
+  "id": 73,
+  "name": "CanariasJS",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Tenerife",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://t.me/canariasjs ",
+  "urls": {
+    "telegram": "https://t.me/canariasjs"
+  },
+  "thumbnailUrl": "images/canariasjs.webp",
+  "latLon": {
+    "lat": 28.2631,
+    "lon": -16.60942
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

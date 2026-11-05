@@ -1,0 +1,28 @@
+{
+  "id": 188,
+  "name": "Frontend Developers Madrid",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/Front-Developers-Madrid/",
+  "urls": {
+    "twitter": "https://twitter.com/FrontenddevMad",
+    "eventsUrl": "https://www.meetup.com/es-ES/Front-Developers-Madrid/"
+  },
+  "thumbnailUrl": "images/frontend-developers-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

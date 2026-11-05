@@ -1,0 +1,32 @@
+{
+  "id": 9,
+  "name": "Adopta un Junior",
+  "status": "active",
+  "lastReviewed": "15/10/2024",
+  "communityType": "collaborative-group",
+  "eventFormat": "online",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://adoptaunjunior.es/",
+  "urls": {
+    "discord": "https://discord.gg/EneE8ajS",
+    "linkedin": "https://www.linkedin.com/company/adoptaunjunior",
+    "youtube": "https://www.youtube.com/channel/UCVFGgfVOfEGdTR4icx9B5Aw",
+    "twitter": "https://x.com/AdoptaUnJunior",
+    "instagram": "https://www.instagram.com/adoptaunjunior/",
+    "bluesky": "https://bsky.app/profile/adoptaunjunior.bsky.social"
+  },
+  "thumbnailUrl": "images/adopta-un-junior.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

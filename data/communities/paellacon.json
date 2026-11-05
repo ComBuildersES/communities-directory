@@ -1,0 +1,28 @@
+{
+  "id": 382,
+  "name": "PaellaCon",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Valencia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://x.com/PaellaCON",
+  "urls": {
+    "twitter": "https://x.com/PaellaCON",
+    "youtube": "https://www.youtube.com/watch?v=Du2PQiMIqfI&list=PLoWTLhDgfllJKIw1n-Y3APvoYZR7mQbMm"
+  },
+  "thumbnailUrl": "images/paellacon.webp",
+  "latLon": {
+    "lat": 39.4702393,
+    "lon": -0.3768049
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

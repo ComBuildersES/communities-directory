@@ -1,0 +1,27 @@
+{
+  "id": 187,
+  "name": "Foro Cybercamp",
+  "status": "active",
+  "lastReviewed": "25/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "online",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/cybercamp-uma/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/cybercamp-uma/"
+  },
+  "thumbnailUrl": "images/foro-cybercamp.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

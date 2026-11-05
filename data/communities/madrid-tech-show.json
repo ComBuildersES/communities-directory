@@ -1,0 +1,25 @@
+{
+  "id": 328,
+  "name": "Madrid Tech Show",
+  "status": "active",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.madridtechshow.es/",
+  "urls": {},
+  "thumbnailUrl": "images/madrid-tech-show.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

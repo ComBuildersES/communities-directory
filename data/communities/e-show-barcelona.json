@@ -1,0 +1,28 @@
+{
+  "id": 171,
+  "name": "E-Show Barcelona",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://eshow.es/barcelona",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/company/eshowcloserstillmedia/",
+    "twitter": "https://twitter.com/eShowesp"
+  },
+  "thumbnailUrl": "images/e-show-barcelona.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,25 @@
+{
+  "id": 253,
+  "name": "Ingobernable",
+  "status": "inactive",
+  "lastReviewed": "22/10/2024",
+  "communityType": "hacklab",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://ingobernable.net/",
+  "urls": {},
+  "thumbnailUrl": "images/ingobernable.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

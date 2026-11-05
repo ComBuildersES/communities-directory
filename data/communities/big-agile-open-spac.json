@@ -1,0 +1,28 @@
+{
+  "id": 58,
+  "name": "Big Agile Open Spac",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://bigagileos.wixsite.com/website",
+  "urls": {
+    "twitter": "https://x.com/bigagileos",
+    "web": "http://web.archive.org/web/20230608075207/https://bigagileos.wixsite.com/website"
+  },
+  "thumbnailUrl": "images/big-agile-open-spac.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

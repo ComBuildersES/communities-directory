@@ -1,0 +1,27 @@
+{
+  "id": 392,
+  "name": "PowerTips Cádiz",
+  "status": "inactive",
+  "lastReviewed": "25/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Cádiz",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/PowerTips-Cadiz/",
+  "urls": {
+    "twitter": "http://twitter.com/powertipses/",
+    "eventsUrl": "https://www.meetup.com/PowerTips-Cadiz/"
+  },
+  "latLon": {
+    "lat": 36.5297453,
+    "lon": -6.2926477
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

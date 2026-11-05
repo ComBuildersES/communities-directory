@@ -1,0 +1,28 @@
+{
+  "id": 197,
+  "name": "GDG Cloud Madrid",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "parentId": 196,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://x.com/gdgcloudmadrid?lang=en",
+  "urls": {
+    "twitter": "https://x.com/gdgcloudmadrid?lang=en",
+    "eventsUrl": "https://www.meetup.com/es-ES/gcdcmadrid/"
+  },
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

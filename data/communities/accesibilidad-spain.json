@@ -1,0 +1,27 @@
+{
+  "id": 6,
+  "name": "Accesibilidad Spain",
+  "status": "inactive",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Sin completar",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/accesibilidad-spain/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es-ES/accesibilidad-spain/"
+  },
+  "thumbnailUrl": "images/accesibilidad-spain.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

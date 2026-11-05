@@ -7,10 +7,12 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
+# `cancel-in-progress: false` serializa los deploys, y con ellos la asignación de IDs:
+# dos merges seguidos no pueden reclamar el mismo id.
 concurrency:
   group: pages
   cancel-in-progress: false
@@ -22,6 +24,12 @@ jobs:
     steps:
       - name: Checkout source code
         uses: actions/checkout@v6
+        with:
+          # Necesario para poder commitear los IDs asignados sobre la rama, no sobre el SHA.
+          ref: master
+          # El token por defecto no dispara workflows con su push, que es justo lo que
+          # queremos: este mismo run ya publica el resultado.
+          persist-credentials: true
 
       - name: Setup Node.js
         uses: actions/setup-node@v6
@@ -31,6 +39,38 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+
+      # Las propuestas llegan con `id: null` y el id se asigna aquí, antes del build, para
+      # que la comunidad nueva se publique en ESTE deploy y no en el siguiente (issue #437).
+      - name: Asignar IDs de comunidades pendientes
+        id: assign
+        run: node scripts/assign-community-ids.js
+
+      - name: Commitear los IDs asignados
+        if: steps.assign.outputs.assigned != ''
+        env:
+          SUMMARY: ${{ steps.assign.outputs.summary }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/communities/ public/data/communities.meta.json
+          if git diff --cached --quiet; then
+            echo "No hay cambios que commitear."
+            exit 0
+          fi
+          git commit -m "chore(data): asignar IDs de comunidad ($SUMMARY) [skip ci]"
+          # Si otro merge entró entre el checkout y ahora, rebasar y reintentar: los ficheros
+          # por comunidad no conflictan, así que el rebase es limpio.
+          for attempt in 1 2 3; do
+            if git push origin HEAD:master; then
+              exit 0
+            fi
+            echo "Push rechazado (intento $attempt); rebasando sobre master."
+            git fetch origin master
+            git rebase origin/master
+          done
+          echo "No se pudo publicar los IDs asignados tras 3 intentos." >&2
+          exit 1
 
       - name: Build the project
         run: npm run build

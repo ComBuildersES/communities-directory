@@ -1,0 +1,27 @@
+{
+  "id": 569,
+  "name": "Hacking Sevilla",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Sevilla España",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-es/hacking-sevillaqk14/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es-es/hacking-sevillaqk14/"
+  },
+  "thumbnailUrl": "images/hacking-sevilla.webp",
+  "latLon": {
+    "lat": 37.3886303,
+    "lon": -5.9953403
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

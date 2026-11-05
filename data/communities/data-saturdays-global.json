@@ -1,0 +1,44 @@
+{
+  "id": 124,
+  "name": "Data Saturdays Global",
+  "status": "active",
+  "lastReviewed": "28/10/2026",
+  "communityType": "umbrella-org",
+  "eventFormat": "in-person",
+  "location": "n/a",
+  "shortDescription": "Data Saturdays is a place for the data community to run small regional events with little outlay or set-up difficulties. Here you can access a set of tools and have open, transparent discussions on how your event should be set up and utilised.",
+  "topics": "",
+  "langs": [
+    "es",
+    "en"
+  ],
+  "tags": [
+    "sql-databases",
+    "big-data",
+    "data-engineering",
+    "data-science",
+    "business-intelligence",
+    "azure"
+  ],
+  "targetAudience": [
+    "data-engineer",
+    "data-analyst",
+    "data-scientist",
+    "software-architect",
+    "senior-staff"
+  ],
+  "contactInfo": "support@datasaturdays.com",
+  "communityUrl": "https://datasaturdays.com/",
+  "urls": {
+    "twitter": "https://x.com/datasaturdays",
+    "eventsUrl": "https://datasaturdays.com/#events"
+  },
+  "thumbnailUrl": "images/data-saturdays.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": true,
+  "removalReason": ""
+}

@@ -1,0 +1,47 @@
+{
+  "id": 439,
+  "name": "Sysarmy Galicia",
+  "status": "active",
+  "lastReviewed": "26/03/2026",
+  "communityType": "collaborative-group",
+  "eventFormat": "in-person",
+  "location": "Galicia",
+  "parentId": 438,
+  "shortDescription": "Sysarmy es la comunidad de sistemas que junta profesionales del área para favorecer el contacto y el intercambio de conocimiento de manera informal.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "git",
+    "open-source",
+    "cybersecurity",
+    "bash",
+    "sysadmin"
+  ],
+  "targetAudience": [
+    "frontend-developer",
+    "backend-developer",
+    "fullstack-developer",
+    "mobile-developer",
+    "game-developer",
+    "devops-engineer",
+    "open-source-contributor",
+    "community-manager"
+  ],
+  "contactInfo": "",
+  "communityUrl": "https://sysarmy.galicia.dev",
+  "urls": {
+    "github": "https://github.com/Gallegarmy",
+    "telegram": "https://t.me/Gallegarmy",
+    "eventsUrl": "https://www.eventbrite.com/o/101517364781"
+  },
+  "thumbnailUrl": "images/sysarmy-galicia.webp",
+  "latLon": {
+    "lat": 43.3707332,
+    "lon": -8.3958532
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

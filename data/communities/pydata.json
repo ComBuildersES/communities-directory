@@ -1,0 +1,34 @@
+{
+  "id": 399,
+  "name": "PyData",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "umbrella-org",
+  "eventFormat": "unknown",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "data-science",
+    "python"
+  ],
+  "targetAudience": [],
+  "contactInfo": "admin@pydata.org",
+  "communityUrl": "https://pydata.org/",
+  "urls": {
+    "youtube": "https://www.youtube.com/user/PyDataTV",
+    "discord": "https://discord.gg/CjspHbE9xe",
+    "mastodon": "https://mastodon.social/@PyData",
+    "twitter": "https://twitter.com/PyData",
+    "eventsUrl": "https://www.meetup.com/pro/pydata/"
+  },
+  "thumbnailUrl": "images/pydata.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

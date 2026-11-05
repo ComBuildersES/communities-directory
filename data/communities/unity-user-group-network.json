@@ -1,0 +1,29 @@
+{
+  "id": 452,
+  "name": "Unity User Group Network",
+  "status": "active",
+  "lastReviewed": "26/05/2025",
+  "communityType": "umbrella-org",
+  "eventFormat": "unknown",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "unity"
+  ],
+  "targetAudience": [],
+  "contactInfo": "meetup@unity3d.com",
+  "communityUrl": "https://www.meetup.com/es-ES/pro/unity/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es-ES/pro/unity/"
+  },
+  "thumbnailUrl": "images/unity-user-group-network.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

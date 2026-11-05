@@ -1,0 +1,29 @@
+{
+  "id": 484,
+  "name": "WordCamp Alhaurín de la Torre",
+  "status": "active",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Málaga (Alhaurín de la Torre, )",
+  "parentId": 483,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://alhaurin.wordcamp.org/2025/",
+  "urls": {
+    "twitter": "https://x.com/WCAlhaurin",
+    "eventsUrl": "https://alhaurin.wordcamp.org/2025/"
+  },
+  "thumbnailUrl": "images/wordcamp-alhaurin-de-la-torre.webp",
+  "latLon": {
+    "lat": 36.6683574,
+    "lon": -4.5529671
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

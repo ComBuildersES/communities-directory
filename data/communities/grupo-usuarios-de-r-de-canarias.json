@@ -1,0 +1,27 @@
+{
+  "id": 234,
+  "name": "Grupo usuarios de R de Canarias",
+  "status": "unknown",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Canarias",
+  "parentId": 103,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "r-lang"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://canarias.r-es.org/",
+  "urls": {},
+  "latLon": {
+    "lat": 28,
+    "lon": -15.5
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

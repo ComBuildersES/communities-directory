@@ -16,8 +16,9 @@
  */
 
 import fs from 'fs';
+// Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
+import { readCommunities, writeCommunities } from './lib/communities-store.js';
 
-const COMMUNITIES_PATH = './public/data/communities.json';
 const MAPPING_PATH     = './scripts/url-mapping.json';
 
 // ─── Clasificación de URLs por plataforma ────────────────────────────────────
@@ -67,7 +68,7 @@ function main() {
   const dryRun       = args.includes('--dry-run');
   const forceStatus  = args.includes('--force-status');
 
-  const communities = JSON.parse(fs.readFileSync(COMMUNITIES_PATH, 'utf-8'));
+  const communities = readCommunities();
   const mapping     = JSON.parse(fs.readFileSync(MAPPING_PATH,     'utf-8'));
 
   // Índice para buscar comunidades por communityUrl o urls.twitter normalizados
@@ -144,7 +145,7 @@ function main() {
   }
 
   if (!dryRun) {
-    fs.writeFileSync(COMMUNITIES_PATH, JSON.stringify(communities, null, 2), 'utf-8');
+    writeCommunities(communities);
   }
 
   const mode = dryRun ? '[DRY RUN] ' : '';

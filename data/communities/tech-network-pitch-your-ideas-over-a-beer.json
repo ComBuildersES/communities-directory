@@ -1,0 +1,26 @@
+{
+  "id": 443,
+  "name": "Tech Network- Pitch your ideas over a beer!",
+  "status": "inactive",
+  "lastReviewed": "11/12/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/technetwork/events/304881438/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/technetwork/events/304881438/"
+  },
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

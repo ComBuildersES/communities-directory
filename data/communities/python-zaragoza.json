@@ -1,0 +1,33 @@
+{
+  "id": 611,
+  "name": "Python Zaragoza",
+  "status": "active",
+  "lastReviewed": "30/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Zaragoza",
+  "parentId": 404,
+  "shortDescription": "Comunidad local para aprender, compartir y reunirse alrededor de Python en Zaragoza.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "python"
+  ],
+  "targetAudience": [],
+  "contactInfo": "zaragoza@es.python.org",
+  "communityUrl": "https://www.meetup.com/es-es/python_zgz/",
+  "urls": {
+    "twitter": "https://x.com/PythonZaragoza/",
+    "telegram": "https://t.me/python_zgz",
+    "eventsUrl": "https://www.meetup.com/es-es/python_zgz/"
+  },
+  "thumbnailUrl": "images/python-murcia.webp",
+  "latLon": {
+    "lat": 41.656837,
+    "lon": -0.8794245
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,24 @@
+{
+  "id": 285,
+  "name": "Iniciador Murcia",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Murcia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://iniciador.com/Murcia",
+  "urls": {},
+  "latLon": {
+    "lat": 37.9835334,
+    "lon": -1.129905
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

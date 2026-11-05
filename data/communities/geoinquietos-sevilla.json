@@ -1,0 +1,29 @@
+{
+  "id": 567,
+  "name": "Geoinquietos Sevilla",
+  "status": "active",
+  "lastReviewed": "26/05/2025",
+  "communityType": "mutual-aid",
+  "eventFormat": "online",
+  "location": "",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://wiki.osgeo.org/wiki/Category:Geoinquietos_Sevilla",
+  "urls": {
+    "github": "https://github.com/GeoinquietosSevilla",
+    "twitter": "https://twitter.com/geoinquietossvq",
+    "eventsUrl": "http://www.meetup.com/Geoinquietos-Sevilla/"
+  },
+  "thumbnailUrl": "images/geoinquietos-sevilla.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

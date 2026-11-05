@@ -1,0 +1,30 @@
+{
+  "id": 230,
+  "name": "Grupo de Usuarios de R de Madrid",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "parentId": 103,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "r-lang"
+  ],
+  "targetAudience": [],
+  "contactInfo": "r-madrid@r-es.org",
+  "communityUrl": "https://www.meetup.com/Grupo-de-Usuarios-de-R-de-Madrid/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/Grupo-de-Usuarios-de-R-de-Madrid/"
+  },
+  "thumbnailUrl": "images/grupo-de-usuarios-de-r-de-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

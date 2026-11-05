@@ -1,0 +1,52 @@
+{
+  "id": 112,
+  "name": "Coruña WTF",
+  "status": "active",
+  "lastReviewed": "25/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Coruña",
+  "shortDescription": "CoruñaWTF somos una comunidad de personas de A Coruña y alrededores, que se reúnen para compartir, aprender y disfrutar alrededor del desarrollo y diseño web.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "design-patterns",
+    "tech-ethics",
+    "html",
+    "css",
+    "accessibility",
+    "web-performance",
+    "web-standards",
+    "frontend-tooling",
+    "ux-ui",
+    "react",
+    "angular",
+    "vue",
+    "javascript-frameworks",
+    "astro",
+    "design-systems",
+    "javascript",
+    "typescript",
+    "seo"
+  ],
+  "targetAudience": [],
+  "contactInfo": "hellocorunawtf@gmail.com",
+  "communityUrl": "https://linktr.ee/corunawtf",
+  "urls": {
+    "telegram": "https://t.me/corunaWTF",
+    "twitter": "https://twitter.com/corunawtf",
+    "linkedin": "https://www.linkedin.com/groups/9273460",
+    "github": "https://github.com/corunawtf",
+    "linkAggregator": "https://linktr.ee/corunawtf"
+  },
+  "thumbnailUrl": "images/coruna-wtf.webp",
+  "latLon": {
+    "lat": 43.3707332,
+    "lon": -8.3958532
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

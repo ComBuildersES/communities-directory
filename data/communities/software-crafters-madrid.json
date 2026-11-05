@@ -1,0 +1,31 @@
+{
+  "id": 427,
+  "name": "Software Crafters Madrid",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "software-craftsmanship"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/madswcraft/",
+  "urls": {
+    "twitter": "http://twitter.com/madswcraft/",
+    "youtube": "https://www.youtube.com/channel/UChF6IE110BrZ6Hk1wAbOWhA",
+    "eventsUrl": "https://www.meetup.com/es-ES/madswcraft/"
+  },
+  "thumbnailUrl": "images/software-crafters-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

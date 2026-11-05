@@ -1,0 +1,26 @@
+{
+  "id": 496,
+  "name": "WordPress Collado Villalba",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid (Collado Villalba)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/wordpress-collado-villalba-meetup/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/wordpress-collado-villalba-meetup/"
+  },
+  "latLon": {
+    "lat": 40.6272562,
+    "lon": -4.0085868
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

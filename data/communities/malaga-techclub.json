@@ -1,0 +1,26 @@
+{
+  "id": 340,
+  "name": "Málaga TechClub",
+  "status": "inactive",
+  "lastReviewed": "25/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/malaga-techstars/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/malaga-techstars/"
+  },
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

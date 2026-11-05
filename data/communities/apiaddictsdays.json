@@ -1,0 +1,30 @@
+{
+  "id": 30,
+  "name": "APIAddictsDays",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "APIs, Cloud, MIcroservicios",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "contacta@apiaddicts.org",
+  "communityUrl": "https://www.apiaddicts.org/apiaddictsdays/",
+  "urls": {
+    "youtube": "https://www.youtube.com/channel/UCepaRmZBCmbdU4QqNhSV5jQ",
+    "linkedin": "https://www.linkedin.com/company/apiaddicts/",
+    "twitter": "https://twitter.com/apiaddicts",
+    "github": "https://github.com/apiaddicts"
+  },
+  "thumbnailUrl": "images/apiaddictsdays.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

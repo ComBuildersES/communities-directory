@@ -1,0 +1,26 @@
+{
+  "id": 459,
+  "name": "Vigo Android Developer Group",
+  "status": "inactive",
+  "lastReviewed": "27/11/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Vigo, Galicia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/Vigo-JUG/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es-ES/Vigo-JUG/"
+  },
+  "latLon": {
+    "lat": 42.2313601,
+    "lon": -8.7124252
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

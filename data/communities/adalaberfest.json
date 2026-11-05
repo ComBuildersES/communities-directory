@@ -1,0 +1,25 @@
+{
+  "id": 8,
+  "name": "AdalaberFest",
+  "status": "inactive",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "online",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://adalaberfest.adalab.es/",
+  "urls": {},
+  "thumbnailUrl": "images/adalaberfest.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

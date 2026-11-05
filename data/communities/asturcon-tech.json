@@ -1,0 +1,31 @@
+{
+  "id": 40,
+  "name": "AsturCON.tech",
+  "status": "active",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Oviedo, Asturias",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://linktr.ee/asturcontech",
+  "urls": {
+    "instagram": "https://www.instagram.com/asturcontech/",
+    "twitter": "https://twitter.com/AsturCONtech",
+    "telegram": "https://t.me/+wRE1sHSRAhdjZjc0",
+    "youtube": "https://www.youtube.com/@asturcontech?sub_confirmation=1",
+    "linkAggregator": "https://linktr.ee/asturcontech"
+  },
+  "thumbnailUrl": "images/asturcontech.webp",
+  "latLon": {
+    "lat": 43.3602825,
+    "lon": -5.8447919
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

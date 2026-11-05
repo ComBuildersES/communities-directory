@@ -1,0 +1,24 @@
+{
+  "id": 268,
+  "name": "Iniciador Ciudad Real",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Ciudad Real",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.iniciador.com/es/ciudad-real",
+  "urls": {},
+  "latLon": {
+    "lat": 38.984305,
+    "lon": -3.929649
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

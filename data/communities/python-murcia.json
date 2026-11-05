@@ -1,0 +1,32 @@
+{
+  "id": 612,
+  "name": "Python Murcia",
+  "status": "unknown",
+  "lastReviewed": "30/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Murcia",
+  "parentId": 404,
+  "shortDescription": "Comunidad de programadores Python en Murcia, España.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "python"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://x.com/pythonmurcia",
+  "urls": {
+    "twitter": "https://x.com/pythonmurcia",
+    "telegram": "https://t.me/pythonmurcia"
+  },
+  "thumbnailUrl": "images/python-espana.webp",
+  "latLon": {
+    "lat": 37.9835334,
+    "lon": -1.129905
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,28 @@
+{
+  "id": 117,
+  "name": "CrossOver",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Granada",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "organizacion@xover.es",
+  "communityUrl": "https://www.xover.es/",
+  "urls": {
+    "twitter": "https://www.twitter.com/acxover",
+    "instagram": "https://www.instagram.com/acxover"
+  },
+  "thumbnailUrl": "images/crossover.webp",
+  "latLon": {
+    "lat": 37.1831938,
+    "lon": -3.604747
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,25 @@
+{
+  "id": 229,
+  "name": "Grupo de Usuarios de Joomla de Vigo",
+  "status": "active",
+  "lastReviewed": "27/11/2024",
+  "communityType": "collaborative-group",
+  "eventFormat": "in-person",
+  "location": "Vigo, Galicia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.joomlavigo.es/",
+  "urls": {},
+  "thumbnailUrl": "images/grupo-de-usuarios-de-joomla-de-vigo.webp",
+  "latLon": {
+    "lat": 42.2313601,
+    "lon": -8.7124252
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

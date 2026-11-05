@@ -1,0 +1,31 @@
+{
+  "id": 432,
+  "name": "Startup Olé",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Salamanca",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "startups"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://startupole.eu/",
+  "urls": {
+    "twitter": "https://x.com/Startup_OLE",
+    "instagram": "https://instagram.com/startupoleaccelerator",
+    "youtube": "https://youtube.com/c/StartupOLE"
+  },
+  "thumbnailUrl": "images/startup-ole.webp",
+  "latLon": {
+    "lat": 40.966674,
+    "lon": -5.665434
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

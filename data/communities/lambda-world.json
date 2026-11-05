@@ -1,0 +1,44 @@
+{
+  "id": 312,
+  "name": "Lambda World",
+  "status": "active",
+  "lastReviewed": "24/03/2026",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Torremolinos",
+  "shortDescription": "Evento internacional sobre programación funcional.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "functional-programming",
+    "scala",
+    "haskell",
+    "elixir",
+    "kotlin",
+    "rust",
+    "erlang"
+  ],
+  "targetAudience": [
+    "backend-developer",
+    "frontend-developer",
+    "fullstack-developer",
+    "senior-staff"
+  ],
+  "contactInfo": "lambda@yayyay.events",
+  "communityUrl": "https://www.lambda.world/",
+  "urls": {
+    "youtube": "https://www.youtube.com/channel/UCEBcDOjv-bhAmLavY71RMHA",
+    "linkedin": "https://www.linkedin.com/company/lambda-world",
+    "twitter": "https://x.com/Lambda_World",
+    "web": "https://www.lambda.world/"
+  },
+  "thumbnailUrl": "images/lambda-world.webp",
+  "latLon": {
+    "lat": 36.5297453,
+    "lon": -6.2926477
+  },
+  "displayOnMap": true,
+  "humanValidated": true
+}

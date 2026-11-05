@@ -1,0 +1,30 @@
+{
+  "id": 193,
+  "name": "Gamepolis",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://gamepolis.org/",
+  "urls": {
+    "twitter": "https://x.com/Gamepolis_org",
+    "web": "https://gamepolis.org/",
+    "youtube": "https://www.youtube.com/@GamepolisOrg",
+    "instagram": "https://www.instagram.com/gamepolis/"
+  },
+  "thumbnailUrl": "images/gamepolis.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

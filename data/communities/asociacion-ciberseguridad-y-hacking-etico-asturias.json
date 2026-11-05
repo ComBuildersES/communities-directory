@@ -1,0 +1,28 @@
+{
+  "id": 34,
+  "name": "Asociación Ciberseguridad Y Hacking Ético Asturias",
+  "status": "active",
+  "lastReviewed": "18/12/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Asturias",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://linktr.ee/asoc_chea",
+  "urls": {
+    "twitter": "https://x.com/asocchea",
+    "linkAggregator": "https://linktr.ee/asoc_chea"
+  },
+  "thumbnailUrl": "images/asociacion-ciberseguridad-y-hacking-etico-asturias.webp",
+  "latLon": {
+    "lat": 43.3602825,
+    "lon": -5.8447919
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

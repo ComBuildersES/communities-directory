@@ -1,0 +1,29 @@
+{
+  "id": 305,
+  "name": "Jornadas de SIG Libre",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Gerona (Girona)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "infosiglibre@udg.edu",
+  "communityUrl": "https://www.jornadassiglibre.org/",
+  "urls": {
+    "youtube": "https://www.youtube.com/channel/UCRJxIASneZaMxT2HPoyMLsA",
+    "linkedin": "https://es.linkedin.com/company/sigte-udg",
+    "instagram": "https://www.instagram.com/sigteudg/"
+  },
+  "thumbnailUrl": "images/jornadas-de-sig-libre.webp",
+  "latLon": {
+    "lat": 42.128030322674,
+    "lon": 2.673305566784
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,27 @@
+{
+  "id": 385,
+  "name": "PHP Coruña",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Coruña",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/php-coruna/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es-ES/php-coruna/"
+  },
+  "thumbnailUrl": "images/php-coruna.webp",
+  "latLon": {
+    "lat": 43.3707332,
+    "lon": -8.3958532
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

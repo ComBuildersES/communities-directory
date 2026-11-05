@@ -1,0 +1,32 @@
+{
+  "id": 555,
+  "name": "Python Bilbao",
+  "status": "active",
+  "lastReviewed": "19/04/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Bilbao",
+  "parentId": 404,
+  "topics": "Python & Tech",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "python"
+  ],
+  "targetAudience": [],
+  "contactInfo": "bilbao@es.python.org",
+  "communityUrl": "https://github.com/pythonbilbao",
+  "urls": {
+    "github": "https://github.com/pythonbilbao",
+    "telegram": "https://t.me/pythonbilbao",
+    "linkedin": "https://www.linkedin.com/company/python-bilbao/"
+  },
+  "thumbnailUrl": "images/python-bilbao.webp",
+  "latLon": {
+    "lat": 43.2569608,
+    "lon": -2.9234602
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

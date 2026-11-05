@@ -1,0 +1,28 @@
+{
+  "id": 430,
+  "name": "Spring I/O",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "info@springio.net",
+  "communityUrl": "https://2025.springio.net/",
+  "urls": {
+    "twitter": "https://twitter.com/sergialmar",
+    "youtube": "https://www.youtube.com/@SpringIOConference"
+  },
+  "thumbnailUrl": "images/spring-io.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

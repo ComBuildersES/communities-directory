@@ -1,0 +1,25 @@
+{
+  "id": 163,
+  "name": "Drupal León",
+  "status": "unknown",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "León",
+  "parentId": 39,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "help@drupal.org",
+  "communityUrl": "https://groups.drupal.org/node/315528",
+  "urls": {},
+  "latLon": {
+    "lat": 42.598862,
+    "lon": -5.572586
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

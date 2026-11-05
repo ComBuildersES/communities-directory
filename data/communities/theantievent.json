@@ -1,0 +1,27 @@
+{
+  "id": 447,
+  "name": "TheAntiEvent",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Bilbao",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://theantievent.org/",
+  "urls": {
+    "twitter": "https://twitter.com/ardiluzu"
+  },
+  "thumbnailUrl": "images/theantievent.webp",
+  "latLon": {
+    "lat": 43.2569608,
+    "lon": -2.9234602
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,28 @@
+{
+  "id": 23,
+  "name": "Almería R users",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Almería",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://almeriarusers.wordpress.com/",
+  "urls": {
+    "twitter": "https://x.com/AlmeriaRUsers",
+    "web": "https://almeriarusers.wordpress.com/"
+  },
+  "thumbnailUrl": "images/almeria-r-users.webp",
+  "latLon": {
+    "lat": 36.8400939,
+    "lon": -2.4679043
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,33 @@
+{
+  "id": 529,
+  "name": "WordPress Zaragoza",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Zaragoza",
+  "parentId": 512,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/wpzaragoza/",
+  "urls": {
+    "twitter": "http://twitter.com/zaragozawp/",
+    "instagram": "https://www.instagram.com/wpzaragoza/",
+    "discord": "https://discord.com/invite/ebCjdwxnyk",
+    "eventsUrl": "https://www.meetup.com/wpzaragoza/"
+  },
+  "thumbnailUrl": "images/wordpress-zaragoza.webp",
+  "latLon": {
+    "lat": 41.656837,
+    "lon": -0.8794245
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

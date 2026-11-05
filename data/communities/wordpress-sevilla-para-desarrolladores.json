@@ -1,0 +1,27 @@
+{
+  "id": 519,
+  "name": "WordPress Sevilla para Desarrolladores",
+  "status": "inactive",
+  "lastReviewed": "18/12/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Sin completar",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://x.com/wpsevilladevs",
+  "urls": {
+    "twitter": "https://x.com/wpsevilladevs",
+    "eventsUrl": "https://saraos.tech/@wordpress-sevilla-devs"
+  },
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

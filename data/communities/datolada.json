@@ -1,0 +1,52 @@
+{
+  "id": 540,
+  "name": "Datolada",
+  "status": "active",
+  "lastReviewed": "30/03/2026",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Coruña",
+  "parentId": null,
+  "shortDescription": "El evento de referencia en analítica y datos del mundo digital, donde nos juntamos para compartir, aprender y celebrar el valor de la comunidad.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "sql-databases",
+    "nosql-databases",
+    "graph-databases",
+    "data-science",
+    "data-engineering",
+    "data-visualization",
+    "vector-databases",
+    "digital-forensics",
+    "robotics",
+    "digital-activism",
+    "tech-ethics",
+    "digital-marketing"
+  ],
+  "targetAudience": [
+    "data-engineer",
+    "data-scientist",
+    "ml-engineer",
+    "data-analyst",
+    "data-journalist"
+  ],
+  "contactInfo": "info@datola.es",
+  "communityUrl": "https://eventos.datola.es/",
+  "urls": {
+    "instagram": "https://www.instagram.com/p/DKRUn_CtaBH/?igsh=MXR1dXU5N21iY2tvYQ==",
+    "linkedin": "https://www.linkedin.com/company/datola/",
+    "twitter": "https://x.com/datolaes",
+    "bluesky": "https://bsky.app/profile/datola.es"
+  },
+  "thumbnailUrl": "images/datolada.webp",
+  "latLon": {
+    "lat": 43.3707332,
+    "lon": -8.3958532
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

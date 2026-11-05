@@ -1,0 +1,27 @@
+{
+  "id": 351,
+  "name": "Mouredev",
+  "status": "active",
+  "lastReviewed": "15/10/2024",
+  "communityType": "mutual-aid",
+  "eventFormat": "online",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://discord.com/invite/mouredev",
+  "urls": {
+    "discord": "https://discord.com/invite/mouredev"
+  },
+  "thumbnailUrl": "images/mouredev.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

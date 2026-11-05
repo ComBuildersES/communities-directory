@@ -1,0 +1,28 @@
+{
+  "id": 172,
+  "name": "E-Show Madrid",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://eshow.es/madrid",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/company/eshowcloserstillmedia/",
+    "twitter": "https://twitter.com/eShowesp"
+  },
+  "thumbnailUrl": "images/e-show-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

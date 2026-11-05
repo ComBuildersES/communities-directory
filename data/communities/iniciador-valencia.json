@@ -1,0 +1,24 @@
+{
+  "id": 294,
+  "name": "Iniciador Valencia",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Valencia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://iniciador.com/Valencia",
+  "urls": {},
+  "latLon": {
+    "lat": 39.4702393,
+    "lon": -0.3768049
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,33 @@
+{
+  "id": 323,
+  "name": "Madrid DevOps",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [
+    "devops-engineer"
+  ],
+  "contactInfo": "",
+  "communityUrl": "https://madrid.devops.es/",
+  "urls": {
+    "twitter": "https://twitter.com/MadridDevops",
+    "telegram": "https://t.me/madrid_devops",
+    "youtube": "https://www.youtube.com/user/madridevops",
+    "linkedin": "https://www.linkedin.com/company/devopsdaysmad",
+    "github": "https://github.com/dawud",
+    "eventsUrl": "http://www.meetup.com/madrid-devops"
+  },
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

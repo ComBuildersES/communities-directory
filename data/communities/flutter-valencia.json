@@ -1,0 +1,31 @@
+{
+  "id": 186,
+  "name": "Flutter Valencia",
+  "status": "active",
+  "lastReviewed": "25/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Valencia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "flutter"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/flutter-valencia/",
+  "urls": {
+    "twitter": "https://twitter.com/FlutterVal",
+    "linkedin": "https://www.linkedin.com/company/flutter-valencia-community",
+    "eventsUrl": "https://www.meetup.com/es-ES/flutter-valencia/"
+  },
+  "thumbnailUrl": "images/flutter-valencia.webp",
+  "latLon": {
+    "lat": 39.4702393,
+    "lon": -0.3768049
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

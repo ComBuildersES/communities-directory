@@ -1,0 +1,30 @@
+{
+  "id": 571,
+  "name": "Programamos",
+  "status": "active",
+  "lastReviewed": "26/05/2025",
+  "communityType": "collaborative-group",
+  "eventFormat": "in-person",
+  "location": "Sevilla, España",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "info@programamos.es",
+  "communityUrl": "https://programamos.es/",
+  "urls": {
+    "twitter": "http://twitter.com/programamos",
+    "instagram": "https://www.instagram.com/programamos_es/",
+    "youtube": "https://www.youtube.com/channel/UCxOl75aSJE7XpZrLdS8gtCg",
+    "mastodon": "https://mastodon.social/@programamos"
+  },
+  "thumbnailUrl": "images/programamos.webp",
+  "latLon": {
+    "lat": 37.3886303,
+    "lon": -5.9953403
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

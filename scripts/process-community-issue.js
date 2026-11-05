@@ -5,11 +5,14 @@ import process from 'node:process';
 import { Buffer } from 'node:buffer';
 import sharp from 'sharp';
 import { normalizeCommunityLangs } from '../src/lib/communityLanguages.js';
+import {
+  readCommunities,
+  removeCommunity,
+  writeCommunity,
+  writeDeletedCommunity,
+} from './lib/communities-store.js';
 
 const body = process.argv[2] ?? '';
-const communitiesPath = './public/data/communities.json';
-const communitiesMetaPath = './public/data/communities.meta.json';
-const deletedCommunitiesPath = './public/data/deleted-communities.json';
 const imagesFolder = './public/images';
 const tagsPath = './public/data/tags.json';
 const audiencePath = './public/data/audience.json';
@@ -275,53 +278,6 @@ export function normalizePayload(payload) {
   };
 }
 
-function readJsonFile(filePath, fallbackValue = null) {
-  if (!fs.existsSync(filePath)) return fallbackValue;
-  return JSON.parse(fs.readFileSync(filePath, 'utf-8'));
-}
-
-function writeJsonFile(filePath, value) {
-  fs.writeFileSync(filePath, `${JSON.stringify(value, null, 2)}\n`);
-}
-
-function getMaxKnownCommunityId(communities, deletedCommunities) {
-  const ids = [];
-
-  if (Array.isArray(communities)) {
-    for (const community of communities) {
-      if (Number.isInteger(community?.id)) {
-        ids.push(community.id);
-      }
-    }
-  }
-
-  if (Array.isArray(deletedCommunities)) {
-    for (const community of deletedCommunities) {
-      if (Number.isInteger(community?.id)) {
-        ids.push(community.id);
-      }
-    }
-  }
-
-  return ids.length > 0 ? Math.max(...ids) : 0;
-}
-
-function getNextCommunityIdFromMeta(meta, communities, deletedCommunities) {
-  const nextCommunityIdFromMeta = Number.isInteger(meta?.nextCommunityId) && meta.nextCommunityId > 0
-    ? meta.nextCommunityId
-    : 1;
-  const minimumNextCommunityId = getMaxKnownCommunityId(communities, deletedCommunities) + 1;
-
-  return Math.max(nextCommunityIdFromMeta, minimumNextCommunityId);
-}
-
-function updateNextCommunityId(meta, nextCommunityId) {
-  return {
-    ...(meta ?? {}),
-    nextCommunityId,
-  };
-}
-
 function buildDeletedCommunityEntry(community, removalReason) {
   const deletedFromIssue = Number.parseInt(process.env.GITHUB_ISSUE_NUMBER ?? '', 10);
 
@@ -416,14 +372,13 @@ function ensureNoDuplicateCreate(communities, payload) {
 }
 
 async function main() {
-  if (!fs.existsSync(communitiesPath)) {
-    console.error('❌ No se encontró el archivo communities.json');
+  const communities = readCommunities();
+
+  if (communities.length === 0) {
+    console.error('❌ No se encontraron comunidades en data/communities/');
     process.exit(1);
   }
 
-  const communities = readJsonFile(communitiesPath, []);
-  const communitiesMeta = readJsonFile(communitiesMetaPath, { nextCommunityId: 1 });
-  const deletedCommunities = readJsonFile(deletedCommunitiesPath, []);
   const { mode, payload: rawPayload } = readSubmission();
   const payload = normalizePayload(rawPayload);
   const proposalEditorUrl = buildProposalEditorUrl({ mode, payload });
@@ -434,12 +389,11 @@ async function main() {
     ensureNoDuplicateCreate(communities, payload);
   }
 
-  const existingIndex = communities.findIndex((community) => String(community.id) === String(payload.id));
-  if ((mode === ISSUE_MODES.EDIT || mode === ISSUE_MODES.DELETE) && existingIndex === -1) {
+  const existing = communities.find((community) => String(community.id) === String(payload.id));
+  if ((mode === ISSUE_MODES.EDIT || mode === ISSUE_MODES.DELETE) && !existing) {
     throw new Error(`No se encontró la comunidad con ID ${payload.id} para ${mode === ISSUE_MODES.DELETE ? 'eliminar' : 'editar'}`);
   }
 
-  const nextCommunityId = getNextCommunityIdFromMeta(communitiesMeta, communities, deletedCommunities);
   const resolvedCoordinates = mode === ISSUE_MODES.DELETE
     ? { lat: null, lon: null }
     : await resolveCoordinates(payload);
@@ -450,13 +404,11 @@ async function main() {
   );
 
   if (mode === ISSUE_MODES.DELETE) {
-    const removedCommunity = communities[existingIndex];
-    communities.splice(existingIndex, 1);
-    deletedCommunities.push(buildDeletedCommunityEntry(removedCommunity, payload.removalReason));
-    writeJsonFile(communitiesPath, communities);
-    writeJsonFile(deletedCommunitiesPath, deletedCommunities);
-    writeJsonFile(communitiesMetaPath, updateNextCommunityId(communitiesMeta, nextCommunityId));
-    console.log(`✔ Comunidad eliminada: ${removedCommunity.name} (ID ${removedCommunity.id})`);
+    removeCommunity(existing.id);
+    const { slug: deletedSlug } = writeDeletedCommunity(
+      buildDeletedCommunityEntry(existing, payload.removalReason)
+    );
+    console.log(`✔ Comunidad eliminada: ${existing.name} (ID ${existing.id}) → data/deleted-communities/${deletedSlug}.json`);
     return;
   }
 
@@ -467,28 +419,24 @@ async function main() {
     console.warn('⚠️ No se pudo procesar la imagen. Continuando con el valor original:', error.message);
   }
 
+  // El `id` NO se asigna aquí: lo hace `assign-community-ids` ya en master, donde las
+  // asignaciones están serializadas. Si se asignase en esta rama, dos propuestas
+  // simultáneas reclamarían el mismo id (ver issue #437).
   const normalizedCommunity = {
     ...payload,
-    id: mode === ISSUE_MODES.CREATE ? nextCommunityId : communities[existingIndex].id,
+    id: mode === ISSUE_MODES.CREATE ? null : existing.id,
     latLon: resolvedCoordinates,
     thumbnailUrl,
   };
 
   if (mode === ISSUE_MODES.EDIT) {
-    communities[existingIndex] = {
-      ...communities[existingIndex],
-      ...normalizedCommunity,
-    };
-    writeJsonFile(communitiesPath, communities);
-    writeJsonFile(communitiesMetaPath, updateNextCommunityId(communitiesMeta, nextCommunityId));
-    console.log(`✔ Comunidad actualizada: ${normalizedCommunity.name} (ID ${normalizedCommunity.id})`);
+    const { slug } = writeCommunity({ ...existing, ...normalizedCommunity });
+    console.log(`✔ Comunidad actualizada: ${normalizedCommunity.name} (ID ${normalizedCommunity.id}) → data/communities/${slug}.json`);
     return;
   }
 
-  communities.push(normalizedCommunity);
-  writeJsonFile(communitiesPath, communities);
-  writeJsonFile(communitiesMetaPath, updateNextCommunityId(communitiesMeta, nextCommunityId + 1));
-  console.log(`✔ Comunidad añadida: ${normalizedCommunity.name} (ID ${normalizedCommunity.id})`);
+  const { slug } = writeCommunity(normalizedCommunity);
+  console.log(`✔ Comunidad añadida: ${normalizedCommunity.name} → data/communities/${slug}.json (id pendiente de asignar en master)`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {

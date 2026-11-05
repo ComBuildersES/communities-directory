@@ -1,0 +1,51 @@
+{
+  "id": 403,
+  "name": "Python Coruña",
+  "status": "active",
+  "lastReviewed": "25/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Coruña",
+  "parentId": 404,
+  "shortDescription": "Somos una comunidad apasionada por el lenguaje de programación Python y su amplia gama de aplicaciones en diferentes áreas, desde el desarrollo web y móvil hasta la ciencia de datos y el aprendizaje automático.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "python",
+    "functional-programming",
+    "oop",
+    "r-lang",
+    "software-architecture",
+    "software-craftsmanship",
+    "free-software",
+    "nlp",
+    "networking",
+    "ethical-hacking",
+    "cloud-security",
+    "django"
+  ],
+  "targetAudience": [
+    "software-architect"
+  ],
+  "contactInfo": "pythoncoruna@es.python.org",
+  "communityUrl": "https://linktr.ee/pythoncoruna",
+  "urls": {
+    "telegram": "https://t.me/pythoncoruna",
+    "github": "https://github.com/pythoncoruna",
+    "youtube": "https://www.youtube.com/@PythonCoruna",
+    "twitter": "https://twitter.com/pythoncoruna",
+    "linkedin": "https://www.linkedin.com/groups/9875231",
+    "eventsUrl": "https://www.meetup.com/python-a-coruna/",
+    "linkAggregator": "https://linktr.ee/pythoncoruna"
+  },
+  "thumbnailUrl": "images/python-coruna.webp",
+  "latLon": {
+    "lat": 43.3707332,
+    "lon": -8.3958532
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

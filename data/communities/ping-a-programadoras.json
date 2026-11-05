@@ -1,0 +1,44 @@
+{
+  "id": 573,
+  "name": "Ping A Programadoras",
+  "status": "active",
+  "lastReviewed": "30/03/2026",
+  "communityType": "mutual-aid",
+  "eventFormat": "in-person",
+  "location": "Sevilla, España",
+  "parentId": null,
+  "shortDescription": "Mujeres y personas de género no binario interesadas en hacer y pensar juntas con los ordenadores, desde una perspectiva crítica y de empoderamiento",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "tech-ethics",
+    "networking",
+    "data-science",
+    "tech4good",
+    "software-architecture",
+    "functional-programming",
+    "r-lang",
+    "oop",
+    "haskell",
+    "augmented-reality",
+    "women-in-tech"
+  ],
+  "targetAudience": [],
+  "contactInfo": "pingprogramadoras@gmail.com",
+  "communityUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/",
+    "linkedin": "https://www.linkedin.com/company/pingaprogramadoras/",
+    "twitter": "https://x.com/pingmujeres"
+  },
+  "thumbnailUrl": "images/ping-a-programadoras.webp",
+  "latLon": {
+    "lat": 37.3886303,
+    "lon": -5.9953403
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

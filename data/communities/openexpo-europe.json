@@ -1,0 +1,25 @@
+{
+  "id": 376,
+  "name": "OpenExpo Europe",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "hybrid",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://web.archive.org/web/20250812184530/https://openexpoeurope.com/",
+  "urls": {},
+  "thumbnailUrl": "images/openexpo-europe.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

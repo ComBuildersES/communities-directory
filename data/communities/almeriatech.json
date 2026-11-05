@@ -1,0 +1,36 @@
+{
+  "id": 25,
+  "name": "AlmeriaTech",
+  "status": "active",
+  "lastReviewed": "02/04/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Almería",
+  "parentId": null,
+  "shortDescription": "AlmeríaTech is a tech community based in Almería that connects digital professionals.\nIt organizes events, talks, and workshops on topics like AI, software development, and data.\nIts goal is to boost local talent and strengthen the tech ecosystem through collaboration and network",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "matchesAllTags": true,
+  "matchesAllAudience": true,
+  "contactInfo": "",
+  "communityUrl": "https://www.almeriatech.es/",
+  "urls": {
+    "youtube": "https://www.youtube.com/@AlmeriaTech_es/videos",
+    "linkedin": "https://www.linkedin.com/company/almeriatech/",
+    "instagram": "https://www.instagram.com/almeriatech_es/",
+    "twitter": "https://twitter.com/almeriatech_es",
+    "github": "https://github.com/almeriatech"
+  },
+  "thumbnailUrl": "images/almeriatech.webp",
+  "latLon": {
+    "lat": 36.8400939,
+    "lon": -2.4679043
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

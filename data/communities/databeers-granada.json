@@ -1,0 +1,28 @@
+{
+  "id": 128,
+  "name": "Databeers Granada",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Granada",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://databeersgrx.com/",
+  "urls": {
+    "twitter": "https://x.com/databeersgrx",
+    "web": "http://web.archive.org/web/20191208235749/http://databeersgrx.com/"
+  },
+  "thumbnailUrl": "images/databeers-granada.webp",
+  "latLon": {
+    "lat": 37.1831938,
+    "lon": -3.604747
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

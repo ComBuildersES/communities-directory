@@ -1,0 +1,29 @@
+{
+  "id": 578,
+  "name": "The Things Network Sevilla",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "collaborative-group",
+  "eventFormat": "hybrid",
+  "location": "Sevilla, Spain",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "community@thethingsnetwork.org",
+  "communityUrl": "https://www.thethingsnetwork.org/community/sevilla/",
+  "urls": {
+    "twitter": "https://x.com/ttn_sevilla",
+    "web": "https://www.thethingsnetwork.org/community/sevilla/",
+    "eventsUrl": "https://www.meetup.com/"
+  },
+  "thumbnailUrl": "images/the-things-network-sevilla.webp",
+  "latLon": {
+    "lat": 37.3886303,
+    "lon": -5.9953403
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,30 @@
+{
+  "id": 182,
+  "name": "Flutter Lleida",
+  "status": "active",
+  "lastReviewed": "25/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Lérida (Lleida)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "flutter"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/flutter-lleida/",
+  "urls": {
+    "twitter": "http://twitter.com/flutterlleida/",
+    "eventsUrl": "https://www.meetup.com/flutter-lleida/"
+  },
+  "thumbnailUrl": "images/flutter-lleida.webp",
+  "latLon": {
+    "lat": 41.6141646,
+    "lon": 0.6258029
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

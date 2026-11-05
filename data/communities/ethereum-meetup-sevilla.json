@@ -1,0 +1,31 @@
+{
+  "id": 566,
+  "name": "Ethereum Meetup Sevilla",
+  "status": "unknown",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Sevilla, España",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "ethereum"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://web.archive.org/web/20240917072042/https://www.meetup.com/es-ES/Ethereum-Meetup-Sevilla/",
+  "urls": {
+    "telegram": "https://t.me/+0UFC-yM_mT82YmVk",
+    "github": "https://github.com/Colm3na",
+    "eventsUrl": "https://web.archive.org/web/20240917072042/https://www.meetup.com/es-ES/Ethereum-Meetup-Sevilla/"
+  },
+  "thumbnailUrl": "images/ethereum-meetup-sevilla.webp",
+  "latLon": {
+    "lat": 37.3886303,
+    "lon": -5.9953403
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

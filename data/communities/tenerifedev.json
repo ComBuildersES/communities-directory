@@ -1,0 +1,29 @@
+{
+  "id": 446,
+  "name": "TenerifeDev",
+  "status": "active",
+  "lastReviewed": "18/12/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Tenerife",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/TenerifeDev/",
+  "urls": {
+    "twitter": "http://twitter.com/tenerifedev/",
+    "linkedin": "https://www.linkedin.com/groups/3020881",
+    "eventsUrl": "https://www.meetup.com/TenerifeDev/"
+  },
+  "thumbnailUrl": "images/tenerifedev.webp",
+  "latLon": {
+    "lat": 28.2631,
+    "lon": -16.609420751149337
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

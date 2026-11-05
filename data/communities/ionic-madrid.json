@@ -1,0 +1,26 @@
+{
+  "id": 300,
+  "name": "Ionic Madrid",
+  "status": "unknown",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/ionic-madrid/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es-ES/ionic-madrid/"
+  },
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

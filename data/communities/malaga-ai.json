@@ -1,0 +1,32 @@
+{
+  "id": 341,
+  "name": "Málaga-AI",
+  "status": "active",
+  "lastReviewed": "24/03/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "hello@malaga-ai.community",
+  "communityUrl": "https://malaga-ai.community/",
+  "urls": {
+    "twitter": "https://x.com/AIMalaga",
+    "linkedin": "https://www.linkedin.com/company/malaga-ai",
+    "github": "https://github.com/Malaga-AI",
+    "discord": "https://discord.com/invite/2tv7W2jxXF",
+    "web": "https://malaga-ai.community/",
+    "eventsUrl": "https://www.meetup.com/es-ES/BoqueronSec/"
+  },
+  "thumbnailUrl": "images/malaga-ai.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

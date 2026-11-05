@@ -1,0 +1,29 @@
+{
+  "id": 428,
+  "name": "Software Testers & QA Experts de Málaga",
+  "status": "inactive",
+  "lastReviewed": "25/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/software-testers-qa-experts-de-malaga/",
+  "urls": {
+    "twitter": "http://twitter.com/expoQA/",
+    "linkedin": "https://es.linkedin.com/company/nexo-qa",
+    "eventsUrl": "https://www.meetup.com/software-testers-qa-experts-de-malaga/"
+  },
+  "thumbnailUrl": "images/software-testers-qa-experts-de-malaga.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

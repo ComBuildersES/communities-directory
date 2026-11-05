@@ -1,0 +1,29 @@
+{
+  "id": 528,
+  "name": "WordPress Vitoria-Gasteiz",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Álava (Vitoria-Gasteiz)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/vitoria-gasteiz-wordpress-meetup/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/vitoria-gasteiz-wordpress-meetup/"
+  },
+  "thumbnailUrl": "images/wordpress-vitoria-gasteiz.webp",
+  "latLon": {
+    "lat": 42.8468573,
+    "lon": -2.6715859
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,27 @@
+{
+  "id": 347,
+  "name": "Midudev",
+  "status": "active",
+  "lastReviewed": "15/10/2024",
+  "communityType": "mutual-aid",
+  "eventFormat": "online",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://discord.com/invite/midudev",
+  "urls": {
+    "discord": "https://discord.com/invite/midudev"
+  },
+  "thumbnailUrl": "images/midudev.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

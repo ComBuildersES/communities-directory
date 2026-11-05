@@ -4,7 +4,6 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.resolve(__dirname, "..");
-const COMMUNITIES_PATH = path.join(ROOT, "public/data/communities.json");
 const TAGS_PATH = path.join(ROOT, "public/data/tags.json");
 const AUDIENCE_PATH = path.join(ROOT, "public/data/audience.json");
 
@@ -319,12 +318,9 @@ function wrapText(value) {
   return normalized ? ` ${normalized} ` : " ";
 }
 
-function readCommunitiesAsExpression() {
-  const source = fs.readFileSync(COMMUNITIES_PATH, "utf8");
-  return {
-    source,
-    data: Function(`"use strict"; return (${source});`)(),
-  };
+// El store es ESM y este script es CJS: se carga con import() dinámico.
+async function loadStore() {
+  return import("./lib/communities-store.js");
 }
 
 function readJson(filePath) {
@@ -440,8 +436,9 @@ function sameArray(a, b) {
   return JSON.stringify(a) === JSON.stringify(b);
 }
 
-function main() {
-  const { data: communities } = readCommunitiesAsExpression();
+async function main() {
+  const store = await loadStore();
+  const communities = store.readCommunities();
   const tagsCatalog = readJson(TAGS_PATH);
   const audienceCatalog = readJson(AUDIENCE_PATH);
 
@@ -503,11 +500,14 @@ function main() {
   console.log(`Cambios en targetAudience: ${touchedAudience}`);
 
   if (shouldWrite) {
-    fs.writeFileSync(COMMUNITIES_PATH, `${JSON.stringify(communities, null, 2)}\n`, "utf8");
-    console.log(`Escrito: ${COMMUNITIES_PATH}`);
+    store.writeCommunities(communities);
+    console.log("Escrito: data/communities/");
   } else {
     console.log("Dry-run completado. Usa --write para aplicar los cambios.");
   }
 }
 
-main();
+main().catch((error) => {
+  console.error(error);
+  process.exit(1);
+});

@@ -1,0 +1,31 @@
+{
+  "id": 105,
+  "name": "Conferencia Agile Spain (CAS)",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Itinerante",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [
+    "agile-practitioner"
+  ],
+  "contactInfo": "",
+  "communityUrl": "https://cas.agile-spain.org/",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/company/agile-spain/?viewAsMember=true",
+    "twitter": "https://twitter.com/agilespain",
+    "youtube": "https://www.youtube.com/@AgileSpaineventos"
+  },
+  "thumbnailUrl": "images/conferencia-agile-spain-cas.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

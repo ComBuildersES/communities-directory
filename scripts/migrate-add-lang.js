@@ -1,14 +1,10 @@
 /* eslint-env node */
-import fs from "node:fs";
 import process from "node:process";
 import { normalizeCommunityLangs } from "../src/lib/communityLanguages.js";
+// Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
+import { readCommunities, writeCommunities } from "./lib/communities-store.js";
 
-const COMMUNITIES_PATH = "public/data/communities.json";
 const dryRun = process.argv.includes("--dry-run");
-
-function readCommunities() {
-  return JSON.parse(fs.readFileSync(COMMUNITIES_PATH, "utf-8"));
-}
 
 function areArraysEqual(left = [], right = []) {
   if (left.length !== right.length) return false;
@@ -44,7 +40,7 @@ function main() {
     return;
   }
 
-  fs.writeFileSync(COMMUNITIES_PATH, `${JSON.stringify(updatedCommunities, null, 2)}\n`);
+  writeCommunities(updatedCommunities);
 }
 
 main();

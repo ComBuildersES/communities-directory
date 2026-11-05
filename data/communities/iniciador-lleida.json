@@ -1,0 +1,24 @@
+{
+  "id": 281,
+  "name": "Iniciador Lleida",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Lérida (Lleida)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://iniciador.com/Lleida",
+  "urls": {},
+  "latLon": {
+    "lat": 41.6141646,
+    "lon": 0.6258029
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

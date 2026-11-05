@@ -1,0 +1,32 @@
+{
+  "id": 533,
+  "name": "Xops Conference",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "devops, platform-engineering, site-reliability-engineering, cloud, cloud-security, cybersecurity, ci/cd, infrastructure, automation, software-architecture",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "info@xopsconference.com",
+  "communityUrl": "https://linktr.ee/xopscon",
+  "urls": {
+    "youtube": "https://www.youtube.com/@X-OpsConference",
+    "telegram": "https://t.me/xopscon",
+    "instagram": "https://www.instagram.com/xops_conference",
+    "linkedin": "https://www.linkedin.com/company/xops-conference/",
+    "twitter": "https://x.com/XopsConference",
+    "linkAggregator": "https://linktr.ee/xopscon"
+  },
+  "thumbnailUrl": "images/xops-conference.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

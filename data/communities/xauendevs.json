@@ -1,0 +1,29 @@
+{
+  "id": 532,
+  "name": "XauenDevs",
+  "status": "active",
+  "lastReviewed": "18/12/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Jaén",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://xauendevs.io/",
+  "urls": {
+    "instagram": "https://www.instagram.com/xauendevs",
+    "discord": "https://discord.gg/CC9e6dtqxQ",
+    "twitter": "https://x.com/xauendevs"
+  },
+  "thumbnailUrl": "images/xauendevs.webp",
+  "latLon": {
+    "lat": 37.7657753,
+    "lon": -3.7893929
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

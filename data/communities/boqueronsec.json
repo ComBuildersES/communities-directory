@@ -1,0 +1,28 @@
+{
+  "id": 66,
+  "name": "BoquerónSec",
+  "status": "inactive",
+  "lastReviewed": "24/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Málaga",
+  "shortDescription": "Comunidad local para compartir conocimiento y experiencias sobre ciberseguridad.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/BoqueronSec/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es-ES/BoqueronSec/"
+  },
+  "thumbnailUrl": "images/boqueronsec.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": true
+}

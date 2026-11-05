@@ -1,0 +1,27 @@
+{
+  "id": 441,
+  "name": "TAI Granada",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Granada",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "info@taigranada.com",
+  "communityUrl": "https://taigranada.com/",
+  "urls": {
+    "twitter": "https://twitter.com/TAIGranada"
+  },
+  "thumbnailUrl": "images/tai-granada.webp",
+  "latLon": {
+    "lat": 37.1831938,
+    "lon": -3.604747
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,31 @@
+{
+  "id": 304,
+  "name": "Jornadas Anuales Wikimedia España",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Itinerante",
+  "parentId": 469,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://wikimedia.es/category/eventos/jornadas-anuales/",
+  "urls": {
+    "twitter": "https://twitter.com/wikimedia_es",
+    "youtube": "https://www.youtube.com/channel/UCPPPCpS8n3GMc_I4qAVpA-g/videos",
+    "linkedin": "https://www.linkedin.com/company/wikimediaespa%C3%B1a/",
+    "instagram": "https://www.instagram.com/wikimedia_es/"
+  },
+  "thumbnailUrl": "images/jornadas-anuales-wikimedia-espana.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

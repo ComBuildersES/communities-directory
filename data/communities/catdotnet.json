@@ -1,0 +1,27 @@
+{
+  "id": 74,
+  "name": "CatDotNet",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Sin completar",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://x.com/catdotnet",
+  "urls": {
+    "twitter": "https://x.com/catdotnet"
+  },
+  "thumbnailUrl": "images/catdotnet.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

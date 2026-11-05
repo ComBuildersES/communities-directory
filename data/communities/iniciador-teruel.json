@@ -1,0 +1,24 @@
+{
+  "id": 292,
+  "name": "Iniciador Teruel",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Teruel",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://iniciador.com/Teruel",
+  "urls": {},
+  "latLon": {
+    "lat": 40.3441099,
+    "lon": -1.1069096
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

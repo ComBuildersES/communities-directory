@@ -1,0 +1,29 @@
+{
+  "id": 77,
+  "name": "Civis GameJam",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "civis@vgwb.org",
+  "communityUrl": "https://www.civis.vgwb.org/civis-game-jam/",
+  "urls": {
+    "instagram": "https://www.instagram.com/videogameswithoutborders",
+    "twitter": "https://x.com/vgwb_org",
+    "linkedin": "https://www.linkedin.com/company/video-games-without-borders/"
+  },
+  "thumbnailUrl": "images/civis-gamejam.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

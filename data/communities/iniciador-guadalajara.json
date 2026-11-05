@@ -1,0 +1,24 @@
+{
+  "id": 276,
+  "name": "Iniciador Guadalajara",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Guadalajara",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://iniciador.com/Guadalajara",
+  "urls": {},
+  "latLon": {
+    "lat": 40.632155,
+    "lon": -3.1621
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

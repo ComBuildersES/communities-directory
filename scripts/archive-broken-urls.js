@@ -25,8 +25,9 @@
  */
 
 import fs from "node:fs";
+// Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
+import { readCommunities, writeCommunities } from "./lib/communities-store.js";
 
-const COMMUNITIES_PATH = "./public/data/communities.json";
 const DEFAULT_REPORT_PATH = "./report.txt";
 const WAYBACK_API = "https://archive.org/wayback/available?url=";
 const DEFAULT_CONCURRENCY = 3;
@@ -306,7 +307,7 @@ async function main() {
     return;
   }
 
-  const communities = JSON.parse(fs.readFileSync(COMMUNITIES_PATH, "utf-8"));
+  const communities = readCommunities();
   const urlIndex = buildUrlIndex(communities);
 
   const changes = [];
@@ -367,8 +368,8 @@ async function main() {
     applyChange(c.community, c.field, c.newUrl);
   }
 
-  fs.writeFileSync(COMMUNITIES_PATH, JSON.stringify(communities, null, 2) + "\n", "utf-8");
-  console.log(`\n✓ ${changes.length} URL(s) actualizadas en ${COMMUNITIES_PATH}`);
+  writeCommunities(communities);
+  console.log(`\n✓ ${changes.length} URL(s) actualizadas en data/communities/`);
   console.log("Ejecuta 'npm run check-urls -- --report report.txt' para verificar el resultado.");
 }
 

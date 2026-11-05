@@ -123,12 +123,13 @@ const URL_CONFIG_KEYS = [
   { key: "mastodon",       labelKey: "communityModal.url.mastodon",        icon: "fab fa-mastodon" },
   { key: "bluesky",        labelKey: "communityModal.url.bluesky",         icon: "fas fa-cloud" },
   { key: "twitch",         labelKey: "communityModal.url.twitch",          icon: "fab fa-twitch" },
+  { key: "flickr",         labelKey: "communityModal.url.flickr",          icon: "fab fa-flickr" },
 ];
 
 const URL_GROUP_DEFS = [
   { key: "comunidad", labelKey: "communityModal.urlGroup.community", icon: "fas fa-globe",       keys: ["web", "eventsUrl", "linkAggregator", "mailingList", "github"] },
   { key: "chat",      labelKey: "communityModal.urlGroup.chat",      icon: "fas fa-comments",    keys: ["discord", "telegram", "whatsapp", "slack"] },
-  { key: "social",    labelKey: "communityModal.urlGroup.social",    icon: "fas fa-share-nodes", keys: ["youtube", "linkedin", "twitter", "tiktok", "instagram", "facebook", "mastodon", "bluesky", "twitch"] },
+  { key: "social",    labelKey: "communityModal.urlGroup.social",    icon: "fas fa-share-nodes", keys: ["youtube", "linkedin", "twitter", "tiktok", "instagram", "facebook", "mastodon", "bluesky", "twitch", "flickr"] },
 ];
 
 const STATUS_CLASS = {

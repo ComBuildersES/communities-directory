@@ -5,7 +5,8 @@ import process from "node:process";
 import YAML from "yaml";
 import { inferProvinceIdFromNominatim } from "../src/lib/provinceNormalization.js";
 
-const COMMUNITIES_PATH = "public/data/communities.json";
+// Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
+import { readCommunities } from "./lib/communities-store.js";
 const OWNERS_PATH = ".github/community-owners.yml";
 const DEFAULT_CACHE_PATH = "tmp/nominatim-community-owner-cache.json";
 const DEFAULT_REPORT_PATH = "tmp/community-owner-assignment-report.json";
@@ -80,10 +81,6 @@ function parseArgs(argv) {
   }
 
   return options;
-}
-
-function readJson(filePath) {
-  return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
 function readYaml(filePath) {
@@ -244,7 +241,7 @@ function printProgress(message, options) {
 
 async function main() {
   const options = parseArgs(process.argv.slice(2));
-  const communities = readJson(COMMUNITIES_PATH);
+  const communities = readCommunities();
   const ownersConfig = readYaml(OWNERS_PATH);
   const ownersLookup = buildOwnersLookup(ownersConfig);
   const cache = readCache(options.cachePath);

@@ -1,0 +1,32 @@
+{
+  "id": 607,
+  "name": "Python Canarias",
+  "status": "active",
+  "lastReviewed": "30/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Canarias",
+  "parentId": 404,
+  "shortDescription": "Asociación y comunidad de usuarios de Python en Canarias.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "python"
+  ],
+  "targetAudience": [],
+  "contactInfo": "info@pythoncanarias.es",
+  "communityUrl": "https://pythoncanarias.es/",
+  "urls": {
+    "twitter": "https://x.com/pythoncanarias",
+    "telegram": "https://t.me/joinchat/AJ7pmT-X0xZVPgWDIzGA-A"
+  },
+  "thumbnailUrl": "images/python-alicante.webp",
+  "latLon": {
+    "lat": 28,
+    "lon": -15.5
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

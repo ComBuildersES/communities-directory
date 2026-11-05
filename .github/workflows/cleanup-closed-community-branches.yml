@@ -1,0 +1,47 @@
+name: Limpiar ramas de propuestas descartadas
+
+# GitHub borra la rama al **mergear** (ajuste `deleteBranchOnMerge` del repositorio), pero no
+# cuando un PR se cierra sin mergear. Las propuestas de comunidad descartadas dejaban ahí su
+# rama: así se acumularon 13 ramas muertas antes de la limpieza de noviembre de 2026.
+#
+# Se limita a las ramas `community-issue-*`, que crea el bot a partir de un issue, para no
+# borrar nunca la rama de una persona.
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  delete-branch:
+    if: >-
+      github.event.pull_request.merged == false &&
+      github.event.pull_request.head.repo.full_name == github.repository &&
+      startsWith(github.event.pull_request.head.ref, 'community-issue-')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Borrar la rama del PR cerrado
+        uses: actions/github-script@v8
+        env:
+          BRANCH: ${{ github.event.pull_request.head.ref }}
+        with:
+          script: |
+            const branch = process.env.BRANCH;
+
+            try {
+              await github.rest.git.deleteRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: `heads/${branch}`,
+              });
+              core.info(`Rama eliminada: ${branch}`);
+            } catch (error) {
+              // 422 = la rama ya no existe (borrada a mano o por otro evento).
+              if (error.status === 422 || error.status === 404) {
+                core.info(`La rama ${branch} ya no existía.`);
+                return;
+              }
+              core.setFailed(`No se pudo borrar ${branch}: ${error.message}`);
+            }

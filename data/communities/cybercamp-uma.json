@@ -1,0 +1,30 @@
+{
+  "id": 120,
+  "name": "CyberCamp UMA",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "cybercamp@uma.es",
+  "communityUrl": "https://www.nics.uma.es/cybercamp-uma/",
+  "urls": {
+    "twitter": "https://twitter.com/nics_lab",
+    "linkedin": "https://www.linkedin.com/company/nics-lab/",
+    "youtube": "https://www.youtube.com/channel/UCBaTbzG6zC_y97QEpmPL2hw",
+    "eventsUrl": "https://www.meetup.com/cybercamp-uma/"
+  },
+  "thumbnailUrl": "images/cybercamp-uma.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

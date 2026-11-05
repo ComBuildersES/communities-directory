@@ -1,0 +1,33 @@
+{
+  "id": 417,
+  "name": "SalmorejoTech",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Córdoba",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "free-software"
+  ],
+  "targetAudience": [],
+  "contactInfo": "aulasoftwarelibre@uco.es",
+  "communityUrl": "https://salmorejo.tech/2024/",
+  "urls": {
+    "twitter": "https://twitter.com/jesusescribanos",
+    "github": "https://github.com/jes106",
+    "instagram": "https://www.instagram.com/aulasoftwarelibre/?hl=es",
+    "telegram": "https://t.me/AulaSoftwareLibreUCO",
+    "youtube": "https://www.youtube.com/channel/UCfWiR5j-cbKcGTi9faK8P6w"
+  },
+  "thumbnailUrl": "images/salmorejotech.webp",
+  "latLon": {
+    "lat": 37.888422,
+    "lon": -4.77513
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

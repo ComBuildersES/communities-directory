@@ -1,0 +1,29 @@
+{
+  "id": 364,
+  "name": "No cON Name",
+  "status": "active",
+  "lastReviewed": "26/05/2025",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.noconname.org/",
+  "urls": {
+    "twitter": "https://x.com/noconname",
+    "web": "http://web.archive.org/web/20260312054722/https://www.noconname.org/",
+    "telegram": "https://t.me/noconname"
+  },
+  "thumbnailUrl": "images/no-con-name.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

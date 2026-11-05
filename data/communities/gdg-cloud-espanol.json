@@ -1,0 +1,42 @@
+{
+  "id": 196,
+  "name": "GDG Cloud Español",
+  "status": "active",
+  "lastReviewed": "25/03/2026",
+  "communityType": "umbrella-org",
+  "eventFormat": "hybrid",
+  "location": "n/a",
+  "shortDescription": "Los Grupos de Desarrolladores de Google (GDG) reúnen a desarrolladores y tecnólogos para que se conecten, aprendan y crezcan junto con las tecnologías y los expertos de Google. Estos grupos apoyan la innovación y el crecimiento en el mundo de la tecnología.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "gcp",
+    "aws",
+    "virtualization"
+  ],
+  "targetAudience": [
+    "cloud-engineer",
+    "community-manager",
+    "frontend-developer",
+    "backend-developer",
+    "fullstack-developer",
+    "mobile-developer",
+    "game-developer"
+  ],
+  "contactInfo": "cloudespanol@gmail.com",
+  "communityUrl": "https://gdg.community.dev/gdg-cloud-espanol/",
+  "urls": {
+    "twitter": "https://www.twitter.com/gdg_cloud",
+    "linkedin": "https://www.linkedin.com/groups/13640206/",
+    "eventsUrl": "https://gdg.community.dev/gdg-cloud-espanol/"
+  },
+  "thumbnailUrl": "images/gdg-cloud-espanol.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": true
+}

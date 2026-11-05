@@ -1,0 +1,36 @@
+{
+  "id": 94,
+  "name": "Codemotion Madrid",
+  "status": "active",
+  "lastReviewed": "30/03/2026",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "parentId": null,
+  "shortDescription": "Codemotion Madrid es uno de los eventos tecnológicos más relevantes en España, diseñado para reunir a desarrolladores, líderes técnicos y profesionales del sector digital en un mismo espacio.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "matchesAllTags": true,
+  "matchesAllAudience": true,
+  "contactInfo": "Community+es@codemotion.it",
+  "communityUrl": "https://conferences.codemotion.com/madrid/",
+  "urls": {
+    "instagram": "https://www.instagram.com/codemotion_esp/",
+    "linkedin": "https://www.linkedin.com/company/codemotion/?originalSubdomain=it",
+    "twitter": "https://twitter.com/CodemoMadrid",
+    "web": "https://conferences.codemotion.com/madrid/",
+    "youtube": "https://www.youtube.com/@Codemotionworld/playlists"
+  },
+  "thumbnailUrl": "images/codemotion.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

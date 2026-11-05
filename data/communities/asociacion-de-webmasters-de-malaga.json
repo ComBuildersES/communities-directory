@@ -1,0 +1,28 @@
+{
+  "id": 38,
+  "name": "Asociación de Webmasters de Málaga",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "hhkaos@gmail.com",
+  "communityUrl": "http://www.webmastersmalaga.com/",
+  "urls": {
+    "twitter": "https://x.com/webmalaga",
+    "web": "http://www.webmastersmalaga.com/"
+  },
+  "thumbnailUrl": "images/asociacion-de-webmasters-de-malaga.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

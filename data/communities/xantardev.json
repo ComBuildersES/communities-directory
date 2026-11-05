@@ -1,0 +1,27 @@
+{
+  "id": 531,
+  "name": "XantarDev",
+  "status": "active",
+  "lastReviewed": "02/07/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Coruña (Santiago de Compostela)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://xantardev.org",
+  "urls": {
+    "twitter": "https://twitter.com/XantarDev?ref_src=twsrc%5Etfw"
+  },
+  "thumbnailUrl": "images/xantardev.webp",
+  "latLon": {
+    "lat": 42.8806228,
+    "lon": -8.5466071
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,30 @@
+{
+  "id": 56,
+  "name": "Betabeers",
+  "status": "unknown",
+  "lastReviewed": "31/05/2024",
+  "communityType": "umbrella-org",
+  "eventFormat": "unknown",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://betabeers.com/",
+  "urls": {
+    "instagram": "https://instagram.com/betabeers_oficial",
+    "twitter": "https://twitter.com/betabeers",
+    "youtube": "https://www.youtube.com/user/betabeers",
+    "linkedin": "https://www.linkedin.com/company/betabeers"
+  },
+  "thumbnailUrl": "images/betabeers.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

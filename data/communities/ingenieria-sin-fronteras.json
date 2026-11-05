@@ -1,0 +1,32 @@
+{
+  "id": 252,
+  "name": "Ingeniería Sin Fronteras",
+  "status": "active",
+  "lastReviewed": "26/05/2025",
+  "communityType": "umbrella-org",
+  "eventFormat": "in-person",
+  "location": "Andalucía, Aragón, Asturias, Cantabria, Castilla, y, León, Catalunya, Euskadi, Galicia, Illes, Balears, Madrid, Murcia, Navarra",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.isf.es/",
+  "urls": {
+    "instagram": "https://www.instagram.com/federacionISF/",
+    "linkedin": "https://www.linkedin.com/company/ingenieria-sin-fronteras",
+    "twitter": "https://x.com/federacionISF",
+    "telegram": "https://telegram.me/isf",
+    "youtube": "https://www.youtube.com/user/multimediaISF",
+    "web": "https://www.isf.es/"
+  },
+  "thumbnailUrl": "images/ingenieria-sin-frontera.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

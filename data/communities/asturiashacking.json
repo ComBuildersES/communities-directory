@@ -1,0 +1,25 @@
+{
+  "id": 43,
+  "name": "AsturiasHacking",
+  "status": "inactive",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Sin completar",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "asturiashacking@gmail.com",
+  "communityUrl": "https://asturiashacking.org/",
+  "urls": {},
+  "thumbnailUrl": "images/asturiashacking.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

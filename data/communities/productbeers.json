@@ -1,0 +1,29 @@
+{
+  "id": 590,
+  "name": "Productbeers",
+  "status": "active",
+  "lastReviewed": "14/06/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Valencia",
+  "topics": "Product Manager, product designer, Product owner",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "soporte@fourvenues.com",
+  "communityUrl": "https://web.fourvenues.com/en/product-beers",
+  "urls": {
+    "web": "http://web.archive.org/web/20250804192128/https://web.fourvenues.com/en/product-beers",
+    "linkedin": "https://www.linkedin.com/company/valencia-product-beers/",
+    "telegram": "https://t.me/valenciaproductbeers/1"
+  },
+  "thumbnailUrl": "images/productbeers.webp",
+  "latLon": {
+    "lat": 39.4697065,
+    "lon": -0.3763353
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

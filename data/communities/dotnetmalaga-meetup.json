@@ -1,0 +1,30 @@
+{
+  "id": 144,
+  "name": "dotnetMalaga (meetup)",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "csharp"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/dotnetmalaga/",
+  "urls": {
+    "twitter": "http://twitter.com/dotnetmalaga/",
+    "eventsUrl": "https://www.meetup.com/es-ES/dotnetmalaga/"
+  },
+  "thumbnailUrl": "images/dotnetmalaga-meetup.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,32 @@
+{
+  "id": 594,
+  "name": "Empower Tech",
+  "status": "active",
+  "lastReviewed": "26/08/2025",
+  "communityType": "collaborative-group",
+  "eventFormat": "online",
+  "location": "",
+  "topics": "Women in Tech, Girls in STEM, Female Empowerment, Gender Equality, Tech Mentorship, Tech Networking, Programming, Coding, Leadership, Diversity in Tech, Inclusive Tech, Career Development, Technology Education, Future Leaders, STEM Education",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "women-in-tech",
+    "stem"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://empower-tech.org/",
+  "urls": {
+    "instagram": "https://www.instagram.com/empowerteches",
+    "linkedin": "https://www.linkedin.com/company/empowerteches",
+    "twitter": "https://x.com/empowerteches"
+  },
+  "thumbnailUrl": "images/empower-tech.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

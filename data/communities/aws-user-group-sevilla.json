@@ -1,0 +1,27 @@
+{
+  "id": 47,
+  "name": "AWS user group Sevilla",
+  "status": "active",
+  "lastReviewed": "18/12/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Sevilla",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "aws"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://awsugsevilla.com/",
+  "urls": {},
+  "thumbnailUrl": "images/aws-user-group-sevilla.webp",
+  "latLon": {
+    "lat": 37.38264,
+    "lon": -5.9962951
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,24 @@
+{
+  "id": 263,
+  "name": "Iniciador Burgos",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Burgos",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://iniciador.com/Burgos",
+  "urls": {},
+  "latLon": {
+    "lat": 42.3408923,
+    "lon": -3.6997623
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

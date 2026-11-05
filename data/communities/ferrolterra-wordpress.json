@@ -1,0 +1,30 @@
+{
+  "id": 499,
+  "name": "Ferrolterra WordPress",
+  "status": "active",
+  "lastReviewed": "04/08/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Coruña (Ferrol)",
+  "parentId": 512,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/ferrolterrawordpress/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/ferrolterrawordpress/"
+  },
+  "thumbnailUrl": "images/ferrolterra-wordpress.webp",
+  "latLon": {
+    "lat": 43.4883872,
+    "lon": -8.2225093
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

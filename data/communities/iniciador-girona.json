@@ -1,0 +1,24 @@
+{
+  "id": 274,
+  "name": "Iniciador Girona",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Gerona (Girona)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://iniciador.com/Girona",
+  "urls": {},
+  "latLon": {
+    "lat": 42.128030322674,
+    "lon": 2.673305566784
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

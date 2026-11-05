@@ -1,0 +1,30 @@
+{
+  "id": 587,
+  "name": "GDG Alicante",
+  "status": "active",
+  "lastReviewed": "07/06/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Alicante",
+  "parentId": 207,
+  "topics": "ciencia, tecnología, comunidad, aprendizaje, conocimiento compartido, desarrollo personal, desarrollo profesional, metodologías de aprendizaje, innovación, formación, networking, colaboración, multidisciplinar, educación, divulgación científica, asociación sin ánimo de lucro",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://gdg.community.dev/gdg-alicante/",
+  "urls": {
+    "twitter": "https://www.twitter.com/GDGAlicante",
+    "linkedin": "https://www.linkedin.com/groups/13743861",
+    "eventsUrl": "https://gdg.community.dev/gdg-alicante/"
+  },
+  "thumbnailUrl": "images/gdg-alicante.webp",
+  "latLon": {
+    "lat": 38.3436365,
+    "lon": -0.4881708
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

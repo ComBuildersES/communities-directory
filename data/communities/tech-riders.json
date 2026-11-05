@@ -1,0 +1,30 @@
+{
+  "id": 561,
+  "name": "Tech Riders",
+  "status": "active",
+  "lastReviewed": "05/08/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Asturias",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://techriders.tajamar.es/",
+  "urls": {
+    "instagram": "https://www.instagram.com/techriders_es/",
+    "twitter": "https://x.com/TechRiders_es",
+    "youtube": "http://youtube.com/@TechRiders_es",
+    "eventsUrl": "https://www.meetup.com/es-ES/TechRiders_es/"
+  },
+  "thumbnailUrl": "images/tech-riders.webp",
+  "latLon": {
+    "lat": 43.3602825,
+    "lon": -5.8447919
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,33 @@
+{
+  "id": 404,
+  "name": "Python España",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "umbrella-org",
+  "eventFormat": "online",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "python"
+  ],
+  "targetAudience": [],
+  "contactInfo": "contacto@es.python.org",
+  "communityUrl": "https://es.python.org",
+  "urls": {
+    "twitter": "https://twitter.com/python_es",
+    "github": "https://github.com/python-spain",
+    "youtube": "https://www.youtube.com/c/PythonEspa%C3%B1aOficial",
+    "telegram": "https://t.me/PythonEsp",
+    "discord": "https://discord.com/invite/35E3Ph7Fez"
+  },
+  "thumbnailUrl": "images/python-canarias.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

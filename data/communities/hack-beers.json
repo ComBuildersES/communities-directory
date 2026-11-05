@@ -1,0 +1,25 @@
+{
+  "id": 238,
+  "name": "Hack & Beers",
+  "status": "inactive",
+  "lastReviewed": "22/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Itinerante",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://web.archive.org/web/20240304115556/https://hackandbeers.es/",
+  "urls": {},
+  "thumbnailUrl": "images/hack-beers.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

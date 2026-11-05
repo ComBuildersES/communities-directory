@@ -1,0 +1,24 @@
+{
+  "id": 273,
+  "name": "Iniciador Fuerteventura",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Las Palmas (Fuerteventura)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://iniciador.com/Fuerteventura",
+  "urls": {},
+  "latLon": {
+    "lat": 28.3967904,
+    "lon": -13.8637263
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

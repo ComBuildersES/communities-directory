@@ -1,0 +1,30 @@
+{
+  "id": 383,
+  "name": "Pamplona-Iruña Software Crafters",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Pamplona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "software-craftsmanship"
+  ],
+  "targetAudience": [],
+  "contactInfo": "pamplonaswcraft@540deg.com",
+  "communityUrl": "https://pamplonaswcraft.com/",
+  "urls": {
+    "twitter": "https://x.com/fran_mosteiro",
+    "bluesky": "https://bsky.app/profile/pamplonaswcraft.bsky.social"
+  },
+  "thumbnailUrl": "images/pamplona-iruna-software-crafters.webp",
+  "latLon": {
+    "lat": 42.8179948,
+    "lon": -1.6441817
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

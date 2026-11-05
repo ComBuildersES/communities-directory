@@ -1,0 +1,38 @@
+{
+  "id": 2,
+  "name": "/RootedCON",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Itinerante",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "cybersecurity",
+    "ethical-hacking",
+    "cloud-security",
+    "web-security"
+  ],
+  "targetAudience": [
+    "cybersecurity-engineer"
+  ],
+  "contactInfo": "info@rootedcon.com",
+  "communityUrl": "https://www.rootedcon.com/",
+  "urls": {
+    "twitter": "https://x.com/rootedcon",
+    "linkedin": "https://www.linkedin.com/company/rooted",
+    "tiktok": "https://www.tiktok.com/@rootedcon",
+    "instagram": "https://www.instagram.com/rootedc0n",
+    "telegram": "https://t.me/RootedCONLive"
+  },
+  "thumbnailUrl": "images/rootedcon.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

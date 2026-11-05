@@ -1,0 +1,28 @@
+{
+  "id": 434,
+  "name": "Subflash Summer Workshops",
+  "status": "active",
+  "lastReviewed": "27/11/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Itinerante",
+  "topics": "Desarrollo web, diseño y multimedia",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "nosvemosenverano@subflash.com",
+  "communityUrl": "https://subflash.com/",
+  "urls": {
+    "twitter": "https://x.com/subflash",
+    "youtube": "https://www.youtube.com/@SubflashReborn"
+  },
+  "thumbnailUrl": "images/subflash-summer-workshops.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

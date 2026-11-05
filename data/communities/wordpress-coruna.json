@@ -1,0 +1,43 @@
+{
+  "id": 497,
+  "name": "WordPress Coruña",
+  "status": "active",
+  "lastReviewed": "30/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Coruña",
+  "parentId": null,
+  "shortDescription": "Nuestro objetivo es difundir conocimientos sobre este CMS de código abierto y dar la oportunidad a asistentes y ponentes de compartir sus experiencias.\n\nTanto si usas WordPress de forma personal como si trabajas con él, podrás disfrutar de estas jornadas gratuitas en A Coruña.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress",
+    "tech4good",
+    "women-in-tech",
+    "open-source",
+    "tech-ethics",
+    "woocommerce"
+  ],
+  "targetAudience": [
+    "fullstack-developer",
+    "open-source-contributor",
+    "devops-engineer",
+    "software-architect"
+  ],
+  "contactInfo": "",
+  "communityUrl": "https://xn--wpcorua-9za.com/es/",
+  "urls": {
+    "twitter": "https://twitter.com/wpcoruna",
+    "eventsUrl": "https://www.meetup.com/es-ES/wordpresscoruna/"
+  },
+  "thumbnailUrl": "images/wordpress-coruna.webp",
+  "latLon": {
+    "lat": 43.3707332,
+    "lon": -8.3958532
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

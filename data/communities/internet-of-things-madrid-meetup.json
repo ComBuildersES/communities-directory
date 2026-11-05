@@ -1,0 +1,26 @@
+{
+  "id": 299,
+  "name": "Internet of Things Madrid Meetup",
+  "status": "inactive",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/iotmadrid/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es-ES/iotmadrid/"
+  },
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

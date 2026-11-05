@@ -1,0 +1,27 @@
+{
+  "id": 127,
+  "name": "Databeers Almería",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Almería",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/databeers-almeria/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es-ES/databeers-almeria/"
+  },
+  "thumbnailUrl": "images/databeers-almeria.webp",
+  "latLon": {
+    "lat": 36.8400939,
+    "lon": -2.4679043
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

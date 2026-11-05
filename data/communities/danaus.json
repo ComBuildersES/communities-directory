@@ -1,0 +1,28 @@
+{
+  "id": 123,
+  "name": "Danaus",
+  "status": "active",
+  "lastReviewed": "19/10/2024",
+  "communityType": "hacklab",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "info@danaus.io",
+  "communityUrl": "https://www.danaus.io/",
+  "urls": {
+    "instagram": "https://www.instagram.com/makerdanaus",
+    "linkedin": "https://www.linkedin.com/company/danausmaker/"
+  },
+  "thumbnailUrl": "images/danaus.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

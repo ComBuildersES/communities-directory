@@ -1,0 +1,30 @@
+{
+  "id": 523,
+  "name": "WordPress Tordosa",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Tarragona (Tortosa)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "hola@wptortosa.com",
+  "communityUrl": "https://www.meetup.com/tortosa-wordpress-meetup/",
+  "urls": {
+    "twitter": "https://twitter.com/WPTortosa",
+    "eventsUrl": "https://www.meetup.com/tortosa-wordpress-meetup/"
+  },
+  "thumbnailUrl": "images/wordpress-tordosa.webp",
+  "latLon": {
+    "lat": 40.8110042,
+    "lon": 0.5209974
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

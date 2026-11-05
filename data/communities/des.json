@@ -1,0 +1,32 @@
+{
+  "id": 134,
+  "name": "DES",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "digital-marketing"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://web.archive.org/web/20260211193651/https://www.des-show.com/",
+  "urls": {
+    "youtube": "https://youtu.be/ijoqFxMcrHM",
+    "instagram": "https://www.instagram.com/des_show/",
+    "twitter": "https://twitter.com/des_show/",
+    "linkedin": "https://www.linkedin.com/company/digital-enterprise-show/"
+  },
+  "thumbnailUrl": "images/des.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

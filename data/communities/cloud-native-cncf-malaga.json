@@ -1,0 +1,33 @@
+{
+  "id": 85,
+  "name": "Cloud Native (CNCF) Malaga",
+  "status": "unknown",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Málaga",
+  "parentId": 79,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://community.cncf.io/malaga/",
+  "urls": {
+    "twitter": "https://twitter.com/cloudnativefdn",
+    "instagram": "https://www.instagram.com/humans.of.cloudnative/",
+    "linkedin": "https://www.linkedin.com/company/cloud-native-computing-foundation/",
+    "youtube": "https://www.youtube.com/c/cloudnativefdn",
+    "github": "https://github.com/cncf",
+    "eventsUrl": "https://community.cncf.io/malaga/"
+  },
+  "thumbnailUrl": "images/cloud-native-cncf-malaga.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,29 @@
+{
+  "id": 54,
+  "name": "Barcelona R User Group",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "r-lang"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/BarcelonaR/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/BarcelonaR/"
+  },
+  "thumbnailUrl": "images/barcelona-r-user-group.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

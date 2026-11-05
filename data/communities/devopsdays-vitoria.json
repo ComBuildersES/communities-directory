@@ -1,0 +1,28 @@
+{
+  "id": 139,
+  "name": "DevOpsDays Vitória",
+  "status": "inactive",
+  "lastReviewed": "14/07/2026",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Álava (Vitoria-Gasteiz)",
+  "parentId": null,
+  "shortDescription": "",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://devopsdays.org/events/2022-vitoria/",
+  "urls": {},
+  "thumbnailUrl": "images/devopsdays-vitoria.webp",
+  "latLon": {
+    "lat": 42.8468573,
+    "lon": -2.6715859
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

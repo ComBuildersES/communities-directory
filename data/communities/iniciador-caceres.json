@@ -1,0 +1,27 @@
+{
+  "id": 264,
+  "name": "Iniciador Cáceres",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Cáceres",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.iniciador.com/es/caceres",
+  "urls": {
+    "twitter": "https://x.com/iniciador_cc",
+    "web": "https://www.iniciador.com/es/caceres"
+  },
+  "latLon": {
+    "lat": 39.4762161,
+    "lon": -6.3708585
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

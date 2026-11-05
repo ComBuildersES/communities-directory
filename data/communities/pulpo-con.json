@@ -1,0 +1,30 @@
+{
+  "id": 396,
+  "name": "Pulpo Con 🐙 ",
+  "status": "active",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Vigo, Galicia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "hello@pulpocon.es",
+  "communityUrl": "https://pulpocon.es/",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/company/pulpocon/",
+    "youtube": "https://www.youtube.com/channel/UCVa-vcCBJ4tSKWmCFu8yfCg",
+    "instagram": "https://www.instagram.com/pulpocon22/",
+    "twitter": "https://twitter.com/phpulpocon"
+  },
+  "thumbnailUrl": "images/pulpo-con.webp",
+  "latLon": {
+    "lat": 42.2313601,
+    "lon": -8.7124252
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

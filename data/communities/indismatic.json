@@ -1,0 +1,28 @@
+{
+  "id": 251,
+  "name": "Indismatic",
+  "status": "active",
+  "lastReviewed": "27/11/2024",
+  "communityType": "mutual-aid",
+  "eventFormat": "in-person",
+  "location": "La Rioja",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.indismatic.es/",
+  "urls": {
+    "twitter": "https://x.com/Indismatic",
+    "instagram": "https://www.instagram.com/indismatic/"
+  },
+  "thumbnailUrl": "images/indismatic.webp",
+  "latLon": {
+    "lat": 42.46569,
+    "lon": -2.44998
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

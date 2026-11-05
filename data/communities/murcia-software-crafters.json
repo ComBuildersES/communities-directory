@@ -1,0 +1,30 @@
+{
+  "id": 360,
+  "name": "Murcia software crafters",
+  "status": "active",
+  "lastReviewed": "27/11/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Murcia, Murcia",
+  "topics": "TDD, Pair Programming, Katas,...",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "software-craftsmanship"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/software-craftsmanship-murcia/",
+  "urls": {
+    "twitter": "https://twitter.com/murciaswcraft",
+    "eventsUrl": "https://www.meetup.com/es-ES/software-craftsmanship-murcia/"
+  },
+  "thumbnailUrl": "images/murcia-software-crafters.webp",
+  "latLon": {
+    "lat": 37.9835334,
+    "lon": -1.129905
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

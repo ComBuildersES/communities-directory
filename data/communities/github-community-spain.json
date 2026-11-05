@@ -1,0 +1,33 @@
+{
+  "id": 542,
+  "name": "GitHub Community Spain",
+  "status": "active",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Madrid y resto de España",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "git"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://ghspain.github.io/",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/company/ghspain/",
+    "github": "https://github.com/svg153",
+    "youtube": "https://www.youtube.com/@GitHubCommunitySpain/",
+    "twitter": "https://x.com/GithubCommSpain",
+    "eventsUrl": "https://www.meetup.com/ghspain"
+  },
+  "thumbnailUrl": "images/github-community-spain.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

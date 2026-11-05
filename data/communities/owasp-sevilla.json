@@ -1,0 +1,34 @@
+{
+  "id": 381,
+  "name": "OWASP Sevilla",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Sevilla",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "web-security",
+    "cybersecurity"
+  ],
+  "targetAudience": [],
+  "contactInfo": "juanjose.domenech@owasp.org",
+  "communityUrl": "https://owasp.org/www-chapter-sevilla/",
+  "urls": {
+    "youtube": "https://www.youtube.com/user/OWASPGLOBAL/videos",
+    "twitter": "https://twitter.com/OWASP_Sevilla",
+    "github": "https://github.com/OWASP/",
+    "mastodon": "https://infosec.exchange/@owasp",
+    "linkedin": "https://www.linkedin.com/company/owasp/"
+  },
+  "thumbnailUrl": "images/owasp-sevilla.webp",
+  "latLon": {
+    "lat": 37.38264,
+    "lon": -5.9962951
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -25,7 +25,8 @@ import path from 'path';
 
 // ─── Configuración ────────────────────────────────────────────────────────────
 
-const COMMUNITIES_PATH  = './public/data/communities.json';
+// Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
+import { readCommunities } from './lib/communities-store.js';
 const TAGS_PATH         = './public/data/tags.json';
 const AUDIENCE_PATH     = './public/data/audience.json';
 const SUGGESTIONS_PATH  = './scripts/suggestions.json';
@@ -289,7 +290,7 @@ async function main() {
   const hasFlag = (flag) => args.includes(flag);
 
   // Cargar datos
-  const communities = JSON.parse(fs.readFileSync(COMMUNITIES_PATH, 'utf-8'));
+  const communities = readCommunities();
   const tags        = JSON.parse(fs.readFileSync(TAGS_PATH,        'utf-8'));
   const audience    = JSON.parse(fs.readFileSync(AUDIENCE_PATH,    'utf-8'));
 

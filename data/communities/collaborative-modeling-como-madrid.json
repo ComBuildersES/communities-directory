@@ -1,0 +1,27 @@
+{
+  "id": 99,
+  "name": "Collaborative Modeling (CoMo) Madrid",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://collaborativemodeling.carrd.co/",
+  "urls": {
+    "telegram": "https://t.me/+oQdISHfNKQJjODJk"
+  },
+  "thumbnailUrl": "images/collaborative-modeling-como-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

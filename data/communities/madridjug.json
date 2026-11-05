@@ -1,0 +1,41 @@
+{
+  "id": 333,
+  "name": "MadridJUG",
+  "status": "active",
+  "lastReviewed": "29/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Madrid",
+  "parentId": 302,
+  "shortDescription": "",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "java",
+    "software-architecture",
+    "kotlin",
+    "groovy",
+    "scala"
+  ],
+  "targetAudience": [
+    "community-manager"
+  ],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/madridjug/",
+  "urls": {
+    "twitter": "http://twitter.com/MadridJUG/",
+    "eventsUrl": "https://www.meetup.com/es-ES/madridjug/",
+    "bluesky": "https://bsky.app/profile/madridjug.es",
+    "web": "https://madridjug.es/"
+  },
+  "thumbnailUrl": "images/madridjug.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}
