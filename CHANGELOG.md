@@ -19,7 +19,11 @@ Se organiza por mes y por tipo de cambio.
 
 ### Maintenance
 
-- 2026-11-05 `919fdbf` borrar la rama de las propuestas de comunidad descartadas
+- 2026-11-05 `0b31f64` borrar la rama de las propuestas de comunidad descartadas
+
+### Other
+
+- 2026-11-05 `205945f` añadir Data Saturdays Madrid y Women4TT
 
 ## 2026-10
 
