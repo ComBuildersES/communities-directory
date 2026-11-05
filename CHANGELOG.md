@@ -3,6 +3,12 @@
 Historial generado automáticamente a partir de los commits del repositorio.
 Se organiza por mes y por tipo de cambio.
 
+## 2026-11
+
+### Data
+
+- 2026-11-05 `10abe10` [Añadida Codex Community](https://directory.communitybuilders.dev/?community=632) ([PR #440](https://github.com/ComBuildersES/communities-directory/pull/440))
+
 ## 2026-10
 
 ### Data
@@ -13,6 +19,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-10-29 `6c3c333` update changelog [skip ci]
 - 2026-10-29 `0deaf2f` update changelog [skip ci]
 - 2026-10-27 `629c087` update changelog [skip ci]
 
