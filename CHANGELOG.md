@@ -11,11 +11,15 @@ Se organiza por mes y por tipo de cambio.
 
 ### Improvements
 
-- 2026-11-05 `e3741c3` una comunidad, un fichero
+- 2026-11-05 `9cbf586` una comunidad, un fichero
 
 ### Docs
 
 - 2026-11-05 `d17ed7d` update changelog [skip ci]
+
+### Maintenance
+
+- 2026-11-05 `919fdbf` borrar la rama de las propuestas de comunidad descartadas
 
 ## 2026-10
 
