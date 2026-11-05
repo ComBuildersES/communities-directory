@@ -132,6 +132,7 @@ button.modal-badge:focus-visible {
 .modal-badge--language { background: #f7f1ff; color: #7046aa; border: 1px solid #dbc9f7; }
 .modal-badge--location { background: #f0faf4; color: #257953; border: 1px solid #a3d9b8; }
 .modal-badge--location-static { cursor: default; }
+.modal-badge--scope    { background: #fff6ec; color: #99581a; border: 1px solid #f0cfa6; }
 .modal-badge--bot      { background: #f0f0f0; color: #666; border: 1px solid #d4d4d4; display: inline-flex; align-items: center; gap: 0.3em; cursor: default; }
 
 .community-modal-header-meta {
@@ -758,4 +759,70 @@ button.modal-badge:focus-visible {
   .community-modal-box {
     will-change: auto;
   }
+}
+
+/* Eventos leídos del feed OTE de la comunidad (issues #57, #349) */
+.community-modal-ote-about {
+  margin-left: auto;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.community-modal-ote-label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #666;
+  margin: 0.4rem 0 0.2rem;
+}
+
+.community-modal-ote-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.community-modal-ote-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.community-modal-ote-date {
+  flex: 0 0 auto;
+  font-variant-numeric: tabular-nums;
+  color: #444;
+  font-weight: 600;
+}
+
+.community-modal-ote-place {
+  color: #777;
+  font-size: 0.78rem;
+}
+
+.community-modal-ote-note {
+  font-size: 0.8rem;
+  color: #777;
+  margin: 0.3rem 0 0;
+}
+
+.community-modal-ote-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin: 0.5rem 0 0;
+  font-size: 0.78rem;
+}
+
+.community-modal-ote-attribution {
+  color: #888;
 }

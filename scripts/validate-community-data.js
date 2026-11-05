@@ -25,18 +25,31 @@ const CANONICAL_EVENT_FORMATS = new Set([
   "online",
   "in-person",
 ]);
+const CANONICAL_GEOGRAPHIC_SCOPES = new Set([
+  "unknown",
+  "local",
+  "provincial",
+  "regional",
+  "national",
+  "international",
+]);
 const ALLOWED_URL_KEYS = new Set([
+  "blog",
   "bluesky",
   "discord",
+  "eventosWiki",
   "eventsUrl",
   "facebook",
   "flickr",
+  "forum",
   "github",
   "instagram",
   "linkAggregator",
   "linkedin",
   "mailingList",
   "mastodon",
+  "ote",
+  "rss",
   "slack",
   "telegram",
   "tiktok",
@@ -389,6 +402,17 @@ function validateCommunityGlobal(community, index, knownTagIds, knownAudienceIds
     );
   }
 
+  if (
+    isNonEmptyString(community.geographicScope) &&
+    !CANONICAL_GEOGRAPHIC_SCOPES.has(community.geographicScope)
+  ) {
+    pushIssue(
+      issues.warnings,
+      "warning",
+      `${label}: geographicScope no canónico "${community.geographicScope}". Valores recomendados: ${[...CANONICAL_GEOGRAPHIC_SCOPES].join(", ")}.`,
+    );
+  }
+
   if (!isValidCalendarDate(community.lastReviewed ?? "")) {
     pushIssue(
       issues.warnings,
@@ -460,6 +484,18 @@ function validateCommunityStrict(community, index, issues, isNew = true) {
       issues.errors,
       "error",
       `${label}: eventFormat debe ser uno de ${[...CANONICAL_EVENT_FORMATS].join(", ")}.`,
+    );
+  }
+
+  // geographicScope es opcional: las 600+ fichas previas al issue #402 no lo traen.
+  if (
+    community.geographicScope !== undefined &&
+    !CANONICAL_GEOGRAPHIC_SCOPES.has(community.geographicScope)
+  ) {
+    pushIssue(
+      issues.errors,
+      "error",
+      `${label}: geographicScope debe ser uno de ${[...CANONICAL_GEOGRAPHIC_SCOPES].join(", ")}.`,
     );
   }
 

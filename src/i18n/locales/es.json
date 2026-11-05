@@ -19,6 +19,14 @@
     "meta-community": "Meta comunidad",
     "mutual-aid": "Grupo de ayuda mutua"
   },
+  "geographicScope": {
+    "unknown": "Desconocido",
+    "local": "Local",
+    "provincial": "Provincial",
+    "regional": "Autonómico",
+    "national": "Nacional (España)",
+    "international": "Internacional"
+  },
   "language": {
     "es": "Español",
     "en": "Inglés",
@@ -99,6 +107,7 @@
     "filterLabel": {
       "status": "Estado",
       "eventFormat": "Formato",
+      "geographicScope": "Ámbito",
       "communityType": "Tipo",
       "langs": "Idioma",
       "tags": "Temática",
@@ -135,7 +144,8 @@
     "communityType": "Tipo de Comunidad",
     "eventFormat": "Tipo de Eventos",
     "status": "Estado de la comunidad",
-    "langs": "Idiomas"
+    "langs": "Idiomas",
+    "geographicScope": "Ámbito geográfico"
   },
   "app": {
     "checkingFreshData": "Comprobando si hay una versión más reciente del directorio antes de abrir detalles o proponer cambios.",
@@ -200,12 +210,33 @@
       "mastodon": "Mastodon",
       "bluesky": "Bluesky",
       "twitch": "Twitch",
-      "flickr": "Flickr"
+      "flickr": "Flickr",
+      "eventosWiki": "Eventos.wiki",
+      "ote": "Eventos (OTE)",
+      "blog": "Blog",
+      "rss": "Feed RSS",
+      "forum": "Foro"
     },
     "urlGroup": {
       "community": "Comunidad",
       "chat": "Chat",
-      "social": "Redes y vídeo"
+      "social": "Redes y vídeo",
+      "events": "Eventos",
+      "content": "Contenido"
+    },
+    "filterByScope": "Filtrar por ámbito geográfico: {{scope}}",
+    "oteEvents": {
+      "title": "Eventos",
+      "loading": "Cargando eventos…",
+      "empty": "No hay eventos publicados ahora mismo.",
+      "error": "No se pudieron cargar los eventos.",
+      "upcoming": "Próximo evento",
+      "past": "Último evento",
+      "attribution": "Datos de {{source}}",
+      "viewAll": "Ver todos los eventos",
+      "openReader": "Abrir en el lector OTE",
+      "moreCount": "y {{count}} más",
+      "aboutOte": "¿Qué es OTE?"
     }
   },
   "map": {
@@ -285,27 +316,142 @@
         "warning": "Ya conocemos estos canales, pero están archivados porque el equipo dinamizador actual no los atiende:",
         "warningIssuePrefix": "Si crees que es un error,",
         "warningIssueSuffix": " y lo revisamos."
+      },
+      "ote": {
+        "title": "Eventos en formato abierto (OTE)",
+        "description": "Open Tech Events (OTE) es una iniciativa impulsada desde Community Builders para publicar los eventos de cada comunidad en un formato abierto y común. Existe para que los datos de eventos no queden encerrados en plataformas cerradas: con un único fichero, cualquier directorio, web o bot puede leer vuestra agenda. Si tu comunidad publica uno, este directorio mostrará vuestros próximos eventos de forma automática.",
+        "waysTitle": "Cómo generar vuestro fichero OTE",
+        "way0": "Registrar la comunidad y sus eventos en eventos.wiki: la vía más cómoda, genera el fichero OTE por vosotros.",
+        "way1": "Usar las agent skills de ote-tools para que un agente redacte la especificación.",
+        "way2": "Crear los eventos a mano con el editor web de OTE.",
+        "way3": "Partir de ote-template, un repo con varias herramientas ya montadas.",
+        "linkSpec": "Qué es OTE",
+        "linkEventosWiki": "eventos.wiki",
+        "linkSkills": "Agent skills (ote-tools)",
+        "linkEditor": "Editor OTE",
+        "linkTemplate": "ote-template"
       }
     },
     "urlHelp": {
-      "web":            { "title": "URL web",            "description": "Añade la web principal o landing más estable de la comunidad.",                        "bullet0": "Ejemplos: web propia, página oficial o microsite persistente.",                                                               "bullet1": "Si ya la has usado como URL principal, no hace falta repetirla aquí." },
-      "eventsUrl":      { "title": "URL de eventos",     "description": "Enlace a la plataforma donde publican convocatorias o entradas.",                      "bullet0": "Ejemplos: Meetup, Eventbrite, Luma, saraos.tech, Google Calendar o una agenda propia.",                                    "bullet1": "Úsalo cuando la actividad viva sobre todo en ese calendario o plataforma." },
-      "linkAggregator": { "title": "Agregador de links", "description": "Enlace a una página que reúne varios perfiles o recursos de la comunidad.",            "bullet0": "Ejemplos: Linktree, Beacons, Bento o una página similar.",                                                                  "bullet1": "Es útil cuando la comunidad centraliza su presencia en un único agregador." },
-      "mailingList":    { "title": "Lista de correo",    "description": "Enlace para suscribirse o consultar la lista de correo de la comunidad.",              "bullet0": "Ejemplos: Google Groups, Buttondown, Substack o Mailchimp.",                                                                 "bullet1": "Añádelo si el email es un canal relevante para seguir la actividad o interactuar con otros miembros." },
-      "github":         { "title": "GitHub",             "description": "Perfil u organización de GitHub usada por la comunidad.",                              "bullet0": "Ejemplos: organización, perfil principal o repositorio central." },
-      "discord":        { "title": "Discord",            "description": "Invitación o acceso al servidor de Discord de la comunidad.",                          "bullet0": "Ejemplos: enlaces `discord.gg` o invitaciones permanentes." },
-      "telegram":       { "title": "Telegram",           "description": "Canal, grupo o enlace público de Telegram.",                                           "bullet0": "Ejemplos: `t.me/canal` o un grupo oficial de la comunidad." },
-      "whatsapp":       { "title": "WhatsApp",           "description": "Grupo o comunidad pública de WhatsApp.",                                               "bullet0": "Ejemplos: invitaciones `chat.whatsapp.com` o enlaces a comunidades públicas." },
-      "slack":          { "title": "Slack",              "description": "Workspace o enlace de acceso a Slack.",                                                "bullet0": "Ejemplos: URL del workspace o página oficial para unirse." },
-      "youtube":        { "title": "YouTube",            "description": "Canal o perfil de YouTube donde publican vídeos o directos.",                          "bullet0": "Ejemplos: canal oficial, usuario o lista de reproducción principal." },
-      "linkedin":       { "title": "LinkedIn",           "description": "Página o perfil de LinkedIn asociado a la comunidad.",                                 "bullet0": "Ejemplos: página de empresa, showcase o grupo oficial." },
-      "twitter":        { "title": "Twitter/X",          "description": "Perfil principal en X o Twitter.",                                                     "bullet0": "Ejemplos: `x.com/usuario` o el handle oficial de la comunidad." },
-      "tiktok":         { "title": "TikTok",             "description": "Perfil oficial de TikTok de la comunidad.",                                            "bullet0": "Ejemplos: `tiktok.com/@usuario`." },
-      "instagram":      { "title": "Instagram",          "description": "Perfil oficial en Instagram.",                                                         "bullet0": "Ejemplos: cuenta principal de la comunidad o del evento." },
-      "facebook":       { "title": "Facebook",           "description": "Página, grupo o perfil oficial en Facebook.",                                          "bullet0": "Ejemplos: fan page o grupo público de la comunidad." },
-      "mastodon":       { "title": "Mastodon",           "description": "Perfil oficial en Mastodon.",                                                          "bullet0": "Ejemplos: `mastodon.social/@usuario` o cualquier instancia equivalente." },
-      "bluesky":        { "title": "Bluesky",            "description": "Perfil oficial en Bluesky.",                                                           "bullet0": "Ejemplos: `bsky.app/profile/usuario`." },
-      "twitch":         { "title": "Twitch",             "description": "Canal de Twitch donde la comunidad emite o publica contenido.",                        "bullet0": "Ejemplos: `twitch.tv/canal`." }
+      "web": {
+        "title": "URL web",
+        "description": "Añade la web principal o landing más estable de la comunidad.",
+        "bullet0": "Ejemplos: web propia, página oficial o microsite persistente.",
+        "bullet1": "Si ya la has usado como URL principal, no hace falta repetirla aquí."
+      },
+      "eventsUrl": {
+        "title": "URL de eventos",
+        "description": "Enlace a la plataforma donde publican convocatorias o entradas.",
+        "bullet0": "Ejemplos: Meetup, Eventbrite, Luma, saraos.tech, Google Calendar o una agenda propia.",
+        "bullet1": "Úsalo cuando la actividad viva sobre todo en ese calendario o plataforma."
+      },
+      "linkAggregator": {
+        "title": "Agregador de links",
+        "description": "Enlace a una página que reúne varios perfiles o recursos de la comunidad.",
+        "bullet0": "Ejemplos: Linktree, Beacons, Bento o una página similar.",
+        "bullet1": "Es útil cuando la comunidad centraliza su presencia en un único agregador."
+      },
+      "mailingList": {
+        "title": "Lista de correo",
+        "description": "Enlace para suscribirse o consultar la lista de correo de la comunidad.",
+        "bullet0": "Ejemplos: Google Groups, Buttondown, Substack o Mailchimp.",
+        "bullet1": "Añádelo si el email es un canal relevante para seguir la actividad o interactuar con otros miembros."
+      },
+      "github": {
+        "title": "GitHub",
+        "description": "Perfil u organización de GitHub usada por la comunidad.",
+        "bullet0": "Ejemplos: organización, perfil principal o repositorio central."
+      },
+      "discord": {
+        "title": "Discord",
+        "description": "Invitación o acceso al servidor de Discord de la comunidad.",
+        "bullet0": "Ejemplos: enlaces `discord.gg` o invitaciones permanentes."
+      },
+      "telegram": {
+        "title": "Telegram",
+        "description": "Canal, grupo o enlace público de Telegram.",
+        "bullet0": "Ejemplos: `t.me/canal` o un grupo oficial de la comunidad."
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "description": "Grupo o comunidad pública de WhatsApp.",
+        "bullet0": "Ejemplos: invitaciones `chat.whatsapp.com` o enlaces a comunidades públicas."
+      },
+      "slack": {
+        "title": "Slack",
+        "description": "Workspace o enlace de acceso a Slack.",
+        "bullet0": "Ejemplos: URL del workspace o página oficial para unirse."
+      },
+      "youtube": {
+        "title": "YouTube",
+        "description": "Canal o perfil de YouTube donde publican vídeos o directos.",
+        "bullet0": "Ejemplos: canal oficial, usuario o lista de reproducción principal."
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "description": "Página o perfil de LinkedIn asociado a la comunidad.",
+        "bullet0": "Ejemplos: página de empresa, showcase o grupo oficial."
+      },
+      "twitter": {
+        "title": "Twitter/X",
+        "description": "Perfil principal en X o Twitter.",
+        "bullet0": "Ejemplos: `x.com/usuario` o el handle oficial de la comunidad."
+      },
+      "tiktok": {
+        "title": "TikTok",
+        "description": "Perfil oficial de TikTok de la comunidad.",
+        "bullet0": "Ejemplos: `tiktok.com/@usuario`."
+      },
+      "instagram": {
+        "title": "Instagram",
+        "description": "Perfil oficial en Instagram.",
+        "bullet0": "Ejemplos: cuenta principal de la comunidad o del evento."
+      },
+      "facebook": {
+        "title": "Facebook",
+        "description": "Página, grupo o perfil oficial en Facebook.",
+        "bullet0": "Ejemplos: fan page o grupo público de la comunidad."
+      },
+      "mastodon": {
+        "title": "Mastodon",
+        "description": "Perfil oficial en Mastodon.",
+        "bullet0": "Ejemplos: `mastodon.social/@usuario` o cualquier instancia equivalente."
+      },
+      "bluesky": {
+        "title": "Bluesky",
+        "description": "Perfil oficial en Bluesky.",
+        "bullet0": "Ejemplos: `bsky.app/profile/usuario`."
+      },
+      "twitch": {
+        "title": "Twitch",
+        "description": "Canal de Twitch donde la comunidad emite o publica contenido.",
+        "bullet0": "Ejemplos: `twitch.tv/canal`."
+      },
+      "eventosWiki": {
+        "title": "Eventos.wiki",
+        "description": "Página de la comunidad en eventos.wiki, el directorio abierto de eventos tecnológicos de España.",
+        "bullet0": "Formato habitual: https://eventos.wiki/organizations/mi-comunidad"
+      },
+      "ote": {
+        "title": "Feed de eventos OTE",
+        "description": "URL del fichero de eventos en formato Open Tech Events. Es lo que permite mostrar vuestros próximos eventos en la ficha.",
+        "bullet0": "Si estáis en eventos.wiki: https://eventos.wiki/organizations/mi-comunidad/events.json"
+      },
+      "blog": {
+        "title": "Blog",
+        "description": "Blog o sección de artículos de la comunidad, si está separada de la web principal.",
+        "bullet0": "Si el blog es la propia web, basta con rellenar el campo Web."
+      },
+      "rss": {
+        "title": "Feed RSS",
+        "description": "Feed RSS o Atom para seguir las publicaciones de la comunidad.",
+        "bullet0": "Formato habitual: https://mi-comunidad.org/feed.xml"
+      },
+      "forum": {
+        "title": "Foro",
+        "description": "Foro o wiki de discusión de la comunidad, si tiene uno abierto.",
+        "bullet0": "Ejemplo: https://wiki.osgeo.org/wiki/Geoinquietos_Almería"
+      }
     },
     "fieldHelp": {
       "status": {
@@ -352,6 +498,15 @@
         "bullet1": "Prioriza qué ofrece, su enfoque o su propuesta de valor.",
         "bullet2": "Evita repetir solo etiquetas, tecnologías o público objetivo que ya hayas marcado arriba.",
         "bullet3": "Una longitud ideal suele estar entre 140 y 220 caracteres."
+      },
+      "geographicScope": {
+        "title": "Ámbito geográfico",
+        "description": "A qué territorio da servicio la comunidad. No tiene que coincidir con la localización de sus eventos: una comunidad puede celebrarlos en Madrid y dar apoyo en toda España.",
+        "bullet0": "Local: la comunidad se dirige a una localidad o área metropolitana.",
+        "bullet1": "Provincial: cubre una provincia entera.",
+        "bullet2": "Autonómico: cubre una comunidad autónoma.",
+        "bullet3": "Nacional (España): cubre todo el país, aunque los eventos se concentren en una ciudad.",
+        "bullet4": "Internacional: la comunidad opera más allá de España."
       }
     },
     "deletion": {
@@ -428,7 +583,8 @@
       "parentOrgLabel": "Organización paraguas",
       "parentOrgNone": "Sin organización paraguas",
       "parentOrgPlaceholder": "Busca por nombre…",
-      "parentOrgTooltip": "Una organización paraguas es una entidad que agrupa varias comunidades locales bajo una misma red o marca (ej: GDG Spain, PyLadies, Codebar). Si tu comunidad pertenece a una de estas redes, selecciónala aquí. La gran mayoría de comunidades no tienen organización paraguas."
+      "parentOrgTooltip": "Una organización paraguas es una entidad que agrupa varias comunidades locales bajo una misma red o marca (ej: GDG Spain, PyLadies, Codebar). Si tu comunidad pertenece a una de estas redes, selecciónala aquí. La gran mayoría de comunidades no tienen organización paraguas.",
+      "geographicScopeLabel": "Ámbito geográfico"
     },
     "tags": {
       "title": "Etiquetas",

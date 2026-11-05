@@ -19,6 +19,14 @@
     "meta-community": "Meta-community",
     "mutual-aid": "Mutual Aid Group"
   },
+  "geographicScope": {
+    "unknown": "Unknown",
+    "local": "Local",
+    "provincial": "Province-wide",
+    "regional": "Region-wide",
+    "national": "Nationwide (Spain)",
+    "international": "International"
+  },
   "language": {
     "es": "Spanish",
     "en": "English",
@@ -99,6 +107,7 @@
     "filterLabel": {
       "status": "Status",
       "eventFormat": "Format",
+      "geographicScope": "Scope",
       "communityType": "Type",
       "langs": "Language",
       "tags": "Topics",
@@ -135,7 +144,8 @@
     "communityType": "Community Type",
     "eventFormat": "Event Type",
     "status": "Community Status",
-    "langs": "Languages"
+    "langs": "Languages",
+    "geographicScope": "Geographic scope"
   },
   "app": {
     "checkingFreshData": "Checking for a more recent version of the directory before opening details or suggesting changes.",
@@ -200,12 +210,33 @@
       "mastodon": "Mastodon",
       "bluesky": "Bluesky",
       "twitch": "Twitch",
-      "flickr": "Flickr"
+      "flickr": "Flickr",
+      "eventosWiki": "Eventos.wiki",
+      "ote": "Events (OTE)",
+      "blog": "Blog",
+      "rss": "RSS feed",
+      "forum": "Forum"
     },
     "urlGroup": {
       "community": "Community",
       "chat": "Chat",
-      "social": "Social & Video"
+      "social": "Social & Video",
+      "events": "Events",
+      "content": "Content"
+    },
+    "filterByScope": "Filter by geographic scope: {{scope}}",
+    "oteEvents": {
+      "title": "Events",
+      "loading": "Loading events…",
+      "empty": "No events published right now.",
+      "error": "Events could not be loaded.",
+      "upcoming": "Next event",
+      "past": "Latest event",
+      "attribution": "Data from {{source}}",
+      "viewAll": "See all events",
+      "openReader": "Open in the OTE reader",
+      "moreCount": "and {{count}} more",
+      "aboutOte": "What is OTE?"
     }
   },
   "map": {
@@ -285,27 +316,142 @@
         "warning": "We already know about these channels, but they are archived because the current organizing team does not maintain them:",
         "warningIssuePrefix": "If you think this is a mistake,",
         "warningIssueSuffix": " and we will review it."
+      },
+      "ote": {
+        "title": "Events in an open format (OTE)",
+        "description": "Open Tech Events (OTE) is an initiative driven by Community Builders to publish each community's events in a shared, open format. It exists so event data is not locked inside closed platforms: with a single file, any directory, website or bot can read your agenda. If your community publishes one, this directory will show your upcoming events automatically.",
+        "waysTitle": "How to generate your OTE file",
+        "way0": "Register the community and its events on eventos.wiki: the easiest route, it generates the OTE file for you.",
+        "way1": "Use the ote-tools agent skills so an agent writes the spec for you.",
+        "way2": "Create the events by hand with the OTE web editor.",
+        "way3": "Start from ote-template, a repo with several tools already wired up.",
+        "linkSpec": "What OTE is",
+        "linkEventosWiki": "eventos.wiki",
+        "linkSkills": "Agent skills (ote-tools)",
+        "linkEditor": "OTE editor",
+        "linkTemplate": "ote-template"
       }
     },
     "urlHelp": {
-      "web":            { "title": "Website URL",      "description": "Add the community's main website or most stable landing page.",                              "bullet0": "Examples: own website, official page or persistent microsite.",                                                                  "bullet1": "If you've already used it as the main URL, there's no need to repeat it here." },
-      "eventsUrl":      { "title": "Events URL",       "description": "Link to the platform where they post events or tickets.",                                    "bullet0": "Examples: Meetup, Eventbrite, Luma, saraos.tech, Google Calendar or own agenda.",                                             "bullet1": "Use it when activity mainly lives on that calendar or platform." },
-      "linkAggregator": { "title": "Link aggregator",  "description": "Link to a page that brings together several profiles or resources of the community.",        "bullet0": "Examples: Linktree, Beacons, Bento or similar page.",                                                                        "bullet1": "Useful when the community centralizes its presence in a single aggregator." },
-      "mailingList":    { "title": "Mailing list",     "description": "Link to subscribe or view the community's mailing list.",                                    "bullet0": "Examples: Google Groups, Buttondown, Substack or Mailchimp.",                                                                "bullet1": "Add it if email is a relevant channel for following activity or interacting with other members." },
-      "github":         { "title": "GitHub",           "description": "GitHub profile or organization used by the community.",                                      "bullet0": "Examples: organization, main profile or central repository." },
-      "discord":        { "title": "Discord",          "description": "Invitation or access to the community's Discord server.",                                    "bullet0": "Examples: `discord.gg` links or permanent invitations." },
-      "telegram":       { "title": "Telegram",         "description": "Telegram channel, group or public link.",                                                    "bullet0": "Examples: `t.me/channel` or an official community group." },
-      "whatsapp":       { "title": "WhatsApp",         "description": "Public WhatsApp group or community.",                                                        "bullet0": "Examples: `chat.whatsapp.com` invitations or links to public communities." },
-      "slack":          { "title": "Slack",            "description": "Workspace or access link to Slack.",                                                         "bullet0": "Examples: workspace URL or official join page." },
-      "youtube":        { "title": "YouTube",          "description": "YouTube channel or profile where they publish videos or streams.",                           "bullet0": "Examples: official channel, user or main playlist." },
-      "linkedin":       { "title": "LinkedIn",         "description": "LinkedIn page or profile associated with the community.",                                    "bullet0": "Examples: company page, showcase or official group." },
-      "twitter":        { "title": "Twitter/X",        "description": "Main profile on X or Twitter.",                                                              "bullet0": "Examples: `x.com/user` or the community's official handle." },
-      "tiktok":         { "title": "TikTok",           "description": "Community's official TikTok profile.",                                                       "bullet0": "Examples: `tiktok.com/@user`." },
-      "instagram":      { "title": "Instagram",        "description": "Official Instagram profile.",                                                                "bullet0": "Examples: community's or event's main account." },
-      "facebook":       { "title": "Facebook",         "description": "Official Facebook page, group or profile.",                                                  "bullet0": "Examples: fan page or public community group." },
-      "mastodon":       { "title": "Mastodon",         "description": "Official Mastodon profile.",                                                                 "bullet0": "Examples: `mastodon.social/@user` or any equivalent instance." },
-      "bluesky":        { "title": "Bluesky",          "description": "Official Bluesky profile.",                                                                  "bullet0": "Examples: `bsky.app/profile/user`." },
-      "twitch":         { "title": "Twitch",           "description": "Twitch channel where the community broadcasts or publishes content.",                        "bullet0": "Examples: `twitch.tv/channel`." }
+      "web": {
+        "title": "Website URL",
+        "description": "Add the community's main website or most stable landing page.",
+        "bullet0": "Examples: own website, official page or persistent microsite.",
+        "bullet1": "If you've already used it as the main URL, there's no need to repeat it here."
+      },
+      "eventsUrl": {
+        "title": "Events URL",
+        "description": "Link to the platform where they post events or tickets.",
+        "bullet0": "Examples: Meetup, Eventbrite, Luma, saraos.tech, Google Calendar or own agenda.",
+        "bullet1": "Use it when activity mainly lives on that calendar or platform."
+      },
+      "linkAggregator": {
+        "title": "Link aggregator",
+        "description": "Link to a page that brings together several profiles or resources of the community.",
+        "bullet0": "Examples: Linktree, Beacons, Bento or similar page.",
+        "bullet1": "Useful when the community centralizes its presence in a single aggregator."
+      },
+      "mailingList": {
+        "title": "Mailing list",
+        "description": "Link to subscribe or view the community's mailing list.",
+        "bullet0": "Examples: Google Groups, Buttondown, Substack or Mailchimp.",
+        "bullet1": "Add it if email is a relevant channel for following activity or interacting with other members."
+      },
+      "github": {
+        "title": "GitHub",
+        "description": "GitHub profile or organization used by the community.",
+        "bullet0": "Examples: organization, main profile or central repository."
+      },
+      "discord": {
+        "title": "Discord",
+        "description": "Invitation or access to the community's Discord server.",
+        "bullet0": "Examples: `discord.gg` links or permanent invitations."
+      },
+      "telegram": {
+        "title": "Telegram",
+        "description": "Telegram channel, group or public link.",
+        "bullet0": "Examples: `t.me/channel` or an official community group."
+      },
+      "whatsapp": {
+        "title": "WhatsApp",
+        "description": "Public WhatsApp group or community.",
+        "bullet0": "Examples: `chat.whatsapp.com` invitations or links to public communities."
+      },
+      "slack": {
+        "title": "Slack",
+        "description": "Workspace or access link to Slack.",
+        "bullet0": "Examples: workspace URL or official join page."
+      },
+      "youtube": {
+        "title": "YouTube",
+        "description": "YouTube channel or profile where they publish videos or streams.",
+        "bullet0": "Examples: official channel, user or main playlist."
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "description": "LinkedIn page or profile associated with the community.",
+        "bullet0": "Examples: company page, showcase or official group."
+      },
+      "twitter": {
+        "title": "Twitter/X",
+        "description": "Main profile on X or Twitter.",
+        "bullet0": "Examples: `x.com/user` or the community's official handle."
+      },
+      "tiktok": {
+        "title": "TikTok",
+        "description": "Community's official TikTok profile.",
+        "bullet0": "Examples: `tiktok.com/@user`."
+      },
+      "instagram": {
+        "title": "Instagram",
+        "description": "Official Instagram profile.",
+        "bullet0": "Examples: community's or event's main account."
+      },
+      "facebook": {
+        "title": "Facebook",
+        "description": "Official Facebook page, group or profile.",
+        "bullet0": "Examples: fan page or public community group."
+      },
+      "mastodon": {
+        "title": "Mastodon",
+        "description": "Official Mastodon profile.",
+        "bullet0": "Examples: `mastodon.social/@user` or any equivalent instance."
+      },
+      "bluesky": {
+        "title": "Bluesky",
+        "description": "Official Bluesky profile.",
+        "bullet0": "Examples: `bsky.app/profile/user`."
+      },
+      "twitch": {
+        "title": "Twitch",
+        "description": "Twitch channel where the community broadcasts or publishes content.",
+        "bullet0": "Examples: `twitch.tv/channel`."
+      },
+      "eventosWiki": {
+        "title": "Eventos.wiki",
+        "description": "The community's page on eventos.wiki, the open directory of tech events in Spain.",
+        "bullet0": "Usual shape: https://eventos.wiki/organizations/my-community"
+      },
+      "ote": {
+        "title": "OTE events feed",
+        "description": "URL of the events file in Open Tech Events format. This is what lets the directory show your upcoming events.",
+        "bullet0": "If you are on eventos.wiki: https://eventos.wiki/organizations/my-community/events.json"
+      },
+      "blog": {
+        "title": "Blog",
+        "description": "The community's blog or articles section, if separate from the main site.",
+        "bullet0": "If the blog is the website itself, just fill in the Web field."
+      },
+      "rss": {
+        "title": "RSS feed",
+        "description": "RSS or Atom feed to follow the community's posts.",
+        "bullet0": "Usual shape: https://my-community.org/feed.xml"
+      },
+      "forum": {
+        "title": "Forum",
+        "description": "Discussion forum or wiki the community keeps open, if any.",
+        "bullet0": "Example: https://wiki.osgeo.org/wiki/Geoinquietos_Almería"
+      }
     },
     "fieldHelp": {
       "status": {
@@ -352,6 +498,15 @@
         "bullet1": "Prioritize what it offers, its focus or value proposition.",
         "bullet2": "Avoid repeating only labels, technologies or target audience that you've already marked above.",
         "bullet3": "An ideal length is usually between 140 and 220 characters."
+      },
+      "geographicScope": {
+        "title": "Geographic scope",
+        "description": "Which territory the community serves. It does not have to match where its events happen: a community can meet in Madrid and support people across Spain.",
+        "bullet0": "Local: the community targets one town or metropolitan area.",
+        "bullet1": "Province-wide: it covers a whole province.",
+        "bullet2": "Region-wide: it covers an autonomous community.",
+        "bullet3": "Nationwide (Spain): it covers the whole country, even if events cluster in one city.",
+        "bullet4": "International: the community operates beyond Spain."
       }
     },
     "deletion": {
@@ -428,7 +583,8 @@
       "parentOrgLabel": "Umbrella organization",
       "parentOrgNone": "No umbrella organization",
       "parentOrgPlaceholder": "Search by name…",
-      "parentOrgTooltip": "An umbrella organization is an entity that groups several local communities under the same network or brand (e.g. GDG Spain, PyLadies, Codebar). If your community belongs to one of these networks, select it here. The vast majority of communities have no umbrella organization."
+      "parentOrgTooltip": "An umbrella organization is an entity that groups several local communities under the same network or brand (e.g. GDG Spain, PyLadies, Codebar). If your community belongs to one of these networks, select it here. The vast majority of communities have no umbrella organization.",
+      "geographicScopeLabel": "Geographic scope"
     },
     "tags": {
       "title": "Tags",

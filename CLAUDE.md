@@ -68,6 +68,7 @@ scripts/               # Utilidades de mantenimiento de datos
   scrape-community-data.js         # Scraping con Playwright → suggestions.json
   apply-suggestions.js             # Aplica suggestions.json a communities.json
   apply-url-mapping.js             # Aplica url-mapping.json a communities.json
+  match-eventos-wiki.js            # Empareja organizadores de eventos.wiki con comunidades
   url-mapping.json                 # Mapeo manual de URLs alternativas por comunidad
   suggestions.json                 # Output del scraping (no commitear si es parcial)
 ```
@@ -83,6 +84,7 @@ scripts/               # Utilidades de mantenimiento de datos
   communityType: "tech-meetup" | "conference" | "umbrella-org" | "hacklab" | "collaborative-group" | "meta-community" | "mutual-aid",
   eventFormat: "in-person" | "online" | "hybrid" | "unknown",
   location: string,
+  geographicScope: "unknown" | "local" | "provincial" | "regional" | "national" | "international",
   topics: string,               // texto libre heredado, separado por comas
   tags: string[],               // IDs referenciando public/data/tags.json
   targetAudience: string[],     // IDs referenciando public/data/audience.json
@@ -102,6 +104,11 @@ scripts/               # Utilidades de mantenimiento de datos
     github?: string,
     mastodon?: string,
     bluesky?: string,
+    eventosWiki?: string,   // página de la comunidad en eventos.wiki
+    ote?: string,           // feed de eventos en formato Open Tech Events
+    blog?: string,
+    rss?: string,
+    forum?: string,
   },
   archivedUrls?: string[],      // canales históricos que ya nadie atiende: se conservan pero NO se muestran
   thumbnailUrl: string,
@@ -159,6 +166,7 @@ npm run migrate-add-new-fields        # Añade urls/tags/targetAudience a commun
 npm run scrape-community-data         # Scraping con Playwright (ver opciones en el script)
 npm run apply-suggestions             # Aplica suggestions.json revisado a communities.json
 npm run apply-url-mapping             # Aplica url-mapping.json a communities.json
+npm run match-eventos-wiki            # Informe de matches con eventos.wiki (--apply para escribir)
 npm run migrate-enum-keys             # Migra claves de enum españolas a claves neutrales (idempotente)
 ```
 
@@ -364,6 +372,38 @@ Canales que una comunidad tuvo abiertos pero que su equipo dinamizador actual no
 - El formulario avisa (`ArchivedUrlWarning`) cuando alguien intenta dar de alta una URL que
   el directorio ya tiene archivada, incluida la de la propia comunidad que se está editando.
 - `apply-suggestions` no reintroduce un canal archivado por scraping.
+
+### Ámbito geográfico (`geographicScope`)
+
+Territorio al que la comunidad da servicio (issue #402). **No** es lo mismo que `location`:
+una comunidad puede celebrar sus eventos en Madrid y dar apoyo a nivel nacional (Women4TT).
+
+- El campo es **opcional** en los ficheros fuente: las 600+ fichas anteriores no lo traen y
+  la validación solo lo rechaza si viene con un valor no canónico.
+- El store rellena `geographicScope: "unknown"` al cargar los datos; sin ese default el
+  filtro del sidebar no podría ofrecer "Desconocido".
+- Filtro en URL: clave corta `gs` (`?gs=national,regional`).
+
+### Eventos vía OTE y eventos.wiki
+
+El directorio no almacena eventos (issues #57, #349): si la comunidad tiene `urls.ote`,
+`CommunityModal` pide ese feed [Open Tech Events](https://opentechevents.org/) al abrir la
+ficha y muestra los próximos eventos (o el último celebrado).
+
+- La atribución se deriva del **dominio que sirve el feed** (`feed.url` y, si falta, la URL
+  del propio feed): un feed OTE puede estar alojado en eventos.wiki, en GitHub Pages o en la
+  web de la comunidad.
+- La sección enlaza al [lector de OTE](https://reader.opentechevents.org/) (`?subscribe=<feed>`):
+  muestra todo lo que publique el evento (C4P, precios, ponentes), no solo lo que cabe en la ficha.
+- No todos los dominios sirven CORS, y **un redirect sin cabeceras CORS también rompe el
+  fetch** aunque el destino sí las traiga: guarda siempre la URL canónica del feed
+  (`communitybuilders.dev/events/feed.json`, no el `github.io` que redirige). Si aun así
+  falla, la sección se queda en el enlace al feed; nunca rompe la ficha.
+- `scripts/match-eventos-wiki.js` empareja los organizadores de
+  `https://eventos.wiki/events.json` con las comunidades por nombre y rellena
+  `urls.eventosWiki` + `urls.ote`. Por defecto solo aplica matches exactos; los parciales
+  ("Codemotion" vs "Codemotion Madrid") se listan para revisión humana y requieren
+  `--include-fuzzy`. Nunca reintroduce un canal archivado.
 
 ### Claves de `urls`
 

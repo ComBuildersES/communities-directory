@@ -14,12 +14,30 @@ export const COMMUNITY_TYPE_OPTIONS = [
   "mutual-aid",
 ];
 export const EVENT_FORMAT_OPTIONS = ["in-person", "online", "hybrid", "unknown"];
+/**
+ * Ámbito geográfico al que la comunidad da servicio (issue #402). Es independiente de
+ * `location`: una comunidad puede celebrar sus eventos en Madrid y dar apoyo a nivel
+ * nacional (p. ej. Women4TT).
+ */
+export const GEOGRAPHIC_SCOPE_OPTIONS = [
+  "unknown",
+  "local",
+  "provincial",
+  "regional",
+  "national",
+  "international",
+];
 export const EVENT_FORMATS_WITH_LOCATION = ["in-person", "hybrid"];
 export const SHORT_DESCRIPTION_MAX_LENGTH = 280;
 
 export const URL_PLATFORM_OPTIONS = [
   { key: "web" },
   { key: "eventsUrl" },
+  { key: "eventosWiki" },
+  { key: "ote" },
+  { key: "blog" },
+  { key: "rss" },
+  { key: "forum" },
   { key: "linkAggregator" },
   { key: "mailingList" },
   { key: "github" },
@@ -54,6 +72,7 @@ const DIRECTORY_FILTER_KEYS = [
   "status",
   "communityType",
   "eventFormat",
+  "geographicScope",
   "langs",
   "tags",
   "targetAudience",
@@ -64,6 +83,7 @@ const FILTER_KEY_SHORT = {
   status: "s",
   communityType: "ct",
   eventFormat: "ef",
+  geographicScope: "gs",
   langs: "langs",
   tags: "t",
   targetAudience: "ta",
@@ -370,6 +390,7 @@ export function getEmptyCommunityDraft(nextId = null) {
     eventFormat: "in-person",
     location: "",
     provinceId: "",
+    geographicScope: "unknown",
     shortDescription: "",
     topics: "",
     langs: ["es"],
@@ -475,6 +496,7 @@ const URL_PLATFORM_HOST_PATTERNS = [
   ["bluesky", /(^|\.)bsky\.(app|social)$/],
   ["twitch", /(^|\.)twitch\.tv$/],
   ["flickr", /(^|\.)flickr\.com$/],
+  ["eventosWiki", /(^|\.)eventos\.wiki$/],
   ["eventsUrl", /(^|\.)(meetup\.com|eventbrite\.(com|es)|luma\.com|lu\.ma)$/],
   ["linkAggregator", /(^|\.)(linktr\.ee|beacons\.ai|bio\.link)$/],
   ["mailingList", /(^|\.)(groups\.google\.com|mailchimp\.com|substack\.com)$/],
@@ -651,6 +673,7 @@ export function buildCommunityPayload(draft, existingCommunity = null, options =
     eventFormat: normalizedEventFormat,
     location: normalizedLocation,
     provinceId: cleanString(draft.provinceId),
+    geographicScope: cleanString(draft.geographicScope) || "unknown",
     shortDescription: cleanString(draft.shortDescription),
     topics: cleanString(draft.topics),
     langs: normalizeCommunityLangs(draft.langs),

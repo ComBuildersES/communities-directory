@@ -31,6 +31,7 @@ const CANONICAL_KEY_ORDER = [
   'eventFormat',
   'location',
   'provinceId',
+  'geographicScope',
   'parentId',
   'shortDescription',
   'topics',

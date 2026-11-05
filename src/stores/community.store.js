@@ -106,6 +106,9 @@ const useCommunityStore = create(
             return {
               ...c,
               langs: normalizeCommunityLangs(c.langs),
+              // Las fichas antiguas no traen la clave: sin este default el filtro de
+              // ámbito geográfico no podría ofrecer "Desconocido".
+              geographicScope: c.geographicScope || "unknown",
               thumbnailUrl: normalizedThumbnailUrl,
             };
           });

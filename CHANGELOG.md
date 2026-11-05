@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-11-06 `a7fd84c` añadir URLs de foro/blog/RSS/eventos.wiki/OTE y ámbito geográfico
 - 2026-11-05 `1d4b6c3` archivar canales históricos de una comunidad (#353)
 
 ### Data

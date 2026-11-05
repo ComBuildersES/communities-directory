@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { Switch } from "./Switch";
 import { useSideBarVisible, useSidebarActions } from "../stores/sidebar.store.js";
 import { COMMUNITY_LANGUAGE_OPTIONS } from "../lib/communityLanguages.js";
+import { GEOGRAPHIC_SCOPE_OPTIONS } from "../lib/communitySubmission.js";
 
 export const Sidebar = () => {
   const { t } = useTranslation();
@@ -120,6 +121,18 @@ export const Sidebar = () => {
             <Switch name="status" value="unknown" />
           </div>
         </li>
+      </ul>
+
+      <p className="menu-label">{t("sidebar.geographicScope")}</p>
+      <ul className="menu-list">
+        {GEOGRAPHIC_SCOPE_OPTIONS.map((scope) => (
+          <li key={scope} className="menu-item">
+            <div className="option-item is-size-7">
+              <p>{t(`geographicScope.${scope}`)}</p>
+              <Switch name="geographicScope" value={scope} />
+            </div>
+          </li>
+        ))}
       </ul>
 
       <p className="menu-label">{t("sidebar.langs")}</p>

@@ -35,6 +35,9 @@ tmp
 .claude/
 .playwright-mcp/
 
+# Informe del emparejamiento con eventos.wiki (se regenera con npm run match-eventos-wiki)
+scripts/eventos-wiki-matches.json
+
 # Artefactos generados desde data/communities/ (ver scripts/compile-communities.js)
 public/data/communities.json
 public/data/communities.geojson

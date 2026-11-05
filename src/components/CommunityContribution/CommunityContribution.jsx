@@ -25,6 +25,7 @@ import {
   SHORT_DESCRIPTION_MAX_LENGTH,
   toggleSelection,
   URL_PLATFORM_OPTIONS,
+  GEOGRAPHIC_SCOPE_OPTIONS,
 } from "../../lib/communitySubmission";
 import {
   COMMUNITY_LANGUAGE_OPTIONS,
@@ -36,6 +37,17 @@ import "./CommunityContribution.css";
 
 function getFieldHelp(t) {
   return {
+    geographicScope: {
+      title: t("contribution.fieldHelp.geographicScope.title"),
+      description: t("contribution.fieldHelp.geographicScope.description"),
+      bullets: [
+        t("contribution.fieldHelp.geographicScope.bullet0"),
+        t("contribution.fieldHelp.geographicScope.bullet1"),
+        t("contribution.fieldHelp.geographicScope.bullet2"),
+        t("contribution.fieldHelp.geographicScope.bullet3"),
+        t("contribution.fieldHelp.geographicScope.bullet4"),
+      ],
+    },
     status: {
       title: t("contribution.fieldHelp.status.title"),
       description: t("contribution.fieldHelp.status.description"),
@@ -657,6 +669,11 @@ function UrlFields({
   const [openPlatformHelp, setOpenPlatformHelp] = useState(null);
   const platformHelpContent = {
     web:            { title: t("contribution.urlHelp.web.title"),            description: t("contribution.urlHelp.web.description"),            bullets: [t("contribution.urlHelp.web.bullet0"),            t("contribution.urlHelp.web.bullet1")] },
+    eventosWiki:    { title: t("contribution.urlHelp.eventosWiki.title"),    description: t("contribution.urlHelp.eventosWiki.description"),    bullets: [t("contribution.urlHelp.eventosWiki.bullet0")] },
+    ote:            { title: t("contribution.urlHelp.ote.title"),            description: t("contribution.urlHelp.ote.description"),            bullets: [t("contribution.urlHelp.ote.bullet0")] },
+    blog:           { title: t("contribution.urlHelp.blog.title"),           description: t("contribution.urlHelp.blog.description"),           bullets: [t("contribution.urlHelp.blog.bullet0")] },
+    rss:            { title: t("contribution.urlHelp.rss.title"),            description: t("contribution.urlHelp.rss.description"),            bullets: [t("contribution.urlHelp.rss.bullet0")] },
+    forum:          { title: t("contribution.urlHelp.forum.title"),          description: t("contribution.urlHelp.forum.description"),          bullets: [t("contribution.urlHelp.forum.bullet0")] },
     eventsUrl:      { title: t("contribution.urlHelp.eventsUrl.title"),      description: t("contribution.urlHelp.eventsUrl.description"),      bullets: [t("contribution.urlHelp.eventsUrl.bullet0"),      t("contribution.urlHelp.eventsUrl.bullet1")] },
     linkAggregator: { title: t("contribution.urlHelp.linkAggregator.title"), description: t("contribution.urlHelp.linkAggregator.description"), bullets: [t("contribution.urlHelp.linkAggregator.bullet0"), t("contribution.urlHelp.linkAggregator.bullet1")] },
     mailingList:    { title: t("contribution.urlHelp.mailingList.title"),    description: t("contribution.urlHelp.mailingList.description"),    bullets: [t("contribution.urlHelp.mailingList.bullet0"),    t("contribution.urlHelp.mailingList.bullet1")] },
@@ -778,6 +795,47 @@ function UrlFields({
             </div>
           </div>
         ))}
+      </div>
+
+      <div className="contribution-ote-callout contribution-grid-span-2">
+        <h4>
+          <i className="fas fa-calendar-days" aria-hidden="true"></i>{" "}
+          {t("contribution.urls.ote.title")}
+        </h4>
+        <p>
+          {t("contribution.urls.ote.description")}{" "}
+          <a href="https://opentechevents.org/" target="_blank" rel="noreferrer">
+            {t("contribution.urls.ote.linkSpec")}
+          </a>
+          .
+        </p>
+        <p className="contribution-ote-ways-title">{t("contribution.urls.ote.waysTitle")}</p>
+        <ul className="contribution-ote-ways">
+          <li>
+            {t("contribution.urls.ote.way0")}{" "}
+            <a href="https://eventos.wiki/" target="_blank" rel="noreferrer">
+              {t("contribution.urls.ote.linkEventosWiki")}
+            </a>
+          </li>
+          <li>
+            {t("contribution.urls.ote.way1")}{" "}
+            <a href="https://github.com/OpenTechEvents/ote-tools/tree/main/skills" target="_blank" rel="noreferrer">
+              {t("contribution.urls.ote.linkSkills")}
+            </a>
+          </li>
+          <li>
+            {t("contribution.urls.ote.way2")}{" "}
+            <a href="https://tools.opentechevents.org/editor/" target="_blank" rel="noreferrer">
+              {t("contribution.urls.ote.linkEditor")}
+            </a>
+          </li>
+          <li>
+            {t("contribution.urls.ote.way3")}{" "}
+            <a href="https://github.com/OpenTechEvents/ote-template" target="_blank" rel="noreferrer">
+              {t("contribution.urls.ote.linkTemplate")}
+            </a>
+          </li>
+        </ul>
       </div>
 
       {archivedUrls.length > 0 && (
@@ -923,6 +981,7 @@ function buildEditableDraftSignature(draft) {
     communityType: draft.communityType,
     eventFormat: draft.eventFormat,
     location: draft.location,
+    geographicScope: draft.geographicScope,
     shortDescription: draft.shortDescription,
     topics: draft.topics,
     langs: draft.langs,
@@ -1858,6 +1917,31 @@ export function CommunityContribution({
                 >
                   {EVENT_FORMAT_OPTIONS.map((option) => (
                     <option key={option} value={option}>{t(`eventFormat.${option}`)}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div className="field">
+            <label className="label contribution-label-with-help" htmlFor="community-geographic-scope">
+              <span>{t("contribution.form.geographicScopeLabel")}</span>
+              <FieldHelp
+                content={FIELD_HELP.geographicScope}
+                isOpen={openHelpField === "geographicScope"}
+                onToggle={() => setOpenHelpField((current) => current === "geographicScope" ? null : "geographicScope")}
+                onClose={() => setOpenHelpField(null)}
+              />
+            </label>
+            <div className="control">
+              <div className="select is-fullwidth">
+                <select
+                  id="community-geographic-scope"
+                  value={draft.geographicScope ?? "unknown"}
+                  onChange={(event) => handleFieldChange("geographicScope", event.target.value)}
+                >
+                  {GEOGRAPHIC_SCOPE_OPTIONS.map((option) => (
+                    <option key={option} value={option}>{t(`geographicScope.${option}`)}</option>
                   ))}
                 </select>
               </div>

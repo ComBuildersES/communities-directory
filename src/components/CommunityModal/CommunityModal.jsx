@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { useCommunityActions, useAllCommunities, useChildrenByParentId } from "../../stores/community.store.js";
 import { buildContributionPath } from "../../lib/communitySubmission";
 import { normalizeCommunityLangs } from "../../lib/communityLanguages.js";
+import { OteEvents } from "./OteEvents.jsx";
 import "./CommunityModal.css";
 
 const APP_URL = "https://directory.communitybuilders.dev/";
@@ -107,6 +108,11 @@ function buildShareLinks(community, t) {
 const URL_CONFIG_KEYS = [
   { key: "web",            labelKey: "communityModal.url.web",            icon: "fas fa-globe" },
   { key: "eventsUrl",      labelKey: "communityModal.url.events",         icon: "fas fa-calendar-days" },
+  { key: "eventosWiki",    labelKey: "communityModal.url.eventosWiki",     icon: "fas fa-calendar-check" },
+  { key: "ote",            labelKey: "communityModal.url.ote",             icon: "fas fa-calendar-plus" },
+  { key: "blog",           labelKey: "communityModal.url.blog",            icon: "fas fa-pen-nib" },
+  { key: "rss",            labelKey: "communityModal.url.rss",             icon: "fas fa-rss" },
+  { key: "forum",          labelKey: "communityModal.url.forum",           icon: "fas fa-comments" },
   { key: "linkAggregator", labelKey: "communityModal.url.linkAggregator", icon: "fas fa-link" },
   { key: "mailingList",    labelKey: "communityModal.url.mailingList",     icon: "fas fa-envelope" },
   { key: "github",         labelKey: "communityModal.url.github",          icon: "fab fa-github" },
@@ -127,7 +133,9 @@ const URL_CONFIG_KEYS = [
 ];
 
 const URL_GROUP_DEFS = [
-  { key: "comunidad", labelKey: "communityModal.urlGroup.community", icon: "fas fa-globe",       keys: ["web", "eventsUrl", "linkAggregator", "mailingList", "github"] },
+  { key: "comunidad", labelKey: "communityModal.urlGroup.community", icon: "fas fa-globe",       keys: ["web", "linkAggregator", "github"] },
+  { key: "eventos",   labelKey: "communityModal.urlGroup.events",    icon: "fas fa-calendar-days", keys: ["eventsUrl", "eventosWiki", "ote"] },
+  { key: "contenido", labelKey: "communityModal.urlGroup.content",   icon: "fas fa-newspaper",   keys: ["blog", "rss", "forum", "mailingList"] },
   { key: "chat",      labelKey: "communityModal.urlGroup.chat",      icon: "fas fa-comments",    keys: ["discord", "telegram", "whatsapp", "slack"] },
   { key: "social",    labelKey: "communityModal.urlGroup.social",    icon: "fas fa-share-nodes", keys: ["youtube", "linkedin", "twitter", "tiktok", "instagram", "facebook", "mastodon", "bluesky", "twitch", "flickr"] },
 ];
@@ -204,6 +212,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
     status,
     communityType,
     eventFormat,
+    geographicScope,
     location: rawLocation = "",
     shortDescription,
     langs,
@@ -290,6 +299,16 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                   title={t("communityModal.filterByFormat", { eventFormat: t(`eventFormat.${eventFormat}`) })}
                 >
                   {t(`eventFormat.${eventFormat}`)}
+                </button>
+              )}
+              {geographicScope && geographicScope !== "unknown" && (
+                <button
+                  type="button"
+                  className="modal-badge modal-badge--scope"
+                  onClick={() => applyFilter("geographicScope", geographicScope)}
+                  title={t("communityModal.filterByScope", { scope: t(`geographicScope.${geographicScope}`) })}
+                >
+                  <i className="fas fa-compass"></i> {t(`geographicScope.${geographicScope}`)}
                 </button>
               )}
               {languages.map((code) => (
@@ -381,6 +400,9 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
               </button>
             </div>
           )}
+
+          {/* Próximos eventos leídos del feed OTE de la comunidad */}
+          {urls.ote && <OteEvents feedUrl={urls.ote} fallbackUrl={urls.eventosWiki ?? null} />}
 
           {/* URLs agrupadas */}
           {(urlEntries.length > 0 || showFallbackUrl) && (

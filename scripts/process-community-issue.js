@@ -286,6 +286,7 @@ export function normalizePayload(payload) {
     communityType: normalizeString(payload.communityType) || 'tech-meetup',
     eventFormat: normalizeString(payload.eventFormat) || 'unknown',
     location: normalizeString(payload.location),
+    geographicScope: normalizeString(payload.geographicScope) || 'unknown',
     shortDescription: normalizeString(payload.shortDescription),
     topics: normalizeString(payload.topics),
     langs: normalizeCommunityLangs(payload.langs),

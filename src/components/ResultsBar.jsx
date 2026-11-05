@@ -18,6 +18,7 @@ import { COMMUNITY_LANGUAGE_OPTIONS } from "../lib/communityLanguages.js";
 const FILTER_LABEL_KEYS = {
   status: "resultsBar.filterLabel.status",
   eventFormat: "resultsBar.filterLabel.eventFormat",
+  geographicScope: "resultsBar.filterLabel.geographicScope",
   communityType: "resultsBar.filterLabel.communityType",
   langs: "resultsBar.filterLabel.langs",
   tags: "resultsBar.filterLabel.tags",
@@ -73,7 +74,7 @@ export function ResultsBar({ view, toggleView }) {
             ? (tagsMap[value] || value)
             : key === "targetAudience"
               ? (audienceMap[value] || value)
-              : key === "status" || key === "eventFormat" || key === "communityType"
+              : key === "status" || key === "eventFormat" || key === "communityType" || key === "geographicScope"
                 ? t(`${key}.${value}`, { defaultValue: value })
                 : key === "parentId"
                   ? (parentIdNameMap[value] || value)
