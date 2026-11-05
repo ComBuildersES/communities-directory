@@ -35,6 +35,8 @@ src/
     ViewToggleButton   # Alternancia lista/mapa
     Map/               # Vista de mapa ArcGIS con clustering
     AddCommunityCTA/   # CTA para añadir comunidad vía GitHub issue
+    CommunityModal/    # Ficha de comunidad; OteEvents.jsx + oteEvents.js leen el feed OTE
+    CommunityContribution/ # Formulario de alta/edición/baja
   stores/
     community.store.js # Estado central: datos, filtros, búsqueda
     sidebar.store.js   # Visibilidad del sidebar (responsive)
@@ -93,22 +95,21 @@ scripts/               # Utilidades de mantenimiento de datos
   contactInfo: string,          // email
   communityUrl: string,         // URL principal (web propia si existe, si no la más relevante)
   urls: {                       // URLs adicionales por plataforma (solo claves con valor)
+    // La lista canónica es URL_PLATFORM_OPTIONS en src/lib/communitySubmission.js
     web?: string,
-    meetup?: string,
-    linkedin?: string,
-    twitter?: string,
-    instagram?: string,
-    youtube?: string,
-    discord?: string,
-    telegram?: string,
-    github?: string,
-    mastodon?: string,
-    bluesky?: string,
+    eventsUrl?: string,     // plataforma de eventos (Meetup, Eventbrite, Luma…)
     eventosWiki?: string,   // página de la comunidad en eventos.wiki
     ote?: string,           // feed de eventos en formato Open Tech Events
     blog?: string,
     rss?: string,
     forum?: string,
+    linkAggregator?: string,
+    mailingList?: string,
+    github?: string,
+    discord?: string, telegram?: string, whatsapp?: string, slack?: string,
+    youtube?: string, linkedin?: string, twitter?: string, tiktok?: string,
+    instagram?: string, facebook?: string, mastodon?: string, bluesky?: string,
+    twitch?: string, flickr?: string,
   },
   archivedUrls?: string[],      // canales históricos que ya nadie atiende: se conservan pero NO se muestran
   thumbnailUrl: string,
@@ -416,6 +417,10 @@ Añadir una plataforma nueva exige tocar **cuatro** sitios, o se cae por el cami
    el enlace nunca se renderiza)
 4. `communityModal.url.<clave>` en `src/i18n/locales/es.json` y `en.json`
 
+Opcional, pero es lo que distingue un campo usable de uno críptico: `platformHelpContent` en
+`CommunityContribution.jsx` + `contribution.urlHelp.<clave>` en ambos locales, para que el
+campo tenga icono de ayuda con un ejemplo de URL.
+
 ### Slugs
 
 `slugifyCommunityName` existe en `scripts/lib/communities-store.js` y en
@@ -443,6 +448,17 @@ slug dependen de esa equivalencia. Hay un test que lo verifica
 - Build genera `dist/` con HTML/CSS/JS
 - Base path dinámico según variable `VITE_BASE`
 - Entry: `index.html` → monta en `<div id="search_app">`
+
+### `[skip ci]` salta el push entero, no solo su commit
+
+GitHub mira **únicamente el commit de cabeza** del push. El hook de pre-commit regenera
+`CHANGELOG.md`, y si ese cambio acaba en un commit propio con `[skip ci]` encima de tu
+trabajo, el push no dispara `deploy.yml` y **nada de lo que va debajo se publica**, aunque
+esos commits no lleven la marca.
+
+- Al pushear a `master` a mano, deja el commit del changelog en medio, o comprueba que haya
+  salido un run: `gh run list --workflow deploy.yml --limit 1`.
+- Si no salió, se lanza a mano: `gh workflow run deploy.yml --ref master`.
 
 ## PWA — Detección de actualizaciones
 

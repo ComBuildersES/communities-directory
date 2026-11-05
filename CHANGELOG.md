@@ -20,7 +20,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
-- 2026-11-06 `ddaa897` update changelog [skip ci]
+- 2026-11-06 `f8f69b0` corregir claves de urls y documentar la trampa de [skip ci] al desplegar
+- 2026-11-06 `d567b40` update changelog [skip ci]
 - 2026-11-05 `d63aab6` update changelog [skip ci]
 - 2026-11-05 `bfaedfa` update changelog [skip ci]
 - 2026-11-05 `d17ed7d` update changelog [skip ci]
