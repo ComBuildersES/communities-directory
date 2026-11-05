@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-05 `81c208f` archivar canales históricos de una comunidad (#353)
+- 2026-11-05 `1d4b6c3` archivar canales históricos de una comunidad (#353)
 
 ### Data
 
