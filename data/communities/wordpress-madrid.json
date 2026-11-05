@@ -1,0 +1,35 @@
+{
+  "id": 614,
+  "name": "WordPress Madrid",
+  "status": "active",
+  "lastReviewed": "30/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "parentId": 512,
+  "shortDescription": "Punto de encuentro en Madrid para usuarias, usuarios, disenadores, desarrolladores y empresas alrededor de WordPress.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-es/wordpress-madrid/",
+  "urls": {
+    "telegram": "https://t.me/madridwordpress",
+    "linkAggregator": "https://linktr.ee/madridwordpress",
+    "instagram": "https://www.instagram.com/wpmadridoficial/",
+    "twitter": "https://x.com/madridwordpress",
+    "eventsUrl": "https://www.meetup.com/es-es/wordpress-madrid/"
+  },
+  "thumbnailUrl": "images/wordpress-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,29 @@
+{
+  "id": 22,
+  "name": "Alhambra Hub",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Granada",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "hola@alhambrahub.es",
+  "communityUrl": "https://alhambrahub.es/",
+  "urls": {
+    "twitter": "https://twitter.com/AlhambraHub",
+    "linkedin": "https://www.linkedin.com/company/alhambra-hub",
+    "discord": "https://discord.gg/5g5FN9jxA7"
+  },
+  "thumbnailUrl": "images/alhambra-hub.webp",
+  "latLon": {
+    "lat": 37.1831938,
+    "lon": -3.604747
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

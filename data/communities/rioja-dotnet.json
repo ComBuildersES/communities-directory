@@ -1,0 +1,30 @@
+{
+  "id": 413,
+  "name": "Rioja{dotnet}",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "La Rioja",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "csharp"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/riojadotnet/",
+  "urls": {
+    "twitter": "http://twitter.com/RiojaDotNet/",
+    "eventsUrl": "https://www.meetup.com/riojadotnet/"
+  },
+  "thumbnailUrl": "images/riojadotnet.webp",
+  "latLon": {
+    "lat": 42.46569,
+    "lon": -2.44998
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

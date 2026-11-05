@@ -1,0 +1,27 @@
+{
+  "id": 338,
+  "name": "Málaga Indie Hackers",
+  "status": "active",
+  "lastReviewed": "25/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/malaga-indie-hackers/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/malaga-indie-hackers/"
+  },
+  "thumbnailUrl": "images/malaga-indie-hackers.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

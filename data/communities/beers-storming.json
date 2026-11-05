@@ -1,0 +1,28 @@
+{
+  "id": 560,
+  "name": "Beers Storming",
+  "status": "active",
+  "lastReviewed": "16/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://beersstorming.com/",
+  "urls": {
+    "web": "https://beersstorming.com/",
+    "linkedin": "https://www.linkedin.com/company/beersstorming/"
+  },
+  "thumbnailUrl": "images/beers-storming.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,27 @@
+{
+  "id": 72,
+  "name": "Comunidades técnicas en Málaga",
+  "status": "active",
+  "lastReviewed": "29/11/2024",
+  "communityType": "meta-community",
+  "eventFormat": "unknown",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://malagatechcomms.github.io/",
+  "urls": {
+    "twitter": "https://twitter.com/Beelzenef_"
+  },
+  "thumbnailUrl": "images/calendario-de-comunidades-tecnicas-de-malaga.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

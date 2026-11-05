@@ -1,0 +1,24 @@
+{
+  "id": 481,
+  "name": "Women Techmakers Zaragoza - Mulleres Tech",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Zaragoza",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://wtmz23.mullerestech.es/",
+  "urls": {},
+  "latLon": {
+    "lat": 41.656837,
+    "lon": -0.8794245
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

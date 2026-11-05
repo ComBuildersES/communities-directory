@@ -1,0 +1,29 @@
+{
+  "id": 237,
+  "name": "Guarandinga Tech",
+  "status": "active",
+  "lastReviewed": "18/12/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Tenerife",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/guarandinga-tech/",
+  "urls": {
+    "twitter": "https://twitter.com/guarandingatech",
+    "youtube": "https://www.youtube.com/@GuarandingaTECH",
+    "eventsUrl": "https://www.meetup.com/guarandinga-tech/"
+  },
+  "thumbnailUrl": "images/guarandinga-tech.webp",
+  "latLon": {
+    "lat": 28.26061255652491,
+    "lon": -16.592734601719567
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

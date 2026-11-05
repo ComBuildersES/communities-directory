@@ -1,0 +1,33 @@
+{
+  "id": 81,
+  "name": "Cloud Native (CNCF) Bilbao",
+  "status": "unknown",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Bilbao",
+  "parentId": 79,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://community.cncf.io/cloud-native-bilbao/",
+  "urls": {
+    "twitter": "https://twitter.com/cloudnativefdn",
+    "instagram": "https://www.instagram.com/humans.of.cloudnative/",
+    "linkedin": "https://www.linkedin.com/company/cloud-native-computing-foundation/",
+    "youtube": "https://www.youtube.com/c/cloudnativefdn",
+    "github": "https://github.com/cncf",
+    "eventsUrl": "https://community.cncf.io/cloud-native-bilbao/"
+  },
+  "thumbnailUrl": "images/cloud-native-cncf-bilbao.webp",
+  "latLon": {
+    "lat": 43.2569608,
+    "lon": -2.9234602
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,28 @@
+{
+  "id": 216,
+  "name": "Global Day of Code Retreat",
+  "status": "unknown",
+  "lastReviewed": "31/05/2024",
+  "communityType": "conference",
+  "eventFormat": "unknown",
+  "location": "Sin completar",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.coderetreat.org/",
+  "urls": {
+    "twitter": "https://twitter.com/racingDeveloper/status/665529557961830400",
+    "mastodon": "https://hachyderm.io/@coderetreat",
+    "github": "https://github.com/coderetreat"
+  },
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

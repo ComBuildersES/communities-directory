@@ -1,0 +1,32 @@
+{
+  "id": 489,
+  "name": "WordPress Alicante",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Alicante",
+  "parentId": 512,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/wordpress-alicante/",
+  "urls": {
+    "youtube": "https://www.youtube.com/channel/UCs6lm9A0PcJTsYw8bJwYkHg",
+    "twitter": "http://twitter.com/wpalicante_es/",
+    "eventsUrl": "https://www.meetup.com/wordpress-alicante/"
+  },
+  "thumbnailUrl": "images/wordpress-alicante.webp",
+  "latLon": {
+    "lat": 38.34521,
+    "lon": -0.4809945
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

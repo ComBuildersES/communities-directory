@@ -1,0 +1,35 @@
+{
+  "id": 378,
+  "name": "OWASP",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "umbrella-org",
+  "eventFormat": "unknown",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "web-security",
+    "cybersecurity"
+  ],
+  "targetAudience": [],
+  "contactInfo": "admin@owasp.org",
+  "communityUrl": "https://owasp.org/chapters/",
+  "urls": {
+    "youtube": "https://www.youtube.com/user/OWASPGLOBAL/videos",
+    "github": "https://github.com/OWASP/",
+    "mastodon": "https://infosec.exchange/@owasp",
+    "twitter": "https://twitter.com/owasp",
+    "linkedin": "https://www.linkedin.com/company/owasp/",
+    "eventsUrl": "https://meetup.com/pro/owasp"
+  },
+  "thumbnailUrl": "images/owasp.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

@@ -1,0 +1,29 @@
+{
+  "id": 491,
+  "name": "WordPress Benidorm",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Benidorm",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/wordpress-benidorm/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/wordpress-benidorm/"
+  },
+  "thumbnailUrl": "images/wordpress-benidorm.webp",
+  "latLon": {
+    "lat": 38.5369002,
+    "lon": -0.1291231
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

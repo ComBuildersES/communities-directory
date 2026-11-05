@@ -1,0 +1,25 @@
+{
+  "id": 248,
+  "name": "I Conferencia Women Techmakers La Rioja",
+  "status": "inactive",
+  "lastReviewed": "27/11/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Logroño",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://womentechmaker.appspot.com/",
+  "urls": {},
+  "thumbnailUrl": "images/i-conferencia-women-techmakers-la-rioja.webp",
+  "latLon": {
+    "lat": 42.46569,
+    "lon": -2.44998
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

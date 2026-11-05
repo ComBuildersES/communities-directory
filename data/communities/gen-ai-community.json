@@ -1,0 +1,44 @@
+{
+  "id": 361,
+  "name": "Gen AI Community",
+  "status": "active",
+  "lastReviewed": "26/03/2026",
+  "communityType": "mutual-aid",
+  "eventFormat": "online",
+  "location": "",
+  "shortDescription": "Gen AI Community es un espacio hands-on para profesionales que trabajan con IA y que no solo quieren debatir, sino también probar, compartir y aplicar. Para quienes tienen más preguntas que respuestas y quieren pensar en colectivo y construir el futuro de la humanidad.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "tech-ethics",
+    "innovation",
+    "tech4good",
+    "women-in-tech",
+    "generative-ai"
+  ],
+  "targetAudience": [
+    "tech-lead",
+    "ml-engineer",
+    "data-analyst",
+    "data-engineer",
+    "cloud-engineer",
+    "data-scientist"
+  ],
+  "contactInfo": "community@genaisummit.eu",
+  "communityUrl": "https://chat.whatsapp.com/BdHQI2a11lRFGsa8BjkOX3",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/groups/9079599/",
+    "eventsUrl": "https://genaisummit.eu/",
+    "whatsapp": "https://chat.whatsapp.com/BdHQI2a11lRFGsa8BjkOX3"
+  },
+  "thumbnailUrl": "images/gen-ai-community.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": true,
+  "removalReason": ""
+}

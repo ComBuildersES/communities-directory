@@ -1,0 +1,28 @@
+{
+  "id": 482,
+  "name": "WonderHack Event",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid (Tielmes)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.wonderhack.es/",
+  "urls": {
+    "twitter": "https://x.com/wonderhackes",
+    "web": "http://web.archive.org/web/20220818234122/https://www.wonderhack.es/"
+  },
+  "thumbnailUrl": "images/wonderhack-event.webp",
+  "latLon": {
+    "lat": 40.2445707,
+    "lon": -3.3144655
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

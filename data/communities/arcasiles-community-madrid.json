@@ -1,0 +1,36 @@
+{
+  "id": 31,
+  "name": "Arcasiles Community Madrid",
+  "status": "active",
+  "lastReviewed": "31/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Madrid",
+  "parentId": null,
+  "shortDescription": "Arcasiles es una comunidad tecnológica nacida en la Vega Baja y con presencia consolidada en Madrid. Desde 2025 llevamos creando eventos con valor y personalidad propios: no solo interactividad, sino experiencias que los asistentes recuerdan y repiten.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "matchesAllTags": true,
+  "matchesAllAudience": true,
+  "contactInfo": "info@arcasiles.com",
+  "communityUrl": "https://arcasiles.com/",
+  "urls": {
+    "instagram": "https://www.instagram.com/arcasilesgroup/",
+    "linkedin": "https://www.linkedin.com/company/arcasilesgroup/",
+    "web": "https://arcasiles.com/",
+    "eventsUrl": "https://luma.com/arcasilesgroup",
+    "github": "https://github.com/arcasilesgroup"
+  },
+  "thumbnailUrl": "images/arcasiles-community-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

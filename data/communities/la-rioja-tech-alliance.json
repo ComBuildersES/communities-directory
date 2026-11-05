@@ -1,0 +1,24 @@
+{
+  "id": 311,
+  "name": "La Rioja Tech Alliance ",
+  "status": "inactive",
+  "lastReviewed": "27/11/2024",
+  "communityType": "meta-community",
+  "eventFormat": "online",
+  "location": "La Rioja",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://web.archive.org/web/20230309185755/http://www.lariojatech.org/",
+  "urls": {},
+  "latLon": {
+    "lat": 42.46569,
+    "lon": -2.44998
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

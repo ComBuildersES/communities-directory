@@ -1,8 +1,10 @@
 import fs from "node:fs";
-import { execFileSync } from "node:child_process";
 import path from "node:path";
 
-const COMMUNITIES_PATH = "public/data/communities.json";
+// Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
+import { readCommunities, stableStringify } from "./lib/communities-store.js";
+import { readCommunitiesAtRef } from "./lib/communities-git.js";
+
 const DEFAULT_CONCURRENCY = 6;
 const DEFAULT_TIMEOUT_MS = 15000;
 
@@ -111,21 +113,8 @@ Opciones:
 `);
 }
 
-function readJson(filePath) {
-  return JSON.parse(fs.readFileSync(filePath, "utf-8"));
-}
-
 function readBaselineCommunities(ref) {
-  try {
-    const raw = execFileSync("git", ["show", `${ref}:${COMMUNITIES_PATH}`], {
-      encoding: "utf-8",
-      stdio: ["ignore", "pipe", "pipe"],
-    });
-
-    return JSON.parse(raw);
-  } catch {
-    return null;
-  }
+  return readCommunitiesAtRef(ref);
 }
 
 function isPlainObject(value) {
@@ -214,7 +203,7 @@ function getChangedCommunities(currentCommunities, baselineCommunities) {
 
   for (const community of baselineCommunities) {
     if (isPlainObject(community) && Number.isInteger(community.id)) {
-      baselineById.set(community.id, JSON.stringify(community));
+      baselineById.set(community.id, stableStringify(community));
     }
   }
 
@@ -223,7 +212,7 @@ function getChangedCommunities(currentCommunities, baselineCommunities) {
       return true;
     }
 
-    return baselineById.get(community.id) !== JSON.stringify(community);
+    return baselineById.get(community.id) !== stableStringify(community);
   });
 }
 
@@ -419,7 +408,7 @@ async function runPool(entries, concurrency, worker, onResult) {
 
 async function main() {
   const options = parseArgs(process.argv.slice(2));
-  const communities = readJson(COMMUNITIES_PATH);
+  const communities = readCommunities();
   const baselineCommunities = options.changedOnly ? readBaselineCommunities(options.baselineRef) : null;
   const communitiesToCheck = options.changedOnly
     ? getChangedCommunities(communities, baselineCommunities)

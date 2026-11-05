@@ -1,0 +1,31 @@
+{
+  "id": 397,
+  "name": "PyCamp España",
+  "status": "active",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Itinerante",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "python"
+  ],
+  "targetAudience": [],
+  "contactInfo": "pycampes@gmail.com",
+  "communityUrl": "https://pycamp.es/",
+  "urls": {
+    "telegram": "https://t.me/pycampes",
+    "twitter": "https://twitter.com/PyCampES",
+    "github": "https://github.com/PyCampES"
+  },
+  "thumbnailUrl": "images/pycamp-espana.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

@@ -1,0 +1,25 @@
+{
+  "id": 4,
+  "name": "🥃LicorcaConf",
+  "status": "inactive",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Coruña (Santiago de Compostela)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.youtube.com/playlist?list=PLKxa4AIfm4pUPtkq6rMt7hZkVR6doOLD1",
+  "urls": {},
+  "thumbnailUrl": "images/licorcaconf.webp",
+  "latLon": {
+    "lat": 42.8806228,
+    "lon": -8.5466071
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

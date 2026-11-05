@@ -1,0 +1,24 @@
+{
+  "id": 289,
+  "name": "Iniciador Santiago de Compostela",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Coruña (Santiago de Compostela)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.iniciador.com/es/santiagodecompostela/eventos-santiago-de-compostela",
+  "urls": {},
+  "latLon": {
+    "lat": 42.8806228,
+    "lon": -8.5466071
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,32 @@
+{
+  "id": 141,
+  "name": "Docker Madrid",
+  "status": "inactive",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "parentId": 142,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "docker"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/docker-madrid/",
+  "urls": {
+    "twitter": "http://twitter.com/dockermadrid/",
+    "linkedin": "http://www.linkedin.com/company/dotcloud",
+    "eventsUrl": "https://www.meetup.com/es-ES/docker-madrid/"
+  },
+  "thumbnailUrl": "images/docker-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

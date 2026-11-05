@@ -4,7 +4,7 @@ on:
   pull_request:
     types: [closed]
     paths:
-      - 'public/data/communities.json'
+      - 'data/communities/**'
 
 jobs:
   social-share-reminder:
@@ -40,11 +40,11 @@ jobs:
             });
 
             const communitiesFileChanged = changedFiles.some(
-              file => file.filename === 'public/data/communities.json'
+              file => file.filename.startsWith('data/communities/') && file.filename.endsWith('.json')
             );
 
             if (!communitiesFileChanged) {
-              core.info('La PR no modificó public/data/communities.json; no se publica recordatorio.');
+              core.info('La PR no modificó ficheros de data/communities/; no se publica recordatorio.');
               return;
             }
 
@@ -60,15 +60,16 @@ jobs:
               return;
             }
 
-            let baseCommunities = [];
-            let currentCommunities = [];
-            try {
-              const baseJson = execSync(`git show ${baseSha}:public/data/communities.json`).toString();
-              const currentJson = execSync(`git show ${currentSha}:public/data/communities.json`).toString();
-              baseCommunities = JSON.parse(baseJson);
-              currentCommunities = JSON.parse(currentJson);
-            } catch (e) {
-              core.setFailed(`No se pudo comparar communities.json entre ${baseSha} y ${currentSha}: ${e.message}`);
+            // La fuente de verdad es data/communities/; el helper reconstruye el listado en
+            // cada ref (y cae al bundle para refs anteriores a la migración).
+            const { readCommunitiesAtRef } = await import(`${process.env.GITHUB_WORKSPACE}/scripts/lib/communities-git.js`);
+            const { stableStringify } = await import(`${process.env.GITHUB_WORKSPACE}/scripts/lib/communities-store.js`);
+
+            const baseCommunities = readCommunitiesAtRef(baseSha);
+            const currentCommunities = readCommunitiesAtRef(currentSha);
+
+            if (!Array.isArray(baseCommunities) || !Array.isArray(currentCommunities)) {
+              core.setFailed(`No se pudieron comparar las comunidades entre ${baseSha} y ${currentSha}.`);
               return;
             }
 
@@ -77,7 +78,7 @@ jobs:
             const changedCommunities = currentCommunities.filter(c => {
               const base = baseMap.get(c.id);
               if (!base) return true;
-              return JSON.stringify(c) !== JSON.stringify(base);
+              return stableStringify(c) !== stableStringify(base);
             });
 
             if (changedCommunities.length === 0) {

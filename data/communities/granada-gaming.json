@@ -1,0 +1,29 @@
+{
+  "id": 222,
+  "name": "Granada Gaming",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Granada",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "organizacion@xover.es",
+  "communityUrl": "https://www.granadagaming.com/",
+  "urls": {
+    "instagram": "https://www.instagram.com/kaleidooodles/",
+    "twitter": "https://twitter.com/ficzone",
+    "youtube": "https://www.youtube.com/channel/UCT2nDcjDucF3kyQr_DQkuvg"
+  },
+  "thumbnailUrl": "images/granada-gaming.webp",
+  "latLon": {
+    "lat": 37.1831938,
+    "lon": -3.604747
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

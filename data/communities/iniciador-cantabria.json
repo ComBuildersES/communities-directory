@@ -1,0 +1,24 @@
+{
+  "id": 266,
+  "name": "Iniciador Cantabria",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Cantabria",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://iniciador.com/Cantabria",
+  "urls": {},
+  "latLon": {
+    "lat": 43.197540444542,
+    "lon": -4.029910146256
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

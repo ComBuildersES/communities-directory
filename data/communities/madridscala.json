@@ -1,0 +1,30 @@
+{
+  "id": 334,
+  "name": "MadridScala",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "scala"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/Scala-Programming-Madrid/",
+  "urls": {
+    "twitter": "http://twitter.com/MadridScala/",
+    "eventsUrl": "https://www.meetup.com/es-ES/Scala-Programming-Madrid/"
+  },
+  "thumbnailUrl": "images/madridscala.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

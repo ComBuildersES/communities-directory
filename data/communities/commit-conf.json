@@ -1,0 +1,37 @@
+{
+  "id": 100,
+  "name": "Commit Conf",
+  "status": "active",
+  "lastReviewed": "07/04/2026",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "parentId": null,
+  "shortDescription": "Conferencia tecnológica española centrada en desarrollo de software, Cloud, Inteligencia Artificial y cultura técnica. Se celebra anualmente en Madrid, siendo un punto de encuentro clave para profesionales del sector IT.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "matchesAllTags": true,
+  "matchesAllAudience": true,
+  "contactInfo": "info@commit-conf.com",
+  "communityUrl": "https://commit-conf.com/",
+  "urls": {
+    "youtube": "https://youtu.be/MaHQ2y1dryE",
+    "bluesky": "https://bsky.app/profile/commit-conf.com",
+    "twitter": "https://x.com/commitconf",
+    "web": "https://commit-conf.com/",
+    "linkedin": "https://www.linkedin.com/company/commit-conf/",
+    "flickr": "https://www.flickr.com/photos/145448896@N02/albums/"
+  },
+  "thumbnailUrl": "images/commitconf.webp",
+  "latLon": {
+    "lat": 40.4052141,
+    "lon": -3.8769548
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

@@ -1,0 +1,27 @@
+{
+  "id": 65,
+  "name": "Blockchain4All",
+  "status": "unknown",
+  "lastReviewed": "25/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/blockchain4all/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/blockchain4all/"
+  },
+  "thumbnailUrl": "images/blockchain4all.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

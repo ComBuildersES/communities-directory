@@ -1,0 +1,30 @@
+{
+  "id": 241,
+  "name": "HackBarna",
+  "status": "active",
+  "lastReviewed": "15/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "machine-learning"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://hackbarna.com",
+  "urls": {
+    "youtube": "https://www.youtube.com/@rivela_",
+    "eventsUrl": "https://www.meetup.com/es-ES/ai-engineers-barcelona/"
+  },
+  "thumbnailUrl": "images/hackbarna.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

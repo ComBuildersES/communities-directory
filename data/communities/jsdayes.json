@@ -1,0 +1,25 @@
+{
+  "id": 307,
+  "name": "JSDayES",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://2020.jsday.es/",
+  "urls": {},
+  "thumbnailUrl": "images/jsdayes.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

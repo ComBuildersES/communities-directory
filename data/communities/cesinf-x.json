@@ -1,0 +1,29 @@
+{
+  "id": 76,
+  "name": "CESINF X",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Tenerife",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.cesinfull.com/",
+  "urls": {
+    "instagram": "https://instagram.com/cesinfull",
+    "twitter": "https://x.com/CESINFULL",
+    "github": "https://github.com/CESINFULL2425"
+  },
+  "thumbnailUrl": "images/cesinf-x.webp",
+  "latLon": {
+    "lat": 28.2631,
+    "lon": -16.60942
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

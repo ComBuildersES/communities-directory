@@ -1,0 +1,27 @@
+{
+  "id": 389,
+  "name": "PHPVigo",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Vigo, Galicia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://x.com/phpvigo",
+  "urls": {
+    "twitter": "https://x.com/phpvigo",
+    "youtube": "https://www.youtube.com/c/phpvigo"
+  },
+  "latLon": {
+    "lat": 42.2313601,
+    "lon": -8.7124252
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,33 @@
+{
+  "id": 559,
+  "name": "Merge Madrid",
+  "status": "active",
+  "lastReviewed": "16/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "Web3",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "web3"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.mmerge.io/",
+  "urls": {
+    "youtube": "https://www.youtube.com/channel/UC6O09aH9r4K8tw81zHx6Cgw/featured",
+    "instagram": "https://www.instagram.com/hispanichouse/",
+    "linkedin": "http://linkedin.com/company/merge-madrid",
+    "telegram": "https://t.me/mergemadrid",
+    "twitter": "https://x.com/mmerge_io"
+  },
+  "thumbnailUrl": "images/merge-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

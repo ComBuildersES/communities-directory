@@ -1,0 +1,31 @@
+{
+  "id": 321,
+  "name": "Madrid |> Elixir",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "elixir"
+  ],
+  "targetAudience": [],
+  "contactInfo": "hec@hecperez.com",
+  "communityUrl": "https://www.meetup.com/es-ES/madrid-elixir/",
+  "urls": {
+    "twitter": "https://twitter.com/MadElixir",
+    "youtube": "https://www.youtube.com/@ElixirMadrid",
+    "eventsUrl": "https://www.meetup.com/es-ES/madrid-elixir/"
+  },
+  "thumbnailUrl": "images/madrid-elixir.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

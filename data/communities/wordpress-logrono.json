@@ -1,0 +1,30 @@
+{
+  "id": 506,
+  "name": "WordPress Logroño",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Logroño",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/wordpress-logrono/",
+  "urls": {
+    "instagram": "http://instagram.com/wordcamplogrono/",
+    "eventsUrl": "https://www.meetup.com/wordpress-logrono/"
+  },
+  "thumbnailUrl": "images/wordpress-logrono.webp",
+  "latLon": {
+    "lat": 42.46569,
+    "lon": -2.44998
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

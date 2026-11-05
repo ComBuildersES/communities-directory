@@ -1,0 +1,30 @@
+{
+  "id": 183,
+  "name": "Flutter Madrid",
+  "status": "active",
+  "lastReviewed": "25/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "flutter"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/flutter-madrid/",
+  "urls": {
+    "twitter": "http://twitter.com/FlutterMadrid/",
+    "eventsUrl": "https://www.meetup.com/flutter-madrid/"
+  },
+  "thumbnailUrl": "images/flutter-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

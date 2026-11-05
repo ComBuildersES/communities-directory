@@ -1,0 +1,28 @@
+{
+  "id": 227,
+  "name": "GranadaJUG",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Granada",
+  "parentId": 302,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/granadajug/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/granadajug/"
+  },
+  "thumbnailUrl": "images/granadajug.webp",
+  "latLon": {
+    "lat": 37.1831938,
+    "lon": -3.604747
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

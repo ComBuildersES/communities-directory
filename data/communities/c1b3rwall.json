@@ -1,0 +1,30 @@
+{
+  "id": 69,
+  "name": "C1b3rWall",
+  "status": "active",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Ávila",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://c1b3rwall.policia.es/",
+  "urls": {
+    "youtube": "https://www.youtube.com/c/c1b3rwall",
+    "twitter": "https://twitter.com/c1b3rwall",
+    "linkedin": "https://es.linkedin.com/company/c1b3rwall",
+    "instagram": "https://www.instagram.com/explore/tags/ciberwall/?hl=es"
+  },
+  "thumbnailUrl": "images/c1b3rwall.webp",
+  "latLon": {
+    "lat": 40.6563881,
+    "lon": -4.700433
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

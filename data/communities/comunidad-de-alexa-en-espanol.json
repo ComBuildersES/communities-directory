@@ -1,0 +1,29 @@
+{
+  "id": 102,
+  "name": "Comunidad de Alexa en español",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Sin completar",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.twitch.tv/comunidadalexa",
+  "urls": {
+    "twitter": "https://x.com/alexadevsmadrid",
+    "discord": "https://discord.com/invite/nuYEGd9Rcv",
+    "twitch": "https://www.twitch.tv/comunidadalexa"
+  },
+  "thumbnailUrl": "images/name-de-alexa-en-espanol.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

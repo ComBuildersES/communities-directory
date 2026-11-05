@@ -1,0 +1,29 @@
+{
+  "id": 185,
+  "name": "Flutter Sevilla",
+  "status": "inactive",
+  "lastReviewed": "25/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Sevilla",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "flutter"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/flutter-sevilla/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/flutter-sevilla/"
+  },
+  "thumbnailUrl": "images/flutter-sevilla.webp",
+  "latLon": {
+    "lat": 37.38264,
+    "lon": -5.9962951
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

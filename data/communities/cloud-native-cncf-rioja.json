@@ -1,0 +1,52 @@
+{
+  "id": 87,
+  "name": "Cloud Native (CNCF) Rioja",
+  "status": "active",
+  "lastReviewed": "25/03/2026",
+  "communityType": "collaborative-group",
+  "eventFormat": "in-person",
+  "location": "Logroño La Rioja",
+  "parentId": 79,
+  "shortDescription": "Este Community Group perteneciente a la CNCF se dedica a construir una comunidad de desarrolladores fuerte, abierta y diversa en torno a la plataforma y tecnologías Cloud Native en La Rioja.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "gcp",
+    "linux",
+    "sql-databases",
+    "tech-ethics"
+  ],
+  "targetAudience": [
+    "sre",
+    "cloud-engineer",
+    "project-manager",
+    "devops-engineer",
+    "embedded-iot-engineer",
+    "robotics-engineer",
+    "data-engineer",
+    "ml-engineer",
+    "cybersecurity-engineer",
+    "qa-engineer",
+    "test-automation-engineer",
+    "community-manager"
+  ],
+  "contactInfo": "",
+  "communityUrl": "https://community.cncf.io/cloud-native-rioja/",
+  "urls": {
+    "twitter": "https://twitter.com/cloudnativefdn",
+    "instagram": "https://www.instagram.com/humans.of.cloudnative/",
+    "linkedin": "https://www.linkedin.com/company/cloud-native-computing-foundation/",
+    "youtube": "https://www.youtube.com/c/cloudnativefdn",
+    "github": "https://github.com/cncf",
+    "eventsUrl": "https://community.cncf.io/cloud-native-rioja/"
+  },
+  "thumbnailUrl": "images/cloud-native-cncf-rioja.webp",
+  "latLon": {
+    "lat": 42.46569,
+    "lon": -2.44998
+  },
+  "displayOnMap": true,
+  "humanValidated": true
+}

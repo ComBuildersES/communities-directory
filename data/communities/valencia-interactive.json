@@ -1,0 +1,30 @@
+{
+  "id": 456,
+  "name": "Valencia Interactive",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Valencia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/valenciainteractive/",
+  "urls": {
+    "discord": "https://discord.gg/6FjnGjkx5G",
+    "twitter": "http://twitter.com/VLCInteractive/",
+    "linkedin": "https://www.linkedin.com/groups/8137182",
+    "eventsUrl": "https://www.meetup.com/valenciainteractive/"
+  },
+  "thumbnailUrl": "images/valencia-interactive.webp",
+  "latLon": {
+    "lat": 39.4702393,
+    "lon": -0.3768049
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

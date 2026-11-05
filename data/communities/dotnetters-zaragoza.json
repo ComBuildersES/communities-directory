@@ -1,0 +1,28 @@
+{
+  "id": 147,
+  "name": "DotNetters Zaragoza",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Zaragoza",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/dotnetters/",
+  "urls": {
+    "twitter": "http://twitter.com/dotnetters/",
+    "eventsUrl": "https://www.meetup.com/dotnetters/"
+  },
+  "thumbnailUrl": "images/dotnetters-zaragoza.webp",
+  "latLon": {
+    "lat": 41.656837,
+    "lon": -0.8794245
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

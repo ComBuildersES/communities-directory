@@ -1,0 +1,26 @@
+{
+  "id": 53,
+  "name": "Barcelona Android Developer Group",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/barcelona-android-dev-group",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es-ES/barcelona-android-dev-group"
+  },
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

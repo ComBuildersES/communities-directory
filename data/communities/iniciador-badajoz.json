@@ -1,0 +1,24 @@
+{
+  "id": 260,
+  "name": "Iniciador Badajoz",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Badajoz",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://iniciador.com/Badajoz",
+  "urls": {},
+  "latLon": {
+    "lat": 38.8785497,
+    "lon": -6.9701578
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,9 +1,11 @@
 import fs from "node:fs";
 import { execFileSync } from "node:child_process";
+import process from "node:process";
 
 const CHANGELOG_PATH = "CHANGELOG.md";
-const COMMUNITIES_PATH = "public/data/communities.json";
-const DELETED_COMMUNITIES_PATH = "public/data/deleted-communities.json";
+// Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
+import { readCommunitiesAtRef, readDeletedCommunitiesAtRef } from "./lib/communities-git.js";
+import { readCommunities, slugifyCommunityName, stableStringify } from "./lib/communities-store.js";
 const APP_COMMUNITY_URL = "https://directory.communitybuilders.dev/?community=";
 const GITHUB_PR_URL = "https://github.com/ComBuildersES/communities-directory/pull/";
 const CATEGORY_ORDER = [
@@ -68,19 +70,6 @@ function getMergePullRequests() {
   return map;
 }
 
-function readJsonFromGit(ref, filePath) {
-  try {
-    const output = execFileSync("git", ["show", `${ref}:${filePath}`], {
-      encoding: "utf-8",
-      stdio: ["ignore", "pipe", "ignore"],
-      maxBuffer: 50 * 1024 * 1024,
-    });
-    return JSON.parse(output);
-  } catch {
-    return null;
-  }
-}
-
 function getParentCommit(hash) {
   const output = execFileSync("git", ["rev-list", "--parents", "-n", "1", hash], {
     encoding: "utf-8",
@@ -102,6 +91,51 @@ function buildIdMap(entries) {
   return map;
 }
 
+/**
+ * Empareja comunidades entre dos refs por `id` y, si no lo tienen, por slug del nombre.
+ *
+ * Hacen falta las dos claves: el `id` se asigna después del merge (ver
+ * `assign-community-ids`), así que en el commit del alta todavía es `null` y solo el slug
+ * identifica a la comunidad; en cambio una edición puede renombrarla, y entonces solo el
+ * `id` la sigue identificando.
+ */
+export function getChangedCommunities(beforeEntries, afterEntries) {
+  const before = Array.isArray(beforeEntries) ? beforeEntries : [];
+  const after = Array.isArray(afterEntries) ? afterEntries : [];
+
+  const beforeById = new Map();
+  const beforeBySlug = new Map();
+
+  for (const entry of before) {
+    if (Number.isInteger(entry?.id)) beforeById.set(entry.id, entry);
+    const slug = slugifyCommunityName(entry?.name);
+    if (slug) beforeBySlug.set(slug, entry);
+  }
+
+  const matched = new Set();
+  const added = [];
+  const changed = [];
+
+  for (const entry of after) {
+    const match = (Number.isInteger(entry?.id) ? beforeById.get(entry.id) : undefined)
+      ?? beforeBySlug.get(slugifyCommunityName(entry?.name));
+
+    if (!match) {
+      added.push(entry);
+      continue;
+    }
+
+    matched.add(match);
+    if (stableStringify(match) !== stableStringify(entry)) changed.push(entry);
+  }
+
+  return {
+    added,
+    changed,
+    removed: before.filter((entry) => !matched.has(entry)),
+  };
+}
+
 function getChangedIds(beforeEntries, afterEntries) {
   const beforeMap = buildIdMap(beforeEntries);
   const afterMap = buildIdMap(afterEntries);
@@ -116,7 +150,7 @@ function getChangedIds(beforeEntries, afterEntries) {
       continue;
     }
 
-    if (JSON.stringify(beforeMap.get(id)) !== JSON.stringify(entry)) {
+    if (stableStringify(beforeMap.get(id)) !== stableStringify(entry)) {
       changed.push(entry);
     }
   }
@@ -134,11 +168,34 @@ function escapeMarkdown(text = "") {
   return String(text).replace(/[[\]\\]/g, "\\$&");
 }
 
-function buildCommunityEntryLabel(action, community, prNumber) {
-  if (!community?.name || !Number.isInteger(community?.id)) return null;
+let currentIdsBySlug = null;
 
-  const communityLink = `${APP_COMMUNITY_URL}${community.id}`;
-  const label = `[${action} ${escapeMarkdown(community.name)}](${communityLink})`;
+/**
+ * Id actual de una comunidad. En el commit del alta el id era `null`, así que se resuelve
+ * contra el estado presente de `data/communities/`, donde ya está asignado.
+ */
+function resolveCommunityId(community) {
+  if (Number.isInteger(community?.id)) return community.id;
+
+  if (!currentIdsBySlug) {
+    currentIdsBySlug = new Map();
+    for (const current of readCommunities()) {
+      const slug = slugifyCommunityName(current?.name);
+      if (slug && Number.isInteger(current.id)) currentIdsBySlug.set(slug, current.id);
+    }
+  }
+
+  return currentIdsBySlug.get(slugifyCommunityName(community?.name)) ?? null;
+}
+
+function buildCommunityEntryLabel(action, community, prNumber) {
+  if (!community?.name) return null;
+
+  const communityId = resolveCommunityId(community);
+  // Sin id resoluble (p. ej. comunidad eliminada después) se emite sin enlace.
+  const label = communityId === null
+    ? `${action} ${escapeMarkdown(community.name)}`
+    : `[${action} ${escapeMarkdown(community.name)}](${APP_COMMUNITY_URL}${communityId})`;
 
   if (!prNumber) {
     return label;
@@ -156,16 +213,16 @@ function getAutoCommunityEntry(commit, issueToPrMap) {
   const parent = getParentCommit(commit.hash);
   if (!parent) return null;
 
-  const beforeCommunities = readJsonFromGit(parent, COMMUNITIES_PATH);
-  const afterCommunities = readJsonFromGit(commit.hash, COMMUNITIES_PATH);
-  const beforeDeleted = readJsonFromGit(parent, DELETED_COMMUNITIES_PATH) ?? [];
-  const afterDeleted = readJsonFromGit(commit.hash, DELETED_COMMUNITIES_PATH) ?? [];
+  const beforeCommunities = readCommunitiesAtRef(parent);
+  const afterCommunities = readCommunitiesAtRef(commit.hash);
+  const beforeDeleted = readDeletedCommunitiesAtRef(parent) ?? [];
+  const afterDeleted = readDeletedCommunitiesAtRef(commit.hash) ?? [];
 
   if (!Array.isArray(beforeCommunities) || !Array.isArray(afterCommunities)) {
     return null;
   }
 
-  const activeChanges = getChangedIds(beforeCommunities, afterCommunities);
+  const activeChanges = getChangedCommunities(beforeCommunities, afterCommunities);
   const deletedChanges = getChangedIds(beforeDeleted, afterDeleted);
 
   if (activeChanges.added.length === 1 && activeChanges.removed.length === 0) {
@@ -285,4 +342,6 @@ function main() {
   console.log(`CHANGELOG.md actualizado con ${commits.length} commit(s).`);
 }
 
-main();
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}

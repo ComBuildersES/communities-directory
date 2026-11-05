@@ -1,0 +1,30 @@
+{
+  "id": 509,
+  "name": "WordPress Mallorca",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Mallorca",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/mallorca-wordpress-meetup/",
+  "urls": {
+    "telegram": "https://t.me/wordpresmallorca",
+    "eventsUrl": "https://www.meetup.com/mallorca-wordpress-meetup/"
+  },
+  "thumbnailUrl": "images/ordpress-mallorca.webp",
+  "latLon": {
+    "lat": 39.578695,
+    "lon": 2.654489
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

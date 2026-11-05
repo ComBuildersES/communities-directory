@@ -1,0 +1,28 @@
+{
+  "id": 68,
+  "name": "BSides Barcelona",
+  "status": "active",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "info@bsides.barcelona",
+  "communityUrl": "https://bsides.barcelona/",
+  "urls": {
+    "twitter": "https://x.com/BarcelonaBsides/",
+    "youtube": "https://www.youtube.com/channel/UC6ZFHgp_gWbORaibgQgJn7g"
+  },
+  "thumbnailUrl": "images/bsides-barcelona.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

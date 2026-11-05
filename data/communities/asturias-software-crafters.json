@@ -1,0 +1,63 @@
+{
+  "id": 41,
+  "name": "Asturias Software Crafters",
+  "status": "active",
+  "lastReviewed": "25/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Oviedo/Gijón (Asturias)",
+  "shortDescription": "Grupo de entusiastas de la tecnología que queremos fomentar las relaciones personales en torno a eventos tecnológicos en Asturias. Organizamos, charlas, talleres, dinámicas.... Siempre con respeto y alrededor de un espacio acogedor donde divertirnos.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "software-architecture",
+    "software-craftsmanship",
+    "free-software",
+    "tech-ethics",
+    "lean-startup"
+  ],
+  "targetAudience": [
+    "software-architect",
+    "junior-developer",
+    "student",
+    "senior-staff",
+    "career-changer",
+    "frontend-developer",
+    "backend-developer",
+    "fullstack-developer",
+    "mobile-developer",
+    "data-engineer",
+    "data-scientist",
+    "devops-engineer",
+    "cloud-engineer",
+    "sre",
+    "cybersecurity-engineer",
+    "qa-engineer",
+    "open-source-contributor",
+    "robotics-engineer",
+    "educator",
+    "sysadmin",
+    "data-analyst",
+    "tech-lead",
+    "product-manager"
+  ],
+  "contactInfo": "asturiascrafters@gmail.com",
+  "communityUrl": "https://saraos.tech/@asturias-software-crafters",
+  "urls": {
+    "twitter": "https://x.com/asturiaswcraft",
+    "bluesky": "https://bsky.app/profile/asturiascrafters.com",
+    "linkedin": "https://linkedin.com/company/asturiaswcraft",
+    "eventsUrl": "https://saraos.tech/@asturias-software-crafters",
+    "telegram": "https://t.me/+F_0R2L0OowljMGY0"
+  },
+  "thumbnailUrl": "images/asturias-software-crafters.webp",
+  "latLon": {
+    "lat": 43.520243144013,
+    "lon": -5.685033233419
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

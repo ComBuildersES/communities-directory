@@ -1,0 +1,25 @@
+{
+  "id": 159,
+  "name": "Drupal Euskadi",
+  "status": "unknown",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "País Vasco",
+  "parentId": 39,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "help@drupal.org",
+  "communityUrl": "http://web.archive.org/web/20201225095243/https://groups.drupal.org/basque-country",
+  "urls": {},
+  "latLon": {
+    "lat": 43.043147818644,
+    "lon": -2.616915141407
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

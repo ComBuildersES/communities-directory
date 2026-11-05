@@ -1,0 +1,24 @@
+{
+  "id": 444,
+  "name": "Techdencias",
+  "status": "inactive",
+  "lastReviewed": "31/05/2024",
+  "communityType": "collaborative-group",
+  "eventFormat": "unknown",
+  "location": "Sin completar",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://web.archive.org/web/20220702201035/http://techdencias.net/",
+  "urls": {},
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

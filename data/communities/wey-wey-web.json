@@ -1,0 +1,43 @@
+{
+  "id": 468,
+  "name": "Wey Wey Web",
+  "status": "active",
+  "lastReviewed": "24/03/2026",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "shortDescription": "Conferencia internacional sobre interfaces de usuario.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "ux-ui",
+    "css",
+    "html",
+    "accessibility",
+    "javascript-frameworks",
+    "web-performance",
+    "frontend-tooling",
+    "design-systems"
+  ],
+  "targetAudience": [
+    "ux-designer",
+    "frontend-developer",
+    "fullstack-developer"
+  ],
+  "contactInfo": "info@weyweyweb.com",
+  "communityUrl": "https://weyweyweb.com/",
+  "urls": {
+    "youtube": "https://www.youtube.com/@weyweyweb",
+    "linkedin": "https://www.linkedin.com/company/wey-wey-web",
+    "twitter": "https://twitter.com/WeyWeyWeb"
+  },
+  "thumbnailUrl": "images/wey-wey-web.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": true
+}

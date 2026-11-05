@@ -1,0 +1,29 @@
+{
+  "id": 318,
+  "name": "Machine Learning Spain",
+  "status": "active",
+  "lastReviewed": "24/03/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "machine-learning"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/machinelearningspain/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es-ES/machinelearningspain/"
+  },
+  "thumbnailUrl": "images/machine-learning-spain.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

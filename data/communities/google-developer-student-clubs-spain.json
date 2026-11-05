@@ -1,0 +1,28 @@
+{
+  "id": 219,
+  "name": "Google Developer Student Clubs Spain",
+  "status": "active",
+  "lastReviewed": "15/10/2024",
+  "communityType": "umbrella-org",
+  "eventFormat": "unknown",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://x.com/dscspain",
+  "urls": {
+    "twitter": "https://x.com/dscspain",
+    "youtube": "https://www.youtube.com/@GDGSpain"
+  },
+  "thumbnailUrl": "images/google-developer-student-clubs-spain.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

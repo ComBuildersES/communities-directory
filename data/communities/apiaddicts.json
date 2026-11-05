@@ -1,0 +1,27 @@
+{
+  "id": 29,
+  "name": "APIAddicts",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Madrid, Valencia, Barcelona, Medellín, Lima, México D.F",
+  "topics": "APIs, Cloud, MIcroservicios",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "contacta@apiaddicts.org",
+  "communityUrl": "https://www.meetup.com/es-ES/apiaddicts/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es-ES/apiaddicts/"
+  },
+  "thumbnailUrl": "images/apiaddicts.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

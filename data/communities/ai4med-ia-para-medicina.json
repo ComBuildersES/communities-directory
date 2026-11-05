@@ -1,0 +1,25 @@
+{
+  "id": 19,
+  "name": "AI4MED - IA para medicina",
+  "status": "active",
+  "lastReviewed": "15/11/2024",
+  "communityType": "collaborative-group",
+  "eventFormat": "hybrid",
+  "location": "Madrid, Valencia, Barcelona, Bilbao",
+  "topics": "IA aplicada al ámbito sanitario y a la investigación clínica. Divulgación y desmitificación de esta tecnología aplicada a la medicina",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "president@ai4med.org",
+  "communityUrl": "http://web.archive.org/web/20260118231740/https://ai4med.org/",
+  "urls": {},
+  "thumbnailUrl": "images/ai4med-ia-para-medicina.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

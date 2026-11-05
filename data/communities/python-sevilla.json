@@ -1,0 +1,31 @@
+{
+  "id": 570,
+  "name": "Python Sevilla",
+  "status": "active",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Sevilla, España",
+  "parentId": 404,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://x.com/python_sevilla",
+  "urls": {
+    "twitter": "https://x.com/python_sevilla",
+    "github": "https://github.com/python-sevilla/meetups",
+    "telegram": "https://t.me/pythonsevilla",
+    "eventsUrl": "https://www.meetup.com/es-es/python-sevilla/"
+  },
+  "thumbnailUrl": "images/python-sevilla.webp",
+  "latLon": {
+    "lat": 37.3886303,
+    "lon": -5.9953403
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

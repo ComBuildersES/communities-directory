@@ -1,0 +1,28 @@
+{
+  "id": 449,
+  "name": "TomatinaCON",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Valencia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://www.tomatinacon.com/",
+  "urls": {
+    "twitter": "https://x.com/tomatinacon",
+    "web": "http://web.archive.org/web/20220921150143/http://tomatinacon.com/"
+  },
+  "thumbnailUrl": "images/tomatinacon.webp",
+  "latLon": {
+    "lat": 39.4702393,
+    "lon": -0.3768049
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

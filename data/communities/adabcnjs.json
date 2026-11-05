@@ -1,0 +1,27 @@
+{
+  "id": 7,
+  "name": "AdaBcnJs",
+  "status": "unknown",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/adabcnjs/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/adabcnjs/"
+  },
+  "thumbnailUrl": "images/adabcnjs.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

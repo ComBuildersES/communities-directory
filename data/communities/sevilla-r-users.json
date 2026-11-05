@@ -1,0 +1,33 @@
+{
+  "id": 420,
+  "name": "Sevilla R users",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Sevilla",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "r-lang"
+  ],
+  "targetAudience": [],
+  "contactInfo": "sevillarug@gmail.com",
+  "communityUrl": "https://sevillarusers.netlify.app/about/",
+  "urls": {
+    "youtube": "https://www.youtube.com/channel/UC4_SN0le5WFMu_LFaIufLbA",
+    "twitter": "https://twitter.com/_SevillaR",
+    "github": "https://github.com/SevillaR",
+    "telegram": "https://t.me/+HE3IBL13swTfZwYI",
+    "eventsUrl": "https://www.meetup.com/es-ES/Sevilla-R-users/"
+  },
+  "thumbnailUrl": "images/sevilla-r-users.webp",
+  "latLon": {
+    "lat": 37.38264,
+    "lon": -5.9962951
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

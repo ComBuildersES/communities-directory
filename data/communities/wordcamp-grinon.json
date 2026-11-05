@@ -1,0 +1,34 @@
+{
+  "id": 486,
+  "name": "Wordcamp Griñón",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid (Griñón)",
+  "parentId": 483,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://grinon.wordcamp.org/2024/",
+  "urls": {
+    "telegram": "https://t.me/WCGrinon",
+    "twitter": "https://twitter.com/WPGrinon",
+    "instagram": "https://www.instagram.com/wpgrinon/",
+    "youtube": "https://www.youtube.com/channel/UCuwhtNtXjCqAs9ty2pvDO2g",
+    "eventsUrl": "https://www.meetup.com/es-ES/Wordpress-Grinon/"
+  },
+  "thumbnailUrl": "images/wordcamp-grinon.webp",
+  "latLon": {
+    "lat": 40.2142405,
+    "lon": -3.8561918
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

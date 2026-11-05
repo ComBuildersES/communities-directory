@@ -1,0 +1,24 @@
+{
+  "id": 256,
+  "name": "Iniciador Alicante",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Alicante",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://iniciador.com/Alicante",
+  "urls": {},
+  "latLon": {
+    "lat": 38.34521,
+    "lon": -0.4809945
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

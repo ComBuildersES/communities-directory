@@ -1,0 +1,28 @@
+{
+  "id": 551,
+  "name": "Galstech",
+  "status": "active",
+  "lastReviewed": "03/03/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Coruña",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "galstechinfo@gmail.com",
+  "communityUrl": "https://www.meetup.com/es-ES/galstech/",
+  "urls": {
+    "twitter": "http://twitter.com/galstech_/",
+    "eventsUrl": "https://www.meetup.com/es-ES/galstech/"
+  },
+  "thumbnailUrl": "images/galstech.webp",
+  "latLon": {
+    "lat": 43.3707332,
+    "lon": -8.3958532
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,25 @@
+{
+  "id": 158,
+  "name": "Drupal Day Spain",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Itinerante",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://drupalday.es/",
+  "urls": {},
+  "thumbnailUrl": "images/drupal-day-spain.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

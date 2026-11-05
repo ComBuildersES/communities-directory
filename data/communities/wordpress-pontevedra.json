@@ -1,0 +1,31 @@
+{
+  "id": 515,
+  "name": "WordPress Pontevedra",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Pontevedra",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/pontevedra-wordpress-meetup/",
+  "urls": {
+    "twitter": "https://twitter.com/@wppontevedra",
+    "instagram": "https://instagram.com/wppontevedra",
+    "eventsUrl": "https://www.meetup.com/pontevedra-wordpress-meetup/"
+  },
+  "thumbnailUrl": "images/wordpress-pontevedra.webp",
+  "latLon": {
+    "lat": 42.433575,
+    "lon": -8.6481143
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

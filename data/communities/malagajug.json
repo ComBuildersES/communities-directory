@@ -1,0 +1,43 @@
+{
+  "id": 344,
+  "name": "MálagaJUG",
+  "status": "active",
+  "lastReviewed": "24/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Málaga",
+  "parentId": 302,
+  "shortDescription": "Comunidad para compartir conocimiento y experiencias sobre el lenguaje y plataforma Java y otros lenguajes de la JVM.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "java",
+    "tech-ethics",
+    "kotlin",
+    "groovy",
+    "robotics",
+    "javascript",
+    "typescript",
+    "go",
+    "r-lang",
+    "business-intelligence",
+    "open-source"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://malagajug.wordpress.com",
+  "urls": {
+    "twitter": "https://twitter.com/MalagaJUG",
+    "eventsUrl": "https://www.meetup.com/es-ES/MalagaJUG/",
+    "web": "https://malagajug.wordpress.com"
+  },
+  "thumbnailUrl": "images/malagajug.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": true
+}

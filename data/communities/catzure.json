@@ -1,0 +1,28 @@
+{
+  "id": 75,
+  "name": "CATzure",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/CATzure/",
+  "urls": {
+    "twitter": "https://twitter.com/CAT_zure",
+    "eventsUrl": "https://www.meetup.com/es-ES/CATzure/"
+  },
+  "thumbnailUrl": "images/catzure.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

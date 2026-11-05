@@ -1,0 +1,41 @@
+{
+  "id": 366,
+  "name": "NodeJSMadrid",
+  "status": "active",
+  "lastReviewed": "27/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "shortDescription": "Grupo de meetup donde hablamos principalmente de Node.js y temas relacionados con el mundo del desarrollo de software.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "nodejs",
+    "javascript",
+    "software-craftsmanship",
+    "free-software",
+    "software-architecture"
+  ],
+  "targetAudience": [
+    "software-architect",
+    "backend-developer",
+    "fullstack-developer",
+    "tech-lead"
+  ],
+  "contactInfo": "mjfosela@gmail.com",
+  "communityUrl": "https://www.meetup.com/es-ES/node-js-madrid/",
+  "urls": {
+    "twitter": "https://x.com/MadridNodeJs",
+    "eventsUrl": "https://www.meetup.com/es-ES/node-js-madrid/"
+  },
+  "thumbnailUrl": "images/nodejs-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

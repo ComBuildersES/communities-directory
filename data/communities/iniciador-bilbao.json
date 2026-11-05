@@ -1,0 +1,27 @@
+{
+  "id": 262,
+  "name": "Iniciador Bilbao",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Bilbao",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.iniciador.com/es/bilbao934",
+  "urls": {
+    "twitter": "https://x.com/iniciador_BIL",
+    "web": "https://www.iniciador.com/es/bilbao934"
+  },
+  "latLon": {
+    "lat": 43.2569608,
+    "lon": -2.9234602
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

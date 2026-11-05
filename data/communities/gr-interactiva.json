@@ -1,0 +1,29 @@
+{
+  "id": 220,
+  "name": "GR Interactiva",
+  "status": "active",
+  "lastReviewed": "25/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Granada",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/gr-interactiva/",
+  "urls": {
+    "twitter": "https://twitter.com/GRinteractiva",
+    "discord": "https://discord.gg/NeUdsTuM",
+    "eventsUrl": "https://www.meetup.com/gr-interactiva/"
+  },
+  "thumbnailUrl": "images/gr-interactiva.webp",
+  "latLon": {
+    "lat": 37.1831938,
+    "lon": -3.604747
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

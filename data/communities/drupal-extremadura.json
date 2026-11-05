@@ -1,0 +1,25 @@
+{
+  "id": 160,
+  "name": "Drupal Extremadura",
+  "status": "unknown",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Extremadura",
+  "parentId": 39,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "help@drupal.org",
+  "communityUrl": "http://web.archive.org/web/20240112162119/https://groups.drupal.org/extremadura",
+  "urls": {},
+  "latLon": {
+    "lat": 39.191324883543,
+    "lon": -6.150896536229
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

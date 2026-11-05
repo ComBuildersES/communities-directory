@@ -1,0 +1,25 @@
+{
+  "id": 178,
+  "name": "Fabada Conference",
+  "status": "inactive",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Gijón, Asturias",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://fabadaconf.com/",
+  "urls": {},
+  "thumbnailUrl": "images/fabada-conference.webp",
+  "latLon": {
+    "lat": 43.545229,
+    "lon": -5.6619245
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

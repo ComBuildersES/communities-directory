@@ -1,0 +1,31 @@
+{
+  "id": 490,
+  "name": "WordPress Barcelona",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "parentId": 512,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/wordpressbcn/",
+  "urls": {
+    "twitter": "http://twitter.com/WPBarcelona/",
+    "eventsUrl": "https://www.meetup.com/wordpressbcn/"
+  },
+  "thumbnailUrl": "images/wordpress-barcelona.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,24 @@
+{
+  "id": 272,
+  "name": "Iniciador Emprendimiento social Barcelona",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.iniciador.com/es/emprendimiento-social-barcelona/organizadores233_i177_i192",
+  "urls": {},
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

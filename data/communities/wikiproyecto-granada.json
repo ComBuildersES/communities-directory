@@ -1,0 +1,26 @@
+{
+  "id": 472,
+  "name": "Wikiproyecto Granada",
+  "status": "active",
+  "lastReviewed": "25/10/2024",
+  "communityType": "collaborative-group",
+  "eventFormat": "online",
+  "location": "Granada",
+  "parentId": 469,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Granada",
+  "urls": {},
+  "thumbnailUrl": "images/wikiproyecto-granada.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

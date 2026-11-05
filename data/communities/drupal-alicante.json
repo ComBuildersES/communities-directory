@@ -1,0 +1,25 @@
+{
+  "id": 150,
+  "name": "Drupal Alicante",
+  "status": "unknown",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Alicante",
+  "parentId": 39,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "help@drupal.org",
+  "communityUrl": "https://groups.drupal.org/alicante",
+  "urls": {},
+  "latLon": {
+    "lat": 38.34521,
+    "lon": -0.4809945
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

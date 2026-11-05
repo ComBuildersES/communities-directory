@@ -1,0 +1,35 @@
+{
+  "id": 226,
+  "name": "Granada Tech",
+  "status": "active",
+  "lastReviewed": "25/03/2026",
+  "communityType": "meta-community",
+  "eventFormat": "hybrid",
+  "location": "Granada, España",
+  "shortDescription": "Granada Tech somos un conjunto de asociaciones, grupos y entidades que organizamos eventos tecnológicos en la provincia de Granada.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "tech4good",
+    "stem",
+    "free-software",
+    "open-source"
+  ],
+  "targetAudience": [],
+  "contactInfo": "info@granadatech.org",
+  "communityUrl": "https://www.granadatech.org/",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/company/granadatech/",
+    "telegram": "https://t.me/granadatech",
+    "whatsapp": "https://whatsapp.com/channel/0029VaqmAGqGOj9p1hXppl27"
+  },
+  "thumbnailUrl": "images/granada-tech.webp",
+  "latLon": {
+    "lat": 37.1831938,
+    "lon": -3.604747
+  },
+  "displayOnMap": true,
+  "humanValidated": true
+}

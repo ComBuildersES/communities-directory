@@ -1,0 +1,28 @@
+{
+  "id": 435,
+  "name": "SVQJUG",
+  "status": "active",
+  "lastReviewed": "11/04/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Sevilla",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "svqjug@gmail.com",
+  "communityUrl": "https://www.meetup.com/svqjug",
+  "urls": {
+    "twitter": "http://twitter.com/svqjug/",
+    "eventsUrl": "https://www.meetup.com/svqjug"
+  },
+  "thumbnailUrl": "images/svqjug.webp",
+  "latLon": {
+    "lat": 37.38264,
+    "lon": -5.9962951
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

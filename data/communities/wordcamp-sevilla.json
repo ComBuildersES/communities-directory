@@ -1,0 +1,28 @@
+{
+  "id": 487,
+  "name": "Wordcamp Sevilla",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Sevilla",
+  "parentId": 483,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://sevilla.wordcamp.org/2024/",
+  "urls": {
+    "eventsUrl": "https://sevilla.wordcamp.org/2024/"
+  },
+  "thumbnailUrl": "images/wordcamp-sevilla.webp",
+  "latLon": {
+    "lat": 37.38264,
+    "lon": -5.9962951
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

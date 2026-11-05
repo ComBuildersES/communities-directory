@@ -1,0 +1,30 @@
+{
+  "id": 93,
+  "name": "Codebar Barcelona",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "parentId": 92,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "barcelona@codebar.io",
+  "communityUrl": "https://codebar.io/barcelona",
+  "urls": {
+    "github": "https://github.com/codebar",
+    "youtube": "https://www.youtube.com/channel/UCEYz232agE47GHUq8wneBCA",
+    "linkedin": "https://www.linkedin.com/company/codebarcommunity"
+  },
+  "thumbnailUrl": "images/codebar-barcelona.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

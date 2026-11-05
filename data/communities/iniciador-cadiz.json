@@ -1,0 +1,27 @@
+{
+  "id": 265,
+  "name": "Iniciador Cádiz",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Cádiz",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.iniciador.com/es/cadiz",
+  "urls": {
+    "twitter": "https://x.com/iniciador_BCA",
+    "web": "https://www.iniciador.com/es/cadiz"
+  },
+  "latLon": {
+    "lat": 36.5297453,
+    "lon": -6.2926477
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,35 @@
+{
+  "id": 546,
+  "name": "Python Barcelona",
+  "status": "active",
+  "lastReviewed": "17/02/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "parentId": 404,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "python"
+  ],
+  "targetAudience": [],
+  "contactInfo": "pybcn@googlegroups.com",
+  "communityUrl": "https://pybcn.org/",
+  "urls": {
+    "github": "https://github.com/pybcn",
+    "linkedin": "https://linkedin.com/company/pybcn",
+    "twitter": "https://twitter.com/PyBCN",
+    "youtube": "https://www.youtube.com/c/PythonBarcelona",
+    "eventsUrl": "https://www.meetup.com/python-barcelona/",
+    "mailingList": "https://groups.google.com/g/pybcn"
+  },
+  "thumbnailUrl": "images/python-barcelona.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

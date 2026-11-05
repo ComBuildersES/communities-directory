@@ -4,7 +4,7 @@ on:
   pull_request_target:
     types: [opened, reopened, synchronize, ready_for_review]
     paths:
-      - public/data/communities.json
+      - data/communities/**
 
 jobs:
   request-community-reviewers:
@@ -33,56 +33,78 @@ jobs:
             const outputDir = path.join(process.env.GITHUB_WORKSPACE, "tmp", "pr-reviewers");
             fs.mkdirSync(outputDir, { recursive: true });
 
-            async function fetchFile({ owner, repo, filePath, ref, outputName }) {
-              const response = await github.rest.repos.getContent({
-                owner,
-                repo,
-                path: filePath,
-                ref,
-              });
+            async function fetchFile({ owner, repo, filePath, ref, optional = false }) {
+              try {
+                const response = await github.rest.repos.getContent({ owner, repo, path: filePath, ref });
 
-              if (Array.isArray(response.data) || !("content" in response.data)) {
-                throw new Error(`No se pudo leer ${filePath} en ${owner}/${repo}@${ref}`);
+                if (Array.isArray(response.data) || !("content" in response.data)) {
+                  throw new Error(`No se pudo leer ${filePath} en ${owner}/${repo}@${ref}`);
+                }
+
+                return Buffer.from(response.data.content, "base64").toString("utf8");
+              } catch (error) {
+                // Una comunidad nueva no existe en base: ausencia esperada, no un fallo.
+                if (optional && error.status === 404) return null;
+                throw error;
               }
-
-              const content = Buffer.from(response.data.content, "base64").toString("utf8");
-              fs.writeFileSync(path.join(outputDir, outputName), content, "utf8");
             }
 
             const base = context.payload.pull_request.base;
             const head = context.payload.pull_request.head;
 
-            await fetchFile({
+            // La fuente de verdad es un fichero por comunidad, así que basta con traer los
+            // ficheros que toca la PR en lugar del directorio completo (600+ ficheros).
+            const changedFiles = await github.paginate(github.rest.pulls.listFiles, {
               owner: base.repo.owner.login,
               repo: base.repo.name,
-              filePath: "public/data/communities.json",
-              ref: base.sha,
-              outputName: "base-communities.json",
+              pull_number: context.payload.pull_request.number,
+              per_page: 100,
             });
 
-            await fetchFile({
-              owner: head.repo.owner.login,
-              repo: head.repo.name,
-              filePath: "public/data/communities.json",
-              ref: head.sha,
-              outputName: "head-communities.json",
-            });
+            const communityFiles = changedFiles
+              .map((file) => file.filename)
+              .filter((filename) => filename.startsWith("data/communities/") && filename.endsWith(".json"));
 
-            await fetchFile({
-              owner: base.repo.owner.login,
-              repo: base.repo.name,
-              filePath: "public/data/community-builders-members.json",
-              ref: base.sha,
-              outputName: "base-members.json",
-            });
+            core.info(`Ficheros de comunidad modificados: ${communityFiles.length}`);
 
-            await fetchFile({
-              owner: head.repo.owner.login,
-              repo: head.repo.name,
-              filePath: "public/data/community-builders-members.json",
-              ref: head.sha,
-              outputName: "head-members.json",
-            });
+            const baseCommunities = [];
+            const headCommunities = [];
+
+            for (const filePath of communityFiles) {
+              const baseRaw = await fetchFile({
+                owner: base.repo.owner.login,
+                repo: base.repo.name,
+                filePath,
+                ref: base.sha,
+                optional: true,
+              });
+              if (baseRaw) baseCommunities.push(JSON.parse(baseRaw));
+
+              const headRaw = await fetchFile({
+                owner: head.repo.owner.login,
+                repo: head.repo.name,
+                filePath,
+                ref: head.sha,
+                optional: true,
+              });
+              if (headRaw) headCommunities.push(JSON.parse(headRaw));
+            }
+
+            fs.writeFileSync(path.join(outputDir, "base-communities.json"), JSON.stringify(baseCommunities), "utf8");
+            fs.writeFileSync(path.join(outputDir, "head-communities.json"), JSON.stringify(headCommunities), "utf8");
+
+            for (const [ref, repoRef, outputName] of [
+              [base.sha, base, "base-members.json"],
+              [head.sha, head, "head-members.json"],
+            ]) {
+              const raw = await fetchFile({
+                owner: repoRef.repo.owner.login,
+                repo: repoRef.repo.name,
+                filePath: "public/data/community-builders-members.json",
+                ref,
+              });
+              fs.writeFileSync(path.join(outputDir, outputName), raw, "utf8");
+            }
 
       - name: Resolver reviewers de comunidad
         id: resolve

@@ -1,0 +1,29 @@
+{
+  "id": 516,
+  "name": "WordPress Santander",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Santander",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/santander-wordpress-meetup/",
+  "urls": {
+    "twitter": "https://twitter.com/search?q=%23WordPress&src=hashtag_click",
+    "eventsUrl": "https://www.meetup.com/santander-wordpress-meetup/"
+  },
+  "latLon": {
+    "lat": 43.4614116,
+    "lon": -3.8093031
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

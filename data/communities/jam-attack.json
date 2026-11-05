@@ -1,0 +1,45 @@
+{
+  "id": 589,
+  "name": "Jam Attack",
+  "status": "active",
+  "lastReviewed": "06/04/2026",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Viator, Almería",
+  "parentId": null,
+  "shortDescription": "Jornada de Videojuegos Indie y Programación \"Jam Attack\". Un pequeño encuentro que cuenta con una zona de juegos, una zona de exposición y presentaciones, donde algunos estudiantes y profesionales muestran sus juegos indie y creaciones personales, y una zona de charlas.",
+  "topics": "desarrollo de videojuegos,programación",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "game-development",
+    "vfx",
+    "3d-modeling",
+    "game-design",
+    "indie-games",
+    "unity",
+    "unreal-engine"
+  ],
+  "targetAudience": [
+    "game-developer",
+    "minors",
+    "junior-developer",
+    "student",
+    "career-changer"
+  ],
+  "contactInfo": "",
+  "communityUrl": "https://arcadejam.github.io/",
+  "urls": {
+    "twitter": "https://x.com/heartbytestudio",
+    "instagram": "https://instagram.com/arcadebits"
+  },
+  "thumbnailUrl": "images/jam-attack.webp",
+  "latLon": {
+    "lat": 36.8887282,
+    "lon": -2.4251246
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

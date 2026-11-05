@@ -1,0 +1,29 @@
+{
+  "id": 63,
+  "name": "Blockchain Málaga",
+  "status": "inactive",
+  "lastReviewed": "25/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "blockchain"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/blockchain-malaga/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/blockchain-malaga/"
+  },
+  "thumbnailUrl": "images/blockchain-malaga.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

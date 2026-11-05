@@ -1,0 +1,25 @@
+{
+  "id": 390,
+  "name": "Pica Pica HackLab",
+  "status": "active",
+  "lastReviewed": "24/10/2024",
+  "communityType": "hacklab",
+  "eventFormat": "in-person",
+  "location": "Oviedo, Asturias",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://www.picahack.org/",
+  "urls": {},
+  "thumbnailUrl": "images/pica-pica-hacklab.webp",
+  "latLon": {
+    "lat": 43.3602825,
+    "lon": -5.8447919
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,35 @@
+{
+  "id": 142,
+  "name": "Docker User Groups",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "umbrella-org",
+  "eventFormat": "unknown",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "docker"
+  ],
+  "targetAudience": [],
+  "contactInfo": "meetup@docker.com",
+  "communityUrl": "https://www.docker.com/community/get-involved/",
+  "urls": {
+    "discord": "https://discord.com/invite/sKqzB9eF3n",
+    "linkedin": "https://www.linkedin.com/groups/6538078/",
+    "youtube": "https://www.youtube.com/@dockerinc",
+    "github": "https://github.com/docker",
+    "instagram": "https://www.instagram.com/dockerinc/?hl=en",
+    "twitter": "https://twitter.com/docker",
+    "eventsUrl": "https://meetup.com/pro/docker"
+  },
+  "thumbnailUrl": "images/docker-user-groups.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

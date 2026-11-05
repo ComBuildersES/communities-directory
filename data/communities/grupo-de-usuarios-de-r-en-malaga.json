@@ -1,0 +1,27 @@
+{
+  "id": 231,
+  "name": "Grupo de usuarios de R en Málaga",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://rmalaga.quarto.pub/",
+  "urls": {
+    "twitter": "https://x.com/_RMlg",
+    "web": "https://rmalaga.quarto.pub/"
+  },
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

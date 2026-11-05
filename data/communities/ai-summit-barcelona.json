@@ -1,0 +1,29 @@
+{
+  "id": 595,
+  "name": "AI Summit Barcelona",
+  "status": "active",
+  "lastReviewed": "01/09/2025",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Barcelona, España",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "info@aisummitbarcelona.com",
+  "communityUrl": "https://aisummitbarcelona.com/",
+  "urls": {
+    "instagram": "https://www.instagram.com/aisummitbarcelona/",
+    "youtube": "https://www.youtube.com/@AISummitBarcelona",
+    "linkedin": "https://www.linkedin.com/company/ai-summit-barcelona"
+  },
+  "thumbnailUrl": "images/ai-summit-barcelona.webp",
+  "latLon": {
+    "lat": 41.3825802,
+    "lon": 2.177073
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

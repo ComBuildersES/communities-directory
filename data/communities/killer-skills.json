@@ -1,0 +1,28 @@
+{
+  "id": 308,
+  "name": "Killer Skills",
+  "status": "active",
+  "lastReviewed": "16/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "killerskills.me@gmail.com",
+  "communityUrl": "https://killerskills.me/",
+  "urls": {
+    "twitter": "https://x.com/killerskills_me",
+    "linkedin": "https://www.linkedin.com/company/killerskills"
+  },
+  "thumbnailUrl": "images/killer-skills.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

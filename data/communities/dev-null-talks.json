@@ -1,0 +1,28 @@
+{
+  "id": 1,
+  "name": "/dev/null talks",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Sevilla",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "devnulltalks@gmail.com",
+  "communityUrl": "https://devnulltalks.github.io/",
+  "urls": {
+    "github": "https://github.com/orderedlist",
+    "eventsUrl": "https://www.meetup.com/dev-null/"
+  },
+  "thumbnailUrl": "images/devnull-talks.webp",
+  "latLon": {
+    "lat": 37.38264,
+    "lon": -5.9962951
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

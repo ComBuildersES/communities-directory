@@ -1,0 +1,25 @@
+{
+  "id": 155,
+  "name": "Drupal Castilla y León",
+  "status": "unknown",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Castilla y León",
+  "parentId": 39,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "help@drupal.org",
+  "communityUrl": "http://web.archive.org/web/20230529035455/https://groups.drupal.org/castillayleon",
+  "urls": {},
+  "latLon": {
+    "lat": 41.754270024781,
+    "lon": -4.782332640458
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

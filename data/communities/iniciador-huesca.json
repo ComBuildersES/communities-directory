@@ -1,0 +1,24 @@
+{
+  "id": 277,
+  "name": "Iniciador Huesca",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Huesca",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://iniciador.com/Huesca",
+  "urls": {},
+  "latLon": {
+    "lat": 42.1400519,
+    "lon": -0.40887
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

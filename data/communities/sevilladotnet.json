@@ -1,0 +1,30 @@
+{
+  "id": 576,
+  "name": "SevillaDotNet",
+  "status": "active",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Sevilla, Spain",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "csharp"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/SevillaDotNet/",
+  "urls": {
+    "twitter": "http://twitter.com/SevillaNetDevs/",
+    "eventsUrl": "https://www.meetup.com/es-ES/SevillaDotNet/"
+  },
+  "thumbnailUrl": "images/sevilladotnet.webp",
+  "latLon": {
+    "lat": 37.3886303,
+    "lon": -5.9953403
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

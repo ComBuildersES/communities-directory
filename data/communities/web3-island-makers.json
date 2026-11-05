@@ -1,0 +1,33 @@
+{
+  "id": 466,
+  "name": "Web3 Island Makers",
+  "status": "active",
+  "lastReviewed": "18/12/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Tenerife",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "web3"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/web3-island-makers",
+  "urls": {
+    "discord": "https://discord.gg/JNNQxJkq2W",
+    "twitter": "https://twitter.com/wim_dao",
+    "instagram": "https://www.instagram.com/web3islandmakers/",
+    "linkedin": "https://www.linkedin.com/company/86969414",
+    "eventsUrl": "https://www.meetup.com/web3-island-makers"
+  },
+  "thumbnailUrl": "images/web3-island-makers.webp",
+  "latLon": {
+    "lat": 28.2631,
+    "lon": -16.60942
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

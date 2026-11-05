@@ -1,0 +1,28 @@
+{
+  "id": 191,
+  "name": "GALPon",
+  "status": "active",
+  "lastReviewed": "27/11/2024",
+  "communityType": "collaborative-group",
+  "eventFormat": "in-person",
+  "location": "Vigo, Galicia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "galpon@mastodon.gal",
+  "communityUrl": "https://www.galpon.org/",
+  "urls": {
+    "telegram": "https://t.me/galpon",
+    "mastodon": "https://mastodon.gal/@galpon"
+  },
+  "thumbnailUrl": "images/galpon.webp",
+  "latLon": {
+    "lat": 42.2313601,
+    "lon": -8.7124252
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

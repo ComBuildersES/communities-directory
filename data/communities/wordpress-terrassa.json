@@ -1,0 +1,29 @@
+{
+  "id": 521,
+  "name": "WordPress Terrassa",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Barcelona (Terrassa)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/terrassa-wordpress-meetup/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/terrassa-wordpress-meetup/"
+  },
+  "thumbnailUrl": "images/wordpress-terrassa.webp",
+  "latLon": {
+    "lat": 41.5609412,
+    "lon": 2.0104484
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

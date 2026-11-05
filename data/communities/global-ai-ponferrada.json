@@ -1,0 +1,30 @@
+{
+  "id": 550,
+  "name": "Global AI Ponferrada",
+  "status": "active",
+  "lastReviewed": "24/02/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Ponferrada",
+  "parentId": 214,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "machine-learning"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/global-ai-ponferrada/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es-ES/global-ai-ponferrada/"
+  },
+  "thumbnailUrl": "images/global-ai-ponferrada.webp",
+  "latLon": {
+    "lat": 42.5463315,
+    "lon": -6.5908331
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

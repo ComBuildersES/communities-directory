@@ -1,0 +1,29 @@
+{
+  "id": 133,
+  "name": "DatabeersRIO",
+  "status": "inactive",
+  "lastReviewed": "27/11/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "La RIoja",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.linkedin.com/company/databeersrio/?originalSubdomain=es",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/company/databeersrio/",
+    "youtube": "https://www.youtube.com/@databeersrioja",
+    "web": "https://www.tumblr.com/databeersrio"
+  },
+  "thumbnailUrl": "images/databeersrio.webp",
+  "latLon": {
+    "lat": 42.46569,
+    "lon": -2.44998
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

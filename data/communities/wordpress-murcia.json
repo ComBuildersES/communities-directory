@@ -1,0 +1,36 @@
+{
+  "id": 615,
+  "name": "WordPress Murcia",
+  "status": "inactive",
+  "lastReviewed": "30/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Murcia",
+  "parentId": 512,
+  "shortDescription": "Comunidad WordPress de Murcia para compartir conocimiento, encuentros y actividad local del ecosistema.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.wpmurcia.org/",
+  "urls": {
+    "facebook": "https://www.facebook.com/WordPressMurcia/",
+    "twitter": "https://x.com/wpmurcia",
+    "instagram": "https://www.instagram.com/wpmurcia/",
+    "youtube": "https://www.youtube.com/channel/UCE0o9a_-p5aOzpwR0wasQ-A",
+    "eventsUrl": "https://www.meetup.com/es-es/wordpress-murcia/",
+    "web": "https://www.wpmurcia.org/"
+  },
+  "thumbnailUrl": "images/wordpress-murcia.webp",
+  "latLon": {
+    "lat": 37.9835334,
+    "lon": -1.129905
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

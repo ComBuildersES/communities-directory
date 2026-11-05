@@ -1,0 +1,29 @@
+{
+  "id": 48,
+  "name": "Azure Data Tech Groups",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "umbrella-org",
+  "eventFormat": "unknown",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "azure"
+  ],
+  "targetAudience": [],
+  "contactInfo": "ms-data@microsoft.com",
+  "communityUrl": "https://www.meetup.com/pro/azuredatatechgroups/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/pro/azuredatatechgroups/"
+  },
+  "thumbnailUrl": "images/azure-data-tech-groups.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

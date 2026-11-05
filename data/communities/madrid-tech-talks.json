@@ -1,0 +1,25 @@
+{
+  "id": 329,
+  "name": "Madrid Tech Talks",
+  "status": "active",
+  "lastReviewed": "11/12/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://web.archive.org/web/20250813111202/https://madridtechtalks.com/",
+  "urls": {},
+  "thumbnailUrl": "images/madrid-tech-talks.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

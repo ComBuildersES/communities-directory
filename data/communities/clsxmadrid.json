@@ -1,0 +1,25 @@
+{
+  "id": 91,
+  "name": "CLSxMadrid",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://web.archive.org/web/20161202102359/http://www.clsxmadrid.es/index.es.html",
+  "urls": {},
+  "thumbnailUrl": "images/clsxmadrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,30 @@
+{
+  "id": 36,
+  "name": "Asociación de usuarios de R de Castilla-La Mancha",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Albacete",
+  "parentId": 103,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "r-lang"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/asociacion-de-usuarios-de-r-de-castilla-la-mancha/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es-ES/asociacion-de-usuarios-de-r-de-castilla-la-mancha/"
+  },
+  "thumbnailUrl": "images/asociacion-de-usuarios-de-r-de-castilla-la-mancha.webp",
+  "latLon": {
+    "lat": 38.9976623,
+    "lon": -1.8600675
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

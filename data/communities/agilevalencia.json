@@ -1,0 +1,28 @@
+{
+  "id": 18,
+  "name": "AgileValencia",
+  "status": "inactive",
+  "lastReviewed": "18/12/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Sin completar",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://agilevalencia.com/",
+  "urls": {
+    "twitter": "https://x.com/AgileValencia",
+    "web": "http://web.archive.org/web/20250108134602/https://agilevalencia.com/"
+  },
+  "thumbnailUrl": "images/agilevalencia.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

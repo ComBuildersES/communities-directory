@@ -1,0 +1,28 @@
+{
+  "id": 16,
+  "name": "agileVigo",
+  "status": "unknown",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Vigo",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://x.com/agilevigo",
+  "urls": {
+    "twitter": "https://x.com/agilevigo",
+    "github": "https://github.com/agileVigo"
+  },
+  "thumbnailUrl": "images/agilevigo.webp",
+  "latLon": {
+    "lat": 42.2313601,
+    "lon": -8.7124252
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

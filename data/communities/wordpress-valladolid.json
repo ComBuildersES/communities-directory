@@ -1,0 +1,30 @@
+{
+  "id": 526,
+  "name": "WordPress Valladolid",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Valladolid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/valladolid-wordpress-meetup/",
+  "urls": {
+    "twitter": "http://twitter.com/wpvalladolid/",
+    "eventsUrl": "https://www.meetup.com/valladolid-wordpress-meetup/"
+  },
+  "thumbnailUrl": "images/wordpress-valladolid.webp",
+  "latLon": {
+    "lat": 41.6529421,
+    "lon": -4.7283839
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

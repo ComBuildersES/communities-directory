@@ -1,0 +1,28 @@
+{
+  "id": 536,
+  "name": "zurracapoteconf",
+  "status": "active",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Logroño, La Rioja",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://aprocyt.github.io/zurracapoteconf//",
+  "urls": {
+    "twitter": "https://twitter.com/zurracapoteconf",
+    "eventsUrl": "https://www.meetup.com/es-ES/GDG-La-Rioja/events/265173706/"
+  },
+  "thumbnailUrl": "images/zurracapoteconf.webp",
+  "latLon": {
+    "lat": 42.46569,
+    "lon": -2.44998
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

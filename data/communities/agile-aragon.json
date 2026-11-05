@@ -1,0 +1,28 @@
+{
+  "id": 11,
+  "name": "Agile Aragón",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Zaragoza",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/agilearagon/",
+  "urls": {
+    "twitter": "https://x.com/agilearagon",
+    "eventsUrl": "https://www.meetup.com/es-ES/agilearagon/"
+  },
+  "thumbnailUrl": "images/agile-aragon.webp",
+  "latLon": {
+    "lat": 41.656837,
+    "lon": -0.8794245
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

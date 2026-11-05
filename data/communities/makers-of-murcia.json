@@ -1,0 +1,28 @@
+{
+  "id": 336,
+  "name": "Makers of Murcia",
+  "status": "active",
+  "lastReviewed": "25/10/2024",
+  "communityType": "hacklab",
+  "eventFormat": "in-person",
+  "location": "Murcia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://x.com/makersofmurcia",
+  "urls": {
+    "twitter": "https://x.com/makersofmurcia",
+    "eventsUrl": "https://www.meetup.com/makers-of-muria/"
+  },
+  "thumbnailUrl": "images/makers-of-murcia.webp",
+  "latLon": {
+    "lat": 37.9835334,
+    "lon": -1.129905
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,27 @@
+{
+  "id": 368,
+  "name": "nosday",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Coruña (Santiago de Compostela)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "nosday23@gmail.com",
+  "communityUrl": "https://nosday.com/",
+  "urls": {
+    "twitter": "https://twitter.com/nosday"
+  },
+  "thumbnailUrl": "images/nosday.webp",
+  "latLon": {
+    "lat": 42.8806228,
+    "lon": -8.5466071
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

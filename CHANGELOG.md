@@ -9,6 +9,14 @@ Se organiza por mes y por tipo de cambio.
 
 - 2026-11-05 `10abe10` [Añadida Codex Community](https://directory.communitybuilders.dev/?community=632) ([PR #440](https://github.com/ComBuildersES/communities-directory/pull/440))
 
+### Improvements
+
+- 2026-11-05 `e3741c3` una comunidad, un fichero
+
+### Docs
+
+- 2026-11-05 `d17ed7d` update changelog [skip ci]
+
 ## 2026-10
 
 ### Data

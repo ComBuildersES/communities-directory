@@ -1,0 +1,30 @@
+{
+  "id": 200,
+  "name": "GDG Jaén",
+  "status": "active",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Jaén ",
+  "parentId": 207,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://gdg.community.dev/gdg-jaen/",
+  "urls": {
+    "twitter": "https://x.com/gdgjaen",
+    "instagram": "https://www.instagram.com/gdgjaen",
+    "eventsUrl": "https://gdg.community.dev/gdg-jaen/"
+  },
+  "thumbnailUrl": "images/gdg-jaen.webp",
+  "latLon": {
+    "lat": 37.7657753,
+    "lon": -3.7893929
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

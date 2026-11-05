@@ -1,0 +1,28 @@
+{
+  "id": 24,
+  "name": "AlmeríaJS",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Almería",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://x.com/AlmeriaJs",
+  "urls": {
+    "twitter": "https://x.com/AlmeriaJs",
+    "eventsUrl": "https://www.meetup.com/es-es/almeriajs/"
+  },
+  "thumbnailUrl": "images/almeriajs.webp",
+  "latLon": {
+    "lat": 36.8400939,
+    "lon": -2.4679043
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

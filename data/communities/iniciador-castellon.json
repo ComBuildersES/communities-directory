@@ -1,0 +1,27 @@
+{
+  "id": 267,
+  "name": "Iniciador Castellón",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Castellón de la Plana",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.iniciador.com/es/castellon",
+  "urls": {
+    "twitter": "https://x.com/iniciador_CAS",
+    "web": "https://www.iniciador.com/es/castellon"
+  },
+  "latLon": {
+    "lat": 39.9860398,
+    "lon": -0.0360705
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

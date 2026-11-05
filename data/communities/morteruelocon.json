@@ -1,0 +1,30 @@
+{
+  "id": 350,
+  "name": "MorterueloCon",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "hybrid",
+  "location": "Cuenca",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "contacto@morteruelo.net",
+  "communityUrl": "https://www.morteruelo.net/",
+  "urls": {
+    "instagram": "https://www.instagram.com/morteruelocon/",
+    "youtube": "https://www.youtube.com/@MorterueloconC",
+    "twitter": "https://x.com/morteruelocon",
+    "bluesky": "https://bsky.app/profile/morteruelocon.bsky.social"
+  },
+  "thumbnailUrl": "images/morteruelocon.webp",
+  "latLon": {
+    "lat": 40.06682,
+    "lon": -2.14167
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,24 @@
+{
+  "id": 257,
+  "name": "Iniciador Almería",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Almería",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://iniciador.com/Almeria",
+  "urls": {},
+  "latLon": {
+    "lat": 36.8400939,
+    "lon": -2.4679043
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,51 @@
+{
+  "id": 228,
+  "name": "Grupo de Programadores e Usuarios de Linux (GPUL)",
+  "status": "active",
+  "lastReviewed": "25/03/2026",
+  "communityType": "collaborative-group",
+  "eventFormat": "in-person",
+  "location": "A Coruña",
+  "shortDescription": "Colectivo sin ánimo de lucro que organiza diversos tipos de encuentros, conferencias y hackathones para divulgar el software y la cultura libres.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "free-software",
+    "software-architecture",
+    "software-craftsmanship",
+    "linux",
+    "3d-printing",
+    "open-hardware",
+    "tech-ethics",
+    "open-source",
+    "github"
+  ],
+  "targetAudience": [
+    "software-architect",
+    "student"
+  ],
+  "contactInfo": "info@gpul.org",
+  "communityUrl": "https://gpul.org/",
+  "urls": {
+    "mastodon": "https://mastodon.social/@gpul_",
+    "bluesky": "https://bsky.app/profile/gpul.org",
+    "github": "https://github.com/gpul-org",
+    "telegram": "https://t.me/+PrK44xhqJ9eP9ZUf",
+    "twitter": "https://x.com/gpul_",
+    "mailingList": "https://lists.gpul.org/",
+    "linkAggregator": "https://links.gpul.org/",
+    "instagram": "https://www.instagram.com/gpul_/",
+    "linkedin": "https://www.linkedin.com/company/gpul",
+    "youtube": "https://www.youtube.com/@gpul_coruna"
+  },
+  "thumbnailUrl": "images/grupo-de-programadores-e-usuarios-de-linux-gpul.webp",
+  "latLon": {
+    "lat": 43.3707332,
+    "lon": -8.3958532
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

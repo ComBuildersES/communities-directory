@@ -1,0 +1,29 @@
+{
+  "id": 602,
+  "name": "Artificial Intelligence Network",
+  "status": "active",
+  "lastReviewed": "23/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "España",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "machine-learning"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.linkedin.com/company/artificial-intelligence-network/",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/company/artificial-intelligence-network/"
+  },
+  "thumbnailUrl": "images/artificial-intelligence-network.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

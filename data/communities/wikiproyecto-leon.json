@@ -1,0 +1,26 @@
+{
+  "id": 477,
+  "name": "Wikiproyecto León",
+  "status": "active",
+  "lastReviewed": "25/10/2024",
+  "communityType": "collaborative-group",
+  "eventFormat": "online",
+  "location": "León",
+  "parentId": 469,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Le%C3%B3n/Participantes",
+  "urls": {},
+  "thumbnailUrl": "images/wikiproyecto-leon.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

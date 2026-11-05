@@ -1,0 +1,27 @@
+{
+  "id": 414,
+  "name": "RioJakers",
+  "status": "active",
+  "lastReviewed": "26/05/2025",
+  "communityType": "mutual-aid",
+  "eventFormat": "online",
+  "location": "La Rioja",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "https://www.linkedin.com/posts/pabpereza_discord-a-new-way-to-chat-with-friends-activity-6763868171494559744-UXkr?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAFTWIUB408_I8M39G1F7ZzN47wVswa8PcA",
+  "communityUrl": "https://github.com/Riojakers",
+  "urls": {
+    "github": "https://github.com/Riojakers"
+  },
+  "thumbnailUrl": "images/riojakers.webp",
+  "latLon": {
+    "lat": 42.46569,
+    "lon": -2.44998
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

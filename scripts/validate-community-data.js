@@ -1,11 +1,11 @@
 import fs from "node:fs";
-import { execFileSync } from "node:child_process";
 import process from "node:process";
 import { COMMUNITY_LANGUAGE_SET } from "../src/lib/communityLanguages.js";
 
-const COMMUNITIES_PATH = "public/data/communities.json";
+// Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
+import { readCommunities, readDeletedCommunities, stableStringify } from "./lib/communities-store.js";
+import { readCommunitiesAtRef } from "./lib/communities-git.js";
 const COMMUNITIES_META_PATH = "public/data/communities.meta.json";
-const DELETED_COMMUNITIES_PATH = "public/data/deleted-communities.json";
 const TAGS_PATH = "public/data/tags.json";
 const AUDIENCE_PATH = "public/data/audience.json";
 
@@ -30,12 +30,14 @@ const ALLOWED_URL_KEYS = new Set([
   "discord",
   "eventsUrl",
   "facebook",
+  "flickr",
   "github",
   "instagram",
   "linkAggregator",
   "linkedin",
   "mailingList",
   "mastodon",
+  "slack",
   "telegram",
   "tiktok",
   "twitch",
@@ -78,19 +80,6 @@ function readJson(filePath) {
     return JSON.parse(fs.readFileSync(filePath, "utf-8"));
   } catch (error) {
     throw new Error(`No se pudo leer o parsear ${filePath}: ${error.message}`);
-  }
-}
-
-function readJsonFromGit(ref, filePath) {
-  try {
-    const raw = execFileSync("git", ["show", `${ref}:${filePath}`], {
-      encoding: "utf-8",
-      stdio: ["ignore", "pipe", "pipe"],
-    });
-
-    return JSON.parse(raw);
-  } catch {
-    return null;
   }
 }
 
@@ -231,8 +220,10 @@ function validateCommunityGlobal(community, index, knownTagIds, knownAudienceIds
   const name = isNonEmptyString(community.name) ? community.name : `#${community.id ?? index}`;
   const label = `${name} (${prefix})`;
 
-  if (!Number.isInteger(community.id)) {
-    pushIssue(issues.errors, "error", `${label}: id debe ser un entero.`);
+  // `id: null` es el estado válido de una propuesta recién creada: el id se asigna ya en
+  // master (`assign-community-ids`) para que dos propuestas simultáneas no colisionen.
+  if (community.id !== null && !Number.isInteger(community.id)) {
+    pushIssue(issues.errors, "error", `${label}: id debe ser un entero o null si está pendiente de asignación.`);
   }
 
   if (!Array.isArray(community.tags)) {
@@ -424,8 +415,8 @@ function validateCommunityStrict(community, index, issues, isNew = true) {
   const name = isNonEmptyString(community.name) ? community.name : `#${community.id ?? index}`;
   const label = `${name} (${prefix})`;
 
-  if (!Number.isInteger(community.id) || community.id < 0) {
-    pushIssue(issues.errors, "error", `${label}: id debe ser un entero mayor o igual que 0.`);
+  if (community.id !== null && (!Number.isInteger(community.id) || community.id < 0)) {
+    pushIssue(issues.errors, "error", `${label}: id debe ser un entero mayor o igual que 0, o null si está pendiente de asignación.`);
   }
 
   const requiredFields = ["name", "status", "lastReviewed", "communityType", "eventFormat"];
@@ -557,7 +548,7 @@ function getChangedCommunities(currentCommunities, baselineCommunities) {
 
   for (const community of baselineCommunities) {
     if (isPlainObject(community) && Number.isInteger(community.id)) {
-      baselineById.set(community.id, JSON.stringify(community));
+      baselineById.set(community.id, stableStringify(community));
     }
   }
 
@@ -568,7 +559,7 @@ function getChangedCommunities(currentCommunities, baselineCommunities) {
       }
 
       const baselineSerialized = baselineById.get(community.id);
-      return baselineSerialized !== JSON.stringify(community);
+      return baselineSerialized !== stableStringify(community);
     })
     .map((community) => ({
       community,
@@ -702,9 +693,9 @@ function main() {
   let audience;
 
   try {
-    communities = readJson(COMMUNITIES_PATH);
+    communities = readCommunities();
     communitiesMeta = readJson(COMMUNITIES_META_PATH);
-    deletedCommunities = readJson(DELETED_COMMUNITIES_PATH);
+    deletedCommunities = readDeletedCommunities();
     tags = readJson(TAGS_PATH);
     audience = readJson(AUDIENCE_PATH);
   } catch (error) {
@@ -748,7 +739,7 @@ function main() {
 
     if (options.strictChanged) {
       const baselineCommunities = options.baselineRef
-        ? readJsonFromGit(options.baselineRef, COMMUNITIES_PATH)
+        ? readCommunitiesAtRef(options.baselineRef)
         : null;
 
       if (!baselineCommunities) {

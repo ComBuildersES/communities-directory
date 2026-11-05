@@ -1,0 +1,31 @@
+{
+  "id": 460,
+  "name": "Vigo Tech Alliance",
+  "status": "active",
+  "lastReviewed": "03/03/2025",
+  "communityType": "meta-community",
+  "eventFormat": "unknown",
+  "location": "Vigo, Galicia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "alliance@vigotech.org",
+  "communityUrl": "https://vigotech.org/",
+  "urls": {
+    "twitter": "https://twitter.com/agilevigo",
+    "github": "https://github.com/agileVigo",
+    "youtube": "https://www.youtube.com/channel/UC9DPKfcLiNd7SEU-QLlIG7A",
+    "telegram": "https://t.me/vigotech",
+    "eventsUrl": "https://www.meetup.com/es-ES/agile-vigo/"
+  },
+  "thumbnailUrl": "images/vigo-tech-alliance.webp",
+  "latLon": {
+    "lat": 42.2313601,
+    "lon": -8.7124252
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

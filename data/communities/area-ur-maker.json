@@ -1,0 +1,25 @@
+{
+  "id": 32,
+  "name": "Area UR-Maker",
+  "status": "active",
+  "lastReviewed": "16/10/2024",
+  "communityType": "hacklab",
+  "eventFormat": "in-person",
+  "location": "Logrono",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.unirioja.es/urmaker/",
+  "urls": {},
+  "thumbnailUrl": "images/area-ur-maker.webp",
+  "latLon": {
+    "lat": 42.46569,
+    "lon": -2.44998
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

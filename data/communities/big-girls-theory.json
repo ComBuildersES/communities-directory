@@ -1,0 +1,29 @@
+{
+  "id": 59,
+  "name": "Big Girls Theory",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Sin completar",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://biggirlstheory.es/",
+  "urls": {
+    "twitter": "https://x.com/biggirlstheory",
+    "web": "http://web.archive.org/web/20220327085309/https://biggirlstheory.es/",
+    "youtube": "https://www.youtube.com/channel/UCD910SAxi1tblfQaAqid-bw"
+  },
+  "thumbnailUrl": "images/big-girls-theory.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

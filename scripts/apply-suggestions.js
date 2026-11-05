@@ -19,8 +19,9 @@
  */
 
 import fs from 'fs';
+// Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
+import { readCommunities, writeCommunities } from './lib/communities-store.js';
 
-const COMMUNITIES_PATH = './public/data/communities.json';
 const SUGGESTIONS_PATH = './scripts/suggestions.json';
 
 function mergeUrls(existing, suggested) {
@@ -47,7 +48,7 @@ async function main() {
     process.exit(1);
   }
 
-  const communities = JSON.parse(fs.readFileSync(COMMUNITIES_PATH, 'utf-8'));
+  const communities = readCommunities();
   const suggestions  = JSON.parse(fs.readFileSync(SUGGESTIONS_PATH,  'utf-8'));
 
   const suggestionMap = {};
@@ -116,7 +117,7 @@ async function main() {
     console.log(`\n[DRY RUN] Se aplicarían cambios a ${applied} comunidades. ${skipped} descartadas.`);
     console.log('Ejecuta sin --dry-run para aplicar.');
   } else {
-    fs.writeFileSync(COMMUNITIES_PATH, JSON.stringify(updated, null, 2), 'utf-8');
+    writeCommunities(updated);
     console.log(`✅ Cambios aplicados: ${applied} comunidades actualizadas. ${skipped} descartadas.`);
   }
 }

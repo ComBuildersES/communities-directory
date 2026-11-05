@@ -1,0 +1,25 @@
+{
+  "id": 244,
+  "name": "HackLab",
+  "status": "inactive",
+  "lastReviewed": "14/12/2024",
+  "communityType": "collaborative-group",
+  "eventFormat": "hybrid",
+  "location": "Almería",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://hacklabalmeria.net/",
+  "urls": {},
+  "thumbnailUrl": "images/hacklab-almeria.webp",
+  "latLon": {
+    "lat": 36.8400939,
+    "lon": -2.4679043
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

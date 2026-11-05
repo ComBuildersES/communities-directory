@@ -1,0 +1,31 @@
+{
+  "id": 217,
+  "name": "Global Software Architecture Summit",
+  "status": "active",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "software-architecture"
+  ],
+  "targetAudience": [],
+  "contactInfo": "gsas@apiumhub.com",
+  "communityUrl": "https://gsas.io/",
+  "urls": {
+    "twitter": "https://x.com/gsas_io",
+    "linkedin": "https://www.linkedin.com/company/globalsoftwarearchitecturesummit",
+    "eventsUrl": "https://www.meetup.com/wtmbcn/"
+  },
+  "thumbnailUrl": "images/global-software-architecture-summit.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

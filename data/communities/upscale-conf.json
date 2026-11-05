@@ -1,0 +1,32 @@
+{
+  "id": 599,
+  "name": "Upscale Conf",
+  "status": "active",
+  "lastReviewed": "03/11/2025",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Málaga, Spain",
+  "topics": "inteligencia artificial,diseño, tecnologías emergentes",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "info@a11yconf.com",
+  "communityUrl": "https://www.upscaleconf.com/",
+  "urls": {
+    "instagram": "https://www.instagram.com/plexus.tech/",
+    "linkedin": "https://linkedin.com/company/plexus-tech",
+    "youtube": "https://www.youtube.com/user/tecnologiasplexus",
+    "twitter": "https://x.com/nextdigitalhub",
+    "bluesky": "https://bsky.app/profile/nextdigitalhub.bsky.social",
+    "github": "https://github.com/Lemoncode"
+  },
+  "thumbnailUrl": "images/upscale-conf.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

@@ -1,0 +1,30 @@
+{
+  "id": 177,
+  "name": "Extremadura Digital Day",
+  "status": "active",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Cáceres",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://extremaduradigitalday.com/",
+  "urls": {
+    "instagram": "https://www.instagram.com/extremaduradigitalday",
+    "twitter": "https://twitter.com/extredigitalday",
+    "linkedin": "https://www.linkedin.com/company/extremaduradigitalday",
+    "youtube": "https://www.youtube.com/@extremaduradigitalday"
+  },
+  "thumbnailUrl": "images/extremadura-digital-day.webp",
+  "latLon": {
+    "lat": 39.4762161,
+    "lon": -6.3708585
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

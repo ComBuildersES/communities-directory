@@ -1,0 +1,30 @@
+{
+  "id": 125,
+  "name": "Data, Cloud and AI in Barcelona",
+  "status": "active",
+  "lastReviewed": "24/03/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "online",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "big-data",
+    "machine-learning"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/big-data-developers-in-barcelona/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/big-data-developers-in-barcelona/"
+  },
+  "thumbnailUrl": "images/data-cloud-and-ai-in-barcelona.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

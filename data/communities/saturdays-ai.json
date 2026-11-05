@@ -1,0 +1,25 @@
+{
+  "id": 583,
+  "name": "Saturdays.AI",
+  "status": "active",
+  "lastReviewed": "26/05/2025",
+  "communityType": "umbrella-org",
+  "eventFormat": "in-person",
+  "location": "",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://saturdays.ai/cities/",
+  "urls": {},
+  "thumbnailUrl": "images/saturdaysai.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

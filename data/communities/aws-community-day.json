@@ -1,0 +1,25 @@
+{
+  "id": 591,
+  "name": "AWS Community Day",
+  "status": "unknown",
+  "lastReviewed": "24/08/2025",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Gijón, Spain",
+  "topics": "AWS",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://web.archive.org/web/20260123140024/https://2024.awscommunity.es/en",
+  "urls": {},
+  "thumbnailUrl": "images/aws-community-day.webp",
+  "latLon": {
+    "lat": 43.5449422,
+    "lon": -5.66275
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

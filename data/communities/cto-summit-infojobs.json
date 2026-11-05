@@ -1,0 +1,25 @@
+{
+  "id": 119,
+  "name": "CTO Summit InfoJobs",
+  "status": "active",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://web.archive.org/web/20250518065709/https://ctosummit.geekshubs.com/",
+  "urls": {},
+  "thumbnailUrl": "images/cto-summit-infojobs.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

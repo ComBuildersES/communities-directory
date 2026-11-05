@@ -1,0 +1,30 @@
+{
+  "id": 28,
+  "name": "Angular Málaga",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "angular"
+  ],
+  "targetAudience": [],
+  "contactInfo": "sponsor@angularmalaga.com",
+  "communityUrl": "https://www.meetup.com/es-ES/angular-malaga/",
+  "urls": {
+    "twitter": "http://twitter.com/angularmalaga/",
+    "eventsUrl": "https://www.meetup.com/es-ES/angular-malaga/"
+  },
+  "thumbnailUrl": "images/angular-malaga.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

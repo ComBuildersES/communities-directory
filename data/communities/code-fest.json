@@ -1,0 +1,27 @@
+{
+  "id": 596,
+  "name": "CODE FEST",
+  "status": "active",
+  "lastReviewed": "12/09/2025",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Málaga, Spain",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "info@codespaceacademy.com",
+  "communityUrl": "https://codespaceacademy.com/code-fest-edicion-ii-2025/",
+  "urls": {
+    "instagram": "https://www.instagram.com/swatfit8/"
+  },
+  "thumbnailUrl": "images/code-fest.webp",
+  "latLon": {
+    "lat": 36.7213028,
+    "lon": -4.4216366
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

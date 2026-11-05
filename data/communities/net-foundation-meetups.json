@@ -1,0 +1,33 @@
+{
+  "id": 0,
+  "name": ".NET foundation meetups",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "umbrella-org",
+  "eventFormat": "unknown",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "csharp"
+  ],
+  "targetAudience": [],
+  "contactInfo": "contact@dotnetfoundation.org",
+  "communityUrl": "https://dotnetfoundation.org/community/.net-meetups",
+  "urls": {
+    "github": "https://github.com/dotnet-foundation",
+    "twitter": "https://twitter.com/dotnetfdn",
+    "youtube": "https://www.youtube.com/channel/UCiaZbznpWV1o-KLxj8zqR6A",
+    "linkedin": "https://www.linkedin.com/company/dotnetfoundation/",
+    "eventsUrl": "https://www.meetup.com/pro/dotnet"
+  },
+  "thumbnailUrl": "images/net-foundation-meetups.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

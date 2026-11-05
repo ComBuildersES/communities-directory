@@ -1,0 +1,29 @@
+{
+  "id": 214,
+  "name": "Global AI Community",
+  "status": "active",
+  "lastReviewed": "24/03/2025",
+  "communityType": "umbrella-org",
+  "eventFormat": "hybrid",
+  "location": "n/a",
+  "topics": "artificial intelligence",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "hq@globalai.community",
+  "communityUrl": "https://globalai.community/",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/company/global-ai-community",
+    "twitter": "https://x.com/GlobAICommunity",
+    "instagram": "https://www.instagram.com/globalaicommunity/"
+  },
+  "thumbnailUrl": "images/global-ai-bootcamp.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

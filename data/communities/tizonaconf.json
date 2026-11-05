@@ -1,0 +1,25 @@
+{
+  "id": 448,
+  "name": "Tizonaconf",
+  "status": "inactive",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Burgos",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://www.tizonaconf.com/",
+  "urls": {},
+  "thumbnailUrl": "images/tizonaconf.webp",
+  "latLon": {
+    "lat": 42.3408923,
+    "lon": -3.6997623
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

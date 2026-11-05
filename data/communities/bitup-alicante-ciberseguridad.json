@@ -1,0 +1,30 @@
+{
+  "id": 61,
+  "name": "Bitup Alicante Ciberseguridad",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Alicante",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://bitupalicante.com/",
+  "urls": {
+    "twitter": "https://x.com/bitupalicante",
+    "web": "https://bitupalicante.com/",
+    "telegram": "https://t.me/bitupalicante",
+    "youtube": "https://www.youtube.com/bitupalicante"
+  },
+  "thumbnailUrl": "images/bitup-alicante-ciberseguridad.webp",
+  "latLon": {
+    "lat": 38.34521,
+    "lon": -0.4809945
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

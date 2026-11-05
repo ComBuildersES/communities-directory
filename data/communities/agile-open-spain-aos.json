@@ -1,0 +1,27 @@
+{
+  "id": 13,
+  "name": "Agile Open Spain (AOS)",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Itinerante",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [
+    "agile-practitioner"
+  ],
+  "contactInfo": "aos@agile-spain.org",
+  "communityUrl": "https://aos.agile-spain.org/",
+  "urls": {},
+  "thumbnailUrl": "images/agile-open-spain-aos.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

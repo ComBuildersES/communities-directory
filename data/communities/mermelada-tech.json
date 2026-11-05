@@ -1,0 +1,31 @@
+{
+  "id": 345,
+  "name": "Mermelada.tech",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "online",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://mermeladatech.com/",
+  "urls": {
+    "discord": "https://discord.gg/mermelada",
+    "youtube": "https://www.youtube.com/@mermeladatech",
+    "github": "https://github.com/mermelada-tech",
+    "twitter": "https://x.com/MermeladaTech",
+    "web": "https://mermeladatech.com/"
+  },
+  "thumbnailUrl": "images/mermeladatech.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

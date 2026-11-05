@@ -1,0 +1,28 @@
+{
+  "id": 405,
+  "name": "Python Granada",
+  "status": "active",
+  "lastReviewed": "15/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Granada",
+  "parentId": 404,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "python"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://pythongranada.github.io/blog/",
+  "urls": {},
+  "thumbnailUrl": "images/python-granada.webp",
+  "latLon": {
+    "lat": 37.1831938,
+    "lon": -3.604747
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

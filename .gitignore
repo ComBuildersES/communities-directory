@@ -34,3 +34,10 @@ tmp
 # Claude Code
 .claude/
 .playwright-mcp/
+
+# Artefactos generados desde data/communities/ (ver scripts/compile-communities.js)
+public/data/communities.json
+public/data/communities.geojson
+
+# Bajas: la fuente es data/deleted-communities/
+public/data/deleted-communities.json

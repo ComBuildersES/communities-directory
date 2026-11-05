@@ -1,0 +1,25 @@
+{
+  "id": 436,
+  "name": "SVQTech",
+  "status": "active",
+  "lastReviewed": "29/11/2024",
+  "communityType": "meta-community",
+  "eventFormat": "unknown",
+  "location": "Sevilla",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://svqtech.com/",
+  "urls": {},
+  "thumbnailUrl": "images/svqtech.webp",
+  "latLon": {
+    "lat": 37.38264,
+    "lon": -5.9962951
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

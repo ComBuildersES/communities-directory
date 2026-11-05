@@ -1,0 +1,32 @@
+{
+  "id": 79,
+  "name": "Cloud Native",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "umbrella-org",
+  "eventFormat": "unknown",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://community.cncf.io",
+  "urls": {
+    "twitter": "https://twitter.com/cloudnativefdn",
+    "instagram": "https://www.instagram.com/humans.of.cloudnative/",
+    "linkedin": "https://www.linkedin.com/company/cloud-native-computing-foundation/",
+    "youtube": "https://www.youtube.com/c/cloudnativefdn",
+    "github": "https://github.com/cncf",
+    "eventsUrl": "https://community.cncf.io"
+  },
+  "thumbnailUrl": "images/cloud-native.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

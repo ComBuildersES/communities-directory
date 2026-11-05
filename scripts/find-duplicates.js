@@ -1,15 +1,11 @@
-import fs from 'fs';
+// Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
+import { readCommunities } from './lib/communities-store.js';
 
-// 🔹 Ruta al archivo JSON con los datos
-const communitiesPath = './public/data/communities.json';
-
-// 🔹 Leemos y parseamos el archivo JSON
 let communities;
 try {
-  const rawData = fs.readFileSync(communitiesPath, "utf-8");
-  communities = JSON.parse(rawData);
+  communities = readCommunities();
 } catch (error) {
-  console.error("❌ Error al leer o parsear el archivo JSON:", error.message);
+  console.error("❌ Error al leer las comunidades:", error.message);
   process.exit(1);
 }
 

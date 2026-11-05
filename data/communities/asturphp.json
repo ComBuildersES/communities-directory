@@ -1,0 +1,30 @@
+{
+  "id": 44,
+  "name": "AsturPHP",
+  "status": "inactive",
+  "lastReviewed": "18/12/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Sin completar",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.facebook.com/people/Astur-PHP/100068828983142/?_rdr",
+  "urls": {
+    "twitter": "https://x.com/asturphp",
+    "mastodon": "https://saraos.tech/@asturphp",
+    "eventsUrl": "https://www.meetup.com/es-es/asturphp/",
+    "facebook": "https://www.facebook.com/people/Astur-PHP/100068828983142/?_rdr"
+  },
+  "thumbnailUrl": "images/asturphp.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

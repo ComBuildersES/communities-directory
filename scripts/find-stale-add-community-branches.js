@@ -1,6 +1,7 @@
 import { execFileSync } from "node:child_process";
 
-const COMMUNITIES_PATH = "public/data/communities.json";
+// Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
+import { readCommunitiesAtRef } from "./lib/communities-git.js";
 
 function execGit(args) {
   return execFileSync("git", args, {
@@ -13,15 +14,6 @@ function execGit(args) {
 function tryExecGit(args) {
   try {
     return execGit(args);
-  } catch {
-    return null;
-  }
-}
-
-function readJsonFromGit(ref, filePath) {
-  try {
-    const raw = execGit(["show", `${ref}:${filePath}`]);
-    return JSON.parse(raw);
   } catch {
     return null;
   }
@@ -147,15 +139,15 @@ function analyzeBranch(branch, masterCommunities, masterIndexes) {
     };
   }
 
-  const baseCommunities = readJsonFromGit(parentCommit, COMMUNITIES_PATH);
-  const branchCommunities = readJsonFromGit(branch, COMMUNITIES_PATH);
+  const baseCommunities = readCommunitiesAtRef(parentCommit);
+  const branchCommunities = readCommunitiesAtRef(branch);
 
   if (!Array.isArray(baseCommunities) || !Array.isArray(branchCommunities)) {
     return {
       branch,
       status: "error",
       introducedCommunities: [],
-      reason: "No se pudo leer communities.json en la rama o en su commit padre.",
+      reason: "No se pudieron leer las comunidades en la rama o en su commit padre.",
     };
   }
 
@@ -238,9 +230,9 @@ function printReport(report) {
 }
 
 function main() {
-  const masterCommunities = readJsonFromGit("origin/master", COMMUNITIES_PATH);
+  const masterCommunities = readCommunitiesAtRef("origin/master");
   if (!Array.isArray(masterCommunities)) {
-    throw new Error("No se pudo leer public/data/communities.json desde origin/master.");
+    throw new Error("No se pudieron leer las comunidades desde origin/master.");
   }
 
   const masterIndexes = buildMasterIndexes(masterCommunities);

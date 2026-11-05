@@ -1,0 +1,29 @@
+{
+  "id": 412,
+  "name": "Red Hat User Group Community",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "umbrella-org",
+  "eventFormat": "unknown",
+  "location": "n/a",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "rhug@redhat.com",
+  "communityUrl": "https://www.redhat.com/en/red-hat-user-group/europe-middle-east-africa",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/company/red-hat",
+    "youtube": "https://www.youtube.com/user/RedHatVideos",
+    "twitter": "https://twitter.com/RedHat"
+  },
+  "thumbnailUrl": "images/red-hat-user-group-community.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

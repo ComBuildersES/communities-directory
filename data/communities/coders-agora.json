@@ -1,0 +1,28 @@
+{
+  "id": 97,
+  "name": "Coders' Agora",
+  "status": "inactive",
+  "lastReviewed": "18/12/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "online",
+  "location": "Sin completar",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://codersagora.org/",
+  "urls": {
+    "twitter": "https://x.com/codersagora_org",
+    "web": "http://web.archive.org/web/20220529082820/http://codersagora.org/"
+  },
+  "thumbnailUrl": "images/coders-agora.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

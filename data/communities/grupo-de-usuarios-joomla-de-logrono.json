@@ -1,0 +1,26 @@
+{
+  "id": 233,
+  "name": "Grupo de Usuarios Joomla! de Logroño",
+  "status": "inactive",
+  "lastReviewed": "27/11/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Logroño",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.facebook.com/groups/juglogrono/?locale=es_LA",
+  "urls": {
+    "facebook": "https://www.facebook.com/groups/juglogrono/?locale=es_LA"
+  },
+  "latLon": {
+    "lat": 42.46569,
+    "lon": -2.44998
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,37 @@
+{
+  "id": 597,
+  "name": "GrafanaCON",
+  "status": "active",
+  "lastReviewed": "11/12/2025",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Itinerante",
+  "topics": "data-visualization, big-data, data-engineering, etl, system-administration, OpenTelemetry, Loki, open-source, DevOps & Platform Engineer, Data Engineer, Cloud Engineer, Site Reliability Engineer, ci-cd, statistics, iot",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "data-visualization",
+    "open-source",
+    "data-pipelines"
+  ],
+  "targetAudience": [
+    "cloud-engineer",
+    "open-source-contributor"
+  ],
+  "contactInfo": "sponsors@grafana.com",
+  "communityUrl": "https://grafana.com/events/grafanacon/",
+  "urls": {
+    "twitter": "https://twitter.com/grafana",
+    "linkedin": "https://www.linkedin.com/company/grafana-labs/",
+    "github": "https://github.com/grafana/",
+    "youtube": "https://www.youtube.com/channel/UCYCwgQAMm9sTJv0rgwQLCxw"
+  },
+  "thumbnailUrl": "images/grafanacon.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

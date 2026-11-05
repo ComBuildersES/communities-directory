@@ -1,0 +1,25 @@
+{
+  "id": 161,
+  "name": "Drupal Galiza Drupal Group",
+  "status": "unknown",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Galicia",
+  "parentId": 39,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "help@drupal.org",
+  "communityUrl": "https://groups.drupal.org/galiza-drupal-group",
+  "urls": {},
+  "latLon": {
+    "lat": 42.756588768824,
+    "lon": -7.910665567756
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

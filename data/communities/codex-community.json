@@ -1,0 +1,33 @@
+{
+  "id": 632,
+  "name": "Codex Community",
+  "status": "active",
+  "lastReviewed": "05/11/2026",
+  "communityType": "umbrella-org",
+  "eventFormat": "in-person",
+  "location": "n/a",
+  "shortDescription": "La comunidad de OpenAI Developers conecta a desarrolladores de todo el mundo para crear con IA. Ofrece soporte, un foro, eventos locales de hackatones y programas destacados, como Codex Ambassadors, para organizar talleres locales, además de ayudas para startups y estudiantes.",
+  "topics": "",
+  "langs": [
+    "es",
+    "en"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "matchesAllTags": true,
+  "matchesAllAudience": true,
+  "contactInfo": "",
+  "communityUrl": "https://developers.openai.com/community",
+  "urls": {
+    "twitter": "https://x.com/openaidevs",
+    "eventsUrl": "https://luma.com/codex-community?utm_source=oaidevs"
+  },
+  "thumbnailUrl": "images/codex-community.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": true,
+  "removalReason": ""
+}

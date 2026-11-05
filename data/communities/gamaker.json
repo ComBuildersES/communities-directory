@@ -1,0 +1,25 @@
+{
+  "id": 192,
+  "name": "Gamaker",
+  "status": "inactive",
+  "lastReviewed": "30/03/2025",
+  "communityType": "hacklab",
+  "eventFormat": "in-person",
+  "location": "Álava (Vitoria-Gasteiz)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://gamaker.org/",
+  "urls": {},
+  "thumbnailUrl": "images/gamaker.webp",
+  "latLon": {
+    "lat": 42.8468573,
+    "lon": -2.6715859
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

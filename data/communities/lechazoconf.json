@@ -1,0 +1,34 @@
+{
+  "id": 315,
+  "name": "LechazoConf",
+  "status": "active",
+  "lastReviewed": "20/09/2026",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Valladolid",
+  "parentId": null,
+  "shortDescription": "La LechazoConf es una conferencia anual sobre tecnología, emprendimiento y startups que se celebra en Valladolid, España.\nDura un solo día y cuenta con una única línea de charlas (track único).Temática central (\"Un fracaso y un éxito\").",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "matchesAllAudience": true,
+  "contactInfo": "info@lechazoconf.com",
+  "communityUrl": "https://lechazoconf.com/",
+  "urls": {
+    "twitter": "https://twitter.com/lechazoconf",
+    "instagram": "https://www.instagram.com/lechazoconf/",
+    "linkedin": "https://www.linkedin.com/company/lechazoconf/",
+    "telegram": "https://t.me/+kRYDuWehPvUzMjg0"
+  },
+  "thumbnailUrl": "images/lechazoconf.webp",
+  "latLon": {
+    "lat": 41.6529421,
+    "lon": -4.7283839
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

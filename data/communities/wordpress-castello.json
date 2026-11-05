@@ -1,0 +1,29 @@
+{
+  "id": 494,
+  "name": "WordPress Castelló",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Castellón de la Plana",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/meetup-wordpress-castello/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/meetup-wordpress-castello/"
+  },
+  "thumbnailUrl": "images/wordpress-castello.webp",
+  "latLon": {
+    "lat": 39.9860398,
+    "lon": -0.0360705
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

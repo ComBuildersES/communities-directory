@@ -1,0 +1,36 @@
+{
+  "id": 440,
+  "name": "T3chFest",
+  "status": "active",
+  "lastReviewed": "27/03/2026",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "shortDescription": "T3chFest es la feria de informática y nuevas tecnologías sin ánimo de lucro celebrada en la Universidad Carlos III de Madrid. Más de 2000 asistentes tanto estudiantes como profesionales dispuestos a aprender e ilusionarse con la tecnología.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "matchesAllTags": true,
+  "matchesAllAudience": true,
+  "contactInfo": "info@t3chfest.es",
+  "communityUrl": "https://t3chfest.es/",
+  "urls": {
+    "youtube": "https://www.youtube.com/@T3chFest",
+    "twitter": "https://x.com/t3chfest",
+    "bluesky": "https://bsky.app/profile/t3chfest.es",
+    "linkedin": "https://es.linkedin.com/company/t3chfest",
+    "instagram": "https://instagram.com/t3chfest",
+    "telegram": "https://t.me/t3chfest_canal"
+  },
+  "thumbnailUrl": "images/t3chfest.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

@@ -1,0 +1,30 @@
+{
+  "id": 543,
+  "name": "GDG Menorca",
+  "status": "active",
+  "lastReviewed": "17/02/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Menorca",
+  "parentId": 207,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://gdg.community.dev/gdg-menorca/",
+  "urls": {
+    "twitter": "https://www.twitter.com/GDGMenorca",
+    "instagram": "https://www.instagram.com/gdgmenorca",
+    "eventsUrl": "https://gdg.community.dev/gdg-menorca/"
+  },
+  "thumbnailUrl": "images/gdg-menorca.webp",
+  "latLon": {
+    "lat": 39.8154,
+    "lon": 4.2754
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

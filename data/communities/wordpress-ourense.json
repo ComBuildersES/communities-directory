@@ -1,0 +1,31 @@
+{
+  "id": 552,
+  "name": "WordPress Ourense",
+  "status": "active",
+  "lastReviewed": "03/03/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Orense (Ourense)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/WordPressOurense/",
+  "urls": {
+    "telegram": "https://t.me/+Ipduptue5zA3M2I0",
+    "twitter": "https://twitter.com/WPOurense",
+    "eventsUrl": "https://www.meetup.com/es-ES/WordPressOurense/"
+  },
+  "thumbnailUrl": "images/wordpress-ourense.webp",
+  "latLon": {
+    "lat": 42.3401174,
+    "lon": -7.8646923
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

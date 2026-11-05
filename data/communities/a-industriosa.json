@@ -1,0 +1,33 @@
+{
+  "id": 5,
+  "name": "A Industriosa",
+  "status": "active",
+  "lastReviewed": "27/11/2024",
+  "communityType": "hacklab",
+  "eventFormat": "in-person",
+  "location": "Vigo, Galicia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "makerspace",
+    "3d-modeling",
+    "robotics",
+    "arduino"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/AIndustriosa/",
+  "urls": {
+    "twitter": "http://twitter.com/aindustriosa",
+    "eventsUrl": "https://www.meetup.com/es-ES/AIndustriosa/"
+  },
+  "thumbnailUrl": "images/a-industriosa.webp",
+  "latLon": {
+    "lat": 42.2313601,
+    "lon": -8.7124252
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

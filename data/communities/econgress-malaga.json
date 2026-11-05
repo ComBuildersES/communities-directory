@@ -1,0 +1,35 @@
+{
+  "id": 173,
+  "name": "eCongress Málaga",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "digital-marketing",
+    "seo"
+  ],
+  "targetAudience": [
+    "digital-marketer"
+  ],
+  "contactInfo": "info@econgressmalaga.es",
+  "communityUrl": "https://econgressmalaga.es/",
+  "urls": {
+    "youtube": "https://youtu.be/XnRJtTYSlc0?si=Zy9AgzsMhEuTlLS6",
+    "linkedin": "https://www.linkedin.com/school/asdrubal-academy",
+    "twitter": "https://twitter.com/RaiolaNetworks",
+    "instagram": "https://www.instagram.com/raiolanetworks.es/"
+  },
+  "thumbnailUrl": "images/econgress-malaga.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,29 @@
+{
+  "id": 190,
+  "name": "Fullstack Sevilla",
+  "status": "active",
+  "lastReviewed": "18/12/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Sevilla",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://x.com/fullstacksvq",
+  "urls": {
+    "twitter": "https://x.com/fullstacksvq",
+    "mastodon": "https://saraos.tech/@fullstacksvq",
+    "eventsUrl": "https://www.meetup.com/es-es/fullstacksevilla/"
+  },
+  "thumbnailUrl": "images/fullstack-sevilla.webp",
+  "latLon": {
+    "lat": 37.38264,
+    "lon": -5.9962951
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

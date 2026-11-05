@@ -1,0 +1,25 @@
+{
+  "id": 314,
+  "name": "Latinas in Tech Madrid",
+  "status": "active",
+  "lastReviewed": "11/12/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://web.archive.org/web/20251205170100/https://latinasintech.org/chapter/madrid",
+  "urls": {},
+  "thumbnailUrl": "images/latinas-in-tech-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

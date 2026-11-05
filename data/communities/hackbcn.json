@@ -1,0 +1,30 @@
+{
+  "id": 585,
+  "name": "HackBcn",
+  "status": "active",
+  "lastReviewed": "26/05/2025",
+  "communityType": "collaborative-group",
+  "eventFormat": "hybrid",
+  "location": "Barcelona, Spain",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "it@hackbcn.org",
+  "communityUrl": "https://hackbcn.org/",
+  "urls": {
+    "telegram": "https://t.me/hackbcn",
+    "github": "https://github.com/ernesto-xload",
+    "twitter": "https://x.com/hackbcn",
+    "web": "https://hackbcn.org/"
+  },
+  "thumbnailUrl": "images/hackbcn.webp",
+  "latLon": {
+    "lat": 41.3825802,
+    "lon": 2.177073
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

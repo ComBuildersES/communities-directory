@@ -1,0 +1,29 @@
+{
+  "id": 402,
+  "name": "PyData Málaga",
+  "status": "active",
+  "lastReviewed": "21/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "data-science"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/pydata-malaga/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es-ES/pydata-malaga/"
+  },
+  "thumbnailUrl": "images/pydata-malaga.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,30 @@
+{
+  "id": 508,
+  "name": "Wordpress Málaga",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/wordpress-malaga/",
+  "urls": {
+    "twitter": "https://twitter.com/wpmalaga/",
+    "eventsUrl": "https://www.meetup.com/es-ES/wordpress-malaga/"
+  },
+  "thumbnailUrl": "images/wordpress-malaga.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

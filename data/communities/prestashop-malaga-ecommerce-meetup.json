@@ -1,0 +1,29 @@
+{
+  "id": 393,
+  "name": "PrestaShop - Málaga Ecommerce Meetup",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "prestashop"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/PrestaShop-Malaga-Meetup/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/PrestaShop-Malaga-Meetup/"
+  },
+  "thumbnailUrl": "images/prestashop-malaga-ecommerce-meetup.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

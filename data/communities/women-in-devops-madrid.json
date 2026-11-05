@@ -1,0 +1,26 @@
+{
+  "id": 479,
+  "name": "Women in DevOps Madrid",
+  "status": "inactive",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/Women-in-DevOps-Madrid/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/es-ES/Women-in-DevOps-Madrid/"
+  },
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

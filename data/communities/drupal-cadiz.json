@@ -1,0 +1,25 @@
+{
+  "id": 153,
+  "name": "Drupal Cádiz",
+  "status": "unknown",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Cádiz",
+  "parentId": 39,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "help@drupal.org",
+  "communityUrl": "https://groups.drupal.org/taxonomy/term/93563",
+  "urls": {},
+  "latLon": {
+    "lat": 36.5297453,
+    "lon": -6.2926477
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

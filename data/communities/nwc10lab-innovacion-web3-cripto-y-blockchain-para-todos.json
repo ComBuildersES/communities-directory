@@ -1,0 +1,32 @@
+{
+  "id": 373,
+  "name": "NWC10Lab: Innovación WEB3, CRIPTO y blockchain para todos",
+  "status": "active",
+  "lastReviewed": "11/12/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "blockchain"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/innovacion-web3-para-todos-con-super-pioneros/?eventOrigin=event_home_page",
+  "urls": {
+    "twitter": "http://twitter.com/nwc10group/",
+    "instagram": "https://www.instagram.com/nwc10.lab/",
+    "linkedin": "https://www.linkedin.com/company/nwc10",
+    "eventsUrl": "https://www.meetup.com/innovacion-web3-para-todos-con-super-pioneros/?eventOrigin=event_home_page"
+  },
+  "thumbnailUrl": "images/nwc10lab-innovacion-web3-cripto-y-blockchain-para-todos.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

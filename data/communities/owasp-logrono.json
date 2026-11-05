@@ -1,0 +1,35 @@
+{
+  "id": 380,
+  "name": "OWASP Logroño",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Logroño",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "web-security",
+    "cybersecurity"
+  ],
+  "targetAudience": [],
+  "contactInfo": "oscar.orellana.artigas@owasp.org",
+  "communityUrl": "https://owasp.org/www-chapter-logrono/",
+  "urls": {
+    "youtube": "https://www.youtube.com/user/OWASPGLOBAL/videos",
+    "linkedin": "https://www.linkedin.com/company/owasp-logrono",
+    "mastodon": "https://infosec.exchange/@owasp_lo",
+    "bluesky": "https://bsky.app/profile/owasp-lo.bsky.social",
+    "github": "https://github.com/OWASP/",
+    "twitter": "https://twitter.com/owasp"
+  },
+  "thumbnailUrl": "images/owasp-logrono.webp",
+  "latLon": {
+    "lat": 42.46569,
+    "lon": -2.44998
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

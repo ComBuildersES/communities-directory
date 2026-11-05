@@ -1,0 +1,27 @@
+{
+  "id": 136,
+  "name": "DevFest Sevilla 2024",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Sevilla",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://gdg.community.dev/events/details/google-gdg-sevilla-presents-devfest-sevilla-2024/",
+  "urls": {
+    "eventsUrl": "https://gdg.community.dev/events/details/google-gdg-sevilla-presents-devfest-sevilla-2024/"
+  },
+  "thumbnailUrl": "images/devfest-sevilla-2024.webp",
+  "latLon": {
+    "lat": 37.38264,
+    "lon": -5.9962951
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

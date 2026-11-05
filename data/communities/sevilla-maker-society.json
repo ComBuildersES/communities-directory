@@ -1,0 +1,29 @@
+{
+  "id": 572,
+  "name": "Sevilla Maker Society",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Sevilla, España",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://sevillamakers.org/",
+  "urls": {
+    "twitter": "https://x.com/MakerSocietySVQ",
+    "web": "https://sevillamakers.org/",
+    "eventsUrl": "https://www.meetup.com/es-es/maker-society/"
+  },
+  "thumbnailUrl": "images/sevilla-maker-societ.webp",
+  "latLon": {
+    "lat": 37.3886303,
+    "lon": -5.9953403
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

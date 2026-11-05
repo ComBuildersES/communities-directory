@@ -1,0 +1,25 @@
+{
+  "id": 319,
+  "name": "MADE Makerspace",
+  "status": "active",
+  "lastReviewed": "25/10/2024",
+  "communityType": "hacklab",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://made-bcn.org/",
+  "urls": {},
+  "thumbnailUrl": "images/made-makerspace.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

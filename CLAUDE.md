@@ -43,9 +43,14 @@ src/
     invertedindex.js   # Construcción del índice invertido
     searchFaceted.js   # Búsqueda facetada por intersección de sets
 
+data/communities/          # FUENTE DE VERDAD: un fichero JSON por comunidad (<slug>.json)
+data/deleted-communities/  # FUENTE DE VERDAD: un fichero JSON por baja (<slug>.json)
+
 public/data/
-  communities.json     # Fuente de datos principal (600 comunidades)
-  communities.geojson  # Formato GeoJSON para el mapa
+  communities.json          # GENERADO — gitignorado, no editar
+  communities.geojson       # GENERADO — gitignorado, no editar
+  deleted-communities.json  # GENERADO — gitignorado, no editar
+  communities.meta.json     # nextCommunityId (lo mantiene solo el job de asignación)
   tags.json            # Taxonomía de etiquetas temáticas (148 tags)
   audience.json        # Perfiles de público objetivo (35 perfiles)
 
@@ -53,7 +58,11 @@ scripts/               # Utilidades de mantenimiento de datos
   check-urls.js
   find-duplicates.js
   ensure-id-autoincrement.js
-  process-to-communities-to-geojson.js
+  compile-communities.js           # Compila el bundle + geojson desde data/communities/
+  explode-communities.js           # Migración one-shot: bundle → fichero por comunidad
+  assign-community-ids.js          # Asigna ids pendientes (solo en master)
+  lib/communities-store.js         # API de lectura/escritura de la fuente de verdad
+  lib/communities-git.js           # Reconstruye el listado en un ref de git (baselines)
   process-community-issue.js
   migrate-add-new-fields.js        # Migración: añade urls/tags/targetAudience
   scrape-community-data.js         # Scraping con Playwright → suggestions.json
@@ -140,7 +149,9 @@ npm run lint                          # ESLint
 npm run check-urls                    # Valida URLs de comunidades
 npm run find-duplicates               # Detecta duplicados por ID
 npm run ensure-id-autoincrement       # Verifica secuencia de IDs
-npm run process-to-communities-to-geojson  # Genera GeoJSON
+npm run compile-communities           # Compila communities.json + .geojson desde la fuente
+npm run explode-communities           # Migración one-shot al layout por fichero
+npm run assign-community-ids          # Asigna ids pendientes (uso en master / CI)
 
 # Enriquecimiento de datos (nuevos)
 npm run migrate-add-new-fields        # Añade urls/tags/targetAudience a communities.json (idempotente)
@@ -268,6 +279,90 @@ export const SUPPORTED_LOCALES = ['es', 'en'];
 ```
 
 Importar desde aquí en cualquier código que necesite validar o iterar los locales; no duplicar la lista.
+
+---
+
+## Fuente de verdad de los datos (una comunidad, un fichero)
+
+**`data/communities/<slug>.json` y `data/deleted-communities/<slug>.json` son la fuente de
+verdad. `public/data/communities.json`, `.geojson` y `deleted-communities.json` son
+artefactos generados y están gitignorados: no los edites ni los commitees.**
+
+Motivo (issue #437): con todas las comunidades en un único JSON, dos propuestas simultáneas
+editaban las mismas líneas de cola y el merge conflictaba siempre. Con un fichero por
+comunidad el conflicto es imposible por construcción, igual que ya ocurría con las imágenes.
+
+### Cómo acceder a los datos desde un script
+
+Nunca leas ni escribas el bundle directamente. Usa el store:
+
+```js
+import { readCommunities, writeCommunities } from './lib/communities-store.js';
+
+const communities = readCommunities();   // lista equivalente al antiguo communities.json
+// ...modificar...
+writeCommunities(communities);           // sincroniza ficheros fuente + recompila el bundle
+```
+
+Para las bajas, el mismo patrón: `readDeletedCommunities()`, `writeDeletedCommunity(entry)`
+y `writeDeletedCommunities(list)`.
+
+Para comparar contra una baseline de git (`--baseline-ref`, commit padre, `origin/master`):
+
+```js
+import { readCommunitiesAtRef } from './lib/communities-git.js';
+const baseline = readCommunitiesAtRef('origin/master');  // cae al bundle en refs antiguos
+```
+
+### Asignación de `id`
+
+El `id` **no** se asigna al crear la propuesta: el fichero nace con `id: null` y se asigna ya
+en `master`, dentro del job `build` de `deploy.yml`, **antes** del build. Asignarlo en la
+rama era lo que hacía que dos propuestas simultáneas reclamasen el mismo id.
+
+- La serialización la da `concurrency: group: pages` con `cancel-in-progress: false`: dos
+  merges seguidos no pueden reclamar el mismo id.
+- Asignar antes del build es lo que permite que la comunidad nueva se publique en **ese
+  mismo deploy**. El commit de los ids lleva `[skip ci]` porque ese run ya publica.
+- `id: null` es un estado válido en `data/communities/` y en la validación.
+- `compileBundle()` no publica comunidades sin id. Con el flujo actual eso no ocurre (los
+  ids se asignan antes); queda como red de seguridad.
+- Mientras no tiene id, la comunidad ya es enlazable por slug
+  (`resolveCommunityFromIdentifier`).
+
+**No añadas otro workflow que asigne ids.** Dos jobs asignando en grupos de concurrencia
+distintos pueden reclamar el mismo id, que es exactamente el bug que esto resuelve.
+
+### Identidad de una comunidad entre dos refs
+
+Al comparar el estado en dos commits hacen falta **las dos claves**: el `id` (porque una
+edición puede renombrar la comunidad, y entonces el slug cambia) y el slug (porque en el
+commit del alta el id todavía es `null`). Ver `getChangedCommunities` en
+`scripts/generate-changelog.js` y su test.
+
+### Comparar dos registros
+
+Usa `stableStringify` del store, nunca `JSON.stringify` directo: el store normaliza el orden
+de claves al escribir, y un comparador sensible al orden marcaría las 600+ comunidades como
+modificadas en cada PR.
+
+### Claves de `urls`
+
+Añadir una plataforma nueva exige tocar **cuatro** sitios, o se cae por el camino:
+
+1. `URL_PLATFORM_OPTIONS` en `src/lib/communitySubmission.js` (formulario)
+2. `ALLOWED_URL_KEYS` en `scripts/validate-community-data.js` (si falta, el modo estricto
+   rechaza la comunidad)
+3. `URL_CONFIG_KEYS` **y** `URL_GROUP_DEFS` en `CommunityModal.jsx` (si falta en el grupo,
+   el enlace nunca se renderiza)
+4. `communityModal.url.<clave>` en `src/i18n/locales/es.json` y `en.json`
+
+### Slugs
+
+`slugifyCommunityName` existe en `scripts/lib/communities-store.js` y en
+`src/lib/communitySubmission.js`, y **deben** producir el mismo resultado: los deep links por
+slug dependen de esa equivalencia. Hay un test que lo verifica
+(`tests/communitiesStore.test.js`).
 
 ---
 

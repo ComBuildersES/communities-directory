@@ -1,0 +1,25 @@
+{
+  "id": 467,
+  "name": "WeCodeFest",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Valladolid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://wecodefest.com/",
+  "urls": {},
+  "thumbnailUrl": "images/wecodefest.webp",
+  "latLon": {
+    "lat": 41.6529421,
+    "lon": -4.7283839
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

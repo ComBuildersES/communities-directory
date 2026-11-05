@@ -1,0 +1,24 @@
+{
+  "id": 271,
+  "name": "Iniciador Donostia",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Guipúzcoa (San Sebastián)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://iniciador.com/Donostia",
+  "urls": {},
+  "latLon": {
+    "lat": 43.320905,
+    "lon": -1.9845145
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

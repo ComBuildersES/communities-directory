@@ -1,0 +1,33 @@
+{
+  "id": 525,
+  "name": "WordPress Valencia",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Valencia",
+  "parentId": 512,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/wordpress-valencia-meetup/",
+  "urls": {
+    "twitter": "https://twitter.com/_wpvalencia",
+    "instagram": "https://www.instagram.com/wordpressvalencia/",
+    "discord": "https://discord.gg/e6PMDnuCFb",
+    "eventsUrl": "https://www.meetup.com/wordpress-valencia-meetup/"
+  },
+  "thumbnailUrl": "images/wordpress-valencia.webp",
+  "latLon": {
+    "lat": 39.4702393,
+    "lon": -0.3768049
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

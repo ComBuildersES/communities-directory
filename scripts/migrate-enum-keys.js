@@ -17,10 +17,10 @@
  */
 
 /* eslint-env node */
-import fs from 'fs';
+// Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
+import { hasSourceDir, readCommunities, writeCommunities } from './lib/communities-store.js';
 
-const COMMUNITIES_PATH = './public/data/communities.json';
-const GEOJSON_PATH = './public/data/communities.geojson';
+
 
 const STATUS_MAP = {
   'Activa':      'active',
@@ -72,12 +72,12 @@ function main() {
   const args = process.argv.slice(2);
   const dryRun = args.includes('--dry-run');
 
-  if (!fs.existsSync(COMMUNITIES_PATH)) {
-    console.error(`❌ No se encontró ${COMMUNITIES_PATH}`);
+  if (!hasSourceDir()) {
+    console.error('❌ No hay ficheros fuente en data/communities/');
     process.exit(1);
   }
 
-  const communities = JSON.parse(fs.readFileSync(COMMUNITIES_PATH, 'utf-8'));
+  const communities = readCommunities();
   let totalChanged = 0;
 
   const updatedCommunities = communities.map((community) => {
@@ -98,28 +98,9 @@ function main() {
     return;
   }
 
-  fs.writeFileSync(COMMUNITIES_PATH, `${JSON.stringify(updatedCommunities, null, 2)}\n`, 'utf-8');
-  console.log(`✅ communities.json: ${totalChanged} comunidades migradas.`);
-
-  // Migrate geojson if it exists
-  if (!fs.existsSync(GEOJSON_PATH)) {
-    console.warn(`⚠️  No se encontró ${GEOJSON_PATH} — omitido.`);
-    return;
-  }
-
-  const geojson = JSON.parse(fs.readFileSync(GEOJSON_PATH, 'utf-8'));
-  let geoChanged = 0;
-
-  const updatedFeatures = geojson.features.map((feature) => {
-    const props = feature.properties;
-    const { updated, changes } = migrateCommunity(props);
-    if (changes.length > 0) geoChanged++;
-    return { ...feature, properties: updated };
-  });
-
-  const updatedGeojson = { ...geojson, features: updatedFeatures };
-  fs.writeFileSync(GEOJSON_PATH, `${JSON.stringify(updatedGeojson, null, 2)}\n`, 'utf-8');
-  console.log(`✅ communities.geojson: ${geoChanged} features migradas.`);
+  // El GeoJSON no se migra: es un artefacto que `writeCommunities` regenera desde la fuente.
+  writeCommunities(updatedCommunities);
+  console.log(`✅ data/communities/: ${totalChanged} comunidades migradas.`);
 }
 
 main();

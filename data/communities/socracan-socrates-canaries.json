@@ -1,0 +1,28 @@
+{
+  "id": 425,
+  "name": "Socracan (SoCraTes Canaries)",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Canarias",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://web.archive.org/web/20230929223744/https://www.socracan.com/",
+  "urls": {
+    "twitter": "https://x.com/socracan",
+    "web": "http://web.archive.org/web/20230929223744/https://www.socracan.com/"
+  },
+  "thumbnailUrl": "images/socracan-socrates-canaries.webp",
+  "latLon": {
+    "lat": 28,
+    "lon": -15.5
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

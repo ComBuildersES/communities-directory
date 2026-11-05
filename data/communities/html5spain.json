@@ -1,0 +1,29 @@
+{
+  "id": 247,
+  "name": "HTML5Spain",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/HTML5-Spain/",
+  "urls": {
+    "twitter": "https://twitter.com/HTML5MeetSpain",
+    "youtube": "https://www.youtube.com/user/HTML5Spain",
+    "eventsUrl": "https://www.meetup.com/es-ES/HTML5-Spain/"
+  },
+  "thumbnailUrl": "images/html5spain.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

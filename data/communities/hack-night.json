@@ -1,0 +1,30 @@
+{
+  "id": 239,
+  "name": "Hack Night",
+  "status": "unknown",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "support@luma.com",
+  "communityUrl": "https://lu.ma/6xew9jdf",
+  "urls": {
+    "twitter": "https://x.com/hackbarna",
+    "youtube": "https://youtube.com/@hackbarna",
+    "linkedin": "https://linkedin.com/company/103594048",
+    "instagram": "https://www.instagram.com/luma_hq/",
+    "eventsUrl": "https://lu.ma/6xew9jdf"
+  },
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,31 @@
+{
+  "id": 169,
+  "name": "DrupalCamp Spain",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Itinerante",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "drupal"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://drupalcamp.es/es",
+  "urls": {
+    "instagram": "https://www.instagram.com/drupalcampspain/",
+    "youtube": "https://www.youtube.com/channel/UCJlthEUN__9_-KWFQ_-0fLg",
+    "github": "https://github.com/AsociacionDrupalES"
+  },
+  "thumbnailUrl": "images/drupalcamp-spain.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

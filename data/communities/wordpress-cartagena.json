@@ -1,0 +1,30 @@
+{
+  "id": 493,
+  "name": "WordPress Cartagena",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Cartagena, Murcia",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/wordpress-cartagena/",
+  "urls": {
+    "twitter": "https://twitter.com/WPCartagena",
+    "eventsUrl": "https://www.meetup.com/wordpress-cartagena/"
+  },
+  "thumbnailUrl": "images/wordpress-cartagena.webp",
+  "latLon": {
+    "lat": 37.6057068,
+    "lon": -0.9913063
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

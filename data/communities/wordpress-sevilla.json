@@ -1,0 +1,31 @@
+{
+  "id": 518,
+  "name": "WordPress Sevilla",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Sevilla",
+  "parentId": 512,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://wpsevilla.org/",
+  "urls": {
+    "telegram": "https://t.me/wpsevilla",
+    "eventsUrl": "https://www.meetup.com/es-ES/wordpress-sevilla/"
+  },
+  "thumbnailUrl": "images/wordpress-sevilla.webp",
+  "latLon": {
+    "lat": 37.38264,
+    "lon": -5.9962951
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,30 @@
+{
+  "id": 362,
+  "name": "Navaja Negra",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Albacete",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "contacto@navajanegra.com",
+  "communityUrl": "https://www.navajanegra.com/2024/",
+  "urls": {
+    "twitter": "https://x.com/alexfrancow",
+    "youtube": "https://youtube.com/c/NavajaNegra",
+    "instagram": "https://www.instagram.com/navajanegra_ab",
+    "telegram": "https://t.me/navaja_negra"
+  },
+  "thumbnailUrl": "images/navaja-negra.webp",
+  "latLon": {
+    "lat": 38.9976623,
+    "lon": -1.8600675
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

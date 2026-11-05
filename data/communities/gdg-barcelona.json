@@ -1,0 +1,31 @@
+{
+  "id": 613,
+  "name": "GDG Barcelona",
+  "status": "active",
+  "lastReviewed": "30/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "parentId": 207,
+  "shortDescription": "Google Developer Group de Barcelona con encuentros de comunidad y divulgacion tecnica.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://gdg.community.dev/gdg-barcelona/",
+  "urls": {
+    "instagram": "https://www.instagram.com/gdg_barcelona/",
+    "mailingList": "https://groups.google.com/g/gdg-barcelona",
+    "eventsUrl": "https://www.meetup.com/es-ES/gdg-barcelona/"
+  },
+  "thumbnailUrl": "images/gdg-barcelona.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

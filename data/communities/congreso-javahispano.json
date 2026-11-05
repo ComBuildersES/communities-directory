@@ -1,0 +1,25 @@
+{
+  "id": 108,
+  "name": "Congreso javaHispano",
+  "status": "inactive",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "http://www.javahispano.org/fotos-seminario-jenkings/fotos-del-i-congreso-javahispano/",
+  "urls": {},
+  "thumbnailUrl": "images/congreso-javahispano.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,32 @@
+{
+  "id": 426,
+  "name": "Software Crafters Barcelona",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "software-craftsmanship"
+  ],
+  "targetAudience": [],
+  "contactInfo": "info@softwarecrafters.barcelona",
+  "communityUrl": "https://softwarecrafters.barcelona/",
+  "urls": {
+    "twitter": "https://twitter.com/alchemist_devel",
+    "github": "https://github.com/bowserchris",
+    "youtube": "https://www.youtube.com/channel/UCksw6qsw6vk7cp8sVwIpNrQ",
+    "eventsUrl": "https://www.meetup.com/software-crafters-barcelona/events/313142147/"
+  },
+  "thumbnailUrl": "images/software-crafters-barcelona.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

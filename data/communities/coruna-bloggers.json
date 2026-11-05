@@ -1,0 +1,27 @@
+{
+  "id": 111,
+  "name": "Coruña Bloggers",
+  "status": "active",
+  "lastReviewed": "22/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Coruña",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "corunabloggers@gmail.com",
+  "communityUrl": "https://corunabloggers.com/",
+  "urls": {
+    "twitter": "https://twitter.com/CorunaBloggers"
+  },
+  "thumbnailUrl": "images/coruna-bloggers.webp",
+  "latLon": {
+    "lat": 43.3707332,
+    "lon": -8.3958532
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

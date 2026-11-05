@@ -1,0 +1,31 @@
+{
+  "id": 320,
+  "name": "Madriagil",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [
+    "agile-practitioner"
+  ],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/madriagil/",
+  "urls": {
+    "twitter": "http://twitter.com/madriagil/",
+    "linkedin": "http://www.linkedin.com/groups/Agile-Spain-137792",
+    "eventsUrl": "https://www.meetup.com/es-ES/madriagil/"
+  },
+  "thumbnailUrl": "images/madriagil.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

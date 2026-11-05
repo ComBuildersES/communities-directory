@@ -1,0 +1,28 @@
+{
+  "id": 42,
+  "name": "asturias.js",
+  "status": "inactive",
+  "lastReviewed": "18/12/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Sin completar",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://x.com/asturiasjs",
+  "urls": {
+    "twitter": "https://x.com/asturiasjs",
+    "eventsUrl": "https://saraos.tech/@asturiasjs"
+  },
+  "thumbnailUrl": "images/asturiasjs.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

@@ -1,0 +1,32 @@
+{
+  "id": 203,
+  "name": "GDG Málaga",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "parentId": 207,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://gdg.community.dev/gdg-malaga/",
+  "urls": {
+    "twitter": "https://www.twitter.com/gdgmalaga",
+    "linkedin": "https://www.linkedin.com/company/gdg-malaga/",
+    "instagram": "https://www.instagram.com/gdgmalaga",
+    "discord": "https://discord.gg/PbUpg2b6pW",
+    "eventsUrl": "https://www.meetup.com/malagamobile/"
+  },
+  "thumbnailUrl": "images/gdg-malaga.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

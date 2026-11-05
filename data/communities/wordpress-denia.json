@@ -1,0 +1,33 @@
+{
+  "id": 498,
+  "name": "WordPress Dénia",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Alicante (Denia)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "meetup@wpdenia.com",
+  "communityUrl": "https://wpdenia.com/",
+  "urls": {
+    "twitter": "https://twitter.com/WPDenia",
+    "instagram": "https://www.instagram.com/wordpress_denia/",
+    "telegram": "https://t.me/joinchat/MIEFyRAkLjYMayM-D1mAIA",
+    "youtube": "https://www.youtube.com/channel/UCcjR_iC6F0cFDKIYbRxAg1A",
+    "eventsUrl": "https://www.meetup.com/es/Wordpress-Denia/"
+  },
+  "thumbnailUrl": "images/wordpress-denia.webp",
+  "latLon": {
+    "lat": 38.8403996,
+    "lon": 0.1086422
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

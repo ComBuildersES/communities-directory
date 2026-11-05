@@ -1,0 +1,31 @@
+{
+  "id": 553,
+  "name": "Bitcoin 2140 A Coruña",
+  "status": "active",
+  "lastReviewed": "03/03/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Coruña",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "cryptocurrencies"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es/bitcoin-2140-a-coruna/",
+  "urls": {
+    "telegram": "https://t.me/B2140_ACoruna",
+    "twitter": "https://twitter.com/2140Coruna",
+    "eventsUrl": "https://www.meetup.com/es/bitcoin-2140-a-coruna/"
+  },
+  "thumbnailUrl": "images/bitcoin-2140-a-coruna.webp",
+  "latLon": {
+    "lat": 43.3707332,
+    "lon": -8.3958532
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

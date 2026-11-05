@@ -1,0 +1,27 @@
+{
+  "id": 431,
+  "name": "Startup Oasis",
+  "status": "active",
+  "lastReviewed": "25/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/startup-oasis/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/startup-oasis/"
+  },
+  "thumbnailUrl": "images/startup-oasis.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

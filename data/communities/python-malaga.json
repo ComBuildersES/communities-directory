@@ -1,0 +1,29 @@
+{
+  "id": 407,
+  "name": "Python Málaga",
+  "status": "active",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "parentId": 404,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://x.com/python_malaga",
+  "urls": {
+    "twitter": "https://x.com/python_malaga",
+    "eventsUrl": "https://www.meetup.com/es-ES/python_malaga/"
+  },
+  "thumbnailUrl": "images/python-malaga.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

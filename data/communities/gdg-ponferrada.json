@@ -1,0 +1,31 @@
+{
+  "id": 205,
+  "name": "GDG Ponferrada",
+  "status": "active",
+  "lastReviewed": "11/12/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "hybrid",
+  "location": "Ponferrada",
+  "parentId": 207,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://gdgponferrada.org",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/company/103238781/",
+    "twitter": "https://x.com/gdgponferrada",
+    "instagram": "https://www.instagram.com/gdgponferrada/",
+    "youtube": "https://www.youtube.com/@gdgponferrada"
+  },
+  "thumbnailUrl": "images/gdg-ponferrada.webp",
+  "latLon": {
+    "lat": 42.5463315,
+    "lon": -6.5908331
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

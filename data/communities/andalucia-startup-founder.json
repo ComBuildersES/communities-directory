@@ -1,0 +1,32 @@
+{
+  "id": 26,
+  "name": "Andalucía Startup Founder",
+  "status": "active",
+  "lastReviewed": "25/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Córdoba",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "startups"
+  ],
+  "targetAudience": [
+    "entrepreneur"
+  ],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/andalucia-startup-founder/",
+  "urls": {
+    "twitter": "https://twitter.com/founding",
+    "eventsUrl": "https://www.meetup.com/andalucia-startup-founder/"
+  },
+  "thumbnailUrl": "images/andalucia-startup-founder.webp",
+  "latLon": {
+    "lat": 37.888422,
+    "lon": -4.77513
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

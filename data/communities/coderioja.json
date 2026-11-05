@@ -1,0 +1,35 @@
+{
+  "id": 96,
+  "name": "CodeRioja",
+  "status": "active",
+  "lastReviewed": "25/03/2026",
+  "communityType": "conference",
+  "eventFormat": "hybrid",
+  "location": "Logroño La Rioja",
+  "shortDescription": "Entre los objetivos de la CodeRioja se fomentar  el conocimiento del software libre, impulsar el sector TIC empresarial riojano, ofrecer una alternativa de ocio constructivo, instructivo y participativo, así como favorecer la comunicación entre los aficionados a la informát",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "tech-ethics",
+    "free-software",
+    "open-source"
+  ],
+  "targetAudience": [],
+  "contactInfo": "coderiojamail@gmail.com",
+  "communityUrl": "https://www.coderioja.com",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/groups/10009786/",
+    "bluesky": "https://bsky.app/profile/coderioja.bsky.social",
+    "telegram": "https://t.me/CodeRioja/",
+    "youtube": "https://youtu.be/88m4uHDIzRs"
+  },
+  "thumbnailUrl": "images/coderioja.webp",
+  "latLon": {
+    "lat": 42.46569,
+    "lon": -2.44998
+  },
+  "displayOnMap": true,
+  "humanValidated": true
+}

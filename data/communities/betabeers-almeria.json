@@ -1,0 +1,30 @@
+{
+  "id": 623,
+  "name": "Betabeers Almería",
+  "status": "inactive",
+  "lastReviewed": "31/07/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Almeria, Spain",
+  "parentId": 56,
+  "shortDescription": "Evento mensual para desarrolladores web y apps en Almeria.\n\nFormato del evento:\n- Charla sobre desarrollo.\n- Presentación de startups, como están hechas por detrás.\n- Networking.\n- Debates.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://betabeers.com/community/betabeers-almeria-25/",
+  "urls": {
+    "twitter": "https://x.com/betabeersalm"
+  },
+  "thumbnailUrl": "images/betabeers-almera.webp",
+  "latLon": {
+    "lat": 36.8685739,
+    "lon": -2.3120282
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

@@ -1,0 +1,28 @@
+{
+  "id": 421,
+  "name": "Singularity Tech Day",
+  "status": "active",
+  "lastReviewed": "31/05/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "singularity@plainconcepts.com",
+  "communityUrl": "https://singularitytechday.com/",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/company/plainconcepts?originalSubdomain=es",
+    "youtube": "https://www.youtube.com/c/plainTV"
+  },
+  "thumbnailUrl": "images/singularity-tech-day.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

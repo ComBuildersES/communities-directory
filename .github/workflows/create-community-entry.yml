@@ -49,8 +49,10 @@ jobs:
           GITHUB_ISSUE_NUMBER: ${{ github.event.issue.number }}
         run: node scripts/process-community-issue.js "$(cat issue-body.txt)"
       
-      - name: Run process-to-communities-to-geojson script
-        run: node scripts/process-to-communities-to-geojson.js
+      # Los artefactos (communities.json / .geojson) se compilan aquí solo para que
+      # `validate-data` pueda revisarlos; están gitignorados y no entran en la PR.
+      - name: Compilar artefactos de datos
+        run: npm run compile-communities
 
       - name: Validate generated data
         run: npm run validate-data
@@ -92,7 +94,7 @@ jobs:
               echo
               echo "Closes #${{ github.event.issue.number }}"
               echo
-              echo "🗑️ Esta propuesta elimina la comunidad del directorio y conserva una traza en \`public/data/deleted-communities.json\`."
+              echo "🗑️ Esta propuesta elimina la comunidad del directorio y conserva una traza en \`data/deleted-communities/\`."
               echo "__BODY__"
             } >> "$GITHUB_OUTPUT"
           else
@@ -119,7 +121,8 @@ jobs:
         uses: peter-evans/create-pull-request@v8
         with:
           add-paths: |
-            public/data/
+            data/communities/
+            data/deleted-communities/
             public/images/
           commit-message: "Aplicar propuesta de comunidad desde issue #${{ github.event.issue.number }}"
           branch: "community-issue-${{ github.event.issue.number }}"

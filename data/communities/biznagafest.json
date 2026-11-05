@@ -1,0 +1,31 @@
+{
+  "id": 62,
+  "name": "BiznagaFest",
+  "status": "active",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "biznagafest@gmail.com",
+  "communityUrl": "https://www.biznagafest.com/",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/company/fjxgroup/",
+    "instagram": "https://www.instagram.com/biznagafest/",
+    "twitter": "https://twitter.com/BiznagaFest",
+    "youtube": "https://www.youtube.com/@biznagafest",
+    "eventsUrl": "https://www.meetup.com/es-ES/google-developer-group-malaga/#top"
+  },
+  "thumbnailUrl": "images/biznagafest.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

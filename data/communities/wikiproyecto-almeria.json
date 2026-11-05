@@ -1,0 +1,33 @@
+{
+  "id": 470,
+  "name": "Wikiproyecto Almería",
+  "status": "active",
+  "lastReviewed": "06/04/2026",
+  "communityType": "collaborative-group",
+  "eventFormat": "in-person",
+  "location": "Almería",
+  "parentId": 469,
+  "shortDescription": "Colectivo que tiene como objetivo crear, mejorar y organizar todos los artículos relacionados con la provincia de Almería, en España, prestando especial atención a los más representativos, como las localidades, los monumentos, espacios naturales y las personalidades de Almería.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "matchesAllTags": true,
+  "matchesAllAudience": true,
+  "contactInfo": "",
+  "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Almer%C3%ADa/",
+  "urls": {
+    "telegram": "https://t.me/WP_Almeria",
+    "eventsUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Almer%C3%ADa/Actividades"
+  },
+  "thumbnailUrl": "images/wikiproyecto-almera.webp",
+  "latLon": {
+    "lat": 36.8400939,
+    "lon": -2.4679043
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}

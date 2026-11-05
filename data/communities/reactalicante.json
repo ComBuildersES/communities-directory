@@ -1,0 +1,30 @@
+{
+  "id": 411,
+  "name": "ReactAlicante",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Alicante",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "react"
+  ],
+  "targetAudience": [],
+  "contactInfo": "react-alicante@limenius.com",
+  "communityUrl": "https://reactalicante.es/",
+  "urls": {
+    "twitter": "http://twitter.com/lukasz_app",
+    "github": "http://github.com/lukasz_app"
+  },
+  "thumbnailUrl": "images/reactalicante.webp",
+  "latLon": {
+    "lat": 38.34521,
+    "lon": -0.4809945
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

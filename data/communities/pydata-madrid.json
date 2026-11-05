@@ -1,0 +1,52 @@
+{
+  "id": 401,
+  "name": "PyData Madrid",
+  "status": "active",
+  "lastReviewed": "24/03/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "parentId": 399,
+  "shortDescription": "",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "data-warehouse",
+    "data-lake",
+    "data-pipelines",
+    "big-data",
+    "open-data",
+    "python",
+    "data-science",
+    "generative-ai",
+    "data-visualization",
+    "machine-learning",
+    "sql-databases",
+    "nosql-databases"
+  ],
+  "targetAudience": [
+    "data-engineer",
+    "data-scientist",
+    "data-analyst",
+    "data-journalist",
+    "community-manager",
+    "sysadmin",
+    "ml-engineer"
+  ],
+  "contactInfo": "madrid-organizers@pydata.org",
+  "communityUrl": "https://guild.host/pydata-madrid",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/company/pydata-madrid/",
+    "bluesky": "https://bsky.app/profile/madrid.pydata.org",
+    "eventsUrl": "https://guild.host/pydata-madrid/events"
+  },
+  "thumbnailUrl": "images/pydata-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": true
+}

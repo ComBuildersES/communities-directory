@@ -1,0 +1,26 @@
+{
+  "id": 478,
+  "name": "Wikiproyecto Valladolid",
+  "status": "active",
+  "lastReviewed": "25/10/2024",
+  "communityType": "collaborative-group",
+  "eventFormat": "online",
+  "location": "Valladolid",
+  "parentId": 469,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Valladolid#Participantes",
+  "urls": {},
+  "thumbnailUrl": "images/wikiproyecto-valladolid.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

@@ -1,0 +1,29 @@
+{
+  "id": 349,
+  "name": "MorcillaConf",
+  "status": "active",
+  "lastReviewed": "17/10/2024",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Burgos",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://morcillaconf.es/",
+  "urls": {
+    "twitter": "https://x.com/GrimerLoner",
+    "instagram": "https://www.instagram.com/grimerloner",
+    "eventsUrl": "https://www.meetup.com/es-ES/gdg-burgos/"
+  },
+  "thumbnailUrl": "images/morcillaconf.webp",
+  "latLon": {
+    "lat": 42.3408923,
+    "lon": -3.6997623
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

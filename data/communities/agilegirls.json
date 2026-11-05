@@ -1,0 +1,28 @@
+{
+  "id": 17,
+  "name": "AgileGirls",
+  "status": "inactive",
+  "lastReviewed": "26/05/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "unknown",
+  "location": "Sin completar",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.facebook.com/AgileGirls/",
+  "urls": {
+    "twitter": "https://x.com/agilegirls",
+    "facebook": "https://www.facebook.com/AgileGirls/"
+  },
+  "thumbnailUrl": "images/agilegirls.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

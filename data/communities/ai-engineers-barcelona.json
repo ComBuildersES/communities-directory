@@ -1,0 +1,30 @@
+{
+  "id": 545,
+  "name": "AI Engineers Barcelona",
+  "status": "active",
+  "lastReviewed": "17/02/2025",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "machine-learning"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/ai-engineers-barcelona/",
+  "urls": {
+    "linkedin": "https://www.linkedin.com/company/ai-engineers-community",
+    "eventsUrl": "https://www.meetup.com/ai-engineers-barcelona/"
+  },
+  "thumbnailUrl": "images/ai-engineers-barcelona.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,26 @@
+{
+  "id": 471,
+  "name": "Wikiproyecto Burgos",
+  "status": "active",
+  "lastReviewed": "25/10/2024",
+  "communityType": "collaborative-group",
+  "eventFormat": "online",
+  "location": "Burgos",
+  "parentId": 469,
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Burgos/participantes",
+  "urls": {},
+  "thumbnailUrl": "images/wikiproyecto-burgos.webp",
+  "latLon": {
+    "lat": null,
+    "lon": null
+  },
+  "displayOnMap": false,
+  "humanValidated": false
+}

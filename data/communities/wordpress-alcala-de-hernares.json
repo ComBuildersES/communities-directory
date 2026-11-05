@@ -1,0 +1,29 @@
+{
+  "id": 488,
+  "name": "WordPress Alcalá de Hernares",
+  "status": "active",
+  "lastReviewed": "18/10/2024",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid (Alcalá de Henares)",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "wordpress"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/alcala-de-henares-wordpress-meetup-group/",
+  "urls": {
+    "eventsUrl": "https://www.meetup.com/alcala-de-henares-wordpress-meetup-group/"
+  },
+  "thumbnailUrl": "images/wordpress-alcala-de-hernares.webp",
+  "latLon": {
+    "lat": 40.481663,
+    "lon": -3.3641362
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}
