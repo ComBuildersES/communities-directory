@@ -15,7 +15,9 @@
   "contactInfo": "contacta@apiaddicts.org",
   "communityUrl": "https://www.meetup.com/es-ES/apiaddicts/",
   "urls": {
-    "eventsUrl": "https://www.meetup.com/es-ES/apiaddicts/"
+    "eventsUrl": "https://www.meetup.com/es-ES/apiaddicts/",
+    "eventosWiki": "https://eventos.wiki/organizations/apiaddicts",
+    "ote": "https://eventos.wiki/organizations/apiaddicts/events.json"
   },
   "thumbnailUrl": "images/apiaddicts.webp",
   "latLon": {

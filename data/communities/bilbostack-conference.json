@@ -18,7 +18,9 @@
     "telegram": "https://t.me/bilbostack",
     "bluesky": "https://bsky.app/profile/bilbostack.com",
     "twitter": "https://x.com/bilbostack",
-    "github": "https://github.com/bilbostack"
+    "github": "https://github.com/bilbostack",
+    "eventosWiki": "https://eventos.wiki/organizations/bilbostack",
+    "ote": "https://eventos.wiki/organizations/bilbostack/events.json"
   },
   "thumbnailUrl": "images/bilbostack-conference.webp",
   "latLon": {

@@ -21,7 +21,9 @@
     "github": "https://github.com/svg153",
     "youtube": "https://www.youtube.com/@GitHubCommunitySpain/",
     "twitter": "https://x.com/GithubCommSpain",
-    "eventsUrl": "https://www.meetup.com/ghspain"
+    "eventsUrl": "https://www.meetup.com/ghspain",
+    "eventosWiki": "https://eventos.wiki/organizations/github-community-spain",
+    "ote": "https://eventos.wiki/organizations/github-community-spain/events.json"
   },
   "thumbnailUrl": "images/github-community-spain.webp",
   "latLon": {

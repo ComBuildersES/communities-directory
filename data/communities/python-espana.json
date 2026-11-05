@@ -21,7 +21,9 @@
     "github": "https://github.com/python-spain",
     "youtube": "https://www.youtube.com/c/PythonEspa%C3%B1aOficial",
     "telegram": "https://t.me/PythonEsp",
-    "discord": "https://discord.com/invite/35E3Ph7Fez"
+    "discord": "https://discord.com/invite/35E3Ph7Fez",
+    "eventosWiki": "https://eventos.wiki/organizations/python-espana",
+    "ote": "https://eventos.wiki/organizations/python-espana/events.json"
   },
   "thumbnailUrl": "images/python-canarias.webp",
   "latLon": {

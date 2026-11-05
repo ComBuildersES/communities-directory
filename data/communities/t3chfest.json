@@ -23,7 +23,9 @@
     "bluesky": "https://bsky.app/profile/t3chfest.es",
     "linkedin": "https://es.linkedin.com/company/t3chfest",
     "instagram": "https://instagram.com/t3chfest",
-    "telegram": "https://t.me/t3chfest_canal"
+    "telegram": "https://t.me/t3chfest_canal",
+    "eventosWiki": "https://eventos.wiki/organizations/t3chfest",
+    "ote": "https://eventos.wiki/organizations/t3chfest/events.json"
   },
   "thumbnailUrl": "images/t3chfest.webp",
   "latLon": {

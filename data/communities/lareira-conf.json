@@ -23,7 +23,9 @@
     "github": "https://github.com/Gallegarmy/LareiraConf-MainPage/",
     "twitter": "https://x.com/lareiraconf",
     "linkedin": "https://www.linkedin.com/company/lareiraconf",
-    "youtube": "https://www.youtube.com/@LareiraConf"
+    "youtube": "https://www.youtube.com/@LareiraConf",
+    "eventosWiki": "https://eventos.wiki/organizations/lareira-conf",
+    "ote": "https://eventos.wiki/organizations/lareira-conf/events.json"
   },
   "thumbnailUrl": "images/lareira-conf.webp",
   "latLon": {

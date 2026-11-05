@@ -42,7 +42,9 @@
   "urls": {
     "twitter": "https://x.com/search?q=%23trgx&src=typed_query&f=live",
     "youtube": "https://www.youtube.com/@CodelyTV",
-    "instagram": "https://www.instagram.com/raul_muro/"
+    "instagram": "https://www.instagram.com/raul_muro/",
+    "eventosWiki": "https://eventos.wiki/organizations/trgcon",
+    "ote": "https://eventos.wiki/organizations/trgcon/events.json"
   },
   "thumbnailUrl": "images/trgcon.webp",
   "latLon": {

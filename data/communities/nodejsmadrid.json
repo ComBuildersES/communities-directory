@@ -28,7 +28,9 @@
   "communityUrl": "https://www.meetup.com/es-ES/node-js-madrid/",
   "urls": {
     "twitter": "https://x.com/MadridNodeJs",
-    "eventsUrl": "https://www.meetup.com/es-ES/node-js-madrid/"
+    "eventsUrl": "https://www.meetup.com/es-ES/node-js-madrid/",
+    "eventosWiki": "https://eventos.wiki/organizations/nodejs-madrid",
+    "ote": "https://eventos.wiki/organizations/nodejs-madrid/events.json"
   },
   "thumbnailUrl": "images/nodejs-madrid.webp",
   "latLon": {

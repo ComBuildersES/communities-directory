@@ -50,7 +50,9 @@
     "bluesky": "https://bsky.app/profile/asturiascrafters.com",
     "linkedin": "https://linkedin.com/company/asturiaswcraft",
     "eventsUrl": "https://saraos.tech/@asturias-software-crafters",
-    "telegram": "https://t.me/+F_0R2L0OowljMGY0"
+    "telegram": "https://t.me/+F_0R2L0OowljMGY0",
+    "eventosWiki": "https://eventos.wiki/organizations/asturias-software-crafters",
+    "ote": "https://eventos.wiki/organizations/asturias-software-crafters/events.json"
   },
   "thumbnailUrl": "images/asturias-software-crafters.webp",
   "latLon": {

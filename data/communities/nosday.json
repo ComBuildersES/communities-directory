@@ -15,7 +15,9 @@
   "contactInfo": "nosday23@gmail.com",
   "communityUrl": "https://nosday.com/",
   "urls": {
-    "twitter": "https://twitter.com/nosday"
+    "twitter": "https://twitter.com/nosday",
+    "eventosWiki": "https://eventos.wiki/organizations/nosday",
+    "ote": "https://eventos.wiki/organizations/nosday/events.json"
   },
   "thumbnailUrl": "images/nosday.webp",
   "latLon": {

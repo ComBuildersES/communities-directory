@@ -17,7 +17,9 @@
   "urls": {
     "linkedin": "https://www.linkedin.com/company/global-ai-community",
     "twitter": "https://x.com/GlobAICommunity",
-    "instagram": "https://www.instagram.com/globalaicommunity/"
+    "instagram": "https://www.instagram.com/globalaicommunity/",
+    "eventosWiki": "https://eventos.wiki/organizations/global-ai-community",
+    "ote": "https://eventos.wiki/organizations/global-ai-community/events.json"
   },
   "thumbnailUrl": "images/global-ai-bootcamp.webp",
   "latLon": {

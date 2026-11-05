@@ -19,7 +19,9 @@
     "twitter": "https://twitter.com/AsturCONtech",
     "telegram": "https://t.me/+wRE1sHSRAhdjZjc0",
     "youtube": "https://www.youtube.com/@asturcontech?sub_confirmation=1",
-    "linkAggregator": "https://linktr.ee/asturcontech"
+    "linkAggregator": "https://linktr.ee/asturcontech",
+    "eventosWiki": "https://eventos.wiki/organizations/asturcontech",
+    "ote": "https://eventos.wiki/organizations/asturcontech/events.json"
   },
   "thumbnailUrl": "images/asturcontech.webp",
   "latLon": {

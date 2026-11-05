@@ -18,7 +18,9 @@
   "communityUrl": "https://reactalicante.es/",
   "urls": {
     "twitter": "http://twitter.com/lukasz_app",
-    "github": "http://github.com/lukasz_app"
+    "github": "http://github.com/lukasz_app",
+    "eventosWiki": "https://eventos.wiki/organizations/reactalicante",
+    "ote": "https://eventos.wiki/organizations/reactalicante/events.json"
   },
   "thumbnailUrl": "images/reactalicante.webp",
   "latLon": {

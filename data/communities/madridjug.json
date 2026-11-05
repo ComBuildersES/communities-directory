@@ -28,7 +28,9 @@
     "twitter": "http://twitter.com/MadridJUG/",
     "eventsUrl": "https://www.meetup.com/es-ES/madridjug/",
     "bluesky": "https://bsky.app/profile/madridjug.es",
-    "web": "https://madridjug.es/"
+    "web": "https://madridjug.es/",
+    "eventosWiki": "https://eventos.wiki/organizations/madridjug",
+    "ote": "https://eventos.wiki/organizations/madridjug/events.json"
   },
   "thumbnailUrl": "images/madridjug.webp",
   "latLon": {

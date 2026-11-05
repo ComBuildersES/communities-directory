@@ -18,7 +18,9 @@
     "linkedin": "https://www.linkedin.com/company/pulpocon/",
     "youtube": "https://www.youtube.com/channel/UCVa-vcCBJ4tSKWmCFu8yfCg",
     "instagram": "https://www.instagram.com/pulpocon22/",
-    "twitter": "https://twitter.com/phpulpocon"
+    "twitter": "https://twitter.com/phpulpocon",
+    "eventosWiki": "https://eventos.wiki/organizations/pulpocon",
+    "ote": "https://eventos.wiki/organizations/pulpocon/events.json"
   },
   "thumbnailUrl": "images/pulpo-con.webp",
   "latLon": {

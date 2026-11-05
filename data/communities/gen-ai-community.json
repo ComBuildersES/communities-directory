@@ -31,7 +31,9 @@
   "urls": {
     "linkedin": "https://www.linkedin.com/groups/9079599/",
     "eventsUrl": "https://genaisummit.eu/",
-    "whatsapp": "https://chat.whatsapp.com/BdHQI2a11lRFGsa8BjkOX3"
+    "whatsapp": "https://chat.whatsapp.com/BdHQI2a11lRFGsa8BjkOX3",
+    "eventosWiki": "https://eventos.wiki/organizations/genaicommunity",
+    "ote": "https://eventos.wiki/organizations/genaicommunity/events.json"
   },
   "thumbnailUrl": "images/gen-ai-community.webp",
   "latLon": {

@@ -29,7 +29,9 @@
     "youtube": "https://www.youtube.com/user/tecnologiasplexus",
     "twitter": "https://x.com/nextdigitalhub",
     "bluesky": "https://bsky.app/profile/nextdigitalhub.bsky.social",
-    "github": "https://github.com/Lemoncode"
+    "github": "https://github.com/Lemoncode",
+    "eventosWiki": "https://eventos.wiki/organizations/a11yconf",
+    "ote": "https://eventos.wiki/organizations/a11yconf/events.json"
   },
   "thumbnailUrl": "images/a11yconf.webp",
   "latLon": {

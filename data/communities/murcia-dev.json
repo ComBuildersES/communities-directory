@@ -19,7 +19,9 @@
     "twitter": "https://twitter.com/MurciaDev",
     "linkedin": "https://www.linkedin.com/company/11855563",
     "telegram": "https://t.me/MurciaDev",
-    "eventsUrl": "https://www.meetup.com/es-ES/murciadev/"
+    "eventsUrl": "https://www.meetup.com/es-ES/murciadev/",
+    "eventosWiki": "https://eventos.wiki/organizations/murciadev",
+    "ote": "https://eventos.wiki/organizations/murciadev/events.json"
   },
   "thumbnailUrl": "images/murcia-dev.webp",
   "latLon": {

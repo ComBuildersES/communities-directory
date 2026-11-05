@@ -18,7 +18,9 @@
   "urls": {
     "twitter": "https://www.twitter.com/GDGAlicante",
     "linkedin": "https://www.linkedin.com/groups/13743861",
-    "eventsUrl": "https://gdg.community.dev/gdg-alicante/"
+    "eventsUrl": "https://gdg.community.dev/gdg-alicante/",
+    "eventosWiki": "https://eventos.wiki/organizations/gdg-alicante",
+    "ote": "https://eventos.wiki/organizations/gdg-alicante/events.json"
   },
   "thumbnailUrl": "images/gdg-alicante.webp",
   "latLon": {

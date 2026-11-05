@@ -19,7 +19,9 @@
   "urls": {
     "linkedin": "https://www.linkedin.com/company/agile-spain/",
     "twitter": "https://twitter.com/agilespain",
-    "youtube": "https://www.youtube.com/c/AgileSpaineventos/videos"
+    "youtube": "https://www.youtube.com/c/AgileSpaineventos/videos",
+    "eventosWiki": "https://eventos.wiki/organizations/agile-spain",
+    "ote": "https://eventos.wiki/organizations/agile-spain/events.json"
   },
   "thumbnailUrl": "images/agile-spain.webp",
   "latLon": {

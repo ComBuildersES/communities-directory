@@ -20,7 +20,9 @@
     "linkedin": "https://www.linkedin.com/company/gdg-malaga/",
     "instagram": "https://www.instagram.com/gdgmalaga",
     "discord": "https://discord.gg/PbUpg2b6pW",
-    "eventsUrl": "https://www.meetup.com/malagamobile/"
+    "eventsUrl": "https://www.meetup.com/malagamobile/",
+    "eventosWiki": "https://eventos.wiki/organizations/gdg-malaga",
+    "ote": "https://eventos.wiki/organizations/gdg-malaga/events.json"
   },
   "thumbnailUrl": "images/gdg-malaga.webp",
   "latLon": {

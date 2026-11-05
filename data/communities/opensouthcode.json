@@ -75,7 +75,9 @@
     "linkedin": "https://www.linkedin.com/company/opensouthcode/",
     "youtube": "https://www.youtube.com/@opensouthcode",
     "instagram": "https://www.instagram.com/opensouthcode",
-    "eventsUrl": "https://www.opensouthcode.org/"
+    "eventsUrl": "https://www.opensouthcode.org/",
+    "eventosWiki": "https://eventos.wiki/organizations/opensouthcode",
+    "ote": "https://eventos.wiki/organizations/opensouthcode/events.json"
   },
   "thumbnailUrl": "images/opensouthcode.webp",
   "latLon": {

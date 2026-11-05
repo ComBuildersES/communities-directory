@@ -28,7 +28,8 @@
   "contactInfo": "",
   "communityUrl": "https://wiki.osgeo.org/wiki/Geoinquietos_Almer%C3%ADa",
   "urls": {
-    "twitter": "https://x.com/geoinquietosalm"
+    "twitter": "https://x.com/geoinquietosalm",
+    "forum": "https://wiki.osgeo.org/wiki/Geoinquietos_Almer%C3%ADa"
   },
   "thumbnailUrl": "images/geoinquietos-almera.webp",
   "latLon": {

@@ -24,7 +24,11 @@
     "twitter": "https://x.com/commitconf",
     "web": "https://commit-conf.com/",
     "linkedin": "https://www.linkedin.com/company/commit-conf/",
-    "flickr": "https://www.flickr.com/photos/145448896@N02/albums/"
+    "flickr": "https://www.flickr.com/photos/145448896@N02/albums/",
+    "eventosWiki": "https://eventos.wiki/organizations/commit-conf",
+    "ote": "https://eventos.wiki/organizations/commit-conf/events.json",
+    "blog": "https://blog.commit-conf.com/",
+    "rss": "https://blog.commit-conf.com/rss/"
   },
   "thumbnailUrl": "images/commitconf.webp",
   "latLon": {

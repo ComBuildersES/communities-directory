@@ -33,7 +33,8 @@
     "youtube": "https://www.youtube.com/@ComBuilders_ES",
     "linkedin": "https://www.linkedin.com/company/combuilders-es/",
     "twitter": "https://x.com/ComBuilders_ES",
-    "bluesky": "https://bsky.app/profile/communitybuilders.bsky.social"
+    "bluesky": "https://bsky.app/profile/communitybuilders.bsky.social",
+    "ote": "https://communitybuilders.dev/events/feed.json"
   },
   "thumbnailUrl": "images/community-builders.webp",
   "latLon": {

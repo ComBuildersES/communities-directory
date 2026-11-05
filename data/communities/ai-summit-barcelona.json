@@ -17,7 +17,9 @@
   "urls": {
     "instagram": "https://www.instagram.com/aisummitbarcelona/",
     "youtube": "https://www.youtube.com/@AISummitBarcelona",
-    "linkedin": "https://www.linkedin.com/company/ai-summit-barcelona"
+    "linkedin": "https://www.linkedin.com/company/ai-summit-barcelona",
+    "eventosWiki": "https://eventos.wiki/organizations/ai-summit-barcelona",
+    "ote": "https://eventos.wiki/organizations/ai-summit-barcelona/events.json"
   },
   "thumbnailUrl": "images/ai-summit-barcelona.webp",
   "latLon": {

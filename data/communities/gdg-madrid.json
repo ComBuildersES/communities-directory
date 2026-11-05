@@ -19,7 +19,9 @@
     "twitter": "https://www.twitter.com/gdgmadrid",
     "linkedin": "https://www.linkedin.com/company/gdgmadrid",
     "discord": "https://discord.gg/7acF6f3DB4",
-    "eventsUrl": "https://gdg.community.dev/gdg-madrid/"
+    "eventsUrl": "https://gdg.community.dev/gdg-madrid/",
+    "eventosWiki": "https://eventos.wiki/organizations/gdg-madrid",
+    "ote": "https://eventos.wiki/organizations/gdg-madrid/events.json"
   },
   "thumbnailUrl": "images/gdg-madrid.webp",
   "latLon": {

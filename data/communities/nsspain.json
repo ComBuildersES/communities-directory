@@ -14,7 +14,10 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://2024.nsspain.com/",
-  "urls": {},
+  "urls": {
+    "eventosWiki": "https://eventos.wiki/organizations/nsspain",
+    "ote": "https://eventos.wiki/organizations/nsspain/events.json"
+  },
   "thumbnailUrl": "images/nsspain.webp",
   "latLon": {
     "lat": 42.46569,

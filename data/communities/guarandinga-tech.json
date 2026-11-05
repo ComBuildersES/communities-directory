@@ -17,7 +17,9 @@
   "urls": {
     "twitter": "https://twitter.com/guarandingatech",
     "youtube": "https://www.youtube.com/@GuarandingaTECH",
-    "eventsUrl": "https://www.meetup.com/guarandinga-tech/"
+    "eventsUrl": "https://www.meetup.com/guarandinga-tech/",
+    "eventosWiki": "https://eventos.wiki/organizations/guarandingatech",
+    "ote": "https://eventos.wiki/organizations/guarandingatech/events.json"
   },
   "thumbnailUrl": "images/guarandinga-tech.webp",
   "latLon": {

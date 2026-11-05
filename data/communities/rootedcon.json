@@ -26,7 +26,9 @@
     "linkedin": "https://www.linkedin.com/company/rooted",
     "tiktok": "https://www.tiktok.com/@rootedcon",
     "instagram": "https://www.instagram.com/rootedc0n",
-    "telegram": "https://t.me/RootedCONLive"
+    "telegram": "https://t.me/RootedCONLive",
+    "eventosWiki": "https://eventos.wiki/organizations/rootedcon",
+    "ote": "https://eventos.wiki/organizations/rootedcon/events.json"
   },
   "thumbnailUrl": "images/rootedcon.webp",
   "latLon": {

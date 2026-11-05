@@ -19,7 +19,9 @@
   "urls": {
     "linkedin": "https://www.linkedin.com/company/asociaci%C3%B3n-espa%C3%B1ola-de-drupal",
     "youtube": "http://www.youtube.com/channel/UCJlthEUN__9_-KWFQ_-0fLg",
-    "github": "https://github.com/AsociacionDrupalES"
+    "github": "https://github.com/AsociacionDrupalES",
+    "eventosWiki": "https://eventos.wiki/organizations/asociacion-espanola-de-drupal",
+    "ote": "https://eventos.wiki/organizations/asociacion-espanola-de-drupal/events.json"
   },
   "thumbnailUrl": "images/asociacion-espanola-de-drupal.webp",
   "latLon": {

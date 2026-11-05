@@ -20,7 +20,9 @@
     "instagram": "https://www.instagram.com/xops_conference",
     "linkedin": "https://www.linkedin.com/company/xops-conference/",
     "twitter": "https://x.com/XopsConference",
-    "linkAggregator": "https://linktr.ee/xopscon"
+    "linkAggregator": "https://linktr.ee/xopscon",
+    "eventosWiki": "https://eventos.wiki/organizations/x-ops-conference",
+    "ote": "https://eventos.wiki/organizations/x-ops-conference/events.json"
   },
   "thumbnailUrl": "images/xops-conference.webp",
   "latLon": {
