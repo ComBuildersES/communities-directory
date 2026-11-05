@@ -5,6 +5,10 @@ Se organiza por mes y por tipo de cambio.
 
 ## 2026-11
 
+### Features
+
+- 2026-11-05 `81c208f` archivar canales históricos de una comunidad (#353)
+
 ### Data
 
 - 2026-11-05 `10abe10` [Añadida Codex Community](https://directory.communitybuilders.dev/?community=632) ([PR #440](https://github.com/ComBuildersES/communities-directory/pull/440))
@@ -15,6 +19,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-11-05 `bfaedfa` update changelog [skip ci]
 - 2026-11-05 `d17ed7d` update changelog [skip ci]
 
 ### Maintenance

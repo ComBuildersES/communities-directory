@@ -42,6 +42,7 @@ const CANONICAL_KEY_ORDER = [
   'contactInfo',
   'communityUrl',
   'urls',
+  'archivedUrls',
   'thumbnailUrl',
   'latLon',
   'displayOnMap',

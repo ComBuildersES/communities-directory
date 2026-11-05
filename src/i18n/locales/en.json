@@ -274,7 +274,18 @@
       "addMoreProfiles": "Want to add more profiles?",
       "missingPlatformNote": "If you're missing a platform type,",
       "openIssue": "open an issue in the repository",
-      "missingPlatformNoteSuffix": "so we can keep improving the available options."
+      "missingPlatformNoteSuffix": "so we can keep improving the available options.",
+      "archive": {
+        "title": "Archived channels",
+        "description": "Channels the community once had but its current team no longer maintains. They are not shown on the community page: they only prevent someone from adding them back as active.",
+        "button": "Archive",
+        "buttonHelp": "Moves this URL to the archived channels: it stays in the data but is no longer shown on the community page.",
+        "restore": "Restore",
+        "remove": "Remove",
+        "warning": "We already know about these channels, but they are archived because the current organizing team does not maintain them:",
+        "warningIssuePrefix": "If you think this is a mistake,",
+        "warningIssueSuffix": " and we will review it."
+      }
     },
     "urlHelp": {
       "web":            { "title": "Website URL",      "description": "Add the community's main website or most stable landing page.",                              "bullet0": "Examples: own website, official page or persistent microsite.",                                                                  "bullet1": "If you've already used it as the main URL, there's no need to repeat it here." },

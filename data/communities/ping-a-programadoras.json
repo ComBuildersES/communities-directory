@@ -30,9 +30,11 @@
   "communityUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/",
   "urls": {
     "eventsUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/",
-    "linkedin": "https://www.linkedin.com/company/pingaprogramadoras/",
-    "twitter": "https://x.com/pingmujeres"
+    "linkedin": "https://www.linkedin.com/company/pingaprogramadoras/"
   },
+  "archivedUrls": [
+    "https://x.com/pingmujeres"
+  ],
   "thumbnailUrl": "images/ping-a-programadoras.webp",
   "latLon": {
     "lat": 37.3886303,

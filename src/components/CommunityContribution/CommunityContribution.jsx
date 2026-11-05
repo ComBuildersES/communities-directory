@@ -13,10 +13,12 @@ import {
   EVENT_FORMAT_OPTIONS,
   EVENT_FORMATS_WITH_LOCATION,
   areCommunityNamesSimilar,
+  findArchivedUrlMatches,
   getComparableCommunityUrls,
   getCommunityDraft,
   getContributionDraftStorageKey,
   getNextCommunityId,
+  inferUrlPlatformKey,
   loadContributionDraft,
   normalizeUrlForComparison,
   saveContributionDraft,
@@ -639,7 +641,16 @@ function TaxonomyPicker({
   );
 }
 
-function UrlFields({ primaryUrl, onPrimaryUrlChange, urls, onUrlChange }) {
+function UrlFields({
+  primaryUrl,
+  onPrimaryUrlChange,
+  urls,
+  onUrlChange,
+  archivedUrls = [],
+  onArchiveUrl,
+  onRestoreArchivedUrl,
+  onRemoveArchivedUrl,
+}) {
   const { t } = useTranslation();
   const [expandedPlatforms, setExpandedPlatforms] = useState([]);
   const [isPrimaryHelpOpen, setIsPrimaryHelpOpen] = useState(false);
@@ -745,7 +756,7 @@ function UrlFields({ primaryUrl, onPrimaryUrlChange, urls, onUrlChange }) {
                 />
               )}
             </label>
-            <div className="control">
+            <div className="control contribution-url-control">
               <input
                 id={`url-${key}`}
                 className="input"
@@ -754,10 +765,50 @@ function UrlFields({ primaryUrl, onPrimaryUrlChange, urls, onUrlChange }) {
                 onChange={(event) => onUrlChange(key, event.target.value)}
                 placeholder="https://..."
               />
+              {(urls[key] ?? "").trim() && (
+                <button
+                  type="button"
+                  className="button is-small is-light contribution-url-archive-button"
+                  onClick={() => onArchiveUrl?.(key)}
+                  title={t("contribution.urls.archive.buttonHelp")}
+                >
+                  {t("contribution.urls.archive.button")}
+                </button>
+              )}
             </div>
           </div>
         ))}
       </div>
+
+      {archivedUrls.length > 0 && (
+        <div className="contribution-archived-urls contribution-grid-span-2">
+          <h4>{t("contribution.urls.archive.title")}</h4>
+          <p className="contribution-archived-urls-note">{t("contribution.urls.archive.description")}</p>
+          <ul className="contribution-archived-url-list">
+            {archivedUrls.map((url) => (
+              <li key={url}>
+                <span className="contribution-archived-url">{url}</span>
+                <span className="contribution-archived-url-actions">
+                  <button
+                    type="button"
+                    className="button is-small is-light"
+                    onClick={() => onRestoreArchivedUrl?.(url)}
+                  >
+                    {t("contribution.urls.archive.restore")}
+                  </button>
+                  <button
+                    type="button"
+                    className="button is-small is-light"
+                    onClick={() => onRemoveArchivedUrl?.(url)}
+                  >
+                    {t("contribution.urls.archive.remove")}
+                  </button>
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
       {hiddenPlatforms.length > 0 && (
         <div className="contribution-extra-platforms">
@@ -810,6 +861,44 @@ function DuplicateWarning({ matches, emptyMessage }) {
   );
 }
 
+/**
+ * Aviso cuando alguien intenta dar de alta una URL que el directorio ya conoce pero tiene
+ * archivada: el canal sigue abierto pero nadie lo atiende (issue #353).
+ */
+function ArchivedUrlWarning({ matches }) {
+  const { t } = useTranslation();
+
+  if (!matches.length) return null;
+
+  return (
+    <div className="contribution-inline-warning" role="status" aria-live="polite">
+      <p>{t("contribution.urls.archive.warning")}</p>
+      <ul className="contribution-inline-list">
+        {matches.map(({ community, url }) => (
+          <li key={`${community.id ?? community.name}-${url}`}>
+            <span className="contribution-archived-url">{url}</span>
+            {" — "}
+            <a href={buildContributionPath({ mode: "edit", identifier: community.id ?? community.name })}>
+              {community.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p>
+        {t("contribution.urls.archive.warningIssuePrefix")}{" "}
+        <a
+          href="https://github.com/ComBuildersES/communities-directory/issues"
+          target="_blank"
+          rel="noreferrer"
+        >
+          {t("contribution.urls.openIssue")}
+        </a>
+        {t("contribution.urls.archive.warningIssueSuffix")}
+      </p>
+    </div>
+  );
+}
+
 function buildCommunityBaselineSignature(community) {
   return JSON.stringify(community ?? null);
 }
@@ -842,6 +931,7 @@ function buildEditableDraftSignature(draft) {
     contactInfo: draft.contactInfo,
     communityUrl: draft.communityUrl,
     urls: draft.urls,
+    archivedUrls: draft.archivedUrls,
     thumbnailUrl: draft.thumbnailUrl,
     replaceThumbnail: draft.replaceThumbnail,
     latLon: draft.latLon,
@@ -863,6 +953,9 @@ function mergeDraftWithProposal(baseDraft, proposalDraft) {
     tags: Array.isArray(proposalDraft.tags) ? proposalDraft.tags : baseDraft.tags,
     targetAudience: Array.isArray(proposalDraft.targetAudience) ? proposalDraft.targetAudience : baseDraft.targetAudience,
     urls: proposalDraft.urls ?? baseDraft.urls,
+    archivedUrls: Array.isArray(proposalDraft.archivedUrls)
+      ? proposalDraft.archivedUrls
+      : baseDraft.archivedUrls,
     latLon: {
       lat: proposalDraft.latLon?.lat ?? baseDraft.latLon?.lat ?? "",
       lon: proposalDraft.latLon?.lon ?? baseDraft.latLon?.lon ?? "",
@@ -1006,6 +1099,9 @@ export function CommunityContribution({
         tags: Array.isArray(storedPayload.tags) ? storedPayload.tags : baseDraft.tags,
         targetAudience: Array.isArray(storedPayload.targetAudience) ? storedPayload.targetAudience : baseDraft.targetAudience,
         urls: storedPayload.urls ?? baseDraft.urls,
+        archivedUrls: Array.isArray(storedPayload.archivedUrls)
+          ? storedPayload.archivedUrls
+          : baseDraft.archivedUrls,
         latLon: {
           lat: storedPayload.latLon?.lat ?? baseDraft.latLon.lat,
           lon: storedPayload.latLon?.lon ?? baseDraft.latLon.lon,
@@ -1190,6 +1286,18 @@ export function CommunityContribution({
     };
   }, [communities, existingCommunity, payload.name, payload.communityUrl, payload.urls]);
 
+  // Incluye la propia comunidad: el caso típico es reintroducir un canal que su equipo
+  // anterior dejó zombie, y el aviso debe aparecer también ahí.
+  const archivedUrlMatches = useMemo(
+    () => findArchivedUrlMatches({
+      communities: existingCommunity
+        ? [existingCommunity, ...communities.filter((community) => community.id !== existingCommunity.id)]
+        : communities,
+      urls: [payload.communityUrl, ...Object.values(payload.urls ?? {})],
+    }),
+    [communities, existingCommunity, payload.communityUrl, payload.urls]
+  );
+
   const baseDraftSignature = useMemo(
     () => buildEditableDraftSignature(latestBaseDraft),
     [latestBaseDraft]
@@ -1307,6 +1415,59 @@ export function CommunityContribution({
         [key]: value,
       },
     }));
+  };
+
+  // Archivar mueve la URL del canal activo a `archivedUrls`: deja de mostrarse en la ficha,
+  // pero el directorio sigue sabiendo que existe (issue #353).
+  const handleArchiveUrl = (key) => {
+    setHasUserInteracted(true);
+    setDraft((current) => {
+      const url = (current.urls?.[key] ?? "").trim();
+      if (!url) return current;
+
+      const nextUrls = { ...current.urls };
+      delete nextUrls[key];
+
+      const alreadyArchived = (current.archivedUrls ?? []).some(
+        (archived) => normalizeUrlForComparison(archived) === normalizeUrlForComparison(url)
+      );
+
+      return {
+        ...current,
+        urls: nextUrls,
+        archivedUrls: alreadyArchived
+          ? current.archivedUrls
+          : [...(current.archivedUrls ?? []), url],
+      };
+    });
+  };
+
+  const handleRemoveArchivedUrl = (url) => {
+    setHasUserInteracted(true);
+    setDraft((current) => ({
+      ...current,
+      archivedUrls: (current.archivedUrls ?? []).filter((archived) => archived !== url),
+    }));
+  };
+
+  // Restaurar devuelve la URL al campo de su plataforma, si se puede inferir; si no, al
+  // primer hueco libre, para no perder el valor por el camino.
+  const handleRestoreArchivedUrl = (url) => {
+    setHasUserInteracted(true);
+    setDraft((current) => {
+      const platformKey = inferUrlPlatformKey(url);
+      const targetKey = platformKey && !(current.urls?.[platformKey] ?? "").trim()
+        ? platformKey
+        : URL_PLATFORM_OPTIONS.map(({ key }) => key).find((key) => !(current.urls?.[key] ?? "").trim());
+
+      if (!targetKey) return current;
+
+      return {
+        ...current,
+        urls: { ...current.urls, [targetKey]: url },
+        archivedUrls: (current.archivedUrls ?? []).filter((archived) => archived !== url),
+      };
+    });
   };
 
   const handleReplaceThumbnailToggle = () => {
@@ -1885,7 +2046,13 @@ export function CommunityContribution({
         onPrimaryUrlChange={(value) => handleFieldChange("communityUrl", value)}
         urls={draft.urls}
         onUrlChange={handleUrlChange}
+        archivedUrls={draft.archivedUrls ?? []}
+        onArchiveUrl={handleArchiveUrl}
+        onRestoreArchivedUrl={handleRestoreArchivedUrl}
+        onRemoveArchivedUrl={handleRemoveArchivedUrl}
       />
+
+      <ArchivedUrlWarning matches={archivedUrlMatches} />
 
       <DuplicateWarning
         matches={duplicates.byUrl}

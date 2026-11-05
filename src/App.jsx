@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { lazy, Suspense, useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { CommunitiesList } from "./components/CommunitiesList.jsx";
 import { Footer } from "./components/Footer.jsx";
@@ -285,6 +285,29 @@ function App () {
     setModalScrollLockY(null);
   };
 
+  // Callbacks estables y con comparación previa: con arrows inline y un objeto nuevo en cada
+  // llamada, los efectos de CommunityContribution que los invocan se reejecutaban en cada
+  // render y el formulario entraba en bucle ("Maximum update depth exceeded").
+  const handleContributionDirtyChange = useCallback((isDirty) => {
+    setContributionState((current) => (
+      current.isDirty === isDirty ? current : { ...current, isDirty }
+    ));
+  }, []);
+
+  const handleContributionIssueOpenedChange = useCallback((issueOpened) => {
+    setContributionState((current) => (
+      current.issueOpened === issueOpened ? current : { ...current, issueOpened }
+    ));
+  }, []);
+
+  const handleDraftActionsChange = useCallback((actions) => {
+    setDraftActions((current) => (
+      current.saveDraft === actions.saveDraft && current.clearDraft === actions.clearDraft
+        ? current
+        : actions
+    ));
+  }, []);
+
   useEffect(() => {
     if (showContributionView) return;
 
@@ -413,9 +436,9 @@ function App () {
                 allAudience={allAudience}
                 existingCommunity={communityToEdit}
                 proposalDraft={route.proposalDraft}
-                onDirtyChange={(isDirty) => setContributionState((current) => ({ ...current, isDirty }))}
-                onIssueOpenedChange={(issueOpened) => setContributionState((current) => ({ ...current, issueOpened }))}
-                onDraftActionsChange={setDraftActions}
+                onDirtyChange={handleContributionDirtyChange}
+                onIssueOpenedChange={handleContributionIssueOpenedChange}
+                onDraftActionsChange={handleDraftActionsChange}
               />
             </Suspense>
           )}

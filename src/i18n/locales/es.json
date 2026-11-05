@@ -274,7 +274,18 @@
       "addMoreProfiles": "¿Quieres añadir más perfiles?",
       "missingPlatformNote": "Si echas en falta algún tipo de plataforma,",
       "openIssue": "abre un issue en el repositorio",
-      "missingPlatformNoteSuffix": "para que podamos seguir mejorando las opciones ofrecidas."
+      "missingPlatformNoteSuffix": "para que podamos seguir mejorando las opciones ofrecidas.",
+      "archive": {
+        "title": "Canales archivados",
+        "description": "Canales que la comunidad tuvo abiertos pero que su equipo actual no atiende. No se muestran en la ficha: solo evitan que alguien los vuelva a dar de alta como activos.",
+        "button": "Archivar",
+        "buttonHelp": "Mueve esta URL a los canales archivados: se conserva en los datos pero deja de mostrarse en la ficha.",
+        "restore": "Restaurar",
+        "remove": "Quitar",
+        "warning": "Ya conocemos estos canales, pero están archivados porque el equipo dinamizador actual no los atiende:",
+        "warningIssuePrefix": "Si crees que es un error,",
+        "warningIssueSuffix": " y lo revisamos."
+      }
     },
     "urlHelp": {
       "web":            { "title": "URL web",            "description": "Añade la web principal o landing más estable de la comunidad.",                        "bullet0": "Ejemplos: web propia, página oficial o microsite persistente.",                                                               "bullet1": "Si ya la has usado como URL principal, no hace falta repetirla aquí." },

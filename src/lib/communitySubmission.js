@@ -378,6 +378,7 @@ export function getEmptyCommunityDraft(nextId = null) {
     contactInfo: "",
     communityUrl: "",
     urls: {},
+    archivedUrls: [],
     thumbnailUrl: "",
     replaceThumbnail: false,
     latLon: {
@@ -406,6 +407,7 @@ export function getCommunityDraft(community, nextId = null) {
     tags: Array.isArray(community.tags) ? community.tags : [],
     targetAudience: Array.isArray(community.targetAudience) ? community.targetAudience : [],
     urls: community.urls ?? {},
+    archivedUrls: normalizeArchivedUrls(community.archivedUrls),
     replaceThumbnail: false,
     latLon: {
       lat: community.latLon?.lat ?? "",
@@ -438,6 +440,93 @@ export function toggleSelection(list, value) {
     return list.filter((item) => item !== value);
   }
   return [...list, value];
+}
+
+export function normalizeArchivedUrls(archivedUrls = []) {
+  if (!Array.isArray(archivedUrls)) return [];
+
+  const seen = new Set();
+
+  return archivedUrls.reduce((list, value) => {
+    const url = cleanString(value);
+    if (!url) return list;
+
+    const comparable = normalizeUrlForComparison(url);
+    if (seen.has(comparable)) return list;
+
+    seen.add(comparable);
+    list.push(url);
+    return list;
+  }, []);
+}
+
+const URL_PLATFORM_HOST_PATTERNS = [
+  ["github", /(^|\.)github\.(com|io)$/],
+  ["discord", /(^|\.)discord(app)?\.(com|gg)$/],
+  ["telegram", /(^|\.)(t\.me|telegram\.(me|org))$/],
+  ["whatsapp", /(^|\.)(chat\.whatsapp\.com|wa\.me)$/],
+  ["slack", /(^|\.)slack\.com$/],
+  ["youtube", /(^|\.)(youtube\.com|youtu\.be)$/],
+  ["linkedin", /(^|\.)linkedin\.com$/],
+  ["twitter", /(^|\.)(twitter\.com|x\.com)$/],
+  ["tiktok", /(^|\.)tiktok\.com$/],
+  ["instagram", /(^|\.)instagram\.com$/],
+  ["facebook", /(^|\.)(facebook\.com|fb\.com)$/],
+  ["bluesky", /(^|\.)bsky\.(app|social)$/],
+  ["twitch", /(^|\.)twitch\.tv$/],
+  ["flickr", /(^|\.)flickr\.com$/],
+  ["eventsUrl", /(^|\.)(meetup\.com|eventbrite\.(com|es)|luma\.com|lu\.ma)$/],
+  ["linkAggregator", /(^|\.)(linktr\.ee|beacons\.ai|bio\.link)$/],
+  ["mailingList", /(^|\.)(groups\.google\.com|mailchimp\.com|substack\.com)$/],
+];
+
+/**
+ * Plataforma probable de una URL. Se usa al restaurar un canal archivado, para devolverlo a
+ * su campo en vez de obligar a reescribirlo.
+ */
+export function inferUrlPlatformKey(value = "") {
+  const cleanedValue = cleanString(value);
+  if (!cleanedValue) return null;
+
+  let host;
+  try {
+    host = new URL(cleanedValue).hostname.toLowerCase().replace(/^www\./, "");
+  } catch {
+    return null;
+  }
+
+  const match = URL_PLATFORM_HOST_PATTERNS.find(([, pattern]) => pattern.test(host));
+  return match ? match[0] : "web";
+}
+
+export function getComparableArchivedUrls(community = {}) {
+  return normalizeArchivedUrls(community.archivedUrls)
+    .map((url) => normalizeUrlForComparison(url))
+    .filter(Boolean);
+}
+
+/**
+ * Canales que el directorio ya conoce pero que el equipo dinamizador actual no atiende
+ * (issue #353). No se muestran en la ficha: solo sirven para avisar a quien intente
+ * volver a darlos de alta.
+ */
+export function findArchivedUrlMatches({ communities = [], urls = [] } = {}) {
+  const comparableUrls = new Set(
+    urls.map((url) => normalizeUrlForComparison(url)).filter(Boolean)
+  );
+
+  if (comparableUrls.size === 0) return [];
+
+  return communities.reduce((matches, community) => {
+    const archivedMatches = normalizeArchivedUrls(community.archivedUrls)
+      .filter((url) => comparableUrls.has(normalizeUrlForComparison(url)));
+
+    archivedMatches.forEach((url) => {
+      matches.push({ community, url });
+    });
+
+    return matches;
+  }, []);
 }
 
 export function normalizeUrls(urls = {}) {
@@ -517,6 +606,14 @@ function normalizeTaxonomySelection(selectedValues, catalogItems, matchesAllFlag
 export function buildCommunityPayload(draft, existingCommunity = null, options = {}) {
   const { allTags = [], allAudience = [] } = options;
   const normalizedUrls = normalizeUrls(draft.urls);
+  // Las URLs archivadas que vuelvan a aparecer como activas dejan de estar archivadas.
+  const activeComparableUrls = new Set(
+    [draft.communityUrl, ...Object.values(normalizedUrls)]
+      .map((url) => normalizeUrlForComparison(url))
+      .filter(Boolean)
+  );
+  const normalizedArchivedUrls = normalizeArchivedUrls(draft.archivedUrls)
+    .filter((url) => !activeComparableUrls.has(normalizeUrlForComparison(url)));
   const lat = normalizeLatLon(draft.latLon?.lat);
   const lon = normalizeLatLon(draft.latLon?.lon);
   const resolvedId = existingCommunity?.id ?? draft.id ?? null;
@@ -562,6 +659,12 @@ export function buildCommunityPayload(draft, existingCommunity = null, options =
     contactInfo: cleanString(draft.contactInfo),
     communityUrl: cleanString(draft.communityUrl),
     urls: normalizedUrls,
+    // Se omite cuando no hay nada archivado, para no añadir un `[]` inútil a las 600+
+    // fichas. Si la comunidad SÍ tenía canales archivados, el array viaja aunque quede
+    // vacío: es la única forma de que el procesado del issue sepa que hay que vaciarlo.
+    ...(normalizedArchivedUrls.length > 0 || (existingCommunity?.archivedUrls?.length ?? 0) > 0
+      ? { archivedUrls: normalizedArchivedUrls }
+      : {}),
     thumbnailUrl: normalizedThumbnailUrl,
     latLon: {
       lat,

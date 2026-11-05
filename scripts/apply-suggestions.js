@@ -24,14 +24,23 @@ import { readCommunities, writeCommunities } from './lib/communities-store.js';
 
 const SUGGESTIONS_PATH = './scripts/suggestions.json';
 
-function mergeUrls(existing, suggested) {
+function comparableUrl(value) {
+  return String(value ?? '').trim().toLowerCase().replace(/\/+$/, '');
+}
+
+function mergeUrls(existing, suggested, archivedUrls = []) {
   const merged = { ...suggested };
   // Las URLs ya presentes en la comunidad tienen prioridad
   for (const [key, val] of Object.entries(existing)) {
     if (val) merged[key] = val;
   }
-  // Limpiar claves con valores nulos/vacíos
-  return Object.fromEntries(Object.entries(merged).filter(([, v]) => v));
+  // Un canal archivado (issue #353) no vuelve a entrar como activo por scraping: se
+  // archivó justamente porque nadie lo atiende.
+  const archived = new Set(archivedUrls.map(comparableUrl));
+
+  return Object.fromEntries(
+    Object.entries(merged).filter(([, v]) => v && !archived.has(comparableUrl(v)))
+  );
 }
 
 function mergeArray(existing, suggested) {
@@ -70,7 +79,7 @@ async function main() {
     let changed = false;
 
     // Merge URLs
-    const mergedUrls = mergeUrls(community.urls ?? {}, sugUrls ?? {});
+    const mergedUrls = mergeUrls(community.urls ?? {}, sugUrls ?? {}, community.archivedUrls ?? []);
     if (JSON.stringify(mergedUrls) !== JSON.stringify(community.urls ?? {})) changed = true;
 
     // Merge tags

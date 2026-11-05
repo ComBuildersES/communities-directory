@@ -355,6 +355,10 @@ function validateCommunityGlobal(community, index, knownTagIds, knownAudienceIds
     pushIssue(issues.errors, "error", `${label}: urls debe ser un objeto.`);
   }
 
+  if ("archivedUrls" in community && !Array.isArray(community.archivedUrls)) {
+    pushIssue(issues.errors, "error", `${label}: archivedUrls debe ser un array de URLs.`);
+  }
+
   if (isNonEmptyString(community.status) && !CANONICAL_STATUS.has(community.status)) {
     pushIssue(
       issues.warnings,
@@ -525,6 +529,8 @@ function validateCommunityStrict(community, index, issues, isNew = true) {
     }
   }
 
+  validateArchivedUrls(community, label, issues);
+
   if (
     community.displayOnMap === true &&
     (!isPlainObject(community.latLon) ||
@@ -536,6 +542,52 @@ function validateCommunityStrict(community, index, issues, isNew = true) {
       "error",
       `${label}: si displayOnMap es true, latLon.lat y latLon.lon deben ser numéricos.`,
     );
+  }
+}
+
+/**
+ * Canales archivados (issue #353): el directorio los conserva para avisar a quien intente
+ * volver a darlos de alta, así que no pueden duplicarse ni coincidir con un canal activo.
+ */
+function validateArchivedUrls(community, label, issues) {
+  if (!("archivedUrls" in community)) return;
+
+  if (!Array.isArray(community.archivedUrls)) {
+    pushIssue(issues.errors, "error", `${label}: archivedUrls debe ser un array de URLs.`);
+    return;
+  }
+
+  const activeUrls = new Set(
+    [community.communityUrl, ...Object.values(community.urls ?? {})]
+      .filter(isNonEmptyString)
+      .map((url) => url.trim())
+  );
+  const seen = new Set();
+
+  for (const value of community.archivedUrls) {
+    if (!isValidUrl(value)) {
+      pushIssue(
+        issues.errors,
+        "error",
+        `${label}: archivedUrls contiene un valor que no es una URL absoluta válida: ${JSON.stringify(value)}.`,
+      );
+      continue;
+    }
+
+    const url = value.trim();
+
+    if (seen.has(url)) {
+      pushIssue(issues.errors, "error", `${label}: archivedUrls contiene la URL duplicada ${url}.`);
+    }
+    seen.add(url);
+
+    if (activeUrls.has(url)) {
+      pushIssue(
+        issues.errors,
+        "error",
+        `${label}: ${url} está a la vez en archivedUrls y como canal activo.`,
+      );
+    }
   }
 }
 

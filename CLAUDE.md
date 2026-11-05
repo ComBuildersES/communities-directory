@@ -103,6 +103,7 @@ scripts/               # Utilidades de mantenimiento de datos
     mastodon?: string,
     bluesky?: string,
   },
+  archivedUrls?: string[],      // canales históricos que ya nadie atiende: se conservan pero NO se muestran
   thumbnailUrl: string,
   latLon: { lat: number | null, lon: number | null },
   displayOnMap: boolean,
@@ -345,6 +346,24 @@ commit del alta el id todavía es `null`). Ver `getChangedCommunities` en
 Usa `stableStringify` del store, nunca `JSON.stringify` directo: el store normaliza el orden
 de claves al escribir, y un comparador sensible al orden marcaría las 600+ comunidades como
 modificadas en cada PR.
+
+### Canales archivados (`archivedUrls`)
+
+Canales que una comunidad tuvo abiertos pero que su equipo dinamizador actual no atiende
+(issue #353). Reglas:
+
+- **No se renderizan nunca** en la ficha ni en las tarjetas: un canal zombie que parece
+  activo manda a la gente a un sitio donde nadie responde.
+- La clave se **omite** cuando no hay nada archivado, para no añadir un `[]` a las 600+
+  fichas. En una edición, el payload sí incluye `archivedUrls: []` si la comunidad tenía
+  canales archivados y se han quitado todos: es lo que distingue "no se tocó" de
+  "se desarchivó todo" (`dropEmptyArchivedUrls` limpia el `[]` antes de escribir el fichero).
+- Una URL no puede estar a la vez archivada y activa: `buildCommunityPayload` y
+  `normalizePayload` la desarchivan si vuelve a aparecer como canal activo, y
+  `validate-community-data` lo rechaza como error.
+- El formulario avisa (`ArchivedUrlWarning`) cuando alguien intenta dar de alta una URL que
+  el directorio ya tiene archivada, incluida la de la propia comunidad que se está editando.
+- `apply-suggestions` no reintroduce un canal archivado por scraping.
 
 ### Claves de `urls`
 

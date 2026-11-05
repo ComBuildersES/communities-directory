@@ -234,6 +234,41 @@ function readSubmission() {
   throw new Error('No se encontró un JSON válido ni el formato antiguo del issue');
 }
 
+/**
+ * Deduplica las URLs archivadas y descarta las que vuelven a estar activas en la propuesta:
+ * un canal no puede estar a la vez publicado y archivado (issue #353).
+ */
+function normalizeArchivedUrlList(archivedUrls, payload) {
+  if (!Array.isArray(archivedUrls)) return [];
+
+  const activeUrls = new Set(
+    [payload?.communityUrl, ...Object.values(payload?.urls ?? {})]
+      .map((url) => normalizeString(url))
+      .filter(Boolean)
+  );
+  const seen = new Set();
+
+  return archivedUrls.reduce((list, value) => {
+    const url = normalizeString(value);
+    if (!url || seen.has(url) || activeUrls.has(url)) return list;
+
+    seen.add(url);
+    list.push(url);
+    return list;
+  }, []);
+}
+
+/** Evita escribir `archivedUrls: []` en las fichas que no tienen ningún canal archivado. */
+export function dropEmptyArchivedUrls(community) {
+  if (Array.isArray(community?.archivedUrls) && community.archivedUrls.length === 0) {
+    return Object.fromEntries(
+      Object.entries(community).filter(([key]) => key !== 'archivedUrls')
+    );
+  }
+
+  return community;
+}
+
 export function normalizePayload(payload) {
   const normalizedTags = Array.isArray(payload.tags) ? [...new Set(payload.tags.filter(Boolean))] : [];
   const normalizedAudience = Array.isArray(payload.targetAudience) ? [...new Set(payload.targetAudience.filter(Boolean))] : [];
@@ -241,6 +276,7 @@ export function normalizePayload(payload) {
   const hasAllKnownAudience = KNOWN_AUDIENCE_IDS.length > 0 && KNOWN_AUDIENCE_IDS.every((id) => normalizedAudience.includes(id));
   const matchesAllTags = normalizeBoolean(payload.matchesAllTags) || hasAllKnownTags;
   const matchesAllAudience = normalizeBoolean(payload.matchesAllAudience) || hasAllKnownAudience;
+  const archivedUrls = normalizeArchivedUrlList(payload.archivedUrls, payload);
 
   return {
     id: payload.id ?? null,
@@ -262,6 +298,10 @@ export function normalizePayload(payload) {
         .map(([key, value]) => [normalizeString(key), normalizeString(value)])
         .filter(([key, value]) => key && value)
     ),
+    // Canales archivados (issue #353). El array viaja tal cual si la propuesta trae la
+    // clave, incluso vacío: en una edición es lo que distingue "no se tocó" de "se
+    // desarchivó todo". La clave vacía se limpia justo antes de escribir el fichero.
+    ...(Array.isArray(payload.archivedUrls) ? { archivedUrls } : {}),
     thumbnailUrl: normalizeString(payload.thumbnailUrl),
     removalReason: normalizeString(payload.removalReason),
     latLon: {
@@ -430,12 +470,12 @@ async function main() {
   };
 
   if (mode === ISSUE_MODES.EDIT) {
-    const { slug } = writeCommunity({ ...existing, ...normalizedCommunity });
+    const { slug } = writeCommunity(dropEmptyArchivedUrls({ ...existing, ...normalizedCommunity }));
     console.log(`✔ Comunidad actualizada: ${normalizedCommunity.name} (ID ${normalizedCommunity.id}) → data/communities/${slug}.json`);
     return;
   }
 
-  const { slug } = writeCommunity(normalizedCommunity);
+  const { slug } = writeCommunity(dropEmptyArchivedUrls(normalizedCommunity));
   console.log(`✔ Comunidad añadida: ${normalizedCommunity.name} → data/communities/${slug}.json (id pendiente de asignar en master)`);
 }
 

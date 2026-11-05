@@ -972,3 +972,68 @@
     transform: none;
   }
 }
+
+/* Canales archivados (issue #353): URLs que el directorio conserva pero no publica. */
+.contribution-url-control {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.contribution-url-control .input {
+  flex: 1 1 auto;
+}
+
+.contribution-url-archive-button {
+  flex: 0 0 auto;
+  border-radius: 999px;
+}
+
+.contribution-archived-urls {
+  margin-top: 0.9rem;
+  padding: 0.8rem 0.9rem;
+  border-radius: 14px;
+  background: #f5f6f8;
+  border: 1px solid #e0e4ea;
+}
+
+.contribution-archived-urls h4 {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.contribution-archived-urls-note {
+  margin: 0.25rem 0 0;
+  color: #62748a;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.contribution-archived-url-list {
+  margin: 0.6rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.contribution-archived-url-list li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+
+.contribution-archived-url {
+  font-size: 0.88rem;
+  word-break: break-all;
+  color: #4a5b70;
+}
+
+.contribution-archived-url-actions {
+  display: flex;
+  gap: 0.35rem;
+}
