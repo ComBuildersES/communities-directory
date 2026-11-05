@@ -23,7 +23,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
-- 2026-11-05 `205945f` añadir Data Saturdays Madrid y Women4TT
+- 2026-11-05 `b53ee77` añadir Data Saturdays Madrid y Women4TT
 
 ## 2026-10
 
