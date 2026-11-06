@@ -11,6 +11,7 @@ import {
   writeCommunity,
   writeDeletedCommunity,
 } from './lib/communities-store.js';
+import { buildProposalSummary } from './lib/proposal-summary.js';
 
 const body = process.argv[2] ?? '';
 const imagesFolder = './public/images';
@@ -442,6 +443,13 @@ async function main() {
   fs.writeFileSync(
     path.join('.geo', 'community-meta.json'),
     JSON.stringify({ name: payload.name, mode, proposalEditorUrl }, null, 2)
+  );
+  // Ficha legible para el cuerpo de la PR (issue #436): el revisor no debería tener que
+  // descifrar ids de tags ni leer el JSON a pelo. Se escribe en un fichero porque la
+  // tabla markdown no cabe en un `$GITHUB_OUTPUT` de una línea.
+  fs.writeFileSync(
+    path.join('.geo', 'proposal-summary.md'),
+    `${buildProposalSummary({ mode, payload, existing })}\n`
   );
 
   if (mode === ISSUE_MODES.DELETE) {

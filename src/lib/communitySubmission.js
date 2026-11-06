@@ -725,13 +725,18 @@ export function buildIssueContent({ payload, mode, shareUrl }) {
       "## Motivo de la baja",
       payload.removalReason || "Explica brevemente por qué conviene eliminar esta comunidad del directorio.",
     );
-  } else {
+  } else if (mode === COMMUNITY_ISSUE_MODES.EDIT) {
     bodyLines.push(
       "",
       "## Enlace de edición",
       shareUrl,
     );
   }
+  // En modo CREATE no se publica enlace de edición (issue #436): la comunidad todavía no
+  // existe, así que `?contribute=new` abriría el formulario vacío. Meter el JSON en el
+  // enlace lo duplicaría dentro de la URL de "new issue" (límite práctico ~8KB de GitHub).
+  // El enlace útil, ya precargado con la propuesta, lo publica el bot en la PR generada
+  // (`buildProposalEditorUrl` en scripts/process-community-issue.js).
 
   bodyLines.push(
     "",

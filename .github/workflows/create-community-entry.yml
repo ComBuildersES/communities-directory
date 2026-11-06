@@ -78,6 +78,8 @@ jobs:
               echo
               echo "Closes #${{ github.event.issue.number }}"
               echo
+              cat .geo/proposal-summary.md
+              echo
               echo "✍️ Seguir mejorando esta propuesta:"
               echo "- [Abrir en el editor con los datos de la propuesta]($PROPOSAL_EDITOR_URL)"
               echo
@@ -94,6 +96,8 @@ jobs:
               echo
               echo "Closes #${{ github.event.issue.number }}"
               echo
+              cat .geo/proposal-summary.md
+              echo
               echo "🗑️ Esta propuesta elimina la comunidad del directorio y conserva una traza en \`data/deleted-communities/\`."
               echo "__BODY__"
             } >> "$GITHUB_OUTPUT"
@@ -104,6 +108,8 @@ jobs:
               echo "Esta PR ha sido generada automáticamente a partir del issue #${{ github.event.issue.number }}."
               echo
               echo "Closes #${{ github.event.issue.number }}"
+              echo
+              cat .geo/proposal-summary.md
               echo
               echo "✍️ Seguir mejorando esta propuesta:"
               echo "- [Abrir en el editor con los datos de la propuesta]($PROPOSAL_EDITOR_URL)"

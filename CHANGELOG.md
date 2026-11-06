@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-11-06 `b4d3e46` ficha legible de la propuesta en la PR automática
 - 2026-11-06 `dd0431a` añadir URLs de foro/blog/RSS/eventos.wiki/OTE y ámbito geográfico
 - 2026-11-05 `1d4b6c3` archivar canales históricos de una comunidad (#353)
 
@@ -20,6 +21,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-11-06 `c2a5170` update changelog [skip ci]
 - 2026-11-06 `b83bbe0` avisar de que no existe clave urls.meetup
 - 2026-11-06 `51d0796` update changelog [skip ci]
 - 2026-11-06 `c43698f` update changelog [skip ci]
