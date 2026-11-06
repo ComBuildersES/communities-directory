@@ -13,6 +13,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-11-06 `3400bbd` Añadida GameDev Murcia ([PR #449](https://github.com/ComBuildersES/communities-directory/pull/449))
 - 2026-11-06 `40f533e` [Actualizada Lareira Conf](https://directory.communitybuilders.dev/?community=541) ([PR #447](https://github.com/ComBuildersES/communities-directory/pull/447))
 - 2026-11-05 `10abe10` [Añadida Codex Community](https://directory.communitybuilders.dev/?community=632) ([PR #440](https://github.com/ComBuildersES/communities-directory/pull/440))
 
@@ -22,6 +23,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-11-06 `cd97585` update changelog [skip ci]
 - 2026-11-06 `dc20152` update changelog [skip ci]
 - 2026-11-06 `c2a5170` update changelog [skip ci]
 - 2026-11-06 `b83bbe0` avisar de que no existe clave urls.meetup
