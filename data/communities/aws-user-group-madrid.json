@@ -1,0 +1,31 @@
+{
+  "id": null,
+  "name": "AWS User Group Madrid",
+  "status": "active",
+  "lastReviewed": "06/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "geographicScope": "local",
+  "shortDescription": "Grupo de usuarios de AWS en Madrid: meetups y talleres prácticos sobre servicios de AWS, arquitectura en la nube e IA agéntica.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "aws",
+    "cloud-security"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/madrid-amazon-web-services-meetup/",
+  "urls": {},
+  "thumbnailUrl": "images/aws-user-group-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false,
+  "removalReason": ""
+}

@@ -1,0 +1,36 @@
+{
+  "id": null,
+  "name": "Claude Community Barcelona",
+  "status": "active",
+  "lastReviewed": "06/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "geographicScope": "local",
+  "parentId": 627,
+  "shortDescription": "Comunidad de Claude en Barcelona: meetups, Claude & Coffee, mesas redondas y sesiones prácticas para quien construye con IA.",
+  "topics": "",
+  "langs": [
+    "es",
+    "en"
+  ],
+  "tags": [
+    "generative-ai",
+    "ai-coding-agents"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://claudebcn.com/",
+  "urls": {
+    "web": "https://claudebcn.com/",
+    "eventsUrl": "https://claudebcn.com/planning"
+  },
+  "thumbnailUrl": "images/claude-community-barcelona.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false,
+  "removalReason": ""
+}

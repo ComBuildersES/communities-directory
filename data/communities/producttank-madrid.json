@@ -1,0 +1,31 @@
+{
+  "id": null,
+  "name": "ProductTank Madrid",
+  "status": "active",
+  "lastReviewed": "06/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "geographicScope": "local",
+  "shortDescription": "Encuentro de la comunidad de producto en Madrid (red ProductTank de Mind the Product): charlas y experiencias prácticas sobre gestión de producto digital.",
+  "topics": "",
+  "langs": [
+    "es",
+    "en"
+  ],
+  "tags": [
+    "product-management"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/producttank-madrid/",
+  "urls": {},
+  "thumbnailUrl": "images/producttank-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false,
+  "removalReason": ""
+}

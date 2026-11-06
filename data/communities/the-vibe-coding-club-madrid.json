@@ -1,0 +1,32 @@
+{
+  "id": null,
+  "name": "The Vibe Coding Club Madrid",
+  "status": "active",
+  "lastReviewed": "06/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "geographicScope": "local",
+  "shortDescription": "Encuentro quincenal en Madrid de gente que construye con IA: se comparte qué se está creando, con qué herramientas y qué flujos de trabajo funcionan.",
+  "topics": "",
+  "langs": [
+    "es",
+    "en"
+  ],
+  "tags": [
+    "ai-coding-agents",
+    "generative-ai"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/the-vcc/",
+  "urls": {},
+  "thumbnailUrl": "images/the-vibe-coding-club-madrid.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false,
+  "removalReason": ""
+}

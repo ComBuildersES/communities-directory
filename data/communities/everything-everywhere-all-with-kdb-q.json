@@ -1,0 +1,32 @@
+{
+  "id": null,
+  "name": "Everything Everywhere All with kdb+/q",
+  "status": "active",
+  "lastReviewed": "06/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "geographicScope": "local",
+  "shortDescription": "Comunidad en Madrid del lenguaje q y la base de datos kdb+: meetups técnicos sobre series temporales, análisis de datos a alta frecuencia y su combinación con agentes de IA.",
+  "topics": "",
+  "langs": [
+    "es",
+    "en"
+  ],
+  "tags": [
+    "nosql-databases",
+    "big-data"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/everything-everywhere-all-with-kdb-q/",
+  "urls": {},
+  "thumbnailUrl": "images/everything-everywhere-all-with-kdb-q.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false,
+  "removalReason": ""
+}

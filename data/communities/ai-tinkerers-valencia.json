@@ -1,0 +1,34 @@
+{
+  "id": null,
+  "name": "AI Tinkerers Valencia",
+  "status": "active",
+  "lastReviewed": "06/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Valencia",
+  "geographicScope": "local",
+  "shortDescription": "Capítulo valenciano de AI Tinkerers: demo nights mensuales de builders de IA, teardowns de producto y encuentros para quien lleva sistemas con agentes a producción.",
+  "topics": "",
+  "langs": [
+    "es",
+    "en"
+  ],
+  "tags": [
+    "generative-ai",
+    "llm"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://valencia.aitinkerers.org/",
+  "urls": {
+    "web": "https://valencia.aitinkerers.org/"
+  },
+  "thumbnailUrl": "images/ai-tinkerers-valencia.webp",
+  "latLon": {
+    "lat": 39.4702393,
+    "lon": -0.3768049
+  },
+  "displayOnMap": true,
+  "humanValidated": false,
+  "removalReason": ""
+}

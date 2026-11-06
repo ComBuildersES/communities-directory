@@ -1,0 +1,34 @@
+{
+  "id": null,
+  "name": "Ladies that UX Málaga",
+  "status": "active",
+  "lastReviewed": "06/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "geographicScope": "local",
+  "shortDescription": "Capítulo malagueño de Ladies that UX, red internacional de mujeres en diseño y experiencia de usuario: meetup mensual de UX, UI y producto digital.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "ux-ui",
+    "women-in-tech",
+    "diversity"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://luma.com/j7v1t5g5",
+  "urls": {
+    "eventsUrl": "https://luma.com/j7v1t5g5"
+  },
+  "thumbnailUrl": "images/ladies-that-ux-malaga.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false,
+  "removalReason": ""
+}

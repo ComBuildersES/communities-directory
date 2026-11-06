@@ -1,0 +1,30 @@
+{
+  "id": null,
+  "name": "Fuengirola Technology & Social Meetup Group",
+  "status": "active",
+  "lastReviewed": "06/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Málaga (Fuengirola)",
+  "geographicScope": "local",
+  "shortDescription": "Café quincenal en inglés en Fuengirola para quien vive o trabaja allí: conversación informal sobre tecnología, IA, programación, ciberseguridad y negocio digital.",
+  "topics": "",
+  "langs": [
+    "en"
+  ],
+  "tags": [
+    "generative-ai"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/fuengirola-technology-social-meetup-group/",
+  "urls": {},
+  "thumbnailUrl": "images/fuengirola-technology-social-meetup-group.webp",
+  "latLon": {
+    "lat": 36.5390044,
+    "lon": -4.6243528
+  },
+  "displayOnMap": true,
+  "humanValidated": false,
+  "removalReason": ""
+}

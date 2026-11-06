@@ -1,0 +1,33 @@
+{
+  "id": null,
+  "name": "Barcelona AI Music Meetup (BAMM)",
+  "status": "active",
+  "lastReviewed": "06/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "geographicScope": "local",
+  "shortDescription": "Encuentro de la comunidad de música e IA en Barcelona: demos en directo, charlas y networking entre músicos, productores y tecnólogos creativos.",
+  "topics": "",
+  "langs": [
+    "en",
+    "es"
+  ],
+  "tags": [
+    "generative-ai"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.eventbrite.com/o/barcelona-ai-music-meetup-91172550453",
+  "urls": {
+    "eventsUrl": "https://www.eventbrite.com/o/barcelona-ai-music-meetup-91172550453"
+  },
+  "thumbnailUrl": "images/barcelona-ai-music-meetup-bamm.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false,
+  "removalReason": ""
+}

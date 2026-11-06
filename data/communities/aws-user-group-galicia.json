@@ -1,0 +1,30 @@
+{
+  "id": null,
+  "name": "AWS User Group Galicia",
+  "status": "active",
+  "lastReviewed": "06/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "A Coruña",
+  "geographicScope": "regional",
+  "shortDescription": "Comunidad gallega de usuarios de AWS: sesiones técnicas sobre resiliencia, caos controlado, arquitectura y servicios de AWS.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "aws"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/aws-ug-galicia/",
+  "urls": {},
+  "thumbnailUrl": "images/aws-user-group-galicia.webp",
+  "latLon": {
+    "lat": 43.3707332,
+    "lon": -8.3958532
+  },
+  "displayOnMap": true,
+  "humanValidated": false,
+  "removalReason": ""
+}

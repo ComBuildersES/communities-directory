@@ -1,0 +1,35 @@
+{
+  "id": null,
+  "name": "GeeksCAT",
+  "status": "active",
+  "lastReviewed": "06/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Girona",
+  "geographicScope": "regional",
+  "shortDescription": "Associació sense ànim de lucre nascuda a Girona per dinamitzar la comunitat tecnològica catalana: GeeksCAT Conf, hackdays i projectes de programari lliure.",
+  "topics": "",
+  "langs": [
+    "ca",
+    "es"
+  ],
+  "tags": [
+    "open-source",
+    "free-software"
+  ],
+  "targetAudience": [],
+  "contactInfo": "info@geekscat.org",
+  "communityUrl": "https://geeks.cat/",
+  "urls": {
+    "web": "https://geeks.cat/",
+    "eventsUrl": "https://conf.geeks.cat/"
+  },
+  "thumbnailUrl": "images/geekscat.webp",
+  "latLon": {
+    "lat": 41.9793006,
+    "lon": 2.8199439
+  },
+  "displayOnMap": true,
+  "humanValidated": false,
+  "removalReason": ""
+}

@@ -1,0 +1,32 @@
+{
+  "id": null,
+  "name": "Innovators Hub Sevilla",
+  "status": "active",
+  "lastReviewed": "06/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Sevilla",
+  "geographicScope": "local",
+  "shortDescription": "Comunidad sevillana de startups, tecnología y emprendimiento: desayunos quincenales (Innovation Brekkie) para conocerse y compartir proyectos.",
+  "topics": "",
+  "langs": [
+    "es",
+    "en"
+  ],
+  "tags": [
+    "startups",
+    "innovation"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/innovatorshubsevilla/",
+  "urls": {},
+  "thumbnailUrl": "images/innovators-hub-sevilla.webp",
+  "latLon": {
+    "lat": 37.38264,
+    "lon": -5.9962951
+  },
+  "displayOnMap": true,
+  "humanValidated": false,
+  "removalReason": ""
+}

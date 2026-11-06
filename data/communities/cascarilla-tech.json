@@ -1,0 +1,33 @@
+{
+  "id": null,
+  "name": "Cascarilla Tech",
+  "status": "active",
+  "lastReviewed": "06/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "A Coruña",
+  "geographicScope": "local",
+  "shortDescription": "Asociación sin ánimo de lucro de A Coruña que organiza jornadas de desarrollo de software e IA con charlas, experiencias y networking, a menudo junto a otras comunidades locales.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "generative-ai"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://cascarillatech.org/",
+  "urls": {
+    "web": "https://cascarillatech.org/",
+    "ote": "https://cascarillatech.org/feed.json"
+  },
+  "thumbnailUrl": "images/cascarilla-tech.webp",
+  "latLon": {
+    "lat": 43.3707332,
+    "lon": -8.3958532
+  },
+  "displayOnMap": true,
+  "humanValidated": false,
+  "removalReason": ""
+}

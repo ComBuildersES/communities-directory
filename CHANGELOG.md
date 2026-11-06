@@ -20,6 +20,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-11-06 `c43698f` update changelog [skip ci]
 - 2026-11-06 `1091c5b` precisar que la marca de saltar CI se busca en todo el mensaje
 - 2026-11-06 `e1a4759` corregir claves de urls y documentar la trampa de [skip ci] al desplegar
 - 2026-11-06 `d567b40` update changelog [skip ci]
@@ -33,6 +34,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
+- 2026-11-06 `987119c` añadir 22 comunidades del feed OTE de Sarao IA
 - 2026-11-06 `b99ae92` enlazar 38 comunidades con eventos.wiki y OTE
 - 2026-11-05 `b53ee77` añadir Data Saturdays Madrid y Women4TT
 

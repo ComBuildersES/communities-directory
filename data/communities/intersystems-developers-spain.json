@@ -1,0 +1,31 @@
+{
+  "id": null,
+  "name": "InterSystems Developers Spain",
+  "status": "active",
+  "lastReviewed": "06/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "geographicScope": "national",
+  "shortDescription": "Comunidad de desarrolladores de InterSystems en España: meetups técnicos sobre IRIS, interoperabilidad sanitaria y desarrollo asistido por IA.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "healthtech",
+    "sql-databases"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/intersystems-developers-spain/",
+  "urls": {},
+  "thumbnailUrl": "images/intersystems-developers-spain.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": false,
+  "removalReason": ""
+}

@@ -1,0 +1,37 @@
+{
+  "id": null,
+  "name": "LleidaHack",
+  "status": "active",
+  "lastReviewed": "06/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Lleida",
+  "geographicScope": "local",
+  "shortDescription": "Associació d'estudiants de l'Escola Politècnica Superior de la Universitat de Lleida que promou la tecnologia: organitza la HackEPS i tech meetings durant el curs.",
+  "topics": "",
+  "langs": [
+    "ca",
+    "es"
+  ],
+  "tags": [
+    "open-source"
+  ],
+  "targetAudience": [],
+  "contactInfo": "contacte@lleidahack.dev",
+  "communityUrl": "https://www.lleidahack.dev/",
+  "urls": {
+    "web": "https://www.lleidahack.dev/",
+    "github": "https://github.com/LleidaHack",
+    "twitter": "https://x.com/lleidahack",
+    "instagram": "https://www.instagram.com/lleidahack/",
+    "linkedin": "https://es.linkedin.com/company/lleidahack"
+  },
+  "thumbnailUrl": "images/lleidahack.webp",
+  "latLon": {
+    "lat": 41.6175899,
+    "lon": 0.6200145
+  },
+  "displayOnMap": true,
+  "humanValidated": false,
+  "removalReason": ""
+}

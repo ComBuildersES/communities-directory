@@ -1,0 +1,31 @@
+{
+  "id": null,
+  "name": "Barcelona Tech Talks",
+  "status": "active",
+  "lastReviewed": "06/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "geographicScope": "local",
+  "shortDescription": "Ciclo de charlas técnicas en Barcelona sobre ingeniería y datos a escala, con equipos de producto de empresas locales e invitadas.",
+  "topics": "",
+  "langs": [
+    "en"
+  ],
+  "tags": [
+    "machine-learning",
+    "data-engineering"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/barcelona-tech-talks/",
+  "urls": {},
+  "thumbnailUrl": "images/barcelona-tech-talks.webp",
+  "latLon": {
+    "lat": 41.387917,
+    "lon": 2.1699187
+  },
+  "displayOnMap": true,
+  "humanValidated": false,
+  "removalReason": ""
+}

@@ -1,0 +1,32 @@
+{
+  "id": null,
+  "name": "Women in Tech Málaga",
+  "status": "active",
+  "lastReviewed": "06/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Málaga",
+  "geographicScope": "local",
+  "shortDescription": "Comunidad de mujeres en tecnología en Málaga: encuentros de networking, marca personal y crecimiento profesional, abiertos a cualquier perfil tech.",
+  "topics": "",
+  "langs": [
+    "es",
+    "en"
+  ],
+  "tags": [
+    "women-in-tech",
+    "diversity"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/women-in-tech-malaga/",
+  "urls": {},
+  "thumbnailUrl": "images/women-in-tech-malaga.webp",
+  "latLon": {
+    "lat": 36.7196292,
+    "lon": -4.4200007
+  },
+  "displayOnMap": true,
+  "humanValidated": false,
+  "removalReason": ""
+}
