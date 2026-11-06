@@ -20,7 +20,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
-- 2026-11-06 `9f06825` precisar que la marca de saltar CI se busca en todo el mensaje
+- 2026-11-06 `1091c5b` precisar que la marca de saltar CI se busca en todo el mensaje
 - 2026-11-06 `e1a4759` corregir claves de urls y documentar la trampa de [skip ci] al desplegar
 - 2026-11-06 `d567b40` update changelog [skip ci]
 - 2026-11-05 `d63aab6` update changelog [skip ci]
