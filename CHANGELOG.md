@@ -34,7 +34,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
-- 2026-11-06 `987119c` añadir 22 comunidades del feed OTE de Sarao IA
+- 2026-11-06 `19894e0` añadir 22 comunidades del feed OTE de Sarao IA
 - 2026-11-06 `b99ae92` enlazar 38 comunidades con eventos.wiki y OTE
 - 2026-11-05 `b53ee77` añadir Data Saturdays Madrid y Women4TT
 
