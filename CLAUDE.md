@@ -456,6 +456,9 @@ GitHub mira **únicamente el commit de cabeza** del push. El hook de pre-commit 
 trabajo, el push no dispara `deploy.yml` y **nada de lo que va debajo se publica**, aunque
 esos commits no lleven la marca.
 
+- La marca se busca en **todo el mensaje**, cuerpo incluido: un commit que la cite al
+  explicarla (como este apartado) también salta el deploy. Si necesitas nombrarla en un
+  mensaje de commit, pártela.
 - Al pushear a `master` a mano, deja el commit del changelog en medio, o comprueba que haya
   salido un run: `gh run list --workflow deploy.yml --limit 1`.
 - Si no salió, se lanza a mano: `gh workflow run deploy.yml --ref master`.
