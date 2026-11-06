@@ -1,0 +1,44 @@
+{
+  "id": null,
+  "name": "GameDev Murcia",
+  "status": "active",
+  "lastReviewed": "06/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Murcia",
+  "geographicScope": "regional",
+  "parentId": null,
+  "shortDescription": "Grupo de Desarrolladores y Creadores de Videojuegos de la Región de Murcia. Comunidad donde todos los desarrolladores (artistas, programadores, diseñadores, productores, etc) puedan compartir sus experiencias, conocimientos y sobre todo su pasión. Ahora parte de MurciaTech",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "game-development",
+    "game-design",
+    "indie-games",
+    "unity",
+    "unreal-engine"
+  ],
+  "targetAudience": [
+    "game-developer",
+    "ui-designer",
+    "frontend-developer",
+    "backend-developer",
+    "fullstack-developer",
+    "mobile-developer"
+  ],
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/gamedevmurcia/",
+  "urls": {
+    "telegram": "https://t.me/+es7SlmPCSC9iMjA0"
+  },
+  "thumbnailUrl": "images/gamedev-murcia.webp",
+  "latLon": {
+    "lat": 37.9347521,
+    "lon": -1.1131029
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}
