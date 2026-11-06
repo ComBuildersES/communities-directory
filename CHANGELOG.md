@@ -5,32 +5,9 @@ Se organiza por mes y por tipo de cambio.
 
 ## 2026-11
 
-### Features
-
-- 2026-11-06 `dd0431a` añadir URLs de foro/blog/RSS/eventos.wiki/OTE y ámbito geográfico
-- 2026-11-05 `1d4b6c3` archivar canales históricos de una comunidad (#353)
-
-### Data
-
-- 2026-11-05 `10abe10` [Añadida Codex Community](https://directory.communitybuilders.dev/?community=632) ([PR #440](https://github.com/ComBuildersES/communities-directory/pull/440))
-
-### Improvements
-
-- 2026-11-05 `9cbf586` una comunidad, un fichero
-
-### Docs
-
-- 2026-11-06 `c43698f` update changelog [skip ci]
-- 2026-11-06 `1091c5b` precisar que la marca de saltar CI se busca en todo el mensaje
-- 2026-11-06 `e1a4759` corregir claves de urls y documentar la trampa de [skip ci] al desplegar
-- 2026-11-06 `d567b40` update changelog [skip ci]
-- 2026-11-05 `d63aab6` update changelog [skip ci]
-- 2026-11-05 `bfaedfa` update changelog [skip ci]
-- 2026-11-05 `d17ed7d` update changelog [skip ci]
-
 ### Maintenance
 
-- 2026-11-05 `0b31f64` borrar la rama de las propuestas de comunidad descartadas
+- 2026-11-06 `0f29de7` asignar IDs de comunidad (ai-tinkerers-valencia#635, aws-user-group-barcelona#636, aws-user-group-galicia#637, aws-user-group-madrid#638, barcelona-ai-music-meetup-bamm#639, barcelona-tech-talks#640, cascarilla-tech#641, claude-community-barcelona#642, club-sintetico#643, everything-everywhere-all-with-kdb-q#644, femcoders-club#645, fuengirola-technology-social-meetup-group#646, geekscat#647, innovators-hub-sevilla#648, intersystems-developers-spain#649, ladies-that-ux-malaga#650, lleidahack#651, producttank-madrid#652, pyladies-valencia#653, quantum-madrid#654, the-vibe-coding-club-madrid#655, women-in-tech-malaga#656) [skip ci]
 
 ### Other
 
