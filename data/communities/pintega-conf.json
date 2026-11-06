@@ -1,5 +1,5 @@
 {
-  "id": null,
+  "id": 658,
   "name": "Pintega Conf",
   "status": "active",
   "lastReviewed": "06/11/2026",
@@ -25,7 +25,7 @@
   },
   "thumbnailUrl": "images/pintega-conf.webp",
   "latLon": {
-    "lat": 43.37093360323112, 
+    "lat": 43.37093360323112,
     "lon": -8.389923881863806
   },
   "displayOnMap": true,
