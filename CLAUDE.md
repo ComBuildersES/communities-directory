@@ -421,6 +421,11 @@ Opcional, pero es lo que distingue un campo usable de uno críptico: `platformHe
 `CommunityContribution.jsx` + `contribution.urlHelp.<clave>` en ambos locales, para que el
 campo tenga icono de ayuda con un ejemplo de URL.
 
+**No hay clave por plataforma de eventos.** No existe `meetup` (ni `eventbrite`, ni `luma`):
+esas URLs van en `eventsUrl`, o directamente en `communityUrl` si es la home de la comunidad.
+Inventarse la clave no falla al escribir el fichero, falla en el hook de pre-commit
+(`validate-data:staged` → "urls contiene una clave no soportada").
+
 ### Slugs
 
 `slugifyCommunityName` existe en `scripts/lib/communities-store.js` y en
