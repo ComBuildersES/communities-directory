@@ -2,26 +2,69 @@
   "id": 537,
   "name": "Barcelona Java User Group",
   "status": "active",
-  "lastReviewed": "06/02/2025",
+  "lastReviewed": "08/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
   "location": "Barcelona",
+  "geographicScope": "unknown",
   "parentId": 302,
+  "shortDescription": "Somos un grupo de \"frikis\" de la ciudad condal que nos gusta compartir experiencias y conocimientos relacionados con el mundo de la informática y en especial con Java, ese lenguaje de programación que nos da tantas risas y tantos quebraderos de cabeza 😅",
   "topics": "",
   "langs": [
-    "es"
+    "es",
+    "en",
+    "ca"
   ],
   "tags": [
-    "java"
+    "java",
+    "gcp",
+    "aws",
+    "docker",
+    "kubernetes",
+    "bash",
+    "servers",
+    "ci-cd",
+    "jenkins",
+    "virtualization",
+    "git",
+    "event-driven",
+    "kotlin",
+    "tech-ethics",
+    "open-source",
+    "ai-coding-agents",
+    "ddd",
+    "clean-code",
+    "cloud-security",
+    "web-security",
+    "generative-ai",
+    "big-data",
+    "data-visualization",
+    "llm",
+    "groovy"
   ],
-  "targetAudience": [],
-  "contactInfo": "",
+  "targetAudience": [
+    "tech-lead",
+    "devops-engineer",
+    "cloud-engineer",
+    "backend-developer",
+    "fullstack-developer",
+    "project-manager",
+    "senior-staff",
+    "test-automation-engineer",
+    "qa-engineer",
+    "student",
+    "open-source-contributor",
+    "agile-practitioner",
+    "software-architect"
+  ],
+  "contactInfo": "info@barcelonajug.org",
   "communityUrl": "https://barcelonajug.org/",
   "urls": {
     "twitter": "https://twitter.com/BarcelonaJUG",
     "linkedin": "https://www.linkedin.com/company/barcelonajug",
     "youtube": "https://www.youtube.com/user/BarcelonaJUG",
-    "github": "https://github.com/barcelonajug"
+    "github": "https://github.com/barcelonajug",
+    "eventsUrl": "https://luma.com/barcelonajug"
   },
   "thumbnailUrl": "images/barcelona-java-user-group.webp",
   "latLon": {
@@ -29,5 +72,6 @@
     "lon": 2.1699187
   },
   "displayOnMap": true,
-  "humanValidated": false
+  "humanValidated": true,
+  "removalReason": ""
 }
