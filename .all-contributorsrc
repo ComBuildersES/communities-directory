@@ -369,6 +369,15 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "icougil",
+      "name": "Nacho Cougil",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2370634?v=4",
+      "profile": "http://nacho.cougil.com",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
