@@ -14,6 +14,7 @@ Se organiza por mes y por tipo de cambio.
 ### Data
 
 - 2026-11-10 `410ec69` Update community-builders-members.json
+- 2026-11-09 `49f325d` [Actualizada Codemotion Madrid](https://directory.communitybuilders.dev/?community=94) ([PR #455](https://github.com/ComBuildersES/communities-directory/pull/455))
 - 2026-11-06 `3400bbd` [Añadida GameDev Murcia](https://directory.communitybuilders.dev/?community=657) ([PR #449](https://github.com/ComBuildersES/communities-directory/pull/449))
 - 2026-11-06 `40f533e` [Actualizada Lareira Conf](https://directory.communitybuilders.dev/?community=541) ([PR #447](https://github.com/ComBuildersES/communities-directory/pull/447))
 - 2026-11-05 `4f68e83` [Añadida Pintega Conf](https://directory.communitybuilders.dev/?community=658) ([PR #444](https://github.com/ComBuildersES/communities-directory/pull/444))
@@ -25,6 +26,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-11-09 `6a1f511` update changelog [skip ci]
 - 2026-11-06 `ec91df2` update changelog [skip ci]
 - 2026-11-06 `cd97585` update changelog [skip ci]
 - 2026-11-06 `dc20152` update changelog [skip ci]
