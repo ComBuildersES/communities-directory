@@ -13,6 +13,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-11-10 `48b8d9e` Update community-builders-members.json
 - 2026-11-09 `42b5c98` [Actualizada No cON Name](https://directory.communitybuilders.dev/?community=364) ([PR #457](https://github.com/ComBuildersES/communities-directory/pull/457))
 - 2026-11-10 `410ec69` Update community-builders-members.json
 - 2026-11-09 `49f325d` [Actualizada Codemotion Madrid](https://directory.communitybuilders.dev/?community=94) ([PR #455](https://github.com/ComBuildersES/communities-directory/pull/455))
@@ -28,6 +29,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-11-09 `ad6175a` update changelog [skip ci]
 - 2026-11-09 `f37702e` update changelog [skip ci]
 - 2026-11-09 `6a1f511` update changelog [skip ci]
 - 2026-11-06 `ec91df2` update changelog [skip ci]
