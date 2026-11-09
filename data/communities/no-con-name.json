@@ -2,16 +2,28 @@
   "id": 364,
   "name": "No cON Name",
   "status": "active",
-  "lastReviewed": "26/05/2025",
+  "lastReviewed": "10/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Barcelona",
+  "location": "Parc Bit, Mallorca",
+  "geographicScope": "unknown",
+  "parentId": null,
+  "shortDescription": "Congreso de hacking y seguridad informática activo más antiguo de España, fundado en 1999. Como asociación sin ánimo de lucro, organiza en Mallorca eventos independientes y sin sesgo comercial, reuniendo a profesionales y entusiastas de la ciberseguridad.",
   "topics": "",
   "langs": [
-    "es"
+    "es",
+    "en"
   ],
-  "tags": [],
-  "targetAudience": [],
+  "tags": [
+    "cybersecurity",
+    "web-security",
+    "digital-forensics",
+    "ethical-hacking"
+  ],
+  "targetAudience": [
+    "cybersecurity-engineer",
+    "student"
+  ],
   "contactInfo": "",
   "communityUrl": "https://www.noconname.org/",
   "urls": {
@@ -25,5 +37,6 @@
     "lon": 2.1699187
   },
   "displayOnMap": true,
-  "humanValidated": false
+  "humanValidated": true,
+  "removalReason": ""
 }
