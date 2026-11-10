@@ -747,5 +747,19 @@
     "footer": "El dataset lo mantienen personas voluntarias y está incompleto. Si falta una comunidad o hay un dato mal, corregirlo es la forma más útil de ayudar.",
     "footerDocs": "Documentación de los datos",
     "footerContribute": "Añadir o corregir una comunidad"
+  },
+  "support": {
+    "title": "¿Te echamos una mano?",
+    "close": "Cerrar",
+    "copy": "Si tienes dudas sobre el directorio, quieres dar de alta tu comunidad o has visto algo mal, escríbenos por donde te resulte más cómodo.",
+    "telegram": "Grupo de Telegram",
+    "telegramHint": "la vía más rápida: preguntas y soporte en directo",
+    "github": "Preguntar en GitHub",
+    "githubHint": "para bugs, datos mal o propuestas de mejora",
+    "mailingList": "Lista de correo",
+    "mailingListHint": "conversación con la comunidad de Community Builders",
+    "linktree": "Todos nuestros canales",
+    "linktreeHint": "redes sociales, eventos y web",
+    "fabLabel": "¿Ayuda?"
   }
 }

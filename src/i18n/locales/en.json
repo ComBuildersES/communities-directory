@@ -747,5 +747,19 @@
     "footer": "This dataset is maintained by volunteers and it is incomplete. If a community is missing or a field is wrong, fixing it is the most useful thing you can do.",
     "footerDocs": "Data documentation",
     "footerContribute": "Add or fix a community"
+  },
+  "support": {
+    "title": "Need a hand?",
+    "close": "Close",
+    "copy": "Questions about the directory, want to add your community, or spotted something wrong? Reach us wherever suits you.",
+    "telegram": "Telegram group",
+    "telegramHint": "fastest route: questions and live support",
+    "github": "Ask on GitHub",
+    "githubHint": "for bugs, wrong data or improvement ideas",
+    "mailingList": "Mailing list",
+    "mailingListHint": "conversation with the Community Builders community",
+    "linktree": "All our channels",
+    "linktreeHint": "social media, events and website",
+    "fabLabel": "Help?"
   }
 }

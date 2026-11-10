@@ -4,6 +4,7 @@ import { CommunitiesList } from "./components/CommunitiesList.jsx";
 import { Footer } from "./components/Footer.jsx";
 import { Heading } from "./components/Heading.jsx";
 import { InstallPromptBar } from "./components/InstallPromptBar.jsx";
+import { SupportFab } from "./components/SupportFab/SupportFab.jsx";
 import { TagSearch } from "./components/TagSearch/TagSearch.jsx";
 import { ResultsBar } from "./components/ResultsBar.jsx";
 import { FilterPanel } from "./components/FilterPanel.jsx";
@@ -494,6 +495,8 @@ function App () {
         )}
         <Footer />
       </div>
+      {/* Fuera del contenedor del contenido: es fijo y no debe heredar su scroll. */}
+      <SupportFab />
       {!showContributionView && selectedCommunity && !shouldBlockCommunityDetails && (
         <Suspense fallback={null}>
           <CommunityModal

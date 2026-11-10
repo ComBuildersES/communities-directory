@@ -1,0 +1,219 @@
+/* Botón flotante de soporte.
+   Va por debajo de los modales (z-index 20030+) y por encima del contenido: si hay una
+   ficha abierta, el botón no debe quedar flotando sobre ella. */
+.support-fab {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  z-index: 9000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+}
+
+/* La vista de lista es una cuadrícula de logos de colores, muchos azules. Para que el
+   botón no se lea como un logo más: fondo azul marino profundo (ningún logo vive ahí),
+   anillo blanco que lo recorta del fondo tenga lo que tenga detrás, sombra en dos capas
+   y una etiqueta de texto — un botón con palabra se ve mucho antes que un icono suelto. */
+.support-fab-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  height: 3rem;
+  padding: 0 1.1rem 0 0.95rem;
+  border: 3px solid #fff;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #24395f 0%, #16233c 100%);
+  color: #fff;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow:
+    0 2px 6px rgba(16, 26, 44, 0.24),
+    0 10px 26px rgba(16, 26, 44, 0.34);
+  transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+
+.support-fab-button i {
+  font-size: 1.05rem;
+}
+
+.support-fab-button:hover {
+  background: linear-gradient(135deg, #3273dc 0%, #2358b0 100%);
+  transform: translateY(-2px);
+  box-shadow:
+    0 2px 6px rgba(16, 26, 44, 0.24),
+    0 14px 30px rgba(16, 26, 44, 0.38);
+}
+
+.support-fab-button:focus-visible {
+  outline: 3px solid #3273dc;
+  outline-offset: 3px;
+}
+
+/* Abierto, la etiqueta sobra: el panel ya dice de qué va. Vuelve a ser un círculo. */
+.support-fab-button--open {
+  width: 3rem;
+  padding: 0;
+  justify-content: center;
+  background: #16233c;
+}
+
+.support-fab-panel {
+  width: min(19rem, calc(100vw - 2rem));
+  padding: 0.9rem 1rem;
+  border: 1px solid #d9e2f0;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 16px 38px rgba(31, 51, 84, 0.18);
+  animation: support-fab-enter 160ms ease-out both;
+}
+
+@keyframes support-fab-enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+.support-fab-title {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #20304c;
+}
+
+.support-fab-copy {
+  margin: 0.25rem 0 0.6rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #6b7f9c;
+}
+
+.support-fab-channels {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.support-fab-channel {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.55rem;
+  padding: 0.45rem 0.55rem;
+  border-radius: 10px;
+  color: #3e5273;
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.support-fab-channel:hover {
+  background: #f2f6fd;
+}
+
+.support-fab-channel i {
+  margin-top: 0.15rem;
+  width: 1rem;
+  text-align: center;
+  color: #5e85c4;
+}
+
+.support-fab-channel span {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.support-fab-channel strong {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #20304c;
+}
+
+.support-fab-channel small {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: #7a8ca5;
+}
+
+/* En móvil el botón sube para no taparse con la barra del navegador ni con el borde. */
+/* En móvil la etiqueta se come el ancho útil: solo el icono, pero conservando el anillo
+   y la sombra, que es lo que de verdad lo separa del fondo. */
+@media (max-width: 600px) {
+  .support-fab {
+    right: 0.75rem;
+    bottom: 0.75rem;
+  }
+
+  .support-fab-button {
+    width: 3rem;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .support-fab-button-label {
+    display: none;
+  }
+}
+
+/* Llamada de atención: un rebote corto y un tooltip, una sola vez por persona.
+   Tres saltos y para: un botón que rebota sin fin es ruido, no una invitación. */
+.support-fab-button--nudge {
+  animation: support-fab-bounce 1.6s ease-in-out 3;
+}
+
+@keyframes support-fab-bounce {
+  0%, 60%, 100% { transform: translateY(0); }
+  15% { transform: translateY(-9px); }
+  30% { transform: translateY(0); }
+  40% { transform: translateY(-4px); }
+  50% { transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .support-fab-button--nudge {
+    animation: none;
+  }
+}
+
+.support-fab-tooltip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: min(15rem, calc(100vw - 2rem));
+  padding: 0.45rem 0.4rem 0.45rem 0.7rem;
+  border-radius: 10px;
+  background: #20304c;
+  color: #fff;
+  font-size: 0.82rem;
+  font-weight: 600;
+  line-height: 1.3;
+  box-shadow: 0 8px 22px rgba(16, 26, 44, 0.3);
+  animation: support-fab-tooltip-enter 220ms ease-out both;
+}
+
+@keyframes support-fab-tooltip-enter {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+.support-fab-tooltip-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.3rem;
+  height: 1.3rem;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+.support-fab-tooltip-close:hover {
+  background: rgba(255, 255, 255, 0.26);
+}
