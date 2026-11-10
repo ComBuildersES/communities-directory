@@ -9,7 +9,7 @@ lo hecho, `CLAUDE.md` y `AGENTS.md` ya lo documentan.
 | --- | --- |
 | Artefactos para LLMs | `scripts/generate-llm-artifacts.js` → `llms.txt`, `llms-full.txt`, CSV, `schema.json`, `sitemap.xml` |
 | Modal "Datos abiertos + IA" | `src/components/OpenDataModal/` |
-| Prompts del modal | `src/i18n/locales/{es,en}.json` → `openData.chat.prompts.*` |
+| Prompts del modal | `src/i18n/locales/{es,en}.json` → `openData.prompts.*` (planos; las pestañas eligen cuáles pintan) |
 | Alta asistida por IA | `src/lib/aiAssist.js` + `src/components/CommunityContribution/AiAssistPanel.jsx` |
 | Botón flotante de apoyo | `src/components/SupportFab/` + `src/lib/shareLinks.js` |
 | Changelog | `scripts/generate-changelog.js`, hook `.githooks/post-commit`, job en `deploy.yml` |
@@ -21,25 +21,47 @@ que mirar ese test.
 
 ---
 
-## Petición 3 — Prompts que prometen datos que no existen (la importante)
+## Petición 3 — Prompts que prometían datos que no existen (RESUELTA)
 
-Los prompts **"Echar una mano"** y **"Sinergias para mi comunidad"** piden a la IA que
-encuentre comunidades que buscan voluntariado, que están abiertas a colaborar o que necesitan
-organizadores. **El dataset no tiene ninguno de esos campos.** El modelo no puede responder
-sin inventárselo, que es justo lo que el resto de esta capa intenta evitar.
+Se midió la cobertura real antes de reescribir nada. De las 446 comunidades activas:
+`communityType` y `status` al 100 %, `location` 436, `latLon` 368, `tags` 220,
+`humanValidated` 77, `targetAudience` 60, `urls.ote` 41, `geographicScope` 27. Y 438
+fichas tienen `lastReviewed` en 2024.
 
-Opciones, de menos a más:
+Conclusiones que cambiaron el plan original:
 
-1. Reescribir los dos prompts para que solo prometan lo que el dato soporta (proximidad
-   temática, zona, alcance, actividad reciente vía `lastReviewed`), y que digan
-   explícitamente que el interés en colaborar hay que preguntarlo a cada comunidad.
-2. Quitar "Echar una mano" y dejar el de sinergias acotado a lo anterior.
-3. Ampliar el esquema si se ve demanda: algo como `openTo: ["volunteers", "collaborations",
-   "co-organisers", "speakers"]`. Esto es un cambio de modelo de datos y toca los cuatro
-   sitios de siempre (formulario, validación, modal, i18n) más `buildSchema()` y
-   `buildLlmsIndex()` en los artefactos.
+- **"Actividad reciente vía `lastReviewed`" no existe**: es fecha de revisión de la ficha,
+  no de actividad. El único indicio real es `urls.ote`.
+- **"Alcance" tampoco**: `geographicScope` lo trae el 6 % de las activas. La zona sí se
+  puede usar, pero por `location`, que está en el 98 %.
+- **`communityType` es el campo más fuerte del dataset** y el que menos se explotaba. De
+  ahí salió el prompt "Qué tipo de comunidad me conviene".
 
-Mi recomendación: (1) ahora, y (3) como issue aparte para medir demanda primero.
+Se aplicó la opción (1): los prompts solo prometen lo que el dato sostiene, y los tres que
+tocan terreno inexistente (voluntariado, sinergias, acogida) **dicen en voz alta que el
+dataset no trae ese campo** y piden el canal para preguntarlo. Hay test.
+
+Sigue abierta la opción (3) como issue aparte si se ve demanda: un `openTo: ["volunteers",
+"collaborations", "co-organisers", "speakers"]`. Es cambio de modelo de datos y toca los
+cuatro sitios de siempre más `buildSchema()` y `buildLlmsIndex()`.
+
+---
+
+## Sesión del 2026-11-10 (tarde): reorganización del modal
+
+**Las pestañas pasan a ir por persona**: `attend` · `organizers` · `found` · `build`.
+Antes mezclaban eje de herramienta y eje de persona. Detalle y razones en `CLAUDE.md`.
+
+Prompts nuevos: `types` (las siete dinámicas de `communityType`), `umbrella` (quién
+puede acoger a quien va a montar algo) y `onboarding` (poner al día al agente de quien
+construye sobre los datos). `volunteer`, `synergies` y `gaps` reescritos.
+
+Arreglado de paso: el mojibake de los `.txt` (`llms.txt` es ASCII puro, `llms-full.txt`
+abre con BOM) y la clave `heading.bookmarkHint` que estaba **duplicada** en los dos
+locales, con la primera copia muerta.
+
+Pendiente menor: el subtítulo del modal sigue diciendo "puedes descargarlas" aunque los
+chips de ficheros ahora vivan en la última pestaña. No molesta, pero se puede afinar.
 
 ---
 

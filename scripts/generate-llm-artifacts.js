@@ -362,12 +362,19 @@ function formatCommunitySection(community, { tagLabels, audienceLabels }) {
   return lines.join('\n');
 }
 
+/** BOM UTF-8: ver el comentario del header. */
+const BOM = '\uFEFF';
+
 export function buildLlmsFull(communities, { tags = [], audience = [] } = {}) {
   const published = publishableCommunities(communities);
   const tagLabels = Object.fromEntries(tags.map((tag) => [tag.id, tag.label]));
   const audienceLabels = Object.fromEntries(audience.map((item) => [item.id, item.label]));
 
-  const header = `# Community Builders Directory — full dataset
+  // GitHub Pages sirve los `.txt` sin `charset`, y entonces el navegador los decodifica con
+  // la codificación local (Windows-1252): "Málaga" se lee "MÃ¡laga". `llms.txt` lo evita
+  // siendo ASCII puro, pero aquí los nombres de las comunidades llevan acentos a la fuerza,
+  // así que la única señal en banda es el BOM, que todos los navegadores respetan.
+  const header = `${BOM}# Community Builders Directory — full dataset
 
 > Every technology community in the directory of Spanish tech communities, as Markdown.
 > ${published.length} communities. Generated from the source of truth on each deploy.
@@ -388,13 +395,26 @@ Field meanings: ${SITE_URL}/data/schema.json
 
 export function buildLlmsIndex(communities, { tags = [], audience = [], deleted = [] } = {}) {
   const published = publishableCommunities(communities);
-  const active = published.filter((community) => community.status === 'active').length;
+  const activeCommunities = published.filter((community) => community.status === 'active');
+  const active = activeCommunities.length;
   const categories = [...new Set(tags.map((tag) => tag.category).filter(Boolean))].sort();
+
+  /**
+   * La cobertura por campo se emite calculada, no redactada a mano: un agente que lee
+   * "la mitad tiene tags" no sabe si eso sigue siendo verdad, y el número envejece solo.
+   * Es lo que evita que el modelo lea un campo vacío como "esta comunidad no trata de eso".
+   */
+  const coverage = (predicate) => activeCommunities.filter(predicate).length;
+  const withTags = coverage((c) => c.tags?.length || c.matchesAllTags);
+  const withAudience = coverage((c) => c.targetAudience?.length || c.matchesAllAudience);
+  const withScope = coverage((c) => c.geographicScope && c.geographicScope !== 'unknown');
+  const withOte = coverage((c) => c.urls?.ote);
+  const withHumanValidation = coverage((c) => c.humanValidated);
 
   return `# Community Builders Directory
 
-> An open directory of ${published.length} technology communities in Spain — meetups, user
-> groups, conferences, hacklabs and umbrella organisations — searchable by topic, audience,
+> An open directory of ${published.length} technology communities in Spain: meetups, user
+> groups, conferences, hacklabs and umbrella organisations, searchable by topic, audience,
 > format and location. ${active} of them are currently active. Maintained in the open by
 > [Community Builders](https://communitybuilders.dev/) and its contributors.
 
@@ -412,7 +432,7 @@ regenerated on every deploy.
 - [communities.json](${SITE_URL}/data/communities.json): every community as a JSON array. The primary dataset.
 - [communities.csv](${SITE_URL}/data/communities.csv): the same records, flattened to one row per community.
 - [communities.geojson](${SITE_URL}/data/communities.geojson): communities with coordinates, as a GeoJSON FeatureCollection.
-- [schema.json](${SITE_URL}/data/schema.json): data dictionary — every field, every enum value, what each one means. Read this before interpreting the dataset.
+- [schema.json](${SITE_URL}/data/schema.json): data dictionary: every field, every enum value, what each one means. Read this before interpreting the dataset.
 - [tags.json](${SITE_URL}/data/tags.json): ${tags.length} topic tags with \`label\`, \`description\`, \`category\` and \`synonyms\`. \`tags\` on a community holds ids that reference this catalogue. English: [tags.en.json](${SITE_URL}/data/tags.en.json).
 - [audience.json](${SITE_URL}/data/audience.json): ${audience.length} audience profiles, same shape. English: [audience.en.json](${SITE_URL}/data/audience.en.json).
 - [deleted-communities.json](${SITE_URL}/data/deleted-communities.json): ${deleted.length} record${deleted.length === 1 ? '' : 's'} removed from the directory, with the reason why.
@@ -422,8 +442,10 @@ regenerated on every deploy.
 
 - \`tags\` and \`targetAudience\` are **ids**, not labels: join them against tags.json and audience.json to get human-readable names. Match on \`label\`, \`description\` and \`synonyms\`, not just the id.
 - \`matchesAllTags\` / \`matchesAllAudience\` mean "generalist": the community matches any topic or any profile, and its array is empty on purpose. Treat an empty array plus the flag as "everything", never as "nothing".
-- \`location\` is where events happen; \`geographicScope\` is the territory served. They differ often — a community can meet in Madrid and serve all of Spain.
-- \`humanValidated: false\` means the record was enriched automatically and no person has checked it. Say so if you present it as fact.
+- \`location\` is where events happen; \`geographicScope\` is the territory served. They differ often: a community can meet in Madrid and serve all of Spain.
+- Coverage is uneven, so do not read an empty field as a statement about the community. Of the ${active} active communities, ${withTags} have \`tags\`, ${withAudience} have \`targetAudience\` and ${withScope} have \`geographicScope\`. An empty field means nobody has filled it in yet, not that the community has no topic or serves nowhere. Say which recommendations rest on a field that is often missing.
+- \`lastReviewed\` is the date a person last checked the record. It is **not** an activity signal: most records have not been revisited since they were added. The only field that evidences live activity is \`urls.ote\`, the community's events feed (${withOte} active communities publish one).
+- \`humanValidated: false\` means the record was enriched automatically and no person has checked it. Say so if you present it as fact. Only ${withHumanValidation} of the active communities have been reviewed by a person.
 - \`archivedUrls\` are dead channels kept for history. Never recommend them: they look alive and nobody is listening.
 - \`status: "inactive"\` communities are kept deliberately. Filter them out before telling someone where to go.
 - A community is linkable by slug: ${SITE_URL}/es/?community=<slug> (and /en/). Prefer linking people to the directory page or the community's own site over linking a raw JSON file.
@@ -444,7 +466,7 @@ this stays accurate.
 
 ## Topic taxonomy
 
-Tags are grouped into these categories: ${categories.join(' · ')}.
+Tags are grouped into these categories: ${categories.join(' | ')}.
 `;
 }
 

@@ -176,3 +176,50 @@ describe('buildSitemap', () => {
     expect(sitemap).not.toMatch(/[^&]&[^a]/);
   });
 });
+
+describe('codificación de los .txt', () => {
+  /**
+   * GitHub Pages sirve los `.txt` sin `charset`, y entonces el navegador los decodifica con
+   * la codificación local: un `—` se lee "â€”". `llms.txt` es el fichero que la gente abre
+   * a mano, así que se mantiene ASCII puro y el problema no existe.
+   */
+  it('llms.txt es ASCII puro, para que ningún navegador lo decodifique mal', () => {
+    const index = buildLlmsIndex([community()], { tags: TAGS, audience: AUDIENCE, deleted: [] });
+    const nonAscii = [...index].filter((char) => char.codePointAt(0) > 127);
+
+    expect(nonAscii).toEqual([]);
+  });
+
+  it('llms-full.txt abre con BOM, porque sus acentos son inevitables', () => {
+    const markdown = buildLlmsFull([community({ name: 'Málaga Tech' })], {
+      tags: TAGS,
+      audience: AUDIENCE,
+    });
+
+    expect(markdown.codePointAt(0)).toBe(0xfeff);
+  });
+});
+
+describe('cobertura declarada en llms.txt', () => {
+  /**
+   * Un campo vacío en este dataset significa "nadie lo ha rellenado", no "la comunidad no
+   * trata de eso". Sin ese aviso el modelo descarta comunidades en silencio.
+   */
+  it('cuenta cuántas activas traen cada campo flojo', () => {
+    const index = buildLlmsIndex(
+      [community(), community({ id: 2, name: 'Sin Temas', tags: [], targetAudience: [], geographicScope: undefined })],
+      { tags: TAGS, audience: AUDIENCE, deleted: [] }
+    );
+
+    expect(index).toContain('Of the 2 active communities, 1 have `tags`');
+    expect(index).toContain('1 have `targetAudience`');
+    expect(index).toContain('1 have `geographicScope`');
+  });
+
+  it('avisa de que lastReviewed no mide actividad', () => {
+    const index = buildLlmsIndex([community()], { tags: TAGS, audience: AUDIENCE, deleted: [] });
+
+    expect(index).toMatch(/`lastReviewed`[\s\S]*not\*\* an activity signal/);
+    expect(index).toContain('`urls.ote`');
+  });
+});

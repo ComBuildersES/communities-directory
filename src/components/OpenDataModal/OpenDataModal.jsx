@@ -64,11 +64,18 @@ const DATA_FILES = [
   { key: "llmsFull", path: "llms-full.txt", icon: "fa-file-lines" },
 ];
 
+/**
+ * Las pestañas van por persona, no por herramienta. Antes mezclaban los dos ejes —tres
+ * pestañas por herramienta (chatbot, código, agentes) y una por persona (organizo una
+ * comunidad)— y obligaban a quien llega a preguntarse si es una herramienta o una persona.
+ * "Construyo con los datos" fusiona código y agentes porque ahí persona y herramienta son
+ * la misma cosa: quien construye.
+ */
 const TABS = [
-  { id: "chat", icon: "fa-comments" },
-  { id: "code", icon: "fa-code" },
-  { id: "agents", icon: "fa-robot" },
+  { id: "attend", icon: "fa-user-group" },
   { id: "organizers", icon: "fa-bullhorn" },
+  { id: "found", icon: "fa-seedling" },
+  { id: "build", icon: "fa-code" },
 ];
 
 /**
@@ -126,49 +133,62 @@ function CopyBlock({ text, label, hint }) {
 
 /**
  * Prompts pensados para lo que el directorio **no** sabe hacer todavía (issue #299):
- * cruzar el dataset consigo mismo, detectar huecos, buscar C4Ps o sinergias. "Comunidades
- * de Python en Valencia" se resuelve mejor y más rápido con los filtros de la propia web,
- * así que eso se dice arriba en vez de ofrecer un prompt para ello.
+ * cruzar el dataset consigo mismo, entender las diferencias entre tipos de comunidad,
+ * detectar huecos o buscar sinergias. "Comunidades de Python en Valencia" se resuelve mejor
+ * y más rápido con los filtros de la propia web, así que eso se dice arriba en vez de
+ * ofrecer un prompt para ello.
+ *
+ * El bloque de reglas del dataset vive una sola vez en `openData.prompts.rules` y cada
+ * prompt lo interpola con `{{rules}}`: repetido ocho veces se desincronizaba en el primer
+ * cambio, y es justo lo que evita que el modelo se invente lo que el dato no dice.
  */
-function useChatPrompts() {
+function usePrompts(keys) {
   const { t } = useTranslation();
-  const dataUrl = `${SITE_URL}/data/communities.json`;
-  const indexUrl = `${SITE_URL}/llms.txt`;
 
-  return useMemo(
-    () =>
-      ["tribe", "speaker", "volunteer", "synergies", "gaps"].map((key) => ({
-        key,
-        label: t(`openData.chat.prompts.${key}.label`),
-        hint: t(`openData.chat.prompts.${key}.hint`),
-        text: t(`openData.chat.prompts.${key}.text`, {
-          dataUrl,
-          indexUrl,
-          ...CATALOGUE_URLS,
-        }),
-      })),
-    [t, dataUrl, indexUrl]
-  );
+  return useMemo(() => {
+    const promptUrls = {
+      dataUrl: `${SITE_URL}/data/communities.json`,
+      indexUrl: `${SITE_URL}/llms.txt`,
+      schemaUrl: `${SITE_URL}/data/schema.json`,
+      ...CATALOGUE_URLS,
+    };
+    const rules = t("openData.prompts.rules", promptUrls);
+
+    return keys.map((key) => ({
+      key,
+      label: t(`openData.prompts.${key}.label`),
+      hint: t(`openData.prompts.${key}.hint`),
+      text: t(`openData.prompts.${key}.text`, { ...promptUrls, rules }),
+    }));
+  }, [t, keys]);
 }
 
-function ChatTab({ total }) {
+function PromptList({ keys }) {
+  const prompts = usePrompts(keys);
+
+  return prompts.map(({ key, label, hint, text }) => (
+    <CopyBlock key={key} text={text} label={label} hint={hint} />
+  ));
+}
+
+/** Los cuatro prompts de quien va a comunidades: encajar, entender, hablar, arrimar. */
+const ATTEND_PROMPTS = ["tribe", "types", "speaker", "volunteer"];
+
+function AttendTab() {
   const { t } = useTranslation();
-  const prompts = useChatPrompts();
 
   return (
     <>
-      <p className="opendata-lead">{t("openData.chat.lead", { total })}</p>
+      <p className="opendata-lead">{t("openData.attend.lead")}</p>
       <p className="opendata-callout">
-        <i className="fas fa-magnifying-glass"></i> {t("openData.chat.useTheSearch")}
+        <i className="fas fa-magnifying-glass"></i> {t("openData.attend.useTheSearch")}
       </p>
-      {prompts.map(({ key, label, hint, text }) => (
-        <CopyBlock key={key} text={text} label={label} hint={hint} />
-      ))}
+      <PromptList keys={ATTEND_PROMPTS} />
       <p className="opendata-note">
-        <i className="fas fa-circle-info"></i> {t("openData.chat.note")}
+        <i className="fas fa-circle-info"></i> {t("openData.attend.note")}
       </p>
       <p className="opendata-note">
-        <i className="fas fa-lightbulb"></i> {t("openData.chat.roadmap")}{" "}
+        <i className="fas fa-lightbulb"></i> {t("openData.attend.roadmap")}{" "}
         <a href={`${ISSUES_URL}/344`} target="_blank" rel="noopener noreferrer">
           #344
         </a>{" "}
@@ -181,7 +201,29 @@ function ChatTab({ total }) {
   );
 }
 
-function CodeTab() {
+const FOUND_PROMPTS = ["umbrella", "gaps"];
+
+/**
+ * Quien se plantea montar una comunidad llega sin saber que puede no hacer falta montarla:
+ * puede sumarse a algo que ya existe, buscar un paraguas que le acoja o reactivar algo
+ * parado. Por eso "quién me puede acoger" va antes que "qué hueco hay".
+ */
+function FoundTab() {
+  const { t } = useTranslation();
+
+  return (
+    <>
+      <p className="opendata-lead">{t("openData.found.lead")}</p>
+      <PromptList keys={FOUND_PROMPTS} />
+      <p className="opendata-note">
+        <i className="fas fa-triangle-exclamation"></i> {t("openData.found.note")}
+      </p>
+      <HelpBlock title={t("openData.found.helpTitle")} copy={t("openData.found.helpCopy")} />
+    </>
+  );
+}
+
+function CodeSnippets() {
   const { t } = useTranslation();
 
   const snippets = [
@@ -253,24 +295,12 @@ console.log(events.flat());
     },
   ];
 
-  return (
-    <>
-      <p className="opendata-lead">{t("openData.code.lead")}</p>
-      {snippets.map(({ key, label, hint, text }) => (
-        <CopyBlock key={key} text={text} label={label} hint={hint} />
-      ))}
-      <p className="opendata-note">
-        <i className="fas fa-triangle-exclamation"></i> {t("openData.code.gotcha")}{" "}
-        <a href={assetUrl("data/schema.json")} target="_blank" rel="noopener noreferrer">
-          schema.json
-        </a>
-        .
-      </p>
-    </>
-  );
+  return snippets.map(({ key, label, hint, text }) => (
+    <CopyBlock key={key} text={text} label={label} hint={hint} />
+  ));
 }
 
-function AgentsTab() {
+function AgentInstructions() {
   const { t } = useTranslation();
 
   const instructions = `# Community Builders Directory — datos de comunidades tech de España
@@ -331,7 +361,131 @@ Reglas al usar estos datos:
   );
 }
 
+/**
+ * Los chips de ficheros vivían sobre las pestañas, antes de que nadie hubiera dicho a qué
+ * venía: para quien busca una comunidad eran nueve enlaces técnicos ocupando el primer
+ * pantallazo. Aquí los encuentra quien los necesita, y encima sin explicación previa.
+ */
+function DataFiles() {
+  const { t } = useTranslation();
+
+  return (
+    <div className="opendata-files">
+      {DATA_FILES.map(({ key, path, icon, variants }) =>
+        variants ? (
+          <span
+            key={key}
+            className="opendata-file opendata-file--multi"
+            title={t(`openData.files.${key}`)}
+          >
+            <i className={`fas ${icon}`}></i>
+            <span>{t(`openData.files.${key}Short`)}</span>
+            <span className="opendata-file-langs">
+              {variants.map(({ lang, path: variantPath }) => (
+                <a
+                  key={lang}
+                  href={assetUrl(variantPath)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title={variantPath}
+                >
+                  {lang.toUpperCase()}
+                </a>
+              ))}
+            </span>
+          </span>
+        ) : (
+          <a
+            key={key}
+            className="opendata-file"
+            href={assetUrl(path)}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={t(`openData.files.${key}`)}
+          >
+            <i className={`fas ${icon}`}></i>
+            <span>{t(`openData.files.${key}Short`)}</span>
+          </a>
+        )
+      )}
+    </div>
+  );
+}
+
+const BUILD_PROMPTS = ["onboarding"];
+
+/**
+ * Para quien construye, persona y herramienta son la misma cosa, así que ficheros, código y
+ * agentes van juntos. El orden es el del camino real: qué hay, cómo empezar sin meter la
+ * pata, ejemplos, y las reglas para el agente.
+ */
+function BuildTab() {
+  const { t } = useTranslation();
+
+  return (
+    <>
+      <p className="opendata-lead">{t("openData.code.lead")}</p>
+
+      <p className="opendata-section-title">{t("openData.build.filesTitle")}</p>
+      <DataFiles />
+
+      <p className="opendata-section-title">{t("openData.build.promptTitle")}</p>
+      <PromptList keys={BUILD_PROMPTS} />
+
+      <p className="opendata-section-title">{t("openData.build.snippetsTitle")}</p>
+      <CodeSnippets />
+      <p className="opendata-note">
+        <i className="fas fa-triangle-exclamation"></i> {t("openData.code.gotcha")}{" "}
+        <a href={assetUrl("data/schema.json")} target="_blank" rel="noopener noreferrer">
+          schema.json
+        </a>
+        .
+      </p>
+
+      <p className="opendata-section-title">{t("openData.build.agentsTitle")}</p>
+      <AgentInstructions />
+    </>
+  );
+}
+
+/**
+ * El bloque de "pregúntanos" es el mismo en dos pestañas con copy distinto: quien organiza
+ * pregunta por el feed o las etiquetas, quien va a montar algo pregunta por dónde empezar.
+ */
+function HelpBlock({ title, copy }) {
+  const { t } = useTranslation();
+
+  return (
+    <div className="opendata-help">
+      <p className="opendata-help-title">{title}</p>
+      <p className="opendata-help-copy">{copy}</p>
+      <div className="opendata-help-links">
+        <a
+          href={TELEGRAM_GROUP_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="opendata-footer-btn opendata-footer-btn--cta"
+        >
+          <i className="fa-brands fa-telegram"></i> {t("openData.organizers.helpTelegram")}
+        </a>
+        <a href={ISSUES_URL} target="_blank" rel="noopener noreferrer" className="opendata-footer-btn">
+          <i className="fa-brands fa-github"></i> {t("openData.organizers.helpIssues")}
+        </a>
+        <a
+          href={MAILING_LIST_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="opendata-footer-btn"
+        >
+          <i className="fas fa-envelope"></i> {t("openData.organizers.helpMailingList")}
+        </a>
+      </div>
+    </div>
+  );
+}
+
 const ORGANIZER_STEPS = ["step1", "step2", "step3", "step4"];
+const ORGANIZER_PROMPTS = ["synergies"];
 
 /**
  * Los cuatro pasos van de uno en uno, no apilados. Son cuatro párrafos densos: puestos en
@@ -407,38 +561,21 @@ function OrganizersTab() {
       <p className="opendata-note">
         <i className="fas fa-circle-info"></i> {t("openData.organizers.note")}
       </p>
-      <div className="opendata-help">
-        <p className="opendata-help-title">{t("openData.organizers.helpTitle")}</p>
-        <p className="opendata-help-copy">{t("openData.organizers.helpCopy")}</p>
-        <div className="opendata-help-links">
-          <a
-            href={TELEGRAM_GROUP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="opendata-footer-btn opendata-footer-btn--cta"
-          >
-            <i className="fa-brands fa-telegram"></i> {t("openData.organizers.helpTelegram")}
-          </a>
-          <a href={ISSUES_URL} target="_blank" rel="noopener noreferrer" className="opendata-footer-btn">
-            <i className="fa-brands fa-github"></i> {t("openData.organizers.helpIssues")}
-          </a>
-          <a
-            href={MAILING_LIST_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="opendata-footer-btn"
-          >
-            <i className="fas fa-envelope"></i> {t("openData.organizers.helpMailingList")}
-          </a>
-        </div>
-      </div>
+
+      <p className="opendata-section-title">{t("openData.organizers.promptsTitle")}</p>
+      <PromptList keys={ORGANIZER_PROMPTS} />
+
+      <HelpBlock
+        title={t("openData.organizers.helpTitle")}
+        copy={t("openData.organizers.helpCopy")}
+      />
     </>
   );
 }
 
 export function OpenDataModal({ onClose, onAddCommunity }) {
   const { t } = useTranslation();
-  const [activeTab, setActiveTab] = useState("chat");
+  const [activeTab, setActiveTab] = useState("attend");
   // El total del dataset, no el filtrado: el modal habla del dataset completo.
   const total = useAllCommunities().length;
   const boxRef = useRef(null);
@@ -492,42 +629,6 @@ export function OpenDataModal({ onClose, onAddCommunity }) {
           </p>
         </header>
 
-        <div className="opendata-files">
-          {DATA_FILES.map(({ key, path, icon, variants }) =>
-            variants ? (
-              <span key={key} className="opendata-file opendata-file--multi" title={t(`openData.files.${key}`)}>
-                <i className={`fas ${icon}`}></i>
-                <span>{t(`openData.files.${key}Short`)}</span>
-                <span className="opendata-file-langs">
-                  {variants.map(({ lang, path: variantPath }) => (
-                    <a
-                      key={lang}
-                      href={assetUrl(variantPath)}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      title={variantPath}
-                    >
-                      {lang.toUpperCase()}
-                    </a>
-                  ))}
-                </span>
-              </span>
-            ) : (
-              <a
-                key={key}
-                className="opendata-file"
-                href={assetUrl(path)}
-                target="_blank"
-                rel="noopener noreferrer"
-                title={t(`openData.files.${key}`)}
-              >
-                <i className={`fas ${icon}`}></i>
-                <span>{t(`openData.files.${key}Short`)}</span>
-              </a>
-            )
-          )}
-        </div>
-
         <div className="opendata-tabs" role="tablist">
           {TABS.map(({ id, icon }) => (
             <button
@@ -546,10 +647,10 @@ export function OpenDataModal({ onClose, onAddCommunity }) {
         </div>
 
         <div className="opendata-panel" role="tabpanel">
-          {activeTab === "chat" && <ChatTab total={total} />}
-          {activeTab === "code" && <CodeTab />}
-          {activeTab === "agents" && <AgentsTab />}
+          {activeTab === "attend" && <AttendTab />}
           {activeTab === "organizers" && <OrganizersTab />}
+          {activeTab === "found" && <FoundTab />}
+          {activeTab === "build" && <BuildTab />}
         </div>
 
         <footer className="opendata-modal-footer">

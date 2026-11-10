@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-10 `f1148c2` el botón flotante pregunta antes de ofrecer
+- 2026-11-10 `969d794` el modal de datos abiertos se organiza por persona
+- 2026-11-10 `1d90695` el botón flotante pregunta antes de ofrecer
 - 2026-11-10 `570f367` garantizar que el changelog refleja lo que se publica
 - 2026-11-10 `66d0d20` botón flotante de soporte con aviso al entrar
 - 2026-11-10 `c92fd31` alta de comunidad asistida por IA

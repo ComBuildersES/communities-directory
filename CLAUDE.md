@@ -447,8 +447,34 @@ cuarto (el feed de eventos), que es justo el que más cuesta explicar.
 
 El equivalente para personas es `src/components/OpenDataModal/`, abierto desde el botón
 "Datos abiertos + IA" de la cabecera. Si cambian las reglas de interpretación del dataset,
-cambian en tres sitios: `buildLlmsIndex()`, el bloque de instrucciones de `AgentsTab` y
-`docs/DATA.md`.
+cambian en cuatro sitios: `buildLlmsIndex()`, el bloque de instrucciones de
+`AgentInstructions` (pestaña "Construyo con los datos"), `openData.prompts.rules` en los dos
+locales y `docs/DATA.md`.
+
+**`llms.txt` es ASCII puro a propósito.** GitHub Pages sirve los `.txt` sin `charset`, y el
+navegador los decodifica con la codificación local: un `—` se lee "â€”". Como el índice es
+prosa en inglés, el arreglo es no usar tipografía fuera de ASCII (hay test). En
+`llms-full.txt` los acentos de los nombres son inevitables, así que abre con BOM.
+
+El índice **declara la cobertura de cada campo flojo** (`tags`, `targetAudience`,
+`geographicScope`, `urls.ote`, `humanValidated`), calculada en cada build. Sin ese dato, un
+modelo lee un campo vacío como "esta comunidad no trata de eso" y la descarta en silencio,
+cuando lo que pasa es que nadie lo ha rellenado.
+
+### Las pestañas del modal van por persona
+
+`attend` · `organizers` · `found` · `build`. Antes mezclaban dos ejes —tres pestañas por
+herramienta (chatbot, código, agentes) y una por persona— y obligaban a quien llega a
+decidir si es una herramienta o una persona. "Construyo con los datos" fusiona código y
+agentes porque ahí persona y herramienta son la misma cosa.
+
+- Los chips de ficheros viven **dentro** de esa pestaña, no sobre las pestañas: para quien
+  busca una comunidad eran nueve enlaces técnicos ocupando el primer pantallazo.
+- En móvil caen los **iconos**, no las etiquetas: "una semilla" no se lee como "quiero
+  montar una comunidad". Con el eje de herramienta el icono bastaba; con el de persona, no.
+- Los prompts se declaran por pestaña (`ATTEND_PROMPTS`, `ORGANIZER_PROMPTS`,
+  `FOUND_PROMPTS`, `BUILD_PROMPTS`) y viven todos en `openData.prompts.*`, plano: mover uno
+  de pestaña es mover una cadena de una constante a otra.
 
 ### Alta asistida por IA (`src/lib/aiAssist.js`)
 
@@ -532,8 +558,17 @@ comprobarlo sobre la lista, no sobre fondo blanco.
 
 Los prompts del modal viven en los locales, no en el componente, y `tests/openDataPrompts.test.js`
 los vigila: deben **preguntar** a la persona (perfil, zona, disponibilidad) en vez de dejar un
-`[rellena aquí]`, y recordar las trampas del dataset (`archivedUrls`, `matchesAllTags`,
-`geographicScope`). Un hueco que alguien tiene que rellenar a mano es un prompt que no se usa.
+`[rellena aquí]`. Un hueco que alguien tiene que rellenar a mano es un prompt que no se usa.
+
+Las trampas del dataset (`archivedUrls`, `matchesAllTags`, `geographicScope`, `lastReviewed`,
+`humanValidated`) están **una sola vez**, en `openData.prompts.rules`, y cada prompt la
+interpola con `{{rules}}`. Repetida en cada prompt se desincronizaba al primer cambio.
+
+**Un prompt no puede prometer lo que el dataset no guarda.** No hay campo que diga quién
+busca voluntariado, quién está abierto a colaborar ni quién acoge grupos nuevos: los prompts
+que van de eso lo dicen en voz alta y piden el canal para preguntarlo (hay test). Y
+`lastReviewed` **no mide actividad**: es la fecha de la última revisión de la ficha, y la
+mayoría no se ha vuelto a mirar desde que se añadió.
 
 ### Claves de `urls`
 

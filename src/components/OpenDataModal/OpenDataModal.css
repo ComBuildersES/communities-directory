@@ -90,7 +90,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  margin: 1rem 0 0.2rem;
+  margin: 0 0 0.2rem;
 }
 
 .opendata-file {
@@ -161,6 +161,19 @@
   font-size: 0.88rem;
   line-height: 1.55;
   color: #3e5273;
+}
+
+.opendata-section-title {
+  margin: 1.4rem 0 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8ba3c4;
+}
+
+.opendata-lead + .opendata-section-title {
+  margin-top: 1rem;
 }
 
 .opendata-note {
@@ -540,15 +553,20 @@
     padding: 1.2rem 1rem 1rem;
   }
 
-  .opendata-tab span {
+  /* Con pestañas por persona el icono solo no dice nada: "una semilla" no se lee como
+     "quiero montar una comunidad". Así que en móvil cae el icono y se queda la etiqueta,
+     al revés que cuando las pestañas iban por herramienta. */
+  .opendata-tab i {
     display: none;
   }
 
   .opendata-tab {
-    flex: 1 1 auto;
+    flex: 1 1 8rem;
     justify-content: center;
-    padding: 0.55rem 0.4rem;
-    font-size: 1rem;
+    padding: 0.5rem 0.35rem;
+    font-size: 0.76rem;
+    text-align: center;
+    line-height: 1.25;
   }
 }
 
