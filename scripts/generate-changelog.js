@@ -19,6 +19,21 @@ const CATEGORY_ORDER = [
   "Other",
 ];
 
+/**
+ * Commits de mantenimiento del propio changelog y de los ficheros que generan los bots.
+ * Aparecían como "Docs" y ahogaban los cambios reales: el historial es para leerlo.
+ */
+const NOISE_SUBJECT_PATTERNS = [
+  /^(?:docs(?:\([^)]*\))?:\s*)?update changelog\b/i,
+  /^(?:docs(?:\([^)]*\))?:\s*)?update readme(?:\.md)?\b/i,
+  /^(?:docs(?:\([^)]*\))?:\s*)?update \.all-contributorsrc\b/i,
+  /^chore\(data\): asignar IDs de comunidad\b/i,
+];
+
+export function isNoiseCommitSubject(subject = "") {
+  return NOISE_SUBJECT_PATTERNS.some((pattern) => pattern.test(subject.trim()));
+}
+
 function getGitLog() {
   const output = execFileSync(
     "git",
@@ -45,7 +60,8 @@ function getGitLog() {
         subject: subjectParts.join("\t").trim(),
       };
     })
-    .filter((entry) => !entry.subject.toLowerCase().startsWith("merge "));
+    .filter((entry) => !entry.subject.toLowerCase().startsWith("merge "))
+    .filter((entry) => !isNoiseCommitSubject(entry.subject));
 }
 
 function getMergePullRequests() {
@@ -204,14 +220,52 @@ function buildCommunityEntryLabel(action, community, prNumber) {
   return `${label} ([PR #${prNumber}](${GITHUB_PR_URL}${prNumber}))`;
 }
 
-function getAutoCommunityEntry(commit, issueToPrMap) {
+/**
+ * Describe qué le pasó a cada comunidad en un commit: una línea por comunidad, con su
+ * acción, su enlace en el directorio y la PR de la que vino.
+ *
+ * Antes solo se resolvía el caso de "exactamente una comunidad tocada" y cualquier otro
+ * caía al asunto crudo del commit ("Aplicar propuesta de comunidad del issue #123"), que
+ * no dice ni cuál ni qué. Un commit puede tocar varias, y entonces interesan todas.
+ */
+export function describeCommunityChanges({ activeChanges, deletedChanges, prNumber = null }) {
+  const labels = [];
+
+  for (const community of activeChanges.added) {
+    labels.push(buildCommunityEntryLabel("Añadida", community, prNumber));
+  }
+
+  for (const community of activeChanges.changed) {
+    labels.push(buildCommunityEntryLabel("Actualizada", community, prNumber));
+  }
+
+  // Una baja solo se anuncia como tal si aparece en `data/deleted-communities/`. Sin ese
+  // registro, la comunidad desapareció del listado por otro motivo (una migración, por
+  // ejemplo) y llamarlo "eliminada" sería mentir.
+  const deletedIds = new Set(deletedChanges.added.map((entry) => entry.id));
+
+  for (const community of activeChanges.removed) {
+    if (!deletedIds.has(community.id)) continue;
+
+    const prLabel = prNumber ? `[PR #${prNumber}](${GITHUB_PR_URL}${prNumber})` : null;
+    labels.push(
+      prLabel
+        ? `Eliminada ${escapeMarkdown(community.name)} (${prLabel})`
+        : `Eliminada ${escapeMarkdown(community.name)}`
+    );
+  }
+
+  return labels;
+}
+
+function getAutoCommunityEntries(commit, issueToPrMap) {
   const issueMatch = commit.subject.match(/issue #(\d+)/i);
-  if (!issueMatch) return null;
+  if (!issueMatch) return [];
 
   const issueNumber = Number(issueMatch[1]);
   const prNumber = issueToPrMap.get(issueNumber) ?? null;
   const parent = getParentCommit(commit.hash);
-  if (!parent) return null;
+  if (!parent) return [];
 
   const beforeCommunities = readCommunitiesAtRef(parent);
   const afterCommunities = readCommunitiesAtRef(commit.hash);
@@ -219,29 +273,14 @@ function getAutoCommunityEntry(commit, issueToPrMap) {
   const afterDeleted = readDeletedCommunitiesAtRef(commit.hash) ?? [];
 
   if (!Array.isArray(beforeCommunities) || !Array.isArray(afterCommunities)) {
-    return null;
+    return [];
   }
 
-  const activeChanges = getChangedCommunities(beforeCommunities, afterCommunities);
-  const deletedChanges = getChangedIds(beforeDeleted, afterDeleted);
-
-  if (activeChanges.added.length === 1 && activeChanges.removed.length === 0) {
-    return buildCommunityEntryLabel("Añadida", activeChanges.added[0], prNumber);
-  }
-
-  if (activeChanges.changed.length === 1 && activeChanges.added.length === 0 && activeChanges.removed.length === 0) {
-    return buildCommunityEntryLabel("Actualizada", activeChanges.changed[0], prNumber);
-  }
-
-  if (activeChanges.removed.length === 1 && deletedChanges.added.length === 1) {
-    const removedCommunity = activeChanges.removed[0];
-    const prLabel = prNumber ? `[PR #${prNumber}](${GITHUB_PR_URL}${prNumber})` : null;
-    return prLabel
-      ? `Eliminada ${escapeMarkdown(removedCommunity.name)} (${prLabel})`
-      : `Eliminada ${escapeMarkdown(removedCommunity.name)}`;
-  }
-
-  return null;
+  return describeCommunityChanges({
+    activeChanges: getChangedCommunities(beforeCommunities, afterCommunities),
+    deletedChanges: getChangedIds(beforeDeleted, afterDeleted),
+    prNumber,
+  });
 }
 
 function stripConventionalPrefix(subject) {
@@ -294,14 +333,19 @@ function buildChangelog(commits) {
   for (const commit of commits) {
     const monthEntry = sections.get(commit.month) ?? new Map();
     const category = classifyCommit(commit.subject);
-    const autoCommunityEntry = category === "Data"
-      ? getAutoCommunityEntry(commit, issueToPrMap)
-      : null;
+    const autoCommunityEntries = category === "Data"
+      ? getAutoCommunityEntries(commit, issueToPrMap)
+      : [];
     const entries = monthEntry.get(category) ?? [];
-    entries.push({
-      ...commit,
-      formattedSubject: autoCommunityEntry ?? formatSubject(commit.subject),
-    });
+
+    // Un commit puede dar varias líneas: una por comunidad tocada.
+    const subjects = autoCommunityEntries.length > 0
+      ? autoCommunityEntries
+      : [formatSubject(commit.subject)];
+
+    for (const formattedSubject of subjects) {
+      entries.push({ ...commit, formattedSubject });
+    }
     monthEntry.set(category, entries);
     sections.set(commit.month, monthEntry);
   }

@@ -72,6 +72,44 @@ jobs:
           echo "No se pudo publicar los IDs asignados tras 3 intentos." >&2
           exit 1
 
+      # El hook de post-commit solo corre en los clones locales que han hecho `npm install`:
+      # nada de lo que se mergea desde la web de GitHub (incluidas las propuestas de
+      # comunidad) pasa por él. Esta es la red que garantiza que el changelog siempre
+      # refleje lo publicado. Va después de asignar IDs para que las altas nuevas puedan
+      # enlazar su ficha del directorio.
+      - name: Regenerar CHANGELOG.md
+        run: node scripts/generate-changelog.js
+
+      - name: Commitear el CHANGELOG actualizado
+        run: |
+          if git diff --quiet -- CHANGELOG.md; then
+            echo "El changelog ya estaba al día."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add CHANGELOG.md
+          git commit -m "docs: update changelog [skip ci]"
+          # Mismo patrón que la asignación de IDs: si otro merge entró por medio, rebasar
+          # y reintentar. CHANGELOG.md se regenera entero, así que el rebase puede
+          # conflictar; en ese caso se descarta la versión local y se vuelve a generar.
+          for attempt in 1 2 3; do
+            if git push origin HEAD:master; then
+              exit 0
+            fi
+            echo "Push rechazado (intento $attempt); rebasando sobre master."
+            git fetch origin master
+            if ! git rebase origin/master; then
+              # El changelog se regenera entero desde el log, así que el conflicto se
+              # resuelve volviéndolo a generar sobre el historial ya rebasado.
+              node scripts/generate-changelog.js
+              git add CHANGELOG.md
+              GIT_EDITOR=true git rebase --continue || git rebase --abort
+            fi
+          done
+          echo "No se pudo publicar el changelog tras 3 intentos." >&2
+          exit 1
+
       - name: Build the project
         run: npm run build
 
