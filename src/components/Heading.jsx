@@ -1,7 +1,11 @@
 /* eslint-disable react/prop-types */
-import { useEffect, useMemo, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "./LanguageSwitcher.jsx";
+
+const OpenDataModal = lazy(() =>
+  import("./OpenDataModal/OpenDataModal.jsx").then((m) => ({ default: m.OpenDataModal }))
+);
 import allContributorsRaw from "../../.all-contributorsrc?raw";
 const allContributorsRc = JSON.parse(allContributorsRaw);
 
@@ -14,6 +18,9 @@ const GITHUB_URL = "https://github.com/ComBuildersES/communities-directory";
 // Apunta a la página que explica dónde está cada dataset, no al directorio de ficheros:
 // `public/data/` ya solo contiene taxonomías y metadatos (los bundles están gitignorados).
 const DATA_URL = "https://github.com/ComBuildersES/communities-directory/blob/master/docs/DATA.md";
+// El changelog se regenera en cada despliegue (hook de post-commit en local, job de
+// deploy en master), así que este enlace siempre lleva a lo último publicado.
+const CHANGELOG_URL = "https://github.com/ComBuildersES/communities-directory/blob/master/CHANGELOG.md";
 
 function shareText(handle, t) {
   return t("heading.shareText", { handle, url: APP_URL });
@@ -68,6 +75,7 @@ export function Heading ({
 }) {
   const { t } = useTranslation();
   const [isAboutOpen, setIsAboutOpen] = useState(false);
+  const [isOpenDataOpen, setIsOpenDataOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [githubStars, setGithubStars] = useState(null);
 
@@ -205,6 +213,16 @@ export function Heading ({
                   </span>
                 )}
               </a>
+              <button
+                type="button"
+                className={`heading-action-btn heading-action-btn--data${isOpenDataOpen ? " heading-action-btn--active" : ""}`}
+                onClick={() => { setIsOpenDataOpen(true); closeMobileMenu(); }}
+                title={t("heading.openDataCtaTitle")}
+                aria-haspopup="dialog"
+              >
+                <i className="fas fa-wand-magic-sparkles"></i>
+                <span className="heading-btn-label">{t("heading.openDataCta")}</span>
+              </button>
               <div className="heading-support" ref={aboutRef}>
                 <button
                   type="button"
@@ -229,6 +247,13 @@ export function Heading ({
                       <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">{t("heading.openSource")}</a>{" "}
                       {t("heading.aboutCopy3")}{" "}
                       <a href={DATA_URL} target="_blank" rel="noopener noreferrer">{t("heading.openData")}</a>.
+                    </p>
+                    <p className="heading-support-copy">
+                      {t("heading.changelogLead")}{" "}
+                      <a href={CHANGELOG_URL} target="_blank" rel="noopener noreferrer">
+                        {t("heading.changelogLink")}
+                      </a>
+                      {t("heading.changelogTail")}
                     </p>
                     <div className="heading-support-share">
                       <p className="heading-support-section-title">{t("heading.shareQuestion")}</p>
@@ -341,6 +366,15 @@ export function Heading ({
           </>
         )}
       </div>
+
+      {isOpenDataOpen && (
+        <Suspense fallback={null}>
+          <OpenDataModal
+            onClose={() => setIsOpenDataOpen(false)}
+            onAddCommunity={goToContribution}
+          />
+        </Suspense>
+      )}
     </header>
   );
 }
