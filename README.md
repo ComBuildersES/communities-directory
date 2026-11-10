@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-40-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-41-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Communities directory
@@ -203,6 +203,7 @@ Echa un vistazo a algunas de las tareas por las que podrías empezar a ayudar:
       <td align="center" valign="top" width="14.28%"><a href="https://dev.to/anajsana95/"><img src="https://avatars.githubusercontent.com/u/43671777?v=4&size=100" width="100px" height="100px" alt="Ana Jimenez Santamaria"/><br /><sub><b>Ana Jimenez Santamaria</b></sub></a><br /><a href="#data-anajsana" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/marotorod"><img src="https://avatars.githubusercontent.com/u/2428057?v=4&size=100" width="100px" height="100px" alt="marotorod"/><br /><sub><b>marotorod</b></sub></a><br /><a href="#data-marotorod" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://nacho.cougil.com"><img src="https://avatars.githubusercontent.com/u/2370634?v=4&size=100" width="100px" height="100px" alt="Nacho Cougil"/><br /><sub><b>Nacho Cougil</b></sub></a><br /><a href="#data-icougil" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.noconname.org"><img src="https://avatars.githubusercontent.com/u/11219948?v=4&size=100" width="100px" height="100px" alt="José Nicolás Castellano"/><br /><sub><b>José Nicolás Castellano</b></sub></a><br /><a href="#data-Malvinito" title="Data">🔣</a></td>
     </tr>
   </tbody>
 </table>
