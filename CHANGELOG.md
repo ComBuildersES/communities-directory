@@ -29,7 +29,10 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-11-09 `c5321b1` update changelog [skip ci]
 - 2026-11-09 `ad6175a` update changelog [skip ci]
+- 2026-11-09 `f5e46a6` update .all-contributorsrc [skip ci]
+- 2026-11-09 `69f4878` update README.md [skip ci]
 - 2026-11-09 `f37702e` update changelog [skip ci]
 - 2026-11-09 `6a1f511` update changelog [skip ci]
 - 2026-11-06 `ec91df2` update changelog [skip ci]
