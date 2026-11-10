@@ -17,6 +17,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-11-10 `41de950` [Actualizada No cON Name](https://directory.communitybuilders.dev/?community=364) ([PR #460](https://github.com/ComBuildersES/communities-directory/pull/460))
 - 2026-11-10 `48b8d9e` Update community-builders-members.json
 - 2026-11-09 `42b5c98` [Actualizada No cON Name](https://directory.communitybuilders.dev/?community=364) ([PR #457](https://github.com/ComBuildersES/communities-directory/pull/457))
 - 2026-11-10 `410ec69` Update community-builders-members.json
@@ -33,6 +34,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-11-10 `d7fda3b` update changelog [skip ci]
 - 2026-11-10 `eaf69c6` actualizar la guía al layout de un fichero por comunidad
 - 2026-11-10 `d1270d2` documentar dónde viven los datos abiertos y apuntar el About ahí
 - 2026-11-10 `3fe28b4` update changelog [skip ci]
