@@ -13,7 +13,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Fixes
 
-- 2026-11-10 `6a9df79` regeocodificar cuando una edición cambia la ubicación
+- 2026-11-10 `e23fc7a` regeocodificar cuando una edición cambia la ubicación
 
 ### Data
 
@@ -63,6 +63,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
+- 2026-11-10 `fdaa251` ajustar coordenadas de No cON Name
 - 2026-11-06 `c037cb1` Update pintega-conf.json
 - 2026-11-06 `19894e0` añadir 22 comunidades del feed OTE de Sarao IA
 - 2026-11-06 `b99ae92` enlazar 38 comunidades con eventos.wiki y OTE
