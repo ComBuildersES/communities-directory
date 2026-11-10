@@ -5,41 +5,6 @@ Se organiza por mes y por tipo de cambio.
 
 ## 2026-11
 
-### Features
-
-- 2026-11-10 `442476c` decir cuanto del dataset ha revisado una persona
-- 2026-11-10 `2ad8fa6` el modal de datos abiertos se organiza por persona
-- 2026-11-10 `1d90695` el botón flotante pregunta antes de ofrecer
-- 2026-11-10 `570f367` garantizar que el changelog refleja lo que se publica
-- 2026-11-10 `66d0d20` botón flotante de soporte con aviso al entrar
-- 2026-11-10 `c92fd31` alta de comunidad asistida por IA
-- 2026-11-10 `fefa8c0` añadir el modal "Datos abiertos + IA" a la cabecera
-- 2026-11-10 `842b6b0` publicar llms.txt y el resto de artefactos para agentes
-- 2026-11-06 `07e7c76` ficha legible de la propuesta en la PR automática
-- 2026-11-06 `dd0431a` añadir URLs de foro/blog/RSS/eventos.wiki/OTE y ámbito geográfico
-- 2026-11-05 `1d4b6c3` archivar canales históricos de una comunidad (#353)
-
-### Fixes
-
-- 2026-11-10 `e23fc7a` regeocodificar cuando una edición cambia la ubicación
-
-### Data
-
-- 2026-11-10 `41de950` [Actualizada No cON Name](https://directory.communitybuilders.dev/?community=364) ([PR #460](https://github.com/ComBuildersES/communities-directory/pull/460))
-- 2026-11-10 `48b8d9e` Update community-builders-members.json
-- 2026-11-09 `42b5c98` [Actualizada No cON Name](https://directory.communitybuilders.dev/?community=364) ([PR #457](https://github.com/ComBuildersES/communities-directory/pull/457))
-- 2026-11-10 `410ec69` Update community-builders-members.json
-- 2026-11-09 `49f325d` [Actualizada Codemotion Madrid](https://directory.communitybuilders.dev/?community=94) ([PR #455](https://github.com/ComBuildersES/communities-directory/pull/455))
-- 2026-11-08 `ab83ead` [Actualizada Barcelona Java User Group](https://directory.communitybuilders.dev/?community=537) ([PR #453](https://github.com/ComBuildersES/communities-directory/pull/453))
-- 2026-11-06 `3400bbd` [Añadida GameDev Murcia](https://directory.communitybuilders.dev/?community=657) ([PR #449](https://github.com/ComBuildersES/communities-directory/pull/449))
-- 2026-11-06 `40f533e` [Actualizada Lareira Conf](https://directory.communitybuilders.dev/?community=541) ([PR #447](https://github.com/ComBuildersES/communities-directory/pull/447))
-- 2026-11-05 `4f68e83` [Añadida Pintega Conf](https://directory.communitybuilders.dev/?community=658) ([PR #444](https://github.com/ComBuildersES/communities-directory/pull/444))
-- 2026-11-05 `10abe10` [Añadida Codex Community](https://directory.communitybuilders.dev/?community=632) ([PR #440](https://github.com/ComBuildersES/communities-directory/pull/440))
-
-### Improvements
-
-- 2026-11-05 `9cbf586` una comunidad, un fichero
-
 ### Docs
 
 - 2026-11-10 `9c84a1a` regenerar el changelog tras el merge
