@@ -1,6 +1,6 @@
 # Relevo: capa de datos abiertos + IA
 
-Estado al cerrar la sesión del 2026-11-10. Lo que sigue es lo pendiente, no lo hecho: para
+Estado al cerrar la sesión del 2026-11-10 (peticiones 1, 2 y 4 ya hechas). Lo que sigue es lo pendiente, no lo hecho: para
 lo hecho, `CLAUDE.md` y `AGENTS.md` ya lo documentan.
 
 ## Dónde está cada cosa
@@ -11,44 +11,13 @@ lo hecho, `CLAUDE.md` y `AGENTS.md` ya lo documentan.
 | Modal "Datos abiertos + IA" | `src/components/OpenDataModal/` |
 | Prompts del modal | `src/i18n/locales/{es,en}.json` → `openData.chat.prompts.*` |
 | Alta asistida por IA | `src/lib/aiAssist.js` + `src/components/CommunityContribution/AiAssistPanel.jsx` |
-| Botón flotante de soporte | `src/components/SupportFab/` |
+| Botón flotante de apoyo | `src/components/SupportFab/` + `src/lib/shareLinks.js` |
 | Changelog | `scripts/generate-changelog.js`, hook `.githooks/post-commit`, job en `deploy.yml` |
 
 Los prompts tienen red: `tests/openDataPrompts.test.js` falla si se reintroduce un
 placeholder `[rellena aquí]`, si un prompt deja de preguntar a la persona, o si se caen los
 avisos sobre `archivedUrls` / `matchesAllTags` / `geographicScope`. Al tocar los textos hay
 que mirar ese test.
-
----
-
-## Petición 1 — Reenfocar el paso de OTE y el bloque de ayuda
-
-**Dónde**: `openData.organizers.step4` y `openData.organizers.help*` en ambos locales.
-El componente es `OrganizersTab` en `OpenDataModal.jsx`.
-
-Hoy el paso 4 describe el mecanismo ("publica un feed y añádelo a tu ficha"). Debería vender
-el porqué: una especificación abierta en crecimiento que da difusión al organizador y permite
-a la gente suscribirse sin depender de una plataforma intermediaria, además de facilitar que
-te descubran. Enlaces ya presentes: opentechevents.org, el lector, eventos.wiki.
-
-El bloque "¿Te atascas?" debería dejar de sonar a fracaso ("¿te has atascado?") y pasar a una
-invitación: dudas o ayuda con OTE o con cualquier otra cosa, y que da gusto ayudar.
-
-Traducir los dos a `en` con el mismo tono.
-
----
-
-## Petición 2 — Placeholders de las URLs del alta asistida
-
-**Dónde**: `contribution.aiAssist.urlPlaceholderMain` y `urlPlaceholderMore`.
-
-No queda claro que **es un campo por URL** (no una lista separada por comas; al escribir en el
-último aparece otro campo vacío) ni qué merece la pena pegar. Conviene sugerir fuentes con
-información pública aprovechable: web propia, Meetup/Eventbrite/Luma, GitHub, LinkedIn,
-Mastodon/Bluesky, blog o RSS, canal de YouTube con charlas.
-
-Ojo: el texto de apoyo (`urlsCopy`) ya explica qué aporta cada fuente; no repetirlo, el
-problema es solo el placeholder.
 
 ---
 
@@ -74,23 +43,24 @@ Mi recomendación: (1) ahora, y (3) como issue aparte para medir demanda primero
 
 ---
 
-## Petición 4 — Reposicionar el botón flotante
+## Hecho en esta sesión (para contexto, no para rehacer)
 
-**Dónde**: `src/components/SupportFab/` + claves `support.*` en los locales.
+- **Paso 4 de OTE y bloque de ayuda** (`openData.organizers.*`): el paso vende el porqué de
+  la especificación abierta; "¿Te atascas?" pasó a "Pregúntanos lo que sea".
+- **Placeholders del alta asistida**: un ejemplo de URL distinto por campo (web, Meetup,
+  GitHub, LinkedIn, RSS) en vez de un texto explicativo: es lo que deja claro que va una
+  URL por campo.
+- **El paso 4 pasó a un stepper** (1 ▸ 2 ▸ 3 ▸ 4) con un paso visible cada vez.
+- **El "cómo colaborar" del popover "Sobre el proyecto" se fue al FAB** (vista "Quiero
+  ayudar"); en el popover queda un botón que lo abre ahí, vía `src/lib/supportFab.js`. Y
+  "¿Te parece útil?" abre ahora con dar una estrella al repo y guardar en favoritos.
+- **Botón flotante**: ahora pregunta primero (¿necesitas ayuda o quieres ayudar?) y de ahí
+  salen dos vistas, `support.help.*` y `support.give.*`. El aviso automático ya no salta a
+  los 7 s en frío: espera a una señal de valor (`resolveNudgeTrigger`). Detalle en
+  `CLAUDE.md`.
 
-Hoy es "¿Ayuda?" / "¿Te echamos una mano?", enfocado a soporte. Lo que más falta ahora es
-**apoyo a la iniciativa**: difundir en redes, pasar el directorio a quien dinamiza comunidades
-para que revise sus datos, escribir sobre ello. El soporte (dudas, bugs, errores en los datos)
-sigue cabiendo, pero deja de ser el titular.
-
-Implica repensar: la etiqueta del botón, el título y copy del panel, y probablemente los
-canales — tiene sentido añadir compartir en redes, que hoy solo vive en el popover "Sobre el
-proyecto" (`buildShareLinks` en `Heading.jsx`, reutilizable).
-
-Cuidado con dos cosas ya resueltas que no conviene romper:
-- El aviso a los 7 s (`useSupportNudge.js`) y su texto salen de `support.title`.
-- El anillo blanco y el fondo azul marino son lo que separa el botón del muro de logos.
-  Si cambia el color, comprobarlo sobre la vista de lista, no sobre fondo blanco.
+Pendiente ahí: el botón sin etiqueta es un círculo sobre un muro de logos. Si se ve que pasa
+desapercibido, el arreglo barato es recuperar la etiqueta solo en escritorio.
 
 ---
 

@@ -16,6 +16,19 @@ import {
  * El panel nace plegado. Quien ya sabe lo que hace rellena el formulario directamente, y
  * esto no le estorba; quien no, encuentra la puerta abierta.
  */
+/**
+ * Un ejemplo distinto por campo: es lo que deja claro que va **una URL por campo** y no
+ * una lista separada por comas, y de paso sugiere qué fuentes merece la pena pegar. A
+ * partir del quinto campo se repite el último; quien llega ahí ya lo ha entendido.
+ */
+const URL_PLACEHOLDERS = [
+  "contribution.aiAssist.urlPlaceholder1",
+  "contribution.aiAssist.urlPlaceholder2",
+  "contribution.aiAssist.urlPlaceholder3",
+  "contribution.aiAssist.urlPlaceholder4",
+  "contribution.aiAssist.urlPlaceholder5",
+];
+
 export function AiAssistPanel({ draft, allTags, allAudience, onApply }) {
   const { t, i18n } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
@@ -112,11 +125,7 @@ export function AiAssistPanel({ draft, allTags, allAudience, onApply }) {
                       type="url"
                       className="input"
                       value={url}
-                      placeholder={
-                        index === 0
-                          ? t("contribution.aiAssist.urlPlaceholderMain")
-                          : t("contribution.aiAssist.urlPlaceholderMore")
-                      }
+                      placeholder={t(URL_PLACEHOLDERS[Math.min(index, URL_PLACEHOLDERS.length - 1)])}
                       onChange={(event) => handleUrlChange(index, event.target.value)}
                       aria-label={t("contribution.aiAssist.urlLabelNumbered", { number: index + 1 })}
                     />

@@ -496,7 +496,7 @@ function App () {
         <Footer />
       </div>
       {/* Fuera del contenedor del contenido: es fijo y no debe heredar su scroll. */}
-      <SupportFab />
+      <SupportFab onAddCommunity={goToContribution} />
       {!showContributionView && selectedCommunity && !shouldBlockCommunityDetails && (
         <Suspense fallback={null}>
           <CommunityModal

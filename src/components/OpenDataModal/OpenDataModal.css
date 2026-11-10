@@ -280,10 +280,8 @@
   word-break: break-word;
 }
 
-.opendata-linklist,
-.opendata-steps {
+.opendata-linklist {
   margin: 0.9rem 0 0;
-  padding-left: 1.1rem;
   font-size: 0.85rem;
   line-height: 1.6;
   color: #3e5273;
@@ -299,8 +297,176 @@
   border-top: 1px solid #f0f4fa;
 }
 
-.opendata-steps li {
-  margin-bottom: 0.35rem;
+/* Stepper de los cuatro pasos para organizadores. En pantallas estrechas los números
+   siguen cabiendo; lo que se oculta es la etiqueta, no el paso. */
+.opendata-stepper {
+  display: flex;
+  align-items: stretch;
+  gap: 0.3rem;
+  margin: 0.9rem 0 0;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+}
+
+.opendata-stepper li {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.opendata-stepper-step {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  width: 100%;
+  height: 100%;
+  padding: 0.4rem 0.5rem;
+  border: 1px solid #e3eaf5;
+  border-radius: 10px;
+  background: #fff;
+  font-family: inherit;
+  font-size: 0.75rem;
+  color: #7a8ca5;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+
+.opendata-stepper-step:hover {
+  border-color: #c7d6ec;
+  color: #3e5273;
+}
+
+.opendata-stepper-step--active {
+  border-color: #3273dc;
+  background: #f4f8ff;
+  color: #20304c;
+  font-weight: 600;
+}
+
+.opendata-stepper-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  flex-shrink: 0;
+  border-radius: 999px;
+  background: #eef3fb;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #5e85c4;
+}
+
+.opendata-stepper-step--active .opendata-stepper-number {
+  background: #3273dc;
+  color: #fff;
+}
+
+.opendata-stepper-step--done .opendata-stepper-number {
+  background: #d9e7fb;
+  color: #2358b0;
+}
+
+.opendata-stepper-label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.opendata-step-body {
+  margin-top: 0.7rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid #e8edf5;
+  border-radius: 12px;
+  background: #fbfcfe;
+}
+
+.opendata-step-count {
+  margin: 0;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #8a9bb5;
+}
+
+.opendata-step-title {
+  margin: 0.2rem 0 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #20304c;
+}
+
+.opendata-step-copy {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: #3e5273;
+}
+
+.opendata-step-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.7rem;
+}
+
+.opendata-step-links a {
+  padding: 0.25rem 0.6rem;
+  border: 1px solid #d9e2f0;
+  border-radius: 999px;
+  background: #fff;
+  font-size: 0.78rem;
+  color: #3273dc;
+  text-decoration: none;
+}
+
+.opendata-step-links a:hover {
+  border-color: #3273dc;
+  background: #f4f8ff;
+}
+
+.opendata-step-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+}
+
+.opendata-step-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid #d9e2f0;
+  border-radius: 8px;
+  background: #fff;
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #3e5273;
+  cursor: pointer;
+}
+
+.opendata-step-nav-btn:hover:not(:disabled) {
+  border-color: #3273dc;
+  color: #3273dc;
+}
+
+.opendata-step-nav-btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+@media (max-width: 560px) {
+  .opendata-stepper-label {
+    display: none;
+  }
+
+  .opendata-stepper li {
+    flex: 0 0 auto;
+  }
 }
 
 .opendata-modal-footer {

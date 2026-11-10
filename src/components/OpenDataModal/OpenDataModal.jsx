@@ -331,31 +331,79 @@ Reglas al usar estos datos:
   );
 }
 
+const ORGANIZER_STEPS = ["step1", "step2", "step3", "step4"];
+
+/**
+ * Los cuatro pasos van de uno en uno, no apilados. Son cuatro párrafos densos: puestos en
+ * lista se leen como un muro y nadie llega al cuarto, que es el que más cuesta explicar.
+ */
 function OrganizersTab() {
   const { t } = useTranslation();
+  const [stepIndex, setStepIndex] = useState(0);
+  const step = ORGANIZER_STEPS[stepIndex];
+  const isLast = stepIndex === ORGANIZER_STEPS.length - 1;
 
   return (
     <>
       <p className="opendata-lead">{t("openData.organizers.lead")}</p>
-      <ol className="opendata-steps">
-        <li>{t("openData.organizers.step1")}</li>
-        <li>{t("openData.organizers.step2")}</li>
-        <li>{t("openData.organizers.step3")}</li>
-        <li>
-          {t("openData.organizers.step4")}{" "}
-          <a href={OTE_URL} target="_blank" rel="noopener noreferrer">
-            opentechevents.org
-          </a>
-          {" · "}
-          <a href={OTE_READER_URL} target="_blank" rel="noopener noreferrer">
-            {t("openData.organizers.oteReader")}
-          </a>
-          {" · "}
-          <a href={EVENTOS_WIKI_URL} target="_blank" rel="noopener noreferrer">
-            eventos.wiki
-          </a>
-        </li>
+
+      <ol className="opendata-stepper" aria-label={t("openData.organizers.lead")}>
+        {ORGANIZER_STEPS.map((key, index) => (
+          <li key={key}>
+            <button
+              type="button"
+              className={`opendata-stepper-step${index === stepIndex ? " opendata-stepper-step--active" : ""}${index < stepIndex ? " opendata-stepper-step--done" : ""}`}
+              onClick={() => setStepIndex(index)}
+              aria-current={index === stepIndex ? "step" : undefined}
+            >
+              <span className="opendata-stepper-number">{index + 1}</span>
+              <span className="opendata-stepper-label">{t(`openData.organizers.${key}Title`)}</span>
+            </button>
+          </li>
+        ))}
       </ol>
+
+      <div className="opendata-step-body">
+        <p className="opendata-step-count">
+          {t("openData.organizers.stepOf", { current: stepIndex + 1, total: ORGANIZER_STEPS.length })}
+        </p>
+        <p className="opendata-step-title">{t(`openData.organizers.${step}Title`)}</p>
+        <p className="opendata-step-copy">{t(`openData.organizers.${step}`)}</p>
+
+        {isLast && (
+          <div className="opendata-step-links">
+            <a href={OTE_URL} target="_blank" rel="noopener noreferrer">
+              opentechevents.org
+            </a>
+            <a href={OTE_READER_URL} target="_blank" rel="noopener noreferrer">
+              {t("openData.organizers.oteReader")}
+            </a>
+            <a href={EVENTOS_WIKI_URL} target="_blank" rel="noopener noreferrer">
+              eventos.wiki
+            </a>
+          </div>
+        )}
+
+        <div className="opendata-step-nav">
+          <button
+            type="button"
+            className="opendata-step-nav-btn"
+            onClick={() => setStepIndex((current) => current - 1)}
+            disabled={stepIndex === 0}
+          >
+            <i className="fas fa-arrow-left"></i> {t("openData.organizers.prevStep")}
+          </button>
+          <button
+            type="button"
+            className="opendata-step-nav-btn"
+            onClick={() => setStepIndex((current) => current + 1)}
+            disabled={isLast}
+          >
+            {t("openData.organizers.nextStep")} <i className="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+
       <p className="opendata-note">
         <i className="fas fa-circle-info"></i> {t("openData.organizers.note")}
       </p>

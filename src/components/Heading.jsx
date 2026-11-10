@@ -2,6 +2,8 @@
 import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "./LanguageSwitcher.jsx";
+import { buildShareLinks } from "../lib/shareLinks.js";
+import { openSupportFab } from "../lib/supportFab.js";
 
 const OpenDataModal = lazy(() =>
   import("./OpenDataModal/OpenDataModal.jsx").then((m) => ({ default: m.OpenDataModal }))
@@ -13,7 +15,6 @@ const CONTRIBUTORS_URL = "https://github.com/ComBuildersES/communities-directory
 const MAX_CONTRIBUTORS_IN_POPOVER = 24;
 const allContributors = allContributorsRc.contributors;
 
-const APP_URL = "https://directory.communitybuilders.dev/";
 const GITHUB_URL = "https://github.com/ComBuildersES/communities-directory";
 // Apunta a la página que explica dónde está cada dataset, no al directorio de ficheros:
 // `public/data/` ya solo contiene taxonomías y metadatos (los bundles están gitignorados).
@@ -21,40 +22,6 @@ const DATA_URL = "https://github.com/ComBuildersES/communities-directory/blob/ma
 // El changelog se regenera en cada despliegue (hook de post-commit en local, job de
 // deploy en master), así que este enlace siempre lleva a lo último publicado.
 const CHANGELOG_URL = "https://github.com/ComBuildersES/communities-directory/blob/master/CHANGELOG.md";
-
-function shareText(handle, t) {
-  return t("heading.shareText", { handle, url: APP_URL });
-}
-
-function buildShareLinks(t) {
-  return [
-    {
-      label: "X / Twitter",
-      icon: "fa-brands fa-x-twitter",
-      href: `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText("@ComBuilders_ES", t))}`,
-    },
-    {
-      label: "Bluesky",
-      icon: "fa-brands fa-bluesky",
-      href: `https://bsky.app/intent/compose?text=${encodeURIComponent(shareText("@communitybuilders.bsky.social", t))}`,
-    },
-    {
-      label: "LinkedIn",
-      icon: "fa-brands fa-linkedin-in",
-      href: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(APP_URL)}`,
-    },
-    {
-      label: "WhatsApp",
-      icon: "fa-brands fa-whatsapp",
-      href: `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText("Community Builders", t))}`,
-    },
-    {
-      label: "Telegram",
-      icon: "fa-brands fa-telegram",
-      href: `https://t.me/share/url?url=${encodeURIComponent(APP_URL)}&text=${encodeURIComponent(shareText("Community Builders", t))}`,
-    },
-  ];
-}
 
 function shuffleContributors(contributors) {
   const shuffled = [...contributors];
@@ -257,9 +224,26 @@ export function Heading ({
                     </p>
                     <div className="heading-support-share">
                       <p className="heading-support-section-title">{t("heading.shareQuestion")}</p>
-                      <p className="heading-support-copy">
-                        {t("heading.shareLead", { shortcut: bookmarkShortcut })}
+                      <a
+                        href={GITHUB_URL}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="heading-support-bookmark heading-support-bookmark--action"
+                      >
+                        <i className="fas fa-star heading-support-bookmark-star"></i>
+                        <span>
+                          <strong>{t("heading.starAction")}</strong>
+                          <small>{t("heading.starHint")}</small>
+                        </span>
+                      </a>
+                      <p className="heading-support-bookmark">
+                        <i className="fas fa-bookmark"></i>
+                        <span>
+                          <strong>{t("heading.bookmarkAction")}</strong>
+                          <small>{t("heading.bookmarkHint", { shortcut: bookmarkShortcut })}</small>
+                        </span>
                       </p>
+                      <p className="heading-support-copy">{t("heading.shareLead")}</p>
                       <div className="heading-support-share-buttons">
                         {SHARE_LINKS.map(({ label, icon, href }) => (
                           <a
@@ -279,35 +263,18 @@ export function Heading ({
 
                     <div className="heading-support-section">
                       <p className="heading-support-section-title">{t("heading.collaborate")}</p>
-                      <p className="heading-support-copy">
-                        {t("heading.collaborateCopy1")}{" "}
-                        <a
-                          href="https://github.com/ComBuildersES/communities-directory/issues"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {t("heading.openIssue")}
-                        </a>{" "}
-                        {t("heading.collaborateCopy2")}{" "}
-                        <a
-                          href="https://github.com/ComBuildersES/communities-directory/blob/master/CONTRIBUTING.md"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          CONTRIBUTING
-                        </a>.
-                      </p>
-                      <p className="heading-support-copy">
-                        {t("heading.seekingPart1")}{" "}
-                        <a
-                          href="https://github.com/ComBuildersES/communities-directory/issues/53"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          {t("heading.provincialMaintainers")}
-                        </a>{" "}
-                        {t("heading.seekingPart2")}
-                      </p>
+                      <button
+                        type="button"
+                        className="heading-support-help-btn"
+                        onClick={() => {
+                          setIsAboutOpen(false);
+                          openSupportFab("give");
+                        }}
+                      >
+                        <i className="fas fa-hand-holding-heart"></i>
+                        {t("heading.collaborateCta")}
+                        <i className="fas fa-arrow-right"></i>
+                      </button>
                     </div>
 
                     <div className="heading-support-contributors">

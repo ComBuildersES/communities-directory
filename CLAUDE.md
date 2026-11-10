@@ -441,6 +441,10 @@ traer un array vacío), explicarlo además en la sección "How to read a communi
 El JSON-LD (`Dataset` + `WebSite`) vive **estático en `index.html`**, no inyectado por React:
 la app renderiza en cliente y un crawler que no ejecuta JS no vería un bloque inyectado.
 
+La pestaña "Organizo una comunidad" presenta sus cuatro pasos en un **stepper**, de uno en
+uno: son cuatro párrafos densos y apilados se leían como un muro, así que nadie llegaba al
+cuarto (el feed de eventos), que es justo el que más cuesta explicar.
+
 El equivalente para personas es `src/components/OpenDataModal/`, abierto desde el botón
 "Datos abiertos + IA" de la cabecera. Si cambian las reglas de interpretación del dataset,
 cambian en tres sitios: `buildLlmsIndex()`, el bloque de instrucciones de `AgentsTab` y
@@ -465,29 +469,66 @@ desde el servidor: el directorio es estático y la IA la pone quien la usa.
 - Si añades un campo al modelo, añádelo a `STRING_FIELDS`, `ARRAY_FIELDS` o `ENUM_VALUES` o
   la IA no podrá rellenarlo.
 
-### Botón flotante de soporte (`src/components/SupportFab/`)
+### Botón flotante (`src/components/SupportFab/`)
+
+Lo primero que hace el panel es **preguntar**: "¿Necesito ayuda?" o "¿Quiero ayudar?". Son
+dos conversaciones distintas, y mezclarlas obligaba a que una fuera el titular y la otra se
+leyera como letra pequeña. Las claves van en `support.help.*` y `support.give.*`; Escape
+vuelve a la pregunta antes de cerrar el panel.
+
+- **Necesito ayuda**: el soporte de siempre (Telegram, alta/edición de ficha, GitHub, lista
+  de correo, Linktree).
+- **Quiero ayudar**: apoyo a la iniciativa, y ahí la vía preferente es **hablar** — cada
+  persona puede ayudar en algo distinto y eso no se resuelve con una lista de enlaces. Por
+  eso la llamada principal es escribir por Telegram, y difundir / revisar tu ficha /
+  GitHub van debajo como "si prefieres ir directo".
+
+Todo el "cómo colaborar" vive en la vista **Quiero ayudar**, incluido el llamamiento a
+responsables provinciales y la guía CONTRIBUTING: antes estaba repartido entre el popover
+"Sobre el proyecto" de la cabecera y el FAB. El popover solo conserva el botón que abre el
+FAB en esa vista, vía `openSupportFab("give")` (`src/lib/supportFab.js`). Es un evento de
+`window` a propósito: cabecera y FAB son hermanos colgando de `App`, y la alternativa era
+bajar el estado por props a través de todo `Heading` para algo que solo necesitan los dos
+extremos.
+
+"¿Te parece útil?" abre con dos acciones concretas: **dar una estrella al repo** en GitHub
+(que no estaba en ninguna parte) y guardar el directorio en favoritos (que era media frase
+dentro de un párrafo). Lo segundo **no se puede disparar desde JS** —ningún navegador deja
+añadir un favorito por código—, así que lo único que cabe es enseñar el atajo.
 
 `TELEGRAM_GROUP_URL` en `SupportFab.jsx` es el **único** sitio donde va la URL del grupo.
-Con valor, Telegram es la primera opción del panel; vacío, el botón cae a GitHub, lista de
-correo y Linktree sin enlazar a ninguna parte. La pestaña "Organizo una comunidad" del modal
-de datos repite la misma URL: si cambia el grupo, son **dos** constantes.
+Con valor, hablar por Telegram es la llamada principal de las dos vistas; vacío, el panel
+cae a los canales que quedan sin enlazar a ninguna parte. La pestaña "Organizo una
+comunidad" del modal de datos repite la misma URL: si cambia el grupo, son **dos**
+constantes.
 
-`useSupportNudge.js` llama la atención sobre el botón a los 7 s: rebote corto, tooltip y un
-clic sintetizado con WebAudio (sin fichero). Una sola vez por persona (`localStorage`), nunca
-con un modal abierto, y sin rebote si el sistema pide movimiento reducido. El sonido se
-abandona en silencio si el navegador tiene el audio bloqueado por falta de gesto previo: es
-un extra, no el mensaje: `unlockNudgeAudio` abre el `AudioContext` en el primer gesto
-(clic, tecla o toque), que es la única ventana en la que el navegador lo permite. Si el
-aviso llega antes de cualquier gesto, no suena.
+Los enlaces de compartir salen de `src/lib/shareLinks.js`, compartidos con el popover "Sobre
+el proyecto" de la cabecera: dos copias del mismo intent se desincronizan en el primer cambio
+de texto.
+
+`useSupportNudge.js` llama la atención sobre el botón: rebote corto, tooltip y un clic
+sintetizado con WebAudio (sin fichero). Una sola vez por persona (`localStorage`), nunca con
+un modal abierto, y sin rebote si el sistema pide movimiento reducido. El sonido se abandona
+en silencio si el navegador tiene el audio bloqueado por falta de gesto previo: es un extra,
+no el mensaje: `unlockNudgeAudio` abre el `AudioContext` en el primer gesto (clic, tecla o
+toque), que es la única ventana en la que el navegador lo permite. Si el aviso llega antes de
+cualquier gesto, no suena.
+
+**El aviso espera a que el directorio haya servido para algo** (`resolveNudgeTrigger`, función
+pura con test): abrir una ficha o cualquier diálogo, usar la búsqueda o los filtros, o leer más
+de una pantalla. Pedir apoyo a alguien que acaba de llegar es pedir antes de haber dado nada.
+Hay un suelo de 7 s y un techo de 60 s: quien lleva un minuto leyendo sin tocar nada también
+está usando el directorio, así que se le avisa igual.
 
 **El scroll no descarta el aviso**, y si la persona está desplazándose cuando toca mostrarlo,
-espera a que la página se quede quieta (`resolveNudgeDelay`, función pura con test). Aparecer
-y desaparecer en mitad de un scroll es el peor momento: nadie mira esa esquina mientras se
-desplaza, y el aviso se gasta sin que lo vea.
+espera a que la página se quede quieta (`resolveNudgeDelay`). Aparecer y desaparecer en mitad
+de un scroll es el peor momento: nadie mira esa esquina mientras se desplaza, y el aviso se
+gasta sin que lo vea.
 
-El botón es un FAB **extendido** (icono + "¿Ayuda?") con anillo blanco y fondo azul marino:
-la vista de lista es una cuadrícula de logos, muchos azules, y un círculo de icono se lee
-como un logo más. El anillo es lo que lo recorta del fondo; no lo quites.
+El botón es un círculo con el icono de conversación, sin etiqueta: el mensaje lo lleva el
+tooltip del aviso. Eso hace que el anillo blanco y el fondo azul marino sean lo **único**
+que lo separa de la cuadrícula de logos de la vista de lista; si cambia el color, hay que
+comprobarlo sobre la lista, no sobre fondo blanco.
 
 Los prompts del modal viven en los locales, no en el componente, y `tests/openDataPrompts.test.js`
 los vigila: deben **preguntar** a la persona (perfil, zona, disponibilidad) en vez de dejar un

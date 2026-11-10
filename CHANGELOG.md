@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-11-10 `f1148c2` el botón flotante pregunta antes de ofrecer
 - 2026-11-10 `570f367` garantizar que el changelog refleja lo que se publica
 - 2026-11-10 `66d0d20` botón flotante de soporte con aviso al entrar
 - 2026-11-10 `c92fd31` alta de comunidad asistida por IA
@@ -38,7 +39,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
-- 2026-11-10 `b001191` documentar la capa de datos abiertos para IA y sanear AGENTS.md
+- 2026-11-10 `5b11100` documentar la capa de datos abiertos para IA y sanear AGENTS.md
 - 2026-11-10 `eaf69c6` actualizar la guía al layout de un fichero por comunidad
 - 2026-11-10 `d1270d2` documentar dónde viven los datos abiertos y apuntar el About ahí
 - 2026-11-06 `b83bbe0` avisar de que no existe clave urls.meetup

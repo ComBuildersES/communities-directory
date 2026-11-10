@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { resolveNudgeDelay } from '../src/components/SupportFab/useSupportNudge.js';
+import { resolveNudgeDelay, resolveNudgeTrigger } from '../src/components/SupportFab/useSupportNudge.js';
 
 /**
  * El aviso del botón de soporte apareció y desapareció en mitad de un scroll: el peor
@@ -41,5 +41,59 @@ describe('resolveNudgeDelay', () => {
 
     // Al parar, se muestra.
     expect(resolveNudgeDelay({ lastScrollAt, now: lastScrollAt + 1_000 })).toBe(0);
+  });
+});
+
+/**
+ * El botón flotante dejó de ser soporte y pasó a pedir apoyo para la iniciativa. Pedirlo
+ * a los 7 s a alguien que acaba de llegar es pedir antes de haber dado nada: ahora el
+ * aviso espera a que el directorio haya servido para algo (una ficha abierta, la búsqueda
+ * o los filtros, o una pantalla leída) y, si no llega ninguna señal, al techo de tiempo.
+ */
+describe('resolveNudgeTrigger', () => {
+  const engaged = { hasOpenedDialog: true };
+
+  it('no avisa antes del suelo de tiempo, aunque haya señal de valor', () => {
+    const { show, retryInMs } = resolveNudgeTrigger({ elapsedMs: 3_000, ...engaged });
+    expect(show).toBe(false);
+    expect(retryInMs).toBe(4_000);
+  });
+
+  it('avisa pasado el suelo si ya ha abierto una ficha', () => {
+    expect(resolveNudgeTrigger({ elapsedMs: 8_000, ...engaged }).show).toBe(true);
+  });
+
+  it('cuenta usar la búsqueda o los filtros como señal de valor', () => {
+    expect(resolveNudgeTrigger({ elapsedMs: 8_000, hasUsedControls: true }).show).toBe(true);
+  });
+
+  it('cuenta haber leído más de una pantalla', () => {
+    expect(resolveNudgeTrigger({ elapsedMs: 8_000, scrolledPx: 1_000, viewportHeight: 800 }).show).toBe(true);
+    expect(resolveNudgeTrigger({ elapsedMs: 8_000, scrolledPx: 200, viewportHeight: 800 }).show).toBe(false);
+  });
+
+  it('sin ninguna señal espera, pero no descarta el aviso', () => {
+    const pending = resolveNudgeTrigger({ elapsedMs: 20_000 });
+    expect(pending.show).toBe(false);
+    expect(pending.retryInMs).toBeGreaterThan(0);
+
+    // Al llegar al techo se avisa igual: leer un minuto también es usar el directorio.
+    expect(resolveNudgeTrigger({ elapsedMs: 61_000 }).show).toBe(true);
+  });
+
+  it('nunca avisa con un diálogo delante', () => {
+    expect(resolveNudgeTrigger({ elapsedMs: 90_000, isDialogOpen: true, ...engaged }).show).toBe(false);
+  });
+
+  it('respeta el silencio de scroll aunque todo lo demás esté listo', () => {
+    const now = 100_000;
+    const { show, retryInMs } = resolveNudgeTrigger({
+      elapsedMs: 30_000,
+      lastScrollAt: now - 200,
+      now,
+      ...engaged,
+    });
+    expect(show).toBe(false);
+    expect(retryInMs).toBe(700);
   });
 });

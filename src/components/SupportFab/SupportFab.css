@@ -12,16 +12,18 @@
   gap: 0.6rem;
 }
 
-/* La vista de lista es una cuadrícula de logos de colores, muchos azules. Para que el
-   botón no se lea como un logo más: fondo azul marino profundo (ningún logo vive ahí),
-   anillo blanco que lo recorta del fondo tenga lo que tenga detrás, sombra en dos capas
-   y una etiqueta de texto — un botón con palabra se ve mucho antes que un icono suelto. */
+/* La vista de lista es una cuadrícula de logos de colores, muchos azules. Sin etiqueta de
+   texto, lo único que impide que el botón se lea como un logo más es la combinación de
+   fondo azul marino profundo (ningún logo vive ahí), anillo blanco que lo recorta tenga
+   lo que tenga detrás y sombra en dos capas. Si cambia el color, comprobarlo sobre la
+   vista de lista, no sobre fondo blanco. */
 .support-fab-button {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  height: 3rem;
-  padding: 0 1.1rem 0 0.95rem;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  padding: 0;
   border: 3px solid #fff;
   border-radius: 999px;
   background: linear-gradient(135deg, #24395f 0%, #16233c 100%);
@@ -36,7 +38,7 @@
 }
 
 .support-fab-button i {
-  font-size: 1.05rem;
+  font-size: 1.2rem;
 }
 
 .support-fab-button:hover {
@@ -52,16 +54,14 @@
   outline-offset: 3px;
 }
 
-/* Abierto, la etiqueta sobra: el panel ya dice de qué va. Vuelve a ser un círculo. */
 .support-fab-button--open {
-  width: 3rem;
-  padding: 0;
-  justify-content: center;
   background: #16233c;
 }
 
 .support-fab-panel {
-  width: min(19rem, calc(100vw - 2rem));
+  width: min(21.5rem, calc(100vw - 2rem));
+  max-height: calc(100vh - 6rem);
+  overflow-y: auto;
   padding: 0.9rem 1rem;
   border: 1px solid #d9e2f0;
   border-radius: 16px;
@@ -89,8 +89,231 @@
   color: #6b7f9c;
 }
 
-.support-fab-channels {
+/* La llamada principal: hablar. Destacada porque cada persona puede ayudar en algo
+   distinto y eso se resuelve conversando, no eligiendo de una lista. */
+.support-fab-cta {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.6rem 0.7rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #24395f 0%, #16233c 100%);
+  color: #fff;
+  text-decoration: none;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.support-fab-cta:hover {
+  background: linear-gradient(135deg, #3273dc 0%, #2358b0 100%);
+  transform: translateY(-1px);
+}
+
+.support-fab-cta i {
+  margin-top: 0.15rem;
+  font-size: 1.05rem;
+}
+
+.support-fab-cta span {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.support-fab-cta strong {
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+.support-fab-cta small {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* El llamamiento concreto que vivía en el popover "Sobre el proyecto". Va aquí arriba
+   porque es lo único de esta vista que pide algo nombrable: "necesitamos a alguien para
+   esto". El resto son formas genéricas de arrimar el hombro. */
+.support-fab-need {
+  margin-top: 0.6rem;
+  padding: 0.6rem 0.7rem;
+  border: 1px dashed #c7d6ec;
+  border-radius: 12px;
+  background: #f7faff;
+}
+
+.support-fab-need-title {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
   margin: 0;
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: #20304c;
+}
+
+.support-fab-need-title i {
+  color: #5e85c4;
+}
+
+.support-fab-need-copy {
+  margin: 0.2rem 0 0.4rem;
+  font-size: 0.78rem;
+  line-height: 1.45;
+  color: #6b7f9c;
+}
+
+.support-fab-need-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #3273dc;
+  text-decoration: none;
+}
+
+.support-fab-need-link:hover {
+  text-decoration: underline;
+}
+
+.support-fab-ways-title {
+  margin: 0.85rem 0 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #8a9bb5;
+}
+
+.support-fab-share {
+  padding: 0.45rem 0.55rem 0.55rem;
+  border-radius: 10px;
+  background: #f6f9fe;
+}
+
+.support-fab-share-label {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 0 0.4rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #20304c;
+}
+
+.support-fab-share-label i {
+  width: 1rem;
+  text-align: center;
+  color: #5e85c4;
+}
+
+.support-fab-share-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+.support-fab-share-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid #d9e2f0;
+  border-radius: 8px;
+  background: #fff;
+  color: #3e5273;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.support-fab-share-btn:hover {
+  border-color: #3273dc;
+  background: #3273dc;
+  color: #fff;
+}
+
+/* La pregunta inicial: ayuda o ayudar. Dos opciones del mismo tamaño, porque ninguna de
+   las dos es "la secundaria". */
+.support-fab-chooser {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-top: 0.6rem;
+}
+
+.support-fab-choice {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  width: 100%;
+  padding: 0.65rem 0.7rem;
+  border: 1px solid #d9e2f0;
+  border-radius: 12px;
+  background: #fff;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, transform 0.15s;
+}
+
+.support-fab-choice:hover {
+  border-color: #3273dc;
+  background: #f4f8ff;
+  transform: translateY(-1px);
+}
+
+.support-fab-choice i {
+  width: 1.4rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #5e85c4;
+}
+
+.support-fab-choice--give i {
+  color: #e0598b;
+}
+
+.support-fab-choice span {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.support-fab-choice strong {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #20304c;
+}
+
+.support-fab-choice small {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: #7a8ca5;
+}
+
+.support-fab-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin: 0 0 0.5rem;
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #6b7f9c;
+  cursor: pointer;
+}
+
+.support-fab-back:hover {
+  color: #3273dc;
+}
+
+.support-fab-channels {
+  margin: 0.3rem 0 0;
   padding: 0;
   list-style: none;
   display: flex;
@@ -99,6 +322,12 @@
 }
 
 .support-fab-channel {
+  width: 100%;
+  border: none;
+  background: none;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
   display: flex;
   align-items: flex-start;
   gap: 0.55rem;
@@ -139,22 +368,10 @@
 }
 
 /* En móvil el botón sube para no taparse con la barra del navegador ni con el borde. */
-/* En móvil la etiqueta se come el ancho útil: solo el icono, pero conservando el anillo
-   y la sombra, que es lo que de verdad lo separa del fondo. */
 @media (max-width: 600px) {
   .support-fab {
     right: 0.75rem;
     bottom: 0.75rem;
-  }
-
-  .support-fab-button {
-    width: 3rem;
-    padding: 0;
-    justify-content: center;
-  }
-
-  .support-fab-button-label {
-    display: none;
   }
 }
 

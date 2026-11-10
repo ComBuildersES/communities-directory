@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
 
 /**
- * Llamada de atención del botón de soporte: pasados unos segundos, un rebote corto, un
- * clic muy suave y el tooltip abierto. El directorio es una pared de logos de colores y
- * un botón azul en una esquina se pierde dentro.
+ * Llamada de atención del botón flotante: pasado un rato, un rebote corto, un clic muy
+ * suave y el tooltip abierto. El directorio es una pared de logos de colores y un botón
+ * en una esquina se pierde dentro.
  *
  * Reglas para que no sea intrusivo:
+ * - **Solo después de que el directorio haya servido para algo.** El botón pide ayuda
+ *   para la iniciativa: pedírsela a alguien que acaba de llegar y aún no ha visto nada es
+ *   mendigar antes de dar. Cuentan como señal de valor abrir una ficha o cualquier
+ *   diálogo, usar la búsqueda o los filtros, y leer hacia abajo más de una pantalla.
+ * - Hay además un suelo de tiempo (`MIN_MS`) y un techo (`FALLBACK_MS`): quien se queda
+ *   un minuto leyendo sin tocar nada también está usando el directorio.
  * - Una sola vez por persona (`localStorage`), no en cada visita.
  * - Nunca si ya ha abierto el panel, ni si hay un modal abierto por encima.
  * - Sin rebote si el sistema pide movimiento reducido.
@@ -17,8 +23,15 @@ import { useEffect, useState } from "react";
  *   de cualquier gesto, no suena, y no pasa nada: el mensaje son el rebote y el tooltip.
  */
 const STORAGE_KEY = "support-fab-nudge-seen";
-const DELAY_MS = 7000;
+/** Suelo: ni con señal de valor inmediata se avisa antes de esto. */
+const MIN_MS = 7000;
+/** Techo: sin ninguna señal, a partir de aquí se avisa igual. */
+const FALLBACK_MS = 60000;
 const VISIBLE_MS = 7000;
+/** Cada cuánto se vuelve a mirar si ya toca. */
+const TICK_MS = 1000;
+/** Pantallas leídas que cuentan como "ha mirado el directorio". */
+const SCROLL_DEPTH_RATIO = 1.2;
 /** Cuánto silencio hace falta tras el último scroll para considerar que ha parado. */
 const SCROLL_QUIET_MS = 900;
 
@@ -50,6 +63,47 @@ export function resolveNudgeDelay({ lastScrollAt = 0, now = Date.now(), quietMs 
 
   const sinceScroll = now - lastScrollAt;
   return sinceScroll >= quietMs ? 0 : quietMs - sinceScroll;
+}
+
+/**
+ * ¿Toca avisar ya? Función pura para poder probar el disparador sin DOM ni temporizadores.
+ *
+ * Devuelve `{ show, retryInMs }`: si `show` es `false`, `retryInMs` dice cuándo volver a
+ * preguntar. Nunca devuelve "no, y no vuelvas a preguntar": el aviso se pospone, no se
+ * descarta, porque la señal de valor puede llegar en cualquier momento.
+ */
+export function resolveNudgeTrigger({
+  elapsedMs = 0,
+  isDialogOpen = false,
+  hasOpenedDialog = false,
+  hasUsedControls = false,
+  scrolledPx = 0,
+  viewportHeight = 0,
+  lastScrollAt = 0,
+  now = Date.now(),
+  minMs = MIN_MS,
+  fallbackMs = FALLBACK_MS,
+  quietMs = SCROLL_QUIET_MS,
+  tickMs = TICK_MS,
+} = {}) {
+  // Con una ficha o el modal de datos delante, el aviso estorba y además no se ve.
+  if (isDialogOpen) return { show: false, retryInMs: tickMs };
+
+  if (elapsedMs < minMs) return { show: false, retryInMs: minMs - elapsedMs };
+
+  const hasReadEnough = viewportHeight > 0 && scrolledPx >= viewportHeight * SCROLL_DEPTH_RATIO;
+  const hasValueSignal = hasOpenedDialog || hasUsedControls || hasReadEnough;
+
+  // Sin señal, se espera al techo: quien lleva un minuto en la página también está usando
+  // el directorio, aunque no haya tocado nada.
+  if (!hasValueSignal && elapsedMs < fallbackMs) {
+    return { show: false, retryInMs: Math.min(tickMs, fallbackMs - elapsedMs) };
+  }
+
+  const quietWait = resolveNudgeDelay({ lastScrollAt, now, quietMs });
+  if (quietWait > 0) return { show: false, retryInMs: quietWait };
+
+  return { show: true, retryInMs: 0 };
 }
 
 function prefersReducedMotion() {
@@ -141,21 +195,40 @@ export function useSupportNudge({ isPanelOpen, enabled = true }) {
   useEffect(() => {
     if (!enabled || isPanelOpen || hasSeenSupportNudge()) return undefined;
 
+    const startedAt = Date.now();
     let lastScrollAt = 0;
+    let scrolledPx = 0;
+    let hasOpenedDialog = false;
+    let hasUsedControls = false;
     let timer = null;
 
     const noteScroll = () => {
       lastScrollAt = Date.now();
+      scrolledPx = Math.max(scrolledPx, window.scrollY || 0);
     };
 
-    const show = () => {
-      // Si mientras tanto se ha abierto una ficha o el modal de datos, el aviso estorbaría.
-      if (document.querySelector('[role="dialog"]')) return;
+    // Escribir en la búsqueda o mover un filtro es la señal más clara de que alguien está
+    // usando el directorio de verdad, y llega antes que el scroll en pantallas grandes.
+    const noteControls = () => {
+      hasUsedControls = true;
+    };
 
-      // En mitad de un scroll no se ve: se reintenta cuando la página esté quieta.
-      const wait = resolveNudgeDelay({ lastScrollAt });
-      if (wait > 0) {
-        timer = setTimeout(show, wait);
+    const tick = () => {
+      const isDialogOpen = Boolean(document.querySelector('[role="dialog"]'));
+      if (isDialogOpen) hasOpenedDialog = true;
+
+      const { show, retryInMs } = resolveNudgeTrigger({
+        elapsedMs: Date.now() - startedAt,
+        isDialogOpen,
+        hasOpenedDialog,
+        hasUsedControls,
+        scrolledPx,
+        viewportHeight: window.innerHeight || 0,
+        lastScrollAt,
+      });
+
+      if (!show) {
+        timer = setTimeout(tick, Math.max(retryInMs, 50));
         return;
       }
 
@@ -166,11 +239,15 @@ export function useSupportNudge({ isPanelOpen, enabled = true }) {
     };
 
     window.addEventListener('scroll', noteScroll, { passive: true });
-    timer = setTimeout(show, DELAY_MS);
+    window.addEventListener('change', noteControls, { passive: true, capture: true });
+    window.addEventListener('input', noteControls, { passive: true, capture: true });
+    timer = setTimeout(tick, MIN_MS);
 
     return () => {
       clearTimeout(timer);
       window.removeEventListener('scroll', noteScroll);
+      window.removeEventListener('change', noteControls, { capture: true });
+      window.removeEventListener('input', noteControls, { capture: true });
     };
   }, [enabled, isPanelOpen]);
 

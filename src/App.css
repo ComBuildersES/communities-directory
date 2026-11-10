@@ -376,6 +376,81 @@ body {
   color: #8899bb;
 }
 
+/* Las dos acciones de "¿Te parece útil?": la estrella del repo y el favorito del navegador.
+   Eran una frase dentro de un párrafo (el favorito) y nada en absoluto (la estrella), y así
+   no las hacía nadie. El atajo del favorito no se puede disparar desde JS —ningún navegador
+   deja añadir uno por código—, así que lo único que cabe es enseñarlo. */
+.heading-support-bookmark {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.45rem 0 0;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #e3eaf5;
+  border-radius: 10px;
+  background: #fbfcfe;
+}
+
+.heading-support-bookmark i {
+  color: #5e85c4;
+  font-size: 1rem;
+}
+
+/* Gana al color general de los iconos del bloque: la estrella es dorada, como en GitHub. */
+.heading-support-bookmark .heading-support-bookmark-star {
+  color: #f0a500;
+}
+
+.heading-support-bookmark--action {
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.heading-support-bookmark--action:hover {
+  border-color: #3273dc;
+  background: #f4f8ff;
+}
+
+.heading-support-bookmark span {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.heading-support-bookmark strong {
+  font-size: 0.85rem;
+  color: #20304c;
+}
+
+.heading-support-bookmark small {
+  font-size: 0.75rem;
+  color: #7a8ca5;
+}
+
+/* "¿Te gustaría ayudar?" ya no se explica aquí: lo cuenta el botón flotante, que es donde
+   vive ahora todo el apoyo a la iniciativa. Esto solo lleva allí. */
+.heading-support-help-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.1rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid #d9e2f0;
+  border-radius: 999px;
+  background: #fff;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #3273dc;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.heading-support-help-btn:hover {
+  border-color: #3273dc;
+  background: #f4f8ff;
+}
+
 .heading-support-copy {
   margin: 0.45rem 0 0;
   font-size: 0.83rem;
