@@ -3,11 +3,15 @@ import { Switch } from "./Switch";
 import { useSideBarVisible, useSidebarActions } from "../stores/sidebar.store.js";
 import { COMMUNITY_LANGUAGE_OPTIONS } from "../lib/communityLanguages.js";
 import { GEOGRAPHIC_SCOPE_OPTIONS } from "../lib/communitySubmission.js";
+import { useReviewFacetCounts } from "../stores/community.store.js";
 
 export const Sidebar = () => {
   const { t } = useTranslation();
   const isSidebarVisible = useSideBarVisible();
   const { toggleSidebar } = useSidebarActions();
+  // El recuento va al lado de la etiqueta porque con un 17% revisado el filtro deja el
+  // directorio casi vacío, y sin la cifra parece que la web se ha roto.
+  const { reviewed: reviewedCount, pending: pendingCount } = useReviewFacetCounts();
 
   return (
     <aside
@@ -145,6 +149,22 @@ export const Sidebar = () => {
             </div>
           </li>
         ))}
+      </ul>
+
+      <p className="menu-label">{t("sidebar.review")}</p>
+      <ul className="menu-list">
+        <li className="menu-item">
+          <div className="option-item is-size-7">
+            <p>{t("review.reviewed", { n: reviewedCount })}</p>
+            <Switch name="humanValidated" value="true" />
+          </div>
+        </li>
+        <li className="menu-item">
+          <div className="option-item is-size-7">
+            <p>{t("review.pending", { n: pendingCount })}</p>
+            <Switch name="humanValidated" value="false" />
+          </div>
+        </li>
       </ul>
 
       {/* <p className="menu-label">Localizacion habitual</p> */}

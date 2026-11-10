@@ -826,3 +826,42 @@ button.modal-badge:focus-visible {
 .community-modal-ote-attribution {
   color: #888;
 }
+
+/* Aviso de ficha pendiente de revisión. Gris azulado, no ámbar ni rojo: describe el estado
+   del proceso (nadie la ha mirado aún), no un problema con la comunidad. */
+.community-modal-pending-review {
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+  background: #f4f6fb;
+  border: 1px solid #dfe3ef;
+  border-radius: 10px;
+  padding: 0.7rem 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.community-modal-pending-review > i {
+  color: #5b6480;
+  font-size: 1rem;
+  margin-top: 0.15rem;
+}
+
+.community-modal-pending-review strong {
+  font-size: 0.88rem;
+  color: #27304a;
+}
+
+.community-modal-pending-review p {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #4b5168;
+  margin: 0.15rem 0 0.35rem;
+}
+
+.community-modal-pending-review a {
+  font-size: 0.82rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}

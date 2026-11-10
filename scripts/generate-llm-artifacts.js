@@ -7,6 +7,7 @@
  *   - public/data/communities.csv        volcado tabular para hojas de cálculo y pandas
  *   - public/data/schema.json            diccionario de datos (JSON Schema) del modelo Community
  *   - public/sitemap.xml                 deep links por comunidad en los dos locales
+ *   - public/data/coverage.json          qué parte del dataset ha revisado una persona
  *
  * Están en inglés a propósito: es la convención de `llms.txt` y lo que mejor interpretan los
  * modelos. Los datos de cada comunidad (nombre, ubicación, descripción) se emiten tal cual.
@@ -23,6 +24,7 @@ import {
   readJsonFile,
   slugifyCommunityName,
 } from './lib/communities-store.js';
+import { buildCoverage } from '../src/lib/dataCoverage.js';
 
 export const SITE_URL = 'https://directory.communitybuilders.dev';
 export const REPO_URL = 'https://github.com/ComBuildersES/communities-directory';
@@ -32,6 +34,7 @@ export const LLMS_FULL_PATH = 'public/llms-full.txt';
 export const CSV_PATH = 'public/data/communities.csv';
 export const SCHEMA_PATH = 'public/data/schema.json';
 export const SITEMAP_PATH = 'public/sitemap.xml';
+export const COVERAGE_PATH = 'public/data/coverage.json';
 
 const LOCALES = ['es', 'en'];
 
@@ -295,8 +298,10 @@ export function buildSchema({ tags = [], audience = [] } = {}) {
       humanValidated: {
         type: 'boolean',
         description:
-          'False means the record was enriched automatically (scraping + AI) and has not been ' +
-          'reviewed by a person. Weigh it accordingly, and consider correcting it upstream.',
+          'False means a person added the community but its tagging (topics, urls, status) was ' +
+          'filled in semi-automatically and has not been checked by anyone yet. The community ' +
+          'itself is real; the metadata is unconfirmed. Weigh it accordingly, and consider ' +
+          'correcting it upstream.',
       },
     },
   };
@@ -355,7 +360,7 @@ function formatCommunitySection(community, { tagLabels, audienceLabels }) {
   }
 
   if (community.humanValidated === false) {
-    lines.push('- Note: record enriched automatically, not yet reviewed by a human.');
+    lines.push('- Note: tagging filled in semi-automatically, not yet checked by a person.');
   }
 
   lines.push('');
@@ -403,13 +408,14 @@ export function buildLlmsIndex(communities, { tags = [], audience = [], deleted 
    * La cobertura por campo se emite calculada, no redactada a mano: un agente que lee
    * "la mitad tiene tags" no sabe si eso sigue siendo verdad, y el número envejece solo.
    * Es lo que evita que el modelo lea un campo vacío como "esta comunidad no trata de eso".
+   *
+   * El cálculo lo hace `src/lib/dataCoverage.js`, el mismo módulo que alimenta la barra de
+   * progreso de la web: si se contasen por separado, el fichero que leen los modelos y lo
+   * que ve una persona dirían cosas distintas.
    */
-  const coverage = (predicate) => activeCommunities.filter(predicate).length;
-  const withTags = coverage((c) => c.tags?.length || c.matchesAllTags);
-  const withAudience = coverage((c) => c.targetAudience?.length || c.matchesAllAudience);
-  const withScope = coverage((c) => c.geographicScope && c.geographicScope !== 'unknown');
-  const withOte = coverage((c) => c.urls?.ote);
-  const withHumanValidation = coverage((c) => c.humanValidated);
+  const { active: fieldCoverage, reviewed, total } = buildCoverage(published);
+  const { withTags, withAudience, withScope, withOte } = fieldCoverage;
+  const withHumanValidation = fieldCoverage.reviewed;
 
   return `# Community Builders Directory
 
@@ -436,6 +442,7 @@ regenerated on every deploy.
 - [tags.json](${SITE_URL}/data/tags.json): ${tags.length} topic tags with \`label\`, \`description\`, \`category\` and \`synonyms\`. \`tags\` on a community holds ids that reference this catalogue. English: [tags.en.json](${SITE_URL}/data/tags.en.json).
 - [audience.json](${SITE_URL}/data/audience.json): ${audience.length} audience profiles, same shape. English: [audience.en.json](${SITE_URL}/data/audience.en.json).
 - [deleted-communities.json](${SITE_URL}/data/deleted-communities.json): ${deleted.length} record${deleted.length === 1 ? '' : 's'} removed from the directory, with the reason why.
+- [coverage.json](${SITE_URL}/data/coverage.json): how much of the dataset a person has reviewed, and how many records carry each sparsely-filled field. Regenerated on every deploy.
 - [llms-full.txt](${SITE_URL}/llms-full.txt): the whole directory as Markdown, one section per community, for when you want prose rather than JSON.
 
 ## How to read a community record
@@ -445,7 +452,7 @@ regenerated on every deploy.
 - \`location\` is where events happen; \`geographicScope\` is the territory served. They differ often: a community can meet in Madrid and serve all of Spain.
 - Coverage is uneven, so do not read an empty field as a statement about the community. Of the ${active} active communities, ${withTags} have \`tags\`, ${withAudience} have \`targetAudience\` and ${withScope} have \`geographicScope\`. An empty field means nobody has filled it in yet, not that the community has no topic or serves nowhere. Say which recommendations rest on a field that is often missing.
 - \`lastReviewed\` is the date a person last checked the record. It is **not** an activity signal: most records have not been revisited since they were added. The only field that evidences live activity is \`urls.ote\`, the community's events feed (${withOte} active communities publish one).
-- \`humanValidated: false\` means the record was enriched automatically and no person has checked it. Say so if you present it as fact. Only ${withHumanValidation} of the active communities have been reviewed by a person.
+- \`humanValidated: false\` means a person added the community but its tagging was filled in semi-automatically and nobody has checked it. Say so if you present it as fact. Only ${withHumanValidation} of the active communities have been reviewed by a person, and ${reviewed} of all ${total} records. The live counts are in [coverage.json](${SITE_URL}/data/coverage.json).
 - \`archivedUrls\` are dead channels kept for history. Never recommend them: they look alive and nobody is listening.
 - \`status: "inactive"\` communities are kept deliberately. Filter them out before telling someone where to go.
 - A community is linkable by slug: ${SITE_URL}/es/?community=<slug> (and /en/). Prefer linking people to the directory page or the community's own site over linking a raw JSON file.
@@ -512,6 +519,7 @@ export function generateAll() {
     [CSV_PATH]: buildCsv(communities),
     [SCHEMA_PATH]: `${JSON.stringify(buildSchema({ tags, audience }), null, 2)}\n`,
     [SITEMAP_PATH]: buildSitemap(communities),
+    [COVERAGE_PATH]: `${JSON.stringify(buildCoverage(publishableCommunities(communities)), null, 2)}\n`,
   };
 
   Object.entries(outputs).forEach(([filePath, contents]) => {

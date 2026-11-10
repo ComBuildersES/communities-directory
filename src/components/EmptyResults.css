@@ -1,0 +1,63 @@
+.empty-results {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  padding: 2.5rem 1.25rem 2rem;
+  max-width: 34rem;
+  margin: 0 auto;
+}
+
+.empty-results-icon {
+  font-size: 1.6rem;
+  color: #b4b4c6;
+  margin-bottom: 0.25rem;
+}
+
+.empty-results-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #27304a;
+}
+
+.empty-results-copy {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #55596e;
+  margin-bottom: 0.4rem;
+}
+
+.empty-results-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  border: 1px solid #1f3864;
+  border-radius: 8px;
+  background: #1f3864;
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+}
+
+.empty-results-btn:hover {
+  background: #2a4a85;
+}
+
+/* Cuando hay oferta de pendientes, quitar filtros pasa a segundo plano: la acción que
+   interesa es repasar una, no vaciar la búsqueda. */
+.empty-results-btn--secondary {
+  background: #fff;
+  color: #1f3864;
+  border-color: #d3d3e0;
+}
+
+.empty-results-btn--secondary:hover {
+  background: #f3f5fb;
+}
+
+.empty-results-icon--done {
+  color: #2f9e6b;
+}

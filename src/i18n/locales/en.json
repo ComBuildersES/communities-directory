@@ -116,7 +116,8 @@
       "tags": "Topics",
       "targetAudience": "Audience",
       "name": "Community",
-      "parentId": ""
+      "parentId": "",
+      "humanValidated": "Review"
     }
   },
   "tagSearch": {
@@ -148,7 +149,8 @@
     "eventFormat": "Event Type",
     "status": "Community Status",
     "langs": "Languages",
-    "geographicScope": "Geographic scope"
+    "geographicScope": "Geographic scope",
+    "review": "Review status"
   },
   "app": {
     "checkingFreshData": "Checking for a more recent version of the directory before opening details or suggesting changes.",
@@ -185,7 +187,6 @@
     "showMore": "+{{count}} more",
     "showLess": "Show less",
     "collaborate": "Collaborate",
-    "aiDataTooltip": "Data enriched automatically, pending human validation. Under CC BY 4.0, your contribution will also benefit those who reuse this directory.",
     "edit": "Edit",
     "share": "Share",
     "cbTooltip": "One of the people who leads or led this community is part of Community Builders, the meta-community of tech community organizers in Spain.",
@@ -240,7 +241,10 @@
       "openReader": "Open in the OTE reader",
       "moreCount": "and {{count}} more",
       "aboutOte": "What is OTE?"
-    }
+    },
+    "pendingReviewTitle": "Community pending review",
+    "pendingReviewBody": "This community's tagging — topics, links, status — was filled in by a semi-automated pass and no person has checked it yet. It may be incomplete or out of date.",
+    "pendingReviewCta": "Review this community"
   },
   "map": {
     "showMap": "Show map",
@@ -742,7 +746,7 @@
       "agentsTitle": "If you build with an agent"
     },
     "prompts": {
-      "rules": "Data rules:\n- To recommend anything to me, only use communities whose \"status\" is \"active\". If I explicitly ask for dormant ones, label them as such.\n- \"tags\" and \"targetAudience\" are catalogue ids. The catalogues exist in Spanish ({{tagsUrl}}, {{audienceUrl}}) and English ({{tagsEnUrl}}, {{audienceEnUrl}}): same ids, translated labels. Match against \"label\", \"description\" and \"synonyms\", not just the id.\n- If \"matchesAllTags\" is true the community is generalist and fits any topic even with an empty list; same for \"matchesAllAudience\" and profiles.\n- Coverage is uneven: many records are missing \"tags\", and most have no \"targetAudience\" or \"geographicScope\". An empty field means nobody has filled it in, not that the community has nothing to do with that topic: do not silently drop it, and tell me when the data is missing. {{indexUrl}} carries the exact count per field.\n- \"location\" is where events happen; \"geographicScope\", where present, is the territory served.\n- \"lastReviewed\" is the date the record was last checked, not an activity signal: most have not been revisited since they were added. The only field that evidences real activity is an events feed in \"urls.ote\".\n- Never suggest URLs listed in \"archivedUrls\": nobody is listening on those channels.\n- \"humanValidated\": false means a scraper filled the record in and no person has reviewed it. That is the majority: warn me.\n- Do not fill gaps with things you know from outside the dataset. If a fact is not there, say so. If something has to be asked of the community itself, tell me and give me the channel.",
+      "rules": "Data rules:\n- To recommend anything to me, only use communities whose \"status\" is \"active\". If I explicitly ask for dormant ones, label them as such.\n- \"tags\" and \"targetAudience\" are catalogue ids. The catalogues exist in Spanish ({{tagsUrl}}, {{audienceUrl}}) and English ({{tagsEnUrl}}, {{audienceEnUrl}}): same ids, translated labels. Match against \"label\", \"description\" and \"synonyms\", not just the id.\n- If \"matchesAllTags\" is true the community is generalist and fits any topic even with an empty list; same for \"matchesAllAudience\" and profiles.\n- Coverage is uneven: many records are missing \"tags\", and most have no \"targetAudience\" or \"geographicScope\". An empty field means nobody has filled it in, not that the community has nothing to do with that topic: do not silently drop it, and tell me when the data is missing. {{indexUrl}} carries the exact count per field.\n- \"location\" is where events happen; \"geographicScope\", where present, is the territory served.\n- \"lastReviewed\" is the date the record was last checked, not an activity signal: most have not been revisited since they were added. The only field that evidences real activity is an events feed in \"urls.ote\".\n- Never suggest URLs listed in \"archivedUrls\": nobody is listening on those channels.\n- \"humanValidated\": false means that community's tagging was filled in by a semi-automated pass and no person has checked it. That is the majority: warn me.\n- Do not fill gaps with things you know from outside the dataset. If a fact is not there, say so. If something has to be asked of the community itself, tell me and give me the channel.",
       "tribe": {
         "label": "Find my people",
         "hint": "asks about your profile, then recommends",
@@ -829,5 +833,34 @@
       "needCopy": "People who check in now and then on the communities in their province.",
       "needCta": "See the issue"
     }
+  },
+  "transparency": {
+    "title": "Where does this data come from?",
+    "progress": "{{reviewed}} of {{total}} active communities reviewed ({{percent}}%)",
+    "method": "People have added these communities, one by one. A semi-automated pass then gave them a minimal tagging — topics, links, status — so they could be searched. No community here was invented by a machine.",
+    "pending": "What is left is going through that tagging community by community, and that is what we are doing. We focus on the active ones, since those are the communities someone can actually go to today. Until it has been checked, a community is flagged as pending review: its tags may be incomplete or its links stale.",
+    "cta": "{{pending}} active communities still to go. If everyone who passes through here reviewed one, they would all be done in no time. It takes five minutes.",
+    "ctaBtn": "Review a pending community",
+    "filterCta": "Show only reviewed communities",
+    "filterActive": "Showing only reviewed communities",
+    "readMore": "Read the full explanation",
+    "code": "The app itself was programmed with AI assistance.",
+    "codeLink": "See the code"
+  },
+  "review": {
+    "reviewed": "Reviewed by a person ({{n}})",
+    "pending": "Pending review ({{n}})",
+    "chipReviewed": "Reviewed communities",
+    "chipPending": "Communities pending review"
+  },
+  "emptyResults": {
+    "title": "No communities match these filters",
+    "body": "Try removing one, or searching for another topic or area.",
+    "reviewedTitle": "None of these has been reviewed yet",
+    "reviewedBody": "These filters hold {{pending}} communities still pending review, but none reviewed yet. If you take one on, everyone after you finds it confirmed.",
+    "reviewCta": "Show the {{pending}} pending",
+    "clearFilters": "Clear filters",
+    "allReviewedTitle": "Nothing left to review here",
+    "allReviewedBody": "All {{reviewed}} communities matching these filters have already been reviewed by a person. Thanks to whoever did it."
   }
 }

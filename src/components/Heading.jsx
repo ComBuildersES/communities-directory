@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "./LanguageSwitcher.jsx";
 import { buildShareLinks } from "../lib/shareLinks.js";
 import { openSupportFab } from "../lib/supportFab.js";
+import { DataTransparency } from "./DataTransparency/DataTransparency.jsx";
 
 const OpenDataModal = lazy(() =>
   import("./OpenDataModal/OpenDataModal.jsx").then((m) => ({ default: m.OpenDataModal }))
@@ -209,7 +210,7 @@ export function Heading ({
                     <p className="heading-support-title">{t("heading.about")}</p>
                     <p className="heading-support-copy">
                       {t("heading.aboutCopy1")}{" "}
-                      <a href="https://communitybuilders.es" target="_blank" rel="noopener noreferrer">Community Builders ES</a>,{" "}
+                      <a href="https://communitybuilders.dev" target="_blank" rel="noopener noreferrer">Community Builders ES</a>,{" "}
                       {t("heading.aboutCopy2")}{" "}
                       <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">{t("heading.openSource")}</a>{" "}
                       {t("heading.aboutCopy3")}{" "}
@@ -222,6 +223,12 @@ export function Heading ({
                       </a>
                       {t("heading.changelogTail")}
                     </p>
+                    <DataTransparency
+                      dataUrl={DATA_URL}
+                      repoUrl={GITHUB_URL}
+                      onNavigate={() => setIsAboutOpen(false)}
+                    />
+
                     <div className="heading-support-share">
                       <p className="heading-support-section-title">{t("heading.shareQuestion")}</p>
                       <a

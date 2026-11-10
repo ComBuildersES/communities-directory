@@ -23,3 +23,36 @@ describe("directory langs filters", () => {
     });
   });
 });
+
+describe("filtro de revisión humana", () => {
+  it("serializa humanValidated con la clave corta hv", () => {
+    const path = buildDirectoryStatePath({
+      pathname: "/es/",
+      filters: { status: ["active"], humanValidated: ["true"] },
+    });
+
+    expect(path).toBe("/es/?hv=true");
+  });
+
+  it("parsea hv desde la query string", () => {
+    expect(parseDirectoryFilters("?hv=false")).toEqual({
+      humanValidated: ["false"],
+    });
+  });
+
+  /**
+   * Es el enlace que necesita un responsable provincial: lo que le queda por revisar.
+   * Si la clave no viaja en la URL, ese listado no se puede compartir.
+   */
+  it("convive con el resto de filtros en la URL", () => {
+    const path = buildDirectoryStatePath({
+      pathname: "/es/",
+      filters: { status: ["active"], tags: ["python"], humanValidated: ["false"] },
+    });
+
+    expect(parseDirectoryFilters(path.slice(path.indexOf("?")))).toEqual({
+      tags: ["python"],
+      humanValidated: ["false"],
+    });
+  });
+});

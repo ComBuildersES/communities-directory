@@ -116,7 +116,8 @@
       "tags": "Temática",
       "targetAudience": "Público",
       "name": "Comunidad",
-      "parentId": ""
+      "parentId": "",
+      "humanValidated": "Revisión"
     }
   },
   "tagSearch": {
@@ -148,7 +149,8 @@
     "eventFormat": "Tipo de Eventos",
     "status": "Estado de la comunidad",
     "langs": "Idiomas",
-    "geographicScope": "Ámbito geográfico"
+    "geographicScope": "Ámbito geográfico",
+    "review": "Estado de la revisión"
   },
   "app": {
     "checkingFreshData": "Comprobando si hay una versión más reciente del directorio antes de abrir detalles o proponer cambios.",
@@ -185,7 +187,6 @@
     "showMore": "+{{count}} más",
     "showLess": "Mostrar menos",
     "collaborate": "Colaborar",
-    "aiDataTooltip": "Datos enriquecidos automáticamente, pendientes de validación humana. Bajo CC BY 4.0, tu aportación beneficiará también a quien reutilice este directorio.",
     "edit": "Editar",
     "share": "Compartir",
     "cbTooltip": "Alguna de las personas que lidera o lideró esta comunidad forma parte de Community Builders, la meta-comunidad de organizadores de comunidades tech en España.",
@@ -240,7 +241,10 @@
       "openReader": "Abrir en el lector OTE",
       "moreCount": "y {{count}} más",
       "aboutOte": "¿Qué es OTE?"
-    }
+    },
+    "pendingReviewTitle": "Comunidad pendiente de revisión",
+    "pendingReviewBody": "El etiquetado de esta comunidad —temáticas, enlaces, estado— lo puso un proceso semiautomático y todavía no lo ha repasado ninguna persona. Puede estar incompleto o desactualizado.",
+    "pendingReviewCta": "Revisar esta comunidad"
   },
   "map": {
     "showMap": "Mostrar mapa",
@@ -700,7 +704,7 @@
     },
     "organizers": {
       "lead": "Cada vez más gente busca comunidades preguntándole a una IA. Esto es lo que hace que la tuya aparezca bien en esas respuestas:",
-      "step1Title": "Tu ficha al día",
+      "step1Title": "Tu comunidad al día",
       "step1": "Asegúrate de que estás en el directorio y de que tu ficha está al día. Si tiene el aviso de \"dato sin revisar\", revísala: ese campo le dice a los modelos que no se fíen del todo.",
       "step2Title": "Temáticas y público",
       "step2": "Rellena temáticas y público objetivo con las etiquetas del catálogo. Son el campo por el que una IA decide si tu comunidad encaja con lo que pide una persona.",
@@ -742,7 +746,7 @@
       "agentsTitle": "Si construyes con un agente"
     },
     "prompts": {
-      "rules": "Reglas de los datos:\n- Para recomendarme algo, usa solo comunidades con \"status\": \"active\". Si te pido expresamente comunidades paradas, márcalas como tales.\n- \"tags\" y \"targetAudience\" son IDs de catálogo. Los catálogos están en español ({{tagsUrl}}, {{audienceUrl}}) y en inglés ({{tagsEnUrl}}, {{audienceEnUrl}}): mismos IDs, etiquetas traducidas. Empareja contra \"label\", \"description\" y \"synonyms\", no solo contra el ID.\n- Si \"matchesAllTags\" es true, la comunidad es generalista y encaja con cualquier temática aunque su lista esté vacía; lo mismo con \"matchesAllAudience\" y los perfiles.\n- La cobertura es desigual: a muchas fichas les faltan los \"tags\", y la mayoría no tiene \"targetAudience\" ni \"geographicScope\". Un campo vacío significa que nadie lo ha rellenado, no que la comunidad no trate de eso: no la descartes en silencio y dime cuándo te falta el dato. {{indexUrl}} trae el recuento exacto de cada campo.\n- \"location\" es dónde se celebran los eventos; \"geographicScope\", cuando está, es el territorio al que da servicio.\n- \"lastReviewed\" es la fecha de la última revisión de la ficha, no una señal de actividad: la mayoría no se ha vuelto a mirar desde que se añadió. Lo único que evidencia actividad real es un feed de eventos en \"urls.ote\".\n- No me propongas URLs que estén en \"archivedUrls\": son canales que ya nadie atiende.\n- \"humanValidated\": false significa que la ficha la rellenó un scraper y no la ha revisado ninguna persona. Es el caso de la mayoría: avísame.\n- No rellenes huecos con lo que te suene de fuera del dataset. Si un dato no está, dilo. Si hay algo que tengo que preguntarle a la comunidad, dímelo y dame el canal.",
+      "rules": "Reglas de los datos:\n- Para recomendarme algo, usa solo comunidades con \"status\": \"active\". Si te pido expresamente comunidades paradas, márcalas como tales.\n- \"tags\" y \"targetAudience\" son IDs de catálogo. Los catálogos están en español ({{tagsUrl}}, {{audienceUrl}}) y en inglés ({{tagsEnUrl}}, {{audienceEnUrl}}): mismos IDs, etiquetas traducidas. Empareja contra \"label\", \"description\" y \"synonyms\", no solo contra el ID.\n- Si \"matchesAllTags\" es true, la comunidad es generalista y encaja con cualquier temática aunque su lista esté vacía; lo mismo con \"matchesAllAudience\" y los perfiles.\n- La cobertura es desigual: a muchas fichas les faltan los \"tags\", y la mayoría no tiene \"targetAudience\" ni \"geographicScope\". Un campo vacío significa que nadie lo ha rellenado, no que la comunidad no trate de eso: no la descartes en silencio y dime cuándo te falta el dato. {{indexUrl}} trae el recuento exacto de cada campo.\n- \"location\" es dónde se celebran los eventos; \"geographicScope\", cuando está, es el territorio al que da servicio.\n- \"lastReviewed\" es la fecha de la última revisión de la ficha, no una señal de actividad: la mayoría no se ha vuelto a mirar desde que se añadió. Lo único que evidencia actividad real es un feed de eventos en \"urls.ote\".\n- No me propongas URLs que estén en \"archivedUrls\": son canales que ya nadie atiende.\n- \"humanValidated\": false significa que el etiquetado de esa comunidad lo puso un proceso semiautomático y no lo ha repasado ninguna persona. Es el caso de la mayoría: avísame.\n- No rellenes huecos con lo que te suene de fuera del dataset. Si un dato no está, dilo. Si hay algo que tengo que preguntarle a la comunidad, dímelo y dame el canal.",
       "tribe": {
         "label": "Encontrar mi tribu",
         "hint": "te pregunta tu perfil y luego recomienda",
@@ -829,5 +833,34 @@
       "needCopy": "Gente que eche un ojo de vez en cuando a los datos de las comunidades de su provincia.",
       "needCta": "Ver el issue"
     }
+  },
+  "transparency": {
+    "title": "¿De dónde salen estos datos?",
+    "progress": "{{reviewed}} de {{total}} comunidades activas revisadas ({{percent}}%)",
+    "method": "Las comunidades las ha ido añadiendo gente, una a una. Después, un proceso semiautomático les puso un etiquetado mínimo —temáticas, enlaces, estado— para que se pudieran buscar. Ninguna comunidad la ha inventado una máquina.",
+    "pending": "Lo que falta es repasar ese etiquetado comunidad por comunidad, y en eso estamos. Nos centramos en las comunidades activas, que son las que alguien puede ir a buscar hoy. Mientras no se ha repasado, una comunidad aparece marcada como pendiente de revisión: puede tener etiquetas incompletas o enlaces viejos.",
+    "cta": "Quedan {{pending}} comunidades activas por repasar. Con que cada persona que pasa por aquí revisase una, estarían todas en nada. Son cinco minutos.",
+    "ctaBtn": "Revisar una comunidad pendiente",
+    "filterCta": "Ver solo comunidades revisadas",
+    "filterActive": "Viendo solo comunidades revisadas",
+    "readMore": "Leer la explicación completa",
+    "code": "La app se ha programado con ayuda de IA.",
+    "codeLink": "Ver el código"
+  },
+  "review": {
+    "reviewed": "Revisadas por una persona ({{n}})",
+    "pending": "Pendientes de revisar ({{n}})",
+    "chipReviewed": "Comunidades revisadas",
+    "chipPending": "Comunidades pendientes de revisar"
+  },
+  "emptyResults": {
+    "title": "No hay comunidades con estos filtros",
+    "body": "Prueba a quitar alguno, o a buscar por otra temática o zona.",
+    "reviewedTitle": "Ninguna de estas está revisada todavía",
+    "reviewedBody": "Con estos filtros hay {{pending}} comunidades pendientes de repasar, pero ninguna revisada aún. Si te animas con una, el resto de la gente se la encuentra ya confirmada.",
+    "reviewCta": "Ver las {{pending}} pendientes",
+    "clearFilters": "Quitar los filtros",
+    "allReviewedTitle": "Aquí no queda nada por repasar",
+    "allReviewedBody": "Las {{reviewed}} comunidades que encajan con estos filtros están ya revisadas por una persona. Gracias a quien lo hizo."
   }
 }

@@ -120,7 +120,7 @@ describe('buildLlmsFull', () => {
       audience: AUDIENCE,
     });
 
-    expect(markdown).toContain('not yet reviewed by a human');
+    expect(markdown).toContain('not yet checked by a person');
   });
 
   it('no publica las comunidades hidden', () => {

@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-10 `969d794` el modal de datos abiertos se organiza por persona
+- 2026-11-10 `21edf65` decir cuanto del dataset ha revisado una persona
+- 2026-11-10 `2ad8fa6` el modal de datos abiertos se organiza por persona
 - 2026-11-10 `1d90695` el botón flotante pregunta antes de ofrecer
 - 2026-11-10 `570f367` garantizar que el changelog refleja lo que se publica
 - 2026-11-10 `66d0d20` botón flotante de soporte con aviso al entrar

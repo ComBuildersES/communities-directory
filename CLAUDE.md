@@ -461,6 +461,70 @@ El índice **declara la cobertura de cada campo flojo** (`tags`, `targetAudience
 modelo lee un campo vacío como "esta comunidad no trata de eso" y la descarta en silencio,
 cuando lo que pasa es que nadie lo ha rellenado.
 
+### Transparencia: cuánto de esto lo ha mirado una persona
+
+Solo 77 de las 446 comunidades activas están revisadas (17%). Ese número, presentado
+como nota de fiabilidad, hunde la confianza de quien acaba de llegar; presentado como trabajo en
+curso, recluta.
+
+**La métrica que se publica es la de activas, no la del dataset entero** (que sería 89 de 657,
+un 13%): repasar una comunidad que ya no organiza nada no mejora lo que alguien consulta hoy, y
+medir sobre el total castiga el esfuerzo sin que sirva de nada. `coverage.json` trae los dos
+recuentos; la web usa el de `active`. Por eso el CTA fija `status=active` junto al filtro de
+revisión: si el listado al que llevas no coincide con el número que la persona acaba de leer,
+el número sobra.
+
+**El origen se cuenta en este orden, y no es decorativo**: las comunidades las añadió gente una
+a una, y lo que puso el proceso semiautomático fue el **etiquetado mínimo** encima (temáticas,
+enlaces, estado). Contado al revés —"las fichas las recopiló un proceso automático"— un dataset
+humano con etiquetado asistido se lee como un dataset generado por IA, que es exactamente la
+duda que esta superficie viene a resolver. Lo mismo vale para el aviso de la ficha: lo que está
+sin revisar es el etiquetado, no la existencia de la comunidad.
+
+De ahí cómo está montado:
+
+- El cálculo vive **una sola vez** en `src/lib/dataCoverage.js`, y lo consumen las dos
+  superficies: el store (`useDataCoverage`) para la web y `generate-llm-artifacts.js` para los
+  recuentos de `llms.txt` y para `public/data/coverage.json` (generado, gitignorado). Con dos
+  cálculos, lo que lee un modelo y lo que ve una persona se contradicen, y entonces la cifra
+  de transparencia es justo lo que nadie se cree.
+- La explicación del método vive en el popover "Sobre el proyecto"
+  (`src/components/DataTransparency/`), con la versión larga en `docs/DATA.md`. El popover
+  **no** es enlazable ni indexable: si algún día hace falta que un crawler o una cita apunten
+  ahí, el bloque se mueve a una vista propia.
+- El bloque **colapsa, pero el número no**: la barra y "89 de 657" se ven siempre; lo que se
+  guarda detrás del desplegable es el proceso y los botones. Si el 13% se esconde, nadie abre
+  el desplegable y la transparencia deja de existir.
+- La llamada principal es **repasar una comunidad** (`?s=active&hv=false`), no "ver solo las
+  revisadas": 369 pendientes son una deuda, y "con que cada persona repase una" las vuelve un
+  reparto. Lleva el coste real (cinco minutos) porque sin él la petición es indefinida.
+- En la interfaz se habla de **comunidades**, no de "fichas": quien llega busca comunidades, y
+  "ficha" es vocabulario de quien mantiene el dataset.
+- El estado vacío de la lista (`src/components/EmptyResults.jsx`) tiene tres variantes, y la que
+  decide es una función pura con test (`src/lib/emptyResults.js`). La que justifica el módulo es
+  **"pedí pendientes y no hay ninguna"**: eso es haber terminado la zona, y con el mensaje
+  genérico se leería como una búsqueda fallida. Antes de esto la lista no tenía estado vacío
+  ninguno: cuadrícula vacía y debajo el CTA de añadir comunidad, que ahí se lee como "está roto".
+- Lo que falta está en el **issue #463**, y el progreso por zona de ahí **no necesita faceta de
+  provincia**: el mapa ya filtra por extent y el foco ya viaja en la URL (`?view=map&m=...`), así
+  que el deep link por zona se construye hoy. El mapa enfoca; los recuentos salen de
+  `inferProvinceIdFromText` en build time, porque un extent es un rectángulo y se come las
+  provincias vecinas.
+- Lo de que el código se programó con ayuda de IA va en **una línea, al final**. Arriba, hace
+  que se lea el directorio entero como salida de un modelo.
+- El aviso por ficha va **arriba del cuerpo del modal**, no colgando del título "Colaborar"
+  (donde se leía como una advertencia sobre colaborar), y **no** se marca en la tarjeta ni en
+  el mapa: lo llevarían 570 de 657 y la cuadrícula pasaría a ser un campo de alertas.
+- Se dice "pendiente de revisar", nunca "sin verificar" ni "generado por IA" a secas: lo que
+  hay detrás es scraping más mapeo de catálogo, y una ficha sin revisar no es una ficha falsa.
+- El filtro es `humanValidated` en el sidebar, clave corta `hv` (`?hv=false` = lo que queda por
+  revisar, que es la lista de trabajo de un responsable provincial). Funciona sin tocar el
+  índice invertido porque el campo ya es un booleano del registro. Los switches **llevan el
+  recuento en la etiqueta**: con un 17%, activarlo vacía el directorio y sin el número parece
+  que la web se ha roto. Ese recuento se calcula **sobre los filtros activos menos el de
+  revisión**, no sobre el dataset entero: con el default `status=active`, un "(568)" medido
+  sobre el total no cuadra con los 369 resultados que salen al pulsarlo.
+
 ### Las pestañas del modal van por persona
 
 `attend` · `organizers` · `found` · `build`. Antes mezclaban dos ejes —tres pestañas por

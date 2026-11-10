@@ -17,6 +17,7 @@ Los ficheros publicados se sirven desde la propia app, listos para consumir:
 | [`audience.json`](https://directory.communitybuilders.dev/data/audience.json) | Perfiles de público objetivo |
 | [`communities.csv`](https://directory.communitybuilders.dev/data/communities.csv) | Las comunidades como tabla plana, una fila por comunidad (arrays separados por `\|`) |
 | [`schema.json`](https://directory.communitybuilders.dev/data/schema.json) | Diccionario de datos: JSON Schema con qué significa cada campo y cada valor de enum |
+| [`coverage.json`](https://directory.communitybuilders.dev/data/coverage.json) | Qué parte del dataset ha revisado una persona, y cuántas fichas traen cada campo poco relleno |
 
 Las etiquetas y los perfiles también están traducidos al inglés en
 [`tags.en.json`](https://directory.communitybuilders.dev/data/tags.en.json) y
@@ -24,6 +25,39 @@ Las etiquetas y los perfiles también están traducidos al inglés en
 
 Las claves `tags` y `targetAudience` de cada comunidad son **IDs** que referencian esos dos
 catálogos: para mostrar etiquetas legibles hay que cruzarlas con `tags.json` / `audience.json`.
+
+## Cómo se hacen estos datos
+
+Conviene decirlo antes de que nadie construya nada encima, porque cambia cómo se leen los
+campos:
+
+1. **Las comunidades las ha añadido gente**, una a una, a lo largo del tiempo. Ninguna la ha
+   creado una máquina a partir de un volcado.
+2. **El etiquetado mínimo lo puso un proceso semiautomático**: temáticas, enlaces por
+   plataforma y estado. Era la única forma de que 600+ comunidades fuesen buscables sin esperar
+   a que alguien las clasificase a mano. Esas llevan `humanValidated: false`.
+3. **La revisión completa va comunidad por comunidad**, y es donde estamos ahora. Una persona
+   abre la comunidad, comprueba cada campo contra las fuentes y la corrige. Entonces pasa a
+   `humanValidated: true`.
+
+Así que una comunidad sin revisar no es una comunidad inventada: es una comunidad con un
+etiquetado que nadie ha confirmado. Si presentas estos datos a otras personas, la distinción
+importa, y por eso el campo viaja en el dataset en vez de quedarse en una nota al pie.
+
+**El porcentaje que publicamos es el de las comunidades activas**, no el del dataset entero.
+Repasar una comunidad que ya no organiza nada no mejora lo que alguien va a consultar hoy, así
+que medir sobre el total castigaría el esfuerzo sin que sirva de nada. Los dos recuentos están
+en [`coverage.json`](https://directory.communitybuilders.dev/data/coverage.json) (`active` y el
+bloque raíz), se regeneran en cada despliegue, y el de activas es lo que muestra la barra de
+progreso del popover "Sobre el proyecto" de la web.
+
+En el directorio se puede filtrar: `?s=active&hv=true` deja solo las activas revisadas y
+`?s=active&hv=false` solo las activas pendientes — que es, de paso, la lista de trabajo de quien
+quiera echar una mano. Con que cada persona que pasa por el directorio repase una, esto se
+cierra rápido.
+
+El **código** de la aplicación también se ha programado en buena parte con ayuda de IA,
+revisado por personas antes de cada despliegue, y está publicado entero.
 
 ## Si quieres corregir o añadir datos
 
@@ -91,7 +125,9 @@ datos ya estructurados, y de ahí sale una PR automática. Ver
 
 Dos avisos sobre la calidad del dato, por si construyes algo encima:
 
-- `humanValidated: false` significa que la ficha viene de scraping y nadie la ha revisado.
+- `humanValidated: false` significa que el etiquetado de esa comunidad lo puso un proceso
+  semiautomático y nadie lo ha repasado. Cuántas hay en cada estado, en
+  [`coverage.json`](https://directory.communitybuilders.dev/data/coverage.json).
 - `status: "inactive"` no se borra: las comunidades que dejaron de organizar eventos siguen en
   el directorio, porque forman parte de la historia del ecosistema y pueden reactivarse.
 

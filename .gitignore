@@ -50,4 +50,5 @@ public/llms.txt
 public/llms-full.txt
 public/data/communities.csv
 public/data/schema.json
+public/data/coverage.json
 public/sitemap.xml
