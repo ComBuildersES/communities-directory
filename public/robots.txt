@@ -1,0 +1,22 @@
+# Community Builders Directory — https://directory.communitybuilders.dev
+#
+# All crawlers, AI crawlers included, are welcome. The community data is published
+# under CC BY 4.0: reuse it, including commercially, and credit Community Builders
+# with a link back to https://directory.communitybuilders.dev so people can reach
+# the communities themselves.
+#
+# This site is a client-rendered single-page app. Crawling the HTML gives you far
+# worse data than the canonical files, which are regenerated on every deploy:
+#
+#   https://directory.communitybuilders.dev/llms.txt       start here
+#   https://directory.communitybuilders.dev/llms-full.txt  whole directory as Markdown
+#   https://directory.communitybuilders.dev/data/communities.json
+#   https://directory.communitybuilders.dev/data/schema.json   what each field means
+#
+# Found something wrong or missing? Please tell us:
+#   https://github.com/ComBuildersES/communities-directory/issues
+
+User-agent: *
+Allow: /
+
+Sitemap: https://directory.communitybuilders.dev/sitemap.xml

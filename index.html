@@ -40,6 +40,83 @@
     <meta name="twitter:description" content="Descubre y filtra más de 500 comunidades tech de toda España: meetups, grupos de usuarios, conferencias y más. Busca por ciudad, tema o formato. Open source y open data." />
     <meta name="twitter:image" content="https://directory.communitybuilders.dev/images/directorio-de-comunidades-tecnicas-de-espa%C3%B1a-1920-630.webp" />
     <meta name="twitter:image:alt" content="Directorio de Comunidades Técnicas de España — +500 meetups, conferencias y más" />
+
+    <!-- JSON-LD: describe el dataset abierto para buscadores y crawlers de LLM. Estático a
+         propósito: la app renderiza en cliente, así que un bloque inyectado por React no lo
+         ve un crawler que no ejecuta JS. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Dataset",
+            "@id": "https://directory.communitybuilders.dev/#dataset",
+            "name": "Directorio de comunidades tecnológicas de España",
+            "alternateName": "Community Builders Directory",
+            "description": "Datos abiertos de más de 650 comunidades tecnológicas de España: meetups, grupos de usuarios, conferencias, hacklabs y organizaciones paraguas, con temática, público objetivo, formato, ubicación y canales de contacto.",
+            "url": "https://directory.communitybuilders.dev/",
+            "inLanguage": ["es", "en"],
+            "license": "https://creativecommons.org/licenses/by/4.0/",
+            "isAccessibleForFree": true,
+            "keywords": ["comunidades tecnológicas", "meetups", "España", "tech communities", "open data", "developer relations"],
+            "spatialCoverage": { "@type": "Place", "name": "España" },
+            "creator": {
+              "@type": "Organization",
+              "name": "Community Builders",
+              "url": "https://communitybuilders.dev/"
+            },
+            "codeRepository": "https://github.com/ComBuildersES/communities-directory",
+            "distribution": [
+              {
+                "@type": "DataDownload",
+                "name": "communities.json",
+                "encodingFormat": "application/json",
+                "contentUrl": "https://directory.communitybuilders.dev/data/communities.json"
+              },
+              {
+                "@type": "DataDownload",
+                "name": "communities.csv",
+                "encodingFormat": "text/csv",
+                "contentUrl": "https://directory.communitybuilders.dev/data/communities.csv"
+              },
+              {
+                "@type": "DataDownload",
+                "name": "communities.geojson",
+                "encodingFormat": "application/geo+json",
+                "contentUrl": "https://directory.communitybuilders.dev/data/communities.geojson"
+              },
+              {
+                "@type": "DataDownload",
+                "name": "llms-full.txt",
+                "encodingFormat": "text/markdown",
+                "contentUrl": "https://directory.communitybuilders.dev/llms-full.txt"
+              }
+            ]
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://directory.communitybuilders.dev/#website",
+            "url": "https://directory.communitybuilders.dev/",
+            "name": "Comunidades Tech",
+            "inLanguage": "es",
+            "about": { "@id": "https://directory.communitybuilders.dev/#dataset" },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Community Builders",
+              "url": "https://communitybuilders.dev/"
+            },
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": {
+                "@type": "EntryPoint",
+                "urlTemplate": "https://directory.communitybuilders.dev/es/?n={search_term_string}"
+              },
+              "query-input": "required name=search_term_string"
+            }
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <!-- Path-restore: when GitHub Pages 404.html encodes a deep link into
