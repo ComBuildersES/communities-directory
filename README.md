@@ -20,6 +20,7 @@ Además, muestra qué comunidades ya están representadas en **Community Builder
 - [Communities directory](#communities-directory)
   - [📖 Índice](#-índice)
   - [Por qué este proyecto](#por-qué-este-proyecto)
+  - [Datos abiertos](#datos-abiertos)
   - [Instalación y uso en local](#instalación-y-uso-en-local)
   - [Roadmap](#roadmap)
   - [Licencias](#licencias)
@@ -50,6 +51,22 @@ Este directorio puede ser útil en muchos escenarios:
 - Podemos identificar personas interesadas en participar en encuentros presenciales de Community Builders.
 
 > **Nota**: Puedes ver el hilo de correos donde explicamos el por qué del proyecto oficialmente por primera vez: [Listado de comunidades](https://groups.google.com/u/1/g/community-builders-es/c/agm4LEFrZco)
+
+## Datos abiertos
+
+Todos los datos del directorio son abiertos ([CC BY 4.0](./DATA_LICENSE.md)) y se pueden
+descargar directamente:
+
+- [`communities.json`](https://directory.communitybuilders.dev/data/communities.json) — todas las comunidades
+- [`communities.geojson`](https://directory.communitybuilders.dev/data/communities.geojson) — las que tienen ubicación, como GeoJSON
+- [`tags.json`](https://directory.communitybuilders.dev/data/tags.json) y [`audience.json`](https://directory.communitybuilders.dev/data/audience.json) — las taxonomías que referencian los campos `tags` y `targetAudience`
+
+La fuente de verdad es [`data/communities/`](./data/communities): un fichero JSON por
+comunidad. Los tres ficheros anteriores son artefactos generados y están gitignorados, así que
+no se editan a mano.
+
+📄 **[docs/DATA.md](./docs/DATA.md)** documenta todos los datasets, el esquema campo a campo y
+cómo regenerarlos en local.
 
 ## Instalación y uso en local
 
@@ -94,7 +111,7 @@ curl -s http://127.0.0.1:5173/src/lib/communitySubmission.js | rg "normalizeTaxo
 
 Si no aparece la firma esperada del código actual, cambia temporalmente a `4173` con `npm run dev:local:clean`.
 
-Si vas a tocar `public/data/`, puedes comprobar el dataset manualmente con `npm run validate-data`. Además, `npm install` configura un hook local para validar las contribuciones antes de cada commit.
+Si vas a tocar los datos (`data/communities/` o las taxonomías de `public/data/`), puedes comprobar el dataset manualmente con `npm run validate-data`, y recompilar los artefactos publicados con `npm run compile-communities`. Además, `npm install` configura un hook local para validar las contribuciones antes de cada commit.
 
 Para sanear URLs rotas o caídas:
 
@@ -116,7 +133,7 @@ Echa un vistazo a los *[milestones](https://github.com/ComBuildersES/communities
 ## Licencias
 
 * El código fuente está disponible bajo la licencia [Apache 2.0](./LICENSE).
-* Los datos en el directorio `public/data/` están bajo la licencia [CC BY 4.0](./DATA_LICENSE.md).
+* Los datos del directorio (`data/communities/`, `data/deleted-communities/` y las taxonomías de `public/data/`, junto con los ficheros publicados que se generan a partir de ellos) están bajo la licencia [CC BY 4.0](./DATA_LICENSE.md). Ver [docs/DATA.md](./docs/DATA.md).
 
 ## Contribuir
 

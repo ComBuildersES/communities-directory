@@ -11,7 +11,9 @@ const allContributors = allContributorsRc.contributors;
 
 const APP_URL = "https://directory.communitybuilders.dev/";
 const GITHUB_URL = "https://github.com/ComBuildersES/communities-directory";
-const DATA_URL = "https://github.com/ComBuildersES/communities-directory/tree/master/public/data";
+// Apunta a la página que explica dónde está cada dataset, no al directorio de ficheros:
+// `public/data/` ya solo contiene taxonomías y metadatos (los bundles están gitignorados).
+const DATA_URL = "https://github.com/ComBuildersES/communities-directory/blob/master/docs/DATA.md";
 
 function shareText(handle, t) {
   return t("heading.shareText", { handle, url: APP_URL });

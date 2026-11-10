@@ -33,6 +33,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-11-10 `285fea7` documentar dónde viven los datos abiertos y apuntar el About ahí
 - 2026-11-10 `3fe28b4` update changelog [skip ci]
 - 2026-11-09 `c5321b1` update changelog [skip ci]
 - 2026-11-09 `ad6175a` update changelog [skip ci]
@@ -63,7 +64,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
-- 2026-11-10 `fdaa251` ajustar coordenadas de No cON Name
+- 2026-11-10 `1e0a9a4` ajustar coordenadas de No cON Name
 - 2026-11-06 `c037cb1` Update pintega-conf.json
 - 2026-11-06 `19894e0` añadir 22 comunidades del feed OTE de Sarao IA
 - 2026-11-06 `b99ae92` enlazar 38 comunidades con eventos.wiki y OTE
