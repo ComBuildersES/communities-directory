@@ -1,12 +1,14 @@
 {
   "id": 484,
   "name": "WordCamp Alhaurín de la Torre",
-  "status": "active",
-  "lastReviewed": "17/10/2024",
+  "status": "inactive",
+  "lastReviewed": "10/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "location": "Málaga (Alhaurín de la Torre, )",
+  "geographicScope": "unknown",
   "parentId": 483,
+  "shortDescription": "",
   "topics": "",
   "langs": [
     "es"
@@ -25,5 +27,6 @@
     "lon": -4.5529671
   },
   "displayOnMap": true,
-  "humanValidated": false
+  "humanValidated": true,
+  "removalReason": ""
 }
