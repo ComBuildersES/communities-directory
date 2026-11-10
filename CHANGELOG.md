@@ -33,7 +33,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
-- 2026-11-10 `ff0af39` actualizar la guía al layout de un fichero por comunidad
+- 2026-11-10 `eaf69c6` actualizar la guía al layout de un fichero por comunidad
 - 2026-11-10 `d1270d2` documentar dónde viven los datos abiertos y apuntar el About ahí
 - 2026-11-10 `3fe28b4` update changelog [skip ci]
 - 2026-11-09 `c5321b1` update changelog [skip ci]
