@@ -34,6 +34,9 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-11-10 `e60bcd7` update changelog [skip ci]
+- 2026-11-10 `c81fb90` update .all-contributorsrc [skip ci]
+- 2026-11-10 `adec752` update README.md [skip ci]
 - 2026-11-10 `d7fda3b` update changelog [skip ci]
 - 2026-11-10 `eaf69c6` actualizar la guía al layout de un fichero por comunidad
 - 2026-11-10 `d1270d2` documentar dónde viven los datos abiertos y apuntar el About ahí
