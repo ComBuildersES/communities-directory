@@ -1,11 +1,14 @@
 {
   "id": 498,
   "name": "WordPress Dénia",
-  "status": "active",
-  "lastReviewed": "18/10/2024",
+  "status": "inactive",
+  "lastReviewed": "10/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "location": "Alicante (Denia)",
+  "geographicScope": "unknown",
+  "parentId": null,
+  "shortDescription": "",
   "topics": "",
   "langs": [
     "es"
@@ -29,5 +32,6 @@
     "lon": 0.1086422
   },
   "displayOnMap": true,
-  "humanValidated": false
+  "humanValidated": true,
+  "removalReason": ""
 }
