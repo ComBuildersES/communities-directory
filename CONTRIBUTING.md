@@ -76,7 +76,7 @@ Hay muchas maneras de participar, tanto si sabes programar como si no. Aquí van
     - Añadir ejemplos, capturas, referencias o esquemas.
 
 1. **Reportar errores o bugs** [`🐛 bug`]
-    - Ya sea en la web, en el fichero JSON o en los flujos automáticos.
+    - Ya sea en la web, en los datos o en los flujos automáticos.
         
 1. **Ayudar a gestionar el proyecto** [`📆 projectManagement`]
     - Definir roadmap y priorizar tareas.     
@@ -94,7 +94,7 @@ Hay muchas maneras de participar, tanto si sabes programar como si no. Aquí van
 
 > *Es la forma más sencilla de empezar a contribuir, y sin necesidad de conocimientos técnicos.*
 
-El núcleo del proyecto es el fichero [communities.json](https://github.com/ComBuildersES/communities-directory/blob/master/public/data/communities.json), donde se almacenan los datos de todas las comunidades. 
+El núcleo del proyecto son los datos de las comunidades: un fichero JSON por comunidad en [`data/communities/`](https://github.com/ComBuildersES/communities-directory/tree/master/data/communities). `public/data/communities.json` y `communities.geojson` son artefactos generados a partir de ahí, están gitignorados y no se editan a mano. Todo esto está documentado en [docs/DATA.md](./docs/DATA.md).
 
 #### Formas de contribuir a los datos
 
@@ -103,9 +103,9 @@ Puedes colaborar con los datos de varias formas:
 - Uniéndote a [las personas que quieran ayudar a mantener las comunidades de cada provincia](https://github.com/ComBuildersES/communities-directory/issues/53).
 - Añadiendo comunidades o mejorando los datos de las existentes:
    - Desde la web del directorio, usando el formulario guiado para altas nuevas o ediciones de comunidades ya existentes.
-   - Desde la web de GitHub, edita directamente [communities.json](https://github.com/ComBuildersES/communities-directory/blob/master/public/data/communities.json) y envía un PR.
+   - Desde la web de GitHub, edita el fichero de la comunidad en [`data/communities/`](https://github.com/ComBuildersES/communities-directory/tree/master/data/communities) (`<slug>.json`) y envía un PR.
    - Creando un _issue_ para propuestas más abiertas: correcciones, mejoras, comunidades a eliminar, normalización de campos, sugerencias sobre etiquetas, etc.
-- Sugiendo mejoras en la [estructura da datos](#estructura-de-datos).
+- Sugiriendo mejoras en la [estructura de los datos](#estructura-de-los-datos).
 - Buscando formas de mejorar el procesamiento automatizado y validación  de datos (normalización de nombres, detección de duplicados...).
 - Aportando al debate de cómo mejorar [las convenciones establecidas](https://github.com/ComBuildersES/communities-directory/issues/63).
 
@@ -174,20 +174,23 @@ Tenemos una lista de personas voluntarias que se encargan de revisar issues y PR
 
 #### Estructura de los datos
 
-> **Referencia técnica para desarrolladores.** Si quieres añadir o editar una comunidad, usa el [formulario web del directorio](https://directory.communitybuilders.dev/), que guía el proceso y genera el issue automáticamente. Los valores válidos de los enums (`status`, `communityType`, `eventFormat`) están disponibles en el propio formulario; los que se documentan aquí incluyen matices adicionales que no caben en un desplegable.
+> **Referencia técnica para desarrolladores.** Si solo quieres consumir los datos, [docs/DATA.md](./docs/DATA.md) tiene las URLs de descarga. Si quieres añadir o editar una comunidad, usa el [formulario web del directorio](https://directory.communitybuilders.dev/), que guía el proceso y genera el issue automáticamente. Los valores válidos de los enums (`status`, `communityType`, `eventFormat`) están disponibles en el propio formulario; los que se documentan aquí incluyen matices adicionales que no caben en un desplegable.
 
-El fichero [communities.json](https://github.com/ComBuildersES/communities-directory/blob/master/public/data/communities.json) es un array donde cada comunidad es un objeto con la siguiente estructura:
+Cada comunidad vive en su propio fichero, [`data/communities/<slug>.json`](https://github.com/ComBuildersES/communities-directory/tree/master/data/communities), con esta estructura:
 
 ```json
 {
-  "id": <integer-autoincrement>,
+  "id": <integer or null>,
   "name": "<community name>",
   "status": "<enum>",
   "lastReviewed": "dd/mm/yyyy",
   "communityType": "<enum>",
   "eventFormat": "<enum>",
   "location": "<postal address>",
+  "geographicScope": "<enum>",
+  "shortDescription": "<texto breve>",
   "topics": "<comma separated values>",
+  "langs": ["es", "..."],
   "tags": ["<tag-id>", "..."],
   "targetAudience": ["<audience-id>", "..."],
   "matchesAllTags": <true or false>,
@@ -210,6 +213,8 @@ El fichero [communities.json](https://github.com/ComBuildersES/communities-direc
     "mailingList": "<absolute URL or omit>",
     "facebook": "<absolute URL or omit>"
   },
+  "archivedUrls": ["<absolute URL>", "..."],
+  "parentId": <integer or null>,
   "thumbnailUrl": "images/<slugify-name>.webp",
   "latLon": {
     "lat": <float or null>,
@@ -220,21 +225,26 @@ El fichero [communities.json](https://github.com/ComBuildersES/communities-direc
 },
 ```
 
-- **id** _(*)_: Identificador (autoincremental, gestionado por `ensure-id-autoincrement`)
+- **id**: Identificador numérico. **No se asigna al crear la propuesta**: el fichero nace con `id: null` y el id se asigna ya en `master`, en el job de despliegue (`assign-community-ids`). Asignarlo en la rama hacía que dos propuestas simultáneas reclamasen el mismo número.
 - **name** _(*)_: Nombre de la comunidad.
 - **status** _(*)_: Estado en el que se encuentra la comunidad (ver [Campo `status`](#campo-status-estado-de-las-comunidades)).
 - **lastReviewed** _(*)_: Última fecha en la que alguien modificó o validó los datos (`dd/mm/yyyy`).
 - **communityType** _(*)_: Tipo de comunidad (ver [Campo `communityType`](#campo-communitytype-taxonomía-de-comunidades)).
 - **eventFormat** _(*)_: Formato de eventos (ver [Campo `eventFormat`](#campo-eventformat-formato-de-eventos)).
 - **location**: Ciudad o región principal en formato `Ciudad` o `Ciudad, País`. Para comunidades sin ubicación fija: `Itinerante`. Para organizaciones paraguas: `n/a`. Solo para comunidades presenciales o híbridas.
+- **geographicScope**: Territorio al que la comunidad da servicio: `unknown`, `local`, `provincial`, `regional`, `national` o `international`. **No** es lo mismo que `location`: una comunidad puede celebrar sus eventos en Madrid y dar apoyo a nivel nacional. Campo opcional; las fichas antiguas no lo traen.
+- **shortDescription**: Descripción breve de la comunidad, la que se muestra en su ficha.
+- **langs**: Idiomas en los que la comunidad se comunica: `es`, `en`, `ca`, `eu`, `gl`, `oc`.
 - **topics**: Lista de temáticas en texto libre separada por comas (campo heredado, [ver issue](https://github.com/ComBuildersES/communities-directory/issues/6)).
-- **tags**: Array de IDs de etiquetas temáticas definidas en [`public/data/tags.json`](../public/data/tags.json). Ejemplo: `["python", "data-science", "machine-learning"]`.
-- **targetAudience**: Array de IDs de perfiles de público objetivo definidos en [`public/data/audience.json`](../public/data/audience.json). Ejemplo: `["data-scientist", "ml-engineer"]`.
+- **tags**: Array de IDs de etiquetas temáticas definidas en [`public/data/tags.json`](./public/data/tags.json). Ejemplo: `["python", "data-science", "machine-learning"]`.
+- **targetAudience**: Array de IDs de perfiles de público objetivo definidos en [`public/data/audience.json`](./public/data/audience.json). Ejemplo: `["data-scientist", "ml-engineer"]`.
 - **matchesAllTags**: `true` cuando la comunidad debe aparecer en cualquier filtro de temática. En el payload final eso compacta `tags` a `[]`, aunque el formulario pueda seguir mostrando la selección visible mientras editas.
 - **matchesAllAudience**: `true` cuando la comunidad está abierta a cualquier perfil. En el payload final eso compacta `targetAudience` a `[]`.
 - **contactInfo**: Email o URL de contacto.
 - **communityUrl** _(*)_: URL principal de la comunidad. Se usa como enlace en la tarjeta y en el mapa. Preferencia: web propia > plataforma más activa.
-- **urls**: Objeto con URLs adicionales por plataforma. Solo incluir las claves que tengan valor. Claves principales: `web`, `eventsUrl` (Meetup, Lu.ma, etc.), `linkedin`, `twitter`, `instagram`, `youtube`, `discord`, `telegram`, `github`, `mastodon`, `bluesky`. Claves menos comunes: `linkAggregator`, `mailingList`, `facebook`.
+- **urls**: Objeto con URLs adicionales por plataforma. Solo incluir las claves que tengan valor. Claves principales: `web`, `eventsUrl` (Meetup, Lu.ma, Eventbrite…), `linkedin`, `twitter`, `instagram`, `youtube`, `discord`, `telegram`, `github`, `mastodon`, `bluesky`. Claves menos comunes: `linkAggregator`, `mailingList`, `forum`, `blog`, `rss`, `facebook`, `eventosWiki`, `ote`. No existe una clave por plataforma de eventos (`meetup`, `eventbrite`…): esas URLs van en `eventsUrl`. La lista canónica es `URL_PLATFORM_OPTIONS` en [`src/lib/communitySubmission.js`](./src/lib/communitySubmission.js), y la validación rechaza claves fuera de ella.
+- **archivedUrls**: Canales que la comunidad tuvo abiertos pero que su equipo actual ya no atiende. Se conservan como histórico y **no se muestran** en la web: un canal zombie manda a la gente a un sitio donde nadie responde. Una URL no puede estar a la vez activa y archivada. La clave se omite cuando no hay nada archivado.
+- **parentId**: `id` de la organización paraguas a la que pertenece la comunidad (por ejemplo, un GDG local apuntando a GDG Spain), o `null`. No aplica a las propias organizaciones paraguas.
 - **thumbnailUrl** _(*)_: Ruta relativa a la imagen de la comunidad (`images/<slug>.webp`). El fondo de la web es blanco.
 - **latLon**: Coordenadas geográficas para comunidades presenciales o híbridas. Si ya hay comunidades en esa ciudad, usar las mismas coordenadas. Si no aplica: `{ "lat": null, "lon": null }`.
 - **displayOnMap**: `true` para comunidades presenciales o híbridas.
@@ -251,15 +261,16 @@ Scripts de mantenimiento del dataset, agrupados por caso de uso.
 Útiles antes de hacer un PR o al revisar contribuciones:
 
 * `npm run validate-data`: valida el dataset completo, taxonomías y referencias cruzadas.
-* `npm run find-duplicates`: busca comunidades potencialmente duplicadas en el JSON.
-* `npm run ensure-id-autoincrement`: reescribe los IDs para asegurar que son consecutivos (ejecutar si se añaden o eliminan entradas manualmente).
+* `npm run find-duplicates`: busca comunidades potencialmente duplicadas.
+* `npm run compile-communities`: recompila `public/data/communities.json` y `communities.geojson` desde `data/communities/`. No hace falta ejecutarlo a mano antes de un commit: `npm run dev` y `npm run build` ya lo hacen.
+* `npm run assign-community-ids`: asigna los `id` pendientes. **Solo se ejecuta en `master`**, desde el job de despliegue; no lo lances en una rama (ver [docs/DATA.md](./docs/DATA.md)).
 
 ##### Salud de URLs
 
 Útiles periódicamente para detectar enlaces caídos o archivados:
 
 * `npm run check-urls`: comprueba la salud de las URLs. Omite dominios que bloquean bots (twitter.com, x.com). Admite `--report <ruta>` para guardar el informe en Markdown.
-* `npm run archive-broken-urls`: para cada URL rota del informe, busca un snapshot en [Wayback Machine](https://web.archive.org/) y actualiza `communities.json`. Admite `--dry-run`, `--from-report <ruta>`, `--include-warnings` y `--concurrency <n>`.
+* `npm run archive-broken-urls`: para cada URL rota del informe, busca un snapshot en [Wayback Machine](https://web.archive.org/) y actualiza los ficheros de `data/communities/`. Admite `--dry-run`, `--from-report <ruta>`, `--include-warnings` y `--concurrency <n>`.
 
 Flujo recomendado:
 
@@ -275,12 +286,13 @@ npm run check-urls -- --report report.txt   # verifica el resultado
 Útiles para mejorar datos de comunidades existentes (tags, URLs de redes sociales, estado):
 
 * `npm run scrape-community-data`: visita las webs de las comunidades con Playwright y extrae redes sociales, tags sugeridos e indicios de estado activo/inactivo. Genera `suggestions.json` para revisión antes de aplicar. Opciones: `--start <n>`, `--end <n>`, `--id <n>`, `--resume`.
-* `npm run apply-suggestions`: aplica `suggestions.json` a `communities.json` tras revisión humana. Admite `--dry-run` y `--only-approved`.
+* `npm run apply-suggestions`: aplica `suggestions.json` a los ficheros de `data/communities/` tras revisión humana. Admite `--dry-run` y `--only-approved`.
 * `npm run apply-url-mapping`: aplica el mapeo manual `url-mapping.json` (URLs alternativas curadas). Admite `--dry-run` y `--force-status`.
+* `npm run match-eventos-wiki`: empareja los organizadores de [eventos.wiki](https://eventos.wiki/) con las comunidades y rellena `urls.eventosWiki` y `urls.ote`. Por defecto solo informa; `--apply` escribe y `--include-fuzzy` incluye los matches parciales, que conviene revisar a mano.
 
 ##### Mapa y GeoJSON
 
-* `npm run process-to-communities-to-geojson`: regenera `communities.geojson` a partir de `communities.json`. Ejecutar tras modificar coordenadas o el campo `displayOnMap`.
+* `npm run compile-communities`: regenera `communities.json` y `communities.geojson` a partir de `data/communities/`. El GeoJSON solo incluye las comunidades con coordenadas y `displayOnMap: true`.
 * `npm run test-geojson`: abre un visor local para explorar las ubicaciones del GeoJSON.
 
 ##### Automatismos (uso interno)
@@ -378,7 +390,7 @@ El flujo principal recomendado es usar el formulario integrado en la web del dir
 
 Cuando se crea ese issue, se ejecuta [create-community-entry.yml](https://github.com/ComBuildersES/communities-directory/blob/master/.github/workflows/create-community-entry.yml), que:
 - Procesa el issue y genera un PR añadiendo o actualizando los datos ([process-community-issue.js](https://github.com/ComBuildersES/communities-directory/blob/master/scripts/process-community-issue.js)).
-- Ejecuta [process-to-communities-to-geojson.js](https://github.com/ComBuildersES/communities-directory/blob/master/scripts/process-to-communities-to-geojson.js) que procesa los datos anteriores y actualiza el fichero [communities.geojson](https://github.com/ComBuildersES/communities-directory/blob/master/public/data/communities.geojson) que contiene las comunidades presenciales e híbridas.
+- Escribe el fichero de la comunidad en `data/communities/<slug>.json` (con `id: null` si es un alta) y compila los artefactos con [compile-communities.js](https://github.com/ComBuildersES/communities-directory/blob/master/scripts/compile-communities.js), que genera `communities.json` y el `communities.geojson` de las comunidades con ubicación.
 - Valida el JSON generado antes de abrir el PR.
 - Abre un PR con todos los cambios.
 
@@ -394,9 +406,12 @@ La creación de issues desde GitHub queda ahora orientada a propuestas abiertas;
 #### Despliegue tras merge en master
 
 Cada push a `master` activa `deploy.yml`, que:
-- Instala dependencias
-- Genera el sitio con Vite.
+- Instala dependencias.
+- Asigna los `id` de las comunidades que llegaron sin él y commitea esa asignación. Va antes del build para que una comunidad nueva se publique en ese mismo despliegue.
+- Genera el sitio con Vite (el build recompila `communities.json` y el GeoJSON, y vuelve a validar los datos).
 - Publica el contenido de `/dist` en GitHub Pages.
+
+> **Ojo con `[skip ci]`**: GitHub solo mira el commit de cabeza del push. Si el commit del changelog acaba encima de tu trabajo con esa marca, no se dispara el despliegue y no se publica nada de lo que va debajo. Comprueba que ha salido un run con `gh run list --workflow deploy.yml --limit 1`.
 
 ###  Cómo contribuir con código
 
