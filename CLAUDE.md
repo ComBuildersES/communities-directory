@@ -50,6 +50,8 @@ data/deleted-communities/  # FUENTE DE VERDAD: un fichero JSON por baja (<slug>.
 
 public/data/
   communities.json          # GENERADO — gitignorado, no editar
+  communities.csv           # GENERADO — gitignorado, no editar
+  schema.json               # GENERADO — gitignorado, no editar
   communities.geojson       # GENERADO — gitignorado, no editar
   deleted-communities.json  # GENERADO — gitignorado, no editar
   communities.meta.json     # nextCommunityId (lo mantiene solo el job de asignación)
@@ -61,12 +63,12 @@ scripts/               # Utilidades de mantenimiento de datos
   find-duplicates.js
   ensure-id-autoincrement.js
   compile-communities.js           # Compila el bundle + geojson desde data/communities/
+  generate-llm-artifacts.js        # Genera llms.txt, llms-full.txt, CSV, schema.json y sitemap
   explode-communities.js           # Migración one-shot: bundle → fichero por comunidad
   assign-community-ids.js          # Asigna ids pendientes (solo en master)
   lib/communities-store.js         # API de lectura/escritura de la fuente de verdad
   lib/communities-git.js           # Reconstruye el listado en un ref de git (baselines)
   process-community-issue.js
-  migrate-add-new-fields.js        # Migración: añade urls/tags/targetAudience
   scrape-community-data.js         # Scraping con Playwright → suggestions.json
   apply-suggestions.js             # Aplica suggestions.json a communities.json
   apply-url-mapping.js             # Aplica url-mapping.json a communities.json
@@ -159,11 +161,11 @@ npm run check-urls                    # Valida URLs de comunidades
 npm run find-duplicates               # Detecta duplicados por ID
 npm run ensure-id-autoincrement       # Verifica secuencia de IDs
 npm run compile-communities           # Compila communities.json + .geojson desde la fuente
+npm run generate-llm-artifacts        # Genera llms.txt, llms-full.txt, CSV, schema.json y sitemap
 npm run explode-communities           # Migración one-shot al layout por fichero
 npm run assign-community-ids          # Asigna ids pendientes (uso en master / CI)
 
 # Enriquecimiento de datos (nuevos)
-npm run migrate-add-new-fields        # Añade urls/tags/targetAudience a communities.json (idempotente)
 npm run scrape-community-data         # Scraping con Playwright (ver opciones en el script)
 npm run apply-suggestions             # Aplica suggestions.json revisado a communities.json
 npm run apply-url-mapping             # Aplica url-mapping.json a communities.json
@@ -419,6 +421,219 @@ ficha y muestra los próximos eventos (o el último celebrado).
   ("Codemotion" vs "Codemotion Madrid") se listan para revisión humana y requieren
   `--include-fuzzy`. Nunca reintroduce un canal archivado.
 
+### Superficie para LLMs y agentes
+
+`scripts/generate-llm-artifacts.js` genera en cada build cinco artefactos gitignorados:
+`public/llms.txt`, `public/llms-full.txt`, `public/data/communities.csv`,
+`public/data/schema.json` y `public/sitemap.xml`. `public/robots.txt` sí está versionado
+(es estático) y permite el rastreo a todos los crawlers, los de IA incluidos, pidiendo
+atribución y remitiendo a los ficheros canónicos en vez de a la SPA.
+
+Están en inglés a propósito: es la convención de `llms.txt` y lo que mejor interpretan los
+modelos. Los datos de cada comunidad se emiten en su idioma.
+
+**Al añadir un campo al modelo de datos, documentarlo en `buildSchema()`.** Un campo que no
+está en `schema.json` es un campo que un agente va a interpretar adivinando. Si el campo
+cambia cómo se lee un registro (como `matchesAllTags`, que significa "encaja con todo" pese a
+traer un array vacío), explicarlo además en la sección "How to read a community record" de
+`buildLlmsIndex()`.
+
+El JSON-LD (`Dataset` + `WebSite`) vive **estático en `index.html`**, no inyectado por React:
+la app renderiza en cliente y un crawler que no ejecuta JS no vería un bloque inyectado.
+
+La pestaña "Organizo una comunidad" presenta sus cuatro pasos en un **stepper**, de uno en
+uno: son cuatro párrafos densos y apilados se leían como un muro, así que nadie llegaba al
+cuarto (el feed de eventos), que es justo el que más cuesta explicar.
+
+El equivalente para personas es `src/components/OpenDataModal/`, abierto desde el botón
+"Datos abiertos + IA" de la cabecera. Si cambian las reglas de interpretación del dataset,
+cambian en cuatro sitios: `buildLlmsIndex()`, el bloque de instrucciones de
+`AgentInstructions` (pestaña "Construyo con los datos"), `openData.prompts.rules` en los dos
+locales y `docs/DATA.md`.
+
+**`llms.txt` es ASCII puro a propósito.** GitHub Pages sirve los `.txt` sin `charset`, y el
+navegador los decodifica con la codificación local: un `—` se lee "â€”". Como el índice es
+prosa en inglés, el arreglo es no usar tipografía fuera de ASCII (hay test). En
+`llms-full.txt` los acentos de los nombres son inevitables, así que abre con BOM.
+
+El índice **declara la cobertura de cada campo flojo** (`tags`, `targetAudience`,
+`geographicScope`, `urls.ote`, `humanValidated`), calculada en cada build. Sin ese dato, un
+modelo lee un campo vacío como "esta comunidad no trata de eso" y la descarta en silencio,
+cuando lo que pasa es que nadie lo ha rellenado.
+
+### Transparencia: cuánto de esto lo ha mirado una persona
+
+Solo 77 de las 446 comunidades activas están revisadas (17%). Ese número, presentado
+como nota de fiabilidad, hunde la confianza de quien acaba de llegar; presentado como trabajo en
+curso, recluta.
+
+**La métrica que se publica es la de activas, no la del dataset entero** (que sería 89 de 657,
+un 13%): repasar una comunidad que ya no organiza nada no mejora lo que alguien consulta hoy, y
+medir sobre el total castiga el esfuerzo sin que sirva de nada. `coverage.json` trae los dos
+recuentos; la web usa el de `active`. Por eso el CTA fija `status=active` junto al filtro de
+revisión: si el listado al que llevas no coincide con el número que la persona acaba de leer,
+el número sobra.
+
+**El origen se cuenta en este orden, y no es decorativo**: las comunidades las añadió gente una
+a una, y lo que puso el proceso semiautomático fue el **etiquetado mínimo** encima (temáticas,
+enlaces, estado). Contado al revés —"las fichas las recopiló un proceso automático"— un dataset
+humano con etiquetado asistido se lee como un dataset generado por IA, que es exactamente la
+duda que esta superficie viene a resolver. Lo mismo vale para el aviso de la ficha: lo que está
+sin revisar es el etiquetado, no la existencia de la comunidad.
+
+De ahí cómo está montado:
+
+- El cálculo vive **una sola vez** en `src/lib/dataCoverage.js`, y lo consumen las dos
+  superficies: el store (`useDataCoverage`) para la web y `generate-llm-artifacts.js` para los
+  recuentos de `llms.txt` y para `public/data/coverage.json` (generado, gitignorado). Con dos
+  cálculos, lo que lee un modelo y lo que ve una persona se contradicen, y entonces la cifra
+  de transparencia es justo lo que nadie se cree.
+- La explicación del método vive en el popover "Sobre el proyecto"
+  (`src/components/DataTransparency/`), con la versión larga en `docs/DATA.md`. El popover
+  **no** es enlazable ni indexable: si algún día hace falta que un crawler o una cita apunten
+  ahí, el bloque se mueve a una vista propia.
+- El bloque **colapsa, pero el número no**: la barra y "89 de 657" se ven siempre; lo que se
+  guarda detrás del desplegable es el proceso y los botones. Si el 13% se esconde, nadie abre
+  el desplegable y la transparencia deja de existir.
+- La llamada principal es **repasar una comunidad** (`?s=active&hv=false`), no "ver solo las
+  revisadas": 369 pendientes son una deuda, y "con que cada persona repase una" las vuelve un
+  reparto. Lleva el coste real (cinco minutos) porque sin él la petición es indefinida.
+- En la interfaz se habla de **comunidades**, no de "fichas": quien llega busca comunidades, y
+  "ficha" es vocabulario de quien mantiene el dataset.
+- El estado vacío de la lista (`src/components/EmptyResults.jsx`) tiene tres variantes, y la que
+  decide es una función pura con test (`src/lib/emptyResults.js`). La que justifica el módulo es
+  **"pedí pendientes y no hay ninguna"**: eso es haber terminado la zona, y con el mensaje
+  genérico se leería como una búsqueda fallida. Antes de esto la lista no tenía estado vacío
+  ninguno: cuadrícula vacía y debajo el CTA de añadir comunidad, que ahí se lee como "está roto".
+- Lo que falta está en el **issue #463**, y el progreso por zona de ahí **no necesita faceta de
+  provincia**: el mapa ya filtra por extent y el foco ya viaja en la URL (`?view=map&m=...`), así
+  que el deep link por zona se construye hoy. El mapa enfoca; los recuentos salen de
+  `inferProvinceIdFromText` en build time, porque un extent es un rectángulo y se come las
+  provincias vecinas.
+- Lo de que el código se programó con ayuda de IA va en **una línea, al final**. Arriba, hace
+  que se lea el directorio entero como salida de un modelo.
+- El aviso por ficha va **arriba del cuerpo del modal**, no colgando del título "Colaborar"
+  (donde se leía como una advertencia sobre colaborar), y **no** se marca en la tarjeta ni en
+  el mapa: lo llevarían 570 de 657 y la cuadrícula pasaría a ser un campo de alertas.
+- Se dice "pendiente de revisar", nunca "sin verificar" ni "generado por IA" a secas: lo que
+  hay detrás es scraping más mapeo de catálogo, y una ficha sin revisar no es una ficha falsa.
+- El filtro es `humanValidated` en el sidebar, clave corta `hv` (`?hv=false` = lo que queda por
+  revisar, que es la lista de trabajo de un responsable provincial). Funciona sin tocar el
+  índice invertido porque el campo ya es un booleano del registro. Los switches **llevan el
+  recuento en la etiqueta**: con un 17%, activarlo vacía el directorio y sin el número parece
+  que la web se ha roto. Ese recuento se calcula **sobre los filtros activos menos el de
+  revisión**, no sobre el dataset entero: con el default `status=active`, un "(568)" medido
+  sobre el total no cuadra con los 369 resultados que salen al pulsarlo.
+
+### Las pestañas del modal van por persona
+
+`attend` · `organizers` · `found` · `build`. Antes mezclaban dos ejes —tres pestañas por
+herramienta (chatbot, código, agentes) y una por persona— y obligaban a quien llega a
+decidir si es una herramienta o una persona. "Construyo con los datos" fusiona código y
+agentes porque ahí persona y herramienta son la misma cosa.
+
+- Los chips de ficheros viven **dentro** de esa pestaña, no sobre las pestañas: para quien
+  busca una comunidad eran nueve enlaces técnicos ocupando el primer pantallazo.
+- En móvil caen los **iconos**, no las etiquetas: "una semilla" no se lee como "quiero
+  montar una comunidad". Con el eje de herramienta el icono bastaba; con el de persona, no.
+- Los prompts se declaran por pestaña (`ATTEND_PROMPTS`, `ORGANIZER_PROMPTS`,
+  `FOUND_PROMPTS`, `BUILD_PROMPTS`) y viven todos en `openData.prompts.*`, plano: mover uno
+  de pestaña es mover una cadena de una constante a otra.
+
+### Alta asistida por IA (`src/lib/aiAssist.js`)
+
+El formulario ofrece abrir Claude o ChatGPT con un prompt preparado (`claude.ai/new?q=` /
+`chatgpt.com/?q=`) y aceptar de vuelta el JSON que devuelvan. No hay clave de API ni llamada
+desde el servidor: el directorio es estático y la IA la pone quien la usa.
+
+- El prompt **enlaza** `schema.json`, `tags.json` y `audience.json` en vez de incrustarlos:
+  166 tags no caben en una query string, y así el modelo trabaja contra la versión vigente.
+- `parseAssistedCommunityJson` no se fía de lo que llega del portapapeles: extrae el objeto
+  aunque venga en una valla ```json o con texto alrededor, filtra a las claves conocidas,
+  descarta valores fuera de los enums y tags o claves de `urls` que no existan, y devuelve
+  avisos en vez de romper. Nunca acepta `id` ni `humanValidated` de la IA.
+- Acepta **varias URLs**: la web dice de qué va la comunidad, la plataforma de eventos si
+  sigue viva, el repositorio qué publican. El prompt las lista todas y pide cruzarlas.
+- Al aplicar, solo se pisan las claves que trae la propuesta: lo que la persona ya escribió a
+  mano no se pierde.
+- Si añades un campo al modelo, añádelo a `STRING_FIELDS`, `ARRAY_FIELDS` o `ENUM_VALUES` o
+  la IA no podrá rellenarlo.
+
+### Botón flotante (`src/components/SupportFab/`)
+
+Lo primero que hace el panel es **preguntar**: "¿Necesito ayuda?" o "¿Quiero ayudar?". Son
+dos conversaciones distintas, y mezclarlas obligaba a que una fuera el titular y la otra se
+leyera como letra pequeña. Las claves van en `support.help.*` y `support.give.*`; Escape
+vuelve a la pregunta antes de cerrar el panel.
+
+- **Necesito ayuda**: el soporte de siempre (Telegram, alta/edición de ficha, GitHub, lista
+  de correo, Linktree).
+- **Quiero ayudar**: apoyo a la iniciativa, y ahí la vía preferente es **hablar** — cada
+  persona puede ayudar en algo distinto y eso no se resuelve con una lista de enlaces. Por
+  eso la llamada principal es escribir por Telegram, y difundir / revisar tu ficha /
+  GitHub van debajo como "si prefieres ir directo".
+
+Todo el "cómo colaborar" vive en la vista **Quiero ayudar**, incluido el llamamiento a
+responsables provinciales y la guía CONTRIBUTING: antes estaba repartido entre el popover
+"Sobre el proyecto" de la cabecera y el FAB. El popover solo conserva el botón que abre el
+FAB en esa vista, vía `openSupportFab("give")` (`src/lib/supportFab.js`). Es un evento de
+`window` a propósito: cabecera y FAB son hermanos colgando de `App`, y la alternativa era
+bajar el estado por props a través de todo `Heading` para algo que solo necesitan los dos
+extremos.
+
+"¿Te parece útil?" abre con dos acciones concretas: **dar una estrella al repo** en GitHub
+(que no estaba en ninguna parte) y guardar el directorio en favoritos (que era media frase
+dentro de un párrafo). Lo segundo **no se puede disparar desde JS** —ningún navegador deja
+añadir un favorito por código—, así que lo único que cabe es enseñar el atajo.
+
+`TELEGRAM_GROUP_URL` en `SupportFab.jsx` es el **único** sitio donde va la URL del grupo.
+Con valor, hablar por Telegram es la llamada principal de las dos vistas; vacío, el panel
+cae a los canales que quedan sin enlazar a ninguna parte. La pestaña "Organizo una
+comunidad" del modal de datos repite la misma URL: si cambia el grupo, son **dos**
+constantes.
+
+Los enlaces de compartir salen de `src/lib/shareLinks.js`, compartidos con el popover "Sobre
+el proyecto" de la cabecera: dos copias del mismo intent se desincronizan en el primer cambio
+de texto.
+
+`useSupportNudge.js` llama la atención sobre el botón: rebote corto, tooltip y un clic
+sintetizado con WebAudio (sin fichero). Una sola vez por persona (`localStorage`), nunca con
+un modal abierto, y sin rebote si el sistema pide movimiento reducido. El sonido se abandona
+en silencio si el navegador tiene el audio bloqueado por falta de gesto previo: es un extra,
+no el mensaje: `unlockNudgeAudio` abre el `AudioContext` en el primer gesto (clic, tecla o
+toque), que es la única ventana en la que el navegador lo permite. Si el aviso llega antes de
+cualquier gesto, no suena.
+
+**El aviso espera a que el directorio haya servido para algo** (`resolveNudgeTrigger`, función
+pura con test): abrir una ficha o cualquier diálogo, usar la búsqueda o los filtros, o leer más
+de una pantalla. Pedir apoyo a alguien que acaba de llegar es pedir antes de haber dado nada.
+Hay un suelo de 7 s y un techo de 60 s: quien lleva un minuto leyendo sin tocar nada también
+está usando el directorio, así que se le avisa igual.
+
+**El scroll no descarta el aviso**, y si la persona está desplazándose cuando toca mostrarlo,
+espera a que la página se quede quieta (`resolveNudgeDelay`). Aparecer y desaparecer en mitad
+de un scroll es el peor momento: nadie mira esa esquina mientras se desplaza, y el aviso se
+gasta sin que lo vea.
+
+El botón es un círculo con el icono de conversación, sin etiqueta: el mensaje lo lleva el
+tooltip del aviso. Eso hace que el anillo blanco y el fondo azul marino sean lo **único**
+que lo separa de la cuadrícula de logos de la vista de lista; si cambia el color, hay que
+comprobarlo sobre la lista, no sobre fondo blanco.
+
+Los prompts del modal viven en los locales, no en el componente, y `tests/openDataPrompts.test.js`
+los vigila: deben **preguntar** a la persona (perfil, zona, disponibilidad) en vez de dejar un
+`[rellena aquí]`. Un hueco que alguien tiene que rellenar a mano es un prompt que no se usa.
+
+Las trampas del dataset (`archivedUrls`, `matchesAllTags`, `geographicScope`, `lastReviewed`,
+`humanValidated`) están **una sola vez**, en `openData.prompts.rules`, y cada prompt la
+interpola con `{{rules}}`. Repetida en cada prompt se desincronizaba al primer cambio.
+
+**Un prompt no puede prometer lo que el dataset no guarda.** No hay campo que diga quién
+busca voluntariado, quién está abierto a colaborar ni quién acoge grupos nuevos: los prompts
+que van de eso lo dicen en voz alta y piden el canal para preguntarlo (hay test). Y
+`lastReviewed` **no mide actividad**: es la fecha de la última revisión de la ficha, y la
+mayoría no se ha vuelto a mirar desde que se añadió.
+
 ### Claves de `urls`
 
 Añadir una plataforma nueva exige tocar **cuatro** sitios, o se cae por el camino:
@@ -466,6 +681,36 @@ slug dependen de esa equivalencia. Hay un test que lo verifica
 - Build genera `dist/` con HTML/CSS/JS
 - Base path dinámico según variable `VITE_BASE`
 - Entry: `index.html` → monta en `<div id="search_app">`
+
+### El CHANGELOG se regenera solo, en dos sitios
+
+`CHANGELOG.md` **nunca se edita a mano**: lo genera `scripts/generate-changelog.js` a partir
+del log de git, entero, en cada ejecución.
+
+1. **En local**: el hook `.githooks/post-commit` lo regenera y lo mete en el commit con
+   `--amend`. Depende de `core.hooksPath`, que configura `npm install` (script `prepare`).
+2. **En `master`**: el job `build` de `deploy.yml` lo regenera y commitea, después de
+   asignar los IDs y antes del build.
+
+El paso de CI es el que de verdad lo garantiza: **el hook solo existe en los clones locales
+que hayan hecho `npm install`**, así que nada de lo que se mergea desde la web de GitHub
+—incluidas todas las propuestas de comunidad— pasa por él. Sin ese paso, el changelog se
+quedaba atrás hasta que alguien commiteaba a mano desde su máquina.
+
+Va **después** de asignar los IDs porque una comunidad recién dada de alta necesita su id
+para poder enlazar su ficha del directorio.
+
+### Qué entra y qué no en el changelog
+
+- Los cambios de comunidad salen con su acción y su enlace: `Añadida X`, `Actualizada X`,
+  `Eliminada X`, con la PR de la que vinieron. Los deriva `describeCommunityChanges`
+  comparando el listado en el commit y en su padre, **una línea por comunidad**: un commit
+  que toque varias las lista todas.
+- Una baja solo se llama baja si aparece en `data/deleted-communities/`. Sin ese registro,
+  la comunidad desapareció del listado por otro motivo y decir "eliminada" sería mentir.
+- `isNoiseCommitSubject` descarta el mantenimiento de los propios ficheros generados
+  (`update changelog`, `update README.md`, `update .all-contributorsrc`, la asignación de
+  IDs). Ahogaban los cambios reales: eran la mitad del fichero.
 
 ### `[skip ci]` salta el push entero, no solo su commit
 

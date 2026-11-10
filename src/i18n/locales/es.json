@@ -79,22 +79,25 @@
     "aboutCopy3": "y",
     "openSource": "código abierto",
     "openData": "datos abiertos",
-    "bookmarkHint": "Y no te olvides de guardar en favoritos: {{shortcut}}.",
     "collaborate": "¿Te gustaría ayudar?",
-    "collaborateCopy1": "Nuevas ideas, bugs y cualquier otra colaboración son bienvenidas —",
-    "openIssue": "abre un issue",
-    "collaborateCopy2": "o consulta",
-    "seekingPart1": "Buscamos",
-    "provincialMaintainers": "responsables provinciales",
-    "seekingPart2": "que ayuden a mantener los datos de las comunidades locales.",
+    "collaborateCta": "Mira cómo puedes ayudar",
     "shareQuestion": "¿Te parece útil?",
-    "shareLead": "Si es así, te invitamos a guardarlo en favoritos con {{shortcut}}, y te animamos a compartirlo con tus contactos para que más personas se beneficien de él.",
+    "starAction": "Dale una estrella en GitHub",
+    "starHint": "es gratis y hace que más gente lo encuentre",
+    "bookmarkAction": "Márcalo en favoritos",
+    "bookmarkHint": "con {{shortcut}}, para tenerlo a mano",
+    "shareLead": "Y compártelo con tus contactos, para que más gente se beneficie de él.",
     "shareOn": "Compartir en {{platform}}",
     "shareText": "Este directorio de {{handle}} no puede faltar en vuestra barra de favoritos, es el mayor listado de meetups, conferencias y comunidades técnicas de España: {{url}} (y encima es open source & opendata! :D)",
     "contributorsTitle": "La comunidad que lo hace posible",
     "seeAllContributors": "Ver a todas las personas que contribuyen",
     "addCommunityTitle": "Añadir una nueva comunidad al directorio",
-    "addCommunity": "Añadir comunidad"
+    "addCommunity": "Añadir comunidad",
+    "openDataCta": "Datos abiertos + IA",
+    "openDataCtaTitle": "Datos abiertos: úsalos con ChatGPT, Claude, tus scripts o tus agentes",
+    "changelogLead": "¿Qué ha cambiado últimamente? El",
+    "changelogLink": "registro de cambios",
+    "changelogTail": " recoge cada mejora del directorio y cada comunidad añadida, actualizada o dada de baja."
   },
   "resultsBar": {
     "suffixList": "comunidades",
@@ -113,7 +116,8 @@
       "tags": "Temática",
       "targetAudience": "Público",
       "name": "Comunidad",
-      "parentId": ""
+      "parentId": "",
+      "humanValidated": "Revisión"
     }
   },
   "tagSearch": {
@@ -145,7 +149,8 @@
     "eventFormat": "Tipo de Eventos",
     "status": "Estado de la comunidad",
     "langs": "Idiomas",
-    "geographicScope": "Ámbito geográfico"
+    "geographicScope": "Ámbito geográfico",
+    "review": "Estado de la revisión"
   },
   "app": {
     "checkingFreshData": "Comprobando si hay una versión más reciente del directorio antes de abrir detalles o proponer cambios.",
@@ -182,7 +187,6 @@
     "showMore": "+{{count}} más",
     "showLess": "Mostrar menos",
     "collaborate": "Colaborar",
-    "aiDataTooltip": "Datos enriquecidos automáticamente, pendientes de validación humana. Bajo CC BY 4.0, tu aportación beneficiará también a quien reutilice este directorio.",
     "edit": "Editar",
     "share": "Compartir",
     "cbTooltip": "Alguna de las personas que lidera o lideró esta comunidad forma parte de Community Builders, la meta-comunidad de organizadores de comunidades tech en España.",
@@ -237,7 +241,10 @@
       "openReader": "Abrir en el lector OTE",
       "moreCount": "y {{count}} más",
       "aboutOte": "¿Qué es OTE?"
-    }
+    },
+    "pendingReviewTitle": "Comunidad pendiente de revisión",
+    "pendingReviewBody": "El etiquetado de esta comunidad —temáticas, enlaces, estado— lo puso un proceso semiautomático y todavía no lo ha repasado ninguna persona. Puede estar incompleto o desactualizado.",
+    "pendingReviewCta": "Revisar esta comunidad"
   },
   "map": {
     "showMap": "Mostrar mapa",
@@ -616,6 +623,244 @@
       "email": "Enviar por email",
       "note": "Se abrirá GitHub con el título y el cuerpo del issue precargados.",
       "noteWithEmail": "Puedes abrir un issue en GitHub o preparar un correo a Community Builders con el JSON generado. Si tu cliente de correo recorta el contenido, copia el bloque JSON manualmente."
+    },
+    "aiAssist": {
+      "title": "¿Prefieres que te ayude una IA?",
+      "subtitle": "Abre Claude o ChatGPT con las instrucciones ya puestas, y pega aquí el JSON que te devuelva para rellenar el formulario.",
+      "step1Title": "Pega los enlaces de la comunidad y abre el chat",
+      "openIn": "Abrir en {{provider}}",
+      "copyPrompt": "Copiar instrucciones",
+      "step2Title": "Pega aquí el JSON que te devuelva",
+      "step2Copy": "No pasa nada si viene con texto alrededor o dentro de un bloque de código: se extrae el JSON igual.",
+      "responseLabel": "Respuesta de la IA en JSON",
+      "apply": "Rellenar formulario",
+      "applied": "Listo: {{count}} campos rellenados. Revísalos uno a uno antes de enviar.",
+      "warningEnum": "Se ha ignorado \"{{value}}\" en el campo {{field}}: no es uno de los valores permitidos.",
+      "warningUnknown": "Se han ignorado valores no reconocidos en {{field}}: {{values}}.",
+      "error": {
+        "invalidJson": "No he encontrado un JSON válido en ese texto. Copia la respuesta de la IA entera, o solo el bloque que empieza por \"{\".",
+        "noFields": "El JSON es válido pero no trae ningún campo que el formulario reconozca. Comprueba que la IA ha usado los nombres de campo del esquema."
+      },
+      "disclaimer": "Lo que propone una IA son datos sin verificar. Revísalos antes de enviar: quien firma la propuesta eres tú, y una ficha con errores manda gente a sitios donde no hay nadie.",
+      "urlsCopy": "Cuantas más fuentes le des, mejor saldrá la ficha: la web dice de qué va, la plataforma de eventos si sigue viva, las redes quién la dinamiza y el repositorio qué construyen.",
+      "urlPlaceholder1": "https://web-de-la-comunidad.dev",
+      "urlPlaceholder2": "https://www.meetup.com/tu-comunidad/",
+      "urlPlaceholder3": "https://github.com/tu-comunidad",
+      "urlPlaceholder4": "https://www.linkedin.com/company/tu-comunidad/",
+      "urlPlaceholder5": "https://blog-de-la-comunidad.dev/rss.xml",
+      "urlLabelNumbered": "Enlace {{number}} de la comunidad",
+      "removeUrl": "Quitar este enlace",
+      "urlCount_one": "{{count}} enlace incluido en las instrucciones.",
+      "urlCount_other": "{{count}} enlaces incluidos en las instrucciones."
     }
+  },
+  "openData": {
+    "title": "Datos abiertos + IA",
+    "subtitle": "Las {{total}} comunidades del directorio son datos abiertos. Puedes descargarlas, preguntarle sobre ellas a un chatbot, cruzarlas con tus datos o dárselas a un agente. Te animamos a hacerlo.",
+    "license": "reutiliza, modifica y redistribuye, también comercialmente, citando a Community Builders y enlazando el directorio.",
+    "close": "Cerrar",
+    "copy": "Copiar",
+    "copied": "¡Copiado!",
+    "tabs": {
+      "attend": "Asisto a comunidades",
+      "organizers": "Organizo una comunidad",
+      "found": "Quiero montar una",
+      "build": "Construyo con los datos"
+    },
+    "files": {
+      "llms": "llms.txt — punto de entrada para LLMs: qué hay, dónde y cómo leerlo",
+      "llmsShort": "llms.txt",
+      "communities": "communities.json — el dataset completo",
+      "communitiesShort": "communities.json",
+      "csv": "communities.csv — una fila por comunidad, para hojas de cálculo",
+      "csvShort": "CSV",
+      "geojson": "communities.geojson — las comunidades con coordenadas, como GeoJSON",
+      "geojsonShort": "GeoJSON",
+      "schema": "schema.json — qué significa cada campo y cada valor",
+      "schemaShort": "Esquema",
+      "tags": "tags.json — taxonomía de temáticas, en español e inglés (mismos IDs)",
+      "tagsShort": "Etiquetas",
+      "llmsFull": "llms-full.txt — el directorio entero en Markdown",
+      "llmsFullShort": "llms-full.txt",
+      "audience": "audience.json — perfiles de público objetivo, en español e inglés (mismos IDs)",
+      "audienceShort": "Públicos"
+    },
+    "code": {
+      "lead": "Los ficheros se sirven como estáticos con CORS abierto: puedes hacer fetch directamente desde tu script, tu notebook o tu frontend. Se regeneran en cada despliegue, así que siempre tienes el dato más reciente.",
+      "gotcha": "Dos trampas habituales: \"tags\" y \"targetAudience\" son IDs (crúzalos con tags.json y audience.json) y una comunidad generalista trae el array vacío con \"matchesAllTags\": true. Todo está documentado en",
+      "hintShell": "filtrar el dataset desde la terminal",
+      "hintJs": "resolver IDs de tags a etiquetas legibles",
+      "hintPython": "cargar el CSV y agrupar",
+      "hintEvents": "recorrer los feeds OTE de las comunidades"
+    },
+    "agents": {
+      "lead": "Si construyes un agente o usas Claude Code, Cursor o similar, pega estas instrucciones en su contexto (CLAUDE.md, AGENTS.md, system prompt o fichero de reglas). Le dicen dónde están los datos y cómo interpretarlos sin equivocarse.",
+      "instructionsLabel": "Instrucciones para tu agente",
+      "noMcp": "No hace falta un servidor MCP: los datos son ficheros estáticos públicos, así que cualquier agente con acceso a la red puede leerlos directamente.",
+      "llms": "índice legible por máquina de todos los ficheros y de cómo interpretarlos.",
+      "agentsMd": "orientación para agentes que vayan a tocar el código del repositorio.",
+      "robots": "política de rastreo: todos los crawlers, incluidos los de IA, son bienvenidos.",
+      "instructionsHint": "pégalas en CLAUDE.md, AGENTS.md o tu system prompt"
+    },
+    "organizers": {
+      "lead": "Cada vez más gente busca comunidades preguntándole a una IA. Esto es lo que hace que la tuya aparezca bien en esas respuestas:",
+      "step1Title": "Tu comunidad al día",
+      "step1": "Asegúrate de que estás en el directorio y de que tu ficha está al día. Si tiene el aviso de \"dato sin revisar\", revísala: ese campo le dice a los modelos que no se fíen del todo.",
+      "step2Title": "Temáticas y público",
+      "step2": "Rellena temáticas y público objetivo con las etiquetas del catálogo. Son el campo por el que una IA decide si tu comunidad encaja con lo que pide una persona.",
+      "step3Title": "Enlaces vivos",
+      "step3": "Mantén una URL principal que funcione y marca como archivados los canales que ya no atiendes. Un enlace muerto que parece vivo manda gente a un sitio donde nadie responde.",
+      "step4Title": "Publica tus eventos",
+      "step4": "Un feed Open Tech Events en tu ficha lleva tus eventos al directorio, a los agregadores y a cualquier agente, y deja que la gente se suscriba sin depender de la plataforma de turno ni del algoritmo. Más difusión, con el calendario que ya mantienes.",
+      "note": "Nada de esto requiere saber Git: el formulario del directorio abre la propuesta por ti y una persona la revisa.",
+      "oteReader": "lector de feeds",
+      "stepOf": "Paso {{current}} de {{total}}",
+      "prevStep": "Anterior",
+      "nextStep": "Siguiente",
+      "helpTitle": "Pregúntanos lo que sea",
+      "helpCopy": "Dudas con el feed de eventos, con las etiquetas, con el formulario o con cualquier otra cosa del directorio: escríbenos.",
+      "helpIssues": "Preguntar en GitHub",
+      "helpMailingList": "Lista de correo",
+      "helpTelegram": "Grupo de Telegram",
+      "promptsTitle": "Pregúntale al dataset"
+    },
+    "footer": "El dataset lo mantienen personas voluntarias y está incompleto. Si falta una comunidad o hay un dato mal, corregirlo es la forma más útil de ayudar.",
+    "footerDocs": "Documentación de los datos",
+    "footerContribute": "Añadir o corregir una comunidad",
+    "attend": {
+      "lead": "Pega uno de estos mensajes en ChatGPT, Claude, Gemini o Perplexity. Pulsa \"Copiar\" directamente, o despliega el bloque si quieres ajustarlo antes.",
+      "useTheSearch": "Para la búsqueda de siempre —\"comunidades de Python en Valencia\"— el buscador y los filtros de esta web son más rápidos y más fiables que preguntarle a una IA. Estos prompts son para lo que el directorio todavía no sabe hacer: cruzar datos, entender diferencias y buscar encaje.",
+      "note": "Si tu chatbot no puede navegar, descarga el fichero y adjúntalo a la conversación. Los datos vienen de personas voluntarias: si ves algo mal o algo que falta, dínoslo.",
+      "roadmap": "Queremos que el propio directorio haga esto sin salir de aquí: búsqueda en lenguaje natural y panel de estadísticas están en el roadmap —"
+    },
+    "found": {
+      "lead": "Montar una comunidad empieza por mirar lo que ya hay: quién lo está intentando, quién puede acogerte y qué hueco está de verdad vacío. Estos prompts te lo responden con el dataset delante en vez de a ojo.",
+      "note": "Ojo con lo que el dataset no sabe: no hay ningún campo que diga quién acoge grupos nuevos ni quién anda buscando gente. Eso se pregunta, y estos prompts están escritos para darte a quién preguntar, no para adivinarlo.",
+      "helpTitle": "No hace falta empezar en solitario",
+      "helpCopy": "Community Builders existe justo para esto. Cuéntanos qué quieres montar y te ponemos en contacto con gente que ya ha pasado por ahí, en tu zona o en tu temática."
+    },
+    "build": {
+      "filesTitle": "Los ficheros",
+      "promptTitle": "Empieza por aquí",
+      "snippetsTitle": "Ejemplos de código",
+      "agentsTitle": "Si construyes con un agente"
+    },
+    "prompts": {
+      "rules": "Reglas de los datos:\n- Para recomendarme algo, usa solo comunidades con \"status\": \"active\". Si te pido expresamente comunidades paradas, márcalas como tales.\n- \"tags\" y \"targetAudience\" son IDs de catálogo. Los catálogos están en español ({{tagsUrl}}, {{audienceUrl}}) y en inglés ({{tagsEnUrl}}, {{audienceEnUrl}}): mismos IDs, etiquetas traducidas. Empareja contra \"label\", \"description\" y \"synonyms\", no solo contra el ID.\n- Si \"matchesAllTags\" es true, la comunidad es generalista y encaja con cualquier temática aunque su lista esté vacía; lo mismo con \"matchesAllAudience\" y los perfiles.\n- La cobertura es desigual: a muchas fichas les faltan los \"tags\", y la mayoría no tiene \"targetAudience\" ni \"geographicScope\". Un campo vacío significa que nadie lo ha rellenado, no que la comunidad no trate de eso: no la descartes en silencio y dime cuándo te falta el dato. {{indexUrl}} trae el recuento exacto de cada campo.\n- \"location\" es dónde se celebran los eventos; \"geographicScope\", cuando está, es el territorio al que da servicio.\n- \"lastReviewed\" es la fecha de la última revisión de la ficha, no una señal de actividad: la mayoría no se ha vuelto a mirar desde que se añadió. Lo único que evidencia actividad real es un feed de eventos en \"urls.ote\".\n- No me propongas URLs que estén en \"archivedUrls\": son canales que ya nadie atiende.\n- \"humanValidated\": false significa que el etiquetado de esa comunidad lo puso un proceso semiautomático y no lo ha repasado ninguna persona. Es el caso de la mayoría: avísame.\n- No rellenes huecos con lo que te suene de fuera del dataset. Si un dato no está, dilo. Si hay algo que tengo que preguntarle a la comunidad, dímelo y dame el canal.",
+      "tribe": {
+        "label": "Encontrar mi tribu",
+        "hint": "te pregunta tu perfil y luego recomienda",
+        "text": "Descarga {{dataUrl}} (datos abiertos del directorio de comunidades tech de España, CC BY 4.0).\n\nQuiero encontrar comunidades que encajen conmigo, no solo por temática.\n\n**Antes de recomendarme nada, pregúntame.** Mira primero qué campos trae el dataset y los catálogos de temáticas y perfiles, y hazme las preguntas que de verdad te sirvan para afinar: qué temas me interesan, dónde vivo y hasta dónde me puedo mover, si prefiero presencial, online o me da igual, qué tipo de comunidad busco (meetup recurrente, conferencia, hacklab, grupo de ayuda mutua…), en qué momento profesional estoy, en qué idiomas me manejo, y cualquier otra cosa que el dataset permita cruzar y que mejore la recomendación. Hazlo de forma conversacional, en un par de rondas como mucho, y con opciones concretas para que me resulte fácil responder.\n\nCuando tengas mi perfil, recomiéndame entre 5 y 8 comunidades ordenadas por lo bien que encajan. De cada una: nombre, ciudad, por qué encaja conmigo en concreto, y su enlace. Añade al final 2 o 3 que no haya pedido pero que creas que me pueden sorprender, explicando por qué.\n\n{{rules}}"
+      },
+      "types": {
+        "label": "Qué tipo de comunidad me conviene",
+        "hint": "las siete dinámicas, y cuál encaja contigo",
+        "text": "Descarga {{dataUrl}} y el diccionario de campos {{schemaUrl}} (datos abiertos del directorio de comunidades tech de España, CC BY 4.0).\n\nNo todas las comunidades funcionan igual, y quiero entender las diferencias antes de decidir dónde entrar. El campo \"communityType\" las clasifica en siete tipos y schema.json explica qué significa cada valor.\n\n**Antes de recomendarme nada, pregúntame**: qué busco (aprender algo concreto, conocer gente, construir en grupo, pedir ayuda, darla, hablar en público), cuánto tiempo puedo dedicar y cada cuánto, si prefiero algo recurrente o puntual, y dónde estoy.\n\nDespués, con mis respuestas delante:\n1. Explícame qué hay detrás de cada tipo —\"tech-meetup\", \"conference\", \"hacklab\", \"umbrella-org\", \"collaborative-group\", \"meta-community\", \"mutual-aid\"—: cómo es su dinámica, qué se espera de quien llega, qué compromiso suele pedir y cuántas hay de cada tipo en el dataset. Hazlo corto y comparable, no un párrafo por tipo.\n2. Dime qué dos o tres tipos encajan mejor con lo que te he contado, y por qué descartas los otros.\n3. Propónme tres o cuatro comunidades concretas de esos tipos, cerca de mí o online, con su enlace y qué esperar la primera vez que vaya.\n\n{{rules}}"
+      },
+      "speaker": {
+        "label": "Dónde dar una charla",
+        "hint": "te pregunta por tu charla y busca encaje",
+        "text": "Descarga {{dataUrl}} (datos abiertos del directorio de comunidades tech de España, CC BY 4.0).\n\nQuiero proponer una charla y busco dónde encajaría mejor.\n\n**Antes de proponerme nada, pregúntame.** Revisa qué campos hay en el dataset y en los catálogos, y hazme las preguntas que te sirvan para acertar: de qué va mi charla y a qué nivel, si ya la he dado antes o la estreno, a qué ciudades puedo desplazarme o si solo online, si busco un meetup pequeño para rodarla o apuntar directamente a una conferencia, en qué idioma la doy, y a qué público me gustaría llegar. Pregúntalo de forma conversacional y con opciones concretas.\n\nDespués dame dos listas separadas:\n1. **Meetups recurrentes** (\"communityType\": \"tech-meetup\"): al repetir cada poco necesitan ponentes de forma continua, así que son mejor sitio para estrenar.\n2. **Conferencias** (\"communityType\": \"conference\"): su call for papers suele abrirse una vez al año. El dataset no guarda fechas de C4P: dime lo que puedas inferir y mándame a su web o a su feed de eventos a comprobarlo.\n\nDe cada una: nombre, ciudad, por qué encaja con mi charla, su enlace y, si lo hay, su feed de eventos (\"urls.ote\") o su plataforma de eventos (\"urls.eventsUrl\"). Termina con un plan: por cuáles empezarías y en qué orden.\n\n{{rules}}"
+      },
+      "volunteer": {
+        "label": "Echar una mano",
+        "hint": "candidatas razonables y a quién preguntar",
+        "text": "Descarga {{dataUrl}} (datos abiertos del directorio de comunidades tech de España, CC BY 4.0).\n\nMe gustaría colaborar como voluntario/a en comunidades y eventos tech.\n\n**Aviso antes de empezar: el dataset no dice qué comunidad busca voluntariado.** No existe ese campo, así que no te lo inventes. Lo que quiero es una lista corta de candidatas razonables y la vía para preguntárselo yo.\n\n**Y antes de nada, pregúntame**: dónde vivo y hasta dónde me muevo, cuánto tiempo puedo dedicar y con qué regularidad, qué sé hacer o qué me gustaría aprender haciendo (logística el día del evento, comunicación, web, captación de ponentes, acompañar a quien empieza…), y qué temáticas me interesan.\n\nDespués, apoyándote en \"communityType\", dame dos listas:\n1. Comunidades que por su naturaleza se sostienen con quien participa: \"hacklab\", \"mutual-aid\", \"collaborative-group\" y los \"tech-meetup\", que al ser recurrentes necesitan manos de forma continuada.\n2. Conferencias (\"conference\"), donde el voluntariado suele ser puntual y alrededor de la fecha del evento.\n\nDe cada una: nombre, ciudad, por qué creo que encajaría y cómo contactar (\"contactInfo\" si lo hay y, si no, el canal más apropiado de \"urls\"; si no hay ninguno, dilo).\n\nTermina escribiéndome un mensaje breve de presentación que pueda adaptar, en el que pregunto si les hace falta ayuda en vez de dar por hecho que sí.\n\n{{rules}}"
+      },
+      "synergies": {
+        "label": "Sinergias para mi comunidad",
+        "hint": "identifica tu comunidad y busca con quién",
+        "text": "Descarga {{dataUrl}} (datos abiertos del directorio de comunidades tech de España, CC BY 4.0).\n\nDinamizo una comunidad y quiero encontrar oportunidades de colaboración.\n\n**Aviso: el dataset no dice quién está abierto a colaborar.** No hay ningún campo para eso. Dame candidatas por afinidad —temática, zona, tipo de comunidad— y asume que el interés hay que preguntarlo; no lo presentes como un hecho.\n\n**Antes de analizar nada, pregúntame.** Averigua primero cuál es mi comunidad (búscala en el dataset por nombre y enséñame su ficha para que confirme que es esa) y luego pregúntame lo que necesites: qué tipo de colaboración busco (evento conjunto, intercambio de ponentes, difusión, compartir espacio), si quiero quedarme en mi ciudad o abrirme a otras, qué me falta ahora mismo (asistentes, ponentes, manos, visibilidad), y si estoy dispuesto/a a absorber o reactivar una comunidad parada.\n\nDespués dame tres listas:\n1. Comunidades activas con las que tendría sentido hacer algo conjunto: temática próxima pero no idéntica, y zona compatible.\n2. Comunidades de mi misma temática en otras ciudades, por si cabe una gira de ponentes o un evento multisede.\n3. Comunidades con \"status\": \"inactive\" en mi zona o temática que quizá se puedan reactivar, con el canal que tenían. Recuerda que \"lastReviewed\" no prueba si siguen paradas: avísame de que hay que comprobarlo antes de escribir.\n\nTermina con el primer paso concreto para cada una de las tres: a quién escribo, por qué canal y qué propongo.\n\n{{rules}}"
+      },
+      "gaps": {
+        "label": "Huecos del ecosistema",
+        "hint": "qué falta, dónde, y qué no se puede saber",
+        "text": "Lee {{indexUrl}}: es el índice de datos abiertos del directorio de comunidades tecnológicas de España. Sigue desde ahí a los ficheros que necesites.\n\nEstoy pensando en montar una comunidad y quiero saber qué hace falta de verdad antes de decidir qué. Si acotarlo ayuda —una comunidad autónoma, una familia de temáticas, un perfil de público concreto—, pregúntame antes por dónde enfocarlo; si no, hazlo completo.\n\nDame:\n- Comunidades activas por provincia y por comunidad autónoma.\n- Temáticas sobrerrepresentadas y temáticas con muy poca o ninguna comunidad, usando las categorías del catálogo de tags.\n- Públicos poco atendidos, cruzando \"targetAudience\" con el catálogo de perfiles. Dime antes cuántas fichas traen ese campo: si son pocas, esta parte es una pista, no una conclusión.\n- Huecos concretos: combinaciones de tema y zona donde no hay nada. Si para valorarlo usas algo que no está en el dataset (población, tejido empresarial, universidades), dilo aparte y marca de dónde sale.\n- Qué parte del dataset es poco fiable, usando \"humanValidated\" y la cobertura de cada campo.\n\nTermina con las cinco comunidades que, si alguien las fundase mañana, más hueco cubrirían, y qué habría que verificar antes de lanzarse a cada una. Y dime de qué no puedes estar seguro con estos datos.\n\n{{rules}}"
+      },
+      "umbrella": {
+        "label": "Quién me puede acoger o apoyar",
+        "hint": "paraguas, hacklabs y comunidades que reactivar",
+        "text": "Descarga {{dataUrl}} (datos abiertos del directorio de comunidades tech de España, CC BY 4.0).\n\nQuiero montar una comunidad y no quiero empezar de cero en solitario: antes de inventar nada, quiero saber quién está haciendo algo parecido y quién podría acogerme o apoyarme.\n\n**Aviso: el dataset no dice si una organización acoge grupos nuevos.** No hay ningún campo para eso, así que no lo afirmes. Dame candidatas y la vía para preguntarlo.\n\n**Antes de nada, pregúntame**: qué quiero montar y dónde, qué me falta (espacio, difusión, paraguas legal, gente con experiencia, ponentes), si ya conozco algo parecido, y cuánto tiempo puedo sostener.\n\nDespués dame:\n1. Si ya existe algo igual o muy parecido en mi zona: a veces sumarse es mejor que duplicar. Dímelo aunque no sea lo que quiero oír.\n2. Organizaciones paraguas (\"umbrella-org\") y metacomunidades (\"meta-community\") de mi temática o mi zona: son las que agrupan o coordinan a otras, y las que mejor saben lo que ya se intentó.\n3. Hacklabs y espacios físicos (\"hacklab\") donde podría caber una actividad nueva.\n4. Comunidades paradas (\"status\": \"inactive\") de mi temática y zona: reactivar algo que ya tiene nombre y gente alrededor cuesta menos que fundarlo. Dame su canal y recuérdame que \"lastReviewed\" no prueba que sigan paradas.\n\nTermina con un plan de primeros pasos: a quién escribo primero, qué le pregunto y en qué orden.\n\n{{rules}}"
+      },
+      "onboarding": {
+        "label": "Poner al día a tu agente",
+        "hint": "qué hay, qué puedes prometer y qué no",
+        "text": "Lee {{indexUrl}} y {{schemaUrl}}: son el índice de datos abiertos del directorio de comunidades tecnológicas de España y el diccionario de sus campos. Desde el índice llegas al resto: el dataset en JSON, el CSV, el GeoJSON, los catálogos de temáticas y de públicos, y el volcado completo en Markdown.\n\n**Antes de escribir una línea de código, pregúntame** qué estoy construyendo (un directorio, un agregador de eventos, un bot, un análisis puntual), con qué stack, y si necesito el dato en vivo o me vale una copia.\n\nDespués, todavía sin código, resúmeme:\n- Qué ficheros hay, qué contiene cada uno y cuál me conviene para lo mío.\n- Qué campos puedo usar con confianza y cuáles están poco rellenos, con los recuentos que da el propio índice. Quiero saber qué NO puedo prometer en mi producto.\n- Las trampas del modelo de datos que me harían mostrar datos mal.\n- Qué pide la licencia CC BY 4.0: cómo atribuyo y a dónde enlazo.\n- Que el directorio no almacena eventos: los publica cada comunidad en su feed Open Tech Events (\"urls.ote\"), así que los eventos se agregan desde ahí.\n- Cómo se corrige un dato mal, para que mi proyecto devuelva valor en vez de solo consumirlo.\n\nCuando lo tengas claro, propónme la forma más simple de empezar y dime qué conviene cachear y cada cuánto refrescarlo.\n\n{{rules}}"
+      }
+    }
+  },
+  "support": {
+    "title": "¿Te ayudamos o nos ayudas?",
+    "close": "Cerrar",
+    "back": "Volver",
+    "chooser": {
+      "help": "Necesito ayuda",
+      "helpHint": "dudas, un dato mal o dar de alta tu comunidad",
+      "give": "Quiero ayudar",
+      "giveHint": "difundirlo, revisar fichas, aportar datos o código"
+    },
+    "help": {
+      "title": "¿En qué te echamos una mano?",
+      "copy": "Escríbenos por donde te resulte más cómodo.",
+      "telegram": "Grupo de Telegram",
+      "telegramHint": "la vía más rápida: preguntas y soporte en directo",
+      "record": "Dar de alta o editar una ficha",
+      "recordHint": "el formulario abre la propuesta por ti",
+      "github": "Preguntar en GitHub",
+      "githubHint": "bugs, datos mal o propuestas de mejora",
+      "mailingList": "Lista de correo",
+      "mailingListHint": "conversación con la comunidad de Community Builders",
+      "linktree": "Todos nuestros canales",
+      "linktreeHint": "redes sociales, eventos y web"
+    },
+    "give": {
+      "title": "¿Nos echas una mano?",
+      "copy": "Este directorio lo mantiene gente de la comunidad en sus ratos libres. Lo mejor es que nos escribas y buscamos algo que encaje con lo que te gusta hacer.",
+      "talk": "Escríbenos por Telegram",
+      "talkHint": "cuéntanos qué te apetece y lo vemos juntos",
+      "waysTitle": "O ve directo a una de estas",
+      "share": "Difunde el directorio",
+      "shareOn": "Compartir en {{platform}}",
+      "record": "¿Dinamizas una comunidad?",
+      "recordHint": "revisa su ficha o dala de alta, y pásalo a quien dinamice otras",
+      "github": "Aportar en GitHub",
+      "githubHint": "ideas nuevas, bugs, datos mal o código",
+      "contributing": "Guía para colaborar",
+      "contributingHint": "cómo abrir un issue o una pull request (CONTRIBUTING)",
+      "mailingList": "Lista de correo",
+      "mailingListHint": "conversación con la comunidad de Community Builders",
+      "needTitle": "Buscamos responsables provinciales",
+      "needCopy": "Gente que eche un ojo de vez en cuando a los datos de las comunidades de su provincia.",
+      "needCta": "Ver el issue"
+    }
+  },
+  "transparency": {
+    "title": "¿De dónde salen estos datos?",
+    "progress": "{{reviewed}} de {{total}} comunidades activas revisadas ({{percent}}%)",
+    "method": "Las comunidades las ha ido añadiendo gente, una a una. Después, un proceso semiautomático les puso un etiquetado mínimo —temáticas, enlaces, estado— para que se pudieran buscar. Ninguna comunidad la ha inventado una máquina.",
+    "pending": "Lo que falta es repasar ese etiquetado comunidad por comunidad, y en eso estamos. Nos centramos en las comunidades activas, que son las que alguien puede ir a buscar hoy. Mientras no se ha repasado, una comunidad aparece marcada como pendiente de revisión: puede tener etiquetas incompletas o enlaces viejos.",
+    "cta": "Quedan {{pending}} comunidades activas por repasar. Con que cada persona que pasa por aquí revisase una, estarían todas en nada. Son cinco minutos.",
+    "ctaBtn": "Revisar una comunidad pendiente",
+    "filterCta": "Ver solo comunidades revisadas",
+    "filterActive": "Viendo solo comunidades revisadas",
+    "readMore": "Leer la explicación completa",
+    "code": "La app se ha programado con ayuda de IA.",
+    "codeLink": "Ver el código"
+  },
+  "review": {
+    "reviewed": "Revisadas por una persona ({{n}})",
+    "pending": "Pendientes de revisar ({{n}})",
+    "chipReviewed": "Comunidades revisadas",
+    "chipPending": "Comunidades pendientes de revisar"
+  },
+  "emptyResults": {
+    "title": "No hay comunidades con estos filtros",
+    "body": "Prueba a quitar alguno, o a buscar por otra temática o zona.",
+    "reviewedTitle": "Ninguna de estas está revisada todavía",
+    "reviewedBody": "Con estos filtros hay {{pending}} comunidades pendientes de repasar, pero ninguna revisada aún. Si te animas con una, el resto de la gente se la encuentra ya confirmada.",
+    "reviewCta": "Ver las {{pending}} pendientes",
+    "clearFilters": "Quitar los filtros",
+    "allReviewedTitle": "Aquí no queda nada por repasar",
+    "allReviewedBody": "Las {{reviewed}} comunidades que encajan con estos filtros están ya revisadas por una persona. Gracias a quien lo hizo."
   }
 }

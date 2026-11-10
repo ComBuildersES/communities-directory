@@ -25,6 +25,7 @@ const FILTER_LABEL_KEYS = {
   targetAudience: "resultsBar.filterLabel.targetAudience",
   name: "resultsBar.filterLabel.name",
   parentId: "resultsBar.filterLabel.parentId",
+  humanValidated: "resultsBar.filterLabel.humanValidated",
 };
 
 /* eslint-disable react/prop-types */
@@ -76,9 +77,13 @@ export function ResultsBar({ view, toggleView }) {
               ? (audienceMap[value] || value)
               : key === "status" || key === "eventFormat" || key === "communityType" || key === "geographicScope"
                 ? t(`${key}.${value}`, { defaultValue: value })
-                : key === "parentId"
-                  ? (parentIdNameMap[value] || value)
-                  : value,
+                : key === "humanValidated"
+                  // El chip no lleva recuento: el del sidebar cuenta el dataset entero, y
+                  // aquí al lado ya está el número de resultados del filtro aplicado.
+                  ? t(value === "true" ? "review.chipReviewed" : "review.chipPending")
+                  : key === "parentId"
+                    ? (parentIdNameMap[value] || value)
+                    : value,
       category: key === "parentId" ? null : (FILTER_LABEL_KEYS[key] ? t(FILTER_LABEL_KEYS[key]) : key),
     }))
   );

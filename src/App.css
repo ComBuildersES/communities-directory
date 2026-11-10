@@ -94,6 +94,7 @@ body {
   justify-content: space-between;
   padding: 0.6rem 1.25rem;
   gap: 1rem;
+  flex-wrap: nowrap;
 }
 
 .heading-brand {
@@ -145,6 +146,9 @@ body {
   color: #1a1a2e;
   line-height: 1.2;
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .heading-subtitle {
@@ -168,6 +172,18 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  min-width: 0;
+}
+
+/* La marca es lo único que cede espacio: su texto se trunca antes de que la fila de
+   acciones se desborde sobre ella. */
+.heading-brand {
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+.heading-brand-button > div {
+  min-width: 0;
 }
 
 
@@ -226,6 +242,34 @@ body {
   background: #dce9ff;
   border-color: #aac3f0;
   color: #1d5fd1;
+}
+
+/* CTA de datos abiertos + IA: acento violeta para que no compita con el azul de
+   "Añadir comunidad" pero sí se vea como invitación, no como enlace secundario. */
+.heading-action-btn--data {
+  background: #f6f2ff;
+  border-color: #ded0fb;
+  color: #6b3fd4;
+}
+
+.heading-action-btn--data:hover {
+  background: #ece2ff;
+  border-color: #c7b0f5;
+  color: #5428c4;
+}
+
+.heading-action-btn--data.heading-action-btn--active {
+  background: #6b3fd4;
+  border-color: #6b3fd4;
+  color: #fff;
+}
+
+/* Entre 1024px y 1199px caben los botones pero no todas las etiquetas: el icono de
+   información se entiende solo, así que su texto es el primero en caer. */
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .heading-support > .heading-action-btn .heading-btn-label {
+    display: none;
+  }
 }
 
 .heading-github-stars-icon {
@@ -330,6 +374,81 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: #8899bb;
+}
+
+/* Las dos acciones de "¿Te parece útil?": la estrella del repo y el favorito del navegador.
+   Eran una frase dentro de un párrafo (el favorito) y nada en absoluto (la estrella), y así
+   no las hacía nadie. El atajo del favorito no se puede disparar desde JS —ningún navegador
+   deja añadir uno por código—, así que lo único que cabe es enseñarlo. */
+.heading-support-bookmark {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.45rem 0 0;
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #e3eaf5;
+  border-radius: 10px;
+  background: #fbfcfe;
+}
+
+.heading-support-bookmark i {
+  color: #5e85c4;
+  font-size: 1rem;
+}
+
+/* Gana al color general de los iconos del bloque: la estrella es dorada, como en GitHub. */
+.heading-support-bookmark .heading-support-bookmark-star {
+  color: #f0a500;
+}
+
+.heading-support-bookmark--action {
+  text-decoration: none;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.heading-support-bookmark--action:hover {
+  border-color: #3273dc;
+  background: #f4f8ff;
+}
+
+.heading-support-bookmark span {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.heading-support-bookmark strong {
+  font-size: 0.85rem;
+  color: #20304c;
+}
+
+.heading-support-bookmark small {
+  font-size: 0.75rem;
+  color: #7a8ca5;
+}
+
+/* "¿Te gustaría ayudar?" ya no se explica aquí: lo cuenta el botón flotante, que es donde
+   vive ahora todo el apoyo a la iniciativa. Esto solo lleva allí. */
+.heading-support-help-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 0.1rem;
+  padding: 0.45rem 0.8rem;
+  border: 1px solid #d9e2f0;
+  border-radius: 999px;
+  background: #fff;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #3273dc;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s;
+}
+
+.heading-support-help-btn:hover {
+  border-color: #3273dc;
+  background: #f4f8ff;
 }
 
 .heading-support-copy {
@@ -540,7 +659,7 @@ body {
   align-self: stretch;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1023px) {
   /* Hamburger visible, inner actions collapse into dropdown */
   .heading-hamburger {
     display: inline-flex;

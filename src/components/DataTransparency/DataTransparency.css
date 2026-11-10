@@ -1,0 +1,137 @@
+.data-transparency {
+  border-top: 1px solid #e8e8ef;
+  padding-top: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+/* La cabecera es el botón entero: el título, la barra y el recuento se pulsan juntos. Lo que
+   no se colapsa nunca es el número — esconderlo deja el bloque en un titular sin dato. */
+.data-transparency-summary {
+  display: block;
+  width: 100%;
+  border: 0;
+  background: none;
+  padding: 0;
+  text-align: left;
+  cursor: pointer;
+  font: inherit;
+}
+
+.data-transparency-summary-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.data-transparency-summary-head i {
+  color: #8a8aa3;
+  font-size: 0.7rem;
+}
+
+.data-transparency-title {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #5a5a72;
+}
+
+/* La barra es azul marino sobre gris, no verde ni roja: un 13% en verde se lee como aprobado
+   y en rojo como alarma, y lo que cuenta es un trabajo en curso. */
+.data-transparency-meter {
+  display: block;
+  height: 6px;
+  border-radius: 999px;
+  background: #e4e4ee;
+  overflow: hidden;
+  margin-bottom: 0.35rem;
+}
+
+.data-transparency-meter-fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: #1f3864;
+}
+
+.data-transparency-progress {
+  display: block;
+  font-size: 0.8rem;
+  color: #1f3864;
+  font-weight: 600;
+}
+
+.data-transparency-detail {
+  margin-top: 0.7rem;
+}
+
+.data-transparency-copy {
+  font-size: 0.82rem;
+  line-height: 1.45;
+  color: #46465c;
+  margin-bottom: 0.5rem;
+}
+
+.data-transparency-copy--cta {
+  color: #27304a;
+  font-weight: 600;
+}
+
+.data-transparency-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  width: 100%;
+  border: 1px solid #d3d3e0;
+  border-radius: 8px;
+  background: #fff;
+  color: #1f3864;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.45rem 0.6rem;
+  cursor: pointer;
+  margin-bottom: 0.4rem;
+}
+
+.data-transparency-btn--primary {
+  background: #1f3864;
+  border-color: #1f3864;
+  color: #fff;
+}
+
+.data-transparency-btn:hover:not(:disabled) {
+  background: #f3f5fb;
+}
+
+.data-transparency-btn--primary:hover:not(:disabled) {
+  background: #2a4a85;
+}
+
+.data-transparency-btn:disabled {
+  cursor: default;
+  color: #6b6b85;
+}
+
+.data-transparency-btn--primary:disabled {
+  background: #9aa4bb;
+  border-color: #9aa4bb;
+  color: #fff;
+}
+
+.data-transparency-link {
+  font-size: 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+/* El código va al final y en pequeño: es una declaración honesta, no la historia del dataset.
+   Mezclado arriba, hace que se lea el directorio entero como salida de un modelo. */
+.data-transparency-code {
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: #6b6b85;
+  margin-top: 0.6rem;
+}

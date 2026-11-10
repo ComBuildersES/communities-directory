@@ -356,6 +356,24 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
 
         {/* Cuerpo */}
         <div className="community-modal-body">
+          {/*
+            El aviso va aquí, lo primero del cuerpo y no colgando del título "Colaborar":
+            es un dato sobre la ficha entera, y donde estaba antes se leía como si fuese una
+            advertencia sobre colaborar. No se marca en la tarjeta ni en el mapa a propósito:
+            lo llevarían 570 de 657 y la cuadrícula pasaría a ser un campo de alertas.
+          */}
+          {!humanValidated && (
+            <div className="community-modal-pending-review">
+              <i className="fa-solid fa-robot" aria-hidden="true"></i>
+              <div>
+                <strong>{t("communityModal.pendingReviewTitle")}</strong>
+                <p>{t("communityModal.pendingReviewBody")}</p>
+                <a href={buildContributionPath({ mode: "edit", identifier: community.id })}>
+                  {t("communityModal.pendingReviewCta")} <i className="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          )}
           {parentCommunity && (
             <button
               type="button"
@@ -542,14 +560,6 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
             <div className="community-modal-section">
               <h3 className="community-modal-section-title">
                 <i className="fas fa-pen-to-square"></i> {t("communityModal.collaborate")}
-                {!humanValidated && (
-                  <span className="community-modal-cb-tooltip-anchor">
-                    <i className="fa-solid fa-robot community-modal-cb-info-icon"></i>
-                    <span className="community-modal-cb-tooltip">
-                      {t("communityModal.aiDataTooltip")}
-                    </span>
-                  </span>
-                )}
               </h3>
               <div className="community-modal-urls">
                 <a

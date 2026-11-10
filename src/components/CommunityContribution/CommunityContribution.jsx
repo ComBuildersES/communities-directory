@@ -32,6 +32,7 @@ import {
   normalizeCommunityLangs,
 } from "../../lib/communityLanguages.js";
 import { inferProvinceIdFromNominatim } from "../../lib/provinceNormalization";
+import { AiAssistPanel } from "./AiAssistPanel.jsx";
 import { scoreItem } from "../../lib/fuzzyMatch";
 import "./CommunityContribution.css";
 
@@ -1460,6 +1461,31 @@ export function CommunityContribution({
     return () => window.removeEventListener("beforeunload", handleBeforeUnload);
   }, [hasOpenedIssue, isDirty]);
 
+  /**
+   * Aplica una ficha propuesta por IA sobre el borrador. Solo toca las claves que vengan
+   * en la propuesta: lo que la persona ya haya escrito a mano no se pierde salvo que la
+   * IA traiga un valor para ese mismo campo.
+   *
+   * `humanValidated` se queda como está: una propuesta de IA no se valida sola, la valida
+   * quien la revisa y le da a enviar.
+   */
+  const handleAiAssistApply = (community) => {
+    setHasUserInteracted(true);
+    setDraft((current) => {
+      const next = { ...current };
+
+      Object.entries(community).forEach(([key, value]) => {
+        if (key === "urls") {
+          next.urls = { ...current.urls, ...value };
+          return;
+        }
+        next[key] = value;
+      });
+
+      return next;
+    });
+  };
+
   const handleFieldChange = (key, value) => {
     setHasUserInteracted(true);
     setDraft((current) => ({ ...current, [key]: value }));
@@ -1605,6 +1631,13 @@ export function CommunityContribution({
           </p>
         </div>
       </section>
+
+      <AiAssistPanel
+        draft={draft}
+        allTags={allTags}
+        allAudience={allAudience}
+        onApply={handleAiAssistApply}
+      />
 
       {hasExternalProposal && !hasRestoredDraft && (
         <article className="message is-info contribution-message">

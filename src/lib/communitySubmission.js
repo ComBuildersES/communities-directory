@@ -78,6 +78,7 @@ const DIRECTORY_FILTER_KEYS = [
   "targetAudience",
   "name",
   "parentId",
+  "humanValidated",
 ];
 const FILTER_KEY_SHORT = {
   status: "s",
@@ -89,6 +90,9 @@ const FILTER_KEY_SHORT = {
   targetAudience: "ta",
   name: "n",
   parentId: "p",
+  // `hv=true` = solo fichas que ha revisado una persona. Es también el enlace que usa un
+  // responsable provincial para listar lo que le queda por revisar: `?hv=false`.
+  humanValidated: "hv",
 };
 
 function getTodayDate() {

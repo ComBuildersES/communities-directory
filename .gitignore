@@ -44,3 +44,11 @@ public/data/communities.geojson
 
 # Bajas: la fuente es data/deleted-communities/
 public/data/deleted-communities.json
+
+# Artefactos para LLMs y agentes (ver scripts/generate-llm-artifacts.js)
+public/llms.txt
+public/llms-full.txt
+public/data/communities.csv
+public/data/schema.json
+public/data/coverage.json
+public/sitemap.xml

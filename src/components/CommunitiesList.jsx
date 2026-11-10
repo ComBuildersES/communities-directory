@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import { CommunityCard } from "./CommunityCard.jsx";
 import { AddCommunityCTA } from "./AddCommunityCTA/AddCommunityCTA.jsx";
+import { EmptyResults } from "./EmptyResults.jsx";
 
 import {
   useIsLoading,
@@ -39,6 +40,15 @@ export function CommunitiesList({ onOpenCommunity }) {
     );
   }
   if (isError) return <p>Error: {isError}</p>;
+
+  if (sortedCommunities.length === 0) {
+    return (
+      <div className="communitieslist-container">
+        <EmptyResults />
+        <AddCommunityCTA />
+      </div>
+    );
+  }
 
   return (
     <div className="communitieslist-container">

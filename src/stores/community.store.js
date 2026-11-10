@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { create } from "zustand";
 import { getAllCommunities } from "../data/API";
 import { bajaString, URL } from "../constants";
@@ -6,6 +7,7 @@ import { devtools } from "zustand/middleware";
 import { searchFaceted } from "../data/searchFaceted";
 import { parseDirectoryFilters } from "../lib/communitySubmission";
 import { normalizeCommunityLangs } from "../lib/communityLanguages.js";
+import { buildCoverage } from "../lib/dataCoverage.js";
 
 const TAGS_URL = `${import.meta.env.BASE_URL}data/tags.json`;
 const AUDIENCE_URL = `${import.meta.env.BASE_URL}data/audience.json`;
@@ -44,6 +46,7 @@ const initialState = {
   cbMemberIds: new Set(), // IDs de comunidades con miembro en Community Builders
   cbMembersMap: new Map(), // communityId -> [github handles]
   childrenByParentId: new Map(), // parentId -> count of child communities
+  coverage: null, // Cuánto del dataset ha revisado una persona (src/lib/dataCoverage.js)
   hasFreshData: false, // Datos confirmados desde red cuando hay conexión
   isRefreshingFreshData: false, // Revalidación online en curso
   freshnessError: null, // Aviso cuando solo hay datos de cache
@@ -144,6 +147,7 @@ const useCommunityStore = create(
             cbMemberIds,
             cbMembersMap,
             childrenByParentId,
+            coverage: buildCoverage(data),
             hasFreshData,
             isRefreshingFreshData: false,
             freshnessError: hasFreshData
@@ -180,6 +184,28 @@ const useCommunityStore = create(
         ]);
 
         set({ allTags: tags, allAudience: audience });
+      },
+      /**
+       * Sustituye el conjunto de filtros de golpe. Lo necesita el CTA de revisión: promete
+       * "quedan N comunidades activas por repasar", así que tiene que dejar al usuario en
+       * exactamente ese listado (`status=active` + `hv=false`), no en lo que hubiera antes
+       * combinado con uno más. Con `filterComunities` haría falta una tanda de toggles y el
+       * resultado dependería del estado previo.
+       */
+      setFilters: (nextFilters) => {
+        const { allCommunities, invertedIndex } = get();
+        const communitiesWithNewFilters = searchFaceted(
+          allCommunities,
+          invertedIndex,
+          nextFilters
+        );
+
+        set({
+          communitiesFiltered: communitiesWithNewFilters,
+          filters: nextFilters,
+          numberOFCommunities: communitiesWithNewFilters.length,
+          numberOFOnSiteCommunities: communitiesWithNewFilters.filter((e) => e.displayOnMap == true).length,
+        });
       },
       filterComunities: (key, value) => {
         const { allCommunities, filters, invertedIndex } = get();
@@ -287,6 +313,32 @@ export const useCBMemberIds = () => useCommunityStore((state) => state.cbMemberI
 export const useChildrenByParentId = () => useCommunityStore((state) => state.childrenByParentId);
 
 export const useCBMembersMap = () => useCommunityStore((state) => state.cbMembersMap);
+
+export const useDataCoverage = () => useCommunityStore((state) => state.coverage);
+
+/**
+ * Cuántas comunidades revisadas y pendientes hay **dentro de los filtros activos**, ignorando
+ * el propio filtro de revisión.
+ *
+ * Medirlo sobre el dataset entero da números que no cuadran con lo que la persona ve: con el
+ * default `status=active`, un "(568) pendientes" no se corresponde con los 369 resultados que
+ * salen al pulsarlo. Y un número que no cuadra con la pantalla es peor que no poner número.
+ */
+export const useReviewFacetCounts = () => {
+  const allCommunities = useAllCommunities();
+  const invertedIndex = useInvertedIndex();
+  const filters = useFilters();
+
+  return useMemo(() => {
+    const otherFilters = Object.fromEntries(
+      Object.entries(filters).filter(([key]) => key !== "humanValidated")
+    );
+    const baseline = searchFaceted(allCommunities, invertedIndex, otherFilters);
+    const reviewed = baseline.filter((community) => community.humanValidated).length;
+
+    return { reviewed, pending: baseline.length - reviewed, total: baseline.length };
+  }, [allCommunities, invertedIndex, filters]);
+};
 
 export const useHasFreshData = () => useCommunityStore((state) => state.hasFreshData);
 
