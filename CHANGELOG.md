@@ -7,6 +7,11 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-11-10 `570f367` garantizar que el changelog refleja lo que se publica
+- 2026-11-10 `66d0d20` botón flotante de soporte con aviso al entrar
+- 2026-11-10 `c92fd31` alta de comunidad asistida por IA
+- 2026-11-10 `fefa8c0` añadir el modal "Datos abiertos + IA" a la cabecera
+- 2026-11-10 `842b6b0` publicar llms.txt y el resto de artefactos para agentes
 - 2026-11-06 `07e7c76` ficha legible de la propuesta en la PR automática
 - 2026-11-06 `dd0431a` añadir URLs de foro/blog/RSS/eventos.wiki/OTE y ámbito geográfico
 - 2026-11-05 `1d4b6c3` archivar canales históricos de una comunidad (#353)
@@ -33,34 +38,15 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
-- 2026-11-10 `ff0af39` actualizar la guía al layout de un fichero por comunidad
+- 2026-11-10 `b001191` documentar la capa de datos abiertos para IA y sanear AGENTS.md
+- 2026-11-10 `eaf69c6` actualizar la guía al layout de un fichero por comunidad
 - 2026-11-10 `d1270d2` documentar dónde viven los datos abiertos y apuntar el About ahí
-- 2026-11-10 `3fe28b4` update changelog [skip ci]
-- 2026-11-09 `c5321b1` update changelog [skip ci]
-- 2026-11-09 `ad6175a` update changelog [skip ci]
-- 2026-11-09 `f5e46a6` update .all-contributorsrc [skip ci]
-- 2026-11-09 `69f4878` update README.md [skip ci]
-- 2026-11-09 `f37702e` update changelog [skip ci]
-- 2026-11-09 `6a1f511` update changelog [skip ci]
-- 2026-11-06 `ec91df2` update changelog [skip ci]
-- 2026-11-06 `cd97585` update changelog [skip ci]
-- 2026-11-06 `dc20152` update changelog [skip ci]
-- 2026-11-06 `c2a5170` update changelog [skip ci]
 - 2026-11-06 `b83bbe0` avisar de que no existe clave urls.meetup
-- 2026-11-06 `51d0796` update changelog [skip ci]
-- 2026-11-06 `c43698f` update changelog [skip ci]
 - 2026-11-06 `1091c5b` precisar que la marca de saltar CI se busca en todo el mensaje
 - 2026-11-06 `e1a4759` corregir claves de urls y documentar la trampa de [skip ci] al desplegar
-- 2026-11-06 `d567b40` update changelog [skip ci]
-- 2026-11-05 `d63aab6` update changelog [skip ci]
-- 2026-11-05 `bfaedfa` update changelog [skip ci]
-- 2026-11-05 `d17ed7d` update changelog [skip ci]
 
 ### Maintenance
 
-- 2026-11-06 `9e200dd` asignar IDs de comunidad (pintega-conf#658) [skip ci]
-- 2026-11-06 `657905f` asignar IDs de comunidad (gamedev-murcia#657) [skip ci]
-- 2026-11-06 `171152c` asignar IDs de comunidad (ai-tinkerers-valencia#635, aws-user-group-barcelona#636, aws-user-group-galicia#637, aws-user-group-madrid#638, barcelona-ai-music-meetup-bamm#639, barcelona-tech-talks#640, cascarilla-tech#641, claude-community-barcelona#642, club-sintetico#643, everything-everywhere-all-with-kdb-q#644, femcoders-club#645, fuengirola-technology-social-meetup-group#646, geekscat#647, innovators-hub-sevilla#648, intersystems-developers-spain#649, ladies-that-ux-malaga#650, lleidahack#651, producttank-madrid#652, pyladies-valencia#653, quantum-madrid#654, the-vibe-coding-club-madrid#655, women-in-tech-malaga#656) [skip ci]
 - 2026-11-05 `0b31f64` borrar la rama de las propuestas de comunidad descartadas
 
 ### Other
@@ -79,12 +65,6 @@ Se organiza por mes y por tipo de cambio.
 - 2026-10-27 `5e40d61` Update community-builders-members.json
 - 2026-10-27 `4fd44e9` [Añadida MurciaTech](https://directory.communitybuilders.dev/?community=631) ([PR #429](https://github.com/ComBuildersES/communities-directory/pull/429))
 
-### Docs
-
-- 2026-10-29 `6c3c333` update changelog [skip ci]
-- 2026-10-29 `0deaf2f` update changelog [skip ci]
-- 2026-10-27 `629c087` update changelog [skip ci]
-
 ## 2026-09
 
 ### Data
@@ -95,17 +75,6 @@ Se organiza por mes y por tipo de cambio.
 - 2026-09-20 `d537cc0` [Actualizada LechazoConf](https://directory.communitybuilders.dev/?community=315) ([PR #422](https://github.com/ComBuildersES/communities-directory/pull/422))
 - 2026-09-20 `0cf5910` Update community-builders-members.json
 - 2026-09-20 `7ad99f4` [Añadida GDG Jerez de la Frontera](https://directory.communitybuilders.dev/?community=630) ([PR #420](https://github.com/ComBuildersES/communities-directory/pull/420))
-
-### Docs
-
-- 2026-09-24 `506216d` update changelog [skip ci]
-- 2026-09-24 `a70b177` update changelog [skip ci]
-- 2026-09-24 `74f2c27` update changelog [skip ci]
-- 2026-09-21 `aaae617` update .all-contributorsrc [skip ci]
-- 2026-09-21 `27a1b35` update README.md [skip ci]
-- 2026-09-21 `db089d2` update changelog [skip ci]
-- 2026-09-20 `a0277b8` update changelog [skip ci]
-- 2026-09-20 `e006f02` update changelog [skip ci]
 
 ### Other
 
@@ -129,20 +98,6 @@ Se organiza por mes y por tipo de cambio.
 - 2026-08-07 `1f5764e` [Añadida Claude Madrid](https://directory.communitybuilders.dev/?community=628) ([PR #415](https://github.com/ComBuildersES/communities-directory/pull/415))
 - 2026-08-06 `dda7efe` [Añadida Claude Community Ambassadors](https://directory.communitybuilders.dev/?community=627) ([PR #413](https://github.com/ComBuildersES/communities-directory/pull/413))
 
-### Docs
-
-- 2026-08-21 `4ecd73d` update changelog [skip ci]
-- 2026-08-21 `995f15f` update .all-contributorsrc [skip ci]
-- 2026-08-21 `b09fb53` update README.md [skip ci]
-- 2026-08-21 `b5cdef1` update changelog [skip ci]
-- 2026-08-13 `cd527eb` update changelog [skip ci]
-- 2026-08-07 `70311ee` update changelog [skip ci]
-- 2026-08-07 `b1fc089` update changelog [skip ci]
-- 2026-08-07 `1bb6cf7` update changelog [skip ci]
-- 2026-08-07 `c71e0e5` update changelog [skip ci]
-- 2026-08-06 `dd36cf9` update changelog [skip ci]
-- 2026-08-06 `1f248c3` update changelog [skip ci]
-
 ### Maintenance
 
 - 2026-08-07 `e01d35b` harden workflows against stale reruns and duplicate builds
@@ -162,18 +117,6 @@ Se organiza por mes y por tipo de cambio.
 - 2026-07-21 `3dcfbba` Update community-builders-members.json adding jcea
 - 2026-07-14 `ca02269` [Actualizada DevOpsDays Vitória](https://directory.communitybuilders.dev/?community=139) ([PR #399](https://github.com/ComBuildersES/communities-directory/pull/399))
 
-### Docs
-
-- 2026-07-31 `70ce712` update changelog [skip ci]
-- 2026-07-31 `96a9bfd` update changelog [skip ci]
-- 2026-07-31 `f88a5a5` update changelog [skip ci]
-- 2026-07-31 `3eb93d0` update changelog [skip ci]
-- 2026-07-31 `be628a6` update changelog [skip ci]
-- 2026-07-31 `b1220bd` update changelog [skip ci]
-- 2026-07-31 `3cd900e` update changelog [skip ci]
-- 2026-07-21 `528fc05` update changelog [skip ci]
-- 2026-07-15 `7ee536b` update changelog [skip ci]
-
 ### Other
 
 - 2026-07-31 `f7a1170` Update communities.geojson
@@ -189,26 +132,11 @@ Se organiza por mes y por tipo de cambio.
 - 2026-06-22 `8ef6d6b` [Actualizada Fr!k](https://directory.communitybuilders.dev/?community=600) ([PR #385](https://github.com/ComBuildersES/communities-directory/pull/385))
 - 2026-06-22 `c21faed` Update community-builders-members.json: add ADCP-dev to frik
 
-### Docs
-
-- 2026-06-25 `f1d3d02` update changelog [skip ci]
-- 2026-06-25 `dd435a1` update changelog [skip ci]
-- 2026-06-25 `4b07f4a` update .all-contributorsrc [skip ci]
-- 2026-06-25 `300925c` update README.md [skip ci]
-- 2026-06-25 `6770b6b` update changelog [skip ci]
-- 2026-06-23 `8d01f03` update changelog [skip ci]
-- 2026-06-23 `35d4676` update changelog [skip ci]
-- 2026-06-22 `ee87d6f` update changelog [skip ci]
-
 ## 2026-05
 
 ### Data
 
 - 2026-05-22 `c20e2d9` [Añadida I Jornada sobre Software Libre e Inteligencia Artificial Abierta](https://directory.communitybuilders.dev/?community=619) ([PR #383](https://github.com/ComBuildersES/communities-directory/pull/383))
-
-### Docs
-
-- 2026-05-26 `c82946f` update changelog [skip ci]
 
 ## 2026-04
 
@@ -237,38 +165,6 @@ Se organiza por mes y por tipo de cambio.
 - 2026-04-06 `1f3d6c4` [Actualizada La Jaquería](https://directory.communitybuilders.dev/?community=309) ([PR #358](https://github.com/ComBuildersES/communities-directory/pull/358))
 - 2026-04-02 `96f65e8` [Actualizada AlmeriaTech](https://directory.communitybuilders.dev/?community=25) ([PR #355](https://github.com/ComBuildersES/communities-directory/pull/355))
 - 2026-04-01 `29f375d` [Añadida geomobBCN](https://directory.communitybuilders.dev/?community=617) ([PR #346](https://github.com/ComBuildersES/communities-directory/pull/346))
-
-### Docs
-
-- 2026-04-14 `519448f` update changelog [skip ci]
-- 2026-04-07 `30abb3e` update changelog [skip ci]
-- 2026-04-07 `1bf80c3` update changelog [skip ci]
-- 2026-04-07 `650d4a5` update changelog [skip ci]
-- 2026-04-07 `5621f73` update changelog [skip ci]
-- 2026-04-07 `b920571` update .all-contributorsrc [skip ci]
-- 2026-04-07 `bad07a8` update README.md [skip ci]
-- 2026-04-07 `d8390fc` update changelog [skip ci]
-- 2026-04-07 `80c8dac` update .all-contributorsrc [skip ci]
-- 2026-04-07 `1e30f25` update README.md [skip ci]
-- 2026-04-07 `327c8c2` update changelog [skip ci]
-- 2026-04-07 `b9d028e` update .all-contributorsrc [skip ci]
-- 2026-04-07 `56c3b20` update changelog [skip ci]
-- 2026-04-07 `605b531` update README.md [skip ci]
-- 2026-04-06 `e0d56e5` update changelog [skip ci]
-- 2026-04-06 `900329f` update changelog [skip ci]
-- 2026-04-06 `68daed1` update changelog [skip ci]
-- 2026-04-06 `30c3803` update changelog [skip ci]
-- 2026-04-06 `bbe440b` update changelog [skip ci]
-- 2026-04-06 `6677806` update changelog [skip ci]
-- 2026-04-03 `86070d7` update changelog [skip ci]
-- 2026-04-03 `c4ed28a` update .all-contributorsrc [skip ci]
-- 2026-04-03 `850a515` update README.md [skip ci]
-- 2026-04-03 `4c84f4e` update changelog [skip ci]
-- 2026-04-01 `09ee6d9` update changelog [skip ci]
-- 2026-04-01 `26e8a37` update .all-contributorsrc [skip ci]
-- 2026-04-01 `f8c2468` update README.md [skip ci]
-- 2026-04-01 `2cc45e9` update changelog [skip ci]
-- 2026-04-01 `91c25ba` update changelog [skip ci]
 
 ### Other
 
@@ -452,114 +348,6 @@ Se organiza por mes y por tipo de cambio.
 - 2026-03-30 `549ffba` initial load optimizations (phases 1-3)
 - 2026-03-27 `f4f251a` simplify results bar layout and improve chip display responsiveness
 
-### Docs
-
-- 2026-03-31 `306772c` update changelog [skip ci]
-- 2026-03-31 `9bf57af` update changelog [skip ci]
-- 2026-03-31 `dff738a` update changelog [skip ci]
-- 2026-03-31 `d9b1b17` update .all-contributorsrc [skip ci]
-- 2026-03-31 `edf0854` update changelog [skip ci]
-- 2026-03-31 `9c4a4cd` update README.md [skip ci]
-- 2026-03-31 `22c626c` update .all-contributorsrc [skip ci]
-- 2026-03-31 `67f69b6` update README.md [skip ci]
-- 2026-03-31 `13c8bdd` update changelog [skip ci]
-- 2026-03-30 `4bf3a72` update changelog [skip ci]
-- 2026-03-30 `6125679` update changelog [skip ci]
-- 2026-03-30 `8329849` update changelog [skip ci]
-- 2026-03-30 `b11ec81` update changelog [skip ci]
-- 2026-03-30 `a6dcd43` update changelog [skip ci]
-- 2026-03-30 `8e3d107` update .all-contributorsrc [skip ci]
-- 2026-03-30 `e84735b` update README.md [skip ci]
-- 2026-03-30 `a421a9f` update changelog [skip ci]
-- 2026-03-30 `70231c8` update changelog [skip ci]
-- 2026-03-30 `1829759` update .all-contributorsrc [skip ci]
-- 2026-03-30 `fb0bfaa` update README.md [skip ci]
-- 2026-03-30 `42fd952` update changelog [skip ci]
-- 2026-03-30 `eb14a83` update changelog [skip ci]
-- 2026-03-30 `6e573bd` update changelog [skip ci]
-- 2026-03-30 `2116e74` update .all-contributorsrc [skip ci]
-- 2026-03-30 `58f77d0` update README.md [skip ci]
-- 2026-03-30 `cf6d747` update changelog [skip ci]
-- 2026-03-30 `221cda3` update changelog [skip ci]
-- 2026-03-30 `eac8b20` update changelog [skip ci]
-- 2026-03-30 `7e24890` update changelog [skip ci]
-- 2026-03-30 `da763a6` update changelog [skip ci]
-- 2026-03-30 `cbe83ae` update changelog [skip ci]
-- 2026-03-30 `5930643` update changelog [skip ci]
-- 2026-03-30 `c18df01` update changelog [skip ci]
-- 2026-03-29 `4293ca4` update changelog [skip ci]
-- 2026-03-29 `a871567` update changelog [skip ci]
-- 2026-03-29 `fdd41b7` update changelog [skip ci]
-- 2026-03-29 `04a360d` update changelog [skip ci]
-- 2026-03-29 `c3a4c89` update changelog [skip ci]
-- 2026-03-29 `58b8b2c` update .all-contributorsrc [skip ci]
-- 2026-03-29 `2c75927` update README.md [skip ci]
-- 2026-03-29 `62e80e4` update changelog [skip ci]
-- 2026-03-29 `242ad83` update changelog [skip ci]
-- 2026-03-27 `768ad9d` update changelog [skip ci]
-- 2026-03-27 `3e56798` update changelog [skip ci]
-- 2026-03-27 `2dbb483` update changelog [skip ci]
-- 2026-03-27 `a3fee7b` update changelog [skip ci]
-- 2026-03-27 `b22b82c` update changelog [skip ci]
-- 2026-03-27 `c33101a` update changelog [skip ci]
-- 2026-03-27 `395dbbc` update changelog [skip ci]
-- 2026-03-27 `aa0d44b` update changelog [skip ci]
-- 2026-03-27 `7dc56e6` update changelog [skip ci]
-- 2026-03-27 `f4cb6f6` update changelog [skip ci]
-- 2026-03-27 `501a3be` update changelog [skip ci]
-- 2026-03-26 `4e0eec6` update changelog [skip ci]
-- 2026-03-26 `5e30bb0` update changelog [skip ci]
-- 2026-03-26 `85d1e05` update changelog [skip ci]
-- 2026-03-26 `cee1e66` update changelog [skip ci]
-- 2026-03-26 `1a3ac52` update .all-contributorsrc [skip ci]
-- 2026-03-26 `0571e53` update README.md [skip ci]
-- 2026-03-26 `1820169` update changelog [skip ci]
-- 2026-03-26 `bf29141` update changelog [skip ci]
-- 2026-03-26 `7903302` update .all-contributorsrc [skip ci]
-- 2026-03-26 `dbece01` update README.md [skip ci]
-- 2026-03-26 `eca1e95` update changelog [skip ci]
-- 2026-03-26 `fa7f5da` update changelog [skip ci]
-- 2026-03-26 `67787ed` update .all-contributorsrc [skip ci]
-- 2026-03-26 `55c6338` update README.md [skip ci]
-- 2026-03-26 `25008fe` update changelog [skip ci]
-- 2026-03-26 `8270327` update changelog [skip ci]
-- 2026-03-26 `5d74871` update changelog [skip ci]
-- 2026-03-26 `2872a05` update changelog [skip ci]
-- 2026-03-26 `d615de9` update changelog [skip ci]
-- 2026-03-26 `c26217a` update changelog [skip ci]
-- 2026-03-26 `a4f0643` update .all-contributorsrc [skip ci]
-- 2026-03-26 `183bf2e` update README.md [skip ci]
-- 2026-03-26 `5695d41` update changelog [skip ci]
-- 2026-03-25 `2343f58` update .all-contributorsrc [skip ci]
-- 2026-03-25 `97f6dfc` update README.md [skip ci]
-- 2026-03-25 `8399529` update changelog [skip ci]
-- 2026-03-25 `97976af` update changelog [skip ci]
-- 2026-03-25 `0adb77b` update changelog [skip ci]
-- 2026-03-25 `1558781` update changelog [skip ci]
-- 2026-03-25 `23e12dc` update changelog [skip ci]
-- 2026-03-25 `478531b` update changelog [skip ci]
-- 2026-03-25 `ac9c4ec` update .all-contributorsrc [skip ci]
-- 2026-03-25 `1359c3c` update README.md [skip ci]
-- 2026-03-25 `e7851fc` update changelog [skip ci]
-- 2026-03-25 `e523576` update changelog [skip ci]
-- 2026-03-25 `74b4366` update changelog [skip ci]
-- 2026-03-25 `d0a82a6` update changelog [skip ci]
-- 2026-03-25 `7416979` update changelog [skip ci]
-- 2026-03-25 `cad5725` update changelog [skip ci]
-- 2026-03-25 `c6896c9` update changelog [skip ci]
-- 2026-03-25 `aa1977b` update changelog [skip ci]
-- 2026-03-25 `ddfc66e` update changelog [skip ci]
-- 2026-03-25 `47f9f99` update changelog [skip ci]
-- 2026-03-25 `a87d162` update changelog [skip ci]
-- 2026-03-25 `56e5c92` update changelog [skip ci]
-- 2026-03-25 `26f4fe9` update changelog [skip ci]
-- 2026-03-25 `0b2144a` update changelog [skip ci]
-- 2026-03-25 `a80b087` update changelog [skip ci]
-- 2026-03-25 `bd7d509` update changelog [skip ci]
-- 2026-03-25 `86d7da1` update changelog [skip ci]
-- 2026-03-25 `c3d4e2e` update changelog [skip ci]
-- 2026-03-25 `b900edc` update changelog [skip ci]
-
 ### Maintenance
 
 - 2026-03-25 `4789783` update GitHub Actions to use latest versions of checkout and setup-node
@@ -621,13 +409,6 @@ Se organiza por mes y por tipo de cambio.
 
 ## 2025-09
 
-### Docs
-
-- 2025-09-03 `0b5b77f` update .all-contributorsrc [skip ci]
-- 2025-09-03 `3ba477f` update README.md [skip ci]
-- 2025-09-03 `f56f624` update .all-contributorsrc [skip ci]
-- 2025-09-03 `d3895a4` update README.md [skip ci]
-
 ### Other
 
 - 2025-09-12 `23e369e` Añadir nueva comunidad desde issue (#140)
@@ -640,11 +421,6 @@ Se organiza por mes y por tipo de cambio.
 ### Features
 
 - 2025-08-02 `764e6fa` add community cta
-
-### Docs
-
-- 2025-08-24 `67faef2` update .all-contributorsrc [skip ci]
-- 2025-08-24 `b8a4f11` update README.md [skip ci]
 
 ### Other
 
@@ -662,7 +438,6 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
-- 2025-06-24 `a6dc7a5` Update README.md
 - 2025-06-20 `265bf1c` Update Global AI Community
 - 2025-06-18 `0ae2526` Fixing DevFest Sevilla & Drupal Day
 - 2025-06-18 `2078972` Adding contactinfo to devnulltalks
@@ -696,14 +471,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
-- 2025-05-14 `3c13e86` update .all-contributorsrc [skip ci]
-- 2025-05-14 `ff98013` update README.md [skip ci]
-- 2025-05-14 `a82ca32` update .all-contributorsrc [skip ci]
-- 2025-05-14 `2297afc` update README.md [skip ci]
-- 2025-05-14 `3db473b` update .all-contributorsrc [skip ci]
-- 2025-05-14 `b5df8f1` update README.md [skip ci]
 - 2025-05-14 `2235870` create .all-contributorsrc [skip ci]
-- 2025-05-14 `cac73e2` update README.md [skip ci]
 
 ### Other
 
@@ -786,17 +554,13 @@ Se organiza por mes y por tipo de cambio.
 - 2025-05-16 `cc37797` Adding script to process and geolocate communities when merge
 - 2025-05-16 `7b37be2` GraphicsLayer to FeatureLayer and add Renderers (failing right now)
 - 2025-05-16 `58538a2` Changing contributing.mdm
-- 2025-05-15 `15ddefe` Update README.md
 - 2025-05-15 `0231dfb` Working on new CONTRIBUTING.md
 - 2025-05-14 `a1ebf0b` Update vite.config.js
 - 2025-05-14 `5543833` Update Switch.jsx
 - 2025-05-14 `b9bf062` Add CommunitiesPopup component and styles; implement community markers on map
 - 2025-05-14 `7a4d537` Update deploy.yml
 - 2025-05-14 `95ce771` Deploy to gh-pages on merge acttion
-- 2025-05-14 `41e35c5` Update README.md
-- 2025-05-14 `d6d4932` Update README.md
 - 2025-05-14 `47f248d` Create .all-contributorsrc
-- 2025-05-14 `c40b10f` Update README.md
 - 2025-05-14 `adc30da` Updating footer
 - 2025-05-14 `a174207` Changing data source to new JSON file (#20)
 - 2025-05-14 `dda4f53` Fixing URLs pointing to the wrong images
@@ -805,17 +569,12 @@ Se organiza por mes y por tipo de cambio.
 - 2025-05-13 `3d2f882` Update create-community-entry.yml (#4)
 - 2025-05-13 `8ef354b` Changing require -> import
 - 2025-05-13 `d7a8106` Adding new DB curation workflow
-- 2025-05-09 `97c096b` Update README.md
-- 2025-05-09 `954f4fb` Update README.md
 
 ## 2025-03
 
 ### Other
 
-- 2025-03-27 `27cdeee` Update README.md
-- 2025-03-27 `00ed798` Update README.md
 - 2025-03-27 `d591332` Create CONTRIBUTING.md
-- 2025-03-27 `78f9e18` Update README.md
 
 ## 2025-02
 

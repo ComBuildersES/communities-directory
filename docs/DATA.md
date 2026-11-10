@@ -15,6 +15,8 @@ Los ficheros publicados se sirven desde la propia app, listos para consumir:
 | [`deleted-communities.json`](https://directory.communitybuilders.dev/data/deleted-communities.json) | Bajas del directorio, con su motivo |
 | [`tags.json`](https://directory.communitybuilders.dev/data/tags.json) | Taxonomía de etiquetas temáticas (`id`, `label`, `description`, `category`, `synonyms`) |
 | [`audience.json`](https://directory.communitybuilders.dev/data/audience.json) | Perfiles de público objetivo |
+| [`communities.csv`](https://directory.communitybuilders.dev/data/communities.csv) | Las comunidades como tabla plana, una fila por comunidad (arrays separados por `\|`) |
+| [`schema.json`](https://directory.communitybuilders.dev/data/schema.json) | Diccionario de datos: JSON Schema con qué significa cada campo y cada valor de enum |
 
 Las etiquetas y los perfiles también están traducidos al inglés en
 [`tags.en.json`](https://directory.communitybuilders.dev/data/tags.en.json) y
@@ -104,6 +106,31 @@ El directorio **no** almacena eventos. Cuando una comunidad publica un feed en f
 [Open Tech Events](https://opentechevents.org/), su URL está en `urls.ote` y la ficha lo lee en
 caliente al abrirse. Para consumir eventos, ese feed es la fuente; `urls.eventosWiki` apunta a
 la página de la comunidad en [eventos.wiki](https://eventos.wiki/).
+
+## Si quieres usar los datos con IA o con un agente
+
+Los datos están pensados para que un modelo o un agente los lea sin tener que rastrear la web.
+La app es una SPA que renderiza en cliente: rastrear el HTML da mucha peor información que
+leer estos ficheros, que se regeneran en cada despliegue.
+
+| Fichero | Para qué |
+| --- | --- |
+| [`llms.txt`](https://directory.communitybuilders.dev/llms.txt) | Punto de entrada siguiendo la convención de [llmstxt.org](https://llmstxt.org/): qué ficheros hay, qué contiene cada uno y las reglas para interpretar un registro sin equivocarse |
+| [`llms-full.txt`](https://directory.communitybuilders.dev/llms-full.txt) | El directorio entero en Markdown, una sección por comunidad, con tags y público ya resueltos a etiquetas legibles |
+| [`schema.json`](https://directory.communitybuilders.dev/data/schema.json) | El significado de cada campo, en JSON Schema |
+| [`robots.txt`](https://directory.communitybuilders.dev/robots.txt) | Política de rastreo: todos los crawlers, los de IA incluidos, son bienvenidos |
+| [`sitemap.xml`](https://directory.communitybuilders.dev/sitemap.xml) | Un deep link por comunidad activa, en los dos idiomas |
+
+El botón **Datos abiertos + IA** de la cabecera del directorio lleva a lo mismo con prompts
+listos para copiar, ejemplos de código e instrucciones para pegar en el contexto de un agente.
+
+No hay servidor MCP y no hace falta: los datos son ficheros estáticos públicos servidos con
+CORS abierto, así que cualquier agente con acceso a la red los lee directamente.
+
+Los cinco artefactos los genera `npm run generate-llm-artifacts`
+([`scripts/generate-llm-artifacts.js`](https://github.com/ComBuildersES/communities-directory/blob/master/scripts/generate-llm-artifacts.js))
+a partir de la fuente de verdad, dentro de `npm run build`. Como el resto de artefactos, están
+gitignorados: no se editan a mano.
 
 ## Licencia y atribución
 

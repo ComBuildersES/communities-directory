@@ -50,6 +50,8 @@ data/deleted-communities/  # FUENTE DE VERDAD: un fichero JSON por baja (<slug>.
 
 public/data/
   communities.json          # GENERADO — gitignorado, no editar
+  communities.csv           # GENERADO — gitignorado, no editar
+  schema.json               # GENERADO — gitignorado, no editar
   communities.geojson       # GENERADO — gitignorado, no editar
   deleted-communities.json  # GENERADO — gitignorado, no editar
   communities.meta.json     # nextCommunityId (lo mantiene solo el job de asignación)
@@ -61,12 +63,12 @@ scripts/               # Utilidades de mantenimiento de datos
   find-duplicates.js
   ensure-id-autoincrement.js
   compile-communities.js           # Compila el bundle + geojson desde data/communities/
+  generate-llm-artifacts.js        # Genera llms.txt, llms-full.txt, CSV, schema.json y sitemap
   explode-communities.js           # Migración one-shot: bundle → fichero por comunidad
   assign-community-ids.js          # Asigna ids pendientes (solo en master)
   lib/communities-store.js         # API de lectura/escritura de la fuente de verdad
   lib/communities-git.js           # Reconstruye el listado en un ref de git (baselines)
   process-community-issue.js
-  migrate-add-new-fields.js        # Migración: añade urls/tags/targetAudience
   scrape-community-data.js         # Scraping con Playwright → suggestions.json
   apply-suggestions.js             # Aplica suggestions.json a communities.json
   apply-url-mapping.js             # Aplica url-mapping.json a communities.json
@@ -159,11 +161,11 @@ npm run check-urls                    # Valida URLs de comunidades
 npm run find-duplicates               # Detecta duplicados por ID
 npm run ensure-id-autoincrement       # Verifica secuencia de IDs
 npm run compile-communities           # Compila communities.json + .geojson desde la fuente
+npm run generate-llm-artifacts        # Genera llms.txt, llms-full.txt, CSV, schema.json y sitemap
 npm run explode-communities           # Migración one-shot al layout por fichero
 npm run assign-community-ids          # Asigna ids pendientes (uso en master / CI)
 
 # Enriquecimiento de datos (nuevos)
-npm run migrate-add-new-fields        # Añade urls/tags/targetAudience a communities.json (idempotente)
 npm run scrape-community-data         # Scraping con Playwright (ver opciones en el script)
 npm run apply-suggestions             # Aplica suggestions.json revisado a communities.json
 npm run apply-url-mapping             # Aplica url-mapping.json a communities.json
@@ -419,6 +421,79 @@ ficha y muestra los próximos eventos (o el último celebrado).
   ("Codemotion" vs "Codemotion Madrid") se listan para revisión humana y requieren
   `--include-fuzzy`. Nunca reintroduce un canal archivado.
 
+### Superficie para LLMs y agentes
+
+`scripts/generate-llm-artifacts.js` genera en cada build cinco artefactos gitignorados:
+`public/llms.txt`, `public/llms-full.txt`, `public/data/communities.csv`,
+`public/data/schema.json` y `public/sitemap.xml`. `public/robots.txt` sí está versionado
+(es estático) y permite el rastreo a todos los crawlers, los de IA incluidos, pidiendo
+atribución y remitiendo a los ficheros canónicos en vez de a la SPA.
+
+Están en inglés a propósito: es la convención de `llms.txt` y lo que mejor interpretan los
+modelos. Los datos de cada comunidad se emiten en su idioma.
+
+**Al añadir un campo al modelo de datos, documentarlo en `buildSchema()`.** Un campo que no
+está en `schema.json` es un campo que un agente va a interpretar adivinando. Si el campo
+cambia cómo se lee un registro (como `matchesAllTags`, que significa "encaja con todo" pese a
+traer un array vacío), explicarlo además en la sección "How to read a community record" de
+`buildLlmsIndex()`.
+
+El JSON-LD (`Dataset` + `WebSite`) vive **estático en `index.html`**, no inyectado por React:
+la app renderiza en cliente y un crawler que no ejecuta JS no vería un bloque inyectado.
+
+El equivalente para personas es `src/components/OpenDataModal/`, abierto desde el botón
+"Datos abiertos + IA" de la cabecera. Si cambian las reglas de interpretación del dataset,
+cambian en tres sitios: `buildLlmsIndex()`, el bloque de instrucciones de `AgentsTab` y
+`docs/DATA.md`.
+
+### Alta asistida por IA (`src/lib/aiAssist.js`)
+
+El formulario ofrece abrir Claude o ChatGPT con un prompt preparado (`claude.ai/new?q=` /
+`chatgpt.com/?q=`) y aceptar de vuelta el JSON que devuelvan. No hay clave de API ni llamada
+desde el servidor: el directorio es estático y la IA la pone quien la usa.
+
+- El prompt **enlaza** `schema.json`, `tags.json` y `audience.json` en vez de incrustarlos:
+  166 tags no caben en una query string, y así el modelo trabaja contra la versión vigente.
+- `parseAssistedCommunityJson` no se fía de lo que llega del portapapeles: extrae el objeto
+  aunque venga en una valla ```json o con texto alrededor, filtra a las claves conocidas,
+  descarta valores fuera de los enums y tags o claves de `urls` que no existan, y devuelve
+  avisos en vez de romper. Nunca acepta `id` ni `humanValidated` de la IA.
+- Acepta **varias URLs**: la web dice de qué va la comunidad, la plataforma de eventos si
+  sigue viva, el repositorio qué publican. El prompt las lista todas y pide cruzarlas.
+- Al aplicar, solo se pisan las claves que trae la propuesta: lo que la persona ya escribió a
+  mano no se pierde.
+- Si añades un campo al modelo, añádelo a `STRING_FIELDS`, `ARRAY_FIELDS` o `ENUM_VALUES` o
+  la IA no podrá rellenarlo.
+
+### Botón flotante de soporte (`src/components/SupportFab/`)
+
+`TELEGRAM_GROUP_URL` en `SupportFab.jsx` es el **único** sitio donde va la URL del grupo.
+Con valor, Telegram es la primera opción del panel; vacío, el botón cae a GitHub, lista de
+correo y Linktree sin enlazar a ninguna parte. La pestaña "Organizo una comunidad" del modal
+de datos repite la misma URL: si cambia el grupo, son **dos** constantes.
+
+`useSupportNudge.js` llama la atención sobre el botón a los 7 s: rebote corto, tooltip y un
+clic sintetizado con WebAudio (sin fichero). Una sola vez por persona (`localStorage`), nunca
+con un modal abierto, y sin rebote si el sistema pide movimiento reducido. El sonido se
+abandona en silencio si el navegador tiene el audio bloqueado por falta de gesto previo: es
+un extra, no el mensaje: `unlockNudgeAudio` abre el `AudioContext` en el primer gesto
+(clic, tecla o toque), que es la única ventana en la que el navegador lo permite. Si el
+aviso llega antes de cualquier gesto, no suena.
+
+**El scroll no descarta el aviso**, y si la persona está desplazándose cuando toca mostrarlo,
+espera a que la página se quede quieta (`resolveNudgeDelay`, función pura con test). Aparecer
+y desaparecer en mitad de un scroll es el peor momento: nadie mira esa esquina mientras se
+desplaza, y el aviso se gasta sin que lo vea.
+
+El botón es un FAB **extendido** (icono + "¿Ayuda?") con anillo blanco y fondo azul marino:
+la vista de lista es una cuadrícula de logos, muchos azules, y un círculo de icono se lee
+como un logo más. El anillo es lo que lo recorta del fondo; no lo quites.
+
+Los prompts del modal viven en los locales, no en el componente, y `tests/openDataPrompts.test.js`
+los vigila: deben **preguntar** a la persona (perfil, zona, disponibilidad) en vez de dejar un
+`[rellena aquí]`, y recordar las trampas del dataset (`archivedUrls`, `matchesAllTags`,
+`geographicScope`). Un hueco que alguien tiene que rellenar a mano es un prompt que no se usa.
+
 ### Claves de `urls`
 
 Añadir una plataforma nueva exige tocar **cuatro** sitios, o se cae por el camino:
@@ -466,6 +541,36 @@ slug dependen de esa equivalencia. Hay un test que lo verifica
 - Build genera `dist/` con HTML/CSS/JS
 - Base path dinámico según variable `VITE_BASE`
 - Entry: `index.html` → monta en `<div id="search_app">`
+
+### El CHANGELOG se regenera solo, en dos sitios
+
+`CHANGELOG.md` **nunca se edita a mano**: lo genera `scripts/generate-changelog.js` a partir
+del log de git, entero, en cada ejecución.
+
+1. **En local**: el hook `.githooks/post-commit` lo regenera y lo mete en el commit con
+   `--amend`. Depende de `core.hooksPath`, que configura `npm install` (script `prepare`).
+2. **En `master`**: el job `build` de `deploy.yml` lo regenera y commitea, después de
+   asignar los IDs y antes del build.
+
+El paso de CI es el que de verdad lo garantiza: **el hook solo existe en los clones locales
+que hayan hecho `npm install`**, así que nada de lo que se mergea desde la web de GitHub
+—incluidas todas las propuestas de comunidad— pasa por él. Sin ese paso, el changelog se
+quedaba atrás hasta que alguien commiteaba a mano desde su máquina.
+
+Va **después** de asignar los IDs porque una comunidad recién dada de alta necesita su id
+para poder enlazar su ficha del directorio.
+
+### Qué entra y qué no en el changelog
+
+- Los cambios de comunidad salen con su acción y su enlace: `Añadida X`, `Actualizada X`,
+  `Eliminada X`, con la PR de la que vinieron. Los deriva `describeCommunityChanges`
+  comparando el listado en el commit y en su padre, **una línea por comunidad**: un commit
+  que toque varias las lista todas.
+- Una baja solo se llama baja si aparece en `data/deleted-communities/`. Sin ese registro,
+  la comunidad desapareció del listado por otro motivo y decir "eliminada" sería mentir.
+- `isNoiseCommitSubject` descarta el mantenimiento de los propios ficheros generados
+  (`update changelog`, `update README.md`, `update .all-contributorsrc`, la asignación de
+  IDs). Ahogaban los cambios reales: eran la mitad del fichero.
 
 ### `[skip ci]` salta el push entero, no solo su commit
 

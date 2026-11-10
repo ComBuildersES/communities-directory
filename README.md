@@ -65,6 +65,20 @@ La fuente de verdad es [`data/communities/`](./data/communities): un fichero JSO
 comunidad. Los tres ficheros anteriores son artefactos generados y están gitignorados, así que
 no se editan a mano.
 
+### Úsalos con IA o con un agente
+
+Te animamos a hacerlo, y el directorio te lo pone fácil:
+
+- [`llms.txt`](https://directory.communitybuilders.dev/llms.txt) — punto de entrada al estilo
+  [llmstxt.org](https://llmstxt.org/): qué ficheros hay y cómo interpretarlos sin equivocarse
+- [`llms-full.txt`](https://directory.communitybuilders.dev/llms-full.txt) — el directorio entero en Markdown
+- [`schema.json`](https://directory.communitybuilders.dev/data/schema.json) — qué significa cada campo y cada valor
+- [`communities.csv`](https://directory.communitybuilders.dev/data/communities.csv) — tabla plana para hojas de cálculo y pandas
+
+El botón **Datos abiertos + IA** de la cabecera del directorio trae prompts listos para pegar
+en ChatGPT o Claude, ejemplos de código e instrucciones para el contexto de tu agente. No hace
+falta servidor MCP: son ficheros estáticos con CORS abierto.
+
 📄 **[docs/DATA.md](./docs/DATA.md)** documenta todos los datasets, el esquema campo a campo y
 cómo regenerarlos en local.
 
