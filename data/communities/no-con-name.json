@@ -5,36 +5,55 @@
   "lastReviewed": "10/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Parc Bit, Mallorca",
-  "geographicScope": "unknown",
+  "location": "Palma, Mallorca",
+  "geographicScope": "national",
   "parentId": null,
-  "shortDescription": "Congreso de hacking y seguridad informática activo más antiguo de España, fundado en 1999. Como asociación sin ánimo de lucro, organiza en Mallorca eventos independientes y sin sesgo comercial, reuniendo a profesionales y entusiastas de la ciberseguridad.",
+  "shortDescription": "Congreso de hacking y seguridad informática activo más antiguo de España, fundado en 1999. Como asociación sin ánimo de lucro, organiza en Barcelona y Mallorca eventos independientes y sin sesgo comercial, reuniendo a profesionales y entusiastas del hacking y la ciberseguridad.",
   "topics": "",
   "langs": [
     "es",
-    "en"
+    "en",
+    "ca"
   ],
   "tags": [
     "cybersecurity",
     "web-security",
     "digital-forensics",
-    "ethical-hacking"
+    "ethical-hacking",
+    "open-hardware",
+    "raspberry-pi",
+    "robotics",
+    "iot"
   ],
   "targetAudience": [
     "cybersecurity-engineer",
-    "student"
+    "student",
+    "software-architect",
+    "pentester",
+    "qa-engineer",
+    "devops-engineer",
+    "backend-developer",
+    "mobile-developer",
+    "embedded-iot-engineer",
+    "robotics-engineer",
+    "researcher",
+    "sysadmin"
   ],
-  "contactInfo": "",
+  "contactInfo": "https://www.noconname.org/contact",
   "communityUrl": "https://www.noconname.org/",
   "urls": {
     "twitter": "https://x.com/noconname",
-    "web": "http://web.archive.org/web/20260312054722/https://www.noconname.org/",
-    "telegram": "https://t.me/noconname"
+    "web": "https://www.noconname.org/",
+    "telegram": "https://t.me/noconname",
+    "mailingList": "https://listas.noconname.org/listinfo/noconname",
+    "linkedin": "https://www.linkedin.com/company/noconname/",
+    "github": "https://github.com/noconname",
+    "mastodon": "https://mastodon.social/@noconname"
   },
   "thumbnailUrl": "images/no-con-name.webp",
   "latLon": {
-    "lat": 39.6357047,
-    "lon": 2.6306549
+    "lat": 39.5695818,
+    "lon": 2.6500745
   },
   "displayOnMap": true,
   "humanValidated": true,
