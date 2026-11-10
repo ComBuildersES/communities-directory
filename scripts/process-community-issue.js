@@ -333,29 +333,69 @@ function buildDeletedCommunityEntry(community, removalReason) {
   };
 }
 
-async function resolveCoordinates(payload) {
+/**
+ * Una edición que mueve `location` arrastra el `latLon` de la ficha anterior: el formulario
+ * siembra el borrador con las coordenadas existentes y no las recalcula. Sin esto, cambiar
+ * "Barcelona" por "Parc Bit, Mallorca" dejaba el pin en Barcelona (PR #457).
+ *
+ * Solo se regeocodifica si las coordenadas de la propuesta son exactamente las heredadas:
+ * si vienen distintas, alguien las ha puesto a mano y manda su valor.
+ */
+export function shouldRegeocodeLocation(payload, existing) {
+  if (!existing || !payload.location) return false;
+
+  const sameLocation =
+    normalizeString(existing.location).toLowerCase() === normalizeString(payload.location).toLowerCase();
+  if (sameLocation) return false;
+
+  return (
+    payload.latLon.lat === normalizeLatLon(existing.latLon?.lat) &&
+    payload.latLon.lon === normalizeLatLon(existing.latLon?.lon)
+  );
+}
+
+async function geocodeLocation(location) {
+  try {
+    const geoRes = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(location)}`, {
+      headers: {
+        'User-Agent': 'ComunidadBot/1.0 (communitybuilders.es@gmail.com)'
+      }
+    });
+    if (!geoRes.ok) return null;
+
+    const geoData = await geoRes.json();
+    if (!Array.isArray(geoData) || geoData.length === 0) return null;
+
+    const lat = parseFloat(geoData[0].lat);
+    const lon = parseFloat(geoData[0].lon);
+    return Number.isFinite(lat) && Number.isFinite(lon) ? { lat, lon } : null;
+  } catch (error) {
+    console.warn('⚠️ No se pudo geocodificar la ubicación:', error.message);
+    return null;
+  }
+}
+
+export async function resolveCoordinates(payload, existing) {
   if (!payload.displayOnMap || payload.communityType === 'umbrella-org') {
     return { lat: null, lon: null };
   }
 
-  if (payload.latLon.lat !== null && payload.latLon.lon !== null) {
-    return payload.latLon;
+  const inheritedLatLon = payload.latLon.lat !== null && payload.latLon.lon !== null
+    ? payload.latLon
+    : null;
+
+  if (inheritedLatLon && !shouldRegeocodeLocation(payload, existing)) {
+    return inheritedLatLon;
   }
 
   if (!payload.location) {
-    return { lat: null, lon: null };
+    return inheritedLatLon ?? { lat: null, lon: null };
   }
 
-  const geoRes = await fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(payload.location)}`, {
-    headers: {
-      'User-Agent': 'ComunidadBot/1.0 (communitybuilders.es@gmail.com)'
-    }
-  });
-  const geoData = await geoRes.json();
-  return geoData.length ? {
-    lat: parseFloat(geoData[0].lat),
-    lon: parseFloat(geoData[0].lon)
-  } : { lat: null, lon: null };
+  // Si la geocodificación falla, conservar las coordenadas heredadas es menos malo que
+  // sacar la comunidad del mapa.
+  const geocoded = await geocodeLocation(payload.location);
+  return geocoded ?? inheritedLatLon ?? { lat: null, lon: null };
 }
 
 export function buildThumbnailTransform(image) {
@@ -438,7 +478,7 @@ async function main() {
 
   const resolvedCoordinates = mode === ISSUE_MODES.DELETE
     ? { lat: null, lon: null }
-    : await resolveCoordinates(payload);
+    : await resolveCoordinates(payload, existing);
   fs.writeFileSync(path.join('.geo', 'last-coordinates.json'), JSON.stringify(resolvedCoordinates, null, 2));
   fs.writeFileSync(
     path.join('.geo', 'community-meta.json'),

@@ -374,6 +374,19 @@ Canales que una comunidad tuvo abiertos pero que su equipo dinamizador actual no
   el directorio ya tiene archivada, incluida la de la propia comunidad que se está editando.
 - `apply-suggestions` no reintroduce un canal archivado por scraping.
 
+### Coordenadas (`latLon`) en una edición
+
+El formulario **no** geocodifica: siembra el borrador con el `latLon` de la ficha actual y
+solo usa Nominatim para inferir `provinceId`. Tampoco hay input de lat/lon. Por eso una
+edición que mueve `location` llega con las coordenadas viejas en el payload (PR #457: la
+ubicación pasó a Mallorca y el pin se quedó en Barcelona).
+
+Quien lo arregla es `resolveCoordinates` en `scripts/process-community-issue.js`: si la
+propuesta cambia `location` **y** trae exactamente las coordenadas heredadas, regeocodifica.
+Si las trae distintas, alguien las puso a mano y manda su valor. Si Nominatim falla o no
+devuelve nada, conserva las heredadas: sacar la comunidad del mapa es peor que un pin
+desactualizado.
+
 ### Ámbito geográfico (`geographicScope`)
 
 Territorio al que la comunidad da servicio (issue #402). **No** es lo mismo que `location`:

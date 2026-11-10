@@ -11,6 +11,10 @@ Se organiza por mes y por tipo de cambio.
 - 2026-11-06 `dd0431a` añadir URLs de foro/blog/RSS/eventos.wiki/OTE y ámbito geográfico
 - 2026-11-05 `1d4b6c3` archivar canales históricos de una comunidad (#353)
 
+### Fixes
+
+- 2026-11-10 `6a9df79` regeocodificar cuando una edición cambia la ubicación
+
 ### Data
 
 - 2026-11-10 `48b8d9e` Update community-builders-members.json
@@ -29,6 +33,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-11-10 `3fe28b4` update changelog [skip ci]
 - 2026-11-09 `c5321b1` update changelog [skip ci]
 - 2026-11-09 `ad6175a` update changelog [skip ci]
 - 2026-11-09 `f5e46a6` update .all-contributorsrc [skip ci]
