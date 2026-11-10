@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-10 `21edf65` decir cuanto del dataset ha revisado una persona
+- 2026-11-10 `442476c` decir cuanto del dataset ha revisado una persona
 - 2026-11-10 `2ad8fa6` el modal de datos abiertos se organiza por persona
 - 2026-11-10 `1d90695` el botón flotante pregunta antes de ofrecer
 - 2026-11-10 `570f367` garantizar que el changelog refleja lo que se publica
@@ -42,10 +42,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
-- 2026-11-10 `e60bcd7` update changelog [skip ci]
-- 2026-11-10 `c81fb90` update .all-contributorsrc [skip ci]
-- 2026-11-10 `adec752` update README.md [skip ci]
-- 2026-11-10 `d7fda3b` update changelog [skip ci]
+- 2026-11-10 `91b10dc` regenerar el changelog tras el merge
 - 2026-11-10 `5b11100` documentar la capa de datos abiertos para IA y sanear AGENTS.md
 - 2026-11-10 `eaf69c6` actualizar la guía al layout de un fichero por comunidad
 - 2026-11-10 `d1270d2` documentar dónde viven los datos abiertos y apuntar el About ahí
