@@ -42,7 +42,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
-- 2026-11-10 `91b10dc` regenerar el changelog tras el merge
+- 2026-11-10 `9c84a1a` regenerar el changelog tras el merge
 - 2026-11-10 `5b11100` documentar la capa de datos abiertos para IA y sanear AGENTS.md
 - 2026-11-10 `eaf69c6` actualizar la guía al layout de un fichero por comunidad
 - 2026-11-10 `d1270d2` documentar dónde viven los datos abiertos y apuntar el About ahí
