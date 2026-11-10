@@ -621,6 +621,32 @@
       "email": "Enviar por email",
       "note": "Se abrirá GitHub con el título y el cuerpo del issue precargados.",
       "noteWithEmail": "Puedes abrir un issue en GitHub o preparar un correo a Community Builders con el JSON generado. Si tu cliente de correo recorta el contenido, copia el bloque JSON manualmente."
+    },
+    "aiAssist": {
+      "title": "¿Prefieres que te ayude una IA?",
+      "subtitle": "Abre Claude o ChatGPT con las instrucciones ya puestas, y pega aquí el JSON que te devuelva para rellenar el formulario.",
+      "step1Title": "Pega los enlaces de la comunidad y abre el chat",
+      "openIn": "Abrir en {{provider}}",
+      "copyPrompt": "Copiar instrucciones",
+      "step2Title": "Pega aquí el JSON que te devuelva",
+      "step2Copy": "No pasa nada si viene con texto alrededor o dentro de un bloque de código: se extrae el JSON igual.",
+      "responseLabel": "Respuesta de la IA en JSON",
+      "apply": "Rellenar formulario",
+      "applied": "Listo: {{count}} campos rellenados. Revísalos uno a uno antes de enviar.",
+      "warningEnum": "Se ha ignorado \"{{value}}\" en el campo {{field}}: no es uno de los valores permitidos.",
+      "warningUnknown": "Se han ignorado valores no reconocidos en {{field}}: {{values}}.",
+      "error": {
+        "invalidJson": "No he encontrado un JSON válido en ese texto. Copia la respuesta de la IA entera, o solo el bloque que empieza por \"{\".",
+        "noFields": "El JSON es válido pero no trae ningún campo que el formulario reconozca. Comprueba que la IA ha usado los nombres de campo del esquema."
+      },
+      "disclaimer": "Lo que propone una IA son datos sin verificar. Revísalos antes de enviar: quien firma la propuesta eres tú, y una ficha con errores manda gente a sitios donde no hay nadie.",
+      "urlsCopy": "Cuantas más fuentes le des, mejor saldrá la ficha: la web dice de qué va, la plataforma de eventos si sigue viva, las redes quién la dinamiza y el repositorio qué construyen.",
+      "urlPlaceholderMain": "https://web-de-la-comunidad.dev",
+      "urlPlaceholderMore": "Otro enlace: Meetup, GitHub, LinkedIn, Mastodon…",
+      "urlLabelNumbered": "Enlace {{number}} de la comunidad",
+      "removeUrl": "Quitar este enlace",
+      "urlCount_one": "{{count}} enlace incluido en las instrucciones.",
+      "urlCount_other": "{{count}} enlaces incluidos en las instrucciones."
     }
   },
   "openData": {

@@ -1077,3 +1077,206 @@
 .contribution-ote-ways li + li {
   margin-top: 0.25rem;
 }
+
+/* Alta asistida por IA ------------------------------------------------------ */
+
+.ai-assist {
+  margin-bottom: 1rem;
+  border: 1px solid #ded0fb;
+  border-radius: 14px;
+  background: #faf7ff;
+  overflow: hidden;
+}
+
+.ai-assist-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+
+.ai-assist-toggle-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  flex-shrink: 0;
+  border-radius: 9px;
+  background: #6b3fd4;
+  color: #fff;
+  font-size: 0.85rem;
+}
+
+.ai-assist-toggle-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.ai-assist-toggle-text strong {
+  font-size: 0.92rem;
+  color: #3c2370;
+}
+
+.ai-assist-toggle-text span {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #6f5f94;
+}
+
+.ai-assist-toggle-caret {
+  flex-shrink: 0;
+  font-size: 0.75rem;
+  color: #8d7cb5;
+}
+
+.ai-assist-body {
+  padding: 0 1rem 1rem;
+}
+
+.ai-assist-steps {
+  margin: 0;
+  padding-left: 1.1rem;
+  color: #3c2370;
+}
+
+.ai-assist-steps > li {
+  margin-bottom: 0.9rem;
+}
+
+.ai-assist-step-title {
+  margin: 0 0 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #3c2370;
+}
+
+.ai-assist-step-copy {
+  margin: 0 0 0.4rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #6f5f94;
+}
+
+.ai-assist-urls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.6rem;
+}
+
+.ai-assist-url-row {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.ai-assist-url-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  flex-shrink: 0;
+  border: 1px solid #ded0fb;
+  border-radius: 8px;
+  background: #fff;
+  color: #8d7cb5;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.ai-assist-url-remove:hover {
+  background: #f1eaff;
+  color: #5428c4;
+}
+
+.ai-assist-url-count {
+  margin: 0.45rem 0 0;
+  font-size: 0.78rem;
+  color: #6f5f94;
+}
+
+.ai-assist-providers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.ai-assist-provider {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid #ded0fb;
+  border-radius: 8px;
+  background: #fff;
+  color: #6b3fd4;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.ai-assist-provider:hover {
+  background: #f1eaff;
+  border-color: #c7b0f5;
+  color: #5428c4;
+}
+
+.ai-assist-provider--ghost {
+  color: #6f5f94;
+}
+
+.ai-assist-textarea {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.78rem;
+}
+
+.ai-assist-apply-row {
+  margin-top: 0.5rem;
+}
+
+.ai-assist-feedback {
+  margin: 0.6rem 0 0;
+  font-size: 0.83rem;
+  line-height: 1.5;
+}
+
+.ai-assist-feedback--ok {
+  color: #257953;
+}
+
+.ai-assist-feedback--error {
+  color: #cc0f35;
+}
+
+.ai-assist-warnings {
+  margin: 0.4rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #8a6d1f;
+}
+
+.ai-assist-disclaimer {
+  margin: 0.8rem 0 0;
+  padding-top: 0.6rem;
+  border-top: 1px solid #e8ddfb;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: #6f5f94;
+}
+
+.ai-assist-disclaimer i {
+  color: #b08a2a;
+}

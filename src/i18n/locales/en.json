@@ -621,6 +621,32 @@
       "email": "Send by email",
       "note": "GitHub will open with the issue title and body pre-filled.",
       "noteWithEmail": "You can open a GitHub issue or prepare an email to Community Builders with the generated JSON. If your mail client truncates it, copy the JSON block manually."
+    },
+    "aiAssist": {
+      "title": "Would you rather an AI helped?",
+      "subtitle": "Open Claude or ChatGPT with the instructions already set up, then paste the JSON it gives you back here to fill in the form.",
+      "step1Title": "Paste the community links and open the chat",
+      "openIn": "Open in {{provider}}",
+      "copyPrompt": "Copy instructions",
+      "step2Title": "Paste the JSON it gives you back",
+      "step2Copy": "It is fine if it comes wrapped in text or inside a code block: the JSON is extracted either way.",
+      "responseLabel": "AI response as JSON",
+      "apply": "Fill in the form",
+      "applied": "Done: {{count}} fields filled in. Check them one by one before submitting.",
+      "warningEnum": "\"{{value}}\" was ignored in the {{field}} field: it is not one of the allowed values.",
+      "warningUnknown": "Unrecognised values were ignored in {{field}}: {{values}}.",
+      "error": {
+        "invalidJson": "I could not find valid JSON in that text. Paste the whole AI response, or just the block starting with \"{\".",
+        "noFields": "The JSON is valid but carries no field the form recognises. Check that the AI used the field names from the schema."
+      },
+      "disclaimer": "What an AI proposes is unverified data. Review it before submitting: you are the one signing the proposal, and a wrong record sends people somewhere nobody is listening.",
+      "urlsCopy": "The more sources you give it, the better the record: the website says what they are about, the events platform whether they are still alive, social channels who runs it, the repository what they build.",
+      "urlPlaceholderMain": "https://community-website.dev",
+      "urlPlaceholderMore": "Another link: Meetup, GitHub, LinkedIn, Mastodon…",
+      "urlLabelNumbered": "Community link {{number}}",
+      "removeUrl": "Remove this link",
+      "urlCount_one": "{{count}} link included in the instructions.",
+      "urlCount_other": "{{count}} links included in the instructions."
     }
   },
   "openData": {
