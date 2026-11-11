@@ -25,6 +25,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-11-11 `4541d1e` Eliminada DES ([PR #474](https://github.com/ComBuildersES/communities-directory/pull/474))
 - 2026-11-11 `25075c2` Eliminada RMC ([PR #472](https://github.com/ComBuildersES/communities-directory/pull/472))
 - 2026-11-10 `da12774` [Actualizada WordCamp Alhaurín de la Torre](https://directory.communitybuilders.dev/?community=484) ([PR #469](https://github.com/ComBuildersES/communities-directory/pull/469))
 - 2026-11-10 `7cb907b` [Actualizada WordPress Dénia](https://directory.communitybuilders.dev/?community=498) ([PR #467](https://github.com/ComBuildersES/communities-directory/pull/467))
