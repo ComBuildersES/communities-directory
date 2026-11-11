@@ -25,6 +25,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-11-10 `da12774` [Actualizada WordCamp Alhaurín de la Torre](https://directory.communitybuilders.dev/?community=484) ([PR #469](https://github.com/ComBuildersES/communities-directory/pull/469))
 - 2026-11-10 `7cb907b` [Actualizada WordPress Dénia](https://directory.communitybuilders.dev/?community=498) ([PR #467](https://github.com/ComBuildersES/communities-directory/pull/467))
 - 2026-11-10 `41de950` [Actualizada No cON Name](https://directory.communitybuilders.dev/?community=364) ([PR #460](https://github.com/ComBuildersES/communities-directory/pull/460))
 - 2026-11-10 `48b8d9e` Update community-builders-members.json
