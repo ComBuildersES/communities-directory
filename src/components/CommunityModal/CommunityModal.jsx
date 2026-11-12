@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useCommunityActions, useAllCommunities, useChildrenByParentId } from "../../stores/community.store.js";
+import { useCommunityActions, useAllCommunities, useChildrenByParentId, useMergedFromById } from "../../stores/community.store.js";
 import { buildContributionPath } from "../../lib/communitySubmission";
 import { normalizeCommunityLangs } from "../../lib/communityLanguages.js";
+import { findMergeTarget, isMergedCommunity } from "../../lib/mergedCommunities.js";
 import { OteEvents } from "./OteEvents.jsx";
 import "./CommunityModal.css";
 
@@ -144,6 +145,7 @@ const STATUS_CLASS = {
   active:   "modal-badge modal-badge--active",
   inactive: "modal-badge modal-badge--inactive",
   unknown:  "modal-badge modal-badge--unknown",
+  merged:   "modal-badge modal-badge--merged",
 };
 
 function isArchivedUrl(url) {
@@ -157,11 +159,12 @@ function normalizeLocation(location) {
   return v && !INVALID_LOCATION_VALUES.has(v.toLowerCase()) ? v : null;
 }
 
-export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = [], childCount = 0, onClose, onGoToMap }) {
+export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = [], childCount = 0, onClose, onGoToMap, onOpenCommunity }) {
   const { t } = useTranslation();
   const { filterComunities } = useCommunityActions();
   const allCommunities = useAllCommunities();
   const childrenByParentId = useChildrenByParentId();
+  const mergedFromById = useMergedFromById();
   const [tagsExpanded, setTagsExpanded] = useState(false);
   const [audienceExpanded, setAudienceExpanded] = useState(false);
   const [openUrlGroup, setOpenUrlGroup] = useState(null);
@@ -232,6 +235,12 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
 
   const parentCommunity = parentId != null ? allCommunities.find((c) => c.id === parentId) : null;
   const siblingCount = parentId != null ? childrenByParentId.get(parentId) ?? 0 : 0;
+
+  // Fusiones (src/lib/mergedCommunities.js): esta comunidad continúa en otra, o es el destino
+  // en el que continúan otras. Las dos caras enlazan a la ficha correspondiente: quien llega
+  // desde un enlace viejo tiene que poder seguir hasta la comunidad viva.
+  const mergeTarget = findMergeTarget(community, allCommunities);
+  const mergedFrom = mergedFromById.get(community.id) ?? [];
 
   const hasMapCoords = latLon?.lat != null && latLon?.lon != null;
   const languages = normalizeCommunityLangs(langs);
@@ -362,6 +371,36 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
             advertencia sobre colaborar. No se marca en la tarjeta ni en el mapa a propósito:
             lo llevarían 570 de 657 y la cuadrícula pasaría a ser un campo de alertas.
           */}
+          {/*
+            Fusión: esta comunidad ya no existe por separado. El aviso va lo primero del
+            cuerpo, por delante del de revisión pendiente: si la comunidad continúa en otra,
+            es el único dato que importa antes de seguir leyendo la ficha.
+          */}
+          {isMergedCommunity(community) && (
+            <div className="community-modal-merged">
+              <i className="fa-solid fa-code-merge" aria-hidden="true"></i>
+              <div>
+                <strong>{t("communityModal.mergedTitle")}</strong>
+                {mergeTarget ? (
+                  <>
+                    <p>{t("communityModal.mergedBody", { name: mergeTarget.name })}</p>
+                    {onOpenCommunity && (
+                      <button
+                        type="button"
+                        className="community-modal-merged-cta"
+                        onClick={() => onOpenCommunity(mergeTarget.id)}
+                      >
+                        {t("communityModal.mergedCta", { name: mergeTarget.name })}
+                        {" "}<i className="fas fa-arrow-right" aria-hidden="true"></i>
+                      </button>
+                    )}
+                  </>
+                ) : (
+                  <p>{t("communityModal.mergedBodyUnknown")}</p>
+                )}
+              </div>
+            </div>
+          )}
           {!humanValidated && (
             <div className="community-modal-pending-review">
               <i className="fa-solid fa-robot" aria-hidden="true"></i>
@@ -416,6 +455,29 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                 {t("communityCard.viewChildren")}
                 {" "}<i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
               </button>
+            </div>
+          )}
+
+          {/* Comunidades que se fusionaron en esta (cara inversa, derivada en el store) */}
+          {mergedFrom.length > 0 && (
+            <div className="community-modal-section">
+              <h3 className="community-modal-section-title">
+                <i className="fa-solid fa-code-merge"></i> {t("communityModal.mergedFromTitle")}
+              </h3>
+              <p className="community-modal-merged-from-intro">{t("communityModal.mergedFromBody")}</p>
+              <div className="community-modal-merged-from">
+                {mergedFrom.map((merged) => (
+                  <button
+                    key={merged.id ?? merged.name}
+                    type="button"
+                    className="community-modal-merged-from-item"
+                    onClick={() => onOpenCommunity?.(merged.id)}
+                    disabled={!onOpenCommunity || merged.id == null}
+                  >
+                    {merged.name}
+                  </button>
+                ))}
+              </div>
             </div>
           )}
 

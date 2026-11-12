@@ -2,7 +2,8 @@
   "status": {
     "active": "Active",
     "inactive": "Inactive",
-    "unknown": "Unknown"
+    "unknown": "Unknown",
+    "merged": "Merged"
   },
   "eventFormat": {
     "in-person": "In Person",
@@ -175,6 +176,12 @@
     "reviewed": "Reviewed: {{date}}",
     "partOfNetwork": "Part of the {{name}} network",
     "networkCount": "· {{count}} communities",
+    "mergedTitle": "This community merged with others",
+    "mergedBody": "It no longer runs anything on its own: its activity continues in {{name}}.",
+    "mergedBodyUnknown": "It no longer runs anything on its own. There is no record of which community it continues in; if you know, edit the entry.",
+    "mergedCta": "Go to {{name}}",
+    "mergedFromTitle": "Communities merged into this one",
+    "mergedFromBody": "These communities stopped running events on their own and their activity continues here.",
     "shortDescription": "Short description",
     "noDescription": "No short description yet",
     "links": "Links",
@@ -466,7 +473,8 @@
         "description": "Use the status based on the community's recent activity.",
         "bullet0": "Active: there are people running the community and it has had recent activity.",
         "bullet1": "Inactive: for meetups, usually applies if there has been no activity for more than a year; for conferences, if it has exceeded its usual cadence.",
-        "bullet2": "Unknown: use it if it's unclear."
+        "bullet2": "Unknown: use it if it's unclear.",
+        "bullet3": "Merged: the community joined others and no longer exists on its own. Say which community it continues in."
       },
       "communityType": {
         "title": "How to choose the type",
@@ -514,6 +522,10 @@
         "bullet2": "Region-wide: it covers an autonomous community.",
         "bullet3": "Nationwide (Spain): it covers the whole country, even if events cluster in one city.",
         "bullet4": "International: the community operates beyond Spain."
+      },
+      "mergedInto": {
+        "title": "What is a merge?",
+        "description": "Use the “Merged” status when a community stopped existing on its own because it joined others into a single one (e.g. Makers of Murcia, GameDev Murcia and murcia dev became MurciaTech). It is not the same as “Inactive”: a dormant community is still itself. Once marked as merged it drops out of the listing and the search, but its entry stays reachable and links to the community it continues in."
       }
     },
     "deletion": {
@@ -589,6 +601,9 @@
       "thumbnailAspectWarning": "This image is rectangular and may look worse in the card. We recommend using a more square version, such as a social profile avatar or the official logo.",
       "parentOrgLabel": "Umbrella organization",
       "parentOrgNone": "No umbrella organization",
+      "mergedIntoLabel": "Community it continues in",
+      "mergedIntoPlaceholder": "Search by name…",
+      "mergedIntoNone": "Pick the community resulting from the merge",
       "parentOrgPlaceholder": "Search by name…",
       "parentOrgTooltip": "An umbrella organization is an entity that groups several local communities under the same network or brand (e.g. GDG Spain, PyLadies, Codebar). If your community belongs to one of these networks, select it here. The vast majority of communities have no umbrella organization.",
       "geographicScopeLabel": "Geographic scope"
@@ -746,7 +761,7 @@
       "agentsTitle": "If you build with an agent"
     },
     "prompts": {
-      "rules": "Data rules:\n- To recommend anything to me, only use communities whose \"status\" is \"active\". If I explicitly ask for dormant ones, label them as such.\n- \"tags\" and \"targetAudience\" are catalogue ids. The catalogues exist in Spanish ({{tagsUrl}}, {{audienceUrl}}) and English ({{tagsEnUrl}}, {{audienceEnUrl}}): same ids, translated labels. Match against \"label\", \"description\" and \"synonyms\", not just the id.\n- If \"matchesAllTags\" is true the community is generalist and fits any topic even with an empty list; same for \"matchesAllAudience\" and profiles.\n- Coverage is uneven: many records are missing \"tags\", and most have no \"targetAudience\" or \"geographicScope\". An empty field means nobody has filled it in, not that the community has nothing to do with that topic: do not silently drop it, and tell me when the data is missing. {{indexUrl}} carries the exact count per field.\n- \"location\" is where events happen; \"geographicScope\", where present, is the territory served.\n- \"lastReviewed\" is the date the record was last checked, not an activity signal: most have not been revisited since they were added. The only field that evidences real activity is an events feed in \"urls.ote\".\n- Never suggest URLs listed in \"archivedUrls\": nobody is listening on those channels.\n- \"humanValidated\": false means that community's tagging was filled in by a semi-automated pass and no person has checked it. That is the majority: warn me.\n- Do not fill gaps with things you know from outside the dataset. If a fact is not there, say so. If something has to be asked of the community itself, tell me and give me the channel.",
+      "rules": "Data rules:\n- To recommend anything to me, only use communities whose \"status\" is \"active\". If I explicitly ask for dormant ones, label them as such.\n- \"tags\" and \"targetAudience\" are catalogue ids. The catalogues exist in Spanish ({{tagsUrl}}, {{audienceUrl}}) and English ({{tagsEnUrl}}, {{audienceEnUrl}}): same ids, translated labels. Match against \"label\", \"description\" and \"synonyms\", not just the id.\n- If \"matchesAllTags\" is true the community is generalist and fits any topic even with an empty list; same for \"matchesAllAudience\" and profiles.\n- Coverage is uneven: many records are missing \"tags\", and most have no \"targetAudience\" or \"geographicScope\". An empty field means nobody has filled it in, not that the community has nothing to do with that topic: do not silently drop it, and tell me when the data is missing. {{indexUrl}} carries the exact count per field.\n- \"location\" is where events happen; \"geographicScope\", where present, is the territory served.\n- \"lastReviewed\" is the date the record was last checked, not an activity signal: most have not been revisited since they were added. The only field that evidences real activity is an events feed in \"urls.ote\".\n- \"status\": \"merged\" means the community merged with others and no longer exists on its own: do not recommend it, point me at the one in \"mergedIntoId\", where its activity continues. This is different from \"parentId\", where both the local community and its umbrella organisation still exist.\n- Never suggest URLs listed in \"archivedUrls\": nobody is listening on those channels.\n- \"humanValidated\": false means that community's tagging was filled in by a semi-automated pass and no person has checked it. That is the majority: warn me.\n- Do not fill gaps with things you know from outside the dataset. If a fact is not there, say so. If something has to be asked of the community itself, tell me and give me the channel.",
       "tribe": {
         "label": "Find my people",
         "hint": "asks about your profile, then recommends",

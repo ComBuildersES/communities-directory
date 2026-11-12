@@ -69,6 +69,9 @@ const ENUMS = {
     active: 'The community is running events or is otherwise alive.',
     inactive: 'No signs of activity; kept for historical reference.',
     unknown: 'Activity could not be verified.',
+    merged:
+      'The community merged with others and no longer exists on its own; `mergedIntoId` ' +
+      'points at the community it continues in.',
   },
   communityType: {
     'tech-meetup': 'Recurring local meetup or user group.',
@@ -215,6 +218,14 @@ export function buildSchema({ tags = [], audience = [] } = {}) {
         description:
           'Id of the umbrella community this one belongs to (e.g. a local chapter pointing at ' +
           'its national organisation).',
+      },
+      mergedIntoId: {
+        type: ['integer', 'null'],
+        description:
+          'Only present when `status` is "merged": id of the community this one merged into ' +
+          'and where its activity continues. Different from `parentId`, where both the chapter ' +
+          'and the umbrella still exist. The reverse side is not stored: derive it by scanning ' +
+          'for records whose `mergedIntoId` is this id.',
       },
       shortDescription: {
         type: 'string',
@@ -455,6 +466,7 @@ regenerated on every deploy.
 - \`humanValidated: false\` means a person added the community but its tagging was filled in semi-automatically and nobody has checked it. Say so if you present it as fact. Only ${withHumanValidation} of the active communities have been reviewed by a person, and ${reviewed} of all ${total} records. The live counts are in [coverage.json](${SITE_URL}/data/coverage.json).
 - \`archivedUrls\` are dead channels kept for history. Never recommend them: they look alive and nobody is listening.
 - \`status: "inactive"\` communities are kept deliberately. Filter them out before telling someone where to go.
+- \`status: "merged"\` means the community no longer exists on its own because it merged with others. Never recommend it: point at \`mergedIntoId\`, the community its activity continues in. This is not \`parentId\`, where the local chapter and its umbrella both still exist.
 - A community is linkable by slug: ${SITE_URL}/es/?community=<slug> (and /en/). Prefer linking people to the directory page or the community's own site over linking a raw JSON file.
 
 ## Documentation
@@ -485,7 +497,7 @@ export function buildSitemap(communities) {
   });
 
   publishableCommunities(communities)
-    .filter((community) => community.status !== 'inactive')
+    .filter((community) => community.status !== 'inactive' && community.status !== 'merged')
     .forEach((community) => {
       LOCALES.forEach((locale) => {
         urls.push({ loc: communityDirectoryUrl(community, locale), priority: '0.6' });

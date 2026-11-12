@@ -96,7 +96,7 @@ datos ya estructurados, y de ahí sale una PR automática. Ver
 {
   id: number | null,            // null mientras la propuesta no se ha publicado
   name: string,
-  status: "active" | "inactive" | "unknown",
+  status: "active" | "inactive" | "unknown" | "merged",
   lastReviewed: "DD/MM/YYYY",   // última revisión humana de la ficha
   communityType: "tech-meetup" | "conference" | "umbrella-org" | "hacklab"
                | "collaborative-group" | "meta-community" | "mutual-aid",
@@ -116,6 +116,7 @@ datos ya estructurados, y de ahí sale una PR automática. Ver
   urls: { web?, eventsUrl?, blog?, rss?, github?, discord?, telegram?, ... },
   archivedUrls?: string[],      // canales que la comunidad ya no atiende; no se muestran
   parentId?: number | null,     // organización paraguas a la que pertenece
+  mergedIntoId?: number | null, // solo con status "merged": comunidad en la que continúa
   thumbnailUrl: string,
   latLon: { lat: number | null, lon: number | null },
   displayOnMap: boolean,
@@ -130,6 +131,12 @@ Dos avisos sobre la calidad del dato, por si construyes algo encima:
   [`coverage.json`](https://directory.communitybuilders.dev/data/coverage.json).
 - `status: "inactive"` no se borra: las comunidades que dejaron de organizar eventos siguen en
   el directorio, porque forman parte de la historia del ecosistema y pueden reactivarse.
+- `status: "merged"` es otra cosa: la comunidad dejó de existir por separado porque se fusionó
+  con otras (Makers of Murcia, GameDev Murcia y murcia dev pasaron a ser MurciaTech). No la
+  recomiendes: su actividad continúa en la comunidad que indica `mergedIntoId`. Tampoco es
+  `parentId`, donde la comunidad local y su organización paraguas siguen existiendo las dos.
+  La cara inversa ("qué comunidades se fusionaron en esta") no se guarda: se deriva buscando
+  las fichas cuyo `mergedIntoId` apunta a ese id.
 
 `urls` solo trae las claves con valor. La lista canónica de plataformas está en
 `URL_PLATFORM_OPTIONS` ([`src/lib/communitySubmission.js`](https://github.com/ComBuildersES/communities-directory/blob/master/src/lib/communitySubmission.js));

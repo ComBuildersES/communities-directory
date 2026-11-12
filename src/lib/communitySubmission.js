@@ -1,9 +1,15 @@
 import { normalizeCommunityLangs } from "./communityLanguages.js";
+import { MERGED_STATUS } from "./mergedCommunities.js";
 
 const GITHUB_NEW_ISSUE_URL = "https://github.com/ComBuildersES/communities-directory/issues/new";
 export const COMMUNITY_BUILDERS_EMAIL = "communitybuilders.es@gmail.com";
 
-export const COMMUNITY_STATUS_OPTIONS = ["active", "inactive", "unknown"];
+/**
+ * `merged` = la comunidad dejó de existir por separado porque se fusionó con otras. No es lo
+ * mismo que `inactive` (parada, pero sigue siendo ella): exige `mergedIntoId` apuntando a la
+ * comunidad en la que continúa. Ver `src/lib/mergedCommunities.js`.
+ */
+export const COMMUNITY_STATUS_OPTIONS = ["active", "inactive", "unknown", "merged"];
 export const COMMUNITY_TYPE_OPTIONS = [
   "tech-meetup",
   "conference",
@@ -415,6 +421,7 @@ export function getEmptyCommunityDraft(nextId = null) {
     matchesAllTags: false,
     matchesAllAudience: false,
     parentId: null,
+    mergedIntoId: null,
   };
 }
 
@@ -702,6 +709,11 @@ export function buildCommunityPayload(draft, existingCommunity = null, options =
     matchesAllTags: normalizedTags.matchesAll,
     matchesAllAudience: normalizedAudience.matchesAll,
     ...(isUmbrellaOrganization ? {} : { parentId: draft.parentId ?? null }),
+    // La fusión solo viaja cuando el estado es "merged": un mergedIntoId colgando de una
+    // comunidad activa dejaría la ficha diciendo que continúa en otro sitio.
+    ...(cleanString(draft.status) === MERGED_STATUS
+      ? { mergedIntoId: draft.mergedIntoId != null ? Number(draft.mergedIntoId) : null }
+      : {}),
   };
 }
 

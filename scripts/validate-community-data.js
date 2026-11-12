@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import process from "node:process";
 import { COMMUNITY_LANGUAGE_SET } from "../src/lib/communityLanguages.js";
+import { MERGED_STATUS, validateMergedReferences } from "../src/lib/mergedCommunities.js";
 
 // Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
 import { readCommunities, readDeletedCommunities, stableStringify } from "./lib/communities-store.js";
@@ -9,7 +10,9 @@ const COMMUNITIES_META_PATH = "public/data/communities.meta.json";
 const TAGS_PATH = "public/data/tags.json";
 const AUDIENCE_PATH = "public/data/audience.json";
 
-const CANONICAL_STATUS = new Set(["active", "inactive", "unknown"]);
+// `merged`: la comunidad se fusionó con otras y continúa en la que indica `mergedIntoId`
+// (ver src/lib/mergedCommunities.js).
+const CANONICAL_STATUS = new Set(["active", "inactive", "unknown", MERGED_STATUS]);
 const CANONICAL_COMMUNITY_TYPES = new Set([
   "conference",
   "collaborative-group",
@@ -565,6 +568,10 @@ function validateCommunityStrict(community, index, issues, isNew = true) {
     }
   }
 
+  if ("mergedIntoId" in community && community.mergedIntoId !== null && !Number.isInteger(community.mergedIntoId)) {
+    pushIssue(issues.errors, "error", `${label}: mergedIntoId debe ser un entero o null.`);
+  }
+
   validateArchivedUrls(community, label, issues);
 
   if (
@@ -823,6 +830,13 @@ function main() {
           message: `communities.json contiene el ID duplicado ${id} (${count} veces).`,
         });
       }
+    }
+
+    // Fusiones: se valida siempre sobre el listado completo, no solo sobre lo que cambia.
+    // Una fusión rota (destino inexistente o también fusionado) deja la ficha prometiendo
+    // una comunidad a la que no se puede llegar.
+    for (const message of validateMergedReferences(communities)) {
+      issues.errors.push({ type: "error", message });
     }
 
     if (options.strictChanged) {

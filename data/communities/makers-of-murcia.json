@@ -1,11 +1,12 @@
 {
   "id": 336,
   "name": "Makers of Murcia",
-  "status": "active",
-  "lastReviewed": "25/10/2024",
+  "status": "merged",
+  "lastReviewed": "12/11/2026",
   "communityType": "hacklab",
   "eventFormat": "in-person",
   "location": "Murcia",
+  "mergedIntoId": 631,
   "topics": "",
   "langs": [
     "es"
@@ -23,6 +24,6 @@
     "lat": 37.9835334,
     "lon": -1.129905
   },
-  "displayOnMap": true,
-  "humanValidated": false
+  "displayOnMap": false,
+  "humanValidated": true
 }

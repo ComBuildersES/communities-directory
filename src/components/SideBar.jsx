@@ -125,6 +125,14 @@ export const Sidebar = () => {
             <Switch name="status" value="unknown" />
           </div>
         </li>
+        {/* Fusionadas: ya no existen por separado, así que solo aparecen si se piden
+            expresamente (src/lib/mergedCommunities.js). */}
+        <li className="menu-item">
+          <div className="option-item is-size-7">
+            <p>{t("status.merged")}</p>
+            <Switch name="status" value="merged" />
+          </div>
+        </li>
       </ul>
 
       <p className="menu-label">{t("sidebar.geographicScope")}</p>

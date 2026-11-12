@@ -83,12 +83,13 @@ scripts/               # Utilidades de mantenimiento de datos
 {
   id: number,
   name: string,
-  status: "active" | "inactive" | "unknown",
+  status: "active" | "inactive" | "unknown" | "merged",
   lastReviewed: "DD/MM/YYYY",
   communityType: "tech-meetup" | "conference" | "umbrella-org" | "hacklab" | "collaborative-group" | "meta-community" | "mutual-aid",
   eventFormat: "in-person" | "online" | "hybrid" | "unknown",
   location: string,
   geographicScope: "unknown" | "local" | "provincial" | "regional" | "national" | "international",
+  mergedIntoId?: number | null, // solo con status "merged": comunidad en la que continúa
   topics: string,               // texto libre heredado, separado por comas
   tags: string[],               // IDs referenciando public/data/tags.json
   targetAudience: string[],     // IDs referenciando public/data/audience.json
@@ -388,6 +389,29 @@ propuesta cambia `location` **y** trae exactamente las coordenadas heredadas, re
 Si las trae distintas, alguien las puso a mano y manda su valor. Si Nominatim falla o no
 devuelve nada, conserva las heredadas: sacar la comunidad del mapa es peor que un pin
 desactualizado.
+
+### Fusiones (`status: "merged"` + `mergedIntoId`)
+
+Varias comunidades que pasan a ser una sola (Makers of Murcia, GameDev Murcia y murcia dev →
+MurciaTech). No es `inactive` —una comunidad parada sigue siendo ella misma— ni `parentId`,
+donde la hija y el paraguas siguen existiendo las dos. Toda la lógica en
+`src/lib/mergedCommunities.js`.
+
+- La relación se guarda **solo en la comunidad fusionada**. La inversa ("MurciaTech integra a
+  estas tres") la deriva `buildMergedFromMap` en el store: duplicarla en el fichero del
+  destino garantiza que las dos caras acaben desincronizadas.
+- Al no ser `active`, queda fuera del listado, la búsqueda y el mapa con el filtro por defecto,
+  **pero la ficha sigue siendo enlazable**: quien llega desde un enlace viejo tiene que poder
+  seguir hasta la comunidad viva. El modal pinta las dos caras y navega entre fichas con
+  `openRelatedCommunity` (App.jsx), que **no** vuelve a fijar `modalScrollLockY`: con el modal
+  abierto `window.scrollY` es 0 y al cerrar devolvería a la persona al principio del listado.
+- **No se admiten cadenas** (A fusionada en B, y B en C): quien llega a A tendría que dar dos
+  saltos y nada garantiza que la cadena termine. Lo rechaza `validateMergedReferences`, que
+  corre en `validate-data` sobre el listado completo, no solo sobre lo que cambia.
+- Las fusionadas salen del `sitemap.xml`: la que se indexa es la viva. Se quedan en
+  `communities.json` y en `llms.txt` explica qué significa el estado.
+- En el formulario el campo "Comunidad en la que continúa" solo aparece con el estado
+  Fusionada, y sus candidatas excluyen la propia ficha y las ya fusionadas.
 
 ### Ámbito geográfico (`geographicScope`)
 

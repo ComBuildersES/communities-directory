@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-11-12 `29d0f40` fusiones de comunidades (status "merged" + mergedIntoId)
 - 2026-11-10 `442476c` decir cuanto del dataset ha revisado una persona
 - 2026-11-10 `2ad8fa6` el modal de datos abiertos se organiza por persona
 - 2026-11-10 `1d90695` el botón flotante pregunta antes de ofrecer

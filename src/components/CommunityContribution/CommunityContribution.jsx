@@ -27,6 +27,7 @@ import {
   URL_PLATFORM_OPTIONS,
   GEOGRAPHIC_SCOPE_OPTIONS,
 } from "../../lib/communitySubmission";
+import { MERGED_STATUS } from "../../lib/mergedCommunities.js";
 import {
   COMMUNITY_LANGUAGE_OPTIONS,
   normalizeCommunityLangs,
@@ -56,6 +57,7 @@ function getFieldHelp(t) {
         t("contribution.fieldHelp.status.bullet0"),
         t("contribution.fieldHelp.status.bullet1"),
         t("contribution.fieldHelp.status.bullet2"),
+        t("contribution.fieldHelp.status.bullet3"),
       ],
     },
     communityType: {
@@ -159,6 +161,11 @@ function getFieldHelp(t) {
     parentOrg: {
       title: t("contribution.fieldHelp.parentOrg.title"),
       description: t("contribution.fieldHelp.parentOrg.description"),
+      bullets: [],
+    },
+    mergedInto: {
+      title: t("contribution.fieldHelp.mergedInto.title"),
+      description: t("contribution.fieldHelp.mergedInto.description"),
       bullets: [],
     },
   };
@@ -1077,6 +1084,14 @@ export function CommunityContribution({
     () => communities.filter((c) => c.communityType === "umbrella-org").sort((a, b) => a.name.localeCompare(b.name)),
     [communities]
   );
+  // Destinos posibles de una fusión: comunidades vivas, nunca la que se está editando ni
+  // otra ya fusionada (una cadena de fusiones deja a la persona sin comunidad a la que ir).
+  const mergeTargets = useMemo(
+    () => communities
+      .filter((c) => c.status !== MERGED_STATUS && c.id != null && c.id !== existingCommunity?.id)
+      .sort((a, b) => a.name.localeCompare(b.name)),
+    [communities, existingCommunity?.id]
+  );
   const isEditMode = Boolean(existingCommunity);
   const groupedAudience = useMemo(
     () => allAudience.map((item) => ({
@@ -1104,6 +1119,9 @@ export function CommunityContribution({
   const [audienceQuery, setAudienceQuery] = useState("");
   const [parentOrgQuery, setParentOrgQuery] = useState(
     () => communities.find((c) => c.id === existingCommunity?.parentId)?.name ?? ""
+  );
+  const [mergedIntoQuery, setMergedIntoQuery] = useState(
+    () => communities.find((c) => c.id === existingCommunity?.mergedIntoId)?.name ?? ""
   );
   const languageOptions = useMemo(
     () => COMMUNITY_LANGUAGE_OPTIONS.map((code) => ({
@@ -1861,6 +1879,47 @@ export function CommunityContribution({
               </div>
             </div>
           </div>
+
+          {draft.status === MERGED_STATUS && (
+            <div className="field">
+              <label className="label contribution-label-with-help" htmlFor="merged-into-input">
+                <span>{t("contribution.form.mergedIntoLabel")} <RequiredMark /></span>
+                <FieldHelp
+                  content={FIELD_HELP.mergedInto}
+                  isOpen={openHelpField === "mergedInto"}
+                  onToggle={() => setOpenHelpField((current) => current === "mergedInto" ? null : "mergedInto")}
+                  onClose={() => setOpenHelpField(null)}
+                />
+              </label>
+              <div className="control">
+                <input
+                  id="merged-into-input"
+                  className="input"
+                  type="text"
+                  list="merge-targets-datalist"
+                  value={mergedIntoQuery}
+                  placeholder={t("contribution.form.mergedIntoPlaceholder")}
+                  required
+                  onChange={(e) => {
+                    const query = e.target.value;
+                    setMergedIntoQuery(query);
+                    const match = mergeTargets.find((c) => c.name === query);
+                    handleFieldChange("mergedIntoId", match ? match.id : null);
+                  }}
+                />
+                <datalist id="merge-targets-datalist">
+                  {mergeTargets.map((c) => (
+                    <option key={c.id} value={c.name} />
+                  ))}
+                </datalist>
+              </div>
+              {draft.mergedIntoId == null && (
+                <p className="help is-italic" style={{ color: "#888" }}>
+                  {t("contribution.form.mergedIntoNone")}
+                </p>
+              )}
+            </div>
+          )}
 
           <div className="field">
             <label className="label contribution-label-with-help" htmlFor="community-type">

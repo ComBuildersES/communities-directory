@@ -8,6 +8,7 @@ import { searchFaceted } from "../data/searchFaceted";
 import { parseDirectoryFilters } from "../lib/communitySubmission";
 import { normalizeCommunityLangs } from "../lib/communityLanguages.js";
 import { buildCoverage } from "../lib/dataCoverage.js";
+import { buildMergedFromMap } from "../lib/mergedCommunities.js";
 
 const TAGS_URL = `${import.meta.env.BASE_URL}data/tags.json`;
 const AUDIENCE_URL = `${import.meta.env.BASE_URL}data/audience.json`;
@@ -46,6 +47,7 @@ const initialState = {
   cbMemberIds: new Set(), // IDs de comunidades con miembro en Community Builders
   cbMembersMap: new Map(), // communityId -> [github handles]
   childrenByParentId: new Map(), // parentId -> count of child communities
+  mergedFromById: new Map(), // id -> comunidades fusionadas en ella (src/lib/mergedCommunities.js)
   coverage: null, // Cuánto del dataset ha revisado una persona (src/lib/dataCoverage.js)
   hasFreshData: false, // Datos confirmados desde red cuando hay conexión
   isRefreshingFreshData: false, // Revalidación online en curso
@@ -127,6 +129,9 @@ const useCommunityStore = create(
             }
             return map;
           }, new Map());
+          // Cara inversa de la fusión: solo se guarda en la comunidad fusionada, así que la
+          // ficha del destino necesita derivarla al cargar los datos.
+          const mergedFromById = buildMergedFromMap(data);
           const inverseIndex = buildInverseIndex(data);
           const defaultFilters = { status: ["active"] };
           const urlFilters = parseDirectoryFilters();
@@ -147,6 +152,7 @@ const useCommunityStore = create(
             cbMemberIds,
             cbMembersMap,
             childrenByParentId,
+            mergedFromById,
             coverage: buildCoverage(data),
             hasFreshData,
             isRefreshingFreshData: false,
@@ -311,6 +317,8 @@ export const useAudience = () => useCommunityStore((state) => state.allAudience)
 export const useCBMemberIds = () => useCommunityStore((state) => state.cbMemberIds);
 
 export const useChildrenByParentId = () => useCommunityStore((state) => state.childrenByParentId);
+
+export const useMergedFromById = () => useCommunityStore((state) => state.mergedFromById);
 
 export const useCBMembersMap = () => useCommunityStore((state) => state.cbMembersMap);
 

@@ -2,7 +2,8 @@
   "status": {
     "active": "Activa",
     "inactive": "Inactiva",
-    "unknown": "Desconocido"
+    "unknown": "Desconocido",
+    "merged": "Fusionada"
   },
   "eventFormat": {
     "in-person": "Presencial",
@@ -175,6 +176,12 @@
     "reviewed": "Revisada: {{date}}",
     "partOfNetwork": "Parte de la red de {{name}}",
     "networkCount": "· {{count}} comunidades",
+    "mergedTitle": "Esta comunidad se fusionó con otras",
+    "mergedBody": "Ya no organiza nada por separado: su actividad continúa en {{name}}.",
+    "mergedBodyUnknown": "Ya no organiza nada por separado. No consta en qué comunidad continúa; si lo sabes, edita la ficha.",
+    "mergedCta": "Ir a la ficha de {{name}}",
+    "mergedFromTitle": "Comunidades que se fusionaron en esta",
+    "mergedFromBody": "Estas comunidades dejaron de organizar por separado y su actividad continúa aquí.",
     "shortDescription": "Descripción breve",
     "noDescription": "Sin descripción breve todavía",
     "links": "Enlaces",
@@ -466,7 +473,8 @@
         "description": "Usa el estado según la actividad reciente de la comunidad.",
         "bullet0": "Activa: hay personas dinamizando la comunidad y ha tenido actividad recientemente.",
         "bullet1": "Inactiva: en meetups suele aplicarse si lleva más de un año sin actividad; en conferencias, si ha superado su cadencia habitual.",
-        "bullet2": "Desconocido: úsalo si no está claro."
+        "bullet2": "Desconocido: úsalo si no está claro.",
+        "bullet3": "Fusionada: la comunidad se unió a otras y ya no existe por separado. Indica en qué comunidad continúa."
       },
       "communityType": {
         "title": "Cómo elegir el tipo",
@@ -514,6 +522,10 @@
         "bullet2": "Autonómico: cubre una comunidad autónoma.",
         "bullet3": "Nacional (España): cubre todo el país, aunque los eventos se concentren en una ciudad.",
         "bullet4": "Internacional: la comunidad opera más allá de España."
+      },
+      "mergedInto": {
+        "title": "¿Qué es una fusión?",
+        "description": "Usa el estado «Fusionada» cuando la comunidad dejó de existir por separado porque se unió a otras en una sola (ej: Makers of Murcia, GameDev Murcia y murcia dev pasaron a ser MurciaTech). No es lo mismo que «Inactiva»: una comunidad parada sigue siendo ella misma. Al marcarla como fusionada deja de aparecer en el listado y el buscador, pero su ficha sigue siendo accesible y enlaza a la comunidad en la que continúa."
       }
     },
     "deletion": {
@@ -589,6 +601,9 @@
       "thumbnailAspectWarning": "Esta imagen es rectangular y puede verse peor en la tarjeta. Recomendamos usar una versión más cuadrada, por ejemplo el avatar de redes sociales o el logo oficial.",
       "parentOrgLabel": "Organización paraguas",
       "parentOrgNone": "Sin organización paraguas",
+      "mergedIntoLabel": "Comunidad en la que continúa",
+      "mergedIntoPlaceholder": "Busca por nombre…",
+      "mergedIntoNone": "Elige la comunidad resultante de la fusión",
       "parentOrgPlaceholder": "Busca por nombre…",
       "parentOrgTooltip": "Una organización paraguas es una entidad que agrupa varias comunidades locales bajo una misma red o marca (ej: GDG Spain, PyLadies, Codebar). Si tu comunidad pertenece a una de estas redes, selecciónala aquí. La gran mayoría de comunidades no tienen organización paraguas.",
       "geographicScopeLabel": "Ámbito geográfico"
@@ -746,7 +761,7 @@
       "agentsTitle": "Si construyes con un agente"
     },
     "prompts": {
-      "rules": "Reglas de los datos:\n- Para recomendarme algo, usa solo comunidades con \"status\": \"active\". Si te pido expresamente comunidades paradas, márcalas como tales.\n- \"tags\" y \"targetAudience\" son IDs de catálogo. Los catálogos están en español ({{tagsUrl}}, {{audienceUrl}}) y en inglés ({{tagsEnUrl}}, {{audienceEnUrl}}): mismos IDs, etiquetas traducidas. Empareja contra \"label\", \"description\" y \"synonyms\", no solo contra el ID.\n- Si \"matchesAllTags\" es true, la comunidad es generalista y encaja con cualquier temática aunque su lista esté vacía; lo mismo con \"matchesAllAudience\" y los perfiles.\n- La cobertura es desigual: a muchas fichas les faltan los \"tags\", y la mayoría no tiene \"targetAudience\" ni \"geographicScope\". Un campo vacío significa que nadie lo ha rellenado, no que la comunidad no trate de eso: no la descartes en silencio y dime cuándo te falta el dato. {{indexUrl}} trae el recuento exacto de cada campo.\n- \"location\" es dónde se celebran los eventos; \"geographicScope\", cuando está, es el territorio al que da servicio.\n- \"lastReviewed\" es la fecha de la última revisión de la ficha, no una señal de actividad: la mayoría no se ha vuelto a mirar desde que se añadió. Lo único que evidencia actividad real es un feed de eventos en \"urls.ote\".\n- No me propongas URLs que estén en \"archivedUrls\": son canales que ya nadie atiende.\n- \"humanValidated\": false significa que el etiquetado de esa comunidad lo puso un proceso semiautomático y no lo ha repasado ninguna persona. Es el caso de la mayoría: avísame.\n- No rellenes huecos con lo que te suene de fuera del dataset. Si un dato no está, dilo. Si hay algo que tengo que preguntarle a la comunidad, dímelo y dame el canal.",
+      "rules": "Reglas de los datos:\n- Para recomendarme algo, usa solo comunidades con \"status\": \"active\". Si te pido expresamente comunidades paradas, márcalas como tales.\n- \"tags\" y \"targetAudience\" son IDs de catálogo. Los catálogos están en español ({{tagsUrl}}, {{audienceUrl}}) y en inglés ({{tagsEnUrl}}, {{audienceEnUrl}}): mismos IDs, etiquetas traducidas. Empareja contra \"label\", \"description\" y \"synonyms\", no solo contra el ID.\n- Si \"matchesAllTags\" es true, la comunidad es generalista y encaja con cualquier temática aunque su lista esté vacía; lo mismo con \"matchesAllAudience\" y los perfiles.\n- La cobertura es desigual: a muchas fichas les faltan los \"tags\", y la mayoría no tiene \"targetAudience\" ni \"geographicScope\". Un campo vacío significa que nadie lo ha rellenado, no que la comunidad no trate de eso: no la descartes en silencio y dime cuándo te falta el dato. {{indexUrl}} trae el recuento exacto de cada campo.\n- \"location\" es dónde se celebran los eventos; \"geographicScope\", cuando está, es el territorio al que da servicio.\n- \"lastReviewed\" es la fecha de la última revisión de la ficha, no una señal de actividad: la mayoría no se ha vuelto a mirar desde que se añadió. Lo único que evidencia actividad real es un feed de eventos en \"urls.ote\".\n- \"status\": \"merged\" significa que la comunidad se fusionó con otras y ya no existe por separado: no me la recomiendes, mándame a la que indica \"mergedIntoId\", que es donde continúa su actividad. Es distinto de \"parentId\", donde la comunidad local y su organización paraguas siguen existiendo las dos.\n- \"status\": \"merged\" significa que la comunidad se fusionó con otras y ya no existe por separado: no me la recomiendes, mándame a la que indica \"mergedIntoId\", que es donde continúa su actividad. Es distinto de \"parentId\", donde la comunidad local y su organización paraguas siguen existiendo las dos.\n- No me propongas URLs que estén en \"archivedUrls\": son canales que ya nadie atiende.\n- \"humanValidated\": false significa que el etiquetado de esa comunidad lo puso un proceso semiautomático y no lo ha repasado ninguna persona. Es el caso de la mayoría: avísame.\n- No rellenes huecos con lo que te suene de fuera del dataset. Si un dato no está, dilo. Si hay algo que tengo que preguntarle a la comunidad, dímelo y dame el canal.",
       "tribe": {
         "label": "Encontrar mi tribu",
         "hint": "te pregunta tu perfil y luego recomienda",

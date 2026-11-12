@@ -317,6 +317,11 @@ export function normalizePayload(payload) {
     ...(normalizeString(payload.communityType) !== 'umbrella-org'
       ? { parentId: payload.parentId != null ? Number(payload.parentId) : null }
       : {}),
+    // Fusión (status "merged"): la clave solo existe si la comunidad dejó de existir por
+    // separado. Ver src/lib/mergedCommunities.js.
+    ...(normalizeString(payload.status) === 'merged'
+      ? { mergedIntoId: payload.mergedIntoId != null ? Number(payload.mergedIntoId) : null }
+      : {}),
   };
 }
 

@@ -33,6 +33,7 @@ const CANONICAL_KEY_ORDER = [
   'provinceId',
   'geographicScope',
   'parentId',
+  'mergedIntoId',
   'shortDescription',
   'topics',
   'langs',

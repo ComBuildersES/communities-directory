@@ -278,6 +278,15 @@ function App () {
     setSelectedCommunityIdentifier(String(communityId));
   };
 
+  // Salto de una ficha a otra con el modal ya abierto (fusiones: "continúa en MurciaTech").
+  // No vuelve a fijar `modalScrollLockY`: con el modal abierto el scroll del documento está
+  // bloqueado, así que window.scrollY es 0 y al cerrar devolvería a la persona al principio.
+  const openRelatedCommunity = (communityId) => {
+    const path = buildDirectoryStatePath({ filters, communityIdentifier: communityId });
+    window.history.pushState({}, "", path);
+    setSelectedCommunityIdentifier(String(communityId));
+  };
+
   const closeCommunityModal = () => {
     pendingScrollRestoreRef.current = modalScrollLockY ?? window.scrollY;
     const path = buildDirectoryStatePath({ filters });
@@ -507,6 +516,7 @@ function App () {
             childCount={childrenByParentId.get(selectedCommunity.id) ?? 0}
             onClose={closeCommunityModal}
             onGoToMap={goToMapLocation}
+            onOpenCommunity={openRelatedCommunity}
           />
         </Suspense>
       )}

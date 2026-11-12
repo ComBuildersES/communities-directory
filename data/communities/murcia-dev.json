@@ -1,11 +1,12 @@
 {
   "id": 359,
   "name": "murcia dev",
-  "status": "active",
-  "lastReviewed": "27/11/2024",
+  "status": "merged",
+  "lastReviewed": "12/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "hybrid",
   "location": "Murcia, Murcia",
+  "mergedIntoId": 631,
   "topics": "",
   "langs": [
     "es"
@@ -28,6 +29,6 @@
     "lat": 37.9835334,
     "lon": -1.129905
   },
-  "displayOnMap": true,
-  "humanValidated": false
+  "displayOnMap": false,
+  "humanValidated": true
 }
