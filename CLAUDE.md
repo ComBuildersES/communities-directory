@@ -98,23 +98,7 @@ scripts/               # Utilidades de mantenimiento de datos
   matchesAllAudience?: boolean, // true = aplica a cualquier filtro de público
   contactInfo: string,          // email
   communityUrl: string,         // URL principal (web propia si existe, si no la más relevante)
-  urls: {                       // URLs adicionales por plataforma (solo claves con valor)
-    // La lista canónica es URL_PLATFORM_OPTIONS en src/lib/communitySubmission.js
-    web?: string,
-    eventsUrl?: string,     // plataforma de eventos (Meetup, Eventbrite, Luma…)
-    eventosWiki?: string,   // página de la comunidad en eventos.wiki
-    ote?: string,           // feed de eventos en formato Open Tech Events
-    blog?: string,
-    rss?: string,
-    forum?: string,
-    linkAggregator?: string,
-    mailingList?: string,
-    github?: string,
-    discord?: string, telegram?: string, whatsapp?: string, slack?: string,
-    youtube?: string, linkedin?: string, twitter?: string, tiktok?: string,
-    instagram?: string, facebook?: string, mastodon?: string, bluesky?: string,
-    twitch?: string, flickr?: string,
-  },
+  urls: Array<UrlEntry>,        // canales; ver src/lib/communityUrls.js
   archivedUrls?: string[],      // canales históricos que ya nadie atiende: se conservan pero NO se muestran
   thumbnailUrl: string,
   latLon: { lat: number | null, lon: number | null },
@@ -190,9 +174,9 @@ npm run migrate-enum-keys -- --dry-run                 # previsualizar migració
 
 ### Comportamiento del scraper
 
-- **Plataformas bloqueadas** (`SKIP_SCRAPING_RE`): Twitter/X, LinkedIn, Instagram, Facebook, Discord, Telegram se saltan sin intentar visitar — evita timeouts. Si la comunidad tiene `urls.web`, se usa como fallback automático.
-- **Fallback `urls.web`**: si `communityUrl` falla o es una red social, el scraper intenta `community.urls.web`.
-- **Enriquecimiento meetup**: si tras scrapar la URL principal se conoce una URL de meetup (en `community.urls.meetup` o descubierta en los links), se visita para extraer topics estructurados (`/find/?keywords=`) y detectar estado activo/inactivo.
+- **Plataformas bloqueadas** (`SKIP_SCRAPING_RE`): Twitter/X, LinkedIn, Instagram, Facebook, Discord, Telegram se saltan sin intentar visitar — evita timeouts. Si la comunidad tiene un canal `web`, se usa como fallback automático.
+- **Fallback al canal `web`**: si `communityUrl` falla o es una red social, el scraper intenta el canal de kind `web`.
+- **Enriquecimiento meetup**: si tras scrapar la URL principal se conoce una URL de meetup (en el canal `eventsUrl` de la comunidad o descubierta en los links), se visita para extraer topics estructurados (`/find/?keywords=`) y detectar estado activo/inactivo.
 - **Topics estructurados**: los topics de meetup se mapean al catálogo `tags.json` por coincidencia en `label` y `synonyms` — más preciso que el matching de texto libre.
 - **Inactivas omitidas**: comunidades con `status: "inactive"` se saltan por defecto; usar `--id` para forzar una concreta.
 
@@ -442,7 +426,7 @@ lógica en `src/lib/organizedCommunities.js`.
   Mismo criterio que en las fusiones: quien llega por un enlace tiene que poder seguir.
 - **Ficha propia solo con marca propia + canales propios.** La edición ("Biznaga Fest 2026")
   nunca: eso es un evento y vive en OTE / eventos.wiki. Un evento anual sin nombre propio se
-  queda como `urls.eventsUrl` de la comunidad. Es la línea que evita que el directorio se
+  queda como canal `eventsUrl` de la comunidad. Es la línea que evita que el directorio se
   convierta en un catálogo de eventos.
 - Si el encuentro **no tiene canales propios**, no se copian los de quien lo organiza: una URL
   en dos fichas se valida dos veces y al archivarla hay que acordarse de los dos sitios. La
@@ -455,6 +439,18 @@ lógica en `src/lib/organizedCommunities.js`.
 
 Queda abierto en #475 el tipo para hackathones, jams y datatones: hoy están repartidos entre
 `conference` y `tech-meetup`, y ninguno de los dos es verdad.
+
+### Comunidades sin logo
+
+La tarjeta pinta las iniciales de la comunidad. Antes el hueco se rellenaba con una imagen
+traída de `bulma.io`: la cuadrícula dependía de un tercero para pintarse —y de paso le
+contaba quién la estaba mirando— a cambio de un rectángulo gris.
+
+El sustituto cubre además el caso que faltaba: una imagen **renombrada o borrada** salía como
+icono roto, porque sólo se caía al relleno si el campo venía vacío.
+
+`src/components/Card.jsx` no lo importa nadie y conserva dos hotlinks más a `bulma.io`; si se
+borra, se van con él.
 
 ### Ámbito geográfico (`geographicScope`)
 
@@ -469,7 +465,7 @@ una comunidad puede celebrar sus eventos en Madrid y dar apoyo a nivel nacional 
 
 ### Eventos vía OTE y eventos.wiki
 
-El directorio no almacena eventos (issues #57, #349): si la comunidad tiene `urls.ote`,
+El directorio no almacena eventos (issues #57, #349): si la comunidad tiene un canal de kind `ote`,
 `CommunityModal` pide ese feed [Open Tech Events](https://opentechevents.org/) al abrir la
 ficha y muestra los próximos eventos (o el último celebrado).
 
@@ -482,9 +478,14 @@ ficha y muestra los próximos eventos (o el último celebrado).
   fetch** aunque el destino sí las traiga: guarda siempre la URL canónica del feed
   (`communitybuilders.dev/events/feed.json`, no el `github.io` que redirige). Si aun así
   falla, la sección se queda en el enlace al feed; nunca rompe la ficha.
+- **Que el feed traiga eventos o no es cosa de la comunidad, no del directorio.** Aquí solo se
+  lee. Por eso `llms.txt`, los prompts y `docs/DATA.md` dicen que el feed es el sitio **donde
+  se puede comprobar** la actividad, y no que tenerlo la demuestre: con la redacción anterior
+  ("lo único que evidencia actividad real"), un modelo deducía "tiene feed, luego está viva".
+  Lo que hay que leer son las fechas de dentro.
 - `scripts/match-eventos-wiki.js` empareja los organizadores de
   `https://eventos.wiki/events.json` con las comunidades por nombre y rellena
-  `urls.eventosWiki` + `urls.ote`. Por defecto solo aplica matches exactos; los parciales
+  los canales `eventosWiki` + `ote`. Por defecto solo aplica matches exactos; los parciales
   ("Codemotion" vs "Codemotion Madrid") se listan para revisión humana y requieren
   `--include-fuzzy`. Nunca reintroduce un canal archivado.
 
@@ -524,7 +525,7 @@ prosa en inglés, el arreglo es no usar tipografía fuera de ASCII (hay test). E
 `llms-full.txt` los acentos de los nombres son inevitables, así que abre con BOM.
 
 El índice **declara la cobertura de cada campo flojo** (`tags`, `targetAudience`,
-`geographicScope`, `urls.ote`, `humanValidated`), calculada en cada build. Sin ese dato, un
+`geographicScope`, el canal `ote`, `humanValidated`), calculada en cada build. Sin ese dato, un
 modelo lee un campo vacío como "esta comunidad no trata de eso" y la descarta en silencio,
 cuando lo que pasa es que nadie lo ha rellenado.
 
@@ -701,25 +702,62 @@ que van de eso lo dicen en voz alta y piden el canal para preguntarlo (hay test)
 `lastReviewed` **no mide actividad**: es la fecha de la última revisión de la ficha, y la
 mayoría no se ha vuelto a mirar desde que se añadió.
 
-### Claves de `urls`
+### `urls` son pares, no una lista fija de plataformas
 
-Añadir una plataforma nueva exige tocar **cuatro** sitios, o se cae por el camino:
+Forma y valores en `schema.json`; la lógica, en `src/lib/communityUrls.js`. Aquí solo lo que
+no se deduce de ninguno de los dos.
 
-1. `URL_PLATFORM_OPTIONS` en `src/lib/communitySubmission.js` (formulario)
-2. `ALLOWED_URL_KEYS` en `scripts/validate-community-data.js` (si falta, el modo estricto
-   rechaza la comunidad)
-3. `URL_CONFIG_KEYS` **y** `URL_GROUP_DEFS` en `CommunityModal.jsx` (si falta en el grupo,
-   el enlace nunca se renderiza)
-4. `communityModal.url.<clave>` en `src/i18n/locales/es.json` y `en.json`
+**Por qué.** `eventsUrl` era una clave única y en los GDG ya estaba ocupada por el Meetup, así
+que no había dónde decir "y además organizan este encuentro anual, aquí". Eso dejó nueve
+DevFest sin sitio al cerrar #475.
 
-Opcional, pero es lo que distingue un campo usable de uno críptico: `platformHelpContent` en
-`CommunityContribution.jsx` + `contribution.urlHelp.<clave>` en ambos locales, para que el
-campo tenga icono de ayuda con un ejemplo de URL.
+- **El `kind` se omite cuando el dominio lo delata**, así que una entrada sin `kind` no es una
+  entrada sin clasificar. Consecuencia para quien consuma los datos: **un canal se localiza
+  por su URL, no sólo por su `kind`**.
+- **El mismo `kind` puede repetirse**, y entonces `label` es lo que distingue una entrada de
+  otra. Es el caso que motivó el cambio, no una excepción.
+- Meetup, Eventbrite y Luma tienen clave propia porque antes competían por `eventsUrl` y
+  compartían icono. Para saber dónde publica eventos una comunidad hay que mirar **toda la
+  familia**, no una clave.
+- `URL_KINDS` es la **única** lista de plataformas. Añadir una son dos sitios: esa constante y
+  su clave en los dos locales. `ALLOWED_URL_KEYS` y `URL_PLATFORM_OPTIONS` se derivan de ella
+  a propósito: mantenidas a mano se quedaron atrás en cuanto llegó Meetup, y el síntoma fue
+  que el alta asistida tiraba en silencio una URL que el propio `schema.json` le había
+  ofrecido al modelo.
 
-**No hay clave por plataforma de eventos.** No existe `meetup` (ni `eventbrite`, ni `luma`):
-esas URLs van en `eventsUrl`, o directamente en `communityUrl` si es la home de la comunidad.
-Inventarse la clave no falla al escribir el fichero, falla en el hook de pre-commit
-(`validate-data:staged` → "urls contiene una clave no soportada").
+#### Por qué la migración fue un script
+
+Eran 510 fichas: una migración a ojo pierde información sin que nadie se entere hasta meses
+después. El script comprueba ficha a ficha que la conversión es **reversible** antes de
+escribir, y aborta entero si una sola no cuadra. El mismo ida y vuelta corre como test sobre
+el dataset completo, así que la garantía no caduca con el script.
+
+El formato antiguo (objeto `{ clave: url }`) se sigue **leyendo**: es lo que traen los issues
+abiertos antes del cambio y los borradores a medias en `localStorage`.
+
+#### El formulario: una fila por canal
+
+El formulario edita **la misma lista que se guarda**. Lo que no es evidente leyendo el
+componente:
+
+- El campo "¿qué es?" hace dos trabajos con un control, y poder elegir plataforma **no es
+  cosmético**: hay kinds que no se infieren nunca por dominio. Sin poder elegirlos, alguien
+  guardaría su feed OTE como etiqueta libre, sin `kind`, y la sección de próximos eventos de
+  su ficha se apagaría en silencio. Por eso esa decisión es una función pura con test
+  (`resolveKindOrLabelInput`) y no lógica dentro del componente: el fallo que importa no da
+  error, da una ficha que parece correcta.
+- El desplegable es propio porque el `<datalist>` nativo no admite ni grupos ni iconos, y la
+  lista ya no se lee de un vistazo. Dentro de Eventos, las plataformas concretas van antes que
+  el genérico: con "Eventos" encabezando el grupo, quien tenía un Meetup elegía el genérico
+  por orden de aparición. `hintKey` existe porque filtrar "even" devuelve cuatro etiquetas
+  casi iguales.
+- El panel dice en su pie que se puede escribir un nombre propio. Sin eso, algo con aspecto de
+  lista cerrada esconde la mitad de lo que el campo hace.
+- **Todos** los caminos que siembran el borrador pasan por `toUrlRows`, y por eso vive en
+  `communityUrls.js`. Cuando uno no lo hacía, las filas quedaban sin identidad y quitar un
+  canal **borraba todos los demás**.
+- `urlExtras` fue el andamio de cuando el formulario aún no editaba pares. Ya no existe en el
+  borrador; sólo se lee al recuperar uno de entonces.
 
 ### Slugs
 

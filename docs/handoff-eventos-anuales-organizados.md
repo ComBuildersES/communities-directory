@@ -1,9 +1,12 @@
 # Handoff — alta de eventos anuales organizados por comunidades
 
-> **Estado 12/11/2026 (tarde): aplicado.** `organizedBy` commiteado en
-> `feat/organized-by-475` (f97406c). Altas, vínculos y la baja de DevFest Sevilla 2024,
-> hechos. Queda: logos de las dos fichas nuevas, confirmar la autoría del BiznagaFest con
-> quien lo organiza, y las altas de GDG Valladolid / Córdoba / Zaragoza / Lleida.
+> **Estado 12/11/2026 (noche): altas de GDG hechas.** `organizedBy` commiteado en
+> `feat/organized-by-475` (f97406c); ids 659 (GeeksCAT Conf) y 660 (VallaTech Summit)
+> asignados por CI en 76ca68b. Añadidos los cuatro GDG que faltaban (661 Córdoba,
+> 662 Lleida, 663 Valladolid, 664 Zaragoza) y vinculado VallaTech Summit → GDG Valladolid.
+> **URLs con etiqueta hechas, formulario incluido** (#478): `urls` es una lista de pares, las
+> 510 fichas con canales están migradas y el formulario edita filas con etiqueta propia.
+> Queda: los logos de los cuatro GDG nuevos (manual) y #477 (a la espera de opiniones).
 
 Estado al **12/11/2026**. Trabajo derivado de los issues
 [#475](https://github.com/ComBuildersES/communities-directory/issues/475) (modelo de autoría
@@ -43,21 +46,6 @@ Y además:
 | CodeRioja | 96 | Existe. Es el "DevFest La Rioja" de la lista. Falta `organizedBy: [201]` si se confirma que lo organiza GDG La Rioja. |
 | DevFest Sevilla 2024 | 136 | **Edición, no serie.** Deuda registrada en #477: renombrar a "DevFest Sevilla" o dar de baja. |
 | GeeksCAT | 647 | Existe la comunidad. Falta la ficha de la conferencia (conf.geeks.cat). |
-
-### GDGs disponibles para vincular
-
-| GDG | id | | GDG | id |
-|---|---|---|---|---|
-| GDG A Coruña | 195 | | GDG Madrid | 202 |
-| GDG Alicante | 587 | | GDG Málaga | 203 |
-| GDG Barcelona | 613 | | GDG Menorca | 543 |
-| GDG Girona | 604 | | GDG Ponferrada | 205 |
-| GDG Granada | 198 | | GDG Sevilla | 206 |
-| GDG Jaén | 200 | | GDG Toledo | 208 |
-| GDG Jerez de la Frontera | 630 | | GDG Valencia | 209 |
-| GDG La Rioja | 201 | | GDG Spain (paraguas) | 207 |
-
-**No están en el directorio**: GDG Córdoba, GDG Zaragoza, GDG Lleida, GDG Valladolid.
 
 ## Evaluación (12/11/2026, verificada en las webs)
 
@@ -109,18 +97,6 @@ dejar la URL en la ficha de GDG Sevilla (206).
 - **GDG Valladolid, Córdoba, Zaragoza y Lleida**: no están en el directorio. Son altas de
   comunidad, no de evento.
 
-## Por cada ficha que se cree
-
-- [ ] `name`, `status: active`, `communityType: conference`, `eventFormat: in-person`
-- [ ] `location`, `provinceId`, `geographicScope` (casi todos `local` o `provincial`)
-- [ ] `communityUrl` + `urls` reales (no inventar; si no hay, dejar vacío)
-- [ ] `organizedBy: [<id del GDG>]` cuando el organizador esté en el directorio
-- [ ] `tags` / `targetAudience` del catálogo
-- [ ] `latLon` + `displayOnMap`
-- [ ] `thumbnailUrl` (la validación avisa si falta)
-- [ ] `id: null`
-- [ ] `npm run validate-data` (o el hook) y `npm test`
-
 ## Lo aplicado (12/11/2026)
 
 | Cambio | Ficha |
@@ -147,15 +123,193 @@ mejor argumento a favor de las **URLs con etiqueta personalizada**: con ellas, c
 tener su enlace "DevFest" junto al de Meetup, y de paso Meetup, Eventbrite y Luma tendrían
 icono propio en vez de compartir `eventsUrl`.
 
+## Lo aplicado (12/11/2026, segunda vuelta): los cuatro GDG que faltaban
+
+Son **altas de comunidad, no de evento**: lo que no llevaba ficha era el capítulo, y por eso
+el DevFest de esas cuatro ciudades no tenía dónde colgarse. Los cuatro están **activos**
+(eventos con fecha de 2026 en `gdg.community.dev`), así que ninguno entra como `inactive`.
+
+Van con `humanValidated: false`: los datos salen de leer sus páginas, no de que una persona
+del capítulo los haya repasado.
+
+La única decisión que no se lee en la ficha: **`gdgzaragoza.es` va a `archivedUrls`**. Su
+último evento es de 2023 y hoy pone "No Events are found", mientras el capítulo sigue activo
+en el programa. Es el caso exacto del canal zombie de #353.
+
+**Y el vínculo que esto desbloquea**: `VallaTech Summit` (660) ya tiene
+`organizedBy: [663]`. Era el único de los dos encuentros nuevos que nació sin autoría,
+precisamente porque su GDG no estaba en el directorio.
+
+El `id` se asignó **en local** con `npm run assign-community-ids` a propósito: `organizedBy`
+referencia ids, así que sin asignarlos antes el vínculo del VallaTech Summit habría tenido
+que esperar a otra ronda después del merge. Estando en `master` y sin nada más pendiente de
+asignar, es determinista y CI no reasigna lo que ya tiene id.
+
+### Lo que sigue sin ficha, y es correcto
+
+DevFest **Córdoba, Zaragoza y Lleida** no llevan ficha propia, por el mismo criterio de
+antes: "DevFest + ciudad" no es marca propia. Ahora al menos su capítulo existe en el
+directorio, que es donde la gente los va a buscar.
+
+## Confirmar la autoría del BiznagaFest
+
+El vínculo `organizedBy: [203]` (GDG Málaga) está **aplicado pero sin confirmar**. Lo que hay
+a favor: nació como DevFest Málaga, y su `eventsUrl` es literalmente el Meetup de
+`google-developer-group-malaga`. Lo que no hay: una frase en su web que lo diga.
+
+Canales para preguntar: `biznagafest@gmail.com` (en la ficha), y el Discord de GDG Málaga
+(`discord.gg/PbUpg2b6pW`).
+
+Borrador:
+
+> Asunto: ¿quién organiza hoy el BiznagaFest? (directorio de Community Builders)
+>
+> Hola:
+>
+> Mantenemos [el directorio de comunidades tecnológicas españolas](https://directory.communitybuilders.dev/)
+> y acabamos de añadir un campo para decir qué comunidad organiza cada encuentro anual, de
+> forma que desde la ficha del BiznagaFest se pueda llegar a la gente que lo hace posible y
+> al revés.
+>
+> Hemos puesto que lo organiza **GDG Málaga**, porque el BiznagaFest viene del DevFest Málaga
+> y porque vuestras inscripciones salen del Meetup del GDG. ¿Es correcto a día de hoy, o lo
+> lleva otro equipo (o varios a la vez)? El campo admite más de una comunidad.
+>
+> Dos cosas más, por si queréis aprovechar:
+>
+> - Quitamos de vuestra ficha el LinkedIn de FJX Group, porque entendemos que es un
+>   patrocinador y no quien organiza. Si nos equivocamos, lo devolvemos.
+> - La ficha está marcada como *pendiente de revisar*: los datos los sacamos de vuestra web,
+>   no de que nos los hayáis confirmado. Si le echáis un ojo y nos decís que está bien, la
+>   marcamos como revisada.
+>
+> Gracias, y cualquier corrección es bienvenida.
+
+Si no contestan, la decisión es **mantener el vínculo**: la evidencia del Meetup es fuerte y
+el coste de equivocarse aquí es un enlace entre dos fichas que de verdad están relacionadas.
+Lo que no se puede hacer sin respuesta es marcar la ficha como `humanValidated: true`.
+
+## URLs con etiqueta personalizada: hecho (#478)
+
+Era el punto 1 de esta lista y resuelve el "no cabe" de la sección anterior. `urls` pasa de
+objeto `{ clave: url }` a **lista de pares** `{ url, kind?, label? }`. El modelo y el criterio
+están en `CLAUDE.md`; aquí queda lo que importa para este trabajo:
+
+- Un GDG ya puede tener su Meetup **y además** su DevFest, los dos como `eventsUrl`,
+  distinguidos por `label`. Eso era exactamente lo que no cabía.
+- `kind` se **omite** cuando el dominio lo delata, así que las fichas migradas no repiten
+  "twitter" al lado de una URL de `x.com`.
+- Añadir una plataforma ya no obliga a tocar cuatro sitios: `URL_KINDS` más la clave de i18n.
+
+### La migración, que era el miedo razonable
+
+No se repasó ninguna ficha a mano, así que la garantía es mecánica y está en tres capas: el
+script aborta entero si una ficha no sobrevive la ida y vuelta; un test corre esa misma
+comprobación sobre el dataset completo, para que no caduque con el script; y una vez aplicada
+se comparó cada ficha contra `git HEAD` — **0 URLs perdidas, 0 aparecidas, 0 `kind` que no
+cuadren**.
+
+### El formulario ya edita pares
+
+Una fila por canal: `[icono] [¿qué es?] [URL] [archivar] [quitar]` y un `+ Añadir canal`.
+Fuera los 24 campos fijos y los chips "+ Telegram". El campo del medio rellena solo el nombre
+y el icono cuando el dominio delata la plataforma, y pide el nombre con un placeholder cuando
+no. Detalles en `CLAUDE.md`.
+
+Lo que **no** era obvio y por poco se cuela: seis kinds (`web`, `ote`, `blog`, `rss`, `forum`,
+`mastodon`) **no se infieren nunca** por dominio. Con un campo de texto libre a secas, el feed
+OTE de alguien se habría guardado con la etiqueta "Eventos" y sin `kind`, y la sección de
+próximos eventos de su ficha se habría apagado sin decir nada. Por eso el campo es un
+combobox: texto libre, pero sugiriendo las plataformas conocidas.
+
+Y un bug que se arregló por el camino: `archivedUrlMatches` hacía `Object.values(payload.urls)`,
+que con pares devuelve los objetos entrada y no las URLs. El aviso de "esta URL ya está
+archivada" llevaba roto desde la migración.
+
+### Segunda pasada del editor
+
+Tres cosas, salidas de probarlo de verdad:
+
+1. **Quitar un canal los borraba todos**, y sólo al *editar* una ficha existente: la identidad
+   de fila se generaba en el componente, y ese camino no pasaba por ahí. Hay test de regresión.
+2. **El `datalist` nativo no servía** con la lista ya crecida. Sustituido por un desplegable
+   propio, agrupado como la ficha.
+3. **Meetup, Eventbrite y Luma pasan a tener clave propia.** Eso cambió el `kind` inferido de
+   236 URLs de meetup.com que lo tenían implícito: ningún fichero hubo que reescribirlo, pero
+   sí actualizar a quien preguntaba por `eventsUrl`.
+
+De paso apareció una inconsistencia de fondo: la inferencia crece con el tiempo, así que un
+`kind` escrito antes puede volverse redundante y el dataset acaba con dos formas de escribir
+lo mismo. Ya pasaba en 11 fichas.
+
+### Los dos primeros canales con etiqueta propia
+
+El campo `label` no tenía **ni un solo uso** en 1505 entradas, así que no se podía comprobar
+de verdad. Ahora tiene dos, los dos verificados (HTTP 200 y la página leída):
+
+| Ficha | Entrada | Por qué |
+|---|---|---|
+| GDG Barcelona (613) | `eventsUrl` + label `DevFest Barcelona` → `gdg.barcelona` | Su `eventsUrl` ya lo ocupaba el Meetup |
+| GDG Jaén (200) | `eventsUrl` + label `DevFest Jaén` → `gdg-jaen.netlify.app` | Su `eventsUrl` ya lo ocupaba `gdg.community.dev` |
+
+Son exactamente el "no cabe" que cerró la sesión anterior. La etiqueta lleva el nombre de la
+**serie**, no el de la edición ("DevFest Barcelona", no "DevFest Barcelona 2026"): mismo
+criterio que #475, aunque la landing sea de la edición de 2026.
+
+Quedan los otros siete DevFest sin ficha (Madrid, Valencia, Girona, Jerez, Córdoba, Zaragoza,
+Lleida). No se han añadido porque **no tienen URL propia estable**: su página es la del GDG,
+que ya está en `communityUrl`, o la de una edición concreta en `gdg.community.dev`.
+
+## Cerrado por decisión: el correo del BiznagaFest
+
+No se manda. El vínculo `organizedBy: [203]` se queda puesto con la evidencia que hay (nació
+como DevFest Málaga y sus inscripciones salen del Meetup del GDG), y la ficha **no** se marca
+como revisada. El borrador sigue más arriba por si algún día se quiere usar.
+
+## Cerrado por decisión: la frescura de los feeds
+
+Se midió (de 40 feeds de comunidades activas, 10 traían algún evento futuro) y se descartó
+perseguirlo: **si eventos.wiki está al día o no, no es responsabilidad del directorio**, que
+se limita a leer el feed. No queda script ni lista de contacto.
+
+Lo único que sí se corrigió es lo que el directorio decía de sí mismo: `llms.txt`, los prompts
+y `docs/DATA.md` afirmaban que el feed es *"lo único que evidencia actividad real"*, y con eso
+un modelo deduce "tiene feed, luego está viva" sin haber abierto el feed. Ahora dicen que el
+campo sólo indica que existe un feed, que lo que contenga es cosa de la comunidad, y que hay
+que leer las fechas de dentro.
+
+## Por qué GDG Madrid no enlaza su DevFest
+
+Preguntado y verificado: **DevFest Madrid no tiene URL propia**. La única es la de la edición
+(`.../google-gdg-madrid-presents-devfest-madrid-2026/`), y el año en el slug la hace caducar
+cada enero. `devfest.gdgmadrid.es`, `devfestmadrid.com`, `gdgmadrid.es` y `devfest.madrid` no
+existen.
+
+Comprobados los **siete** sin entrada (Madrid, Valencia, Girona, Jerez, Córdoba, Zaragoza,
+Lleida): ninguno tiene dominio propio. `gdglleida.com` y `gdgzaragoza.es` sí existen, pero son
+la web del capítulo, ya tratadas. Barcelona y Jaén la llevan porque su landing vive en un
+dominio que sobrevive a la edición.
+
+## Logos: lo que falta y por qué no sale solo
+
+GeeksCAT Conf y VallaTech Summit ya tienen logo. Quedan los **cuatro GDG nuevos** (661, 662,
+663, 664), que son las **únicas cuatro comunidades activas del directorio sin logo**.
+
+Y no se pueden sacar automáticamente. Lo que publican los capítulos no sirve:
+
+- En `gdg.community.dev` lo específico del capítulo es una **foto de la ciudad** como banner y
+  los avatares de quien organiza. No hay logo.
+- El avatar de Linktree de GDG Córdoba es `GDG-Professional---Horizontal---Dark.png`: el
+  **lockup genérico** de GDG, sin ciudad. Ponérselo a los cuatro sería la misma imagen en
+  cuatro fichas distintas, que en una cuadrícula no identifica nada.
+- `gdglleida.com` es un Blogger y sus imágenes son carteles de eventos.
+
+Lo que llevan los 19 GDG que ya estaban (el lockup con el nombre de la ciudad) sale de los
+avatares de sus redes, que no son descargables sin sesión. Es trabajo manual.
+
+Mientras tanto no se ve un hueco roto: la tarjeta pinta las iniciales.
+
 ## Siguiente sesión
 
-1. **URLs con etiqueta personalizada** (idea nueva): sustituir la lista fija de plataformas
-   por pares etiqueta + URL. Si la etiqueta coincide con una conocida, icono predefinido; si
-   no, icono genérico. Afecta a `URL_PLATFORM_OPTIONS`, `ALLOWED_URL_KEYS`,
-   `URL_CONFIG_KEYS` / `URL_GROUP_DEFS` y los locales — hoy añadir una plataforma obliga a
-   tocar cuatro sitios, que es parte del problema. Hay que decidir qué pasa con las 655
-   fichas actuales y con la validación.
-2. Logos de GeeksCAT Conf y VallaTech Summit.
-3. Confirmar con quien organiza el BiznagaFest que el vínculo con GDG Málaga es correcto.
-4. Altas de GDG Valladolid, Córdoba, Zaragoza y Lleida (son altas de comunidad, no de evento).
-5. #477 sigue abierto: tipo para hackathones, jams y datatones.
+1. Logos de GDG Córdoba, Lleida, Valladolid y Zaragoza (manual, ver arriba).
+2. #477 sigue abierto: tipo para hackathones, jams y datatones.

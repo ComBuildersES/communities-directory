@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-12 `58abe3e` enlazar el DevFest de GDG Barcelona y GDG Jaén
+- 2026-11-12 `5ad5592` enlazar el DevFest de GDG Barcelona y GDG Jaén
 - 2026-11-12 `cb2eed1` editar los canales como filas, con etiqueta propia
 - 2026-11-12 `cba2880` `urls` como lista de pares con etiqueta propia
 - 2026-11-12 `56aa7f8` apagar el vínculo de autoría cuando el otro lado no está activo
@@ -56,6 +56,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-11-12 `567f0a9` el porqué de los canales como pares, no lo que ya dice el esquema
 - 2026-11-10 `9c84a1a` regenerar el changelog tras el merge
 - 2026-11-10 `5b11100` documentar la capa de datos abiertos para IA y sanear AGENTS.md
 - 2026-11-10 `eaf69c6` actualizar la guía al layout de un fichero por comunidad

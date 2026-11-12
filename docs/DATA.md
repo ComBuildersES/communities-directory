@@ -160,9 +160,15 @@ no existe una clave por plataforma de eventos (Meetup, Eventbrite, Luma…): esa
 ## Eventos
 
 El directorio **no** almacena eventos. Cuando una comunidad publica un feed en formato
-[Open Tech Events](https://opentechevents.org/), su URL está en `urls.ote` y la ficha lo lee en
-caliente al abrirse. Para consumir eventos, ese feed es la fuente; `urls.eventosWiki` apunta a
-la página de la comunidad en [eventos.wiki](https://eventos.wiki/).
+[Open Tech Events](https://opentechevents.org/), ese feed es la entrada de `urls` con
+`"kind": "ote"`, y la ficha lo lee en caliente al abrirse. Para consumir eventos, el feed es la
+fuente; la entrada con `"kind": "eventosWiki"` apunta a la página de la comunidad en
+[eventos.wiki](https://eventos.wiki/).
+
+**Que una comunidad publique feed no prueba que esté activa.** El campo solo dice que hay un
+feed; lo que contenga y cuándo se actualice es cosa de la comunidad, no del directorio, que se
+limita a leerlo. Para saber si hay algo próximo, mira las fechas del feed, no la presencia del
+campo.
 
 ## Si quieres usar los datos con IA o con un agente
 
