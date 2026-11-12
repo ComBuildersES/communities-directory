@@ -29,7 +29,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Fixes
 
-- 2026-11-12 `756bbcf` dejar de cobrar clics y atención por lo que ya se sabe
+- 2026-11-12 `f4fef93` no pedir logo ni URL a las comunidades inactivas
+- 2026-11-12 `d131a3d` dejar de cobrar clics y atención por lo que ya se sabe
 - 2026-11-12 `40f7209` iniciales en lugar de una imagen traída de bulma.io
 - 2026-11-10 `e23fc7a` regeocodificar cuando una edición cambia la ubicación
 

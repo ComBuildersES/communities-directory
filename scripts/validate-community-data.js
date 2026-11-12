@@ -410,21 +410,35 @@ function validateCommunityGlobal(community, index, knownTagIds, knownAudienceIds
     );
   }
 
-  if (!isNonEmptyString(community.communityUrl)) {
-    pushIssue(
-      issues.warnings,
-      "warning",
-      `${label}: falta communityUrl. Es un campo obligatorio para nuevas contribuciones.`,
-    );
-  }
+  if (requiresBranding(community)) {
+    if (!isNonEmptyString(community.communityUrl)) {
+      pushIssue(
+        issues.warnings,
+        "warning",
+        `${label}: falta communityUrl. Es un campo obligatorio para nuevas contribuciones.`,
+      );
+    }
 
-  if (!isNonEmptyString(community.thumbnailUrl)) {
-    pushIssue(
-      issues.warnings,
-      "warning",
-      `${label}: falta thumbnailUrl. Es un campo obligatorio para nuevas contribuciones.`,
-    );
+    if (!isNonEmptyString(community.thumbnailUrl)) {
+      pushIssue(
+        issues.warnings,
+        "warning",
+        `${label}: falta thumbnailUrl. Es un campo obligatorio para nuevas contribuciones.`,
+      );
+    }
   }
+}
+
+/**
+ * ¿Se le pide logo y URL a esta comunidad?
+ *
+ * A una comunidad inactiva, no: no hay nadie a quien pedirle el logo, y su ficha existe para
+ * que quien busque el grupo sepa que ya no organiza nada. Antes esas 95 advertencias eran la
+ * mayor parte del ruido de cada validación, y un aviso que nadie va a atender esconde los que
+ * sí (`unknown` sigue avisando: ahí la comunidad puede estar viva y el logo vale la pena).
+ */
+export function requiresBranding(community) {
+  return community?.status !== "inactive";
 }
 
 function validateCommunityStrict(community, index, issues, isNew = true) {
@@ -438,7 +452,7 @@ function validateCommunityStrict(community, index, issues, isNew = true) {
 
   const requiredFields = ["name", "status", "lastReviewed", "communityType", "eventFormat"];
 
-  if (isNew) {
+  if (isNew && requiresBranding(community)) {
     requiredFields.push("communityUrl", "thumbnailUrl");
   }
 
@@ -970,4 +984,7 @@ function main() {
   }
 }
 
-main();
+// El helper se importa desde los tests; sin esta guarda, importarlo lanzaría la validación.
+if (import.meta.url === `file://${process.argv[1]}`) {
+  main();
+}

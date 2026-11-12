@@ -440,6 +440,16 @@ lógica en `src/lib/organizedCommunities.js`.
 Queda abierto en #475 el tipo para hackathones, jams y datatones: hoy están repartidos entre
 `conference` y `tech-meetup`, y ninguno de los dos es verdad.
 
+### A una comunidad inactiva no se le pide logo ni URL
+
+`requiresBranding` en `scripts/validate-community-data.js`: con `status: "inactive"` no se
+avisa de que falten `thumbnailUrl` ni `communityUrl`, ni se exigen en una propuesta nueva.
+
+No hay nadie a quien pedírselos, y su ficha existe para que quien busque el grupo sepa que ya
+no organiza nada. Eran **95 de las 119 advertencias** de cada validación: un aviso que nadie va
+a atender esconde los que sí. `unknown` sigue avisando —ahí la comunidad puede estar viva— y
+`merged` también, porque su ficha es el camino hacia la comunidad viva.
+
 ### Comunidades sin logo
 
 La tarjeta pinta las iniciales de la comunidad. Antes el hueco se rellenaba con una imagen
