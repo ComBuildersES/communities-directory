@@ -16,11 +16,22 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://gdg.community.dev/gdg-barcelona/",
-  "urls": {
-    "instagram": "https://www.instagram.com/gdg_barcelona/",
-    "mailingList": "https://groups.google.com/g/gdg-barcelona",
-    "eventsUrl": "https://www.meetup.com/es-ES/gdg-barcelona/"
-  },
+  "urls": [
+    {
+      "url": "https://www.instagram.com/gdg_barcelona/"
+    },
+    {
+      "url": "https://groups.google.com/g/gdg-barcelona"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/gdg-barcelona/"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://gdg.barcelona/",
+      "label": "DevFest Barcelona"
+    }
+  ],
   "thumbnailUrl": "images/gdg-barcelona.webp",
   "latLon": {
     "lat": 41.387917,

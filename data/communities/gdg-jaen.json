@@ -15,11 +15,22 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://gdg.community.dev/gdg-jaen/",
-  "urls": {
-    "twitter": "https://x.com/gdgjaen",
-    "instagram": "https://www.instagram.com/gdgjaen",
-    "eventsUrl": "https://gdg.community.dev/gdg-jaen/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/gdgjaen"
+    },
+    {
+      "url": "https://www.instagram.com/gdgjaen"
+    },
+    {
+      "url": "https://gdg.community.dev/gdg-jaen/"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://gdg-jaen.netlify.app/",
+      "label": "DevFest Jaén"
+    }
+  ],
   "thumbnailUrl": "images/gdg-jaen.webp",
   "latLon": {
     "lat": 37.7657753,

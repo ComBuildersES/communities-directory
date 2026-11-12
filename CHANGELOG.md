@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-11-12 `58abe3e` enlazar el DevFest de GDG Barcelona y GDG Jaén
 - 2026-11-12 `cb2eed1` editar los canales como filas, con etiqueta propia
 - 2026-11-12 `cba2880` `urls` como lista de pares con etiqueta propia
 - 2026-11-12 `56aa7f8` apagar el vínculo de autoría cuando el otro lado no está activo
@@ -27,7 +28,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Fixes
 
-- 2026-11-12 `6011f9d` iniciales en lugar de una imagen traída de bulma.io
+- 2026-11-12 `40f7209` iniciales en lugar de una imagen traída de bulma.io
 - 2026-11-10 `e23fc7a` regeocodificar cuando una edición cambia la ubicación
 
 ### Data
