@@ -63,16 +63,33 @@
   ],
   "contactInfo": "geodevelopers.es@gmail.com",
   "communityUrl": "https://www.geodevelopers.org",
-  "urls": {
-    "linkAggregator": "https://linktr.ee/geodevelopers",
-    "linkedin": "https://www.linkedin.com/company/geo-developers/",
-    "youtube": "https://www.youtube.com/geo-developers",
-    "twitter": "https://x.com/geo_developers",
-    "github": "https://github.com/geo-developers",
-    "twitch": "https://www.twitch.tv/geodevelopers",
-    "eventsUrl": "https://calendar.google.com/calendar/u/0/embed?src=3mv6ssdlr6dipkrqaheqnbjmuo@group.calendar.google.com&ctz=Europe/Madrid",
-    "mailingList": "https://groups.google.com/g/geo-developers"
-  },
+  "urls": [
+    {
+      "url": "https://linktr.ee/geodevelopers"
+    },
+    {
+      "url": "https://www.linkedin.com/company/geo-developers/"
+    },
+    {
+      "url": "https://www.youtube.com/geo-developers"
+    },
+    {
+      "url": "https://x.com/geo_developers"
+    },
+    {
+      "url": "https://github.com/geo-developers"
+    },
+    {
+      "url": "https://www.twitch.tv/geodevelopers"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://calendar.google.com/calendar/u/0/embed?src=3mv6ssdlr6dipkrqaheqnbjmuo@group.calendar.google.com&ctz=Europe/Madrid"
+    },
+    {
+      "url": "https://groups.google.com/g/geo-developers"
+    }
+  ],
   "thumbnailUrl": "images/geodevelopers.webp",
   "latLon": {
     "lat": null,

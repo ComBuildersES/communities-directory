@@ -15,15 +15,30 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://gdg.community.dev/gdg-malaga/",
-  "urls": {
-    "twitter": "https://www.twitter.com/gdgmalaga",
-    "linkedin": "https://www.linkedin.com/company/gdg-malaga/",
-    "instagram": "https://www.instagram.com/gdgmalaga",
-    "discord": "https://discord.gg/PbUpg2b6pW",
-    "eventsUrl": "https://www.meetup.com/malagamobile/",
-    "eventosWiki": "https://eventos.wiki/organizations/gdg-malaga",
-    "ote": "https://eventos.wiki/organizations/gdg-malaga/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://www.twitter.com/gdgmalaga"
+    },
+    {
+      "url": "https://www.linkedin.com/company/gdg-malaga/"
+    },
+    {
+      "url": "https://www.instagram.com/gdgmalaga"
+    },
+    {
+      "url": "https://discord.gg/PbUpg2b6pW"
+    },
+    {
+      "url": "https://www.meetup.com/malagamobile/"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/gdg-malaga"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/gdg-malaga/events.json"
+    }
+  ],
   "thumbnailUrl": "images/gdg-malaga.webp",
   "latLon": {
     "lat": 36.7196292,

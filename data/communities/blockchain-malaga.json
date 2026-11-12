@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/blockchain-malaga/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/blockchain-malaga/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/blockchain-malaga/"
+    }
+  ],
   "thumbnailUrl": "images/blockchain-malaga.webp",
   "latLon": {
     "lat": 36.7196292,

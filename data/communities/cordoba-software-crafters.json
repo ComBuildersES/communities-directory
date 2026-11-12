@@ -16,12 +16,20 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.eventbrite.com/o/cordoba-software-crafters-48873988743",
-  "urls": {
-    "twitter": "https://www.twitter.com/CordobaCrafters",
-    "linkedin": "https://www.linkedin.com/company/eventbrite",
-    "instagram": "https://www.instagram.com/eventbrite",
-    "eventsUrl": "https://www.eventbrite.com/o/cordoba-software-crafters-48873988743"
-  },
+  "urls": [
+    {
+      "url": "https://www.twitter.com/CordobaCrafters"
+    },
+    {
+      "url": "https://www.linkedin.com/company/eventbrite"
+    },
+    {
+      "url": "https://www.instagram.com/eventbrite"
+    },
+    {
+      "url": "https://www.eventbrite.com/o/cordoba-software-crafters-48873988743"
+    }
+  ],
   "thumbnailUrl": "images/cordoba-software-crafters.webp",
   "latLon": {
     "lat": 37.888422,

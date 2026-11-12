@@ -15,14 +15,27 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://gdg.community.dev/gdg-madrid/",
-  "urls": {
-    "twitter": "https://www.twitter.com/gdgmadrid",
-    "linkedin": "https://www.linkedin.com/company/gdgmadrid",
-    "discord": "https://discord.gg/7acF6f3DB4",
-    "eventsUrl": "https://gdg.community.dev/gdg-madrid/",
-    "eventosWiki": "https://eventos.wiki/organizations/gdg-madrid",
-    "ote": "https://eventos.wiki/organizations/gdg-madrid/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://www.twitter.com/gdgmadrid"
+    },
+    {
+      "url": "https://www.linkedin.com/company/gdgmadrid"
+    },
+    {
+      "url": "https://discord.gg/7acF6f3DB4"
+    },
+    {
+      "url": "https://gdg.community.dev/gdg-madrid/"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/gdg-madrid"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/gdg-madrid/events.json"
+    }
+  ],
   "thumbnailUrl": "images/gdg-madrid.webp",
   "latLon": {
     "lat": 40.4167047,

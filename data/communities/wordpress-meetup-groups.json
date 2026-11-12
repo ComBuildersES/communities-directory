@@ -16,13 +16,23 @@
   "targetAudience": [],
   "contactInfo": "support@wordcamp.org",
   "communityUrl": "https://make.wordpress.org/community/meetups/",
-  "urls": {
-    "twitter": "https://www.x.com/WordPress",
-    "bluesky": "https://bsky.app/profile/wordpress.org",
-    "instagram": "https://www.instagram.com/wordpress/",
-    "linkedin": "https://www.linkedin.com/company/wordpress",
-    "eventsUrl": "https://www.meetup.com/pro/wordpress/"
-  },
+  "urls": [
+    {
+      "url": "https://www.x.com/WordPress"
+    },
+    {
+      "url": "https://bsky.app/profile/wordpress.org"
+    },
+    {
+      "url": "https://www.instagram.com/wordpress/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/wordpress"
+    },
+    {
+      "url": "https://www.meetup.com/pro/wordpress/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-meetup-groups.webp",
   "latLon": {
     "lat": null,

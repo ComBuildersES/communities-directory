@@ -14,11 +14,18 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.droidcon.com/",
-  "urls": {
-    "twitter": "https://x.com/droidcon?lang=en",
-    "linkedin": "https://www.linkedin.com/company/droidcon/",
-    "youtube": "http://web.archive.org/web/20251224100413/https://www.youtube.com/@DroidconDe"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/droidcon?lang=en"
+    },
+    {
+      "url": "https://www.linkedin.com/company/droidcon/"
+    },
+    {
+      "kind": "youtube",
+      "url": "http://web.archive.org/web/20251224100413/https://www.youtube.com/@DroidconDe"
+    }
+  ],
   "thumbnailUrl": "images/droidcon.webp",
   "latLon": {
     "lat": null,

@@ -14,12 +14,21 @@
   "targetAudience": [],
   "contactInfo": "it@hackbcn.org",
   "communityUrl": "https://hackbcn.org/",
-  "urls": {
-    "telegram": "https://t.me/hackbcn",
-    "github": "https://github.com/ernesto-xload",
-    "twitter": "https://x.com/hackbcn",
-    "web": "https://hackbcn.org/"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/hackbcn"
+    },
+    {
+      "url": "https://github.com/ernesto-xload"
+    },
+    {
+      "url": "https://x.com/hackbcn"
+    },
+    {
+      "kind": "web",
+      "url": "https://hackbcn.org/"
+    }
+  ],
   "thumbnailUrl": "images/hackbcn.webp",
   "latLon": {
     "lat": 41.3825802,

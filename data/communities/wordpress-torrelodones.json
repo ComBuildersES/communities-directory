@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/torrelodones-wordpress-meetup/",
-  "urls": {
-    "twitter": "http://twitter.com/WPTorrelodones/",
-    "eventsUrl": "https://www.meetup.com/torrelodones-wordpress-meetup/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/WPTorrelodones/"
+    },
+    {
+      "url": "https://www.meetup.com/torrelodones-wordpress-meetup/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-torrelodones.webp",
   "latLon": {
     "lat": 40.576519,

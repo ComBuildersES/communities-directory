@@ -85,17 +85,40 @@ describe('parseAssistedCommunityJson', () => {
     expect(warnings).toContain('unknown:tags:pitón');
   });
 
-  it('descarta claves de urls no soportadas, incluida la trampa de "meetup"', () => {
+  it('descarta las claves de urls que no existen', () => {
     const { community, warnings } = parseAssistedCommunityJson(
       JSON.stringify({
         name: 'A',
-        urls: { web: 'https://a.dev', meetup: 'https://meetup.com/a', github: '' },
+        urls: { web: 'https://a.dev', inventada: 'https://a.dev/x', github: '' },
       }),
       CATALOGUES
     );
 
     expect(community.urls).toEqual({ web: 'https://a.dev' });
-    expect(warnings).toContain('unknown:urls:meetup');
+    expect(warnings).toContain('unknown:urls:inventada');
+  });
+
+  /**
+   * El prompt enlaza `schema.json` y le pide al modelo que se ciña a él. Cuando la lista de
+   * claves que acepta el parser se mantenía a mano, se quedó atrás respecto al esquema: el
+   * modelo devolvía una URL de Meetup siguiendo lo que había leído y el formulario la tiraba
+   * sin decir nada. Ahora ambas salen de `URL_KINDS`.
+   */
+  it('acepta las claves de plataforma que el esquema le ofrece al modelo', () => {
+    const { community, warnings } = parseAssistedCommunityJson(
+      JSON.stringify({
+        name: 'A',
+        urls: { meetup: 'https://meetup.com/a', luma: 'https://lu.ma/a', eventbrite: 'https://eventbrite.es/e/1' },
+      }),
+      CATALOGUES
+    );
+
+    expect(community.urls).toEqual({
+      meetup: 'https://meetup.com/a',
+      luma: 'https://lu.ma/a',
+      eventbrite: 'https://eventbrite.es/e/1',
+    });
+    expect(warnings.some((w) => w.startsWith('unknown:urls'))).toBe(false);
   });
 
   it('conserva los flags de generalista solo si son booleanos', () => {

@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://linktr.ee/tryit_upm",
-  "urls": {
-    "linkAggregator": "https://linktr.ee/tryit_upm"
-  },
+  "urls": [
+    {
+      "url": "https://linktr.ee/tryit_upm"
+    }
+  ],
   "thumbnailUrl": "images/congreso-tryit.webp",
   "latLon": {
     "lat": 40.4167047,

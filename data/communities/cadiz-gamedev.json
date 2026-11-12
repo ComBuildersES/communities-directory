@@ -16,13 +16,23 @@
   "targetAudience": [],
   "contactInfo": "cadizgamedev@gmail.com",
   "communityUrl": "https://linktr.ee/cadizgamedev",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/cadizgamedev",
-    "twitter": "https://x.com/cadizgamedev",
-    "instagram": "https://www.instagram.com/cadizgamedev",
-    "discord": "https://discord.gg/jENjY6Jnwe",
-    "linkAggregator": "https://linktr.ee/cadizgamedev"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/cadizgamedev"
+    },
+    {
+      "url": "https://x.com/cadizgamedev"
+    },
+    {
+      "url": "https://www.instagram.com/cadizgamedev"
+    },
+    {
+      "url": "https://discord.gg/jENjY6Jnwe"
+    },
+    {
+      "url": "https://linktr.ee/cadizgamedev"
+    }
+  ],
   "thumbnailUrl": "images/cadiz-gamedev.webp",
   "latLon": {
     "lat": 36.5297453,

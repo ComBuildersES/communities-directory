@@ -41,13 +41,23 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://gdg.community.dev/gdg-toledo/",
-  "urls": {
-    "twitter": "https://www.twitter.com/gdgtoledo_es",
-    "linkedin": "https://www.linkedin.com/company/103971769",
-    "discord": "https://discord.gg/KkvcV3krCY",
-    "eventsUrl": "https://gdg.community.dev/gdg-toledo/",
-    "youtube": "https://www.youtube.com/@gdgtoledo1846"
-  },
+  "urls": [
+    {
+      "url": "https://www.twitter.com/gdgtoledo_es"
+    },
+    {
+      "url": "https://www.linkedin.com/company/103971769"
+    },
+    {
+      "url": "https://discord.gg/KkvcV3krCY"
+    },
+    {
+      "url": "https://gdg.community.dev/gdg-toledo/"
+    },
+    {
+      "url": "https://www.youtube.com/@gdgtoledo1846"
+    }
+  ],
   "thumbnailUrl": "images/gdg-toledo.webp",
   "latLon": {
     "lat": 39.85966175170025,

@@ -21,12 +21,20 @@
   ],
   "contactInfo": "sponsors@grafana.com",
   "communityUrl": "https://grafana.com/events/grafanacon/",
-  "urls": {
-    "twitter": "https://twitter.com/grafana",
-    "linkedin": "https://www.linkedin.com/company/grafana-labs/",
-    "github": "https://github.com/grafana/",
-    "youtube": "https://www.youtube.com/channel/UCYCwgQAMm9sTJv0rgwQLCxw"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/grafana"
+    },
+    {
+      "url": "https://www.linkedin.com/company/grafana-labs/"
+    },
+    {
+      "url": "https://github.com/grafana/"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCYCwgQAMm9sTJv0rgwQLCxw"
+    }
+  ],
   "thumbnailUrl": "images/grafanacon.webp",
   "latLon": {
     "lat": null,

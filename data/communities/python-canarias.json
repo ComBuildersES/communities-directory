@@ -18,10 +18,14 @@
   "targetAudience": [],
   "contactInfo": "info@pythoncanarias.es",
   "communityUrl": "https://pythoncanarias.es/",
-  "urls": {
-    "twitter": "https://x.com/pythoncanarias",
-    "telegram": "https://t.me/joinchat/AJ7pmT-X0xZVPgWDIzGA-A"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/pythoncanarias"
+    },
+    {
+      "url": "https://t.me/joinchat/AJ7pmT-X0xZVPgWDIzGA-A"
+    }
+  ],
   "thumbnailUrl": "images/python-alicante.webp",
   "latLon": {
     "lat": 28,

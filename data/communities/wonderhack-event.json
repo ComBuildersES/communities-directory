@@ -14,10 +14,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.wonderhack.es/",
-  "urls": {
-    "twitter": "https://x.com/wonderhackes",
-    "web": "http://web.archive.org/web/20220818234122/https://www.wonderhack.es/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/wonderhackes"
+    },
+    {
+      "kind": "web",
+      "url": "http://web.archive.org/web/20220818234122/https://www.wonderhack.es/"
+    }
+  ],
   "thumbnailUrl": "images/wonderhack-event.webp",
   "latLon": {
     "lat": 40.2445707,

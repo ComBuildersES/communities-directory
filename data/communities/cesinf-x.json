@@ -14,11 +14,17 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.cesinfull.com/",
-  "urls": {
-    "instagram": "https://instagram.com/cesinfull",
-    "twitter": "https://x.com/CESINFULL",
-    "github": "https://github.com/CESINFULL2425"
-  },
+  "urls": [
+    {
+      "url": "https://instagram.com/cesinfull"
+    },
+    {
+      "url": "https://x.com/CESINFULL"
+    },
+    {
+      "url": "https://github.com/CESINFULL2425"
+    }
+  ],
   "thumbnailUrl": "images/cesinf-x.webp",
   "latLon": {
     "lat": 28.2631,

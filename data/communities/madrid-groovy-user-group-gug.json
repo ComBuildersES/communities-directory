@@ -35,12 +35,20 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://www.madridgug.com/",
-  "urls": {
-    "twitter": "https://twitter.com/madridgug",
-    "youtube": "https://www.youtube.com/channel/UCgvO2jxLdGaVqHqnfPdyYzw",
-    "eventsUrl": "http://www.meetup.com/madrid-gug",
-    "bluesky": "https://bsky.app/profile/madridgug.com"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/madridgug"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCgvO2jxLdGaVqHqnfPdyYzw"
+    },
+    {
+      "url": "http://www.meetup.com/madrid-gug"
+    },
+    {
+      "url": "https://bsky.app/profile/madridgug.com"
+    }
+  ],
   "thumbnailUrl": "images/madrid-groovy-user-group-gug.webp",
   "latLon": {
     "lat": 40.4167047,

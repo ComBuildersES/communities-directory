@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/flutter-lleida/",
-  "urls": {
-    "twitter": "http://twitter.com/flutterlleida/",
-    "eventsUrl": "https://www.meetup.com/flutter-lleida/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/flutterlleida/"
+    },
+    {
+      "url": "https://www.meetup.com/flutter-lleida/"
+    }
+  ],
   "thumbnailUrl": "images/flutter-lleida.webp",
   "latLon": {
     "lat": 41.6141646,

@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://x.com/agilevigo",
-  "urls": {
-    "twitter": "https://x.com/agilevigo",
-    "github": "https://github.com/agileVigo"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/agilevigo"
+    },
+    {
+      "url": "https://github.com/agileVigo"
+    }
+  ],
   "thumbnailUrl": "images/agilevigo.webp",
   "latLon": {
     "lat": 42.2313601,

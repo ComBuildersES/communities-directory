@@ -17,14 +17,27 @@
   "targetAudience": [],
   "contactInfo": "admin@owasp.org",
   "communityUrl": "https://owasp.org/chapters/",
-  "urls": {
-    "youtube": "https://www.youtube.com/user/OWASPGLOBAL/videos",
-    "github": "https://github.com/OWASP/",
-    "mastodon": "https://infosec.exchange/@owasp",
-    "twitter": "https://twitter.com/owasp",
-    "linkedin": "https://www.linkedin.com/company/owasp/",
-    "eventsUrl": "https://meetup.com/pro/owasp"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/user/OWASPGLOBAL/videos"
+    },
+    {
+      "url": "https://github.com/OWASP/"
+    },
+    {
+      "kind": "mastodon",
+      "url": "https://infosec.exchange/@owasp"
+    },
+    {
+      "url": "https://twitter.com/owasp"
+    },
+    {
+      "url": "https://www.linkedin.com/company/owasp/"
+    },
+    {
+      "url": "https://meetup.com/pro/owasp"
+    }
+  ],
   "thumbnailUrl": "images/owasp.webp",
   "latLon": {
     "lat": null,

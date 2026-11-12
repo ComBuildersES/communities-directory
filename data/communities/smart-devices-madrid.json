@@ -14,9 +14,12 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://web.archive.org/web/20210925180244/https://www.meetup.com/es-ES/Smart-devices-for-Home-Madrid/",
-  "urls": {
-    "eventsUrl": "https://web.archive.org/web/20210925180244/https://www.meetup.com/es-ES/Smart-devices-for-Home-Madrid/"
-  },
+  "urls": [
+    {
+      "kind": "eventsUrl",
+      "url": "https://web.archive.org/web/20210925180244/https://www.meetup.com/es-ES/Smart-devices-for-Home-Madrid/"
+    }
+  ],
   "latLon": {
     "lat": 40.4167047,
     "lon": -3.7035825

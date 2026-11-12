@@ -16,11 +16,17 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://drupalcamp.es/es",
-  "urls": {
-    "instagram": "https://www.instagram.com/drupalcampspain/",
-    "youtube": "https://www.youtube.com/channel/UCJlthEUN__9_-KWFQ_-0fLg",
-    "github": "https://github.com/AsociacionDrupalES"
-  },
+  "urls": [
+    {
+      "url": "https://www.instagram.com/drupalcampspain/"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCJlthEUN__9_-KWFQ_-0fLg"
+    },
+    {
+      "url": "https://github.com/AsociacionDrupalES"
+    }
+  ],
   "thumbnailUrl": "images/drupalcamp-spain.webp",
   "latLon": {
     "lat": null,

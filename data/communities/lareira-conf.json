@@ -19,15 +19,30 @@
   "matchesAllAudience": true,
   "contactInfo": "info@lareiraconf.es",
   "communityUrl": "https://www.lareiraconf.es/",
-  "urls": {
-    "instagram": "https://www.instagram.com/lareiraconf",
-    "github": "https://github.com/Gallegarmy/LareiraConf-MainPage/",
-    "twitter": "https://x.com/lareiraconf",
-    "linkedin": "https://www.linkedin.com/company/lareiraconf",
-    "youtube": "https://www.youtube.com/@LareiraConf",
-    "eventosWiki": "https://eventos.wiki/organizations/lareira-conf",
-    "ote": "https://eventos.wiki/organizations/lareira-conf/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://www.instagram.com/lareiraconf"
+    },
+    {
+      "url": "https://github.com/Gallegarmy/LareiraConf-MainPage/"
+    },
+    {
+      "url": "https://x.com/lareiraconf"
+    },
+    {
+      "url": "https://www.linkedin.com/company/lareiraconf"
+    },
+    {
+      "url": "https://www.youtube.com/@LareiraConf"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/lareira-conf"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/lareira-conf/events.json"
+    }
+  ],
   "thumbnailUrl": "images/lareira-conf.webp",
   "latLon": {
     "lat": 43.3707332,

@@ -156,11 +156,13 @@ describe("applyMatches", () => {
         },
       },
     ]);
-    expect(next.find((c) => c.id === 404).urls).toEqual({
-      web: "https://es.python.org",
-      eventosWiki: "https://eventos.wiki/organizations/python-espana",
-      ote: "https://eventos.wiki/organizations/python-espana/events.json",
-    });
+    // `urls` se escribe como lista de pares (#478). El kind de la página de eventos.wiki se
+    // omite porque el dominio ya lo delata; el de `web` y el de `ote` no, así que viajan.
+    expect(next.find((c) => c.id === 404).urls).toEqual([
+      { kind: "web", url: "https://es.python.org" },
+      { url: "https://eventos.wiki/organizations/python-espana" },
+      { kind: "ote", url: "https://eventos.wiki/organizations/python-espana/events.json" },
+    ]);
     expect(next.find((c) => c.id === 94)).toBe(communities[1]);
   });
 

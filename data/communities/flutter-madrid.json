@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/flutter-madrid/",
-  "urls": {
-    "twitter": "http://twitter.com/FlutterMadrid/",
-    "eventsUrl": "https://www.meetup.com/flutter-madrid/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/FlutterMadrid/"
+    },
+    {
+      "url": "https://www.meetup.com/flutter-madrid/"
+    }
+  ],
   "thumbnailUrl": "images/flutter-madrid.webp",
   "latLon": {
     "lat": 40.4167047,

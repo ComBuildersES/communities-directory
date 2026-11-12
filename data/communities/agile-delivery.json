@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://x.com/AgileDeliveryES",
-  "urls": {
-    "twitter": "https://x.com/AgileDeliveryES",
-    "eventsUrl": "https://www.meetup.com/es-es/agile-delivery-es/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/AgileDeliveryES"
+    },
+    {
+      "url": "https://www.meetup.com/es-es/agile-delivery-es/"
+    }
+  ],
   "thumbnailUrl": "images/agile-delivery.webp",
   "latLon": {
     "lat": null,

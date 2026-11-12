@@ -14,10 +14,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://rmalaga.quarto.pub/",
-  "urls": {
-    "twitter": "https://x.com/_RMlg",
-    "web": "https://rmalaga.quarto.pub/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/_RMlg"
+    },
+    {
+      "kind": "web",
+      "url": "https://rmalaga.quarto.pub/"
+    }
+  ],
   "latLon": {
     "lat": 36.7196292,
     "lon": -4.4200007

@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "http://totalism.org/",
-  "urls": {
-    "instagram": "https://www.instagram.com/chtotalism/"
-  },
+  "urls": [
+    {
+      "url": "https://www.instagram.com/chtotalism/"
+    }
+  ],
   "thumbnailUrl": "images/cyberhippietotalism.webp",
   "latLon": {
     "lat": 28.3967904,

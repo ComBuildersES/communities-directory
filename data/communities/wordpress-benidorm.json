@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/wordpress-benidorm/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/wordpress-benidorm/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/wordpress-benidorm/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-benidorm.webp",
   "latLon": {
     "lat": 38.5369002,

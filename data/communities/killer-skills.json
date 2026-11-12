@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "killerskills.me@gmail.com",
   "communityUrl": "https://killerskills.me/",
-  "urls": {
-    "twitter": "https://x.com/killerskills_me",
-    "linkedin": "https://www.linkedin.com/company/killerskills"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/killerskills_me"
+    },
+    {
+      "url": "https://www.linkedin.com/company/killerskills"
+    }
+  ],
   "thumbnailUrl": "images/killer-skills.webp",
   "latLon": {
     "lat": 40.4167047,

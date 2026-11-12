@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/Front-Developers-Madrid/",
-  "urls": {
-    "twitter": "https://twitter.com/FrontenddevMad",
-    "eventsUrl": "https://www.meetup.com/es-ES/Front-Developers-Madrid/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/FrontenddevMad"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/Front-Developers-Madrid/"
+    }
+  ],
   "thumbnailUrl": "images/frontend-developers-madrid.webp",
   "latLon": {
     "lat": 40.4167047,

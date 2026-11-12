@@ -14,10 +14,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.iniciador.com/es/castellon",
-  "urls": {
-    "twitter": "https://x.com/iniciador_CAS",
-    "web": "https://www.iniciador.com/es/castellon"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/iniciador_CAS"
+    },
+    {
+      "kind": "web",
+      "url": "https://www.iniciador.com/es/castellon"
+    }
+  ],
   "latLon": {
     "lat": 39.9860398,
     "lon": -0.0360705

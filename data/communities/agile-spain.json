@@ -16,13 +16,24 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://agile-spain.org/",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/agile-spain/",
-    "twitter": "https://twitter.com/agilespain",
-    "youtube": "https://www.youtube.com/c/AgileSpaineventos/videos",
-    "eventosWiki": "https://eventos.wiki/organizations/agile-spain",
-    "ote": "https://eventos.wiki/organizations/agile-spain/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/agile-spain/"
+    },
+    {
+      "url": "https://twitter.com/agilespain"
+    },
+    {
+      "url": "https://www.youtube.com/c/AgileSpaineventos/videos"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/agile-spain"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/agile-spain/events.json"
+    }
+  ],
   "thumbnailUrl": "images/agile-spain.webp",
   "latLon": {
     "lat": null,

@@ -16,11 +16,18 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://web.archive.org/web/20240917072042/https://www.meetup.com/es-ES/Ethereum-Meetup-Sevilla/",
-  "urls": {
-    "telegram": "https://t.me/+0UFC-yM_mT82YmVk",
-    "github": "https://github.com/Colm3na",
-    "eventsUrl": "https://web.archive.org/web/20240917072042/https://www.meetup.com/es-ES/Ethereum-Meetup-Sevilla/"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/+0UFC-yM_mT82YmVk"
+    },
+    {
+      "url": "https://github.com/Colm3na"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://web.archive.org/web/20240917072042/https://www.meetup.com/es-ES/Ethereum-Meetup-Sevilla/"
+    }
+  ],
   "thumbnailUrl": "images/ethereum-meetup-sevilla.webp",
   "latLon": {
     "lat": 37.3886303,

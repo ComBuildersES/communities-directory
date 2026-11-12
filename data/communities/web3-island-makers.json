@@ -16,13 +16,23 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/web3-island-makers",
-  "urls": {
-    "discord": "https://discord.gg/JNNQxJkq2W",
-    "twitter": "https://twitter.com/wim_dao",
-    "instagram": "https://www.instagram.com/web3islandmakers/",
-    "linkedin": "https://www.linkedin.com/company/86969414",
-    "eventsUrl": "https://www.meetup.com/web3-island-makers"
-  },
+  "urls": [
+    {
+      "url": "https://discord.gg/JNNQxJkq2W"
+    },
+    {
+      "url": "https://twitter.com/wim_dao"
+    },
+    {
+      "url": "https://www.instagram.com/web3islandmakers/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/86969414"
+    },
+    {
+      "url": "https://www.meetup.com/web3-island-makers"
+    }
+  ],
   "thumbnailUrl": "images/web3-island-makers.webp",
   "latLon": {
     "lat": 28.2631,

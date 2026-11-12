@@ -15,10 +15,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://x.com/python_malaga",
-  "urls": {
-    "twitter": "https://x.com/python_malaga",
-    "eventsUrl": "https://www.meetup.com/es-ES/python_malaga/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/python_malaga"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/python_malaga/"
+    }
+  ],
   "thumbnailUrl": "images/python-malaga.webp",
   "latLon": {
     "lat": 36.7196292,

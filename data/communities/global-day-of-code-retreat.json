@@ -14,11 +14,18 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.coderetreat.org/",
-  "urls": {
-    "twitter": "https://twitter.com/racingDeveloper/status/665529557961830400",
-    "mastodon": "https://hachyderm.io/@coderetreat",
-    "github": "https://github.com/coderetreat"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/racingDeveloper/status/665529557961830400"
+    },
+    {
+      "kind": "mastodon",
+      "url": "https://hachyderm.io/@coderetreat"
+    },
+    {
+      "url": "https://github.com/coderetreat"
+    }
+  ],
   "latLon": {
     "lat": null,
     "lon": null

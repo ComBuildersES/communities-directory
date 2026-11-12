@@ -15,9 +15,12 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://granada.wordcamp.org/",
-  "urls": {
-    "eventsUrl": "https://granada.wordcamp.org/"
-  },
+  "urls": [
+    {
+      "kind": "eventsUrl",
+      "url": "https://granada.wordcamp.org/"
+    }
+  ],
   "thumbnailUrl": "images/wordcamp-granada.webp",
   "latLon": {
     "lat": 37.1831938,

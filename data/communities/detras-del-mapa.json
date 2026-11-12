@@ -26,9 +26,11 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://www.nosolosig.com/articulos/asi-es-detras-del-mapa-el-nuevo-grupo-de-telegram-creado-por-nosolosig-para-compartir-novedades-y-recursos-sobre-mapas-y-tecnologias-de-la-informacion-geografica",
-  "urls": {
-    "telegram": "https://t.me/detrasdelmapa"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/detrasdelmapa"
+    }
+  ],
   "thumbnailUrl": "images/detrs-del-mapa.webp",
   "latLon": {
     "lat": null,

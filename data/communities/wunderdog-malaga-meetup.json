@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/wunderdog-malaga-meetup/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/wunderdog-malaga-meetup/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/wunderdog-malaga-meetup/"
+    }
+  ],
   "thumbnailUrl": "images/wunderdog-malaga-meetup.webp",
   "latLon": {
     "lat": 36.7196292,

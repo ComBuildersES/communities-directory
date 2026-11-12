@@ -17,10 +17,14 @@
   "targetAudience": [],
   "contactInfo": "meetup-vuejs-list@meetup.com",
   "communityUrl": "https://www.meetup.com/es-ES/vuejs-madrid/",
-  "urls": {
-    "twitter": "http://twitter.com/VueJSMadrid/",
-    "eventsUrl": "https://www.meetup.com/es-ES/vuejs-madrid/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/VueJSMadrid/"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/vuejs-madrid/"
+    }
+  ],
   "thumbnailUrl": "images/vuejs-madrid.webp",
   "latLon": {
     "lat": 40.4167047,

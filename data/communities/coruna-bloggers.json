@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "corunabloggers@gmail.com",
   "communityUrl": "https://corunabloggers.com/",
-  "urls": {
-    "twitter": "https://twitter.com/CorunaBloggers"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/CorunaBloggers"
+    }
+  ],
   "thumbnailUrl": "images/coruna-bloggers.webp",
   "latLon": {
     "lat": 43.3707332,

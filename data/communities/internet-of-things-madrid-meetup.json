@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/iotmadrid/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/es-ES/iotmadrid/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/es-ES/iotmadrid/"
+    }
+  ],
   "latLon": {
     "lat": 40.4167047,
     "lon": -3.7035825

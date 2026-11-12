@@ -43,9 +43,11 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://gdg.community.dev/gdg-jerez-de-la-frontera/",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/gdg-jerez-de-la-frontera/"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/gdg-jerez-de-la-frontera/"
+    }
+  ],
   "thumbnailUrl": "images/gdg-jerez-de-la-frontera.webp",
   "latLon": {
     "lat": 36.6816936,

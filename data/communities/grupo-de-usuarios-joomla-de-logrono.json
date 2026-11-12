@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.facebook.com/groups/juglogrono/?locale=es_LA",
-  "urls": {
-    "facebook": "https://www.facebook.com/groups/juglogrono/?locale=es_LA"
-  },
+  "urls": [
+    {
+      "url": "https://www.facebook.com/groups/juglogrono/?locale=es_LA"
+    }
+  ],
   "latLon": {
     "lat": 42.46569,
     "lon": -2.44998

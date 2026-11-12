@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "info@gdgmenorca.dev",
   "communityUrl": "https://gdgmenorca.dev/",
-  "urls": {
-    "twitter": "https://x.com/GDGMenorca/",
-    "instagram": "https://www.instagram.com/gdgmenorca/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/GDGMenorca/"
+    },
+    {
+      "url": "https://www.instagram.com/gdgmenorca/"
+    }
+  ],
   "thumbnailUrl": "images/stem-talks-menorca-2025.webp",
   "latLon": {
     "lat": 39.8154,

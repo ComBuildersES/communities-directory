@@ -14,14 +14,26 @@
   "targetAudience": [],
   "contactInfo": "info@a11yconf.com",
   "communityUrl": "https://www.upscaleconf.com/",
-  "urls": {
-    "instagram": "https://www.instagram.com/plexus.tech/",
-    "linkedin": "https://linkedin.com/company/plexus-tech",
-    "youtube": "https://www.youtube.com/user/tecnologiasplexus",
-    "twitter": "https://x.com/nextdigitalhub",
-    "bluesky": "https://bsky.app/profile/nextdigitalhub.bsky.social",
-    "github": "https://github.com/Lemoncode"
-  },
+  "urls": [
+    {
+      "url": "https://www.instagram.com/plexus.tech/"
+    },
+    {
+      "url": "https://linkedin.com/company/plexus-tech"
+    },
+    {
+      "url": "https://www.youtube.com/user/tecnologiasplexus"
+    },
+    {
+      "url": "https://x.com/nextdigitalhub"
+    },
+    {
+      "url": "https://bsky.app/profile/nextdigitalhub.bsky.social"
+    },
+    {
+      "url": "https://github.com/Lemoncode"
+    }
+  ],
   "thumbnailUrl": "images/upscale-conf.webp",
   "latLon": {
     "lat": null,

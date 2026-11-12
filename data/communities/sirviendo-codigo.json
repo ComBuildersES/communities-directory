@@ -18,14 +18,27 @@
   "matchesAllAudience": true,
   "contactInfo": "sirviendocodigo@nextdigital.es",
   "communityUrl": "https://sirviendocodigo.com/",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/sirviendo-codigo/",
-    "instagram": "https://www.instagram.com/sirviendo.codigo/",
-    "youtube": "https://www.youtube.com/@SirviendoC%C3%B3digo",
-    "tiktok": "https://www.tiktok.com/@sirviendo.codigo",
-    "eventosWiki": "https://eventos.wiki/organizations/sirviendo-codigo",
-    "ote": "https://eventos.wiki/organizations/sirviendo-codigo/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/sirviendo-codigo/"
+    },
+    {
+      "url": "https://www.instagram.com/sirviendo.codigo/"
+    },
+    {
+      "url": "https://www.youtube.com/@SirviendoC%C3%B3digo"
+    },
+    {
+      "url": "https://www.tiktok.com/@sirviendo.codigo"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/sirviendo-codigo"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/sirviendo-codigo/events.json"
+    }
+  ],
   "thumbnailUrl": "images/sirviendo-cdigo.webp",
   "latLon": {
     "lat": 40.4167047,

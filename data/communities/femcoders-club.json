@@ -20,12 +20,22 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.femcodersclub.com/",
-  "urls": {
-    "web": "https://www.femcodersclub.com/",
-    "eventsUrl": "https://www.femcodersclub.com/eventos",
-    "github": "https://github.com/femcodersclub",
-    "linkedin": "https://www.linkedin.com/company/fem-coders-club"
-  },
+  "urls": [
+    {
+      "kind": "web",
+      "url": "https://www.femcodersclub.com/"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://www.femcodersclub.com/eventos"
+    },
+    {
+      "url": "https://github.com/femcodersclub"
+    },
+    {
+      "url": "https://www.linkedin.com/company/fem-coders-club"
+    }
+  ],
   "thumbnailUrl": "images/femcoders-club.webp",
   "latLon": {
     "lat": 41.387917,

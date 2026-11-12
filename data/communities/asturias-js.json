@@ -14,10 +14,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://x.com/asturiasjs",
-  "urls": {
-    "twitter": "https://x.com/asturiasjs",
-    "eventsUrl": "https://saraos.tech/@asturiasjs"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/asturiasjs"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://saraos.tech/@asturiasjs"
+    }
+  ],
   "thumbnailUrl": "images/asturiasjs.webp",
   "latLon": {
     "lat": null,

@@ -23,12 +23,20 @@
   "targetAudience": [],
   "contactInfo": "coderiojamail@gmail.com",
   "communityUrl": "https://www.coderioja.com",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/groups/10009786/",
-    "bluesky": "https://bsky.app/profile/coderioja.bsky.social",
-    "telegram": "https://t.me/CodeRioja/",
-    "youtube": "https://youtu.be/88m4uHDIzRs"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/groups/10009786/"
+    },
+    {
+      "url": "https://bsky.app/profile/coderioja.bsky.social"
+    },
+    {
+      "url": "https://t.me/CodeRioja/"
+    },
+    {
+      "url": "https://youtu.be/88m4uHDIzRs"
+    }
+  ],
   "thumbnailUrl": "images/coderioja.webp",
   "latLon": {
     "lat": 42.46569,

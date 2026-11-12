@@ -27,11 +27,17 @@
   ],
   "contactInfo": "cloudespanol@gmail.com",
   "communityUrl": "https://gdg.community.dev/gdg-cloud-espanol/",
-  "urls": {
-    "twitter": "https://www.twitter.com/gdg_cloud",
-    "linkedin": "https://www.linkedin.com/groups/13640206/",
-    "eventsUrl": "https://gdg.community.dev/gdg-cloud-espanol/"
-  },
+  "urls": [
+    {
+      "url": "https://www.twitter.com/gdg_cloud"
+    },
+    {
+      "url": "https://www.linkedin.com/groups/13640206/"
+    },
+    {
+      "url": "https://gdg.community.dev/gdg-cloud-espanol/"
+    }
+  ],
   "thumbnailUrl": "images/gdg-cloud-espanol.webp",
   "latLon": {
     "lat": null,

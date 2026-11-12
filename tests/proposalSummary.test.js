@@ -89,6 +89,46 @@ describe('buildProposalSummary', () => {
     expect(summary).not.toContain('| Estado |');
   });
 
+  /**
+   * Con pares (#478) un mismo `kind` puede repetirse: el Meetup de un GDG y su encuentro
+   * anual son los dos `eventsUrl`. Si el diff emparejase por clave, añadir el segundo se
+   * leería como "el Meetup ha cambiado de dirección", que es un cambio que nadie hizo.
+   */
+  it('con dos canales del mismo kind, añadir uno es un alta y no una modificación', () => {
+    const existing = {
+      ...payload,
+      id: 632,
+      urls: [{ kind: 'eventsUrl', url: 'https://www.meetup.com/gdgZaragoza/' }],
+    };
+    const proposed = {
+      ...payload,
+      id: 632,
+      urls: [
+        { kind: 'eventsUrl', url: 'https://www.meetup.com/gdgZaragoza/' },
+        { kind: 'eventsUrl', url: 'https://gdgzaragoza.es/devfest', label: 'DevFest Zaragoza' },
+      ],
+    };
+    const summary = buildProposalSummary({ mode: 'edit', payload: proposed, existing, catalogs });
+
+    expect(summary).toContain('| urls.eventsUrl | — | https://gdgzaragoza.es/devfest |');
+    expect(summary).not.toContain('https://www.meetup.com/gdgZaragoza/ | https://gdgzaragoza.es/devfest');
+  });
+
+  it('la etiqueta propia de un canal se lista con su nombre, no con el de la plataforma', () => {
+    const summary = buildProposalSummary({
+      mode: 'create',
+      payload: {
+        ...payload,
+        urls: [
+          { kind: 'eventsUrl', url: 'https://gdgzaragoza.es/devfest', label: 'DevFest Zaragoza' },
+        ],
+      },
+      catalogs,
+    });
+
+    expect(summary).toContain('**DevFest Zaragoza (eventsUrl)**: https://gdgzaragoza.es/devfest');
+  });
+
   it('avisa cuando una edición no cambia nada en lugar de dejar la tabla vacía', () => {
     const existing = { ...payload, id: 632 };
     const summary = buildProposalSummary({ mode: 'edit', payload: { ...payload, id: 632 }, existing, catalogs });

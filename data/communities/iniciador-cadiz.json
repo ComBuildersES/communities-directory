@@ -14,10 +14,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.iniciador.com/es/cadiz",
-  "urls": {
-    "twitter": "https://x.com/iniciador_BCA",
-    "web": "https://www.iniciador.com/es/cadiz"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/iniciador_BCA"
+    },
+    {
+      "kind": "web",
+      "url": "https://www.iniciador.com/es/cadiz"
+    }
+  ],
   "latLon": {
     "lat": 36.5297453,
     "lon": -6.2926477

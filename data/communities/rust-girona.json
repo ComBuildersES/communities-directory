@@ -17,9 +17,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://luma.com/rust-girona",
-  "urls": {
-    "github": "https://github.com/rust-girona/"
-  },
+  "urls": [
+    {
+      "url": "https://github.com/rust-girona/"
+    }
+  ],
   "thumbnailUrl": "images/rust-girona.webp",
   "latLon": {
     "lat": 41.9793006,

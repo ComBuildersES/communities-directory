@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/go-mad/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/es-ES/go-mad/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/es-ES/go-mad/"
+    }
+  ],
   "thumbnailUrl": "images/gomad.webp",
   "latLon": {
     "lat": 40.4167047,

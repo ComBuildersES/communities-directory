@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "info@codespaceacademy.com",
   "communityUrl": "https://codespaceacademy.com/code-fest-edicion-ii-2025/",
-  "urls": {
-    "instagram": "https://www.instagram.com/swatfit8/"
-  },
+  "urls": [
+    {
+      "url": "https://www.instagram.com/swatfit8/"
+    }
+  ],
   "thumbnailUrl": "images/code-fest.webp",
   "latLon": {
     "lat": 36.7213028,

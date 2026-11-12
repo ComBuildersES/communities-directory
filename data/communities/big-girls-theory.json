@@ -14,11 +14,18 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "http://biggirlstheory.es/",
-  "urls": {
-    "twitter": "https://x.com/biggirlstheory",
-    "web": "http://web.archive.org/web/20220327085309/https://biggirlstheory.es/",
-    "youtube": "https://www.youtube.com/channel/UCD910SAxi1tblfQaAqid-bw"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/biggirlstheory"
+    },
+    {
+      "kind": "web",
+      "url": "http://web.archive.org/web/20220327085309/https://biggirlstheory.es/"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCD910SAxi1tblfQaAqid-bw"
+    }
+  ],
   "thumbnailUrl": "images/big-girls-theory.webp",
   "latLon": {
     "lat": null,

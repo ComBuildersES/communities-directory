@@ -14,11 +14,17 @@
   "targetAudience": [],
   "contactInfo": "info@dotnetmalaga.es",
   "communityUrl": "https://dotnetmalaga.es/",
-  "urls": {
-    "twitter": "http://twitter.com/dotnetmalaga",
-    "github": "https://github.com/dotnetmalaga",
-    "eventsUrl": "http://www.meetup.com/dotnetMALAGA/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/dotnetmalaga"
+    },
+    {
+      "url": "https://github.com/dotnetmalaga"
+    },
+    {
+      "url": "http://www.meetup.com/dotnetMALAGA/"
+    }
+  ],
   "thumbnailUrl": "images/dotnetmalaga-conferencia.webp",
   "latLon": {
     "lat": 36.7196292,

@@ -14,10 +14,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://x.com/wpsevilladevs",
-  "urls": {
-    "twitter": "https://x.com/wpsevilladevs",
-    "eventsUrl": "https://saraos.tech/@wordpress-sevilla-devs"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/wpsevilladevs"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://saraos.tech/@wordpress-sevilla-devs"
+    }
+  ],
   "latLon": {
     "lat": null,
     "lon": null

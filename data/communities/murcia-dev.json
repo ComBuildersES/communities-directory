@@ -15,15 +15,30 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/murciadev/",
-  "urls": {
-    "discord": "https://discord.gg/xRVKFGURaw",
-    "twitter": "https://twitter.com/MurciaDev",
-    "linkedin": "https://www.linkedin.com/company/11855563",
-    "telegram": "https://t.me/MurciaDev",
-    "eventsUrl": "https://www.meetup.com/es-ES/murciadev/",
-    "eventosWiki": "https://eventos.wiki/organizations/murciadev",
-    "ote": "https://eventos.wiki/organizations/murciadev/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://discord.gg/xRVKFGURaw"
+    },
+    {
+      "url": "https://twitter.com/MurciaDev"
+    },
+    {
+      "url": "https://www.linkedin.com/company/11855563"
+    },
+    {
+      "url": "https://t.me/MurciaDev"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/murciadev/"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/murciadev"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/murciadev/events.json"
+    }
+  ],
   "thumbnailUrl": "images/murcia-dev.webp",
   "latLon": {
     "lat": 37.9835334,

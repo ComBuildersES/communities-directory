@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "https://www.linkedin.com/posts/pabpereza_discord-a-new-way-to-chat-with-friends-activity-6763868171494559744-UXkr?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAFTWIUB408_I8M39G1F7ZzN47wVswa8PcA",
   "communityUrl": "https://github.com/Riojakers",
-  "urls": {
-    "github": "https://github.com/Riojakers"
-  },
+  "urls": [
+    {
+      "url": "https://github.com/Riojakers"
+    }
+  ],
   "thumbnailUrl": "images/riojakers.webp",
   "latLon": {
     "lat": 42.46569,

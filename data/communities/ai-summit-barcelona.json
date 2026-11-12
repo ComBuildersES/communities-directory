@@ -14,13 +14,24 @@
   "targetAudience": [],
   "contactInfo": "info@aisummitbarcelona.com",
   "communityUrl": "https://aisummitbarcelona.com/",
-  "urls": {
-    "instagram": "https://www.instagram.com/aisummitbarcelona/",
-    "youtube": "https://www.youtube.com/@AISummitBarcelona",
-    "linkedin": "https://www.linkedin.com/company/ai-summit-barcelona",
-    "eventosWiki": "https://eventos.wiki/organizations/ai-summit-barcelona",
-    "ote": "https://eventos.wiki/organizations/ai-summit-barcelona/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://www.instagram.com/aisummitbarcelona/"
+    },
+    {
+      "url": "https://www.youtube.com/@AISummitBarcelona"
+    },
+    {
+      "url": "https://www.linkedin.com/company/ai-summit-barcelona"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/ai-summit-barcelona"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/ai-summit-barcelona/events.json"
+    }
+  ],
   "thumbnailUrl": "images/ai-summit-barcelona.webp",
   "latLon": {
     "lat": 41.3825802,

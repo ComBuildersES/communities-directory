@@ -14,11 +14,17 @@
   "targetAudience": [],
   "contactInfo": "hola@alhambrahub.es",
   "communityUrl": "https://alhambrahub.es/",
-  "urls": {
-    "twitter": "https://twitter.com/AlhambraHub",
-    "linkedin": "https://www.linkedin.com/company/alhambra-hub",
-    "discord": "https://discord.gg/5g5FN9jxA7"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/AlhambraHub"
+    },
+    {
+      "url": "https://www.linkedin.com/company/alhambra-hub"
+    },
+    {
+      "url": "https://discord.gg/5g5FN9jxA7"
+    }
+  ],
   "thumbnailUrl": "images/alhambra-hub.webp",
   "latLon": {
     "lat": 37.1831938,

@@ -14,13 +14,24 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/guarandinga-tech/",
-  "urls": {
-    "twitter": "https://twitter.com/guarandingatech",
-    "youtube": "https://www.youtube.com/@GuarandingaTECH",
-    "eventsUrl": "https://www.meetup.com/guarandinga-tech/",
-    "eventosWiki": "https://eventos.wiki/organizations/guarandingatech",
-    "ote": "https://eventos.wiki/organizations/guarandingatech/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/guarandingatech"
+    },
+    {
+      "url": "https://www.youtube.com/@GuarandingaTECH"
+    },
+    {
+      "url": "https://www.meetup.com/guarandinga-tech/"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/guarandingatech"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/guarandingatech/events.json"
+    }
+  ],
   "thumbnailUrl": "images/guarandinga-tech.webp",
   "latLon": {
     "lat": 28.26061255652491,

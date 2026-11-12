@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://discord.com/invite/mouredev",
-  "urls": {
-    "discord": "https://discord.com/invite/mouredev"
-  },
+  "urls": [
+    {
+      "url": "https://discord.com/invite/mouredev"
+    }
+  ],
   "thumbnailUrl": "images/mouredev.webp",
   "latLon": {
     "lat": null,

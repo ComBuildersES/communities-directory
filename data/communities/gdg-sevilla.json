@@ -15,10 +15,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/GDGSevilla/",
-  "urls": {
-    "twitter": "http://twitter.com/GDGSevilla/",
-    "eventsUrl": "https://www.meetup.com/GDGSevilla/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/GDGSevilla/"
+    },
+    {
+      "url": "https://www.meetup.com/GDGSevilla/"
+    }
+  ],
   "thumbnailUrl": "images/gdg-sevilla.webp",
   "latLon": {
     "lat": 37.38264,

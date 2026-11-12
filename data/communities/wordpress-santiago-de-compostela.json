@@ -17,10 +17,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-es/santiago-de-compostela-wordpress-meetup-group/",
-  "urls": {
-    "telegram": "https://t.me/+6faPK40eIFw1Njc0",
-    "eventsUrl": "https://www.meetup.com/es-es/santiago-de-compostela-wordpress-meetup-group/"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/+6faPK40eIFw1Njc0"
+    },
+    {
+      "url": "https://www.meetup.com/es-es/santiago-de-compostela-wordpress-meetup-group/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-santiago-de-compostela.webp",
   "latLon": {
     "lat": 42.8806228,

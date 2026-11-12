@@ -25,9 +25,11 @@
   ],
   "contactInfo": "contacto@coruna,events",
   "communityUrl": "https://coruna.events/community/notion-coruna",
-  "urls": {
-    "telegram": "https://t.me/+QXyjeCBUPIAxYWNk#"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/+QXyjeCBUPIAxYWNk#"
+    }
+  ],
   "thumbnailUrl": "images/notion-coruna.webp",
   "latLon": {
     "lat": 43.3707332,

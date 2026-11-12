@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/PrestaShop-Malaga-Meetup/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/PrestaShop-Malaga-Meetup/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/PrestaShop-Malaga-Meetup/"
+    }
+  ],
   "thumbnailUrl": "images/prestashop-malaga-ecommerce-meetup.webp",
   "latLon": {
     "lat": 36.7196292,

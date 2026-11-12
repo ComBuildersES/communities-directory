@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/madriddotnet/",
-  "urls": {
-    "twitter": "http://twitter.com/madriddotnet/",
-    "eventsUrl": "https://www.meetup.com/madriddotnet/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/madriddotnet/"
+    },
+    {
+      "url": "https://www.meetup.com/madriddotnet/"
+    }
+  ],
   "thumbnailUrl": "images/madriddotnet.webp",
   "latLon": {
     "lat": 40.4167047,

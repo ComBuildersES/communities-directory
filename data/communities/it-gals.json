@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.youtube.com/@it_gals",
-  "urls": {
-    "youtube": "https://www.youtube.com/@it_gals"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/@it_gals"
+    }
+  ],
   "thumbnailUrl": "images/itgals.webp",
   "latLon": {
     "lat": 37.3886303,

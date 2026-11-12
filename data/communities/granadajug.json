@@ -15,9 +15,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/granadajug/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/granadajug/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/granadajug/"
+    }
+  ],
   "thumbnailUrl": "images/granadajug.webp",
   "latLon": {
     "lat": 37.1831938,

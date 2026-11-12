@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/angular_madrid/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/es-ES/angular_madrid/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/es-ES/angular_madrid/"
+    }
+  ],
   "thumbnailUrl": "images/angular-madrid.webp",
   "latLon": {
     "lat": 40.4167047,

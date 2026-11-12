@@ -18,13 +18,23 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-es/wordpress-madrid/",
-  "urls": {
-    "telegram": "https://t.me/madridwordpress",
-    "linkAggregator": "https://linktr.ee/madridwordpress",
-    "instagram": "https://www.instagram.com/wpmadridoficial/",
-    "twitter": "https://x.com/madridwordpress",
-    "eventsUrl": "https://www.meetup.com/es-es/wordpress-madrid/"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/madridwordpress"
+    },
+    {
+      "url": "https://linktr.ee/madridwordpress"
+    },
+    {
+      "url": "https://www.instagram.com/wpmadridoficial/"
+    },
+    {
+      "url": "https://x.com/madridwordpress"
+    },
+    {
+      "url": "https://www.meetup.com/es-es/wordpress-madrid/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-madrid.webp",
   "latLon": {
     "lat": 40.4167047,

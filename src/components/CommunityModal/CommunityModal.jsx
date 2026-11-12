@@ -6,6 +6,7 @@ import { buildContributionPath } from "../../lib/communitySubmission";
 import { normalizeCommunityLangs } from "../../lib/communityLanguages.js";
 import { findMergeTarget, isMergedCommunity } from "../../lib/mergedCommunities.js";
 import { findOrganizers } from "../../lib/organizedCommunities.js";
+import { FALLBACK_GROUP, groupUrlEntries, toLegacyUrlMap } from "../../lib/communityUrls.js";
 import { OteEvents } from "./OteEvents.jsx";
 import "./CommunityModal.css";
 
@@ -61,7 +62,8 @@ function extractSocialHandle(platform, url) {
 }
 
 function buildShareLinks(community, t) {
-  const urls = community.urls || {};
+  // Solo quiere dos handles concretos, así que pide el mapa por clave en vez de recorrer pares.
+  const urls = toLegacyUrlMap(community.urls);
   const directLink = `${APP_URL}?community=${community.id}`;
   const enc = encodeURIComponent;
 
@@ -107,41 +109,6 @@ function buildShareLinks(community, t) {
   ];
 }
 
-const URL_CONFIG_KEYS = [
-  { key: "web",            labelKey: "communityModal.url.web",            icon: "fas fa-globe" },
-  { key: "eventsUrl",      labelKey: "communityModal.url.events",         icon: "fas fa-calendar-days" },
-  { key: "eventosWiki",    labelKey: "communityModal.url.eventosWiki",     icon: "fas fa-calendar-check" },
-  { key: "ote",            labelKey: "communityModal.url.ote",             icon: "fas fa-calendar-plus" },
-  { key: "blog",           labelKey: "communityModal.url.blog",            icon: "fas fa-pen-nib" },
-  { key: "rss",            labelKey: "communityModal.url.rss",             icon: "fas fa-rss" },
-  { key: "forum",          labelKey: "communityModal.url.forum",           icon: "fas fa-comments" },
-  { key: "linkAggregator", labelKey: "communityModal.url.linkAggregator", icon: "fas fa-link" },
-  { key: "mailingList",    labelKey: "communityModal.url.mailingList",     icon: "fas fa-envelope" },
-  { key: "github",         labelKey: "communityModal.url.github",          icon: "fab fa-github" },
-  { key: "discord",        labelKey: "communityModal.url.discord",         icon: "fab fa-discord" },
-  { key: "telegram",       labelKey: "communityModal.url.telegram",        icon: "fab fa-telegram" },
-  { key: "whatsapp",       labelKey: "communityModal.url.whatsapp",        icon: "fab fa-whatsapp" },
-  { key: "slack",          labelKey: "communityModal.url.slack",           icon: "fab fa-slack" },
-  { key: "youtube",        labelKey: "communityModal.url.youtube",         icon: "fab fa-youtube" },
-  { key: "linkedin",       labelKey: "communityModal.url.linkedin",        icon: "fab fa-linkedin" },
-  { key: "twitter",        labelKey: "communityModal.url.twitter",         icon: "fab fa-x-twitter" },
-  { key: "tiktok",         labelKey: "communityModal.url.tiktok",          icon: "fab fa-tiktok" },
-  { key: "instagram",      labelKey: "communityModal.url.instagram",       icon: "fab fa-instagram" },
-  { key: "facebook",       labelKey: "communityModal.url.facebook",        icon: "fab fa-facebook" },
-  { key: "mastodon",       labelKey: "communityModal.url.mastodon",        icon: "fab fa-mastodon" },
-  { key: "bluesky",        labelKey: "communityModal.url.bluesky",         icon: "fas fa-cloud" },
-  { key: "twitch",         labelKey: "communityModal.url.twitch",          icon: "fab fa-twitch" },
-  { key: "flickr",         labelKey: "communityModal.url.flickr",          icon: "fab fa-flickr" },
-];
-
-const URL_GROUP_DEFS = [
-  { key: "comunidad", labelKey: "communityModal.urlGroup.community", icon: "fas fa-globe",       keys: ["web", "linkAggregator", "github"] },
-  { key: "eventos",   labelKey: "communityModal.urlGroup.events",    icon: "fas fa-calendar-days", keys: ["eventsUrl", "eventosWiki", "ote"] },
-  { key: "contenido", labelKey: "communityModal.urlGroup.content",   icon: "fas fa-newspaper",   keys: ["blog", "rss", "forum", "mailingList"] },
-  { key: "chat",      labelKey: "communityModal.urlGroup.chat",      icon: "fas fa-comments",    keys: ["discord", "telegram", "whatsapp", "slack"] },
-  { key: "social",    labelKey: "communityModal.urlGroup.social",    icon: "fas fa-share-nodes", keys: ["youtube", "linkedin", "twitter", "tiktok", "instagram", "facebook", "mastodon", "bluesky", "twitch", "flickr"] },
-];
-
 const STATUS_CLASS = {
   active:   "modal-badge modal-badge--active",
   inactive: "modal-badge modal-badge--inactive",
@@ -176,9 +143,6 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
 
   const CHIPS_THRESHOLD = 3;
 
-  const URL_CONFIG = URL_CONFIG_KEYS.map(({ key, labelKey, icon }) => ({ key, label: t(labelKey), icon }));
-  const URL_CONFIG_BY_KEY = Object.fromEntries(URL_CONFIG.map(c => [c.key, c]));
-  const URL_GROUPS = URL_GROUP_DEFS.map(({ key, labelKey, icon, keys }) => ({ key, label: t(labelKey), icon, keys }));
 
   const applyFilter = (key, value) => {
     filterComunities(key, value);
@@ -224,7 +188,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
     lastReviewed,
     contactInfo,
     communityUrl,
-    urls = {},
+    urls: rawUrls,
     tags = [],
     targetAudience = [],
     matchesAllTags = false,
@@ -254,9 +218,13 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
   const languages = normalizeCommunityLangs(langs);
 
   const location = normalizeLocation(rawLocation);
-  // URLs a mostrar: las del objeto urls, y communityUrl como fallback si no hay ninguna web
-  const urlEntries = URL_CONFIG.filter(({ key }) => urls[key]);
-  const hasCommunityUrlInUrls = Object.values(urls).includes(communityUrl);
+  // URLs a mostrar: las entradas de `urls`, y communityUrl como fallback si no hay ninguna web.
+  // `urlsByKind` existe solo para las preguntas de clave única ("¿tiene feed OTE?"); lo que
+  // se pinta son las entradas, porque puede haber dos del mismo kind con etiquetas distintas.
+  const urlGroups = groupUrlEntries(rawUrls, t);
+  const urlsByKind = toLegacyUrlMap(rawUrls);
+  const urlEntries = urlGroups.flatMap((group) => group.entries);
+  const hasCommunityUrlInUrls = urlEntries.some((entry) => entry.url === communityUrl);
   const showFallbackUrl = communityUrl && !hasCommunityUrlInUrls;
   const communityUrlIsArchived = isArchivedUrl(communityUrl);
 
@@ -550,7 +518,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
           )}
 
           {/* Próximos eventos leídos del feed OTE de la comunidad */}
-          {urls.ote && <OteEvents feedUrl={urls.ote} fallbackUrl={urls.eventosWiki ?? null} />}
+          {urlsByKind.ote && <OteEvents feedUrl={urlsByKind.ote} fallbackUrl={urlsByKind.eventosWiki ?? null} />}
 
           {/* URLs agrupadas */}
           {(urlEntries.length > 0 || showFallbackUrl) && (
@@ -559,11 +527,9 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                 <i className="fas fa-link"></i> {t("communityModal.links")}
               </h3>
               <div className="community-modal-url-groups">
-                {URL_GROUPS.map(({ key: groupKey, label, icon, keys }) => {
-                  const groupEntries = keys
-                    .filter(k => urls[k])
-                    .map(k => URL_CONFIG_BY_KEY[k]);
-                  const includeFallback = groupKey === "comunidad" && showFallbackUrl;
+                {urlGroups.map(({ group: groupKey, labelKey, icon, entries: groupEntries }) => {
+                  const label = t(labelKey);
+                  const includeFallback = groupKey === FALLBACK_GROUP && showFallbackUrl;
                   if (groupEntries.length === 0 && !includeFallback) return null;
                   const count = groupEntries.length + (includeFallback ? 1 : 0);
                   const isOpen = openUrlGroup === groupKey;
@@ -581,8 +547,8 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                       </button>
                       {isOpen && (
                         <div className="community-modal-url-dropdown">
-                          {groupEntries.map(({ key, label: urlLabel, icon: urlIcon }) => (
-                            <a key={key} href={urls[key]} target="_blank" rel="noopener noreferrer" className="community-modal-url-dropdown-item">
+                          {groupEntries.map(({ url, label: urlLabel, icon: urlIcon }) => (
+                            <a key={url} href={url} target="_blank" rel="noopener noreferrer" className="community-modal-url-dropdown-item">
                               <i className={urlIcon}></i>
                               <span>{urlLabel}</span>
                             </a>

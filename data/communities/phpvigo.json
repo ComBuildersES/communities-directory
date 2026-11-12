@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://x.com/phpvigo",
-  "urls": {
-    "twitter": "https://x.com/phpvigo",
-    "youtube": "https://www.youtube.com/c/phpvigo"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/phpvigo"
+    },
+    {
+      "url": "https://www.youtube.com/c/phpvigo"
+    }
+  ],
   "latLon": {
     "lat": 42.2313601,
     "lon": -8.7124252

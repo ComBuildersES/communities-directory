@@ -14,14 +14,26 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://adoptaunjunior.es/",
-  "urls": {
-    "discord": "https://discord.gg/EneE8ajS",
-    "linkedin": "https://www.linkedin.com/company/adoptaunjunior",
-    "youtube": "https://www.youtube.com/channel/UCVFGgfVOfEGdTR4icx9B5Aw",
-    "twitter": "https://x.com/AdoptaUnJunior",
-    "instagram": "https://www.instagram.com/adoptaunjunior/",
-    "bluesky": "https://bsky.app/profile/adoptaunjunior.bsky.social"
-  },
+  "urls": [
+    {
+      "url": "https://discord.gg/EneE8ajS"
+    },
+    {
+      "url": "https://www.linkedin.com/company/adoptaunjunior"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCVFGgfVOfEGdTR4icx9B5Aw"
+    },
+    {
+      "url": "https://x.com/AdoptaUnJunior"
+    },
+    {
+      "url": "https://www.instagram.com/adoptaunjunior/"
+    },
+    {
+      "url": "https://bsky.app/profile/adoptaunjunior.bsky.social"
+    }
+  ],
   "thumbnailUrl": "images/adopta-un-junior.webp",
   "latLon": {
     "lat": null,

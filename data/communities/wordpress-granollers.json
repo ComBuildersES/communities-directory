@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/wordpressgranollers/",
-  "urls": {
-    "twitter": "http://twitter.com/wpgranollers/",
-    "eventsUrl": "https://www.meetup.com/wordpressgranollers/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/wpgranollers/"
+    },
+    {
+      "url": "https://www.meetup.com/wordpressgranollers/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-granollers.webp",
   "latLon": {
     "lat": 41.6082321,

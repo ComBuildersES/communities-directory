@@ -15,12 +15,20 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://x.com/python_sevilla",
-  "urls": {
-    "twitter": "https://x.com/python_sevilla",
-    "github": "https://github.com/python-sevilla/meetups",
-    "telegram": "https://t.me/pythonsevilla",
-    "eventsUrl": "https://www.meetup.com/es-es/python-sevilla/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/python_sevilla"
+    },
+    {
+      "url": "https://github.com/python-sevilla/meetups"
+    },
+    {
+      "url": "https://t.me/pythonsevilla"
+    },
+    {
+      "url": "https://www.meetup.com/es-es/python-sevilla/"
+    }
+  ],
   "thumbnailUrl": "images/python-sevilla.webp",
   "latLon": {
     "lat": 37.3886303,

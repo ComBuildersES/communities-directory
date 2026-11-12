@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "vicon@galicia.com",
   "communityUrl": "https://www.vicon.gal/",
-  "urls": {
-    "twitter": "https://twitter.com/vicongal",
-    "instagram": "https://instagram.com/vicon.gal"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/vicongal"
+    },
+    {
+      "url": "https://instagram.com/vicon.gal"
+    }
+  ],
   "thumbnailUrl": "images/vicon.webp",
   "latLon": {
     "lat": 42.2313601,

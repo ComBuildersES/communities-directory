@@ -34,14 +34,26 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://community.cncf.io/cloud-native-rioja/",
-  "urls": {
-    "twitter": "https://twitter.com/cloudnativefdn",
-    "instagram": "https://www.instagram.com/humans.of.cloudnative/",
-    "linkedin": "https://www.linkedin.com/company/cloud-native-computing-foundation/",
-    "youtube": "https://www.youtube.com/c/cloudnativefdn",
-    "github": "https://github.com/cncf",
-    "eventsUrl": "https://community.cncf.io/cloud-native-rioja/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/cloudnativefdn"
+    },
+    {
+      "url": "https://www.instagram.com/humans.of.cloudnative/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/cloud-native-computing-foundation/"
+    },
+    {
+      "url": "https://www.youtube.com/c/cloudnativefdn"
+    },
+    {
+      "url": "https://github.com/cncf"
+    },
+    {
+      "url": "https://community.cncf.io/cloud-native-rioja/"
+    }
+  ],
   "thumbnailUrl": "images/cloud-native-cncf-rioja.webp",
   "latLon": {
     "lat": 42.46569,

@@ -16,11 +16,17 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://jsdaycanarias.com/",
-  "urls": {
-    "twitter": "https://twitter.com/canariasjs",
-    "youtube": "https://youtube.com/c/canariasjs",
-    "instagram": "https://www.instagram.com/canariasjs"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/canariasjs"
+    },
+    {
+      "url": "https://youtube.com/c/canariasjs"
+    },
+    {
+      "url": "https://www.instagram.com/canariasjs"
+    }
+  ],
   "thumbnailUrl": "images/jsday-canarias.webp",
   "latLon": {
     "lat": 28.2631,

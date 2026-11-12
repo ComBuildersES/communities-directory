@@ -16,11 +16,17 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/azuremalaga/",
-  "urls": {
-    "twitter": "https://twitter.com/azuremalaga",
-    "linkedin": "https://www.linkedin.com/groups/8197954/",
-    "eventsUrl": "https://www.meetup.com/azuremalaga/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/azuremalaga"
+    },
+    {
+      "url": "https://www.linkedin.com/groups/8197954/"
+    },
+    {
+      "url": "https://www.meetup.com/azuremalaga/"
+    }
+  ],
   "thumbnailUrl": "images/azure-malaga-meetup.webp",
   "latLon": {
     "lat": 36.7196292,

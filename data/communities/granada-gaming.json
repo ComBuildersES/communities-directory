@@ -14,11 +14,17 @@
   "targetAudience": [],
   "contactInfo": "organizacion@xover.es",
   "communityUrl": "https://www.granadagaming.com/",
-  "urls": {
-    "instagram": "https://www.instagram.com/kaleidooodles/",
-    "twitter": "https://twitter.com/ficzone",
-    "youtube": "https://www.youtube.com/channel/UCT2nDcjDucF3kyQr_DQkuvg"
-  },
+  "urls": [
+    {
+      "url": "https://www.instagram.com/kaleidooodles/"
+    },
+    {
+      "url": "https://twitter.com/ficzone"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCT2nDcjDucF3kyQr_DQkuvg"
+    }
+  ],
   "thumbnailUrl": "images/granada-gaming.webp",
   "latLon": {
     "lat": 37.1831938,

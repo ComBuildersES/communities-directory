@@ -19,13 +19,24 @@
   "targetAudience": [],
   "contactInfo": "contacte@lleidahack.dev",
   "communityUrl": "https://www.lleidahack.dev/",
-  "urls": {
-    "web": "https://www.lleidahack.dev/",
-    "github": "https://github.com/LleidaHack",
-    "twitter": "https://x.com/lleidahack",
-    "instagram": "https://www.instagram.com/lleidahack/",
-    "linkedin": "https://es.linkedin.com/company/lleidahack"
-  },
+  "urls": [
+    {
+      "kind": "web",
+      "url": "https://www.lleidahack.dev/"
+    },
+    {
+      "url": "https://github.com/LleidaHack"
+    },
+    {
+      "url": "https://x.com/lleidahack"
+    },
+    {
+      "url": "https://www.instagram.com/lleidahack/"
+    },
+    {
+      "url": "https://es.linkedin.com/company/lleidahack"
+    }
+  ],
   "thumbnailUrl": "images/lleidahack.webp",
   "latLon": {
     "lat": 41.6175899,

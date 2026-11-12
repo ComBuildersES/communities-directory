@@ -26,11 +26,17 @@
   "targetAudience": [],
   "contactInfo": "womentechmakersmadrid@gmail.com",
   "communityUrl": "https://wtmgdgmadrid.github.io/wtm-madrid-landing/",
-  "urls": {
-    "twitter": "https://twitter.com/_mtnieto",
-    "bluesky": "https://bsky.app/profile/mtnieto.es",
-    "instagram": "https://www.instagram.com/wtmmadrid/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/_mtnieto"
+    },
+    {
+      "url": "https://bsky.app/profile/mtnieto.es"
+    },
+    {
+      "url": "https://www.instagram.com/wtmmadrid/"
+    }
+  ],
   "thumbnailUrl": "images/women-techmakers-madrid.webp",
   "latLon": {
     "lat": 40.4167047,

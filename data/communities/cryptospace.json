@@ -14,12 +14,22 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "http://www.cryptospace.es/",
-  "urls": {
-    "twitter": "https://x.com/CryptoSpaceCS",
-    "web": "http://www.cryptospace.es/",
-    "linkedin": "https://www.linkedin.com/company/cryptospacecs/",
-    "eventsUrl": "https://saraos.tech/@cryptospace"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/CryptoSpaceCS"
+    },
+    {
+      "kind": "web",
+      "url": "http://www.cryptospace.es/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/cryptospacecs/"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://saraos.tech/@cryptospace"
+    }
+  ],
   "thumbnailUrl": "images/cryptospace.webp",
   "latLon": {
     "lat": null,

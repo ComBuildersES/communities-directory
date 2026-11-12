@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://x.com/PaellaCON",
-  "urls": {
-    "twitter": "https://x.com/PaellaCON",
-    "youtube": "https://www.youtube.com/watch?v=Du2PQiMIqfI&list=PLoWTLhDgfllJKIw1n-Y3APvoYZR7mQbMm"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/PaellaCON"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Du2PQiMIqfI&list=PLoWTLhDgfllJKIw1n-Y3APvoYZR7mQbMm"
+    }
+  ],
   "thumbnailUrl": "images/paellacon.webp",
   "latLon": {
     "lat": 39.4702393,

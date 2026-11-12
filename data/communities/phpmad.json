@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/phpmad/events/304894313/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/phpmad/events/304894313/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/phpmad/events/304894313/"
+    }
+  ],
   "thumbnailUrl": "images/phpmad.webp",
   "latLon": {
     "lat": 40.4167047,

@@ -14,10 +14,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://betabeers.com/community/betabeers-galicia-29/",
-  "urls": {
-    "twitter": "https://x.com/betabeersgal",
-    "web": "https://betabeers.com/community/betabeers-galicia-29/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/betabeersgal"
+    },
+    {
+      "kind": "web",
+      "url": "https://betabeers.com/community/betabeers-galicia-29/"
+    }
+  ],
   "thumbnailUrl": "images/betabeers-galicia.webp",
   "latLon": {
     "lat": 42.756588768824,

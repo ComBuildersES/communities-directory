@@ -12,6 +12,8 @@
  * en el build o en el navegador, esta función no.
  */
 
+import { toLegacyUrlMap } from "./communityUrls.js";
+
 const STATUSES = ["active", "inactive", "unknown"];
 
 const hasTags = (community) => Boolean(community.tags?.length || community.matchesAllTags);
@@ -19,7 +21,9 @@ const hasAudience = (community) =>
   Boolean(community.targetAudience?.length || community.matchesAllAudience);
 const hasScope = (community) =>
   Boolean(community.geographicScope && community.geographicScope !== "unknown");
-const hasOte = (community) => Boolean(community.urls?.ote);
+// `urls` es un array de pares desde #478, así que "¿tiene feed OTE?" no es un acceso por
+// clave: se pregunta al helper, que entiende los dos formatos.
+const hasOte = (community) => Boolean(toLegacyUrlMap(community.urls).ote);
 
 /** Porcentaje entero, redondeado hacia abajo: 89 de 657 es un 13%, no un 14%. */
 export const percentage = (part, whole) => (whole > 0 ? Math.floor((part / whole) * 100) : 0);

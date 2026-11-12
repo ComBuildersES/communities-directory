@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://r-es.org/",
-  "urls": {
-    "github": "https://github.com/rhisp",
-    "twitter": "https://twitter.com/R_Hisp"
-  },
+  "urls": [
+    {
+      "url": "https://github.com/rhisp"
+    },
+    {
+      "url": "https://twitter.com/R_Hisp"
+    }
+  ],
   "thumbnailUrl": "images/name-de-r-hispano.webp",
   "latLon": {
     "lat": null,

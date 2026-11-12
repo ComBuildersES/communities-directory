@@ -14,12 +14,20 @@
   "targetAudience": [],
   "contactInfo": "guadalindie@malagajam.com",
   "communityUrl": "https://guadalindie.com/",
-  "urls": {
-    "discord": "https://discord.com/invite/6Q3DKDT",
-    "bluesky": "https://bsky.app/profile/guadalindie.bsky.social",
-    "twitter": "https://twitter.com/guadalindie",
-    "instagram": "https://www.instagram.com/guadalindie/"
-  },
+  "urls": [
+    {
+      "url": "https://discord.com/invite/6Q3DKDT"
+    },
+    {
+      "url": "https://bsky.app/profile/guadalindie.bsky.social"
+    },
+    {
+      "url": "https://twitter.com/guadalindie"
+    },
+    {
+      "url": "https://www.instagram.com/guadalindie/"
+    }
+  ],
   "thumbnailUrl": "images/guadalindie.webp",
   "latLon": {
     "lat": 36.7196292,

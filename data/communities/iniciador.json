@@ -34,11 +34,17 @@
   ],
   "contactInfo": "gerencia@iniciador.com",
   "communityUrl": "https://iniciador.com/",
-  "urls": {
-    "twitter": "https://x.com/iniciador",
-    "flickr": "https://www.flickr.com/groups/iniciador/",
-    "linkedin": "https://www.linkedin.com/company/iniciador/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/iniciador"
+    },
+    {
+      "url": "https://www.flickr.com/groups/iniciador/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/iniciador/"
+    }
+  ],
   "thumbnailUrl": "",
   "latLon": {
     "lat": null,

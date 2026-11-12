@@ -14,13 +14,23 @@
   "targetAudience": [],
   "contactInfo": "support@luma.com",
   "communityUrl": "https://lu.ma/6xew9jdf",
-  "urls": {
-    "twitter": "https://x.com/hackbarna",
-    "youtube": "https://youtube.com/@hackbarna",
-    "linkedin": "https://linkedin.com/company/103594048",
-    "instagram": "https://www.instagram.com/luma_hq/",
-    "eventsUrl": "https://lu.ma/6xew9jdf"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/hackbarna"
+    },
+    {
+      "url": "https://youtube.com/@hackbarna"
+    },
+    {
+      "url": "https://linkedin.com/company/103594048"
+    },
+    {
+      "url": "https://www.instagram.com/luma_hq/"
+    },
+    {
+      "url": "https://lu.ma/6xew9jdf"
+    }
+  ],
   "latLon": {
     "lat": 41.387917,
     "lon": 2.1699187

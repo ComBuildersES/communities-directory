@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://x.com/catdotnet",
-  "urls": {
-    "twitter": "https://x.com/catdotnet"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/catdotnet"
+    }
+  ],
   "thumbnailUrl": "images/catdotnet.webp",
   "latLon": {
     "lat": null,

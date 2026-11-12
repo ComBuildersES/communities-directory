@@ -24,9 +24,12 @@
   "targetAudience": [],
   "contactInfo": "conf@geekscat.org",
   "communityUrl": "https://conf.geeks.cat/",
-  "urls": {
-    "web": "https://conf.geeks.cat/"
-  },
+  "urls": [
+    {
+      "kind": "web",
+      "url": "https://conf.geeks.cat/"
+    }
+  ],
   "thumbnailUrl": "images/geekscat-conf.webp",
   "latLon": {
     "lat": 41.9794,

@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/madrid-dug/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/es-ES/madrid-dug/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/es-ES/madrid-dug/"
+    }
+  ],
   "latLon": {
     "lat": 40.4167047,
     "lon": -3.7035825

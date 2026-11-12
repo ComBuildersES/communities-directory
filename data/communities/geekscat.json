@@ -20,9 +20,12 @@
   "targetAudience": [],
   "contactInfo": "info@geekscat.org",
   "communityUrl": "https://geeks.cat/",
-  "urls": {
-    "web": "https://geeks.cat/"
-  },
+  "urls": [
+    {
+      "kind": "web",
+      "url": "https://geeks.cat/"
+    }
+  ],
   "thumbnailUrl": "images/geekscat.webp",
   "latLon": {
     "lat": 41.9793006,

@@ -17,16 +17,33 @@
   "matchesAllAudience": true,
   "contactInfo": "info@t3chfest.es",
   "communityUrl": "https://t3chfest.es/",
-  "urls": {
-    "youtube": "https://www.youtube.com/@T3chFest",
-    "twitter": "https://x.com/t3chfest",
-    "bluesky": "https://bsky.app/profile/t3chfest.es",
-    "linkedin": "https://es.linkedin.com/company/t3chfest",
-    "instagram": "https://instagram.com/t3chfest",
-    "telegram": "https://t.me/t3chfest_canal",
-    "eventosWiki": "https://eventos.wiki/organizations/t3chfest",
-    "ote": "https://eventos.wiki/organizations/t3chfest/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/@T3chFest"
+    },
+    {
+      "url": "https://x.com/t3chfest"
+    },
+    {
+      "url": "https://bsky.app/profile/t3chfest.es"
+    },
+    {
+      "url": "https://es.linkedin.com/company/t3chfest"
+    },
+    {
+      "url": "https://instagram.com/t3chfest"
+    },
+    {
+      "url": "https://t.me/t3chfest_canal"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/t3chfest"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/t3chfest/events.json"
+    }
+  ],
   "thumbnailUrl": "images/t3chfest.webp",
   "latLon": {
     "lat": 40.4167047,

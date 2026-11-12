@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "info@wpigualada.com",
   "communityUrl": "https://wpigualada.com/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/es-ES/girona-wordpress-meetup/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/es-ES/girona-wordpress-meetup/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-igualada.webp",
   "latLon": {
     "lat": 41.5787648,

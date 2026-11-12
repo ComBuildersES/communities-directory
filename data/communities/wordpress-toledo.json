@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/toledo-wordpress/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/toledo-wordpress/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/toledo-wordpress/"
+    }
+  ],
   "latLon": {
     "lat": 39.85966175170025,
     "lon": -4.024544270483665

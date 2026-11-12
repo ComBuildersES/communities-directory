@@ -14,10 +14,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://bigagileos.wixsite.com/website",
-  "urls": {
-    "twitter": "https://x.com/bigagileos",
-    "web": "http://web.archive.org/web/20230608075207/https://bigagileos.wixsite.com/website"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/bigagileos"
+    },
+    {
+      "kind": "web",
+      "url": "http://web.archive.org/web/20230608075207/https://bigagileos.wixsite.com/website"
+    }
+  ],
   "thumbnailUrl": "images/big-agile-open-spac.webp",
   "latLon": {
     "lat": 40.4167047,

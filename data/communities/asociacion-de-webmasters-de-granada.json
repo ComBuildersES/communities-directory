@@ -56,12 +56,21 @@
   ],
   "contactInfo": "hhkaos@gmail.com",
   "communityUrl": "https://web.archive.org/web/20120627123011/http://www.webmastergranada.es/",
-  "urls": {
-    "twitter": "https://x.com/webgranada",
-    "web": "https://webmastergranada.es/",
-    "facebook": "https://www.facebook.com/100063929263670/about/",
-    "linkedin": "https://linkedin.com/company/asociaci-n-de-webmasters-de-granada/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/webgranada"
+    },
+    {
+      "kind": "web",
+      "url": "https://webmastergranada.es/"
+    },
+    {
+      "url": "https://www.facebook.com/100063929263670/about/"
+    },
+    {
+      "url": "https://linkedin.com/company/asociaci-n-de-webmasters-de-granada/"
+    }
+  ],
   "thumbnailUrl": "images/asociacion-de-webmasters-de-granada.webp",
   "latLon": {
     "lat": 37.1831938,

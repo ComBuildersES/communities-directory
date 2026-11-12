@@ -16,12 +16,20 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/flutter-malaga/",
-  "urls": {
-    "twitter": "https://x.com/fluttermalaga",
-    "linkedin": "https://www.linkedin.com/company/flutter-m%C3%A1laga/",
-    "instagram": "https://www.instagram.com/flutter_malaga",
-    "eventsUrl": "https://www.meetup.com/es-ES/flutter-malaga/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/fluttermalaga"
+    },
+    {
+      "url": "https://www.linkedin.com/company/flutter-m%C3%A1laga/"
+    },
+    {
+      "url": "https://www.instagram.com/flutter_malaga"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/flutter-malaga/"
+    }
+  ],
   "thumbnailUrl": "images/flutter-malaga.webp",
   "latLon": {
     "lat": 36.7196292,

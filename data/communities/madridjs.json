@@ -16,11 +16,17 @@
   "targetAudience": [],
   "contactInfo": "madridjs-list@meetup.com",
   "communityUrl": "https://www.meetup.com/es-ES/madridjs/",
-  "urls": {
-    "twitter": "https://twitter.com/madridjs",
-    "github": "https://github.com/madridjs",
-    "eventsUrl": "https://www.meetup.com/es-ES/madridjs/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/madridjs"
+    },
+    {
+      "url": "https://github.com/madridjs"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/madridjs/"
+    }
+  ],
   "thumbnailUrl": "images/madridjs.webp",
   "latLon": {
     "lat": 40.4167047,

@@ -14,16 +14,33 @@
   "targetAudience": [],
   "contactInfo": "info@xopsconference.com",
   "communityUrl": "https://linktr.ee/xopscon",
-  "urls": {
-    "youtube": "https://www.youtube.com/@X-OpsConference",
-    "telegram": "https://t.me/xopscon",
-    "instagram": "https://www.instagram.com/xops_conference",
-    "linkedin": "https://www.linkedin.com/company/xops-conference/",
-    "twitter": "https://x.com/XopsConference",
-    "linkAggregator": "https://linktr.ee/xopscon",
-    "eventosWiki": "https://eventos.wiki/organizations/x-ops-conference",
-    "ote": "https://eventos.wiki/organizations/x-ops-conference/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/@X-OpsConference"
+    },
+    {
+      "url": "https://t.me/xopscon"
+    },
+    {
+      "url": "https://www.instagram.com/xops_conference"
+    },
+    {
+      "url": "https://www.linkedin.com/company/xops-conference/"
+    },
+    {
+      "url": "https://x.com/XopsConference"
+    },
+    {
+      "url": "https://linktr.ee/xopscon"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/x-ops-conference"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/x-ops-conference/events.json"
+    }
+  ],
   "thumbnailUrl": "images/xops-conference.webp",
   "latLon": {
     "lat": 40.4167047,

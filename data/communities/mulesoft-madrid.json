@@ -15,11 +15,18 @@
   "targetAudience": [],
   "contactInfo": "info@mulesoft.com",
   "communityUrl": "https://meetups.mulesoft.com/madrid",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/groups/6936034",
-    "twitter": "https://twitter.com/MuleDev",
-    "eventsUrl": "https://meetups.mulesoft.com/madrid"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/groups/6936034"
+    },
+    {
+      "url": "https://twitter.com/MuleDev"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://meetups.mulesoft.com/madrid"
+    }
+  ],
   "thumbnailUrl": "images/mulesoft-madrid.webp",
   "latLon": {
     "lat": 40.4167047,

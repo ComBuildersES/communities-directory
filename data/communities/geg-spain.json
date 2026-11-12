@@ -19,14 +19,28 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://transformacioneducativa.es",
-  "urls": {
-    "twitter": "https://x.com/GEGSpain",
-    "instagram": "https://www.instagram.com/gegspain/",
-    "youtube": "https://www.youtube.com/c/GEGSpain",
-    "linkedin": "https://www.linkedin.com/company/transformaci%C3%B3n-educativa-geg-spain/",
-    "web": "https://transformacioneducativa.es/meetup/",
-    "eventsUrl": "https://transformacioneducativa.es/agenda/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/GEGSpain"
+    },
+    {
+      "url": "https://www.instagram.com/gegspain/"
+    },
+    {
+      "url": "https://www.youtube.com/c/GEGSpain"
+    },
+    {
+      "url": "https://www.linkedin.com/company/transformaci%C3%B3n-educativa-geg-spain/"
+    },
+    {
+      "kind": "web",
+      "url": "https://transformacioneducativa.es/meetup/"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://transformacioneducativa.es/agenda/"
+    }
+  ],
   "thumbnailUrl": "images/geg-spain.webp",
   "latLon": {
     "lat": null,

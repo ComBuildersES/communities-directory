@@ -14,11 +14,18 @@
   "targetAudience": [],
   "contactInfo": "info@mulesoft.com",
   "communityUrl": "https://meetups.mulesoft.com/",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/groups/6936034",
-    "twitter": "https://twitter.com/MuleDev",
-    "eventsUrl": "https://meetups.mulesoft.com/"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/groups/6936034"
+    },
+    {
+      "url": "https://twitter.com/MuleDev"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://meetups.mulesoft.com/"
+    }
+  ],
   "thumbnailUrl": "images/mulesoft-meetups.webp",
   "latLon": {
     "lat": null,

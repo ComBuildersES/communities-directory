@@ -14,11 +14,18 @@
   "targetAudience": [],
   "contactInfo": "contacta@apiaddicts.org",
   "communityUrl": "https://www.meetup.com/es-ES/apiaddicts/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/es-ES/apiaddicts/",
-    "eventosWiki": "https://eventos.wiki/organizations/apiaddicts",
-    "ote": "https://eventos.wiki/organizations/apiaddicts/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/es-ES/apiaddicts/"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/apiaddicts"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/apiaddicts/events.json"
+    }
+  ],
   "thumbnailUrl": "images/apiaddicts.webp",
   "latLon": {
     "lat": null,

@@ -14,11 +14,17 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/software-testers-qa-experts-de-malaga/",
-  "urls": {
-    "twitter": "http://twitter.com/expoQA/",
-    "linkedin": "https://es.linkedin.com/company/nexo-qa",
-    "eventsUrl": "https://www.meetup.com/software-testers-qa-experts-de-malaga/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/expoQA/"
+    },
+    {
+      "url": "https://es.linkedin.com/company/nexo-qa"
+    },
+    {
+      "url": "https://www.meetup.com/software-testers-qa-experts-de-malaga/"
+    }
+  ],
   "thumbnailUrl": "images/software-testers-qa-experts-de-malaga.webp",
   "latLon": {
     "lat": 36.7196292,

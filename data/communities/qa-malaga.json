@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/qa-malaga/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/qa-malaga/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/qa-malaga/"
+    }
+  ],
   "thumbnailUrl": "images/qa-malaga.webp",
   "latLon": {
     "lat": 36.7196292,

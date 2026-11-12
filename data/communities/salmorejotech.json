@@ -16,13 +16,23 @@
   "targetAudience": [],
   "contactInfo": "aulasoftwarelibre@uco.es",
   "communityUrl": "https://salmorejo.tech/2024/",
-  "urls": {
-    "twitter": "https://twitter.com/jesusescribanos",
-    "github": "https://github.com/jes106",
-    "instagram": "https://www.instagram.com/aulasoftwarelibre/?hl=es",
-    "telegram": "https://t.me/AulaSoftwareLibreUCO",
-    "youtube": "https://www.youtube.com/channel/UCfWiR5j-cbKcGTi9faK8P6w"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/jesusescribanos"
+    },
+    {
+      "url": "https://github.com/jes106"
+    },
+    {
+      "url": "https://www.instagram.com/aulasoftwarelibre/?hl=es"
+    },
+    {
+      "url": "https://t.me/AulaSoftwareLibreUCO"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCfWiR5j-cbKcGTi9faK8P6w"
+    }
+  ],
   "thumbnailUrl": "images/salmorejotech.webp",
   "latLon": {
     "lat": 37.888422,

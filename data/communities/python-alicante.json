@@ -18,12 +18,20 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-es/python_alc/",
-  "urls": {
-    "twitter": "https://x.com/python_alc",
-    "telegram": "https://t.me/python_alc",
-    "github": "https://github.com/pythonalicante",
-    "eventsUrl": "https://www.meetup.com/es-es/python_alc/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/python_alc"
+    },
+    {
+      "url": "https://t.me/python_alc"
+    },
+    {
+      "url": "https://github.com/pythonalicante"
+    },
+    {
+      "url": "https://www.meetup.com/es-es/python_alc/"
+    }
+  ],
   "thumbnailUrl": "images/python-asturias.webp",
   "latLon": {
     "lat": 38.34521,

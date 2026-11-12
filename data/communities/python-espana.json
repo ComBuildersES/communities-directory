@@ -16,15 +16,30 @@
   "targetAudience": [],
   "contactInfo": "contacto@es.python.org",
   "communityUrl": "https://es.python.org",
-  "urls": {
-    "twitter": "https://twitter.com/python_es",
-    "github": "https://github.com/python-spain",
-    "youtube": "https://www.youtube.com/c/PythonEspa%C3%B1aOficial",
-    "telegram": "https://t.me/PythonEsp",
-    "discord": "https://discord.com/invite/35E3Ph7Fez",
-    "eventosWiki": "https://eventos.wiki/organizations/python-espana",
-    "ote": "https://eventos.wiki/organizations/python-espana/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/python_es"
+    },
+    {
+      "url": "https://github.com/python-spain"
+    },
+    {
+      "url": "https://www.youtube.com/c/PythonEspa%C3%B1aOficial"
+    },
+    {
+      "url": "https://t.me/PythonEsp"
+    },
+    {
+      "url": "https://discord.com/invite/35E3Ph7Fez"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/python-espana"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/python-espana/events.json"
+    }
+  ],
   "thumbnailUrl": "images/python-canarias.webp",
   "latLon": {
     "lat": null,

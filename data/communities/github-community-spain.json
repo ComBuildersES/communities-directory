@@ -16,15 +16,30 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://ghspain.github.io/",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/ghspain/",
-    "github": "https://github.com/svg153",
-    "youtube": "https://www.youtube.com/@GitHubCommunitySpain/",
-    "twitter": "https://x.com/GithubCommSpain",
-    "eventsUrl": "https://www.meetup.com/ghspain",
-    "eventosWiki": "https://eventos.wiki/organizations/github-community-spain",
-    "ote": "https://eventos.wiki/organizations/github-community-spain/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/ghspain/"
+    },
+    {
+      "url": "https://github.com/svg153"
+    },
+    {
+      "url": "https://www.youtube.com/@GitHubCommunitySpain/"
+    },
+    {
+      "url": "https://x.com/GithubCommSpain"
+    },
+    {
+      "url": "https://www.meetup.com/ghspain"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/github-community-spain"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/github-community-spain/events.json"
+    }
+  ],
   "thumbnailUrl": "images/github-community-spain.webp",
   "latLon": {
     "lat": 40.4167047,

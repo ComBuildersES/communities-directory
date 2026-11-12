@@ -14,11 +14,17 @@
   "targetAudience": [],
   "contactInfo": "vlc.databeers@gmail.com",
   "communityUrl": "https://databeersvlc.com/",
-  "urls": {
-    "twitter": "https://twitter.com/databeersvlc",
-    "linkedin": "https://www.linkedin.com/company/databeersvlc",
-    "youtube": "https://www.youtube.com/channel/UCeG7yKw4z0LW2g6lx-aIhTA"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/databeersvlc"
+    },
+    {
+      "url": "https://www.linkedin.com/company/databeersvlc"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCeG7yKw4z0LW2g6lx-aIhTA"
+    }
+  ],
   "thumbnailUrl": "images/databeers-valencia.webp",
   "latLon": {
     "lat": 39.4702393,

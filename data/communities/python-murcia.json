@@ -18,10 +18,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://x.com/pythonmurcia",
-  "urls": {
-    "twitter": "https://x.com/pythonmurcia",
-    "telegram": "https://t.me/pythonmurcia"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/pythonmurcia"
+    },
+    {
+      "url": "https://t.me/pythonmurcia"
+    }
+  ],
   "thumbnailUrl": "images/python-espana.webp",
   "latLon": {
     "lat": 37.9835334,

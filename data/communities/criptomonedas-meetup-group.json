@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/fuengirola-criptomonedas-meetup-group/?eventOrigin=topic_overview_nearest_groups",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/es-ES/fuengirola-criptomonedas-meetup-group/?eventOrigin=topic_overview_nearest_groups"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/es-ES/fuengirola-criptomonedas-meetup-group/?eventOrigin=topic_overview_nearest_groups"
+    }
+  ],
   "thumbnailUrl": "images/criptomonedas-meetup-group.webp",
   "latLon": {
     "lat": 36.5390044,

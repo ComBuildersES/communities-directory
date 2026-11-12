@@ -15,10 +15,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://x.com/makersofmurcia",
-  "urls": {
-    "twitter": "https://x.com/makersofmurcia",
-    "eventsUrl": "https://www.meetup.com/makers-of-muria/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/makersofmurcia"
+    },
+    {
+      "url": "https://www.meetup.com/makers-of-muria/"
+    }
+  ],
   "thumbnailUrl": "images/makers-of-murcia.webp",
   "latLon": {
     "lat": 37.9835334,

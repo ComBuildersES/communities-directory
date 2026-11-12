@@ -34,13 +34,23 @@
   "targetAudience": [],
   "contactInfo": "hellocorunawtf@gmail.com",
   "communityUrl": "https://linktr.ee/corunawtf",
-  "urls": {
-    "telegram": "https://t.me/corunaWTF",
-    "twitter": "https://twitter.com/corunawtf",
-    "linkedin": "https://www.linkedin.com/groups/9273460",
-    "github": "https://github.com/corunawtf",
-    "linkAggregator": "https://linktr.ee/corunawtf"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/corunaWTF"
+    },
+    {
+      "url": "https://twitter.com/corunawtf"
+    },
+    {
+      "url": "https://www.linkedin.com/groups/9273460"
+    },
+    {
+      "url": "https://github.com/corunawtf"
+    },
+    {
+      "url": "https://linktr.ee/corunawtf"
+    }
+  ],
   "thumbnailUrl": "images/coruna-wtf.webp",
   "latLon": {
     "lat": 43.3707332,

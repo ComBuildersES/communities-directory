@@ -1,6 +1,7 @@
 import { normalizeCommunityLangs } from "./communityLanguages.js";
 import { MERGED_STATUS } from "./mergedCommunities.js";
 import { normalizeOrganizedBy } from "./organizedCommunities.js";
+import { URL_KINDS, mergeDraftUrls, toUrlEntries, toUrlRows } from "./communityUrls.js";
 
 const GITHUB_NEW_ISSUE_URL = "https://github.com/ComBuildersES/communities-directory/issues/new";
 export const COMMUNITY_BUILDERS_EMAIL = "communitybuilders.es@gmail.com";
@@ -37,32 +38,13 @@ export const GEOGRAPHIC_SCOPE_OPTIONS = [
 export const EVENT_FORMATS_WITH_LOCATION = ["in-person", "hybrid"];
 export const SHORT_DESCRIPTION_MAX_LENGTH = 280;
 
-export const URL_PLATFORM_OPTIONS = [
-  { key: "web" },
-  { key: "eventsUrl" },
-  { key: "eventosWiki" },
-  { key: "ote" },
-  { key: "blog" },
-  { key: "rss" },
-  { key: "forum" },
-  { key: "linkAggregator" },
-  { key: "mailingList" },
-  { key: "github" },
-  { key: "discord" },
-  { key: "telegram" },
-  { key: "whatsapp" },
-  { key: "slack" },
-  { key: "youtube" },
-  { key: "linkedin" },
-  { key: "twitter" },
-  { key: "tiktok" },
-  { key: "instagram" },
-  { key: "facebook" },
-  { key: "mastodon" },
-  { key: "bluesky" },
-  { key: "twitch" },
-  { key: "flickr" },
-];
+/**
+ * Las plataformas que el alta asistida puede devolver. **Se deriva de `URL_KINDS`**: tenerla
+ * a mano se desincronizó en cuanto Meetup, Eventbrite y Luma pasaron a tener clave propia, y
+ * el resultado fue que la IA proponía una URL de Meetup siguiendo el esquema y el formulario
+ * la tiraba en silencio.
+ */
+export const URL_PLATFORM_OPTIONS = URL_KINDS.map(({ kind }) => ({ key: kind }));
 
 export const COMMUNITY_ISSUE_MODES = {
   CREATE: "create",
@@ -215,7 +197,7 @@ export function normalizeUrlForComparison(value = "") {
 export function getComparableCommunityUrls(community = {}) {
   return [
     community.communityUrl,
-    ...Object.values(normalizeUrls(community.urls ?? {})),
+    ...toUrlEntries(community.urls).map((entry) => entry.url),
   ]
     .map((url) => normalizeUrlForComparison(url))
     .filter(Boolean);
@@ -409,7 +391,9 @@ export function getEmptyCommunityDraft(nextId = null) {
     targetAudience: [],
     contactInfo: "",
     communityUrl: "",
-    urls: {},
+    // Canales como lista de entradas `{ url, kind?, label? }` (#478): es el mismo formato que
+    // se almacena, así que el formulario edita lo que se va a guardar.
+    urls: [],
     archivedUrls: [],
     thumbnailUrl: "",
     replaceThumbnail: false,
@@ -442,7 +426,9 @@ export function getCommunityDraft(community, nextId = null) {
     langs: normalizeCommunityLangs(community.langs),
     tags: Array.isArray(community.tags) ? community.tags : [],
     targetAudience: Array.isArray(community.targetAudience) ? community.targetAudience : [],
-    urls: community.urls ?? {},
+    // Con filas, no entradas sueltas: cada una necesita su `_rowId` o el formulario no sabe
+    // a cuál se refiere "quitar".
+    urls: toUrlRows(community.urls),
     archivedUrls: normalizeArchivedUrls(community.archivedUrls),
     replaceThumbnail: false,
     latLon: {
@@ -497,45 +483,6 @@ export function normalizeArchivedUrls(archivedUrls = []) {
   }, []);
 }
 
-const URL_PLATFORM_HOST_PATTERNS = [
-  ["github", /(^|\.)github\.(com|io)$/],
-  ["discord", /(^|\.)discord(app)?\.(com|gg)$/],
-  ["telegram", /(^|\.)(t\.me|telegram\.(me|org))$/],
-  ["whatsapp", /(^|\.)(chat\.whatsapp\.com|wa\.me)$/],
-  ["slack", /(^|\.)slack\.com$/],
-  ["youtube", /(^|\.)(youtube\.com|youtu\.be)$/],
-  ["linkedin", /(^|\.)linkedin\.com$/],
-  ["twitter", /(^|\.)(twitter\.com|x\.com)$/],
-  ["tiktok", /(^|\.)tiktok\.com$/],
-  ["instagram", /(^|\.)instagram\.com$/],
-  ["facebook", /(^|\.)(facebook\.com|fb\.com)$/],
-  ["bluesky", /(^|\.)bsky\.(app|social)$/],
-  ["twitch", /(^|\.)twitch\.tv$/],
-  ["flickr", /(^|\.)flickr\.com$/],
-  ["eventosWiki", /(^|\.)eventos\.wiki$/],
-  ["eventsUrl", /(^|\.)(meetup\.com|eventbrite\.(com|es)|luma\.com|lu\.ma)$/],
-  ["linkAggregator", /(^|\.)(linktr\.ee|beacons\.ai|bio\.link)$/],
-  ["mailingList", /(^|\.)(groups\.google\.com|mailchimp\.com|substack\.com)$/],
-];
-
-/**
- * Plataforma probable de una URL. Se usa al restaurar un canal archivado, para devolverlo a
- * su campo en vez de obligar a reescribirlo.
- */
-export function inferUrlPlatformKey(value = "") {
-  const cleanedValue = cleanString(value);
-  if (!cleanedValue) return null;
-
-  let host;
-  try {
-    host = new URL(cleanedValue).hostname.toLowerCase().replace(/^www\./, "");
-  } catch {
-    return null;
-  }
-
-  const match = URL_PLATFORM_HOST_PATTERNS.find(([, pattern]) => pattern.test(host));
-  return match ? match[0] : "web";
-}
 
 export function getComparableArchivedUrls(community = {}) {
   return normalizeArchivedUrls(community.archivedUrls)
@@ -567,13 +514,6 @@ export function findArchivedUrlMatches({ communities = [], urls = [] } = {}) {
   }, []);
 }
 
-export function normalizeUrls(urls = {}) {
-  return Object.fromEntries(
-    Object.entries(urls)
-      .map(([key, value]) => [cleanString(key), cleanString(value)])
-      .filter(([key, value]) => key && value)
-  );
-}
 
 export function serializeProposalDraft(proposalDraft) {
   if (!isPlainObject(proposalDraft)) return "";
@@ -643,10 +583,13 @@ function normalizeTaxonomySelection(selectedValues, catalogItems, matchesAllFlag
 
 export function buildCommunityPayload(draft, existingCommunity = null, options = {}) {
   const { allTags = [], allAudience = [] } = options;
-  const normalizedUrls = normalizeUrls(draft.urls);
+  // `mergeDraftUrls` acepta tanto la lista de entradas que edita el formulario hoy como el
+  // objeto por clave de un borrador guardado antes de #478, y deduplica por URL. `urlExtras`
+  // ya no existe en el borrador: se lee solo por si quedaba uno a medias en localStorage.
+  const normalizedUrls = mergeDraftUrls(draft.urls, draft.urlExtras);
   // Las URLs archivadas que vuelvan a aparecer como activas dejan de estar archivadas.
   const activeComparableUrls = new Set(
-    [draft.communityUrl, ...Object.values(normalizedUrls)]
+    [draft.communityUrl, ...normalizedUrls.map((entry) => entry.url)]
       .map((url) => normalizeUrlForComparison(url))
       .filter(Boolean)
   );

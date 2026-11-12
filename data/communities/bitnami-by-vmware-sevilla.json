@@ -14,11 +14,17 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/bitnami-sevilla/",
-  "urls": {
-    "twitter": "https://twitter.com/bitnami",
-    "linkedin": "https://www.linkedin.com/company/bitnami/",
-    "eventsUrl": "https://www.meetup.com/bitnami-sevilla/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/bitnami"
+    },
+    {
+      "url": "https://www.linkedin.com/company/bitnami/"
+    },
+    {
+      "url": "https://www.meetup.com/bitnami-sevilla/"
+    }
+  ],
   "thumbnailUrl": "images/bitnami-by-vmware-sevilla.webp",
   "latLon": {
     "lat": 37.3886303,

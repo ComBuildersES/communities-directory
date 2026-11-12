@@ -28,10 +28,14 @@
   "targetAudience": [],
   "contactInfo": "pingprogramadoras@gmail.com",
   "communityUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/",
-    "linkedin": "https://www.linkedin.com/company/pingaprogramadoras/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/es-ES/grupo-de-ping-a-programadoras/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/pingaprogramadoras/"
+    }
+  ],
   "archivedUrls": [
     "https://x.com/pingmujeres"
   ],

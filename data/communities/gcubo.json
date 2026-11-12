@@ -20,11 +20,18 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://gcubo.org/",
-  "urls": {
-    "twitter": "https://x.com/gcubo_linux",
-    "web": "http://web.archive.org/web/20250316120847/http://www.gcubo.org/",
-    "facebook": "https://www.facebook.com/gcubo"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/gcubo_linux"
+    },
+    {
+      "kind": "web",
+      "url": "http://web.archive.org/web/20250316120847/http://www.gcubo.org/"
+    },
+    {
+      "url": "https://www.facebook.com/gcubo"
+    }
+  ],
   "thumbnailUrl": "images/gcubo.webp",
   "latLon": {
     "lat": 37.1831938,

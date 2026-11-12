@@ -38,16 +38,34 @@
   ],
   "contactInfo": "hhkaos@gmail.com",
   "communityUrl": "http://www.tomellosotech.org",
-  "urls": {
-    "twitter": "https://x.com/TomellosoTech",
-    "web": "http://web.archive.org/web/20201130180149/https://www.tomellosotech.org/",
-    "linkedin": "https://www.linkedin.com/company/tomellosotech/",
-    "youtube": "https://www.youtube.com/@TomellosoTech",
-    "telegram": "https://t.me/TomeTech",
-    "github": "https://github.com/TomellosoTech",
-    "facebook": "https://www.facebook.com/tomellosotech/",
-    "eventsUrl": "https://web.archive.org/web/20200814030945/https://www.meetup.com/es-ES/TomellosoTech/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/TomellosoTech"
+    },
+    {
+      "kind": "web",
+      "url": "http://web.archive.org/web/20201130180149/https://www.tomellosotech.org/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/tomellosotech/"
+    },
+    {
+      "url": "https://www.youtube.com/@TomellosoTech"
+    },
+    {
+      "url": "https://t.me/TomeTech"
+    },
+    {
+      "url": "https://github.com/TomellosoTech"
+    },
+    {
+      "url": "https://www.facebook.com/tomellosotech/"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://web.archive.org/web/20200814030945/https://www.meetup.com/es-ES/TomellosoTech/"
+    }
+  ],
   "thumbnailUrl": "",
   "latLon": {
     "lat": 39.157747,

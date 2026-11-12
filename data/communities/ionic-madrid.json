@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/ionic-madrid/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/es-ES/ionic-madrid/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/es-ES/ionic-madrid/"
+    }
+  ],
   "latLon": {
     "lat": 40.4167047,
     "lon": -3.7035825

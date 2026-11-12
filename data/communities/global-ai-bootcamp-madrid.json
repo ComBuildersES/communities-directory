@@ -14,11 +14,17 @@
   "targetAudience": [],
   "contactInfo": "staff@globalai.es",
   "communityUrl": "https://globalai.es/",
-  "urls": {
-    "youtube": "https://www.youtube.com/c/GlobalAISpain/",
-    "twitter": "https://x.com/mariasotocast",
-    "github": "https://github.com/alejandrolmeida"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/c/GlobalAISpain/"
+    },
+    {
+      "url": "https://x.com/mariasotocast"
+    },
+    {
+      "url": "https://github.com/alejandrolmeida"
+    }
+  ],
   "thumbnailUrl": "images/global-ai-bootcamp-madrid.webp",
   "latLon": {
     "lat": 40.4167047,

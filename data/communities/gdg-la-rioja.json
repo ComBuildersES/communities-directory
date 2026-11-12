@@ -28,12 +28,21 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://gdg.community.dev/gdg-la-rioja/",
-  "urls": {
-    "twitter": "https://www.twitter.com/GDGLaRioja",
-    "eventsUrl": "https://gdg.community.dev/gdg-la-rioja/",
-    "eventosWiki": "https://eventos.wiki/organizations/gdg-la-rioja",
-    "ote": "https://eventos.wiki/organizations/gdg-la-rioja/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://www.twitter.com/GDGLaRioja"
+    },
+    {
+      "url": "https://gdg.community.dev/gdg-la-rioja/"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/gdg-la-rioja"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/gdg-la-rioja/events.json"
+    }
+  ],
   "thumbnailUrl": "images/gdg-la-rioja.webp",
   "latLon": {
     "lat": 42.46569,

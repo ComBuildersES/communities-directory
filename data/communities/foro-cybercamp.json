@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/cybercamp-uma/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/cybercamp-uma/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/cybercamp-uma/"
+    }
+  ],
   "thumbnailUrl": "images/foro-cybercamp.webp",
   "latLon": {
     "lat": null,

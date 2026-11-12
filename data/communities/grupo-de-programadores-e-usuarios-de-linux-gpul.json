@@ -28,18 +28,41 @@
   ],
   "contactInfo": "info@gpul.org",
   "communityUrl": "https://gpul.org/",
-  "urls": {
-    "mastodon": "https://mastodon.social/@gpul_",
-    "bluesky": "https://bsky.app/profile/gpul.org",
-    "github": "https://github.com/gpul-org",
-    "telegram": "https://t.me/+PrK44xhqJ9eP9ZUf",
-    "twitter": "https://x.com/gpul_",
-    "mailingList": "https://lists.gpul.org/",
-    "linkAggregator": "https://links.gpul.org/",
-    "instagram": "https://www.instagram.com/gpul_/",
-    "linkedin": "https://www.linkedin.com/company/gpul",
-    "youtube": "https://www.youtube.com/@gpul_coruna"
-  },
+  "urls": [
+    {
+      "kind": "mastodon",
+      "url": "https://mastodon.social/@gpul_"
+    },
+    {
+      "url": "https://bsky.app/profile/gpul.org"
+    },
+    {
+      "url": "https://github.com/gpul-org"
+    },
+    {
+      "url": "https://t.me/+PrK44xhqJ9eP9ZUf"
+    },
+    {
+      "url": "https://x.com/gpul_"
+    },
+    {
+      "kind": "mailingList",
+      "url": "https://lists.gpul.org/"
+    },
+    {
+      "kind": "linkAggregator",
+      "url": "https://links.gpul.org/"
+    },
+    {
+      "url": "https://www.instagram.com/gpul_/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/gpul"
+    },
+    {
+      "url": "https://www.youtube.com/@gpul_coruna"
+    }
+  ],
   "thumbnailUrl": "images/grupo-de-programadores-e-usuarios-de-linux-gpul.webp",
   "latLon": {
     "lat": 43.3707332,

@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/meetup-wordpress-castello/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/meetup-wordpress-castello/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/meetup-wordpress-castello/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-castello.webp",
   "latLon": {
     "lat": 39.9860398,

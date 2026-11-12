@@ -31,15 +31,29 @@
   ],
   "contactInfo": "pythoncoruna@es.python.org",
   "communityUrl": "https://linktr.ee/pythoncoruna",
-  "urls": {
-    "telegram": "https://t.me/pythoncoruna",
-    "github": "https://github.com/pythoncoruna",
-    "youtube": "https://www.youtube.com/@PythonCoruna",
-    "twitter": "https://twitter.com/pythoncoruna",
-    "linkedin": "https://www.linkedin.com/groups/9875231",
-    "eventsUrl": "https://www.meetup.com/python-a-coruna/",
-    "linkAggregator": "https://linktr.ee/pythoncoruna"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/pythoncoruna"
+    },
+    {
+      "url": "https://github.com/pythoncoruna"
+    },
+    {
+      "url": "https://www.youtube.com/@PythonCoruna"
+    },
+    {
+      "url": "https://twitter.com/pythoncoruna"
+    },
+    {
+      "url": "https://www.linkedin.com/groups/9875231"
+    },
+    {
+      "url": "https://www.meetup.com/python-a-coruna/"
+    },
+    {
+      "url": "https://linktr.ee/pythoncoruna"
+    }
+  ],
   "thumbnailUrl": "images/python-coruna.webp",
   "latLon": {
     "lat": 43.3707332,

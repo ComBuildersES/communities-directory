@@ -20,9 +20,12 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://valencia.aitinkerers.org/",
-  "urls": {
-    "web": "https://valencia.aitinkerers.org/"
-  },
+  "urls": [
+    {
+      "kind": "web",
+      "url": "https://valencia.aitinkerers.org/"
+    }
+  ],
   "thumbnailUrl": "images/ai-tinkerers-valencia.webp",
   "latLon": {
     "lat": 39.4702393,

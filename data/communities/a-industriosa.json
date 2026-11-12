@@ -19,10 +19,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/AIndustriosa/",
-  "urls": {
-    "twitter": "http://twitter.com/aindustriosa",
-    "eventsUrl": "https://www.meetup.com/es-ES/AIndustriosa/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/aindustriosa"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/AIndustriosa/"
+    }
+  ],
   "thumbnailUrl": "images/a-industriosa.webp",
   "latLon": {
     "lat": 42.2313601,

@@ -14,10 +14,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://devwomen.com/",
-  "urls": {
-    "web": "http://web.archive.org/web/20240221104701/http://devwomen.com/",
-    "instagram": "https://www.instagram.com/devwomen_es/"
-  },
+  "urls": [
+    {
+      "kind": "web",
+      "url": "http://web.archive.org/web/20240221104701/http://devwomen.com/"
+    },
+    {
+      "url": "https://www.instagram.com/devwomen_es/"
+    }
+  ],
   "thumbnailUrl": "images/devwomen.webp",
   "latLon": {
     "lat": null,

@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/technetwork/events/304881438/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/technetwork/events/304881438/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/technetwork/events/304881438/"
+    }
+  ],
   "latLon": {
     "lat": 40.4167047,
     "lon": -3.7035825

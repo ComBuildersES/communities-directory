@@ -14,12 +14,20 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/valenciainteractive/",
-  "urls": {
-    "discord": "https://discord.gg/6FjnGjkx5G",
-    "twitter": "http://twitter.com/VLCInteractive/",
-    "linkedin": "https://www.linkedin.com/groups/8137182",
-    "eventsUrl": "https://www.meetup.com/valenciainteractive/"
-  },
+  "urls": [
+    {
+      "url": "https://discord.gg/6FjnGjkx5G"
+    },
+    {
+      "url": "http://twitter.com/VLCInteractive/"
+    },
+    {
+      "url": "https://www.linkedin.com/groups/8137182"
+    },
+    {
+      "url": "https://www.meetup.com/valenciainteractive/"
+    }
+  ],
   "thumbnailUrl": "images/valencia-interactive.webp",
   "latLon": {
     "lat": 39.4702393,

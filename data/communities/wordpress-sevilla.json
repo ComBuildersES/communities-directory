@@ -17,10 +17,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://wpsevilla.org/",
-  "urls": {
-    "telegram": "https://t.me/wpsevilla",
-    "eventsUrl": "https://www.meetup.com/es-ES/wordpress-sevilla/"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/wpsevilla"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/wordpress-sevilla/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-sevilla.webp",
   "latLon": {
     "lat": 37.38264,

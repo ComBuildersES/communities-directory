@@ -19,9 +19,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.eventbrite.com/o/barcelona-ai-music-meetup-91172550453",
-  "urls": {
-    "eventsUrl": "https://www.eventbrite.com/o/barcelona-ai-music-meetup-91172550453"
-  },
+  "urls": [
+    {
+      "url": "https://www.eventbrite.com/o/barcelona-ai-music-meetup-91172550453"
+    }
+  ],
   "thumbnailUrl": "images/barcelona-ai-music-meetup-bamm.webp",
   "latLon": {
     "lat": 41.387917,

@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "info@taigranada.com",
   "communityUrl": "https://taigranada.com/",
-  "urls": {
-    "twitter": "https://twitter.com/TAIGranada"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/TAIGranada"
+    }
+  ],
   "thumbnailUrl": "images/tai-granada.webp",
   "latLon": {
     "lat": 37.1831938,

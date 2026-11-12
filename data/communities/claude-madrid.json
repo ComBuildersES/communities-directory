@@ -20,9 +20,12 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://claudemadrid.com/",
-  "urls": {
-    "eventsUrl": "https://claudemadrid.com/eventos"
-  },
+  "urls": [
+    {
+      "kind": "eventsUrl",
+      "url": "https://claudemadrid.com/eventos"
+    }
+  ],
   "thumbnailUrl": "images/claude-madrid.webp",
   "latLon": {
     "lat": 40.416782,

@@ -14,11 +14,18 @@
   "targetAudience": [],
   "contactInfo": "community@thethingsnetwork.org",
   "communityUrl": "https://www.thethingsnetwork.org/community/sevilla/",
-  "urls": {
-    "twitter": "https://x.com/ttn_sevilla",
-    "web": "https://www.thethingsnetwork.org/community/sevilla/",
-    "eventsUrl": "https://www.meetup.com/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/ttn_sevilla"
+    },
+    {
+      "kind": "web",
+      "url": "https://www.thethingsnetwork.org/community/sevilla/"
+    },
+    {
+      "url": "https://www.meetup.com/"
+    }
+  ],
   "thumbnailUrl": "images/the-things-network-sevilla.webp",
   "latLon": {
     "lat": 37.3886303,

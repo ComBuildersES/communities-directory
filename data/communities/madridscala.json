@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/Scala-Programming-Madrid/",
-  "urls": {
-    "twitter": "http://twitter.com/MadridScala/",
-    "eventsUrl": "https://www.meetup.com/es-ES/Scala-Programming-Madrid/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/MadridScala/"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/Scala-Programming-Madrid/"
+    }
+  ],
   "thumbnailUrl": "images/madridscala.webp",
   "latLon": {
     "lat": 40.4167047,

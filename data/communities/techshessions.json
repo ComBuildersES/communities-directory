@@ -14,11 +14,17 @@
   "targetAudience": [],
   "contactInfo": "info@techshessions.com",
   "communityUrl": "https://techshessions.com/",
-  "urls": {
-    "twitter": "https://www.twitter.com/techshessions",
-    "linkedin": "https://www.linkedin.com/company/techshessions/",
-    "eventsUrl": "https://www.meetup.com/es-ES/Tech-SHEssions/"
-  },
+  "urls": [
+    {
+      "url": "https://www.twitter.com/techshessions"
+    },
+    {
+      "url": "https://www.linkedin.com/company/techshessions/"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/Tech-SHEssions/"
+    }
+  ],
   "thumbnailUrl": "images/techshessions.webp",
   "latLon": {
     "lat": 40.4167047,

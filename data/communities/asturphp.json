@@ -14,12 +14,21 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.facebook.com/people/Astur-PHP/100068828983142/?_rdr",
-  "urls": {
-    "twitter": "https://x.com/asturphp",
-    "mastodon": "https://saraos.tech/@asturphp",
-    "eventsUrl": "https://www.meetup.com/es-es/asturphp/",
-    "facebook": "https://www.facebook.com/people/Astur-PHP/100068828983142/?_rdr"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/asturphp"
+    },
+    {
+      "kind": "mastodon",
+      "url": "https://saraos.tech/@asturphp"
+    },
+    {
+      "url": "https://www.meetup.com/es-es/asturphp/"
+    },
+    {
+      "url": "https://www.facebook.com/people/Astur-PHP/100068828983142/?_rdr"
+    }
+  ],
   "thumbnailUrl": "images/asturphp.webp",
   "latLon": {
     "lat": null,

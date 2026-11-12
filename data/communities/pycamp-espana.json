@@ -16,11 +16,17 @@
   "targetAudience": [],
   "contactInfo": "pycampes@gmail.com",
   "communityUrl": "https://pycamp.es/",
-  "urls": {
-    "telegram": "https://t.me/pycampes",
-    "twitter": "https://twitter.com/PyCampES",
-    "github": "https://github.com/PyCampES"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/pycampes"
+    },
+    {
+      "url": "https://twitter.com/PyCampES"
+    },
+    {
+      "url": "https://github.com/PyCampES"
+    }
+  ],
   "thumbnailUrl": "images/pycamp-espana.webp",
   "latLon": {
     "lat": null,

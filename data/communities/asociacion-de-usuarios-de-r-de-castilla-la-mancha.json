@@ -17,9 +17,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/asociacion-de-usuarios-de-r-de-castilla-la-mancha/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/es-ES/asociacion-de-usuarios-de-r-de-castilla-la-mancha/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/es-ES/asociacion-de-usuarios-de-r-de-castilla-la-mancha/"
+    }
+  ],
   "thumbnailUrl": "images/asociacion-de-usuarios-de-r-de-castilla-la-mancha.webp",
   "latLon": {
     "lat": 38.9976623,

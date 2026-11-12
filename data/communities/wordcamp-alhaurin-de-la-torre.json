@@ -17,10 +17,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://alhaurin.wordcamp.org/2025/",
-  "urls": {
-    "twitter": "https://x.com/WCAlhaurin",
-    "eventsUrl": "https://alhaurin.wordcamp.org/2025/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/WCAlhaurin"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://alhaurin.wordcamp.org/2025/"
+    }
+  ],
   "thumbnailUrl": "images/wordcamp-alhaurin-de-la-torre.webp",
   "latLon": {
     "lat": 36.6683574,

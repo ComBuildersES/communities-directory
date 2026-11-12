@@ -28,10 +28,14 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://xn--wpcorua-9za.com/es/",
-  "urls": {
-    "twitter": "https://twitter.com/wpcoruna",
-    "eventsUrl": "https://www.meetup.com/es-ES/wordpresscoruna/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/wpcoruna"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/wordpresscoruna/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-coruna.webp",
   "latLon": {
     "lat": 43.3707332,

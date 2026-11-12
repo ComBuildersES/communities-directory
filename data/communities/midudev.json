@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://discord.com/invite/midudev",
-  "urls": {
-    "discord": "https://discord.com/invite/midudev"
-  },
+  "urls": [
+    {
+      "url": "https://discord.com/invite/midudev"
+    }
+  ],
   "thumbnailUrl": "images/midudev.webp",
   "latLon": {
     "lat": null,

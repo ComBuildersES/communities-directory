@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/valladolid-wordpress-meetup/",
-  "urls": {
-    "twitter": "http://twitter.com/wpvalladolid/",
-    "eventsUrl": "https://www.meetup.com/valladolid-wordpress-meetup/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/wpvalladolid/"
+    },
+    {
+      "url": "https://www.meetup.com/valladolid-wordpress-meetup/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-valladolid.webp",
   "latLon": {
     "lat": 41.6529421,

@@ -276,13 +276,17 @@ print(activas.groupby("geographicScope").size())`,
       hint: t("openData.code.hintEvents"),
       text: `// El directorio no guarda eventos: los publica cada comunidad en su feed OTE.
 const communities = await fetch("${SITE_URL}/data/communities.json").then((r) => r.json());
-const withFeed = communities.filter((c) => c.urls?.ote);
+
+// \`urls\` es una lista de { url, kind?, label? }: el feed es la entrada con kind "ote".
+const withFeed = communities
+  .map((c) => ({ community: c, feed: (c.urls ?? []).find((u) => u.kind === "ote")?.url }))
+  .filter(({ feed }) => Boolean(feed));
 
 const events = await Promise.all(
-  withFeed.map(async (c) => {
+  withFeed.map(async ({ community, feed: feedUrl }) => {
     try {
-      const feed = await fetch(c.urls.ote).then((r) => r.json());
-      return (feed.events ?? []).map((event) => ({ community: c.name, ...event }));
+      const feed = await fetch(feedUrl).then((r) => r.json());
+      return (feed.events ?? []).map((event) => ({ community: community.name, ...event }));
     } catch {
       // No todos los dominios sirven CORS; un feed caído no debe tumbar el resto.
       return [];
@@ -323,8 +327,10 @@ Reglas al usar estos datos:
   completa de organizadores: empresas y patrocinadores no están aquí.
 - Nunca proponer URLs de "archivedUrls": son canales muertos.
 - humanValidated: false significa dato sin revisar por una persona. Decirlo.
-- El directorio no almacena eventos: los publica cada comunidad en su feed
-  "urls.ote", en formato Open Tech Events (${OTE_URL}).
+- "urls" es una lista de canales: { url, kind?, label? }. El kind se omite
+  cuando el dominio ya lo dice, y puede repetirse con labels distintas.
+- El directorio no almacena eventos: los publica cada comunidad en el canal
+  con kind "ote", en formato Open Tech Events (${OTE_URL}).
 - Licencia CC BY 4.0: citar Community Builders y enlazar ${SITE_URL}.
 - Si falta una comunidad o hay un dato mal, proponer abrir un issue en
   ${ISSUES_URL}.`;

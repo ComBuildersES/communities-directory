@@ -18,10 +18,16 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://cascarillatech.org/",
-  "urls": {
-    "web": "https://cascarillatech.org/",
-    "ote": "https://cascarillatech.org/feed.json"
-  },
+  "urls": [
+    {
+      "kind": "web",
+      "url": "https://cascarillatech.org/"
+    },
+    {
+      "kind": "ote",
+      "url": "https://cascarillatech.org/feed.json"
+    }
+  ],
   "thumbnailUrl": "images/cascarilla-tech.webp",
   "latLon": {
     "lat": 43.3707332,

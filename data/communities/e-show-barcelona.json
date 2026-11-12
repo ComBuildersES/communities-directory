@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://eshow.es/barcelona",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/eshowcloserstillmedia/",
-    "twitter": "https://twitter.com/eShowesp"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/eshowcloserstillmedia/"
+    },
+    {
+      "url": "https://twitter.com/eShowesp"
+    }
+  ],
   "thumbnailUrl": "images/e-show-barcelona.webp",
   "latLon": {
     "lat": 41.387917,

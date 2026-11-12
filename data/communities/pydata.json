@@ -17,13 +17,24 @@
   "targetAudience": [],
   "contactInfo": "admin@pydata.org",
   "communityUrl": "https://pydata.org/",
-  "urls": {
-    "youtube": "https://www.youtube.com/user/PyDataTV",
-    "discord": "https://discord.gg/CjspHbE9xe",
-    "mastodon": "https://mastodon.social/@PyData",
-    "twitter": "https://twitter.com/PyData",
-    "eventsUrl": "https://www.meetup.com/pro/pydata/"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/user/PyDataTV"
+    },
+    {
+      "url": "https://discord.gg/CjspHbE9xe"
+    },
+    {
+      "kind": "mastodon",
+      "url": "https://mastodon.social/@PyData"
+    },
+    {
+      "url": "https://twitter.com/PyData"
+    },
+    {
+      "url": "https://www.meetup.com/pro/pydata/"
+    }
+  ],
   "thumbnailUrl": "images/pydata.webp",
   "latLon": {
     "lat": null,

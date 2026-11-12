@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://developer.microsoft.com/en-us/azure-tech-groups/",
-  "urls": {
-    "github": "https://github.com/AzureTechCommunity"
-  },
+  "urls": [
+    {
+      "url": "https://github.com/AzureTechCommunity"
+    }
+  ],
   "thumbnailUrl": "images/azure-tech-groups.webp",
   "latLon": {
     "lat": null,

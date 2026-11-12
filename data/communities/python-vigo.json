@@ -17,11 +17,17 @@
   "targetAudience": [],
   "contactInfo": "luisgf@luisgf.es",
   "communityUrl": "https://www.python-vigo.es/",
-  "urls": {
-    "bluesky": "https://bsky.app/profile/pythonvigo.bsky.social",
-    "telegram": "https://t.me/+B9bb6mt07Uyp5Pj7",
-    "github": "https://github.com/migonzalvar"
-  },
+  "urls": [
+    {
+      "url": "https://bsky.app/profile/pythonvigo.bsky.social"
+    },
+    {
+      "url": "https://t.me/+B9bb6mt07Uyp5Pj7"
+    },
+    {
+      "url": "https://github.com/migonzalvar"
+    }
+  ],
   "thumbnailUrl": "images/python-vigo.webp",
   "latLon": {
     "lat": 42.2313601,

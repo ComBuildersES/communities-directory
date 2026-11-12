@@ -28,11 +28,18 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://malagajug.wordpress.com",
-  "urls": {
-    "twitter": "https://twitter.com/MalagaJUG",
-    "eventsUrl": "https://www.meetup.com/es-ES/MalagaJUG/",
-    "web": "https://malagajug.wordpress.com"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/MalagaJUG"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/MalagaJUG/"
+    },
+    {
+      "kind": "web",
+      "url": "https://malagajug.wordpress.com"
+    }
+  ],
   "thumbnailUrl": "images/malagajug.webp",
   "latLon": {
     "lat": 36.7196292,

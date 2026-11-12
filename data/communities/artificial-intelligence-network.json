@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.linkedin.com/company/artificial-intelligence-network/",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/artificial-intelligence-network/"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/artificial-intelligence-network/"
+    }
+  ],
   "thumbnailUrl": "images/artificial-intelligence-network.webp",
   "latLon": {
     "lat": null,

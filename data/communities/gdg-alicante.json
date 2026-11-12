@@ -15,13 +15,24 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://gdg.community.dev/gdg-alicante/",
-  "urls": {
-    "twitter": "https://www.twitter.com/GDGAlicante",
-    "linkedin": "https://www.linkedin.com/groups/13743861",
-    "eventsUrl": "https://gdg.community.dev/gdg-alicante/",
-    "eventosWiki": "https://eventos.wiki/organizations/gdg-alicante",
-    "ote": "https://eventos.wiki/organizations/gdg-alicante/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://www.twitter.com/GDGAlicante"
+    },
+    {
+      "url": "https://www.linkedin.com/groups/13743861"
+    },
+    {
+      "url": "https://gdg.community.dev/gdg-alicante/"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/gdg-alicante"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/gdg-alicante/events.json"
+    }
+  ],
   "thumbnailUrl": "images/gdg-alicante.webp",
   "latLon": {
     "lat": 38.3436365,

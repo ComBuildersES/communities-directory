@@ -14,12 +14,21 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://cacerestech.com/",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/cacerestech/",
-    "telegram": "https://t.me/cacerestech",
-    "twitter": "https://x.com/caceresfront",
-    "web": "https://cacerestech.com/"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/cacerestech/"
+    },
+    {
+      "url": "https://t.me/cacerestech"
+    },
+    {
+      "url": "https://x.com/caceresfront"
+    },
+    {
+      "kind": "web",
+      "url": "https://cacerestech.com/"
+    }
+  ],
   "thumbnailUrl": "images/cacerestech.webp",
   "latLon": {
     "lat": 39.4762161,

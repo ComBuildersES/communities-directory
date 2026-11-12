@@ -14,12 +14,20 @@
   "targetAudience": [],
   "contactInfo": "root@sysarmy.com",
   "communityUrl": "https://sysarmy.com/",
-  "urls": {
-    "twitter": "https://twitter.com/sysarmy",
-    "instagram": "https://instagram.com/sysarmy",
-    "linkedin": "https://www.linkedin.com/groups/4736196/",
-    "eventsUrl": "https://www.meetup.com/sysarmy"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/sysarmy"
+    },
+    {
+      "url": "https://instagram.com/sysarmy"
+    },
+    {
+      "url": "https://www.linkedin.com/groups/4736196/"
+    },
+    {
+      "url": "https://www.meetup.com/sysarmy"
+    }
+  ],
   "thumbnailUrl": "images/sysarmy.webp",
   "latLon": {
     "lat": null,

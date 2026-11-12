@@ -37,13 +37,23 @@
   ],
   "contactInfo": "info@atlanticaconf.com",
   "communityUrl": "https://atlanticaconf.com/",
-  "urls": {
-    "twitter": "https://x.com/atlanticaconf",
-    "linkedin": "https://www.linkedin.com/company/atlanticaconf/",
-    "bluesky": "https://bsky.app/profile/atlanticaconf.com",
-    "eventsUrl": "https://www.meetup.com/es-ES/gpul-labs",
-    "youtube": "https://www.youtube.com/@Atlantica-conf"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/atlanticaconf"
+    },
+    {
+      "url": "https://www.linkedin.com/company/atlanticaconf/"
+    },
+    {
+      "url": "https://bsky.app/profile/atlanticaconf.com"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/gpul-labs"
+    },
+    {
+      "url": "https://www.youtube.com/@Atlantica-conf"
+    }
+  ],
   "thumbnailUrl": "images/atlanticaconf.webp",
   "latLon": {
     "lat": 43.3707332,

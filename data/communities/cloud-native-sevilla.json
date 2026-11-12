@@ -17,12 +17,20 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://cloudnativesevilla.com/",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/groups/13076051/",
-    "youtube": "https://www.youtube.com/@CloudNativeSevilla",
-    "telegram": "https://t.me/+IKebP_J4X2Y0OGI0",
-    "eventsUrl": "https://www.meetup.com/cloud-native-sevilla/"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/groups/13076051/"
+    },
+    {
+      "url": "https://www.youtube.com/@CloudNativeSevilla"
+    },
+    {
+      "url": "https://t.me/+IKebP_J4X2Y0OGI0"
+    },
+    {
+      "url": "https://www.meetup.com/cloud-native-sevilla/"
+    }
+  ],
   "thumbnailUrl": "images/cloud-native-sevilla.webp",
   "latLon": {
     "lat": 37.3886303,

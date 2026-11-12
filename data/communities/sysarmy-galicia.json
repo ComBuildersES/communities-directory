@@ -31,11 +31,17 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://sysarmy.galicia.dev",
-  "urls": {
-    "github": "https://github.com/Gallegarmy",
-    "telegram": "https://t.me/Gallegarmy",
-    "eventsUrl": "https://www.eventbrite.com/o/101517364781"
-  },
+  "urls": [
+    {
+      "url": "https://github.com/Gallegarmy"
+    },
+    {
+      "url": "https://t.me/Gallegarmy"
+    },
+    {
+      "url": "https://www.eventbrite.com/o/101517364781"
+    }
+  ],
   "thumbnailUrl": "images/sysarmy-galicia.webp",
   "latLon": {
     "lat": 43.3707332,

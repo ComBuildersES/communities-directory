@@ -14,10 +14,15 @@
   "targetAudience": [],
   "contactInfo": "galpon@mastodon.gal",
   "communityUrl": "https://www.galpon.org/",
-  "urls": {
-    "telegram": "https://t.me/galpon",
-    "mastodon": "https://mastodon.gal/@galpon"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/galpon"
+    },
+    {
+      "kind": "mastodon",
+      "url": "https://mastodon.gal/@galpon"
+    }
+  ],
   "thumbnailUrl": "images/galpon.webp",
   "latLon": {
     "lat": 42.2313601,

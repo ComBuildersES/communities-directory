@@ -16,12 +16,20 @@
   "targetAudience": [],
   "contactInfo": "azuremalaga@gmail.com",
   "communityUrl": "https://azuremalaga.com/",
-  "urls": {
-    "twitter": "http://twitter.com/azuremalaga",
-    "github": "https://github.com/azuremalaga",
-    "linkedin": "https://www.linkedin.com/company/azuremalaga",
-    "eventsUrl": "https://www.meetup.com/es-ES/azuremalaga/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/azuremalaga"
+    },
+    {
+      "url": "https://github.com/azuremalaga"
+    },
+    {
+      "url": "https://www.linkedin.com/company/azuremalaga"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/azuremalaga/"
+    }
+  ],
   "thumbnailUrl": "images/azure-malaga.webp",
   "latLon": {
     "lat": 36.7196292,

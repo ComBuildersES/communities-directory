@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/barcelona-android-dev-group",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/es-ES/barcelona-android-dev-group"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/es-ES/barcelona-android-dev-group"
+    }
+  ],
   "latLon": {
     "lat": 41.387917,
     "lon": 2.1699187

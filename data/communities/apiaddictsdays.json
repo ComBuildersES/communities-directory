@@ -14,12 +14,20 @@
   "targetAudience": [],
   "contactInfo": "contacta@apiaddicts.org",
   "communityUrl": "https://www.apiaddicts.org/apiaddictsdays/",
-  "urls": {
-    "youtube": "https://www.youtube.com/channel/UCepaRmZBCmbdU4QqNhSV5jQ",
-    "linkedin": "https://www.linkedin.com/company/apiaddicts/",
-    "twitter": "https://twitter.com/apiaddicts",
-    "github": "https://github.com/apiaddicts"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/channel/UCepaRmZBCmbdU4QqNhSV5jQ"
+    },
+    {
+      "url": "https://www.linkedin.com/company/apiaddicts/"
+    },
+    {
+      "url": "https://twitter.com/apiaddicts"
+    },
+    {
+      "url": "https://github.com/apiaddicts"
+    }
+  ],
   "thumbnailUrl": "images/apiaddictsdays.webp",
   "latLon": {
     "lat": 40.4167047,

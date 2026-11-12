@@ -14,14 +14,26 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://linktr.ee/etsiittechclub",
-  "urls": {
-    "telegram": "https://t.me/ETSIITTech_Club",
-    "instagram": "https://www.instagram.com/etsiittech_club",
-    "twitter": "https://x.com/etsiittech_club",
-    "linkedin": "https://www.linkedin.com/company/etsiittechlcub",
-    "discord": "https://discord.gg/yRya3Rquz9",
-    "linkAggregator": "https://linktr.ee/etsiittechclub"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/ETSIITTech_Club"
+    },
+    {
+      "url": "https://www.instagram.com/etsiittech_club"
+    },
+    {
+      "url": "https://x.com/etsiittech_club"
+    },
+    {
+      "url": "https://www.linkedin.com/company/etsiittechlcub"
+    },
+    {
+      "url": "https://discord.gg/yRya3Rquz9"
+    },
+    {
+      "url": "https://linktr.ee/etsiittechclub"
+    }
+  ],
   "thumbnailUrl": "images/etsiittech_club.webp",
   "latLon": {
     "lat": 37.1831938,

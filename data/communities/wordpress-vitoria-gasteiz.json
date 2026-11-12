@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/vitoria-gasteiz-wordpress-meetup/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/vitoria-gasteiz-wordpress-meetup/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/vitoria-gasteiz-wordpress-meetup/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-vitoria-gasteiz.webp",
   "latLon": {
     "lat": 42.8468573,

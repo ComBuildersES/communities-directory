@@ -16,11 +16,18 @@
   "targetAudience": [],
   "contactInfo": "miduga@gmail.com",
   "communityUrl": "https://www.jsconf.es/",
-  "urls": {
-    "twitter": "https://x.com/erickwendel_/",
-    "eventosWiki": "https://eventos.wiki/organizations/jsconf-espana",
-    "ote": "https://eventos.wiki/organizations/jsconf-espana/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/erickwendel_/"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/jsconf-espana"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/jsconf-espana/events.json"
+    }
+  ],
   "thumbnailUrl": "images/jsconf.webp",
   "latLon": {
     "lat": 40.4167047,

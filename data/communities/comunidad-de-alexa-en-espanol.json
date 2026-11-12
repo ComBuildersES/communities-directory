@@ -14,11 +14,17 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.twitch.tv/comunidadalexa",
-  "urls": {
-    "twitter": "https://x.com/alexadevsmadrid",
-    "discord": "https://discord.com/invite/nuYEGd9Rcv",
-    "twitch": "https://www.twitch.tv/comunidadalexa"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/alexadevsmadrid"
+    },
+    {
+      "url": "https://discord.com/invite/nuYEGd9Rcv"
+    },
+    {
+      "url": "https://www.twitch.tv/comunidadalexa"
+    }
+  ],
   "thumbnailUrl": "images/name-de-alexa-en-espanol.webp",
   "latLon": {
     "lat": null,

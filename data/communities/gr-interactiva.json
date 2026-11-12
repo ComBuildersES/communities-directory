@@ -14,11 +14,17 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/gr-interactiva/",
-  "urls": {
-    "twitter": "https://twitter.com/GRinteractiva",
-    "discord": "https://discord.gg/NeUdsTuM",
-    "eventsUrl": "https://www.meetup.com/gr-interactiva/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/GRinteractiva"
+    },
+    {
+      "url": "https://discord.gg/NeUdsTuM"
+    },
+    {
+      "url": "https://www.meetup.com/gr-interactiva/"
+    }
+  ],
   "thumbnailUrl": "images/gr-interactiva.webp",
   "latLon": {
     "lat": 37.1831938,

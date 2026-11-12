@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/santander-wordpress-meetup/",
-  "urls": {
-    "twitter": "https://twitter.com/search?q=%23WordPress&src=hashtag_click",
-    "eventsUrl": "https://www.meetup.com/santander-wordpress-meetup/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/search?q=%23WordPress&src=hashtag_click"
+    },
+    {
+      "url": "https://www.meetup.com/santander-wordpress-meetup/"
+    }
+  ],
   "latLon": {
     "lat": 43.4614116,
     "lon": -3.8093031

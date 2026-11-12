@@ -14,13 +14,23 @@
   "targetAudience": [],
   "contactInfo": "contacto@multitecua.com",
   "communityUrl": "https://multitecua.com/",
-  "urls": {
-    "instagram": "https://www.instagram.com/multitecua/",
-    "twitter": "https://twitter.com/MultiTecUA",
-    "linkedin": "https://www.linkedin.com/company/multitecua/",
-    "youtube": "https://www.youtube.com/channel/UComtzTLqL-jHvRhiQVrzPJg",
-    "telegram": "https://t.me/MultitecUA"
-  },
+  "urls": [
+    {
+      "url": "https://www.instagram.com/multitecua/"
+    },
+    {
+      "url": "https://twitter.com/MultiTecUA"
+    },
+    {
+      "url": "https://www.linkedin.com/company/multitecua/"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UComtzTLqL-jHvRhiQVrzPJg"
+    },
+    {
+      "url": "https://t.me/MultitecUA"
+    }
+  ],
   "thumbnailUrl": "images/multitecua.webp",
   "latLon": {
     "lat": 38.3436365,

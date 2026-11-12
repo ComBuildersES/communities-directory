@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/golang-sevilla/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/golang-sevilla/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/golang-sevilla/"
+    }
+  ],
   "thumbnailUrl": "images/golang-sevilla.webp",
   "latLon": {
     "lat": 37.3886303,

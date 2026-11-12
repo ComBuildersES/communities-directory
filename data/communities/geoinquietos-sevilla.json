@@ -14,11 +14,17 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://wiki.osgeo.org/wiki/Category:Geoinquietos_Sevilla",
-  "urls": {
-    "github": "https://github.com/GeoinquietosSevilla",
-    "twitter": "https://twitter.com/geoinquietossvq",
-    "eventsUrl": "http://www.meetup.com/Geoinquietos-Sevilla/"
-  },
+  "urls": [
+    {
+      "url": "https://github.com/GeoinquietosSevilla"
+    },
+    {
+      "url": "https://twitter.com/geoinquietossvq"
+    },
+    {
+      "url": "http://www.meetup.com/Geoinquietos-Sevilla/"
+    }
+  ],
   "thumbnailUrl": "images/geoinquietos-sevilla.webp",
   "latLon": {
     "lat": null,

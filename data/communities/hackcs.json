@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://wiki.hackerspaces.org/HackCS",
-  "urls": {
-    "bluesky": "https://bsky.app/profile/celphase.bsky.social"
-  },
+  "urls": [
+    {
+      "url": "https://bsky.app/profile/celphase.bsky.social"
+    }
+  ],
   "thumbnailUrl": "images/hackcs.webp",
   "latLon": {
     "lat": 39.9860398,

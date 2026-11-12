@@ -14,10 +14,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://databeers.tumblr.com/",
-  "urls": {
-    "twitter": "https://x.com/databeers",
-    "web": "https://databeers.tumblr.com/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/databeers"
+    },
+    {
+      "kind": "web",
+      "url": "https://databeers.tumblr.com/"
+    }
+  ],
   "thumbnailUrl": "images/databeers-madrid.webp",
   "latLon": {
     "lat": 40.4167047,

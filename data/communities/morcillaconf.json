@@ -14,11 +14,17 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://morcillaconf.es/",
-  "urls": {
-    "twitter": "https://x.com/GrimerLoner",
-    "instagram": "https://www.instagram.com/grimerloner",
-    "eventsUrl": "https://www.meetup.com/es-ES/gdg-burgos/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/GrimerLoner"
+    },
+    {
+      "url": "https://www.instagram.com/grimerloner"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/gdg-burgos/"
+    }
+  ],
   "thumbnailUrl": "images/morcillaconf.webp",
   "latLon": {
     "lat": 42.3408923,

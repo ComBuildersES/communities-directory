@@ -17,9 +17,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/global-ai-ponferrada/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/es-ES/global-ai-ponferrada/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/es-ES/global-ai-ponferrada/"
+    }
+  ],
   "thumbnailUrl": "images/global-ai-ponferrada.webp",
   "latLon": {
     "lat": 42.5463315,

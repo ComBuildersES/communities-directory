@@ -14,11 +14,18 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://sevillamakers.org/",
-  "urls": {
-    "twitter": "https://x.com/MakerSocietySVQ",
-    "web": "https://sevillamakers.org/",
-    "eventsUrl": "https://www.meetup.com/es-es/maker-society/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/MakerSocietySVQ"
+    },
+    {
+      "kind": "web",
+      "url": "https://sevillamakers.org/"
+    },
+    {
+      "url": "https://www.meetup.com/es-es/maker-society/"
+    }
+  ],
   "thumbnailUrl": "images/sevilla-maker-societ.webp",
   "latLon": {
     "lat": 37.3886303,

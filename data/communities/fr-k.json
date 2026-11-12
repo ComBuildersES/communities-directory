@@ -19,12 +19,21 @@
   "matchesAllAudience": true,
   "contactInfo": "hey@frik.you",
   "communityUrl": "https://frik.global/es",
-  "urls": {
-    "instagram": "https://instagram.com/frik_spain",
-    "linkedin": "https://linkedin.com/company/frikglobal",
-    "youtube": "https://youtube.com/@frik.global",
-    "web": "https://frik.global/es"
-  },
+  "urls": [
+    {
+      "url": "https://instagram.com/frik_spain"
+    },
+    {
+      "url": "https://linkedin.com/company/frikglobal"
+    },
+    {
+      "url": "https://youtube.com/@frik.global"
+    },
+    {
+      "kind": "web",
+      "url": "https://frik.global/es"
+    }
+  ],
   "thumbnailUrl": "images/frk.webp",
   "latLon": {
     "lat": null,

@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "info@bsides.barcelona",
   "communityUrl": "https://bsides.barcelona/",
-  "urls": {
-    "twitter": "https://x.com/BarcelonaBsides/",
-    "youtube": "https://www.youtube.com/channel/UC6ZFHgp_gWbORaibgQgJn7g"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/BarcelonaBsides/"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UC6ZFHgp_gWbORaibgQgJn7g"
+    }
+  ],
   "thumbnailUrl": "images/bsides-barcelona.webp",
   "latLon": {
     "lat": 41.387917,

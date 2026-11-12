@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://x.com/AlmeriaJs",
-  "urls": {
-    "twitter": "https://x.com/AlmeriaJs",
-    "eventsUrl": "https://www.meetup.com/es-es/almeriajs/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/AlmeriaJs"
+    },
+    {
+      "url": "https://www.meetup.com/es-es/almeriajs/"
+    }
+  ],
   "thumbnailUrl": "images/almeriajs.webp",
   "latLon": {
     "lat": 36.8400939,

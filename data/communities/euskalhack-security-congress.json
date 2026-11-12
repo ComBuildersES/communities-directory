@@ -16,13 +16,23 @@
   "targetAudience": [],
   "contactInfo": "javiermarin@olarain.com",
   "communityUrl": "https://www.euskalhack.org/securitycongress/index_en.html",
-  "urls": {
-    "twitter": "https://twitter.com/euskalhack",
-    "instagram": "https://instagram.com/euskalhack",
-    "youtube": "https://www.youtube.com/channel/UCmhyLl5DtaOaxYsqGkWODPQ",
-    "linkedin": "https://www.linkedin.com/company/euskalhack",
-    "github": "https://github.com/euskalhack"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/euskalhack"
+    },
+    {
+      "url": "https://instagram.com/euskalhack"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCmhyLl5DtaOaxYsqGkWODPQ"
+    },
+    {
+      "url": "https://www.linkedin.com/company/euskalhack"
+    },
+    {
+      "url": "https://github.com/euskalhack"
+    }
+  ],
   "thumbnailUrl": "images/euskalhack-security-congress.webp",
   "latLon": {
     "lat": 43.320905,

@@ -31,14 +31,27 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://gdg.es/",
-  "urls": {
-    "web": "https://gdg.es/",
-    "twitter": "https://x.com/GDG_ES",
-    "youtube": "https://www.youtube.com/c/GDGSpain",
-    "facebook": "https://www.facebook.com/GDGSpain",
-    "instagram": "https://instagram.com/GDGSpain",
-    "github": "https://github.com/GDGSpain"
-  },
+  "urls": [
+    {
+      "kind": "web",
+      "url": "https://gdg.es/"
+    },
+    {
+      "url": "https://x.com/GDG_ES"
+    },
+    {
+      "url": "https://www.youtube.com/c/GDGSpain"
+    },
+    {
+      "url": "https://www.facebook.com/GDGSpain"
+    },
+    {
+      "url": "https://instagram.com/GDGSpain"
+    },
+    {
+      "url": "https://github.com/GDGSpain"
+    }
+  ],
   "thumbnailUrl": "images/gdg-spain.webp",
   "latLon": {
     "lat": null,

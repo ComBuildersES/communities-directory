@@ -70,15 +70,31 @@
   ],
   "contactInfo": "sponsors@opensouthcode.org",
   "communityUrl": "https://www.opensouthcode.org/",
-  "urls": {
-    "twitter": "https://twitter.com/opensouthcode",
-    "linkedin": "https://www.linkedin.com/company/opensouthcode/",
-    "youtube": "https://www.youtube.com/@opensouthcode",
-    "instagram": "https://www.instagram.com/opensouthcode",
-    "eventsUrl": "https://www.opensouthcode.org/",
-    "eventosWiki": "https://eventos.wiki/organizations/opensouthcode",
-    "ote": "https://eventos.wiki/organizations/opensouthcode/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/opensouthcode"
+    },
+    {
+      "url": "https://www.linkedin.com/company/opensouthcode/"
+    },
+    {
+      "url": "https://www.youtube.com/@opensouthcode"
+    },
+    {
+      "url": "https://www.instagram.com/opensouthcode"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://www.opensouthcode.org/"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/opensouthcode"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/opensouthcode/events.json"
+    }
+  ],
   "thumbnailUrl": "images/opensouthcode.webp",
   "latLon": {
     "lat": 36.7196292,

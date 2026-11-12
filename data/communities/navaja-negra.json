@@ -14,12 +14,20 @@
   "targetAudience": [],
   "contactInfo": "contacto@navajanegra.com",
   "communityUrl": "https://www.navajanegra.com/2024/",
-  "urls": {
-    "twitter": "https://x.com/alexfrancow",
-    "youtube": "https://youtube.com/c/NavajaNegra",
-    "instagram": "https://www.instagram.com/navajanegra_ab",
-    "telegram": "https://t.me/navaja_negra"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/alexfrancow"
+    },
+    {
+      "url": "https://youtube.com/c/NavajaNegra"
+    },
+    {
+      "url": "https://www.instagram.com/navajanegra_ab"
+    },
+    {
+      "url": "https://t.me/navaja_negra"
+    }
+  ],
   "thumbnailUrl": "images/navaja-negra.webp",
   "latLon": {
     "lat": 38.9976623,

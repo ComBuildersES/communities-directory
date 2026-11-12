@@ -28,11 +28,17 @@
   ],
   "contactInfo": "info@weyweyweb.com",
   "communityUrl": "https://weyweyweb.com/",
-  "urls": {
-    "youtube": "https://www.youtube.com/@weyweyweb",
-    "linkedin": "https://www.linkedin.com/company/wey-wey-web",
-    "twitter": "https://twitter.com/WeyWeyWeb"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/@weyweyweb"
+    },
+    {
+      "url": "https://www.linkedin.com/company/wey-wey-web"
+    },
+    {
+      "url": "https://twitter.com/WeyWeyWeb"
+    }
+  ],
   "thumbnailUrl": "images/wey-wey-web.webp",
   "latLon": {
     "lat": 36.7196292,

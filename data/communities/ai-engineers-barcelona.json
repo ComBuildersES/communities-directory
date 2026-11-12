@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/ai-engineers-barcelona/",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/ai-engineers-community",
-    "eventsUrl": "https://www.meetup.com/ai-engineers-barcelona/"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/ai-engineers-community"
+    },
+    {
+      "url": "https://www.meetup.com/ai-engineers-barcelona/"
+    }
+  ],
   "thumbnailUrl": "images/ai-engineers-barcelona.webp",
   "latLon": {
     "lat": 41.387917,

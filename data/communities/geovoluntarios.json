@@ -44,13 +44,24 @@
   ],
   "contactInfo": "info@geovoluntarios.org, geocomunidadcovid@gmail.com",
   "communityUrl": "https://web.archive.org/web/20231206014030/https://geovoluntarios.org/",
-  "urls": {
-    "web": "https://web.archive.org/web/20231206014030/https://geovoluntarios.org/",
-    "instagram": "https://www.instagram.com/geovoluntarios/",
-    "youtube": "https://www.youtube.com/channel/UC0DCi6eDemhIdRpKX4fRdNg",
-    "twitter": "https://x.com/geovoluntarios",
-    "linkedin": "https://www.linkedin.com/company/geovoluntarios-org/"
-  },
+  "urls": [
+    {
+      "kind": "web",
+      "url": "https://web.archive.org/web/20231206014030/https://geovoluntarios.org/"
+    },
+    {
+      "url": "https://www.instagram.com/geovoluntarios/"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UC0DCi6eDemhIdRpKX4fRdNg"
+    },
+    {
+      "url": "https://x.com/geovoluntarios"
+    },
+    {
+      "url": "https://www.linkedin.com/company/geovoluntarios-org/"
+    }
+  ],
   "thumbnailUrl": "",
   "latLon": {
     "lat": null,

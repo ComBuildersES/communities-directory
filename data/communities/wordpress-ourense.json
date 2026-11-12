@@ -16,11 +16,17 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/WordPressOurense/",
-  "urls": {
-    "telegram": "https://t.me/+Ipduptue5zA3M2I0",
-    "twitter": "https://twitter.com/WPOurense",
-    "eventsUrl": "https://www.meetup.com/es-ES/WordPressOurense/"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/+Ipduptue5zA3M2I0"
+    },
+    {
+      "url": "https://twitter.com/WPOurense"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/WordPressOurense/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-ourense.webp",
   "latLon": {
     "lat": 42.3401174,

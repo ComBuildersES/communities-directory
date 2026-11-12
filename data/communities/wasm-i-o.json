@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "info@wasm.io",
   "communityUrl": "https://wasm.io/",
-  "urls": {
-    "twitter": "https://twitter.com/sergialmar",
-    "youtube": "https://www.youtube.com/@wasmio"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/sergialmar"
+    },
+    {
+      "url": "https://www.youtube.com/@wasmio"
+    }
+  ],
   "thumbnailUrl": "images/wasm-io.webp",
   "latLon": {
     "lat": 41.387917,

@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/ia-generativa-sevilla/",
-  "urls": {
-    "youtube": "https://www.youtube.com/@IAGenerativaSevilla",
-    "eventsUrl": "https://www.meetup.com/ia-generativa-sevilla/"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/@IAGenerativaSevilla"
+    },
+    {
+      "url": "https://www.meetup.com/ia-generativa-sevilla/"
+    }
+  ],
   "thumbnailUrl": "images/ia-generativa-sevilla.webp",
   "latLon": {
     "lat": 37.3886303,

@@ -39,10 +39,15 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://geoinquietos.org/",
-  "urls": {
-    "mailingList": "https://lists.osgeo.org/mailman/listinfo/geoinquietos-es",
-    "github": "https://github.com/geoinquietos-org/"
-  },
+  "urls": [
+    {
+      "kind": "mailingList",
+      "url": "https://lists.osgeo.org/mailman/listinfo/geoinquietos-es"
+    },
+    {
+      "url": "https://github.com/geoinquietos-org/"
+    }
+  ],
   "thumbnailUrl": "images/geoinquietos.webp",
   "latLon": {
     "lat": null,

@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://theantievent.org/",
-  "urls": {
-    "twitter": "https://twitter.com/ardiluzu"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/ardiluzu"
+    }
+  ],
   "thumbnailUrl": "images/theantievent.webp",
   "latLon": {
     "lat": 43.2569608,

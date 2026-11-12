@@ -236,7 +236,7 @@ Please:
 
 Rules that matter:
 - "location" is where the events happen ("City, Region"); "geographicScope" is the territory served. They are different.
-- "urls" only takes the platform keys listed in the schema. There is no "meetup" key: Meetup, Eventbrite and Luma URLs go in "eventsUrl".
+- "urls" only takes the platform keys listed in the schema. Meetup, Eventbrite and Luma have their own keys ("meetup", "eventbrite", "luma"); "eventsUrl" is for any other events platform.
 - Set "matchesAllTags" (or "matchesAllAudience") to true only for a genuinely generalist community, and leave its array empty in that case.
 - Fill "urls" with the channels you found, each under its own key.
 - Leave out any field you cannot establish. Do not guess, and do not invent contact emails or URLs.
@@ -261,7 +261,7 @@ Haz lo siguiente:
 
 Reglas que importan:
 - "location" es dónde se celebran los eventos ("Ciudad, Comunidad Autónoma"); "geographicScope" es el territorio al que da servicio. No son lo mismo.
-- "urls" solo admite las claves de plataforma del esquema. No existe la clave "meetup": las URLs de Meetup, Eventbrite o Luma van en "eventsUrl".
+- "urls" solo admite las claves de plataforma del esquema. Meetup, Eventbrite y Luma tienen clave propia ("meetup", "eventbrite", "luma"); "eventsUrl" es para cualquier otra plataforma de eventos.
 - Pon "matchesAllTags" (o "matchesAllAudience") a true solo si la comunidad es realmente generalista, y en ese caso deja su array vacío.
 - Rellena "urls" con los canales que hayas encontrado, cada uno en su clave.
 - Omite cualquier campo que no puedas establecer. No adivines, y no te inventes correos ni URLs.

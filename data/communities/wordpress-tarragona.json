@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/wordpresstarragona/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/wordpresstarragona/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/wordpresstarragona/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-tarragona.webp",
   "latLon": {
     "lat": 41.1186629,

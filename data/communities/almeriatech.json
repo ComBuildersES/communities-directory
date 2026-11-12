@@ -18,13 +18,23 @@
   "matchesAllAudience": true,
   "contactInfo": "",
   "communityUrl": "https://www.almeriatech.es/",
-  "urls": {
-    "youtube": "https://www.youtube.com/@AlmeriaTech_es/videos",
-    "linkedin": "https://www.linkedin.com/company/almeriatech/",
-    "instagram": "https://www.instagram.com/almeriatech_es/",
-    "twitter": "https://twitter.com/almeriatech_es",
-    "github": "https://github.com/almeriatech"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/@AlmeriaTech_es/videos"
+    },
+    {
+      "url": "https://www.linkedin.com/company/almeriatech/"
+    },
+    {
+      "url": "https://www.instagram.com/almeriatech_es/"
+    },
+    {
+      "url": "https://twitter.com/almeriatech_es"
+    },
+    {
+      "url": "https://github.com/almeriatech"
+    }
+  ],
   "thumbnailUrl": "images/almeriatech.webp",
   "latLon": {
     "lat": 36.8400939,

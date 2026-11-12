@@ -15,11 +15,17 @@
   "targetAudience": [],
   "contactInfo": "barcelona@codebar.io",
   "communityUrl": "https://codebar.io/barcelona",
-  "urls": {
-    "github": "https://github.com/codebar",
-    "youtube": "https://www.youtube.com/channel/UCEYz232agE47GHUq8wneBCA",
-    "linkedin": "https://www.linkedin.com/company/codebarcommunity"
-  },
+  "urls": [
+    {
+      "url": "https://github.com/codebar"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCEYz232agE47GHUq8wneBCA"
+    },
+    {
+      "url": "https://www.linkedin.com/company/codebarcommunity"
+    }
+  ],
   "thumbnailUrl": "images/codebar-barcelona.webp",
   "latLon": {
     "lat": 41.387917,

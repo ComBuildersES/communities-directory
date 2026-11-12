@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/phpmad/",
-  "urls": {
-    "twitter": "http://twitter.com/PHPMad/",
-    "eventsUrl": "https://www.meetup.com/es-ES/phpmad/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/PHPMad/"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/phpmad/"
+    }
+  ],
   "latLon": {
     "lat": 40.4167047,
     "lon": -3.7035825

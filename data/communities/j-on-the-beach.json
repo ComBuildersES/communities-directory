@@ -34,10 +34,14 @@
   ],
   "contactInfo": "info@yayyay.events",
   "communityUrl": "https://www.jonthebeach.com/",
-  "urls": {
-    "youtube": "https://www.youtube.com/c/Jonthebeach",
-    "twitter": "https://x.com/jotbconf"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/c/Jonthebeach"
+    },
+    {
+      "url": "https://x.com/jotbconf"
+    }
+  ],
   "thumbnailUrl": "images/j-on-the-breach.webp",
   "latLon": {
     "lat": 36.7196292,

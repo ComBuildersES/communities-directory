@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "iniciador-granada@googlegroups.com; hhkaos@gmail.com",
   "communityUrl": "https://iniciador.com/Granada",
-  "urls": {
-    "mailingList": "https://groups.google.com/g/iniciador-granada"
-  },
+  "urls": [
+    {
+      "url": "https://groups.google.com/g/iniciador-granada"
+    }
+  ],
   "latLon": {
     "lat": 37.1831938,
     "lon": -3.604747

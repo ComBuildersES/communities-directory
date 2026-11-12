@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/intellias-spain-tech-talks/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/intellias-spain-tech-talks/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/intellias-spain-tech-talks/"
+    }
+  ],
   "thumbnailUrl": "images/intellias-spain-tech-talks.webp",
   "latLon": {
     "lat": 36.7196292,

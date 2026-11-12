@@ -18,13 +18,25 @@
   "matchesAllAudience": true,
   "contactInfo": "info@arcasiles.com",
   "communityUrl": "https://arcasiles.com/",
-  "urls": {
-    "instagram": "https://www.instagram.com/arcasilesgroup/",
-    "linkedin": "https://www.linkedin.com/company/arcasilesgroup/",
-    "web": "https://arcasiles.com/",
-    "eventsUrl": "https://luma.com/arcasilesgroup",
-    "github": "https://github.com/arcasilesgroup"
-  },
+  "urls": [
+    {
+      "url": "https://www.instagram.com/arcasilesgroup/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/arcasilesgroup/"
+    },
+    {
+      "kind": "web",
+      "url": "https://arcasiles.com/"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://luma.com/arcasilesgroup"
+    },
+    {
+      "url": "https://github.com/arcasilesgroup"
+    }
+  ],
   "thumbnailUrl": "images/arcasiles-community-madrid.webp",
   "latLon": {
     "lat": 40.4167047,

@@ -16,14 +16,26 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.uco.es/aulasoftwarelibre/",
-  "urls": {
-    "telegram": "https://t.me/AulaSoftwareLibreUCO",
-    "twitter": "https://twitter.com/aulasl",
-    "github": "https://github.com/aulasoftwarelibre/",
-    "instagram": "https://www.instagram.com/aulasoftwarelibre/",
-    "youtube": "https://www.youtube.com/channel/UCfWiR5j-cbKcGTi9faK8P6w",
-    "linkedin": "https://www.linkedin.com/company/aulasoftwarelibre/"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/AulaSoftwareLibreUCO"
+    },
+    {
+      "url": "https://twitter.com/aulasl"
+    },
+    {
+      "url": "https://github.com/aulasoftwarelibre/"
+    },
+    {
+      "url": "https://www.instagram.com/aulasoftwarelibre/"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCfWiR5j-cbKcGTi9faK8P6w"
+    },
+    {
+      "url": "https://www.linkedin.com/company/aulasoftwarelibre/"
+    }
+  ],
   "thumbnailUrl": "images/aula-de-software-libre-cordoba.webp",
   "latLon": {
     "lat": 37.888422,

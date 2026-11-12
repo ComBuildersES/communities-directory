@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/hackmadrid-27/",
-  "urls": {
-    "twitter": "https://twitter.com/hackmadrid",
-    "eventsUrl": "https://www.meetup.com/es-ES/hackmadrid-27/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/hackmadrid"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/hackmadrid-27/"
+    }
+  ],
   "thumbnailUrl": "images/hackmadrid.webp",
   "latLon": {
     "lat": 40.4167047,

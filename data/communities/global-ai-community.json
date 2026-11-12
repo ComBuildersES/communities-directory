@@ -14,13 +14,24 @@
   "targetAudience": [],
   "contactInfo": "hq@globalai.community",
   "communityUrl": "https://globalai.community/",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/global-ai-community",
-    "twitter": "https://x.com/GlobAICommunity",
-    "instagram": "https://www.instagram.com/globalaicommunity/",
-    "eventosWiki": "https://eventos.wiki/organizations/global-ai-community",
-    "ote": "https://eventos.wiki/organizations/global-ai-community/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/global-ai-community"
+    },
+    {
+      "url": "https://x.com/GlobAICommunity"
+    },
+    {
+      "url": "https://www.instagram.com/globalaicommunity/"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/global-ai-community"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/global-ai-community/events.json"
+    }
+  ],
   "thumbnailUrl": "images/global-ai-bootcamp.webp",
   "latLon": {
     "lat": null,

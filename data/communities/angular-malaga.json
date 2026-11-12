@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "sponsor@angularmalaga.com",
   "communityUrl": "https://www.meetup.com/es-ES/angular-malaga/",
-  "urls": {
-    "twitter": "http://twitter.com/angularmalaga/",
-    "eventsUrl": "https://www.meetup.com/es-ES/angular-malaga/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/angularmalaga/"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/angular-malaga/"
+    }
+  ],
   "thumbnailUrl": "images/angular-malaga.webp",
   "latLon": {
     "lat": 36.7196292,

@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/PowerTips-Cadiz/",
-  "urls": {
-    "twitter": "http://twitter.com/powertipses/",
-    "eventsUrl": "https://www.meetup.com/PowerTips-Cadiz/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/powertipses/"
+    },
+    {
+      "url": "https://www.meetup.com/PowerTips-Cadiz/"
+    }
+  ],
   "latLon": {
     "lat": 36.5297453,
     "lon": -6.2926477

@@ -16,6 +16,7 @@
  */
 
 import fs from 'fs';
+import { mergeDraftUrls, splitDraftUrls, toLegacyUrlMap } from '../src/lib/communityUrls.js';
 // Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
 import { readCommunities, writeCommunities } from './lib/communities-store.js';
 
@@ -75,7 +76,8 @@ function main() {
   const byUrl = new Map();
   for (const c of communities) {
     if (c.communityUrl) byUrl.set(normalizeUrl(c.communityUrl), c.id);
-    if (c.urls?.twitter) byUrl.set(normalizeUrl(c.urls.twitter), c.id);
+    const twitter = toLegacyUrlMap(c.urls).twitter;
+    if (twitter) byUrl.set(normalizeUrl(twitter), c.id);
   }
 
   let matched   = 0;
@@ -99,25 +101,29 @@ function main() {
     const community = communities.find(c => c.id === communityId);
     const before    = JSON.stringify(community);
 
-    // Inicializar urls si no existe
-    if (!community.urls) community.urls = {};
+    // `urls` es una lista de pares (#478). Se trabaja sobre el mapa por clave, que es lo que
+    // este script sabe clasificar, y los canales que no caben en una clave (kind repetido o
+    // etiqueta propia) se conservan aparte para volver a pegarlos al final.
+    const { primary: urlsByKind, extras: urlExtras } = splitDraftUrls(community.urls);
 
-    // Mover communityUrl a urls.twitter si no está ya registrado
-    if (!community.urls.twitter) {
-      community.urls.twitter = twitterUrl.replace(/\/$/, ''); // normalizar trailing slash
+    // Mover communityUrl a la clave twitter si no está ya registrado
+    if (!urlsByKind.twitter) {
+      urlsByKind.twitter = twitterUrl.replace(/\/$/, ''); // normalizar trailing slash
     }
 
     // Clasificar y añadir las URLs adicionales (sin sobreescribir existentes)
     for (const url of (additionalUrls || [])) {
       if (!url || url.startsWith('t.co/')) continue; // saltar t.co no resolubles
       const platform = classifyUrl(url);
-      if (!community.urls[platform]) {
-        community.urls[platform] = url;
+      if (!urlsByKind[platform]) {
+        urlsByKind[platform] = url;
       }
     }
 
+    community.urls = mergeDraftUrls(urlsByKind, urlExtras);
+
     // Actualizar communityUrl a la URL web si hay una y la actual es Twitter
-    const newWeb = community.urls.web;
+    const newWeb = urlsByKind.web;
     if (newWeb && /\b(twitter\.com|x\.com)\b/i.test(community.communityUrl)) {
       community.communityUrl = newWeb;
     }

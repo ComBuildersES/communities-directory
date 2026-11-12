@@ -16,13 +16,23 @@
   "targetAudience": [],
   "contactInfo": "sevillarug@gmail.com",
   "communityUrl": "https://sevillarusers.netlify.app/about/",
-  "urls": {
-    "youtube": "https://www.youtube.com/channel/UC4_SN0le5WFMu_LFaIufLbA",
-    "twitter": "https://twitter.com/_SevillaR",
-    "github": "https://github.com/SevillaR",
-    "telegram": "https://t.me/+HE3IBL13swTfZwYI",
-    "eventsUrl": "https://www.meetup.com/es-ES/Sevilla-R-users/"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/channel/UC4_SN0le5WFMu_LFaIufLbA"
+    },
+    {
+      "url": "https://twitter.com/_SevillaR"
+    },
+    {
+      "url": "https://github.com/SevillaR"
+    },
+    {
+      "url": "https://t.me/+HE3IBL13swTfZwYI"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/Sevilla-R-users/"
+    }
+  ],
   "thumbnailUrl": "images/sevilla-r-users.webp",
   "latLon": {
     "lat": 37.38264,

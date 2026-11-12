@@ -15,10 +15,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://x.com/gdgcloudmadrid?lang=en",
-  "urls": {
-    "twitter": "https://x.com/gdgcloudmadrid?lang=en",
-    "eventsUrl": "https://www.meetup.com/es-ES/gcdcmadrid/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/gdgcloudmadrid?lang=en"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/gcdcmadrid/"
+    }
+  ],
   "latLon": {
     "lat": 40.4167047,
     "lon": -3.7035825

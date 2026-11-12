@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "hola@wptortosa.com",
   "communityUrl": "https://www.meetup.com/tortosa-wordpress-meetup/",
-  "urls": {
-    "twitter": "https://twitter.com/WPTortosa",
-    "eventsUrl": "https://www.meetup.com/tortosa-wordpress-meetup/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/WPTortosa"
+    },
+    {
+      "url": "https://www.meetup.com/tortosa-wordpress-meetup/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-tordosa.webp",
   "latLon": {
     "lat": 40.8110042,

@@ -1,4 +1,5 @@
 import { execFileSync } from "node:child_process";
+import { toUrlEntries } from "../src/lib/communityUrls.js";
 
 // Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
 import { readCommunitiesAtRef } from "./lib/communities-git.js";
@@ -62,7 +63,7 @@ function normalizeUrl(value = "") {
 function getComparableUrls(community = {}) {
   return [
     community.communityUrl,
-    ...Object.values(community.urls ?? {}),
+    ...toUrlEntries(community.urls).map((entry) => entry.url),
   ]
     .map((value) => normalizeUrl(value))
     .filter(Boolean);

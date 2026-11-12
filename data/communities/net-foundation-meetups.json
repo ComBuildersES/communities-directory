@@ -16,13 +16,23 @@
   "targetAudience": [],
   "contactInfo": "contact@dotnetfoundation.org",
   "communityUrl": "https://dotnetfoundation.org/community/.net-meetups",
-  "urls": {
-    "github": "https://github.com/dotnet-foundation",
-    "twitter": "https://twitter.com/dotnetfdn",
-    "youtube": "https://www.youtube.com/channel/UCiaZbznpWV1o-KLxj8zqR6A",
-    "linkedin": "https://www.linkedin.com/company/dotnetfoundation/",
-    "eventsUrl": "https://www.meetup.com/pro/dotnet"
-  },
+  "urls": [
+    {
+      "url": "https://github.com/dotnet-foundation"
+    },
+    {
+      "url": "https://twitter.com/dotnetfdn"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCiaZbznpWV1o-KLxj8zqR6A"
+    },
+    {
+      "url": "https://www.linkedin.com/company/dotnetfoundation/"
+    },
+    {
+      "url": "https://www.meetup.com/pro/dotnet"
+    }
+  ],
   "thumbnailUrl": "images/net-foundation-meetups.webp",
   "latLon": {
     "lat": null,

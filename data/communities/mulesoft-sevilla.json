@@ -14,11 +14,18 @@
   "targetAudience": [],
   "contactInfo": "info@mulesoft.com",
   "communityUrl": "https://meetups.mulesoft.com/sevilla",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/groups/6936034",
-    "twitter": "https://twitter.com/MuleDev",
-    "eventsUrl": "https://meetups.mulesoft.com/sevilla"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/groups/6936034"
+    },
+    {
+      "url": "https://twitter.com/MuleDev"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://meetups.mulesoft.com/sevilla"
+    }
+  ],
   "thumbnailUrl": "images/mulesoft-sevilla.webp",
   "latLon": {
     "lat": 37.38264,

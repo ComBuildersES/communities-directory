@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/rockndroidmad/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/rockndroidmad/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/rockndroidmad/"
+    }
+  ],
   "latLon": {
     "lat": 40.4167047,
     "lon": -3.7035825

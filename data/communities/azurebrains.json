@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/azurebrains-name-global-ai-spain/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/azurebrains-name-global-ai-spain/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/azurebrains-name-global-ai-spain/"
+    }
+  ],
   "thumbnailUrl": "images/azurebrains.webp",
   "latLon": {
     "lat": 40.4167047,

@@ -17,10 +17,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/big-data-developers-in-madrid/",
-  "urls": {
-    "youtube": "https://www.youtube.com/channel/UCxROk30xBNLZE1uCW3TqH2g",
-    "eventsUrl": "https://www.meetup.com/big-data-developers-in-madrid/"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/channel/UCxROk30xBNLZE1uCW3TqH2g"
+    },
+    {
+      "url": "https://www.meetup.com/big-data-developers-in-madrid/"
+    }
+  ],
   "thumbnailUrl": "images/data-cloud-and-ai-in-madrid.webp",
   "latLon": {
     "lat": 40.4167047,

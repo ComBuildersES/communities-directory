@@ -15,13 +15,23 @@
   "targetAudience": [],
   "contactInfo": "organizers@cloudnativevalencia.com",
   "communityUrl": "https://community.cncf.io/cloud-native-valencia/",
-  "urls": {
-    "twitter": "https://twitter.com/cloudnativefdn",
-    "instagram": "https://www.instagram.com/humans.of.cloudnative/",
-    "youtube": "https://www.youtube.com/c/cloudnativefdn",
-    "github": "https://github.com/cncf",
-    "eventsUrl": "https://community.cncf.io/cloud-native-valencia/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/cloudnativefdn"
+    },
+    {
+      "url": "https://www.instagram.com/humans.of.cloudnative/"
+    },
+    {
+      "url": "https://www.youtube.com/c/cloudnativefdn"
+    },
+    {
+      "url": "https://github.com/cncf"
+    },
+    {
+      "url": "https://community.cncf.io/cloud-native-valencia/"
+    }
+  ],
   "thumbnailUrl": "images/cloud-native-cncf-valencia.webp",
   "latLon": {
     "lat": 39.4702393,

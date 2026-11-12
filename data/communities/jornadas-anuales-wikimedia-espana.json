@@ -15,12 +15,20 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://wikimedia.es/category/eventos/jornadas-anuales/",
-  "urls": {
-    "twitter": "https://twitter.com/wikimedia_es",
-    "youtube": "https://www.youtube.com/channel/UCPPPCpS8n3GMc_I4qAVpA-g/videos",
-    "linkedin": "https://www.linkedin.com/company/wikimediaespa%C3%B1a/",
-    "instagram": "https://www.instagram.com/wikimedia_es/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/wikimedia_es"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCPPPCpS8n3GMc_I4qAVpA-g/videos"
+    },
+    {
+      "url": "https://www.linkedin.com/company/wikimediaespa%C3%B1a/"
+    },
+    {
+      "url": "https://www.instagram.com/wikimedia_es/"
+    }
+  ],
   "thumbnailUrl": "images/jornadas-anuales-wikimedia-espana.webp",
   "latLon": {
     "lat": null,

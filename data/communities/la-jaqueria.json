@@ -35,12 +35,20 @@
   ],
   "contactInfo": "lajaqueria@gmail.com",
   "communityUrl": "https://lajaqueria.org/sesiones/",
-  "urls": {
-    "github": "https://github.com/LaJaqueria",
-    "instagram": "https://instagram.com/lajaqueria",
-    "twitter": "https://www.twitter.com/LaJaqueria",
-    "youtube": "https://youtube.com/channel/UCYKcbF-qtcpfLj4WpUNOH2w"
-  },
+  "urls": [
+    {
+      "url": "https://github.com/LaJaqueria"
+    },
+    {
+      "url": "https://instagram.com/lajaqueria"
+    },
+    {
+      "url": "https://www.twitter.com/LaJaqueria"
+    },
+    {
+      "url": "https://youtube.com/channel/UCYKcbF-qtcpfLj4WpUNOH2w"
+    }
+  ],
   "thumbnailUrl": "images/la-jaqueria.webp",
   "latLon": {
     "lat": 36.8400939,

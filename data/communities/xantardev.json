@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://xantardev.org",
-  "urls": {
-    "twitter": "https://twitter.com/XantarDev?ref_src=twsrc%5Etfw"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/XantarDev?ref_src=twsrc%5Etfw"
+    }
+  ],
   "thumbnailUrl": "images/xantardev.webp",
   "latLon": {
     "lat": 42.8806228,

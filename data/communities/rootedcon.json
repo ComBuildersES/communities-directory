@@ -21,15 +21,30 @@
   ],
   "contactInfo": "info@rootedcon.com",
   "communityUrl": "https://www.rootedcon.com/",
-  "urls": {
-    "twitter": "https://x.com/rootedcon",
-    "linkedin": "https://www.linkedin.com/company/rooted",
-    "tiktok": "https://www.tiktok.com/@rootedcon",
-    "instagram": "https://www.instagram.com/rootedc0n",
-    "telegram": "https://t.me/RootedCONLive",
-    "eventosWiki": "https://eventos.wiki/organizations/rootedcon",
-    "ote": "https://eventos.wiki/organizations/rootedcon/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/rootedcon"
+    },
+    {
+      "url": "https://www.linkedin.com/company/rooted"
+    },
+    {
+      "url": "https://www.tiktok.com/@rootedcon"
+    },
+    {
+      "url": "https://www.instagram.com/rootedc0n"
+    },
+    {
+      "url": "https://t.me/RootedCONLive"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/rootedcon"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/rootedcon/events.json"
+    }
+  ],
   "thumbnailUrl": "images/rootedcon.webp",
   "latLon": {
     "lat": null,

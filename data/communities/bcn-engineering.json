@@ -14,11 +14,17 @@
   "targetAudience": [],
   "contactInfo": "contact@bcneng.org",
   "communityUrl": "https://bcneng.org/",
-  "urls": {
-    "github": "https://github.com/bcneng",
-    "linkedin": "https://www.linkedin.com/company/bcneng/",
-    "twitter": "https://twitter.com/bcn_eng"
-  },
+  "urls": [
+    {
+      "url": "https://github.com/bcneng"
+    },
+    {
+      "url": "https://www.linkedin.com/company/bcneng/"
+    },
+    {
+      "url": "https://twitter.com/bcn_eng"
+    }
+  ],
   "thumbnailUrl": "images/bcn-engineering.webp",
   "latLon": {
     "lat": null,

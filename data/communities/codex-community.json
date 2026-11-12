@@ -18,10 +18,15 @@
   "matchesAllAudience": true,
   "contactInfo": "",
   "communityUrl": "https://developers.openai.com/community",
-  "urls": {
-    "twitter": "https://x.com/openaidevs",
-    "eventsUrl": "https://luma.com/codex-community?utm_source=oaidevs"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/openaidevs"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://luma.com/codex-community?utm_source=oaidevs"
+    }
+  ],
   "thumbnailUrl": "images/codex-community.webp",
   "latLon": {
     "lat": null,

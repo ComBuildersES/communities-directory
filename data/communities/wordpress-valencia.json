@@ -17,12 +17,20 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/wordpress-valencia-meetup/",
-  "urls": {
-    "twitter": "https://twitter.com/_wpvalencia",
-    "instagram": "https://www.instagram.com/wordpressvalencia/",
-    "discord": "https://discord.gg/e6PMDnuCFb",
-    "eventsUrl": "https://www.meetup.com/wordpress-valencia-meetup/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/_wpvalencia"
+    },
+    {
+      "url": "https://www.instagram.com/wordpressvalencia/"
+    },
+    {
+      "url": "https://discord.gg/e6PMDnuCFb"
+    },
+    {
+      "url": "https://www.meetup.com/wordpress-valencia-meetup/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-valencia.webp",
   "latLon": {
     "lat": 39.4702393,

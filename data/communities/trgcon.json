@@ -39,13 +39,24 @@
   ],
   "contactInfo": "tarugoconf@bonillaware.com",
   "communityUrl": "https://trgcon.com/",
-  "urls": {
-    "twitter": "https://x.com/search?q=%23trgx&src=typed_query&f=live",
-    "youtube": "https://www.youtube.com/@CodelyTV",
-    "instagram": "https://www.instagram.com/raul_muro/",
-    "eventosWiki": "https://eventos.wiki/organizations/trgcon",
-    "ote": "https://eventos.wiki/organizations/trgcon/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/search?q=%23trgx&src=typed_query&f=live"
+    },
+    {
+      "url": "https://www.youtube.com/@CodelyTV"
+    },
+    {
+      "url": "https://www.instagram.com/raul_muro/"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/trgcon"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/trgcon/events.json"
+    }
+  ],
   "thumbnailUrl": "images/trgcon.webp",
   "latLon": {
     "lat": 40.4167047,

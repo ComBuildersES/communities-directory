@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/databeers-almeria/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/es-ES/databeers-almeria/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/es-ES/databeers-almeria/"
+    }
+  ],
   "thumbnailUrl": "images/databeers-almeria.webp",
   "latLon": {
     "lat": 36.8400939,

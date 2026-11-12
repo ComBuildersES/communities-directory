@@ -18,11 +18,17 @@
   "targetAudience": [],
   "contactInfo": "zaragoza@es.python.org",
   "communityUrl": "https://www.meetup.com/es-es/python_zgz/",
-  "urls": {
-    "twitter": "https://x.com/PythonZaragoza/",
-    "telegram": "https://t.me/python_zgz",
-    "eventsUrl": "https://www.meetup.com/es-es/python_zgz/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/PythonZaragoza/"
+    },
+    {
+      "url": "https://t.me/python_zgz"
+    },
+    {
+      "url": "https://www.meetup.com/es-es/python_zgz/"
+    }
+  ],
   "thumbnailUrl": "images/python-murcia.webp",
   "latLon": {
     "lat": 41.656837,

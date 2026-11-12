@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://wpgranada.es/",
-  "urls": {
-    "youtube": "https://www.youtube.com/@wordpressgranada7164",
-    "eventsUrl": "https://www.meetup.com/es-ES/granada-wordpress-meetup/"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/@wordpressgranada7164"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/granada-wordpress-meetup/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-granada.webp",
   "latLon": {
     "lat": 37.1831938,

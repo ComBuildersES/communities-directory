@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/madrid-spring-user-group",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/madrid-spring-user-group"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/madrid-spring-user-group"
+    }
+  ],
   "latLon": {
     "lat": 40.4167047,
     "lon": -3.7035825

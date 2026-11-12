@@ -14,12 +14,21 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://gamepolis.org/",
-  "urls": {
-    "twitter": "https://x.com/Gamepolis_org",
-    "web": "https://gamepolis.org/",
-    "youtube": "https://www.youtube.com/@GamepolisOrg",
-    "instagram": "https://www.instagram.com/gamepolis/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/Gamepolis_org"
+    },
+    {
+      "kind": "web",
+      "url": "https://gamepolis.org/"
+    },
+    {
+      "url": "https://www.youtube.com/@GamepolisOrg"
+    },
+    {
+      "url": "https://www.instagram.com/gamepolis/"
+    }
+  ],
   "thumbnailUrl": "images/gamepolis.webp",
   "latLon": {
     "lat": 36.7196292,

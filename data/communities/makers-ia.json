@@ -16,11 +16,19 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://makersia.com/",
-  "urls": {
-    "web": "https://makersia.com/",
-    "linkedin": "https://www.linkedin.com/company/makersia/",
-    "whatsapp": "https://makersia.com"
-  },
+  "urls": [
+    {
+      "kind": "web",
+      "url": "https://makersia.com/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/makersia/"
+    },
+    {
+      "kind": "whatsapp",
+      "url": "https://makersia.com"
+    }
+  ],
   "thumbnailUrl": "images/makers-ia.webp",
   "latLon": {
     "lat": 40.4167047,

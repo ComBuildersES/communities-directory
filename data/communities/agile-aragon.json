@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/agilearagon/",
-  "urls": {
-    "twitter": "https://x.com/agilearagon",
-    "eventsUrl": "https://www.meetup.com/es-ES/agilearagon/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/agilearagon"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/agilearagon/"
+    }
+  ],
   "thumbnailUrl": "images/agile-aragon.webp",
   "latLon": {
     "lat": 41.656837,

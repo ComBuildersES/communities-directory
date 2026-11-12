@@ -14,11 +14,17 @@
   "targetAudience": [],
   "contactInfo": "civis@vgwb.org",
   "communityUrl": "https://www.civis.vgwb.org/civis-game-jam/",
-  "urls": {
-    "instagram": "https://www.instagram.com/videogameswithoutborders",
-    "twitter": "https://x.com/vgwb_org",
-    "linkedin": "https://www.linkedin.com/company/video-games-without-borders/"
-  },
+  "urls": [
+    {
+      "url": "https://www.instagram.com/videogameswithoutborders"
+    },
+    {
+      "url": "https://x.com/vgwb_org"
+    },
+    {
+      "url": "https://www.linkedin.com/company/video-games-without-borders/"
+    }
+  ],
   "thumbnailUrl": "images/civis-gamejam.webp",
   "latLon": {
     "lat": 36.7196292,

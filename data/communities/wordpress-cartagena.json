@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/wordpress-cartagena/",
-  "urls": {
-    "twitter": "https://twitter.com/WPCartagena",
-    "eventsUrl": "https://www.meetup.com/wordpress-cartagena/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/WPCartagena"
+    },
+    {
+      "url": "https://www.meetup.com/wordpress-cartagena/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-cartagena.webp",
   "latLon": {
     "lat": 37.6057068,

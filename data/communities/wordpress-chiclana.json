@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/wordpress-meetup-chiclana/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/wordpress-meetup-chiclana/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/wordpress-meetup-chiclana/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-chiclana.webp",
   "latLon": {
     "lat": 36.41976,

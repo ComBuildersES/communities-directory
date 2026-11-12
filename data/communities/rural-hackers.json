@@ -14,11 +14,17 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://ruralhackers.com/",
-  "urls": {
-    "instagram": "http://instagram.com/ruralhackers",
-    "youtube": "https://www.youtube.com/@ruralhackers",
-    "linkedin": "https://www.linkedin.com/company/rural-hackers"
-  },
+  "urls": [
+    {
+      "url": "http://instagram.com/ruralhackers"
+    },
+    {
+      "url": "https://www.youtube.com/@ruralhackers"
+    },
+    {
+      "url": "https://www.linkedin.com/company/rural-hackers"
+    }
+  ],
   "thumbnailUrl": "images/rural-hackers.webp",
   "latLon": {
     "lat": 42.3604762,

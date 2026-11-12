@@ -19,11 +19,18 @@
   "matchesAllAudience": true,
   "contactInfo": "contacto@coruna.events",
   "communityUrl": "https://coruna.events/",
-  "urls": {
-    "instagram": "https://instagram.com/coruna.events",
-    "linkedin": "https://www.linkedin.com/company/coruna.events",
-    "eventsUrl": "https://coruna.events/eventos"
-  },
+  "urls": [
+    {
+      "url": "https://instagram.com/coruna.events"
+    },
+    {
+      "url": "https://www.linkedin.com/company/coruna.events"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://coruna.events/eventos"
+    }
+  ],
   "thumbnailUrl": "images/corunaevents.webp",
   "latLon": {
     "lat": null,

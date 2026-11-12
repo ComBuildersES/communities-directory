@@ -14,13 +14,23 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://linktr.ee/devmad",
-  "urls": {
-    "telegram": "https://t.me/+EDA7YP0n0dc0MDU0",
-    "linkedin": "https://www.linkedin.com/company/devmad/",
-    "youtube": "https://www.youtube.com/@DevelopersInMadrid",
-    "eventsUrl": "https://www.meetup.com/devmad",
-    "linkAggregator": "https://linktr.ee/devmad"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/+EDA7YP0n0dc0MDU0"
+    },
+    {
+      "url": "https://www.linkedin.com/company/devmad/"
+    },
+    {
+      "url": "https://www.youtube.com/@DevelopersInMadrid"
+    },
+    {
+      "url": "https://www.meetup.com/devmad"
+    },
+    {
+      "url": "https://linktr.ee/devmad"
+    }
+  ],
   "thumbnailUrl": "images/devmad-developers.webp",
   "latLon": {
     "lat": 40.4167047,

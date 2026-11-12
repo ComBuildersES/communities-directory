@@ -26,12 +26,21 @@
   ],
   "contactInfo": "mjfosela@gmail.com",
   "communityUrl": "https://www.meetup.com/es-ES/node-js-madrid/",
-  "urls": {
-    "twitter": "https://x.com/MadridNodeJs",
-    "eventsUrl": "https://www.meetup.com/es-ES/node-js-madrid/",
-    "eventosWiki": "https://eventos.wiki/organizations/nodejs-madrid",
-    "ote": "https://eventos.wiki/organizations/nodejs-madrid/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/MadridNodeJs"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/node-js-madrid/"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/nodejs-madrid"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/nodejs-madrid/events.json"
+    }
+  ],
   "thumbnailUrl": "images/nodejs-madrid.webp",
   "latLon": {
     "lat": 40.4167047,

@@ -17,12 +17,20 @@
   "targetAudience": [],
   "contactInfo": "biznagafest@gmail.com",
   "communityUrl": "https://www.biznagafest.com/",
-  "urls": {
-    "instagram": "https://www.instagram.com/biznagafest/",
-    "twitter": "https://twitter.com/BiznagaFest",
-    "youtube": "https://www.youtube.com/@biznagafest",
-    "eventsUrl": "https://www.meetup.com/es-ES/google-developer-group-malaga/#top"
-  },
+  "urls": [
+    {
+      "url": "https://www.instagram.com/biznagafest/"
+    },
+    {
+      "url": "https://twitter.com/BiznagaFest"
+    },
+    {
+      "url": "https://www.youtube.com/@biznagafest"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/google-developer-group-malaga/#top"
+    }
+  ],
   "thumbnailUrl": "images/biznagafest.webp",
   "latLon": {
     "lat": 36.7196292,

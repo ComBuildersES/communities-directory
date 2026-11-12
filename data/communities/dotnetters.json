@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/dotnetters/",
-  "urls": {
-    "twitter": "http://twitter.com/dotnetters/",
-    "eventsUrl": "https://www.meetup.com/es-ES/dotnetters/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/dotnetters/"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/dotnetters/"
+    }
+  ],
   "thumbnailUrl": "images/dotnetters.webp",
   "latLon": {
     "lat": 41.656837,

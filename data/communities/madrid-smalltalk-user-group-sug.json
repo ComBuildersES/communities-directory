@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/madridsug/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/es-ES/madridsug/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/es-ES/madridsug/"
+    }
+  ],
   "latLon": {
     "lat": 40.4167047,
     "lon": -3.7035825

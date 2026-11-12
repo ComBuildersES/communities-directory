@@ -87,7 +87,33 @@ describe.each(LOCALES)('prompts de openData ($name)', ({ data, asksFirst }) => {
     const { rules } = prompts;
 
     expect(rules).toContain('lastReviewed');
-    expect(rules).toContain('urls.ote');
+    // Desde #478 `urls` es una lista de pares, así que la señal se nombra por su kind y no
+    // como "urls.ote". Lo que el prompt no puede dejar de hacer es apuntar al feed.
+    expect(rules).toContain('"ote"');
+  });
+
+  /**
+   * `urls` dejó de ser un objeto por plataforma (#478). Si el prompt no lo dice, el modelo
+   * busca `urls.telegram`, no lo encuentra y concluye que la comunidad no tiene Telegram.
+   */
+  /**
+   * El directorio lee el feed, no responde de él. Decir que el feed "evidencia actividad"
+   * hacía que un modelo leyese "tiene feed, luego está viva", que es una conclusión sobre lo
+   * que publique cada comunidad y no sobre lo que el dataset sabe.
+   */
+  it('el bloque de reglas no deja deducir actividad de que exista el feed', () => {
+    const { rules } = prompts;
+
+    expect(rules).toMatch(/no dice qué hay dentro|says nothing about what is in it/);
+    expect(rules).toMatch(/fechas del feed|dates in the feed/);
+  });
+
+  it('el bloque de reglas explica que urls es una lista de pares', () => {
+    const { rules } = prompts;
+
+    expect(rules).toMatch(/LISTA de canales|LIST of channels/);
+    expect(rules).toContain('"kind"');
+    expect(rules).toContain('"label"');
   });
 
   it('el bloque de reglas avisa de que un campo vacío no es un dato', () => {

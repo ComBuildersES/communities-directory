@@ -14,10 +14,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://almeriarusers.wordpress.com/",
-  "urls": {
-    "twitter": "https://x.com/AlmeriaRUsers",
-    "web": "https://almeriarusers.wordpress.com/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/AlmeriaRUsers"
+    },
+    {
+      "kind": "web",
+      "url": "https://almeriarusers.wordpress.com/"
+    }
+  ],
   "thumbnailUrl": "images/almeria-r-users.webp",
   "latLon": {
     "lat": 36.8400939,

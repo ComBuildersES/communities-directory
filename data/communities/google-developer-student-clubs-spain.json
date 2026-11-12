@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://x.com/dscspain",
-  "urls": {
-    "twitter": "https://x.com/dscspain",
-    "youtube": "https://www.youtube.com/@GDGSpain"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/dscspain"
+    },
+    {
+      "url": "https://www.youtube.com/@GDGSpain"
+    }
+  ],
   "thumbnailUrl": "images/google-developer-student-clubs-spain.webp",
   "latLon": {
     "lat": null,

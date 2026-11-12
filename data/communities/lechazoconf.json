@@ -17,12 +17,20 @@
   "matchesAllAudience": true,
   "contactInfo": "info@lechazoconf.com",
   "communityUrl": "https://lechazoconf.com/",
-  "urls": {
-    "twitter": "https://twitter.com/lechazoconf",
-    "instagram": "https://www.instagram.com/lechazoconf/",
-    "linkedin": "https://www.linkedin.com/company/lechazoconf/",
-    "telegram": "https://t.me/+kRYDuWehPvUzMjg0"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/lechazoconf"
+    },
+    {
+      "url": "https://www.instagram.com/lechazoconf/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/lechazoconf/"
+    },
+    {
+      "url": "https://t.me/+kRYDuWehPvUzMjg0"
+    }
+  ],
   "thumbnailUrl": "images/lechazoconf.webp",
   "latLon": {
     "lat": 41.6529421,

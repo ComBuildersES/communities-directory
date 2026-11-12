@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://betabeers.com/community/betabeers-almeria-25/",
-  "urls": {
-    "twitter": "https://x.com/betabeersalm"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/betabeersalm"
+    }
+  ],
   "thumbnailUrl": "images/betabeers-almera.webp",
   "latLon": {
     "lat": 36.8685739,

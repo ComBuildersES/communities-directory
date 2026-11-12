@@ -25,6 +25,7 @@ import {
   slugifyCommunityName,
 } from './lib/communities-store.js';
 import { buildCoverage } from '../src/lib/dataCoverage.js';
+import { URL_KINDS, resolveUrlEntry, toLegacyUrlMap, toUrlEntries } from '../src/lib/communityUrls.js';
 
 export const SITE_URL = 'https://directory.communitybuilders.dev';
 export const REPO_URL = 'https://github.com/ComBuildersES/communities-directory';
@@ -290,13 +291,33 @@ export function buildSchema({ tags = [], audience = [] } = {}) {
           'Main URL: the community\'s own site if it has one, otherwise its most relevant channel.',
       },
       urls: {
-        type: 'object',
+        type: 'array',
         description:
-          'Additional channels, keyed by platform. Only keys with a value are present. Notable ' +
-          'keys: `web`, `eventsUrl` (Meetup/Eventbrite/Luma — there is no per-platform key), ' +
-          '`ote` (an Open Tech Events feed of upcoming events), `eventosWiki`, `github`, ' +
-          '`mastodon`, `bluesky`, plus the usual social and chat platforms.',
-        additionalProperties: { type: 'string' },
+          'Additional channels, as a list of entries. `url` is the only required field. `kind` ' +
+          'is OMITTED when the domain already identifies the platform (x.com is Twitter), so ' +
+          'locate a channel by its URL, not by `kind` alone; it is present when the domain ' +
+          'cannot say it (`blog`, `rss`, `forum`, `mailingList`, `ote`, `mastodon`) or when it ' +
+          'contradicts it. Several entries may share a `kind`: a group with its Meetup plus its ' +
+          'own annual event are both `eventsUrl`, told apart by `label`. There is no ' +
+          'per-platform key for event sites (Meetup/Eventbrite/Luma are all `eventsUrl`).',
+        items: {
+          type: 'object',
+          required: ['url'],
+          properties: {
+            url: { type: 'string', description: 'Absolute URL of the channel.' },
+            kind: {
+              type: 'string',
+              enum: URL_KINDS.map(({ kind }) => kind),
+              description: 'What the channel is, when the domain does not say it.',
+            },
+            label: {
+              type: 'string',
+              description:
+                'Name to display instead of the platform name, e.g. "DevFest Zaragoza" for an ' +
+                'annual event that lives alongside the group\'s own Meetup.',
+            },
+          },
+        },
       },
       archivedUrls: {
         type: 'array',
@@ -374,7 +395,7 @@ function formatCommunitySection(community, { tagLabels, audienceLabels, nameById
         .join(', ') || null,
     ],
     ['Website', meaningfulText(community.communityUrl)],
-    ['Events feed', meaningfulText(community.urls?.ote)],
+    ['Events feed', meaningfulText(toLegacyUrlMap(community.urls).ote)],
     ['Contact', meaningfulText(community.contactInfo)],
     ['Directory page', communityDirectoryUrl(community)],
     ['Record', `${REPO_URL}/blob/master/data/communities/${slug}.json`],
@@ -384,9 +405,14 @@ function formatCommunitySection(community, { tagLabels, audienceLabels, nameById
     .filter(([, value]) => value)
     .forEach(([label, value]) => lines.push(`- ${label}: ${value}`));
 
-  const channels = Object.entries(community.urls ?? {})
-    .filter(([key, value]) => value && key !== 'ote')
-    .map(([key, value]) => `${key}: ${value}`);
+  // El feed OTE ya va arriba como "Events feed". Del resto se emite la etiqueta que de verdad
+  // hay que leer: la propia si la trae, y si no el kind o el dominio.
+  const channels = toUrlEntries(community.urls)
+    .filter((entry) => entry.kind !== 'ote')
+    .map((entry) => {
+      const { label, kind, url, hasCustomLabel } = resolveUrlEntry(entry);
+      return `${hasCustomLabel ? label : kind ?? label}: ${url}`;
+    });
 
   if (channels.length > 0) {
     lines.push(`- Channels: ${channels.join(' · ')}`);
@@ -489,8 +515,9 @@ regenerated on every deploy.
 - \`matchesAllTags\` / \`matchesAllAudience\` mean "generalist": the community matches any topic or any profile, and its array is empty on purpose. Treat an empty array plus the flag as "everything", never as "nothing".
 - \`location\` is where events happen; \`geographicScope\` is the territory served. They differ often: a community can meet in Madrid and serve all of Spain.
 - Coverage is uneven, so do not read an empty field as a statement about the community. Of the ${active} active communities, ${withTags} have \`tags\`, ${withAudience} have \`targetAudience\` and ${withScope} have \`geographicScope\`. An empty field means nobody has filled it in yet, not that the community has no topic or serves nowhere. Say which recommendations rest on a field that is often missing.
-- \`lastReviewed\` is the date a person last checked the record. It is **not** an activity signal: most records have not been revisited since they were added. The only field that evidences live activity is \`urls.ote\`, the community's events feed (${withOte} active communities publish one).
+- \`lastReviewed\` is the date a person last checked the record. It is **not** an activity signal: most records have not been revisited since they were added. The only place where live activity can be checked is the \`urls\` entry whose \`kind\` is \`ote\`, the community's events feed (${withOte} active communities publish one). The field only says the community publishes one; it says nothing about what is in it, and keeping it current is the community's call, not the directory's. Read the dates inside the feed rather than inferring activity from the field being present.
 - \`humanValidated: false\` means a person added the community but its tagging was filled in semi-automatically and nobody has checked it. Say so if you present it as fact. Only ${withHumanValidation} of the active communities have been reviewed by a person, and ${reviewed} of all ${total} records. The live counts are in [coverage.json](${SITE_URL}/data/coverage.json).
+- \`urls\` is a **list** of channels, not an object keyed by platform: each entry is \`{ url, kind?, label? }\`. \`kind\` is omitted whenever the domain already identifies the platform, so to find a community's Telegram you look at the URLs, not only at \`kind\`. The same \`kind\` can appear more than once, and there \`label\` is the name to show (a group's Meetup plus its own annual event). Event platforms have their own kinds (\`meetup\`, \`eventbrite\`, \`luma\`) and \`eventsUrl\` is the generic one, so to find where a community publishes events look at that whole family, not at one key.
 - \`archivedUrls\` are dead channels kept for history. Never recommend them: they look alive and nobody is listening.
 - \`status: "inactive"\` communities are kept deliberately. Filter them out before telling someone where to go.
 - \`organizedBy\` lists the communities **in this directory** that organise the record, for recurring events with their own brand (a community and its annual conference are two records, both alive). It is not the full organiser list: companies, sponsors and institutional support are not in the directory, so do not present it as "run only by these". A record with no \`organizedBy\` may still be run by someone: plenty of conferences have no standing community behind them.

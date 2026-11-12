@@ -14,12 +14,21 @@
   "targetAudience": [],
   "contactInfo": "info@programamos.es",
   "communityUrl": "https://programamos.es/",
-  "urls": {
-    "twitter": "http://twitter.com/programamos",
-    "instagram": "https://www.instagram.com/programamos_es/",
-    "youtube": "https://www.youtube.com/channel/UCxOl75aSJE7XpZrLdS8gtCg",
-    "mastodon": "https://mastodon.social/@programamos"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/programamos"
+    },
+    {
+      "url": "https://www.instagram.com/programamos_es/"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCxOl75aSJE7XpZrLdS8gtCg"
+    },
+    {
+      "kind": "mastodon",
+      "url": "https://mastodon.social/@programamos"
+    }
+  ],
   "thumbnailUrl": "images/programamos.webp",
   "latLon": {
     "lat": 37.3886303,

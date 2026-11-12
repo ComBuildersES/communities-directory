@@ -28,13 +28,25 @@
   ],
   "contactInfo": "community@genaisummit.eu",
   "communityUrl": "https://chat.whatsapp.com/BdHQI2a11lRFGsa8BjkOX3",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/groups/9079599/",
-    "eventsUrl": "https://genaisummit.eu/",
-    "whatsapp": "https://chat.whatsapp.com/BdHQI2a11lRFGsa8BjkOX3",
-    "eventosWiki": "https://eventos.wiki/organizations/genaicommunity",
-    "ote": "https://eventos.wiki/organizations/genaicommunity/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/groups/9079599/"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://genaisummit.eu/"
+    },
+    {
+      "url": "https://chat.whatsapp.com/BdHQI2a11lRFGsa8BjkOX3"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/genaicommunity"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/genaicommunity/events.json"
+    }
+  ],
   "thumbnailUrl": "images/gen-ai-community.webp",
   "latLon": {
     "lat": null,

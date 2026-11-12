@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://x.com/GDGVigo/",
-  "urls": {
-    "twitter": "https://x.com/GDGVigo",
-    "youtube": "https://www.youtube.com/user/GDGVigo"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/GDGVigo"
+    },
+    {
+      "url": "https://www.youtube.com/user/GDGVigo"
+    }
+  ],
   "latLon": {
     "lat": 42.2313601,
     "lon": -8.7124252

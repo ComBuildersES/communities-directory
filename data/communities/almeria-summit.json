@@ -22,10 +22,14 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://iaenalmeria.com/",
-  "urls": {
-    "instagram": "https://www.instagram.com/iaenalmeria/",
-    "whatsapp": "https://chat.whatsapp.com/CPrkjmfpdR6LbLct23hi4Y"
-  },
+  "urls": [
+    {
+      "url": "https://www.instagram.com/iaenalmeria/"
+    },
+    {
+      "url": "https://chat.whatsapp.com/CPrkjmfpdR6LbLct23hi4Y"
+    }
+  ],
   "thumbnailUrl": "images/almeria-summit.webp",
   "latLon": {
     "lat": 36.8414197,

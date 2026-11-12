@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "pamplonaswcraft@540deg.com",
   "communityUrl": "https://pamplonaswcraft.com/",
-  "urls": {
-    "twitter": "https://x.com/fran_mosteiro",
-    "bluesky": "https://bsky.app/profile/pamplonaswcraft.bsky.social"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/fran_mosteiro"
+    },
+    {
+      "url": "https://bsky.app/profile/pamplonaswcraft.bsky.social"
+    }
+  ],
   "thumbnailUrl": "images/pamplona-iruna-software-crafters.webp",
   "latLon": {
     "lat": 42.8179948,

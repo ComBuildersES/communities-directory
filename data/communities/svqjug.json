@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "svqjug@gmail.com",
   "communityUrl": "https://www.meetup.com/svqjug",
-  "urls": {
-    "twitter": "http://twitter.com/svqjug/",
-    "eventsUrl": "https://www.meetup.com/svqjug"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/svqjug/"
+    },
+    {
+      "url": "https://www.meetup.com/svqjug"
+    }
+  ],
   "thumbnailUrl": "images/svqjug.webp",
   "latLon": {
     "lat": 37.38264,

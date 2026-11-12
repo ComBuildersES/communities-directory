@@ -16,14 +16,26 @@
   "targetAudience": [],
   "contactInfo": "pyladies-bcn@googlegroups.com",
   "communityUrl": "https://pybcn.org/pyladies_bcn/about/",
-  "urls": {
-    "github": "https://github.com/pybcn",
-    "linkedin": "https://linkedin.com/company/pybcn",
-    "twitter": "https://twitter.com/PyBCN",
-    "youtube": "https://www.youtube.com/c/PythonBarcelona",
-    "eventsUrl": "https://www.meetup.com/python-barcelona/",
-    "mailingList": "https://groups.google.com/g/pyladies-bcn"
-  },
+  "urls": [
+    {
+      "url": "https://github.com/pybcn"
+    },
+    {
+      "url": "https://linkedin.com/company/pybcn"
+    },
+    {
+      "url": "https://twitter.com/PyBCN"
+    },
+    {
+      "url": "https://www.youtube.com/c/PythonBarcelona"
+    },
+    {
+      "url": "https://www.meetup.com/python-barcelona/"
+    },
+    {
+      "url": "https://groups.google.com/g/pyladies-bcn"
+    }
+  ],
   "thumbnailUrl": "images/pyladies-barcelona.webp",
   "latLon": {
     "lat": 41.387917,

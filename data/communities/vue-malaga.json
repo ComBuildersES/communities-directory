@@ -14,10 +14,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.vuemalaga.com/",
-  "urls": {
-    "twitter": "https://x.com/VuejsMalaga",
-    "web": "https://www.vuemalaga.com/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/VuejsMalaga"
+    },
+    {
+      "kind": "web",
+      "url": "https://www.vuemalaga.com/"
+    }
+  ],
   "thumbnailUrl": "images/vue-malaga.webp",
   "latLon": {
     "lat": 36.7196292,

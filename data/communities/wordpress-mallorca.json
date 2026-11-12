@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/mallorca-wordpress-meetup/",
-  "urls": {
-    "telegram": "https://t.me/wordpresmallorca",
-    "eventsUrl": "https://www.meetup.com/mallorca-wordpress-meetup/"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/wordpresmallorca"
+    },
+    {
+      "url": "https://www.meetup.com/mallorca-wordpress-meetup/"
+    }
+  ],
   "thumbnailUrl": "images/ordpress-mallorca.webp",
   "latLon": {
     "lat": 39.578695,

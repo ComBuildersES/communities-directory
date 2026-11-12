@@ -14,11 +14,17 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://web.archive.org/web/20180617225556/http://www.sug.cat/",
-  "urls": {
-    "linkedin": "http://www.linkedin.com/groups/SUGCAT-2883719",
-    "twitter": "https://twitter.com/SUG_Cat",
-    "eventsUrl": "http://www.meetup.com/SUG-CAT/"
-  },
+  "urls": [
+    {
+      "url": "http://www.linkedin.com/groups/SUGCAT-2883719"
+    },
+    {
+      "url": "https://twitter.com/SUG_Cat"
+    },
+    {
+      "url": "http://www.meetup.com/SUG-CAT/"
+    }
+  ],
   "latLon": {
     "lat": null,
     "lon": null

@@ -18,10 +18,14 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/granadagdg/",
-  "urls": {
-    "twitter": "http://twitter.com/GDGgranada/",
-    "eventsUrl": "https://www.meetup.com/es-ES/granadagdg/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/GDGgranada/"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/granadagdg/"
+    }
+  ],
   "thumbnailUrl": "images/gdg-granada.webp",
   "latLon": {
     "lat": 37.1831938,

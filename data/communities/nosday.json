@@ -14,11 +14,18 @@
   "targetAudience": [],
   "contactInfo": "nosday23@gmail.com",
   "communityUrl": "https://nosday.com/",
-  "urls": {
-    "twitter": "https://twitter.com/nosday",
-    "eventosWiki": "https://eventos.wiki/organizations/nosday",
-    "ote": "https://eventos.wiki/organizations/nosday/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/nosday"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/nosday"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/nosday/events.json"
+    }
+  ],
   "thumbnailUrl": "images/nosday.webp",
   "latLon": {
     "lat": 42.8806228,

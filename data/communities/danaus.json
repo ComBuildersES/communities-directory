@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "info@danaus.io",
   "communityUrl": "https://www.danaus.io/",
-  "urls": {
-    "instagram": "https://www.instagram.com/makerdanaus",
-    "linkedin": "https://www.linkedin.com/company/danausmaker/"
-  },
+  "urls": [
+    {
+      "url": "https://www.instagram.com/makerdanaus"
+    },
+    {
+      "url": "https://www.linkedin.com/company/danausmaker/"
+    }
+  ],
   "thumbnailUrl": "images/danaus.webp",
   "latLon": {
     "lat": 41.387917,

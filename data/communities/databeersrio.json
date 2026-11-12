@@ -14,11 +14,18 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.linkedin.com/company/databeersrio/?originalSubdomain=es",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/databeersrio/",
-    "youtube": "https://www.youtube.com/@databeersrioja",
-    "web": "https://www.tumblr.com/databeersrio"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/databeersrio/"
+    },
+    {
+      "url": "https://www.youtube.com/@databeersrioja"
+    },
+    {
+      "kind": "web",
+      "url": "https://www.tumblr.com/databeersrio"
+    }
+  ],
   "thumbnailUrl": "images/databeersrio.webp",
   "latLon": {
     "lat": 42.46569,

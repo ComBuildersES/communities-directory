@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://aprocyt.github.io/zurracapoteconf//",
-  "urls": {
-    "twitter": "https://twitter.com/zurracapoteconf",
-    "eventsUrl": "https://www.meetup.com/es-ES/GDG-La-Rioja/events/265173706/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/zurracapoteconf"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/GDG-La-Rioja/events/265173706/"
+    }
+  ],
   "thumbnailUrl": "images/zurracapoteconf.webp",
   "latLon": {
     "lat": 42.46569,

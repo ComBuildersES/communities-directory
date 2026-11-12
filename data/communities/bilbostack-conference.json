@@ -14,14 +14,27 @@
   "targetAudience": [],
   "contactInfo": "info@bilbostack.com",
   "communityUrl": "https://bilbostack.com/",
-  "urls": {
-    "telegram": "https://t.me/bilbostack",
-    "bluesky": "https://bsky.app/profile/bilbostack.com",
-    "twitter": "https://x.com/bilbostack",
-    "github": "https://github.com/bilbostack",
-    "eventosWiki": "https://eventos.wiki/organizations/bilbostack",
-    "ote": "https://eventos.wiki/organizations/bilbostack/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/bilbostack"
+    },
+    {
+      "url": "https://bsky.app/profile/bilbostack.com"
+    },
+    {
+      "url": "https://x.com/bilbostack"
+    },
+    {
+      "url": "https://github.com/bilbostack"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/bilbostack"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/bilbostack/events.json"
+    }
+  ],
   "thumbnailUrl": "images/bilbostack-conference.webp",
   "latLon": {
     "lat": 43.2569608,

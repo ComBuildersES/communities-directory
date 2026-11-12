@@ -29,10 +29,15 @@
   ],
   "contactInfo": "support@datasaturdays.com",
   "communityUrl": "https://datasaturdays.com/",
-  "urls": {
-    "twitter": "https://x.com/datasaturdays",
-    "eventsUrl": "https://datasaturdays.com/#events"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/datasaturdays"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://datasaturdays.com/#events"
+    }
+  ],
   "thumbnailUrl": "images/data-saturdays.webp",
   "latLon": {
     "lat": null,

@@ -59,13 +59,24 @@
   ],
   "contactInfo": "info@barcelonajug.org",
   "communityUrl": "https://barcelonajug.org/",
-  "urls": {
-    "twitter": "https://twitter.com/BarcelonaJUG",
-    "linkedin": "https://www.linkedin.com/company/barcelonajug",
-    "youtube": "https://www.youtube.com/user/BarcelonaJUG",
-    "github": "https://github.com/barcelonajug",
-    "eventsUrl": "https://luma.com/barcelonajug"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/BarcelonaJUG"
+    },
+    {
+      "url": "https://www.linkedin.com/company/barcelonajug"
+    },
+    {
+      "url": "https://www.youtube.com/user/BarcelonaJUG"
+    },
+    {
+      "url": "https://github.com/barcelonajug"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://luma.com/barcelonajug"
+    }
+  ],
   "thumbnailUrl": "images/barcelona-java-user-group.webp",
   "latLon": {
     "lat": 41.387917,

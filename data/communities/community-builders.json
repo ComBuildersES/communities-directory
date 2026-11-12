@@ -24,18 +24,41 @@
   ],
   "contactInfo": "communitybuilders.es@gmail.com",
   "communityUrl": "https://linktr.ee/ComBuilders_ES",
-  "urls": {
-    "linkAggregator": "https://linktr.ee/ComBuilders_ES",
-    "web": "https://combuilderses.github.io/",
-    "eventsUrl": "https://calendar.google.com/calendar/u/0/r",
-    "mailingList": "https://groups.google.com/g/community-builders-es",
-    "github": "https://github.com/ComBuildersES",
-    "youtube": "https://www.youtube.com/@ComBuilders_ES",
-    "linkedin": "https://www.linkedin.com/company/combuilders-es/",
-    "twitter": "https://x.com/ComBuilders_ES",
-    "bluesky": "https://bsky.app/profile/communitybuilders.bsky.social",
-    "ote": "https://communitybuilders.dev/events/feed.json"
-  },
+  "urls": [
+    {
+      "url": "https://linktr.ee/ComBuilders_ES"
+    },
+    {
+      "kind": "web",
+      "url": "https://combuilderses.github.io/"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://calendar.google.com/calendar/u/0/r"
+    },
+    {
+      "url": "https://groups.google.com/g/community-builders-es"
+    },
+    {
+      "url": "https://github.com/ComBuildersES"
+    },
+    {
+      "url": "https://www.youtube.com/@ComBuilders_ES"
+    },
+    {
+      "url": "https://www.linkedin.com/company/combuilders-es/"
+    },
+    {
+      "url": "https://x.com/ComBuilders_ES"
+    },
+    {
+      "url": "https://bsky.app/profile/communitybuilders.bsky.social"
+    },
+    {
+      "kind": "ote",
+      "url": "https://communitybuilders.dev/events/feed.json"
+    }
+  ],
   "thumbnailUrl": "images/community-builders.webp",
   "latLon": {
     "lat": null,

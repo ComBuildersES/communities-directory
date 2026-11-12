@@ -14,14 +14,26 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://linktr.ee/grinteractiva",
-  "urls": {
-    "discord": "https://discord.gg/QMWd5uCHs6",
-    "twitter": "https://twitter.com/GRinteractiva",
-    "instagram": "https://www.instagram.com/grinteractiva/",
-    "linkedin": "https://www.linkedin.com/groups/12728039",
-    "eventsUrl": "https://www.meetup.com/gr-interactiva/events/306225253/?utm_medium=referral&utm_campaign=announceModal_savedevents_share_modal&utm_source=link",
-    "linkAggregator": "https://linktr.ee/grinteractiva"
-  },
+  "urls": [
+    {
+      "url": "https://discord.gg/QMWd5uCHs6"
+    },
+    {
+      "url": "https://twitter.com/GRinteractiva"
+    },
+    {
+      "url": "https://www.instagram.com/grinteractiva/"
+    },
+    {
+      "url": "https://www.linkedin.com/groups/12728039"
+    },
+    {
+      "url": "https://www.meetup.com/gr-interactiva/events/306225253/?utm_medium=referral&utm_campaign=announceModal_savedevents_share_modal&utm_source=link"
+    },
+    {
+      "url": "https://linktr.ee/grinteractiva"
+    }
+  ],
   "thumbnailUrl": "images/granada-interactiva.webp",
   "latLon": {
     "lat": 37.1831938,

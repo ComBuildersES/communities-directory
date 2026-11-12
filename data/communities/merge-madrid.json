@@ -16,13 +16,23 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.mmerge.io/",
-  "urls": {
-    "youtube": "https://www.youtube.com/channel/UC6O09aH9r4K8tw81zHx6Cgw/featured",
-    "instagram": "https://www.instagram.com/hispanichouse/",
-    "linkedin": "http://linkedin.com/company/merge-madrid",
-    "telegram": "https://t.me/mergemadrid",
-    "twitter": "https://x.com/mmerge_io"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/channel/UC6O09aH9r4K8tw81zHx6Cgw/featured"
+    },
+    {
+      "url": "https://www.instagram.com/hispanichouse/"
+    },
+    {
+      "url": "http://linkedin.com/company/merge-madrid"
+    },
+    {
+      "url": "https://t.me/mergemadrid"
+    },
+    {
+      "url": "https://x.com/mmerge_io"
+    }
+  ],
   "thumbnailUrl": "images/merge-madrid.webp",
   "latLon": {
     "lat": 40.4167047,

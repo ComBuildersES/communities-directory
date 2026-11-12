@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "singularity@plainconcepts.com",
   "communityUrl": "https://singularitytechday.com/",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/plainconcepts?originalSubdomain=es",
-    "youtube": "https://www.youtube.com/c/plainTV"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/plainconcepts?originalSubdomain=es"
+    },
+    {
+      "url": "https://www.youtube.com/c/plainTV"
+    }
+  ],
   "thumbnailUrl": "images/singularity-tech-day.webp",
   "latLon": {
     "lat": 41.387917,

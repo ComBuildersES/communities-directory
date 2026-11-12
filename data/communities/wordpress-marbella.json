@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/wordpress-meetup-marbella/",
-  "urls": {
-    "twitter": "http://twitter.com/wpmarbellaorg/",
-    "eventsUrl": "https://www.meetup.com/wordpress-meetup-marbella/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/wpmarbellaorg/"
+    },
+    {
+      "url": "https://www.meetup.com/wordpress-meetup-marbella/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-marbella.webp",
   "latLon": {
     "lat": 36.5118318,

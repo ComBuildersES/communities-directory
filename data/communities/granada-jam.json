@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://granadajam.com/",
-  "urls": {
-    "twitter": "https://twitter.com/GranadaGameJam",
-    "youtube": "https://www.youtube.com/channel/UCTqz9Db6koRqZmCn-O7EKoQ"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/GranadaGameJam"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCTqz9Db6koRqZmCn-O7EKoQ"
+    }
+  ],
   "thumbnailUrl": "images/granada-jam.webp",
   "latLon": {
     "lat": 37.1831938,

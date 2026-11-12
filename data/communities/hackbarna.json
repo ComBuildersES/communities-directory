@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://hackbarna.com",
-  "urls": {
-    "youtube": "https://www.youtube.com/@rivela_",
-    "eventsUrl": "https://www.meetup.com/es-ES/ai-engineers-barcelona/"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/@rivela_"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/ai-engineers-barcelona/"
+    }
+  ],
   "thumbnailUrl": "images/hackbarna.webp",
   "latLon": {
     "lat": 41.387917,

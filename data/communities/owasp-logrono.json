@@ -17,14 +17,27 @@
   "targetAudience": [],
   "contactInfo": "oscar.orellana.artigas@owasp.org",
   "communityUrl": "https://owasp.org/www-chapter-logrono/",
-  "urls": {
-    "youtube": "https://www.youtube.com/user/OWASPGLOBAL/videos",
-    "linkedin": "https://www.linkedin.com/company/owasp-logrono",
-    "mastodon": "https://infosec.exchange/@owasp_lo",
-    "bluesky": "https://bsky.app/profile/owasp-lo.bsky.social",
-    "github": "https://github.com/OWASP/",
-    "twitter": "https://twitter.com/owasp"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/user/OWASPGLOBAL/videos"
+    },
+    {
+      "url": "https://www.linkedin.com/company/owasp-logrono"
+    },
+    {
+      "kind": "mastodon",
+      "url": "https://infosec.exchange/@owasp_lo"
+    },
+    {
+      "url": "https://bsky.app/profile/owasp-lo.bsky.social"
+    },
+    {
+      "url": "https://github.com/OWASP/"
+    },
+    {
+      "url": "https://twitter.com/owasp"
+    }
+  ],
   "thumbnailUrl": "images/owasp-logrono.webp",
   "latLon": {
     "lat": 42.46569,

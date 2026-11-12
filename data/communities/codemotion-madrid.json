@@ -19,14 +19,28 @@
   "matchesAllAudience": true,
   "contactInfo": "Community+es@codemotion.it",
   "communityUrl": "https://conferences.codemotion.com/madrid/",
-  "urls": {
-    "instagram": "https://www.instagram.com/codemotion_esp/",
-    "linkedin": "https://www.linkedin.com/company/codemotion/?originalSubdomain=it",
-    "twitter": "https://twitter.com/CodemoMadrid",
-    "web": "https://conferences.codemotion.com/madrid/",
-    "youtube": "https://www.youtube.com/@Codemotionworld/playlists",
-    "ote": "https://eventos.wiki/organizations/codemotion/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://www.instagram.com/codemotion_esp/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/codemotion/?originalSubdomain=it"
+    },
+    {
+      "url": "https://twitter.com/CodemoMadrid"
+    },
+    {
+      "kind": "web",
+      "url": "https://conferences.codemotion.com/madrid/"
+    },
+    {
+      "url": "https://www.youtube.com/@Codemotionworld/playlists"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/codemotion/events.json"
+    }
+  ],
   "thumbnailUrl": "images/codemotion.webp",
   "latLon": {
     "lat": 40.4167047,

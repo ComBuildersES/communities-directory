@@ -17,13 +17,23 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://grinon.wordcamp.org/2024/",
-  "urls": {
-    "telegram": "https://t.me/WCGrinon",
-    "twitter": "https://twitter.com/WPGrinon",
-    "instagram": "https://www.instagram.com/wpgrinon/",
-    "youtube": "https://www.youtube.com/channel/UCuwhtNtXjCqAs9ty2pvDO2g",
-    "eventsUrl": "https://www.meetup.com/es-ES/Wordpress-Grinon/"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/WCGrinon"
+    },
+    {
+      "url": "https://twitter.com/WPGrinon"
+    },
+    {
+      "url": "https://www.instagram.com/wpgrinon/"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCuwhtNtXjCqAs9ty2pvDO2g"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/Wordpress-Grinon/"
+    }
+  ],
   "thumbnailUrl": "images/wordcamp-grinon.webp",
   "latLon": {
     "lat": 40.2142405,

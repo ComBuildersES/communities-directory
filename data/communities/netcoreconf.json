@@ -14,12 +14,21 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://netcoreconf.com/",
-  "urls": {
-    "twitter": "https://x.com/AdrianDiaz81",
-    "github": "https://github.com/AdrianDiaz81",
-    "eventosWiki": "https://eventos.wiki/organizations/netcoreconf",
-    "ote": "https://eventos.wiki/organizations/netcoreconf/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/AdrianDiaz81"
+    },
+    {
+      "url": "https://github.com/AdrianDiaz81"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/netcoreconf"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/netcoreconf/events.json"
+    }
+  ],
   "thumbnailUrl": "images/netcoreconf.webp",
   "latLon": {
     "lat": 40.4167047,

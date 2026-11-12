@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.linkedin.com/company/disitech",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/disitech"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/disitech"
+    }
+  ],
   "thumbnailUrl": "images/disitech.webp",
   "latLon": {
     "lat": 40.4167047,

@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.facebook.com/AgileGirls/",
-  "urls": {
-    "twitter": "https://x.com/agilegirls",
-    "facebook": "https://www.facebook.com/AgileGirls/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/agilegirls"
+    },
+    {
+      "url": "https://www.facebook.com/AgileGirls/"
+    }
+  ],
   "thumbnailUrl": "images/agilegirls.webp",
   "latLon": {
     "lat": null,

@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "info@springio.net",
   "communityUrl": "https://2025.springio.net/",
-  "urls": {
-    "twitter": "https://twitter.com/sergialmar",
-    "youtube": "https://www.youtube.com/@SpringIOConference"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/sergialmar"
+    },
+    {
+      "url": "https://www.youtube.com/@SpringIOConference"
+    }
+  ],
   "thumbnailUrl": "images/spring-io.webp",
   "latLon": {
     "lat": 41.387917,

@@ -14,15 +14,30 @@
   "targetAudience": [],
   "contactInfo": "info@hackathonlovers.com",
   "communityUrl": "https://hackathonlovers.com/",
-  "urls": {
-    "discord": "https://discord.gg/QRN2epZVDB",
-    "mastodon": "https://mastodon.social/@hackathonlovers",
-    "twitter": "http://twitter.com/HackathonLovers",
-    "linkedin": "http://linkedin.com/groups/Hackathon-Lovers-6510465",
-    "github": "http://github.com/hackathonlovers",
-    "youtube": "http://youtube.com/channel/UCRwSe7jK-y62BMvIiNBV1qw",
-    "eventsUrl": "https://www.meetup.com/Hackathon-Lovers/"
-  },
+  "urls": [
+    {
+      "url": "https://discord.gg/QRN2epZVDB"
+    },
+    {
+      "kind": "mastodon",
+      "url": "https://mastodon.social/@hackathonlovers"
+    },
+    {
+      "url": "http://twitter.com/HackathonLovers"
+    },
+    {
+      "url": "http://linkedin.com/groups/Hackathon-Lovers-6510465"
+    },
+    {
+      "url": "http://github.com/hackathonlovers"
+    },
+    {
+      "url": "http://youtube.com/channel/UCRwSe7jK-y62BMvIiNBV1qw"
+    },
+    {
+      "url": "https://www.meetup.com/Hackathon-Lovers/"
+    }
+  ],
   "thumbnailUrl": "images/hackathonlovers.webp",
   "latLon": {
     "lat": 40.4167047,

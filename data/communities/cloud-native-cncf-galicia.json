@@ -15,14 +15,26 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://community.cncf.io/cloud-native-galicia/",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/cloud-native-galicia",
-    "twitter": "https://twitter.com/cloudnativegal",
-    "instagram": "https://www.instagram.com/humans.of.cloudnative/",
-    "youtube": "https://www.youtube.com/c/cloudnativefdn",
-    "github": "https://github.com/cncf",
-    "eventsUrl": "https://community.cncf.io/cloud-native-galicia/"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/cloud-native-galicia"
+    },
+    {
+      "url": "https://twitter.com/cloudnativegal"
+    },
+    {
+      "url": "https://www.instagram.com/humans.of.cloudnative/"
+    },
+    {
+      "url": "https://www.youtube.com/c/cloudnativefdn"
+    },
+    {
+      "url": "https://github.com/cncf"
+    },
+    {
+      "url": "https://community.cncf.io/cloud-native-galicia/"
+    }
+  ],
   "thumbnailUrl": "images/cloud-native-cncf-galicia.webp",
   "latLon": {
     "lat": 43.3707332,

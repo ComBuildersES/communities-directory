@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://hackersweek.es/",
-  "urls": {
-    "youtube": "https://youtu.be/UxNUhgNQrYQ"
-  },
+  "urls": [
+    {
+      "url": "https://youtu.be/UxNUhgNQrYQ"
+    }
+  ],
   "thumbnailUrl": "images/hackers-week.webp",
   "latLon": {
     "lat": 36.7196292,

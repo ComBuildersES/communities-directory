@@ -29,9 +29,11 @@
   ],
   "contactInfo": "info@aibirras.org",
   "communityUrl": "https://aibirras.org/",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/aibirras/"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/aibirras/"
+    }
+  ],
   "thumbnailUrl": "images/aibirras.webp",
   "latLon": {
     "lat": 37.1831938,

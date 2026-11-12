@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/GDG-Marbella/",
-  "urls": {
-    "twitter": "http://twitter.com/GDGMarbella/",
-    "eventsUrl": "https://www.meetup.com/GDG-Marbella/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/GDGMarbella/"
+    },
+    {
+      "url": "https://www.meetup.com/GDG-Marbella/"
+    }
+  ],
   "thumbnailUrl": "images/gdg-marbella.webp",
   "latLon": {
     "lat": 36.5118318,

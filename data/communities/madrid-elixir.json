@@ -16,11 +16,17 @@
   "targetAudience": [],
   "contactInfo": "hec@hecperez.com",
   "communityUrl": "https://www.meetup.com/es-ES/madrid-elixir/",
-  "urls": {
-    "twitter": "https://twitter.com/MadElixir",
-    "youtube": "https://www.youtube.com/@ElixirMadrid",
-    "eventsUrl": "https://www.meetup.com/es-ES/madrid-elixir/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/MadElixir"
+    },
+    {
+      "url": "https://www.youtube.com/@ElixirMadrid"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/madrid-elixir/"
+    }
+  ],
   "thumbnailUrl": "images/madrid-elixir.webp",
   "latLon": {
     "lat": 40.4167047,

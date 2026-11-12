@@ -14,10 +14,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "http://agilevalencia.com/",
-  "urls": {
-    "twitter": "https://x.com/AgileValencia",
-    "web": "http://web.archive.org/web/20250108134602/https://agilevalencia.com/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/AgileValencia"
+    },
+    {
+      "kind": "web",
+      "url": "http://web.archive.org/web/20250108134602/https://agilevalencia.com/"
+    }
+  ],
   "thumbnailUrl": "images/agilevalencia.webp",
   "latLon": {
     "lat": null,

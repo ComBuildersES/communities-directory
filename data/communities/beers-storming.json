@@ -14,10 +14,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://beersstorming.com/",
-  "urls": {
-    "web": "https://beersstorming.com/",
-    "linkedin": "https://www.linkedin.com/company/beersstorming/"
-  },
+  "urls": [
+    {
+      "kind": "web",
+      "url": "https://beersstorming.com/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/beersstorming/"
+    }
+  ],
   "thumbnailUrl": "images/beers-storming.webp",
   "latLon": {
     "lat": 40.4167047,

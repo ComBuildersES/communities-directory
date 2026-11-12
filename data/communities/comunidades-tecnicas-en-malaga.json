@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://malagatechcomms.github.io/",
-  "urls": {
-    "twitter": "https://twitter.com/Beelzenef_"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/Beelzenef_"
+    }
+  ],
   "thumbnailUrl": "images/calendario-de-comunidades-tecnicas-de-malaga.webp",
   "latLon": {
     "lat": 36.7196292,

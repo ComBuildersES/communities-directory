@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/malaga-indie-hackers/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/malaga-indie-hackers/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/malaga-indie-hackers/"
+    }
+  ],
   "thumbnailUrl": "images/malaga-indie-hackers.webp",
   "latLon": {
     "lat": 36.7196292,

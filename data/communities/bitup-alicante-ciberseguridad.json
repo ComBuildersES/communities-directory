@@ -14,12 +14,21 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://bitupalicante.com/",
-  "urls": {
-    "twitter": "https://x.com/bitupalicante",
-    "web": "https://bitupalicante.com/",
-    "telegram": "https://t.me/bitupalicante",
-    "youtube": "https://www.youtube.com/bitupalicante"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/bitupalicante"
+    },
+    {
+      "kind": "web",
+      "url": "https://bitupalicante.com/"
+    },
+    {
+      "url": "https://t.me/bitupalicante"
+    },
+    {
+      "url": "https://www.youtube.com/bitupalicante"
+    }
+  ],
   "thumbnailUrl": "images/bitup-alicante-ciberseguridad.webp",
   "latLon": {
     "lat": 38.34521,

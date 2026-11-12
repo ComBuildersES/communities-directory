@@ -18,11 +18,17 @@
   "targetAudience": [],
   "contactInfo": "valencia@es.python.org",
   "communityUrl": "https://python-valencia.es/",
-  "urls": {
-    "twitter": "https://x.com/python_vlc",
-    "telegram": "https://t.me/python_vlc",
-    "eventsUrl": "https://www.meetup.com/es-es/python-valencia-meetup/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/python_vlc"
+    },
+    {
+      "url": "https://t.me/python_vlc"
+    },
+    {
+      "url": "https://www.meetup.com/es-es/python-valencia-meetup/"
+    }
+  ],
   "thumbnailUrl": "images/python-zaragoza.webp",
   "latLon": {
     "lat": 39.4702393,

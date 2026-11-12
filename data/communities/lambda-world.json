@@ -28,12 +28,21 @@
   ],
   "contactInfo": "lambda@yayyay.events",
   "communityUrl": "https://www.lambda.world/",
-  "urls": {
-    "youtube": "https://www.youtube.com/channel/UCEBcDOjv-bhAmLavY71RMHA",
-    "linkedin": "https://www.linkedin.com/company/lambda-world",
-    "twitter": "https://x.com/Lambda_World",
-    "web": "https://www.lambda.world/"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/channel/UCEBcDOjv-bhAmLavY71RMHA"
+    },
+    {
+      "url": "https://www.linkedin.com/company/lambda-world"
+    },
+    {
+      "url": "https://x.com/Lambda_World"
+    },
+    {
+      "kind": "web",
+      "url": "https://www.lambda.world/"
+    }
+  ],
   "thumbnailUrl": "images/lambda-world.webp",
   "latLon": {
     "lat": 36.5297453,

@@ -17,10 +17,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/wordpressbcn/",
-  "urls": {
-    "twitter": "http://twitter.com/WPBarcelona/",
-    "eventsUrl": "https://www.meetup.com/wordpressbcn/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/WPBarcelona/"
+    },
+    {
+      "url": "https://www.meetup.com/wordpressbcn/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-barcelona.webp",
   "latLon": {
     "lat": 41.387917,

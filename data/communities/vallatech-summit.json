@@ -19,9 +19,12 @@
   "targetAudience": [],
   "contactInfo": "valladolidgdg@gmail.com",
   "communityUrl": "https://vallatechsummit.com/",
-  "urls": {
-    "web": "https://vallatechsummit.com/"
-  },
+  "urls": [
+    {
+      "kind": "web",
+      "url": "https://vallatechsummit.com/"
+    }
+  ],
   "thumbnailUrl": "images/vallatech-summit.webp",
   "latLon": {
     "lat": 41.6523,

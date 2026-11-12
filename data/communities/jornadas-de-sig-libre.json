@@ -14,11 +14,17 @@
   "targetAudience": [],
   "contactInfo": "infosiglibre@udg.edu",
   "communityUrl": "https://www.jornadassiglibre.org/",
-  "urls": {
-    "youtube": "https://www.youtube.com/channel/UCRJxIASneZaMxT2HPoyMLsA",
-    "linkedin": "https://es.linkedin.com/company/sigte-udg",
-    "instagram": "https://www.instagram.com/sigteudg/"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/channel/UCRJxIASneZaMxT2HPoyMLsA"
+    },
+    {
+      "url": "https://es.linkedin.com/company/sigte-udg"
+    },
+    {
+      "url": "https://www.instagram.com/sigteudg/"
+    }
+  ],
   "thumbnailUrl": "images/jornadas-de-sig-libre.webp",
   "latLon": {
     "lat": 42.128030322674,

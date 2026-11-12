@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/riojadotnet/",
-  "urls": {
-    "twitter": "http://twitter.com/RiojaDotNet/",
-    "eventsUrl": "https://www.meetup.com/riojadotnet/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/RiojaDotNet/"
+    },
+    {
+      "url": "https://www.meetup.com/riojadotnet/"
+    }
+  ],
   "thumbnailUrl": "images/riojadotnet.webp",
   "latLon": {
     "lat": 42.46569,

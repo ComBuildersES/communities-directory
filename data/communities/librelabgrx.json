@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "info@librelabgrx.cc",
   "communityUrl": "https://librelabgrx.cc/",
-  "urls": {
-    "telegram": "https://t.me/LibreLabGRX",
-    "twitter": "https://twitter.com/LibreLabGRX/"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/LibreLabGRX"
+    },
+    {
+      "url": "https://twitter.com/LibreLabGRX/"
+    }
+  ],
   "thumbnailUrl": "images/librelabgrx.webp",
   "latLon": {
     "lat": 37.1831938,

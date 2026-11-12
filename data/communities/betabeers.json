@@ -14,12 +14,20 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://betabeers.com/",
-  "urls": {
-    "instagram": "https://instagram.com/betabeers_oficial",
-    "twitter": "https://twitter.com/betabeers",
-    "youtube": "https://www.youtube.com/user/betabeers",
-    "linkedin": "https://www.linkedin.com/company/betabeers"
-  },
+  "urls": [
+    {
+      "url": "https://instagram.com/betabeers_oficial"
+    },
+    {
+      "url": "https://twitter.com/betabeers"
+    },
+    {
+      "url": "https://www.youtube.com/user/betabeers"
+    },
+    {
+      "url": "https://www.linkedin.com/company/betabeers"
+    }
+  ],
   "thumbnailUrl": "images/betabeers.webp",
   "latLon": {
     "lat": null,

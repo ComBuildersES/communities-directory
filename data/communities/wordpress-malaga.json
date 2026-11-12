@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/wordpress-malaga/",
-  "urls": {
-    "twitter": "https://twitter.com/wpmalaga/",
-    "eventsUrl": "https://www.meetup.com/es-ES/wordpress-malaga/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/wpmalaga/"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/wordpress-malaga/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-malaga.webp",
   "latLon": {
     "lat": 36.7196292,

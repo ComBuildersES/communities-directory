@@ -16,11 +16,17 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://startupole.eu/",
-  "urls": {
-    "twitter": "https://x.com/Startup_OLE",
-    "instagram": "https://instagram.com/startupoleaccelerator",
-    "youtube": "https://youtube.com/c/StartupOLE"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/Startup_OLE"
+    },
+    {
+      "url": "https://instagram.com/startupoleaccelerator"
+    },
+    {
+      "url": "https://youtube.com/c/StartupOLE"
+    }
+  ],
   "thumbnailUrl": "images/startup-ole.webp",
   "latLon": {
     "lat": 40.966674,

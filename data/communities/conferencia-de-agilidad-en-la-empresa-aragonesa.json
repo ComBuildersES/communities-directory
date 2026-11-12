@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "congreso.aragon.agilidad@gmail.com",
   "communityUrl": "https://caearagon.org/#conferencia",
-  "urls": {
-    "twitter": "http://twitter.com/iagilidad",
-    "youtube": "https://www.youtube.com/channel/UCZkVhc0TGy_mgFhIkel7Khw"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/iagilidad"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCZkVhc0TGy_mgFhIkel7Khw"
+    }
+  ],
   "thumbnailUrl": "images/conferencia-de-agilidad-en-la-empresa-aragonesa.webp",
   "latLon": {
     "lat": 41.656837,

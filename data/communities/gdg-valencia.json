@@ -17,11 +17,17 @@
   "targetAudience": [],
   "contactInfo": "hola@gdgvalencia.es ",
   "communityUrl": "https://gdg.community.dev/gdg-valencia/",
-  "urls": {
-    "twitter": "https://www.twitter.com/gdgvalencia",
-    "linkedin": "https://www.linkedin.com/company/gdg-valencia",
-    "eventsUrl": "https://www.meetup.com/es-ES/flutter-valencia/?eventorigin=find_page&recsource=group_search&recid=6be59e59-c0a6-4ef8-a919-ca393d3f51b5&searchid=79e9fe5c-443d-4964-a180-d8781432835d"
-  },
+  "urls": [
+    {
+      "url": "https://www.twitter.com/gdgvalencia"
+    },
+    {
+      "url": "https://www.linkedin.com/company/gdg-valencia"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/flutter-valencia/?eventorigin=find_page&recsource=group_search&recid=6be59e59-c0a6-4ef8-a919-ca393d3f51b5&searchid=79e9fe5c-443d-4964-a180-d8781432835d"
+    }
+  ],
   "thumbnailUrl": "images/gdg-valencia.webp",
   "latLon": {
     "lat": 39.4702393,

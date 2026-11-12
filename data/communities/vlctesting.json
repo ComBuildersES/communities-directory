@@ -14,12 +14,20 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://vlctesting.es/",
-  "urls": {
-    "instagram": "https://www.instagram.com/iti.tic/",
-    "twitter": "https://x.com/ITI_TIC",
-    "linkedin": "https://www.linkedin.com/company/iti-instituto-tecnologico-de-informatica",
-    "youtube": "https://www.youtube.com/user/VIEWITIVIDEOS/featured"
-  },
+  "urls": [
+    {
+      "url": "https://www.instagram.com/iti.tic/"
+    },
+    {
+      "url": "https://x.com/ITI_TIC"
+    },
+    {
+      "url": "https://www.linkedin.com/company/iti-instituto-tecnologico-de-informatica"
+    },
+    {
+      "url": "https://www.youtube.com/user/VIEWITIVIDEOS/featured"
+    }
+  ],
   "thumbnailUrl": "images/vlctesting.webp",
   "latLon": {
     "lat": 39.4697065,

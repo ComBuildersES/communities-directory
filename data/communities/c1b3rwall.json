@@ -14,12 +14,20 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://c1b3rwall.policia.es/",
-  "urls": {
-    "youtube": "https://www.youtube.com/c/c1b3rwall",
-    "twitter": "https://twitter.com/c1b3rwall",
-    "linkedin": "https://es.linkedin.com/company/c1b3rwall",
-    "instagram": "https://www.instagram.com/explore/tags/ciberwall/?hl=es"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/c/c1b3rwall"
+    },
+    {
+      "url": "https://twitter.com/c1b3rwall"
+    },
+    {
+      "url": "https://es.linkedin.com/company/c1b3rwall"
+    },
+    {
+      "url": "https://www.instagram.com/explore/tags/ciberwall/?hl=es"
+    }
+  ],
   "thumbnailUrl": "images/c1b3rwall.webp",
   "latLon": {
     "lat": 40.6563881,

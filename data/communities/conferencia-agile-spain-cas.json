@@ -16,11 +16,17 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://cas.agile-spain.org/",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/agile-spain/?viewAsMember=true",
-    "twitter": "https://twitter.com/agilespain",
-    "youtube": "https://www.youtube.com/@AgileSpaineventos"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/agile-spain/?viewAsMember=true"
+    },
+    {
+      "url": "https://twitter.com/agilespain"
+    },
+    {
+      "url": "https://www.youtube.com/@AgileSpaineventos"
+    }
+  ],
   "thumbnailUrl": "images/conferencia-agile-spain-cas.webp",
   "latLon": {
     "lat": null,

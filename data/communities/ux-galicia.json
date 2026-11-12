@@ -14,10 +14,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.uxgalicia.com/",
-  "urls": {
-    "twitter": "https://x.com/uxgalicia",
-    "web": "https://www.uxgalicia.com/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/uxgalicia"
+    },
+    {
+      "kind": "web",
+      "url": "https://www.uxgalicia.com/"
+    }
+  ],
   "latLon": {
     "lat": 42.2313601,
     "lon": -8.7124252

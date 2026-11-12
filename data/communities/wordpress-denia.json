@@ -19,13 +19,23 @@
   "targetAudience": [],
   "contactInfo": "meetup@wpdenia.com",
   "communityUrl": "https://wpdenia.com/",
-  "urls": {
-    "twitter": "https://twitter.com/WPDenia",
-    "instagram": "https://www.instagram.com/wordpress_denia/",
-    "telegram": "https://t.me/joinchat/MIEFyRAkLjYMayM-D1mAIA",
-    "youtube": "https://www.youtube.com/channel/UCcjR_iC6F0cFDKIYbRxAg1A",
-    "eventsUrl": "https://www.meetup.com/es/Wordpress-Denia/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/WPDenia"
+    },
+    {
+      "url": "https://www.instagram.com/wordpress_denia/"
+    },
+    {
+      "url": "https://t.me/joinchat/MIEFyRAkLjYMayM-D1mAIA"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCcjR_iC6F0cFDKIYbRxAg1A"
+    },
+    {
+      "url": "https://www.meetup.com/es/Wordpress-Denia/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-denia.webp",
   "latLon": {
     "lat": 38.8403996,

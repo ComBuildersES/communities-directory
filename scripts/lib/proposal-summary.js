@@ -1,5 +1,6 @@
 /* eslint-env node */
 import fs from 'fs';
+import { resolveUrlEntry, toUrlEntries } from '../../src/lib/communityUrls.js';
 
 /**
  * Ficha legible de una propuesta de comunidad para el cuerpo de la PR automática
@@ -111,13 +112,19 @@ function formatValue(def, value, catalogs) {
 }
 
 /**
- * Los enlaces se listan aparte de la tabla: `urls` sólo trae las claves con valor y
- * meterlas en filas haría la tabla ilegible en cuanto una comunidad tenga ocho canales.
+ * Los enlaces se listan aparte de la tabla: meterlos en filas la haría ilegible en cuanto una
+ * comunidad tenga ocho canales.
+ *
+ * Se nombra cada entrada por lo que de verdad la identifica: su etiqueta propia si la trae
+ * (el "DevFest Zaragoza" de un GDG que ya tiene su Meetup), el `kind` si no, y el dominio
+ * cuando tampoco hay kind. Quien revisa la propuesta tiene que poder leer qué es cada enlace.
  */
-function formatUrlsList(urls = {}) {
-  return Object.entries(urls)
-    .filter(([, value]) => typeof value === 'string' && value.trim() !== '')
-    .map(([key, value]) => `- **${key}**: ${value.trim()}`);
+function formatUrlsList(urls) {
+  return toUrlEntries(urls).map((entry) => {
+    const { label, kind, hasCustomLabel } = resolveUrlEntry(entry);
+    const name = hasCustomLabel ? `${label}${kind ? ` (${kind})` : ''}` : kind ?? label;
+    return `- **${name}**: ${entry.url}`;
+  });
 }
 
 function formatThumbnail(thumbnailUrl) {
@@ -158,14 +165,71 @@ function buildDiffRows(payload, existing, catalogs) {
     ].join(' '));
 }
 
+/**
+ * El diff de canales se compara **por URL**, no por clave: con pares (#478) un mismo `kind`
+ * puede aparecer varias veces, así que casar por clave emparejaría el Meetup de un GDG con su
+ * encuentro anual y los mostraría como un cambio que nadie hizo.
+ *
+ * Pero el caso corriente es "el LinkedIn ha cambiado de dirección", y eso tiene que leerse en
+ * **una** fila con antes y ahora, no como una baja y un alta sueltas. Así que cuando de un
+ * `kind` sale exactamente una URL y entra exactamente una, se emparejan. Con dos o más, no se
+ * adivina: se listan por separado, porque emparejarlas al azar es inventarse qué cambió.
+ */
 function buildUrlDiffRows(payload, existing) {
-  const payloadUrls = payload.urls ?? {};
-  const existingUrls = existing.urls ?? {};
-  const keys = [...new Set([...Object.keys(existingUrls), ...Object.keys(payloadUrls)])].sort();
+  const describe = (entry) => {
+    const { label, kind, hasCustomLabel } = resolveUrlEntry(entry);
+    return hasCustomLabel ? `${label}${kind ? ` (${kind})` : ''}` : kind ?? label;
+  };
+  const kindOf = (entry) => resolveUrlEntry(entry).kind ?? describe(entry);
 
-  return keys
-    .filter((key) => serializeForComparison(existingUrls[key]) !== serializeForComparison(payloadUrls[key]))
-    .map((key) => `| urls.${key} | ${escapeTableCell(existingUrls[key] || '—')} | ${escapeTableCell(payloadUrls[key] || '—')} |`);
+  const before = toUrlEntries(existing.urls);
+  const after = toUrlEntries(payload.urls);
+  const beforeUrls = new Set(before.map((entry) => entry.url));
+  const afterUrls = new Set(after.map((entry) => entry.url));
+
+  const gone = before.filter((entry) => !afterUrls.has(entry.url));
+  const added = after.filter((entry) => !beforeUrls.has(entry.url));
+  const changed = after.filter(
+    (entry) =>
+      beforeUrls.has(entry.url) &&
+      serializeForComparison(before.find((old) => old.url === entry.url)) !==
+        serializeForComparison(entry),
+  );
+
+  const rows = [];
+  const pairedAway = new Set();
+
+  for (const entry of gone) {
+    const kind = kindOf(entry);
+    const sameKindGone = gone.filter((other) => kindOf(other) === kind);
+    const sameKindAdded = added.filter((other) => kindOf(other) === kind);
+
+    if (sameKindGone.length === 1 && sameKindAdded.length === 1) {
+      const replacement = sameKindAdded[0];
+      pairedAway.add(replacement);
+      rows.push(
+        `| urls.${kind} | ${escapeTableCell(entry.url)} | ${escapeTableCell(replacement.url)} |`,
+      );
+      continue;
+    }
+
+    rows.push(`| urls.${kind} | ${escapeTableCell(entry.url)} | — |`);
+  }
+
+  for (const entry of added) {
+    if (pairedAway.has(entry)) continue;
+    rows.push(`| urls.${kindOf(entry)} | — | ${escapeTableCell(entry.url)} |`);
+  }
+
+  for (const entry of changed) {
+    // Misma URL, otra etiqueta o otro kind: sigue siendo un cambio que hay que revisar.
+    const old = before.find((other) => other.url === entry.url);
+    rows.push(
+      `| urls.${kindOf(entry)} | ${escapeTableCell(describe(old))} | ${escapeTableCell(describe(entry))} |`,
+    );
+  }
+
+  return rows;
 }
 
 export function buildProposalSummary({ mode, payload, existing = null, catalogs }) {

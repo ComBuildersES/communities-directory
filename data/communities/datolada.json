@@ -35,12 +35,20 @@
   ],
   "contactInfo": "info@datola.es",
   "communityUrl": "https://eventos.datola.es/",
-  "urls": {
-    "instagram": "https://www.instagram.com/p/DKRUn_CtaBH/?igsh=MXR1dXU5N21iY2tvYQ==",
-    "linkedin": "https://www.linkedin.com/company/datola/",
-    "twitter": "https://x.com/datolaes",
-    "bluesky": "https://bsky.app/profile/datola.es"
-  },
+  "urls": [
+    {
+      "url": "https://www.instagram.com/p/DKRUn_CtaBH/?igsh=MXR1dXU5N21iY2tvYQ=="
+    },
+    {
+      "url": "https://www.linkedin.com/company/datola/"
+    },
+    {
+      "url": "https://x.com/datolaes"
+    },
+    {
+      "url": "https://bsky.app/profile/datola.es"
+    }
+  ],
   "thumbnailUrl": "images/datolada.webp",
   "latLon": {
     "lat": 43.3707332,

@@ -45,15 +45,31 @@
   ],
   "contactInfo": "asturiascrafters@gmail.com",
   "communityUrl": "https://saraos.tech/@asturias-software-crafters",
-  "urls": {
-    "twitter": "https://x.com/asturiaswcraft",
-    "bluesky": "https://bsky.app/profile/asturiascrafters.com",
-    "linkedin": "https://linkedin.com/company/asturiaswcraft",
-    "eventsUrl": "https://saraos.tech/@asturias-software-crafters",
-    "telegram": "https://t.me/+F_0R2L0OowljMGY0",
-    "eventosWiki": "https://eventos.wiki/organizations/asturias-software-crafters",
-    "ote": "https://eventos.wiki/organizations/asturias-software-crafters/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/asturiaswcraft"
+    },
+    {
+      "url": "https://bsky.app/profile/asturiascrafters.com"
+    },
+    {
+      "url": "https://linkedin.com/company/asturiaswcraft"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://saraos.tech/@asturias-software-crafters"
+    },
+    {
+      "url": "https://t.me/+F_0R2L0OowljMGY0"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/asturias-software-crafters"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/asturias-software-crafters/events.json"
+    }
+  ],
   "thumbnailUrl": "images/asturias-software-crafters.webp",
   "latLon": {
     "lat": 43.520243144013,

@@ -14,10 +14,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "http://web.archive.org/web/20230929223744/https://www.socracan.com/",
-  "urls": {
-    "twitter": "https://x.com/socracan",
-    "web": "http://web.archive.org/web/20230929223744/https://www.socracan.com/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/socracan"
+    },
+    {
+      "kind": "web",
+      "url": "http://web.archive.org/web/20230929223744/https://www.socracan.com/"
+    }
+  ],
   "thumbnailUrl": "images/socracan-socrates-canaries.webp",
   "latLon": {
     "lat": 28,

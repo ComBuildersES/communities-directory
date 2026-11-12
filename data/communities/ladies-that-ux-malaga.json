@@ -20,9 +20,12 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://luma.com/j7v1t5g5",
-  "urls": {
-    "eventsUrl": "https://luma.com/j7v1t5g5"
-  },
+  "urls": [
+    {
+      "kind": "eventsUrl",
+      "url": "https://luma.com/j7v1t5g5"
+    }
+  ],
   "thumbnailUrl": "images/ladies-that-ux-malaga.webp",
   "latLon": {
     "lat": 36.7196292,

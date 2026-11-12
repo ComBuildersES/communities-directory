@@ -18,9 +18,12 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://clubsintetico.org/",
-  "urls": {
-    "web": "https://clubsintetico.org/"
-  },
+  "urls": [
+    {
+      "kind": "web",
+      "url": "https://clubsintetico.org/"
+    }
+  ],
   "thumbnailUrl": "images/club-sintetico.webp",
   "latLon": {
     "lat": 40.4167047,

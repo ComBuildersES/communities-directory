@@ -14,15 +14,30 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://linktr.ee/asturcontech",
-  "urls": {
-    "instagram": "https://www.instagram.com/asturcontech/",
-    "twitter": "https://twitter.com/AsturCONtech",
-    "telegram": "https://t.me/+wRE1sHSRAhdjZjc0",
-    "youtube": "https://www.youtube.com/@asturcontech?sub_confirmation=1",
-    "linkAggregator": "https://linktr.ee/asturcontech",
-    "eventosWiki": "https://eventos.wiki/organizations/asturcontech",
-    "ote": "https://eventos.wiki/organizations/asturcontech/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://www.instagram.com/asturcontech/"
+    },
+    {
+      "url": "https://twitter.com/AsturCONtech"
+    },
+    {
+      "url": "https://t.me/+wRE1sHSRAhdjZjc0"
+    },
+    {
+      "url": "https://www.youtube.com/@asturcontech?sub_confirmation=1"
+    },
+    {
+      "url": "https://linktr.ee/asturcontech"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/asturcontech"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/asturcontech/events.json"
+    }
+  ],
   "thumbnailUrl": "images/asturcontech.webp",
   "latLon": {
     "lat": 43.3602825,

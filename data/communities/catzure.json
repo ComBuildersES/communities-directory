@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/CATzure/",
-  "urls": {
-    "twitter": "https://twitter.com/CAT_zure",
-    "eventsUrl": "https://www.meetup.com/es-ES/CATzure/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/CAT_zure"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/CATzure/"
+    }
+  ],
   "thumbnailUrl": "images/catzure.webp",
   "latLon": {
     "lat": 41.387917,

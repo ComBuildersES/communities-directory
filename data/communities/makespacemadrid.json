@@ -14,12 +14,20 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://makespacemadrid.org/",
-  "urls": {
-    "telegram": "https://t.me/makespacemadrid",
-    "instagram": "https://www.instagram.com/makespacemadrid/",
-    "youtube": "https://youtu.be/94_uaafCR0w",
-    "eventsUrl": "https://www.meetup.com/es-ES/makespace-madrid/"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/makespacemadrid"
+    },
+    {
+      "url": "https://www.instagram.com/makespacemadrid/"
+    },
+    {
+      "url": "https://youtu.be/94_uaafCR0w"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/makespace-madrid/"
+    }
+  ],
   "thumbnailUrl": "images/makespacemadrid.webp",
   "latLon": {
     "lat": 40.4167047,

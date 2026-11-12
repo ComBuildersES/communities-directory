@@ -14,11 +14,17 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.miduconf.com/",
-  "urls": {
-    "discord": "https://discord.gg/midudev",
-    "twitter": "https://x.com/midudev",
-    "instagram": "https://www.instagram.com/midu.dev"
-  },
+  "urls": [
+    {
+      "url": "https://discord.gg/midudev"
+    },
+    {
+      "url": "https://x.com/midudev"
+    },
+    {
+      "url": "https://www.instagram.com/midu.dev"
+    }
+  ],
   "thumbnailUrl": "images/miduconf.webp",
   "latLon": {
     "lat": null,

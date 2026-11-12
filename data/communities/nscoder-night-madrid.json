@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/nscoder-night-madrid/",
-  "urls": {
-    "twitter": "http://twitter.com/nscoder_mad/",
-    "eventsUrl": "https://www.meetup.com/nscoder-night-madrid/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/nscoder_mad/"
+    },
+    {
+      "url": "https://www.meetup.com/nscoder-night-madrid/"
+    }
+  ],
   "thumbnailUrl": "images/nscoder-night-madrid.webp",
   "latLon": {
     "lat": 40.4167047,

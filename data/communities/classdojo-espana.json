@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/classdojo-espana/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/classdojo-espana/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/classdojo-espana/"
+    }
+  ],
   "thumbnailUrl": "images/classdojo-espana.webp",
   "latLon": {
     "lat": 37.2571454,

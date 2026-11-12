@@ -14,10 +14,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.iniciador.com/es/bilbao934",
-  "urls": {
-    "twitter": "https://x.com/iniciador_BIL",
-    "web": "https://www.iniciador.com/es/bilbao934"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/iniciador_BIL"
+    },
+    {
+      "kind": "web",
+      "url": "https://www.iniciador.com/es/bilbao934"
+    }
+  ],
   "latLon": {
     "lat": 43.2569608,
     "lon": -2.9234602

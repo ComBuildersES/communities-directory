@@ -18,12 +18,20 @@
   "targetAudience": [],
   "contactInfo": "hub@akasha.barcelona",
   "communityUrl": "https://akasha.barcelona/",
-  "urls": {
-    "telegram": "https://t.me/+BimXDWstf680Nzk8",
-    "instagram": "https://www.instagram.com/akasha.barcelona/",
-    "twitter": "https://twitter.com/AKASHAworldBCN",
-    "eventsUrl": "https://www.meetup.com/akashabarcelona/"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/+BimXDWstf680Nzk8"
+    },
+    {
+      "url": "https://www.instagram.com/akasha.barcelona/"
+    },
+    {
+      "url": "https://twitter.com/AKASHAworldBCN"
+    },
+    {
+      "url": "https://www.meetup.com/akashabarcelona/"
+    }
+  ],
   "thumbnailUrl": "images/akasha-hub.webp",
   "latLon": {
     "lat": 41.387917,

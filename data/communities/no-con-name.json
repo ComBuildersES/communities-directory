@@ -41,15 +41,32 @@
   ],
   "contactInfo": "https://www.noconname.org/contact",
   "communityUrl": "https://www.noconname.org/",
-  "urls": {
-    "twitter": "https://x.com/noconname",
-    "web": "https://www.noconname.org/",
-    "telegram": "https://t.me/noconname",
-    "mailingList": "https://listas.noconname.org/listinfo/noconname",
-    "linkedin": "https://www.linkedin.com/company/noconname/",
-    "github": "https://github.com/noconname",
-    "mastodon": "https://mastodon.social/@noconname"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/noconname"
+    },
+    {
+      "kind": "web",
+      "url": "https://www.noconname.org/"
+    },
+    {
+      "url": "https://t.me/noconname"
+    },
+    {
+      "kind": "mailingList",
+      "url": "https://listas.noconname.org/listinfo/noconname"
+    },
+    {
+      "url": "https://www.linkedin.com/company/noconname/"
+    },
+    {
+      "url": "https://github.com/noconname"
+    },
+    {
+      "kind": "mastodon",
+      "url": "https://mastodon.social/@noconname"
+    }
+  ],
   "thumbnailUrl": "images/no-con-name.webp",
   "latLon": {
     "lat": 39.5695818,

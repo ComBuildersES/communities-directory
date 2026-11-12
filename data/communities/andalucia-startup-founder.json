@@ -18,10 +18,14 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/andalucia-startup-founder/",
-  "urls": {
-    "twitter": "https://twitter.com/founding",
-    "eventsUrl": "https://www.meetup.com/andalucia-startup-founder/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/founding"
+    },
+    {
+      "url": "https://www.meetup.com/andalucia-startup-founder/"
+    }
+  ],
   "thumbnailUrl": "images/andalucia-startup-founder.webp",
   "latLon": {
     "lat": 37.888422,

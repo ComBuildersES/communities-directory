@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "devnulltalks@gmail.com",
   "communityUrl": "https://devnulltalks.github.io/",
-  "urls": {
-    "github": "https://github.com/orderedlist",
-    "eventsUrl": "https://www.meetup.com/dev-null/"
-  },
+  "urls": [
+    {
+      "url": "https://github.com/orderedlist"
+    },
+    {
+      "url": "https://www.meetup.com/dev-null/"
+    }
+  ],
   "thumbnailUrl": "images/devnull-talks.webp",
   "latLon": {
     "lat": 37.38264,

@@ -20,6 +20,7 @@
  */
 
 import { chromium } from 'playwright';
+import { toLegacyUrlMap } from '../src/lib/communityUrls.js';
 import fs from 'fs';
 import path from 'path';
 
@@ -373,7 +374,8 @@ async function main() {
       if (!SKIP_SCRAPING_RE.test(communityUrl)) {
         urlsToVisit.push(communityUrl);
       }
-      const webFallback = community.urls?.web;
+      const communityUrlsByKind = toLegacyUrlMap(community.urls);
+      const webFallback = communityUrlsByKind.web;
       if (webFallback && webFallback !== communityUrl && !SKIP_SCRAPING_RE.test(webFallback)) {
         urlsToVisit.push(webFallback);
       }
@@ -469,7 +471,11 @@ async function main() {
       // pero se conoce una URL de meetup (ya en community.urls o recién descubierta),
       // visitarla para mejorar la detección de tags y el estado de actividad.
       if (scraped) {
-        const meetupUrl = community.urls?.meetup || suggestion.suggestions.urls.meetup;
+        const meetupUrl =
+          communityUrlsByKind.meetup ||
+          communityUrlsByKind.eventsUrl ||
+          suggestion.suggestions.urls.meetup ||
+          suggestion.suggestions.urls.eventsUrl;
         const alreadyVisitedMeetup = urlsToVisit.some(u => /meetup\.com/i.test(u));
         if (meetupUrl && !alreadyVisitedMeetup) {
           const meetupPage = await context.newPage();

@@ -21,10 +21,16 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://claudebcn.com/",
-  "urls": {
-    "web": "https://claudebcn.com/",
-    "eventsUrl": "https://claudebcn.com/planning"
-  },
+  "urls": [
+    {
+      "kind": "web",
+      "url": "https://claudebcn.com/"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://claudebcn.com/planning"
+    }
+  ],
   "thumbnailUrl": "images/claude-community-barcelona.webp",
   "latLon": {
     "lat": 41.387917,

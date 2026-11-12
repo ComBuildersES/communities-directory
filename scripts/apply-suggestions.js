@@ -19,6 +19,7 @@
  */
 
 import fs from 'fs';
+import { mergeDraftUrls, splitDraftUrls, toUrlEntries } from '../src/lib/communityUrls.js';
 // Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
 import { readCommunities, writeCommunities } from './lib/communities-store.js';
 
@@ -78,9 +79,12 @@ async function main() {
 
     let changed = false;
 
-    // Merge URLs
-    const mergedUrls = mergeUrls(community.urls ?? {}, sugUrls ?? {}, community.archivedUrls ?? []);
-    if (JSON.stringify(mergedUrls) !== JSON.stringify(community.urls ?? {})) changed = true;
+    // Merge URLs. `urls` es una lista de pares (#478): se mergea sobre el mapa por clave y
+    // los canales que no caben en una clave se conservan tal cual.
+    const { primary: urlsByKind, extras: urlExtras } = splitDraftUrls(community.urls);
+    const mergedByKind = mergeUrls(urlsByKind, sugUrls ?? {}, community.archivedUrls ?? []);
+    const mergedUrls = mergeDraftUrls(mergedByKind, urlExtras);
+    if (JSON.stringify(mergedUrls) !== JSON.stringify(toUrlEntries(community.urls))) changed = true;
 
     // Merge tags
     const mergedTags = mergeArray(community.tags ?? [], sugTags ?? []);
@@ -105,7 +109,7 @@ async function main() {
       applied++;
       if (dryRun) {
         console.log(`[DRY] ${community.id} ${community.name}`);
-        if (JSON.stringify(mergedUrls) !== JSON.stringify(community.urls ?? {}))
+        if (JSON.stringify(mergedUrls) !== JSON.stringify(toUrlEntries(community.urls)))
           console.log(`      urls:        ${JSON.stringify(mergedUrls)}`);
         if (mergedTags.length !== (community.tags ?? []).length)
           console.log(`      tags:        ${JSON.stringify(mergedTags)}`);

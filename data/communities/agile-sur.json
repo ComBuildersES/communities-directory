@@ -16,11 +16,17 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/agile-sur/?eventOrigin=event_home_page",
-  "urls": {
-    "telegram": "https://t.me/+HIJ-46Dne3o2NzY0",
-    "twitter": "https://twitter.com/agilesur",
-    "eventsUrl": "https://www.meetup.com/es-ES/agile-sur/?eventOrigin=event_home_page"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/+HIJ-46Dne3o2NzY0"
+    },
+    {
+      "url": "https://twitter.com/agilesur"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/agile-sur/?eventOrigin=event_home_page"
+    }
+  ],
   "thumbnailUrl": "images/agile-sur.webp",
   "latLon": {
     "lat": 37.38264,

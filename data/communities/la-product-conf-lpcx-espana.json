@@ -14,13 +14,24 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.laproductconf.com/",
-  "urls": {
-    "youtube": "https://www.youtube.com/channel/UCO0OJyqS_POidtPlaEoR95Q",
-    "linkedin": "https://www.linkedin.com/company/la-product-conference/",
-    "instagram": "https://www.instagram.com/laproductconfparis/",
-    "eventosWiki": "https://eventos.wiki/organizations/la-product-conf",
-    "ote": "https://eventos.wiki/organizations/la-product-conf/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/channel/UCO0OJyqS_POidtPlaEoR95Q"
+    },
+    {
+      "url": "https://www.linkedin.com/company/la-product-conference/"
+    },
+    {
+      "url": "https://www.instagram.com/laproductconfparis/"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/la-product-conf"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/la-product-conf/events.json"
+    }
+  ],
   "thumbnailUrl": "images/la-product-conf-lpcx-espana.webp",
   "latLon": {
     "lat": 40.4167047,

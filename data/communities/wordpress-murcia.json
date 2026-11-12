@@ -18,14 +18,27 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.wpmurcia.org/",
-  "urls": {
-    "facebook": "https://www.facebook.com/WordPressMurcia/",
-    "twitter": "https://x.com/wpmurcia",
-    "instagram": "https://www.instagram.com/wpmurcia/",
-    "youtube": "https://www.youtube.com/channel/UCE0o9a_-p5aOzpwR0wasQ-A",
-    "eventsUrl": "https://www.meetup.com/es-es/wordpress-murcia/",
-    "web": "https://www.wpmurcia.org/"
-  },
+  "urls": [
+    {
+      "url": "https://www.facebook.com/WordPressMurcia/"
+    },
+    {
+      "url": "https://x.com/wpmurcia"
+    },
+    {
+      "url": "https://www.instagram.com/wpmurcia/"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCE0o9a_-p5aOzpwR0wasQ-A"
+    },
+    {
+      "url": "https://www.meetup.com/es-es/wordpress-murcia/"
+    },
+    {
+      "kind": "web",
+      "url": "https://www.wpmurcia.org/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-murcia.webp",
   "latLon": {
     "lat": 37.9835334,

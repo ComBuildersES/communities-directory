@@ -30,10 +30,14 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://arcadejam.github.io/",
-  "urls": {
-    "twitter": "https://x.com/heartbytestudio",
-    "instagram": "https://instagram.com/arcadebits"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/heartbytestudio"
+    },
+    {
+      "url": "https://instagram.com/arcadebits"
+    }
+  ],
   "thumbnailUrl": "images/jam-attack.webp",
   "latLon": {
     "lat": 36.8887282,

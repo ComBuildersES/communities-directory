@@ -18,10 +18,15 @@
   "matchesAllAudience": true,
   "contactInfo": "",
   "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Almer%C3%ADa/",
-  "urls": {
-    "telegram": "https://t.me/WP_Almeria",
-    "eventsUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Almer%C3%ADa/Actividades"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/WP_Almeria"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://es.wikipedia.org/wiki/Wikiproyecto:Almer%C3%ADa/Actividades"
+    }
+  ],
   "thumbnailUrl": "images/wikiproyecto-almera.webp",
   "latLon": {
     "lat": 36.8400939,

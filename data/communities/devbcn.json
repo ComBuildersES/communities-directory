@@ -14,15 +14,30 @@
   "targetAudience": [],
   "contactInfo": "info@devbcn.com",
   "communityUrl": "https://www.devbcn.com/",
-  "urls": {
-    "twitter": "https://twitter.com/dev_bcn",
-    "instagram": "https://www.instagram.com/devbcn.conf/",
-    "linkedin": "https://www.linkedin.com/company/devbcn/",
-    "bluesky": "https://bsky.app/profile/devbcn.bsky.social",
-    "youtube": "https://www.youtube.com/@DevBcn",
-    "eventosWiki": "https://eventos.wiki/organizations/devbcn",
-    "ote": "https://eventos.wiki/organizations/devbcn/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/dev_bcn"
+    },
+    {
+      "url": "https://www.instagram.com/devbcn.conf/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/devbcn/"
+    },
+    {
+      "url": "https://bsky.app/profile/devbcn.bsky.social"
+    },
+    {
+      "url": "https://www.youtube.com/@DevBcn"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/devbcn"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/devbcn/events.json"
+    }
+  ],
   "thumbnailUrl": "images/devbcn.webp",
   "latLon": {
     "lat": 41.387917,

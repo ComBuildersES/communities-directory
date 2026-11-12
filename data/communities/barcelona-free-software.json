@@ -21,15 +21,32 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://bcnfs.org/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/barcelona-free-software/",
-    "web": "https://docs.fsfe.org/en/LocalGroups/Active/Barcelona",
-    "mailingList": "https://lists.bcnfs.org/mailman3/lists/comunicacio.bcnfs.org/",
-    "youtube": "https://www.youtube.com/playlist?list=PLnYTvqeUgaCH__pAycl1c31O2J-kYYpRz",
-    "mastodon": "https://fosstodon.org/@BCNFreeSoftware",
-    "linkedin": "https://www.linkedin.com/company/barcelona-free-software/",
-    "bluesky": "https://bsky.app/profile/BCNFreeSoftware.fosstodon.org.ap.brid.gy"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/barcelona-free-software/"
+    },
+    {
+      "kind": "web",
+      "url": "https://docs.fsfe.org/en/LocalGroups/Active/Barcelona"
+    },
+    {
+      "kind": "mailingList",
+      "url": "https://lists.bcnfs.org/mailman3/lists/comunicacio.bcnfs.org/"
+    },
+    {
+      "url": "https://www.youtube.com/playlist?list=PLnYTvqeUgaCH__pAycl1c31O2J-kYYpRz"
+    },
+    {
+      "kind": "mastodon",
+      "url": "https://fosstodon.org/@BCNFreeSoftware"
+    },
+    {
+      "url": "https://www.linkedin.com/company/barcelona-free-software/"
+    },
+    {
+      "url": "https://bsky.app/profile/BCNFreeSoftware.fosstodon.org.ap.brid.gy"
+    }
+  ],
   "thumbnailUrl": "images/barcelona-free-software.webp",
   "latLon": {
     "lat": 41.3825802,

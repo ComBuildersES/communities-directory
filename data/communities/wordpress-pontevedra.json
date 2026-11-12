@@ -16,11 +16,17 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/pontevedra-wordpress-meetup/",
-  "urls": {
-    "twitter": "https://twitter.com/@wppontevedra",
-    "instagram": "https://instagram.com/wppontevedra",
-    "eventsUrl": "https://www.meetup.com/pontevedra-wordpress-meetup/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/@wppontevedra"
+    },
+    {
+      "url": "https://instagram.com/wppontevedra"
+    },
+    {
+      "url": "https://www.meetup.com/pontevedra-wordpress-meetup/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-pontevedra.webp",
   "latLon": {
     "lat": 42.433575,

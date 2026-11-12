@@ -16,11 +16,17 @@
   "targetAudience": [],
   "contactInfo": "gsas@apiumhub.com",
   "communityUrl": "https://gsas.io/",
-  "urls": {
-    "twitter": "https://x.com/gsas_io",
-    "linkedin": "https://www.linkedin.com/company/globalsoftwarearchitecturesummit",
-    "eventsUrl": "https://www.meetup.com/wtmbcn/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/gsas_io"
+    },
+    {
+      "url": "https://www.linkedin.com/company/globalsoftwarearchitecturesummit"
+    },
+    {
+      "url": "https://www.meetup.com/wtmbcn/"
+    }
+  ],
   "thumbnailUrl": "images/global-software-architecture-summit.webp",
   "latLon": {
     "lat": 41.387917,

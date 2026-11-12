@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/codify/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/es-ES/codify/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/es-ES/codify/"
+    }
+  ],
   "thumbnailUrl": "images/codifymeetup.webp",
   "latLon": {
     "lat": 40.4167047,

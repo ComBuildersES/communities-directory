@@ -14,11 +14,18 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://x.com/fullstacksvq",
-  "urls": {
-    "twitter": "https://x.com/fullstacksvq",
-    "mastodon": "https://saraos.tech/@fullstacksvq",
-    "eventsUrl": "https://www.meetup.com/es-es/fullstacksevilla/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/fullstacksvq"
+    },
+    {
+      "kind": "mastodon",
+      "url": "https://saraos.tech/@fullstacksvq"
+    },
+    {
+      "url": "https://www.meetup.com/es-es/fullstacksevilla/"
+    }
+  ],
   "thumbnailUrl": "images/fullstack-sevilla.webp",
   "latLon": {
     "lat": 37.38264,

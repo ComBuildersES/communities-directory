@@ -16,12 +16,20 @@
   ],
   "contactInfo": "initiatives@agilealliance.org",
   "communityUrl": "https://www.agilealliance.org/resources/initiatives/",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/agilealliance/",
-    "bluesky": "https://bsky.app/profile/agilealliance.bsky.social",
-    "instagram": "https://www.instagram.com/agilealliance",
-    "twitter": "https://twitter.com/AgileAlliance"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/agilealliance/"
+    },
+    {
+      "url": "https://bsky.app/profile/agilealliance.bsky.social"
+    },
+    {
+      "url": "https://www.instagram.com/agilealliance"
+    },
+    {
+      "url": "https://twitter.com/AgileAlliance"
+    }
+  ],
   "thumbnailUrl": "images/agile-alliance.webp",
   "latLon": {
     "lat": null,

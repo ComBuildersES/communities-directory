@@ -38,13 +38,23 @@
   ],
   "contactInfo": "granada@pydata.org",
   "communityUrl": "https://linksta.cc/@PyDataGRX",
-  "urls": {
-    "github": "https://github.com/PyDataGRX",
-    "twitter": "https://twitter.com/PyDataGRX",
-    "linkedin": "https://www.linkedin.com/company/pydata-grx/",
-    "discord": "https://discord.gg/XmZWeChMZd",
-    "eventsUrl": "https://www.meetup.com/es-ES/pydatagrx/"
-  },
+  "urls": [
+    {
+      "url": "https://github.com/PyDataGRX"
+    },
+    {
+      "url": "https://twitter.com/PyDataGRX"
+    },
+    {
+      "url": "https://www.linkedin.com/company/pydata-grx/"
+    },
+    {
+      "url": "https://discord.gg/XmZWeChMZd"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/pydatagrx/"
+    }
+  ],
   "thumbnailUrl": "images/pydata-granada.webp",
   "latLon": {
     "lat": 37.1831938,

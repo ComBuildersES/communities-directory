@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/producttank-malaga/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/producttank-malaga/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/producttank-malaga/"
+    }
+  ],
   "thumbnailUrl": "images/producttank-malaga.webp",
   "latLon": {
     "lat": 36.7196292,

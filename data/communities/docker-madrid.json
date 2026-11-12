@@ -17,11 +17,17 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/docker-madrid/",
-  "urls": {
-    "twitter": "http://twitter.com/dockermadrid/",
-    "linkedin": "http://www.linkedin.com/company/dotcloud",
-    "eventsUrl": "https://www.meetup.com/es-ES/docker-madrid/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/dockermadrid/"
+    },
+    {
+      "url": "http://www.linkedin.com/company/dotcloud"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/docker-madrid/"
+    }
+  ],
   "thumbnailUrl": "images/docker-madrid.webp",
   "latLon": {
     "lat": 40.4167047,

@@ -15,11 +15,17 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://gdg.community.dev/gdg-menorca/",
-  "urls": {
-    "twitter": "https://www.twitter.com/GDGMenorca",
-    "instagram": "https://www.instagram.com/gdgmenorca",
-    "eventsUrl": "https://gdg.community.dev/gdg-menorca/"
-  },
+  "urls": [
+    {
+      "url": "https://www.twitter.com/GDGMenorca"
+    },
+    {
+      "url": "https://www.instagram.com/gdgmenorca"
+    },
+    {
+      "url": "https://gdg.community.dev/gdg-menorca/"
+    }
+  ],
   "thumbnailUrl": "images/gdg-menorca.webp",
   "latLon": {
     "lat": 39.8154,

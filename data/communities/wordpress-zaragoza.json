@@ -17,12 +17,20 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/wpzaragoza/",
-  "urls": {
-    "twitter": "http://twitter.com/zaragozawp/",
-    "instagram": "https://www.instagram.com/wpzaragoza/",
-    "discord": "https://discord.com/invite/ebCjdwxnyk",
-    "eventsUrl": "https://www.meetup.com/wpzaragoza/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/zaragozawp/"
+    },
+    {
+      "url": "https://www.instagram.com/wpzaragoza/"
+    },
+    {
+      "url": "https://discord.com/invite/ebCjdwxnyk"
+    },
+    {
+      "url": "https://www.meetup.com/wpzaragoza/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-zaragoza.webp",
   "latLon": {
     "lat": 41.656837,

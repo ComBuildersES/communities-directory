@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/sug-cat/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/es-ES/sug-cat/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/es-ES/sug-cat/"
+    }
+  ],
   "latLon": {
     "lat": 41.798241349587,
     "lon": 1.528756658648

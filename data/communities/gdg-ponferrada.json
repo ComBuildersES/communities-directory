@@ -15,12 +15,20 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://gdgponferrada.org",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/103238781/",
-    "twitter": "https://x.com/gdgponferrada",
-    "instagram": "https://www.instagram.com/gdgponferrada/",
-    "youtube": "https://www.youtube.com/@gdgponferrada"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/103238781/"
+    },
+    {
+      "url": "https://x.com/gdgponferrada"
+    },
+    {
+      "url": "https://www.instagram.com/gdgponferrada/"
+    },
+    {
+      "url": "https://www.youtube.com/@gdgponferrada"
+    }
+  ],
   "thumbnailUrl": "images/gdg-ponferrada.webp",
   "latLon": {
     "lat": 42.5463315,

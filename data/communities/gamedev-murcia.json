@@ -31,9 +31,11 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/gamedevmurcia/",
-  "urls": {
-    "telegram": "https://t.me/+es7SlmPCSC9iMjA0"
-  },
+  "urls": [
+    {
+      "url": "https://t.me/+es7SlmPCSC9iMjA0"
+    }
+  ],
   "thumbnailUrl": "images/gamedev-murcia.webp",
   "latLon": {
     "lat": 37.9347521,

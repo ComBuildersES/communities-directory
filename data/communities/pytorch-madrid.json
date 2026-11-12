@@ -29,9 +29,12 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://madrid.pytorch.es/",
-  "urls": {
-    "eventsUrl": "https://luma.com/uys5qucv"
-  },
+  "urls": [
+    {
+      "kind": "eventsUrl",
+      "url": "https://luma.com/uys5qucv"
+    }
+  ],
   "thumbnailUrl": "images/pytorch-madrid.webp",
   "latLon": {
     "lat": 40.416782,

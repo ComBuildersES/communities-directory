@@ -14,12 +14,21 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://community.cncf.io/xxx-dormant-cloud-native-asturias/",
-  "urls": {
-    "twitter": "https://x.com/cloudnativeast",
-    "mastodon": "https://saraos.tech/@cloud-native-asturias",
-    "youtube": "https://www.youtube.com/@cloudnativeasturias5752",
-    "eventsUrl": "https://community.cncf.io/xxx-dormant-cloud-native-asturias/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/cloudnativeast"
+    },
+    {
+      "url": "https://saraos.tech/@cloud-native-asturias",
+      "kind": "mastodon"
+    },
+    {
+      "url": "https://www.youtube.com/@cloudnativeasturias5752"
+    },
+    {
+      "url": "https://community.cncf.io/xxx-dormant-cloud-native-asturias/"
+    }
+  ],
   "thumbnailUrl": "images/cloud-native-asturias.webp",
   "latLon": {
     "lat": null,

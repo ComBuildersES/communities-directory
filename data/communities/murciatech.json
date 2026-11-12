@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://murciatech.org/",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/murciatech/home/"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/murciatech/home/"
+    }
+  ],
   "thumbnailUrl": "images/murciatech.webp",
   "latLon": {
     "lat": 37.9347521,

@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/wordpresslugo/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/wordpresslugo/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/wordpresslugo/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-lugo.webp",
   "latLon": {
     "lat": 43.0120963,

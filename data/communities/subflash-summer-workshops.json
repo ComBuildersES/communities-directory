@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "nosvemosenverano@subflash.com",
   "communityUrl": "https://subflash.com/",
-  "urls": {
-    "twitter": "https://x.com/subflash",
-    "youtube": "https://www.youtube.com/@SubflashReborn"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/subflash"
+    },
+    {
+      "url": "https://www.youtube.com/@SubflashReborn"
+    }
+  ],
   "thumbnailUrl": "images/subflash-summer-workshops.webp",
   "latLon": {
     "lat": null,

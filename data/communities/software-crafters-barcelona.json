@@ -16,14 +16,27 @@
   "targetAudience": [],
   "contactInfo": "info@softwarecrafters.barcelona",
   "communityUrl": "https://softwarecrafters.barcelona/",
-  "urls": {
-    "twitter": "https://twitter.com/alchemist_devel",
-    "github": "https://github.com/bowserchris",
-    "youtube": "https://www.youtube.com/channel/UCksw6qsw6vk7cp8sVwIpNrQ",
-    "eventsUrl": "https://www.meetup.com/software-crafters-barcelona/events/313142147/",
-    "eventosWiki": "https://eventos.wiki/organizations/software-crafters-barcelona",
-    "ote": "https://eventos.wiki/organizations/software-crafters-barcelona/events.json"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/alchemist_devel"
+    },
+    {
+      "url": "https://github.com/bowserchris"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCksw6qsw6vk7cp8sVwIpNrQ"
+    },
+    {
+      "url": "https://www.meetup.com/software-crafters-barcelona/events/313142147/"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/software-crafters-barcelona"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/software-crafters-barcelona/events.json"
+    }
+  ],
   "thumbnailUrl": "images/software-crafters-barcelona.webp",
   "latLon": {
     "lat": 41.387917,

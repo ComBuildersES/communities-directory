@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/alcala-de-henares-wordpress-meetup-group/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/alcala-de-henares-wordpress-meetup-group/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/alcala-de-henares-wordpress-meetup-group/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-alcala-de-hernares.webp",
   "latLon": {
     "lat": 40.481663,

@@ -46,11 +46,17 @@
   ],
   "contactInfo": "gdggirona@gmail.com",
   "communityUrl": "https://gdg.community.dev/gdg-girona/",
-  "urls": {
-    "twitter": "https://x.com/GDGGirona",
-    "youtube": "https://www.youtube.com/@GDGGirona",
-    "bluesky": "https://bsky.app/profile/gdggirona.bsky.social"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/GDGGirona"
+    },
+    {
+      "url": "https://www.youtube.com/@GDGGirona"
+    },
+    {
+      "url": "https://bsky.app/profile/gdggirona.bsky.social"
+    }
+  ],
   "thumbnailUrl": "images/gdg-girona.webp",
   "latLon": {
     "lat": 41.9793006,

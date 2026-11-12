@@ -17,10 +17,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/haskell-mad/",
-  "urls": {
-    "twitter": "http://twitter.com/haskellMAD/",
-    "eventsUrl": "https://www.meetup.com/haskell-mad/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/haskellMAD/"
+    },
+    {
+      "url": "https://www.meetup.com/haskell-mad/"
+    }
+  ],
   "thumbnailUrl": "images/haskellmad.webp",
   "latLon": {
     "lat": 40.4167047,

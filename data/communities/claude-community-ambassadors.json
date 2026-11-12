@@ -19,10 +19,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://claude.com/community/ambassadors",
-  "urls": {
-    "eventsUrl": "https://claude.com/community",
-    "discord": "https://discord.com/invite/6PPFFzqPDZ"
-  },
+  "urls": [
+    {
+      "kind": "eventsUrl",
+      "url": "https://claude.com/community"
+    },
+    {
+      "url": "https://discord.com/invite/6PPFFzqPDZ"
+    }
+  ],
   "thumbnailUrl": "images/claude-community-ambassadors.webp",
   "latLon": {
     "lat": null,

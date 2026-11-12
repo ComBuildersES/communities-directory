@@ -25,6 +25,7 @@
  */
 
 import fs from "node:fs";
+import { inferKindFromUrl, toUrlEntries } from "../src/lib/communityUrls.js";
 // Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
 import { readCommunities, writeCommunities } from "./lib/communities-store.js";
 
@@ -176,11 +177,10 @@ function buildUrlIndex(communities) {
     if (community.communityUrl) {
       index.set(normalizeUrl(community.communityUrl), { community, field: "communityUrl" });
     }
-    for (const [key, url] of Object.entries(community.urls ?? {})) {
-      if (url) {
-        index.set(normalizeUrl(url), { community, field: `urls.${key}` });
-      }
-    }
+    // Con pares, la entrada se identifica por su índice: `kind` ya no es único (#478).
+    toUrlEntries(community.urls).forEach((entry, position) => {
+      index.set(normalizeUrl(entry.url), { community, field: `urls[${position}]` });
+    });
   }
 
   return index;
@@ -248,9 +248,28 @@ async function runPool(items, concurrency, worker) {
 function applyChange(community, field, newUrl) {
   if (field === "communityUrl") {
     community.communityUrl = newUrl;
-  } else if (field.startsWith("urls.")) {
-    if (!community.urls) community.urls = {};
-    community.urls[field.slice(5)] = newUrl;
+    return;
+  }
+
+  const positional = /^urls\[(\d+)\]$/.exec(field);
+  if (positional) {
+    const entries = toUrlEntries(community.urls);
+    const position = Number(positional[1]);
+    if (!entries[position]) return;
+    // Se reescribe solo la URL: el kind y el label de esa entrada siguen siendo los suyos.
+    entries[position] = { ...entries[position], url: newUrl };
+    community.urls = entries;
+    return;
+  }
+
+  // Formato antiguo (`urls.<clave>`) por si queda un informe generado antes de la migración.
+  if (field.startsWith("urls.")) {
+    const entries = toUrlEntries(community.urls);
+    const kind = field.slice(5);
+    const position = entries.findIndex((entry) => (entry.kind ?? inferKindFromUrl(entry.url)) === kind);
+    if (position === -1) return;
+    entries[position] = { ...entries[position], url: newUrl };
+    community.urls = entries;
   }
 }
 

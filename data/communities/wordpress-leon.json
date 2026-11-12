@@ -16,12 +16,20 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/leon-wordpress-meetup/",
-  "urls": {
-    "twitter": "http://twitter.com/LeonWordPress/",
-    "instagram": "https://www.instagram.com/leonwordpress/",
-    "linkedin": "https://www.linkedin.com/company/leon-wordpress/",
-    "eventsUrl": "https://www.meetup.com/leon-wordpress-meetup/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/LeonWordPress/"
+    },
+    {
+      "url": "https://www.instagram.com/leonwordpress/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/leon-wordpress/"
+    },
+    {
+      "url": "https://www.meetup.com/leon-wordpress-meetup/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-leon.webp",
   "latLon": {
     "lat": 42.598862,

@@ -19,12 +19,20 @@
   ],
   "contactInfo": "info@econgressmalaga.es",
   "communityUrl": "https://econgressmalaga.es/",
-  "urls": {
-    "youtube": "https://youtu.be/XnRJtTYSlc0?si=Zy9AgzsMhEuTlLS6",
-    "linkedin": "https://www.linkedin.com/school/asdrubal-academy",
-    "twitter": "https://twitter.com/RaiolaNetworks",
-    "instagram": "https://www.instagram.com/raiolanetworks.es/"
-  },
+  "urls": [
+    {
+      "url": "https://youtu.be/XnRJtTYSlc0?si=Zy9AgzsMhEuTlLS6"
+    },
+    {
+      "url": "https://www.linkedin.com/school/asdrubal-academy"
+    },
+    {
+      "url": "https://twitter.com/RaiolaNetworks"
+    },
+    {
+      "url": "https://www.instagram.com/raiolanetworks.es/"
+    }
+  ],
   "thumbnailUrl": "images/econgress-malaga.webp",
   "latLon": {
     "lat": 36.7196292,

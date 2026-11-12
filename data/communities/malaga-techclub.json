@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/malaga-techstars/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/malaga-techstars/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/malaga-techstars/"
+    }
+  ],
   "latLon": {
     "lat": 36.7196292,
     "lon": -4.4200007

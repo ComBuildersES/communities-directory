@@ -17,11 +17,17 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/wordpress-alicante/",
-  "urls": {
-    "youtube": "https://www.youtube.com/channel/UCs6lm9A0PcJTsYw8bJwYkHg",
-    "twitter": "http://twitter.com/wpalicante_es/",
-    "eventsUrl": "https://www.meetup.com/wordpress-alicante/"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/channel/UCs6lm9A0PcJTsYw8bJwYkHg"
+    },
+    {
+      "url": "http://twitter.com/wpalicante_es/"
+    },
+    {
+      "url": "https://www.meetup.com/wordpress-alicante/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-alicante.webp",
   "latLon": {
     "lat": 38.34521,

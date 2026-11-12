@@ -13,6 +13,7 @@ import {
 } from './lib/communities-store.js';
 import { buildProposalSummary } from './lib/proposal-summary.js';
 import { normalizeOrganizedBy } from '../src/lib/organizedCommunities.js';
+import { toUrlEntries } from '../src/lib/communityUrls.js';
 
 const body = process.argv[2] ?? '';
 const imagesFolder = './public/images';
@@ -167,7 +168,7 @@ function extractLegacyPayload() {
     targetAudience: [],
     contactInfo: extractField('Correo de contacto (público)'),
     communityUrl: extractField('URL principal de la comunidad'),
-    urls: {},
+    urls: [],
     thumbnailUrl: extractField('Imagen o logotipo de la comunidad'),
     latLon: {
       lat: null,
@@ -244,7 +245,7 @@ function normalizeArchivedUrlList(archivedUrls, payload) {
   if (!Array.isArray(archivedUrls)) return [];
 
   const activeUrls = new Set(
-    [payload?.communityUrl, ...Object.values(payload?.urls ?? {})]
+    [payload?.communityUrl, ...toUrlEntries(payload?.urls).map((entry) => entry.url)]
       .map((url) => normalizeString(url))
       .filter(Boolean)
   );
@@ -302,11 +303,9 @@ export function normalizePayload(payload) {
     targetAudience: matchesAllAudience ? [] : normalizedAudience,
     contactInfo: normalizeString(payload.contactInfo),
     communityUrl: normalizeString(payload.communityUrl),
-    urls: Object.fromEntries(
-      Object.entries(payload.urls ?? {})
-        .map(([key, value]) => [normalizeString(key), normalizeString(value)])
-        .filter(([key, value]) => key && value)
-    ),
+    // `urls` llega como lista de pares (#478). `toUrlEntries` acepta también el objeto por
+    // clave del formato anterior, que es lo que traen los issues abiertos antes del cambio.
+    urls: toUrlEntries(payload.urls),
     // Canales archivados (issue #353). El array viaja tal cual si la propuesta trae la
     // clave, incluso vacío: en una edición es lo que distingue "no se tocó" de "se
     // desarchivó todo". La clave vacía se limpia justo antes de escribir el fichero.

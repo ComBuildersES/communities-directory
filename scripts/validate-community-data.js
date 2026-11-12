@@ -3,6 +3,7 @@ import process from "node:process";
 import { COMMUNITY_LANGUAGE_SET } from "../src/lib/communityLanguages.js";
 import { MERGED_STATUS, validateMergedReferences } from "../src/lib/mergedCommunities.js";
 import { validateOrganizedByReferences } from "../src/lib/organizedCommunities.js";
+import { URL_KINDS, URL_KIND_BY_KEY } from "../src/lib/communityUrls.js";
 
 // Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
 import { readCommunities, readDeletedCommunities, stableStringify } from "./lib/communities-store.js";
@@ -37,32 +38,12 @@ const CANONICAL_GEOGRAPHIC_SCOPES = new Set([
   "national",
   "international",
 ]);
-const ALLOWED_URL_KEYS = new Set([
-  "blog",
-  "bluesky",
-  "discord",
-  "eventosWiki",
-  "eventsUrl",
-  "facebook",
-  "flickr",
-  "forum",
-  "github",
-  "instagram",
-  "linkAggregator",
-  "linkedin",
-  "mailingList",
-  "mastodon",
-  "ote",
-  "rss",
-  "slack",
-  "telegram",
-  "tiktok",
-  "twitch",
-  "twitter",
-  "web",
-  "whatsapp",
-  "youtube",
-]);
+/**
+ * Claves admitidas en el formato antiguo de `urls` (objeto `{ clave: url }`). **Se deriva de
+ * `URL_KINDS`**: escrita a mano se quedó atrás en cuanto Meetup, Eventbrite y Luma tuvieron
+ * clave propia, y entonces `toUrlEntries` aceptaba lo que esta validación rechazaba.
+ */
+const ALLOWED_URL_KEYS = new Set(URL_KINDS.map(({ kind }) => kind));
 
 function parseArgs(argv) {
   const options = {
@@ -368,8 +349,12 @@ function validateCommunityGlobal(community, index, knownTagIds, knownAudienceIds
     pushIssue(issues.errors, "error", `${label}: humanValidated debe ser boolean.`);
   }
 
-  if ("urls" in community && !isPlainObject(community.urls)) {
-    pushIssue(issues.errors, "error", `${label}: urls debe ser un objeto.`);
+  if ("urls" in community && !isUrlsContainer(community.urls)) {
+    pushIssue(
+      issues.errors,
+      "error",
+      `${label}: urls debe ser un array de pares { url, kind?, label? }.`,
+    );
   }
 
   if ("archivedUrls" in community && !Array.isArray(community.archivedUrls)) {
@@ -547,27 +532,7 @@ function validateCommunityStrict(community, index, issues, isNew = true) {
     );
   }
 
-  if (!isPlainObject(community.urls)) {
-    pushIssue(issues.errors, "error", `${label}: urls debe ser un objeto.`);
-  } else {
-    for (const [key, value] of Object.entries(community.urls)) {
-      if (!ALLOWED_URL_KEYS.has(key)) {
-        pushIssue(
-          issues.errors,
-          "error",
-          `${label}: urls contiene una clave no soportada: "${key}".`,
-        );
-      }
-
-      if (!isValidUrl(value)) {
-        pushIssue(
-          issues.errors,
-          "error",
-          `${label}: urls.${key} debe ser una URL absoluta válida.`,
-        );
-      }
-    }
-  }
+  validateUrlsContainer(community, label, issues);
 
   if ("mergedIntoId" in community && community.mergedIntoId !== null && !Number.isInteger(community.mergedIntoId)) {
     pushIssue(issues.errors, "error", `${label}: mergedIntoId debe ser un entero o null.`);
@@ -598,6 +563,110 @@ function validateCommunityStrict(community, index, issues, isNew = true) {
  * Canales archivados (issue #353): el directorio los conserva para avisar a quien intente
  * volver a darlos de alta, así que no pueden duplicarse ni coincidir con un canal activo.
  */
+/**
+ * `urls` es un **array de pares** `{ url, kind?, label? }` desde #478. Se sigue aceptando el
+ * objeto `{ clave: url }` anterior porque los ficheros que no se hayan migrado todavía (y lo
+ * que llegue de un issue viejo) tienen que seguir validando: `toUrlEntries` lee los dos.
+ */
+function isUrlsContainer(value) {
+  return Array.isArray(value) || isPlainObject(value);
+}
+
+function validateUrlsContainer(community, label, issues) {
+  const { urls } = community;
+
+  if (!isUrlsContainer(urls)) {
+    pushIssue(
+      issues.errors,
+      "error",
+      `${label}: urls debe ser un array de pares { url, kind?, label? }.`,
+    );
+    return;
+  }
+
+  // Formato antiguo: se valida como antes, por clave.
+  if (isPlainObject(urls)) {
+    for (const [key, value] of Object.entries(urls)) {
+      if (!ALLOWED_URL_KEYS.has(key)) {
+        pushIssue(
+          issues.errors,
+          "error",
+          `${label}: urls contiene una clave no soportada: "${key}".`,
+        );
+      }
+
+      if (!isValidUrl(value)) {
+        pushIssue(
+          issues.errors,
+          "error",
+          `${label}: urls.${key} debe ser una URL absoluta válida.`,
+        );
+      }
+    }
+    return;
+  }
+
+  const seen = new Set();
+
+  urls.forEach((entry, index) => {
+    const at = `urls[${index}]`;
+
+    if (!isPlainObject(entry)) {
+      pushIssue(
+        issues.errors,
+        "error",
+        `${label}: ${at} debe ser un objeto { url, kind?, label? }.`,
+      );
+      return;
+    }
+
+    if (!isValidUrl(entry.url)) {
+      pushIssue(issues.errors, "error", `${label}: ${at}.url debe ser una URL absoluta válida.`);
+    }
+
+    if ("kind" in entry && !URL_KIND_BY_KEY[entry.kind]) {
+      pushIssue(
+        issues.errors,
+        "error",
+        `${label}: ${at}.kind no soportado: "${entry.kind}".`,
+      );
+    }
+
+    if ("label" in entry && !isNonEmptyString(entry.label)) {
+      pushIssue(issues.errors, "error", `${label}: ${at}.label debe ser un texto no vacío.`);
+    }
+
+    // La misma URL dos veces no es un canal más: es la que se queda sin actualizar cuando
+    // alguien cambia una de las dos.
+    const normalized = typeof entry.url === "string" ? entry.url.trim().toLowerCase() : null;
+    if (normalized) {
+      if (seen.has(normalized)) {
+        pushIssue(issues.errors, "error", `${label}: ${at}.url está repetida en urls.`);
+      }
+      seen.add(normalized);
+    }
+  });
+
+  // Dos entradas del mismo `kind` son el caso que motivó el cambio (el Meetup de un GDG y su
+  // DevFest), pero solo se distinguen si al menos una lleva etiqueta propia.
+  const byKind = new Map();
+  for (const entry of urls) {
+    if (!isPlainObject(entry) || !URL_KIND_BY_KEY[entry.kind]) continue;
+    const list = byKind.get(entry.kind) ?? [];
+    list.push(entry);
+    byKind.set(entry.kind, list);
+  }
+  for (const [kind, list] of byKind) {
+    if (list.length > 1 && list.every((entry) => !isNonEmptyString(entry.label))) {
+      pushIssue(
+        issues.warnings,
+        "warning",
+        `${label}: urls tiene ${list.length} entradas de kind "${kind}" y ninguna con label propia: en la ficha se leerán todas igual.`,
+      );
+    }
+  }
+}
+
 function validateArchivedUrls(community, label, issues) {
   if (!("archivedUrls" in community)) return;
 

@@ -16,14 +16,26 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://madrid.devops.es/",
-  "urls": {
-    "twitter": "https://twitter.com/MadridDevops",
-    "telegram": "https://t.me/madrid_devops",
-    "youtube": "https://www.youtube.com/user/madridevops",
-    "linkedin": "https://www.linkedin.com/company/devopsdaysmad",
-    "github": "https://github.com/dawud",
-    "eventsUrl": "http://www.meetup.com/madrid-devops"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/MadridDevops"
+    },
+    {
+      "url": "https://t.me/madrid_devops"
+    },
+    {
+      "url": "https://www.youtube.com/user/madridevops"
+    },
+    {
+      "url": "https://www.linkedin.com/company/devopsdaysmad"
+    },
+    {
+      "url": "https://github.com/dawud"
+    },
+    {
+      "url": "http://www.meetup.com/madrid-devops"
+    }
+  ],
   "latLon": {
     "lat": 40.4167047,
     "lon": -3.7035825

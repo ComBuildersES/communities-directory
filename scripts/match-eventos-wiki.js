@@ -15,6 +15,7 @@
  *   node scripts/match-eventos-wiki.js --input fichero.json # usa un volcado local
  */
 import fs from "node:fs";
+import { mergeDraftUrls, splitDraftUrls, toLegacyUrlMap, toUrlEntries } from '../src/lib/communityUrls.js';
 import process from "node:process";
 
 import { readCommunities, writeCommunities } from "./lib/communities-store.js";
@@ -100,7 +101,7 @@ export function matchOrganizer(organizer, communities) {
   const organizerUrl = normalizeUrlForComparison(organizer.url);
 
   const byExistingUrl = communities.filter((community) =>
-    Object.values(community.urls ?? {}).some((url) => normalizeUrlForComparison(url) === organizerUrl)
+    toUrlEntries(community.urls).some((entry) => normalizeUrlForComparison(entry.url) === organizerUrl)
   );
   if (byExistingUrl.length > 0) {
     return { confidence: "url", candidates: byExistingUrl };
@@ -150,7 +151,7 @@ export function buildMatchReport(catalog, communities) {
         id: community.id,
         name: community.name,
         slug: community.name,
-        alreadyLinked: Boolean(community.urls?.eventosWiki) && Boolean(community.urls?.ote),
+        alreadyLinked: Boolean(toLegacyUrlMap(community.urls).eventosWiki) && Boolean(toLegacyUrlMap(community.urls).ote),
         archivedConflict: (community.archivedUrls ?? []).some((url) =>
           [organizer.url, oteUrl].some((candidate) =>
             normalizeUrlForComparison(url) === normalizeUrlForComparison(candidate)
@@ -191,15 +192,18 @@ export function applyMatches(communities, entries) {
     const entry = updates.get(community.id);
     if (!entry) return community;
 
-    const urls = { ...(community.urls ?? {}) };
+    const { primary: urlsByKind, extras: urlExtras } = splitDraftUrls(community.urls);
     const additions = {};
 
-    if (!urls.eventosWiki) additions.eventosWiki = entry.eventosWiki;
-    if (!urls.ote) additions.ote = entry.ote;
+    if (!urlsByKind.eventosWiki) additions.eventosWiki = entry.eventosWiki;
+    if (!urlsByKind.ote) additions.ote = entry.ote;
     if (Object.keys(additions).length === 0) return community;
 
     changed.push({ id: community.id, name: community.name, additions });
-    return { ...community, urls: { ...urls, ...additions } };
+    return {
+      ...community,
+      urls: mergeDraftUrls({ ...urlsByKind, ...additions }, urlExtras),
+    };
   });
 
   return { communities: nextCommunities, changed };

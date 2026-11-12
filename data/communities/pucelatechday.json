@@ -14,10 +14,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "http://www.pucelatechday.com",
-  "urls": {
-    "twitter": "https://x.com/pucelatechday",
-    "web": "http://www.pucelatechday.com"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/pucelatechday"
+    },
+    {
+      "kind": "web",
+      "url": "http://www.pucelatechday.com"
+    }
+  ],
   "thumbnailUrl": "images/pucelatechday.webp",
   "latLon": {
     "lat": 41.6529421,

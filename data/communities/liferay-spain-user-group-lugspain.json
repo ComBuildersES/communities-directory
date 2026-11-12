@@ -22,11 +22,17 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/liferay-spain-user-group/",
-  "urls": {
-    "twitter": "http://twitter.com/LugSpain/",
-    "eventsUrl": "https://www.meetup.com/liferay-spain-user-group/",
-    "linkedin": "https://es.linkedin.com/in/lugspain"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/LugSpain/"
+    },
+    {
+      "url": "https://www.meetup.com/liferay-spain-user-group/"
+    },
+    {
+      "url": "https://es.linkedin.com/in/lugspain"
+    }
+  ],
   "thumbnailUrl": "images/liferay-spain-user-group-lugspain.webp",
   "latLon": {
     "lat": null,

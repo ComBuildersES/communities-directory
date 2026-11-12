@@ -18,18 +18,42 @@
   "matchesAllAudience": true,
   "contactInfo": "info@commit-conf.com",
   "communityUrl": "https://commit-conf.com/",
-  "urls": {
-    "youtube": "https://youtu.be/MaHQ2y1dryE",
-    "bluesky": "https://bsky.app/profile/commit-conf.com",
-    "twitter": "https://x.com/commitconf",
-    "web": "https://commit-conf.com/",
-    "linkedin": "https://www.linkedin.com/company/commit-conf/",
-    "flickr": "https://www.flickr.com/photos/145448896@N02/albums/",
-    "eventosWiki": "https://eventos.wiki/organizations/commit-conf",
-    "ote": "https://eventos.wiki/organizations/commit-conf/events.json",
-    "blog": "https://blog.commit-conf.com/",
-    "rss": "https://blog.commit-conf.com/rss/"
-  },
+  "urls": [
+    {
+      "url": "https://youtu.be/MaHQ2y1dryE"
+    },
+    {
+      "url": "https://bsky.app/profile/commit-conf.com"
+    },
+    {
+      "url": "https://x.com/commitconf"
+    },
+    {
+      "kind": "web",
+      "url": "https://commit-conf.com/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/commit-conf/"
+    },
+    {
+      "url": "https://www.flickr.com/photos/145448896@N02/albums/"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/commit-conf"
+    },
+    {
+      "kind": "ote",
+      "url": "https://eventos.wiki/organizations/commit-conf/events.json"
+    },
+    {
+      "kind": "blog",
+      "url": "https://blog.commit-conf.com/"
+    },
+    {
+      "kind": "rss",
+      "url": "https://blog.commit-conf.com/rss/"
+    }
+  ],
   "thumbnailUrl": "images/commitconf.webp",
   "latLon": {
     "lat": 40.4052141,

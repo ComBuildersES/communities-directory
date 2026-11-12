@@ -21,9 +21,11 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://www.thethingsnetwork.org/community/madrid/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/es-es/the-things-network-madrid-community/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/es-es/the-things-network-madrid-community/"
+    }
+  ],
   "thumbnailUrl": "images/the-things-network-madrid.webp",
   "latLon": {
     "lat": 40.416782,

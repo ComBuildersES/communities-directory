@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "meetup@unity3d.com",
   "communityUrl": "https://www.meetup.com/es-ES/pro/unity/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/es-ES/pro/unity/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/es-ES/pro/unity/"
+    }
+  ],
   "thumbnailUrl": "images/unity-user-group-network.webp",
   "latLon": {
     "lat": null,

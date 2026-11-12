@@ -1,4 +1,5 @@
 import fs from "node:fs";
+import { toUrlEntries } from "../src/lib/communityUrls.js";
 import path from "node:path";
 
 // Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
@@ -168,7 +169,11 @@ function getCommunityUrls(community) {
   const seen = new Set();
   const candidates = [
     { source: "communityUrl", url: community.communityUrl },
-    ...Object.entries(community.urls ?? {}).map(([key, value]) => ({ source: `urls.${key}`, url: value })),
+    ...toUrlEntries(community.urls).map((entry, index) => ({
+      // El índice identifica la entrada: con pares, `kind` ya no es único dentro de urls.
+      source: `urls[${index}]${entry.kind ? ` (${entry.kind})` : ""}`,
+      url: entry.url,
+    })),
   ];
 
   for (const candidate of candidates) {
@@ -418,7 +423,7 @@ async function main() {
   // Contar cuántas URLs fueron omitidas por ser de dominios bot-bloqueados
   const allCandidates = communitiesToCheck.flatMap((c) => [
     c.communityUrl,
-    ...Object.values(c.urls ?? {}),
+    ...toUrlEntries(c.urls).map((entry) => entry.url),
   ]).filter(Boolean);
   const skippedCount = allCandidates.filter(isBotBlockedDomain).length;
 

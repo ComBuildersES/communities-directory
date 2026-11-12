@@ -16,13 +16,23 @@
   "targetAudience": [],
   "contactInfo": "meetups@grafana.com",
   "communityUrl": "https://grafana.com/community/meetups/",
-  "urls": {
-    "twitter": "https://twitter.com/grafana",
-    "linkedin": "https://www.linkedin.com/company/grafana-labs/",
-    "github": "https://github.com/grafana/",
-    "youtube": "https://www.youtube.com/channel/UCYCwgQAMm9sTJv0rgwQLCxw",
-    "eventsUrl": "https://www.meetup.com/pro/grafana/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/grafana"
+    },
+    {
+      "url": "https://www.linkedin.com/company/grafana-labs/"
+    },
+    {
+      "url": "https://github.com/grafana/"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCYCwgQAMm9sTJv0rgwQLCxw"
+    },
+    {
+      "url": "https://www.meetup.com/pro/grafana/"
+    }
+  ],
   "thumbnailUrl": "images/grafana-meetups.webp",
   "latLon": {
     "lat": null,

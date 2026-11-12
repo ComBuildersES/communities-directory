@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.indismatic.es/",
-  "urls": {
-    "twitter": "https://x.com/Indismatic",
-    "instagram": "https://www.instagram.com/indismatic/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/Indismatic"
+    },
+    {
+      "url": "https://www.instagram.com/indismatic/"
+    }
+  ],
   "thumbnailUrl": "images/indismatic.webp",
   "latLon": {
     "lat": 42.46569,

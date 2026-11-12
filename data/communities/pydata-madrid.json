@@ -37,11 +37,18 @@
   ],
   "contactInfo": "madrid-organizers@pydata.org",
   "communityUrl": "https://guild.host/pydata-madrid",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/pydata-madrid/",
-    "bluesky": "https://bsky.app/profile/madrid.pydata.org",
-    "eventsUrl": "https://guild.host/pydata-madrid/events"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/pydata-madrid/"
+    },
+    {
+      "url": "https://bsky.app/profile/madrid.pydata.org"
+    },
+    {
+      "kind": "eventsUrl",
+      "url": "https://guild.host/pydata-madrid/events"
+    }
+  ],
   "thumbnailUrl": "images/pydata-madrid.webp",
   "latLon": {
     "lat": 40.4167047,

@@ -30,14 +30,26 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://canallacon.com/",
-  "urls": {
-    "twitter": "https://x.com/CosasDeHackers",
-    "youtube": "https://www.youtube.com/@CosasDeHackers",
-    "twitch": "https://www.twitch.tv/cosasdehackers",
-    "instagram": "https://www.instagram.com/cosasdehackers/",
-    "linkedin": "https://www.linkedin.com/company/cosasdehackers/",
-    "telegram": "https://t.me/CosasDeHackers"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/CosasDeHackers"
+    },
+    {
+      "url": "https://www.youtube.com/@CosasDeHackers"
+    },
+    {
+      "url": "https://www.twitch.tv/cosasdehackers"
+    },
+    {
+      "url": "https://www.instagram.com/cosasdehackers/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/cosasdehackers/"
+    },
+    {
+      "url": "https://t.me/CosasDeHackers"
+    }
+  ],
   "thumbnailUrl": "images/canallacon.webp",
   "latLon": {
     "lat": 36.7630203,

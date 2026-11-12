@@ -220,7 +220,33 @@ describe('cobertura declarada en llms.txt', () => {
     const index = buildLlmsIndex([community()], { tags: TAGS, audience: AUDIENCE, deleted: [] });
 
     expect(index).toMatch(/`lastReviewed`[\s\S]*not\*\* an activity signal/);
-    expect(index).toContain('`urls.ote`');
+    // Desde #478 el feed no es `urls.ote` sino la entrada de `urls` con ese kind. Lo que el
+    // índice no puede dejar de hacer es apuntar al feed como única señal de actividad.
+    expect(index).toMatch(/`urls` entry whose `kind` is `ote`/);
+  });
+
+  /**
+   * El directorio lee el feed; mantenerlo al día es de la comunidad. Con la redacción
+   * anterior ("the only field that evidences live activity"), un agente concluía que una
+   * ficha con feed está viva sin haber abierto el feed.
+   */
+  it('no deja deducir actividad de que el campo del feed exista', () => {
+    const index = buildLlmsIndex([community()], { tags: TAGS, audience: AUDIENCE, deleted: [] });
+
+    expect(index).toMatch(/says nothing about what is in it/);
+    expect(index).toMatch(/Read the dates inside the feed/);
+  });
+
+  /**
+   * `urls` dejó de ser un objeto por plataforma (#478). Si el índice no lo dice, un agente
+   * busca `urls.telegram`, no lo encuentra y concluye que la comunidad no tiene Telegram.
+   */
+  it('explica que urls es una lista de pares y que el kind puede repetirse', () => {
+    const index = buildLlmsIndex([community()], { tags: TAGS, audience: AUDIENCE, deleted: [] });
+
+    expect(index).toMatch(/`urls` is a \*\*list\*\*/);
+    expect(index).toContain('`{ url, kind?, label? }`');
+    expect(index).toMatch(/same `kind` can appear more than once/);
   });
 });
 

@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.yeswetech.org/",
-  "urls": {
-    "twitter": "https://twitter.com/yeswetech_org",
-    "instagram": "https://www.instagram.com/yeswetech_org/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/yeswetech_org"
+    },
+    {
+      "url": "https://www.instagram.com/yeswetech_org/"
+    }
+  ],
   "thumbnailUrl": "images/yes-we-tech.webp",
   "latLon": {
     "lat": 36.7196292,

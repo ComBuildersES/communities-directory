@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://x.com/codenares",
-  "urls": {
-    "twitter": "https://x.com/codenares",
-    "eventsUrl": "https://www.meetup.com/es-es/codenares/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/codenares"
+    },
+    {
+      "url": "https://www.meetup.com/es-es/codenares/"
+    }
+  ],
   "thumbnailUrl": "images/codenares.webp",
   "latLon": {
     "lat": 40.4167047,

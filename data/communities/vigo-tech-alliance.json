@@ -14,13 +14,23 @@
   "targetAudience": [],
   "contactInfo": "alliance@vigotech.org",
   "communityUrl": "https://vigotech.org/",
-  "urls": {
-    "twitter": "https://twitter.com/agilevigo",
-    "github": "https://github.com/agileVigo",
-    "youtube": "https://www.youtube.com/channel/UC9DPKfcLiNd7SEU-QLlIG7A",
-    "telegram": "https://t.me/vigotech",
-    "eventsUrl": "https://www.meetup.com/es-ES/agile-vigo/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/agilevigo"
+    },
+    {
+      "url": "https://github.com/agileVigo"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UC9DPKfcLiNd7SEU-QLlIG7A"
+    },
+    {
+      "url": "https://t.me/vigotech"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/agile-vigo/"
+    }
+  ],
   "thumbnailUrl": "images/vigo-tech-alliance.webp",
   "latLon": {
     "lat": 42.2313601,

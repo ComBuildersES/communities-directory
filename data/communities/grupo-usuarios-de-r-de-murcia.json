@@ -14,10 +14,15 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://gauss.inf.um.es/umur/",
-  "urls": {
-    "twitter": "https://x.com/UMUR_Murcia",
-    "web": "https://gauss.inf.um.es/umur/"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/UMUR_Murcia"
+    },
+    {
+      "kind": "web",
+      "url": "https://gauss.inf.um.es/umur/"
+    }
+  ],
   "latLon": {
     "lat": 37.9835334,
     "lon": -1.129905

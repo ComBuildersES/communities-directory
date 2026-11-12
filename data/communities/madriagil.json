@@ -16,11 +16,17 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/madriagil/",
-  "urls": {
-    "twitter": "http://twitter.com/madriagil/",
-    "linkedin": "http://www.linkedin.com/groups/Agile-Spain-137792",
-    "eventsUrl": "https://www.meetup.com/es-ES/madriagil/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/madriagil/"
+    },
+    {
+      "url": "http://www.linkedin.com/groups/Agile-Spain-137792"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/madriagil/"
+    }
+  ],
   "thumbnailUrl": "images/madriagil.webp",
   "latLon": {
     "lat": 40.4167047,

@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/startup-oasis/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/startup-oasis/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/startup-oasis/"
+    }
+  ],
   "thumbnailUrl": "images/startup-oasis.webp",
   "latLon": {
     "lat": 36.7196292,

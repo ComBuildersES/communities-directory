@@ -14,13 +14,23 @@
   "targetAudience": [],
   "contactInfo": "infostep4ward@gmail.com",
   "communityUrl": "https://step4ward.es/",
-  "urls": {
-    "linkedin": "https://www.linkedin.com/company/step4ward-es/",
-    "instagram": "https://www.instagram.com/step4ward_es/",
-    "twitter": "https://twitter.com/Step4ward_ES",
-    "youtube": "https://www.youtube.com/@step4ward_ES/streams",
-    "bluesky": "https://bsky.app/profile/step4ward-es.bsky.social"
-  },
+  "urls": [
+    {
+      "url": "https://www.linkedin.com/company/step4ward-es/"
+    },
+    {
+      "url": "https://www.instagram.com/step4ward_es/"
+    },
+    {
+      "url": "https://twitter.com/Step4ward_ES"
+    },
+    {
+      "url": "https://www.youtube.com/@step4ward_ES/streams"
+    },
+    {
+      "url": "https://bsky.app/profile/step4ward-es.bsky.social"
+    }
+  ],
   "thumbnailUrl": "images/step4ward.webp",
   "latLon": {
     "lat": 41.387917,

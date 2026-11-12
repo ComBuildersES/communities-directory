@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://x.com/malagascala",
-  "urls": {
-    "twitter": "https://x.com/malagascala",
-    "github": "https://github.com/malagascala"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/malagascala"
+    },
+    {
+      "url": "https://github.com/malagascala"
+    }
+  ],
   "latLon": {
     "lat": 36.7196292,
     "lon": -4.4200007

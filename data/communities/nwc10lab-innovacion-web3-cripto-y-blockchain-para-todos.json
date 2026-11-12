@@ -16,12 +16,20 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/innovacion-web3-para-todos-con-super-pioneros/?eventOrigin=event_home_page",
-  "urls": {
-    "twitter": "http://twitter.com/nwc10group/",
-    "instagram": "https://www.instagram.com/nwc10.lab/",
-    "linkedin": "https://www.linkedin.com/company/nwc10",
-    "eventsUrl": "https://www.meetup.com/innovacion-web3-para-todos-con-super-pioneros/?eventOrigin=event_home_page"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/nwc10group/"
+    },
+    {
+      "url": "https://www.instagram.com/nwc10.lab/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/nwc10"
+    },
+    {
+      "url": "https://www.meetup.com/innovacion-web3-para-todos-con-super-pioneros/?eventOrigin=event_home_page"
+    }
+  ],
   "thumbnailUrl": "images/nwc10lab-innovacion-web3-cripto-y-blockchain-para-todos.webp",
   "latLon": {
     "lat": 40.4167047,

@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/machinelearningspain/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/es-ES/machinelearningspain/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/es-ES/machinelearningspain/"
+    }
+  ],
   "thumbnailUrl": "images/machine-learning-spain.webp",
   "latLon": {
     "lat": 40.4167047,

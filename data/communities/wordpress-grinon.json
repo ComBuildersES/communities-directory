@@ -16,12 +16,20 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/wordpress-grinon/",
-  "urls": {
-    "twitter": "https://twitter.com/WPGrinon",
-    "instagram": "https://www.instagram.com/wpgrinon/",
-    "youtube": "https://www.youtube.com/channel/UCuwhtNtXjCqAs9ty2pvDO2g",
-    "eventsUrl": "https://www.meetup.com/wordpress-grinon/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/WPGrinon"
+    },
+    {
+      "url": "https://www.instagram.com/wpgrinon/"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCuwhtNtXjCqAs9ty2pvDO2g"
+    },
+    {
+      "url": "https://www.meetup.com/wordpress-grinon/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-grinon.webp",
   "latLon": {
     "lat": 40.2142405,

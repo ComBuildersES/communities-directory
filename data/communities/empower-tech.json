@@ -17,11 +17,17 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://empower-tech.org/",
-  "urls": {
-    "instagram": "https://www.instagram.com/empowerteches",
-    "linkedin": "https://www.linkedin.com/company/empowerteches",
-    "twitter": "https://x.com/empowerteches"
-  },
+  "urls": [
+    {
+      "url": "https://www.instagram.com/empowerteches"
+    },
+    {
+      "url": "https://www.linkedin.com/company/empowerteches"
+    },
+    {
+      "url": "https://x.com/empowerteches"
+    }
+  ],
   "thumbnailUrl": "images/empower-tech.webp",
   "latLon": {
     "lat": null,

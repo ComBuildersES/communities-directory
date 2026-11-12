@@ -19,10 +19,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/quantummadrid/",
-  "urls": {
-    "twitter": "https://x.com/quantummadrid",
-    "youtube": "https://www.youtube.com/c/QuantumMadrid"
-  },
+  "urls": [
+    {
+      "url": "https://x.com/quantummadrid"
+    },
+    {
+      "url": "https://www.youtube.com/c/QuantumMadrid"
+    }
+  ],
   "thumbnailUrl": "images/quantum-madrid.webp",
   "latLon": {
     "lat": 40.4167047,

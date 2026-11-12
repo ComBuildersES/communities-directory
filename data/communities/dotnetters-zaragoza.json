@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/dotnetters/",
-  "urls": {
-    "twitter": "http://twitter.com/dotnetters/",
-    "eventsUrl": "https://www.meetup.com/dotnetters/"
-  },
+  "urls": [
+    {
+      "url": "http://twitter.com/dotnetters/"
+    },
+    {
+      "url": "https://www.meetup.com/dotnetters/"
+    }
+  ],
   "thumbnailUrl": "images/dotnetters-zaragoza.webp",
   "latLon": {
     "lat": 41.656837,

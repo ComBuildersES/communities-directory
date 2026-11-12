@@ -14,9 +14,12 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://wordcamp.org//",
-  "urls": {
-    "eventsUrl": "https://wordcamp.org//"
-  },
+  "urls": [
+    {
+      "kind": "eventsUrl",
+      "url": "https://wordcamp.org//"
+    }
+  ],
   "thumbnailUrl": "images/wordcamp.webp",
   "latLon": {
     "lat": null,

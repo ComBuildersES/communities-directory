@@ -16,13 +16,23 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/quedadas-wordpress-en-espanol/",
-  "urls": {
-    "twitter": "https://twitter.com/QuedadasWP",
-    "instagram": "https://www.instagram.com/quedadaswp",
-    "linkedin": "https://www.linkedin.com/company/quedadaswp",
-    "bluesky": "https://bsky.app/profile/quedadaswp.com",
-    "eventsUrl": "https://www.meetup.com/quedadas-wordpress-en-espanol/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/QuedadasWP"
+    },
+    {
+      "url": "https://www.instagram.com/quedadaswp"
+    },
+    {
+      "url": "https://www.linkedin.com/company/quedadaswp"
+    },
+    {
+      "url": "https://bsky.app/profile/quedadaswp.com"
+    },
+    {
+      "url": "https://www.meetup.com/quedadas-wordpress-en-espanol/"
+    }
+  ],
   "thumbnailUrl": "images/quedadas-wordpress-en-espanol.webp",
   "latLon": {
     "lat": null,

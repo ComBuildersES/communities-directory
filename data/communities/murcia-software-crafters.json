@@ -16,10 +16,14 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/software-craftsmanship-murcia/",
-  "urls": {
-    "twitter": "https://twitter.com/murciaswcraft",
-    "eventsUrl": "https://www.meetup.com/es-ES/software-craftsmanship-murcia/"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/murciaswcraft"
+    },
+    {
+      "url": "https://www.meetup.com/es-ES/software-craftsmanship-murcia/"
+    }
+  ],
   "thumbnailUrl": "images/murcia-software-crafters.webp",
   "latLon": {
     "lat": 37.9835334,

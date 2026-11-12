@@ -21,9 +21,12 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://corunajug.org/",
-  "urls": {
-    "ote": "https://corunajug.org/feed.json"
-  },
+  "urls": [
+    {
+      "kind": "ote",
+      "url": "https://corunajug.org/feed.json"
+    }
+  ],
   "thumbnailUrl": "images/corunajug.webp",
   "latLon": {
     "lat": 43.3707332,

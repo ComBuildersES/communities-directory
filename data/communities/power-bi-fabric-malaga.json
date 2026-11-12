@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/powerbi-fabricmalaga/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/powerbi-fabricmalaga/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/powerbi-fabricmalaga/"
+    }
+  ],
   "thumbnailUrl": "images/power-bi-fabric-malaga.webp",
   "latLon": {
     "lat": 36.7196292,

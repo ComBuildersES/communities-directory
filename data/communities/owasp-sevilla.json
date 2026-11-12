@@ -17,13 +17,24 @@
   "targetAudience": [],
   "contactInfo": "juanjose.domenech@owasp.org",
   "communityUrl": "https://owasp.org/www-chapter-sevilla/",
-  "urls": {
-    "youtube": "https://www.youtube.com/user/OWASPGLOBAL/videos",
-    "twitter": "https://twitter.com/OWASP_Sevilla",
-    "github": "https://github.com/OWASP/",
-    "mastodon": "https://infosec.exchange/@owasp",
-    "linkedin": "https://www.linkedin.com/company/owasp/"
-  },
+  "urls": [
+    {
+      "url": "https://www.youtube.com/user/OWASPGLOBAL/videos"
+    },
+    {
+      "url": "https://twitter.com/OWASP_Sevilla"
+    },
+    {
+      "url": "https://github.com/OWASP/"
+    },
+    {
+      "kind": "mastodon",
+      "url": "https://infosec.exchange/@owasp"
+    },
+    {
+      "url": "https://www.linkedin.com/company/owasp/"
+    }
+  ],
   "thumbnailUrl": "images/owasp-sevilla.webp",
   "latLon": {
     "lat": 37.38264,

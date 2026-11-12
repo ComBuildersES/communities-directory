@@ -14,9 +14,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/es-ES/comunidades-tecnologicas-madrid/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/es-ES/comunidades-tecnologicas-madrid/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/es-ES/comunidades-tecnologicas-madrid/"
+    }
+  ],
   "thumbnailUrl": "images/namees-tecnologicas-madrid.webp",
   "latLon": {
     "lat": 40.4167047,

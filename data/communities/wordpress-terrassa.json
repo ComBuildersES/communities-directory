@@ -16,9 +16,11 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.meetup.com/terrassa-wordpress-meetup/",
-  "urls": {
-    "eventsUrl": "https://www.meetup.com/terrassa-wordpress-meetup/"
-  },
+  "urls": [
+    {
+      "url": "https://www.meetup.com/terrassa-wordpress-meetup/"
+    }
+  ],
   "thumbnailUrl": "images/wordpress-terrassa.webp",
   "latLon": {
     "lat": 41.5609412,

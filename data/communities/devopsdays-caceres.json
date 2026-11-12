@@ -14,12 +14,20 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://devopsdays.es/",
-  "urls": {
-    "twitter": "https://twitter.com/DevOpsDaysCC",
-    "instagram": "https://www.instagram.com/devopsdayscc/",
-    "linkedin": "https://www.linkedin.com/company/devopsdayscc",
-    "youtube": "https://www.youtube.com/channel/UCt5kxNPkNGifadwaOgHn_tg"
-  },
+  "urls": [
+    {
+      "url": "https://twitter.com/DevOpsDaysCC"
+    },
+    {
+      "url": "https://www.instagram.com/devopsdayscc/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/devopsdayscc"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCt5kxNPkNGifadwaOgHn_tg"
+    }
+  ],
   "thumbnailUrl": "images/devopsdays-caceres.webp",
   "latLon": {
     "lat": 39.4762161,

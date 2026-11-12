@@ -14,10 +14,14 @@
   "targetAudience": [],
   "contactInfo": "organizacion@xover.es",
   "communityUrl": "https://www.xover.es/",
-  "urls": {
-    "twitter": "https://www.twitter.com/acxover",
-    "instagram": "https://www.instagram.com/acxover"
-  },
+  "urls": [
+    {
+      "url": "https://www.twitter.com/acxover"
+    },
+    {
+      "url": "https://www.instagram.com/acxover"
+    }
+  ],
   "thumbnailUrl": "images/crossover.webp",
   "latLon": {
     "lat": 37.1831938,

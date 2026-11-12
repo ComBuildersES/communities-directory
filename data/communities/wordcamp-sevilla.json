@@ -15,9 +15,12 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://sevilla.wordcamp.org/2024/",
-  "urls": {
-    "eventsUrl": "https://sevilla.wordcamp.org/2024/"
-  },
+  "urls": [
+    {
+      "kind": "eventsUrl",
+      "url": "https://sevilla.wordcamp.org/2024/"
+    }
+  ],
   "thumbnailUrl": "images/wordcamp-sevilla.webp",
   "latLon": {
     "lat": 37.38264,
