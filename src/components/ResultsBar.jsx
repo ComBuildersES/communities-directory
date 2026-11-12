@@ -26,6 +26,7 @@ const FILTER_LABEL_KEYS = {
   name: "resultsBar.filterLabel.name",
   parentId: "resultsBar.filterLabel.parentId",
   humanValidated: "resultsBar.filterLabel.humanValidated",
+  cbMembers: "resultsBar.filterLabel.cbMembers",
 };
 
 /* eslint-disable react/prop-types */
@@ -83,7 +84,9 @@ export function ResultsBar({ view, toggleView }) {
                   ? t(value === "true" ? "review.chipReviewed" : "review.chipPending")
                   : key === "parentId"
                     ? (parentIdNameMap[value] || value)
-                    : value,
+                    : key === "cbMembers"
+                      ? `@${value}`
+                      : value,
       category: key === "parentId" ? null : (FILTER_LABEL_KEYS[key] ? t(FILTER_LABEL_KEYS[key]) : key),
     }))
   );

@@ -10,6 +10,7 @@ import { normalizeCommunityLangs } from "../lib/communityLanguages.js";
 import { buildCoverage } from "../lib/dataCoverage.js";
 import { buildMergedFromMap } from "../lib/mergedCommunities.js";
 import { buildOrganizedByMap } from "../lib/organizedCommunities.js";
+import { buildCbMemberIndex, memberHandlesForCommunity } from "../lib/cbMembers.js";
 
 const TAGS_URL = `${import.meta.env.BASE_URL}data/tags.json`;
 const AUDIENCE_URL = `${import.meta.env.BASE_URL}data/audience.json`;
@@ -47,6 +48,7 @@ const initialState = {
   numberOFOnSiteCommunities: 0, // Estado para el numero de com. presenciales
   cbMemberIds: new Set(), // IDs de comunidades con miembro en Community Builders
   cbMembersMap: new Map(), // communityId -> [github handles]
+  cbMemberHandles: [], // [{ handle, label, count }] para el desplegable de "@" (src/lib/cbMembers.js)
   childrenByParentId: new Map(), // parentId -> count of child communities
   mergedFromById: new Map(), // id -> comunidades fusionadas en ella (src/lib/mergedCommunities.js)
   organizedById: new Map(), // id -> encuentros que organiza (src/lib/organizedCommunities.js)
@@ -102,7 +104,12 @@ const useCommunityStore = create(
           // Resolve relative thumbnailUrl values to absolute paths.
           // Components receive ready-to-use URLs; no BASE_URL handling needed per-component.
           const baseUrl = import.meta.env.BASE_URL;
-          const data = rawData.filter((c) => c.hidden !== true).map((c) => {
+          const visibleData = rawData.filter((c) => c.hidden !== true);
+          const { cbMemberIds, cbMembersMap, cbMemberHandles } = buildCbMemberIndex(
+            cbMembers,
+            visibleData
+          );
+          const data = visibleData.map((c) => {
             const { thumbnailUrl } = c;
             const normalizedThumbnailUrl =
               !thumbnailUrl || thumbnailUrl.startsWith("http") || thumbnailUrl.startsWith("//") || thumbnailUrl.startsWith("/")
@@ -115,15 +122,12 @@ const useCommunityStore = create(
               // Las fichas antiguas no traen la clave: sin este default el filtro de
               // ámbito geográfico no podría ofrecer "Desconocido".
               geographicScope: c.geographicScope || "unknown",
+              // Quién del programa mantiene la ficha vive fuera del registro: se deriva aquí
+              // para que el índice invertido lo indexe como un array más (src/lib/cbMembers.js).
+              cbMembers: memberHandlesForCommunity(cbMembersMap, c.id),
               thumbnailUrl: normalizedThumbnailUrl,
             };
           });
-          const cbMemberIds = new Set(cbMembers.map((m) => m.communityId));
-          const cbMembersMap = cbMembers.reduce((map, { communityId, github }) => {
-            if (!map.has(communityId)) map.set(communityId, []);
-            map.get(communityId).push(github);
-            return map;
-          }, new Map());
           const childrenByParentId = data.reduce((map, c) => {
             if (c.parentId != null) {
               map.set(c.parentId, (map.get(c.parentId) ?? 0) + 1);
@@ -155,6 +159,7 @@ const useCommunityStore = create(
             filters: initialFilters,
             cbMemberIds,
             cbMembersMap,
+            cbMemberHandles,
             childrenByParentId,
             mergedFromById,
             organizedById,
@@ -326,6 +331,8 @@ export const useMergedFromById = () => useCommunityStore((state) => state.merged
 export const useOrganizedById = () => useCommunityStore((state) => state.organizedById);
 
 export const useCBMembersMap = () => useCommunityStore((state) => state.cbMembersMap);
+
+export const useCBMemberHandles = () => useCommunityStore((state) => state.cbMemberHandles);
 
 export const useDataCoverage = () => useCommunityStore((state) => state.coverage);
 

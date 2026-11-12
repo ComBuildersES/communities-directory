@@ -118,11 +118,12 @@
       "targetAudience": "Audience",
       "name": "Community",
       "parentId": "",
-      "humanValidated": "Review"
+      "humanValidated": "Review",
+      "cbMembers": "Person"
     }
   },
   "tagSearch": {
-    "placeholder": "Filter by topic, audience or community…",
+    "placeholder": "Filter by topic, audience, community or @person…",
     "placeholderMore": "Add another filter…",
     "clearFilters": "Clear filters",
     "removeChip": "Remove {{label}}",
@@ -130,7 +131,12 @@
     "groupAudience": "Target Audience",
     "groupCommunities": "Communities",
     "communityLabel": "Community",
-    "showMore": "+{{count}} more"
+    "showMore": "+{{count}} more",
+    "groupMembers": "Community Builders",
+    "memberCommunities": "{{count}} community",
+    "memberCommunities_other": "{{count}} communities",
+    "copyMemberLink": "Copy link to these communities",
+    "memberHint": "Type @ to filter by a Community Builders member"
   },
   "communityCard": {
     "viewDetails": "View details for {{name}}",

@@ -5,6 +5,7 @@ import {
   useTags,
   useAudience,
   useAllCommunities,
+  useCBMemberHandles,
   useCommunityActions,
   useFilters,
 } from "../../stores/community.store.js";
@@ -15,6 +16,13 @@ import {
   slugifyCommunityName,
 } from "../../lib/communitySubmission";
 import { scoreItem, scoreCommunity } from "../../lib/fuzzyMatch";
+import {
+  MEMBER_QUERY_PREFIX,
+  filterMemberSuggestions,
+  githubAvatarUrl,
+  normalizeHandle,
+  parseMemberQuery,
+} from "../../lib/cbMembers";
 import "./TagSearch.css";
 
 const INVALID_LOCATION_VALUES = new Set([
@@ -43,6 +51,7 @@ const SECTION_LIMITS = {
   topics:      3,
   audience:    3,
   communities: 3,
+  members:     6,
 };
 
 function normalizeLocation(location) {
@@ -92,15 +101,47 @@ function dismissActiveInput() {
   }
 }
 
+/**
+ * Avatar de GitHub con caída a la inicial.
+ *
+ * La imagen la sirve GitHub, así que si falla (handle renombrado, red bloqueada) lo que queda
+ * no puede ser un icono roto: el desplegable tiene que seguir leyéndose.
+ */
+function MemberAvatar({ handle, size = "1.25rem" }) {
+  const [failed, setFailed] = useState(false);
+
+  if (failed) {
+    return (
+      <span className="cb-member-avatar cb-member-avatar--fallback" style={{ width: size, height: size }} aria-hidden="true">
+        {handle.charAt(0).toUpperCase()}
+      </span>
+    );
+  }
+
+  return (
+    <img
+      className="cb-member-avatar"
+      style={{ width: size, height: size }}
+      src={githubAvatarUrl(handle)}
+      alt=""
+      loading="lazy"
+      referrerPolicy="no-referrer"
+      onError={() => setFailed(true)}
+    />
+  );
+}
+
 export function TagSearch() {
   const { t } = useTranslation();
   const [query, setQuery] = useState("");
   const [activeFilters, setActiveFilters] = useState([]);
   const [showDropdown, setShowDropdown] = useState(false);
   const [expandedSections, setExpandedSections] = useState(new Set());
+  const [copiedMember, setCopiedMember] = useState(null);
   const allTags = useTags();
   const allAudience = useAudience();
   const allCommunities = useAllCommunities();
+  const cbMemberHandles = useCBMemberHandles();
   const filters = useFilters();
   const { filterComunities } = useCommunityActions();
   const inputRef = useRef(null);
@@ -126,8 +167,26 @@ export function TagSearch() {
   );
 
   const q = query.trim();
+  const { isMemberQuery, term: memberTerm } = parseMemberQuery(q);
 
-  const tagSuggestions = q.length < 2
+  // Los chips de persona no son estado local como los demás: salen de los filtros del store,
+  // que es lo que se restaura al abrir una URL compartida. Si fueran estado local, quien
+  // recibe el enlace vería la lista filtrada sin nada que explicara por qué.
+  const activeMemberHandles = filters.cbMembers ?? [];
+
+  const memberSuggestions = !isMemberQuery
+    ? []
+    : filterMemberSuggestions(memberTerm, cbMemberHandles, activeMemberHandles).map((member) => ({
+        sectionKey: "members",
+        group: t("tagSearch.groupMembers"),
+        key: "cbMembers",
+        value: member.handle,
+        label: `${MEMBER_QUERY_PREFIX}${member.label}`,
+        description: t("tagSearch.memberCommunities", { count: member.count }),
+        avatarHandle: member.handle,
+      }));
+
+  const tagSuggestions = isMemberQuery || q.length < 2
     ? []
     : allTags
         .filter((tag) => !activeFilterIds.has(`tags:${tag.id}`))
@@ -143,7 +202,7 @@ export function TagSearch() {
           description: tag.description,
         }));
 
-  const audienceSuggestions = q.length < 2
+  const audienceSuggestions = isMemberQuery || q.length < 2
     ? []
     : allAudience
         .filter((audience) => !activeFilterIds.has(`targetAudience:${audience.id}`))
@@ -159,7 +218,7 @@ export function TagSearch() {
           description: audience.description,
         }));
 
-  const communitySuggestions = q.length < 2
+  const communitySuggestions = isMemberQuery || q.length < 2
     ? []
     : allCommunities
         .filter((community) => !activeFilterIds.has(`name:${community.name}`))
@@ -186,6 +245,7 @@ export function TagSearch() {
         }));
 
   const sections = [
+    { key: "members",     label: t("tagSearch.groupMembers"),      suggestions: memberSuggestions },
     { key: "topics",      label: t("tagSearch.groupTopics"),      suggestions: tagSuggestions },
     { key: "audience",    label: t("tagSearch.groupAudience"),     suggestions: audienceSuggestions },
     { key: "communities", label: t("tagSearch.groupCommunities"),  suggestions: communitySuggestions },
@@ -237,6 +297,40 @@ export function TagSearch() {
     setShowDropdown(false);
   };
 
+  const addMemberFilter = (handle) => {
+    filterComunities("cbMembers", normalizeHandle(handle));
+    setQuery("");
+    setShowDropdown(false);
+    inputRef.current?.focus();
+  };
+
+  const removeMemberFilter = (handle) => {
+    filterComunities("cbMembers", bajaString + handle);
+  };
+
+  /**
+   * Copia el enlace a *esta* persona, con los filtros que haya puestos.
+   *
+   * No vale con decirle a alguien que copie la barra de direcciones: en móvil está escondida,
+   * y el objetivo del botón es justo mandarle a esa persona lo suyo.
+   */
+  const copyMemberLink = async (handle) => {
+    const path = buildDirectoryFilterPath({
+      filters: { ...filters, cbMembers: [handle] },
+    });
+    const url = `${window.location.origin}${path}`;
+
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopiedMember(handle);
+      window.setTimeout(() => setCopiedMember((current) => (current === handle ? null : current)), 2000);
+    } catch {
+      // Sin permiso de portapapeles (http, Safari sin gesto): abrir el enlace deja a la
+      // persona en una pestaña cuya URL sí puede copiar a mano.
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+  };
+
   const removeFilter = (filterToRemove) => {
     setActiveFilters((prev) =>
       prev.filter(
@@ -251,6 +345,7 @@ export function TagSearch() {
     activeFilters.forEach((filter) =>
       filterComunities(filter.key, bajaString + filter.value)
     );
+    activeMemberHandles.forEach((handle) => removeMemberFilter(handle));
     setActiveFilters([]);
   };
 
@@ -259,6 +354,32 @@ export function TagSearch() {
       <div className="tag-search-inner">
         <i className="fas fa-search tag-search-icon"></i>
         <div className="tag-search-chips">
+          {activeMemberHandles.map((handle) => {
+            const member = cbMemberHandles.find((m) => m.handle === normalizeHandle(handle));
+            const label = member?.label ?? handle;
+
+            return (
+              <span key={`cbMembers:${handle}`} className="tag-chip tag-chip--cbMembers">
+                <MemberAvatar handle={handle} size="1rem" />
+                {`${MEMBER_QUERY_PREFIX}${label}`}
+                <button
+                  className="tag-chip-action"
+                  onClick={() => copyMemberLink(handle)}
+                  title={t("tagSearch.copyMemberLink")}
+                  aria-label={t("tagSearch.copyMemberLink")}
+                >
+                  <i className={copiedMember === handle ? "fas fa-check" : "fas fa-link"}></i>
+                </button>
+                <button
+                  className="tag-chip-remove"
+                  onClick={() => removeMemberFilter(handle)}
+                  aria-label={t("tagSearch.removeChip", { label })}
+                >
+                  <i className="fas fa-times"></i>
+                </button>
+              </span>
+            );
+          })}
           {activeFilters.map((filter) => (
             <span key={`${filter.key}:${filter.value}`} className={`tag-chip tag-chip--${filter.key}`}>
               {filter.label}
@@ -276,7 +397,7 @@ export function TagSearch() {
             className="tag-search-input"
             type="text"
             placeholder={
-              activeFilters.length === 0
+              activeFilters.length === 0 && activeMemberHandles.length === 0
                 ? t("tagSearch.placeholder")
                 : t("tagSearch.placeholderMore")
             }
@@ -285,10 +406,15 @@ export function TagSearch() {
               setQuery(e.target.value);
               setShowDropdown(true);
             }}
-            onFocus={() => query.trim().length >= 2 && setShowDropdown(true)}
+            onFocus={() => {
+              const trimmed = query.trim();
+              if (trimmed.length >= 2 || trimmed.startsWith(MEMBER_QUERY_PREFIX)) {
+                setShowDropdown(true);
+              }
+            }}
           />
         </div>
-        {activeFilters.length > 0 && (
+        {(activeFilters.length > 0 || activeMemberHandles.length > 0) && (
           <button
             className="tag-search-clear"
             onClick={clearAll}
@@ -298,6 +424,12 @@ export function TagSearch() {
           </button>
         )}
       </div>
+
+      {showDropdown && isMemberQuery && memberSuggestions.length === 0 && (
+        <div className="tag-search-dropdown">
+          <div className="tag-search-empty">{t("tagSearch.memberHint")}</div>
+        </div>
+      )}
 
       {showDropdown && sections.length > 0 && (
         <div className="tag-search-dropdown">
@@ -317,6 +449,15 @@ export function TagSearch() {
                     onMouseDown={(e) => {
                       e.preventDefault();
 
+                      if (suggestion.key === "cbMembers") {
+                        if (e.metaKey || e.ctrlKey) {
+                          openFilterInNewTab(suggestion);
+                          return;
+                        }
+                        addMemberFilter(suggestion.value);
+                        return;
+                      }
+
                       if (suggestion.communityIdentifier !== null && suggestion.communityIdentifier !== undefined) {
                         openCommunityDetails(suggestion, e.metaKey || e.ctrlKey);
                         return;
@@ -330,7 +471,10 @@ export function TagSearch() {
                       addFilter(suggestion);
                     }}
                   >
-                    <span className="tag-option-label">{suggestion.label}</span>
+                    <span className="tag-option-label">
+                      {suggestion.avatarHandle && <MemberAvatar handle={suggestion.avatarHandle} />}
+                      {suggestion.label}
+                    </span>
                     {suggestion.meta?.length ? (
                       <span className="tag-option-meta" aria-hidden="true">
                         {suggestion.meta.map((item) => (

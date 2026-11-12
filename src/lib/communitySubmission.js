@@ -68,6 +68,7 @@ const DIRECTORY_FILTER_KEYS = [
   "name",
   "parentId",
   "humanValidated",
+  "cbMembers",
 ];
 const FILTER_KEY_SHORT = {
   status: "s",
@@ -82,6 +83,9 @@ const FILTER_KEY_SHORT = {
   // `hv=true` = solo fichas que ha revisado una persona. Es también el enlace que usa un
   // responsable provincial para listar lo que le queda por revisar: `?hv=false`.
   humanValidated: "hv",
+  // `cb=<handle>` = las comunidades que mantiene esa persona de Community Builders. Es el
+  // enlace que se le pasa a quien quieres que repase lo suyo (src/lib/cbMembers.js).
+  cbMembers: "cb",
 };
 
 function getTodayDate() {

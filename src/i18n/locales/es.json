@@ -118,11 +118,12 @@
       "targetAudience": "Público",
       "name": "Comunidad",
       "parentId": "",
-      "humanValidated": "Revisión"
+      "humanValidated": "Revisión",
+      "cbMembers": "Persona"
     }
   },
   "tagSearch": {
-    "placeholder": "Filtrar por temática, público o comunidad…",
+    "placeholder": "Filtrar por temática, público, comunidad o @persona…",
     "placeholderMore": "Añadir otro filtro…",
     "clearFilters": "Limpiar filtros",
     "removeChip": "Quitar {{label}}",
@@ -130,7 +131,12 @@
     "groupAudience": "Público objetivo",
     "groupCommunities": "Comunidades",
     "communityLabel": "Comunidad",
-    "showMore": "+{{count}} más"
+    "showMore": "+{{count}} más",
+    "groupMembers": "Community Builders",
+    "memberCommunities": "{{count}} comunidad",
+    "memberCommunities_other": "{{count}} comunidades",
+    "copyMemberLink": "Copiar enlace a estas comunidades",
+    "memberHint": "Escribe @ para filtrar por persona de Community Builders"
   },
   "communityCard": {
     "viewDetails": "Ver detalles de {{name}}",

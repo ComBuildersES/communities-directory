@@ -398,6 +398,31 @@ donde la hija y el paraguas siguen existiendo las dos. Toda la lógica en
 - En el formulario el campo "Comunidad en la que continúa" solo aparece con el estado
   Fusionada, y sus candidatas excluyen la propia ficha y las ya fusionadas.
 
+### Filtrar por persona de Community Builders (`@handle`)
+
+Quién del programa mantiene una ficha vive **fuera** del registro, en
+`public/data/community-builders-members.json`. La barra de búsqueda lo expone escribiendo `@`:
+desplegable con avatar y recuento, y al elegir se filtra el directorio. Toda la lógica pura en
+`src/lib/cbMembers.js`.
+
+- El campo se **deriva al cargar los datos** (`community.cbMembers`, handles en minúscula), no
+  se escribe en `data/communities/`: así el índice invertido lo indexa como cualquier otro
+  array y `searchFaceted` no necesita un caso especial. En los ficheros fuente no existe.
+- La clave de URL es `cb` (`?cb=hhkaos`), registrada en `DIRECTORY_FILTER_KEYS`: eso es lo que
+  hace el enlace compartible, porque `App.jsx` ya sincroniza los filtros con la URL.
+- **Los chips de persona salen de los filtros del store, no del estado local de `TagSearch`**
+  (que es lo que hacen los demás). Quien abre el enlace que le han pasado tiene que ver por qué
+  la lista está recortada; con estado local vería 7 comunidades sin explicación.
+- El botón de copiar enlace del chip existe porque en móvil la barra de direcciones está
+  escondida, y mandar a alguien lo suyo es justo para lo que sirve el filtro. Sin permiso de
+  portapapeles abre el enlace en otra pestaña en vez de fallar en silencio.
+- El filtro **no toca `status`**, así que con el default `active` las comunidades paradas de esa
+  persona no salen. Para pasarle todo lo suyo, el enlace lleva `?s=active,inactive&cb=...`.
+- El avatar lo sirve GitHub (`avatars.githubusercontent.com`) y cae a la inicial si falla: un
+  handle renombrado no puede dejar un icono roto en el desplegable.
+- La coincidencia es por **subcadena, no fuzzy**: un handle no tiene sinónimos ni acentos, y
+  tolerar erratas devuelve a otra persona.
+
 ### Autoría de encuentros recurrentes (`organizedBy`)
 
 Una asociación que hace quedadas pequeñas **y además** una conferencia anual con marca propia

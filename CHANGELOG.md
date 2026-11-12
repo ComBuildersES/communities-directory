@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-12 `09d6086` el feed de eventos, donde se explica qué es
+- 2026-11-12 `a622e66` filtrar por persona de Community Builders con @
+- 2026-11-12 `ac5f709` el feed de eventos, donde se explica qué es
 - 2026-11-12 `fbebf4e` alta de GDG Córdoba, Lleida, Valladolid y Zaragoza
 - 2026-11-12 `5ad5592` enlazar el DevFest de GDG Barcelona y GDG Jaén
 - 2026-11-12 `cb2eed1` editar los canales como filas, con etiqueta propia
