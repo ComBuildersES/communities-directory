@@ -339,9 +339,14 @@
         "warningIssueSuffix": " y lo revisamos."
       },
       "ote": {
+        "sectionTitle": "Vuestra agenda de eventos",
+        "sectionLead": "Publicad vuestros eventos en un fichero abierto y los leen este directorio, otras webs, los calendarios y los bots. Es opcional: aquí solo hace falta su URL.",
+        "sectionLeadWithFeed": "Ya publicáis vuestra agenda en formato abierto: el directorio mostrará vuestros próximos eventos en la ficha de la comunidad.",
+        "fieldLabel": "URL del fichero de eventos (OTE)",
+        "noFeedPrompt": "¿Todavía no tenéis uno?",
+        "howToCta": "Cómo crearlo",
+        "readerCta": "Comprobar el feed en el lector de OTE",
         "title": "Eventos en formato abierto (OTE)",
-        "hook": "¿Dinamizas esta comunidad y quieres que vuestros eventos se vean en más sitios con un solo fichero?",
-        "hookCta": "Cómo funciona",
         "pitch": "Publica vuestra agenda una vez y que la lea quien quiera: este directorio, otras webs, bots o calendarios.",
         "analogy": "Imagina la especificación OTE como el hijo de RSS, iCalendar y schema.org/Event, pero pensada para lo que de verdad importa en una comunidad técnica: de qué tecnologías va el evento, a qué público se dirige, quién habla, cuándo cierra el call for papers, en qué idiomas se celebra y mucho más.",
         "fields": "Publicáis los datos que queráis: solo 6 campos son obligatorios, pero hay más de 100 disponibles.",
@@ -365,7 +370,7 @@
       "row": {
         "add": "Añadir canal",
         "remove": "Quitar este canal",
-        "empty": "Todavía no has añadido ningún canal. Pulsa «Añadir canal» para poner la web, el grupo de chat, las redes o el feed de eventos.",
+        "empty": "Todavía no has añadido ningún canal. Pulsa «Añadir canal» para poner la web, el grupo de chat, las redes o la plataforma donde publicáis los eventos.",
         "kindPlaceholder": "¿Qué es? (Telegram, Blog, «DevFest Barcelona»…)",
         "kindLabel": "Qué es este canal",
         "urlLabel": "URL del canal {{position}}",

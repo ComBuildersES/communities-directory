@@ -1038,51 +1038,38 @@
   gap: 0.35rem;
 }
 
-/* Explicación de Open Tech Events en la sección de URLs (issue #402) */
+/* Tarjeta de la agenda de eventos en formato abierto (issues #402 y #478) */
 /*
-  Gancho de una línea, no un bloque de argumentario: el detalle vive en un modal y solo lo
-  ve quien lo pide (ver OteCallout.jsx).
+  Tarjeta propia, con el campo del feed dentro: el argumentario vive en un modal y solo lo ve
+  quien lo pide (ver OteSection.jsx). El borde azul la separa de las demás tarjetas del
+  formulario sin que parezca un aviso de error.
 */
-.contribution-ote-callout {
-  display: block;
-  width: 100%;
-  margin-top: 1rem;
-  border: 1px solid #d9e2ef;
+.contribution-ote-card {
   border-left: 3px solid #3273dc;
-  border-radius: 6px;
-  background: #f7faff;
-  padding: 0.6rem 0.85rem;
-  text-align: left;
-  cursor: pointer;
-  transition: background 0.15s, border-color 0.15s;
 }
 
-.contribution-ote-callout:hover {
-  background: #eef4fe;
-  border-color: #b9cdea;
-}
-
-.contribution-ote-hook {
-  margin: 0;
-  font-family: inherit;
-  font-size: 0.85rem;
-  color: #3b4a5a;
-  line-height: 1.45;
-}
-
-.contribution-ote-hook i {
+.contribution-ote-card .contribution-card-header h3 i {
   color: #3273dc;
+  margin-right: 0.15rem;
 }
 
-/* El control es el aviso entero; esto solo señala dónde lleva el clic. */
+.contribution-ote-field-help {
+  margin-top: 0.4rem;
+}
+
+/* Botón con aspecto de enlace: abre el modal con las vías para crear el feed. */
 .contribution-ote-hook-link {
+  border: 0;
+  padding: 0;
+  background: none;
+  font: inherit;
   font-weight: 600;
   color: #3273dc;
   text-decoration: underline;
-  white-space: nowrap;
+  cursor: pointer;
 }
 
-.contribution-ote-callout:hover .contribution-ote-hook-link {
+.contribution-ote-hook-link:hover {
   color: #2759a8;
 }
 

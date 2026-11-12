@@ -339,9 +339,14 @@
         "warningIssueSuffix": " and we will review it."
       },
       "ote": {
+        "sectionTitle": "Your event schedule",
+        "sectionLead": "Publish your events in an open file and this directory, other sites, calendars and bots can all read them. It's optional: all we need here is its URL.",
+        "sectionLeadWithFeed": "You already publish your schedule in an open format: the directory will show your upcoming events on the community page.",
+        "fieldLabel": "Event file URL (OTE)",
+        "noFeedPrompt": "Don't have one yet?",
+        "howToCta": "How to create it",
+        "readerCta": "Check the feed in the OTE reader",
         "title": "Events in an open format (OTE)",
-        "hook": "Do you run this community and want your events to show up in more places from a single file?",
-        "hookCta": "How it works",
         "pitch": "Publish your schedule once and let anyone read it: this directory, other sites, bots or calendars.",
         "analogy": "Think of the OTE spec as the child of RSS, iCalendar and schema.org/Event, but built for what actually matters in a tech community: which technologies the event is about, who it's for, who speaks, when the call for papers closes, which languages it runs in, and much more.",
         "fields": "You publish whatever you want: only 6 fields are required, but more than 100 are available.",
@@ -365,7 +370,7 @@
       "row": {
         "add": "Add channel",
         "remove": "Remove this channel",
-        "empty": "No channels yet. Hit “Add channel” to add the website, the chat group, social profiles or the events feed.",
+        "empty": "No channels yet. Hit “Add channel” to add the website, the chat group, social profiles or the platform where you publish your events.",
         "kindPlaceholder": "What is it? (Telegram, Blog, “DevFest Barcelona”…)",
         "kindLabel": "What this channel is",
         "urlLabel": "URL of channel {{position}}",

@@ -60,6 +60,17 @@ export const URL_KINDS = [
   { kind: "flickr", labelKey: "communityModal.url.flickr", icon: "fab fa-flickr", group: "social" },
 ];
 
+/**
+ * Las plataformas que ofrece el desplegable del formulario.
+ *
+ * Es `URL_KINDS` menos el feed de eventos: desde #478 ese canal lo edita su tarjeta propia,
+ * donde además se explica qué es OTE. Ofrecerlo también aquí daría dos sitios para editar el
+ * mismo campo, y dos sitios acaban con dos valores distintos. El `kind` sigue siendo válido
+ * en los datos, en el alta asistida y en lo que llega de un issue: lo que se quita es la
+ * entrada del desplegable, no la plataforma.
+ */
+export const URL_KIND_PICKER_OPTIONS = URL_KINDS.filter(({ kind }) => kind !== "ote");
+
 export const URL_KIND_BY_KEY = Object.fromEntries(URL_KINDS.map((k) => [k.kind, k]));
 
 /** Orden de los grupos en la ficha. El icono y la etiqueta del grupo, aquí. */
@@ -399,4 +410,41 @@ export function makeUrlRow(entry = {}) {
 
 export function toUrlRows(urls) {
   return toUrlEntries(urls).map((entry) => makeUrlRow(entry));
+}
+
+/**
+ * ¿Es esta fila el canal del feed de eventos (OTE)?
+ *
+ * Mira el `kind` explícito y, como el resto del módulo, lo que delataría el dominio: hoy
+ * ningún dominio infiere `ote` (un feed se publica donde quiera la comunidad), pero buscar
+ * solo por la clave es justo lo que dejó canales fuera cuando llegó Meetup.
+ */
+export function isOteRow(row) {
+  if (!row) return false;
+  return (row.kind || inferKindFromUrl(row.url ?? "")) === "ote";
+}
+
+/**
+ * La fila del feed que edita su tarjeta propia, o `null`.
+ *
+ * Es **la primera**: la tarjeta es un campo único, así que si alguien llega con dos feeds
+ * (de un issue antiguo o de un borrador a medias) la segunda se queda donde está en vez de
+ * desaparecer sin que nadie se entere.
+ */
+export function findOteRow(rows = []) {
+  return rows.find((row) => isOteRow(row)) ?? null;
+}
+
+/**
+ * Qué pinta la tarjeta del feed de eventos: su valor y cuál de las dos caras toca.
+ *
+ * `hasFeed` no es "el campo tiene texto": mientras se escribe la URL, la cara de
+ * "ya publicáis" prometería que el directorio va a leer un feed que todavía no existe. Se
+ * decide aquí y no en el componente porque es la línea entre vender OTE a quien no lo tiene
+ * y no darle la lata a quien ya lo publica.
+ */
+export function resolveOteFieldState(rows = []) {
+  const row = findOteRow(rows);
+  const url = (row?.url ?? "").trim();
+  return { rowId: row?._rowId ?? null, value: row?.url ?? "", hasFeed: Boolean(url) };
 }

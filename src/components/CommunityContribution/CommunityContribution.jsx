@@ -30,12 +30,13 @@ import {
   URL_KINDS,
   URL_KIND_BY_KEY,
   inferKindFromUrl,
+  isOteRow,
   makeUrlRow,
   resolveKindOrLabelInput,
   toUrlEntries,
   toUrlRows,
 } from "../../lib/communityUrls.js";
-import { OteCallout } from "./OteCallout.jsx";
+import { OteSection } from "./OteSection.jsx";
 import { UrlKindCombobox } from "./UrlKindCombobox.jsx";
 import { MERGED_STATUS } from "../../lib/mergedCommunities.js";
 import {
@@ -855,11 +856,15 @@ function UrlFields({
       </div>
 
       <div className="contribution-url-rows contribution-grid-span-2">
-        {urls.length === 0 && (
+        {urls.every((row) => isOteRow(row)) && (
           <p className="contribution-url-rows-empty">{t("contribution.urls.row.empty")}</p>
         )}
 
-        {urls.map((row, index) => {
+        {/*
+          El feed de eventos se queda fuera de la lista: lo edita su tarjeta propia, justo
+          debajo, que es donde se explica qué es (OteSection.jsx).
+        */}
+        {urls.filter((row) => !isOteRow(row)).map((row, index) => {
           const kind = row.kind || inferKindFromUrl(row.url ?? "");
           return (
             <UrlRow
@@ -886,8 +891,6 @@ function UrlFields({
           <span>{t("contribution.urls.row.add")}</span>
         </button>
       </div>
-
-      <OteCallout urls={urls} />
 
       {archivedUrls.length > 0 && (
         <div className="contribution-archived-urls contribution-grid-span-2">
@@ -1584,6 +1587,23 @@ export function CommunityContribution({
 
   const handleAddUrlRow = () => {
     updateUrlRows((rows) => [...rows, makeUrlRow({ url: "" })]);
+  };
+
+  /**
+   * El campo de la tarjeta del feed de eventos escribe en la lista de canales: el feed se
+   * guarda como un canal más con `kind: "ote"`, no como un campo aparte del modelo.
+   *
+   * Vaciar el campo **quita la fila**. Dejarla con la URL en blanco la devolvería a la lista
+   * de canales como una fila vacía sin plataforma, que es exactamente el ruido que esta
+   * tarjeta viene a evitar.
+   */
+  const handleOteFeedChange = (url) => {
+    updateUrlRows((rows) => {
+      const existing = rows.find((row) => isOteRow(row));
+      if (!existing) return url.trim() ? [...rows, makeUrlRow({ url, kind: "ote" })] : rows;
+      if (!url.trim()) return rows.filter((row) => row !== existing);
+      return rows.map((row) => (row === existing ? { ...row, url, kind: "ote" } : row));
+    });
   };
 
   const handleRemoveUrlRow = (rowId) => {
@@ -2369,6 +2389,8 @@ export function CommunityContribution({
         onRestoreArchivedUrl={handleRestoreArchivedUrl}
         onRemoveArchivedUrl={handleRemoveArchivedUrl}
       />
+
+      <OteSection urls={draft.urls ?? []} onChange={handleOteFeedChange} />
 
       <ArchivedUrlWarning matches={archivedUrlMatches} />
 

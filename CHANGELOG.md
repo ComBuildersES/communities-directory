@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-11-12 `09d6086` el feed de eventos, donde se explica qué es
 - 2026-11-12 `fbebf4e` alta de GDG Córdoba, Lleida, Valladolid y Zaragoza
 - 2026-11-12 `5ad5592` enlazar el DevFest de GDG Barcelona y GDG Jaén
 - 2026-11-12 `cb2eed1` editar los canales como filas, con etiqueta propia
@@ -29,7 +30,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Fixes
 
-- 2026-11-12 `f4fef93` no pedir logo ni URL a las comunidades inactivas
+- 2026-11-12 `28ef24f` no pedir logo ni URL a las comunidades inactivas
 - 2026-11-12 `d131a3d` dejar de cobrar clics y atención por lo que ya se sabe
 - 2026-11-12 `40f7209` iniciales en lugar de una imagen traída de bulma.io
 - 2026-11-10 `e23fc7a` regeocodificar cuando una edición cambia la ubicación

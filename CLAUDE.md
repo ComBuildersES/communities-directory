@@ -493,13 +493,28 @@ ficha y muestra los próximos eventos (o el último celebrado).
   se puede comprobar** la actividad, y no que tenerlo la demuestre: con la redacción anterior
   ("lo único que evidencia actividad real"), un modelo deducía "tiene feed, luego está viva".
   Lo que hay que leer son las fechas de dentro.
-- La invitación a publicar el feed vive en el formulario (`OteCallout.jsx`) como **un gancho
-  de una línea que abre un modal**, y **solo para quien no tiene ya canal `ote`**. Antes era un
-  bloque fijo —argumentario, cuatro vías técnicas y cinco enlaces— en medio de la edición de
-  los canales: quien venía a corregir una URL se topaba con un muro, y lo veía también quien ya
-  publica su feed, donde eso no es más que ruido. Dentro del modal, la vía fácil (eventos.wiki)
-  va suelta y las demás plegadas, porque es lo único que la mayoría necesita leer; para el
-  resto está el botón que abre el FAB en "¿Necesito ayuda?" (`openSupportFab("help")`).
+- El feed se declara en el formulario desde **su propia tarjeta** (`OteSection.jsx`), con el
+  campo de la URL dentro. Antes fue un bloque fijo en medio de la edición de los canales
+  —argumentario, cuatro vías técnicas y cinco enlaces, un muro para quien venía a corregir
+  una URL— y después un gancho de una línea debajo de "Añadir canal". Las dos versiones
+  fallaban igual: prosa colgando de una zona de controles, sin nada a lo que anclarse, y con
+  la acción a tres clics (volver arriba, añadir canal, encontrar "OTE" en el desplegable).
+  **El campo tiene que vivir donde se explica qué es**, porque el acrónimo no le dice nada a
+  nadie: por eso el título habla de "vuestra agenda de eventos" y OTE va entre paréntesis.
+- La tarjeta se pinta **siempre, con dos caras** (`resolveOteFieldState`, función pura con
+  test): sin feed invita y enseña cómo crearlo; con feed enseña el que hay y enlaza al lector
+  de OTE, sin argumentario, que ahí no es más que ruido. "Con feed" es que la URL no esté
+  vacía: mientras se teclea, la cara de "ya publicáis" prometería un feed que aún no existe.
+- El feed se sigue guardando como **un canal más de `urls`** con `kind: "ote"`; la tarjeta
+  edita esa fila. Por eso esa fila **no se pinta además en la lista de canales** y
+  `URL_KIND_PICKER_OPTIONS` la quita del desplegable de plataformas: un campo con dos sitios
+  donde editarlo acaba con dos valores distintos. El `kind` sigue vivo en el catálogo, en el
+  alta asistida y en lo que llega de un issue — lo que se quitó es la entrada del desplegable.
+  Vaciar el campo **quita la fila**: dejarla sin URL la devolvería a la lista como una fila
+  vacía sin plataforma.
+- Dentro del modal, la vía fácil (eventos.wiki) va suelta y las demás plegadas, porque es lo
+  único que la mayoría necesita leer; para el resto está el botón que abre el FAB en
+  "¿Necesito ayuda?" (`openSupportFab("help")`).
 - Lo primero del modal es **la analogía** ("el hijo de RSS, iCalendar y schema.org/Event, pero
   para comunidades técnicas"), destacada y sola: es lo que hace entender OTE sin leer la
   especificación, y todo lo que viene detrás (6 campos obligatorios de más de 100, quién lo lee,
@@ -741,8 +756,9 @@ DevFest sin sitio al cerrar #475.
   compartían icono. Para saber dónde publica eventos una comunidad hay que mirar **toda la
   familia**, no una clave.
 - `URL_KINDS` es la **única** lista de plataformas. Añadir una son dos sitios: esa constante y
-  su clave en los dos locales. `ALLOWED_URL_KEYS` y `URL_PLATFORM_OPTIONS` se derivan de ella
-  a propósito: mantenidas a mano se quedaron atrás en cuanto llegó Meetup, y el síntoma fue
+  su clave en los dos locales. `ALLOWED_URL_KEYS`, `URL_PLATFORM_OPTIONS` y
+  `URL_KIND_PICKER_OPTIONS` (el desplegable, que es `URL_KINDS` menos `ote`) se derivan de
+  ella a propósito: mantenidas a mano se quedaron atrás en cuanto llegó Meetup, y el síntoma fue
   que el alta asistida tiraba en silencio una URL que el propio `schema.json` le había
   ofrecido al modelo.
 

@@ -5,11 +5,15 @@ import {
   URL_GROUPS,
   URL_KINDS,
   URL_KIND_BY_KEY,
+  URL_KIND_PICKER_OPTIONS,
   groupUrlEntries,
   inferKindFromUrl,
   mergeDraftUrls,
   hasUrlKind,
+  findOteRow,
+  isOteRow,
   resolveKindOrLabelInput,
+  resolveOteFieldState,
   resolveUrlEntry,
   resolveUrlGroupDisplay,
   withEmptyUrlGroups,
@@ -496,5 +500,69 @@ describe("withEmptyUrlGroups", () => {
     const groups = withEmptyUrlGroups(groupUrlEntries(urls, (key) => key));
     expect(groups.find(({ group }) => group === "chat").entries).toHaveLength(1);
     expect(groups.find(({ group }) => group === "social").entries).toHaveLength(1);
+  });
+});
+
+/**
+ * El feed de eventos lo edita su tarjeta propia, no una fila más de la lista de canales
+ * (issue #478): "OTE" no le dice nada a nadie, así que el campo tiene que ir donde se
+ * explica qué es. Quién es esa fila y cuál de las dos caras toca se decide aquí.
+ */
+describe("resolveOteFieldState", () => {
+  it("sin feed, devuelve el campo vacío y la cara de invitación", () => {
+    const rows = [{ _rowId: "r1", url: "https://t.me/grupo", kind: "telegram" }];
+    expect(resolveOteFieldState(rows)).toEqual({ rowId: null, value: "", hasFeed: false });
+  });
+
+  it("con feed, devuelve la fila que hay que editar", () => {
+    const rows = [
+      { _rowId: "r1", url: "https://t.me/grupo", kind: "telegram" },
+      { _rowId: "r2", url: "https://comunidad.dev/events/feed.json", kind: "ote" },
+    ];
+    expect(resolveOteFieldState(rows)).toEqual({
+      rowId: "r2",
+      value: "https://comunidad.dev/events/feed.json",
+      hasFeed: true,
+    });
+  });
+
+  // Mientras se teclea la URL, la cara de "ya publicáis" prometería un feed que no existe.
+  it("una fila de feed sin URL todavía no cuenta como feed publicado", () => {
+    const rows = [{ _rowId: "r2", url: "   ", kind: "ote" }];
+    expect(resolveOteFieldState(rows)).toMatchObject({ rowId: "r2", hasFeed: false });
+  });
+
+  it("se queda con la primera cuando hay dos feeds", () => {
+    const rows = [
+      { _rowId: "r1", url: "https://a.dev/feed.json", kind: "ote" },
+      { _rowId: "r2", url: "https://b.dev/feed.json", kind: "ote" },
+    ];
+    expect(resolveOteFieldState(rows).rowId).toBe("r1");
+  });
+
+  it("no confunde el feed con las demás plataformas de eventos", () => {
+    expect(isOteRow({ url: "https://meetup.com/grupo" })).toBe(false);
+    expect(isOteRow({ url: "https://eventos.wiki/c/grupo", kind: "eventosWiki" })).toBe(false);
+    expect(findOteRow([{ url: "https://meetup.com/grupo" }])).toBeNull();
+  });
+});
+
+describe("URL_KIND_PICKER_OPTIONS", () => {
+  // El feed se edita en su tarjeta, donde además se explica qué es: ofrecerlo también en el
+  // desplegable daría dos sitios para el mismo campo y dos valores distintos.
+  it("no ofrece el feed de eventos como una plataforma más", () => {
+    expect(URL_KIND_PICKER_OPTIONS.some(({ kind }) => kind === "ote")).toBe(false);
+  });
+
+  it("mantiene el resto de plataformas, en el mismo orden", () => {
+    expect(URL_KIND_PICKER_OPTIONS.map(({ kind }) => kind)).toEqual(
+      URL_KINDS.map(({ kind }) => kind).filter((kind) => kind !== "ote")
+    );
+  });
+
+  // Quitarlo del desplegable no lo quita del modelo: sigue llegando de los issues, del alta
+  // asistida y de los ficheros ya publicados.
+  it("deja el kind `ote` vivo en el catálogo", () => {
+    expect(URL_KIND_BY_KEY.ote).toBeTruthy();
   });
 });

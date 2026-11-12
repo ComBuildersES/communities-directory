@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { URL_GROUPS, URL_KINDS } from "../../lib/communityUrls.js";
+import { URL_GROUPS, URL_KIND_PICKER_OPTIONS } from "../../lib/communityUrls.js";
 
 /**
  * El campo "¿qué es?" de una fila de canal (issue #478).
@@ -40,7 +40,7 @@ export function UrlKindCombobox({ value, onChange, placeholder, ariaLabel }) {
 
   const options = useMemo(
     () =>
-      URL_KINDS.map(({ kind, labelKey, icon, group, hintKey }) => ({
+      URL_KIND_PICKER_OPTIONS.map(({ kind, labelKey, icon, group, hintKey }) => ({
         kind,
         icon,
         group,

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { hasUrlKind } from "../../lib/communityUrls.js";
+import { resolveOteFieldState } from "../../lib/communityUrls.js";
 import { openSupportFab } from "../../lib/supportFab.js";
 
 const OTE_SITE_URL = "https://opentechevents.org/";
@@ -11,23 +11,34 @@ const OTE_TEMPLATE_URL = "https://github.com/OpenTechEvents/ote-template";
 const OTE_TOOLS_URL = "https://opentechevents.org/#tools";
 const EVENTOS_WIKI_REPO_URL = "https://github.com/achamorro-dev/eventoswiki";
 const EVENTOS_WIKI_DATA_URL = "https://eventos.wiki/events.json";
+const OTE_READER_URL = "https://reader.opentechevents.org/";
 
 /**
- * Invitación a publicar los eventos en formato abierto (OTE).
+ * La agenda de eventos de la comunidad: su propia tarjeta, con el campo del feed dentro.
  *
- * Antes era un bloque fijo dentro del formulario: un párrafo de propuesta de valor, cuatro
- * vías técnicas y cinco enlaces, en medio de la edición de los canales. Quien venía a
- * corregir una URL se encontraba con un muro, y encima lo veía también quien **ya** publica
- * su feed, donde el argumentario no es más que ruido.
+ * Empezó siendo un bloque fijo dentro de la tarjeta de URLs (argumentario, cuatro vías
+ * técnicas y cinco enlaces) y pasó por ser un gancho de una línea debajo de "Añadir canal".
+ * Las dos versiones compartían el mismo fallo: prosa colgando de una zona de controles, sin
+ * nada a lo que anclarse, y con la acción que proponía a tres clics de distancia (volver
+ * arriba, añadir canal, encontrar "OTE" en el desplegable).
  *
- * Queda un gancho de una línea que abre el detalle a demanda, y sólo para quien aún no tiene
- * canal `ote`. Las instrucciones viven dentro del modal, plegadas: la vía fácil
- * (eventos.wiki) es lo único que la mayoría necesita leer, y para el resto está pedir ayuda.
+ * De ahí la tarjeta: **el campo vive donde se explica qué es**. El acrónimo no encabeza nada
+ * —"OTE" no le dice nada a quien llega— y el título habla de lo que la persona reconoce, su
+ * agenda de eventos.
+ *
+ * Se pinta siempre, con dos caras: a quien no tiene feed se le invita; a quien ya publica se
+ * le enseña el suyo y se le calla el argumentario, que ahí no es más que ruido.
+ *
+ * El feed sigue guardándose como un canal más de `urls` (kind `ote`): esta tarjeta edita esa
+ * fila, no un campo aparte del modelo de datos. Por eso la fila no se pinta además en la
+ * lista de canales, y el desplegable de plataformas no ofrece OTE: un campo con dos sitios
+ * donde editarlo acaba con dos valores distintos.
  */
 /* eslint-disable react/prop-types */
-export function OteCallout({ urls = [] }) {
+export function OteSection({ urls = [], onChange }) {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
+  const { value, hasFeed } = resolveOteFieldState(urls);
 
   useEffect(() => {
     if (!isOpen) return undefined;
@@ -38,32 +49,71 @@ export function OteCallout({ urls = [] }) {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [isOpen]);
 
-  // Quien ya publica su feed no necesita que le vendan OTE.
-  if (hasUrlKind(urls, "ote")) return null;
-
   const askForHelp = () => {
     setIsOpen(false);
     openSupportFab("help");
   };
 
   return (
-    <div className="contribution-grid-span-2">
-      {/*
-        Todo el aviso es el control, no solo "cómo funciona": el objetivo de clic era un
-        enlace de dos palabras dentro de una línea de texto. Un único botón envolviéndolo
-        todo (el modal va fuera: anidar interactivos es HTML inválido).
-      */}
-      <button
-        type="button"
-        className="contribution-ote-callout contribution-ote-hook"
-        onClick={() => setIsOpen(true)}
-      >
-        <i className="fas fa-calendar-days" aria-hidden="true"></i>{" "}
-        <span>{t("contribution.urls.ote.hook")}</span>{" "}
-        <span className="contribution-ote-hook-link">
-          {t("contribution.urls.ote.hookCta")}
-        </span>
-      </button>
+    <section className="contribution-card contribution-ote-card">
+      <div className="contribution-card-header">
+        <div>
+          <h3>
+            <i
+              className={hasFeed ? "fas fa-circle-check" : "fas fa-calendar-days"}
+              aria-hidden="true"
+            ></i>{" "}
+            {t("contribution.urls.ote.sectionTitle")}
+          </h3>
+          <p>
+            {hasFeed
+              ? t("contribution.urls.ote.sectionLeadWithFeed")
+              : t("contribution.urls.ote.sectionLead")}
+          </p>
+        </div>
+      </div>
+
+      <div className="field contribution-grid-span-2">
+        <label className="label" htmlFor="community-ote-feed">
+          {t("contribution.urls.ote.fieldLabel")}
+        </label>
+        <div className="control">
+          <input
+            id="community-ote-feed"
+            className="input"
+            type="url"
+            value={value}
+            onChange={(event) => onChange?.(event.target.value)}
+            placeholder="https://comunidad.dev/events/feed.json"
+          />
+        </div>
+        {/*
+          El pie del campo es lo que decide si esto recluta o estorba: sin feed, el camino
+          para crearlo; con feed, dónde comprobar que se lee bien. Nunca las dos cosas.
+        */}
+        <p className="help contribution-ote-field-help">
+          {hasFeed ? (
+            <a
+              href={`${OTE_READER_URL}?subscribe=${encodeURIComponent(value.trim())}`}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {t("contribution.urls.ote.readerCta")}
+            </a>
+          ) : (
+            <>
+              <span>{t("contribution.urls.ote.noFeedPrompt")}</span>{" "}
+              <button
+                type="button"
+                className="contribution-ote-hook-link"
+                onClick={() => setIsOpen(true)}
+              >
+                {t("contribution.urls.ote.howToCta")}
+              </button>
+            </>
+          )}
+        </p>
+      </div>
 
       {isOpen && (
         <div className="contribution-help-modal-overlay" onClick={() => setIsOpen(false)}>
@@ -164,6 +214,6 @@ export function OteCallout({ urls = [] }) {
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 }
