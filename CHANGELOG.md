@@ -56,7 +56,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
-- 2026-11-12 `567f0a9` el porqué de los canales como pares, no lo que ya dice el esquema
+- 2026-11-12 `61a2304` por qué las cuatro altas de GDG se quedan fuera
+- 2026-11-12 `66364d5` el porqué de los canales como pares, no lo que ya dice el esquema
 - 2026-11-10 `9c84a1a` regenerar el changelog tras el merge
 - 2026-11-10 `5b11100` documentar la capa de datos abiertos para IA y sanear AGENTS.md
 - 2026-11-10 `eaf69c6` actualizar la guía al layout de un fichero por comunidad
