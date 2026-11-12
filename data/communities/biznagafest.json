@@ -6,6 +6,9 @@
   "communityType": "conference",
   "eventFormat": "in-person",
   "location": "Málaga",
+  "organizedBy": [
+    203
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -15,7 +18,6 @@
   "contactInfo": "biznagafest@gmail.com",
   "communityUrl": "https://www.biznagafest.com/",
   "urls": {
-    "linkedin": "https://www.linkedin.com/company/fjxgroup/",
     "instagram": "https://www.instagram.com/biznagafest/",
     "twitter": "https://twitter.com/BiznagaFest",
     "youtube": "https://www.youtube.com/@biznagafest",

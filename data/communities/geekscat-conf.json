@@ -1,0 +1,37 @@
+{
+  "id": null,
+  "name": "GeeksCAT Conf",
+  "status": "active",
+  "lastReviewed": "12/11/2026",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Girona",
+  "geographicScope": "regional",
+  "organizedBy": [
+    647
+  ],
+  "shortDescription": "Esdeveniment anual de la comunitat tecnològica catalana, hereu de la Festa Open Source. Xerrades tècniques sobre codi, infraestructura, dades i IA, organitzades per voluntaris de GeeksCAT.",
+  "topics": "",
+  "langs": [
+    "ca",
+    "es",
+    "en"
+  ],
+  "tags": [
+    "open-source",
+    "free-software"
+  ],
+  "targetAudience": [],
+  "contactInfo": "conf@geekscat.org",
+  "communityUrl": "https://conf.geeks.cat/",
+  "urls": {
+    "web": "https://conf.geeks.cat/"
+  },
+  "thumbnailUrl": "images/geekscat-conf.webp",
+  "latLon": {
+    "lat": 41.9794,
+    "lon": 2.8214
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

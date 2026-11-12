@@ -6,6 +6,10 @@
   "communityType": "conference",
   "eventFormat": "hybrid",
   "location": "Logroño La Rioja",
+  "organizedBy": [
+    201,
+    311
+  ],
   "shortDescription": "Entre los objetivos de la CodeRioja se fomentar  el conocimiento del software libre, impulsar el sector TIC empresarial riojano, ofrecer una alternativa de ocio constructivo, instructivo y participativo, así como favorecer la comunicación entre los aficionados a la informát",
   "topics": "",
   "langs": [

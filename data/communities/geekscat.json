@@ -21,8 +21,7 @@
   "contactInfo": "info@geekscat.org",
   "communityUrl": "https://geeks.cat/",
   "urls": {
-    "web": "https://geeks.cat/",
-    "eventsUrl": "https://conf.geeks.cat/"
+    "web": "https://geeks.cat/"
   },
   "thumbnailUrl": "images/geekscat.webp",
   "latLon": {
