@@ -26,6 +26,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-11-12 `18aa3e6` Update community-builders-members.json
 - 2026-11-11 `4541d1e` Eliminada DES ([PR #474](https://github.com/ComBuildersES/communities-directory/pull/474))
 - 2026-11-11 `25075c2` Eliminada RMC ([PR #472](https://github.com/ComBuildersES/communities-directory/pull/472))
 - 2026-11-10 `da12774` [Actualizada WordCamp Alhaurín de la Torre](https://directory.communitybuilders.dev/?community=484) ([PR #469](https://github.com/ComBuildersES/communities-directory/pull/469))
