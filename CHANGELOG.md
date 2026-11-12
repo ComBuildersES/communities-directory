@@ -5,25 +5,6 @@ Se organiza por mes y por tipo de cambio.
 
 ## 2026-11
 
-### Features
-
-- 2026-11-12 `20c8add` fusiones de comunidades (status "merged" + mergedIntoId)
-- 2026-11-10 `442476c` decir cuanto del dataset ha revisado una persona
-- 2026-11-10 `2ad8fa6` el modal de datos abiertos se organiza por persona
-- 2026-11-10 `1d90695` el botón flotante pregunta antes de ofrecer
-- 2026-11-10 `570f367` garantizar que el changelog refleja lo que se publica
-- 2026-11-10 `66d0d20` botón flotante de soporte con aviso al entrar
-- 2026-11-10 `c92fd31` alta de comunidad asistida por IA
-- 2026-11-10 `fefa8c0` añadir el modal "Datos abiertos + IA" a la cabecera
-- 2026-11-10 `842b6b0` publicar llms.txt y el resto de artefactos para agentes
-- 2026-11-06 `07e7c76` ficha legible de la propuesta en la PR automática
-- 2026-11-06 `dd0431a` añadir URLs de foro/blog/RSS/eventos.wiki/OTE y ámbito geográfico
-- 2026-11-05 `1d4b6c3` archivar canales históricos de una comunidad (#353)
-
-### Fixes
-
-- 2026-11-10 `e23fc7a` regeocodificar cuando una edición cambia la ubicación
-
 ### Data
 
 - 2026-11-12 `18aa3e6` Update community-builders-members.json
