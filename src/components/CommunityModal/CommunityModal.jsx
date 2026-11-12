@@ -500,7 +500,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                   <button
                     key={organizer.id ?? organizer.name}
                     type="button"
-                    className="community-modal-relation"
+                    className={`community-modal-relation${organizer.status !== "active" ? " community-modal-relation--dimmed" : ""}`}
                     onClick={() => onOpenCommunity?.(organizer.id)}
                     disabled={!onOpenCommunity || organizer.id == null}
                   >
@@ -533,7 +533,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                   <button
                     key={organized.id ?? organized.name}
                     type="button"
-                    className="community-modal-relation"
+                    className={`community-modal-relation${organized.status !== "active" ? " community-modal-relation--dimmed" : ""}`}
                     onClick={() => onOpenCommunity?.(organized.id)}
                     disabled={!onOpenCommunity || organized.id == null}
                   >
@@ -629,7 +629,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                   <button
                     key={organizer.id ?? organizer.name}
                     type="button"
-                    className="community-modal-relation"
+                    className={`community-modal-relation${organizer.status !== "active" ? " community-modal-relation--dimmed" : ""}`}
                     onClick={() => onOpenCommunity?.(organizer.id)}
                     disabled={!onOpenCommunity || organizer.id == null}
                   >

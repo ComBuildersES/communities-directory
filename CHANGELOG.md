@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-12 `1a317f2` eventos anuales con marca propia y su autoría
+- 2026-11-12 `e4d787d` apagar el vínculo de autoría cuando el otro lado no está activo
+- 2026-11-12 `59f5517` eventos anuales con marca propia y su autoría
 - 2026-11-12 `f97406c` modelar autoría de encuentros recurrentes (organizedBy)
 - 2026-11-12 `20c8add` fusiones de comunidades (status "merged" + mergedIntoId)
 - 2026-11-10 `442476c` decir cuanto del dataset ha revisado una persona
