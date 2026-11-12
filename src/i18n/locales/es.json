@@ -154,7 +154,6 @@
     "review": "Estado de la revisión"
   },
   "app": {
-    "checkingFreshData": "Comprobando si hay una versión más reciente del directorio antes de abrir detalles o proponer cambios.",
     "syncingBeforeEdit": "Sincronizando la última versión antes de permitir la edición...",
     "loadingForm": "Cargando formulario...",
     "communityNotFound": "No he encontrado la comunidad que intentabas editar. Puedes volver al directorio o abrir el formulario vacío para crear una nueva.",
@@ -162,7 +161,9 @@
     "unsavedChangesBody": "Si sales ahora perderás lo que has escrito en el formulario. Puedes seguir editando, guardar un borrador local en este navegador o salir sin guardarlo.",
     "keepEditing": "Seguir editando",
     "saveDraftAndExit": "Guardar borrador y salir",
-    "exitWithoutSaving": "Salir sin guardar"
+    "exitWithoutSaving": "Salir sin guardar",
+    "freshDataFailed": "No he podido confirmar la última versión del directorio. Para no pisar cambios de otra persona, la edición espera a sincronizar.",
+    "retryFreshData": "Reintentar"
   },
   "communityModal": {
     "close": "Cerrar",
@@ -325,9 +326,7 @@
         "bullet1": "Si no existe web propia, usa el enlace que mejor represente a la comunidad y tenga menos probabilidad de expirar.",
         "bullet2": "El resto de perfiles pueden añadirse como URLs adicionales."
       },
-      "missingPlatformNote": "Si echas en falta algún tipo de plataforma,",
       "openIssue": "abre un issue en el repositorio",
-      "missingPlatformNoteSuffix": "para que podamos seguir mejorando las opciones ofrecidas.",
       "archive": {
         "title": "Canales archivados",
         "description": "Canales que la comunidad tuvo abiertos pero que su equipo actual no atiende. No se muestran en la ficha: solo evitan que alguien los vuelva a dar de alta como activos.",
@@ -341,14 +340,24 @@
       },
       "ote": {
         "title": "Eventos en formato abierto (OTE)",
-        "description": "Open Tech Events (OTE) es una iniciativa impulsada desde Community Builders para publicar los eventos de cada comunidad en un formato abierto y común. Existe para que los datos de eventos no queden encerrados en plataformas cerradas: con un único fichero, cualquier directorio, web o bot puede leer vuestra agenda. Si tu comunidad publica uno, este directorio mostrará vuestros próximos eventos de forma automática.",
-        "waysTitle": "Cómo generar vuestro fichero OTE",
-        "way0": "Registrar la comunidad y sus eventos en eventos.wiki: la vía más cómoda, genera el fichero OTE por vosotros.",
+        "hook": "¿Dinamizas esta comunidad y quieres que vuestros eventos se vean en más sitios con un solo fichero?",
+        "hookCta": "Cómo funciona",
+        "pitch": "Publica vuestra agenda una vez y que la lea quien quiera: este directorio, otras webs, bots o calendarios.",
+        "analogy": "Imagina la especificación OTE como el hijo de RSS, iCalendar y schema.org/Event, pero pensada para lo que de verdad importa en una comunidad técnica: de qué tecnologías va el evento, a qué público se dirige, quién habla, cuándo cierra el call for papers, en qué idiomas se celebra y mucho más.",
+        "fields": "Publicáis los datos que queráis: solo 6 campos son obligatorios, pero hay más de 100 disponibles.",
+        "vocabulary": "Al ser un vocabulario común, vuestros eventos no los lee solo este directorio: también eventos.wiki, saraoia.com y un ecosistema creciente de herramientas, con solo darles la URL. Y esos mismos datos se exportan a ICS y RSS, así que cualquiera puede seguir vuestra agenda desde su calendario o su lector de siempre.",
+        "easyWay": "La vía más cómoda: registrar la comunidad y sus eventos en eventos.wiki, que genera vuestro fichero OTE básico y además puede traerse los eventos automáticamente desde plataformas como Meetup.",
+        "ownership": "eventos.wiki es software libre y publica sus datos en abierto, y alrededor de la especificación hay más herramientas libres. La idea es que la información de vuestros eventos sea vuestra y que sean los demás quienes se conecten a ella.",
+        "waysTitle": "Otras formas de generarlo",
         "way1": "Usar las agent skills de ote-tools para que un agente redacte la especificación.",
         "way2": "Crear los eventos a mano con el editor web de OTE.",
         "way3": "Partir de ote-template, un repo con varias herramientas ya montadas.",
+        "askForHelp": "Pídenos ayuda",
         "linkSpec": "Qué es OTE",
         "linkEventosWiki": "eventos.wiki",
+        "linkEventosWikiRepo": "Código de eventos.wiki",
+        "linkEventosWikiData": "Sus datos abiertos (events.json)",
+        "linkTools": "Herramientas del ecosistema OTE",
         "linkSkills": "Agent skills (ote-tools)",
         "linkEditor": "Editor OTE",
         "linkTemplate": "ote-template"

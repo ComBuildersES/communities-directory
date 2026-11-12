@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-12 `d268b3f` alta de GDG Córdoba, Lleida, Valladolid y Zaragoza
+- 2026-11-12 `fbebf4e` alta de GDG Córdoba, Lleida, Valladolid y Zaragoza
 - 2026-11-12 `5ad5592` enlazar el DevFest de GDG Barcelona y GDG Jaén
 - 2026-11-12 `cb2eed1` editar los canales como filas, con etiqueta propia
 - 2026-11-12 `cba2880` `urls` como lista de pares con etiqueta propia
@@ -29,6 +29,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Fixes
 
+- 2026-11-12 `756bbcf` dejar de cobrar clics y atención por lo que ya se sabe
 - 2026-11-12 `40f7209` iniciales en lugar de una imagen traída de bulma.io
 - 2026-11-10 `e23fc7a` regeocodificar cuando una edición cambia la ubicación
 

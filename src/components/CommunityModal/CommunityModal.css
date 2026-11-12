@@ -389,6 +389,28 @@ button.modal-badge:focus-visible {
   border-color: #bbb;
 }
 
+/*
+  Grupo de un solo canal: es un enlace, no un disparador de desplegable (ver
+  `resolveUrlGroupDisplay`). Mismo aspecto para que la fila no se vea desigual, con la flecha
+  de "abre fuera" en lugar del chevron.
+*/
+.community-modal-url-group-btn--direct {
+  text-decoration: none;
+}
+
+.community-modal-url-group-btn--direct:hover {
+  color: #3273dc;
+}
+
+.community-modal-url-group-external {
+  font-size: 0.6rem;
+  color: #bbb;
+}
+
+.community-modal-url-group-btn--direct:hover .community-modal-url-group-external {
+  color: #3273dc;
+}
+
 .community-modal-url-group-count {
   font-size: 0.7rem;
   font-weight: 400;

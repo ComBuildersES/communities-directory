@@ -483,6 +483,17 @@ ficha y muestra los próximos eventos (o el último celebrado).
   se puede comprobar** la actividad, y no que tenerlo la demuestre: con la redacción anterior
   ("lo único que evidencia actividad real"), un modelo deducía "tiene feed, luego está viva".
   Lo que hay que leer son las fechas de dentro.
+- La invitación a publicar el feed vive en el formulario (`OteCallout.jsx`) como **un gancho
+  de una línea que abre un modal**, y **solo para quien no tiene ya canal `ote`**. Antes era un
+  bloque fijo —argumentario, cuatro vías técnicas y cinco enlaces— en medio de la edición de
+  los canales: quien venía a corregir una URL se topaba con un muro, y lo veía también quien ya
+  publica su feed, donde eso no es más que ruido. Dentro del modal, la vía fácil (eventos.wiki)
+  va suelta y las demás plegadas, porque es lo único que la mayoría necesita leer; para el
+  resto está el botón que abre el FAB en "¿Necesito ayuda?" (`openSupportFab("help")`).
+- Lo primero del modal es **la analogía** ("el hijo de RSS, iCalendar y schema.org/Event, pero
+  para comunidades técnicas"), destacada y sola: es lo que hace entender OTE sin leer la
+  especificación, y todo lo que viene detrás (6 campos obligatorios de más de 100, quién lo lee,
+  la exportación a ICS y RSS) solo se entiende sabiendo ya de qué hablamos.
 - `scripts/match-eventos-wiki.js` empareja los organizadores de
   `https://eventos.wiki/events.json` con las comunidades por nombre y rellena
   los canales `eventosWiki` + `ote`. Por defecto solo aplica matches exactos; los parciales
@@ -759,6 +770,19 @@ componente:
 - `urlExtras` fue el andamio de cuando el formulario aún no editaba pares. Ya no existe en el
   borrador; sólo se lee al recuperar uno de entonces.
 
+#### Los grupos de la ficha: un canal, un clic
+
+- Un grupo con **un solo canal se pinta como enlace**, no como desplegable: abrirlo para elegir
+  la única opción son dos clics para llegar al mismo sitio (LechazoConf → Chat → Telegram). Y
+  entonces lo que se enseña es la etiqueta del canal ("Telegram"), no la del grupo ("Chat"):
+  importa a dónde lleva el clic, no en qué cajón lo hemos guardado. La decisión es una función
+  pura con test (`resolveUrlGroupDisplay`).
+- La URL principal entra en ese reparto como un canal más del grupo "Comunidad" cuando no está
+  ya entre las entradas, así que **cuenta para decidir si el grupo es uno o varios**. Y para
+  que pueda entrar hace falta `withEmptyUrlGroups`: `groupUrlEntries` descarta los grupos
+  vacíos, y con el grupo "Comunidad" filtrado la URL principal no se pintaba en ninguna parte
+  de la ficha (a LechazoConf le faltaba su web).
+
 ### Slugs
 
 `slugifyCommunityName` existe en `scripts/lib/communities-store.js` y en
@@ -767,6 +791,26 @@ slug dependen de esa equivalencia. Hay un test que lo verifica
 (`tests/communitiesStore.test.js`).
 
 ---
+
+## La revalidación al volver a la pestaña es silenciosa
+
+Volver a la pestaña vuelve a pedir `communities.json` para no quedarse con datos viejos. Eso
+**no se anuncia**: la comprobación no pinta nada y no bloquea la lectura. Toda la decisión está
+en `src/lib/freshness.js` (`shouldRevalidateFreshData`, función pura con test).
+
+- Antes la comprobación bloqueaba el detalle: mientras corría, la **ficha abierta se cerraba** y
+  en su hueco aparecía un aviso que empujaba el contenido. Un alt-tab bastaba para perder lo que
+  estabas leyendo, y el aviso ni se llegaba a leer.
+- Lo que sí espera a confirmar la última versión es **solo la edición**: una propuesta construida
+  sobre datos viejos pisa cambios de otra persona. Leer una ficha diez minutos desactualizada no
+  hace daño a nadie.
+- Si la revalidación falla, el aviso sale **en el formulario**, con un botón de reintentar, no en
+  el listado de quien solo venía a mirar.
+- Hay un **throttle** (`FRESH_DATA_MIN_INTERVAL_MS`): sin él, cinco alt-tab eran cinco descargas
+  del dataset completo. No aplica cuando nunca se llegó a confirmar la versión, porque reintentar
+  es justo lo que desbloquea la edición.
+- Con el formulario abierto no se revalida: recargar movería el suelo bajo lo que se está
+  escribiendo.
 
 ## Patrones y convenciones
 

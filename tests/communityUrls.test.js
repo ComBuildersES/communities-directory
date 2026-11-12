@@ -2,13 +2,17 @@ import { describe, expect, it } from "vitest";
 import fs from "node:fs";
 import path from "node:path";
 import {
+  URL_GROUPS,
   URL_KINDS,
   URL_KIND_BY_KEY,
   groupUrlEntries,
   inferKindFromUrl,
   mergeDraftUrls,
+  hasUrlKind,
   resolveKindOrLabelInput,
   resolveUrlEntry,
+  resolveUrlGroupDisplay,
+  withEmptyUrlGroups,
   splitDraftUrls,
   toLegacyUrlMap,
   toUrlEntries,
@@ -391,5 +395,106 @@ describe("resolveKindOrLabelInput", () => {
     expect(
       resolveKindOrLabelInput({ text: "  telegram  ", url: "https://ejemplo.org", kindLabels }),
     ).toEqual({ kind: "telegram", label: undefined });
+  });
+});
+
+/**
+ * Un grupo con un solo canal se pintaba igualmente como desplegable: en LechazoConf, llegar a
+ * su Telegram eran dos clics (Chat → Telegram) para una única opción.
+ */
+describe("resolveUrlGroupDisplay", () => {
+  const telegram = { url: "https://t.me/lechazoconf", label: "Telegram", icon: "fab fa-telegram" };
+  const discord = { url: "https://discord.gg/abc", label: "Discord", icon: "fab fa-discord" };
+
+  it("con un solo canal no hay desplegable y manda la etiqueta del canal", () => {
+    expect(
+      resolveUrlGroupDisplay({
+        entries: [telegram],
+        groupLabel: "Chat",
+        groupIcon: "fas fa-comments",
+      }),
+    ).toEqual({
+      items: [telegram],
+      isDirect: true,
+      label: "Telegram",
+      icon: "fab fa-telegram",
+    });
+  });
+
+  it("con varios canales se agrupan bajo la etiqueta y el icono del grupo", () => {
+    const display = resolveUrlGroupDisplay({
+      entries: [telegram, discord],
+      groupLabel: "Chat",
+      groupIcon: "fas fa-comments",
+    });
+
+    expect(display.isDirect).toBe(false);
+    expect(display.label).toBe("Chat");
+    expect(display.icon).toBe("fas fa-comments");
+    expect(display.items).toEqual([telegram, discord]);
+  });
+
+  it("la URL principal cuenta para decidir si el grupo es uno o varios", () => {
+    const fallbackItem = { url: "https://lechazoconf.dev", label: "Enlace principal", icon: "fas fa-link" };
+
+    expect(resolveUrlGroupDisplay({ entries: [], fallbackItem, groupLabel: "Comunidad" }).isDirect).toBe(true);
+    expect(
+      resolveUrlGroupDisplay({ entries: [telegram], fallbackItem, groupLabel: "Comunidad" }),
+    ).toMatchObject({ isDirect: false, label: "Comunidad", items: [telegram, fallbackItem] });
+  });
+
+  it("sin canales ni URL principal no hay nada que pintar", () => {
+    expect(resolveUrlGroupDisplay({ groupLabel: "Chat" }).items).toEqual([]);
+  });
+});
+
+/**
+ * El bloque que invita a publicar el feed OTE no se pinta a quien ya lo tiene. Un canal se
+ * localiza por su URL, no solo por su `kind`: el `kind` se omite cuando el dominio lo delata.
+ */
+describe("hasUrlKind", () => {
+  it("encuentra el canal por su kind explícito", () => {
+    expect(hasUrlKind([{ kind: "ote", url: "https://comunidad.dev/feed.json" }], "ote")).toBe(true);
+  });
+
+  it("encuentra el canal cuando el kind se omitió porque el dominio lo delata", () => {
+    expect(hasUrlKind([{ url: "https://t.me/comunidad" }], "telegram")).toBe(true);
+  });
+
+  it("dice que no cuando ese canal no está", () => {
+    expect(hasUrlKind([{ url: "https://comunidad.dev" }], "ote")).toBe(false);
+    expect(hasUrlKind([], "ote")).toBe(false);
+    expect(hasUrlKind(undefined, "ote")).toBe(false);
+  });
+
+  it("lee también el formato antiguo de objeto, que es lo que traen los issues viejos", () => {
+    expect(hasUrlKind({ ote: "https://comunidad.dev/feed.json" }, "ote")).toBe(true);
+  });
+});
+
+/**
+ * La ficha mete la URL principal en el grupo "Comunidad" cuando no está entre los canales.
+ * Con los grupos vacíos filtrados, esa rama era inalcanzable y el enlace no se pintaba en
+ * ninguna parte: LechazoConf (solo redes y Telegram) se quedaba sin su web.
+ */
+describe("withEmptyUrlGroups", () => {
+  const urls = [{ url: "https://t.me/lechazoconf" }, { url: "https://twitter.com/lechazoconf" }];
+
+  it("devuelve siempre todos los grupos, en el orden de la ficha", () => {
+    const groups = withEmptyUrlGroups(groupUrlEntries(urls, (key) => key));
+    expect(groups.map(({ group }) => group)).toEqual(URL_GROUPS.map(({ group }) => group));
+  });
+
+  it("deja el grupo de la URL principal disponible aunque no tenga canales", () => {
+    const groups = withEmptyUrlGroups(groupUrlEntries(urls, (key) => key));
+    const community = groups.find(({ group }) => group === "community");
+    expect(community.entries).toEqual([]);
+    expect(community.labelKey).toBe("communityModal.urlGroup.community");
+  });
+
+  it("no toca los grupos que sí traen canales", () => {
+    const groups = withEmptyUrlGroups(groupUrlEntries(urls, (key) => key));
+    expect(groups.find(({ group }) => group === "chat").entries).toHaveLength(1);
+    expect(groups.find(({ group }) => group === "social").entries).toHaveLength(1);
   });
 });

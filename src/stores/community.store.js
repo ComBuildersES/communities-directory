@@ -53,7 +53,7 @@ const initialState = {
   coverage: null, // Cuánto del dataset ha revisado una persona (src/lib/dataCoverage.js)
   hasFreshData: false, // Datos confirmados desde red cuando hay conexión
   isRefreshingFreshData: false, // Revalidación online en curso
-  freshnessError: null, // Aviso cuando solo hay datos de cache
+  lastFreshAt: null, // Cuándo se confirmó la última versión (throttle de src/lib/freshness.js)
 };
 
 // Define el store Zustand
@@ -81,7 +81,6 @@ const useCommunityStore = create(
           error: null,
           hasFreshData: shouldRequireFreshData ? false : true,
           isRefreshingFreshData: shouldRequireFreshData,
-          freshnessError: null,
         }));
 
         try {
@@ -162,9 +161,7 @@ const useCommunityStore = create(
             coverage: buildCoverage(data),
             hasFreshData,
             isRefreshingFreshData: false,
-            freshnessError: hasFreshData
-              ? null
-              : "No he podido confirmar la ultima version del directorio. Mientras haya conexion, los detalles y la edicion quedan bloqueados hasta sincronizar.",
+            lastFreshAt: hasFreshData ? Date.now() : null,
             isLoading: false,
             numberOFCommunities: communitiesFiltered.length,
             numberOFOnSiteCommunities: communitiesFiltered.filter(e => e.displayOnMap == true).length
@@ -361,7 +358,7 @@ export const useHasFreshData = () => useCommunityStore((state) => state.hasFresh
 export const useIsRefreshingFreshData = () =>
   useCommunityStore((state) => state.isRefreshingFreshData);
 
-export const useFreshnessError = () => useCommunityStore((state) => state.freshnessError);
+export const useLastFreshAt = () => useCommunityStore((state) => state.lastFreshAt);
 
 // Selector de las acciones
 

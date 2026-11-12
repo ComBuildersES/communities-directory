@@ -242,6 +242,11 @@
   margin: 0;
 }
 
+/* Aviso de "no pude confirmar la última versión": el texto y su botón de reintentar. */
+.contribution-message .message-body p {
+  margin-bottom: 0.75rem;
+}
+
 .contribution-matches-all-label {
   display: flex;
   align-items: center;
@@ -567,11 +572,6 @@
 .contribution-extra-platforms p {
   margin: 0;
   font-size: 0.92rem;
-}
-
-.contribution-extra-platform-note {
-  color: #62748a;
-  line-height: 1.5;
 }
 
 .contribution-extra-platform-list {
@@ -1039,43 +1039,113 @@
 }
 
 /* Explicación de Open Tech Events en la sección de URLs (issue #402) */
+/*
+  Gancho de una línea, no un bloque de argumentario: el detalle vive en un modal y solo lo
+  ve quien lo pide (ver OteCallout.jsx).
+*/
 .contribution-ote-callout {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
   border: 1px solid #d9e2ef;
   border-left: 3px solid #3273dc;
   border-radius: 6px;
   background: #f7faff;
-  padding: 0.85rem 1rem;
+  padding: 0.6rem 0.85rem;
+  text-align: left;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
 }
 
-.contribution-ote-callout h4 {
-  margin: 0 0 0.4rem;
-  font-size: 0.9rem;
-  font-weight: 700;
+.contribution-ote-callout:hover {
+  background: #eef4fe;
+  border-color: #b9cdea;
 }
 
-.contribution-ote-callout p {
-  margin: 0 0 0.4rem;
-  font-size: 0.82rem;
-  color: #4a4a4a;
+.contribution-ote-hook {
+  margin: 0;
+  font-family: inherit;
+  font-size: 0.85rem;
+  color: #3b4a5a;
   line-height: 1.45;
 }
 
-.contribution-ote-ways-title {
+.contribution-ote-hook i {
+  color: #3273dc;
+}
+
+/* El control es el aviso entero; esto solo señala dónde lleva el clic. */
+.contribution-ote-hook-link {
+  font-weight: 600;
+  color: #3273dc;
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.contribution-ote-callout:hover .contribution-ote-hook-link {
+  color: #2759a8;
+}
+
+/* El modal reutiliza la cubierta de FieldHelpModal, que solo estilaba listas. */
+.contribution-help-modal-body > p {
+  margin: 0 0 0.75rem;
+  color: #56677d;
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.contribution-help-modal-body > .contribution-ote-easy-way {
+  margin-bottom: 1rem;
+  color: #3b4a5a;
   font-weight: 600;
 }
 
+/* La analogía es la frase que hace entender OTE: destacada, no un párrafo más. */
+.contribution-help-modal-body > .contribution-ote-analogy {
+  padding: 0.7rem 0.85rem;
+  border-left: 3px solid #3273dc;
+  border-radius: 0 6px 6px 0;
+  background: #eef4fe;
+  color: #3b4a5a;
+}
+
+.contribution-help-modal-body > .contribution-ote-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1rem;
+  font-size: 0.85rem;
+}
+
+.contribution-ote-ways-details {
+  margin: 0.75rem 0;
+  font-size: 0.85rem;
+}
+
+.contribution-ote-ways-details > summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #3b4a5a;
+}
+
 .contribution-ote-ways {
-  margin: 0;
-  /* Bulma quita las viñetas de los ul; aquí la lista numera vías alternativas y se leen mejor con ellas */
+  margin: 0.5rem 0 0;
+  /* Bulma quita las viñetas de los ul; aquí la lista enumera vías alternativas y se leen mejor con ellas */
   list-style: disc outside;
   padding-left: 1.1rem;
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   color: #4a4a4a;
   line-height: 1.45;
 }
 
 .contribution-ote-ways li + li {
   margin-top: 0.25rem;
+}
+
+.contribution-ote-modal-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }
 
 /* Alta asistida por IA ------------------------------------------------------ */

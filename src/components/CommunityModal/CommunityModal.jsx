@@ -6,7 +6,13 @@ import { buildContributionPath } from "../../lib/communitySubmission";
 import { normalizeCommunityLangs } from "../../lib/communityLanguages.js";
 import { findMergeTarget, isMergedCommunity } from "../../lib/mergedCommunities.js";
 import { findOrganizers } from "../../lib/organizedCommunities.js";
-import { FALLBACK_GROUP, groupUrlEntries, toLegacyUrlMap } from "../../lib/communityUrls.js";
+import {
+  FALLBACK_GROUP,
+  groupUrlEntries,
+  resolveUrlGroupDisplay,
+  toLegacyUrlMap,
+  withEmptyUrlGroups,
+} from "../../lib/communityUrls.js";
 import { OteEvents } from "./OteEvents.jsx";
 import "./CommunityModal.css";
 
@@ -527,11 +533,39 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                 <i className="fas fa-link"></i> {t("communityModal.links")}
               </h3>
               <div className="community-modal-url-groups">
-                {urlGroups.map(({ group: groupKey, labelKey, icon, entries: groupEntries }) => {
-                  const label = t(labelKey);
+                {withEmptyUrlGroups(urlGroups).map(({ group: groupKey, labelKey, icon, entries: groupEntries }) => {
                   const includeFallback = groupKey === FALLBACK_GROUP && showFallbackUrl;
                   if (groupEntries.length === 0 && !includeFallback) return null;
-                  const count = groupEntries.length + (includeFallback ? 1 : 0);
+                  const { items, isDirect, label, icon: groupItemIcon } = resolveUrlGroupDisplay({
+                    entries: groupEntries,
+                    fallbackItem: includeFallback
+                      ? {
+                        url: communityUrl,
+                        label: t("communityModal.mainLink"),
+                        icon: "fas fa-arrow-up-right-from-square",
+                      }
+                      : null,
+                    groupLabel: t(labelKey),
+                    groupIcon: icon,
+                  });
+
+                  // Un solo canal: enlace directo, sin desplegable que abrir.
+                  if (isDirect) {
+                    return (
+                      <a
+                        key={groupKey}
+                        href={items[0].url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="community-modal-url-group-btn community-modal-url-group-btn--direct"
+                      >
+                        <i className={groupItemIcon}></i>
+                        <span>{label}</span>
+                        <i className="fas fa-arrow-up-right-from-square community-modal-url-group-external"></i>
+                      </a>
+                    );
+                  }
+
                   const isOpen = openUrlGroup === groupKey;
                   return (
                     <div key={groupKey} className="community-modal-url-group">
@@ -540,25 +574,19 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                         className={`community-modal-url-group-btn${isOpen ? " is-open" : ""}`}
                         onClick={() => setOpenUrlGroup(isOpen ? null : groupKey)}
                       >
-                        <i className={icon}></i>
+                        <i className={groupItemIcon}></i>
                         <span>{label}</span>
-                        <span className="community-modal-url-group-count">{count}</span>
+                        <span className="community-modal-url-group-count">{items.length}</span>
                         <i className="fas fa-chevron-down community-modal-url-group-chevron"></i>
                       </button>
                       {isOpen && (
                         <div className="community-modal-url-dropdown">
-                          {groupEntries.map(({ url, label: urlLabel, icon: urlIcon }) => (
+                          {items.map(({ url, label: urlLabel, icon: urlIcon }) => (
                             <a key={url} href={url} target="_blank" rel="noopener noreferrer" className="community-modal-url-dropdown-item">
                               <i className={urlIcon}></i>
                               <span>{urlLabel}</span>
                             </a>
                           ))}
-                          {includeFallback && (
-                            <a href={communityUrl} target="_blank" rel="noopener noreferrer" className="community-modal-url-dropdown-item">
-                              <i className="fas fa-arrow-up-right-from-square"></i>
-                              <span>{t("communityModal.mainLink")}</span>
-                            </a>
-                          )}
                         </div>
                       )}
                     </div>

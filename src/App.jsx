@@ -21,15 +21,16 @@ import {
   useAllCommunities,
   useAudience,
   useCommunityActions,
-  useFreshnessError,
   useFilters,
   useHasFreshData,
   useIsLoading,
   useIsRefreshingFreshData,
+  useLastFreshAt,
   useTags,
   useCBMembersMap,
   useChildrenByParentId,
 } from "./stores/community.store.js";
+import { shouldRevalidateFreshData } from "./lib/freshness.js";
 
 const Map = lazy(() => import("./components/Map/Map.jsx"));
 const CommunityContribution = lazy(() =>
@@ -88,8 +89,9 @@ function App () {
   const childrenByParentId = useChildrenByParentId();
   const hasFreshData = useHasFreshData();
   const isRefreshingFreshData = useIsRefreshingFreshData();
-  const freshnessError = useFreshnessError();
+  const lastFreshAt = useLastFreshAt();
   const routeRef = useRef(route);
+  const freshnessRef = useRef({ hasFreshData: false, lastFreshAt: null });
   const contributionStateRef = useRef(contributionState);
   const pendingScrollRestoreRef = useRef(null);
 
@@ -108,6 +110,10 @@ function App () {
   }, [route]);
 
   useEffect(() => {
+    freshnessRef.current = { hasFreshData, lastFreshAt };
+  }, [hasFreshData, lastFreshAt]);
+
+  useEffect(() => {
     contributionStateRef.current = contributionState;
   }, [contributionState]);
 
@@ -121,9 +127,18 @@ function App () {
 
   useEffect(() => {
     const syncOnlineStatus = () => setIsOnline(navigator.onLine);
+    // Silenciosa y con throttle: ver src/lib/freshness.js. `freshnessRef` evita que el
+    // efecto se vuelva a montar (y a suscribir) en cada revalidación.
     const refreshFreshData = () => {
-      if (routeRef.current.mode === "edit") return;
-      if (!navigator.onLine) return;
+      const { hasFreshData: currentHasFreshData, lastFreshAt: currentLastFreshAt } =
+        freshnessRef.current;
+      const shouldRefresh = shouldRevalidateFreshData({
+        isOnline: navigator.onLine,
+        isEditing: routeRef.current.mode === "edit",
+        hasFreshData: currentHasFreshData,
+        lastFreshAt: currentLastFreshAt,
+      });
+      if (!shouldRefresh) return;
       fetchCommunities({ preserveData: true, locale: i18n.resolvedLanguage });
     };
     const handleVisibilityChange = () => {
@@ -256,9 +271,15 @@ function App () {
     ? resolveCommunityFromIdentifier(communities, selectedCommunityIdentifier)
     : null;
   const showContributionView = route.mode !== "directory";
-  const shouldBlockCommunityDetails = isOnline && (isRefreshingFreshData || !hasFreshData);
-  const shouldBlockCommunityEdit = route.mode === "edit" && shouldBlockCommunityDetails;
-  const isCommunityModalOpen = !showContributionView && Boolean(selectedCommunity) && !shouldBlockCommunityDetails;
+  /*
+    Solo la edición espera a confirmar la última versión del directorio: una propuesta
+    construida sobre datos viejos pisa cambios ajenos. La lectura no se bloquea nunca, así
+    que volver a la pestaña ya no cierra la ficha que estabas leyendo.
+  */
+  const isStale = isOnline && (isRefreshingFreshData || !hasFreshData);
+  const shouldBlockCommunityEdit = route.mode === "edit" && isStale;
+  const freshDataFailed = isOnline && !isRefreshingFreshData && !hasFreshData;
+  const isCommunityModalOpen = !showContributionView && Boolean(selectedCommunity);
   const effectiveModalScrollLockY = isCommunityModalOpen ? modalScrollLockY : null;
   const appShellClassName = [
     "app-shell",
@@ -426,17 +447,6 @@ function App () {
         {!showContributionView && <ResultsBar view={view} toggleView={toggleView} />}
         {!showContributionView && <FilterPanel />}
         {!showContributionView && <ParentFilterBanner />}
-        {!showContributionView && shouldBlockCommunityDetails && communities.length > 0 && (
-          <section className="contribution-shell">
-            <article className="message is-info contribution-message">
-              <div className="message-body">
-                {isRefreshingFreshData
-                  ? t("app.checkingFreshData")
-                  : freshnessError}
-              </div>
-            </article>
-          </section>
-        )}
         <div className="main">
           {showContributionView && !isLoading && !shouldBlockCommunityEdit && (
             <Suspense fallback={<p className="contribution-loading">{t("app.loadingForm")}</p>}>
@@ -453,11 +463,30 @@ function App () {
             </Suspense>
           )}
           {showContributionView && (isLoading || shouldBlockCommunityEdit) && (
-            <p className="contribution-loading">
-              {shouldBlockCommunityEdit
-                ? t("app.syncingBeforeEdit")
-                : t("app.loadingForm")}
-            </p>
+            freshDataFailed && shouldBlockCommunityEdit ? (
+              <section className="contribution-shell">
+                <article className="message is-warning contribution-message">
+                  <div className="message-body">
+                    <p>{t("app.freshDataFailed")}</p>
+                    <button
+                      type="button"
+                      className="button is-small"
+                      onClick={() =>
+                        fetchCommunities({ preserveData: true, locale: i18n.resolvedLanguage })
+                      }
+                    >
+                      {t("app.retryFreshData")}
+                    </button>
+                  </div>
+                </article>
+              </section>
+            ) : (
+              <p className="contribution-loading">
+                {shouldBlockCommunityEdit
+                  ? t("app.syncingBeforeEdit")
+                  : t("app.loadingForm")}
+              </p>
+            )
           )}
           {showContributionView && route.mode === "edit" && !isLoading && !shouldBlockCommunityEdit && !communityToEdit && (
             <section className="contribution-shell">
@@ -506,7 +535,7 @@ function App () {
       </div>
       {/* Fuera del contenedor del contenido: es fijo y no debe heredar su scroll. */}
       <SupportFab onAddCommunity={goToContribution} />
-      {!showContributionView && selectedCommunity && !shouldBlockCommunityDetails && (
+      {!showContributionView && selectedCommunity && (
         <Suspense fallback={null}>
           <CommunityModal
             community={selectedCommunity}

@@ -133,6 +133,17 @@ export function inferKindFromUrl(url) {
   return null;
 }
 
+/**
+ * ¿Hay un canal de este `kind` entre las entradas?
+ *
+ * Mira el `kind` explícito y, cuando falta, lo que delata el dominio: una entrada sin `kind`
+ * no es una entrada sin clasificar, así que buscar solo por la clave deja fuera la mitad de
+ * los casos.
+ */
+export function hasUrlKind(urls, kind) {
+  return toUrlEntries(urls).some((entry) => (entry.kind || inferKindFromUrl(entry.url)) === kind);
+}
+
 function isNonEmptyString(value) {
   return typeof value === "string" && value.trim().length > 0;
 }
@@ -232,6 +243,48 @@ export function groupUrlEntries(urls, translate) {
     icon,
     entries: resolved.filter((entry) => entry.group === group),
   })).filter(({ entries }) => entries.length > 0);
+}
+
+/**
+ * Los mismos grupos, con los vacíos de vuelta y en el orden de `URL_GROUPS`.
+ *
+ * Lo necesita quien tenga que pintar algo en un grupo sin canales: la ficha mete la URL
+ * principal en el grupo "Comunidad" cuando no está ya entre los canales, y con los grupos
+ * vacíos filtrados ese enlace no se pintaba en ninguna parte (LechazoConf: su web no salía).
+ */
+export function withEmptyUrlGroups(groups = []) {
+  const byKey = new Map(groups.map((group) => [group.group, group]));
+  return URL_GROUPS.map(({ group, labelKey, icon }) => (
+    byKey.get(group) ?? { group, labelKey, icon, entries: [] }
+  ));
+}
+
+/**
+ * Qué pinta la ficha de un grupo de canales.
+ *
+ * Con un solo canal **no hay desplegable**: abrirlo para elegir la única opción son dos clics
+ * para llegar al mismo sitio (LechazoConf → Chat → Telegram). Y entonces lo que se enseña es
+ * la etiqueta del canal, no la del grupo: lo que importa es a dónde lleva el clic
+ * ("Telegram"), no en qué cajón lo hemos guardado ("Chat").
+ *
+ * `fallbackItem` es la URL principal cuando no aparece ya entre los canales: viaja aquí para
+ * que cuente al decidir si el grupo tiene uno o varios.
+ */
+export function resolveUrlGroupDisplay({
+  entries = [],
+  fallbackItem = null,
+  groupLabel = "",
+  groupIcon = FALLBACK_ICON,
+} = {}) {
+  const items = fallbackItem ? [...entries, fallbackItem] : [...entries];
+  const isDirect = items.length === 1;
+
+  return {
+    items,
+    isDirect,
+    label: isDirect ? items[0].label : groupLabel,
+    icon: isDirect ? items[0].icon : groupIcon,
+  };
 }
 
 /**

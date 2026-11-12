@@ -35,6 +35,7 @@ import {
   toUrlEntries,
   toUrlRows,
 } from "../../lib/communityUrls.js";
+import { OteCallout } from "./OteCallout.jsx";
 import { UrlKindCombobox } from "./UrlKindCombobox.jsx";
 import { MERGED_STATUS } from "../../lib/mergedCommunities.js";
 import {
@@ -884,60 +885,9 @@ function UrlFields({
           <i className="fas fa-plus" aria-hidden="true"></i>
           <span>{t("contribution.urls.row.add")}</span>
         </button>
-
-        <p className="contribution-extra-platform-note">
-          {t("contribution.urls.missingPlatformNote")}{" "}
-          <a
-            href="https://github.com/ComBuildersES/communities-directory/issues"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {t("contribution.urls.openIssue")}
-          </a>{" "}
-          {t("contribution.urls.missingPlatformNoteSuffix")}
-        </p>
       </div>
 
-      <div className="contribution-ote-callout contribution-grid-span-2">
-        <h4>
-          <i className="fas fa-calendar-days" aria-hidden="true"></i>{" "}
-          {t("contribution.urls.ote.title")}
-        </h4>
-        <p>
-          {t("contribution.urls.ote.description")}{" "}
-          <a href="https://opentechevents.org/" target="_blank" rel="noreferrer">
-            {t("contribution.urls.ote.linkSpec")}
-          </a>
-          .
-        </p>
-        <p className="contribution-ote-ways-title">{t("contribution.urls.ote.waysTitle")}</p>
-        <ul className="contribution-ote-ways">
-          <li>
-            {t("contribution.urls.ote.way0")}{" "}
-            <a href="https://eventos.wiki/" target="_blank" rel="noreferrer">
-              {t("contribution.urls.ote.linkEventosWiki")}
-            </a>
-          </li>
-          <li>
-            {t("contribution.urls.ote.way1")}{" "}
-            <a href="https://github.com/OpenTechEvents/ote-tools/tree/main/skills" target="_blank" rel="noreferrer">
-              {t("contribution.urls.ote.linkSkills")}
-            </a>
-          </li>
-          <li>
-            {t("contribution.urls.ote.way2")}{" "}
-            <a href="https://tools.opentechevents.org/editor/" target="_blank" rel="noreferrer">
-              {t("contribution.urls.ote.linkEditor")}
-            </a>
-          </li>
-          <li>
-            {t("contribution.urls.ote.way3")}{" "}
-            <a href="https://github.com/OpenTechEvents/ote-template" target="_blank" rel="noreferrer">
-              {t("contribution.urls.ote.linkTemplate")}
-            </a>
-          </li>
-        </ul>
-      </div>
+      <OteCallout urls={urls} />
 
       {archivedUrls.length > 0 && (
         <div className="contribution-archived-urls contribution-grid-span-2">
