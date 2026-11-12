@@ -1,0 +1,32 @@
+{
+  "id": null,
+  "name": "DevopsDays Barcelona",
+  "status": "active",
+  "lastReviewed": "12/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Barcelona",
+  "geographicScope": "local",
+  "parentId": null,
+  "shortDescription": "A worldwide series of community-led conferences focused on software development, IT infrastructure operations, and the culture that connects them. No marketing pitches—just real-world engineering.",
+  "topics": "",
+  "langs": [
+    "es",
+    "en"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "matchesAllTags": true,
+  "matchesAllAudience": true,
+  "contactInfo": "",
+  "communityUrl": "https://www.meetup.com/es-ES/devopsdays-bcn/",
+  "urls": {},
+  "thumbnailUrl": "images/devopsdays-barcelona.webp",
+  "latLon": {
+    "lat": 41.3825802,
+    "lon": 2.177073
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}
