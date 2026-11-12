@@ -18,15 +18,24 @@ import {
   getCommunityDraft,
   getContributionDraftStorageKey,
   getNextCommunityId,
-  inferUrlPlatformKey,
   loadContributionDraft,
   normalizeUrlForComparison,
   saveContributionDraft,
   SHORT_DESCRIPTION_MAX_LENGTH,
   toggleSelection,
-  URL_PLATFORM_OPTIONS,
   GEOGRAPHIC_SCOPE_OPTIONS,
 } from "../../lib/communitySubmission";
+import {
+  FALLBACK_ICON,
+  URL_KINDS,
+  URL_KIND_BY_KEY,
+  inferKindFromUrl,
+  makeUrlRow,
+  resolveKindOrLabelInput,
+  toUrlEntries,
+  toUrlRows,
+} from "../../lib/communityUrls.js";
+import { UrlKindCombobox } from "./UrlKindCombobox.jsx";
 import { MERGED_STATUS } from "../../lib/mergedCommunities.js";
 import {
   COMMUNITY_LANGUAGE_OPTIONS,
@@ -666,20 +675,119 @@ function TaxonomyPicker({
   );
 }
 
+/**
+ * Una fila = icono + un campo para decir qué es + la URL (issue #478).
+ *
+ * El campo del medio hace **dos trabajos con un control**, y es la parte que no es obvia:
+ *
+ * - Si el dominio delata la plataforma, se rellena solo con su nombre y no se guarda nada:
+ *   `kind` se deduce de la URL.
+ * - Si el texto coincide con una plataforma conocida, se guarda `kind`. Esto es
+ *   imprescindible, no cosmético: `web`, `ote`, `blog`, `rss`, `forum` y `mastodon` **no se
+ *   pueden inferir nunca** por dominio. Sin poder elegirlos, alguien pegaría su feed OTE con
+ *   la etiqueta "Eventos", se guardaría sin `kind`, y la sección de próximos eventos de la
+ *   ficha se apagaría en silencio.
+ * - Cualquier otro texto se guarda como `label`. Es lo que permite que un GDG tenga su Meetup
+ *   *y además* su "DevFest Barcelona", los dos `eventsUrl`.
+ *
+ * Es un `<input list>` con `<datalist>` a propósito: texto libre y sugerencias sin dependencia
+ * ninguna, y el navegador ya lo hace accesible.
+ */
+function UrlRow({ row, index, onChange, onRemove, onArchive, helpContent, isHelpOpen, onToggleHelp, onCloseHelp }) {
+  const { t } = useTranslation();
+  const url = row.url ?? "";
+  const inferredKind = inferKindFromUrl(url);
+  const kind = row.kind || inferredKind;
+  const known = kind ? URL_KIND_BY_KEY[kind] : null;
+  const icon = known ? known.icon : FALLBACK_ICON;
+  const kindLabels = useMemo(
+    () => URL_KINDS.map(({ kind: key }) => ({ kind: key, label: t(`communityModal.url.${key}`, { defaultValue: key }) })),
+    [t]
+  );
+
+  // Lo que se ve en el campo: la etiqueta propia si la hay, y si no el nombre de la
+  // plataforma. Vacío solo cuando no hay ni una ni otra, que es cuando el placeholder pide
+  // que alguien lo escriba.
+  const fieldValue = row.label ?? (known ? t(`communityModal.url.${kind}`, { defaultValue: kind }) : "");
+
+  const handleKindOrLabelChange = (value) => {
+    onChange(resolveKindOrLabelInput({ text: value, url, kindLabels }));
+  };
+
+  return (
+    <div className="contribution-url-row">
+      <span className="contribution-url-row-icon" aria-hidden="true">
+        <i className={icon}></i>
+      </span>
+
+      <div className="contribution-url-row-kind">
+        <UrlKindCombobox
+          value={fieldValue}
+          onChange={handleKindOrLabelChange}
+          placeholder={t("contribution.urls.row.kindPlaceholder")}
+          ariaLabel={t("contribution.urls.row.kindLabel")}
+        />
+      </div>
+
+      <div className="contribution-url-row-url">
+        <input
+          className="input"
+          type="url"
+          value={url}
+          onChange={(event) => onChange({ url: event.target.value })}
+          placeholder="https://..."
+          aria-label={t("contribution.urls.row.urlLabel", { position: index + 1 })}
+        />
+      </div>
+
+      <div className="contribution-url-row-actions">
+        {helpContent && (
+          <FieldHelp
+            content={helpContent}
+            isOpen={isHelpOpen}
+            onToggle={onToggleHelp}
+            onClose={onCloseHelp}
+          />
+        )}
+        {url.trim() && (
+          <button
+            type="button"
+            className="button is-small is-light"
+            onClick={onArchive}
+            title={t("contribution.urls.archive.buttonHelp")}
+          >
+            {t("contribution.urls.archive.button")}
+          </button>
+        )}
+        <button
+          type="button"
+          className="button is-small is-light contribution-url-row-remove"
+          onClick={onRemove}
+          title={t("contribution.urls.row.remove")}
+          aria-label={t("contribution.urls.row.remove")}
+        >
+          <i className="fas fa-xmark" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  );
+}
+
 function UrlFields({
   primaryUrl,
   onPrimaryUrlChange,
-  urls,
-  onUrlChange,
+  urls = [],
+  onUrlRowChange,
+  onAddUrlRow,
+  onRemoveUrlRow,
+  onArchiveUrlRow,
   archivedUrls = [],
-  onArchiveUrl,
   onRestoreArchivedUrl,
   onRemoveArchivedUrl,
 }) {
   const { t } = useTranslation();
-  const [expandedPlatforms, setExpandedPlatforms] = useState([]);
   const [isPrimaryHelpOpen, setIsPrimaryHelpOpen] = useState(false);
-  const [openPlatformHelp, setOpenPlatformHelp] = useState(null);
+  const [openRowHelp, setOpenRowHelp] = useState(null);
   const platformHelpContent = {
     web:            { title: t("contribution.urlHelp.web.title"),            description: t("contribution.urlHelp.web.description"),            bullets: [t("contribution.urlHelp.web.bullet0"),            t("contribution.urlHelp.web.bullet1")] },
     eventosWiki:    { title: t("contribution.urlHelp.eventosWiki.title"),    description: t("contribution.urlHelp.eventosWiki.description"),    bullets: [t("contribution.urlHelp.eventosWiki.bullet0")] },
@@ -704,33 +812,6 @@ function UrlFields({
     mastodon:       { title: t("contribution.urlHelp.mastodon.title"),       description: t("contribution.urlHelp.mastodon.description"),       bullets: [t("contribution.urlHelp.mastodon.bullet0")] },
     bluesky:        { title: t("contribution.urlHelp.bluesky.title"),        description: t("contribution.urlHelp.bluesky.description"),        bullets: [t("contribution.urlHelp.bluesky.bullet0")] },
     twitch:         { title: t("contribution.urlHelp.twitch.title"),         description: t("contribution.urlHelp.twitch.description"),         bullets: [t("contribution.urlHelp.twitch.bullet0")] },
-  };
-  const localizedPlatformOptions = useMemo(
-    () => URL_PLATFORM_OPTIONS.map(({ key }) => ({
-      key,
-      label: t(`communityModal.url.${key}`, { defaultValue: key }),
-    })),
-    [t]
-  );
-  const visiblePlatforms = useMemo(
-    () => localizedPlatformOptions.filter(({ key }) => (urls[key] ?? "").trim() || expandedPlatforms.includes(key)),
-    [expandedPlatforms, localizedPlatformOptions, urls]
-  );
-  const hiddenPlatforms = useMemo(
-    () => localizedPlatformOptions.filter(({ key }) => !visiblePlatforms.some((platform) => platform.key === key)),
-    [localizedPlatformOptions, visiblePlatforms]
-  );
-
-  useEffect(() => {
-    const filledPlatforms = localizedPlatformOptions
-      .filter(({ key }) => (urls[key] ?? "").trim())
-      .map(({ key }) => key);
-
-    setExpandedPlatforms((current) => [...new Set([...current, ...filledPlatforms])]);
-  }, [localizedPlatformOptions, urls]);
-
-  const showPlatform = (key) => {
-    setExpandedPlatforms((current) => [...new Set([...current, key])]);
   };
 
   return (
@@ -772,42 +853,49 @@ function UrlFields({
         </div>
       </div>
 
-      <div className="contribution-grid contribution-grid--compact">
-        {visiblePlatforms.map(({ key, label }) => (
-          <div className="field" key={key}>
-            <label className="label contribution-label-with-help" htmlFor={`url-${key}`}>
-              <span>{label}</span>
-              {platformHelpContent[key] && (
-                <FieldHelp
-                  content={platformHelpContent[key]}
-                  isOpen={openPlatformHelp === key}
-                  onToggle={() => setOpenPlatformHelp((current) => current === key ? null : key)}
-                  onClose={() => setOpenPlatformHelp(null)}
-                />
-              )}
-            </label>
-            <div className="control contribution-url-control">
-              <input
-                id={`url-${key}`}
-                className="input"
-                type="url"
-                value={urls[key] ?? ""}
-                onChange={(event) => onUrlChange(key, event.target.value)}
-                placeholder="https://..."
-              />
-              {(urls[key] ?? "").trim() && (
-                <button
-                  type="button"
-                  className="button is-small is-light contribution-url-archive-button"
-                  onClick={() => onArchiveUrl?.(key)}
-                  title={t("contribution.urls.archive.buttonHelp")}
-                >
-                  {t("contribution.urls.archive.button")}
-                </button>
-              )}
-            </div>
-          </div>
-        ))}
+      <div className="contribution-url-rows contribution-grid-span-2">
+        {urls.length === 0 && (
+          <p className="contribution-url-rows-empty">{t("contribution.urls.row.empty")}</p>
+        )}
+
+        {urls.map((row, index) => {
+          const kind = row.kind || inferKindFromUrl(row.url ?? "");
+          return (
+            <UrlRow
+              key={row._rowId ?? index}
+              row={row}
+              index={index}
+              onChange={(patch) => onUrlRowChange?.(row._rowId, patch)}
+              onRemove={() => onRemoveUrlRow?.(row._rowId)}
+              onArchive={() => onArchiveUrlRow?.(row._rowId)}
+              helpContent={kind ? platformHelpContent[kind] : null}
+              isHelpOpen={openRowHelp === row._rowId}
+              onToggleHelp={() => setOpenRowHelp((current) => (current === row._rowId ? null : row._rowId))}
+              onCloseHelp={() => setOpenRowHelp(null)}
+            />
+          );
+        })}
+
+        <button
+          type="button"
+          className="button is-small contribution-url-add"
+          onClick={() => onAddUrlRow?.()}
+        >
+          <i className="fas fa-plus" aria-hidden="true"></i>
+          <span>{t("contribution.urls.row.add")}</span>
+        </button>
+
+        <p className="contribution-extra-platform-note">
+          {t("contribution.urls.missingPlatformNote")}{" "}
+          <a
+            href="https://github.com/ComBuildersES/communities-directory/issues"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t("contribution.urls.openIssue")}
+          </a>{" "}
+          {t("contribution.urls.missingPlatformNoteSuffix")}
+        </p>
       </div>
 
       <div className="contribution-ote-callout contribution-grid-span-2">
@@ -881,34 +969,6 @@ function UrlFields({
         </div>
       )}
 
-      {hiddenPlatforms.length > 0 && (
-        <div className="contribution-extra-platforms">
-          <p>{t("contribution.urls.addMoreProfiles")}</p>
-          <div className="contribution-extra-platform-list">
-            {hiddenPlatforms.map(({ key, label }) => (
-              <button
-                key={key}
-                type="button"
-                className="button is-small is-light contribution-extra-platform-button"
-                onClick={() => showPlatform(key)}
-              >
-                + {label}
-              </button>
-            ))}
-          </div>
-          <p className="contribution-extra-platform-note">
-            {t("contribution.urls.missingPlatformNote")}{" "}
-            <a
-              href="https://github.com/ComBuildersES/communities-directory/issues"
-              target="_blank"
-              rel="noreferrer"
-            >
-              {t("contribution.urls.openIssue")}
-            </a>{" "}
-            {t("contribution.urls.missingPlatformNoteSuffix")}
-          </p>
-        </div>
-      )}
     </section>
   );
 }
@@ -932,10 +992,6 @@ function DuplicateWarning({ matches, emptyMessage }) {
   );
 }
 
-/**
- * Aviso cuando alguien intenta dar de alta una URL que el directorio ya conoce pero tiene
- * archivada: el canal sigue abierto pero nadie lo atiende (issue #353).
- */
 function ArchivedUrlWarning({ matches }) {
   const { t } = useTranslation();
 
@@ -1014,6 +1070,27 @@ function buildEditableDraftSignature(draft) {
   });
 }
 
+/**
+ * Un borrador guardado (localStorage, o el `proposal` de la URL) puede traer `urls` en
+ * cualquiera de los dos formatos: lista de entradas si lo escribió el formulario actual, u
+ * objeto por clave si viene de antes de #478. `toUrlRows` acepta los dos.
+ *
+ * `urlExtras` fue el andamio de la fase anterior, cuando el formulario aún no editaba pares:
+ * se sigue leyendo para no tirar un borrador que quedase a medias en localStorage.
+ */
+function adoptDraftUrls(source, baseDraft) {
+  if (!source || source.urls === undefined) {
+    return { urls: baseDraft.urls };
+  }
+
+  return {
+    urls: toUrlRows([
+      ...toUrlEntries(source.urls),
+      ...(Array.isArray(source.urlExtras) ? toUrlEntries(source.urlExtras) : []),
+    ]),
+  };
+}
+
 function mergeDraftWithProposal(baseDraft, proposalDraft) {
   if (!proposalDraft || typeof proposalDraft !== "object") {
     return baseDraft;
@@ -1025,7 +1102,7 @@ function mergeDraftWithProposal(baseDraft, proposalDraft) {
     langs: Array.isArray(proposalDraft.langs) ? normalizeCommunityLangs(proposalDraft.langs) : baseDraft.langs,
     tags: Array.isArray(proposalDraft.tags) ? proposalDraft.tags : baseDraft.tags,
     targetAudience: Array.isArray(proposalDraft.targetAudience) ? proposalDraft.targetAudience : baseDraft.targetAudience,
-    urls: proposalDraft.urls ?? baseDraft.urls,
+    ...adoptDraftUrls(proposalDraft, baseDraft),
     archivedUrls: Array.isArray(proposalDraft.archivedUrls)
       ? proposalDraft.archivedUrls
       : baseDraft.archivedUrls,
@@ -1192,7 +1269,7 @@ export function CommunityContribution({
         langs: Array.isArray(storedPayload.langs) ? normalizeCommunityLangs(storedPayload.langs) : baseDraft.langs,
         tags: Array.isArray(storedPayload.tags) ? storedPayload.tags : baseDraft.tags,
         targetAudience: Array.isArray(storedPayload.targetAudience) ? storedPayload.targetAudience : baseDraft.targetAudience,
-        urls: storedPayload.urls ?? baseDraft.urls,
+        ...adoptDraftUrls(storedPayload, baseDraft),
         archivedUrls: Array.isArray(storedPayload.archivedUrls)
           ? storedPayload.archivedUrls
           : baseDraft.archivedUrls,
@@ -1387,7 +1464,7 @@ export function CommunityContribution({
       communities: existingCommunity
         ? [existingCommunity, ...communities.filter((community) => community.id !== existingCommunity.id)]
         : communities,
-      urls: [payload.communityUrl, ...Object.values(payload.urls ?? {})],
+      urls: [payload.communityUrl, ...toUrlEntries(payload.urls).map((entry) => entry.url)],
     }),
     [communities, existingCommunity, payload.communityUrl, payload.urls]
   );
@@ -1510,7 +1587,16 @@ export function CommunityContribution({
 
       Object.entries(community).forEach(([key, value]) => {
         if (key === "urls") {
-          next.urls = { ...current.urls, ...value };
+          // La IA devuelve el objeto por clave (así se lo pide el prompt: un modelo acierta
+          // más con "pon la URL en su clave" que emitiendo pares). Se añaden como filas
+          // nuevas las URLs que no estuviesen ya, sin tocar lo que la persona escribió.
+          const existing = new Set(
+            toUrlEntries(current.urls).map((entry) => entry.url.trim().toLowerCase())
+          );
+          const incoming = toUrlEntries(value).filter(
+            (entry) => !existing.has(entry.url.trim().toLowerCase())
+          );
+          next.urls = [...(current.urls ?? []), ...incoming.map((entry) => makeUrlRow(entry))];
           return;
         }
         next[key] = value;
@@ -1525,27 +1611,48 @@ export function CommunityContribution({
     setDraft((current) => ({ ...current, [key]: value }));
   };
 
-  const handleUrlChange = (key, value) => {
+  const updateUrlRows = (updater) => {
     setHasUserInteracted(true);
-    setDraft((current) => ({
-      ...current,
-      urls: {
-        ...current.urls,
-        [key]: value,
-      },
-    }));
+    setDraft((current) => ({ ...current, urls: updater(current.urls ?? []) }));
   };
 
-  // Archivar mueve la URL del canal activo a `archivedUrls`: deja de mostrarse en la ficha,
-  // pero el directorio sigue sabiendo que existe (issue #353).
-  const handleArchiveUrl = (key) => {
+  const handleUrlRowChange = (rowId, patch) => {
+    if (rowId == null) return;
+    updateUrlRows((rows) =>
+      rows.map((row) => {
+        if (row._rowId !== rowId) return row;
+        const next = { ...row, ...patch };
+        // `undefined` en el patch significa "quita esta clave", no "guarda undefined": es
+        // como el campo del medio borra un kind o un label que ya no aplican.
+        for (const key of Object.keys(patch)) {
+          if (patch[key] === undefined) delete next[key];
+        }
+        return next;
+      })
+    );
+  };
+
+  const handleAddUrlRow = () => {
+    updateUrlRows((rows) => [...rows, makeUrlRow({ url: "" })]);
+  };
+
+  const handleRemoveUrlRow = (rowId) => {
+    // Sin la guarda, un `rowId` nulo casaría con toda fila que tampoco lo tenga y vaciaría
+    // la lista entera. Es el bug que tuvo el editor al abrir una ficha ya existente.
+    if (rowId == null) return;
+    updateUrlRows((rows) => rows.filter((row) => row._rowId !== rowId));
+  };
+
+  // Archivar mueve la URL de la fila a `archivedUrls`: deja de mostrarse en la ficha, pero el
+  // directorio sigue sabiendo que existió (issue #353).
+  const handleArchiveUrl = (rowId) => {
+    if (rowId == null) return;
     setHasUserInteracted(true);
     setDraft((current) => {
-      const url = (current.urls?.[key] ?? "").trim();
+      const rows = current.urls ?? [];
+      const row = rows.find((candidate) => candidate._rowId === rowId);
+      const url = (row?.url ?? "").trim();
       if (!url) return current;
-
-      const nextUrls = { ...current.urls };
-      delete nextUrls[key];
 
       const alreadyArchived = (current.archivedUrls ?? []).some(
         (archived) => normalizeUrlForComparison(archived) === normalizeUrlForComparison(url)
@@ -1553,7 +1660,7 @@ export function CommunityContribution({
 
       return {
         ...current,
-        urls: nextUrls,
+        urls: rows.filter((candidate) => candidate._rowId !== rowId),
         archivedUrls: alreadyArchived
           ? current.archivedUrls
           : [...(current.archivedUrls ?? []), url],
@@ -1569,24 +1676,15 @@ export function CommunityContribution({
     }));
   };
 
-  // Restaurar devuelve la URL al campo de su plataforma, si se puede inferir; si no, al
-  // primer hueco libre, para no perder el valor por el camino.
+  // Restaurar es añadir una fila: el kind lo deduce el dominio, y si no lo deduce la fila
+  // queda pidiendo el nombre. Antes había que buscarle un hueco libre entre 24 campos fijos.
   const handleRestoreArchivedUrl = (url) => {
     setHasUserInteracted(true);
-    setDraft((current) => {
-      const platformKey = inferUrlPlatformKey(url);
-      const targetKey = platformKey && !(current.urls?.[platformKey] ?? "").trim()
-        ? platformKey
-        : URL_PLATFORM_OPTIONS.map(({ key }) => key).find((key) => !(current.urls?.[key] ?? "").trim());
-
-      if (!targetKey) return current;
-
-      return {
-        ...current,
-        urls: { ...current.urls, [targetKey]: url },
-        archivedUrls: (current.archivedUrls ?? []).filter((archived) => archived !== url),
-      };
-    });
+    setDraft((current) => ({
+      ...current,
+      urls: [...(current.urls ?? []), makeUrlRow({ url })],
+      archivedUrls: (current.archivedUrls ?? []).filter((archived) => archived !== url),
+    }));
   };
 
   const handleReplaceThumbnailToggle = () => {
@@ -2313,9 +2411,11 @@ export function CommunityContribution({
         primaryUrl={draft.communityUrl}
         onPrimaryUrlChange={(value) => handleFieldChange("communityUrl", value)}
         urls={draft.urls}
-        onUrlChange={handleUrlChange}
+        onUrlRowChange={handleUrlRowChange}
+        onAddUrlRow={handleAddUrlRow}
+        onRemoveUrlRow={handleRemoveUrlRow}
+        onArchiveUrlRow={handleArchiveUrl}
         archivedUrls={draft.archivedUrls ?? []}
-        onArchiveUrl={handleArchiveUrl}
         onRestoreArchivedUrl={handleRestoreArchivedUrl}
         onRemoveArchivedUrl={handleRemoveArchivedUrl}
       />

@@ -232,7 +232,10 @@
       "ote": "Eventos (OTE)",
       "blog": "Blog",
       "rss": "Feed RSS",
-      "forum": "Foro"
+      "forum": "Foro",
+      "meetup": "Meetup",
+      "eventbrite": "Eventbrite",
+      "luma": "Luma"
     },
     "urlGroup": {
       "community": "Comunidad",
@@ -322,7 +325,6 @@
         "bullet1": "Si no existe web propia, usa el enlace que mejor represente a la comunidad y tenga menos probabilidad de expirar.",
         "bullet2": "El resto de perfiles pueden añadirse como URLs adicionales."
       },
-      "addMoreProfiles": "¿Quieres añadir más perfiles?",
       "missingPlatformNote": "Si echas en falta algún tipo de plataforma,",
       "openIssue": "abre un issue en el repositorio",
       "missingPlatformNoteSuffix": "para que podamos seguir mejorando las opciones ofrecidas.",
@@ -350,6 +352,24 @@
         "linkSkills": "Agent skills (ote-tools)",
         "linkEditor": "Editor OTE",
         "linkTemplate": "ote-template"
+      },
+      "row": {
+        "add": "Añadir canal",
+        "remove": "Quitar este canal",
+        "empty": "Todavía no has añadido ningún canal. Pulsa «Añadir canal» para poner la web, el grupo de chat, las redes o el feed de eventos.",
+        "kindPlaceholder": "¿Qué es? (Telegram, Blog, «DevFest Barcelona»…)",
+        "kindLabel": "Qué es este canal",
+        "urlLabel": "URL del canal {{position}}",
+        "kindHint": "O escribe un nombre propio, como «DevFest Barcelona», si este canal no es solo «Eventos».",
+        "kindNoMatch": "Ninguna plataforma se llama así. Se guardará «{{query}}» como nombre de este canal."
+      },
+      "kindHint": {
+        "web": "La web propia de la comunidad",
+        "linkAggregator": "Linktree, Bio.link, Beacons…",
+        "eventsUrl": "Otra plataforma: Sessionize, community.cncf.io, gdg.community.dev…",
+        "eventosWiki": "Vuestra página en eventos.wiki",
+        "ote": "Feed abierto de eventos (Open Tech Events)",
+        "mailingList": "Lista de correo o grupo de Google"
       }
     },
     "urlHelp": {
@@ -775,7 +795,7 @@
       "agentsTitle": "Si construyes con un agente"
     },
     "prompts": {
-      "rules": "Reglas de los datos:\n- Para recomendarme algo, usa solo comunidades con \"status\": \"active\". Si te pido expresamente comunidades paradas, márcalas como tales.\n- \"tags\" y \"targetAudience\" son IDs de catálogo. Los catálogos están en español ({{tagsUrl}}, {{audienceUrl}}) y en inglés ({{tagsEnUrl}}, {{audienceEnUrl}}): mismos IDs, etiquetas traducidas. Empareja contra \"label\", \"description\" y \"synonyms\", no solo contra el ID.\n- Si \"matchesAllTags\" es true, la comunidad es generalista y encaja con cualquier temática aunque su lista esté vacía; lo mismo con \"matchesAllAudience\" y los perfiles.\n- La cobertura es desigual: a muchas fichas les faltan los \"tags\", y la mayoría no tiene \"targetAudience\" ni \"geographicScope\". Un campo vacío significa que nadie lo ha rellenado, no que la comunidad no trate de eso: no la descartes en silencio y dime cuándo te falta el dato. {{indexUrl}} trae el recuento exacto de cada campo.\n- \"location\" es dónde se celebran los eventos; \"geographicScope\", cuando está, es el territorio al que da servicio.\n- \"lastReviewed\" es la fecha de la última revisión de la ficha, no una señal de actividad: la mayoría no se ha vuelto a mirar desde que se añadió. Lo único que evidencia actividad real es un feed de eventos en \"urls.ote\".\n- \"status\": \"merged\" significa que la comunidad se fusionó con otras y ya no existe por separado: no me la recomiendes, mándame a la que indica \"mergedIntoId\", que es donde continúa su actividad. Es distinto de \"parentId\", donde la comunidad local y su organización paraguas siguen existiendo las dos.\n- \"organizedBy\" son los ids de las comunidades DEL DIRECTORIO que organizan esa ficha: es como se modela una comunidad y su conferencia anual, dos fichas vivas. No es la lista completa de organizadores (empresas, patrocinadores y apoyo institucional no están en el directorio), así que no me digas \"lo organiza solo esta gente\". Que falte no significa que no lo organice nadie: hay conferencias sin comunidad detrás.\n- No me propongas URLs que estén en \"archivedUrls\": son canales que ya nadie atiende.\n- \"humanValidated\": false significa que el etiquetado de esa comunidad lo puso un proceso semiautomático y no lo ha repasado ninguna persona. Es el caso de la mayoría: avísame.\n- No rellenes huecos con lo que te suene de fuera del dataset. Si un dato no está, dilo. Si hay algo que tengo que preguntarle a la comunidad, dímelo y dame el canal.",
+      "rules": "Reglas de los datos:\n- Para recomendarme algo, usa solo comunidades con \"status\": \"active\". Si te pido expresamente comunidades paradas, márcalas como tales.\n- \"tags\" y \"targetAudience\" son IDs de catálogo. Los catálogos están en español ({{tagsUrl}}, {{audienceUrl}}) y en inglés ({{tagsEnUrl}}, {{audienceEnUrl}}): mismos IDs, etiquetas traducidas. Empareja contra \"label\", \"description\" y \"synonyms\", no solo contra el ID.\n- Si \"matchesAllTags\" es true, la comunidad es generalista y encaja con cualquier temática aunque su lista esté vacía; lo mismo con \"matchesAllAudience\" y los perfiles.\n- La cobertura es desigual: a muchas fichas les faltan los \"tags\", y la mayoría no tiene \"targetAudience\" ni \"geographicScope\". Un campo vacío significa que nadie lo ha rellenado, no que la comunidad no trate de eso: no la descartes en silencio y dime cuándo te falta el dato. {{indexUrl}} trae el recuento exacto de cada campo.\n- \"location\" es dónde se celebran los eventos; \"geographicScope\", cuando está, es el territorio al que da servicio.\n- \"lastReviewed\" es la fecha de la última revisión de la ficha, no una señal de actividad: la mayoría no se ha vuelto a mirar desde que se añadió. Lo único donde se puede comprobar actividad real es el feed de eventos (la entrada de \"urls\" con \"kind\": \"ote\"), y el campo solo dice que la comunidad publica uno: no dice qué hay dentro. Mira las fechas del feed; no deduzcas que una comunidad está viva porque el campo exista.\n- \"status\": \"merged\" significa que la comunidad se fusionó con otras y ya no existe por separado: no me la recomiendes, mándame a la que indica \"mergedIntoId\", que es donde continúa su actividad. Es distinto de \"parentId\", donde la comunidad local y su organización paraguas siguen existiendo las dos.\n- \"organizedBy\" son los ids de las comunidades DEL DIRECTORIO que organizan esa ficha: es como se modela una comunidad y su conferencia anual, dos fichas vivas. No es la lista completa de organizadores (empresas, patrocinadores y apoyo institucional no están en el directorio), así que no me digas \"lo organiza solo esta gente\". Que falte no significa que no lo organice nadie: hay conferencias sin comunidad detrás.\n- \"urls\" es una LISTA de canales, no un objeto por plataforma: cada entrada es { \"url\", \"kind\" opcional, \"label\" opcional }. El \"kind\" se omite cuando el dominio ya lo dice (x.com es Twitter), así que para localizar un canal mira la URL, no solo el \"kind\". Puede haber varias entradas del mismo \"kind\": un grupo con su Meetup y además su encuentro anual, y ahí el \"label\" es el nombre que hay que leer.\n- No me propongas URLs que estén en \"archivedUrls\": son canales que ya nadie atiende.\n- \"humanValidated\": false significa que el etiquetado de esa comunidad lo puso un proceso semiautomático y no lo ha repasado ninguna persona. Es el caso de la mayoría: avísame.\n- No rellenes huecos con lo que te suene de fuera del dataset. Si un dato no está, dilo. Si hay algo que tengo que preguntarle a la comunidad, dímelo y dame el canal.",
       "tribe": {
         "label": "Encontrar mi tribu",
         "hint": "te pregunta tu perfil y luego recomienda",
@@ -789,7 +809,7 @@
       "speaker": {
         "label": "Dónde dar una charla",
         "hint": "te pregunta por tu charla y busca encaje",
-        "text": "Descarga {{dataUrl}} (datos abiertos del directorio de comunidades tech de España, CC BY 4.0).\n\nQuiero proponer una charla y busco dónde encajaría mejor.\n\n**Antes de proponerme nada, pregúntame.** Revisa qué campos hay en el dataset y en los catálogos, y hazme las preguntas que te sirvan para acertar: de qué va mi charla y a qué nivel, si ya la he dado antes o la estreno, a qué ciudades puedo desplazarme o si solo online, si busco un meetup pequeño para rodarla o apuntar directamente a una conferencia, en qué idioma la doy, y a qué público me gustaría llegar. Pregúntalo de forma conversacional y con opciones concretas.\n\nDespués dame dos listas separadas:\n1. **Meetups recurrentes** (\"communityType\": \"tech-meetup\"): al repetir cada poco necesitan ponentes de forma continua, así que son mejor sitio para estrenar.\n2. **Conferencias** (\"communityType\": \"conference\"): su call for papers suele abrirse una vez al año. El dataset no guarda fechas de C4P: dime lo que puedas inferir y mándame a su web o a su feed de eventos a comprobarlo.\n\nDe cada una: nombre, ciudad, por qué encaja con mi charla, su enlace y, si lo hay, su feed de eventos (\"urls.ote\") o su plataforma de eventos (\"urls.eventsUrl\"). Termina con un plan: por cuáles empezarías y en qué orden.\n\n{{rules}}"
+        "text": "Descarga {{dataUrl}} (datos abiertos del directorio de comunidades tech de España, CC BY 4.0).\n\nQuiero proponer una charla y busco dónde encajaría mejor.\n\n**Antes de proponerme nada, pregúntame.** Revisa qué campos hay en el dataset y en los catálogos, y hazme las preguntas que te sirvan para acertar: de qué va mi charla y a qué nivel, si ya la he dado antes o la estreno, a qué ciudades puedo desplazarme o si solo online, si busco un meetup pequeño para rodarla o apuntar directamente a una conferencia, en qué idioma la doy, y a qué público me gustaría llegar. Pregúntalo de forma conversacional y con opciones concretas.\n\nDespués dame dos listas separadas:\n1. **Meetups recurrentes** (\"communityType\": \"tech-meetup\"): al repetir cada poco necesitan ponentes de forma continua, así que son mejor sitio para estrenar.\n2. **Conferencias** (\"communityType\": \"conference\"): su call for papers suele abrirse una vez al año. El dataset no guarda fechas de C4P: dime lo que puedas inferir y mándame a su web o a su feed de eventos a comprobarlo.\n\nDe cada una: nombre, ciudad, por qué encaja con mi charla, su enlace y, si lo hay, su feed de eventos (la entrada de \"urls\" con \"kind\": \"ote\") o su plataforma de eventos (\"kind\": \"meetup\", \"eventbrite\", \"luma\" o \"eventsUrl\"). Termina con un plan: por cuáles empezarías y en qué orden.\n\n{{rules}}"
       },
       "volunteer": {
         "label": "Echar una mano",
@@ -814,7 +834,7 @@
       "onboarding": {
         "label": "Poner al día a tu agente",
         "hint": "qué hay, qué puedes prometer y qué no",
-        "text": "Lee {{indexUrl}} y {{schemaUrl}}: son el índice de datos abiertos del directorio de comunidades tecnológicas de España y el diccionario de sus campos. Desde el índice llegas al resto: el dataset en JSON, el CSV, el GeoJSON, los catálogos de temáticas y de públicos, y el volcado completo en Markdown.\n\n**Antes de escribir una línea de código, pregúntame** qué estoy construyendo (un directorio, un agregador de eventos, un bot, un análisis puntual), con qué stack, y si necesito el dato en vivo o me vale una copia.\n\nDespués, todavía sin código, resúmeme:\n- Qué ficheros hay, qué contiene cada uno y cuál me conviene para lo mío.\n- Qué campos puedo usar con confianza y cuáles están poco rellenos, con los recuentos que da el propio índice. Quiero saber qué NO puedo prometer en mi producto.\n- Las trampas del modelo de datos que me harían mostrar datos mal.\n- Qué pide la licencia CC BY 4.0: cómo atribuyo y a dónde enlazo.\n- Que el directorio no almacena eventos: los publica cada comunidad en su feed Open Tech Events (\"urls.ote\"), así que los eventos se agregan desde ahí.\n- Cómo se corrige un dato mal, para que mi proyecto devuelva valor en vez de solo consumirlo.\n\nCuando lo tengas claro, propónme la forma más simple de empezar y dime qué conviene cachear y cada cuánto refrescarlo.\n\n{{rules}}"
+        "text": "Lee {{indexUrl}} y {{schemaUrl}}: son el índice de datos abiertos del directorio de comunidades tecnológicas de España y el diccionario de sus campos. Desde el índice llegas al resto: el dataset en JSON, el CSV, el GeoJSON, los catálogos de temáticas y de públicos, y el volcado completo en Markdown.\n\n**Antes de escribir una línea de código, pregúntame** qué estoy construyendo (un directorio, un agregador de eventos, un bot, un análisis puntual), con qué stack, y si necesito el dato en vivo o me vale una copia.\n\nDespués, todavía sin código, resúmeme:\n- Qué ficheros hay, qué contiene cada uno y cuál me conviene para lo mío.\n- Qué campos puedo usar con confianza y cuáles están poco rellenos, con los recuentos que da el propio índice. Quiero saber qué NO puedo prometer en mi producto.\n- Las trampas del modelo de datos que me harían mostrar datos mal.\n- Qué pide la licencia CC BY 4.0: cómo atribuyo y a dónde enlazo.\n- Que el directorio no almacena eventos: los publica cada comunidad en su feed Open Tech Events (la entrada de \"urls\" con \"kind\": \"ote\"), así que los eventos se agregan desde ahí.\n- Cómo se corrige un dato mal, para que mi proyecto devuelva valor en vez de solo consumirlo.\n\nCuando lo tengas claro, propónme la forma más simple de empezar y dime qué conviene cachear y cada cuánto refrescarlo.\n\n{{rules}}"
       }
     }
   },

@@ -232,7 +232,10 @@
       "ote": "Events (OTE)",
       "blog": "Blog",
       "rss": "RSS feed",
-      "forum": "Forum"
+      "forum": "Forum",
+      "meetup": "Meetup",
+      "eventbrite": "Eventbrite",
+      "luma": "Luma"
     },
     "urlGroup": {
       "community": "Community",
@@ -322,7 +325,6 @@
         "bullet1": "If there's no own website, use the link that best represents the community and is least likely to expire.",
         "bullet2": "Other profiles can be added as additional URLs."
       },
-      "addMoreProfiles": "Want to add more profiles?",
       "missingPlatformNote": "If you're missing a platform type,",
       "openIssue": "open an issue in the repository",
       "missingPlatformNoteSuffix": "so we can keep improving the available options.",
@@ -350,6 +352,24 @@
         "linkSkills": "Agent skills (ote-tools)",
         "linkEditor": "OTE editor",
         "linkTemplate": "ote-template"
+      },
+      "row": {
+        "add": "Add channel",
+        "remove": "Remove this channel",
+        "empty": "No channels yet. Hit “Add channel” to add the website, the chat group, social profiles or the events feed.",
+        "kindPlaceholder": "What is it? (Telegram, Blog, “DevFest Barcelona”…)",
+        "kindLabel": "What this channel is",
+        "urlLabel": "URL of channel {{position}}",
+        "kindHint": "Or type your own name, like “DevFest Barcelona”, if this channel is more than just “Events”.",
+        "kindNoMatch": "No platform by that name. “{{query}}” will be saved as this channel's name."
+      },
+      "kindHint": {
+        "web": "The community's own website",
+        "linkAggregator": "Linktree, Bio.link, Beacons…",
+        "eventsUrl": "Another platform: Sessionize, community.cncf.io, gdg.community.dev…",
+        "eventosWiki": "Your page on eventos.wiki",
+        "ote": "Open events feed (Open Tech Events)",
+        "mailingList": "Mailing list or Google group"
       }
     },
     "urlHelp": {
@@ -775,7 +795,7 @@
       "agentsTitle": "If you build with an agent"
     },
     "prompts": {
-      "rules": "Data rules:\n- To recommend anything to me, only use communities whose \"status\" is \"active\". If I explicitly ask for dormant ones, label them as such.\n- \"tags\" and \"targetAudience\" are catalogue ids. The catalogues exist in Spanish ({{tagsUrl}}, {{audienceUrl}}) and English ({{tagsEnUrl}}, {{audienceEnUrl}}): same ids, translated labels. Match against \"label\", \"description\" and \"synonyms\", not just the id.\n- If \"matchesAllTags\" is true the community is generalist and fits any topic even with an empty list; same for \"matchesAllAudience\" and profiles.\n- Coverage is uneven: many records are missing \"tags\", and most have no \"targetAudience\" or \"geographicScope\". An empty field means nobody has filled it in, not that the community has nothing to do with that topic: do not silently drop it, and tell me when the data is missing. {{indexUrl}} carries the exact count per field.\n- \"location\" is where events happen; \"geographicScope\", where present, is the territory served.\n- \"lastReviewed\" is the date the record was last checked, not an activity signal: most have not been revisited since they were added. The only field that evidences real activity is an events feed in \"urls.ote\".\n- \"status\": \"merged\" means the community merged with others and no longer exists on its own: do not recommend it, point me at the one in \"mergedIntoId\", where its activity continues. This is different from \"parentId\", where both the local community and its umbrella organisation still exist.\n- \"organizedBy\" holds the ids of the communities IN THIS DIRECTORY that organise that record: this is how a community and its annual conference are modelled, as two live records. It is not the full list of organisers (companies, sponsors and institutional support are not in the directory), so never tell me \"only these people run it\". A missing value does not mean nobody runs it: plenty of conferences have no community behind them.\n- Never suggest URLs listed in \"archivedUrls\": nobody is listening on those channels.\n- \"humanValidated\": false means that community's tagging was filled in by a semi-automated pass and no person has checked it. That is the majority: warn me.\n- Do not fill gaps with things you know from outside the dataset. If a fact is not there, say so. If something has to be asked of the community itself, tell me and give me the channel.",
+      "rules": "Data rules:\n- To recommend anything to me, only use communities whose \"status\" is \"active\". If I explicitly ask for dormant ones, label them as such.\n- \"tags\" and \"targetAudience\" are catalogue ids. The catalogues exist in Spanish ({{tagsUrl}}, {{audienceUrl}}) and English ({{tagsEnUrl}}, {{audienceEnUrl}}): same ids, translated labels. Match against \"label\", \"description\" and \"synonyms\", not just the id.\n- If \"matchesAllTags\" is true the community is generalist and fits any topic even with an empty list; same for \"matchesAllAudience\" and profiles.\n- Coverage is uneven: many records are missing \"tags\", and most have no \"targetAudience\" or \"geographicScope\". An empty field means nobody has filled it in, not that the community has nothing to do with that topic: do not silently drop it, and tell me when the data is missing. {{indexUrl}} carries the exact count per field.\n- \"location\" is where events happen; \"geographicScope\", where present, is the territory served.\n- \"lastReviewed\" is the date the record was last checked, not an activity signal: most have not been revisited since they were added. The only place where real activity can be checked is the events feed (the \"urls\" entry whose \"kind\" is \"ote\"), and the field only says the community publishes one: it says nothing about what is in it. Read the dates in the feed; never infer a community is alive from the field being present.\n- \"status\": \"merged\" means the community merged with others and no longer exists on its own: do not recommend it, point me at the one in \"mergedIntoId\", where its activity continues. This is different from \"parentId\", where both the local community and its umbrella organisation still exist.\n- \"organizedBy\" holds the ids of the communities IN THIS DIRECTORY that organise that record: this is how a community and its annual conference are modelled, as two live records. It is not the full list of organisers (companies, sponsors and institutional support are not in the directory), so never tell me \"only these people run it\". A missing value does not mean nobody runs it: plenty of conferences have no community behind them.\n- \"urls\" is a LIST of channels, not an object keyed by platform: each entry is { \"url\", optional \"kind\", optional \"label\" }. \"kind\" is omitted when the domain already says it (x.com is Twitter), so locate a channel by its URL, not by \"kind\" alone. There can be several entries with the same \"kind\": a group with its Meetup plus its own annual event, and there the \"label\" is the name to read.\n- Never suggest URLs listed in \"archivedUrls\": nobody is listening on those channels.\n- \"humanValidated\": false means that community's tagging was filled in by a semi-automated pass and no person has checked it. That is the majority: warn me.\n- Do not fill gaps with things you know from outside the dataset. If a fact is not there, say so. If something has to be asked of the community itself, tell me and give me the channel.",
       "tribe": {
         "label": "Find my people",
         "hint": "asks about your profile, then recommends",
@@ -789,7 +809,7 @@
       "speaker": {
         "label": "Where to give a talk",
         "hint": "asks about your talk, then finds the fit",
-        "text": "Fetch {{dataUrl}} (open data from the directory of Spanish tech communities, CC BY 4.0).\n\nI want to pitch a talk and I am looking for where it would land best.\n\n**Before proposing anything, ask me.** Look at what the dataset and the catalogues contain, then ask what you need to get this right: what my talk is about and at what level, whether I have given it before or I am debuting it, which cities I can travel to or whether it is online only, whether I want a small meetup to road-test it or I am aiming straight at a conference, what language I give it in, and which audience I want to reach. Ask conversationally, with concrete options.\n\nThen give me two separate lists:\n1. **Recurring meetups** (\"communityType\": \"tech-meetup\"): because they come round often they need speakers continuously, which makes them a better place to debut.\n2. **Conferences** (\"communityType\": \"conference\"): their call for papers usually opens once a year. The dataset holds no CFP dates: tell me what you can infer and send me to their site or events feed to check.\n\nFor each: name, city, why it fits my talk, its link, and where available its events feed (\"urls.ote\") or events platform (\"urls.eventsUrl\"). Finish with a plan: which ones you would start with, and in what order.\n\n{{rules}}"
+        "text": "Fetch {{dataUrl}} (open data from the directory of Spanish tech communities, CC BY 4.0).\n\nI want to pitch a talk and I am looking for where it would land best.\n\n**Before proposing anything, ask me.** Look at what the dataset and the catalogues contain, then ask what you need to get this right: what my talk is about and at what level, whether I have given it before or I am debuting it, which cities I can travel to or whether it is online only, whether I want a small meetup to road-test it or I am aiming straight at a conference, what language I give it in, and which audience I want to reach. Ask conversationally, with concrete options.\n\nThen give me two separate lists:\n1. **Recurring meetups** (\"communityType\": \"tech-meetup\"): because they come round often they need speakers continuously, which makes them a better place to debut.\n2. **Conferences** (\"communityType\": \"conference\"): their call for papers usually opens once a year. The dataset holds no CFP dates: tell me what you can infer and send me to their site or events feed to check.\n\nFor each: name, city, why it fits my talk, its link, and where available its events feed (the \"urls\" entry with \"kind\": \"ote\") or events platform (\"kind\": \"meetup\", \"eventbrite\", \"luma\" or \"eventsUrl\"). Finish with a plan: which ones you would start with, and in what order.\n\n{{rules}}"
       },
       "volunteer": {
         "label": "Lend a hand",
@@ -814,7 +834,7 @@
       "onboarding": {
         "label": "Brief your agent",
         "hint": "what exists, and what you can promise",
-        "text": "Read {{indexUrl}} and {{schemaUrl}}: they are the open-data index for the directory of Spanish tech communities and the dictionary of its fields. From the index you reach everything else: the JSON dataset, the CSV, the GeoJSON, the topic and audience catalogues, and the full dump as Markdown.\n\n**Before writing a line of code, ask me** what I am building (a directory, an events aggregator, a bot, a one-off analysis), on what stack, and whether I need the data live or a copy will do.\n\nThen, still without code, summarise for me:\n- Which files exist, what each one holds, and which suits my case.\n- Which fields I can rely on and which are sparsely filled, with the counts the index itself gives. I want to know what I must NOT promise in my product.\n- The data-model traps that would make me display things wrongly.\n- What the CC BY 4.0 licence asks of me: how I attribute and where I link.\n- That the directory stores no events: each community publishes them in its Open Tech Events feed (\"urls.ote\"), so events are aggregated from there.\n- How a wrong record gets corrected, so my project gives value back instead of only consuming.\n\nOnce that is clear, propose the simplest way to start, and tell me what to cache and how often to refresh it.\n\n{{rules}}"
+        "text": "Read {{indexUrl}} and {{schemaUrl}}: they are the open-data index for the directory of Spanish tech communities and the dictionary of its fields. From the index you reach everything else: the JSON dataset, the CSV, the GeoJSON, the topic and audience catalogues, and the full dump as Markdown.\n\n**Before writing a line of code, ask me** what I am building (a directory, an events aggregator, a bot, a one-off analysis), on what stack, and whether I need the data live or a copy will do.\n\nThen, still without code, summarise for me:\n- Which files exist, what each one holds, and which suits my case.\n- Which fields I can rely on and which are sparsely filled, with the counts the index itself gives. I want to know what I must NOT promise in my product.\n- The data-model traps that would make me display things wrongly.\n- What the CC BY 4.0 licence asks of me: how I attribute and where I link.\n- That the directory stores no events: each community publishes them in its Open Tech Events feed (the \"urls\" entry with \"kind\": \"ote\"), so events are aggregated from there.\n- How a wrong record gets corrected, so my project gives value back instead of only consuming.\n\nOnce that is clear, propose the simplest way to start, and tell me what to cache and how often to refresh it.\n\n{{rules}}"
       }
     }
   },

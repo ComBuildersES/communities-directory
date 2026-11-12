@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-12 `7c1c34c` `urls` como lista de pares con etiqueta propia
+- 2026-11-12 `9187d51` editar los canales como filas, con etiqueta propia
+- 2026-11-12 `cba2880` `urls` como lista de pares con etiqueta propia
 - 2026-11-12 `56aa7f8` apagar el vínculo de autoría cuando el otro lado no está activo
 - 2026-11-12 `59f5517` eventos anuales con marca propia y su autoría
 - 2026-11-12 `f97406c` modelar autoría de encuentros recurrentes (organizedBy)
