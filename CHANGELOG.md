@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-11-12 `d268b3f` alta de GDG Córdoba, Lleida, Valladolid y Zaragoza
 - 2026-11-12 `5ad5592` enlazar el DevFest de GDG Barcelona y GDG Jaén
 - 2026-11-12 `cb2eed1` editar los canales como filas, con etiqueta propia
 - 2026-11-12 `cba2880` `urls` como lista de pares con etiqueta propia
@@ -56,7 +57,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
-- 2026-11-12 `61a2304` por qué las cuatro altas de GDG se quedan fuera
+- 2026-11-12 `9bdda6c` por qué las cuatro altas de GDG se quedan fuera
 - 2026-11-12 `66364d5` el porqué de los canales como pares, no lo que ya dice el esquema
 - 2026-11-10 `9c84a1a` regenerar el changelog tras el merge
 - 2026-11-10 `5b11100` documentar la capa de datos abiertos para IA y sanear AGENTS.md

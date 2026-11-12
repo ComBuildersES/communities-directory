@@ -1,0 +1,43 @@
+{
+  "id": 663,
+  "name": "GDG Valladolid",
+  "status": "active",
+  "lastReviewed": "12/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Valladolid",
+  "geographicScope": "provincial",
+  "parentId": 207,
+  "shortDescription": "Capítulo de Google Developer Groups en Valladolid. Organiza charlas, talleres y quedadas sobre tecnologías de Google, inteligencia artificial y cloud, y es quien está detrás del VallaTech Summit.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "generative-ai",
+    "gcp",
+    "android",
+    "machine-learning"
+  ],
+  "targetAudience": [],
+  "contactInfo": "valladolidgdg@gmail.com",
+  "communityUrl": "https://gdg.community.dev/gdg-valladolid/",
+  "urls": [
+    {
+      "url": "https://x.com/GDG_Valladolid"
+    },
+    {
+      "url": "https://www.linkedin.com/in/gdg-valladolid-35a397264/"
+    },
+    {
+      "url": "https://www.instagram.com/gdg_valladolid"
+    }
+  ],
+  "thumbnailUrl": "images/gdg-valladolid.webp",
+  "latLon": {
+    "lat": 41.6523,
+    "lon": -4.7245
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -1,0 +1,49 @@
+{
+  "id": 661,
+  "name": "GDG Córdoba",
+  "status": "active",
+  "lastReviewed": "12/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Córdoba",
+  "geographicScope": "provincial",
+  "parentId": 207,
+  "shortDescription": "Capítulo de Google Developer Groups en Córdoba. Organiza meetups y talleres sobre tecnologías de Google e inteligencia artificial, y el DevFest Córdoba.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "generative-ai",
+    "gcp",
+    "android",
+    "machine-learning"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://gdg.community.dev/gdg-cordoba/",
+  "urls": [
+    {
+      "url": "https://x.com/GDGCordobaESP"
+    },
+    {
+      "url": "https://www.linkedin.com/company/gdg-c%C3%B3rdoba"
+    },
+    {
+      "url": "https://t.me/+0bblMyCHdvQwMjlk"
+    },
+    {
+      "url": "https://linktr.ee/gdgcordoba"
+    },
+    {
+      "url": "https://www.meetup.com/gdg-cordoba-meetup-group/"
+    }
+  ],
+  "thumbnailUrl": "images/gdg-cordoba.webp",
+  "latLon": {
+    "lat": 37.8882,
+    "lon": -4.7794
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

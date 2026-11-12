@@ -1,0 +1,49 @@
+{
+  "id": 664,
+  "name": "GDG Zaragoza",
+  "status": "active",
+  "lastReviewed": "12/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Zaragoza",
+  "geographicScope": "provincial",
+  "parentId": 207,
+  "shortDescription": "Capítulo de Google Developer Groups en Zaragoza. Organiza talleres y charlas sobre tecnologías de Google, inteligencia artificial y realidad virtual, y ha venido celebrando el DevFest Zaragoza.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "generative-ai",
+    "machine-learning",
+    "gcp",
+    "android"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://gdg.community.dev/gdg-zaragoza/",
+  "urls": [
+    {
+      "url": "https://x.com/GDGZaragoza"
+    },
+    {
+      "url": "https://www.linkedin.com/company/gdg-zaragoza"
+    },
+    {
+      "url": "https://www.instagram.com/GDGZaragoza"
+    },
+    {
+      "url": "https://www.meetup.com/gdgZaragoza/"
+    }
+  ],
+  "archivedUrls": [
+    "https://gdgzaragoza.es/"
+  ],
+  "thumbnailUrl": "images/gdg-zaragoza.webp",
+  "latLon": {
+    "lat": 41.6488,
+    "lon": -0.8891
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}

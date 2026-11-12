@@ -6,7 +6,7 @@
 > 662 Lleida, 663 Valladolid, 664 Zaragoza) y vinculado VallaTech Summit → GDG Valladolid.
 > **URLs con etiqueta hechas, formulario incluido** (#478): `urls` es una lista de pares, las
 > 510 fichas con canales están migradas y el formulario edita filas con etiqueta propia.
-> Queda: los logos de los cuatro GDG nuevos (manual) y #477 (a la espera de opiniones).
+> Queda sólo #477, a la espera de opiniones.
 
 Estado al **12/11/2026**. Trabajo derivado de los issues
 [#475](https://github.com/ComBuildersES/communities-directory/issues/475) (modelo de autoría
@@ -290,47 +290,28 @@ Lleida): ninguno tiene dominio propio. `gdglleida.com` y `gdgzaragoza.es` sí ex
 la web del capítulo, ya tratadas. Barcelona y Jaén la llevan porque su landing vive en un
 dominio que sobrevive a la edición.
 
-## Las cuatro altas de GDG están bloqueadas por el logo
+## Las cuatro altas de GDG, dentro
 
-**`thumbnailUrl` no es un extra: es obligatorio.** El hook de pre-commit valida en modo
-estricto todo lo que cambia respecto a `HEAD`, y una ficha nueva sin logo es **error**, no
-aviso. Las cuatro altas no pueden entrar hasta tener imagen.
+**`thumbnailUrl` no es un extra: es obligatorio.** El hook valida en estricto todo lo que
+cambia respecto a `HEAD`, y una ficha nueva sin logo es **error**, no aviso. Las altas
+estuvieron bloqueadas hasta tener imagen.
 
-Por eso, al cerrar la sesión:
+Los logos salen de los avatares de X de cada capítulo, convertidos a webp 400×400 como el
+resto. Es la fuente que hay: en su página del programa lo específico del capítulo es una foto
+de la ciudad, y `gdglleida.com` es un Blogger lleno de carteles de eventos.
 
-- Los cuatro ficheros (`gdg-cordoba`, `gdg-lleida`, `gdg-valladolid`, `gdg-zaragoza`) están en
-  `data/communities/` **sin commitear**.
-- **Mientras estén ahí, el hook rechaza cualquier commit**, aunque no tenga nada que ver. No
-  es un fallo del hook: es la regla haciendo su trabajo. La salida es poner los logos, no
-  `--no-verify`.
-- `VallaTech Summit` se quedó **sin** su `organizedBy`. Apuntaba a GDG Valladolid, que no
-  existe todavía en el dataset, y `validateOrganizedByReferences` lo rechaza con razón. Hay
-  que devolverlo en cuanto el alta entre.
+**El de GDG Córdoba es el lockup genérico de GDG, sin ciudad.** No es un descuido de la
+conversión: es el avatar que ellos publican, el mismo que tienen en Linktree. Los otros tres
+sí llevan el nombre de la ciudad. Si algún día sacan uno propio, es un reemplazo de fichero.
 
-### De dónde salen esos logos
-
-No se pueden sacar automáticamente. Lo que publican los capítulos no sirve:
-
-- En su página del programa, lo específico del capítulo es una **foto de la ciudad** como
-  banner y los avatares de quien organiza. No hay logo.
-- El avatar de Linktree de GDG Córdoba es el **lockup genérico** de GDG, sin ciudad. Puesto en
-  las cuatro fichas sería la misma imagen cuatro veces, que en una cuadrícula no identifica
-  nada.
-- `gdglleida.com` es un Blogger y sus imágenes son carteles de eventos.
-
-Lo que llevan los 19 GDG que ya estaban es el lockup **con el nombre de la ciudad**, que sale
-de los avatares de sus redes y no es descargable sin sesión.
-
-Mientras tanto la cuadrícula no enseña un hueco roto: la tarjeta pinta las iniciales.
+Con esto, **ninguna comunidad activa del directorio se queda sin logo**, y `VallaTech Summit`
+recupera su `organizedBy` hacia GDG Valladolid, que estuvo retirado mientras la ficha no
+existía.
 
 ## Lo commiteado, y dónde
 
-Rama `feat/urls-con-etiqueta-478`, cinco commits sobre `76ca68b`. Sin pushear.
-
-No están ahí las cuatro altas ni el vínculo del VallaTech, por lo de arriba.
+Rama `feat/urls-con-etiqueta-478`, sobre `76ca68b`. Sin pushear.
 
 ## Siguiente sesión
 
-1. Conseguir los cuatro logos, meter las altas y devolverle a VallaTech Summit su
-   `organizedBy`. Hasta entonces no se puede commitear nada.
-2. #477 sigue abierto: tipo para hackathones, jams y datatones.
+#477 sigue abierto: tipo para hackathones, jams y datatones.

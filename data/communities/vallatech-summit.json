@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "Valladolid",
   "geographicScope": "provincial",
+  "organizedBy": [
+    663
+  ],
   "shortDescription": "Encuentro anual de la comunidad tecnológica de Valladolid, con charlas, talleres y networking sobre inteligencia artificial, cloud y ciberseguridad. Es el DevFest que organiza GDG Valladolid, con marca y web propias.",
   "topics": "",
   "langs": [

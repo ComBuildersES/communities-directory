@@ -1,0 +1,52 @@
+{
+  "id": 662,
+  "name": "GDG Lleida",
+  "status": "active",
+  "lastReviewed": "12/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Lleida",
+  "geographicScope": "provincial",
+  "parentId": 207,
+  "shortDescription": "Capítulo de Google Developer Groups en Lleida. Organiza charlas, talleres y concursos sobre tecnologías de Google, inteligencia artificial, Android, cloud y cultura maker, y acoge el capítulo de Women Techmakers Lleida.",
+  "topics": "",
+  "langs": [
+    "ca",
+    "es"
+  ],
+  "tags": [
+    "generative-ai",
+    "machine-learning",
+    "gcp",
+    "android",
+    "flutter",
+    "kubernetes",
+    "iot",
+    "women-in-tech"
+  ],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://www.gdglleida.com/",
+  "urls": [
+    {
+      "kind": "web",
+      "url": "https://www.gdglleida.com/"
+    },
+    {
+      "url": "https://x.com/gdglleida"
+    },
+    {
+      "url": "https://www.instagram.com/gdglleida"
+    },
+    {
+      "url": "https://gdg.community.dev/gdg-lleida/"
+    }
+  ],
+  "thumbnailUrl": "images/gdg-lleida.webp",
+  "latLon": {
+    "lat": 41.6176,
+    "lon": 0.62
+  },
+  "displayOnMap": true,
+  "humanValidated": false
+}
