@@ -9,6 +9,7 @@ import { parseDirectoryFilters } from "../lib/communitySubmission";
 import { normalizeCommunityLangs } from "../lib/communityLanguages.js";
 import { buildCoverage } from "../lib/dataCoverage.js";
 import { buildMergedFromMap } from "../lib/mergedCommunities.js";
+import { buildOrganizedByMap } from "../lib/organizedCommunities.js";
 
 const TAGS_URL = `${import.meta.env.BASE_URL}data/tags.json`;
 const AUDIENCE_URL = `${import.meta.env.BASE_URL}data/audience.json`;
@@ -48,6 +49,7 @@ const initialState = {
   cbMembersMap: new Map(), // communityId -> [github handles]
   childrenByParentId: new Map(), // parentId -> count of child communities
   mergedFromById: new Map(), // id -> comunidades fusionadas en ella (src/lib/mergedCommunities.js)
+  organizedById: new Map(), // id -> encuentros que organiza (src/lib/organizedCommunities.js)
   coverage: null, // Cuánto del dataset ha revisado una persona (src/lib/dataCoverage.js)
   hasFreshData: false, // Datos confirmados desde red cuando hay conexión
   isRefreshingFreshData: false, // Revalidación online en curso
@@ -132,6 +134,9 @@ const useCommunityStore = create(
           // Cara inversa de la fusión: solo se guarda en la comunidad fusionada, así que la
           // ficha del destino necesita derivarla al cargar los datos.
           const mergedFromById = buildMergedFromMap(data);
+          // Cara inversa de la autoría (issue #475): `organizedBy` vive solo en la ficha del
+          // encuentro, así que la ficha de la comunidad organizadora la deriva aquí.
+          const organizedById = buildOrganizedByMap(data);
           const inverseIndex = buildInverseIndex(data);
           const defaultFilters = { status: ["active"] };
           const urlFilters = parseDirectoryFilters();
@@ -153,6 +158,7 @@ const useCommunityStore = create(
             cbMembersMap,
             childrenByParentId,
             mergedFromById,
+            organizedById,
             coverage: buildCoverage(data),
             hasFreshData,
             isRefreshingFreshData: false,
@@ -319,6 +325,8 @@ export const useCBMemberIds = () => useCommunityStore((state) => state.cbMemberI
 export const useChildrenByParentId = () => useCommunityStore((state) => state.childrenByParentId);
 
 export const useMergedFromById = () => useCommunityStore((state) => state.mergedFromById);
+
+export const useOrganizedById = () => useCommunityStore((state) => state.organizedById);
 
 export const useCBMembersMap = () => useCommunityStore((state) => state.cbMembersMap);
 

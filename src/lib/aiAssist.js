@@ -10,6 +10,10 @@
  * no confía en él. Filtra a las claves conocidas, descarta valores fuera de los enums y
  * devuelve avisos en vez de romper, para que el formulario pueda aprovechar lo que sí
  * sirve en lugar de tirar la respuesta entera.
+ *
+ * Los campos que son ids de otras fichas (`id`, `parentId`, `mergedIntoId`, `organizedBy`)
+ * se descartan a propósito: un id solo significa algo dentro de este dataset, y un modelo
+ * que lo rellena está adivinando. Esos vínculos los elige una persona en el formulario.
  */
 import { URL_PLATFORM_OPTIONS } from "./communitySubmission";
 

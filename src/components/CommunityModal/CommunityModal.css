@@ -948,3 +948,67 @@ button.modal-badge:focus-visible {
   align-items: center;
   gap: 0.3rem;
 }
+
+/* Autoría de encuentros recurrentes (issue #475): "organizada por" y su cara inversa. */
+.community-modal-relations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.community-modal-relation {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 20px;
+  background: #eef4ff;
+  border: 1px solid #c8d8f7;
+  color: #2f5aa8;
+  font-size: 0.8rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.community-modal-relation:hover:not(:disabled) {
+  background: #e0ebff;
+  border-color: #a8c2ef;
+}
+
+.community-modal-relation:disabled {
+  cursor: default;
+  opacity: 0.7;
+}
+
+/* Estado del otro lado del vínculo: la conferencia puede seguir viva con la comunidad
+   parada, y quien lee la ficha necesita saberlo antes de pulsar. */
+.community-modal-relation__status {
+  padding: 0.05rem 0.4rem;
+  border-radius: 10px;
+  background: #fff3cd;
+  border: 1px solid #f0d99b;
+  color: #7a5c0a;
+  font-size: 0.7rem;
+  text-transform: lowercase;
+}
+
+.community-modal-relations-note {
+  font-size: 0.78rem;
+  color: #6b7280;
+  margin-top: 0.45rem;
+}
+
+.community-modal-no-channels {
+  font-size: 0.82rem;
+  color: #4b5168;
+  margin-bottom: 0.5rem;
+}
+
+.community-modal-no-channels-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}

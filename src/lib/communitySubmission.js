@@ -1,5 +1,6 @@
 import { normalizeCommunityLangs } from "./communityLanguages.js";
 import { MERGED_STATUS } from "./mergedCommunities.js";
+import { normalizeOrganizedBy } from "./organizedCommunities.js";
 
 const GITHUB_NEW_ISSUE_URL = "https://github.com/ComBuildersES/communities-directory/issues/new";
 export const COMMUNITY_BUILDERS_EMAIL = "communitybuilders.es@gmail.com";
@@ -422,6 +423,9 @@ export function getEmptyCommunityDraft(nextId = null) {
     matchesAllAudience: false,
     parentId: null,
     mergedIntoId: null,
+    // Comunidades del directorio que organizan esta (issue #475). Ver
+    // src/lib/organizedCommunities.js.
+    organizedBy: [],
   };
 }
 
@@ -449,6 +453,7 @@ export function getCommunityDraft(community, nextId = null) {
     humanValidated: Boolean(community.humanValidated),
     matchesAllTags: Boolean(community.matchesAllTags),
     matchesAllAudience: Boolean(community.matchesAllAudience),
+    organizedBy: normalizeOrganizedBy(community.organizedBy, { selfId: community.id ?? null }),
     ...(isUmbrella && { location: "n/a" }),
   };
 }
@@ -668,6 +673,7 @@ export function buildCommunityPayload(draft, existingCommunity = null, options =
   const normalizedThumbnailUrl = rawThumbnailUrl?.startsWith(baseUrl)
     ? rawThumbnailUrl.slice(baseUrl.length)
     : rawThumbnailUrl;
+  const normalizedOrganizedBy = normalizeOrganizedBy(draft.organizedBy, { selfId: resolvedId });
   const normalizedTags = normalizeTaxonomySelection(draft.tags, allTags, draft.matchesAllTags);
   const normalizedAudience = normalizeTaxonomySelection(
     draft.targetAudience,
@@ -713,6 +719,13 @@ export function buildCommunityPayload(draft, existingCommunity = null, options =
     // comunidad activa dejaría la ficha diciendo que continúa en otro sitio.
     ...(cleanString(draft.status) === MERGED_STATUS
       ? { mergedIntoId: draft.mergedIntoId != null ? Number(draft.mergedIntoId) : null }
+      : {}),
+    // Autoría (issue #475): se omite la clave cuando no hay vínculo, para no añadir un `[]`
+    // a las 600+ fichas que no son un encuentro organizado por nadie del directorio. Si la
+    // comunidad SÍ tenía organizadoras, el array viaja aunque quede vacío: es lo que
+    // distingue "no se tocó" de "se quitaron todas".
+    ...(normalizedOrganizedBy.length > 0 || (existingCommunity?.organizedBy?.length ?? 0) > 0
+      ? { organizedBy: normalizedOrganizedBy }
       : {}),
   };
 }

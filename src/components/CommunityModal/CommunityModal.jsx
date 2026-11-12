@@ -1,10 +1,11 @@
 /* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { useCommunityActions, useAllCommunities, useChildrenByParentId, useMergedFromById } from "../../stores/community.store.js";
+import { useCommunityActions, useAllCommunities, useChildrenByParentId, useMergedFromById, useOrganizedById } from "../../stores/community.store.js";
 import { buildContributionPath } from "../../lib/communitySubmission";
 import { normalizeCommunityLangs } from "../../lib/communityLanguages.js";
 import { findMergeTarget, isMergedCommunity } from "../../lib/mergedCommunities.js";
+import { findOrganizers } from "../../lib/organizedCommunities.js";
 import { OteEvents } from "./OteEvents.jsx";
 import "./CommunityModal.css";
 
@@ -165,6 +166,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
   const allCommunities = useAllCommunities();
   const childrenByParentId = useChildrenByParentId();
   const mergedFromById = useMergedFromById();
+  const organizedById = useOrganizedById();
   const [tagsExpanded, setTagsExpanded] = useState(false);
   const [audienceExpanded, setAudienceExpanded] = useState(false);
   const [openUrlGroup, setOpenUrlGroup] = useState(null);
@@ -241,6 +243,12 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
   // desde un enlace viejo tiene que poder seguir hasta la comunidad viva.
   const mergeTarget = findMergeTarget(community, allCommunities);
   const mergedFrom = mergedFromById.get(community.id) ?? [];
+
+  // Autoría (src/lib/organizedCommunities.js): las comunidades del directorio que organizan
+  // esta, y los encuentros que organiza ella. Las dos caras se pintan siempre, con el estado
+  // del otro lado: una asociación dormida puede seguir sacando su conferencia, y al revés.
+  const organizers = findOrganizers(community, allCommunities);
+  const organizes = organizedById.get(community.id) ?? [];
 
   const hasMapCoords = latLon?.lat != null && latLon?.lon != null;
   const languages = normalizeCommunityLangs(langs);
@@ -481,6 +489,66 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
             </div>
           )}
 
+          {/* Quién organiza esta comunidad (issue #475) */}
+          {organizers.length > 0 && (
+            <div className="community-modal-section">
+              <h3 className="community-modal-section-title">
+                <i className="fa-solid fa-people-group"></i> {t("communityModal.organizedByTitle")}
+              </h3>
+              <div className="community-modal-relations">
+                {organizers.map((organizer) => (
+                  <button
+                    key={organizer.id ?? organizer.name}
+                    type="button"
+                    className="community-modal-relation"
+                    onClick={() => onOpenCommunity?.(organizer.id)}
+                    disabled={!onOpenCommunity || organizer.id == null}
+                  >
+                    <span>{organizer.name}</span>
+                    {organizer.status !== "active" && (
+                      <span className="community-modal-relation__status">
+                        {t(`status.${organizer.status}`)}
+                      </span>
+                    )}
+                  </button>
+                ))}
+              </div>
+              {/*
+                Un encuentro tiene muchos más organizadores reales (empresas, patrocinadores,
+                apoyo institucional) que el directorio no lista. Sin esta nota, una lista con
+                una sola comunidad se lee como "lo organiza solo esta gente".
+              */}
+              <p className="community-modal-relations-note">{t("communityModal.organizedByNote")}</p>
+            </div>
+          )}
+
+          {/* Encuentros que organiza esta comunidad (cara inversa, derivada en el store) */}
+          {organizes.length > 0 && (
+            <div className="community-modal-section">
+              <h3 className="community-modal-section-title">
+                <i className="fa-solid fa-calendar-days"></i> {t("communityModal.organizesTitle")}
+              </h3>
+              <div className="community-modal-relations">
+                {organizes.map((organized) => (
+                  <button
+                    key={organized.id ?? organized.name}
+                    type="button"
+                    className="community-modal-relation"
+                    onClick={() => onOpenCommunity?.(organized.id)}
+                    disabled={!onOpenCommunity || organized.id == null}
+                  >
+                    <span>{organized.name}</span>
+                    {organized.status !== "active" && (
+                      <span className="community-modal-relation__status">
+                        {t(`status.${organized.status}`)}
+                      </span>
+                    )}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
           {/* Próximos eventos leídos del feed OTE de la comunidad */}
           {urls.ote && <OteEvents feedUrl={urls.ote} fallbackUrl={urls.eventosWiki ?? null} />}
 
@@ -536,6 +604,39 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                   {t("communityModal.archivedUrlNote")}
                 </p>
               )}
+            </div>
+          )}
+
+          {/*
+            Un encuentro que no tiene canales propios (issue #475): no se copian los de la
+            comunidad organizadora. Una URL repetida en dos fichas se valida dos veces y al
+            archivar un canal hay que acordarse de los dos sitios. Lo que se ofrece es la vía
+            para añadir el canal que falte y el enlace a los canales de quien lo organiza.
+          */}
+          {urlEntries.length === 0 && !showFallbackUrl && organizers.length > 0 && (
+            <div className="community-modal-section">
+              <h3 className="community-modal-section-title">
+                <i className="fas fa-link"></i> {t("communityModal.links")}
+              </h3>
+              <p className="community-modal-no-channels">
+                {t("communityModal.noOwnChannels")}
+              </p>
+              <div className="community-modal-no-channels-actions">
+                <a href={buildContributionPath({ mode: "edit", identifier: community.id })}>
+                  {t("communityModal.noOwnChannelsCta")} <i className="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+                {organizers.map((organizer) => (
+                  <button
+                    key={organizer.id ?? organizer.name}
+                    type="button"
+                    className="community-modal-relation"
+                    onClick={() => onOpenCommunity?.(organizer.id)}
+                    disabled={!onOpenCommunity || organizer.id == null}
+                  >
+                    {t("communityModal.noOwnChannelsOrganizer", { name: organizer.name })}
+                  </button>
+                ))}
+              </div>
             </div>
           )}
 

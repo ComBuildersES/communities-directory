@@ -12,6 +12,7 @@ import {
   writeDeletedCommunity,
 } from './lib/communities-store.js';
 import { buildProposalSummary } from './lib/proposal-summary.js';
+import { normalizeOrganizedBy } from '../src/lib/organizedCommunities.js';
 
 const body = process.argv[2] ?? '';
 const imagesFolder = './public/images';
@@ -259,15 +260,21 @@ function normalizeArchivedUrlList(archivedUrls, payload) {
   }, []);
 }
 
-/** Evita escribir `archivedUrls: []` en las fichas que no tienen ningún canal archivado. */
+/**
+ * Evita escribir `archivedUrls: []` u `organizedBy: []` en las fichas que no tienen nada en
+ * esas claves. El array vacío sí viaja en el payload (es lo que distingue "no se tocó" de
+ * "se vació"), pero no tiene por qué quedarse en el fichero.
+ */
 export function dropEmptyArchivedUrls(community) {
-  if (Array.isArray(community?.archivedUrls) && community.archivedUrls.length === 0) {
-    return Object.fromEntries(
-      Object.entries(community).filter(([key]) => key !== 'archivedUrls')
-    );
-  }
+  const emptyKeys = ['archivedUrls', 'organizedBy'].filter(
+    (key) => Array.isArray(community?.[key]) && community[key].length === 0
+  );
 
-  return community;
+  if (emptyKeys.length === 0) return community;
+
+  return Object.fromEntries(
+    Object.entries(community).filter(([key]) => !emptyKeys.includes(key))
+  );
 }
 
 export function normalizePayload(payload) {
@@ -321,6 +328,12 @@ export function normalizePayload(payload) {
     // separado. Ver src/lib/mergedCommunities.js.
     ...(normalizeString(payload.status) === 'merged'
       ? { mergedIntoId: payload.mergedIntoId != null ? Number(payload.mergedIntoId) : null }
+      : {}),
+    // Autoría (issue #475): la clave solo existe si la propuesta la trae. Un array vacío se
+    // conserva aquí —en una edición es lo que dice "se quitaron todas las organizadoras"— y
+    // lo limpia `dropEmptyArchivedUrls` antes de escribir el fichero.
+    ...(Array.isArray(payload.organizedBy)
+      ? { organizedBy: normalizeOrganizedBy(payload.organizedBy, { selfId: payload.id ?? null }) }
       : {}),
   };
 }

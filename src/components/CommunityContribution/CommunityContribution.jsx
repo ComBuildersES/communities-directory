@@ -168,6 +168,11 @@ function getFieldHelp(t) {
       description: t("contribution.fieldHelp.mergedInto.description"),
       bullets: [],
     },
+    organizedBy: {
+      title: t("contribution.fieldHelp.organizedBy.title"),
+      description: t("contribution.fieldHelp.organizedBy.description"),
+      bullets: [],
+    },
   };
 }
 
@@ -999,6 +1004,7 @@ function buildEditableDraftSignature(draft) {
     communityUrl: draft.communityUrl,
     urls: draft.urls,
     archivedUrls: draft.archivedUrls,
+    organizedBy: draft.organizedBy,
     thumbnailUrl: draft.thumbnailUrl,
     replaceThumbnail: draft.replaceThumbnail,
     latLon: draft.latLon,
@@ -1092,6 +1098,15 @@ export function CommunityContribution({
       .sort((a, b) => a.name.localeCompare(b.name)),
     [communities, existingCommunity?.id]
   );
+  // Candidatas a organizadoras (issue #475): comunidades vivas del directorio, nunca la que
+  // se está editando. Una fusionada no se ofrece —ya no organiza nada por separado—, pero si
+  // la ficha la traía declarada se sigue mostrando como chip.
+  const organizerCandidates = useMemo(
+    () => communities
+      .filter((c) => c.status !== MERGED_STATUS && c.id != null && c.id !== existingCommunity?.id)
+      .sort((a, b) => a.name.localeCompare(b.name)),
+    [communities, existingCommunity?.id]
+  );
   const isEditMode = Boolean(existingCommunity);
   const groupedAudience = useMemo(
     () => allAudience.map((item) => ({
@@ -1120,6 +1135,7 @@ export function CommunityContribution({
   const [parentOrgQuery, setParentOrgQuery] = useState(
     () => communities.find((c) => c.id === existingCommunity?.parentId)?.name ?? ""
   );
+  const [organizedByQuery, setOrganizedByQuery] = useState("");
   const [mergedIntoQuery, setMergedIntoQuery] = useState(
     () => communities.find((c) => c.id === existingCommunity?.mergedIntoId)?.name ?? ""
   );
@@ -1988,6 +2004,82 @@ export function CommunityContribution({
               )}
             </div>
           )}
+
+          {/*
+            Autoría (issue #475): quién organiza este encuentro. Va justo detrás de la
+            organización paraguas porque las dos se confunden, y leídas seguidas se
+            distinguen: paraguas = pertenece a una red; organizada por = alguien monta el
+            encuentro y las dos fichas siguen vivas.
+          */}
+          <div className="field">
+            <label className="label contribution-label-with-help" htmlFor="organized-by-input">
+              <span>{t("contribution.form.organizedByLabel")}</span>
+              <FieldHelp
+                content={FIELD_HELP.organizedBy}
+                isOpen={openHelpField === "organizedBy"}
+                onToggle={() => setOpenHelpField((current) => current === "organizedBy" ? null : "organizedBy")}
+                onClose={() => setOpenHelpField(null)}
+              />
+            </label>
+            {draft.organizedBy?.length > 0 && (
+              <div className="contribution-organizers">
+                {draft.organizedBy.map((organizerId) => {
+                  const organizer = communities.find((c) => c.id === organizerId);
+                  const name = organizer?.name ?? `#${organizerId}`;
+
+                  return (
+                    <span key={organizerId} className="contribution-organizer-chip">
+                      {name}
+                      <button
+                        type="button"
+                        aria-label={t("contribution.form.organizedByRemove", { name })}
+                        onClick={() => handleFieldChange(
+                          "organizedBy",
+                          draft.organizedBy.filter((id) => id !== organizerId)
+                        )}
+                      >
+                        <i className="fas fa-times" aria-hidden="true"></i>
+                      </button>
+                    </span>
+                  );
+                })}
+              </div>
+            )}
+            <div className="control">
+              <input
+                id="organized-by-input"
+                className="input"
+                type="text"
+                list="organizers-datalist"
+                value={organizedByQuery}
+                placeholder={t("contribution.form.organizedByPlaceholder")}
+                onChange={(e) => {
+                  const query = e.target.value;
+                  const match = organizerCandidates.find((c) => c.name === query);
+
+                  if (match && !(draft.organizedBy ?? []).includes(match.id)) {
+                    handleFieldChange("organizedBy", [...(draft.organizedBy ?? []), match.id]);
+                    setOrganizedByQuery("");
+                    return;
+                  }
+
+                  setOrganizedByQuery(query);
+                }}
+              />
+              <datalist id="organizers-datalist">
+                {organizerCandidates
+                  .filter((c) => !(draft.organizedBy ?? []).includes(c.id))
+                  .map((c) => (
+                    <option key={c.id} value={c.name} />
+                  ))}
+              </datalist>
+            </div>
+            {!(draft.organizedBy?.length > 0) && (
+              <p className="help is-italic" style={{ color: "#888" }}>
+                {t("contribution.form.organizedByNone")}
+              </p>
+            )}
+          </div>
 
           <div className="field">
             <label className="label contribution-label-with-help" htmlFor="community-format">

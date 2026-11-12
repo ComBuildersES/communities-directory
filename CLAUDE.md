@@ -90,6 +90,7 @@ scripts/               # Utilidades de mantenimiento de datos
   location: string,
   geographicScope: "unknown" | "local" | "provincial" | "regional" | "national" | "international",
   mergedIntoId?: number | null, // solo con status "merged": comunidad en la que continúa
+  organizedBy?: number[],       // comunidades del directorio que organizan esta (ver abajo)
   topics: string,               // texto libre heredado, separado por comas
   tags: string[],               // IDs referenciando public/data/tags.json
   targetAudience: string[],     // IDs referenciando public/data/audience.json
@@ -412,6 +413,48 @@ donde la hija y el paraguas siguen existiendo las dos. Toda la lógica en
   `communities.json` y en `llms.txt` explica qué significa el estado.
 - En el formulario el campo "Comunidad en la que continúa" solo aparece con el estado
   Fusionada, y sus candidatas excluyen la propia ficha y las ya fusionadas.
+
+### Autoría de encuentros recurrentes (`organizedBy`)
+
+Una asociación que hace quedadas pequeñas **y además** una conferencia anual con marca propia
+(GDG Málaga y el Biznaga Fest; GeeksCAT y la GeeksCAT Conf) son **dos fichas vivas**, no una.
+Antes había que elegir, y la que no entraba desaparecía del directorio. Issue #475; toda la
+lógica en `src/lib/organizedCommunities.js`.
+
+- No es `parentId` (pertenencia a un paraguas) ni `mergedIntoId` (sucesión: una de las dos
+  caras está muerta). Aquí las dos están vivas y la relación es de **autoría**. `parentId`
+  sigue significando "capítulo de" en ~105 fichas: estirarlo cambiaría lo que dice
+  `ParentFilterBanner` en todas ellas.
+- **Es plural y opcional.** Plural porque hay encuentros co-organizados. Opcional porque es
+  lo que resuelve el "¿qué va antes, el huevo o la gallina?": CommitConf existe sin un grupo
+  que mantenga un canal activo, así que se queda sin `organizedBy`.
+- **Solo enumera comunidades del directorio**, y la ficha lo dice en voz alta
+  (`communityModal.organizedByNote`). Un encuentro tiene empresas, patrocinadores y apoyo
+  institucional que aquí no se listan; sin esa nota, una lista con una sola comunidad se lee
+  como "lo organiza solo esta gente". Lo mismo vale para `llms.txt` y los prompts.
+- **La relación se guarda solo en la ficha organizada.** La inversa ("GDG Málaga organiza el
+  Biznaga Fest") la deriva `buildOrganizedByMap` en el store, igual que con las fusiones.
+- Se admiten **cadenas** (paraguas → comunidad → encuentro): son relaciones distintas y cada
+  salto lleva a una ficha viva. Lo que `validateOrganizedByReferences` rechaza es la autoría
+  **recíproca**: si A organiza B y B organiza A, ninguna es la autora.
+- Los dos lados tienen **ciclo de vida propio** (una asociación dormida que sigue sacando su
+  conferencia, o al revés), así que el vínculo se pinta siempre, con el estado del otro lado.
+  Mismo criterio que en las fusiones: quien llega por un enlace tiene que poder seguir.
+- **Ficha propia solo con marca propia + canales propios.** La edición ("Biznaga Fest 2026")
+  nunca: eso es un evento y vive en OTE / eventos.wiki. Un evento anual sin nombre propio se
+  queda como `urls.eventsUrl` de la comunidad. Es la línea que evita que el directorio se
+  convierta en un catálogo de eventos.
+- Si el encuentro **no tiene canales propios**, no se copian los de quien lo organiza: una URL
+  en dos fichas se valida dos veces y al archivarla hay que acordarse de los dos sitios. La
+  ficha muestra el CTA para añadir el canal que falte y el enlace a los canales de la
+  organizadora.
+- La IA del formulario **no rellena este campo** (ni `parentId`, ni `mergedIntoId`): un id solo
+  significa algo dentro de este dataset, así que un modelo que lo rellena está adivinando.
+- El relleno de las conferencias ya publicadas es **manual**, caso a caso. Un vínculo de
+  autoría equivocado es peor que ninguno, así que no hay script de matching por nombre.
+
+Queda abierto en #475 el tipo para hackathones, jams y datatones: hoy están repartidos entre
+`conference` y `tech-meetup`, y ninguno de los dos es verdad.
 
 ### Ámbito geográfico (`geographicScope`)
 

@@ -223,3 +223,58 @@ describe('cobertura declarada en llms.txt', () => {
     expect(index).toContain('`urls.ote`');
   });
 });
+
+/**
+ * Autoría de encuentros recurrentes (issue #475). Un campo que no está en schema.json es un
+ * campo que un agente interpreta adivinando, y `organizedBy` es de los que se malinterpretan
+ * solos: leerlo como la lista completa de organizadores es falso.
+ */
+describe('organizedBy en los artefactos', () => {
+  const gdgMalaga = community({ id: 11, name: 'GDG Málaga' });
+  const biznaga = community({
+    id: 12,
+    name: 'Biznaga Fest',
+    communityType: 'conference',
+    organizedBy: [11],
+  });
+
+  it('el schema documenta el campo y lo distingue de parentId y mergedIntoId', () => {
+    const { properties } = buildSchema({ tags: TAGS, audience: AUDIENCE });
+
+    expect(properties.organizedBy.type).toBe('array');
+    expect(properties.organizedBy.description).toContain('parentId');
+    expect(properties.organizedBy.description).toContain('mergedIntoId');
+  });
+
+  it('el índice avisa de que no es la lista completa de organizadores', () => {
+    const index = buildLlmsIndex([gdgMalaga, biznaga], { tags: TAGS, audience: AUDIENCE });
+
+    expect(index).toContain('`organizedBy`');
+    expect(index).toMatch(/sponsors/);
+  });
+
+  it('el CSV trae la columna, con los ids separados por |', () => {
+    // Partir por comas a pelo no sirve: `location` viaja entrecomillada y desplaza las
+    // columnas siguientes.
+    const splitCsvRow = (row) =>
+      (row.match(/("([^"]|"")*"|[^,]*)(,|$)/g) ?? [])
+        .slice(0, -1)
+        .map((cell) => cell.replace(/,$/, '').replace(/^"|"$/g, '').replace(/""/g, '"'));
+
+    const csv = buildCsv([gdgMalaga, biznaga]);
+    const [header, ...rows] = csv.trim().split('\n');
+    const columns = splitCsvRow(header);
+    const biznagaRow = splitCsvRow(rows.find((row) => row.includes('Biznaga Fest')));
+
+    expect(columns).toContain('organizedBy');
+    expect(biznagaRow[columns.indexOf('organizedBy')]).toBe('11');
+  });
+
+  it('llms-full.txt emite nombres, no ids: un id suelto no le dice nada a quien lee prosa', () => {
+    const full = buildLlmsFull([gdgMalaga, biznaga], { tags: TAGS, audience: AUDIENCE });
+
+    expect(full).toContain('- Organised by: GDG Málaga');
+    // La ficha de la comunidad organizadora no repite la relación: es derivada.
+    expect(full.split('## GDG Málaga')[1].split('##')[0]).not.toContain('Organised by');
+  });
+});

@@ -33,6 +33,8 @@ const FIELD_DEFS = [
   { key: 'contactInfo', label: 'Contacto' },
   { key: 'communityUrl', label: 'URL principal', url: true },
   { key: 'parentId', label: 'Comunidad madre (parentId)' },
+  // Autoría (issue #475): ids de las comunidades del directorio que organizan esta.
+  { key: 'organizedBy', label: 'Organizada por (ids)', list: true },
   { key: 'displayOnMap', label: 'Mostrar en el mapa', boolean: true },
   { key: 'humanValidated', label: 'Validado por humano', boolean: true },
 ];

@@ -34,6 +34,7 @@ const CANONICAL_KEY_ORDER = [
   'geographicScope',
   'parentId',
   'mergedIntoId',
+  'organizedBy',
   'shortDescription',
   'topics',
   'langs',

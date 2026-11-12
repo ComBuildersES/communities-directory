@@ -2,6 +2,7 @@ import fs from "node:fs";
 import process from "node:process";
 import { COMMUNITY_LANGUAGE_SET } from "../src/lib/communityLanguages.js";
 import { MERGED_STATUS, validateMergedReferences } from "../src/lib/mergedCommunities.js";
+import { validateOrganizedByReferences } from "../src/lib/organizedCommunities.js";
 
 // Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
 import { readCommunities, readDeletedCommunities, stableStringify } from "./lib/communities-store.js";
@@ -572,6 +573,11 @@ function validateCommunityStrict(community, index, issues, isNew = true) {
     pushIssue(issues.errors, "error", `${label}: mergedIntoId debe ser un entero o null.`);
   }
 
+  // Autoría (issue #475): el grafo completo se valida aparte, en validateOrganizedByReferences.
+  if ("organizedBy" in community && !Array.isArray(community.organizedBy)) {
+    pushIssue(issues.errors, "error", `${label}: organizedBy debe ser un array de ids de comunidades.`);
+  }
+
   validateArchivedUrls(community, label, issues);
 
   if (
@@ -836,6 +842,13 @@ function main() {
     // Una fusión rota (destino inexistente o también fusionado) deja la ficha prometiendo
     // una comunidad a la que no se puede llegar.
     for (const message of validateMergedReferences(communities)) {
+      issues.errors.push({ type: "error", message });
+    }
+
+    // Autoría de encuentros recurrentes (issue #475): igual que las fusiones, se valida
+    // sobre el listado completo. Un `organizedBy` que apunta a una ficha inexistente deja
+    // la ficha diciendo que la organiza alguien a quien no se puede llegar.
+    for (const message of validateOrganizedByReferences(communities)) {
       issues.errors.push({ type: "error", message });
     }
 

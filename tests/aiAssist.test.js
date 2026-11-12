@@ -220,3 +220,17 @@ describe('buildAssistChatUrl', () => {
     expect(buildAssistChatUrl('gemini', 'x')).toBeNull();
   });
 });
+
+describe("vínculos entre fichas", () => {
+  it("descarta organizedBy: un id solo significa algo dentro del dataset, y el modelo lo adivinaría", () => {
+    const { community, warnings } = parseAssistedCommunityJson(
+      JSON.stringify({ name: "Biznaga Fest", organizedBy: [11], parentId: 10 }),
+      { knownTagIds: [], knownAudienceIds: [] }
+    );
+
+    expect(community.name).toBe("Biznaga Fest");
+    expect("organizedBy" in community).toBe(false);
+    expect("parentId" in community).toBe(false);
+    expect(warnings).toBeInstanceOf(Array);
+  });
+});

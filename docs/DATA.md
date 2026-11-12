@@ -117,6 +117,7 @@ datos ya estructurados, y de ahí sale una PR automática. Ver
   archivedUrls?: string[],      // canales que la comunidad ya no atiende; no se muestran
   parentId?: number | null,     // organización paraguas a la que pertenece
   mergedIntoId?: number | null, // solo con status "merged": comunidad en la que continúa
+  organizedBy?: number[],       // comunidades del directorio que organizan esta
   thumbnailUrl: string,
   latLon: { lat: number | null, lon: number | null },
   displayOnMap: boolean,
@@ -137,6 +138,19 @@ Dos avisos sobre la calidad del dato, por si construyes algo encima:
   `parentId`, donde la comunidad local y su organización paraguas siguen existiendo las dos.
   La cara inversa ("qué comunidades se fusionaron en esta") no se guarda: se deriva buscando
   las fichas cuyo `mergedIntoId` apunta a ese id.
+- `organizedBy` son las comunidades **del directorio** que organizan esa ficha. Es como se
+  modela una asociación y su conferencia anual (GDG Málaga y el Biznaga Fest; GeeksCAT y la
+  GeeksCAT Conf): dos fichas, las dos vivas, con audiencia y canales propios. No es
+  `parentId` (pertenencia a una red) ni `mergedIntoId` (sucesión). Dos cosas que se
+  malinterpretan solas:
+  - **No es la lista completa de organizadores.** Un encuentro tiene empresas,
+    patrocinadores y apoyo institucional que no están en el directorio, así que nunca se lee
+    como "lo organiza solo esta gente".
+  - **Que falte no significa que no lo organice nadie.** Hay conferencias sin una comunidad
+    detrás que mantenga canales activos (CommitConf), y por eso el campo es opcional.
+
+  La cara inversa ("qué encuentros organiza esta comunidad") tampoco se guarda: se deriva
+  buscando las fichas cuyo `organizedBy` contiene ese id.
 
 `urls` solo trae las claves con valor. La lista canónica de plataformas está en
 `URL_PLATFORM_OPTIONS` ([`src/lib/communitySubmission.js`](https://github.com/ComBuildersES/communities-directory/blob/master/src/lib/communitySubmission.js));

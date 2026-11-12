@@ -61,6 +61,7 @@ const CSV_COLUMNS = [
   'lon',
   'lastReviewed',
   'humanValidated',
+  'organizedBy',
   'directoryUrl',
 ];
 
@@ -149,6 +150,7 @@ export function buildCsv(communities) {
       lon: community.latLon?.lon,
       lastReviewed: community.lastReviewed,
       humanValidated: community.humanValidated,
+      organizedBy: community.organizedBy ?? [],
       directoryUrl: communityDirectoryUrl(community),
     };
 
@@ -218,6 +220,19 @@ export function buildSchema({ tags = [], audience = [] } = {}) {
         description:
           'Id of the umbrella community this one belongs to (e.g. a local chapter pointing at ' +
           'its national organisation).',
+      },
+      organizedBy: {
+        type: 'array',
+        items: { type: 'integer' },
+        description:
+          'Ids of the communities in this directory that organise this one. Use it for a ' +
+          'recurring event with a brand of its own run by a community (GDG Malaga organises ' +
+          'Biznaga Fest). Both sides stay alive, so it is neither `parentId` (belonging to an ' +
+          'umbrella) nor `mergedIntoId` (succession). Only communities listed here are ' +
+          'enumerated: companies, sponsors and institutional support are not, so never read ' +
+          'this as the full list of organisers. Absent when nothing is linked. The reverse ' +
+          'side is not stored: derive it by scanning for records whose `organizedBy` ' +
+          'contains this id.',
       },
       mergedIntoId: {
         type: ['integer', 'null'],
@@ -318,7 +333,7 @@ export function buildSchema({ tags = [], audience = [] } = {}) {
   };
 }
 
-function formatCommunitySection(community, { tagLabels, audienceLabels }) {
+function formatCommunitySection(community, { tagLabels, audienceLabels, nameById = {} }) {
   const slug = communitySlug(community);
   const lines = [`## ${community.name}`, ''];
 
@@ -350,6 +365,13 @@ function formatCommunitySection(community, { tagLabels, audienceLabels }) {
       community.matchesAllAudience
         ? 'Open to any profile'
         : community.targetAudience?.map((id) => audienceLabels[id] ?? id).join(', ') || null,
+    ],
+    [
+      'Organised by',
+      (community.organizedBy ?? [])
+        .map((id) => nameById[id])
+        .filter(Boolean)
+        .join(', ') || null,
     ],
     ['Website', meaningfulText(community.communityUrl)],
     ['Events feed', meaningfulText(community.urls?.ote)],
@@ -402,8 +424,13 @@ Field meanings: ${SITE_URL}/data/schema.json
 
 `;
 
+  const nameById = Object.fromEntries(
+    communities
+      .filter((community) => Number.isInteger(community.id))
+      .map((community) => [community.id, community.name])
+  );
   const sections = published.map((community) =>
-    formatCommunitySection(community, { tagLabels, audienceLabels })
+    formatCommunitySection(community, { tagLabels, audienceLabels, nameById })
   );
 
   return `${header}${sections.join('\n')}`;
@@ -466,6 +493,7 @@ regenerated on every deploy.
 - \`humanValidated: false\` means a person added the community but its tagging was filled in semi-automatically and nobody has checked it. Say so if you present it as fact. Only ${withHumanValidation} of the active communities have been reviewed by a person, and ${reviewed} of all ${total} records. The live counts are in [coverage.json](${SITE_URL}/data/coverage.json).
 - \`archivedUrls\` are dead channels kept for history. Never recommend them: they look alive and nobody is listening.
 - \`status: "inactive"\` communities are kept deliberately. Filter them out before telling someone where to go.
+- \`organizedBy\` lists the communities **in this directory** that organise the record, for recurring events with their own brand (a community and its annual conference are two records, both alive). It is not the full organiser list: companies, sponsors and institutional support are not in the directory, so do not present it as "run only by these". A record with no \`organizedBy\` may still be run by someone: plenty of conferences have no standing community behind them.
 - \`status: "merged"\` means the community no longer exists on its own because it merged with others. Never recommend it: point at \`mergedIntoId\`, the community its activity continues in. This is not \`parentId\`, where the local chapter and its umbrella both still exist.
 - A community is linkable by slug: ${SITE_URL}/es/?community=<slug> (and /en/). Prefer linking people to the directory page or the community's own site over linking a raw JSON file.
 

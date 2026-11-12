@@ -318,6 +318,9 @@ Reglas al usar estos datos:
 - "location" es dónde se celebran los eventos; "geographicScope" es el territorio
   al que da servicio. No son lo mismo.
 - Filtrar status != "active" antes de recomendar una comunidad a alguien.
+- "organizedBy" son ids de comunidades DEL DIRECTORIO que organizan esa ficha
+  (una comunidad y su conferencia anual son dos fichas vivas). No es la lista
+  completa de organizadores: empresas y patrocinadores no están aquí.
 - Nunca proponer URLs de "archivedUrls": son canales muertos.
 - humanValidated: false significa dato sin revisar por una persona. Decirlo.
 - El directorio no almacena eventos: los publica cada comunidad en su feed
