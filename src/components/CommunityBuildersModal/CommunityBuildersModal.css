@@ -1,0 +1,484 @@
+/*
+ * El modal reutiliza la geometría, la tipografía y el azul del resto del directorio
+ * (`OpenDataModal`): mismo overlay, mismo radio, mismas pestañas, mismo pie. Un acento
+ * propio lo habría convertido en una pantalla de otra web metida dentro de esta.
+ */
+.cb-modal {
+  --cb-accent: #3273dc;
+  --cb-accent-strong: #1d5fd1;
+  --cb-accent-soft: #eef4ff;
+  --cb-accent-border: #ccdaf7;
+}
+
+.cb-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 20040;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(16, 26, 44, 0.55);
+  backdrop-filter: blur(3px);
+  animation: cb-overlay-enter 180ms ease-out both;
+}
+
+.cb-modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(48rem, 100%);
+  max-height: min(90vh, 52rem);
+  padding: 1.5rem 1.6rem 1.2rem;
+  border-radius: 18px;
+  background: #fff;
+  color: #20304c;
+  box-shadow: 0 24px 60px rgba(16, 26, 44, 0.28);
+  animation: cb-box-enter 220ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes cb-overlay-enter {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes cb-box-enter {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+
+.cb-modal-close {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.9rem;
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e3e9f3;
+  border-radius: 999px;
+  background: #fff;
+  color: #5e7596;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+
+.cb-modal-close:hover { background: #f1f5fb; color: #20304c; }
+
+.cb-modal-header { padding-right: 2.5rem; }
+
+.cb-modal-title {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #20304c;
+}
+
+.cb-modal-title i { color: var(--cb-accent); margin-right: 0.3rem; }
+
+.cb-modal-subtitle {
+  margin: 0.35rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #566b8c;
+}
+
+.cb-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 1.1rem 0 0;
+  border-bottom: 1px solid #e8edf5;
+  padding-bottom: 0.1rem;
+}
+
+.cb-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.45rem 0.7rem;
+  border: none;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: #6b7f9c;
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.cb-tab:hover { color: var(--cb-accent-strong); }
+.cb-tab--active { color: var(--cb-accent); border-bottom-color: var(--cb-accent); }
+
+/* El panel es lo único que hace scroll: cabecera, pestañas y pie se quedan fijos, así que
+   la llamada a unirse no depende de que alguien llegue al final del texto. */
+.cb-panel {
+  flex: 1 1 auto;
+  min-height: 15rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0.9rem 0.1rem 0.2rem;
+  animation: cb-panel-enter 200ms ease-out both;
+}
+
+@keyframes cb-panel-enter {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+.cb-lead {
+  margin: 0 0 0.7rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #2b3f5e;
+}
+
+.cb-copy {
+  margin: 0 0 0.6rem;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: #3e5273;
+}
+
+.cb-note {
+  margin: 0.6rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #6b7f9c;
+}
+
+.cb-section-title {
+  margin: 1.3rem 0 0.6rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8ba3c4;
+}
+
+.cb-modal a { color: var(--cb-accent); }
+
+/* --- Caras --- */
+
+.cb-face-wrap { position: relative; display: inline-flex; }
+
+.cb-face {
+  display: inline-grid;
+  place-items: center;
+  width: 2.4rem;
+  height: 2.4rem;
+  padding: 0;
+  border: 2px solid #fff;
+  border-radius: 999px;
+  background: var(--cb-accent-soft);
+  color: var(--cb-accent);
+  box-shadow: 0 0 0 1px var(--cb-accent-border);
+  font-weight: 700;
+  font-size: 0.85rem;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.cb-face img { width: 100%; height: 100%; object-fit: cover; }
+.cb-face:hover { transform: translateY(-2px); box-shadow: 0 0 0 2px var(--cb-accent); }
+.cb-face--group { cursor: default; background: #eef3fa; color: #5e7596; box-shadow: 0 0 0 1px #dde6f5; }
+.cb-face--group:hover { transform: none; box-shadow: 0 0 0 1px #dde6f5; }
+
+.cb-tooltip {
+  position: fixed;
+  z-index: 20050;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  width: 250px;
+  max-height: 200px;
+  overflow: auto;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #e3e9f3;
+  border-radius: 12px;
+  background: #fff;
+  color: #3e5273;
+  box-shadow: 0 10px 30px rgba(16, 26, 44, 0.18);
+  font-size: 0.8rem;
+  line-height: 1.45;
+}
+
+.cb-tooltip strong { color: var(--cb-accent); }
+.cb-tooltip em { font-style: normal; color: #8ba3c4; }
+.cb-tooltip-hint { margin-top: 0.3rem; font-size: 0.72rem; color: #8ba3c4; }
+
+/* --- Quiénes somos: ventana de caras que rota --- */
+
+.cb-strip-faces {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Cada cara entra con un desvanecido corto: la rotación tiene que notarse como un relevo,
+   no como un parpadeo del layout. */
+.cb-strip-faces .cb-face-wrap { animation: cb-face-enter 420ms ease-out both; }
+
+@keyframes cb-face-enter {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: none; }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .cb-overlay, .cb-modal, .cb-panel, .cb-strip-faces .cb-face-wrap, .cb-story { animation: none; }
+}
+
+/* --- Qué hacemos --- */
+
+.cb-blocks { display: grid; gap: 0.6rem; }
+
+.cb-block {
+  padding: 0.75rem 0.85rem;
+  border: 1px solid #e3e9f3;
+  border-radius: 12px;
+  background: #fbfcff;
+}
+
+.cb-block-title {
+  margin: 0 0 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #20304c;
+}
+
+.cb-block-title i { color: var(--cb-accent); margin-right: 0.35rem; }
+
+.cb-block-copy {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: #3e5273;
+}
+
+.cb-inline-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1rem;
+  margin-top: 0.8rem;
+  font-size: 0.82rem;
+}
+
+/* --- Historias --- */
+
+.cb-story {
+  padding: 1rem;
+  border: 1px solid #e3e9f3;
+  border-radius: 14px;
+  background: #fbfcff;
+  animation: cb-panel-enter 220ms ease-out both;
+}
+
+.cb-story-title {
+  margin: 0 0 0.4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #20304c;
+}
+
+/* El relato va antes de las caras: cuenta qué pasó, y la fila de abajo resume de un vistazo
+   quién pidió y quién echó el cable. Sin el párrafo, la historia se quedaba en un titular. */
+.cb-story-body {
+  margin: 0 0 0.9rem;
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: #3e5273;
+}
+
+/* Las dos caras de la ayuda, con la flecha en medio: es lo que se lee de un vistazo. */
+.cb-story-flow {
+  display: grid;
+  grid-template-columns: minmax(0, auto) auto minmax(0, auto);
+  justify-content: start;
+  align-items: start;
+  gap: 0.9rem;
+}
+
+.cb-story-side { display: flex; flex-direction: column; gap: 0.45rem; min-width: 0; }
+
+.cb-story-role {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8ba3c4;
+}
+
+.cb-story-faces { display: flex; flex-wrap: wrap; gap: 0.35rem; }
+
+.cb-story-arrow {
+  align-self: center;
+  color: var(--cb-accent-border);
+  font-size: 1.1rem;
+}
+
+.cb-story-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1rem;
+  margin-top: 0.9rem;
+  padding-top: 0.7rem;
+  border-top: 1px solid #eef2f8;
+  font-size: 0.8rem;
+}
+
+.cb-story-links i { font-size: 0.65rem; }
+
+.cb-carousel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.cb-nav-btn {
+  display: inline-grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid #dde6f5;
+  border-radius: 999px;
+  background: #fff;
+  color: #5e7596;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.cb-nav-btn:hover { background: var(--cb-accent-soft); color: var(--cb-accent); border-color: var(--cb-accent-border); }
+
+.cb-dots { display: inline-flex; gap: 0.35rem; }
+
+.cb-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0;
+  border: none;
+  border-radius: 999px;
+  background: #dde6f5;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.cb-dot--active { background: var(--cb-accent); transform: scale(1.25); }
+
+/* --- Unirse --- */
+
+.cb-steps { margin: 0; padding: 0; list-style: none; display: grid; gap: 0.5rem; }
+
+.cb-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.87rem;
+  line-height: 1.55;
+  color: #3e5273;
+}
+
+.cb-step-copy { margin: 0; }
+
+.cb-step-number {
+  flex: 0 0 auto;
+  display: inline-grid;
+  place-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 999px;
+  background: var(--cb-accent-soft);
+  color: var(--cb-accent);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* --- Pie --- */
+
+.cb-modal-footer {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.9rem;
+  margin-top: 0.9rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid #eef2f8;
+}
+
+.cb-footer-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.85rem;
+  border: 1px solid #dde6f5;
+  border-radius: 8px;
+  background: #fff;
+  color: #5577a8;
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.cb-modal .cb-footer-btn--cta {
+  background: var(--cb-accent);
+  border-color: var(--cb-accent);
+  color: #fff;
+}
+
+.cb-modal .cb-footer-btn--cta:hover { background: var(--cb-accent-strong); border-color: var(--cb-accent-strong); }
+
+.cb-footer-copy {
+  margin: 0;
+  flex: 1 1 14rem;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: #6b7f9c;
+  overflow-wrap: anywhere;
+}
+
+.cb-footer-copy i { font-size: 0.78rem; }
+
+.cb-modal button:focus-visible,
+.cb-modal a:focus-visible {
+  outline: 2px solid var(--cb-accent);
+  outline-offset: 3px;
+}
+
+/* El botón de la cabecera, en el azul de la casa. */
+.heading-action-btn--builders {
+  background: #eef4ff;
+  border-color: #ccdaf7;
+  color: #3273dc;
+}
+
+.heading-action-btn--builders:hover {
+  background: #dce9ff;
+  border-color: #aac3f0;
+  color: #1d5fd1;
+}
+
+@media (max-width: 640px) {
+  .cb-overlay { padding: 0.5rem; }
+  .cb-modal { max-height: 94dvh; padding: 1.2rem 1rem 1rem; border-radius: 14px; }
+  /* Con cuatro pestañas y pantalla estrecha, las etiquetas caen antes que los iconos:
+     "una puerta" no se lee como "cómo unirse", así que lo que se conserva es el texto. */
+  .cb-tab { flex: 1 1 0; min-width: 0; justify-content: center; padding: 0.45rem 0.25rem; font-size: 0.76rem; }
+  .cb-tab i { display: none; }
+  /* La flecha gira: en vertical las dos caras siguen leyéndose como un antes y un después. */
+  .cb-story-flow { grid-template-columns: 1fr; gap: 0.6rem; }
+  .cb-story-arrow { justify-self: start; transform: rotate(90deg); }
+  .cb-modal-footer { flex-direction: column; align-items: stretch; gap: 0.55rem; }
+  .cb-footer-btn { justify-content: center; }
+  /* En columna, `flex: 1 1 14rem` crece a lo alto: el pie se comía media pantalla y el
+     panel se quedaba en su altura mínima. Aquí la línea de contacto mide lo que ocupa. */
+  .cb-footer-copy { flex: 0 0 auto; }
+}

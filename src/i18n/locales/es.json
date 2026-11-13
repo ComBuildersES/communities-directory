@@ -931,5 +931,85 @@
     "clearFilters": "Quitar los filtros",
     "allReviewedTitle": "Aquí no queda nada por repasar",
     "allReviewedBody": "Las {{reviewed}} comunidades que encajan con estos filtros están ya revisadas por una persona. Gracias a quien lo hizo."
+  },
+  "builders": {
+    "cta": "¿Dinamizas una comunidad tech?",
+    "title": "Community Builders, la comunidad detrás de este directorio",
+    "subtitle": "Somos un grupo de personas que dinamizamos comunidades técnicas en España.",
+    "close": "Cerrar",
+    "tabs": {
+      "who": "Quiénes somos",
+      "what": "Qué hacemos",
+      "stories": "Historias reales",
+      "join": "Cómo unirse"
+    },
+    "whoLead": "¿Dinamizas una comunidad técnica, organizas meetups o conferencias, o te gustaría montar una?",
+    "whoCopy": "Esta iniciativa surgió de [los open spaces de la Commit Conf](https://github.com/orgs/ComBuildersES/discussions/categories/encuentros?discussions_q=is%3Aopen+category%3AEncuentros+open+space+commit). En junio de 2024, tras juntarnos por segunda vez a hablar de los retos que nos encontrábamos en nuestras comunidades, y para vernos más a menudo que una vez al año y poder conectar con gente que organiza, decidimos mantener el contacto de manera online.",
+    "whoSpirit": "Algunas personas llevamos quince años dinamizando comunidades y otras están preparando su primer meetup o conferencia. Lo que nos une es la pasión por la tecnología y por conectar personas, crear comunidad y compartir conocimiento. Si te reconoces en eso, da igual lo grande o lo pequeña que sea tu comunidad.",
+    "membersTitle": "Algunas personas que participamos",
+    "membersHelp": "Pulsa una cara para ver más detalles de las comunidades que dinamiza esa persona.",
+    "tooltipHint": "Pulsa para verlas en el directorio",
+    "viewMember": "Ver comunidades de @{{handle}}",
+    "noMember": "@{{handle}} aún no tiene comunidades en el directorio",
+    "loading": "Cargando personas…",
+    "unavailable": "No se han podido cargar los perfiles. Puedes seguir leyendo y solicitar unirte igualmente.",
+    "groupFace": "Entre varias personas del grupo",
+    "whatLead": "Crear comunidad, conocernos, echarnos un cable y, a veces, crear iniciativas que creemos que ayudarán al resto de personas que dinamizan comunidades (aunque no participen activamente en Community Builders).",
+    "what": {
+      "challengesTitle": "Ayudarnos a superar retos comunes",
+      "challenges": "Atraer a personas, crear sentimiento de comunidad, conseguir patrocinio, aclararte con los impuestos, buscar relevo cuando la gente se empieza a desgastar, dar con un espacio, encontrar ponentes… Son muy parecidos entre unas ciudades y otras, y casi siempre hay alguien que ya pasó por ahí y te puede contar cómo lo resolvió o darte ideas.",
+      "meetTitle": "Crear comunidad",
+      "meet": "Tenemos un grupo de Telegram para el día a día, un encuentro online al mes para vernos las caras, presentar a las nuevas personas y contarnos cómo nos va, y cuando coincidimos en alguna conferencia intentamos vernos en persona. Incluso empezamos un podcast para quien quiera hablarnos de su comunidad y compartir su experiencia dinamizándola.",
+      "projectsTitle": "Colaborar en iniciativas",
+      "projects": "Cuando vemos que hay un problema que compartimos muchas personas, solemos terminar arrancando una iniciativa para resolverlo. Este directorio salió de ahí, y también [OTE spec](https://opentechevents.org/), una especificación abierta para publicar información de eventos técnicos. Nadie tiene que estar en todas: cada quien se suma a lo que le apetece, y contribuye lo que puede.",
+      "initiativesLink": "Ver las iniciativas en marcha"
+    },
+    "storiesLead": "Algunos ejemplos de peticiones que alguien lanzó y lo que pasó después.",
+    "asks": "Pide ayuda",
+    "helps": "Ayuda",
+    "carousel": "carrusel",
+    "previous": "Historia anterior",
+    "next": "Historia siguiente",
+    "stories": {
+      "funding": {
+        "title": "Cómo conseguir financiación",
+        "body": "Encontrar patrocinadores es uno de los dolores más comunes, y en varios encuentros hemos hablado del tema. Iván y Juanlu compartieron su experiencia con [Open Collective](https://opencollective.com/) para recibir donativos de la propia comunidad, y Dani (Extremadura Digital Day, DevOpsDays Cáceres) y Luis (J On The Beach, Lambda World) también compartieron aprendizajes. Tenemos un hilo donde vamos recopilando más ideas y consejos.",
+        "link0": "Ver la conversación",
+        "link1": "Recursos compartidos"
+      },
+      "tax": {
+        "title": "Las dudas sobre presentación de impuestos en Hacienda",
+        "body": "Mario (TechFest), Laura y Abraham (Commit Conf) comentaron que de cara a la organización de conferencias técnicas hay algunas complejidades sobre la declaración de impuestos, y que diferentes consultoras les habían dado diferentes consejos. Raúl (Community Builders) coordinó una reunión con un técnico de Hacienda que nos diese consejos prácticos.",
+        "link0": "Ver la conversación"
+      },
+      "venue": {
+        "title": "Se cae el espacio a última hora",
+        "body": "A Ricardo (GDG Jerez de la Frontera) se le complicó el espacio de un evento a pocos días y necesitaba ayuda para encontrar una alternativa. Nico (No cON Name) y Raúl (Community Builders) le pusieron en contacto con gente de la zona, incluyendo a Gabriel, de [Cádiz GameDev](?community=71), desde fuera de Community Builders."
+      },
+      "local": {
+        "title": "Búsqueda de contactos locales para una conferencia",
+        "body": "Para la DrupalCamp de Santiago de Compostela, Oskar Calvo (Drupal Madrid) buscaba contactar con profesores de la zona. Nacho (Sysarmy Galicia) movió la petición entre cuatro comunidades gallegas para buscarle los contactos."
+      },
+      "formats": {
+        "title": "Ideas de dinámicas nuevas para un meetup",
+        "body": "David Gómez quería hacer algo diferente para los eventos del Madrid Java User Group. Ana (Collaborative Modelling), Juanlu (PyData Madrid) y más gente fueron contando los formatos que les habían funcionado.",
+        "link0": "Ver la conversación"
+      },
+      "website": {
+        "title": "Ayuda para configurar la plantilla de top.gal",
+        "body": "Iván (Madrid Groovy User Group) necesitaba ayuda montando la web de un evento con la plantilla de top.gal. David Bonilla (TRGCon), que mantiene esa plantilla, le echó una mano en el mismo hilo.",
+        "link0": "Ver la conversación"
+      }
+    },
+    "joinLead": "Si te resuena lo que has leído en este modal y quieres unirte, los pasos son:",
+    "join": {
+      "form": "Rellenas [la solicitud](https://docs.google.com/forms/d/e/1FAIpQLSd5Idc1wG2uhHBT11veYVx6JUfrvb_ylc1WC0ZfuXykvm1rtw/viewform). Para que sepamos quién eres, qué comunidad dinamizas y tus intereses.",
+      "call": "En unas dos semanas buscamos un hueco para una llamada de bienvenida: nos conocemos, hablamos un poco más sobre tus intereses, qué esperas, y te contamos lo que hemos ido haciendo por si algo te sirve.",
+      "in": "Te damos de alta en el grupo de Telegram, en la lista de correo y en los sitios donde colaboramos."
+    },
+    "expectTitle": "Qué esperamos de quien se une",
+    "expect": "No hace falta participar en todas las iniciativas ni venir a todos los encuentros: sabemos de sobra que el tiempo es lo que más escasea (y más entre las personas de esta comunidad). Lo que sí esperamos es reciprocidad; escuchar a quien pregunta, dar tu opinión cuando se propone algo, pasar un contacto si lo tienes o revisar los datos de tu comunidad en este directorio. Cosas de unos minutos, pero que es justo lo que hace que esto funcione.",
+    "joinCta": "Solicitar unirme",
+    "contact": "¿No tienes claro si encajas? Cuéntanoslo y lo vemos:"
   }
 }

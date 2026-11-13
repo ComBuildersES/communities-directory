@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
+import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { LanguageSwitcher } from "./LanguageSwitcher.jsx";
 import { buildShareLinks } from "../lib/shareLinks.js";
@@ -9,6 +9,10 @@ import { DataTransparency } from "./DataTransparency/DataTransparency.jsx";
 const OpenDataModal = lazy(() =>
   import("./OpenDataModal/OpenDataModal.jsx").then((m) => ({ default: m.OpenDataModal }))
 );
+const CommunityBuildersModal = lazy(() =>
+  import("./CommunityBuildersModal/CommunityBuildersModal.jsx").then((m) => ({ default: m.CommunityBuildersModal }))
+);
+import "./CommunityBuildersModal/CommunityBuildersModal.css";
 import allContributorsRaw from "../../.all-contributorsrc?raw";
 const allContributorsRc = JSON.parse(allContributorsRaw);
 
@@ -40,10 +44,15 @@ export function Heading ({
   closeContributionForm,
   goToHome,
   goToContribution,
+  onSelectMember,
 }) {
   const { t } = useTranslation();
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isOpenDataOpen, setIsOpenDataOpen] = useState(false);
+  const [isBuildersOpen, setIsBuildersOpen] = useState(false);
+  const closeBuilders = useCallback(() => setIsBuildersOpen(false), []);
+  const buildersReturnFocusRef = useRef(null);
+  const mobileMenuToggleRef = useRef(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [githubStars, setGithubStars] = useState(null);
 
@@ -155,6 +164,7 @@ export function Heading ({
             <button
               type="button"
               className="button is-light heading-hamburger"
+              ref={mobileMenuToggleRef}
               onClick={() => setIsMobileMenuOpen((prev) => !prev)}
               aria-label={isMobileMenuOpen ? t("heading.closeMenu") : t("heading.openMenu")}
               aria-expanded={isMobileMenuOpen}
@@ -165,6 +175,21 @@ export function Heading ({
             </button>
 
             <div className={`heading-actions-inner${isMobileMenuOpen ? " heading-actions-inner--open" : ""}`}>
+              <button
+                type="button"
+                className="heading-action-btn heading-action-btn--builders"
+                onClick={(event) => {
+                  buildersReturnFocusRef.current = mobileMenuToggleRef.current?.getClientRects().length
+                    ? mobileMenuToggleRef.current : event.currentTarget;
+                  setIsBuildersOpen(true); setIsAboutOpen(false); closeMobileMenu();
+                }}
+                aria-haspopup="dialog"
+                aria-label={t("builders.cta")}
+                title={t("builders.cta")}
+              >
+                <i className="fas fa-people-group" aria-hidden="true" />
+                <span className="heading-btn-label">{t("builders.cta")}</span>
+              </button>
               <a
                 href={GITHUB_URL}
                 target="_blank"
@@ -347,6 +372,11 @@ export function Heading ({
             onClose={() => setIsOpenDataOpen(false)}
             onAddCommunity={goToContribution}
           />
+        </Suspense>
+      )}
+      {isBuildersOpen && (
+        <Suspense fallback={null}>
+          <CommunityBuildersModal onClose={closeBuilders} onSelectMember={onSelectMember} returnFocusRef={buildersReturnFocusRef} />
         </Suspense>
       )}
     </header>

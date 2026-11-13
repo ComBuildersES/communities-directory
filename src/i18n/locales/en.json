@@ -931,5 +931,85 @@
     "clearFilters": "Clear filters",
     "allReviewedTitle": "Nothing left to review here",
     "allReviewedBody": "All {{reviewed}} communities matching these filters have already been reviewed by a person. Thanks to whoever did it."
+  },
+  "builders": {
+    "cta": "Do you run a tech community?",
+    "title": "Community Builders, the community behind this directory",
+    "subtitle": "We're a group of people who run tech communities in Spain.",
+    "close": "Close",
+    "tabs": {
+      "who": "Who we are",
+      "what": "What we do",
+      "stories": "Real stories",
+      "join": "How to join"
+    },
+    "whoLead": "Do you run a tech community, organise meetups or conferences, or would you like to start one?",
+    "whoCopy": "This initiative came out of [the Commit Conf open spaces](https://github.com/orgs/ComBuildersES/discussions/categories/encuentros?discussions_q=is%3Aopen+category%3AEncuentros+open+space+commit). In June 2024, after getting together for the second time to talk about the challenges we were running into in our communities, and so we could see each other more often than once a year and connect with other organisers, we decided to keep in touch online.",
+    "whoSpirit": "Some of us have been running communities for fifteen years; others are getting their first meetup or conference ready. What we have in common is a passion for technology and for connecting people, building community and sharing knowledge. If that sounds like you, it doesn't matter how big or small your community is.",
+    "membersTitle": "Some of the people taking part",
+    "membersHelp": "Click a face to see more about the communities that person runs.",
+    "tooltipHint": "Click to see them in the directory",
+    "viewMember": "See @{{handle}}'s communities",
+    "noMember": "@{{handle}} has no communities in the directory yet",
+    "loading": "Loading people…",
+    "unavailable": "Profiles couldn't be loaded. You can keep reading and apply anyway.",
+    "groupFace": "Several people from the group",
+    "whatLead": "Building community, getting to know each other, lending a hand and, sometimes, starting initiatives we think will help everyone else who runs a community (even if they aren't actively part of Community Builders).",
+    "what": {
+      "challengesTitle": "Helping each other through shared challenges",
+      "challenges": "Attracting people, building a sense of community, landing sponsorship, working out the tax side, finding someone to take over when people start to burn out, getting a venue, finding speakers… They're much the same from one city to the next, and there's almost always someone who has been there and can tell you how they solved it or give you ideas.",
+      "meetTitle": "Building community",
+      "meet": "We have a Telegram group for the day to day, an online get-together each month to see each other's faces, introduce newcomers and catch up, and whenever we end up at the same conference we try to meet in person. We even started a podcast for anyone who wants to tell us about their community and share their experience running it.",
+      "projectsTitle": "Collaborating on initiatives",
+      "projects": "When we see a problem that many of us share, we usually end up starting something to solve it. This directory came out of that, and so did [OTE spec](https://opentechevents.org/), an open specification for publishing tech event information. Nobody has to be in all of them: you join whatever you fancy and contribute what you can.",
+      "initiativesLink": "See the initiatives under way"
+    },
+    "storiesLead": "A few examples of requests someone made, and what happened next.",
+    "asks": "Asks for help",
+    "helps": "Helps",
+    "carousel": "carousel",
+    "previous": "Previous story",
+    "next": "Next story",
+    "stories": {
+      "funding": {
+        "title": "How to get funding",
+        "body": "Finding sponsors is one of the most common pains, and we've covered it across several get-togethers. Iván and Juanlu shared their experience with [Open Collective](https://opencollective.com/) for taking donations from the community itself, and Dani (Extremadura Digital Day, DevOpsDays Cáceres) and Luis (J On The Beach, Lambda World) shared what they had learnt too. We keep a thread where we collect more ideas and tips.",
+        "link0": "See the thread",
+        "link1": "Shared resources"
+      },
+      "tax": {
+        "title": "Questions about filing taxes",
+        "body": "Mario (TechFest), Laura and Abraham (Commit Conf) pointed out that running tech conferences brings some complexities around tax returns, and that different consultants had given them different advice. Raúl (Community Builders) set up a session with a tax office officer to give us practical guidance.",
+        "link0": "See the thread"
+      },
+      "venue": {
+        "title": "The venue falls through at the last minute",
+        "body": "Ricardo (GDG Jerez de la Frontera) ran into trouble with his event venue days before and needed help finding an alternative. Nico (No cON Name) and Raúl (Community Builders) put him in touch with people in the area, including Gabriel, from [Cádiz GameDev](?community=71), from outside Community Builders."
+      },
+      "local": {
+        "title": "Looking for local contacts for a conference",
+        "body": "For DrupalCamp in Santiago de Compostela, Oskar Calvo (Drupal Madrid) was trying to reach teachers in the area. Nacho (Sysarmy Galicia) passed the request around four Galician communities to find those contacts."
+      },
+      "formats": {
+        "title": "Ideas for new meetup formats",
+        "body": "David Gómez wanted to do something different with Madrid Java User Group's events. Ana (Collaborative Modelling), Juanlu (PyData Madrid) and others shared the formats that had worked for them.",
+        "link0": "See the thread"
+      },
+      "website": {
+        "title": "Help setting up the top.gal template",
+        "body": "Iván (Madrid Groovy User Group) needed help building an event website with the top.gal template. David Bonilla (TRGCon), who maintains that template, gave him a hand right there in the thread.",
+        "link0": "See the thread"
+      }
+    },
+    "joinLead": "If what you've read here resonates and you want to join, these are the steps:",
+    "join": {
+      "form": "You fill in [the application](https://docs.google.com/forms/d/e/1FAIpQLSd5Idc1wG2uhHBT11veYVx6JUfrvb_ylc1WC0ZfuXykvm1rtw/viewform). So we know who you are, which community you run and what you're interested in.",
+      "call": "Within a couple of weeks we find a slot for a welcome call: we get to know each other, talk a bit more about your interests and what you're hoping for, and we tell you what we've been doing in case any of it helps.",
+      "in": "We add you to the Telegram group, the mailing list and the places where we collaborate."
+    },
+    "expectTitle": "What we expect from people who join",
+    "expect": "You don't have to take part in every initiative or come to every get-together: we know all too well that time is the scarcest thing there is (even more so among the people in this community). What we do expect is reciprocity: listening when someone asks, weighing in when something gets proposed, passing on a contact if you have one, or checking your community's data in this directory. Small things, but they're exactly what makes this work.",
+    "joinCta": "Apply to join",
+    "contact": "Not sure whether you fit? Tell us and we'll figure it out:"
   }
 }

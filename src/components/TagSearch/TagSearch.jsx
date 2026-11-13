@@ -144,6 +144,11 @@ export function TagSearch() {
   const cbMemberHandles = useCBMemberHandles();
   const filters = useFilters();
   const { filterComunities } = useCommunityActions();
+  // Otro control (por ejemplo un avatar) puede reemplazar todos los filtros.
+  // No conservar chips de selecciones que ya no existen en el store.
+  useEffect(() => {
+    setActiveFilters((current) => current.filter((filter) => filters[filter.key]?.includes(filter.value)));
+  }, [filters]);
   const inputRef = useRef(null);
   const containerRef = useRef(null);
 

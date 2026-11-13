@@ -31,6 +31,7 @@ import {
   useChildrenByParentId,
 } from "./stores/community.store.js";
 import { shouldRevalidateFreshData } from "./lib/freshness.js";
+import { builderFilters } from "./lib/communityBuilders.js";
 
 const Map = lazy(() => import("./components/Map/Map.jsx"));
 const CommunityContribution = lazy(() =>
@@ -79,7 +80,7 @@ function App () {
     typeof navigator === "undefined" ? true : navigator.onLine
   );
   const [modalScrollLockY, setModalScrollLockY] = useState(null);
-  const { fetchCommunities } = useCommunityActions();
+  const { fetchCommunities, setFilters } = useCommunityActions();
   const communities = useAllCommunities();
   const allTags = useTags();
   const allAudience = useAudience();
@@ -442,6 +443,12 @@ function App () {
           closeContributionForm={closeContributionForm}
           goToHome={goToHome}
           goToContribution={goToContribution}
+          onSelectMember={(handle) => {
+            setSelectedCommunityIdentifier(null);
+            setMapFocusTarget(null);
+            setView("list");
+            setFilters(builderFilters(handle));
+          }}
         />
         {!showContributionView && <TagSearch />}
         {!showContributionView && <ResultsBar view={view} toggleView={toggleView} />}
