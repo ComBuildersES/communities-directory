@@ -38,7 +38,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
-- 2026-11-12 `d79b3b5` Añadida DevopsDays Barcelona ([PR #479](https://github.com/ComBuildersES/communities-directory/pull/479))
+- 2026-11-12 `d79b3b5` [Añadida DevopsDays Barcelona](https://directory.communitybuilders.dev/?community=665) ([PR #479](https://github.com/ComBuildersES/communities-directory/pull/479))
 - 2026-11-12 `4b139f3` Update community-builders-members.json
 - 2026-11-12 `18aa3e6` Update community-builders-members.json
 - 2026-11-11 `4541d1e` Eliminada DES ([PR #474](https://github.com/ComBuildersES/communities-directory/pull/474))
