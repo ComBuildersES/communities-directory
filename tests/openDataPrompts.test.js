@@ -120,17 +120,17 @@ describe.each(LOCALES)('prompts de openData ($name)', ({ data, asksFirst }) => {
     expect(prompts.rules).toMatch(/nadie lo ha rellenado|nobody has filled it in/i);
   });
 
-  /**
-   * El dataset no tiene ningún campo que diga quién busca voluntariado, quién está abierto
-   * a colaborar o quién acoge grupos nuevos. Los prompts que van de eso tienen que decirlo
-   * en voz alta, o el modelo responde inventándoselo.
-   */
-  it.each(['volunteer', 'synergies', 'umbrella'])(
-    '"%s" avisa de que el dataset no trae ese campo',
+  it.each(['volunteer', 'synergies', 'speaker'])(
+    '"%s" usa la disponibilidad declarada sin inferirla cuando falta',
     (key) => {
-      expect(prompts[key].text).toMatch(/el dataset no dice|the dataset does not say/i);
+      expect(prompts[key].text).toContain('openTo');
+      expect(prompts[key].text).toMatch(/sin información|unknown|dato falta|If missing/i);
     }
   );
+
+  it('no deduce de openTo que una organización acoja grupos nuevos', () => {
+    expect(prompts.umbrella.text).toMatch(/el dataset no dice|the dataset does not say/i);
+  });
 
   it.each(RECOMMENDING_KEYS)('"%s" pide el enlace o el canal de contacto', (key) => {
     expect(prompts[key].text).toMatch(/enlace|canal|link|channel/i);

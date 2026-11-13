@@ -1,4 +1,5 @@
 /* eslint-env node */
+import { normalizeOpenTo } from '../src/lib/communityOpenTo.js';
 import fs from 'fs';
 import path from 'path';
 import process from 'node:process';
@@ -267,7 +268,7 @@ function normalizeArchivedUrlList(archivedUrls, payload) {
  * "se vació"), pero no tiene por qué quedarse en el fichero.
  */
 export function dropEmptyArchivedUrls(community) {
-  const emptyKeys = ['archivedUrls', 'organizedBy'].filter(
+  const emptyKeys = ['archivedUrls', 'organizedBy', 'openTo'].filter(
     (key) => Array.isArray(community?.[key]) && community[key].length === 0
   );
 
@@ -301,6 +302,7 @@ export function normalizePayload(payload) {
     langs: normalizeCommunityLangs(payload.langs),
     tags: matchesAllTags ? [] : normalizedTags,
     targetAudience: matchesAllAudience ? [] : normalizedAudience,
+    ...(Array.isArray(payload.openTo) ? { openTo: normalizeOpenTo(payload.openTo) } : {}),
     contactInfo: normalizeString(payload.contactInfo),
     communityUrl: normalizeString(payload.communityUrl),
     // `urls` llega como lista de pares (#478). `toUrlEntries` acepta también el objeto por

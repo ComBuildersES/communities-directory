@@ -36,6 +36,7 @@ import {
   toUrlEntries,
   toUrlRows,
 } from "../../lib/communityUrls.js";
+import { OpenToOptions } from "../OpenToOptions.jsx";
 import { OteSection } from "./OteSection.jsx";
 import { UrlKindCombobox } from "./UrlKindCombobox.jsx";
 import { MERGED_STATUS } from "../../lib/mergedCommunities.js";
@@ -1009,6 +1010,7 @@ function buildEditableDraftSignature(draft) {
     langs: draft.langs,
     tags: draft.tags,
     targetAudience: draft.targetAudience,
+    openTo: draft.openTo,
     contactInfo: draft.contactInfo,
     communityUrl: draft.communityUrl,
     urls: draft.urls,
@@ -2199,6 +2201,13 @@ export function CommunityContribution({
               </div>
             </div>
           </div>
+
+          <fieldset className="field open-to-field contribution-grid-span-2">
+            <legend className="label">{t("openTo.title")}</legend>
+            <p className="open-to-note">{t("openTo.note")}</p>
+            <OpenToOptions selected={draft.openTo ?? []}
+              onToggle={(option) => handleFieldChange("openTo", toggleSelection(draft.openTo ?? [], option))} />
+          </fieldset>
 
           {shouldShowLocationField && (
             <div className="field">

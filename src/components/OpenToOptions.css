@@ -1,0 +1,9 @@
+.open-to-options { display: grid; gap: .5rem; }
+.open-to-option { gap: .4rem; }
+.open-to-label { flex: 1; display: flex; align-items: center; gap: .5rem; }
+.open-to-option .custom-switch { border: 0; flex-shrink: 0; }
+.open-to-info { border: 0; background: transparent; color: inherit; cursor: help; padding: .3rem; }
+.open-to-info:focus-visible, .open-to-option .custom-switch:focus-visible { outline: 2px solid #3273dc; outline-offset: 2px; }
+.open-to-tooltip { position: fixed; z-index: 1000000; padding: .7rem; border-radius: .5rem; background: #17263c; color: white; font-size: .8rem; line-height: 1.5; box-shadow: 0 4px 16px #0004; }
+.open-to-field { border: 0; padding: 0; min-width: 0; }
+.open-to-note { font-size: .8rem; margin-bottom: .75rem; }

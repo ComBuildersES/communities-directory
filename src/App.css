@@ -622,7 +622,8 @@ body {
 }
 
 .filter-panel--open {
-  max-height: 400px;
+  max-height: min(70dvh, 900px);
+  overflow-y: auto;
 }
 
 .filter-panel-inner {
@@ -749,7 +750,7 @@ body {
     border-bottom: 1px solid #f0f0f0;
   }
   .filter-panel--open {
-    max-height: 800px;
+    max-height: min(70dvh, 900px);
   }
 }
 .sticky {

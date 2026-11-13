@@ -325,6 +325,8 @@ Reglas al usar estos datos:
 - "organizedBy" son ids de comunidades DEL DIRECTORIO que organizan esa ficha
   (una comunidad y su conferencia anual son dos fichas vivas). No es la lista
   completa de organizadores: empresas y patrocinadores no están aquí.
+- "openTo" indica disponibilidad declarada para aportaciones, no búsqueda urgente.
+  Vacío o ausente significa sin información, no rechazo. No inferirlo.
 - Nunca proponer URLs de "archivedUrls": son canales muertos.
 - humanValidated: false significa dato sin revisar por una persona. Decirlo.
 - "urls" es una lista de canales: { url, kind?, label? }. El kind se omite

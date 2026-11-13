@@ -13,6 +13,7 @@ import {
   toLegacyUrlMap,
   withEmptyUrlGroups,
 } from "../../lib/communityUrls.js";
+import { normalizeOpenTo } from "../../lib/communityOpenTo.js";
 import { OteEvents } from "./OteEvents.jsx";
 import "./CommunityModal.css";
 
@@ -347,6 +348,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
 
         {/* Cuerpo */}
         <div className="community-modal-body">
+
           {/*
             El aviso va aquí, lo primero del cuerpo y no colgando del título "Colaborar":
             es un dato sobre la ficha entera, y donde estaba antes se leía como si fuese una
@@ -395,6 +397,14 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
               </div>
             </div>
           )}
+          {normalizeOpenTo(community.openTo).length > 0 && <section className="community-modal-section">
+            <h3 className="community-modal-section-title">{t("openTo.title")}</h3>
+            <div className="community-modal-badges">
+              {normalizeOpenTo(community.openTo).map((option) => <button key={option} type="button"
+                className="modal-badge" onClick={() => applyFilter("openTo", option)}
+                title={t(`openTo.descriptions.${option}`)}>{t(`openTo.labels.${option}`)}</button>)}
+            </div>
+          </section>}
           {parentCommunity && (
             <button
               type="button"

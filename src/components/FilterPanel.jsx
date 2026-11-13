@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { OpenToFilters } from "./OpenToOptions.jsx";
 import { Switch } from "./Switch";
 import { useSideBarVisible } from "../stores/sidebar.store.js";
 import { COMMUNITY_LANGUAGE_OPTIONS } from "../lib/communityLanguages.js";
@@ -48,6 +49,11 @@ export function FilterPanel() {
 
         <div className="filter-group-divider" />
 
+        <div className="filter-group">
+          <p className="filter-group-label">{t("openTo.title")}</p>
+          <OpenToFilters />
+        </div>
+        <div className="filter-group-divider" />
         <div className="filter-group">
           <p className="filter-group-label">{t("sidebar.langs")}</p>
           <div className="filter-group-items">

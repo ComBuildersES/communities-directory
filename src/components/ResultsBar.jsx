@@ -16,6 +16,7 @@ import { bajaString } from "../constants";
 import { COMMUNITY_LANGUAGE_OPTIONS } from "../lib/communityLanguages.js";
 
 const FILTER_LABEL_KEYS = {
+  openTo: "openTo.title",
   status: "resultsBar.filterLabel.status",
   eventFormat: "resultsBar.filterLabel.eventFormat",
   geographicScope: "resultsBar.filterLabel.geographicScope",
@@ -70,7 +71,9 @@ export function ResultsBar({ view, toggleView }) {
       key,
       value,
       label:
-        key === "langs"
+        key === "openTo"
+          ? t(`openTo.labels.${value}`, { defaultValue: value })
+          : key === "langs"
           ? (languagesMap[value] || value.toUpperCase())
           : key === "tags"
             ? (tagsMap[value] || value)

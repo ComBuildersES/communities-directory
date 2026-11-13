@@ -1,3 +1,4 @@
+import { normalizeOpenTo } from "./communityOpenTo.js";
 import { normalizeCommunityLangs } from "./communityLanguages.js";
 import { MERGED_STATUS } from "./mergedCommunities.js";
 import { normalizeOrganizedBy } from "./organizedCommunities.js";
@@ -65,6 +66,7 @@ const DIRECTORY_FILTER_KEYS = [
   "langs",
   "tags",
   "targetAudience",
+  "openTo",
   "name",
   "parentId",
   "humanValidated",
@@ -78,6 +80,7 @@ const FILTER_KEY_SHORT = {
   langs: "langs",
   tags: "t",
   targetAudience: "ta",
+  openTo: "ot",
   name: "n",
   parentId: "p",
   // `hv=true` = solo fichas que ha revisado una persona. Es también el enlace que usa un
@@ -393,6 +396,7 @@ export function getEmptyCommunityDraft(nextId = null) {
     langs: ["es"],
     tags: [],
     targetAudience: [],
+    openTo: [],
     contactInfo: "",
     communityUrl: "",
     // Canales como lista de entradas `{ url, kind?, label? }` (#478): es el mismo formato que
@@ -427,6 +431,7 @@ export function getCommunityDraft(community, nextId = null) {
   return {
     ...getEmptyCommunityDraft(nextId),
     ...community,
+    openTo: normalizeOpenTo(community.openTo),
     langs: normalizeCommunityLangs(community.langs),
     tags: Array.isArray(community.tags) ? community.tags : [],
     targetAudience: Array.isArray(community.targetAudience) ? community.targetAudience : [],
@@ -643,6 +648,8 @@ export function buildCommunityPayload(draft, existingCommunity = null, options =
     langs: normalizeCommunityLangs(draft.langs),
     tags: normalizedTags.values,
     targetAudience: normalizedAudience.values,
+    ...(normalizeOpenTo(draft.openTo).length || existingCommunity?.openTo?.length
+      ? { openTo: normalizeOpenTo(draft.openTo) } : {}),
     contactInfo: cleanString(draft.contactInfo),
     communityUrl: cleanString(draft.communityUrl),
     urls: normalizedUrls,
