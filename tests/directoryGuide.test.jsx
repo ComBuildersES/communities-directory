@@ -8,6 +8,7 @@ import { FilterPanel } from '../src/components/FilterPanel.jsx';
 import { FindCommunityAiGuide } from '../src/components/DirectoryGuideModal/FindCommunityAiGuide.jsx';
 import { ContributeCommunityGuide } from '../src/components/DirectoryGuideModal/ContributeCommunityGuide.jsx';
 import { FindCommunityGuide } from '../src/components/DirectoryGuideModal/FindCommunityGuide.jsx';
+import { OrganizeCommunityGuide } from '../src/components/DirectoryGuideModal/OrganizeCommunityGuide.jsx';
 
 const state = vi.hoisted(() => ({ locale: 'es' }));
 vi.mock('react-i18next', () => ({
@@ -23,6 +24,30 @@ vi.mock('../src/stores/sidebar.store.js', () => ({
 }));
 
 afterEach(() => { state.locale = 'es'; });
+
+describe('descubrir a otras personas que dinamizan (español)', () => {
+  it('integra Community Builders y conserva solo el recorrido de colaboración', () => {
+    const builders = vi.fn();
+    const filters = vi.fn();
+    const html = renderToStaticMarkup(<OrganizeCommunityGuide onSelectMember={builders} onFilters={filters} />);
+    expect(html).toContain(es.builders.title);
+    expect(html).toContain(es.builders.whoLead);
+    for (const label of Object.values(es.builders.tabs)) expect(html).toContain(label);
+    expect(html).toContain(es.builders.joinCta);
+    expect((html.match(/class="guide-accordion-trigger"/g) ?? []).length).toBe(2);
+    expect(html).toContain('aria-labelledby="guide-section-organize-connect"');
+    expect(html).toContain('aria-labelledby="guide-section-organize-collaborate" hidden=""');
+    expect(html).not.toContain('guide-section-organize-found');
+    expect(html).toContain(es.directoryGuide.organize.availability);
+    expect(html).toContain(es.openData.prompts.synergies.label);
+    for (const key of ['umbrella', 'gaps']) expect(html).not.toContain(es.openData.prompts[key].label);
+    expect(html).not.toContain(es.directoryGuide.improve.title);
+    expect(html).toContain('images/guide/filters-es.webp');
+    expect(html).not.toContain('directoryGuide.');
+    expect(builders).not.toHaveBeenCalled();
+    expect(filters).not.toHaveBeenCalled();
+  });
+});
 
 describe.each([{ locale: 'es', data: es }, { locale: 'en', data: en }])('tour ligero ($locale)', ({ locale, data }) => {
   it('muestra seis objetivos sin aplicar criterios ni adelantar las herramientas', () => {

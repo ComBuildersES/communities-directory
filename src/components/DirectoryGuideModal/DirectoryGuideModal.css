@@ -113,3 +113,17 @@
 .guide-contribute-notes > i { margin-top: 0.2rem; }
 .guide-contribute-notes strong { color: #425778; }
 .guide-contribute-notes p { margin-top: 0.5rem; }
+
+.guide-organize { margin-top: 1.2rem; grid-template-columns: minmax(0, 1fr); }
+.guide-organize .guide-organize-note { margin-top: 1rem; }
+.guide-organize-note p { margin: 0; }
+.guide-organize-action { margin-top: 0.85rem; }
+.guide-organize button:disabled { opacity: 0.55; cursor: default; }
+@media (max-width: 600px) {
+  .guide-organize .opendata-copyblock-toggle { display: grid; grid-template-columns: auto minmax(0, 1fr); }
+  .guide-organize .opendata-copyblock-label { min-width: 0; overflow-wrap: anywhere; }
+  .guide-organize .opendata-copyblock-hint { grid-column: 2; }
+}
+
+.guide-organize .cb-modal-header { margin-top: 0.75rem; }
+.guide-organize .cb-modal-title { font-size: 1.05rem; }

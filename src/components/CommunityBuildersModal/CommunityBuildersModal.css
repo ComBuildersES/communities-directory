@@ -3,12 +3,15 @@
  * (`OpenDataModal`): mismo overlay, mismo radio, mismas pestañas, mismo pie. Un acento
  * propio lo habría convertido en una pantalla de otra web metida dentro de esta.
  */
-.cb-modal {
+.cb-modal, .cb-content {
   --cb-accent: #3273dc;
   --cb-accent-strong: #1d5fd1;
   --cb-accent-soft: #eef4ff;
   --cb-accent-border: #ccdaf7;
 }
+
+.cb-content { display: flex; flex-direction: column; min-height: 0; }
+.cb-modal > .cb-content { flex: 1 1 auto; }
 
 .cb-overlay {
   position: fixed;
@@ -158,7 +161,7 @@
   color: #8ba3c4;
 }
 
-.cb-modal a { color: var(--cb-accent); }
+.cb-content a { color: var(--cb-accent); }
 
 /* --- Caras --- */
 
@@ -428,13 +431,13 @@
   transition: background 0.15s, border-color 0.15s, color 0.15s;
 }
 
-.cb-modal .cb-footer-btn--cta {
+.cb-content .cb-footer-btn--cta {
   background: var(--cb-accent);
   border-color: var(--cb-accent);
   color: #fff;
 }
 
-.cb-modal .cb-footer-btn--cta:hover { background: var(--cb-accent-strong); border-color: var(--cb-accent-strong); }
+.cb-content .cb-footer-btn--cta:hover { background: var(--cb-accent-strong); border-color: var(--cb-accent-strong); }
 
 .cb-footer-copy {
   margin: 0;

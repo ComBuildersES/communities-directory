@@ -85,9 +85,17 @@ function MemberFace({ handle, profiles, onSelect, size = "md" }) {
     };
     document.addEventListener("scroll", dismiss, true);
     window.addEventListener("resize", dismiss);
+    const escape = (event) => {
+      if (event.key !== "Escape") return;
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      setTooltip(null);
+    };
+    document.addEventListener("keydown", escape);
     return () => {
       document.removeEventListener("scroll", dismiss, true);
       window.removeEventListener("resize", dismiss);
+      document.removeEventListener("keydown", escape);
     };
   }, [tooltip]);
 
@@ -341,13 +349,80 @@ function JoinTab() {
   );
 }
 
-export function CommunityBuildersModal({ onClose, onSelectMember, returnFocusRef }) {
+/** Contenido y estado compartidos por el modal y el recorrido del directorio. */
+export function CommunityBuildersContent({ onSelectMember, titleId }) {
   const { t } = useTranslation();
   const communities = useAllCommunities();
   const handles = useCBMemberHandles();
   const isLoading = useIsLoading();
   const profiles = useMemo(() => buildBuilderProfiles(communities), [communities]);
   const [tab, setTab] = useState("who");
+  const contentId = useId();
+  const headingId = titleId ?? `${contentId}-title`;
+  const select = onSelectMember;
+  return <div className="cb-content">
+        <header className="cb-modal-header">
+          <h2 className="cb-modal-title" id={headingId}>
+            <i className="fas fa-people-group" aria-hidden="true" /> {t("builders.title")}
+          </h2>
+          <p className="cb-modal-subtitle">{t("builders.subtitle")}</p>
+        </header>
+
+        <div className="cb-tabs" role="tablist" aria-labelledby={headingId}>
+          {TABS.map(({ id, icon }) => (
+            <button
+              key={id}
+              type="button"
+              role="tab"
+              id={`${contentId}-${id}`}
+              aria-controls={`${contentId}-panel`}
+              aria-selected={tab === id}
+              tabIndex={tab === id ? 0 : -1}
+              className={`cb-tab${tab === id ? " cb-tab--active" : ""}`}
+              onClick={() => setTab(id)}
+              onKeyDown={event => {
+                if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+                event.preventDefault();
+                const index = TABS.findIndex(item => item.id === tab);
+                const next = event.key === "Home" ? 0 : event.key === "End" ? TABS.length - 1
+                  : (index + (event.key === "ArrowRight" ? 1 : -1) + TABS.length) % TABS.length;
+                setTab(TABS[next].id);
+                document.getElementById(`${contentId}-${TABS[next].id}`)?.focus();
+              }}
+            >
+              <i className={`fas ${icon}`} aria-hidden="true" />
+              <span>{t(`builders.tabs.${id}`)}</span>
+            </button>
+          ))}
+        </div>
+
+        <div className="cb-panel" id={`${contentId}-panel`} role="tabpanel" aria-labelledby={`${contentId}-${tab}`}>
+          {tab === "who" && <WhoTab handles={handles} profiles={profiles} onSelect={select} isLoading={isLoading} />}
+          {tab === "what" && <WhatTab />}
+          {tab === "stories" && <StoriesTab profiles={profiles} onSelect={select} />}
+          {tab === "join" && <JoinTab />}
+        </div>
+
+        <footer className="cb-modal-footer">
+          <a className="cb-footer-btn cb-footer-btn--cta" href={JOIN_BUILDERS_URL} target="_blank" rel="noopener noreferrer">
+            <i className="fas fa-paper-plane" aria-hidden="true" /> {t("builders.joinCta")}
+          </a>
+          <p className="cb-footer-copy">
+            {t("builders.contact")}{" "}
+            <a href={BUILDERS_TELEGRAM_URL} target="_blank" rel="noopener noreferrer">
+              <i className="fa-brands fa-telegram" aria-hidden="true" /> Telegram
+            </a>
+            {" · "}
+            <a href={`mailto:${BUILDERS_EMAIL}`}>
+              <i className="fas fa-envelope" aria-hidden="true" /> {BUILDERS_EMAIL}
+            </a>
+          </p>
+        </footer>
+  </div>;
+}
+
+export function CommunityBuildersModal({ onClose, onSelectMember, returnFocusRef }) {
+  const { t } = useTranslation();
   const dialog = useRef(null);
   const closeButton = useRef(null);
   const titleId = useId();
@@ -358,7 +433,10 @@ export function CommunityBuildersModal({ onClose, onSelectMember, returnFocusRef
     document.body.style.overflow = "hidden";
     closeButton.current?.focus();
     const keydown = (event) => {
-      if (event.key === "Escape") { event.preventDefault(); onClose(); return; }
+      if (event.key === "Escape") {
+        if (document.querySelector('[role="tooltip"]')) return;
+        event.preventDefault(); onClose(); return;
+      }
       if (event.key !== "Tab") return;
       const controls = [...dialog.current.querySelectorAll('button:not(:disabled), a[href], [tabindex="0"]')]
         .filter((element) => element.getClientRects().length > 0);
@@ -384,51 +462,7 @@ export function CommunityBuildersModal({ onClose, onSelectMember, returnFocusRef
           <i className="fas fa-xmark" aria-hidden="true" />
         </button>
 
-        <header className="cb-modal-header">
-          <h2 className="cb-modal-title" id={titleId}>
-            <i className="fas fa-people-group" aria-hidden="true" /> {t("builders.title")}
-          </h2>
-          <p className="cb-modal-subtitle">{t("builders.subtitle")}</p>
-        </header>
-
-        <div className="cb-tabs" role="tablist">
-          {TABS.map(({ id, icon }) => (
-            <button
-              key={id}
-              type="button"
-              role="tab"
-              aria-selected={tab === id}
-              className={`cb-tab${tab === id ? " cb-tab--active" : ""}`}
-              onClick={() => setTab(id)}
-            >
-              <i className={`fas ${icon}`} aria-hidden="true" />
-              <span>{t(`builders.tabs.${id}`)}</span>
-            </button>
-          ))}
-        </div>
-
-        <div className="cb-panel" role="tabpanel">
-          {tab === "who" && <WhoTab handles={handles} profiles={profiles} onSelect={select} isLoading={isLoading} />}
-          {tab === "what" && <WhatTab />}
-          {tab === "stories" && <StoriesTab profiles={profiles} onSelect={select} />}
-          {tab === "join" && <JoinTab />}
-        </div>
-
-        <footer className="cb-modal-footer">
-          <a className="cb-footer-btn cb-footer-btn--cta" href={JOIN_BUILDERS_URL} target="_blank" rel="noopener noreferrer">
-            <i className="fas fa-paper-plane" aria-hidden="true" /> {t("builders.joinCta")}
-          </a>
-          <p className="cb-footer-copy">
-            {t("builders.contact")}{" "}
-            <a href={BUILDERS_TELEGRAM_URL} target="_blank" rel="noopener noreferrer">
-              <i className="fa-brands fa-telegram" aria-hidden="true" /> Telegram
-            </a>
-            {" · "}
-            <a href={`mailto:${BUILDERS_EMAIL}`}>
-              <i className="fas fa-envelope" aria-hidden="true" /> {BUILDERS_EMAIL}
-            </a>
-          </p>
-        </footer>
+        <CommunityBuildersContent onSelectMember={select} titleId={titleId} />
       </div>
     </div>, document.body);
 }

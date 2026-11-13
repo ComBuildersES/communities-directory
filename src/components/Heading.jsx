@@ -346,6 +346,7 @@ export function Heading ({
             onClose={closeGuide}
             onAddCommunity={goToContribution}
             onShowMap={onShowMap}
+            onSelectMember={onSelectMember}
             returnFocusRef={guideReturnFocusRef}
           />
         </Suspense>

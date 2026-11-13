@@ -1,6 +1,6 @@
 # Plan temporal de mejoras de UI/UX
 
-Estado: fase 1 revisada. «Encontrar mi comunidad» (primera entrada de la fase 2) terminada y aprobada por el usuario. «Aportar a una comunidad» implementada en español, pendiente de revisión del usuario.
+Estado: fase 1 revisada. «Encontrar mi comunidad» (primera entrada de la fase 2) terminada y aprobada por el usuario. «Aportar a una comunidad» aprobada y con commit confirmado por el usuario. «Descubrir a otras personas que dinamizan comunidades» aprobada por el usuario, solo en español.
 
 Continuidad y aprendizajes: [handoff de las mejoras de UI](handoff-mejoras-ui.md).
 
@@ -84,7 +84,7 @@ Decisión de revisión: limitar la ayuda a opciones útiles y menos visibles. Se
 
 #### Aportar a una comunidad
 
-**Implementada; pendiente de revisión del usuario.**
+**Aprobada por el usuario; confirma que ha hecho commit.**
 
 - [x] Explicar las siete disponibilidades: ponentes, personas coorganizadoras, voluntariado, mentoría, patrocinio, espacios y colaboraciones entre comunidades.
 - [x] Explicar cómo combinar «Abierta a…» con temática, formato, idioma y exploración del mapa.
@@ -93,12 +93,14 @@ Decisión de revisión: limitar la ayuda a opciones útiles y menos visibles. Se
 - [x] Reubicar los prompts completos «Dónde dar una charla» y «Echar una mano», incluidos los límites sobre C4Ps y la necesidad de confirmar la disponibilidad con la comunidad.
 - [x] Ofrecer acciones para ver comunidades con la disponibilidad elegida y copiar los prompts correspondientes. No presentar como existentes prompts específicos de mentoría, patrocinio o espacios que aún no se han creado.
 
-#### Dinamizo una comunidad
+#### Descubrir a otras personas que dinamizan comunidades
 
-- [ ] **Conectar con otras personas que dinamizan:** explicar Community Builders y ofrecer acceso a su modal actual, conservando quiénes somos, qué hacemos, historias reales y cómo unirse.
-- [ ] **Colaborar con otra comunidad:** explicar el filtro de colaboraciones y reubicar el prompt completo «Sinergias para mi comunidad», con sus propuestas de colaboración local, entre ciudades y posible reactivación.
-- [ ] **Quiero montar una comunidad:** conservar como apartado secundario el contenido actual de esa pestaña, aunque no sea una sexta entrada inicial. Reubicar los prompts completos «Quién me puede acoger o apoyar» y «Huecos del ecosistema», sus advertencias y las vías de ayuda.
-- [ ] **Dar visibilidad a mi comunidad:** orientar hacia «Mejorar el directorio» para mantener la ficha, las etiquetas, los enlaces y los eventos al día.
+**Aprobada por el usuario el 13 de noviembre de 2026, solo en español. Solicita commit.**
+
+- [x] **Conectar con otras personas que dinamizan:** integrar dentro del acordeón el mismo contenido y lógica del modal Community Builders, extraídos a `CommunityBuildersContent`: quiénes somos, qué hacemos, historias, perfiles, incorporación y contactos. No sustituirlo por un resumen o un CTA hacia otro modal.
+- [x] **Colaborar con otra comunidad:** conectar el filtro de colaboraciones y reubicar el prompt completo «Sinergias para mi comunidad», con sus propuestas de colaboración local, entre ciudades y posible reactivación.
+- Retirado del alcance por el usuario: **«Quiero montar una comunidad»**. Su contenido sigue accesible en el modal anterior; no incluirlo aquí.
+- Retirado del alcance por el usuario: **«Dar visibilidad a mi comunidad»** y el enlace de mantenimiento. No incluirlos aquí.
 
 #### Mejorar el directorio
 
@@ -194,6 +196,16 @@ Decisión de revisión: limitar la ayuda a opciones útiles y menos visibles. Se
 - Por petición expresa del usuario, no se vuelven a ejecutar tests tras este ajuste de texto. La última validación previa sigue siendo de 497 tests, lint y build correctos; este último ajuste se revisa con lint y comprobación del diff.
 - El usuario solicita hacer commit del trabajo de UI de esta sesión. Los documentos locales de contactos, invitaciones y automatización quedan fuera.
 
+### Descubrir a otras personas que dinamizan comunidades
+
+- Se continúa tras la confirmación del usuario de que «Aportar» está revisada y tiene commit. No se reabre esa entrada.
+- El usuario corrige la primera propuesta: «Conectar» debe integrar el contenido completo de Community Builders, reutilizando su lógica; no corresponden aquí la puesta en marcha de una comunidad ni el enlace de mantenimiento. Se retiran estos dos bloques. Los prompts de puesta en marcha quedan donde estaban.
+- Dos acordeones: Community Builders (abierto) y colaboraciones. `CommunityBuildersContent` comparte cabecera, pestañas, perfiles, historias, incorporación y contactos con el modal original. Pestañas accesibles con flechas y Escape cierra primero la ayuda.
+- Captura real española ampliable para filtros. Nota de cobertura antes de acciones, contador contextual, ceros desactivados y acceso a filtros sin cambiar criterios.
+- Se reubica el prompt de sinergias con reglas y URLs completas. Selector de datos compartido, sin añadir formatos ni traducciones inglesas. Se evitan canales archivados y contactos inventados.
+- Validación de esta entrada: **498 tests Vitest y cuatro pruebas de navegador correctos**, lint de los archivos modificados y build de producción correctos. Revisado en español a 1440 y 390 px: contenido compartido, cuatro pestañas con teclado, perfiles y filtro por persona, historias, incorporación y contactos, ausencia de los bloques retirados, captura de filtros, ceros desactivados, contador con colaboración de prueba, conservación de criterios, copia exacta de sinergias/URL, Escape y retorno de foco. El modal original también se verifica. El usuario aprueba el resultado y solicita commit.
+- El usuario aprueba la entrada y solicita commit. Conservar el plan y no avanzar a la siguiente entrada en esta sesión. Las decisiones de este registro prevalecen sobre el mapa inicial de reubicación.
+
 ### Mapa de reubicación del contenido actual
 
 Inventario inicial basado en `src/components/OpenDataModal/OpenDataModal.jsx`, los textos de `src/i18n/locales/es.json` y el modal de Community Builders. Usarlo para verificar que no desaparece contenido durante la reorganización.
@@ -230,7 +242,7 @@ Nota visual: se propuso una animación sutil de sombreado o borde. El brillo sua
 
 ## Fase 4. Invitación a Community Builders
 
-- [ ] Añadir acceso desde «Dinamizo una comunidad» en el nuevo modal.
+- [x] Añadir acceso desde «Descubrir a otras personas que dinamizan comunidades» en el nuevo modal.
 - [ ] Añadir la invitación en «Sobre el proyecto», después del párrafo del registro de cambios y antes del bloque «¿De dónde salen estos datos?».
 - [ ] Añadir la invitación al terminar de crear o editar una comunidad.
 - [ ] Reutilizar el modal actual de Community Builders.

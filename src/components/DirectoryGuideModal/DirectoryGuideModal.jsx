@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next";
 import { OpenDataModal } from "../OpenDataModal/OpenDataModal.jsx";
 import { ContributeCommunityGuide } from "./ContributeCommunityGuide.jsx";
 import { FindCommunityGuide } from "./FindCommunityGuide.jsx";
+import { OrganizeCommunityGuide } from "./OrganizeCommunityGuide.jsx";
 import { openSupportFab } from "../../lib/supportFab.js";
 import { useSidebarActions } from "../../stores/sidebar.store.js";
 import "./DirectoryGuideModal.css";
@@ -17,9 +18,9 @@ const ENTRIES = [
   { id: "other", icon: "fa-circle-question" },
 ];
 // Se conserva el contenido actual mientras se revisa cada recorrido de la fase 2.
-const EXISTING_TABS = { organize: "organizers", improve: "organizers", build: "build", reuse: "build" };
+const EXISTING_TABS = { improve: "organizers", build: "build", reuse: "build" };
 
-export function DirectoryGuideModal({ onClose, onAddCommunity, onShowMap, returnFocusRef }) {
+export function DirectoryGuideModal({ onClose, onAddCommunity, onShowMap, onSelectMember, returnFocusRef }) {
   const { t } = useTranslation();
   const [screen, setScreen] = useState("menu");
   const boxRef = useRef(null);
@@ -43,9 +44,9 @@ export function DirectoryGuideModal({ onClose, onAddCommunity, onShowMap, return
     headingRef.current?.focus();
     const handleKeyDown = (event) => {
       // La ayuda contextual se cierra antes que el recorrido que la contiene.
-      if (event.key === "Escape" && !(screen === "contribute" && document.querySelector('[role="tooltip"]'))) onClose();
+      if (event.key === "Escape" && !document.querySelector('[role="tooltip"]')) onClose();
       if (event.key !== "Tab") return;
-      const controls = [...boxRef.current.querySelectorAll('button:not([disabled]), a[href], summary, [tabindex="0"]')]
+      const controls = [...boxRef.current.querySelectorAll('button:not([disabled]), input:not([disabled]), select:not([disabled]), a[href], summary, [tabindex="0"]')]
         .filter((el) => el.getClientRects().length && el.tabIndex >= 0);
       const first = controls[0];
       const last = controls.at(-1);
@@ -102,6 +103,12 @@ export function DirectoryGuideModal({ onClose, onAddCommunity, onShowMap, return
               </button>
             ))}
           </div>
+        ) : screen === "organize" ? (
+          <OrganizeCommunityGuide onSelectMember={handle => leaveFor(() => onSelectMember(handle))}
+            onFilters={() => leaveFor(() => {
+              setSidebarVisibility(true);
+              requestAnimationFrame(() => document.querySelector(".filter-panel")?.focus());
+            })} />
         ) : screen === "contribute" ? (
           <ContributeCommunityGuide onViewCommunities={() => leaveFor(() => {
             setSidebarVisibility(true);

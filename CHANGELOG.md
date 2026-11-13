@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-13 `7dfd5f5` ampliar la guía de aportaciones y datos abiertos
+- 2026-11-13 `f56cdff` integrar Community Builders en la guía del directorio
+- 2026-11-13 `3ce4bc9` ampliar la guía de aportaciones y datos abiertos
 - 2026-11-13 `efb806b` simplificar cabecera y añadir guía para encontrar comunidades
 - 2026-11-13 `a1c207a` mejorar la ficha, el selector de colaboración y los eventos
 - 2026-11-13 `7b8dc68` añadir openTo y filtros de colaboración (#464)

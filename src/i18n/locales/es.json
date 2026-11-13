@@ -786,7 +786,16 @@
     },
     "organize": {
       "title": "Descubrir a otras personas que dinamizan comunidades",
-      "hint": "Descubrir y conectar con otras personas que dinamizan el ecosistema tech."
+      "hint": "Descubrir y conectar con otras personas que dinamizan el ecosistema tech.",
+      "lead": "Conecta con otras personas que dinamizan comunidades y explora colaboraciones.",
+      "connectTitle": "Conectar con Community Builders",
+      "connectHint": "Personas, experiencias y apoyo mutuo",
+      "collaborateTitle": "Colaborar con otra comunidad",
+      "collaborateHint": "Encuentros conjuntos, ponentes, difusión o espacios",
+      "collaborate": "Busca comunidades abiertas a colaborar y combina ese criterio con tus temáticas, formatos o idiomas.",
+      "availability": "La disponibilidad para colaborar es un dato nuevo y poco cumplimentado. Su ausencia significa que no lo sabemos, no rechazo; declararla tampoco garantiza una colaboración. Contacta para confirmar.",
+      "collaborationsAction": "Ver comunidades abiertas a colaborar ({{count}})",
+      "ai": "Un agente puede entrevistarte y proponer sinergias locales, entre ciudades o para explorar una posible reactivación. Este prompt es un ejemplo:"
     },
     "improve": {
       "title": "Mejorar este directorio",
@@ -951,7 +960,7 @@
       "synergies": {
         "label": "Sinergias para mi comunidad",
         "hint": "identifica tu comunidad y busca con quién",
-        "text": "Descarga {{dataUrl}} (datos abiertos del directorio de comunidades tech de España).\n\nDinamizo una comunidad y quiero encontrar oportunidades de colaboración.\n\nUsa \"openTo\" con \"collaborations\" para identificar disponibilidad declarada, sin asumir búsqueda urgente. Si falta el dato, ofrece candidatas por afinidad y deja claro que hay que preguntarles: vacío o ausente significa sin información, no rechazo.\n\n**Antes de analizar nada, pregúntame.** Averigua primero cuál es mi comunidad (búscala en el dataset por nombre y enséñame su ficha para que confirme que es esa) y luego pregúntame lo que necesites: qué tipo de colaboración busco (evento conjunto, intercambio de ponentes, difusión, compartir espacio), si quiero quedarme en mi ciudad o abrirme a otras, qué me falta ahora mismo (asistentes, ponentes, manos, visibilidad), y si estoy dispuesto/a a absorber o reactivar una comunidad parada.\n\nDespués dame tres listas:\n1. Comunidades activas con las que tendría sentido hacer algo conjunto: temática próxima pero no idéntica, y zona compatible.\n2. Comunidades de mi misma temática en otras ciudades, por si cabe una gira de ponentes o un evento multisede.\n3. Comunidades con \"status\": \"inactive\" en mi zona o temática que quizá se puedan reactivar, con el canal que tenían. Recuerda que \"lastReviewed\" no prueba si siguen paradas: avísame de que hay que comprobarlo antes de escribir.\n\nTermina con el primer paso concreto para cada una de las tres: a quién escribo, por qué canal y qué propongo.\n\n{{rules}}"
+        "text": "Descarga {{dataUrl}} (datos abiertos del directorio de comunidades tech de España).\n\nDinamizo una comunidad y quiero encontrar oportunidades de colaboración.\n\nUsa \"openTo\" con \"collaborations\" para identificar disponibilidad declarada, sin asumir búsqueda urgente. Si falta el dato, ofrece candidatas por afinidad y deja claro que hay que preguntarles: vacío o ausente significa sin información, no rechazo.\n\n**Antes de analizar nada, pregúntame.** Averigua primero cuál es mi comunidad (búscala en el dataset por nombre y enséñame su ficha para que confirme que es esa) y luego pregúntame lo que necesites: qué tipo de colaboración busco (evento conjunto, intercambio de ponentes, difusión, compartir espacio), si quiero quedarme en mi ciudad o abrirme a otras, qué me falta ahora mismo (asistentes, ponentes, manos, visibilidad), y si estoy dispuesto/a a absorber o reactivar una comunidad parada.\n\nDespués dame tres listas:\n1. Comunidades activas con las que tendría sentido hacer algo conjunto: temática próxima pero no idéntica, y zona compatible.\n2. Comunidades de mi misma temática en otras ciudades, por si cabe una gira de ponentes o un evento multisede.\n3. Comunidades con \"status\": \"inactive\" en mi zona o temática que quizá se puedan reactivar, con un canal no archivado, si consta. Recuerda que \"lastReviewed\" no prueba si siguen paradas: avísame de que hay que comprobarlo antes de escribir.\n\nTermina con el primer paso concreto para cada una de las tres: a qué comunidad escribo, por qué canal no archivado y qué propongo; si no consta una persona de contacto, no la inventes.\n\n{{rules}}"
       },
       "gaps": {
         "label": "Huecos del ecosistema",
