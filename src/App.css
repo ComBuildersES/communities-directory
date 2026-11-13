@@ -146,18 +146,16 @@ body {
   color: #1a1a2e;
   line-height: 1.2;
   margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .heading-subtitle {
   font-size: 0.75rem;
   color: #888;
   margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  white-space: normal;
+  overflow-wrap: anywhere;
 }
 
 .heading-actions {
@@ -175,11 +173,9 @@ body {
   min-width: 0;
 }
 
-/* La marca es lo único que cede espacio: su texto se trunca antes de que la fila de
-   acciones se desborde sobre ella. */
+/* La marca puede ocupar varias líneas sin ocultar el título ni el subtítulo. */
 .heading-brand {
   flex: 1 1 auto;
-  overflow: hidden;
 }
 
 .heading-brand-button > div {
@@ -232,56 +228,19 @@ body {
   color: #fff;
 }
 
-.heading-action-btn--cta {
+.heading-action-btn--guide {
   background: #eef4ff;
   border-color: #ccdaf7;
   color: #3273dc;
 }
 
-.heading-action-btn--cta:hover {
+.heading-action-btn--guide:hover {
   background: #dce9ff;
   border-color: #aac3f0;
   color: #1d5fd1;
 }
 
-/* CTA de datos abiertos + IA: acento violeta para que no compita con el azul de
-   "Añadir comunidad" pero sí se vea como invitación, no como enlace secundario. */
-.heading-action-btn--data {
-  background: #f6f2ff;
-  border-color: #ded0fb;
-  color: #6b3fd4;
-}
 
-.heading-action-btn--data:hover {
-  background: #ece2ff;
-  border-color: #c7b0f5;
-  color: #5428c4;
-}
-
-.heading-action-btn--data.heading-action-btn--active {
-  background: #6b3fd4;
-  border-color: #6b3fd4;
-  color: #fff;
-}
-
-/* Entre 1024px y 1199px caben los botones pero no todas las etiquetas: el icono de
-   información se entiende solo, así que su texto es el primero en caer. */
-@media (min-width: 1024px) and (max-width: 1199px) {
-  .heading-support > .heading-action-btn .heading-btn-label {
-    display: none;
-  }
-}
-
-.heading-github-stars-icon {
-  font-size: 0.7rem;
-  color: #f5a623;
-}
-
-.heading-github-stars-count {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-}
 
 .language-switcher {
   display: inline-flex;
@@ -648,6 +607,17 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.filter-group-label--with-info {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.filter-group-label--with-info .open-to-info { padding: 0; }
+.community-type-option { column-gap: 0.35rem; }
+.community-type-option > p { flex: 1; }
+.community-type-option .custom-switch { flex-shrink: 0; }
+
 .filter-group-items {
   display: flex;
   flex-direction: column;
@@ -937,9 +907,6 @@ body {
 
 /* Mobile */
 @media (max-width: 600px) {
-  .heading-subtitle {
-    display: none;
-  }
   #title {
     padding: 0.5rem 0.75rem;
   }

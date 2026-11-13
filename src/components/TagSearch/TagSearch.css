@@ -256,9 +256,17 @@
   color: #555;
 }
 
-.results-count {
-  flex: 1;
+.results-summary {
+  display: flex;
+  flex: 1 1 20rem;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.75rem;
   min-width: 0;
+}
+
+.results-count {
+  flex-shrink: 0;
 }
 
 .results-bar__controls {
@@ -278,7 +286,7 @@
 }
 
 .results-chips {
-  width: 100%;
+  min-width: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 0.35rem;
@@ -286,6 +294,8 @@
 }
 
 .results-chip {
+  max-width: 100%;
+  overflow-wrap: anywhere;
   display: inline-flex;
   align-items: center;
   gap: 0.25rem;

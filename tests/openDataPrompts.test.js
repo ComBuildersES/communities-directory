@@ -40,7 +40,7 @@ const LOCALES = [
   { name: 'en', data: en, asksFirst: /ask me|ask what you need|ask you/i },
 ];
 
-describe.each(LOCALES)('prompts de openData ($name)', ({ data, asksFirst }) => {
+describe.each(LOCALES)('prompts de openData ($name)', ({ name, data, asksFirst }) => {
   const prompts = data.openData.prompts;
 
   it('tiene un prompt por cada clave que pintan las pestañas', () => {
@@ -74,7 +74,15 @@ describe.each(LOCALES)('prompts de openData ($name)', ({ data, asksFirst }) => {
     expect(rules).toContain('matchesAllTags');
     expect(rules).toContain('geographicScope');
     expect(rules).toContain('humanValidated');
-    expect(rules).toContain('{{tagsEnUrl}}');
+    if (name === 'es') {
+      expect(rules).toContain('{{tagsUrl}}');
+      expect(rules).toContain('{{audienceUrl}}');
+      expect(rules).not.toContain('{{tagsEnUrl}}');
+      expect(rules).not.toContain('{{audienceEnUrl}}');
+    } else {
+      // La revisión del inglés se hará al terminar todas las fases.
+      expect(rules).toContain('{{tagsEnUrl}}');
+    }
   });
 
   /**
@@ -154,5 +162,34 @@ describe.each(LOCALES)('pestañas de openData ($name)', ({ data }) => {
     expect(data.openData.found.helpTitle).toBeTruthy();
     expect(data.openData.organizers.promptsTitle).toBeTruthy();
     expect(data.openData.build.filesTitle).toBeTruthy();
+  });
+});
+
+
+describe('revisión de prompts en español', () => {
+  it('mantiene separado el enlace de cabecera del contenido del modal', () => {
+    expect(typeof es.heading.openData).toBe('string');
+    expect(es.openData.prompts.types.label).toBe('Descubrir tipos de comunidades');
+  });
+
+  it('omite la licencia en los ocho prompts', () => {
+    for (const key of PROMPT_KEYS) expect(es.openData.prompts[key].text).not.toMatch(/CC BY|licencia/i);
+  });
+
+  it('limita la búsqueda por ubicación a coincidencias exactas y no deduce proximidad', () => {
+    expect(es.openData.prompts.rules).toContain('coincidencia exacta');
+    expect(es.openData.prompts.rules).toContain('No deduzcas proximidad, radios');
+    expect(es.openData.prompts.rules).toContain('explorar el mapa');
+    expect(es.openData.prompts.tribe.text).not.toContain('hasta dónde me puedo mover');
+  });
+
+  it('explora tipos y dinámicas sin decidir cuál conviene a una persona', () => {
+    const prompt = es.openData.prompts.types;
+    expect(prompt.label).toBe('Descubrir tipos de comunidades');
+    expect(prompt.text).toContain('No busco que decidas qué tipo me conviene');
+    expect(prompt.text).toContain('hacklab frente a asistir a charlas en un meetup');
+    expect(prompt.text).toContain('no como recomendaciones personales');
+    expect(prompt.text).not.toContain('cerca de mí');
+    expect(prompt.text).not.toContain('qué dos o tres tipos encajan mejor');
   });
 });

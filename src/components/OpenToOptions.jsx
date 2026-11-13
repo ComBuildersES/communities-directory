@@ -8,7 +8,7 @@ import { bajaString } from '../constants';
 import './OpenToOptions.css';
 import './switch.css';
 
-function InfoTooltip({ label, text, children, className = 'open-to-info' }) {
+export function InfoTooltip({ label, text, children, className = 'open-to-info' }) {
   const id = useId();
   const anchor = useRef(null);
   const bubble = useRef(null);

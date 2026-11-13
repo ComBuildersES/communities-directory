@@ -6,8 +6,8 @@ import { buildShareLinks } from "../lib/shareLinks.js";
 import { openSupportFab } from "../lib/supportFab.js";
 import { DataTransparency } from "./DataTransparency/DataTransparency.jsx";
 
-const OpenDataModal = lazy(() =>
-  import("./OpenDataModal/OpenDataModal.jsx").then((m) => ({ default: m.OpenDataModal }))
+const DirectoryGuideModal = lazy(() =>
+  import("./DirectoryGuideModal/DirectoryGuideModal.jsx").then((m) => ({ default: m.DirectoryGuideModal }))
 );
 const CommunityBuildersModal = lazy(() =>
   import("./CommunityBuildersModal/CommunityBuildersModal.jsx").then((m) => ({ default: m.CommunityBuildersModal }))
@@ -45,27 +45,18 @@ export function Heading ({
   goToHome,
   goToContribution,
   onSelectMember,
+  onShowMap,
 }) {
   const { t } = useTranslation();
   const [isAboutOpen, setIsAboutOpen] = useState(false);
-  const [isOpenDataOpen, setIsOpenDataOpen] = useState(false);
+  const [isGuideOpen, setIsGuideOpen] = useState(false);
+  const closeGuide = useCallback(() => setIsGuideOpen(false), []);
+  const guideReturnFocusRef = useRef(null);
   const [isBuildersOpen, setIsBuildersOpen] = useState(false);
   const closeBuilders = useCallback(() => setIsBuildersOpen(false), []);
   const buildersReturnFocusRef = useRef(null);
   const mobileMenuToggleRef = useRef(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [githubStars, setGithubStars] = useState(null);
-
-  useEffect(() => {
-    fetch("https://api.github.com/repos/ComBuildersES/communities-directory")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.stargazers_count != null) {
-          setGithubStars(data.stargazers_count);
-        }
-      })
-      .catch(() => {});
-  }, []);
   const [visibleContributors, setVisibleContributors] = useState(() => (
     shuffleContributors(allContributors).slice(0, MAX_CONTRIBUTORS_IN_POPOVER)
   ));
@@ -177,44 +168,17 @@ export function Heading ({
             <div className={`heading-actions-inner${isMobileMenuOpen ? " heading-actions-inner--open" : ""}`}>
               <button
                 type="button"
-                className="heading-action-btn heading-action-btn--builders"
+                className={`heading-action-btn heading-action-btn--guide${isGuideOpen ? " heading-action-btn--active" : ""}`}
                 onClick={(event) => {
-                  buildersReturnFocusRef.current = mobileMenuToggleRef.current?.getClientRects().length
+                  guideReturnFocusRef.current = mobileMenuToggleRef.current?.getClientRects().length
                     ? mobileMenuToggleRef.current : event.currentTarget;
-                  setIsBuildersOpen(true); setIsAboutOpen(false); closeMobileMenu();
+                  setIsGuideOpen(true);
+                  closeMobileMenu();
                 }}
                 aria-haspopup="dialog"
-                aria-label={t("builders.cta")}
-                title={t("builders.cta")}
               >
-                <i className="fas fa-people-group" aria-hidden="true" />
-                <span className="heading-btn-label">{t("builders.cta")}</span>
-              </button>
-              <a
-                href={GITHUB_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="heading-action-btn heading-github-stars"
-                title="GitHub"
-                aria-label="GitHub stars"
-              >
-                <i className="fa-brands fa-github"></i>
-                {githubStars != null && (
-                  <span className="heading-btn-label heading-github-stars-count">
-                    <i className="fas fa-star heading-github-stars-icon"></i>
-                    {githubStars}
-                  </span>
-                )}
-              </a>
-              <button
-                type="button"
-                className={`heading-action-btn heading-action-btn--data${isOpenDataOpen ? " heading-action-btn--active" : ""}`}
-                onClick={() => { setIsOpenDataOpen(true); closeMobileMenu(); }}
-                title={t("heading.openDataCtaTitle")}
-                aria-haspopup="dialog"
-              >
-                <i className="fas fa-wand-magic-sparkles"></i>
-                <span className="heading-btn-label">{t("heading.openDataCta")}</span>
+                <i className="fas fa-compass" aria-hidden="true"></i>
+                <span className="heading-btn-label">{t("heading.guideCta")}</span>
               </button>
               <div className="heading-support" ref={aboutRef}>
                 <button
@@ -248,6 +212,25 @@ export function Heading ({
                       </a>
                       {t("heading.changelogTail")}
                     </p>
+                    <div className="heading-support-section">
+                      <button
+                        type="button"
+                        className="heading-support-help-btn"
+                        onClick={() => {
+                          buildersReturnFocusRef.current = mobileMenuToggleRef.current?.getClientRects().length
+                            ? mobileMenuToggleRef.current : aboutRef.current?.querySelector("button");
+                          setIsBuildersOpen(true);
+                          setIsAboutOpen(false);
+                          closeMobileMenu();
+                        }}
+                        aria-haspopup="dialog"
+                      >
+                        <i className="fas fa-people-group" aria-hidden="true"></i>
+                        {t("builders.cta")}
+                        <i className="fas fa-arrow-right" aria-hidden="true"></i>
+                      </button>
+                    </div>
+
                     <DataTransparency
                       dataUrl={DATA_URL}
                       repoUrl={GITHUB_URL}
@@ -352,25 +335,18 @@ export function Heading ({
                 )}
               </div>
               <LanguageSwitcher />
-              <button
-                type="button"
-                className="heading-action-btn heading-action-btn--cta"
-                onClick={() => { goToContribution(); closeMobileMenu(); }}
-                title={t("heading.addCommunityTitle")}
-              >
-                <i className="fas fa-plus"></i>
-                <span className="heading-btn-label">{t("heading.addCommunity")}</span>
-              </button>
             </div>
           </>
         )}
       </div>
 
-      {isOpenDataOpen && (
+      {isGuideOpen && (
         <Suspense fallback={null}>
-          <OpenDataModal
-            onClose={() => setIsOpenDataOpen(false)}
+          <DirectoryGuideModal
+            onClose={closeGuide}
             onAddCommunity={goToContribution}
+            onShowMap={onShowMap}
+            returnFocusRef={guideReturnFocusRef}
           />
         </Suspense>
       )}

@@ -443,6 +443,10 @@ function App () {
           closeContributionForm={closeContributionForm}
           goToHome={goToHome}
           goToContribution={goToContribution}
+          onShowMap={() => {
+            setMapFocusTarget(null);
+            setView("map");
+          }}
           onSelectMember={(handle) => {
             setSelectedCommunityIdentifier(null);
             setMapFocusTarget(null);

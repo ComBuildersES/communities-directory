@@ -94,6 +94,7 @@
     "seeAllContributors": "See all contributors",
     "addCommunityTitle": "Add a new community to the directory",
     "addCommunity": "Add community",
+    "guideCta": "What you can do here",
     "openDataCta": "Open data + AI",
     "openDataCtaTitle": "Open data: use it with ChatGPT, Claude, your scripts or your agents",
     "changelogLead": "What changed recently? The",
@@ -157,7 +158,18 @@
     "status": "Community Status",
     "langs": "Languages",
     "geographicScope": "Geographic scope",
-    "review": "Review status"
+    "review": "Review status",
+    "communityTypeHelp": "Which type of community might suit me?",
+    "communityTypeNote": "These are pointers to how they work, not a guarantee of frequency or activity.",
+    "communityTypeDescriptions": {
+      "tech-meetup": "Meetings to share talks, learn and get to know people.",
+      "conference": "Events with a concentrated programme of sessions.",
+      "collaborative-group": "Ongoing participation in shared projects and work.",
+      "mutual-aid": "People exchanging support, experiences and resources.",
+      "hacklab": "Experimentation and hands-on learning in a shared space.",
+      "umbrella-org": "An organisation that brings together or supports other communities.",
+      "meta-community": "Connections and shared learning between community organisers."
+    }
   },
   "app": {
     "syncingBeforeEdit": "Syncing the latest version before allowing edits...",
@@ -724,6 +736,63 @@
       "removeUrl": "Remove this link",
       "urlCount_one": "{{count}} link included in the instructions.",
       "urlCount_other": "{{count}} links included in the instructions."
+    }
+  },
+  "directoryGuide": {
+    "expandImage": "Enlarge screenshot",
+    "back": "Back to menu",
+    "reuse": "Download and reuse the data",
+    "downloadDataset": "Download JSON",
+    "tabs": {
+      "directory": "With the directory",
+      "ai": "With AI help"
+    },
+    "actions": {
+      "search": "Start searching",
+      "filters": "Open filters",
+      "map": "Explore the map"
+    },
+    "contribute": {
+      "title": "Contribute to a community",
+      "hint": "Talks, volunteering, mentoring, sponsorship or venues."
+    },
+    "organize": {
+      "title": "I run a community",
+      "hint": "Connect with other organisers and collaborate."
+    },
+    "improve": {
+      "title": "Improve the directory",
+      "hint": "Add a community or update its profile."
+    },
+    "other": {
+      "title": "Something else",
+      "hint": "Tell us what you need through the help button."
+    },
+    "find": {
+      "title": "Find my community",
+      "hint": "By interests, ways to participate or location.",
+      "lead": "Combine your interests with how and where you want to take part.",
+      "searchTitle": "Search by interests",
+      "searchHint": "Topics, audiences and names",
+      "search": "The search bar lets you select topics and audience profiles as filters, or find a community by name.",
+      "filtersTitle": "Narrow your search",
+      "filtersHint": "Format, languages and ways to participate",
+      "filters": "The filter panel lets you narrow your search further.",
+      "openTo": "“Open to…” indicates availability for contributions, not a current call for participants.",
+      "mapTitle": "Explore an area",
+      "mapHint": "Places, clusters and nearby communities",
+      "map": "In map view, find communities by entering an address or dragging the map. The cards in this view update to match the area you are looking at.",
+      "mapNote": "Only communities with a location and configured to appear on the map are shown. The list includes the others too.",
+      "ai": "For topic searches, the directory controls are faster and more reliable. But you may prefer a more semantic search, or an agent that interviews you and recommends communities you might find interesting.",
+      "searchImageAlt": "Search bar with “mad” entered and suggestions for topics, target audiences and communities.",
+      "filtersImageAlt": "Filter panel showing community type, event format, status, availability for contributions and languages.",
+      "combineTip": "Combine these filters with topics and audience profiles from the search bar.",
+      "statusTip": "You start with active communities; you can explore the others too.",
+      "dataIntro": "The directory data is available in several formats for use with your chatbot or agent:",
+      "dataFormat": "Format",
+      "dataUrl": "Data URL",
+      "copyUrl": "Copy URL",
+      "promptsIntro": "Here are a few illustrative prompts you can copy and paste into your favourite chatbot or agent."
     }
   },
   "openData": {

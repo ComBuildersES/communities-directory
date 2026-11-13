@@ -143,7 +143,8 @@ function CopyBlock({ text, label, hint }) {
  * cambio, y es justo lo que evita que el modelo se invente lo que el dato no dice.
  */
 function usePrompts(keys) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const catalogueSuffix = i18n.resolvedLanguage === "en" ? ".en" : "";
 
   return useMemo(() => {
     const promptUrls = {
@@ -151,6 +152,8 @@ function usePrompts(keys) {
       indexUrl: `${SITE_URL}/llms.txt`,
       schemaUrl: `${SITE_URL}/data/schema.json`,
       ...CATALOGUE_URLS,
+      tagsUrl: `${SITE_URL}/data/tags${catalogueSuffix}.json`,
+      audienceUrl: `${SITE_URL}/data/audience${catalogueSuffix}.json`,
     };
     const rules = t("openData.prompts.rules", promptUrls);
 
@@ -160,10 +163,10 @@ function usePrompts(keys) {
       hint: t(`openData.prompts.${key}.hint`),
       text: t(`openData.prompts.${key}.text`, { ...promptUrls, rules }),
     }));
-  }, [t, keys]);
+  }, [t, keys, catalogueSuffix]);
 }
 
-function PromptList({ keys }) {
+export function PromptList({ keys }) {
   const prompts = usePrompts(keys);
 
   return prompts.map(({ key, label, hint, text }) => (
@@ -584,9 +587,9 @@ function OrganizersTab() {
   );
 }
 
-export function OpenDataModal({ onClose, onAddCommunity }) {
+export function OpenDataModal({ onClose, onAddCommunity, initialTab = "attend", onBack }) {
   const { t } = useTranslation();
-  const [activeTab, setActiveTab] = useState("attend");
+  const [activeTab, setActiveTab] = useState(initialTab);
   // El total del dataset, no el filtrado: el modal habla del dataset completo.
   const total = useAllCommunities().length;
   const boxRef = useRef(null);
@@ -626,6 +629,12 @@ export function OpenDataModal({ onClose, onAddCommunity }) {
         >
           <i className="fas fa-xmark"></i>
         </button>
+
+        {onBack && (
+          <button type="button" className="opendata-footer-btn guide-back" onClick={onBack}>
+            <i className="fas fa-arrow-left" aria-hidden="true"></i> {t("directoryGuide.back")}
+          </button>
+        )}
 
         <header className="opendata-modal-header">
           <h2 className="opendata-modal-title">
