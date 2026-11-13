@@ -13,7 +13,7 @@ const CONTRIBUTE_PROMPTS = ["speaker", "volunteer"];
 
 export function ContributeCommunityGuide({ onViewCommunities, onMap }) {
   const { t } = useTranslation();
-  const [openSection, setOpenSection] = useState("offer");
+  const [openSection, setOpenSection] = useState(null);
   const [tab, setTab] = useState("directory");
   const filters = useFilters();
   const communities = useAllCommunities();

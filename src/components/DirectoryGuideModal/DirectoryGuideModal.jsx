@@ -4,6 +4,8 @@ import { useTranslation } from "react-i18next";
 import { OpenDataModal } from "../OpenDataModal/OpenDataModal.jsx";
 import { ContributeCommunityGuide } from "./ContributeCommunityGuide.jsx";
 import { FindCommunityGuide } from "./FindCommunityGuide.jsx";
+import { ImproveDirectoryGuide } from "./ImproveDirectoryGuide.jsx";
+import { BuildDataGuide } from "./BuildDataGuide.jsx";
 import { OrganizeCommunityGuide } from "./OrganizeCommunityGuide.jsx";
 import { openSupportFab } from "../../lib/supportFab.js";
 import { useSidebarActions } from "../../stores/sidebar.store.js";
@@ -17,8 +19,8 @@ const ENTRIES = [
   { id: "build", icon: "fa-code" },
   { id: "other", icon: "fa-circle-question" },
 ];
-// Se conserva el contenido actual mientras se revisa cada recorrido de la fase 2.
-const EXISTING_TABS = { improve: "organizers", build: "build", reuse: "build" };
+// Conserva los prompts de puesta en marcha y los enlaces de contexto anteriores.
+const EXISTING_TABS = { legacy: "found" };
 
 export function DirectoryGuideModal({ onClose, onAddCommunity, onShowMap, onSelectMember, returnFocusRef }) {
   const { t } = useTranslation();
@@ -64,7 +66,7 @@ export function DirectoryGuideModal({ onClose, onAddCommunity, onShowMap, onSele
     if (id === "other") {
       onClose();
       openSupportFab();
-    } else setScreen(id);
+    } else setScreen(id === "reuse" ? "build" : id);
   };
   const leaveFor = (action) => { onClose(); requestAnimationFrame(action); };
   const focusSearch = () => {
@@ -103,6 +105,10 @@ export function DirectoryGuideModal({ onClose, onAddCommunity, onShowMap, onSele
               </button>
             ))}
           </div>
+        ) : screen === "improve" ? (
+          <ImproveDirectoryGuide onSearch={() => leaveFor(focusSearch)} onAdd={() => leaveFor(onAddCommunity)} />
+        ) : screen === "build" ? (
+          <BuildDataGuide onMore={() => setScreen("legacy")} />
         ) : screen === "organize" ? (
           <OrganizeCommunityGuide onSelectMember={handle => leaveFor(() => onSelectMember(handle))}
             onFilters={() => leaveFor(() => {
@@ -130,7 +136,7 @@ export function DirectoryGuideModal({ onClose, onAddCommunity, onShowMap, onSele
           />
         )}
         <footer className="opendata-modal-footer">
-          <button type="button" className="guide-inline-link" onClick={() => setScreen("reuse")}>{t("directoryGuide.reuse")}</button>
+          <button type="button" className="guide-inline-link" onClick={() => setScreen("build")}>{t("directoryGuide.reuse")}</button>
         </footer>
       </div>
     </div>

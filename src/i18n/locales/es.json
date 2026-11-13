@@ -799,7 +799,25 @@
     },
     "improve": {
       "title": "Mejorar este directorio",
-      "hint": "Añadir una comunidad o mejorar la ficha de una existente."
+      "hint": "Añadir una comunidad o mejorar la ficha de una existente.",
+      "lead": "Puedes proponer mejoras aunque no organices la comunidad.",
+      "proposeTitle": "Añadir o corregir una comunidad",
+      "proposeHint": "Busca primero y prepara una propuesta",
+      "search": "Busca la comunidad por su nombre antes de proponer un alta, para evitar duplicados.",
+      "add": "Añadir una comunidad",
+      "edit": "Si ya existe, usa «Editar» en su ficha. Las pendientes de validación también ofrecen «Revisar esta comunidad».",
+      "editImageAlt": "Aviso «Comunidad pendiente de revisión» y enlace «Revisar esta comunidad» en una ficha real.",
+      "review": "«Pendiente de revisión» indica que los datos aún no se han validado manualmente. No necesitas saber Git: el formulario prepara una propuesta para enviarla a revisión; enviarla no publica los cambios automáticamente.",
+      "ai": "La asistencia con IA del formulario puede preparar un borrador a partir de las fuentes de la comunidad. Revisa sus datos antes de enviar la propuesta.",
+      "maintainTitle": "Qué merece la pena mantener",
+      "maintainHint": "Ficha, temáticas, canales y eventos",
+      "discovery": "Estos datos ayudan tanto a los filtros del directorio como a los agentes que consultan el dataset.",
+      "helpTitle": "Resolver dudas",
+      "helpHint": "Feeds, etiquetas o propuestas",
+      "aiTitle": "Preparar un borrador con IA",
+      "aiHint": "Asistencia dentro del formulario",
+      "aiImageAlt": "Acceso «¿Prefieres que te ayude una IA?» en el formulario de propuesta de una comunidad.",
+      "prepare": "Abrir el formulario"
     },
     "other": {
       "title": "Otra cosa",
@@ -840,7 +858,18 @@
     },
     "build": {
       "title": "Construir con los datos",
-      "hint": "Crear un directorio, un agregador de eventos, un bot o un análisis puntual."
+      "hint": "Crear un directorio, un agregador de eventos, un bot o un análisis puntual.",
+      "lead": "Datos abiertos para directorios, agregadores de eventos, bots y análisis.",
+      "filesTitle": "Elegir y descargar los datos",
+      "filesHint": "Formatos, catálogos y licencia",
+      "downloads": "Descargas y diccionario de datos",
+      "codeTitle": "Consultar desde tu código",
+      "codeHint": "Shell, JavaScript, Python y feeds de eventos",
+      "examples": "Ejemplos de consultas y lectura de feeds para adaptar a tu proyecto.",
+      "agentsTitle": "Construir con un agente",
+      "agentsHint": "Un prompt de ejemplo y reglas de interpretación",
+      "ai": "Este prompt ilustra cómo explorar el dataset con un agente antes de implementar tu idea.",
+      "more": "Más consultas con IA y contexto del proyecto"
     },
     "intro": "Asistentes, ponentes, personas que dinamizan comunidades y quienes crean herramientas o análisis pueden aprovechar este directorio y sus datos"
   },
@@ -876,7 +905,7 @@
       "audienceShort": "Públicos"
     },
     "code": {
-      "lead": "Los ficheros se sirven como estáticos con CORS abierto: puedes hacer fetch directamente desde tu script, tu notebook o tu frontend. Se regeneran en cada despliegue, así que siempre tienes el dato más reciente.",
+      "lead": "Los ficheros son estáticos y tienen CORS abierto para consultarlos desde scripts, notebooks o aplicaciones. Se regeneran en cada despliegue; la fecha de revisión y la cobertura varían por comunidad.",
       "gotcha": "Dos trampas habituales: \"tags\" y \"targetAudience\" son IDs (crúzalos con tags.json y audience.json) y una comunidad generalista trae el array vacío con \"matchesAllTags\": true. Todo está documentado en",
       "hintShell": "filtrar el dataset desde la terminal",
       "hintJs": "resolver IDs de tags a etiquetas legibles",
@@ -884,24 +913,24 @@
       "hintEvents": "recorrer los feeds OTE de las comunidades"
     },
     "agents": {
-      "lead": "Si construyes un agente o usas Claude Code, Cursor o similar, pega estas instrucciones en su contexto (CLAUDE.md, AGENTS.md, system prompt o fichero de reglas). Le dicen dónde están los datos y cómo interpretarlos sin equivocarse.",
+      "lead": "Reglas para el contexto de tu agente: fuentes, significado de los campos y límites de interpretación.",
       "instructionsLabel": "Instrucciones para tu agente",
       "noMcp": "No hace falta un servidor MCP: los datos son ficheros estáticos públicos, así que cualquier agente con acceso a la red puede leerlos directamente.",
       "llms": "índice legible por máquina de todos los ficheros y de cómo interpretarlos.",
       "agentsMd": "orientación para agentes que vayan a tocar el código del repositorio.",
       "robots": "política de rastreo: todos los crawlers, incluidos los de IA, son bienvenidos.",
-      "instructionsHint": "pégalas en CLAUDE.md, AGENTS.md o tu system prompt"
+      "instructionsHint": "fuentes y reglas del dataset"
     },
     "organizers": {
       "lead": "Cada vez más gente busca comunidades preguntándole a una IA. Esto es lo que hace que la tuya aparezca bien en esas respuestas:",
       "step1Title": "Tu comunidad al día",
-      "step1": "Asegúrate de que estás en el directorio y de que tu ficha está al día. Si tiene el aviso de \"dato sin revisar\", revísala: ese campo le dice a los modelos que no se fíen del todo.",
+      "step1": "Comprueba los datos de la ficha, especialmente si está pendiente de revisión humana. Esa marca indica si se han validado manualmente; no garantiza que sigan actualizados.",
       "step2Title": "Temáticas y público",
-      "step2": "Rellena temáticas y público objetivo con las etiquetas del catálogo. Son el campo por el que una IA decide si tu comunidad encaja con lo que pide una persona.",
+      "step2": "Completa temáticas y público con las etiquetas del catálogo: los filtros y los agentes pueden cruzarlas con lo que busca una persona.",
       "step3Title": "Enlaces vivos",
-      "step3": "Mantén una URL principal que funcione y marca como archivados los canales que ya no atiendes. Un enlace muerto que parece vivo manda gente a un sitio donde nadie responde.",
+      "step3": "Mantén una URL principal que funcione y archiva los canales que ya no atiendes, para no dirigir a la gente a sitios sin respuesta.",
       "step4Title": "Publica tus eventos",
-      "step4": "Un feed Open Tech Events en tu ficha lleva tus eventos al directorio, a los agregadores y a cualquier agente, y deja que la gente se suscriba sin depender de la plataforma de turno ni del algoritmo. Más difusión, con el calendario que ya mantienes.",
+      "step4": "Añade el feed Open Tech Events de tu comunidad a la ficha para mostrar sus eventos, facilitar su lectura por agregadores y agentes y permitir suscribirse sin depender de una plataforma. El lector permite consultar el feed; eventos.wiki es otra vía para descubrir eventos tecnológicos.",
       "note": "Nada de esto requiere saber Git: el formulario del directorio abre la propuesta por ti y una persona la revisa.",
       "oteReader": "lector de feeds",
       "stepOf": "Paso {{current}} de {{total}}",

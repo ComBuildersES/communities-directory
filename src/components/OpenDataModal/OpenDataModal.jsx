@@ -2,6 +2,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useAllCommunities } from "../../stores/community.store.js";
+import { getCodeSnippets } from "../../lib/openDataCode.js";
 import "./OpenDataModal.css";
 
 const SITE_URL = "https://directory.communitybuilders.dev";
@@ -113,7 +114,7 @@ function CopyBlock({ text, label, hint }) {
           onClick={() => setIsOpen((current) => !current)}
           aria-expanded={isOpen}
         >
-          <i className="fas fa-chevron-right opendata-copyblock-caret"></i>
+          <i aria-hidden="true" className="fas fa-chevron-right opendata-copyblock-caret"></i>
           <span className="opendata-copyblock-label">{label}</span>
           {hint && <span className="opendata-copyblock-hint">{hint}</span>}
         </button>
@@ -122,7 +123,7 @@ function CopyBlock({ text, label, hint }) {
           className={`opendata-copy-btn${copied ? " opendata-copy-btn--done" : ""}`}
           onClick={copy}
         >
-          <i className={`fas ${copied ? "fa-check" : "fa-copy"}`}></i>
+          <i aria-hidden="true" className={`fas ${copied ? "fa-check" : "fa-copy"}`}></i>
           <span>{copied ? t("openData.copied") : t("openData.copy")}</span>
         </button>
       </div>
@@ -184,14 +185,14 @@ function AttendTab() {
     <>
       <p className="opendata-lead">{t("openData.attend.lead")}</p>
       <p className="opendata-callout">
-        <i className="fas fa-magnifying-glass"></i> {t("openData.attend.useTheSearch")}
+        <i aria-hidden="true" className="fas fa-magnifying-glass"></i> {t("openData.attend.useTheSearch")}
       </p>
       <PromptList keys={ATTEND_PROMPTS} />
       <p className="opendata-note">
-        <i className="fas fa-circle-info"></i> {t("openData.attend.note")}
+        <i aria-hidden="true" className="fas fa-circle-info"></i> {t("openData.attend.note")}
       </p>
       <p className="opendata-note">
-        <i className="fas fa-lightbulb"></i> {t("openData.attend.roadmap")}{" "}
+        <i aria-hidden="true" className="fas fa-lightbulb"></i> {t("openData.attend.roadmap")}{" "}
         <a href={`${ISSUES_URL}/344`} target="_blank" rel="noopener noreferrer">
           #344
         </a>{" "}
@@ -219,95 +220,22 @@ function FoundTab() {
       <p className="opendata-lead">{t("openData.found.lead")}</p>
       <PromptList keys={FOUND_PROMPTS} />
       <p className="opendata-note">
-        <i className="fas fa-triangle-exclamation"></i> {t("openData.found.note")}
+        <i aria-hidden="true" className="fas fa-triangle-exclamation"></i> {t("openData.found.note")}
       </p>
       <HelpBlock title={t("openData.found.helpTitle")} copy={t("openData.found.helpCopy")} />
     </>
   );
 }
 
-function CodeSnippets() {
+
+export function CodeSnippets() {
   const { t } = useTranslation();
-
-  const snippets = [
-    {
-      key: "shell",
-      label: "curl + jq",
-      hint: t("openData.code.hintShell"),
-      text: `# Comunidades activas de ciberseguridad con eventos presenciales
-curl -s ${SITE_URL}/data/communities.json \\
-  | jq '[.[] | select(.status == "active" and .eventFormat == "in-person")
-         | select(.tags | index("cybersecurity"))
-         | {name, location, communityUrl}]'`,
-    },
-    {
-      key: "js",
-      label: "JavaScript",
-      hint: t("openData.code.hintJs"),
-      text: `const [communities, tags] = await Promise.all([
-  fetch("${SITE_URL}/data/communities.json").then((r) => r.json()),
-  fetch("${SITE_URL}/data/tags.json").then((r) => r.json()),
-]);
-
-const labelById = Object.fromEntries(tags.map((tag) => [tag.id, tag.label]));
-
-// Ojo: matchesAllTags marca comunidades generalistas; su array de tags
-// está vacío a propósito y deben contar como coincidencia.
-const matching = communities.filter(
-  (c) => c.status === "active" && (c.matchesAllTags || c.tags.includes("python"))
-);
-
-for (const c of matching) {
-  console.log(c.name, "—", c.location, "—", c.tags.map((id) => labelById[id]).join(", "));
-}`,
-    },
-    {
-      key: "python",
-      label: "Python / pandas",
-      hint: t("openData.code.hintPython"),
-      text: `import pandas as pd
-
-df = pd.read_csv("${SITE_URL}/data/communities.csv")
-df["tags"] = df["tags"].fillna("").str.split("|")
-
-activas = df[df["status"] == "active"]
-print(activas.groupby("geographicScope").size())`,
-    },
-    {
-      key: "events",
-      label: "Open Tech Events",
-      hint: t("openData.code.hintEvents"),
-      text: `// El directorio no guarda eventos: los publica cada comunidad en su feed OTE.
-const communities = await fetch("${SITE_URL}/data/communities.json").then((r) => r.json());
-
-// \`urls\` es una lista de { url, kind?, label? }: el feed es la entrada con kind "ote".
-const withFeed = communities
-  .map((c) => ({ community: c, feed: (c.urls ?? []).find((u) => u.kind === "ote")?.url }))
-  .filter(({ feed }) => Boolean(feed));
-
-const events = await Promise.all(
-  withFeed.map(async ({ community, feed: feedUrl }) => {
-    try {
-      const feed = await fetch(feedUrl).then((r) => r.json());
-      return (feed.events ?? []).map((event) => ({ community: community.name, ...event }));
-    } catch {
-      // No todos los dominios sirven CORS; un feed caído no debe tumbar el resto.
-      return [];
-    }
-  })
-);
-
-console.log(events.flat());
-// Spec del formato: ${OTE_URL}`,
-    },
-  ];
-
-  return snippets.map(({ key, label, hint, text }) => (
+  return getCodeSnippets(t).map(({ key, label, hint, text }) => (
     <CopyBlock key={key} text={text} label={label} hint={hint} />
   ));
 }
 
-function AgentInstructions() {
+export function AgentInstructions() {
   const { t } = useTranslation();
 
   const instructions = `# Community Builders Directory — datos de comunidades tech de España
@@ -318,13 +246,12 @@ Significado de cada campo: ${SITE_URL}/data/schema.json
 
 Reglas al usar estos datos:
 - "tags" y "targetAudience" son IDs: cruzarlos con tags.json / audience.json.
-  Los mismos catálogos están en inglés (tags.en.json, audience.en.json) con los
-  mismos IDs y las etiquetas traducidas.
-- matchesAllTags o matchesAllAudience = la comunidad encaja con cualquier filtro,
-  aunque su array esté vacío.
+- matchesAllTags y matchesAllAudience amplían solo su faceta (temáticas o público),
+  aunque el array correspondiente esté vacío; no anulan los demás filtros.
 - "location" es dónde se celebran los eventos; "geographicScope" es el territorio
   al que da servicio. No son lo mismo.
-- Filtrar status != "active" antes de recomendar una comunidad a alguien.
+- Excluir hidden: true y status != "active" antes de recomendar comunidades.
+- No inferir cercanía a partir de "location": solo coincidencia textual exacta.
 - "organizedBy" son ids de comunidades DEL DIRECTORIO que organizan esa ficha
   (una comunidad y su conferencia anual son dos fichas vivas). No es la lista
   completa de organizadores: empresas y patrocinadores no están aquí.
@@ -336,7 +263,6 @@ Reglas al usar estos datos:
   cuando el dominio ya lo dice, y puede repetirse con labels distintas.
 - El directorio no almacena eventos: los publica cada comunidad en el canal
   con kind "ote", en formato Open Tech Events (${OTE_URL}).
-- Licencia CC BY 4.0: citar Community Builders y enlazar ${SITE_URL}.
 - Si falta una comunidad o hay un dato mal, proponer abrir un issue en
   ${ISSUES_URL}.`;
 
@@ -349,7 +275,7 @@ Reglas al usar estos datos:
         hint={t("openData.agents.instructionsHint")}
       />
       <p className="opendata-note">
-        <i className="fas fa-circle-info"></i> {t("openData.agents.noMcp")}
+        <i aria-hidden="true" className="fas fa-circle-info"></i> {t("openData.agents.noMcp")}
       </p>
       <ul className="opendata-linklist">
         <li>
@@ -380,7 +306,7 @@ Reglas al usar estos datos:
  * venía: para quien busca una comunidad eran nueve enlaces técnicos ocupando el primer
  * pantallazo. Aquí los encuentra quien los necesita, y encima sin explicación previa.
  */
-function DataFiles() {
+export function DataFiles() {
   const { t } = useTranslation();
 
   return (
@@ -392,7 +318,7 @@ function DataFiles() {
             className="opendata-file opendata-file--multi"
             title={t(`openData.files.${key}`)}
           >
-            <i className={`fas ${icon}`}></i>
+            <i aria-hidden="true" className={`fas ${icon}`}></i>
             <span>{t(`openData.files.${key}Short`)}</span>
             <span className="opendata-file-langs">
               {variants.map(({ lang, path: variantPath }) => (
@@ -417,7 +343,7 @@ function DataFiles() {
             rel="noopener noreferrer"
             title={t(`openData.files.${key}`)}
           >
-            <i className={`fas ${icon}`}></i>
+            <i aria-hidden="true" className={`fas ${icon}`}></i>
             <span>{t(`openData.files.${key}Short`)}</span>
           </a>
         )
@@ -449,7 +375,7 @@ function BuildTab() {
       <p className="opendata-section-title">{t("openData.build.snippetsTitle")}</p>
       <CodeSnippets />
       <p className="opendata-note">
-        <i className="fas fa-triangle-exclamation"></i> {t("openData.code.gotcha")}{" "}
+        <i aria-hidden="true" className="fas fa-triangle-exclamation"></i> {t("openData.code.gotcha")}{" "}
         <a href={assetUrl("data/schema.json")} target="_blank" rel="noopener noreferrer">
           schema.json
         </a>
@@ -466,7 +392,7 @@ function BuildTab() {
  * El bloque de "pregúntanos" es el mismo en dos pestañas con copy distinto: quien organiza
  * pregunta por el feed o las etiquetas, quien va a montar algo pregunta por dónde empezar.
  */
-function HelpBlock({ title, copy }) {
+export function HelpBlock({ title, copy }) {
   const { t } = useTranslation();
 
   return (
@@ -480,10 +406,10 @@ function HelpBlock({ title, copy }) {
           rel="noopener noreferrer"
           className="opendata-footer-btn opendata-footer-btn--cta"
         >
-          <i className="fa-brands fa-telegram"></i> {t("openData.organizers.helpTelegram")}
+          <i aria-hidden="true" className="fa-brands fa-telegram"></i> {t("openData.organizers.helpTelegram")}
         </a>
         <a href={ISSUES_URL} target="_blank" rel="noopener noreferrer" className="opendata-footer-btn">
-          <i className="fa-brands fa-github"></i> {t("openData.organizers.helpIssues")}
+          <i aria-hidden="true" className="fa-brands fa-github"></i> {t("openData.organizers.helpIssues")}
         </a>
         <a
           href={MAILING_LIST_URL}
@@ -491,7 +417,7 @@ function HelpBlock({ title, copy }) {
           rel="noopener noreferrer"
           className="opendata-footer-btn"
         >
-          <i className="fas fa-envelope"></i> {t("openData.organizers.helpMailingList")}
+          <i aria-hidden="true" className="fas fa-envelope"></i> {t("openData.organizers.helpMailingList")}
         </a>
       </div>
     </div>
@@ -559,7 +485,7 @@ function OrganizersTab() {
             onClick={() => setStepIndex((current) => current - 1)}
             disabled={stepIndex === 0}
           >
-            <i className="fas fa-arrow-left"></i> {t("openData.organizers.prevStep")}
+            <i aria-hidden="true" className="fas fa-arrow-left"></i> {t("openData.organizers.prevStep")}
           </button>
           <button
             type="button"
@@ -567,13 +493,13 @@ function OrganizersTab() {
             onClick={() => setStepIndex((current) => current + 1)}
             disabled={isLast}
           >
-            {t("openData.organizers.nextStep")} <i className="fas fa-arrow-right"></i>
+            {t("openData.organizers.nextStep")} <i aria-hidden="true" className="fas fa-arrow-right"></i>
           </button>
         </div>
       </div>
 
       <p className="opendata-note">
-        <i className="fas fa-circle-info"></i> {t("openData.organizers.note")}
+        <i aria-hidden="true" className="fas fa-circle-info"></i> {t("openData.organizers.note")}
       </p>
 
       <p className="opendata-section-title">{t("openData.organizers.promptsTitle")}</p>
@@ -627,18 +553,18 @@ export function OpenDataModal({ onClose, onAddCommunity, initialTab = "attend", 
           ref={closeRef}
           aria-label={t("openData.close")}
         >
-          <i className="fas fa-xmark"></i>
+          <i aria-hidden="true" className="fas fa-xmark"></i>
         </button>
 
         {onBack && (
           <button type="button" className="opendata-footer-btn guide-back" onClick={onBack}>
-            <i className="fas fa-arrow-left" aria-hidden="true"></i> {t("directoryGuide.back")}
+            <i aria-hidden="true" className="fas fa-arrow-left"></i> {t("directoryGuide.back")}
           </button>
         )}
 
         <header className="opendata-modal-header">
           <h2 className="opendata-modal-title">
-            <i className="fas fa-wand-magic-sparkles"></i> {t("openData.title")}
+            <i aria-hidden="true" className="fas fa-wand-magic-sparkles"></i> {t("openData.title")}
           </h2>
           <p className="opendata-modal-subtitle">{t("openData.subtitle", { total })}</p>
           <p className="opendata-modal-license">
@@ -660,7 +586,7 @@ export function OpenDataModal({ onClose, onAddCommunity, initialTab = "attend", 
               className={`opendata-tab${activeTab === id ? " opendata-tab--active" : ""}`}
               onClick={() => setActiveTab(id)}
             >
-              <i className={`fas ${icon}`}></i>
+              <i aria-hidden="true" className={`fas ${icon}`}></i>
               <span>{t(`openData.tabs.${id}`)}</span>
             </button>
           ))}
@@ -682,7 +608,7 @@ export function OpenDataModal({ onClose, onAddCommunity, initialTab = "attend", 
               target="_blank"
               rel="noopener noreferrer"
             >
-              <i className="fas fa-book"></i> {t("openData.footerDocs")}
+              <i aria-hidden="true" className="fas fa-book"></i> {t("openData.footerDocs")}
             </a>
             <button
               type="button"
@@ -692,7 +618,7 @@ export function OpenDataModal({ onClose, onAddCommunity, initialTab = "attend", 
                 onAddCommunity?.();
               }}
             >
-              <i className="fas fa-plus"></i> {t("openData.footerContribute")}
+              <i aria-hidden="true" className="fas fa-plus"></i> {t("openData.footerContribute")}
             </button>
           </div>
         </footer>

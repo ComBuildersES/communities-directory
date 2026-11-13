@@ -26,15 +26,13 @@ Antes de entregar, revisar expresamente: **solo español; apoyo visual para los 
 
 ## Punto de continuación
 
-«Descubrir comunidades» (antes «Encontrar mi comunidad»), «Aportar a una comunidad» y la fase 1 están aprobadas. El usuario confirma que ha revisado «Aportar» y ha hecho commit. **«Descubrir a otras personas que dinamizan comunidades» está aprobada por el usuario. Se hace commit de esta entrada; no se avanza a «Mejorar este directorio» en esta sesión.**
+Las entradas anteriores y la fase 1 siguen aprobadas. El usuario autoriza terminar juntas **«Mejorar este directorio» y «Construir con los datos»**. Ambas tienen ahora recorrido propio y la implementación de la **fase 2 queda lista para revisión del usuario**. El usuario pide un último ajuste: todas las secciones cerradas al entrar en cualquier recorrido, y después hacer commit. No avanzar a fases 3–5 ni hacer push o despliegue.
 
-La sexta entrada «Construir con los datos» ya está en el menú y abre «Construyo con los datos», igual que el enlace del pie. Su revisión específica de contenido sigue pendiente. Los otros nuevos rótulos son «Descubrir comunidades», «Descubrir a otras personas que dinamizan comunidades» y «Mejorar este directorio»; corresponden a los mismos recorridos e IDs anteriores.
-
-Bajo «Qué puedes hacer aquí» se ha añadido una introducción común para asistentes, ponentes, personas que dinamizan y quienes crean herramientas o análisis; destaca **open data** en negrita. El paréntesis se retira de «Mejorar este directorio». El usuario pide hacer commit del trabajo de esta sesión y no volver a ejecutar tests después de este último cambio de texto; la última suite previa pasó con 497 tests.
+El menú mantiene sus seis entradas y la introducción común con **open data**. «Construir con los datos» y el enlace del pie comparten el mismo destino. El contenido anterior que debe conservarse sigue accesible desde «Más consultas con IA y contexto del proyecto», dentro de construcción → agentes.
 
 El alcance y el inventario de contenido siguen en [el plan temporal](plan-temporal-mejoras-ui.md). Este handoff recoge el estado final y los aprendizajes; el registro cronológico del plan contiene versiones anteriores que ya se han sustituido. Las decisiones más recientes del usuario prevalecen sobre el inventario inicial.
 
-**No borrar el plan** hasta terminar todas las fases y realizar la revisión final con el usuario. Esta aprobación cierra una entrada, no la fase 2 ni el proyecto completo.
+**No borrar el plan** hasta terminar todas las fases y realizar la revisión final con el usuario. La revisión de fase 2 se cierra con el ajuste de acordeones solicitado por el usuario; las fases 3–5 siguen pendientes.
 
 ## Acuerdos que se deben mantener
 
@@ -79,13 +77,16 @@ El mapa sí actualiza **las tarjetas de su propia vista** según la extensión v
 
 | Fichero | Papel / precaución |
 | --- | --- |
-| `src/components/DirectoryGuideModal/DirectoryGuideModal.jsx` | Menú de seis entradas, navegación, cierre, foco y acciones hacia los controles existentes. `EXISTING_TABS` deriva solo mejora y reutilización al modal anterior; descubrimiento, aportaciones y conexión con personas que dinamizan tienen vista propia. |
+| `src/components/DirectoryGuideModal/DirectoryGuideModal.jsx` | Menú de seis entradas, navegación, cierre, foco y acciones hacia los controles existentes. Los cinco recorridos tienen vista propia; `legacy` conserva el acceso al contenido anterior de puesta en marcha y contexto. |
 | `src/components/DirectoryGuideModal/OrganizeCommunityGuide.jsx` | Conectar con Community Builders, contenido compartido de Community Builders, colaboraciones con contador contextual y prompt de sinergias. Sin puesta en marcha ni mantenimiento por petición del usuario. |
+| `src/components/DirectoryGuideModal/ImproveDirectoryGuide.jsx` | Alta/edición, mantenimiento, asistencia IA y consulta. Capturas españolas reales, acciones explícitas hacia buscador/formulario. |
+| `src/components/DirectoryGuideModal/BuildDataGuide.jsx` | Tres bloques: recursos, código y agentes. Mismo destino desde menú y pie; recursos compartidos con el modal anterior. |
+| `src/lib/openDataCode.js` | Ejemplos copiables compartidos y verificables con datos de prueba. |
 | `src/components/DirectoryGuideModal/ContributeCommunityGuide.jsx` | Recorrido de aportaciones: siete chips con contadores, nota previa sobre cobertura del dato y CTA explícito que sustituye solo `openTo`, ayuda de disponibilidad y pestaña IA con `speaker` / `volunteer`. |
 | `src/components/DirectoryGuideModal/FindCommunityGuide.jsx` | Vista aprobada del directorio. `GuideSection` y `GuideScreenshot` se exportan y comparten con aportaciones; no se altera la vista aprobada. |
 | `src/components/DirectoryGuideModal/FindCommunityAiGuide.jsx` | Vista aprobada de IA. Selector de datos, copia de URL y dos prompts. `DataSourcePicker` se exporta y se comparte con el recorrido de aportaciones. |
 | `src/components/DirectoryGuideModal/DirectoryGuideModal.css` | Estilos del menú, acordeones, capturas, selector y espaciado. Reutiliza la base de estilos de OpenDataModal. |
-| `src/components/OpenDataModal/OpenDataModal.jsx` | Conserva el contenido todavía pendiente de reubicar. Exporta `PromptList`, que interpola reglas y URLs y usa los bloques copiables existentes. Permite pestaña inicial y regreso al menú. |
+| `src/components/OpenDataModal/OpenDataModal.jsx` | Conserva las consultas de puesta en marcha y contexto; comparte descargas, ejemplos, instrucciones y canales de ayuda con los recorridos nuevos. Exporta `PromptList`, que interpola reglas y URLs y usa los bloques copiables existentes. Permite pestaña inicial y regreso al menú. |
 | `src/components/OpenToOptions.jsx` | Exporta `InfoTooltip`, reutilizado para disponibilidad y tipos; soporta puntero, foco, clic, Escape y posicionamiento en pantalla. Evitar crear otra implementación equivalente. |
 | `src/components/FilterPanel.jsx` | Incluye los tooltips de tipos. Es enfocable para recibir el foco tras el CTA de la guía. |
 | `src/lib/communityOpenTo.js` | Opciones y disponibilidad declarada. El panel solo ofrece valores presentes en los datos. La guía muestra los siete chips y usa `countOpenToOptions()` sobre el contexto filtrado, con ceros desactivados. No inferir disponibilidad. |
@@ -148,3 +149,26 @@ Referencia de la última implementación aprobada («Encontrar»): **490 tests p
 En una sesión ya abierta, pedir primero: «Relee los acuerdos activos de `AGENTS.md` y los criterios de aceptación al principio de `docs/handoff-mejoras-ui.md`. Aplícalos al trabajo actual: solo español en toda la aplicación hasta el cierre; capturas reales para mostrar controles y flujos; ayuda breve para perfiles técnicos; detalle progresivo y márgenes comprobados. Conserva el trabajo local y para para revisión antes de avanzar a otra entrada».
 
 > «Descubrir a otras personas que dinamizan comunidades» está aprobada y se ha solicitado su commit. La siguiente entrada pendiente es «Mejorar este directorio»; espera una petición para continuar. Continúa las mejoras de UI desde `docs/handoff-mejoras-ui.md` y `docs/plan-temporal-mejoras-ui.md`. «Encontrar mi comunidad» está aprobada. La implementación y su checklist están actualizados en el plan. Conserva el contenido y los cambios locales ajenos; espera la revisión antes de pasar a otra entrada. No borres el plan ni traduzcas al inglés todavía.
+
+
+## Cierre de implementación de la fase 2 — pendiente de revisión
+
+El usuario pide completar juntas «Mejorar este directorio» y «Construir con los datos», validar y parar. No se reabren las entradas aprobadas ni se avanza a las fases 3–5.
+
+- **Mejora:** cuatro acordeones, con alta/edición abierto al entrar. Búsqueda previa para evitar duplicados, alta si falta y edición/revisión desde una ficha. Captura española de búsqueda reutilizada; nuevas capturas reales del aviso de revisión y del acceso a la asistencia IA. La ayuda de IA tiene su propio bloque con captura y acción hacia el formulario. No se envía ninguna propuesta durante la validación.
+- Se distingue revisión humana de vigencia del dato, se invita también a quien no organiza la comunidad y se aclara que preparar/enviar una propuesta no publica cambios automáticamente ni exige Git. Los cuatro aspectos de mantenimiento conservan temáticas/públicos, canales archivados y eventos, con Open Tech Events, su lector y eventos.wiki. Telegram, GitHub y lista de correo usan el componente de consulta compartido.
+- **Construcción:** datos, código y agentes en tres acordeones, solo el primero abierto. Selector compartido de cinco recursos con URL copiable aparte, todas las descargas previas (también esquema y taxonomías ES/EN), licencia/atribución y documentación. No se añade una captura artificial a contenido conceptual: los formatos y ejemplos son el recurso útil.
+- Shell, JavaScript, Python y OTE conservados en `openDataCode.js`, compartidos con el modal anterior. Se excluyen fichas ocultas y se incluyen generalistas en consultas por temática. Las pruebas ejecutan JavaScript y agregación OTE con fixtures, incluido un feed caído. Instrucciones de agentes con reglas precisas sobre facetas, ubicación, revisión, disponibilidad y canales archivados; sin licencia ni catálogos duplicados por idioma en el bloque copiable.
+- El prompt `onboarding` conserva sus reglas. Construcción → agentes → «Más consultas con IA y contexto del proyecto» permite llegar a los otros siete prompts, puesta en marcha, notas y roadmap anteriores. El inventario de fase 2 queda contrastado en español; se conserva inglés y su revisión sigue aplazada al cierre.
+- Entrar o desplegar no cambia filtros ni abre herramientas. El menú y «Descargar y reutilizar los datos» comparten el recorrido de construcción. Los iconos decorativos del modal anterior se excluyen del nombre accesible.
+
+Validación: **502 tests Vitest correctos**, lint de los componentes, biblioteca de ejemplos y tests modificados correcto. Navegador en español a **1440 y 390 px**: acordeones, capturas, alta/búsqueda, descargas, cinco formatos, copia exacta de URLs y bloques, ocho prompts accesibles, navegación al contenido conservado, regreso, Escape, foco y ausencia de desbordamiento. Comprobación visual del espaciado real en ambos anchos, más una prueba de teclado/acción del bloque de IA y del selector «Otra cosa»: 13,6 px entre frase y captura, 12 px entre captura y acción, sin desbordamiento. El último ajuste editorial conserva la suscripción a feeds sin depender de una plataforma; no cambia estructura ni lógica. **Build de producción correcto** (23 avisos previos de imágenes ausentes en el dataset y aviso de tamaño de chunks de ArcGIS).
+
+**Parar para revisión del usuario.** Mantener el plan. Sin commit, push ni despliegue; los documentos locales de contactos e invitaciones permanecen intactos.
+
+
+### Último ajuste de revisión y commit
+
+- Por petición del usuario, los cinco recorridos comienzan con todos sus acordeones cerrados. La persona elige qué sección abrir; se conserva la apertura exclusiva y la posibilidad de cerrarlas todas.
+- Se ajustan las expectativas de las pruebas a ese estado inicial. **No se ejecutan tests después de este cambio**, por indicación expresa del usuario. La validación previa fue de 502 tests, lint, build y navegador; después del último ajuste editorial pasaron las 110 pruebas específicas.
+- Se solicita commit de todo el trabajo de UI de esta sesión. Se excluyen los documentos locales de contactos, invitaciones y automatización. El changelog lo genera el hook; no se edita a mano. Sin push ni avance a otra fase.

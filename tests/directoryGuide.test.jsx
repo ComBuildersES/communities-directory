@@ -8,6 +8,8 @@ import { FilterPanel } from '../src/components/FilterPanel.jsx';
 import { FindCommunityAiGuide } from '../src/components/DirectoryGuideModal/FindCommunityAiGuide.jsx';
 import { ContributeCommunityGuide } from '../src/components/DirectoryGuideModal/ContributeCommunityGuide.jsx';
 import { FindCommunityGuide } from '../src/components/DirectoryGuideModal/FindCommunityGuide.jsx';
+import { BuildDataGuide } from '../src/components/DirectoryGuideModal/BuildDataGuide.jsx';
+import { ImproveDirectoryGuide } from '../src/components/DirectoryGuideModal/ImproveDirectoryGuide.jsx';
 import { OrganizeCommunityGuide } from '../src/components/DirectoryGuideModal/OrganizeCommunityGuide.jsx';
 
 const state = vi.hoisted(() => ({ locale: 'es' }));
@@ -35,7 +37,7 @@ describe('descubrir a otras personas que dinamizan (español)', () => {
     for (const label of Object.values(es.builders.tabs)) expect(html).toContain(label);
     expect(html).toContain(es.builders.joinCta);
     expect((html.match(/class="guide-accordion-trigger"/g) ?? []).length).toBe(2);
-    expect(html).toContain('aria-labelledby="guide-section-organize-connect"');
+    expect(html).toContain('aria-labelledby="guide-section-organize-connect" hidden=""');
     expect(html).toContain('aria-labelledby="guide-section-organize-collaborate" hidden=""');
     expect(html).not.toContain('guide-section-organize-found');
     expect(html).toContain(es.directoryGuide.organize.availability);
@@ -66,15 +68,15 @@ describe.each([{ locale: 'es', data: es }, { locale: 'en', data: en }])('tour li
     expect(map).not.toHaveBeenCalled();
   });
 
-  it('presenta solo tres bloques y despliega la búsqueda al entrar', () => {
+  it('presenta los tres bloques cerrados al entrar', () => {
     state.locale = locale;
     const html = renderToStaticMarkup(<FindCommunityGuide />);
     expect((html.match(/class="guide-accordion-trigger"/g) ?? []).length).toBe(3);
-    expect((html.match(/class="guide-accordion-trigger"[^>]*aria-expanded="true"/g) ?? []).length).toBe(1);
+    expect((html.match(/class="guide-accordion-trigger"[^>]*aria-expanded="true"/g) ?? []).length).toBe(0);
     for (const id of ['search', 'filters', 'map']) {
       expect(html).toContain(`aria-controls="guide-section-panel-${id}"`);
       expect(html).toContain(data.directoryGuide.find[`${id}Hint`]);
-      expect(html).toContain(`aria-labelledby="guide-section-${id}"${id === 'search' ? '' : ' hidden=""'}`);
+      expect(html).toContain(`aria-labelledby="guide-section-${id}" hidden=""`);
     }
   });
 
@@ -161,7 +163,7 @@ describe('aportar a una comunidad (español)', () => {
     expect(html).not.toContain(es.openTo.descriptions.speakers);
     expect(html).toContain('images/guide/filters-es.webp');
     expect(html).toContain('aria-controls="guide-section-panel-contribute-refine"');
-    expect((html.match(/aria-expanded="true"/g) ?? []).length).toBe(1);
+    expect((html.match(/aria-expanded="true"/g) ?? []).length).toBe(0);
     expect(html).not.toContain('directoryGuide.');
   });
 
@@ -169,5 +171,48 @@ describe('aportar a una comunidad (español)', () => {
     const html = renderToStaticMarkup(<ContributeCommunityGuide />);
 
     expect(html).toMatch(/<button type="button" disabled=""/);
+  });
+});
+
+
+describe('cierre de fase 2 (español)', () => {
+  it('ofrece alta y búsqueda explícitas, revisión y los cuatro aspectos de mantenimiento', () => {
+    const search = vi.fn();
+    const add = vi.fn();
+    const html = renderToStaticMarkup(<ImproveDirectoryGuide onSearch={search} onAdd={add} />);
+    expect((html.match(/class="guide-accordion-trigger"/g) ?? []).length).toBe(4);
+    expect(html).toContain('aria-labelledby="guide-section-improve-propose" hidden=""');
+    expect(html).toContain('aria-labelledby="guide-section-improve-maintain" hidden=""');
+    expect(html).not.toContain('aria-expanded="true"');
+    for (const n of [1, 2, 3, 4]) expect(html).toContain(es.openData.organizers[`step${n}Title`]);
+    expect(html).toContain(es.directoryGuide.improve.review);
+    expect(html).toContain(es.directoryGuide.improve.ai);
+    for (const url of ['https://opentechevents.org/', 'https://reader.opentechevents.org/', 'https://eventos.wiki/', 'https://t.me/+bUyya_Rzv6cxYmE0', 'https://groups.google.com/g/community-builders-es']) expect(html).toContain(url);
+    for (const name of ['search', 'edit', 'assist']) {
+      const path = `images/guide/${name}-es.webp`;
+      expect(html).toContain(path);
+      expect(readFileSync(new URL(`../public/${path}`, import.meta.url)).toString('ascii', 8, 12)).toBe('WEBP');
+    }
+    expect(html.indexOf('images/guide/search-es.webp')).toBeLessThan(html.indexOf(es.directoryGuide.improve.add));
+    expect(html).not.toContain('directoryGuide.');
+    expect(search).not.toHaveBeenCalled();
+    expect(add).not.toHaveBeenCalled();
+  });
+
+  it('conserva todos los formatos, licencia, código e instrucciones sin adelantar herramientas', () => {
+    const more = vi.fn();
+    const html = renderToStaticMarkup(<BuildDataGuide onMore={more} />);
+    expect(html).not.toContain('aria-expanded="true"');
+    expect((html.match(/class="guide-accordion-trigger"/g) ?? []).length).toBe(3);
+    expect((html.match(/<option /g) ?? []).length).toBe(5);
+    for (const path of ['llms.txt', 'llms-full.txt', 'data/communities.json', 'data/communities.csv', 'data/communities.geojson', 'data/schema.json', 'data/tags.json', 'data/tags.en.json', 'data/audience.json', 'data/audience.en.json', 'robots.txt']) expect(html).toContain(`href="/${path}"`);
+    expect(html).toContain('https://creativecommons.org/licenses/by/4.0/deed.es');
+    expect(html).toContain(es.openData.license);
+    expect(html).toContain('/blob/master/docs/DATA.md');
+    expect(html).toContain('/blob/master/AGENTS.md');
+    for (const label of ['curl + jq', 'JavaScript', 'Python / pandas', 'Open Tech Events', es.openData.prompts.onboarding.label, es.openData.agents.instructionsLabel]) expect(html).toContain(label);
+    expect(html).toContain(es.openData.agents.noMcp);
+    expect(html).not.toContain('directoryGuide.');
+    expect(more).not.toHaveBeenCalled();
   });
 });

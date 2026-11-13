@@ -42,7 +42,7 @@ export function FindCommunityGuide({ onSearch, onFilters, onMap, onContribute })
   const { t, i18n } = useTranslation();
   const locale = i18n.resolvedLanguage === "en" ? "en" : "es";
   const [tab, setTab] = useState("directory");
-  const [openSection, setOpenSection] = useState("search");
+  const [openSection, setOpenSection] = useState(null);
   const sectionProps = (id, icon) => ({
     id,
     icon,

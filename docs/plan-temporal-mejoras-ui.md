@@ -1,6 +1,6 @@
 # Plan temporal de mejoras de UI/UX
 
-Estado: fase 1 revisada. «Encontrar mi comunidad» (primera entrada de la fase 2) terminada y aprobada por el usuario. «Aportar a una comunidad» aprobada y con commit confirmado por el usuario. «Descubrir a otras personas que dinamizan comunidades» aprobada por el usuario, solo en español.
+Estado: fase 2 revisada con el ajuste final de iniciar todos los acordeones cerrados; el usuario solicita commit. Fases 3–5 pendientes. Fase 1 revisada. «Encontrar mi comunidad» (primera entrada de la fase 2) terminada y aprobada por el usuario. «Aportar a una comunidad» aprobada y con commit confirmado por el usuario. «Descubrir a otras personas que dinamizan comunidades» aprobada por el usuario, solo en español.
 
 Continuidad y aprendizajes: [handoff de las mejoras de UI](handoff-mejoras-ui.md).
 
@@ -41,7 +41,7 @@ Trabajar y revisar los cambios en español hasta terminar todas las fases. Pospo
 ## Fase 2. Modal «Qué puedes hacer aquí»
 
 - [x] Mostrar las seis entradas de la tabla, incluida «Construir con los datos».
-- [ ] Al elegir una, mostrar una explicación breve antes de las acciones disponibles.
+- [x] Al elegir una, mostrar una explicación breve antes de las acciones disponibles.
 - [x] Permitir volver al menú inicial.
 
 | Entrada | Posibilidades |
@@ -53,10 +53,10 @@ Trabajar y revisar los cambios en español hasta terminar todas las fases. Pospo
 | Construir con los datos | Reutilizar los datos para crear un directorio, un agregador de eventos, un bot o un análisis puntual. |
 | Otra cosa | Abrir el selector de ayuda existente (`support-fab-chooser` / `support-fab-choice`). |
 
-- [ ] Integrar las posibilidades actuales de IA y reutilización de datos en los recorridos donde resulten útiles.
+- [x] Integrar las posibilidades actuales de IA y reutilización de datos en los recorridos donde resulten útiles.
 - [x] Añadir al pie un acceso discreto a «Descargar y reutilizar los datos».
 - [x] Explicar que «Abiertas a» indica disponibilidad declarada, sin implicar una convocatoria vigente.
-- [ ] Conectar las acciones con los filtros o interfaces existentes que correspondan.
+- [x] Conectar las acciones con los filtros o interfaces existentes que correspondan.
 
 ### Qué ocurre al pulsar una entrada
 
@@ -64,8 +64,8 @@ Cada entrada abre una vista de detalle dentro del modal. Primero explica cómo l
 
 - [x] Usar una lista de bloques breves cuando el contenido sea corto.
 - [x] Usar pestañas para separar contenido extenso, por ejemplo «Con el directorio» y «Con ayuda de IA», según la cantidad de contenido de cada recorrido. La estructura exacta se decidirá al maquetar, manteniendo los contenidos descritos aquí.
-- [ ] Mantener las explicaciones visibles antes de los CTA y permitir volver al menú de entradas.
-- [ ] Conservar los prompts copiables y las instrucciones existentes: reubicarlos por objetivo, sin perder contenido al retirar el botón «Datos abiertos + IA» de la cabecera.
+- [x] Mantener las explicaciones visibles antes de los CTA y permitir volver al menú de entradas.
+- [x] Conservar los prompts copiables y las instrucciones existentes: reubicarlos por objetivo, sin perder contenido al retirar el botón «Datos abiertos + IA» de la cabecera.
 
 #### Encontrar mi comunidad
 
@@ -104,26 +104,26 @@ Decisión de revisión: limitar la ayuda a opciones útiles y menos visibles. Se
 
 #### Mejorar el directorio
 
-- [ ] Explicar cómo buscar primero una comunidad para evitar duplicados, solicitar su alta si falta y proponer cambios desde una ficha existente.
-- [ ] Explicar los datos revisados y pendientes de revisión y permitir aportar también a quien no organiza la comunidad.
-- [ ] Reubicar los cuatro pasos actuales de «Organizo una comunidad»: ficha al día, temáticas y público, enlaces vivos y publicación de eventos.
-- [ ] Conservar la explicación de cómo esos datos ayudan al descubrimiento con IA, el significado de la revisión humana y la aclaración de que no se necesita saber Git.
-- [ ] Conservar los enlaces y explicaciones de Open Tech Events, su lector y eventos.wiki, así como las vías de consulta por Telegram, GitHub y lista de correo.
-- [ ] Explicar el flujo de propuesta y revisión sin afirmar que enviar una propuesta publica automáticamente los cambios.
-- [ ] Dar acceso al formulario y mantener su asistencia actual con IA para preparar los datos.
+- [x] Explicar cómo buscar primero una comunidad para evitar duplicados, solicitar su alta si falta y proponer cambios desde una ficha existente.
+- [x] Explicar los datos revisados y pendientes de revisión y permitir aportar también a quien no organiza la comunidad.
+- [x] Reubicar los cuatro pasos actuales de «Organizo una comunidad»: ficha al día, temáticas y público, enlaces vivos y publicación de eventos.
+- [x] Conservar la explicación de cómo esos datos ayudan al descubrimiento con IA, el significado de la revisión humana y la aclaración de que no se necesita saber Git.
+- [x] Conservar los enlaces y explicaciones de Open Tech Events, su lector y eventos.wiki, así como las vías de consulta por Telegram, GitHub y lista de correo.
+- [x] Explicar el flujo de propuesta y revisión sin afirmar que enviar una propuesta publica automáticamente los cambios.
+- [x] Dar acceso al formulario y mantener su asistencia actual con IA para preparar los datos.
 
 #### Otra cosa
 
-- [ ] Abrir el selector de ayuda existente y conservar sus opciones y canales. No crear un recorrido paralelo con enlaces distintos.
+- [x] Abrir el selector de ayuda existente y conservar sus opciones y canales. No crear un recorrido paralelo con enlaces distintos.
 
-#### Construir con los datos (acceso añadido; revisión del recorrido pendiente)
+#### Construir con los datos (implementada; pendiente de revisión del usuario)
 
 - [x] Añadir una sexta entrada principal «Construir con los datos», para crear un directorio, un agregador de eventos, un bot o un análisis puntual. Reutilizar el contenido de «Construyo con los datos»; conservar también el acceso discreto «Descargar y reutilizar los datos» del pie hacia el mismo detalle.
-- [ ] Conservar los ficheros descargables: JSON, CSV, GeoJSON, esquema, taxonomías de temáticas y públicos en ambos idiomas, `llms.txt` y `llms-full.txt`.
-- [ ] Conservar la licencia CC BY 4.0, los requisitos de atribución y el acceso a la documentación de datos.
-- [ ] Reubicar los ejemplos actuales de shell, JavaScript, Python y lectura de feeds OTE, junto con sus notas sobre el esquema y la interpretación de los datos.
-- [ ] Conservar el prompt «Poner al día a tu agente», las instrucciones completas para agentes y los enlaces a `llms.txt`, `AGENTS.md` y `robots.txt`, incluida la explicación de que no hace falta MCP.
-- [ ] Mantener accesibles las reglas comunes que acompañan a los prompts, las advertencias sobre datos sin revisar y los enlaces de contexto y roadmap existentes.
+- [x] Conservar los ficheros descargables: JSON, CSV, GeoJSON, esquema, taxonomías de temáticas y públicos en ambos idiomas, `llms.txt` y `llms-full.txt`.
+- [x] Conservar la licencia CC BY 4.0, los requisitos de atribución y el acceso a la documentación de datos.
+- [x] Reubicar los ejemplos actuales de shell, JavaScript, Python y lectura de feeds OTE, junto con sus notas sobre el esquema y la interpretación de los datos.
+- [x] Conservar el prompt «Poner al día a tu agente», las instrucciones completas para agentes y los enlaces a `llms.txt`, `AGENTS.md` y `robots.txt`, incluida la explicación de que no hace falta MCP.
+- [x] Mantener accesibles las reglas comunes que acompañan a los prompts, las advertencias sobre datos sin revisar y los enlaces de contexto y roadmap existentes.
 
 ### Registro de la fase 2 — primera entrada
 
@@ -206,6 +206,17 @@ Decisión de revisión: limitar la ayuda a opciones útiles y menos visibles. Se
 - Validación de esta entrada: **498 tests Vitest y cuatro pruebas de navegador correctos**, lint de los archivos modificados y build de producción correctos. Revisado en español a 1440 y 390 px: contenido compartido, cuatro pestañas con teclado, perfiles y filtro por persona, historias, incorporación y contactos, ausencia de los bloques retirados, captura de filtros, ceros desactivados, contador con colaboración de prueba, conservación de criterios, copia exacta de sinergias/URL, Escape y retorno de foco. El modal original también se verifica. El usuario aprueba el resultado y solicita commit.
 - El usuario aprueba la entrada y solicita commit. Conservar el plan y no avanzar a la siguiente entrada en esta sesión. Las decisiones de este registro prevalecen sobre el mapa inicial de reubicación.
 
+### Cierre de implementación de la fase 2 — Mejora y construcción
+
+- El usuario autoriza completar juntas las dos entradas pendientes y parar para revisión, sin avanzar a las fases 3–5.
+- «Mejorar este directorio» tiene recorrido propio: búsqueda previa/alta o edición, cuatro aspectos de mantenimiento, asistencia con IA y ayuda. Se reutilizan la captura de búsqueda y los canales de consulta existentes; se añaden capturas reales españolas del aviso de revisión y del acceso a IA en el formulario. Las acciones abren el buscador o el formulario existente. Entrar o desplegar no modifica filtros ni abre herramientas.
+- Se explica la revisión humana sin garantía de vigencia, la posibilidad de aportar sin organizar la comunidad y el flujo de propuesta sin publicación automática ni necesidad de Git. Los cuatro pasos conservan ficha, temáticas/público, canales archivados y eventos; Open Tech Events, su lector y eventos.wiki permanecen enlazados.
+- «Construir con los datos» tiene tres acordeones: datos, código y agentes. El menú y «Descargar y reutilizar los datos» comparten esta vista. Selector compartido de cinco formatos con URL copiable; todas las descargas anteriores (incluidos esquema y catálogos ES/EN), licencia/atribución y documentación siguen disponibles.
+- Código y recursos compartidos con el modal anterior, sin duplicar lógica. Los ejemplos de temática incluyen generalistas y excluyen fichas ocultas; el agregador tolera feeds caídos. Instrucciones de agentes: facetas generalistas diferenciadas, fichas ocultas excluidas y ubicación sin proximidad inferida. Licencia en reutilización y sin catálogos bilingües dentro de las instrucciones.
+- El prompt `onboarding` conserva sus reglas interpoladas. «Más consultas con IA y contexto del proyecto» mantiene accesible el modal anterior: los otros siete prompts, los contenidos de puesta en marcha retirados del recorrido de dinamización por el usuario y los enlaces de contexto/roadmap. No se modifica inglés ni ninguna entrada aprobada.
+- Los recursos de datos y código son el apoyo visual de construcción: no se inventa una captura para un recorrido conceptual. La asistencia del formulario sí lleva captura real ampliable. Se marcan como decorativos los iconos del modal anterior para que no interfieran en los nombres accesibles de las acciones.
+- Validación final y pausa de revisión: se registran en `docs/handoff-mejoras-ui.md`. La implementación de fase 2 queda lista para revisión del usuario; no equivale a su aprobación. Conservar este plan.
+
 ### Mapa de reubicación del contenido actual
 
 Inventario inicial basado en `src/components/OpenDataModal/OpenDataModal.jsx`, los textos de `src/i18n/locales/es.json` y el modal de Community Builders. Usarlo para verificar que no desaparece contenido durante la reorganización.
@@ -224,7 +235,7 @@ Inventario inicial basado en `src/components/OpenDataModal/OpenDataModal.jsx`, l
 | Selector flotante de soporte | Se conserva; Otra cosa abre el selector existente. |
 | Asistencia con IA del formulario de alta/edición | Se conserva en el formulario; se explica su utilidad desde Mejorar el directorio. |
 
-- [ ] Antes de dar por terminada esta fase, contrastar este inventario con la implementación y comprobar que los ocho prompts actuales, los cuatro pasos para organizadores, las descargas, los ejemplos y las instrucciones siguen accesibles en español e inglés.
+- [x] Inventario contrastado en español: los ocho prompts, los cuatro pasos, descargas, ejemplos, instrucciones, notas y enlaces de contexto siguen accesibles. Se conservan los textos ingleses existentes; su revisión integral se aplaza a la fase 5 por el acuerdo de trabajar solo en español.
 
 Contexto: issue [#299 — Explicar a quién va dirigido este directorio](https://github.com/ComBuildersES/communities-directory/issues/299) y filtros de colaboración añadidos en el commit `7b8dc682a7b87b8a4961fa10a3cbc06a92fc9c5c`.
 
@@ -262,3 +273,8 @@ Nota visual: se propuso una animación sutil de sombreado o borde. El brillo sua
 - [ ] Ejecutar tests, lint y build.
 - [ ] Revisar el resultado con el usuario.
 - [ ] Borrar este fichero temporal al terminar.
+
+
+### Último ajuste de revisión de fase 2
+
+El usuario pide que ninguno de los cinco recorridos abra la primera sección automáticamente. Todos los acordeones comienzan cerrados; las expectativas de las pruebas se actualizan sin ejecutarlas, por petición expresa. Se hace commit del trabajo de UI y se conserva este plan para continuar las fases pendientes. Sin push ni despliegue.

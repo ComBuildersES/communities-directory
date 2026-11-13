@@ -14,7 +14,7 @@ const COLLABORATION_PROMPTS = ["synergies"];
 
 export function OrganizeCommunityGuide({ onSelectMember, onFilters }) {
   const { t } = useTranslation();
-  const [section, setSection] = useState("connect");
+  const [section, setSection] = useState(null);
   const filters = useFilters();
   const communities = useAllCommunities();
   const index = useInvertedIndex();

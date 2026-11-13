@@ -127,3 +127,21 @@
 
 .guide-organize .cb-modal-header { margin-top: 0.75rem; }
 .guide-organize .cb-modal-title { font-size: 1.05rem; }
+
+.guide-detail { margin-top: 1.2rem; grid-template-columns: minmax(0, 1fr); }
+.guide-detail .guide-accordion-panel > p + p { margin-top: 1rem; }
+.guide-detail-actions { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0.85rem 0 1.2rem; }
+.guide-detail-note { margin-top: 1rem; }
+.guide-detail-note p { margin: 0; }
+.guide-detail-note + p { margin-top: 1rem; }
+.guide-maintenance-list { list-style: decimal; margin: 1rem 0 0 1.3rem; }
+.guide-maintenance-list li + li { margin-top: 1rem; }
+.guide-maintenance-list strong { color: #20304c; }
+.guide-maintenance-list p { margin-top: 0.3rem; }
+.guide-more { margin-top: 1rem; }
+.guide-build .opendata-lead + .opendata-copyblock { margin-top: 1rem; }
+@media (max-width: 600px) {
+  .guide-build .opendata-copyblock-toggle { display: grid; grid-template-columns: auto minmax(0, 1fr); }
+  .guide-build .opendata-copyblock-label { min-width: 0; overflow-wrap: anywhere; }
+  .guide-build .opendata-copyblock-hint { grid-column: 2; white-space: normal; }
+}
