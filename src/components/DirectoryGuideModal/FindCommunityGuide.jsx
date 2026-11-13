@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { FindCommunityAiGuide } from "./FindCommunityAiGuide.jsx";
 
-function GuideScreenshot({ name, locale, alt, width, height }) {
+export function GuideScreenshot({ name, locale, alt, width, height }) {
   const { t } = useTranslation();
   const src = `${import.meta.env.BASE_URL}images/guide/${name}-${locale}.webp`;
   return (
@@ -14,7 +14,7 @@ function GuideScreenshot({ name, locale, alt, width, height }) {
   );
 }
 
-function GuideSection({ id, icon, title, hint, isOpen, onToggle, children }) {
+export function GuideSection({ id, icon, title, hint, isOpen, onToggle, children }) {
   return (
     <section className={`guide-accordion-item${isOpen ? " guide-accordion-item--open" : ""}`}>
       <h3>

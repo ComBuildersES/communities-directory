@@ -193,3 +193,20 @@ describe('revisión de prompts en español', () => {
     expect(prompt.text).not.toContain('qué dos o tres tipos encajan mejor');
   });
 });
+
+
+describe('aportaciones sin disponibilidad inferida (español)', () => {
+  it.each(['speaker', 'volunteer'])('%s limita las inferencias de tipo, ubicación y plazas', (key) => {
+    const text = es.openData.prompts[key].text;
+    expect(text).toContain('coincidencia exacta');
+    expect(text).toContain('no deduzcas proximidad');
+    expect(text).toContain('no garantiza una plaza');
+    expect(text).not.toContain('necesitan ponentes de forma continua');
+    expect(text).not.toContain('necesitan manos de forma continuada');
+  });
+
+  it('no infiere las fechas ni la periodicidad de los C4P', () => {
+    expect(es.openData.prompts.speaker.text).toContain('no infieras si están abiertos ni su periodicidad');
+    expect(es.openData.prompts.speaker.text).not.toContain('suele abrirse una vez al año');
+  });
+});

@@ -13,7 +13,7 @@ const DATA_SOURCES = [
 // Estas URLs se comparten con agentes que no pueden acceder al servidor local.
 const SITE_URL = "https://directory.communitybuilders.dev";
 
-function DataSourcePicker() {
+export function DataSourcePicker() {
   const { t } = useTranslation();
   const formatId = useId();
   const [path, setPath] = useState(DATA_SOURCES[0].path);

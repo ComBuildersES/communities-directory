@@ -6,12 +6,14 @@ import en from '../src/i18n/locales/en.json';
 import { DirectoryGuideModal } from '../src/components/DirectoryGuideModal/DirectoryGuideModal.jsx';
 import { FilterPanel } from '../src/components/FilterPanel.jsx';
 import { FindCommunityAiGuide } from '../src/components/DirectoryGuideModal/FindCommunityAiGuide.jsx';
+import { ContributeCommunityGuide } from '../src/components/DirectoryGuideModal/ContributeCommunityGuide.jsx';
 import { FindCommunityGuide } from '../src/components/DirectoryGuideModal/FindCommunityGuide.jsx';
 
 const state = vi.hoisted(() => ({ locale: 'es' }));
 vi.mock('react-i18next', () => ({
   useTranslation: () => ({ t: (key, vars = {}) => {
-    const value = key.split('.').reduce((data, part) => data?.[part], state.locale === 'es' ? es : en) ?? key;
+    const value = key.split('.').reduce((data, part) => data?.[part], state.locale === 'es' ? es : en)
+      ?? key.split('.').reduce((data, part) => data?.[part], es) ?? key;
     return typeof value === 'string' ? value.replace(/{{(\w+)}}/g, (_, name) => vars[name] ?? '') : value;
   }, i18n: { resolvedLanguage: state.locale } }),
 }));
@@ -23,14 +25,14 @@ vi.mock('../src/stores/sidebar.store.js', () => ({
 afterEach(() => { state.locale = 'es'; });
 
 describe.each([{ locale: 'es', data: es }, { locale: 'en', data: en }])('tour ligero ($locale)', ({ locale, data }) => {
-  it('muestra cinco objetivos sin aplicar criterios ni adelantar las herramientas', () => {
+  it('muestra seis objetivos sin aplicar criterios ni adelantar las herramientas', () => {
     state.locale = locale;
     const close = vi.fn();
     const map = vi.fn();
     const html = renderToStaticMarkup(<DirectoryGuideModal onClose={close} onShowMap={map} />);
-    expect((html.match(/class="guide-entry"/g) ?? []).length).toBe(5);
-    for (const id of ['find', 'contribute', 'organize', 'improve', 'other']) {
-      expect(html).toContain(data.directoryGuide[id].title);
+    expect((html.match(/class="guide-entry"/g) ?? []).length).toBe(6);
+    for (const id of ['find', 'contribute', 'organize', 'improve', 'build', 'other']) {
+      expect(html).toContain((data.directoryGuide[id] ?? es.directoryGuide[id]).title);
     }
     expect(html).toContain(data.directoryGuide.reuse);
     expect(html).not.toContain('role="tabpanel"');
@@ -114,4 +116,33 @@ describe.each([{ locale: 'es', data: es }, { locale: 'en', data: en }])('tour li
     expect(html).not.toContain('/issues/194');
   });
 
+});
+
+describe('aportar a una comunidad (español)', () => {
+  it('presenta las siete aportaciones con ayuda y límites antes de contactar', () => {
+    const html = renderToStaticMarkup(<ContributeCommunityGuide />);
+    for (const label of Object.values(es.directoryGuide.contribute.options)) expect(html).toContain(label);
+    expect((html.match(/class="guide-contribute-chip"/g) ?? []).length).toBe(7);
+    expect(html).not.toContain("<select");
+    expect(html).toContain(es.directoryGuide.contribute.contact);
+    expect(html).toContain(es.directoryGuide.contribute.coverage);
+    expect(html.indexOf(es.directoryGuide.contribute.coverage)).toBeLessThan(html.indexOf(es.directoryGuide.contribute.chipsPrefix));
+    expect(html).not.toContain("conserva los demás filtros");
+    expect(html).toContain(`<aside class="guide-contribute-notes" aria-label="${es.directoryGuide.contribute.notesTitle}">`);
+    expect(html).not.toContain(es.directoryGuide.find.mapNote);
+    expect(html).toContain(`class="opendata-footer-btn" aria-label="${es.directoryGuide.actions.map}"`);
+    expect(html).toContain(es.directoryGuide.contribute.chipCount.replace('{{action}}', es.directoryGuide.contribute.options.speakers).replace('{{count}}', '0'));
+    expect((html.match(/class="guide-contribute-chip-count"/g) ?? []).length).toBe(7);
+    expect(html).not.toContain(es.openTo.descriptions.speakers);
+    expect(html).toContain('images/guide/filters-es.webp');
+    expect(html).toContain('aria-controls="guide-section-panel-contribute-refine"');
+    expect((html.match(/aria-expanded="true"/g) ?? []).length).toBe(1);
+    expect(html).not.toContain('directoryGuide.');
+  });
+
+  it('no ofrece filtrar por disponibilidades que nadie ha declarado', () => {
+    const html = renderToStaticMarkup(<ContributeCommunityGuide />);
+
+    expect(html).toMatch(/<button type="button" disabled=""/);
+  });
 });

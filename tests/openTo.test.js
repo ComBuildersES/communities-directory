@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { OPEN_TO_OPTIONS, availableOpenToOptions, normalizeOpenTo, validateOpenTo } from '../src/lib/communityOpenTo.js';
+import { OPEN_TO_OPTIONS, availableOpenToOptions, countOpenToOptions, normalizeOpenTo, validateOpenTo } from '../src/lib/communityOpenTo.js';
 import { buildCommunityPayload, buildDirectoryFilterPath, getCommunityDraft, getEmptyCommunityDraft, parseDirectoryFilters } from '../src/lib/communitySubmission.js';
 import { dropEmptyArchivedUrls, normalizePayload } from '../scripts/process-community-issue.js';
 import { parseAssistedCommunityJson, buildAssistPrompt } from '../src/lib/aiAssist.js';
@@ -78,5 +78,37 @@ describe('openTo (#464)', () => {
     expect(buildLlmsIndex([])).toContain('Empty or absent means unknown, not refusal');
     expect(field.description).toContain('unknown');
     expect(buildCsv([{ id: 1, name: 'Comunidad', openTo: ['speakers', 'mentors'] }])).toContain('speakers|mentors');
+  });
+});
+
+
+describe('recuentos de aportaciones', () => {
+  it('cuenta comunidades con declaración explícita una vez y excluye las ocultas', () => {
+    const counts = countOpenToOptions([
+      { openTo: ['speakers', 'speakers', 'mentors', 'inventado'] },
+      { openTo: ['speakers'] },
+      { openTo: ['mentors'], hidden: true },
+      { communityType: 'tech-meetup' },
+      { openTo: [] },
+    ]);
+    expect(counts).toEqual({ speakers: 2, 'co-organisers': 0, mentors: 1, volunteers: 0, venues: 0, collaborations: 0, sponsors: 0 });
+  });
+
+  it('coincide con los resultados al sustituir openTo, conservando las demás facetas', () => {
+    const data = [
+      { id: 1, status: 'active', tags: ['python'], openTo: ['speakers'] },
+      { id: 2, status: 'active', tags: ['python'], openTo: ['mentors'] },
+      { id: 3, status: 'inactive', tags: ['python'], openTo: ['speakers'] },
+      { id: 4, status: 'active', tags: ['javascript'], openTo: ['speakers'] },
+      { id: 5, status: 'active', tags: ['python'] },
+    ];
+    const index = buildInverseIndex(data);
+    const context = { status: ['active'], tags: ['python'] };
+    const counts = countOpenToOptions(searchFaceted(data, index, context));
+    expect(counts.speakers).toBe(1);
+    expect(counts.mentors).toBe(1);
+    for (const option of OPEN_TO_OPTIONS) {
+      expect(counts[option]).toBe(searchFaceted(data, index, { ...context, openTo: [option] }).length);
+    }
   });
 });

@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { OpenDataModal } from "../OpenDataModal/OpenDataModal.jsx";
+import { ContributeCommunityGuide } from "./ContributeCommunityGuide.jsx";
 import { FindCommunityGuide } from "./FindCommunityGuide.jsx";
 import { openSupportFab } from "../../lib/supportFab.js";
 import { useSidebarActions } from "../../stores/sidebar.store.js";
@@ -12,10 +13,11 @@ const ENTRIES = [
   { id: "contribute", icon: "fa-hand-holding-heart" },
   { id: "organize", icon: "fa-people-group" },
   { id: "improve", icon: "fa-pen-to-square" },
+  { id: "build", icon: "fa-code" },
   { id: "other", icon: "fa-circle-question" },
 ];
 // Se conserva el contenido actual mientras se revisa cada recorrido de la fase 2.
-const EXISTING_TABS = { contribute: "attend", organize: "organizers", improve: "organizers", reuse: "build" };
+const EXISTING_TABS = { organize: "organizers", improve: "organizers", build: "build", reuse: "build" };
 
 export function DirectoryGuideModal({ onClose, onAddCommunity, onShowMap, returnFocusRef }) {
   const { t } = useTranslation();
@@ -40,7 +42,8 @@ export function DirectoryGuideModal({ onClose, onAddCommunity, onShowMap, return
     boxRef.current?.scrollTo(0, 0);
     headingRef.current?.focus();
     const handleKeyDown = (event) => {
-      if (event.key === "Escape") onClose();
+      // La ayuda contextual se cierra antes que el recorrido que la contiene.
+      if (event.key === "Escape" && !(screen === "contribute" && document.querySelector('[role="tooltip"]'))) onClose();
       if (event.key !== "Tab") return;
       const controls = [...boxRef.current.querySelectorAll('button:not([disabled]), a[href], summary, [tabindex="0"]')]
         .filter((el) => el.getClientRects().length && el.tabIndex >= 0);
@@ -85,8 +88,9 @@ export function DirectoryGuideModal({ onClose, onAddCommunity, onShowMap, return
         <button type="button" className="opendata-modal-close" onClick={onClose} aria-label={t("openData.close")}><i className="fas fa-xmark" aria-hidden="true"></i></button>
         {screen !== "menu" && <button type="button" className="opendata-footer-btn guide-back" onClick={() => setScreen("menu")}><i className="fas fa-arrow-left" aria-hidden="true"></i>{t("directoryGuide.back")}</button>}
         <header className="opendata-modal-header">
-          <h2 id="directory-guide-title" ref={headingRef} tabIndex={-1} className="opendata-modal-title">{t(screen === "menu" ? "heading.guideCta" : "directoryGuide.find.title")}</h2>
-          {screen === "find" && <p className="opendata-modal-subtitle">{t("directoryGuide.find.lead")}</p>}
+          <h2 id="directory-guide-title" ref={headingRef} tabIndex={-1} className="opendata-modal-title">{t(screen === "menu" ? "heading.guideCta" : `directoryGuide.${screen}.title`)}</h2>
+          {screen === "menu" && <p className="opendata-modal-subtitle">{t("directoryGuide.intro")} <strong>open data</strong>.</p>}
+          {screen !== "menu" && <p className="opendata-modal-subtitle">{t(`directoryGuide.${screen}.lead`)}</p>}
         </header>
         {screen === "menu" ? (
           <div className="guide-menu">
@@ -98,6 +102,11 @@ export function DirectoryGuideModal({ onClose, onAddCommunity, onShowMap, return
               </button>
             ))}
           </div>
+        ) : screen === "contribute" ? (
+          <ContributeCommunityGuide onViewCommunities={() => leaveFor(() => {
+            setSidebarVisibility(true);
+            requestAnimationFrame(() => document.querySelector(".filter-panel")?.focus());
+          })} onMap={() => leaveFor(onShowMap)} />
         ) : (
           <FindCommunityGuide
             onSearch={() => leaveFor(focusSearch)}

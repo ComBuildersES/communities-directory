@@ -25,3 +25,13 @@ export function availableOpenToOptions(communities) {
     .flatMap((community) => normalizeOpenTo(community.openTo)));
   return OPEN_TO_OPTIONS.filter((option) => declared.has(option));
 }
+
+/** Cuenta declaraciones explícitas una vez por comunidad; no incluye fichas ocultas. */
+export function countOpenToOptions(communities) {
+  const counts = Object.fromEntries(OPEN_TO_OPTIONS.map(option => [option, 0]));
+  for (const community of communities) {
+    if (community.hidden === true) continue;
+    for (const option of normalizeOpenTo(community.openTo)) counts[option] += 1;
+  }
+  return counts;
+}

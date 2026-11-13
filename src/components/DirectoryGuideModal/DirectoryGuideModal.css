@@ -98,3 +98,18 @@
 .guide-data-url .opendata-copy-btn { flex-shrink: 0; }
 .guide-ai-prompts { margin-top: 1.5rem; color: #425778; font-size: 0.9rem; line-height: 1.5; }
 .guide-ai-prompt-list { margin-top: 1rem; }
+
+.guide-contribute { color: #425778; font-size: 0.88rem; line-height: 1.5; }
+.guide-contribute button:disabled { opacity: 0.55; cursor: default; }
+.guide-contribute-chips { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; margin-top: 1rem; }
+.guide-contribute-prefix { font-weight: 600; color: #425778; }
+.guide-contribute-chip { display: inline-flex; align-items: center; gap: 0.5rem; max-width: 100%; padding: 0.45rem 0.7rem; border: 1px solid #b8cdee; border-radius: 18px; background: #f0f5ff; color: #245598; font: inherit; font-size: 0.82rem; text-align: left; cursor: pointer; }
+.guide-contribute-chip > span:first-child { min-width: 0; }
+.guide-contribute-chip:hover:not(:disabled) { background: #e2edff; border-color: #7ea3da; }
+.guide-contribute-chip-count { display: inline-flex; justify-content: center; align-items: center; min-width: 1.4rem; height: 1.4rem; padding: 0 0.3rem; border-radius: 20px; background: #dce8fa; color: #294f82; font-size: 0.75rem; font-weight: 600; flex-shrink: 0; }
+.guide-contribute-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 0.75rem; }
+.guide-contribute-explore { margin-top: 0.85rem; }
+.guide-contribute-notes { display: flex; align-items: flex-start; gap: 0.65rem; margin: 0; padding: 0.85rem; border-left: 3px solid #a6bddd; border-radius: 0 8px 8px 0; background: #f0f5fc; color: #506786; font-size: 0.8rem; line-height: 1.5; }
+.guide-contribute-notes > i { margin-top: 0.2rem; }
+.guide-contribute-notes strong { color: #425778; }
+.guide-contribute-notes p { margin-top: 0.5rem; }

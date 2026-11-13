@@ -1,8 +1,10 @@
 # Plan temporal de mejoras de UI/UX
 
-Estado: fase 1 revisada. «Encontrar mi comunidad» (primera entrada de la fase 2) terminada y aprobada por el usuario. Próxima sesión: «Aportar a una comunidad».
+Estado: fase 1 revisada. «Encontrar mi comunidad» (primera entrada de la fase 2) terminada y aprobada por el usuario. «Aportar a una comunidad» implementada en español, pendiente de revisión del usuario.
 
 Continuidad y aprendizajes: [handoff de las mejoras de UI](handoff-mejoras-ui.md).
+
+**Antes de continuar una entrada, aplicar los [criterios de aceptación del handoff](handoff-mejoras-ui.md#criterios-de-aceptación-para-todas-las-entradas) y los acuerdos activos de `AGENTS.md`.** Las correcciones sobre idioma, capturas, brevedad, público técnico y espaciado se aplican a las siguientes entradas; no son únicamente un registro histórico de la primera.
 
 Este fichero sirve para revisar las decisiones y registrar el avance durante la implementación. Actualizar las casillas y las decisiones pendientes conforme se resuelvan. Borrar este fichero al terminar el trabajo.
 
@@ -38,16 +40,17 @@ Trabajar y revisar los cambios en español hasta terminar todas las fases. Pospo
 
 ## Fase 2. Modal «Qué puedes hacer aquí»
 
-- [x] Mostrar las cinco entradas iniciales de la tabla.
+- [x] Mostrar las seis entradas de la tabla, incluida «Construir con los datos».
 - [ ] Al elegir una, mostrar una explicación breve antes de las acciones disponibles.
 - [x] Permitir volver al menú inicial.
 
 | Entrada | Posibilidades |
 | --- | --- |
-| Encontrar mi comunidad | Buscar por afinidad o ubicación. |
+| Descubrir comunidades | Buscar por afinidad o ubicación. |
 | Aportar a una comunidad | Proponer charlas, participar como coorganizador, ayudar con voluntariado o mentoría, ofrecer patrocinio o espacios. |
-| Dinamizo una comunidad | Conectar con Community Builders o encontrar otras comunidades abiertas a colaborar. |
-| Mejorar el directorio | Añadir una comunidad o encontrar su ficha para corregirla. |
+| Descubrir a otras personas que dinamizan comunidades | Descubrir y conectar con otras personas que dinamizan el ecosistema tech. |
+| Mejorar este directorio | Añadir una comunidad o mejorar la ficha de una existente. |
+| Construir con los datos | Reutilizar los datos para crear un directorio, un agregador de eventos, un bot o un análisis puntual. |
 | Otra cosa | Abrir el selector de ayuda existente (`support-fab-chooser` / `support-fab-choice`). |
 
 - [ ] Integrar las posibilidades actuales de IA y reutilización de datos en los recorridos donde resulten útiles.
@@ -61,7 +64,7 @@ Cada entrada abre una vista de detalle dentro del modal. Primero explica cómo l
 
 - [x] Usar una lista de bloques breves cuando el contenido sea corto.
 - [x] Usar pestañas para separar contenido extenso, por ejemplo «Con el directorio» y «Con ayuda de IA», según la cantidad de contenido de cada recorrido. La estructura exacta se decidirá al maquetar, manteniendo los contenidos descritos aquí.
-- [ ] Mantener las explicaciones visibles antes de los CTA y permitir volver a las cinco entradas.
+- [ ] Mantener las explicaciones visibles antes de los CTA y permitir volver al menú de entradas.
 - [ ] Conservar los prompts copiables y las instrucciones existentes: reubicarlos por objetivo, sin perder contenido al retirar el botón «Datos abiertos + IA» de la cabecera.
 
 #### Encontrar mi comunidad
@@ -81,12 +84,14 @@ Decisión de revisión: limitar la ayuda a opciones útiles y menos visibles. Se
 
 #### Aportar a una comunidad
 
-- [ ] Explicar las siete disponibilidades: ponentes, personas coorganizadoras, voluntariado, mentoría, patrocinio, espacios y colaboraciones entre comunidades.
-- [ ] Explicar cómo combinar «Abierta a…» con temática, formato, idioma y exploración del mapa.
-- [ ] Explicar cómo abrir la ficha y contactar: disponibilidad declarada no equivale a una oferta urgente, un C4P abierto ni una plaza garantizada. Ausencia del dato significa sin información, no rechazo.
-- [ ] Separar charlas, voluntariado, mentoría y apoyo con patrocinio o espacios en bloques breves o pestañas si el contenido lo requiere.
-- [ ] Reubicar los prompts completos «Dónde dar una charla» y «Echar una mano», incluidos los límites sobre C4Ps y la necesidad de confirmar la disponibilidad con la comunidad.
-- [ ] Ofrecer acciones para ver comunidades con la disponibilidad elegida y copiar los prompts correspondientes. No presentar como existentes prompts específicos de mentoría, patrocinio o espacios que aún no se han creado.
+**Implementada; pendiente de revisión del usuario.**
+
+- [x] Explicar las siete disponibilidades: ponentes, personas coorganizadoras, voluntariado, mentoría, patrocinio, espacios y colaboraciones entre comunidades.
+- [x] Explicar cómo combinar «Abierta a…» con temática, formato, idioma y exploración del mapa.
+- [x] Explicar cómo abrir la ficha y contactar: disponibilidad declarada no equivale a una oferta urgente, un C4P abierto ni una plaza garantizada. Ausencia del dato significa sin información, no rechazo.
+- [x] Separar charlas, voluntariado, mentoría y apoyo con patrocinio o espacios en bloques breves o pestañas si el contenido lo requiere.
+- [x] Reubicar los prompts completos «Dónde dar una charla» y «Echar una mano», incluidos los límites sobre C4Ps y la necesidad de confirmar la disponibilidad con la comunidad.
+- [x] Ofrecer acciones para ver comunidades con la disponibilidad elegida y copiar los prompts correspondientes. No presentar como existentes prompts específicos de mentoría, patrocinio o espacios que aún no se han creado.
 
 #### Dinamizo una comunidad
 
@@ -109,9 +114,9 @@ Decisión de revisión: limitar la ayuda a opciones útiles y menos visibles. Se
 
 - [ ] Abrir el selector de ayuda existente y conservar sus opciones y canales. No crear un recorrido paralelo con enlaces distintos.
 
-#### Acceso al pie: Descargar y reutilizar los datos
+#### Construir con los datos (acceso añadido; revisión del recorrido pendiente)
 
-- [ ] Abrir un detalle de reutilización desde el enlace discreto del pie, sin añadir una sexta entrada principal.
+- [x] Añadir una sexta entrada principal «Construir con los datos», para crear un directorio, un agregador de eventos, un bot o un análisis puntual. Reutilizar el contenido de «Construyo con los datos»; conservar también el acceso discreto «Descargar y reutilizar los datos» del pie hacia el mismo detalle.
 - [ ] Conservar los ficheros descargables: JSON, CSV, GeoJSON, esquema, taxonomías de temáticas y públicos en ambos idiomas, `llms.txt` y `llms-full.txt`.
 - [ ] Conservar la licencia CC BY 4.0, los requisitos de atribución y el acceso a la documentación de datos.
 - [ ] Reubicar los ejemplos actuales de shell, JavaScript, Python y lectura de feeds OTE, junto con sus notas sobre el esquema y la interpretación de los datos.
@@ -131,6 +136,64 @@ Decisión de revisión: limitar la ayuda a opciones útiles y menos visibles. Se
 - Ajuste posterior de IA: separar el párrafo de datos tanto del anterior como del selector; reducir el selector a cinco recursos (índice, Markdown y comunidades en JSON, CSV y GeoJSON), con nombres descriptivos en vez de rutas. Los prompts españoles omiten la licencia y enlazan solo los catálogos del idioma de la interfaz. La licencia sigue accesible en reutilización. Las reglas advierten de que filtrar por localización textual exige coincidencia exacta y no permite inferir proximidad. «Descubrir tipos de comunidades» compara dinámicas e ilustra posibilidades que pueden pasar inadvertidas, sin asignar un tipo ni descartar otros por perfil. La revisión equivalente en inglés queda pendiente para el cierre.
 - Cierre: el usuario aprueba y da por terminada «Encontrar mi comunidad». Aprendizajes y estado final guardados en `docs/handoff-mejoras-ui.md`. Continuar con «Aportar a una comunidad» en otra sesión y parar de nuevo al terminar esa entrada.
 
+### Registro de la fase 2 — Aportar a una comunidad
+
+- Implementada solo en español; pendiente de revisión del usuario. Se para aquí, sin avanzar a «Dinamizo una comunidad».
+- Dos bloques de acordeón reutilizados: «Encuentra dónde aportar» (abierto inicialmente) y «Afina y explora». El segundo ilustra el panel con la captura española existente, ampliable, entre frase y CTA.
+- Selector con las siete formas de aportar y ayuda a petición mediante el `InfoTooltip` existente, con las descripciones del panel. Sustituye los siete bloques explicativos por ayuda centrada en la opción elegida. Entrar en el recorrido o cambiar la selección no aplica filtros.
+- El CTA sustituye solo `openTo` mediante `setFilters`, conservando los demás criterios. Los valores de una misma faceta se combinan con OR: añadir una opción a las anteriores ampliaría resultados y no cumpliría el propósito del CTA. Se explica la sustitución antes de salir y se abre/enfoca el panel de filtros.
+- Las opciones sin disponibilidad declarada siguen siendo consultables para descubrir posibilidades; el CTA se desactiva y se explica la ausencia de información. La disponibilidad se consulta sobre todo el directorio visible, como en el panel, no solo en los resultados filtrados.
+- Se distingue disponibilidad declarada de convocatoria urgente, C4P o plaza garantizada; se invita a consultar la ficha y contactar. Ausencia del dato significa sin información, no rechazo.
+- Pestaña de IA con selector de datos compartido y los prompts `speaker` y `volunteer` completos. Se corrigen las inferencias de frecuencia, necesidad de ayuda y periodicidad de C4P basadas en el tipo; se mantienen reglas, canales, entrevista previa y límites geográficos. No se crean prompts adicionales.
+- Retirada la derivación provisional de «Aportar» a «Asisto a comunidades». El resto del modal anterior continúa accesible.
+- Cambio de alcance solicitado: se planifica una sexta entrada «Construir con los datos», para directorios, agregadores de eventos, bots y análisis puntuales. Reutilizará «Construyo con los datos» y compartirá destino con el enlace del pie. Su implementación sigue pendiente.
+- Validación: 495 tests correctos, lint de componentes y pruebas modificados correcto y build de producción correcto. Revisión en español a 1440 y 390 px de acordeones, captura ampliable, selectores, espaciado y prompts. Comprobados los siete caminos de aportación, opciones sin disponibilidad, copia exacta con URLs/reglas interpoladas, teclado, cierre, regreso y foco. El CTA conserva temática, idioma y estado y sustituye solo la disponibilidad; cambiar el selector o entrar no modifica filtros. La revisión visual integral del mapa sigue en la fase 5.
+- Pausa para revisión del usuario; no se ha implementado «Dinamizo una comunidad» ni la entrada nueva de reutilización.
+
+### Revisión de Aportar contra los acuerdos activos
+
+- Releídos `AGENTS.md` y los criterios iniciales del handoff. Solo se revisa la entrada actual, en español; se conserva la entrada aprobada y no se generan traducciones ni capturas inglesas.
+- Pendiente corregido: las descripciones de aportaciones pasan del párrafo permanente al tooltip reutilizado del panel, actualizado según la opción elegida. Escape cierra primero esa ayuda y después el modal; se añade una prueba de navegador para este comportamiento.
+- Se abrevian el aviso de sustitución de filtros, las notas de disponibilidad y la introducción de IA. Se conserva la información relevante y se elimina la instrucción obvia de consultar una ficha.
+- La selección interactiva permite descubrir las siete posibilidades sin explicar una pantalla adicional. Para orientar sobre los controles del directorio se mantiene frase breve → captura española real ampliable del panel → acciones. Los dos acordeones separan elección y exploración; solo el primero empieza abierto.
+- Se mantienen cinco formatos descriptivos con URL de producción aparte, prompts ilustrativos completos y reglas de coincidencia exacta de ubicación, ausencia de datos y disponibilidad no inferida. No se añaden licencia, roadmap ni instrucciones básicas al recorrido de IA.
+- Validación de esta revisión: 495 tests Vitest y la nueva prueba de navegador correctos; lint de los componentes y pruebas modificados correcto; build de producción correcto. Comprobadas visualmente ambas pestañas a 1440 y 390 px, márgenes reales, captura ampliable, cinco formatos, reglas/URLs de los prompts, selección sin efectos y sustitución de disponibilidad conservando filtros. Escape cierra el tooltip sin cerrar el modal.
+- Parar para revisión antes de otra entrada. El plan se conserva.
+
+### Revisión de «¿Cómo quieres aportar?» — acciones y acordeón
+
+- El selector se sustituye por siete acciones visibles en un acordeón: dar una charla, ayudar a dinamizar, ayudar/mentorizar, voluntariado, ofrecer espacios, colaborar desde otra comunidad y patrocinio. Solo se abre una acción cada vez, también se puede cerrar; abrirla no aplica filtros. Las aclaraciones siguen en el tooltip existente.
+- Retirado por petición del usuario el aviso sobre conservación/sustitución de filtros. El comportamiento se mantiene: el CTA sustituye únicamente `openTo` y conserva el contexto de búsqueda.
+- Las notas de disponibilidad se agrupan en un bloque «Ten en cuenta», con icono, fondo y borde lateral para distinguirlas de las instrucciones.
+- «Abrir filtros» y «Explorar el mapa» comparten estilo de botón. La limitación de cobertura deja de mostrarse como párrafo y pasa al tooltip del propio botón de mapa, accesible con ratón y foco. Se reutiliza `InfoTooltip`, añadiéndole una acción opcional al pulsar sin alterar sus usos anteriores.
+- Validación: 495 tests correctos y lint de los archivos modificados correcto. Pruebas de navegador a 1440 y 390 px: siete acciones y apertura exclusiva, sin cambios de filtros al abrirlas; sustitución de disponibilidad conservando temática/idioma; notas diferenciadas y espaciado; tooltip de aportación y Escape; tooltip del mapa con ratón y navegación al mapa desde el propio botón. Build de producción correcto.
+- Solo español. Se conserva la captura real ampliable de filtros y la entrada aprobada. Se para de nuevo para revisión antes de avanzar.
+
+### Revisión de «¿Cómo quieres aportar?» — chips y cobertura del dato
+
+- Los siete bloques internos pasan a chips consecutivos con el prefijo «Ver comunidades en las que pueda aportar:». Etiquetas: «Dando una charla», «Ayudando a dinamizar la comunidad», «Mentorizando a otras personas», «Echando una mano como voluntario/a», «Ofreciéndoles espacio para los encuentros», «Buscando sinergias con mi comunidad» y «Apoyando económicamente o en especie».
+- La nota diferenciada pasa antes de los chips. Explica que `openTo` es nuevo y está poco cumplimentado: para las demás comunidades desconocemos su disponibilidad, sin implicar rechazo. Declararlo no garantiza convocatoria, C4P ni plaza; se anima a contactar para ofrecerse a participar.
+- Cada chip incluye un contador. Los recuentos respetan los demás filtros e ignoran la selección previa de `openTo`, de modo que coinciden con el resultado al pulsar. Se cuentan solo declaraciones explícitas, una vez por comunidad, sin fichas ocultas ni disponibilidad inferida. Los chips con cero resultados quedan desactivados.
+- Pulsar un chip aplica directamente la aportación elegida, conservando los demás filtros y enfocando el panel existente. Entrar en el recorrido sigue sin modificar filtros. Se mantienen las descripciones en tooltips y el botón de mapa con su aclaración contextual.
+- Validación: 497 tests correctos, lint de los archivos modificados correcto y dos pruebas de navegador a 1440 y 390 px correctas. Verificados los siete chips, ceros desactivados, nota previa y espaciado, lectura sin desbordamiento, tooltip/Escape, coincidencia del contador con el resultado real, conservación de filtros y acceso al mapa. Build de producción correcto.
+- Solo español, sin cambios en la entrada aprobada, prompts ni formatos de IA. Se conserva el plan y se para para revisión.
+
+### Ajuste de textos del menú y sexta entrada
+
+- «Encontrar mi comunidad» pasa a «Descubrir comunidades», también en el título del recorrido. Se conserva su implementación aprobada.
+- «Dinamizo una comunidad» pasa a «Descubrir a otras personas que dinamizan comunidades», con la descripción solicitada del ecosistema tech.
+- «Mejorar el directorio» pasa a «Mejorar este directorio (open data)», con «Añadir una comunidad o mejorar la ficha de una existente».
+- Añadida «Construir con los datos», con descripción de directorios, agregadores de eventos, bots y análisis puntuales. Abre la pestaña existente «Construyo con los datos», igual que el enlace del pie; la revisión específica de ese contenido sigue pendiente. No se avanza en los recorridos de organización y mejora.
+- Cambios solo en español; no se actualizan traducciones inglesas.
+- Validación: 497 tests, lint de los archivos modificados y build correctos. Menú revisado a 1440 y 390 px sin desbordamiento; comprobados el nuevo título de descubrimiento, la sexta entrada, las descargas y ejemplos conservados, el destino compartido con el pie, regreso al menú y Escape.
+
+### Nota de público y datos abiertos en el menú
+
+- Añadida una nota breve bajo «Qué puedes hacer aquí» para asistentes, ponentes, personas que dinamizan comunidades y quienes crean herramientas o análisis. Se indica que los datos son **open data**, en negrita.
+- Se retira «(open data)» de «Mejorar este directorio», al quedar explicado en la introducción común.
+- Por petición expresa del usuario, no se vuelven a ejecutar tests tras este ajuste de texto. La última validación previa sigue siendo de 497 tests, lint y build correctos; este último ajuste se revisa con lint y comprobación del diff.
+- El usuario solicita hacer commit del trabajo de UI de esta sesión. Los documentos locales de contactos, invitaciones y automatización quedan fuera.
+
 ### Mapa de reubicación del contenido actual
 
 Inventario inicial basado en `src/components/OpenDataModal/OpenDataModal.jsx`, los textos de `src/i18n/locales/es.json` y el modal de Community Builders. Usarlo para verificar que no desaparece contenido durante la reorganización.
@@ -142,7 +205,7 @@ Inventario inicial basado en `src/components/OpenDataModal/OpenDataModal.jsx`, l
 | «Organizo una comunidad»: los cuatro pasos, aclaraciones y enlaces OTE | Mejorar el directorio → mantener mi ficha y publicar eventos. Acceso contextual desde Dinamizo una comunidad. |
 | «Organizo una comunidad»: prompt `synergies` | Dinamizo una comunidad → colaborar con otra comunidad. |
 | «Quiero montar una»: prompts `umbrella` / `gaps`, advertencias y ayuda | Dinamizo una comunidad → apartado secundario «Quiero montar una comunidad». |
-| «Construyo con los datos»: descargas, prompt `onboarding`, código e instrucciones de agentes | Acceso al pie «Descargar y reutilizar los datos». Instrucciones y prompts relevantes también accesibles desde cada objetivo. |
+| «Construyo con los datos»: descargas, prompt `onboarding`, código e instrucciones de agentes | Construir con los datos, también accesible desde el pie «Descargar y reutilizar los datos». Instrucciones y prompts relevantes también accesibles desde cada objetivo. |
 | Cabecera y pie de «Datos abiertos + IA»: licencia, documentación y contribución | Licencia y documentación en reutilización; contribución en Mejorar el directorio. |
 | Notas, reglas de prompts y enlaces de roadmap de «Datos abiertos + IA» | Junto al contenido relacionado; no eliminarlos como consecuencia de la redistribución. |
 | Modal actual de Community Builders | Se conserva íntegro; accesos desde Dinamizo una comunidad, Sobre el proyecto y final del flujo de propuesta. |

@@ -754,22 +754,50 @@
     },
     "contribute": {
       "title": "Aportar a una comunidad",
-      "hint": "Charlas, voluntariado, mentoría, patrocinio o espacios."
+      "hint": "Charlas, voluntariado, mentoría, patrocinio o espacios.",
+      "lead": "Hay muchas formas de aportar, además de asistir a los encuentros.",
+      "choose": "Busca comunidades que hayan declarado estar abiertas a lo que quieres ofrecer.",
+      "optionLabel": "¿Cómo quieres aportar?",
+      "view": "Ver comunidades",
+      "combine": "Combina «Abierta a…» con temáticas, formato e idiomas desde el buscador y los filtros.",
+      "contact": "Que una comunidad lo indique no significa que tenga un C4P abierto, una convocatoria urgente o una plaza garantizada. Aún así, te animamos a contactar con ella y ofrecerte a participar.",
+      "unknown": "Sin disponibilidad indicada significa sin información, no rechazo.",
+      "unavailable": "Todavía no hay comunidades que hayan declarado esta disponibilidad. Puedes explorar el directorio y preguntarles directamente.",
+      "ai": "Un agente puede entrevistarte para buscar encaje para una charla o preparar una propuesta de voluntariado, distinguiendo lo declarado de lo que hay que confirmar.",
+      "offerTitle": "¿Cómo quieres aportar?",
+      "offerHint": "Charlas, organización, mentoría y otras colaboraciones",
+      "refineTitle": "Afina y explora",
+      "refineHint": "Combina criterios o explora una zona",
+      "options": {
+        "speakers": "Dando una charla",
+        "co-organisers": "Ayudando a dinamizar la comunidad",
+        "mentors": "Mentorizando a otras personas",
+        "volunteers": "Echando una mano como voluntario/a",
+        "venues": "Ofreciéndoles espacio para los encuentros",
+        "collaborations": "Buscando sinergias con mi comunidad",
+        "sponsors": "Apoyando económicamente o en especie"
+      },
+      "notesTitle": "Ten en cuenta",
+      "coverage": "«Abierta a…» es un dato nuevo del directorio y todavía lo han rellenado pocas comunidades. Para las demás, aún no sabemos si aceptan estas aportaciones; que falte el dato no implica rechazo.",
+      "chipsPrefix": "Ver comunidades en las que pueda aportar:",
+      "chipCount_one": "{{action}}: {{count}} comunidad",
+      "chipCount_other": "{{action}}: {{count}} comunidades",
+      "chipCount": "{{action}}: {{count}} comunidades"
     },
     "organize": {
-      "title": "Dinamizo una comunidad",
-      "hint": "Conectar con otras personas que organizan y colaborar."
+      "title": "Descubrir a otras personas que dinamizan comunidades",
+      "hint": "Descubrir y conectar con otras personas que dinamizan el ecosistema tech."
     },
     "improve": {
-      "title": "Mejorar el directorio",
-      "hint": "Añadir una comunidad o poner al día su ficha."
+      "title": "Mejorar este directorio",
+      "hint": "Añadir una comunidad o mejorar la ficha de una existente."
     },
     "other": {
       "title": "Otra cosa",
       "hint": "Cuéntanos qué necesitas en el botón de ayuda."
     },
     "find": {
-      "title": "Encontrar mi comunidad",
+      "title": "Descubrir comunidades",
       "hint": "Por afinidad, forma de participar o ubicación.",
       "lead": "Combina tus intereses con cómo y dónde quieres participar.",
       "searchTitle": "Busca por afinidad",
@@ -800,7 +828,12 @@
         "communitiesCsv": "Comunidades (CSV)",
         "communitiesGeojson": "Comunidades (GeoJSON)"
       }
-    }
+    },
+    "build": {
+      "title": "Construir con los datos",
+      "hint": "Crear un directorio, un agregador de eventos, un bot o un análisis puntual."
+    },
+    "intro": "Asistentes, ponentes, personas que dinamizan comunidades y quienes crean herramientas o análisis pueden aprovechar este directorio y sus datos"
   },
   "openData": {
     "title": "Datos abiertos + IA",
@@ -908,12 +941,12 @@
       "speaker": {
         "label": "Dónde dar una charla",
         "hint": "te pregunta por tu charla y busca encaje",
-        "text": "Descarga {{dataUrl}} (datos abiertos del directorio de comunidades tech de España).\n\nQuiero proponer una charla y busco dónde encajaría mejor.\n\n**Antes de proponerme nada, pregúntame.** Revisa qué campos hay en el dataset y en los catálogos, y hazme las preguntas que te sirvan para acertar: de qué va mi charla y a qué nivel, si ya la he dado antes o la estreno, a qué ciudades puedo desplazarme o si solo online, si busco un meetup pequeño para rodarla o apuntar directamente a una conferencia, en qué idioma la doy, y a qué público me gustaría llegar. Pregúntalo de forma conversacional y con opciones concretas.\n\nDespués dame dos listas separadas:\n1. **Meetups recurrentes** (\"communityType\": \"tech-meetup\"): al repetir cada poco necesitan ponentes de forma continua, así que son mejor sitio para estrenar.\n2. **Conferencias** (\"communityType\": \"conference\"): su call for papers suele abrirse una vez al año. El dataset no guarda fechas de C4P: dime lo que puedas inferir y mándame a su web o a su feed de eventos a comprobarlo.\n\nDe cada una: nombre, ciudad, por qué encaja con mi charla, su enlace y, si lo hay, su feed de eventos (la entrada de \"urls\" con \"kind\": \"ote\") o su plataforma de eventos (\"kind\": \"meetup\", \"eventbrite\", \"luma\" o \"eventsUrl\"). Termina con un plan: por cuáles empezarías y en qué orden.\n\n{{rules}}\n\nPrioriza las comunidades con \"speakers\" en \"openTo\". Si ese dato falta, no supongas que aceptan propuestas ni que las rechazan: ofrece su canal para preguntar."
+        "text": "Descarga {{dataUrl}} (datos abiertos del directorio de comunidades tech de España).\n\nQuiero proponer una charla y busco dónde encajaría mejor.\n\n**Antes de proponerme nada, pregúntame.** Revisa qué campos hay en el dataset y en los catálogos, y hazme las preguntas que te sirvan para acertar: de qué va mi charla y a qué nivel, si ya la he dado antes o la estreno, a qué ciudades puedo desplazarme o si solo online, si busco un meetup pequeño para rodarla o apuntar directamente a una conferencia, en qué idioma la doy, y a qué público me gustaría llegar. Pregúntalo de forma conversacional y con opciones concretas.\n\nDespués agrupa las candidatas por tipo de comunidad cuando ayude a comparar las formas de participar; no descartes otros tipos por mi perfil. No infieras frecuencia de encuentros, necesidad de ponentes ni idoneidad para estrenar una charla a partir de \"communityType\". El dataset no guarda fechas de C4P: no infieras si están abiertos ni su periodicidad; remite a la web o al canal de eventos para confirmarlo. Usa coincidencia exacta de ubicación y no deduzcas proximidad ni desplazamientos por nombres de lugares. Si necesito explorar una zona, sugiere el mapa y aclara sus límites de cobertura.\n\nDe cada una: nombre, ciudad, por qué encaja con mi charla, su enlace y, si lo hay, su feed de eventos (la entrada de \"urls\" con \"kind\": \"ote\") o su plataforma de eventos (\"kind\": \"meetup\", \"eventbrite\", \"luma\" o \"eventsUrl\"). Termina con un plan: por cuáles empezarías y en qué orden.\n\n{{rules}}\n\nPrioriza las comunidades con \"speakers\" en \"openTo\". Si ese dato falta, no supongas que aceptan propuestas ni que las rechazan: ofrece su canal para preguntar.\n\nLa disponibilidad declarada no garantiza una plaza. Contacta con la comunidad para confirmar si acepta la propuesta y en qué condiciones."
       },
       "volunteer": {
         "label": "Echar una mano",
         "hint": "candidatas razonables y a quién preguntar",
-        "text": "Descarga {{dataUrl}} (datos abiertos del directorio de comunidades tech de España).\n\nMe gustaría colaborar como voluntario/a en comunidades y eventos tech.\n\nUsa \"openTo\" con \"volunteers\" para identificar disponibilidad declarada, sin asumir búsqueda urgente. Si falta el dato, ofrece candidatas por afinidad y deja claro que hay que preguntarles: vacío o ausente significa sin información, no rechazo.\n\n**Y antes de nada, pregúntame**: dónde vivo y hasta dónde me muevo, cuánto tiempo puedo dedicar y con qué regularidad, qué sé hacer o qué me gustaría aprender haciendo (logística el día del evento, comunicación, web, captación de ponentes, acompañar a quien empieza…), y qué temáticas me interesan.\n\nDespués, apoyándote en \"communityType\", dame dos listas:\n1. Comunidades que por su naturaleza se sostienen con quien participa: \"hacklab\", \"mutual-aid\", \"collaborative-group\" y los \"tech-meetup\", que al ser recurrentes necesitan manos de forma continuada.\n2. Conferencias (\"conference\"), donde el voluntariado suele ser puntual y alrededor de la fecha del evento.\n\nDe cada una: nombre, ciudad, por qué creo que encajaría y cómo contactar (\"contactInfo\" si lo hay y, si no, el canal más apropiado de \"urls\"; si no hay ninguno, dilo).\n\nTermina escribiéndome un mensaje breve de presentación que pueda adaptar, en el que pregunto si les hace falta ayuda en vez de dar por hecho que sí.\n\n{{rules}}"
+        "text": "Descarga {{dataUrl}} (datos abiertos del directorio de comunidades tech de España).\n\nMe gustaría colaborar como voluntario/a en comunidades y eventos tech.\n\nUsa \"openTo\" con \"volunteers\" para identificar disponibilidad declarada, sin asumir búsqueda urgente. Si falta el dato, ofrece candidatas por afinidad y deja claro que hay que preguntarles: vacío o ausente significa sin información, no rechazo.\n\n**Y antes de nada, pregúntame**: en qué localidades concretas quiero colaborar o si prefiero hacerlo online, cuánto tiempo puedo dedicar y con qué regularidad, qué sé hacer o qué me gustaría aprender haciendo (logística el día del evento, comunicación, web, captación de ponentes, acompañar a quien empieza…), y qué temáticas me interesan.\n\nDespués compara las candidatas por afinidad, tareas que me interesan y disponibilidad declarada. Puedes agruparlas por \"communityType\" si ayuda, sin inferir frecuencia, carga de trabajo ni necesidad de ayuda a partir del tipo. No presupongas que los meetups necesitan apoyo continuo o que el voluntariado en conferencias sea puntual: hay que confirmarlo con cada comunidad. Usa coincidencia exacta de ubicación; no deduzcas proximidad ni desplazamientos por nombres de lugares. Para explorar una zona, sugiere el mapa y aclara sus límites de cobertura. La disponibilidad declarada no garantiza una plaza.\n\nDe cada una: nombre, ciudad, por qué creo que encajaría y cómo contactar (\"contactInfo\" si lo hay y, si no, el canal más apropiado de \"urls\"; si no hay ninguno, dilo).\n\nTermina escribiéndome un mensaje breve de presentación que pueda adaptar, en el que pregunto si les hace falta ayuda en vez de dar por hecho que sí.\n\n{{rules}}"
       },
       "synergies": {
         "label": "Sinergias para mi comunidad",
