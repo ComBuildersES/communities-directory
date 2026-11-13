@@ -257,13 +257,16 @@
       "loading": "Cargando eventos…",
       "empty": "No hay eventos publicados ahora mismo.",
       "error": "No se pudieron cargar los eventos.",
-      "upcoming": "Próximo evento",
-      "past": "Último evento",
+      "upcoming": "Próximos eventos",
+      "past": "Últimos eventos",
       "attribution": "Datos de {{source}}",
-      "viewAll": "Ver todos los eventos",
-      "openReader": "Abrir en el lector OTE",
-      "moreCount": "y {{count}} más",
-      "aboutOte": "¿Qué es OTE?"
+      "openReader": "Abrir lector OTE",
+      "aboutOte": "¿Qué es OTE?",
+      "feed": "Feed OTE",
+      "previous": "Evento anterior",
+      "next": "Evento siguiente",
+      "carousel": "carrusel",
+      "position": "Evento {{current}} de {{total}}"
     },
     "pendingReviewTitle": "Comunidad pendiente de revisión",
     "pendingReviewBody": "El etiquetado de esta comunidad —temáticas, enlaces, estado— lo puso un proceso semiautomático y todavía no lo ha repasado ninguna persona. Puede estar incompleto o desactualizado.",
@@ -1022,8 +1025,8 @@
       "co-organisers": "Personas coorganizadoras",
       "speakers": "Ponentes",
       "sponsors": "Patrocinadores",
-      "venues": "Espacios para eventos",
-      "mentors": "Mentores"
+      "venues": "Espacio",
+      "mentors": "Mentores / Mentoras"
     },
     "descriptions": {
       "volunteers": "Acepta ayuda en tareas concretas, como logística, comunicación o recepción de asistentes.",
@@ -1033,6 +1036,9 @@
       "sponsors": "Está abierta a recibir apoyo económico o en especie para sus actividades.",
       "venues": "Está abierta a propuestas de espacios donde celebrar sus encuentros.",
       "mentors": "Está abierta a incorporar personas que acompañen y orienten a otras en sus programas de mentoría."
-    }
+    },
+    "add": "Añadir opción…",
+    "allAdded": "Todas las opciones añadidas",
+    "remove": "Quitar {{option}}"
   }
 }

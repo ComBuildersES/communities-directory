@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-13 `6701748` añadir openTo y filtros de colaboración (#464)
+- 2026-11-13 `bf80557` mejorar la ficha, el selector de colaboración y los eventos
+- 2026-11-13 `7b8dc68` añadir openTo y filtros de colaboración (#464)
 - 2026-11-13 `92a5ce6` invitación a Community Builders desde la cabecera
 - 2026-11-12 `df99b7c` filtrar por persona de Community Builders con @
 - 2026-11-12 `ac5f709` el feed de eventos, donde se explica qué es

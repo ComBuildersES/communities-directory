@@ -22,6 +22,10 @@
     "mentee",
     "mentor"
   ],
+  "openTo": [
+    "co-organisers",
+    "volunteers"
+  ],
   "contactInfo": "communitybuilders.es@gmail.com",
   "communityUrl": "https://linktr.ee/ComBuilders_ES",
   "urls": [

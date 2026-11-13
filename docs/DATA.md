@@ -219,3 +219,9 @@ el procesado elimina la clave vacía del fichero fuente.
 
 La faceta usa OR entre sus opciones y AND con las otras facetas. Se puede compartir por
 URL con `ot=volunteers,speakers` (también se admite la clave larga `openTo`).
+
+En la interfaz, las opciones se ordenan como ponentes, personas coorganizadoras, mentores /
+mentoras, voluntariado, espacio, colaboraciones entre comunidades y patrocinadores.
+Los filtros solo muestran opciones declaradas por alguna comunidad visible del directorio.
+El formulario permite añadir cualquiera mediante un desplegable; la selección aparece en
+chips eliminables con su explicación en un tooltip.

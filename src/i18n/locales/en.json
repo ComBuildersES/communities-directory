@@ -257,13 +257,16 @@
       "loading": "Loading events…",
       "empty": "No events published right now.",
       "error": "Events could not be loaded.",
-      "upcoming": "Next event",
-      "past": "Latest event",
+      "upcoming": "Upcoming events",
+      "past": "Latest events",
       "attribution": "Data from {{source}}",
-      "viewAll": "See all events",
-      "openReader": "Open in the OTE reader",
-      "moreCount": "and {{count}} more",
-      "aboutOte": "What is OTE?"
+      "openReader": "Open OTE reader",
+      "aboutOte": "What is OTE?",
+      "feed": "Feed OTE",
+      "previous": "Previous event",
+      "next": "Next event",
+      "carousel": "carousel",
+      "position": "Event {{current}} of {{total}}"
     },
     "pendingReviewTitle": "Community pending review",
     "pendingReviewBody": "This community's tagging — topics, links, status — was filled in by a semi-automated pass and no person has checked it yet. It may be incomplete or out of date.",
@@ -1022,7 +1025,7 @@
       "co-organisers": "Co-organisers",
       "speakers": "Speakers",
       "sponsors": "Sponsors",
-      "venues": "Event venues",
+      "venues": "Venue",
       "mentors": "Mentors"
     },
     "descriptions": {
@@ -1033,6 +1036,9 @@
       "sponsors": "Open to financial or in-kind support for its activities.",
       "venues": "Open to offers of spaces to host its events.",
       "mentors": "Open to people supporting and guiding others in its mentoring programmes."
-    }
+    },
+    "add": "Add an option…",
+    "allAdded": "All options added",
+    "remove": "Remove {{option}}"
   }
 }

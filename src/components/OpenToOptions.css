@@ -7,3 +7,10 @@
 .open-to-tooltip { position: fixed; z-index: 1000000; padding: .7rem; border-radius: .5rem; background: #17263c; color: white; font-size: .8rem; line-height: 1.5; box-shadow: 0 4px 16px #0004; }
 .open-to-field { border: 0; padding: 0; min-width: 0; }
 .open-to-note { font-size: .8rem; margin-bottom: .75rem; }
+
+.open-to-chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: .75rem; }
+.open-to-chip { display: inline-flex; align-items: center; max-width: 100%; border-radius: 1rem; background: #edf4ff; color: #245591; border: 1px solid #cfdef3; }
+.open-to-chip-label, .open-to-chip-remove { border: 0; background: transparent; color: inherit; font: inherit; cursor: pointer; }
+.open-to-chip-label { padding: .3rem .25rem .3rem .65rem; border-radius: 1rem; font-size: .8rem; text-align: left; }
+.open-to-chip-remove { padding: .2rem .65rem .2rem .3rem; border-radius: 1rem; }
+.open-to-chip-label:focus-visible, .open-to-chip-remove:focus-visible { outline: 2px solid #3273dc; outline-offset: 2px; }

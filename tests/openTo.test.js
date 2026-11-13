@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { OPEN_TO_OPTIONS, normalizeOpenTo, validateOpenTo } from '../src/lib/communityOpenTo.js';
+import { OPEN_TO_OPTIONS, availableOpenToOptions, normalizeOpenTo, validateOpenTo } from '../src/lib/communityOpenTo.js';
 import { buildCommunityPayload, buildDirectoryFilterPath, getCommunityDraft, getEmptyCommunityDraft, parseDirectoryFilters } from '../src/lib/communitySubmission.js';
 import { dropEmptyArchivedUrls, normalizePayload } from '../scripts/process-community-issue.js';
 import { parseAssistedCommunityJson, buildAssistPrompt } from '../src/lib/aiAssist.js';
@@ -11,13 +11,23 @@ import en from '../src/i18n/locales/en.json';
 
 describe('openTo (#464)', () => {
   it('ofrece las siete opciones traducidas, incluyendo Ponentes y Mentores', () => {
-    expect(OPEN_TO_OPTIONS).toHaveLength(7);
+    expect(OPEN_TO_OPTIONS).toEqual(['speakers', 'co-organisers', 'mentors', 'volunteers', 'venues', 'collaborations', 'sponsors']);
     for (const locale of [es, en]) for (const id of OPEN_TO_OPTIONS) {
       expect(locale.openTo.labels[id]).toBeTruthy();
       expect(locale.openTo.descriptions[id]).toBeTruthy();
     }
     expect(es.openTo.labels.speakers).toBe('Ponentes');
-    expect(es.openTo.labels.mentors).toBe('Mentores');
+    expect(es.openTo.labels.mentors).toBe('Mentores / Mentoras');
+    expect(es.openTo.labels.venues).toBe('Espacio');
+  });
+  it('oculta las facetas sin comunidades y conserva el orden solicitado', () => {
+    expect(availableOpenToOptions([
+      { openTo: ['volunteers', 'co-organisers'] },
+      { openTo: ['mentors'], hidden: true },
+      { openTo: [] },
+      {},
+    ])).toEqual(['co-organisers', 'volunteers']);
+    expect(availableOpenToOptions([])).toEqual([]);
   });
   it('mantiene sin información las fichas antiguas y no añade claves vacías', () => {
     expect(getCommunityDraft({ name: 'Antigua' }).openTo).toEqual([]);

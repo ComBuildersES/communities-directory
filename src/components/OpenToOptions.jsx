@@ -2,13 +2,13 @@
 import { useEffect, useId, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { useTranslation } from 'react-i18next';
-import { OPEN_TO_OPTIONS } from '../lib/communityOpenTo.js';
-import { useCommunityActions, useFilters } from '../stores/community.store.js';
+import { OPEN_TO_OPTIONS, availableOpenToOptions, normalizeOpenTo } from '../lib/communityOpenTo.js';
+import { useAllCommunities, useCommunityActions, useFilters } from '../stores/community.store.js';
 import { bajaString } from '../constants';
 import './OpenToOptions.css';
 import './switch.css';
 
-function InfoTooltip({ label, text }) {
+function InfoTooltip({ label, text, children, className = 'open-to-info' }) {
   const id = useId();
   const anchor = useRef(null);
   const bubble = useRef(null);
@@ -44,36 +44,54 @@ function InfoTooltip({ label, text }) {
     };
   }, [position]);
   return <>
-    <button ref={anchor} type="button" className="open-to-info" aria-label={label}
+    <button ref={anchor} type="button" className={className} aria-label={label}
       aria-describedby={position ? id : undefined}
       onMouseEnter={show} onMouseLeave={scheduleClose} onFocus={show}
       onBlur={() => setPosition(null)} onClick={show}>
-      <i className="fas fa-circle-info" aria-hidden="true" />
+      {children ?? <i className="fas fa-circle-info" aria-hidden="true" />}
     </button>
     {position && createPortal(<span ref={bubble} id={id} role="tooltip" className="open-to-tooltip" style={position} onMouseEnter={cancelClose} onMouseLeave={scheduleClose}>{text}</span>, document.body)}
   </>;
 }
 
-export function OpenToOptions({ selected = [], onToggle, switches = false }) {
+export function OpenToOptions({ selected = [], onToggle, switches = false, options = OPEN_TO_OPTIONS }) {
   const { t } = useTranslation();
-  const Label = switches ? "span" : "label";
-  return <div className="open-to-options">
-    {OPEN_TO_OPTIONS.map((option) => <div key={option} className="option-item open-to-option is-size-7">
-      <Label className="open-to-label">
-        {!switches && <input type="checkbox" checked={selected.includes(option)} onChange={() => onToggle(option)} />}
-        {t(`openTo.labels.${option}`)}
-      </Label>
+  const selectId = useId();
+  if (switches) return <div className="open-to-options">
+    {options.map((option) => <div key={option} className="option-item open-to-option is-size-7">
+      <span className="open-to-label">{t(`openTo.labels.${option}`)}</span>
       <InfoTooltip label={t('openTo.info', { option: t(`openTo.labels.${option}`) })} text={t(`openTo.descriptions.${option}`)} />
-      {switches && <button type="button" role="switch" aria-checked={selected.includes(option)}
+      <button type="button" role="switch" aria-checked={selected.includes(option)}
         aria-label={t(`openTo.labels.${option}`)} onClick={() => onToggle(option)}
-        className={`custom-switch ${selected.includes(option) ? 'on' : 'off'}`}><span className="switch-slider" /></button>}
+        className={`custom-switch ${selected.includes(option) ? 'on' : 'off'}`}><span className="switch-slider" /></button>
     </div>)}
+  </div>;
+
+  const remaining = options.filter((option) => !selected.includes(option));
+  return <div className="open-to-picker">
+    <div className="select is-fullwidth">
+      <select id={selectId} aria-label={t('openTo.add')} value="" disabled={remaining.length === 0}
+        onChange={(event) => { if (event.target.value) onToggle(event.target.value); }}>
+        <option value="" disabled>{t(remaining.length ? 'openTo.add' : 'openTo.allAdded')}</option>
+        {remaining.map((option) => <option key={option} value={option}>{t(`openTo.labels.${option}`)}</option>)}
+      </select>
+    </div>
+    {selected.length > 0 && <div className="open-to-chips">
+      {normalizeOpenTo(selected).map((option) => <span className="open-to-chip" key={option}>
+        <InfoTooltip className="open-to-chip-label"
+          label={t('openTo.info', { option: t(`openTo.labels.${option}`) })}
+          text={t(`openTo.descriptions.${option}`)}>{t(`openTo.labels.${option}`)}</InfoTooltip>
+        <button type="button" className="open-to-chip-remove" onClick={() => onToggle(option)}
+          aria-label={t('openTo.remove', { option: t(`openTo.labels.${option}`) })}>×</button>
+      </span>)}
+    </div>}
   </div>;
 }
 
 export function OpenToFilters() {
   const filters = useFilters();
+  const communities = useAllCommunities();
   const { filterComunities } = useCommunityActions();
-  return <OpenToOptions switches selected={filters.openTo ?? []}
+  return <OpenToOptions switches options={availableOpenToOptions(communities)} selected={filters.openTo ?? []}
     onToggle={(option) => filterComunities('openTo', filters.openTo?.includes(option) ? bajaString + option : option)} />;
 }
