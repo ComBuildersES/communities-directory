@@ -1,6 +1,6 @@
 # Plan temporal de mejoras de UI/UX
 
-Estado: fase 2 revisada con el ajuste final de iniciar todos los acordeones cerrados; el usuario solicita commit. Fases 3–5 pendientes. Fase 1 revisada. «Encontrar mi comunidad» (primera entrada de la fase 2) terminada y aprobada por el usuario. «Aportar a una comunidad» aprobada y con commit confirmado por el usuario. «Descubrir a otras personas que dinamizan comunidades» aprobada por el usuario, solo en español.
+Estado: fases 1–4 implementadas y traducciones pendientes de fase 2 completadas. Validación final de fase 5 realizada; pendiente únicamente la revisión conjunta del usuario y, después, borrar este plan temporal. La petición del 13 de noviembre de 2026 autoriza terminar juntas todas las fases y completar el inglés al cierre; sustituye las pausas por entrada de sesiones anteriores.
 
 Continuidad y aprendizajes: [handoff de las mejoras de UI](handoff-mejoras-ui.md).
 
@@ -241,36 +241,36 @@ Contexto: issue [#299 — Explicar a quién va dirigido este directorio](https:/
 
 ## Fase 3. Añadir y mantener comunidades
 
-- [ ] Listado: colocar una tarjeta diferenciada al principio del grid, dirigida principalmente a quienes organizan.
-- [ ] Incluir CTA «Añadir mi comunidad» y orientación para encontrar y revisar una ficha existente.
-- [ ] Mantener la posibilidad de que cualquier persona sugiera mejoras, especialmente en fichas nunca revisadas.
-- [ ] Probar un brillo sutil y espaciado en el borde, respetando la preferencia de movimiento reducido.
-- [ ] Mapa: colocar un botón «Añadir comunidad» sobre el mapa, separado de sus controles de navegación.
-- [ ] Mantener también este recorrido dentro del nuevo modal.
-- [ ] Revisar el CTA existente al final del listado para evitar duplicaciones innecesarias.
+- [x] Listado: colocar una tarjeta diferenciada al principio del grid, dirigida principalmente a quienes organizan.
+- [x] Incluir CTA «Añadir mi comunidad» y orientación para encontrar y revisar una ficha existente.
+- [x] Mantener la posibilidad de que cualquier persona sugiera mejoras, especialmente en fichas nunca revisadas.
+- [x] Probar un brillo sutil y espaciado en el borde, respetando la preferencia de movimiento reducido.
+- [x] Mapa: colocar un botón «Añadir comunidad» sobre el mapa, separado de sus controles de navegación.
+- [x] Mantener también este recorrido dentro del nuevo modal.
+- [x] Revisar el CTA existente al final del listado para evitar duplicaciones innecesarias.
 
 Nota visual: se propuso una animación sutil de sombreado o borde. El brillo suave y espaciado es el punto de partida para probar; no se ha acordado un borde arcoíris definitivo.
 
 ## Fase 4. Invitación a Community Builders
 
 - [x] Añadir acceso desde «Descubrir a otras personas que dinamizan comunidades» en el nuevo modal.
-- [ ] Añadir la invitación en «Sobre el proyecto», después del párrafo del registro de cambios y antes del bloque «¿De dónde salen estos datos?».
-- [ ] Añadir la invitación al terminar de crear o editar una comunidad.
-- [ ] Reutilizar el modal actual de Community Builders.
-- [ ] Explicar con claridad que la invitación sirve para conectar con otras personas que dinamizan comunidades.
+- [x] Añadir la invitación en «Sobre el proyecto», después del párrafo del registro de cambios y antes del bloque «¿De dónde salen estos datos?».
+- [x] Añadir la invitación al terminar de crear o editar una comunidad.
+- [x] Reutilizar el modal actual de Community Builders.
+- [x] Explicar con claridad que la invitación sirve para conectar con otras personas que dinamizan comunidades.
 
 ### Matiz pendiente
 
-- [ ] Determinar el momento concreto de la invitación final: el formulario prepara una propuesta que se envía por una vía externa. No dar a entender que la comunidad ya se ha publicado o actualizado.
+- [x] Determinar el momento concreto de la invitación final: el formulario prepara una propuesta que se envía por una vía externa. No dar a entender que la comunidad ya se ha publicado o actualizado.
 
 ## Fase 5. Validación y cierre
 
-- [ ] Revisar escritorio y móvil, tanto en listado como en mapa.
-- [ ] Comprobar navegación con teclado, foco y cierre de modales.
-- [ ] Al terminar las demás fases, completar y revisar los textos en inglés a partir de la interfaz española acordada.
-- [ ] Verificar filtros y enlaces desde los nuevos recorridos.
-- [ ] Añadir pruebas de comportamiento pertinentes y de cualquier bug corregido.
-- [ ] Ejecutar tests, lint y build.
+- [x] Revisar escritorio y móvil, tanto en listado como en mapa.
+- [x] Comprobar navegación con teclado, foco y cierre de modales.
+- [x] Al terminar las demás fases, completar y revisar los textos en inglés a partir de la interfaz española acordada.
+- [x] Verificar filtros y enlaces desde los nuevos recorridos.
+- [x] Añadir pruebas de comportamiento pertinentes y de cualquier bug corregido.
+- [x] Ejecutar tests, lint y build.
 - [ ] Revisar el resultado con el usuario.
 - [ ] Borrar este fichero temporal al terminar.
 
@@ -278,3 +278,64 @@ Nota visual: se propuso una animación sutil de sombreado o borde. El brillo sua
 ### Último ajuste de revisión de fase 2
 
 El usuario pide que ninguno de los cinco recorridos abra la primera sección automáticamente. Todos los acordeones comienzan cerrados; las expectativas de las pruebas se actualizan sin ejecutarlas, por petición expresa. Se hace commit del trabajo de UI y se conserva este plan para continuar las fases pendientes. Sin push ni despliegue.
+
+
+## Cierre de implementación — fases 3–5 y traducciones
+
+Petición del usuario del 13 de noviembre de 2026: terminar todo lo pendiente, incluido el inglés aplazado de la fase 2. Esta petición sustituye las pausas por entrada y las restricciones temporales de idioma de los registros anteriores. No implica commit, push ni despliegue.
+
+- **Listado:** una tarjeta propia al principio del grid, con «Añadir mi comunidad», búsqueda de una ficha existente y apertura a mejoras por cualquier persona. Ocupa una fila independiente para no estirar las tarjetas de comunidades. Se elimina el CTA duplicado al final. Se conserva el acceso con cero resultados. Brillo sutil cada ocho segundos, desactivado con movimiento reducido.
+- **Mapa:** «Añadir una comunidad» sobre el mapa, separado de la búsqueda, leyenda y atribución; se conserva el formulario y la selección de comunidades existentes. Verificado con datos y clusters cargados, además del estado inicial.
+- **Community Builders:** se conserva el diseño y comportamiento original del botón en «Sobre el proyecto», después del registro de cambios y antes del origen de los datos. La invitación nueva aparece al abrir una propuesta externa desde alta o edición y reutiliza el modal original completo.
+- **Momento de la invitación:** abrir GitHub o preparar el correo, con formulario válido. La aplicación no puede saber si se ha enviado la propuesta externa; el aviso exige completar allí el envío y explica que los cambios solo se publican tras revisión. No se presenta un éxito de publicación. No se invita al solicitar una baja ni antes de preparar una propuesta válida.
+- **Inglés:** todas las claves de los cinco recorridos, selector de formatos, chips/contadores, notas, capturas, ayuda e invitaciones. Se revisan los ocho prompts, las reglas y las instrucciones copiables, incluidos los límites de ubicación, disponibilidad y tipos. Sin licencia en los prompts ni catálogos bilingües duplicados. Los comentarios de código y el catálogo de etiquetas del ejemplo JS siguen el idioma. Nuevas capturas inglesas reales del aviso de revisión y la asistencia del formulario; se reutilizan búsqueda/filtros ya existentes.
+- **Accesibilidad y responsive:** revisión a 1440, 390 y 320 px según el recorrido; sin desbordamiento del listado ni del mapa. Acordeones inicialmente cerrados, apertura exclusiva, teclado, tooltips/Escape, vuelta de foco, separación del botón de mapa y movimiento reducido. El icono decorativo de «Sobre el proyecto» deja de alterar su nombre accesible.
+- **Validación:** 511 pruebas Vitest correctas; 16 casos de navegador verificados entre las suites de aportación, organización y cierre. Se prueban filtros, recuentos, copias exactas, catálogos del idioma, alta/edición/correo y navegación sin enviar propuestas. Lint de los componentes nuevos, traducción y pruebas modificadas correcto; el lint global sigue con errores previos ajenos (scripts/configuración, props y variables sin uso). Build de producción correcto, con avisos previos de imágenes del dataset y tamaño de chunks de ArcGIS.
+
+Se conserva este plan **solo para la revisión final conjunta** y su posterior eliminación. No se ha hecho commit, push ni despliegue. Los documentos locales de contactos, invitaciones y n8n permanecen intactos.
+
+
+### Ajustes de la revisión final
+
+- Restaurado el diseño original de «¿Dinamizas una comunidad tech?» en «Sobre el proyecto», sin introducir allí la tarjeta de invitación del formulario.
+- Tarjeta del listado: pregunta para quienes dinamizan o participan, utilidad de los metadatos y búsqueda/revisión/alta. «Pendientes de revisión» aplica ese filtro manteniendo los demás criterios.
+- Tarjeta cerrable, con preferencia persistente en localStorage. Cerrada, se convierte en «Mejorar el directorio», antes de «Qué puedes hacer aquí»; permite reabrirla y volver al listado desde el mapa conservando filtros. Teclado y foco comprobados, también tras recargar.
+- Botón de alta del mapa arriba a la izquierda; en mapas estrechos se separa verticalmente del buscador.
+- Validación actualizada: 513 tests correctos, lint específico y pruebas de navegador de los nuevos comportamientos, incluyendo 320 px. Se conservan los errores previos del lint global y el plan hasta la revisión conjunta.
+
+
+### Revisión del 14 de noviembre — tira y panel de contribución
+
+- Se continúa sobre los cambios del otro agente: tira y panel separados. La tira pierde los recuentos, reparte texto/acción entre extremos y tiene un cierre visible con clave propia y caducidad de 30 días. Cerrar una pieza no silencia la otra.
+- La variante filtrada explica primero la posible falta de etiquetas y ofrece búsqueda por nombre; el alta secundaria aclara que falta «en el directorio». Traducciones ES/EN actualizadas.
+- Panel con dos columnas desde 900 px, nota inferior a todo el ancho y botón azul con texto blanco mediante clase propia. No se cambia el resto de botones.
+- Posición mediante `resolveCtaPanelPlacement`: al final con ≤24 resultados o tras la ficha 24 con más resultados. Siempre hay un solo panel; el intercalado ocupa toda la fila.
+- Store generalizado en `createDismissStore(key)`. `CLAUDE.md` registra el motivo del umbral y las claves separadas.
+- 532 tests y siete pruebas de navegador correctos; lint específico correcto, con los problemas previos de lint global aún fuera de alcance. Comprobación visual de escritorio y móvil, cierres y recargas independientes, umbral, búsqueda por nombre y contraste. Build de producción correcto (59 s), con avisos previos del dataset y chunks de ArcGIS.
+
+
+### Ajuste de filas completas y acciones del panel — 14 de noviembre
+
+- Se sustituye el corte fijo de 24 fichas por la siguiente fila completa, según las columnas calculadas del grid. Con 13 columnas son 26 fichas; con 14 son 28. Si no quedan más fichas, el panel permanece al final.
+- Recalcular mediante `ResizeObserver` y resize de ventana, también ante cambios del ancho del contenedor. Una sola instancia del panel, sin huecos añadidos en la fila anterior.
+- Acciones de escritorio apiladas y alineadas a la derecha, próximas a «Ahora no». Móvil conservado.
+- 544 tests y cinco pruebas de navegador correctos, con redimensionado entre 320 y 1900 px y cambios de ancho del contenedor. Lint específico correcto con el error previo de props en `CommunitiesList.jsx` aún fuera de alcance. Build de producción correcto (1 min 10 s). `CLAUDE.md` actualizado con la nueva política.
+
+
+### Simplificación de la invitación — 14 de noviembre
+
+- Se retira la tira: repetía la búsqueda del buscador y del panel. Una sola invitación integrada en el listado.
+- Dos botones visibles apilados: «Añadir una comunidad» principal y «Buscar mi comunidad» secundario con borde, del mismo ancho. Se mantiene esa etiqueta porque la acción abre el buscador, no la revisión de una ficha directamente.
+- Texto actualizado sobre datos incompletos o desactualizados que pueden no aparecer en búsquedas; «Estos datos son abiertos» en negrita. Inglés y `CLAUDE.md` coherentes.
+- Se eliminan estado/estilos/traducciones exclusivos de la tira. Persistencia y reapertura del panel, filas completas y demás recorridos conservados.
+- 543 tests y cinco pruebas de navegador correctos; lint específico correcto, con el error previo de props fuera de alcance. Build de producción correcto (1 min 4 s). El plan sigue pendiente de revisión final conjunta.
+
+
+### Espaciado del panel — 14 de noviembre
+
+Por petición del usuario, margen superior e inferior iguales: `1rem`. Comprobado en navegador a 1900 y 390 px: la separación real respecto a las tarjetas es idéntica arriba y abajo (23,19 px y 22,39 px, respectivamente, incluyendo el gap del grid). Cambio exclusivo de CSS, sin repetir tests ni build.
+
+
+### Introducción del menú y commit — 14 de noviembre
+
+Por petición del usuario, la introducción queda en «Asistentes, ponentes, personas que dinamizan comunidades y quienes crean herramientas pueden aprovechar este directorio.». Se retira el añadido HTML «open data» y se ajusta inglés. El usuario solicita commit del trabajo de UI pendiente; se excluyen los documentos locales de contactos, invitaciones y n8n. El changelog lo genera el hook del repositorio; no se edita a mano. No se solicita push ni despliegue. El plan se conserva para la revisión final conjunta.

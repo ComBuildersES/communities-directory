@@ -13,7 +13,8 @@ import { DataSourcePicker } from "./FindCommunityAiGuide.jsx";
 const COLLABORATION_PROMPTS = ["synergies"];
 
 export function OrganizeCommunityGuide({ onSelectMember, onFilters }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const locale = i18n.resolvedLanguage === "en" ? "en" : "es";
   const [section, setSection] = useState(null);
   const filters = useFilters();
   const communities = useAllCommunities();
@@ -35,7 +36,7 @@ export function OrganizeCommunityGuide({ onSelectMember, onFilters }) {
     </GuideSection>
     <GuideSection {...sectionProps("collaborate", "fa-handshake")}>
       <p>{t("directoryGuide.organize.collaborate")}</p>
-      <GuideScreenshot name="filters" locale="es" alt={t("directoryGuide.find.filtersImageAlt")} width={1280} height={260} />
+      <GuideScreenshot name="filters" locale={locale} alt={t("directoryGuide.find.filtersImageAlt")} width={1280} height={260} />
       <aside className="guide-contribute-notes guide-organize-note" aria-label={t("directoryGuide.contribute.notesTitle")}>
         <i className="fas fa-circle-info" aria-hidden="true" />
         <p>{t("directoryGuide.organize.availability")}</p>

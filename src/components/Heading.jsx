@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useAddCommunityCTAStore } from "../stores/addCommunityCTA.store.js";
 import { LanguageSwitcher } from "./LanguageSwitcher.jsx";
 import { buildShareLinks } from "../lib/shareLinks.js";
 import { openSupportFab } from "../lib/supportFab.js";
@@ -46,8 +47,11 @@ export function Heading ({
   goToContribution,
   onSelectMember,
   onShowMap,
+  onShowList,
 }) {
   const { t } = useTranslation();
+  const isAddCommunityCTADismissed = useAddCommunityCTAStore(state => state.isDismissed);
+  const setAddCommunityCTADismissed = useAddCommunityCTAStore(state => state.setDismissed);
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [isGuideOpen, setIsGuideOpen] = useState(false);
   const closeGuide = useCallback(() => setIsGuideOpen(false), []);
@@ -166,6 +170,23 @@ export function Heading ({
             </button>
 
             <div className={`heading-actions-inner${isMobileMenuOpen ? " heading-actions-inner--open" : ""}`}>
+              {isAddCommunityCTADismissed && <button
+                type="button"
+                className="heading-action-btn heading-reopen-community-cta"
+                onClick={() => {
+                  setAddCommunityCTADismissed(false);
+                  onShowList?.();
+                  closeMobileMenu();
+                  requestAnimationFrame(() => {
+                    const heading = document.querySelector(".cta-panel__title");
+                    heading?.scrollIntoView({ block: "center", behavior: "instant" });
+                    heading?.focus({ preventScroll: true });
+                  });
+                }}
+              >
+                <i className="fas fa-people-group" aria-hidden="true" />
+                <span className="heading-btn-label">{t("addCommunityCTA.reopen")}</span>
+              </button>}
               <button
                 type="button"
                 className={`heading-action-btn heading-action-btn--guide${isGuideOpen ? " heading-action-btn--active" : ""}`}
@@ -189,7 +210,7 @@ export function Heading ({
                   aria-expanded={isAboutOpen}
                   aria-haspopup="dialog"
                 >
-                  <i className="fas fa-circle-info"></i>
+                  <i className="fas fa-circle-info" aria-hidden="true"></i>
                   <span className="heading-btn-label">{t("heading.about")}</span>
                 </button>
                 {isAboutOpen && (

@@ -1,12 +1,67 @@
-.add-community-cta {
-  border: 1px solid var(--bulma-border);
-  border-radius: var(--bulma-radius);
-  background-color: var(--bulma-scheme-main);
-  box-shadow: var(--bulma-shadow);
-  padding: var(--bulma-block-spacing);
-  text-align: center;
+/* Panel de contribución integrado entre filas completas del listado. */
+
+.cta-panel {
+  grid-column: 1 / -1;
+  position: relative;
+  margin: 1rem 0;
+  padding: 1.5rem 1.4rem;
+  border: 1px solid #e0e4ea;
+  border-radius: 12px;
+  background: #fff;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: var(--bulma-size-small);
+  align-items: flex-start;
+  gap: .75rem;
+}
+.cta-panel__title {
+  margin: 0;
+  /* La pregunta introduce la invitación integrada en el listado. */
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.25;
+  max-width: 34ch;
+  padding-right: 5rem;
+}
+.cta-panel__lead { margin: 0; font-size: .95rem; line-height: 1.55; color: #3b4654; max-width: 62ch; }
+.cta-panel__actions { display: flex; flex-direction: column; align-items: stretch; gap: .65rem; margin-top: .25rem; max-width: 100%; }
+.cta-panel__actions .button { height: auto; min-height: 2.6rem; padding: .55rem 1.4rem; white-space: normal; font-weight: 600; }
+.cta-panel .cta-panel__primary { background: #245c9b; color: #fff; border-color: #245c9b; height: auto; min-height: 2.6rem; padding: .55rem 1.4rem; font-weight: 600; }
+.cta-panel .cta-panel__secondary { color: #245c9b; background: #fff; border: 1px solid #245c9b; }
+.cta-panel__note { margin: .25rem 0 0; font-size: .85rem; color: #5b6673; }
+.cta-panel__note a { color: #245c9b; font-weight: 600; }
+
+/* "Ahora no", no un aspa: el aspa se pulsa por reflejo y esto silencia la pieza un mes. */
+.cta-panel__close {
+  position: absolute; top: .9rem; right: 1rem;
+  background: none; border: 0; padding: .2rem .4rem; cursor: pointer;
+  font: inherit; font-size: .8rem; color: #78828f; text-decoration: underline;
+}
+.cta-panel__close:hover { color: #3b4654; }
+
+@media (min-width: 700px) {
+  .cta-panel { padding: 1.9rem 1.8rem; }
+}
+
+.cta-panel .cta-panel__primary:hover { background: #17406e; border-color: #17406e; color: #fff; }
+.cta-panel .cta-panel__secondary:hover { background: #eef4fb; color: #17406e; border-color: #17406e; }
+@media (min-width: 900px) {
+  .cta-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    grid-template-areas: "title actions" "lead actions" "note note";
+    column-gap: 3rem;
+    align-items: start;
+  }
+  .cta-panel__title { grid-area: title; max-width: none; padding-right: 0; }
+  .cta-panel__lead { grid-area: lead; max-width: 55ch; }
+  .cta-panel__actions {
+    grid-area: actions;
+    flex-direction: column;
+    align-items: stretch;
+    justify-self: end;
+    margin-top: 1.8rem;
+    padding-right: 0;
+    text-align: right;
+  }
+  .cta-panel__note { grid-area: note; }
 }

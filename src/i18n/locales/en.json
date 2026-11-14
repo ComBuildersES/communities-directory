@@ -61,8 +61,22 @@
     "closeAriaLabel": "Close install notice"
   },
   "addCommunityCTA": {
-    "question": "Missing a community?",
-    "button": "Request a new community here"
+    "findMine": "Find my community",
+    "later": "Not now",
+    "reopen": "Improve the directory",
+    "panel": {
+      "label": "Invitation to contribute to the directory",
+      "title": {
+        "default": "Does your community show up when someone looks for it?",
+        "filtered": "Is a community missing from these results?",
+        "reviewing": "Would you review one of these communities?"
+      },
+      "lead": "There are {{total}} active communities here, added one by one by people. <strong>This data is open</strong>: it is read by search engines, AI assistants and whoever just moved to your city and knows nobody. If yours is missing, or its details are incomplete or out of date, it may not appear in searches.",
+      "pending": "{{pending}} communities are still unreviewed",
+      "pendingNote": "and you do not need to be part of a community to review one: it takes five minutes.",
+      "leadFiltered": "It may already be in the directory but not appear with these filters because it is missing tags. Search for its record by name and fill in its details; if it does not exist, you can add it."
+    },
+    "add": "Add a community"
   },
   "viewToggle": {
     "list": "List",
@@ -706,7 +720,8 @@
       "new": "Suggest new community",
       "email": "Send by email",
       "note": "GitHub will open with the issue title and body pre-filled.",
-      "noteWithEmail": "You can open a GitHub issue or prepare an email to Community Builders with the generated JSON. If your mail client truncates it, copy the JSON block manually."
+      "noteWithEmail": "You can open a GitHub issue or prepare an email to Community Builders with the generated JSON. If your mail client truncates it, copy the JSON block manually.",
+      "externalPending": "You have opened an external route for your proposal. Complete the submission there; changes will only be published after review."
     },
     "aiAssist": {
       "title": "Would you rather an AI helped?",
@@ -754,22 +769,93 @@
     },
     "contribute": {
       "title": "Contribute to a community",
-      "hint": "Talks, volunteering, mentoring, sponsorship or venues."
+      "hint": "Talks, volunteering, mentoring, sponsorship or venues.",
+      "lead": "There are many ways to contribute beyond attending events.",
+      "choose": "Find communities that have explicitly said they are open to what you want to offer.",
+      "optionLabel": "How would you like to contribute?",
+      "view": "View communities",
+      "combine": "Combine “Open to…” with topics, event formats and languages using search and filters.",
+      "contact": "A community declaring its openness does not guarantee an open call for papers, urgent recruitment or a place. We still encourage you to contact them and offer to take part.",
+      "unknown": "No declared availability means unknown, not refusal.",
+      "unavailable": "No communities have declared this availability yet. You can explore the directory and ask them directly.",
+      "ai": "An agent can interview you to find a fit for your talk or draft a volunteering proposal, distinguishing declared availability from what needs confirming.",
+      "offerTitle": "How would you like to contribute?",
+      "offerHint": "Talks, organising, mentoring and other collaborations",
+      "refineTitle": "Refine and explore",
+      "refineHint": "Combine criteria or explore an area",
+      "options": {
+        "speakers": "By giving a talk",
+        "co-organisers": "By helping run the community",
+        "mentors": "By mentoring others",
+        "volunteers": "By volunteering",
+        "venues": "By offering space for meetups",
+        "collaborations": "By collaborating with my community",
+        "sponsors": "By providing funding or support in kind"
+      },
+      "notesTitle": "Keep in mind",
+      "coverage": "“Open to…” is a new field in the directory and few communities have filled it in. For the others, we do not yet know whether they welcome these contributions; a missing value does not mean refusal.",
+      "chipsPrefix": "Find communities where I can contribute:",
+      "chipCount_one": "{{action}}: {{count}} community",
+      "chipCount_other": "{{action}}: {{count}} communities",
+      "chipCount": "{{action}}: {{count}} communities"
     },
     "organize": {
-      "title": "I run a community",
-      "hint": "Connect with other organisers and collaborate."
+      "title": "Discover other community organisers",
+      "hint": "Discover and connect with people who bring the tech ecosystem together.",
+      "lead": "Connect with other community organisers and explore collaborations.",
+      "connectTitle": "Connect with Community Builders",
+      "connectHint": "People, experiences and mutual support",
+      "collaborateTitle": "Collaborate with another community",
+      "collaborateHint": "Joint events, speakers, promotion or venues",
+      "collaborate": "Find communities open to collaboration and combine this with your topics, formats or languages.",
+      "availability": "Declared openness to collaboration is a new field with limited coverage. Missing data means unknown, not refusal; a declaration does not guarantee a collaboration either. Contact the community to confirm.",
+      "collaborationsAction": "View communities open to collaboration ({{count}})",
+      "ai": "An agent can interview you and suggest collaborations locally, across cities or to explore a possible revival. Here is an illustrative prompt:"
     },
     "improve": {
-      "title": "Improve the directory",
-      "hint": "Add a community or update its profile."
+      "title": "Improve this directory",
+      "hint": "Add a community or improve an existing record.",
+      "lead": "You can suggest improvements even if you do not run the community.",
+      "proposeTitle": "Add or correct a community",
+      "proposeHint": "Search first, then prepare a proposal",
+      "search": "Search for the community by name before proposing an addition, to avoid duplicates.",
+      "add": "Add a community",
+      "edit": "If it already exists, use “Edit” on its record. Records awaiting validation also offer “Review this community”.",
+      "editImageAlt": "“Community pending review” notice and “Review this community” link on a real record.",
+      "review": "“Pending review” means the data has not been checked manually yet. You do not need Git: the form prepares a proposal for review; sending it does not publish the changes automatically.",
+      "ai": "The form’s AI assistance can prepare a draft from the community’s sources. Check its data before sending your proposal.",
+      "maintainTitle": "What is worth keeping up to date",
+      "maintainHint": "Record, topics, channels and events",
+      "discovery": "These fields support both directory filters and agents using the dataset.",
+      "helpTitle": "Ask a question",
+      "helpHint": "Feeds, tags or proposals",
+      "aiTitle": "Prepare a draft with AI",
+      "aiHint": "Assistance within the form",
+      "aiImageAlt": "“Would you prefer AI help?” entry in the community proposal form.",
+      "prepare": "Open the form"
     },
     "other": {
       "title": "Something else",
       "hint": "Tell us what you need through the help button."
     },
+    "build": {
+      "title": "Build with the data",
+      "hint": "Create a directory, an events aggregator, a bot or a one-off analysis.",
+      "lead": "Open data for directories, events aggregators, bots and analysis.",
+      "filesTitle": "Choose and download data",
+      "filesHint": "Formats, catalogues and licence",
+      "downloads": "Downloads and field dictionary",
+      "codeTitle": "Query from your code",
+      "codeHint": "Shell, JavaScript, Python and event feeds",
+      "examples": "Query and feed-reading examples to adapt to your project.",
+      "agentsTitle": "Build with an agent",
+      "agentsHint": "An illustrative prompt and interpretation rules",
+      "ai": "This prompt illustrates how to explore the dataset with an agent before implementing your idea.",
+      "more": "More AI queries and project context"
+    },
+    "intro": "Attendees, speakers, community organisers and people building tools can use this directory.",
     "find": {
-      "title": "Find my community",
+      "title": "Discover communities",
       "hint": "By interests, ways to participate or location.",
       "lead": "Combine your interests with how and where you want to take part.",
       "searchTitle": "Search by interests",
@@ -792,7 +878,14 @@
       "dataFormat": "Format",
       "dataUrl": "Data URL",
       "copyUrl": "Copy URL",
-      "promptsIntro": "Here are a few illustrative prompts you can copy and paste into your favourite chatbot or agent."
+      "promptsIntro": "Here are a few illustrative prompts you can copy and paste into your favourite chatbot or agent.",
+      "dataSources": {
+        "agentIndex": "Index for agents",
+        "fullDirectory": "Complete directory in Markdown",
+        "communitiesJson": "Communities (JSON)",
+        "communitiesCsv": "Communities (CSV)",
+        "communitiesGeojson": "Communities (GeoJSON)"
+      }
     }
   },
   "openData": {
@@ -827,32 +920,40 @@
       "audienceShort": "Audiences"
     },
     "code": {
-      "lead": "The files are plain statics served with open CORS, so you can fetch them straight from a script, a notebook or a frontend. They are regenerated on every deploy, so you always get the latest data.",
+      "lead": "The files are static and allow CORS for queries from scripts, notebooks or applications. They are regenerated on each deployment; review dates and coverage vary by community.",
       "gotcha": "Two common traps: \"tags\" and \"targetAudience\" are ids (join them against tags.json and audience.json), and a generalist community carries an empty array plus \"matchesAllTags\": true. It is all documented in",
       "hintShell": "filter the dataset from your terminal",
       "hintJs": "resolve tag ids into readable labels",
       "hintPython": "load the CSV and group it",
-      "hintEvents": "walk the communities’ OTE feeds"
+      "hintEvents": "walk the communities’ OTE feeds",
+      "commentShell": "# Active cybersecurity communities with in-person events",
+      "commentGeneralist": "// matchesAllTags identifies generalist communities: their tag array\n// is intentionally empty and they must count as a match.",
+      "commentEvents": "// The directory does not store events: communities publish them in OTE feeds.",
+      "commentChannels": "// `urls` is a list of { url, kind?, label? }: find the feed by kind \"ote\".",
+      "commentFeedFailure": "// Some domains do not allow CORS; one failed feed must not stop the others.",
+      "commentSpec": "// Format specification:",
+      "tagsFile": "tags.en.json"
     },
     "agents": {
-      "lead": "Building an agent, or using Claude Code, Cursor or similar? Paste these instructions into its context (CLAUDE.md, AGENTS.md, system prompt or rules file). They tell it where the data lives and how to read it without getting it wrong.",
+      "lead": "Rules for your agent’s context: sources, field meanings and interpretation limits.",
       "instructionsLabel": "Instructions for your agent",
       "noMcp": "No MCP server needed: the data is a set of public static files, so any agent with network access can read it directly.",
       "llms": "machine-readable index of every file and how to interpret it.",
       "agentsMd": "orientation for agents about to work on the repository itself.",
       "robots": "crawling policy: every crawler, AI crawlers included, is welcome.",
-      "instructionsHint": "paste into CLAUDE.md, AGENTS.md or your system prompt"
+      "instructionsHint": "dataset sources and rules",
+      "instructions": "# Community Builders Directory — tech communities in Spain\n\nData source: {{siteUrl}}/llms.txt (start here; it indexes the other files)\nDataset: {{siteUrl}}/data/communities.json\nField dictionary: {{siteUrl}}/data/schema.json\n\nRules for using this data:\n- \"tags\" and \"targetAudience\" are IDs: resolve them with tags.en.json / audience.en.json.\n- matchesAllTags and matchesAllAudience broaden only their own facet (topics or audience), even when the corresponding array is empty; they do not override other filters.\n- \"location\" is where events happen; \"geographicScope\" is the territory served. They are different.\n- Exclude hidden: true and status != \"active\" before recommending communities.\n- Never infer proximity from \"location\": only exact textual matches are supported.\n- \"organizedBy\" contains IDs of communities IN THIS DIRECTORY that organise a record (a community and its annual conference are two active records). It is not the complete list of organisers: companies and sponsors are not included here.\n- \"openTo\" is declared openness to contributions, not urgent recruitment. Empty or absent means unknown, not refusal. Never infer it.\n- Never suggest URLs in \"archivedUrls\": these channels are no longer monitored.\n- humanValidated: false means no person has reviewed the data. Say so.\n- \"urls\" is a list of channels: { url, kind?, label? }. The kind is omitted when the domain identifies it, and may appear more than once with different labels.\n- The directory does not store events: each community publishes them through its channel with kind \"ote\", in Open Tech Events format ({{oteUrl}}).\n- If a community is missing or data is wrong, suggest opening an issue at {{issuesUrl}}."
     },
     "organizers": {
       "lead": "More and more people look for communities by asking an AI. This is what makes yours show up well in those answers:",
-      "step1Title": "Your record, current",
-      "step1": "Make sure you are in the directory and your record is current. If it is flagged as not reviewed by a human, review it: that field tells models how much to trust it.",
+      "step1Title": "Keep your record up to date",
+      "step1": "Check the record, especially if it is awaiting human review. That flag indicates whether the data has been checked manually; it does not guarantee it is still current.",
       "step2Title": "Topics and audience",
-      "step2": "Fill in topics and target audience using the catalogue tags. They are what an AI uses to decide whether your community matches what someone asked for.",
+      "step2": "Fill in topics and audience using catalogue tags: filters and agents can match them against what someone is looking for.",
       "step3Title": "Live links",
-      "step3": "Keep a working main URL and archive the channels you no longer attend. A dead link that looks alive sends people somewhere nobody answers.",
+      "step3": "Keep a working main URL and archive channels you no longer monitor, so people are not sent somewhere nobody answers.",
       "step4Title": "Publish your events",
-      "step4": "An Open Tech Events feed on your record puts your events in the directory, in aggregators and in front of any agent, and lets people subscribe without depending on whichever platform you use or on an algorithm. More reach, from the calendar you already keep.",
+      "step4": "Add your community’s Open Tech Events feed to its record to show its events, make them available to aggregators and agents, and enable subscriptions without depending on a platform. The reader lets you browse the feed; eventos.wiki is another way to discover tech events.",
       "note": "None of this needs Git: the directory form opens the proposal for you and a person reviews it.",
       "oteReader": "feed reader",
       "stepOf": "Step {{current}} of {{total}}",
@@ -887,31 +988,31 @@
       "agentsTitle": "If you build with an agent"
     },
     "prompts": {
-      "rules": "Data rules:\n- To recommend anything to me, only use communities whose \"status\" is \"active\". If I explicitly ask for dormant ones, label them as such.\n- \"tags\" and \"targetAudience\" are catalogue ids. The catalogues exist in Spanish ({{tagsUrl}}, {{audienceUrl}}) and English ({{tagsEnUrl}}, {{audienceEnUrl}}): same ids, translated labels. Match against \"label\", \"description\" and \"synonyms\", not just the id.\n- If \"matchesAllTags\" is true the community is generalist and fits any topic even with an empty list; same for \"matchesAllAudience\" and profiles.\n- Coverage is uneven: many records are missing \"tags\", and most have no \"targetAudience\" or \"geographicScope\". An empty field means nobody has filled it in, not that the community has nothing to do with that topic: do not silently drop it, and tell me when the data is missing. {{indexUrl}} carries the exact count per field.\n- \"location\" is where events happen; \"geographicScope\", where present, is the territory served.\n- \"lastReviewed\" is the date the record was last checked, not an activity signal: most have not been revisited since they were added. The only place where real activity can be checked is the events feed (the \"urls\" entry whose \"kind\" is \"ote\"), and the field only says the community publishes one: it says nothing about what is in it. Read the dates in the feed; never infer a community is alive from the field being present.\n- \"status\": \"merged\" means the community merged with others and no longer exists on its own: do not recommend it, point me at the one in \"mergedIntoId\", where its activity continues. This is different from \"parentId\", where both the local community and its umbrella organisation still exist.\n- \"organizedBy\" holds the ids of the communities IN THIS DIRECTORY that organise that record: this is how a community and its annual conference are modelled, as two live records. It is not the full list of organisers (companies, sponsors and institutional support are not in the directory), so never tell me \"only these people run it\". A missing value does not mean nobody runs it: plenty of conferences have no community behind them.\n- \"urls\" is a LIST of channels, not an object keyed by platform: each entry is { \"url\", optional \"kind\", optional \"label\" }. \"kind\" is omitted when the domain already says it (x.com is Twitter), so locate a channel by its URL, not by \"kind\" alone. There can be several entries with the same \"kind\": a group with its Meetup plus its own annual event, and there the \"label\" is the name to read.\n- Never suggest URLs listed in \"archivedUrls\": nobody is listening on those channels.\n- \"humanValidated\": false means that community's tagging was filled in by a semi-automated pass and no person has checked it. That is the majority: warn me.\n- Do not fill gaps with things you know from outside the dataset. If a fact is not there, say so. If something has to be asked of the community itself, tell me and give me the channel.\n- \"openTo\" indicates explicitly declared openness to contributions, not urgent recruitment. Empty or absent means unknown, not refusal. Never infer it from community topics or type.",
+      "rules": "Data rules:\n- To recommend anything to me, only use communities whose \"status\" is \"active\". If I explicitly ask for dormant ones, label them as such.\n- \"tags\" and \"targetAudience\" are catalogue ids. Use the English catalogues ({{tagsUrl}}, {{audienceUrl}}). Match against \"label\", \"description\" and \"synonyms\", not just the id.\n- If \"matchesAllTags\" is true the community is generalist and fits any topic even with an empty list; same for \"matchesAllAudience\" and profiles.\n- Coverage is uneven: many records are missing \"tags\", and most have no \"targetAudience\" or \"geographicScope\". An empty field means nobody has filled it in, not that the community has nothing to do with that topic: do not silently drop it, and tell me when the data is missing. {{indexUrl}} carries the exact count per field.\n- \"location\" is where events happen; \"geographicScope\", where present, is the territory served.\n- \"lastReviewed\" is the date the record was last checked, not an activity signal: most have not been revisited since they were added. The only place where real activity can be checked is the events feed (the \"urls\" entry whose \"kind\" is \"ote\"), and the field only says the community publishes one: it says nothing about what is in it. Read the dates in the feed; never infer a community is alive from the field being present.\n- \"status\": \"merged\" means the community merged with others and no longer exists on its own: do not recommend it, point me at the one in \"mergedIntoId\", where its activity continues. This is different from \"parentId\", where both the local community and its umbrella organisation still exist.\n- \"organizedBy\" holds the ids of the communities IN THIS DIRECTORY that organise that record: this is how a community and its annual conference are modelled, as two live records. It is not the full list of organisers (companies, sponsors and institutional support are not in the directory), so never tell me \"only these people run it\". A missing value does not mean nobody runs it: plenty of conferences have no community behind them.\n- \"urls\" is a LIST of channels, not an object keyed by platform: each entry is { \"url\", optional \"kind\", optional \"label\" }. \"kind\" is omitted when the domain already says it (x.com is Twitter), so locate a channel by its URL, not by \"kind\" alone. There can be several entries with the same \"kind\": a group with its Meetup plus its own annual event, and there the \"label\" is the name to read.\n- Never suggest URLs listed in \"archivedUrls\": nobody is listening on those channels.\n- \"humanValidated\": false means that community's tagging was filled in by a semi-automated pass and no person has checked it. That is the majority: warn me.\n- Do not fill gaps with things you know from outside the dataset. If a fact is not there, say so. If something has to be asked of the community itself, tell me and give me the channel.\n- \"openTo\" indicates explicitly declared openness to contributions, not urgent recruitment. Empty or absent means unknown, not refusal. Never infer it from community topics or type.\n- Exclude records with \"hidden\": true.\n- Textual location searches only support exact matches. Never infer proximity, a radius or equivalence between places from their names. Use the directory map to explore an area: its cards update with the visible extent, without filtering the general list.",
       "tribe": {
         "label": "Find my people",
         "hint": "asks about your profile, then recommends",
-        "text": "Fetch {{dataUrl}} (open data from the directory of Spanish tech communities, CC BY 4.0).\n\nI want to find communities that fit me, not just my topic.\n\n**Before recommending anything, ask me.** First look at what fields the dataset carries and at the topic and audience catalogues, then ask me the questions that genuinely help you narrow it down: which topics interest me, where I live and how far I can travel, whether I prefer in-person, online or either, what kind of community I am after (recurring meetup, conference, hacklab, mutual-aid group…), where I am in my career, which languages I speak, and anything else the dataset lets you cross-reference that would improve the recommendation. Keep it conversational, two rounds at most, and offer concrete options so I can answer easily.\n\nOnce you have my profile, recommend 5 to 8 communities ranked by fit. For each: name, city, why it fits me specifically, and its link. Then add 2 or 3 I did not ask for but that might surprise me, and say why.\n\n{{rules}}"
+        "text": "Fetch {{dataUrl}} (open data from the directory of Spanish tech communities).\n\nI want to find communities that fit me, not just my topic.\n\n**Before recommending anything, ask me.** First look at what fields the dataset carries and at the topic and audience catalogues, then ask me the questions that genuinely help you narrow it down: which topics interest me, where I live and how far I can travel, whether I prefer in-person, online or either, what kind of community I am after (recurring meetup, conference, hacklab, mutual-aid group…), where I am in my career, which languages I speak, and anything else the dataset lets you cross-reference that would improve the recommendation. Keep it conversational, two rounds at most, and offer concrete options so I can answer easily.\n\nOnce you have my profile, recommend 5 to 8 communities ranked by fit. For each: name, city, why it fits me specifically, and its link. Then add 2 or 3 I did not ask for but that might surprise me, and say why.\n\n{{rules}}"
       },
       "types": {
-        "label": "Which kind of community suits me",
-        "hint": "the seven dynamics, and which one is yours",
-        "text": "Fetch {{dataUrl}} and the field dictionary at {{schemaUrl}} (open data from the directory of Spanish tech communities, CC BY 4.0).\n\nCommunities do not all work the same way, and I want to understand the differences before deciding where to walk in. The \"communityType\" field sorts them into seven kinds, and schema.json explains what each value means.\n\n**Before recommending anything, ask me**: what I am after (learning something specific, meeting people, building with others, asking for help, giving it, speaking in public), how much time I can give and how often, whether I want something recurring or one-off, and where I am.\n\nThen, with my answers in hand:\n1. Explain what each kind actually is — \"tech-meetup\", \"conference\", \"hacklab\", \"umbrella-org\", \"collaborative-group\", \"meta-community\", \"mutual-aid\": how it runs, what is expected of a newcomer, what commitment it usually asks for, and how many of each the dataset holds. Keep it short and comparable, not a paragraph each.\n2. Tell me which two or three kinds fit what I described, and why you are ruling the others out.\n3. Suggest three or four specific communities of those kinds, near me or online, with their link and what to expect the first time I show up.\n\n{{rules}}"
+        "label": "Discover types of communities",
+        "hint": "compare seven ways of participating",
+        "text": "Fetch {{dataUrl}} and the field dictionary at {{schemaUrl}} (open data from the directory of Spanish tech communities).\n\nI want to discover different ways communities work, including ones I may have overlooked, such as a hacklab compared with a meetup.\n\n**Before suggesting examples, ask me** which dynamics I am curious about: sharing talks, building together, experimenting, exchanging support or connecting organisers, and which topics and formats interest me.\n\nThen:\n1. Briefly compare the seven types: \"tech-meetup\", \"conference\", \"hacklab\", \"umbrella-org\", \"collaborative-group\", \"meta-community\" and \"mutual-aid\". Explain their dynamics without inferring frequency, activity or required commitment from their type.\n2. Show differences and possibilities I might have overlooked. Do not decide which type suits me or rule out types based on my profile.\n3. Suggest three or four examples to explore, explaining only what the dataset actually says and linking to their records. Do not promise open calls or guaranteed places.\n\n{{rules}}"
       },
       "speaker": {
         "label": "Where to give a talk",
         "hint": "asks about your talk, then finds the fit",
-        "text": "Fetch {{dataUrl}} (open data from the directory of Spanish tech communities, CC BY 4.0).\n\nI want to pitch a talk and I am looking for where it would land best.\n\n**Before proposing anything, ask me.** Look at what the dataset and the catalogues contain, then ask what you need to get this right: what my talk is about and at what level, whether I have given it before or I am debuting it, which cities I can travel to or whether it is online only, whether I want a small meetup to road-test it or I am aiming straight at a conference, what language I give it in, and which audience I want to reach. Ask conversationally, with concrete options.\n\nThen give me two separate lists:\n1. **Recurring meetups** (\"communityType\": \"tech-meetup\"): because they come round often they need speakers continuously, which makes them a better place to debut.\n2. **Conferences** (\"communityType\": \"conference\"): their call for papers usually opens once a year. The dataset holds no CFP dates: tell me what you can infer and send me to their site or events feed to check.\n\nFor each: name, city, why it fits my talk, its link, and where available its events feed (the \"urls\" entry with \"kind\": \"ote\") or events platform (\"kind\": \"meetup\", \"eventbrite\", \"luma\" or \"eventsUrl\"). Finish with a plan: which ones you would start with, and in what order.\n\n{{rules}}\n\nPrioritise communities with \"speakers\" in \"openTo\". If missing, do not assume they accept or reject proposals: provide their channel to ask."
+        "text": "Fetch {{dataUrl}} (open data from the directory of Spanish tech communities).\n\nI want to pitch a talk and I am looking for where it would land best.\n\n**Before proposing anything, ask me.** Look at what the dataset and the catalogues contain, then ask what you need to get this right: what my talk is about and at what level, whether I have given it before or I am debuting it, which cities I can travel to or whether it is online only, whether I want a meetup or a conference, what language I give it in, and which audience I want to reach. Ask conversationally, with concrete options.\n\nThen give me two separate lists:\n1. **Tech meetups** (\"communityType\": \"tech-meetup\"): compare their declared topics, audiences and formats without inferring frequency or demand for speakers.\n2. **Conferences** (\"communityType\": \"conference\"): the dataset holds no CFP dates. Do not infer a call’s timing or availability; send me to their channels to confirm.\n\nFor each: name, city, why it fits my talk, its link, and where available its events feed (the \"urls\" entry with \"kind\": \"ote\") or events platform (\"kind\": \"meetup\", \"eventbrite\", \"luma\" or \"eventsUrl\"). Finish with a plan: which ones you would start with, and in what order.\n\n{{rules}}\n\nPrioritise communities with \"speakers\" in \"openTo\". If missing, do not assume they accept or reject proposals: provide their channel to ask."
       },
       "volunteer": {
         "label": "Lend a hand",
         "hint": "plausible candidates, and whom to ask",
-        "text": "Fetch {{dataUrl}} (open data from the directory of Spanish tech communities, CC BY 4.0).\n\nI would like to volunteer with tech communities and events.\n\nUse \"openTo\" containing \"volunteers\" to identify explicitly declared openness, without assuming urgent recruitment. If missing, offer candidates by affinity and explain that we need to ask: empty or absent means unknown, not refusal.\n\n**And before anything else, ask me**: where I live and how far I travel, how much time I can give and how regularly, what I can do or would like to learn by doing (day-of logistics, communications, web, finding speakers, welcoming newcomers…), and which topics interest me.\n\nThen, using \"communityType\", give me two lists:\n1. Communities that by their nature run on whoever shows up: \"hacklab\", \"mutual-aid\", \"collaborative-group\", and \"tech-meetup\" ones, which being recurring need hands continuously.\n2. Conferences (\"conference\"), where volunteering tends to be one-off and clustered around the event date.\n\nFor each: name, city, why I might fit, and how to get in touch (\"contactInfo\" where present, otherwise the most appropriate channel in \"urls\"; if there is none, say so).\n\nFinish by drafting a short introduction message I can adapt, one that asks whether they need help rather than assuming they do.\n\n{{rules}}"
+        "text": "Fetch {{dataUrl}} (open data from the directory of Spanish tech communities).\n\nI would like to volunteer with tech communities and events.\n\nUse \"openTo\" containing \"volunteers\" to identify explicitly declared openness, without assuming urgent recruitment. If missing, offer candidates by affinity and explain that we need to ask: empty or absent means unknown, not refusal.\n\n**And before anything else, ask me**: where I live and how far I travel, how much time I can give and how regularly, what I can do or would like to learn by doing (day-of logistics, communications, web, finding speakers, welcoming newcomers…), and which topics interest me.\n\nThen, using \"communityType\", give me two lists:\n1. Communities with \"communityType\" set to \"hacklab\", \"mutual-aid\", \"collaborative-group\" or \"tech-meetup\": compare their declared dynamics without assuming frequency or a need for help.\n2. Conferences (\"conference\"): do not assume an upcoming event or volunteer recruitment without checking their channels.\n\nFor each: name, city, why I might fit, and how to get in touch (\"contactInfo\" where present, otherwise the most appropriate channel in \"urls\"; if there is none, say so).\n\nFinish by drafting a short introduction message I can adapt, one that asks whether they need help rather than assuming they do.\n\n{{rules}}"
       },
       "synergies": {
         "label": "Synergies for my community",
         "hint": "identifies your community, finds partners",
-        "text": "Fetch {{dataUrl}} (open data from the directory of Spanish tech communities, CC BY 4.0).\n\nI run a community and I am looking for collaboration opportunities.\n\nUse \"openTo\" containing \"collaborations\" to identify explicitly declared openness, without assuming urgent recruitment. If missing, offer candidates by affinity and explain that we need to ask: empty or absent means unknown, not refusal.\n\n**Before analysing anything, ask me.** First work out which community is mine (search the dataset by name and show me the record so I can confirm), then ask what you need: what kind of collaboration I am after (joint event, speaker exchange, promotion, sharing a venue), whether I want to stay in my city or reach others, what I am short of right now (attendees, speakers, hands, visibility), and whether I would consider absorbing or reviving a dormant community.\n\nThen give me three lists:\n1. Active communities worth doing something joint with: adjacent but not identical topic, compatible area.\n2. Communities on my topic in other cities, in case a speaker tour or a multi-venue event makes sense.\n3. Communities with \"status\": \"inactive\" in my area or topic that might be revived, with the channel they had. Remember \"lastReviewed\" is no proof they are still dormant: tell me to check before writing.\n\nFinish with the concrete first step for each of the three: whom I write to, through which channel, and what I propose.\n\n{{rules}}"
+        "text": "Fetch {{dataUrl}} (open data from the directory of Spanish tech communities).\n\nI run a community and I am looking for collaboration opportunities.\n\nUse \"openTo\" containing \"collaborations\" to identify explicitly declared openness, without assuming urgent recruitment. If missing, offer candidates by affinity and explain that we need to ask: empty or absent means unknown, not refusal.\n\n**Before analysing anything, ask me.** First work out which community is mine (search the dataset by name and show me the record so I can confirm), then ask what you need: what kind of collaboration I am after (joint event, speaker exchange, promotion, sharing a venue), whether I want to stay in my city or reach others, what I am short of right now (attendees, speakers, hands, visibility), and whether I would consider absorbing or reviving a dormant community.\n\nThen give me three lists:\n1. Active communities worth doing something joint with: adjacent but not identical topic, compatible area.\n2. Communities on my topic in other cities, in case a speaker tour or a multi-venue event makes sense.\n3. Communities with \"status\": \"inactive\" in my area or topic that might be revived, with a current channel, never one in \"archivedUrls\". Remember \"lastReviewed\" is no proof they are still dormant: tell me to check before writing.\n\nFinish with the concrete first step for each of the three: which available channel to use and what to propose; do not invent contacts.\n\n{{rules}}"
       },
       "gaps": {
         "label": "Gaps in the ecosystem",
@@ -921,12 +1022,12 @@
       "umbrella": {
         "label": "Who could host or back me",
         "hint": "umbrellas, hacklabs, and communities to revive",
-        "text": "Fetch {{dataUrl}} (open data from the directory of Spanish tech communities, CC BY 4.0).\n\nI want to start a community and I would rather not begin from scratch on my own: before inventing anything, I want to know who is doing something similar and who could host or back me.\n\n**Heads-up: the dataset does not say whether an organisation hosts new groups.** There is no field for it, so do not claim it. Give me candidates and the channel to ask.\n\n**Before anything else, ask me**: what I want to start and where, what I am missing (a venue, reach, a legal umbrella, experienced people, speakers), whether I already know of something similar, and how much time I can sustain.\n\nThen give me:\n1. Whether something identical or very close already exists in my area: sometimes joining beats duplicating. Tell me even if it is not what I want to hear.\n2. Umbrella organisations (\"umbrella-org\") and meta-communities (\"meta-community\") on my topic or in my area: they are the ones that group or coordinate others, and the ones who best know what has already been tried.\n3. Hacklabs and physical spaces (\"hacklab\") where a new activity could fit.\n4. Dormant communities (\"status\": \"inactive\") on my topic and area: reviving something that already has a name and people around it costs less than founding one. Give me their channel, and remind me \"lastReviewed\" is no proof they are still dormant.\n\nFinish with a first-steps plan: whom I write to first, what I ask, and in what order.\n\n{{rules}}"
+        "text": "Fetch {{dataUrl}} (open data from the directory of Spanish tech communities).\n\nI want to start a community and I would rather not begin from scratch on my own: before inventing anything, I want to know who is doing something similar and who could host or back me.\n\n**Heads-up: the dataset does not say whether an organisation hosts new groups.** There is no field for it, so do not claim it. Give me candidates and the channel to ask.\n\n**Before anything else, ask me**: what I want to start and where, what I am missing (a venue, reach, a legal umbrella, experienced people, speakers), whether I already know of something similar, and how much time I can sustain.\n\nThen give me:\n1. Whether something identical or very close already exists in my area: sometimes joining beats duplicating. Tell me even if it is not what I want to hear.\n2. Umbrella organisations (\"umbrella-org\") and meta-communities (\"meta-community\") on my topic or in my area: they are the ones that group or coordinate others, and the ones who best know what has already been tried.\n3. Hacklabs and physical spaces (\"hacklab\") where a new activity could fit.\n4. Dormant communities (\"status\": \"inactive\") on my topic and area: reviving something that already has a name and people around it costs less than founding one. Give me their channel, and remind me \"lastReviewed\" is no proof they are still dormant.\n\nFinish with a first-steps plan: whom I write to first, what I ask, and in what order.\n\n{{rules}}"
       },
       "onboarding": {
         "label": "Brief your agent",
         "hint": "what exists, and what you can promise",
-        "text": "Read {{indexUrl}} and {{schemaUrl}}: they are the open-data index for the directory of Spanish tech communities and the dictionary of its fields. From the index you reach everything else: the JSON dataset, the CSV, the GeoJSON, the topic and audience catalogues, and the full dump as Markdown.\n\n**Before writing a line of code, ask me** what I am building (a directory, an events aggregator, a bot, a one-off analysis), on what stack, and whether I need the data live or a copy will do.\n\nThen, still without code, summarise for me:\n- Which files exist, what each one holds, and which suits my case.\n- Which fields I can rely on and which are sparsely filled, with the counts the index itself gives. I want to know what I must NOT promise in my product.\n- The data-model traps that would make me display things wrongly.\n- What the CC BY 4.0 licence asks of me: how I attribute and where I link.\n- That the directory stores no events: each community publishes them in its Open Tech Events feed (the \"urls\" entry with \"kind\": \"ote\"), so events are aggregated from there.\n- How a wrong record gets corrected, so my project gives value back instead of only consuming.\n\nOnce that is clear, propose the simplest way to start, and tell me what to cache and how often to refresh it.\n\n{{rules}}"
+        "text": "Read {{indexUrl}} and {{schemaUrl}}: they are the open-data index for the directory of Spanish tech communities and the dictionary of its fields. From the index you reach everything else: the JSON dataset, the CSV, the GeoJSON, the topic and audience catalogues, and the full dump as Markdown.\n\n**Before writing a line of code, ask me** what I am building (a directory, an events aggregator, a bot, a one-off analysis), on what stack, and whether I need the data live or a copy will do.\n\nThen, still without code, summarise for me:\n- Which files exist, what each one holds, and which suits my case.\n- Which fields I can rely on and which are sparsely filled, with the counts the index itself gives. I want to know what I must NOT promise in my product.\n- The data-model traps that would make me display things wrongly.\n- That the directory stores no events: each community publishes them in its Open Tech Events feed (the \"urls\" entry with \"kind\": \"ote\"), so events are aggregated from there.\n- How a wrong record gets corrected, so my project gives value back instead of only consuming.\n\nOnce that is clear, propose the simplest way to start, and tell me what to cache and how often to refresh it.\n\n{{rules}}"
       }
     }
   },
@@ -1082,7 +1183,8 @@
     "expectTitle": "What we expect from people who join",
     "expect": "You don't have to take part in every initiative or come to every get-together: we know all too well that time is the scarcest thing there is (even more so among the people in this community). What we do expect is reciprocity: listening when someone asks, weighing in when something gets proposed, passing on a contact if you have one, or checking your community's data in this directory. Small things, but they're exactly what makes this work.",
     "joinCta": "Apply to join",
-    "contact": "Not sure whether you fit? Tell us and we'll figure it out:"
+    "contact": "Not sure whether you fit? Tell us and we'll figure it out:",
+    "invitation": "Connect with other community organisers: shared experiences, collaborations and mutual support through Community Builders."
   },
   "openTo": {
     "title": "Open to…",

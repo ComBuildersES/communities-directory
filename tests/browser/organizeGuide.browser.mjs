@@ -31,6 +31,7 @@ for (const width of [1440, 390]) {
       assert.equal(await dialog.locator('.opendata-modal-close').evaluate(el => el === document.activeElement), true);
       assert.ok(await dialog.evaluate(el => el.scrollWidth <= el.clientWidth));
       await page.screenshot({ path: `/tmp/combuilder-organize-connect-${width}.png`, fullPage: true, animations: 'disabled' });
+      await dialog.getByRole('button', { name: /Conectar con Community Builders/ }).click();
       assert.equal(await dialog.getByRole('tab').count(), 4);
       assert.ok((await dialog.innerText()).includes(es.builders.whoLead));
       assert.equal(await dialog.getByRole('link', { name: es.builders.joinCta }).count(), 1);
@@ -134,6 +135,7 @@ test('perfiles, historias y modal original comparten comportamiento', { timeout:
     await page.getByRole('button', { name: 'Qué puedes hacer aquí', exact: true }).click();
     await page.getByRole('button', { name: /Descubrir a otras personas que dinamizan/ }).click();
     const dialog = page.getByRole('dialog');
+    await dialog.getByRole('button', { name: /Conectar con Community Builders/ }).click();
     const face = dialog.getByRole('button', { name: /^Ver comunidades de @/ }).first();
     await face.hover();
     await face.focus();
@@ -141,7 +143,7 @@ test('perfiles, historias y modal original comparten comportamiento', { timeout:
     await page.keyboard.press('Escape');
     await page.getByRole('tooltip').waitFor({ state: 'detached' });
     assert.equal(await dialog.count(), 1);
-    const handle = (await face.getAttribute('aria-label')).split('@')[1];
+    const handle = (await face.getAttribute('aria-label')).split('@')[1].toLowerCase();
     await face.click();
     await page.waitForFunction(value => new URL(location.href).searchParams.get('cb') === value, handle);
     assert.equal(await dialog.count(), 0);

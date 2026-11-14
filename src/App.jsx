@@ -443,6 +443,7 @@ function App () {
           closeContributionForm={closeContributionForm}
           goToHome={goToHome}
           goToContribution={goToContribution}
+          onShowList={() => { setMapFocusTarget(null); setView("list"); }}
           onShowMap={() => {
             setMapFocusTarget(null);
             setView("map");
@@ -469,6 +470,7 @@ function App () {
                 proposalDraft={route.proposalDraft}
                 onDirtyChange={handleContributionDirtyChange}
                 onIssueOpenedChange={handleContributionIssueOpenedChange}
+                onSelectMember={handle => navigateWithGuard(buildDirectoryStatePath({ filters: builderFilters(handle) }))}
                 onDraftActionsChange={handleDraftActionsChange}
               />
             </Suspense>

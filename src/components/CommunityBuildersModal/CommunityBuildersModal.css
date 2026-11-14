@@ -485,3 +485,7 @@
      panel se quedaba en su altura mínima. Aquí la línea de contacto mide lo que ocupa. */
   .cb-footer-copy { flex: 0 0 auto; }
 }
+
+.builders-invitation { margin-block: 1rem; padding: 1rem; border: 1px solid #d6e3f1; border-radius: 8px; background: #f4f8fc; }
+.builders-invitation p { margin: 0 0 .8rem; line-height: 1.5; }
+.builders-invitation .button { white-space: normal; height: auto; min-height: 2.5rem; gap: .5rem; text-align: left; }

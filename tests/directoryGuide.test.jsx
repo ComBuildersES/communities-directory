@@ -62,6 +62,8 @@ describe.each([{ locale: 'es', data: es }, { locale: 'en', data: en }])('tour li
       expect(html).toContain((data.directoryGuide[id] ?? es.directoryGuide[id]).title);
     }
     expect(html).toContain(data.directoryGuide.reuse);
+    expect(html).toContain(data.directoryGuide.intro);
+    expect(html).not.toContain("<strong>open data</strong>");
     expect(html).not.toContain('role="tabpanel"');
     expect(html).not.toContain('opendata-copyblock');
     expect(close).not.toHaveBeenCalled();

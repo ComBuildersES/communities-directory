@@ -40,7 +40,7 @@ const LOCALES = [
   { name: 'en', data: en, asksFirst: /ask me|ask what you need|ask you/i },
 ];
 
-describe.each(LOCALES)('prompts de openData ($name)', ({ name, data, asksFirst }) => {
+describe.each(LOCALES)('prompts de openData ($name)', ({ data, asksFirst }) => {
   const prompts = data.openData.prompts;
 
   it('tiene un prompt por cada clave que pintan las pestañas', () => {
@@ -74,15 +74,10 @@ describe.each(LOCALES)('prompts de openData ($name)', ({ name, data, asksFirst }
     expect(rules).toContain('matchesAllTags');
     expect(rules).toContain('geographicScope');
     expect(rules).toContain('humanValidated');
-    if (name === 'es') {
-      expect(rules).toContain('{{tagsUrl}}');
-      expect(rules).toContain('{{audienceUrl}}');
-      expect(rules).not.toContain('{{tagsEnUrl}}');
-      expect(rules).not.toContain('{{audienceEnUrl}}');
-    } else {
-      // La revisión del inglés se hará al terminar todas las fases.
-      expect(rules).toContain('{{tagsEnUrl}}');
-    }
+    expect(rules).toContain('{{tagsUrl}}');
+    expect(rules).toContain('{{audienceUrl}}');
+    expect(rules).not.toContain('{{tagsEnUrl}}');
+    expect(rules).not.toContain('{{audienceEnUrl}}');
   });
 
   /**

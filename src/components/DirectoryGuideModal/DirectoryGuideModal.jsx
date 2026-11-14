@@ -92,7 +92,7 @@ export function DirectoryGuideModal({ onClose, onAddCommunity, onShowMap, onSele
         {screen !== "menu" && <button type="button" className="opendata-footer-btn guide-back" onClick={() => setScreen("menu")}><i className="fas fa-arrow-left" aria-hidden="true"></i>{t("directoryGuide.back")}</button>}
         <header className="opendata-modal-header">
           <h2 id="directory-guide-title" ref={headingRef} tabIndex={-1} className="opendata-modal-title">{t(screen === "menu" ? "heading.guideCta" : `directoryGuide.${screen}.title`)}</h2>
-          {screen === "menu" && <p className="opendata-modal-subtitle">{t("directoryGuide.intro")} <strong>open data</strong>.</p>}
+          {screen === "menu" && <p className="opendata-modal-subtitle">{t("directoryGuide.intro")}</p>}
           {screen !== "menu" && <p className="opendata-modal-subtitle">{t(`directoryGuide.${screen}.lead`)}</p>}
         </header>
         {screen === "menu" ? (

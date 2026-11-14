@@ -12,7 +12,8 @@ import { DataSourcePicker } from "./FindCommunityAiGuide.jsx";
 const CONTRIBUTE_PROMPTS = ["speaker", "volunteer"];
 
 export function ContributeCommunityGuide({ onViewCommunities, onMap }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const locale = i18n.resolvedLanguage === "en" ? "en" : "es";
   const [openSection, setOpenSection] = useState(null);
   const [tab, setTab] = useState("directory");
   const filters = useFilters();
@@ -75,7 +76,7 @@ export function ContributeCommunityGuide({ onViewCommunities, onMap }) {
         </GuideSection>
         <GuideSection {...sectionProps("refine", "fa-sliders")}>
         <p>{t("directoryGuide.contribute.combine")}</p>
-        <GuideScreenshot name="filters" locale="es" alt={t("directoryGuide.find.filtersImageAlt")} width={1280} height={260} />
+        <GuideScreenshot name="filters" locale={locale} alt={t("directoryGuide.find.filtersImageAlt")} width={1280} height={260} />
         <div className="guide-contribute-actions guide-contribute-explore">
           <button type="button" className="opendata-footer-btn" onClick={onViewCommunities}>{t("directoryGuide.actions.filters")}</button>
           <InfoTooltip className="opendata-footer-btn" label={t("directoryGuide.actions.map")}

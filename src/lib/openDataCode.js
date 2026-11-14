@@ -7,7 +7,7 @@ export function getCodeSnippets(t) {
       key: "shell",
       label: "curl + jq",
       hint: t("openData.code.hintShell"),
-      text: `# Comunidades activas de ciberseguridad con eventos presenciales
+      text: `${t("openData.code.commentShell")}
 curl -s ${SITE_URL}/data/communities.json \\
   | jq '[.[] | select(.hidden != true and .status == "active" and .eventFormat == "in-person")
          | select(.matchesAllTags == true or (.tags | index("cybersecurity")))
@@ -19,13 +19,12 @@ curl -s ${SITE_URL}/data/communities.json \\
       hint: t("openData.code.hintJs"),
       text: `const [communities, tags] = await Promise.all([
   fetch("${SITE_URL}/data/communities.json").then((r) => r.json()),
-  fetch("${SITE_URL}/data/tags.json").then((r) => r.json()),
+  fetch("${SITE_URL}/data/${t("openData.code.tagsFile")}").then((r) => r.json()),
 ]);
 
 const labelById = Object.fromEntries(tags.map((tag) => [tag.id, tag.label]));
 
-// Ojo: matchesAllTags marca comunidades generalistas; su array de tags
-// está vacío a propósito y deben contar como coincidencia.
+${t("openData.code.commentGeneralist")}
 const matching = communities.filter(
   (c) => !c.hidden && c.status === "active" && (c.matchesAllTags || c.tags.includes("python"))
 );
@@ -51,10 +50,10 @@ print(activas.groupby("geographicScope").size())`,
       key: "events",
       label: "Open Tech Events",
       hint: t("openData.code.hintEvents"),
-      text: `// El directorio no guarda eventos: los publica cada comunidad en su feed OTE.
+      text: `${t("openData.code.commentEvents")}
 const communities = await fetch("${SITE_URL}/data/communities.json").then((r) => r.json());
 
-// \`urls\` es una lista de { url, kind?, label? }: el feed es la entrada con kind "ote".
+${t("openData.code.commentChannels")}
 const withFeed = communities
   .filter((c) => !c.hidden)
   .map((c) => ({ community: c, feed: (c.urls ?? []).find((u) => u.kind === "ote")?.url }))
@@ -66,14 +65,14 @@ const events = await Promise.all(
       const feed = await fetch(feedUrl).then((r) => r.json());
       return (feed.events ?? []).map((event) => ({ community: community.name, ...event }));
     } catch {
-      // No todos los dominios sirven CORS; un feed caído no debe tumbar el resto.
+      ${t("openData.code.commentFeedFailure")}
       return [];
     }
   })
 );
 
 console.log(events.flat());
-// Spec del formato: ${OTE_URL}`,
+${t("openData.code.commentSpec")} ${OTE_URL}`,
     },
   ];
 

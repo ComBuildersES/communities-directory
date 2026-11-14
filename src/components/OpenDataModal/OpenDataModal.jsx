@@ -238,33 +238,7 @@ export function CodeSnippets() {
 export function AgentInstructions() {
   const { t } = useTranslation();
 
-  const instructions = `# Community Builders Directory — datos de comunidades tech de España
-
-Fuente de datos: ${SITE_URL}/llms.txt (empieza por aquí; indexa el resto)
-Dataset: ${SITE_URL}/data/communities.json
-Significado de cada campo: ${SITE_URL}/data/schema.json
-
-Reglas al usar estos datos:
-- "tags" y "targetAudience" son IDs: cruzarlos con tags.json / audience.json.
-- matchesAllTags y matchesAllAudience amplían solo su faceta (temáticas o público),
-  aunque el array correspondiente esté vacío; no anulan los demás filtros.
-- "location" es dónde se celebran los eventos; "geographicScope" es el territorio
-  al que da servicio. No son lo mismo.
-- Excluir hidden: true y status != "active" antes de recomendar comunidades.
-- No inferir cercanía a partir de "location": solo coincidencia textual exacta.
-- "organizedBy" son ids de comunidades DEL DIRECTORIO que organizan esa ficha
-  (una comunidad y su conferencia anual son dos fichas vivas). No es la lista
-  completa de organizadores: empresas y patrocinadores no están aquí.
-- "openTo" indica disponibilidad declarada para aportaciones, no búsqueda urgente.
-  Vacío o ausente significa sin información, no rechazo. No inferirlo.
-- Nunca proponer URLs de "archivedUrls": son canales muertos.
-- humanValidated: false significa dato sin revisar por una persona. Decirlo.
-- "urls" es una lista de canales: { url, kind?, label? }. El kind se omite
-  cuando el dominio ya lo dice, y puede repetirse con labels distintas.
-- El directorio no almacena eventos: los publica cada comunidad en el canal
-  con kind "ote", en formato Open Tech Events (${OTE_URL}).
-- Si falta una comunidad o hay un dato mal, proponer abrir un issue en
-  ${ISSUES_URL}.`;
+  const instructions = t("openData.agents.instructions", { siteUrl: SITE_URL, oteUrl: OTE_URL, issuesUrl: ISSUES_URL });
 
   return (
     <>

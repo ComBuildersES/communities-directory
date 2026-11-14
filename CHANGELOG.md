@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-13 `1408518` completar los recorridos de mejora y reutilización de datos
+- 2026-11-14 `ec0c795` completar mejoras del directorio y traducciones
+- 2026-11-13 `2fe2f71` completar los recorridos de mejora y reutilización de datos
 - 2026-11-13 `93d229c` integrar Community Builders en la guía del directorio
 - 2026-11-13 `3ce4bc9` ampliar la guía de aportaciones y datos abiertos
 - 2026-11-13 `efb806b` simplificar cabecera y añadir guía para encontrar comunidades

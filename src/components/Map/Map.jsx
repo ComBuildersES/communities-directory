@@ -1,3 +1,4 @@
+import { buildContributionPath } from "../../lib/communitySubmission.js";
 /* eslint-disable react/prop-types */
 import { startTransition, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -549,6 +550,10 @@ function Map({
             all-placeholder={t("map.searchPlaceholder")}
           ></arcgis-search>
         </arcgis-map>
+
+        <a className="button is-primary map-add-community" href={buildContributionPath({ mode: "new" })}>
+          <i className="fas fa-plus" aria-hidden="true" /> {t("directoryGuide.improve.add")}
+        </a>
 
         {legendItems.length > 0 && (
           <>

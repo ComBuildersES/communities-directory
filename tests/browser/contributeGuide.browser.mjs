@@ -20,6 +20,7 @@ for (const width of [1440, 390]) {
       await openGuide();
       const dialog = page.getByRole('dialog');
       const originalUrl = page.url();
+      await dialog.getByRole('button', { name: /¿Cómo quieres aportar/ }).click();
       const chips = dialog.locator('.guide-contribute-chip');
       assert.equal(await chips.count(), 7);
       assert.equal(await dialog.getByRole('combobox').count(), 0);

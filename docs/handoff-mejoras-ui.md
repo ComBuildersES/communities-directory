@@ -1,6 +1,6 @@
 # Handoff de las mejoras de UI
 
-Actualizado: 13 de noviembre de 2026.
+Actualizado: 14 de noviembre de 2026.
 
 ## Criterios de aceptación para todas las entradas
 
@@ -26,17 +26,15 @@ Antes de entregar, revisar expresamente: **solo español; apoyo visual para los 
 
 ## Punto de continuación
 
-Las entradas anteriores y la fase 1 siguen aprobadas. El usuario autoriza terminar juntas **«Mejorar este directorio» y «Construir con los datos»**. Ambas tienen ahora recorrido propio y la implementación de la **fase 2 queda lista para revisión del usuario**. El usuario pide un último ajuste: todas las secciones cerradas al entrar en cualquier recorrido, y después hacer commit. No avanzar a fases 3–5 ni hacer push o despliegue.
+**Implementación terminada para revisión final.** El usuario pidió completar todo el plan, incluidas las traducciones pendientes de fase 2. Esa petición sustituye las pausas por entrada y el aplazamiento del inglés de las sesiones anteriores. Fases 3–4 implementadas; validación de fase 5 y traducciones terminadas.
 
-El menú mantiene sus seis entradas y la introducción común con **open data**. «Construir con los datos» y el enlace del pie comparten el mismo destino. El contenido anterior que debe conservarse sigue accesible desde «Más consultas con IA y contexto del proyecto», dentro de construcción → agentes.
+Queda únicamente la revisión conjunta del resultado y, después, eliminar `docs/plan-temporal-mejoras-ui.md`. Se conserva por el acuerdo expreso de no borrarlo antes de esa revisión. No hacer commit, push ni despliegue sin petición.
 
-El alcance y el inventario de contenido siguen en [el plan temporal](plan-temporal-mejoras-ui.md). Este handoff recoge el estado final y los aprendizajes; el registro cronológico del plan contiene versiones anteriores que ya se han sustituido. Las decisiones más recientes del usuario prevalecen sobre el inventario inicial.
-
-**No borrar el plan** hasta terminar todas las fases y realizar la revisión final con el usuario. La revisión de fase 2 se cierra con el ajuste de acordeones solicitado por el usuario; las fases 3–5 siguen pendientes.
+El detalle actual está en «Cierre de implementación — fases 3–5 y traducciones», al final del plan. Los registros posteriores de este handoff describen sesiones anteriores; sus puntos de continuación y restricciones temporales quedan sustituidos por este bloque.
 
 ## Acuerdos que se deben mantener
 
-- Trabajar **solo en español en toda la aplicación** hasta terminar todas las fases. Completar y revisar el inglés al final. Hay traducciones parciales de esta sesión, anteriores a esa indicación: son provisionales, no una referencia editorial definitiva.
+- El aplazamiento del inglés ha terminado: las traducciones pendientes se completan en el cierre autorizado por el usuario, a partir de la interfaz española acordada. Las demás decisiones editoriales y de interacción se mantienen.
 - El público es técnico. La guía debe mostrar posibilidades y opciones poco visibles, sin enseñar lo obvio ni convertirse en un manual. El botón de ayuda cubre las dudas adicionales.
 - Entrar en un objetivo muestra información; no debe aplicar filtros ni abrir herramientas automáticamente. Las acciones deben ser explícitas y usar los controles existentes.
 - Conservar el contenido al reorganizarlo. Las retiradas y reescrituras solicitadas expresamente por el usuario sí están autorizadas y están registradas en el plan.
@@ -144,7 +142,7 @@ Referencia de la última implementación aprobada («Encontrar»): **490 tests p
 - Hay cambios de esta implementación sin commit y documentos locales ajenos. Leer `git status` antes de editar; no hacer limpieza general, revertir ni añadir todos los ficheros indiscriminadamente. Los documentos de contactos, invitaciones y automatización n8n no pertenecen a esta tarea.
 - Si se automatizan cambios de JSON, distinguir claves raíz de claves homónimas anidadas: `heading.openData` es una cadena, mientras que `openData` es el objeto del modal. Una sustitución textual no anclada causó un error que los tests detectaron y ya está corregido.
 
-## Mensaje para iniciar la siguiente sesión
+## Mensaje histórico de continuación (sustituido por el cierre actual)
 
 En una sesión ya abierta, pedir primero: «Relee los acuerdos activos de `AGENTS.md` y los criterios de aceptación al principio de `docs/handoff-mejoras-ui.md`. Aplícalos al trabajo actual: solo español en toda la aplicación hasta el cierre; capturas reales para mostrar controles y flujos; ayuda breve para perfiles técnicos; detalle progresivo y márgenes comprobados. Conserva el trabajo local y para para revisión antes de avanzar a otra entrada».
 
@@ -172,3 +170,71 @@ Validación: **502 tests Vitest correctos**, lint de los componentes, biblioteca
 - Por petición del usuario, los cinco recorridos comienzan con todos sus acordeones cerrados. La persona elige qué sección abrir; se conserva la apertura exclusiva y la posibilidad de cerrarlas todas.
 - Se ajustan las expectativas de las pruebas a ese estado inicial. **No se ejecutan tests después de este cambio**, por indicación expresa del usuario. La validación previa fue de 502 tests, lint, build y navegador; después del último ajuste editorial pasaron las 110 pruebas específicas.
 - Se solicita commit de todo el trabajo de UI de esta sesión. Se excluyen los documentos locales de contactos, invitaciones y automatización. El changelog lo genera el hook; no se edita a mano. Sin push ni avance a otra fase.
+
+
+## Cierre actual — fases 3–5 y traducciones
+
+- Tarjeta de alta al principio del grid, sin duplicado final; búsqueda de ficha existente, aportaciones de cualquier persona y brillo que respeta movimiento reducido. Una fila propia evita estirar las tarjetas de comunidades.
+- Botón de alta sobre el mapa, separado de controles y leyenda. Revisado con datos y clusters cargados a 1440, 390 y 320 px y también en inglés móvil.
+- «Sobre el proyecto» conserva el botón original «¿Dinamizas una comunidad tech?», sin tarjeta ni párrafo añadido. `BuildersInvitation.jsx` se usa al final de preparación de propuestas, reutilizando el mismo modal original. GitHub y correo se prueban sin envío. Abrir una vía externa no equivale a enviar ni publicar; el aviso lo aclara.
+- Inglés completado: cinco recorridos, formatos, chips, notas, prompts, instrucciones de agentes, comentarios de código e invitaciones. Capturas inglesas reales de revisión y asistencia IA; búsqueda/filtros ingleses reutilizados. Sin claves faltantes respecto al español. Los prompts respetan los límites acordados y usan solo los catálogos del idioma de la interfaz.
+- **511 tests Vitest correctos; 16 casos de navegador verificados** entre las suites de aportación, organización y cierre; lint específico de componentes nuevos, traducción y pruebas correcto. El lint global sigue fallando por problemas previos, también en `CommunitiesList.jsx` (props), `CommunityContribution.jsx` (tres variables sin uso) y `App.jsx` (dependencia de efecto), además de scripts/configuración ajenos. No se amplía el alcance para corregirlos. **Build de producción correcto**, con avisos previos de imágenes de comunidades y chunks de ArcGIS.
+- Los tests de navegador existentes se adaptan al acuerdo de acordeones cerrados. La selección de perfiles compara handles normalizados, como el filtro real; se espera la tarjeta tras la carga y el render de capas antes de comprobar el mapa.
+- Validación visual de márgenes, capturas y acciones en ambos idiomas, escritorio y móvil; listado/mapa sin desbordamiento a 320 px. Capturas de QA en `/tmp` son auxiliares; las dos capturas inglesas de ayuda están en `public/images/guide/`.
+
+**Pendiente únicamente:** revisión final conjunta y eliminación del plan después de esa revisión. Sin commit, push ni despliegue; documentos locales ajenos conservados.
+
+
+## Correcciones de la revisión final
+
+- No rediseñar la invitación de Community Builders en «Sobre el proyecto»: restaurados el botón, iconos, sección y comportamiento originales. El texto y la tarjeta nuevos se conservan únicamente tras preparar una propuesta de alta o edición.
+- La tarjeta del listado pregunta «¿Dinamizas o participas en alguna comunidad?» y explica que una comunidad sin metadatos es más difícil de descubrir: buscar la ficha, revisar sus datos si existe o añadirla si falta. «Pendientes de revisión» es un enlace real que aplica `humanValidated=false`, sustituyendo esa faceta y conservando las demás.
+- Cierre accesible de la tarjeta. Al cerrarla aparece «Mejorar el directorio» antes de «Qué puedes hacer aquí». Pulsarlo restaura la tarjeta y la enfoca; desde el mapa vuelve al listado sin cambiar filtros. La preferencia abierta/cerrada se guarda en localStorage y se restaura al volver a la página. Si el almacenamiento está bloqueado, la interacción sigue funcionando durante la sesión.
+- Botón de alta del mapa arriba a la izquierda. En mapas estrechos, la búsqueda baja una fila para evitar solapamientos.
+- Validación de esta revisión: 513 tests Vitest correctos, lint específico correcto y comprobaciones de navegador en español e inglés, escritorio y móvil. Se comprueban persistencia tras recarga, cierre/reapertura y foco a 1440/390/320 px, conservación de filtros y recuento de pendientes, diseño original de «Sobre el proyecto», acceso al formulario y ubicación del botón del mapa. Se mantiene el plan para la revisión final conjunta.
+
+
+## Revisión del 14 de noviembre — tira y panel de contribución
+
+Se parte de la reorganización realizada con otro agente: tira fina antes del listado y panel de contribución separado. Las decisiones de este bloque sustituyen las versiones anteriores de esta invitación; no se cambia «Sobre el proyecto» ni el mapa en esta entrada.
+
+- Tira sin recuentos en sus tres variantes, con texto a la izquierda, acción a la derecha y un aspa siempre visible. En móvil las acciones bajan a otra línea. Cerrar la tira usa `directory-cta-bar-dismissed`; no cierra el panel ni activa el botón de reapertura del panel en la cabecera.
+- `createDismissStore(storageKey)` instancia ambos estados, reutilizando la caducidad de 30 días y el fallback con almacenamiento bloqueado. El panel conserva `directory-add-community-cta-dismissed`, «Ahora no» y su reapertura desde la cabecera.
+- En la variante filtrada, tira y panel explican primero que una ficha puede existir sin las etiquetas necesarias para aparecer en el recorte. El lead incluye una acción de búsqueda por nombre. El alta queda como segunda opción y dice expresamente «No está en el directorio».
+- Panel en dos columnas desde 900 px: título/lead a la izquierda, acciones a la derecha y nota debajo ocupando todo el ancho. En móvil sigue en columna. El botón principal usa azul `#245c9b` y texto blanco mediante una clase propia, sin cambiar otros botones.
+- `resolveCtaPanelPlacement`: con hasta 24 resultados el panel va al final; con más se inserta después de la ficha 24, ocupando la fila completa. Una sola instancia. El título de revisión deja de decir que se ha llegado al final, porque ahora puede aparecer antes.
+- Textos actualizados en español e inglés. `CLAUDE.md` explica por qué se usan el umbral de 24 y claves de cierre independientes.
+- Validación: 532 tests Vitest y siete pruebas de navegador correctos, lint de los componentes, biblioteca, store y pruebas nuevos/modificados correcto (salvo los errores previos ya registrados de `CommunitiesList.jsx`). Revisión visual a 1900, 900, 390 y 320 px según el caso: espaciado, columnas, contraste, enlace por nombre, posición única del panel, cierres independientes y persistencia tras recarga. Build de producción correcto (59 s), con los avisos previos de imágenes del dataset y tamaño de chunks de ArcGIS.
+
+Se conserva el plan para la revisión conjunta. Sin commit, push ni despliegue; documentos locales ajenos intactos.
+
+
+## Ajuste de filas completas y acciones del panel — 14 de noviembre
+
+- Las 24 fichas son una referencia, no un corte fijo. La inserción se redondea hacia la siguiente fila completa según las columnas reales del grid: 26 fichas con 13 columnas, 28 con 14, etc. Si no quedan más fichas tras esa fila, el panel va al final. Nunca se duplica.
+- `CommunitiesList` mide `grid-template-columns`; `ResizeObserver` y el evento de resize recalculan la posición al cambiar el ancho disponible. No se codifican columnas por breakpoint ni se depende solo del ancho de la ventana.
+- En el diseño de escritorio, «Buscar mi comunidad» y el enlace de alta se apilan y alinean a la derecha, bajo «Ahora no». Se conserva el diseño móvil.
+- `CLAUDE.md` refleja la política nueva. Esta corrección sustituye el corte fijo tras la ficha 24 documentado en la revisión anterior.
+- Validación: 544 tests Vitest correctos; cinco pruebas de navegador correctas, incluidas comprobaciones en español e inglés y un redimensionado continuo a 1900, 1774, 1450, 1208, 1100, 900, 699, 390 y 320 px. Verificado también el cambio de ancho del contenedor, la última tarjeta alineada al borde del grid, una sola instancia del panel, las acciones apiladas y la ausencia de desbordamiento. Lint específico correcto salvo el error previo de props en `CommunitiesList.jsx`. Build de producción correcto (1 min 10 s), con los avisos previos del dataset y tamaño de chunks.
+
+
+## Simplificación de la invitación y jerarquía de acciones — 14 de noviembre
+
+La última decisión del usuario sustituye el diseño de tira más panel: se retira la tira para no repetir la misma búsqueda junto al buscador superior y dentro del panel.
+
+- Queda un único panel. «Añadir una comunidad» es la acción principal, con botón azul; «Buscar mi comunidad» es la secundaria, con borde azul y el mismo ancho. Se conserva «Buscar» porque el botón localiza la ficha antes de poder revisarla. Ambas acciones siguen apiladas y alineadas a la derecha en escritorio.
+- Se retiran el componente, estilos, traducciones y estado exclusivos de la tira. Su antigua preferencia guardada deja de usarse. El cierre del panel y la reapertura desde cabecera mantienen la caducidad de 30 días.
+- La variante filtrada conserva la aclaración sobre fichas existentes sin etiquetas, sin un botón de búsqueda adicional dentro del párrafo.
+- Texto español exacto solicitado: «Si la tuya no está, o sus datos están incompletos o desactualizados, puede no aparecer en las búsquedas.». «Estos datos son abiertos» aparece en negrita. Se actualiza también inglés y `CLAUDE.md`.
+- Sin cambios en la inserción por filas completas, los filtros, «Sobre el proyecto» ni el mapa.
+- Validación: 543 tests Vitest y cinco pruebas de navegador correctos (se elimina la prueba de los dos cierres independientes al desaparecer la tira). Comprobadas ambas acciones y su destino, una sola búsqueda en el panel, negrita y texto exacto, persistencia, foco, columnas/filas y ausencia de desbordamiento en ES/EN y escritorio/móvil. Lint específico correcto; permanece el error previo de props de `CommunitiesList.jsx`. Build de producción correcto (1 min 4 s), con los avisos previos del dataset y tamaño de chunks.
+
+
+### Espaciado del panel — 14 de noviembre
+
+Por petición del usuario, margen superior e inferior iguales: `1rem`. Comprobado en navegador a 1900 y 390 px: la separación real respecto a las tarjetas es idéntica arriba y abajo (23,19 px y 22,39 px, respectivamente, incluyendo el gap del grid). Cambio exclusivo de CSS, sin repetir tests ni build.
+
+
+### Introducción del menú y commit — 14 de noviembre
+
+Por petición del usuario, la introducción queda en «Asistentes, ponentes, personas que dinamizan comunidades y quienes crean herramientas pueden aprovechar este directorio.». Se retira el añadido HTML «open data» y se ajusta inglés. El usuario solicita commit del trabajo de UI pendiente; se excluyen los documentos locales de contactos, invitaciones y n8n. El changelog lo genera el hook del repositorio; no se edita a mano. No se solicita push ni despliegue. El plan se conserva para la revisión final conjunta.

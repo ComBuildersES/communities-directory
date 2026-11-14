@@ -582,3 +582,10 @@ arcgis-map {
     font-size: 0.84rem;
   }
 }
+
+.map-add-community { position: absolute; left: 12px; top: 12px; z-index: 2; gap: .5rem; font-size: .85rem; box-shadow: 0 2px 8px #0002; }
+@media (prefers-reduced-motion: reduce) { .map-canvas { transition: none; } }
+.map-canvas { container-type: inline-size; }
+@container (max-width: 520px) {
+  .esri-ui-top-right { margin-top: 3.25rem; }
+}

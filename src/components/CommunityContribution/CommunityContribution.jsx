@@ -1,3 +1,4 @@
+import { BuildersInvitation } from "../CommunityBuildersModal/BuildersInvitation.jsx";
 /* eslint-disable react/prop-types */
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -1112,6 +1113,7 @@ export function CommunityContribution({
   onDirtyChange,
   onIssueOpenedChange,
   onDraftActionsChange,
+  onSelectMember,
 }) {
   const { t } = useTranslation();
   const FIELD_HELP = useMemo(() => getFieldHelp(t), [t]);
@@ -1182,6 +1184,7 @@ export function CommunityContribution({
   const [isCommunityTypeModalOpen, setIsCommunityTypeModalOpen] = useState(false);
   const [isJsonExpanded, setIsJsonExpanded] = useState(false);
   const [hasOpenedIssue, setHasOpenedIssue] = useState(false);
+  const [hasPreparedContribution, setHasPreparedContribution] = useState(false);
   const [hasRestoredDraft, setHasRestoredDraft] = useState(false);
   const [restoredDraftMeta, setRestoredDraftMeta] = useState(null);
   const [hasUserInteracted, setHasUserInteracted] = useState(false);
@@ -1247,6 +1250,7 @@ export function CommunityContribution({
     }
 
     setHasOpenedIssue(false);
+    setHasPreparedContribution(false);
     setHasUserInteracted(false);
     setIsDeletionFormVisible(false);
     setDeletionReasonType("");
@@ -1677,6 +1681,7 @@ export function CommunityContribution({
 
     clearContributionDraft(storageKey);
     setHasOpenedIssue(true);
+    setHasPreparedContribution(true);
     setHasRestoredDraft(false);
     window.open(githubIssueUrl, "_blank", "noopener,noreferrer");
   };
@@ -1687,6 +1692,7 @@ export function CommunityContribution({
     setHasRestoredDraft(false);
     setRestoredDraftMeta(null);
     setHasOpenedIssue(false);
+    setHasPreparedContribution(false);
     setHasUserInteracted(false);
   };
   const handleDeletionReasonTypeChange = (value) => {
@@ -1705,6 +1711,7 @@ export function CommunityContribution({
     if (!isDeletionRequestValid) return;
 
     setHasOpenedIssue(true);
+    setHasPreparedContribution(false);
     window.open(deletionIssueUrl, "_blank", "noopener,noreferrer");
   };
   const handleDuplicateTargetSelect = (community) => {
@@ -2505,6 +2512,11 @@ export function CommunityContribution({
             <a
               className="button is-light is-medium contribution-submit-button"
               href={submissionEmailUrl}
+              onClick={event => {
+                if (!formRef.current?.reportValidity()) { event.preventDefault(); return; }
+                setHasOpenedIssue(true);
+                setHasPreparedContribution(true);
+              }}
             >
               {t("contribution.submit.email")}
             </a>
@@ -2513,6 +2525,10 @@ export function CommunityContribution({
             {isEditMode ? t("contribution.submit.note") : t("contribution.submit.noteWithEmail")}
           </p>
         </div>
+        {hasOpenedIssue && hasPreparedContribution && <>
+          <p className="contribution-submit-note" role="status">{t("contribution.submit.externalPending")}</p>
+          <BuildersInvitation onSelectMember={onSelectMember} />
+        </>}
       </section>
     </form>
   );

@@ -61,8 +61,22 @@
     "closeAriaLabel": "Cerrar aviso de instalación"
   },
   "addCommunityCTA": {
-    "question": "¿Echas en falta alguna comunidad?",
-    "button": "Solicitar nueva comunidad aquí"
+    "findMine": "Buscar mi comunidad",
+    "later": "Ahora no",
+    "reopen": "Mejorar el directorio",
+    "panel": {
+      "label": "Invitación a contribuir al directorio",
+      "title": {
+        "default": "Tu comunidad, ¿sale cuando alguien la busca?",
+        "filtered": "¿Echas en falta alguna comunidad aquí?",
+        "reviewing": "¿Repasas una de estas comunidades?"
+      },
+      "lead": "Aquí hay {{total}} comunidades activas, y las puso gente una a una. <strong>Estos datos son abiertos</strong>: los leen buscadores, asistentes de IA y quien acaba de mudarse a tu ciudad y no conoce a nadie. Si la tuya no está, o sus datos están incompletos o desactualizados, puede no aparecer en las búsquedas.",
+      "pending": "Quedan {{pending}} comunidades sin repasar",
+      "pendingNote": "y no hace falta ser de la comunidad para revisar una: son cinco minutos.",
+      "leadFiltered": "Puede que ya esté en el directorio y no salga con estos filtros porque le faltan etiquetas. Busca su ficha por nombre y completa sus datos; si no existe, puedes añadirla."
+    },
+    "add": "Añadir una comunidad"
   },
   "viewToggle": {
     "list": "Lista",
@@ -706,7 +720,8 @@
       "new": "Sugerir nueva comunidad",
       "email": "Enviar por email",
       "note": "Se abrirá GitHub con el título y el cuerpo del issue precargados.",
-      "noteWithEmail": "Puedes abrir un issue en GitHub o preparar un correo a Community Builders con el JSON generado. Si tu cliente de correo recorta el contenido, copia el bloque JSON manualmente."
+      "noteWithEmail": "Puedes abrir un issue en GitHub o preparar un correo a Community Builders con el JSON generado. Si tu cliente de correo recorta el contenido, copia el bloque JSON manualmente.",
+      "externalPending": "Has abierto una vía externa para la propuesta. Completa allí el envío; los cambios se publicarán solo después de su revisión."
     },
     "aiAssist": {
       "title": "¿Prefieres que te ayude una IA?",
@@ -871,7 +886,7 @@
       "ai": "Este prompt ilustra cómo explorar el dataset con un agente antes de implementar tu idea.",
       "more": "Más consultas con IA y contexto del proyecto"
     },
-    "intro": "Asistentes, ponentes, personas que dinamizan comunidades y quienes crean herramientas o análisis pueden aprovechar este directorio y sus datos"
+    "intro": "Asistentes, ponentes, personas que dinamizan comunidades y quienes crean herramientas pueden aprovechar este directorio."
   },
   "openData": {
     "title": "Datos abiertos + IA",
@@ -910,7 +925,14 @@
       "hintShell": "filtrar el dataset desde la terminal",
       "hintJs": "resolver IDs de tags a etiquetas legibles",
       "hintPython": "cargar el CSV y agrupar",
-      "hintEvents": "recorrer los feeds OTE de las comunidades"
+      "hintEvents": "recorrer los feeds OTE de las comunidades",
+      "commentShell": "# Comunidades activas de ciberseguridad con eventos presenciales",
+      "commentGeneralist": "// Ojo: matchesAllTags marca comunidades generalistas; su array de tags\n// está vacío a propósito y deben contar como coincidencia.",
+      "commentEvents": "// El directorio no guarda eventos: los publica cada comunidad en su feed OTE.",
+      "commentChannels": "// `urls` es una lista de { url, kind?, label? }: el feed es la entrada con kind \"ote\".",
+      "commentFeedFailure": "// No todos los dominios sirven CORS; un feed caído no debe tumbar el resto.",
+      "commentSpec": "// Spec del formato:",
+      "tagsFile": "tags.json"
     },
     "agents": {
       "lead": "Reglas para el contexto de tu agente: fuentes, significado de los campos y límites de interpretación.",
@@ -919,7 +941,8 @@
       "llms": "índice legible por máquina de todos los ficheros y de cómo interpretarlos.",
       "agentsMd": "orientación para agentes que vayan a tocar el código del repositorio.",
       "robots": "política de rastreo: todos los crawlers, incluidos los de IA, son bienvenidos.",
-      "instructionsHint": "fuentes y reglas del dataset"
+      "instructionsHint": "fuentes y reglas del dataset",
+      "instructions": "# Community Builders Directory — datos de comunidades tech de España\n\nFuente de datos: {{siteUrl}}/llms.txt (empieza por aquí; indexa el resto)\nDataset: {{siteUrl}}/data/communities.json\nSignificado de cada campo: {{siteUrl}}/data/schema.json\n\nReglas al usar estos datos:\n- \"tags\" y \"targetAudience\" son IDs: cruzarlos con tags.json / audience.json.\n- matchesAllTags y matchesAllAudience amplían solo su faceta (temáticas o público),\n  aunque el array correspondiente esté vacío; no anulan los demás filtros.\n- \"location\" es dónde se celebran los eventos; \"geographicScope\" es el territorio\n  al que da servicio. No son lo mismo.\n- Excluir hidden: true y status != \"active\" antes de recomendar comunidades.\n- No inferir cercanía a partir de \"location\": solo coincidencia textual exacta.\n- \"organizedBy\" son ids de comunidades DEL DIRECTORIO que organizan esa ficha\n  (una comunidad y su conferencia anual son dos fichas vivas). No es la lista\n  completa de organizadores: empresas y patrocinadores no están aquí.\n- \"openTo\" indica disponibilidad declarada para aportaciones, no búsqueda urgente.\n  Vacío o ausente significa sin información, no rechazo. No inferirlo.\n- Nunca proponer URLs de \"archivedUrls\": son canales muertos.\n- humanValidated: false significa dato sin revisar por una persona. Decirlo.\n- \"urls\" es una lista de canales: { url, kind?, label? }. El kind se omite\n  cuando el dominio ya lo dice, y puede repetirse con labels distintas.\n- El directorio no almacena eventos: los publica cada comunidad en el canal\n  con kind \"ote\", en formato Open Tech Events ({{oteUrl}}).\n- Si falta una comunidad o hay un dato mal, proponer abrir un issue en\n  {{issuesUrl}}.`"
     },
     "organizers": {
       "lead": "Cada vez más gente busca comunidades preguntándole a una IA. Esto es lo que hace que la tuya aparezca bien en esas respuestas:",
@@ -1160,7 +1183,8 @@
     "expectTitle": "Qué esperamos de quien se une",
     "expect": "No hace falta participar en todas las iniciativas ni venir a todos los encuentros: sabemos de sobra que el tiempo es lo que más escasea (y más entre las personas de esta comunidad). Lo que sí esperamos es reciprocidad; escuchar a quien pregunta, dar tu opinión cuando se propone algo, pasar un contacto si lo tienes o revisar los datos de tu comunidad en este directorio. Cosas de unos minutos, pero que es justo lo que hace que esto funcione.",
     "joinCta": "Solicitar unirme",
-    "contact": "¿No tienes claro si encajas? Cuéntanoslo y lo vemos:"
+    "contact": "¿No tienes claro si encajas? Cuéntanoslo y lo vemos:",
+    "invitation": "Conecta con otras personas que dinamizan comunidades: experiencias, colaboraciones y apoyo mutuo en Community Builders."
   },
   "openTo": {
     "title": "Abierta a…",
