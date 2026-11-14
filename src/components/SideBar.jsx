@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { OpenToFilters } from "./OpenToOptions.jsx";
 import { Switch } from "./Switch";
 import { useSideBarVisible, useSidebarActions } from "../stores/sidebar.store.js";
 import { COMMUNITY_LANGUAGE_OPTIONS } from "../lib/communityLanguages.js";
@@ -146,6 +147,9 @@ export const Sidebar = () => {
           </li>
         ))}
       </ul>
+
+      <p className="menu-label">{t("openTo.title")}</p>
+      <OpenToFilters />
 
       <p className="menu-label">{t("sidebar.langs")}</p>
       <ul className="menu-list">

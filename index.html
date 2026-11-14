@@ -41,6 +41,22 @@
     <meta name="twitter:image" content="https://directory.communitybuilders.dev/images/directorio-de-comunidades-tecnicas-de-espa%C3%B1a-1920-630.webp" />
     <meta name="twitter:image:alt" content="Directorio de Comunidades Técnicas de España — +500 meetups, conferencias y más" />
 
+    <!-- Consent Mode v2: el estado por defecto tiene que llegar antes que cualquier
+         etiqueta. `gtm.js` NO se carga aqui: lo carga src/lib/analytics.js solo si
+         alguien acepta el aviso, asi que sin respuesta no hay peticion a Google. -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        wait_for_update: 500
+      });
+      gtag('js', new Date());
+    </script>
+
     <!-- JSON-LD: describe el dataset abierto para buscadores y crawlers de LLM. Estático a
          propósito: la app renderiza en cliente, así que un bloque inyectado por React no lo
          ve un crawler que no ejecuta JS. -->
@@ -97,7 +113,7 @@
             "@type": "WebSite",
             "@id": "https://directory.communitybuilders.dev/#website",
             "url": "https://directory.communitybuilders.dev/",
-            "name": "Comunidades Tech",
+            "name": "Comunidades Tech de España",
             "inLanguage": "es",
             "about": { "@id": "https://directory.communitybuilders.dev/#dataset" },
             "publisher": {

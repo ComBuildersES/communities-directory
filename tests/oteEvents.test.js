@@ -6,6 +6,7 @@ import {
   getFeedAttribution,
   parseOteDate,
   selectEventsToShow,
+  selectCarouselEvents,
 } from "../src/components/CommunityModal/oteEvents.js";
 
 const now = new Date("2026-11-06T10:00:00Z");
@@ -101,5 +102,29 @@ describe("buildOteReaderUrl", () => {
   it("no devuelve enlace sin feed", () => {
     expect(buildOteReaderUrl("")).toBeNull();
     expect(buildOteReaderUrl(undefined)).toBeNull();
+  });
+});
+
+describe("selectCarouselEvents", () => {
+  it("permite recorrer todos los próximos eventos sin truncarlos a tres", () => {
+    const many = Array.from({ length: 6 }, (_, i) => ({ id: String(i), name: `Evento ${i}`, startDate: `2027-01-0${i + 1}T18:00` }));
+    const result = selectCarouselEvents([...many].reverse(), { now });
+    expect(result.upcoming).toBe(true);
+    expect(result.events.map(event => event.id)).toEqual(many.map(event => event.id));
+  });
+
+  it("permite recorrer los últimos eventos en orden descendente, sin cancelados ni fechas inválidas", () => {
+    const result = selectCarouselEvents([
+      ...events.filter(event => !['c', 'd', 'e'].includes(event.id)),
+      { name: 'Cancelado pasado', startDate: '2026-11-01T18:00', status: 'cancelled' },
+      { name: 'Fecha incorrecta', startDate: 'no-es-una-fecha' },
+    ], { now });
+    expect(result.upcoming).toBe(false);
+    expect(result.events.map(event => event.id)).toEqual(['b', 'a']);
+  });
+
+  it("tolera feeds vacíos y eventos nulos", () => {
+    expect(selectCarouselEvents(undefined, { now })).toEqual({ events: [], upcoming: false });
+    expect(selectCarouselEvents([null, {}], { now })).toEqual({ events: [], upcoming: false });
   });
 });

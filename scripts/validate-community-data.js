@@ -1,3 +1,4 @@
+import { validateOpenTo } from "../src/lib/communityOpenTo.js";
 import fs from "node:fs";
 import process from "node:process";
 import { COMMUNITY_LANGUAGE_SET } from "../src/lib/communityLanguages.js";
@@ -217,6 +218,9 @@ function validateCommunityGlobal(community, index, knownTagIds, knownAudienceIds
 
   const name = isNonEmptyString(community.name) ? community.name : `#${community.id ?? index}`;
   const label = `${name} (${prefix})`;
+
+  const openToError = validateOpenTo(community.openTo);
+  if (openToError) pushIssue(issues.errors, "error", `${label}: ${openToError}`);
 
   // `id: null` es el estado válido de una propuesta recién creada: el id se asigna ya en
   // master (`assign-community-ids`) para que dos propuestas simultáneas no colisionen.

@@ -40,6 +40,7 @@ const CANONICAL_KEY_ORDER = [
   'langs',
   'tags',
   'targetAudience',
+  'openTo',
   'matchesAllTags',
   'matchesAllAudience',
   'contactInfo',

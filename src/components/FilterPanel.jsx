@@ -1,4 +1,5 @@
 import { useTranslation } from "react-i18next";
+import { InfoTooltip, OpenToFilters } from "./OpenToOptions.jsx";
 import { Switch } from "./Switch";
 import { useSideBarVisible } from "../stores/sidebar.store.js";
 import { COMMUNITY_LANGUAGE_OPTIONS } from "../lib/communityLanguages.js";
@@ -8,18 +9,24 @@ export function FilterPanel() {
   const isVisible = useSideBarVisible();
 
   return (
-    <div className={`filter-panel ${isVisible ? "filter-panel--open" : ""}`}>
+    <div className={`filter-panel ${isVisible ? "filter-panel--open" : ""}`} tabIndex={-1} role="region" aria-label={t("resultsBar.filters")}>
       <div className="filter-panel-inner">
         <div className="filter-group">
-          <p className="filter-group-label">{t("sidebar.communityType")}</p>
+          <div className="filter-group-label filter-group-label--with-info">
+            <span>{t("sidebar.communityType")}</span>
+            <InfoTooltip label={t("sidebar.communityTypeHelp")} text={t("sidebar.communityTypeNote")} />
+          </div>
           <div className="filter-group-items">
-            <div className="option-item is-size-7"><p>{t("communityType.tech-meetup")}</p><Switch name="communityType" value="tech-meetup" /></div>
-            <div className="option-item is-size-7"><p>{t("communityType.conference")}</p><Switch name="communityType" value="conference" /></div>
-            <div className="option-item is-size-7"><p>{t("communityType.collaborative-group")}</p><Switch name="communityType" value="collaborative-group" /></div>
-            <div className="option-item is-size-7"><p>{t("communityType.mutual-aid")}</p><Switch name="communityType" value="mutual-aid" /></div>
-            <div className="option-item is-size-7"><p>{t("communityType.hacklab")}</p><Switch name="communityType" value="hacklab" /></div>
-            <div className="option-item is-size-7"><p>{t("communityType.umbrella-org")}</p><Switch name="communityType" value="umbrella-org" /></div>
-            <div className="option-item is-size-7"><p>{t("communityType.meta-community")}</p><Switch name="communityType" value="meta-community" /></div>
+            {["tech-meetup", "conference", "collaborative-group", "mutual-aid", "hacklab", "umbrella-org", "meta-community"].map((type) => (
+              <div className="option-item community-type-option is-size-7" key={type}>
+                <p>{t(`communityType.${type}`)}</p>
+                <InfoTooltip
+                  label={t("openTo.info", { option: t(`communityType.${type}`) })}
+                  text={t(`sidebar.communityTypeDescriptions.${type}`)}
+                />
+                <Switch name="communityType" value={type} />
+              </div>
+            ))}
           </div>
         </div>
 
@@ -48,6 +55,11 @@ export function FilterPanel() {
 
         <div className="filter-group-divider" />
 
+        <div className="filter-group">
+          <p className="filter-group-label">{t("openTo.title")}</p>
+          <OpenToFilters />
+        </div>
+        <div className="filter-group-divider" />
         <div className="filter-group">
           <p className="filter-group-label">{t("sidebar.langs")}</p>
           <div className="filter-group-items">

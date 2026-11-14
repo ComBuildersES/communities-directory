@@ -7,6 +7,16 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-11-14 `8223d6f` medir visitas con consentimiento previo y LibreCounter
+- 2026-11-14 `74f1690` mejorar búsqueda y explorar temáticas y públicos
+- 2026-11-14 `431d4c3` completar mejoras del directorio y traducciones
+- 2026-11-13 `2fe2f71` completar los recorridos de mejora y reutilización de datos
+- 2026-11-13 `93d229c` integrar Community Builders en la guía del directorio
+- 2026-11-13 `3ce4bc9` ampliar la guía de aportaciones y datos abiertos
+- 2026-11-13 `efb806b` simplificar cabecera y añadir guía para encontrar comunidades
+- 2026-11-13 `a1c207a` mejorar la ficha, el selector de colaboración y los eventos
+- 2026-11-13 `7b8dc68` añadir openTo y filtros de colaboración (#464)
+- 2026-11-13 `92a5ce6` invitación a Community Builders desde la cabecera
 - 2026-11-12 `df99b7c` filtrar por persona de Community Builders con @
 - 2026-11-12 `ac5f709` el feed de eventos, donde se explica qué es
 - 2026-11-12 `fbebf4e` alta de GDG Córdoba, Lleida, Valladolid y Zaragoza

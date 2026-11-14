@@ -785,51 +785,29 @@ button.modal-badge:focus-visible {
 }
 
 /* Eventos leídos del feed OTE de la comunidad (issues #57, #349) */
-.community-modal-ote-about {
-  margin-left: auto;
-  font-size: 0.7rem;
-  font-weight: 600;
-  text-transform: none;
-  letter-spacing: 0;
-}
-
-.community-modal-ote-label {
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: #666;
-  margin: 0.4rem 0 0.2rem;
-}
-
-.community-modal-ote-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-}
-
+.community-modal-ote { gap: 8px; }
+.community-modal-ote-header, .community-modal-ote-controls { display: flex; align-items: center; gap: .5rem; }
+.community-modal-ote-header { justify-content: space-between; }
+.community-modal-ote-controls { flex-shrink: 0; }
+.community-modal-ote-controls button { border: 1px solid #dce3ec; background: #fff; border-radius: .35rem; color: #365776; width: 1.9rem; height: 1.9rem; cursor: pointer; }
+.community-modal-ote-controls button:disabled { opacity: .35; cursor: default; }
+.community-modal-ote-controls button:focus-visible { outline: 2px solid #3273dc; outline-offset: 2px; }
+.community-modal-ote-position { font-size: .72rem; color: #777; font-variant-numeric: tabular-nums; }
 .community-modal-ote-item {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: 0.5rem;
-  font-size: 0.85rem;
+  flex-direction: column;
+  gap: 6px;
+  padding: 12px 14px;
+  background: #f8fafc;
+  border: 1px solid #e6ebf1;
+  border-radius: 8px;
+  font-size: .85rem;
+  overflow-wrap: anywhere;
 }
-
-.community-modal-ote-date {
-  flex: 0 0 auto;
-  font-variant-numeric: tabular-nums;
-  color: #444;
-  font-weight: 600;
-}
-
-.community-modal-ote-place {
-  color: #777;
-  font-size: 0.78rem;
-}
+.community-modal-ote-item > a, .community-modal-ote-item > span { font-weight: 600; }
+.community-modal-ote-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .65rem; }
+.community-modal-ote-date { font-variant-numeric: tabular-nums; color: #444; font-size: .78rem; font-weight: 600; }
+.community-modal-ote-place { color: #777; font-size: .78rem; }
 
 .community-modal-ote-note {
   font-size: 0.8rem;
@@ -841,8 +819,8 @@ button.modal-badge:focus-visible {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  gap: 0.6rem;
-  margin: 0.5rem 0 0;
+  gap: 0.25rem 0.45rem;
+  margin: 0;
   font-size: 0.78rem;
 }
 

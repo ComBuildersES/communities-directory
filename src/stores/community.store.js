@@ -11,6 +11,7 @@ import { buildCoverage } from "../lib/dataCoverage.js";
 import { buildMergedFromMap } from "../lib/mergedCommunities.js";
 import { buildOrganizedByMap } from "../lib/organizedCommunities.js";
 import { buildCbMemberIndex, memberHandlesForCommunity } from "../lib/cbMembers.js";
+import { getNameSearchRecovery } from "../lib/nameSearchRecovery.js";
 
 const TAGS_URL = `${import.meta.env.BASE_URL}data/tags.json`;
 const AUDIENCE_URL = `${import.meta.env.BASE_URL}data/audience.json`;
@@ -208,15 +209,18 @@ const useCommunityStore = create(
        */
       setFilters: (nextFilters) => {
         const { allCommunities, invertedIndex } = get();
+        const effectiveFilters = { ...nextFilters };
+        if (!effectiveFilters.tags?.length) delete effectiveFilters.tagMatch;
+        if (!effectiveFilters.targetAudience?.length) delete effectiveFilters.audienceMatch;
         const communitiesWithNewFilters = searchFaceted(
           allCommunities,
           invertedIndex,
-          nextFilters
+          effectiveFilters
         );
 
         set({
           communitiesFiltered: communitiesWithNewFilters,
-          filters: nextFilters,
+          filters: effectiveFilters,
           numberOFCommunities: communitiesWithNewFilters.length,
           numberOFOnSiteCommunities: communitiesWithNewFilters.filter((e) => e.displayOnMap == true).length,
         });
@@ -256,6 +260,8 @@ const updateFilter = (filters, key, value) => {
       // eliminamos la key
       // eslint-disable-next-line no-unused-vars
       const { [key]: _, ...updatedFilters } = filters;
+      if (key === 'tags') delete updatedFilters.tagMatch;
+      if (key === 'targetAudience') delete updatedFilters.audienceMatch;
       return updatedFilters;
     } else {
       // devolvemos los filtros con el array con el valor actualizado
@@ -361,6 +367,13 @@ export const useReviewFacetCounts = () => {
 };
 
 export const useHasFreshData = () => useCommunityStore((state) => state.hasFreshData);
+
+export const useNameSearchRecovery = () => {
+  const data = useAllCommunities();
+  const index = useInvertedIndex();
+  const filters = useFilters();
+  return useMemo(() => getNameSearchRecovery(data, index, filters), [data, index, filters]);
+};
 
 export const useIsRefreshingFreshData = () =>
   useCommunityStore((state) => state.isRefreshingFreshData);

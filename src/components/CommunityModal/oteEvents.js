@@ -66,6 +66,17 @@ export function selectEventsToShow(events, { now = new Date(), limit = 3 } = {})
   };
 }
 
+/** Todos los eventos navegables: próximos en orden cronológico o últimos del más reciente al más antiguo. */
+export function selectCarouselEvents(events, { now = new Date() } = {}) {
+  const { upcoming } = selectEventsToShow(events, { now, limit: Infinity });
+  if (upcoming.length) return { events: upcoming, upcoming: true };
+  const past = (Array.isArray(events) ? events : [])
+    .map((event) => ({ ...event, startsAt: parseOteDate(event?.startDate) }))
+    .filter((event) => event.name && event.startsAt && event.startsAt < now && event.status !== "cancelled")
+    .sort((a, b) => b.startsAt - a.startsAt);
+  return { events: past, upcoming: false };
+}
+
 const OTE_READER_URL = "https://reader.opentechevents.org/";
 
 /**

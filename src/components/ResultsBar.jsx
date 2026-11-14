@@ -16,14 +16,18 @@ import { bajaString } from "../constants";
 import { COMMUNITY_LANGUAGE_OPTIONS } from "../lib/communityLanguages.js";
 
 const FILTER_LABEL_KEYS = {
+  openTo: "openTo.title",
   status: "resultsBar.filterLabel.status",
   eventFormat: "resultsBar.filterLabel.eventFormat",
   geographicScope: "resultsBar.filterLabel.geographicScope",
   communityType: "resultsBar.filterLabel.communityType",
   langs: "resultsBar.filterLabel.langs",
   tags: "resultsBar.filterLabel.tags",
+  tagMatch: "topicExplorer.modeLabel",
   targetAudience: "resultsBar.filterLabel.targetAudience",
+  audienceMatch: "topicExplorer.audience.modeLabel",
   name: "resultsBar.filterLabel.name",
+  nameQuery: "resultsBar.filterLabel.nameQuery",
   parentId: "resultsBar.filterLabel.parentId",
   humanValidated: "resultsBar.filterLabel.humanValidated",
   cbMembers: "resultsBar.filterLabel.cbMembers",
@@ -65,12 +69,20 @@ export function ResultsBar({ view, toggleView }) {
     [allCommunities, childrenByParentId]
   );
 
-  const chips = Object.entries(filters).flatMap(([key, values]) =>
+  const chips = Object.entries(filters).filter(([key]) =>
+    (key !== 'tagMatch' || filters.tags?.length > 0) && (key !== 'audienceMatch' || filters.targetAudience?.length > 0)
+  ).flatMap(([key, values]) =>
     values.map((value) => ({
       key,
       value,
       label:
-        key === "langs"
+        key === 'tagMatch'
+          ? t('topicExplorer.all')
+          : key === 'audienceMatch'
+          ? t('topicExplorer.audience.all')
+          : key === "openTo"
+          ? t(`openTo.labels.${value}`, { defaultValue: value })
+          : key === "langs"
           ? (languagesMap[value] || value.toUpperCase())
           : key === "tags"
             ? (tagsMap[value] || value)
@@ -98,12 +110,31 @@ export function ResultsBar({ view, toggleView }) {
 
   return (
     <div className="results-bar">
-      <span className="results-count">
-        <strong>{displayCount}</strong>
-        {showTotal && <span className="results-count-total"> {t("resultsBar.ofTotal", { total })}</span>}
-        {" "}{suffix}
-      </span>
+      <div className="results-summary" tabIndex={-1}>
+        <span className="results-count" role="status" aria-live="polite" aria-atomic="true">
+          <strong>{displayCount}</strong>
+          {showTotal && <span className="results-count-total"> {t("resultsBar.ofTotal", { total })}</span>}
+          {" "}{suffix}
+        </span>
 
+        {chips.length > 0 && (
+          <div className="results-chips">
+            {chips.map(({ key, value, label, category }) => (
+              <span key={`${key}-${value}`} className="results-chip">
+                {category && <span className="results-chip-category">{category}:</span>}
+                {label}
+                <button
+                  className="results-chip-remove"
+                  onClick={() => filterComunities(key, bajaString + value)}
+                  aria-label={t("resultsBar.removeFilter", { label })}
+                >
+                  <i className="fas fa-times"></i>
+                </button>
+              </span>
+            ))}
+          </div>
+        )}
+      </div>
       <div className="results-bar__controls">
         <button
           type="button"
@@ -116,24 +147,6 @@ export function ResultsBar({ view, toggleView }) {
         </button>
         <ViewToggleButton view={view} toggleView={toggleView} />
       </div>
-
-      {chips.length > 0 && (
-        <div className="results-chips">
-          {chips.map(({ key, value, label, category }) => (
-            <span key={`${key}-${value}`} className="results-chip">
-              {category && <span className="results-chip-category">{category}:</span>}
-              {label}
-              <button
-                className="results-chip-remove"
-                onClick={() => filterComunities(key, bajaString + value)}
-                aria-label={t("resultsBar.removeFilter", { label })}
-              >
-                <i className="fas fa-times"></i>
-              </button>
-            </span>
-          ))}
-        </div>
-      )}
     </div>
   );
 }

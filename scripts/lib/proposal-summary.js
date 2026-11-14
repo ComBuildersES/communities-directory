@@ -26,6 +26,7 @@ const FIELD_DEFS = [
   { key: 'shortDescription', label: 'Descripción corta' },
   { key: 'topics', label: 'Temas (texto libre)' },
   { key: 'tags', label: 'Etiquetas', catalog: 'tags', list: true },
+  { key: 'openTo', label: 'Abierta a', enumGroup: 'openTo', list: true },
   { key: 'targetAudience', label: 'Público objetivo', catalog: 'audience', list: true },
   // Los flags "vale para cualquier…" solo se listan cuando están activos: en falso son el
   // caso normal y añadirían dos filas de ruido a cada ficha.
@@ -74,6 +75,7 @@ export function loadSummaryCatalogs({
       eventFormat: locale.eventFormat ?? {},
       geographicScope: locale.geographicScope ?? {},
       language: locale.language ?? {},
+      openTo: locale.openTo?.labels ?? {},
     },
     tags: buildCatalogLabels(readJsonFile(tagsPath, [])),
     audience: buildCatalogLabels(readJsonFile(audiencePath, [])),

@@ -688,6 +688,33 @@ desde el servidor: el directorio es estático y la IA la pone quien la usa.
 - Si añades un campo al modelo, añádelo a `STRING_FIELDS`, `ARRAY_FIELDS` o `ENUM_VALUES` o
   la IA no podrá rellenarlo.
 
+### Invitación a contribuir (`src/components/AddCommunityCTA/`)
+
+Hay un único panel (`AddCommunityCTAPanel`). Se retiró la tira superior porque repetía
+la búsqueda que ya ofrece el buscador y el propio panel.
+
+- **«Añadir una comunidad» es la acción principal**, con botón azul. «Buscar mi comunidad»
+  es un botón secundario de borde azul, del mismo ancho. Se conserva ese nombre porque
+  el control primero localiza una ficha; no inicia directamente su revisión. En escritorio
+  se apilan y alinean a la derecha, cerca de «Ahora no».
+- El panel usa **24 fichas como referencia**, completando la fila real antes de intercalarse
+  (`resolveCtaPanelPlacement`). Se leen las columnas calculadas del grid y un
+  `ResizeObserver` recalcula ante cambios del ancho disponible, además del resize de
+  ventana. Con 13 columnas se inserta después de 26 fichas; con 14, después de 28. Si no
+  quedan más fichas después de esa fila, va al final. Siempre hay un solo panel.
+- El texto explica el uso de los datos por buscadores, asistentes y personas. «Estos datos
+  son abiertos» va en negrita. Los datos incompletos o desactualizados **pueden** impedir
+  aparecer en búsquedas; no se afirma que lo hagan siempre.
+- `resolveAddCommunityCTAVariant` conserva tres variantes. En el recorrido filtrado se
+  explica que una ficha puede existir sin las etiquetas necesarias para aparecer en ese
+  recorte, sin añadir otra acción de búsqueda dentro del párrafo. A quien ya está viendo
+  pendientes no se le ofrece volver a filtrarlas.
+- «Ahora no» silencia el panel **30 días** (`isCtaDismissed`), usando
+  `directory-add-community-cta-dismissed`. La cabecera permite reabrirlo. La antigua
+  clave de cierre de la tira deja de usarse; su valor guardado no afecta al panel.
+  `createDismissStore(key)` mantiene el fallback si localStorage está bloqueado. El `true`
+  sin fecha de la versión antigua caduca, porque aquel cierre no fue sobre esta pieza.
+
 ### Botón flotante (`src/components/SupportFab/`)
 
 Lo primero que hace el panel es **preguntar**: "¿Necesito ayuda?" o "¿Quiero ayudar?". Son
@@ -925,6 +952,34 @@ esos commits no lleven la marca.
 - Al pushear a `master` a mano, deja el commit del changelog en medio, o comprueba que haya
   salido un run: `gh run list --workflow deploy.yml --limit 1`.
 - Si no salió, se lanza a mano: `gh workflow run deploy.yml --ref master`.
+
+## Analítica: nada se carga antes de que alguien diga que sí
+
+Dos contadores, y ninguno de los dos existe para perfilar a nadie:
+
+- **LibreCounter** (icono del pie, `src/components/Footer.jsx`): sin cookies, sin
+  identificar a nadie, y el total es público. Cuenta a todo el mundo, por eso no hace falta
+  pedirle permiso a nadie. Va **sin `loading="lazy"`** a propósito: el pie es
+  `is-hidden-mobile`, y una imagen diferida dentro de un contenedor en `display:none` no se
+  pide nunca, así que en móvil no contaría. `referrerPolicy="unsafe-url"` es lo que permite
+  atribuir la visita al dominio; sin él, no se cuenta.
+- **Google Tag Manager** (`GTM-MT4LP53K`, con GA4 dentro): sólo cuántas visitas hay.
+
+`index.html` declara el `dataLayer` y el `consent default: denied` (Consent Mode v2) antes de
+cualquier etiqueta, pero **no carga `gtm.js`**. Lo carga `src/lib/analytics.js`
+(`enableAnalytics`, idempotente) únicamente cuando alguien acepta el aviso: así, para quien
+rechaza o no responde, no hay ni una petición a Google, no sólo cookies de menos.
+
+- La decisión se guarda con fecha y versión (`src/lib/analyticsConsent.js`) y **caduca al
+  año**. Ante cualquier duda —valor ilegible, versión distinta del aviso, caducado— el estado
+  es `unknown` y se vuelve a preguntar: preguntar de más molesta; medir sin permiso, no es
+  legal. Sube `ANALYTICS_CONSENT_VERSION` sólo si cambia **para qué** se usan los datos.
+- El banner (`src/components/CookieConsent/`) da **las dos respuestas al mismo peso**: un
+  "aceptar" destacado junto a un "rechazar" en letra pequeña convierte la pregunta en un
+  trámite. Va por debajo de los modales (`z-index` 8900) para no tapar la ficha que alguien
+  acaba de abrir.
+- El pie tiene un enlace "Analítica" que **vuelve a abrir la pregunta**: sin él, quien
+  rechaza no tiene forma de cambiar de opinión durante un año.
 
 ## PWA — Detección de actualizaciones
 

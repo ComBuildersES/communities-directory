@@ -74,7 +74,10 @@ describe.each(LOCALES)('prompts de openData ($name)', ({ data, asksFirst }) => {
     expect(rules).toContain('matchesAllTags');
     expect(rules).toContain('geographicScope');
     expect(rules).toContain('humanValidated');
-    expect(rules).toContain('{{tagsEnUrl}}');
+    expect(rules).toContain('{{tagsUrl}}');
+    expect(rules).toContain('{{audienceUrl}}');
+    expect(rules).not.toContain('{{tagsEnUrl}}');
+    expect(rules).not.toContain('{{audienceEnUrl}}');
   });
 
   /**
@@ -120,17 +123,17 @@ describe.each(LOCALES)('prompts de openData ($name)', ({ data, asksFirst }) => {
     expect(prompts.rules).toMatch(/nadie lo ha rellenado|nobody has filled it in/i);
   });
 
-  /**
-   * El dataset no tiene ningún campo que diga quién busca voluntariado, quién está abierto
-   * a colaborar o quién acoge grupos nuevos. Los prompts que van de eso tienen que decirlo
-   * en voz alta, o el modelo responde inventándoselo.
-   */
-  it.each(['volunteer', 'synergies', 'umbrella'])(
-    '"%s" avisa de que el dataset no trae ese campo',
+  it.each(['volunteer', 'synergies', 'speaker'])(
+    '"%s" usa la disponibilidad declarada sin inferirla cuando falta',
     (key) => {
-      expect(prompts[key].text).toMatch(/el dataset no dice|the dataset does not say/i);
+      expect(prompts[key].text).toContain('openTo');
+      expect(prompts[key].text).toMatch(/sin información|unknown|dato falta|If missing/i);
     }
   );
+
+  it('no deduce de openTo que una organización acoja grupos nuevos', () => {
+    expect(prompts.umbrella.text).toMatch(/el dataset no dice|the dataset does not say/i);
+  });
 
   it.each(RECOMMENDING_KEYS)('"%s" pide el enlace o el canal de contacto', (key) => {
     expect(prompts[key].text).toMatch(/enlace|canal|link|channel/i);
@@ -154,5 +157,51 @@ describe.each(LOCALES)('pestañas de openData ($name)', ({ data }) => {
     expect(data.openData.found.helpTitle).toBeTruthy();
     expect(data.openData.organizers.promptsTitle).toBeTruthy();
     expect(data.openData.build.filesTitle).toBeTruthy();
+  });
+});
+
+
+describe('revisión de prompts en español', () => {
+  it('mantiene separado el enlace de cabecera del contenido del modal', () => {
+    expect(typeof es.heading.openData).toBe('string');
+    expect(es.openData.prompts.types.label).toBe('Descubrir tipos de comunidades');
+  });
+
+  it('omite la licencia en los ocho prompts', () => {
+    for (const key of PROMPT_KEYS) expect(es.openData.prompts[key].text).not.toMatch(/CC BY|licencia/i);
+  });
+
+  it('limita la búsqueda por ubicación a coincidencias exactas y no deduce proximidad', () => {
+    expect(es.openData.prompts.rules).toContain('coincidencia exacta');
+    expect(es.openData.prompts.rules).toContain('No deduzcas proximidad, radios');
+    expect(es.openData.prompts.rules).toContain('explorar el mapa');
+    expect(es.openData.prompts.tribe.text).not.toContain('hasta dónde me puedo mover');
+  });
+
+  it('explora tipos y dinámicas sin decidir cuál conviene a una persona', () => {
+    const prompt = es.openData.prompts.types;
+    expect(prompt.label).toBe('Descubrir tipos de comunidades');
+    expect(prompt.text).toContain('No busco que decidas qué tipo me conviene');
+    expect(prompt.text).toContain('hacklab frente a asistir a charlas en un meetup');
+    expect(prompt.text).toContain('no como recomendaciones personales');
+    expect(prompt.text).not.toContain('cerca de mí');
+    expect(prompt.text).not.toContain('qué dos o tres tipos encajan mejor');
+  });
+});
+
+
+describe('aportaciones sin disponibilidad inferida (español)', () => {
+  it.each(['speaker', 'volunteer'])('%s limita las inferencias de tipo, ubicación y plazas', (key) => {
+    const text = es.openData.prompts[key].text;
+    expect(text).toContain('coincidencia exacta');
+    expect(text).toContain('no deduzcas proximidad');
+    expect(text).toContain('no garantiza una plaza');
+    expect(text).not.toContain('necesitan ponentes de forma continua');
+    expect(text).not.toContain('necesitan manos de forma continuada');
+  });
+
+  it('no infiere las fechas ni la periodicidad de los C4P', () => {
+    expect(es.openData.prompts.speaker.text).toContain('no infieras si están abiertos ni su periodicidad');
+    expect(es.openData.prompts.speaker.text).not.toContain('suele abrirse una vez al año');
   });
 });

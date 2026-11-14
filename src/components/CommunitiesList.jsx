@@ -1,6 +1,7 @@
-import { useMemo } from "react";
+import { Fragment, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { CommunityCard } from "./CommunityCard.jsx";
-import { AddCommunityCTA } from "./AddCommunityCTA/AddCommunityCTA.jsx";
+import { AddCommunityCTAPanel } from "./AddCommunityCTA/AddCommunityCTA.jsx";
+import { resolveCtaPanelPlacement } from "../lib/addCommunityCTA.js";
 import { EmptyResults } from "./EmptyResults.jsx";
 
 import {
@@ -15,6 +16,8 @@ export function CommunitiesList({ onOpenCommunity }) {
   const isError = useIsError();
   const communitiesFiltered = useCommunitiesFiltered();
   const cbMemberIds = useCBMemberIds();
+  const gridRef = useRef(null);
+  const [gridColumns, setGridColumns] = useState(1);
 
   const sortedCommunities = useMemo(
     () => [...communitiesFiltered].sort((a, b) => {
@@ -27,6 +30,23 @@ export function CommunitiesList({ onOpenCommunity }) {
     }),
     [communitiesFiltered, cbMemberIds]
   );
+
+  useLayoutEffect(() => {
+    const grid = gridRef.current;
+    if (!grid) return;
+    const measureColumns = () => {
+      const tracks = getComputedStyle(grid).gridTemplateColumns;
+      setGridColumns(Math.max(1, tracks.split(/\s+/).filter(Boolean).length));
+    };
+    measureColumns();
+    const observer = typeof ResizeObserver === "function" ? new ResizeObserver(measureColumns) : null;
+    observer?.observe(grid);
+    window.addEventListener("resize", measureColumns);
+    return () => {
+      observer?.disconnect();
+      window.removeEventListener("resize", measureColumns);
+    };
+  }, [isLoading, isError, sortedCommunities.length]);
 
   if (isLoading) {
     return (
@@ -44,25 +64,28 @@ export function CommunitiesList({ onOpenCommunity }) {
   if (sortedCommunities.length === 0) {
     return (
       <div className="communitieslist-container">
-        <EmptyResults />
-        <AddCommunityCTA />
+        <EmptyResults onOpenCommunity={onOpenCommunity} />
+        <AddCommunityCTAPanel />
       </div>
     );
   }
 
+  const placement = resolveCtaPanelPlacement({ resultCount: sortedCommunities.length, columnCount: gridColumns });
   return (
     <div className="communitieslist-container">
-      <div className="communitieslist">
-        {sortedCommunities.map((community) => (
-          <CommunityCard
-            key={community.id}
-            community={community}
-            hasCBMember={cbMemberIds.has(community.id)}
-            onOpen={onOpenCommunity}
-          />
+      <div className="communitieslist" ref={gridRef}>
+        {sortedCommunities.map((community, index) => (
+          <Fragment key={community.id}>
+            <CommunityCard
+              community={community}
+              hasCBMember={cbMemberIds.has(community.id)}
+              onOpen={onOpenCommunity}
+            />
+            {placement.afterIndex === index + 1 && <AddCommunityCTAPanel />}
+          </Fragment>
         ))}
       </div>
-      <AddCommunityCTA />
+      {placement.atEnd && <AddCommunityCTAPanel />}
     </div>
   );
 }

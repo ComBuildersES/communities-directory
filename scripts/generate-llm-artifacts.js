@@ -15,6 +15,7 @@
  * Se ejecuta en `npm run build`, después de `compile-communities`, así que el deploy siempre
  * publica artefactos sincronizados con la fuente de verdad.
  */
+import { OPEN_TO_OPTIONS } from '../src/lib/communityOpenTo.js';
 import fs from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
@@ -56,6 +57,7 @@ const CSV_COLUMNS = [
   'langs',
   'tags',
   'targetAudience',
+  'openTo',
   'communityUrl',
   'contactInfo',
   'lat',
@@ -145,6 +147,7 @@ export function buildCsv(communities) {
       langs: community.langs,
       tags: community.tags,
       targetAudience: community.targetAudience,
+      openTo: community.openTo,
       communityUrl: community.communityUrl,
       contactInfo: community.contactInfo,
       lat: community.latLon?.lat,
@@ -266,6 +269,16 @@ export function buildSchema({ tags = [], audience = [] } = {}) {
           '`description`, `category` and `synonyms`. The same catalogue is published in ' +
           'English at /data/tags.en.json, with identical ids and translated labels.',
       },
+      openTo: {
+        type: 'array',
+        uniqueItems: true,
+        items: { type: 'string', enum: OPEN_TO_OPTIONS },
+        description: 'Explicitly declared openness to volunteers (specific tasks), collaborations ' +
+          '(joint activities between communities), co-organisers (ongoing organising roles), ' +
+          'speakers (talks or workshops), sponsors (financial or in-kind support), venues ' +
+          '(event spaces), or mentors (mentoring programmes). Not urgent recruitment. ' +
+          'Empty or absent means unknown, never refusal. Populate only with explicit evidence.',
+      },
       targetAudience: {
         type: 'array',
         items: { type: 'string' },
@@ -373,6 +386,7 @@ function formatCommunitySection(community, { tagLabels, audienceLabels, nameById
         (community.eventFormat === 'online' ? 'Online only' : null),
     ],
     ['Scope', community.geographicScope && community.geographicScope !== 'unknown' ? community.geographicScope : null],
+    ['Open to', community.openTo?.join(', ') || null],
     ['Languages', community.langs?.length ? community.langs.join(', ') : null],
     [
       'Topics',
@@ -513,6 +527,7 @@ regenerated on every deploy.
 
 - \`tags\` and \`targetAudience\` are **ids**, not labels: join them against tags.json and audience.json to get human-readable names. Match on \`label\`, \`description\` and \`synonyms\`, not just the id.
 - \`matchesAllTags\` / \`matchesAllAudience\` mean "generalist": the community matches any topic or any profile, and its array is empty on purpose. Treat an empty array plus the flag as "everything", never as "nothing".
+- \`openTo\` lists explicitly declared openness to contributions: volunteers, collaborations, co-organisers, speakers, sponsors, venues, mentors. It does not imply urgent recruitment. Empty or absent means unknown, not refusal. Never infer it from community type or activity.
 - \`location\` is where events happen; \`geographicScope\` is the territory served. They differ often: a community can meet in Madrid and serve all of Spain.
 - Coverage is uneven, so do not read an empty field as a statement about the community. Of the ${active} active communities, ${withTags} have \`tags\`, ${withAudience} have \`targetAudience\` and ${withScope} have \`geographicScope\`. An empty field means nobody has filled it in yet, not that the community has no topic or serves nowhere. Say which recommendations rest on a field that is often missing.
 - \`lastReviewed\` is the date a person last checked the record. It is **not** an activity signal: most records have not been revisited since they were added. The only place where live activity can be checked is the \`urls\` entry whose \`kind\` is \`ote\`, the community's events feed (${withOte} active communities publish one). The field only says the community publishes one; it says nothing about what is in it, and keeping it current is the community's call, not the directory's. Read the dates inside the feed rather than inferring activity from the field being present.

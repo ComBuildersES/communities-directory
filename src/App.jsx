@@ -4,6 +4,7 @@ import { CommunitiesList } from "./components/CommunitiesList.jsx";
 import { Footer } from "./components/Footer.jsx";
 import { Heading } from "./components/Heading.jsx";
 import { InstallPromptBar } from "./components/InstallPromptBar.jsx";
+import { CookieConsentBanner } from "./components/CookieConsent/CookieConsentBanner.jsx";
 import { SupportFab } from "./components/SupportFab/SupportFab.jsx";
 import { TagSearch } from "./components/TagSearch/TagSearch.jsx";
 import { ResultsBar } from "./components/ResultsBar.jsx";
@@ -31,6 +32,7 @@ import {
   useChildrenByParentId,
 } from "./stores/community.store.js";
 import { shouldRevalidateFreshData } from "./lib/freshness.js";
+import { builderFilters } from "./lib/communityBuilders.js";
 
 const Map = lazy(() => import("./components/Map/Map.jsx"));
 const CommunityContribution = lazy(() =>
@@ -79,7 +81,7 @@ function App () {
     typeof navigator === "undefined" ? true : navigator.onLine
   );
   const [modalScrollLockY, setModalScrollLockY] = useState(null);
-  const { fetchCommunities } = useCommunityActions();
+  const { fetchCommunities, setFilters } = useCommunityActions();
   const communities = useAllCommunities();
   const allTags = useTags();
   const allAudience = useAudience();
@@ -442,8 +444,19 @@ function App () {
           closeContributionForm={closeContributionForm}
           goToHome={goToHome}
           goToContribution={goToContribution}
+          onShowList={() => { setMapFocusTarget(null); setView("list"); }}
+          onShowMap={() => {
+            setMapFocusTarget(null);
+            setView("map");
+          }}
+          onSelectMember={(handle) => {
+            setSelectedCommunityIdentifier(null);
+            setMapFocusTarget(null);
+            setView("list");
+            setFilters(builderFilters(handle));
+          }}
         />
-        {!showContributionView && <TagSearch />}
+        {!showContributionView && <TagSearch onShowResults={() => { setMapFocusTarget(null); setView("list"); }} />}
         {!showContributionView && <ResultsBar view={view} toggleView={toggleView} />}
         {!showContributionView && <FilterPanel />}
         {!showContributionView && <ParentFilterBanner />}
@@ -458,6 +471,7 @@ function App () {
                 proposalDraft={route.proposalDraft}
                 onDirtyChange={handleContributionDirtyChange}
                 onIssueOpenedChange={handleContributionIssueOpenedChange}
+                onSelectMember={handle => navigateWithGuard(buildDirectoryStatePath({ filters: builderFilters(handle) }))}
                 onDraftActionsChange={handleDraftActionsChange}
               />
             </Suspense>
@@ -534,6 +548,7 @@ function App () {
         <Footer />
       </div>
       {/* Fuera del contenedor del contenido: es fijo y no debe heredar su scroll. */}
+      <CookieConsentBanner />
       <SupportFab onAddCommunity={goToContribution} />
       {!showContributionView && selectedCommunity && (
         <Suspense fallback={null}>

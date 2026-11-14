@@ -1,3 +1,5 @@
+import { TAG_CATEGORY_ORDER, AUDIENCE_CATEGORY_ORDER } from '../../lib/topicExplorer.js';
+import { BuildersInvitation } from "../CommunityBuildersModal/BuildersInvitation.jsx";
 /* eslint-disable react/prop-types */
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -36,6 +38,7 @@ import {
   toUrlEntries,
   toUrlRows,
 } from "../../lib/communityUrls.js";
+import { OpenToOptions } from "../OpenToOptions.jsx";
 import { OteSection } from "./OteSection.jsx";
 import { UrlKindCombobox } from "./UrlKindCombobox.jsx";
 import { MERGED_STATUS } from "../../lib/mergedCommunities.js";
@@ -186,39 +189,6 @@ function getFieldHelp(t) {
     },
   };
 }
-
-const TAG_CATEGORY_ORDER = [
-  "Web y Frontend",
-  "Frameworks, Librerías y Stacks",
-  "Lenguajes de programación",
-  "Tech for Social Good",
-  "Datos, IA y Analítica",
-  "DevOps, Cloud e Infraestructura",
-  "Arquitectura y Paradigmas",
-  "Startups, Negocio y Producto",
-  "Bases de Datos y Almacenamiento",
-  "Ciberseguridad",
-  "Mobile y Sistemas Operativos",
-  "Hardware, IoT y Maker",
-  "DevTools",
-  "CMS",
-  "Tecnologías Descentralizadas",
-  "Realidad Extendida y 3D",
-  "Videojuegos",
-];
-
-const AUDIENCE_CATEGORY_ORDER = [
-  "Etapa profesional",
-  "Desarrollo de software",
-  "Datos e inteligencia artificial",
-  "Plataforma, cloud y operaciones",
-  "Calidad, seguridad y arquitectura",
-  "Liderazgo, producto y delivery",
-  "Diseño, experiencia y contenido",
-  "Negocio, comunidad e impacto",
-  "Hardware, sistemas y robótica",
-  "Investigación, educación y academia",
-];
 
 const NOT_TECH_DISCUSSION_URL = "https://github.com/ComBuildersES/communities-directory/issues/62";
 
@@ -1009,6 +979,7 @@ function buildEditableDraftSignature(draft) {
     langs: draft.langs,
     tags: draft.tags,
     targetAudience: draft.targetAudience,
+    openTo: draft.openTo,
     contactInfo: draft.contactInfo,
     communityUrl: draft.communityUrl,
     urls: draft.urls,
@@ -1110,6 +1081,7 @@ export function CommunityContribution({
   onDirtyChange,
   onIssueOpenedChange,
   onDraftActionsChange,
+  onSelectMember,
 }) {
   const { t } = useTranslation();
   const FIELD_HELP = useMemo(() => getFieldHelp(t), [t]);
@@ -1180,6 +1152,7 @@ export function CommunityContribution({
   const [isCommunityTypeModalOpen, setIsCommunityTypeModalOpen] = useState(false);
   const [isJsonExpanded, setIsJsonExpanded] = useState(false);
   const [hasOpenedIssue, setHasOpenedIssue] = useState(false);
+  const [hasPreparedContribution, setHasPreparedContribution] = useState(false);
   const [hasRestoredDraft, setHasRestoredDraft] = useState(false);
   const [restoredDraftMeta, setRestoredDraftMeta] = useState(null);
   const [hasUserInteracted, setHasUserInteracted] = useState(false);
@@ -1245,6 +1218,7 @@ export function CommunityContribution({
     }
 
     setHasOpenedIssue(false);
+    setHasPreparedContribution(false);
     setHasUserInteracted(false);
     setIsDeletionFormVisible(false);
     setDeletionReasonType("");
@@ -1675,6 +1649,7 @@ export function CommunityContribution({
 
     clearContributionDraft(storageKey);
     setHasOpenedIssue(true);
+    setHasPreparedContribution(true);
     setHasRestoredDraft(false);
     window.open(githubIssueUrl, "_blank", "noopener,noreferrer");
   };
@@ -1685,6 +1660,7 @@ export function CommunityContribution({
     setHasRestoredDraft(false);
     setRestoredDraftMeta(null);
     setHasOpenedIssue(false);
+    setHasPreparedContribution(false);
     setHasUserInteracted(false);
   };
   const handleDeletionReasonTypeChange = (value) => {
@@ -1703,6 +1679,7 @@ export function CommunityContribution({
     if (!isDeletionRequestValid) return;
 
     setHasOpenedIssue(true);
+    setHasPreparedContribution(false);
     window.open(deletionIssueUrl, "_blank", "noopener,noreferrer");
   };
   const handleDuplicateTargetSelect = (community) => {
@@ -2200,6 +2177,13 @@ export function CommunityContribution({
             </div>
           </div>
 
+          <fieldset className="field open-to-field contribution-grid-span-2">
+            <legend className="label">{t("openTo.title")}</legend>
+            <p className="open-to-note">{t("openTo.note")}</p>
+            <OpenToOptions selected={draft.openTo ?? []}
+              onToggle={(option) => handleFieldChange("openTo", toggleSelection(draft.openTo ?? [], option))} />
+          </fieldset>
+
           {shouldShowLocationField && (
             <div className="field">
               <label className="label contribution-label-with-help" htmlFor="community-location">
@@ -2496,6 +2480,11 @@ export function CommunityContribution({
             <a
               className="button is-light is-medium contribution-submit-button"
               href={submissionEmailUrl}
+              onClick={event => {
+                if (!formRef.current?.reportValidity()) { event.preventDefault(); return; }
+                setHasOpenedIssue(true);
+                setHasPreparedContribution(true);
+              }}
             >
               {t("contribution.submit.email")}
             </a>
@@ -2504,6 +2493,10 @@ export function CommunityContribution({
             {isEditMode ? t("contribution.submit.note") : t("contribution.submit.noteWithEmail")}
           </p>
         </div>
+        {hasOpenedIssue && hasPreparedContribution && <>
+          <p className="contribution-submit-note" role="status">{t("contribution.submit.externalPending")}</p>
+          <BuildersInvitation onSelectMember={onSelectMember} />
+        </>}
       </section>
     </form>
   );

@@ -202,3 +202,26 @@ encima, también con fines comerciales, citando a **Community Builders** y, a po
 enlazando a <https://directory.communitybuilders.dev/>.
 
 El código de la app está bajo [Apache 2.0](../LICENSE).
+
+### `openTo`: disponibilidad para recibir aportaciones
+
+Array opcional de IDs: `volunteers` (ayuda en tareas concretas), `collaborations`
+(acciones conjuntas entre comunidades), `co-organisers` (personas que se incorporan al equipo
+organizador de forma continuada), `speakers` (ponentes para charlas, talleres o demos),
+`sponsors` (apoyo económico o en especie), `venues` (espacios para eventos) y `mentors`
+(personas para programas de mentoría). No admite duplicados ni otros valores.
+
+Expresa «abierta a…», no una búsqueda urgente. Solo se rellena con disponibilidad declarada
+explícitamente por la comunidad; la IA no debe inferirla por su temática, tipo o actividad.
+Vacío o ausente significa **sin información**, nunca rechazo. No se migran ni rellenan
+automáticamente las fichas antiguas. Al editar, `[]` permite retirar todas las opciones;
+el procesado elimina la clave vacía del fichero fuente.
+
+La faceta usa OR entre sus opciones y AND con las otras facetas. Se puede compartir por
+URL con `ot=volunteers,speakers` (también se admite la clave larga `openTo`).
+
+En la interfaz, las opciones se ordenan como ponentes, personas coorganizadoras, mentores /
+mentoras, voluntariado, espacio, colaboraciones entre comunidades y patrocinadores.
+Los filtros solo muestran opciones declaradas por alguna comunidad visible del directorio.
+El formulario permite añadir cualquiera mediante un desplegable; la selección aparece en
+chips eliminables con su explicación en un tooltip.

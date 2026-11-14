@@ -1,0 +1,68 @@
+/* Por debajo de los modales (z-index 10000) y del FAB (9000): un aviso que tapa la
+   ficha que alguien acaba de abrir se cierra sin leerlo. */
+.cookie-consent {
+  position: fixed;
+  inset: auto 0.75rem 0.75rem 0.75rem;
+  z-index: 8900;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.cookie-consent__content {
+  pointer-events: auto;
+  width: min(42rem, 100%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  padding: 0.7rem 0.9rem;
+  background: #fff;
+  border: 1px solid #d7e4fb;
+  border-radius: 0.75rem;
+  box-shadow: 0 6px 20px rgba(21, 44, 84, 0.14);
+}
+
+.cookie-consent__text {
+  margin: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: #30507d;
+  flex: 1 1 18rem;
+}
+
+.cookie-consent__icon {
+  margin-top: 0.15rem;
+  color: #4a7bd0;
+}
+
+.cookie-consent__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.cookie-consent__button.button.is-small {
+  min-height: 1.95rem;
+  padding-inline: 0.9rem;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .cookie-consent__content {
+    justify-content: stretch;
+  }
+
+  .cookie-consent__actions {
+    width: 100%;
+  }
+
+  .cookie-consent__button.button.is-small {
+    flex: 1 1 0;
+  }
+}
