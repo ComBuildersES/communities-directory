@@ -3,7 +3,7 @@
  * Supports:
  * - Diacritic normalization ("estandares" → matches "Estándares web")
  * - Multi-token matching ("web stand" matches "Estándares web" — all tokens must appear)
- * - Levenshtein distance ≤ 1 for tokens of length ≥ 4 (typo tolerance)
+ * - One edit or adjacent transposition, also in word prefixes, for tokens of length ≥ 4
  *
  * Scoring (higher = better match):
  *   7 = exact label match
@@ -18,39 +18,39 @@
 /** Remove diacritics and lowercase. */
 export function normalize(str) {
   if (!str) return "";
-  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+  return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim().replace(/\s+/g, " ");
 }
 
-/** Levenshtein distance between two strings. */
-function levenshtein(a, b) {
+/** Distancia de edición con inversión de dos letras adyacentes (Damerau–Levenshtein). */
+function editDistance(a, b) {
   const m = a.length;
   const n = b.length;
-  if (m === 0) return n;
-  if (n === 0) return m;
-
-  let prev = Array.from({ length: n + 1 }, (_, i) => i);
-  let curr = new Array(n + 1);
-
+  if (Math.abs(m - n) > 1) return 2;
+  const distances = Array.from({ length: m + 1 }, (_, row) =>
+    Array.from({ length: n + 1 }, (_, column) => row === 0 ? column : column === 0 ? row : 0));
   for (let i = 1; i <= m; i++) {
-    curr[0] = i;
     for (let j = 1; j <= n; j++) {
       const cost = a[i - 1] === b[j - 1] ? 0 : 1;
-      curr[j] = Math.min(prev[j] + 1, curr[j - 1] + 1, prev[j - 1] + cost);
+      distances[i][j] = Math.min(distances[i - 1][j] + 1, distances[i][j - 1] + 1, distances[i - 1][j - 1] + cost);
+      if (i > 1 && j > 1 && a[i - 1] === b[j - 2] && a[i - 2] === b[j - 1]) {
+        distances[i][j] = Math.min(distances[i][j], distances[i - 2][j - 2] + 1);
+      }
     }
-    [prev, curr] = [curr, prev];
   }
-
-  return prev[n];
+  return distances[m][n];
 }
 
 /**
  * Check if a (normalized) query token matches a (normalized) target word.
- * Matches if the word contains the token, or if Levenshtein distance ≤ 1
- * for tokens of length ≥ 4.
+ * Coincidencia literal o una errata en la palabra o su prefijo (mínimo cuatro letras).
  */
 function tokenMatches(token, word) {
   if (word.includes(token)) return true;
-  if (token.length >= 4 && levenshtein(token, word) <= 1) return true;
+  if (token.length >= 4) {
+    for (const length of [token.length - 1, token.length, token.length + 1]) {
+      if (editDistance(token, word.slice(0, length)) <= 1) return true;
+    }
+  }
   return false;
 }
 
@@ -73,6 +73,7 @@ function scoreNormalized(nq, nt) {
       (token) => nt.includes(token) || targetWords.some((word) => tokenMatches(token, word))
     );
     if (allMatch) return 2;
+    return null;
   }
 
   // Fuzzy single-token match against any word in the target
@@ -89,6 +90,12 @@ function scoreNormalized(nq, nt) {
  */
 export function scoreItem(query, item) {
   const nq = normalize(query);
+
+  // «C» y «R» son temáticas completas, no prefijos de todo el catálogo.
+  if (nq.length === 1) {
+    if (normalize(item.label) === nq) return 7;
+    return (item.synonyms ?? []).some((value) => normalize(value) === nq) ? 2 : null;
+  }
 
   const labelScore = scoreNormalized(nq, normalize(item.label));
   if (labelScore !== null) return labelScore + 2; // boost label matches
@@ -109,5 +116,26 @@ export function scoreItem(query, item) {
  * Returns null if no match.
  */
 export function scoreCommunity(query, name) {
+  if (normalize(query).length === 1 && normalize(query) !== normalize(name)) return null;
   return scoreNormalized(normalize(query), normalize(name));
+}
+
+/** Coincidencia de todas las palabras, sin sustituirlas por aproximaciones. */
+export function matchesCommunityName(query, name) {
+  const nq = normalize(query);
+  const nt = normalize(name);
+  if (!nq || !nt) return false;
+  if (nq.length === 1) return nq === nt;
+  return nq.split(" ").every((token) => nt.includes(token));
+}
+
+/** Sugerencias alternativas: erratas o solo parte de una consulta de varias palabras. */
+export function scoreRelatedCommunity(query, name) {
+  if (matchesCommunityName(query, name)) return null;
+  const score = scoreCommunity(query, name);
+  if (score !== null) return score;
+  const tokens = normalize(query).split(" ").filter((token) => token.length >= 2);
+  if (tokens.length < 2) return null;
+  const matched = tokens.filter((token) => scoreCommunity(token, name) !== null).length;
+  return matched > 0 ? matched / tokens.length : null;
 }

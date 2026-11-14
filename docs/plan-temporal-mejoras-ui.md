@@ -1,6 +1,8 @@
 # Plan temporal de mejoras de UI/UX
 
-Estado: fases 1–4 implementadas y traducciones pendientes de fase 2 completadas. Validación final de fase 5 realizada; pendiente únicamente la revisión conjunta del usuario y, después, borrar este plan temporal. La petición del 13 de noviembre de 2026 autoriza terminar juntas todas las fases y completar el inglés al cierre; sustituye las pausas por entrada de sesiones anteriores.
+Estado adicional del 14 de noviembre: bloque 1 del buscador aprobado por el usuario. Bloque 2 del explorador de temáticas y públicos implementado y validado; pendiente de revisión del usuario. Se conserva el plan para la revisión final conjunta.
+
+Estado de las fases anteriores: fases 1–4 implementadas y traducciones pendientes de fase 2 completadas. Validación final de fase 5 realizada; pendiente únicamente la revisión conjunta del usuario y, después, borrar este plan temporal. La petición del 13 de noviembre de 2026 autoriza terminar juntas todas las fases y completar el inglés al cierre; sustituye las pausas por entrada de sesiones anteriores.
 
 Continuidad y aprendizajes: [handoff de las mejoras de UI](handoff-mejoras-ui.md).
 
@@ -339,3 +341,96 @@ Por petición del usuario, margen superior e inferior iguales: `1rem`. Comprobad
 ### Introducción del menú y commit — 14 de noviembre
 
 Por petición del usuario, la introducción queda en «Asistentes, ponentes, personas que dinamizan comunidades y quienes crean herramientas pueden aprovechar este directorio.». Se retira el añadido HTML «open data» y se ajusta inglés. El usuario solicita commit del trabajo de UI pendiente; se excluyen los documentos locales de contactos, invitaciones y n8n. El changelog lo genera el hook del repositorio; no se edita a mano. No se solicita push ni despliegue. El plan se conserva para la revisión final conjunta.
+
+
+## Mejora de búsqueda — 14 de noviembre de 2026
+
+Nueva petición del usuario tras revisar la experiencia y responder preguntas. Trabajo en español, por bloques, con pausa para revisar el primero.
+
+### Bloque 1 — buscador (aprobado por el usuario)
+
+- [x] Intro sin sugerencia seleccionada muestra en el listado las comunidades cuyo nombre contiene todas las palabras, sin distinguir mayúsculas ni acentos. Cambia de mapa a listado si corresponde; conserva las otras facetas y sustituye la selección anterior por nombre.
+- [x] La consulta queda como criterio «Nombre», eliminable desde los resultados y compartible mediante `q` en la URL. No convertir el texto en una lista de nombres precalculada. Preservar las comas de la consulta y no confundir registros con ID nulo.
+- [x] Separar nombres que contienen todas las palabras de sugerencias aproximadas o parciales. Corregir el matcher compartido para que una consulta compuesta no se acepte por su primera palabra únicamente.
+- [x] Sugerencias activables con clic, toque, Tab + Intro o flechas + Intro; Escape cierra y devuelve el foco. Diferenciar «Abrir ficha» y «Filtrar».
+- [x] Permitir temáticas de un carácter, como C y R, por coincidencia exacta de etiqueta o sinónimo.
+- [x] Estados de inicio, ausencia de coincidencias y ausencia de personas, sin esconder las alternativas parciales bajo una coincidencia falsa.
+- [x] Retirar el máximo de tres sugerencias y los botones «más». Desplegable ajustado al espacio vertical disponible.
+- [x] Vista dedicada a anchuras de hasta 700 px o alturas de hasta 520 px, con el mismo input, cierre explícito, foco contenido, fondo inerte y adaptación al viewport visual. Cabecera y soporte quedan debajo de la búsqueda.
+- [x] Validación: 551 tests Vitest correctos; cinco pruebas de navegador en escritorio, 390 × 844, 320 × 568 y 844 × 390, con teclado, toque y simulación de reducción del viewport visual. Lint específico correcto; `App.jsx` conserva la advertencia previa sobre `i18n.resolvedLanguage`. Build correcto (1 min 40 s), con las advertencias existentes de miniaturas y chunks. Capturas españolas revisadas visualmente.
+
+El teclado virtual se simula reduciendo el viewport visual: falta una comprobación en dispositivo físico si el usuario quiere validar ese entorno. No se ha cambiado el dataset, el mapa, inglés ni los recorridos aprobados de la guía. No se ha hecho commit ni push.
+
+### Bloque 2 — explorador de temáticas (implementado; pendiente de revisión)
+
+- [x] Acceso «Explorar temáticas» junto al buscador.
+- [x] Categorías con ejemplos → todos los chips de la categoría elegida; búsqueda global que no exija acertar antes la categoría.
+- [x] Selecciones visibles al cambiar de categoría y acción «Ver N comunidades» que respete el resto de filtros.
+- [x] Selector «Cualquiera / Todas», con «Cualquiera» inicialmente, persistencia en URL y comunidades declaradas generalistas incluidas. No tratar las fichas sin temáticas informadas como generalistas.
+- [x] Revisar y validar este bloque después de la aprobación del primero.
+
+### Revisión del bloque 1 — resaltado de coincidencias
+
+Por petición del usuario, las sugerencias resaltan con fondo amarillo suave las partes coincidentes del nombre y, cuando procede, de la descripción. Se mantienen el texto original, los acentos y el espaciado; el resaltado sigue siendo legible sobre la selección azul del teclado. En las alternativas parciales se marca únicamente texto coincidente, sin presentar una errata como coincidencia literal. Las consultas de una letra se resaltan en la etiqueta para evitar llenar la descripción de marcas.
+
+Validación específica: cuatro pruebas unitarias (acentos compuestos/descompuestos, solapamientos, símbolos y escape de HTML), una prueba de navegador en escritorio y móvil y lint específico correctos. Capturas españolas revisadas. Se mantiene la pausa antes del explorador de temáticas.
+
+### Revisión del bloque 1 — inactivas y erratas
+
+Decisiones recogidas con preguntas al usuario: aviso y botón «Incluir inactivas» para coincidencias completas excluidas por el estado; nombres aproximados para elegir cuando no haya coincidencias completas. No corregir texto ni ampliar filtros automáticamente, ni presentar fichas atenuadas como resultados.
+
+- El vacío de «webma» con estado activo explica que hay dos comunidades inactivas y ofrece incluirlas. El contador ignora fichas ocultas, respeta las otras facetas y coincide con el destino del botón. Solo se añade `inactive` al estado, sin sustituir la consulta ni los demás criterios.
+- Se admite una inserción, borrado, sustitución o inversión de letras adyacentes, también en prefijos, para términos de al menos cuatro caracteres. Todas las palabras siguen siendo necesarias para una sugerencia por errata; no se recupera el fallo de aceptar solo la primera. La consulta del listado sigue siendo literal.
+- Tras Intro con «webam», el listado conserva cero coincidencias y el texto original; «Nombres parecidos» ofrece hasta cinco fichas, con el estado declarado y una indicación de si quedan fuera del filtro de estado. Se respetan las otras facetas. Abrir una ficha conserva búsqueda y filtros, también en el enlace compartible y al cerrarla. No se ofrecen erratas para sustituir un nombre completo que exista pero esté excluido por filtros.
+- Validación: 563 pruebas unitarias correctas y nueve pruebas de navegador correctas, incluidas las anteriores del buscador, los casos «webma»/«webam» en escritorio y móvil y el recuento con una temática activa. Lint específico correcto. Capturas españolas y espaciado revisados. Se mantiene la pausa antes del bloque 2.
+
+Build de producción de esta revisión correcto (1 min 22 s), con los avisos existentes de miniaturas y tamaño de chunks. No se modifica inglés, el dataset ni el explorador de temáticas.
+
+
+### Implementación del bloque 2 — explorador de temáticas
+
+El usuario aprueba el buscador («ya revisé, todo bien») y se continúa con el segundo bloque acordado, solo en español.
+
+- Botón «Explorar temáticas» junto al buscador, también en la búsqueda dedicada móvil. Abrirlo no aplica filtros.
+- Catálogo de 166 temáticas en las 17 categorías existentes, con ejemplos y todos los chips de la categoría elegida. Se comparte el orden de categorías con el formulario de contribución, sin cambiar su comportamiento.
+- Búsqueda global por etiqueta, descripción y sinónimos, incluyendo C; conserva la categoría anterior al borrar el texto. Las selecciones se mantienen visibles y se conservan al pasar de una categoría a otra.
+- Borrador local: permite combinar, quitar o borrar selecciones sin alterar los resultados hasta pulsar «Ver N comunidades». Cerrar sin aplicar lo descarta; las selecciones aplicadas se recuperan al volver a abrir y al recargar la URL.
+- «Cualquiera» conserva OR; «Todas» cruza cada etiqueta usando el índice invertido, sin mutarlo. Se mantienen las comunidades declaradas generalistas y no se interpreta una ficha sin temáticas como generalista. Los valores desconocidos no se eliminan de la intersección. Las demás facetas siguen restringiendo los resultados.
+- El contador y el destino usan `searchFaceted` con la misma selección; el botón queda desactivado en cero. Aplicar sustituye únicamente `tags` y su modo; conserva los otros filtros y abre el listado.
+- Modo compartible como `tm=all`; se omite para Cualquiera y al quitar la última temática. Se muestra «Temáticas: Todas» junto a los criterios activos y se puede quitar para volver a Cualquiera.
+- Diálogo con foco inicial en la búsqueda, cierre y retorno al botón de apertura, fondo bloqueado y adaptación al viewport visual. En ventanas bajas se revela la sección de chips al navegar y el chip pulsado permanece visible cuando crece la selección.
+- Se reutiliza `InfoTooltip` en los chips y en la ayuda del modo. Permite montar la ayuda dentro del diálogo nativo y comunicar la selección con `aria-pressed`. Escape cierra primero la ayuda y después el explorador; las ayudas de texto no interceptan otros controles.
+- Validación: 586 pruebas unitarias correctas; seis pruebas de navegador del explorador y nueve del buscador correctas. Comprobados escritorio, 390 × 844, 320 × 568 y 844 × 390, teclado, foco, ayudas, borrador, URL, conteos reales y simulación del teclado virtual. Lint específico correcto. Build final correcto (1 min 7 s), con los avisos existentes de miniaturas y tamaño de chunks.
+- Capturas españolas reales de categorías y selección revisadas en escritorio y móvil, incluido el espaciado y las ventanas bajas. El teclado virtual se ha simulado, no se ha validado en un teléfono físico.
+
+Pausa para revisión del explorador. El buscador aprobado se conserva. No se ha modificado inglés ni el dataset, y no se ha hecho commit, push ni despliegue. Se mantienen los cambios locales ajenos, incluidos los de consentimiento y analítica que estaban evolucionando durante esta sesión.
+
+### Revisión del bloque 2 — añadir una categoría y sugerir temáticas
+
+Petición del usuario: poder elegir temáticas individualmente o añadir una categoría completa, y proponer varias nuevas por comas con su categoría para abrir un issue.
+
+- Cada categoría ofrece «Añadir todas». Añade únicamente las que faltan, conserva selecciones de otras categorías y no cambia el modo Cualquiera/Todas. «Todas añadidas» queda desactivado; quitar una temática permite volver a completar la categoría. Continúa siendo un borrador hasta «Ver N comunidades».
+- Acceso «Sugerir temáticas» siempre visible en el pie, también si la búsqueda no encuentra opciones. Abre una vista breve dentro del mismo diálogo, conservando el borrador del explorador.
+- Admite varios nombres separados por comas o saltos de línea y elimina duplicados sin distinguir acentos o mayúsculas. Reconoce etiquetas, IDs y sinónimos exactos ya existentes y prepara la propuesta solo con las nuevas; no descarta un nombre por semejanza difusa.
+- Desde una categoría, esta se preselecciona. Desde una búsqueda global se precarga el texto y se pide categoría, con «No lo tengo claro» como alternativa explícita. Volver a explorar conserva las selecciones; Escape vuelve primero al explorador.
+- «Continuar en GitHub» abre un único issue preparado con título, lista de temáticas y categoría, para revisar y publicar allí. La app no publica ni añade etiquetas al catálogo por su cuenta. Las pruebas interceptan `window.open` y no publican issues.
+- Se incluye `.github/ISSUE_TEMPLATE/proponer-tematicas.md`, referenciada por la URL, porque `blank_issues_enabled` está desactivado. Se conserva esa configuración y no se usa el marcador ni la etiqueta que activan los automatismos de comunidades. La plantilla estará disponible cuando llegue a la rama predeterminada: [documentación de GitHub](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/configuring-issue-templates-for-your-repository).
+- Validación: 591 pruebas unitarias correctas, nueve pruebas de navegador del explorador correctas, lint específico correcto y build de producción correcto (1 min 43 s), con los avisos existentes. Comprobados lote parcial, conservación de otras categorías y del modo, contador y destino, nombres nuevos y existentes, familia conocida o por decidir, foco y navegación, URL del issue sin publicación real, y capturas/espaciado a 1440, 390 y 320 px.
+
+Pendiente de revisión del usuario. No se han hecho commit, push ni despliegue; la plantilla también requiere publicarse con los cambios. Se mantienen inglés y cambios locales ajenos.
+
+
+### Ampliación del explorador — públicos
+
+Petición explícita del usuario: añadir al mismo explorador el recorrido equivalente para públicos, según la propuesta revisada en la conversación.
+
+- Acceso y título «Explorar temáticas y públicos», con pestañas «Temáticas» y «Públicos». Las pestañas admiten flechas, Inicio y Fin; indican cuántas selecciones hay en cada catálogo.
+- Los 43 públicos se exploran en sus diez categorías existentes. Se comparte el orden con el formulario sin alterar sus datos ni sus etiquetas. Hay búsqueda global por etiqueta, descripción y sinónimos, chips con ayuda contextual, selección individual y «Añadir todos» por categoría.
+- Cada catálogo conserva su consulta, categoría, selección, propuesta y modo al cambiar de pestaña. El contador y «Ver N comunidades» combinan ambos borradores con las demás facetas. No se aplica ningún cambio hasta esa acción; cerrar descarta el borrador.
+- Temáticas mantiene «Cualquiera / Todas» y públicos usa «Cualquiera / Todos». Las dos facetas se cruzan con AND y sus modos son independientes. Solo `matchesAllTags` y `matchesAllAudience` declarados permiten saltar su respectiva faceta; los datos vacíos no se interpretan como cobertura universal.
+- El modo de públicos viaja como `am=all` junto a `ta`; el de temáticas sigue usando `tm=all`. Recargar recupera ambos. Quitar o borrar el último público retira únicamente `audienceMatch`; se conservan las temáticas y su modo. Los criterios muestran «Públicos: Todos» cuando procede.
+- «Sugerir públicos» reutiliza el formulario y la detección de términos existentes en el catálogo activo, conserva el borrador y prepara un issue identificado como Públicos. Usa la nueva plantilla `.github/ISSUE_TEMPLATE/proponer-publicos.md`; los issues de temáticas mantienen la suya. Las plantillas deben publicarse en la rama predeterminada para estar disponibles en GitHub.
+- Validación: 598 tests unitarios correctos; las trece pruebas de navegador del explorador pasan, incluidas las nueve anteriores y cuatro nuevas de públicos. Comprobados 1440, 390 y 320 px, categorías y búsqueda, navegación de pestañas con teclado, conservación de borradores y modos, conteos combinados, destino y recarga de URL, selección por categoría, retirada del último público y preparación de issue sin publicarlo. Se mantienen las comprobaciones de ventana baja y viewport visual del explorador anterior.
+- Lint específico y build de producción correctos (1 min 57 s), con los avisos existentes. Capturas españolas reales revisadas en escritorio y móvil; se conservan las etiquetas originales del catálogo. No se han modificado las traducciones inglesas, el dataset ni los cambios locales ajenos. No se ha hecho commit, push ni despliegue.
+
+Pausa para revisión conjunta del explorador ampliado. Conservar el plan temporal.

@@ -8,7 +8,7 @@ import { bajaString } from '../constants';
 import './OpenToOptions.css';
 import './switch.css';
 
-export function InfoTooltip({ label, text, children, className = 'open-to-info', onClick, disabled = false }) {
+export function InfoTooltip({ label, text, children, className = 'open-to-info', onClick, disabled = false, portalTarget, pressed }) {
   const id = useId();
   const anchor = useRef(null);
   const bubble = useRef(null);
@@ -44,13 +44,13 @@ export function InfoTooltip({ label, text, children, className = 'open-to-info',
     };
   }, [position]);
   return <>
-    <button ref={anchor} type="button" disabled={disabled} className={className} aria-label={label}
+    <button ref={anchor} type="button" disabled={disabled} className={className} aria-label={label} aria-pressed={pressed}
       aria-describedby={position ? id : undefined}
       onMouseEnter={show} onMouseLeave={scheduleClose} onFocus={show}
       onBlur={() => setPosition(null)} onClick={onClick ?? show}>
       {children ?? <i className="fas fa-circle-info" aria-hidden="true" />}
     </button>
-    {position && createPortal(<span ref={bubble} id={id} role="tooltip" className="open-to-tooltip" style={position} onMouseEnter={cancelClose} onMouseLeave={scheduleClose}>{text}</span>, document.body)}
+    {position && createPortal(<span ref={bubble} id={id} role="tooltip" className="open-to-tooltip" style={position} onMouseEnter={cancelClose} onMouseLeave={scheduleClose}>{text}</span>, (typeof portalTarget === 'function' ? portalTarget() : portalTarget) ?? document.body)}
   </>;
 }
 

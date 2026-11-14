@@ -1,3 +1,4 @@
+import { TAG_CATEGORY_ORDER, AUDIENCE_CATEGORY_ORDER } from '../../lib/topicExplorer.js';
 import { BuildersInvitation } from "../CommunityBuildersModal/BuildersInvitation.jsx";
 /* eslint-disable react/prop-types */
 import { useEffect, useMemo, useRef, useState } from "react";
@@ -188,39 +189,6 @@ function getFieldHelp(t) {
     },
   };
 }
-
-const TAG_CATEGORY_ORDER = [
-  "Web y Frontend",
-  "Frameworks, Librerías y Stacks",
-  "Lenguajes de programación",
-  "Tech for Social Good",
-  "Datos, IA y Analítica",
-  "DevOps, Cloud e Infraestructura",
-  "Arquitectura y Paradigmas",
-  "Startups, Negocio y Producto",
-  "Bases de Datos y Almacenamiento",
-  "Ciberseguridad",
-  "Mobile y Sistemas Operativos",
-  "Hardware, IoT y Maker",
-  "DevTools",
-  "CMS",
-  "Tecnologías Descentralizadas",
-  "Realidad Extendida y 3D",
-  "Videojuegos",
-];
-
-const AUDIENCE_CATEGORY_ORDER = [
-  "Etapa profesional",
-  "Desarrollo de software",
-  "Datos e inteligencia artificial",
-  "Plataforma, cloud y operaciones",
-  "Calidad, seguridad y arquitectura",
-  "Liderazgo, producto y delivery",
-  "Diseño, experiencia y contenido",
-  "Negocio, comunidad e impacto",
-  "Hardware, sistemas y robótica",
-  "Investigación, educación y academia",
-];
 
 const NOT_TECH_DISCUSSION_URL = "https://github.com/ComBuildersES/communities-directory/issues/62";
 

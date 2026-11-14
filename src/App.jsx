@@ -455,7 +455,7 @@ function App () {
             setFilters(builderFilters(handle));
           }}
         />
-        {!showContributionView && <TagSearch />}
+        {!showContributionView && <TagSearch onShowResults={() => { setMapFocusTarget(null); setView("list"); }} />}
         {!showContributionView && <ResultsBar view={view} toggleView={toggleView} />}
         {!showContributionView && <FilterPanel />}
         {!showContributionView && <ParentFilterBanner />}

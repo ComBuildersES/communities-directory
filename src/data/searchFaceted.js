@@ -1,3 +1,5 @@
+import { matchesCommunityName } from "../lib/fuzzyMatch.js";
+
 export const facetedSearch = (data, indexInverso, filtros) => {
   const filtroskeys = Object.keys(filtros).filter(
     (key) => filtros[key].length > 0
@@ -46,11 +48,16 @@ export const facetedSearch = (data, indexInverso, filtros) => {
 };
 
 export const searchFaceted = (data, inverseIndex, filters) => {
+  const nameQueries = filters.nameQuery ?? [];
+  // Filtrar registros antes de cruzar IDs evita confundir propuestas aún sin ID.
+  const matchingData = nameQueries.length > 0
+    ? data.filter((community) => nameQueries.some((query) => matchesCommunityName(query, community.name)))
+    : data;
   const filterKeys = Object.keys(filters).filter(
-    (key) => filters[key].length > 0
+    (key) => key !== "nameQuery" && key !== "tagMatch" && key !== "audienceMatch" && filters[key].length > 0
   );
 
-  if (filterKeys.length === 0) return data;
+  if (filterKeys.length === 0) return matchingData;
 
   const matchAllTagsIds = new Set(
     data.filter((c) => c.matchesAllTags).map((c) => c.id)
@@ -70,10 +77,14 @@ export const searchFaceted = (data, inverseIndex, filters) => {
           ...ids,
         ]); */
         return ids;
-      })
-      .filter((ids) => ids.size > 0); // Filtrar los conjuntos vacios
+      });
 
-    const combinedIds = new Set(setIDsBykey.flatMap((set) => [...set])); // Combinar conjuntos en un único Set
+    // En «Todas», un valor sin registros también debe vaciar la intersección.
+    const matchEveryValue = (key === 'tags' && filters.tagMatch?.includes('all'))
+      || (key === 'targetAudience' && filters.audienceMatch?.includes('all'));
+    const combinedIds = matchEveryValue
+      ? new Set([...setIDsBykey[0]].filter(id => setIDsBykey.every(ids => ids.has(id))))
+      : new Set(setIDsBykey.flatMap((set) => [...set]));
 
     // Communities with matchesAllTags/matchesAllAudience bypass that dimension's filter but still respect all other filters
     if (key === 'tags') {
@@ -103,5 +114,5 @@ export const searchFaceted = (data, inverseIndex, filters) => {
     return [];
   }
 
-  return data.filter((comunity) => filteredIDs.has(comunity.id));
+  return matchingData.filter((comunity) => filteredIDs.has(comunity.id));
 };

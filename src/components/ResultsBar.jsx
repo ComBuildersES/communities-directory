@@ -23,8 +23,11 @@ const FILTER_LABEL_KEYS = {
   communityType: "resultsBar.filterLabel.communityType",
   langs: "resultsBar.filterLabel.langs",
   tags: "resultsBar.filterLabel.tags",
+  tagMatch: "topicExplorer.modeLabel",
   targetAudience: "resultsBar.filterLabel.targetAudience",
+  audienceMatch: "topicExplorer.audience.modeLabel",
   name: "resultsBar.filterLabel.name",
+  nameQuery: "resultsBar.filterLabel.nameQuery",
   parentId: "resultsBar.filterLabel.parentId",
   humanValidated: "resultsBar.filterLabel.humanValidated",
   cbMembers: "resultsBar.filterLabel.cbMembers",
@@ -66,12 +69,18 @@ export function ResultsBar({ view, toggleView }) {
     [allCommunities, childrenByParentId]
   );
 
-  const chips = Object.entries(filters).flatMap(([key, values]) =>
+  const chips = Object.entries(filters).filter(([key]) =>
+    (key !== 'tagMatch' || filters.tags?.length > 0) && (key !== 'audienceMatch' || filters.targetAudience?.length > 0)
+  ).flatMap(([key, values]) =>
     values.map((value) => ({
       key,
       value,
       label:
-        key === "openTo"
+        key === 'tagMatch'
+          ? t('topicExplorer.all')
+          : key === 'audienceMatch'
+          ? t('topicExplorer.audience.all')
+          : key === "openTo"
           ? t(`openTo.labels.${value}`, { defaultValue: value })
           : key === "langs"
           ? (languagesMap[value] || value.toUpperCase())
@@ -101,8 +110,8 @@ export function ResultsBar({ view, toggleView }) {
 
   return (
     <div className="results-bar">
-      <div className="results-summary">
-        <span className="results-count">
+      <div className="results-summary" tabIndex={-1}>
+        <span className="results-count" role="status" aria-live="polite" aria-atomic="true">
           <strong>{displayCount}</strong>
           {showTotal && <span className="results-count-total"> {t("resultsBar.ofTotal", { total })}</span>}
           {" "}{suffix}

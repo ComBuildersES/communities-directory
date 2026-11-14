@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import { normalize, scoreItem, scoreCommunity } from "../src/lib/fuzzyMatch.js";
+import { normalize, scoreItem, scoreCommunity, matchesCommunityName, scoreRelatedCommunity } from "../src/lib/fuzzyMatch.js";
 
 describe("normalize", () => {
   it("removes diacritics and lowercases", () => {
@@ -17,6 +17,37 @@ describe("normalize", () => {
 });
 
 describe("scoreCommunity", () => {
+  it("tolera invertir letras, añadirlas o borrarlas al escribir un prefijo", () => {
+    const name = 'Asociación de Webmasters de Málaga';
+    for (const query of ['webam', 'webmster', 'webmx', 'webmaas']) {
+      expect(scoreCommunity(query, name), query).not.toBeNull();
+      expect(matchesCommunityName(query, name), query).toBe(false);
+    }
+    expect(scoreCommunity('wbeams', name)).toBeNull();
+    expect(scoreCommunity('webam inexistente', name)).toBeNull();
+  });
+
+  it("no aproxima términos cortos ni confunde la coincidencia literal con una errata", () => {
+    expect(scoreCommunity('wbe', 'Web Madrid')).toBeNull();
+    expect(scoreCommunity('C', 'CSS Madrid')).toBeNull();
+    expect(scoreRelatedCommunity('webam', 'Asociación de Webmasters de Málaga')).not.toBeNull();
+    expect(scoreRelatedCommunity('webma', 'Asociación de Webmasters de Málaga')).toBeNull();
+  });
+  it("no acepta solo la primera palabra de una consulta compuesta", () => {
+    expect(scoreCommunity("gdg almer", "GDG A Coruña")).toBeNull();
+    expect(scoreCommunity("gdg almer", "GDG Almería")).not.toBeNull();
+    expect(scoreCommunity("  almeria   gdg ", "GDG Almería")).not.toBeNull();
+  });
+
+  it("separa erratas y coincidencias parciales de los nombres con todas las palabras", () => {
+    expect(matchesCommunityName("gdg almeria", "GDG Almería")).toBe(true);
+    expect(matchesCommunityName("gdg almeria", "GDG Alicante")).toBe(false);
+    expect(matchesCommunityName("gdg madird", "GDG Madrid")).toBe(false);
+    expect(scoreRelatedCommunity("gdg almeria", "GDG Alicante")).not.toBeNull();
+    expect(scoreRelatedCommunity("gdg madrd", "GDG Madrid")).not.toBeNull();
+    expect(scoreRelatedCommunity("gdg madrid", "GDG Madrid")).toBeNull();
+    expect(scoreRelatedCommunity("gdg almeria", "Python Madrid")).toBeNull();
+  });
   it("matches exact name", () => {
     expect(scoreCommunity("WebMadrid", "WebMadrid")).not.toBeNull();
   });
@@ -52,6 +83,17 @@ describe("scoreCommunity", () => {
 });
 
 describe("scoreItem", () => {
+  it("permite temáticas de una letra sin sugerir cualquier palabra que la contenga", () => {
+    expect(scoreItem("C", { label: "C" })).toBe(7);
+    expect(scoreItem("R", { label: "R" })).toBe(7);
+    expect(scoreItem("c", { label: "C++", description: "Lenguaje C" })).toBeNull();
+    expect(scoreItem("r", { label: "React" })).toBeNull();
+    expect(scoreItem("c", { label: "Otro", synonyms: ["C"] })).not.toBeNull();
+  });
+
+  it("no acepta solo la primera palabra tampoco en descripciones o sinónimos", () => {
+    expect(scoreItem("python inexistente", { label: "Python", description: "Python para datos", synonyms: ["python3"] })).toBeNull();
+  });
   const tag = {
     id: "web-standards",
     label: "Estándares web",

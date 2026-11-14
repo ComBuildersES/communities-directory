@@ -26,6 +26,8 @@ Antes de entregar, revisar expresamente: **solo español; apoyo visual para los 
 
 ## Punto de continuación
 
+**Nueva mejora de búsqueda — 14 de noviembre:** el usuario ha aprobado el bloque 1 del buscador. El bloque 2 está implementado y validado: explorador por categorías con ejemplos y chips, búsqueda global, selección persistente, «Cualquiera / Todas», contador contextual y modo compartible en URL. La revisión del bloque 2 añade «Añadir todas» por categoría y un formulario para sugerir varias temáticas y preparar un issue en GitHub. El usuario también pidió y autorizó públicos: el mismo explorador incorpora pestañas, 43 públicos en diez categorías, selección y modos independientes, contador combinado y propuestas por catálogo. Ambas plantillas incluidas deben publicarse en la rama predeterminada. Se para para revisión del usuario antes de cualquier trabajo adicional. El detalle, las decisiones y la validación están al final del plan temporal. Conservar ambos documentos y los cambios locales ajenos; no hacer commit ni push sin petición. Este párrafo determina la siguiente acción de la nueva petición; el estado de las fases anteriores sigue debajo.
+
 **Implementación terminada para revisión final.** El usuario pidió completar todo el plan, incluidas las traducciones pendientes de fase 2. Esa petición sustituye las pausas por entrada y el aplazamiento del inglés de las sesiones anteriores. Fases 3–4 implementadas; validación de fase 5 y traducciones terminadas.
 
 Queda únicamente la revisión conjunta del resultado y, después, eliminar `docs/plan-temporal-mejoras-ui.md`. Se conserva por el acuerdo expreso de no borrarlo antes de esa revisión. No hacer commit, push ni despliegue sin petición.

@@ -65,9 +65,12 @@ const DIRECTORY_FILTER_KEYS = [
   "geographicScope",
   "langs",
   "tags",
+  "tagMatch",
   "targetAudience",
+  "audienceMatch",
   "openTo",
   "name",
+  "nameQuery",
   "parentId",
   "humanValidated",
   "cbMembers",
@@ -79,9 +82,12 @@ const FILTER_KEY_SHORT = {
   geographicScope: "gs",
   langs: "langs",
   tags: "t",
+  tagMatch: "tm",
   targetAudience: "ta",
+  audienceMatch: "am",
   openTo: "ot",
   name: "n",
+  nameQuery: "q",
   parentId: "p",
   // `hv=true` = solo fichas que ha revisado una persona. Es también el enlace que usa un
   // responsable provincial para listar lo que le queda por revisar: `?hv=false`.
@@ -282,10 +288,14 @@ export function parseMapState(search = window.location.search) {
 export function parseDirectoryFilters(search = window.location.search) {
   const params = new URLSearchParams(search);
 
-  return DIRECTORY_FILTER_KEYS.reduce((filters, key) => {
+  const filters = DIRECTORY_FILTER_KEYS.reduce((filters, key) => {
     // Accept short key (current format) or long key (backwards compat)
     const raw = params.get(FILTER_KEY_SHORT[key]) ?? params.get(key);
-    const values = raw ? raw.split(",").map((v) => v.trim()).filter(Boolean) : [];
+    if (key === 'tagMatch' || key === 'audienceMatch') {
+      if (raw === 'all') filters[key] = ['all'];
+      return filters;
+    }
+    const values = raw ? (key === "nameQuery" ? [raw.trim()] : raw.split(",").map((v) => v.trim())).filter(Boolean) : [];
 
     if (values.length > 0) {
       filters[key] = values;
@@ -293,6 +303,9 @@ export function parseDirectoryFilters(search = window.location.search) {
 
     return filters;
   }, {});
+  if (!filters.tags?.length) delete filters.tagMatch;
+  if (!filters.targetAudience?.length) delete filters.audienceMatch;
+  return filters;
 }
 
 export function buildDirectoryFilterPath({ filters = {}, pathname = window.location.pathname } = {}) {
@@ -307,6 +320,8 @@ export function buildDirectoryStatePath({
   const params = new URLSearchParams();
 
   DIRECTORY_FILTER_KEYS.forEach((key) => {
+    if (key === 'tagMatch' && (!filters.tags?.length || !filters.tagMatch?.includes('all'))) return;
+    if (key === 'audienceMatch' && (!filters.targetAudience?.length || !filters.audienceMatch?.includes('all'))) return;
     const rawValues = filters[key];
     const values = Array.isArray(rawValues)
       ? rawValues

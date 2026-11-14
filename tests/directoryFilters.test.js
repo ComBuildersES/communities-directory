@@ -4,6 +4,15 @@ import {
   parseDirectoryFilters,
 } from "../src/lib/communitySubmission.js";
 
+describe("consulta por nombre compartida", () => {
+  it("conserva consulta, comas, acentos y otros filtros al compartir el enlace", () => {
+    const filters = { nameQuery: ["GDG Almería, cloud"], tags: ["python"] };
+    const path = buildDirectoryStatePath({ pathname: "/es/", filters });
+    expect(path).toContain("q=");
+    expect(parseDirectoryFilters(path.slice(path.indexOf("?")))).toEqual(filters);
+  });
+});
+
 describe("directory langs filters", () => {
   it("serializa langs en la URL usando la clave larga", () => {
     const path = buildDirectoryStatePath({

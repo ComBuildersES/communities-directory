@@ -64,7 +64,7 @@ export function CommunitiesList({ onOpenCommunity }) {
   if (sortedCommunities.length === 0) {
     return (
       <div className="communitieslist-container">
-        <EmptyResults />
+        <EmptyResults onOpenCommunity={onOpenCommunity} />
         <AddCommunityCTAPanel />
       </div>
     );
