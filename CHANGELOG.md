@@ -48,6 +48,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-11-13 `0c63dc9` [Actualizada Cádiz GameDev](https://directory.communitybuilders.dev/?community=71) ([PR #482](https://github.com/ComBuildersES/communities-directory/pull/482))
 - 2026-11-12 `d79b3b5` [Añadida DevopsDays Barcelona](https://directory.communitybuilders.dev/?community=665) ([PR #479](https://github.com/ComBuildersES/communities-directory/pull/479))
 - 2026-11-12 `4b139f3` Update community-builders-members.json
 - 2026-11-12 `18aa3e6` Update community-builders-members.json
