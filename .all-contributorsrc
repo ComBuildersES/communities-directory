@@ -396,6 +396,15 @@
       "contributions": [
         "data"
       ]
+    },
+    {
+      "login": "gabuscuv",
+      "name": "Gabriel Bustillo del Cuvillo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52936877?v=4",
+      "profile": "http://gabuscuv.dev",
+      "contributions": [
+        "data"
+      ]
     }
   ],
   "contributorsPerLine": 7,
