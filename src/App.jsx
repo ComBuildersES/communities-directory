@@ -4,6 +4,7 @@ import { CommunitiesList } from "./components/CommunitiesList.jsx";
 import { Footer } from "./components/Footer.jsx";
 import { Heading } from "./components/Heading.jsx";
 import { InstallPromptBar } from "./components/InstallPromptBar.jsx";
+import { CookieConsentBanner } from "./components/CookieConsent/CookieConsentBanner.jsx";
 import { SupportFab } from "./components/SupportFab/SupportFab.jsx";
 import { TagSearch } from "./components/TagSearch/TagSearch.jsx";
 import { ResultsBar } from "./components/ResultsBar.jsx";
@@ -547,6 +548,7 @@ function App () {
         <Footer />
       </div>
       {/* Fuera del contenedor del contenido: es fijo y no debe heredar su scroll. */}
+      <CookieConsentBanner />
       <SupportFab onAddCommunity={goToContribution} />
       {!showContributionView && selectedCommunity && (
         <Suspense fallback={null}>

@@ -48,7 +48,17 @@
     "maintainedWith": "Proyecto mantenido con 💖",
     "byCommunity": "por la comunidad",
     "codeUnder": "Código bajo",
-    "dataUnder": "& datos bajo"
+    "dataUnder": "& datos bajo",
+    "libreCounterTitle": "Visitas contadas por LibreCounter (sin cookies, públicas)",
+    "libreCounterAlt": "Contador de visitas de LibreCounter",
+    "analyticsPreferences": "Analítica"
+  },
+  "cookieConsent": {
+    "ariaLabel": "Aviso sobre la analítica de la web",
+    "message": "Usamos Google Analytics solo para saber cuánta gente visita el directorio.",
+    "emphasis": "Nada de publicidad ni de perfiles: si prefieres que no, el directorio funciona igual.",
+    "accept": "Vale, acepto",
+    "deny": "No, gracias"
   },
   "installPromptBar": {
     "updateAvailable": "Hay una nueva versión del directorio lista para cargar con los datos y mejoras más recientes.",
@@ -83,8 +93,8 @@
     "map": "Mapa"
   },
   "heading": {
-    "title": "Comunidades Tech",
-    "subtitle": "Directorio de comunidades tecnológicas de España",
+    "title": "Comunidades Tech de España",
+    "subtitle": "El directorio libre de comunidades tecnológicas",
     "back": "Volver",
     "openMenu": "Abrir menú",
     "closeMenu": "Cerrar menú",

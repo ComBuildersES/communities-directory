@@ -48,7 +48,17 @@
     "maintainedWith": "Project maintained with 💖",
     "byCommunity": "by the community",
     "codeUnder": "Code under",
-    "dataUnder": "& data under"
+    "dataUnder": "& data under",
+    "libreCounterTitle": "Visits counted by LibreCounter (cookie-free, public)",
+    "libreCounterAlt": "LibreCounter visit counter",
+    "analyticsPreferences": "Analytics"
+  },
+  "cookieConsent": {
+    "ariaLabel": "Notice about this site's analytics",
+    "message": "We use Google Analytics only to know how many people visit the directory.",
+    "emphasis": "No ads, no profiling: if you'd rather not, the directory works just the same.",
+    "accept": "Sure, accept",
+    "deny": "No, thanks"
   },
   "installPromptBar": {
     "updateAvailable": "A new version of the directory is ready to load with the latest data and improvements.",
@@ -83,8 +93,8 @@
     "map": "Map"
   },
   "heading": {
-    "title": "Tech Communities",
-    "subtitle": "Directory of Spanish technology communities",
+    "title": "Tech Communities in Spain",
+    "subtitle": "The free directory of Spanish technology communities",
     "back": "Back",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",

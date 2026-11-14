@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-14 `803fd9a` mejorar búsqueda y explorar temáticas y públicos
+- 2026-11-14 `8223d6f` medir visitas con consentimiento previo y LibreCounter
+- 2026-11-14 `74f1690` mejorar búsqueda y explorar temáticas y públicos
 - 2026-11-14 `431d4c3` completar mejoras del directorio y traducciones
 - 2026-11-13 `2fe2f71` completar los recorridos de mejora y reutilización de datos
 - 2026-11-13 `93d229c` integrar Community Builders en la guía del directorio

@@ -953,6 +953,34 @@ esos commits no lleven la marca.
   salido un run: `gh run list --workflow deploy.yml --limit 1`.
 - Si no salió, se lanza a mano: `gh workflow run deploy.yml --ref master`.
 
+## Analítica: nada se carga antes de que alguien diga que sí
+
+Dos contadores, y ninguno de los dos existe para perfilar a nadie:
+
+- **LibreCounter** (icono del pie, `src/components/Footer.jsx`): sin cookies, sin
+  identificar a nadie, y el total es público. Cuenta a todo el mundo, por eso no hace falta
+  pedirle permiso a nadie. Va **sin `loading="lazy"`** a propósito: el pie es
+  `is-hidden-mobile`, y una imagen diferida dentro de un contenedor en `display:none` no se
+  pide nunca, así que en móvil no contaría. `referrerPolicy="unsafe-url"` es lo que permite
+  atribuir la visita al dominio; sin él, no se cuenta.
+- **Google Tag Manager** (`GTM-MT4LP53K`, con GA4 dentro): sólo cuántas visitas hay.
+
+`index.html` declara el `dataLayer` y el `consent default: denied` (Consent Mode v2) antes de
+cualquier etiqueta, pero **no carga `gtm.js`**. Lo carga `src/lib/analytics.js`
+(`enableAnalytics`, idempotente) únicamente cuando alguien acepta el aviso: así, para quien
+rechaza o no responde, no hay ni una petición a Google, no sólo cookies de menos.
+
+- La decisión se guarda con fecha y versión (`src/lib/analyticsConsent.js`) y **caduca al
+  año**. Ante cualquier duda —valor ilegible, versión distinta del aviso, caducado— el estado
+  es `unknown` y se vuelve a preguntar: preguntar de más molesta; medir sin permiso, no es
+  legal. Sube `ANALYTICS_CONSENT_VERSION` sólo si cambia **para qué** se usan los datos.
+- El banner (`src/components/CookieConsent/`) da **las dos respuestas al mismo peso**: un
+  "aceptar" destacado junto a un "rechazar" en letra pequeña convierte la pregunta en un
+  trámite. Va por debajo de los modales (`z-index` 8900) para no tapar la ficha que alguien
+  acaba de abrir.
+- El pie tiene un enlace "Analítica" que **vuelve a abrir la pregunta**: sin él, quien
+  rechaza no tiene forma de cambiar de opinión durante un año.
+
 ## PWA — Detección de actualizaciones
 
 La app es una PWA con service worker en `public/sw.js`. Para que los usuarios reciban la notificación "Hay una nueva versión" al refrescar, **el fichero `sw.js` debe cambiar en cada build**.
