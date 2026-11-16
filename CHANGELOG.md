@@ -48,6 +48,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-11-16 `8d10b48` [Actualizada zurracapoteconf](https://directory.communitybuilders.dev/?community=536) ([PR #495](https://github.com/ComBuildersES/communities-directory/pull/495))
 - 2026-11-16 `1240212` [Añadida Canarias Go Retro](https://directory.communitybuilders.dev/?community=667) ([PR #491](https://github.com/ComBuildersES/communities-directory/pull/491))
 - 2026-11-16 `40d1c34` [Actualizada Barcelona Java User Group](https://directory.communitybuilders.dev/?community=537) ([PR #489](https://github.com/ComBuildersES/communities-directory/pull/489))
 - 2026-11-16 `122b152` [Actualizada Barcelona Java User Group](https://directory.communitybuilders.dev/?community=537) ([PR #487](https://github.com/ComBuildersES/communities-directory/pull/487))
@@ -669,6 +670,3 @@ Se organiza por mes y por tipo de cambio.
 - 2024-11-22 `9e1a3da` normalizando valores y quirar funcion indice inverso antigua
 - 2024-11-22 `a12bfa8` quitado codigo comentado de CommunitiesList
 - 2024-11-20 `bddbfff` Initial commit
-### Other
-
-- 2026-11-16 `9f9fcf8` Update config.yml
