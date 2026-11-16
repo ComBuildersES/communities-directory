@@ -1,19 +1,44 @@
 {
   "id": 49,
-  "name": "Azure Malaga",
+  "name": "Azure Málaga",
   "status": "active",
-  "lastReviewed": "31/05/2024",
-  "communityType": "conference",
+  "lastReviewed": "16/11/2026",
+  "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Málaga",
+  "location": "Málaga, Andalucía",
+  "geographicScope": "provincial",
+  "parentId": null,
+  "shortDescription": "Comunidad de Azure del sur de España! Organizamos encuentros y participamos en eventos internacionales: Global Azure, Global AI y GlobalDevOpsX; además, ofrecemos talleres y oportunidades para establecer contactos entre los aficionados a la nube.",
   "topics": "",
   "langs": [
     "es"
   ],
   "tags": [
-    "azure"
+    "azure",
+    "machine-learning",
+    "generative-ai",
+    "cloud-security",
+    "cybersecurity",
+    "iot",
+    "data-science"
   ],
-  "targetAudience": [],
+  "targetAudience": [
+    "cloud-engineer",
+    "devops-engineer",
+    "software-architect",
+    "backend-developer",
+    "ml-engineer",
+    "data-scientist",
+    "junior-developer",
+    "senior-staff"
+  ],
+  "openTo": [
+    "speakers",
+    "co-organisers",
+    "volunteers",
+    "venues",
+    "sponsors"
+  ],
   "contactInfo": "azuremalaga@gmail.com",
   "communityUrl": "https://azuremalaga.com/",
   "urls": [
@@ -32,9 +57,10 @@
   ],
   "thumbnailUrl": "images/azure-malaga.webp",
   "latLon": {
-    "lat": 36.7196292,
-    "lon": -4.4200007
+    "lat": 36.7647913,
+    "lon": -4.4422005
   },
   "displayOnMap": true,
-  "humanValidated": false
+  "humanValidated": true,
+  "removalReason": ""
 }
