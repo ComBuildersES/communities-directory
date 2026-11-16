@@ -1,11 +1,17 @@
 {
   "id": 536,
   "name": "zurracapoteconf",
-  "status": "active",
-  "lastReviewed": "17/10/2024",
+  "status": "inactive",
+  "lastReviewed": "16/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "location": "Logroño, La Rioja",
+  "geographicScope": "unknown",
+  "parentId": null,
+  "organizedBy": [
+    201
+  ],
+  "shortDescription": "",
   "topics": "",
   "langs": [
     "es"
@@ -28,5 +34,6 @@
     "lon": -2.44998
   },
   "displayOnMap": true,
-  "humanValidated": false
+  "humanValidated": true,
+  "removalReason": ""
 }
