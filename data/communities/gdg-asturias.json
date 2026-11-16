@@ -1,0 +1,48 @@
+{
+  "id": null,
+  "name": "GDG Asturias",
+  "status": "inactive",
+  "lastReviewed": "16/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "Asturias, Spain",
+  "geographicScope": "provincial",
+  "parentId": 207,
+  "shortDescription": "Grupo sin ánimo de lucro, formado por desarrolladores y personas interesadas en tecnología en Asturias que tienen el objetivo de aprender e intercambiar conocimientos y experiencias sobre tecnología.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://web.archive.org/web/20190622051014/https://www.gdgasturias.com/",
+  "urls": [
+    {
+      "url": "https://x.com/gdgasturias"
+    },
+    {
+      "url": "https://www.meetup.com/es-es/gdg-asturias/"
+    },
+    {
+      "url": "https://www.instagram.com/gdgasturias/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/gdgasturias/about/"
+    },
+    {
+      "url": "https://www.youtube.com/@gdgasturias4078"
+    },
+    {
+      "url": "https://www.facebook.com/GDGAsturias"
+    }
+  ],
+  "thumbnailUrl": "images/gdg-asturias.webp",
+  "latLon": {
+    "lat": 43.3133868,
+    "lon": -5.94192
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}
