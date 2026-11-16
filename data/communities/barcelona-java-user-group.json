@@ -79,6 +79,9 @@
     {
       "url": "https://eventos.wiki/organizations/barcelona-jug/events.json",
       "kind": "ote"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/barcelona-jug/events"
     }
   ],
   "thumbnailUrl": "images/barcelona-java-user-group.webp",
