@@ -1,11 +1,14 @@
 {
   "id": 137,
   "name": "DevOpsDays Cáceres",
-  "status": "active",
-  "lastReviewed": "17/10/2024",
+  "status": "unknown",
+  "lastReviewed": "16/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "location": "Cáceres",
+  "geographicScope": "unknown",
+  "parentId": null,
+  "shortDescription": "",
   "topics": "",
   "langs": [
     "es"
@@ -34,5 +37,6 @@
     "lon": -6.3708585
   },
   "displayOnMap": true,
-  "humanValidated": false
+  "humanValidated": true,
+  "removalReason": ""
 }
