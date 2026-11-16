@@ -41,7 +41,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Fixes
 
-- 2026-11-16 `fe741c1` assign community builders to issues
+- 2026-11-16 `59b83f1` assign community builders to issues
 - 2026-11-12 `28ef24f` no pedir logo ni URL a las comunidades inactivas
 - 2026-11-12 `d131a3d` dejar de cobrar clics y atención por lo que ya se sabe
 - 2026-11-12 `40f7209` iniciales en lugar de una imagen traída de bulma.io
@@ -49,6 +49,18 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-11-16 `4ca30a7` [Actualizada DevopsDays Madrid](https://directory.communitybuilders.dev/?community=138) ([PR #509](https://github.com/ComBuildersES/communities-directory/pull/509))
+- 2026-11-16 `8231584` [Actualizada Congreso TryIT!](https://directory.communitybuilders.dev/?community=109) ([PR #505](https://github.com/ComBuildersES/communities-directory/pull/505))
+- 2026-11-16 `ed5e6e0` [Actualizada Azure Málaga](https://directory.communitybuilders.dev/?community=49) ([PR #503](https://github.com/ComBuildersES/communities-directory/pull/503))
+- 2026-11-16 `e0684fa` [Actualizada Jornadas de SIG Libre](https://directory.communitybuilders.dev/?community=305) ([PR #500](https://github.com/ComBuildersES/communities-directory/pull/500))
+- 2026-11-16 `6255460` [Actualizada Big Agile Open Space](https://directory.communitybuilders.dev/?community=58) ([PR #497](https://github.com/ComBuildersES/communities-directory/pull/497))
+- 2026-11-16 `8d10b48` [Actualizada zurracapoteconf](https://directory.communitybuilders.dev/?community=536) ([PR #495](https://github.com/ComBuildersES/communities-directory/pull/495))
+- 2026-11-16 `1240212` [Añadida Canarias Go Retro](https://directory.communitybuilders.dev/?community=667) ([PR #491](https://github.com/ComBuildersES/communities-directory/pull/491))
+- 2026-11-16 `40d1c34` [Actualizada Barcelona Java User Group](https://directory.communitybuilders.dev/?community=537) ([PR #489](https://github.com/ComBuildersES/communities-directory/pull/489))
+- 2026-11-16 `122b152` [Actualizada Barcelona Java User Group](https://directory.communitybuilders.dev/?community=537) ([PR #487](https://github.com/ComBuildersES/communities-directory/pull/487))
+- 2026-11-16 `0202581` Update community-builders-members.json
+- 2026-11-16 `d0a2c67` [Añadida GDG Asturias](https://directory.communitybuilders.dev/?community=666) ([PR #485](https://github.com/ComBuildersES/communities-directory/pull/485))
+- 2026-11-13 `0c63dc9` [Actualizada Cádiz GameDev](https://directory.communitybuilders.dev/?community=71) ([PR #482](https://github.com/ComBuildersES/communities-directory/pull/482))
 - 2026-11-12 `d79b3b5` [Añadida DevopsDays Barcelona](https://directory.communitybuilders.dev/?community=665) ([PR #479](https://github.com/ComBuildersES/communities-directory/pull/479))
 - 2026-11-12 `4b139f3` Update community-builders-members.json
 - 2026-11-12 `18aa3e6` Update community-builders-members.json
@@ -89,6 +101,9 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
+- 2026-11-16 `f2fc169` Updating changelog
+- 2026-11-16 `9f9fcf8` Update config.yml
+- 2026-11-16 `2ddafcd` Update canarias-go-retro.json
 - 2026-11-10 `1e0a9a4` ajustar coordenadas de No cON Name
 - 2026-11-06 `c037cb1` Update pintega-conf.json
 - 2026-11-06 `19894e0` añadir 22 comunidades del feed OTE de Sarao IA
