@@ -1,22 +1,40 @@
 {
   "id": 109,
   "name": "Congreso TryIT!",
-  "status": "active",
-  "lastReviewed": "18/10/2024",
+  "status": "unknown",
+  "lastReviewed": "16/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "location": "Madrid",
+  "geographicScope": "unknown",
+  "parentId": null,
+  "shortDescription": "",
   "topics": "",
   "langs": [
     "es"
   ],
   "tags": [],
   "targetAudience": [],
-  "contactInfo": "",
+  "contactInfo": "tryit@upm.es",
   "communityUrl": "https://linktr.ee/tryit_upm",
   "urls": [
     {
       "url": "https://linktr.ee/tryit_upm"
+    },
+    {
+      "url": "https://www.linkedin.com/company/tryit-upm/"
+    },
+    {
+      "url": "https://www.youtube.com/@CongresoTryITUPM"
+    },
+    {
+      "url": "https://www.instagram.com/tryit_upm"
+    },
+    {
+      "url": "https://x.com/tryit_upm"
+    },
+    {
+      "url": "https://www.twitch.tv/tryit_upm"
     }
   ],
   "thumbnailUrl": "images/congreso-tryit.webp",
@@ -25,5 +43,6 @@
     "lon": -3.7035825
   },
   "displayOnMap": true,
-  "humanValidated": false
+  "humanValidated": true,
+  "removalReason": ""
 }
