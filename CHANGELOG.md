@@ -48,6 +48,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-11-16 `e0684fa` [Actualizada Jornadas de SIG Libre](https://directory.communitybuilders.dev/?community=305) ([PR #500](https://github.com/ComBuildersES/communities-directory/pull/500))
 - 2026-11-16 `6255460` [Actualizada Big Agile Open Space](https://directory.communitybuilders.dev/?community=58) ([PR #497](https://github.com/ComBuildersES/communities-directory/pull/497))
 - 2026-11-16 `8d10b48` [Actualizada zurracapoteconf](https://directory.communitybuilders.dev/?community=536) ([PR #495](https://github.com/ComBuildersES/communities-directory/pull/495))
 - 2026-11-16 `1240212` [Añadida Canarias Go Retro](https://directory.communitybuilders.dev/?community=667) ([PR #491](https://github.com/ComBuildersES/communities-directory/pull/491))
