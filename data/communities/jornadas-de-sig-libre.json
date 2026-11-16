@@ -2,16 +2,27 @@
   "id": 305,
   "name": "Jornadas de SIG Libre",
   "status": "active",
-  "lastReviewed": "18/10/2024",
+  "lastReviewed": "16/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "location": "Gerona (Girona)",
+  "geographicScope": "national",
+  "parentId": null,
+  "shortDescription": "Las Jornadas de SIG Libre son un evento donde compartir e intercambiar conocimientos alrededor de las geotecnologías libres y la ciencia de datos espaciales.",
   "topics": "",
   "langs": [
     "es"
   ],
-  "tags": [],
+  "tags": [
+    "open-source",
+    "geospatial",
+    "spatial-databases"
+  ],
   "targetAudience": [],
+  "openTo": [
+    "speakers",
+    "venues"
+  ],
   "contactInfo": "infosiglibre@udg.edu",
   "communityUrl": "https://www.jornadassiglibre.org/",
   "urls": [
@@ -31,5 +42,6 @@
     "lon": 2.673305566784
   },
   "displayOnMap": true,
-  "humanValidated": false
+  "humanValidated": true,
+  "removalReason": ""
 }
