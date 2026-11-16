@@ -48,6 +48,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-11-16 `122b152` [Actualizada Barcelona Java User Group](https://directory.communitybuilders.dev/?community=537) ([PR #487](https://github.com/ComBuildersES/communities-directory/pull/487))
 - 2026-11-16 `0202581` Update community-builders-members.json
 - 2026-11-16 `d0a2c67` [Añadida GDG Asturias](https://directory.communitybuilders.dev/?community=666) ([PR #485](https://github.com/ComBuildersES/communities-directory/pull/485))
 - 2026-11-13 `0c63dc9` [Actualizada Cádiz GameDev](https://directory.communitybuilders.dev/?community=71) ([PR #482](https://github.com/ComBuildersES/communities-directory/pull/482))
@@ -664,6 +665,3 @@ Se organiza por mes y por tipo de cambio.
 - 2024-11-22 `9e1a3da` normalizando valores y quirar funcion indice inverso antigua
 - 2024-11-22 `a12bfa8` quitado codigo comentado de CommunitiesList
 - 2024-11-20 `bddbfff` Initial commit
-### Data
-
-- 2026-11-16 `0202581` Update community-builders-members.json
