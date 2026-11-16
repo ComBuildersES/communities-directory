@@ -48,6 +48,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-11-16 `6255460` [Actualizada Big Agile Open Space](https://directory.communitybuilders.dev/?community=58) ([PR #497](https://github.com/ComBuildersES/communities-directory/pull/497))
 - 2026-11-16 `8d10b48` [Actualizada zurracapoteconf](https://directory.communitybuilders.dev/?community=536) ([PR #495](https://github.com/ComBuildersES/communities-directory/pull/495))
 - 2026-11-16 `1240212` [Añadida Canarias Go Retro](https://directory.communitybuilders.dev/?community=667) ([PR #491](https://github.com/ComBuildersES/communities-directory/pull/491))
 - 2026-11-16 `40d1c34` [Actualizada Barcelona Java User Group](https://directory.communitybuilders.dev/?community=537) ([PR #489](https://github.com/ComBuildersES/communities-directory/pull/489))
