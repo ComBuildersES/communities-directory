@@ -2,7 +2,7 @@
   "id": 537,
   "name": "Barcelona Java User Group",
   "status": "active",
-  "lastReviewed": "08/11/2026",
+  "lastReviewed": "16/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
   "location": "Barcelona",
@@ -73,8 +73,12 @@
       "url": "https://github.com/barcelonajug"
     },
     {
-      "kind": "eventsUrl",
-      "url": "https://luma.com/barcelonajug"
+      "url": "https://luma.com/barcelonajug",
+      "kind": "eventsUrl"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/barcelona-jug/events.json",
+      "kind": "ote"
     }
   ],
   "thumbnailUrl": "images/barcelona-java-user-group.webp",
