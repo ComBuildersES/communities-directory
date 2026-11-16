@@ -48,6 +48,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-11-16 `1240212` Añadida Canarias Go Retro ([PR #491](https://github.com/ComBuildersES/communities-directory/pull/491))
 - 2026-11-16 `40d1c34` [Actualizada Barcelona Java User Group](https://directory.communitybuilders.dev/?community=537) ([PR #489](https://github.com/ComBuildersES/communities-directory/pull/489))
 - 2026-11-16 `122b152` [Actualizada Barcelona Java User Group](https://directory.communitybuilders.dev/?community=537) ([PR #487](https://github.com/ComBuildersES/communities-directory/pull/487))
 - 2026-11-16 `0202581` Update community-builders-members.json
@@ -93,6 +94,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
+- 2026-11-16 `2ddafcd` Update canarias-go-retro.json
 - 2026-11-10 `1e0a9a4` ajustar coordenadas de No cON Name
 - 2026-11-06 `c037cb1` Update pintega-conf.json
 - 2026-11-06 `19894e0` añadir 22 comunidades del feed OTE de Sarao IA
