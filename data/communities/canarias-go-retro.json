@@ -1,0 +1,43 @@
+{
+  "id": null,
+  "name": "Canarias Go Retro",
+  "status": "active",
+  "lastReviewed": "16/11/2026",
+  "communityType": "tech-meetup",
+  "eventFormat": "in-person",
+  "location": "La Laguna, Santa Cruz de Tenerife",
+  "geographicScope": "unknown",
+  "parentId": null,
+  "shortDescription": "Somos un grupo de amantes de la informática clásica, la electrónica, demoscene, consolas viejunas y los videojuegos, que nos reunimos de forma presencial una vez al mes para trabajar en nuestros proyectos, divertirnos y, sobre todo, comer y pasar un rato de charla distendida.",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "info@canariasgoretro.com",
+  "communityUrl": "https://www.canariasgoretro.org",
+  "urls": [
+    {
+      "url": "https://es-es.facebook.com/CanariasGoRetro/"
+    },
+    {
+      "url": "https://t.me/canariasgoretronoticias"
+    },
+    {
+      "url": "https://twitter.com/canariasgoretro?lang=es"
+    },
+    {
+      "url": "https://tkz.one/@canariasgoretro",
+      "kind": "mastodon"
+    }
+  ],
+  "thumbnailUrl": "images/canarias-go-retro.webp",
+  "latLon": {
+    "lat": 28.4857715,
+    "lon": -16.3159422
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}
