@@ -669,3 +669,6 @@ Se organiza por mes y por tipo de cambio.
 - 2024-11-22 `9e1a3da` normalizando valores y quirar funcion indice inverso antigua
 - 2024-11-22 `a12bfa8` quitado codigo comentado de CommunitiesList
 - 2024-11-20 `bddbfff` Initial commit
+### Other
+
+- 2026-11-16 `9f9fcf8` Update config.yml
