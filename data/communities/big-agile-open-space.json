@@ -1,0 +1,46 @@
+{
+  "id": 58,
+  "name": "Big Agile Open Space",
+  "status": "unknown",
+  "lastReviewed": "16/11/2026",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "location": "Madrid",
+  "geographicScope": "unknown",
+  "parentId": null,
+  "shortDescription": "",
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "",
+  "communityUrl": "https://baos.agile-spain.org/",
+  "urls": [
+    {
+      "url": "https://x.com/bigagileos"
+    },
+    {
+      "url": "http://web.archive.org/web/20230608075207/https://bigagileos.wixsite.com/website",
+      "kind": "web"
+    },
+    {
+      "url": "https://www.linkedin.com/company/bigagileos/"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UCZv_CizTqh-vWCgBSYp0G4Q"
+    },
+    {
+      "url": "https://www.instagram.com/bigagileos/?hl=es"
+    }
+  ],
+  "thumbnailUrl": "images/big-agile-open-spac.webp",
+  "latLon": {
+    "lat": 40.4167047,
+    "lon": -3.7035825
+  },
+  "displayOnMap": true,
+  "humanValidated": true,
+  "removalReason": ""
+}
