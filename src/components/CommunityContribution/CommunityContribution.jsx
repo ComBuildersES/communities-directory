@@ -47,6 +47,12 @@ import {
   normalizeCommunityLangs,
 } from "../../lib/communityLanguages.js";
 import { inferProvinceIdFromNominatim } from "../../lib/provinceNormalization";
+import {
+  formatLocationNames,
+  makeLocationRow,
+  normalizeLocationKey,
+  toLocationRows,
+} from "../../lib/communityLocations.js";
 import { AiAssistPanel } from "./AiAssistPanel.jsx";
 import { scoreItem } from "../../lib/fuzzyMatch";
 import "./CommunityContribution.css";
@@ -985,7 +991,9 @@ function buildEditableDraftSignature(draft) {
     status: draft.status,
     communityType: draft.communityType,
     eventFormat: draft.eventFormat,
-    location: draft.location,
+    // Sin `_rowId` ni `provinceId`: son del borrador, no de lo que se propone. Con ellos,
+    // volver a sembrar las filas contaría como un cambio que nadie hizo.
+    locations: (draft.locations ?? []).map(({ name, latLon }) => ({ name, latLon })),
     geographicScope: draft.geographicScope,
     shortDescription: draft.shortDescription,
     topics: draft.topics,
@@ -1000,7 +1008,6 @@ function buildEditableDraftSignature(draft) {
     organizedBy: draft.organizedBy,
     thumbnailUrl: draft.thumbnailUrl,
     replaceThumbnail: draft.replaceThumbnail,
-    latLon: draft.latLon,
     displayOnMap: draft.displayOnMap,
     matchesAllTags: draft.matchesAllTags,
     matchesAllAudience: draft.matchesAllAudience,
@@ -1043,10 +1050,10 @@ function mergeDraftWithProposal(baseDraft, proposalDraft) {
     archivedUrls: Array.isArray(proposalDraft.archivedUrls)
       ? proposalDraft.archivedUrls
       : baseDraft.archivedUrls,
-    latLon: {
-      lat: proposalDraft.latLon?.lat ?? baseDraft.latLon?.lat ?? "",
-      lon: proposalDraft.latLon?.lon ?? baseDraft.latLon?.lon ?? "",
-    },
+    // Las sedes de la propuesta vuelven a pasar por la identidad de fila.
+    locations: Array.isArray(proposalDraft.locations)
+      ? toLocationRows(proposalDraft.locations)
+      : baseDraft.locations,
     replaceThumbnail: false,
   };
 }
@@ -1210,7 +1217,9 @@ export function CommunityContribution({
   const [duplicateTargetQuery, setDuplicateTargetQuery] = useState("");
   const [otherDeletionReason, setOtherDeletionReason] = useState("");
   const [thumbnailAspectWarning, setThumbnailAspectWarning] = useState(false);
-  const inferredProvinceIdRef = useRef("");
+  // nombre de sede normalizado → provinceId ("" si Nominatim no supo). Vive lo que el
+  // formulario: es lo que evita volver a preguntar por una sede ya resuelta.
+  const provinceCacheRef = useRef(new Map());
   const datasetSignature = useMemo(() => buildDatasetSignature(communities), [communities]);
   const latestBaseDraft = useMemo(
     () => getInitialContributionDraft(existingCommunity, nextId, proposalDraft),
@@ -1247,10 +1256,9 @@ export function CommunityContribution({
         archivedUrls: Array.isArray(storedPayload.archivedUrls)
           ? storedPayload.archivedUrls
           : baseDraft.archivedUrls,
-        latLon: {
-          lat: storedPayload.latLon?.lat ?? baseDraft.latLon.lat,
-          lon: storedPayload.latLon?.lon ?? baseDraft.latLon.lon,
-        },
+        locations: Array.isArray(storedPayload.locations)
+          ? toLocationRows(storedPayload.locations)
+          : baseDraft.locations,
       });
       setHasRestoredDraft(true);
       setRestoredDraftMeta({
@@ -1275,26 +1283,9 @@ export function CommunityContribution({
     setOtherDeletionReason("");
   }, [currentCommunityBaselineSignature, datasetSignature, latestBaseDraft, nextId, storageKey]);
 
-  useEffect(() => {
-    if (draft.communityType !== "umbrella-org") return;
-    if (draft.location === "n/a") return;
-
-    setDraft((current) => ({
-      ...current,
-      location: "n/a",
-    }));
-  }, [draft.communityType, draft.location]);
-
-  useEffect(() => {
-    if (draft.communityType === "umbrella-org") return;
-    if (EVENT_FORMATS_WITH_LOCATION.includes(draft.eventFormat)) return;
-    if (!draft.location) return;
-
-    setDraft((current) => ({
-      ...current,
-      location: "",
-    }));
-  }, [draft.communityType, draft.eventFormat, draft.location]);
+  // Paraguas y online no tienen sede: el campo se oculta y el payload manda `[]`
+  // (buildCommunityPayload). Las filas **no** se borran del borrador: quien cambia el formato
+  // por error y lo deshace no pierde las sedes que había escrito.
 
   const sharePath = buildContributionPath({
     mode: isEditMode ? "edit" : "new",
@@ -1354,7 +1345,7 @@ export function CommunityContribution({
       .filter((community) => {
         const haystack = [
           community.name,
-          community.location,
+          formatLocationNames(community, " "),
           community.communityUrl,
         ]
           .filter(Boolean)
@@ -1450,62 +1441,78 @@ export function CommunityContribution({
   );
   const currentDraftSignature = useMemo(() => buildEditableDraftSignature(draft), [draft]);
 
-  useEffect(() => {
-    inferredProvinceIdRef.current = draft.provinceId;
-  }, [draft.provinceId]);
+  // Provincia de cada sede, para asignar la propuesta a sus responsables. Una petición por
+  // fila y **de una en una** (Nominatim pide 1 req/s), sólo para los nombres que no se han
+  // resuelto ya: añadir una segunda sede no vuelve a preguntar por la primera.
+  const locationNamesSignature = (draft.locations ?? [])
+    .map((row) => `${row._rowId}\u0000${row.name}`)
+    .join("\u0001");
+  const supportsLocationRows = EVENT_FORMATS_WITH_LOCATION.includes(draft.eventFormat)
+    && draft.communityType !== "umbrella-org";
 
   useEffect(() => {
-    const normalizedLocation = draft.location.trim();
-    const supportsLocation = EVENT_FORMATS_WITH_LOCATION.includes(draft.eventFormat);
-    const isUmbrellaOrganization = draft.communityType === "umbrella-org";
+    if (!supportsLocationRows) return undefined;
 
-    if (!supportsLocation || isUmbrellaOrganization || normalizedLocation.length < 3) {
-      if (inferredProvinceIdRef.current) {
-        setDraft((current) => current.provinceId ? { ...current, provinceId: "" } : current);
-      }
+    const pending = (draft.locations ?? [])
+      .map((row) => ({ rowId: row._rowId, name: row.name.trim() }))
+      .filter(({ name }) => name.length >= 3 && !provinceCacheRef.current.has(normalizeLocationKey(name)));
+
+    const applyCached = () => setDraft((current) => {
+      let changed = false;
+      const locations = (current.locations ?? []).map((row) => {
+        const key = normalizeLocationKey(row.name);
+        const provinceId = row.name.trim().length >= 3 && provinceCacheRef.current.has(key)
+          ? provinceCacheRef.current.get(key)
+          : "";
+        if (row.provinceId === provinceId) return row;
+        changed = true;
+        return { ...row, provinceId };
+      });
+      return changed ? { ...current, locations } : current;
+    });
+
+    if (pending.length === 0) {
+      applyCached();
       return undefined;
     }
 
     const controller = new AbortController();
     const timeoutId = window.setTimeout(async () => {
-      try {
-        const params = new URLSearchParams({
-          q: normalizedLocation,
-          format: "jsonv2",
-          limit: "1",
-          addressdetails: "1",
-          "accept-language": "es",
-        });
-        const response = await fetch(`https://nominatim.openstreetmap.org/search?${params.toString()}`, {
-          signal: controller.signal,
-          headers: {
-            Accept: "application/json",
-          },
-        });
-
-        if (!response.ok) return;
-
-        const results = await response.json();
-        const provinceId = inferProvinceIdFromNominatim(results?.[0]);
-
-        setDraft((current) => {
-          const nextProvinceId = provinceId ?? "";
-          return current.provinceId === nextProvinceId
-            ? current
-            : { ...current, provinceId: nextProvinceId };
-        });
-      } catch (error) {
-        if (error.name !== "AbortError") {
-          setDraft((current) => current.provinceId ? { ...current, provinceId: "" } : current);
+      for (const [index, { name }] of pending.entries()) {
+        if (controller.signal.aborted) return;
+        if (index > 0) await new Promise((resolve) => window.setTimeout(resolve, 1100));
+        try {
+          const params = new URLSearchParams({
+            q: name,
+            format: "jsonv2",
+            limit: "1",
+            addressdetails: "1",
+            "accept-language": "es",
+          });
+          const response = await fetch(`https://nominatim.openstreetmap.org/search?${params.toString()}`, {
+            signal: controller.signal,
+            headers: {
+              Accept: "application/json",
+            },
+          });
+          if (!response.ok) continue;
+          const results = await response.json();
+          provinceCacheRef.current.set(normalizeLocationKey(name), inferProvinceIdFromNominatim(results?.[0]) ?? "");
+        } catch (error) {
+          if (error.name === "AbortError") return;
         }
       }
+      if (!controller.signal.aborted) applyCached();
     }, 1200);
 
     return () => {
       controller.abort();
       window.clearTimeout(timeoutId);
     };
-  }, [draft.communityType, draft.eventFormat, draft.location]);
+    // `draft.locations` entra por su firma: re-geocodificar cada vez que cambia una
+    // coordenada o un `provinceId` sería un bucle.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [locationNamesSignature, supportsLocationRows]);
   const isDirty = hasUserInteracted && currentDraftSignature !== baseDraftSignature;
 
   useEffect(() => {
@@ -1574,6 +1581,19 @@ export function CommunityContribution({
           next.urls = [...(current.urls ?? []), ...incoming.map((entry) => makeUrlRow(entry))];
           return;
         }
+        if (key === "locations") {
+          // Igual que con los canales: se añaden como filas las sedes que no estuviesen ya, y
+          // sin coordenadas (las pone el procesado del issue; una IA las adivinaría).
+          const filled = (current.locations ?? []).filter((row) => row.name.trim());
+          const known = new Set(filled.map((row) => normalizeLocationKey(row.name)));
+          const incoming = (Array.isArray(value) ? value : [])
+            .map((location) => (typeof location === "string" ? location : location?.name ?? "").trim())
+            .filter((name) => name && !known.has(normalizeLocationKey(name)));
+          if (incoming.length > 0) {
+            next.locations = [...filled, ...incoming.map((name) => makeLocationRow({ name }))];
+          }
+          return;
+        }
         next[key] = value;
       });
 
@@ -1625,6 +1645,30 @@ export function CommunityContribution({
         return next;
       })
     );
+  };
+
+  const updateLocationRows = (updater) => {
+    setHasUserInteracted(true);
+    setDraft((current) => ({ ...current, locations: updater(current.locations ?? []) }));
+  };
+
+  // Cambiar el nombre de una fila no toca sus coordenadas: si es la misma sede renombrada,
+  // el procesado del issue lo detecta (coordenadas heredadas + nombre nuevo) y regeocodifica.
+  const handleLocationRowChange = (rowId, name) => {
+    updateLocationRows((rows) => rows.map((row) => (row._rowId === rowId ? { ...row, name } : row)));
+  };
+
+  // Siempre queda al menos una fila: un campo obligatorio sin dónde escribir no se puede
+  // rellenar.
+  const handleRemoveLocationRow = (rowId) => {
+    updateLocationRows((rows) => {
+      const next = rows.filter((row) => row._rowId !== rowId);
+      return next.length > 0 ? next : [makeLocationRow()];
+    });
+  };
+
+  const handleAddLocationRow = () => {
+    updateLocationRows((rows) => [...rows, makeLocationRow()]);
   };
 
   const handleAddUrlRow = () => {
@@ -1907,7 +1951,7 @@ export function CommunityContribution({
                         <span className="contribution-duplicate-result-name">{community.name}</span>
                         <span className="contribution-duplicate-result-meta">
                           ID {community.id}
-                          {community.location ? ` · ${community.location}` : ""}
+                          {formatLocationNames(community, ", ") ? ` · ${formatLocationNames(community, ", ")}` : ""}
                         </span>
                       </button>
                     ))
@@ -2283,16 +2327,47 @@ export function CommunityContribution({
                   onClose={() => setOpenHelpField(null)}
                 />
               </label>
-              <div className="control">
-                <input
-                  id="community-location"
-                  className="input"
-                  type="text"
-                  value={draft.location}
-                  onChange={(event) => handleFieldChange("location", event.target.value)}
-                  placeholder={t("contribution.form.locationPlaceholder")}
-                  required
-                />
+              {/*
+                Una fila por sede (issue #45): ciudades donde hay actividad presencial fija,
+                compartiendo nombre, canales y equipo. La primera es la principal. Si cada
+                ciudad tiene su propio equipo, son comunidades distintas (y van con parentId).
+              */}
+              <div className="contribution-location-rows">
+                {(draft.locations ?? []).map((row, index) => (
+                  <div className="contribution-location-row" key={row._rowId}>
+                    <div className="control is-expanded">
+                      <input
+                        id={index === 0 ? "community-location" : undefined}
+                        className="input"
+                        type="text"
+                        value={row.name}
+                        onChange={(event) => handleLocationRowChange(row._rowId, event.target.value)}
+                        placeholder={t("contribution.form.locationPlaceholder")}
+                        aria-label={t("contribution.form.locationRowLabel", { position: index + 1 })}
+                        required={index === 0}
+                      />
+                    </div>
+                    {(draft.locations.length > 1 || row.name.trim()) && (
+                      <button
+                        type="button"
+                        className="button is-small is-light contribution-url-row-remove"
+                        onClick={() => handleRemoveLocationRow(row._rowId)}
+                        title={t("contribution.form.locationRemove")}
+                        aria-label={t("contribution.form.locationRemove")}
+                      >
+                        <i className="fas fa-xmark" aria-hidden="true"></i>
+                      </button>
+                    )}
+                  </div>
+                ))}
+                <button
+                  type="button"
+                  className="button is-small is-light contribution-location-add"
+                  onClick={handleAddLocationRow}
+                >
+                  <i className="fas fa-plus" aria-hidden="true"></i>
+                  <span>{t("contribution.form.locationAdd")}</span>
+                </button>
               </div>
             </div>
           )}

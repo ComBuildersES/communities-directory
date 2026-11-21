@@ -19,6 +19,7 @@ import {
   useCommunityActions,
 } from "../../stores/community.store.js";
 import { CommunityCard } from "../CommunityCard.jsx";
+import { buildMapLocations, uniqueCommunitiesById } from "../../lib/communityLocations.js";
 
 import "./Map.css";
 
@@ -89,11 +90,19 @@ function buildMarkerSymbol(style) {
   };
 }
 
-function buildCommunityPoint(community) {
+function buildLocationPoint(latLon) {
   return new Point({
-    latitude: community.latLon.lat,
-    longitude: community.latLon.lon,
+    latitude: latLon.lat,
+    longitude: latLon.lon,
   });
+}
+
+/**
+ * Atributos de la feature de una sede: los de la comunidad más el nombre de **esa** sede.
+ * El `id` es el de la comunidad, así que pinchar cualquiera de sus pins abre la misma ficha.
+ */
+function buildLocationAttributes(community, location) {
+  return { ...community, location: location.name };
 }
 
 async function zoomToCluster(view, layerView, graphic) {
@@ -194,12 +203,15 @@ function Map({
     [rawCommunities]
   );
 
+  // Un punto por sede con coordenadas (issue #45). Lo que se deriva de aquí hacia la lista
+  // (comunidades visibles, leyenda, recuentos) pasa por `uniqueCommunitiesById`: una
+  // comunidad con dos sedes en pantalla es una comunidad, no dos.
   const mappableCommunities = useMemo(
-    () =>
-      communities.map((community) => ({
-        community,
-        point: buildCommunityPoint(community),
-      })),
+    () => buildMapLocations(communities).map(({ community, location }) => ({
+      community,
+      location,
+      point: buildLocationPoint(location.latLon),
+    })),
     [communities]
   );
 
@@ -351,8 +363,8 @@ function Map({
     // Seed the layer with the current data so ArcGIS can infer the geometry type
     // (required for generateClusterConfiguration). Effect B will handle subsequent syncs.
     isFirstLayerSyncRef.current = true;
-    const initialGraphics = mappableCommunitiesRef.current.map(({ community, point }) =>
-      new Graphic({ geometry: point, attributes: community })
+    const initialGraphics = mappableCommunitiesRef.current.map(({ community, location, point }) =>
+      new Graphic({ geometry: point, attributes: buildLocationAttributes(community, location) })
     );
     const communityLayer = new FeatureLayer({
       source: initialGraphics,
@@ -440,8 +452,8 @@ function Map({
 
     let cancelled = false;
 
-    const newGraphics = mappableCommunities.map(({ community, point }) =>
-      new Graphic({ geometry: point, attributes: community })
+    const newGraphics = mappableCommunities.map(({ community, location, point }) =>
+      new Graphic({ geometry: point, attributes: buildLocationAttributes(community, location) })
     );
 
     const sync = async () => {
@@ -477,9 +489,13 @@ function Map({
         return;
       }
 
-      const visible = mappableCommunities
-        .filter(({ point }) => extent.contains(point))
-        .map(({ community }) => community);
+      // Basta con que **una** de sus sedes caiga en el extent para que la comunidad salga
+      // en la lista bajo el mapa, y sale una sola vez.
+      const visible = uniqueCommunitiesById(
+        mappableCommunities
+          .filter(({ point }) => extent.contains(point))
+          .map(({ community }) => community)
+      );
 
       startTransition(() => {
         setVisibleCommunities(visible);

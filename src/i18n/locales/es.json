@@ -293,6 +293,11 @@
     "freshDataFailed": "No he podido confirmar la última versión del directorio. Para no pisar cambios de otra persona, la edición espera a sincronizar.",
     "retryFreshData": "Reintentar"
   },
+  "errorBoundary": {
+    "title": "Algo ha fallado al mostrar el directorio",
+    "body": "Suele arreglarse recargando la página: puede que estuvieras usando una versión anterior de la web. Si vuelve a pasar, avísanos.",
+    "reload": "Recargar"
+  },
   "communityModal": {
     "close": "Cerrar",
     "filterByStatus": "Filtrar por estado {{status}}",
@@ -301,6 +306,15 @@
     "filterByLanguage": "Filtrar por idioma {{language}}",
     "filterByTag": "Filtrar por {{tag}}",
     "filterByAudience": "Filtrar por {{audience}}",
+    "locations": {
+      "presence": "Encuentros presenciales en {{places}}",
+      "broadScope": "Alcance: {{scope}}. Si estás en otra zona, puedes escribir a la organización",
+      "missing": {
+        "online": "Comunidad online: no tiene sede física.",
+        "umbrella": "Organización paraguas: la actividad presencial la organizan sus comunidades.",
+        "pending": "Aún no consta dónde se reúne. Si lo sabes, puedes completar la ficha."
+      }
+    },
     "viewOnMap": "Ver en el mapa",
     "reviewed": "Revisada: {{date}}",
     "partOfNetwork": "Parte de la red de {{name}}",
@@ -668,10 +682,10 @@
         "bullet3": "Desconocido: si no tienes suficiente contexto."
       },
       "location": {
-        "title": "Cómo indicar la localización",
-        "description": "Indica la referencia geográfica más útil para entender dónde ocurre la actividad.",
-        "bullet0": "Usa ciudad o región principal con un formato tipo `Ciudad, País`, por ejemplo `Barcelona, España`.",
-        "bullet1": "Usa `Itinerante` cuando la comunidad cambia de ciudad o sede según la edición o el evento.",
+        "title": "Dónde os reunís",
+        "description": "Una fila por cada ciudad donde la comunidad tiene actividad presencial fija. La primera es la principal. Cada fila es un pin en el mapa.",
+        "bullet0": "Escribe una ciudad por fila, por ejemplo `Barcelona` y `Madrid`. No juntes varias en la misma fila.",
+        "bullet1": "Si en cada ciudad hay un equipo, canales y agenda propios, son comunidades distintas: da de alta cada una. Usa `Itinerante` cuando la comunidad cambia de ciudad según la edición.",
         "bullet2": "Si no tienes claro qué valor poner, mejor abre un issue para comentarlo antes de enviarlo."
       },
       "parentOrg": {
@@ -760,8 +774,11 @@
       "statusLabel": "Estado",
       "communityTypeLabel": "Tipo de comunidad",
       "formatLabel": "Formato",
-      "locationLabel": "Localización",
+      "locationLabel": "Ciudades donde os reunís",
       "locationPlaceholder": "Madrid, España o Itinerante",
+      "locationRowLabel": "Ciudad {{position}}",
+      "locationAdd": "Añadir otra ciudad",
+      "locationRemove": "Quitar esta ciudad",
       "langsLabel": "Idiomas",
       "langsHelp": "Marca los idiomas en los que la comunidad se comunica u organiza habitualmente. Si dudas, deja al menos Español.",
       "langSelected": "Seleccionado",
@@ -956,7 +973,7 @@
       "mapTitle": "Explora una zona",
       "mapHint": "Lugares, agrupamientos y comunidades cercanas",
       "map": "En la vista de mapa puedes buscar comunidades introduciendo una dirección o arrastrando el mapa. Las tarjetas de esta vista se actualizan según la zona que estés viendo.",
-      "mapNote": "Solo aparecen las comunidades con ubicación y configuradas para mostrarse en el mapa. El listado incluye también las demás.",
+      "mapNote": "Solo aparecen las comunidades con ubicación y configuradas para mostrarse en el mapa, con un pin por cada ciudad donde se reúnen. El listado incluye también las demás.",
       "ai": "Para buscar por temática, los controles del directorio son más rápidos y fiables. Pero quizá prefieras una búsqueda más semántica, o que un agente te entreviste y te recomiende comunidades que podrían interesarte.",
       "searchImageAlt": "Barra de búsqueda con «mad» escrito y sugerencias de temáticas, público objetivo y comunidades.",
       "filtersImageAlt": "Panel de filtros con tipo de comunidad, formato de eventos, estado, disponibilidad para aportar e idiomas.",

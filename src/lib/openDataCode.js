@@ -11,7 +11,7 @@ export function getCodeSnippets(t) {
 curl -s ${SITE_URL}/data/communities.json \\
   | jq '[.[] | select(.hidden != true and .status == "active" and .eventFormat == "in-person")
          | select(.matchesAllTags == true or (.tags | index("cybersecurity")))
-         | {name, location, communityUrl}]'`,
+         | {name, locations: [.locations[].name], communityUrl}]'`,
     },
     {
       key: "js",
@@ -30,7 +30,8 @@ const matching = communities.filter(
 );
 
 for (const c of matching) {
-  console.log(c.name, "—", c.location, "—", c.tags.map((id) => labelById[id]).join(", "));
+  const places = c.locations.map((l) => l.name).join(", ");
+  console.log(c.name, "—", places, "—", c.tags.map((id) => labelById[id]).join(", "));
 }`,
     },
     {

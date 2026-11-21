@@ -3,7 +3,7 @@ import es from '../src/i18n/locales/es.json';
 import en from '../src/i18n/locales/en.json';
 import { getCodeSnippets } from '../src/lib/openDataCode.js';
 
-const community = (name, extra = {}) => ({ name, status: 'active', eventFormat: 'in-person', location: 'Madrid', communityUrl: 'https://example.org', tags: ['python'], ...extra });
+const community = (name, extra = {}) => ({ name, status: 'active', eventFormat: 'in-person', locations: [{ name: 'Madrid', latLon: { lat: null, lon: null } }], communityUrl: 'https://example.org', tags: ['python'], ...extra });
 const rows = [
   community('Temática'),
   community('Generalista', { tags: [], matchesAllTags: true }),

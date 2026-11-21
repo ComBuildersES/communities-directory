@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-21 `ba5a25a` scripts y workflows leen `locations`
+- 2026-11-21 `538bbf8` mapa, ficha, buscador y formulario con varias sedes
+- 2026-11-21 `352d3ed` scripts y workflows leen `locations`
 - 2026-11-21 `f0409cd` migra las 663 fichas de `location` + `latLon` a `locations`
 - 2026-11-21 `5c4ddf3` librería de sedes y validación anti-deriva
 - 2026-11-21 `d7d81e6` script de migración a `locations` y orden canónico de claves

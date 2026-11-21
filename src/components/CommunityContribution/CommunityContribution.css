@@ -1640,3 +1640,26 @@
 .contribution-organized-by-reveal:hover {
   text-decoration: underline;
 }
+
+/* Sedes (issue #45): una fila por ciudad, con su botón de quitar. */
+.contribution-location-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contribution-location-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contribution-location-row .control {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.contribution-location-add {
+  align-self: flex-start;
+  gap: 0.4rem;
+}

@@ -293,6 +293,11 @@
     "freshDataFailed": "I couldn't confirm the latest version of the directory. To avoid overwriting someone else's changes, editing waits until it syncs.",
     "retryFreshData": "Try again"
   },
+  "errorBoundary": {
+    "title": "Something went wrong while showing the directory",
+    "body": "Reloading the page usually fixes it: you may have been using an older version of the site. If it happens again, let us know.",
+    "reload": "Reload"
+  },
   "communityModal": {
     "close": "Close",
     "filterByStatus": "Filter by status {{status}}",
@@ -301,6 +306,15 @@
     "filterByLanguage": "Filter by language {{language}}",
     "filterByTag": "Filter by {{tag}}",
     "filterByAudience": "Filter by {{audience}}",
+    "locations": {
+      "presence": "In-person meetups in {{places}}",
+      "broadScope": "Reach: {{scope}}. If you are elsewhere, you can write to the organisers",
+      "missing": {
+        "online": "Online community: no physical venue.",
+        "umbrella": "Umbrella organisation: in-person activity is run by its member communities.",
+        "pending": "Where it meets is not recorded yet. If you know, you can complete this listing."
+      }
+    },
     "viewOnMap": "View on map",
     "reviewed": "Reviewed: {{date}}",
     "partOfNetwork": "Part of the {{name}} network",
@@ -668,10 +682,10 @@
         "bullet3": "Unknown: if you don't have enough context."
       },
       "location": {
-        "title": "How to indicate the location",
-        "description": "Indicate the most useful geographic reference for understanding where the activity happens.",
-        "bullet0": "Use city or main region in a format like `City, Country`, for example `Barcelona, Spain`.",
-        "bullet1": "Use `Itinerant` when the community changes city or venue depending on the edition or event.",
+        "title": "Where you meet",
+        "description": "One row per city where the community holds regular in-person activity. The first one is the main one. Each row is a pin on the map.",
+        "bullet0": "Write one city per row, for example `Barcelona` and `Madrid`. Do not put several in the same row.",
+        "bullet1": "If each city has its own team, channels and schedule, they are separate communities: add each one. Use `Itinerant` when the community changes city from one edition to the next.",
         "bullet2": "If you're not sure what value to put, it's better to open an issue to discuss it first."
       },
       "parentOrg": {
@@ -760,8 +774,11 @@
       "statusLabel": "Status",
       "communityTypeLabel": "Community type",
       "formatLabel": "Format",
-      "locationLabel": "Location",
+      "locationLabel": "Cities where you meet",
       "locationPlaceholder": "Madrid, Spain or Itinerant",
+      "locationRowLabel": "City {{position}}",
+      "locationAdd": "Add another city",
+      "locationRemove": "Remove this city",
       "langsLabel": "Languages",
       "langsHelp": "Select the languages the community usually communicates or organizes in. If unsure, keep at least Spanish selected.",
       "langSelected": "Selected",
@@ -972,7 +989,7 @@
       "mapTitle": "Explore an area",
       "mapHint": "Places, clusters and nearby communities",
       "map": "In map view, find communities by entering an address or dragging the map. The cards in this view update to match the area you are looking at.",
-      "mapNote": "Only communities with a location and configured to appear on the map are shown. The list includes the others too.",
+      "mapNote": "Only communities with a location and configured to appear on the map are shown, with one pin per city where they meet. The list includes the others too.",
       "ai": "For topic searches, the directory controls are faster and more reliable. But you may prefer a more semantic search, or an agent that interviews you and recommends communities you might find interesting.",
       "searchImageAlt": "Search bar with “mad” entered and suggestions for topics, target audiences and communities.",
       "filtersImageAlt": "Filter panel showing community type, event format, status, availability for contributions and languages.",

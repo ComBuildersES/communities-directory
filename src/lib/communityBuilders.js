@@ -1,5 +1,6 @@
 import { normalizeHandle } from "./cbMembers.js";
 import { COMMUNITY_STATUS_OPTIONS } from "./communitySubmission.js";
+import { formatLocationNames } from "./communityLocations.js";
 
 export const JOIN_BUILDERS_URL = "https://docs.google.com/forms/d/e/1FAIpQLSd5Idc1wG2uhHBT11veYVx6JUfrvb_ylc1WC0ZfuXykvm1rtw/viewform";
 export const BUILDERS_TELEGRAM_URL = "https://t.me/hhkaos";
@@ -28,14 +29,11 @@ export const BUILDER_STORIES = [
 ];
 
 /**
- * `location` es texto libre y arrastra marcadores de "esto no se ha rellenado". Pintarlos
- * en el tooltip ("Java User Groups · n/a") es peor que no decir nada: parece un dato.
+ * Sedes de la comunidad para el tooltip, sin marcadores de "esto no se ha rellenado":
+ * pintarlos ("Java User Groups · n/a") es peor que no decir nada, parece un dato.
  */
-const PLACEHOLDER_LOCATIONS = new Set(["n/a", "na", "n.a.", "sin completar", "-", "—", "?", "unknown", "desconocido", "desconocida"]);
-
-export function displayLocation(location) {
-  const value = location?.toString().trim() ?? "";
-  return PLACEHOLDER_LOCATIONS.has(value.toLowerCase()) ? "" : value;
+export function displayLocation(community) {
+  return formatLocationNames(community, ", ");
 }
 
 /** Derive public profiles from the same visible records used by the member filter. */

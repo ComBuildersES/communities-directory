@@ -137,7 +137,7 @@ function MemberFace({ handle, profiles, onSelect, size = "md" }) {
           <strong>@{handle}</strong>
           {profile
             ? profile.communities.map((community) => {
-              const place = displayLocation(community.location);
+              const place = displayLocation(community);
               return (
                 <span key={community.id}>
                   {community.name}{place && <em> · {place}</em>}

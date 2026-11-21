@@ -2,6 +2,7 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "./App.css";
 import App from "./App.jsx";
+import { ErrorBoundary } from "./components/ErrorBoundary.jsx";
 import { registerServiceWorker } from "./lib/pwa";
 import { SUPPORTED_LOCALES } from "./i18n/index.js";
 
@@ -47,6 +48,8 @@ registerServiceWorker();
 
 createRoot(document.getElementById("search_app")).render(
   <StrictMode>
-    <App />
+    <ErrorBoundary>
+      <App />
+    </ErrorBoundary>
   </StrictMode>
 );

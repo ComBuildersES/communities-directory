@@ -19,6 +19,7 @@ import {
   getLocations,
   getPrimaryLocation,
   hasCoordinates,
+  isMappableLocationName,
   normalizeLocationKey,
   normalizeLocations,
 } from '../src/lib/communityLocations.js';
@@ -448,8 +449,10 @@ export async function resolveCoordinates(payload, existing, { delayMs = NOMINATI
   if (!Array.isArray(payload.locations)) return undefined;
 
   const displayOnMap = payload.displayOnMap ?? existing?.displayOnMap ?? false;
+  // Fuera del mapa no se geocodifica, pero tampoco se borra lo que la sede ya traía: editar
+  // una ficha oculta no puede costarle sus coordenadas.
   if (!displayOnMap || payload.communityType === 'umbrella-org') {
-    return payload.locations.map((location) => ({ ...location, latLon: { ...NULL_LAT_LON } }));
+    return payload.locations.map((location) => ({ ...location, latLon: { ...location.latLon } }));
   }
 
   const existingLocations = getLocations(existing);
@@ -469,6 +472,12 @@ export async function resolveCoordinates(payload, existing, { delayMs = NOMINATI
 
     if (!ownLatLon && hasCoordinates(sameName?.latLon)) {
       resolved.push({ ...location, latLon: { ...sameName.latLon } });
+      continue;
+    }
+
+    // "Itinerante" no es un sitio: no se pregunta a Nominatim (lo resolvía a Perú).
+    if (!isMappableLocationName(location.name)) {
+      resolved.push({ ...location, latLon: ownLatLon ? { ...ownLatLon } : { ...NULL_LAT_LON } });
       continue;
     }
 

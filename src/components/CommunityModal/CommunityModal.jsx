@@ -15,6 +15,7 @@ import {
 } from "../../lib/communityUrls.js";
 import { normalizeOpenTo } from "../../lib/communityOpenTo.js";
 import { resolveShortDescription } from "../../lib/localizedText.js";
+import { getDisplayLocations, hasCoordinates, resolveMissingLocationReason } from "../../lib/communityLocations.js";
 import { OteEvents } from "./OteEvents.jsx";
 import "./CommunityModal.css";
 
@@ -128,11 +129,15 @@ function isArchivedUrl(url) {
   return typeof url === "string" && url.includes("web.archive.org/web/");
 }
 
-const INVALID_LOCATION_VALUES = new Set(["n/a", "n.a.", "n.a", "sin completar", "sin localidad"]);
+/** Ámbitos que van más allá de las ciudades de sus sedes: ahí cabe "escríbeles desde otra zona". */
+const BROAD_SCOPES = new Set(["regional", "national", "international"]);
 
-function normalizeLocation(location) {
-  const v = location?.trim();
-  return v && !INVALID_LOCATION_VALUES.has(v.toLowerCase()) ? v : null;
+function formatPlaceList(names, locale) {
+  try {
+    return new Intl.ListFormat(locale, { style: "long", type: "conjunction" }).format(names);
+  } catch {
+    return names.join(", ");
+  }
 }
 
 export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = [], childCount = 0, onClose, onGoToMap, onOpenCommunity }) {
@@ -190,7 +195,6 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
     communityType,
     eventFormat,
     geographicScope,
-    location: rawLocation = "",
     langs,
     lastReviewed,
     contactInfo,
@@ -202,7 +206,6 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
     matchesAllAudience = false,
     thumbnailUrl,
     humanValidated,
-    latLon,
     parentId,
   } = community;
 
@@ -222,10 +225,14 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
   const organizes = organizedById.get(community.id) ?? [];
   const description = resolveShortDescription(community, i18n.resolvedLanguage);
 
-  const hasMapCoords = latLon?.lat != null && latLon?.lon != null;
   const languages = normalizeCommunityLangs(langs);
 
-  const location = normalizeLocation(rawLocation);
+  // Sedes (src/lib/communityLocations.js): un badge por sede, y una línea que dice dónde hay
+  // actividad presencial o, si no consta ninguna, por qué. La ficha no sabe qué zona del mapa
+  // está mirando la persona, así que no resalta ninguna sede.
+  const locations = getDisplayLocations(community);
+  const missingLocationReason = isMergedCommunity(community) ? null : resolveMissingLocationReason(community);
+  const showsPresenceLine = locations.length > 1 || (locations.length > 0 && BROAD_SCOPES.has(geographicScope));
   // URLs a mostrar: las entradas de `urls`, y communityUrl como fallback si no hay ninguna web.
   // `urlsByKind` existe solo para las preguntas de clave única ("¿tiene feed OTE?"); lo que
   // se pinta son las entradas, porque puede haber dos del mismo kind con etiquetas distintas.
@@ -315,21 +322,43 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                   {t(`language.${code}`)}
                 </button>
               ))}
-              {location && hasMapCoords && onGoToMap ? (
-                <button
-                  type="button"
-                  className="modal-badge modal-badge--location"
-                  onClick={() => onGoToMap(latLon)}
-                  title={t("communityModal.viewOnMap")}
-                >
-                  <i className="fas fa-location-dot"></i> {location}
-                </button>
-              ) : location ? (
-                <span className="modal-badge modal-badge--location modal-badge--location-static">
-                  <i className="fas fa-location-dot"></i> {location}
-                </span>
-              ) : null}
+              {locations.map((location) => (
+                hasCoordinates(location.latLon) && onGoToMap ? (
+                  <button
+                    key={location.name}
+                    type="button"
+                    className="modal-badge modal-badge--location"
+                    onClick={() => onGoToMap(location.latLon)}
+                    title={t("communityModal.viewOnMap")}
+                  >
+                    <i className="fas fa-location-dot"></i> {location.name}
+                  </button>
+                ) : (
+                  <span key={location.name} className="modal-badge modal-badge--location modal-badge--location-static">
+                    <i className="fas fa-location-dot"></i> {location.name}
+                  </span>
+                )
+              ))}
             </div>
+            {showsPresenceLine && (
+              <p className="community-modal-locations-note">
+                <strong>{t("communityModal.locations.presence", {
+                  places: formatPlaceList(locations.map((location) => location.name), i18n.resolvedLanguage),
+                })}</strong>
+                {BROAD_SCOPES.has(geographicScope) && (
+                  <>
+                    {" · "}
+                    {t("communityModal.locations.broadScope", { scope: t(`geographicScope.${geographicScope}`) })}
+                  </>
+                )}
+              </p>
+            )}
+            {missingLocationReason && (
+              <p className="community-modal-locations-note community-modal-locations-note--missing">
+                <i className="fas fa-location-dot" aria-hidden="true"></i>{" "}
+                {t(`communityModal.locations.missing.${missingLocationReason}`)}
+              </p>
+            )}
             <div className="community-modal-header-meta">
               {lastReviewed && (
                 <span><i className="fas fa-clock-rotate-left"></i> {t("communityModal.reviewed", { date: lastReviewed })}</span>

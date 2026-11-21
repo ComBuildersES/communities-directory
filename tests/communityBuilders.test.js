@@ -46,10 +46,12 @@ describe("Community Builders profiles", () => {
 
 describe("Community Builders modal data", () => {
   it("hides placeholder locations instead of printing them as a fact", () => {
-    expect(displayLocation("Madrid")).toBe("Madrid");
-    expect(displayLocation(" n/a ")).toBe("");
-    expect(displayLocation("Sin completar")).toBe("");
-    expect(displayLocation(undefined)).toBe("");
+    const at = (...names) => ({ locations: names.map((name) => ({ name, latLon: { lat: null, lon: null } })) });
+    expect(displayLocation(at("Madrid"))).toBe("Madrid");
+    expect(displayLocation(at("Barcelona", "Madrid"))).toBe("Barcelona, Madrid");
+    expect(displayLocation(at(" n/a "))).toBe("");
+    expect(displayLocation(at("Sin completar"))).toBe("");
+    expect(displayLocation({})).toBe("");
   });
 
   it("shuffles without losing or duplicating anyone", () => {

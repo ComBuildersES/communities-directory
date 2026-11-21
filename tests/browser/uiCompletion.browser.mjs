@@ -133,7 +133,7 @@ test('propuestas de edición y correo: invitación sin confirmar publicación', 
       }, true);
     });
     const communities = await (await page.request.get(`${base}/data/communities.json`)).json();
-    const community = communities.find(c => c.id && !c.hidden && c.status === 'active' && c.communityUrl && c.location && c.eventFormat === 'in-person');
+    const community = communities.find(c => c.id && !c.hidden && c.status === 'active' && c.communityUrl && c.locations?.length && c.eventFormat === 'in-person');
     await page.goto(`${base}/es/?edit=${community.id}`, { waitUntil: 'networkidle' });
     await page.locator('.contribution-shell').waitFor();
     assert.equal(await page.locator('.contribution-shell .builders-invitation').count(), 0);

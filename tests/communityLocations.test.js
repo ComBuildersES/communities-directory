@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 
 import {
+  buildMapLocations,
   dropPlaceholderLocations,
   formatLocationNames,
   getDisplayLocationNames,
@@ -11,6 +12,7 @@ import {
   normalizeLocations,
   provincesInLocationName,
   resolveMissingLocationReason,
+  uniqueCommunitiesById,
 } from "../src/lib/communityLocations.js";
 import { validateLocations } from "../scripts/validate-community-data.js";
 
@@ -149,5 +151,24 @@ describe("validateLocations", () => {
 
   it("no avisa de los marcadores de la lista cerrada: se limpian en bloque", () => {
     expect(validate({ locations: [{ name: "n/a", latLon: { lat: null, lon: null } }] }).warnings).toEqual([]);
+  });
+});
+
+describe("mapa: pins por sede, comunidades únicas", () => {
+  const two = { id: 1, locations: [BCN, NO_COORDS, MAD] };
+  const one = { id: 2, locations: [BCN] };
+
+  it("un pin por sede con coordenadas", () => {
+    const points = buildMapLocations([two, one]);
+    expect(points.map((p) => [p.community.id, p.location.name])).toEqual([
+      [1, "Barcelona"],
+      [1, "Madrid"],
+      [2, "Barcelona"],
+    ]);
+  });
+
+  it("dos sedes en el extent son una comunidad en la lista", () => {
+    const visible = buildMapLocations([two, one]).map((p) => p.community);
+    expect(uniqueCommunitiesById(visible).map((c) => c.id)).toEqual([1, 2]);
   });
 });

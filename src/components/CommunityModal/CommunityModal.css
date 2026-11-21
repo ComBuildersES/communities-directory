@@ -136,6 +136,23 @@ button.modal-badge:focus-visible {
 .modal-badge--scope    { background: #fff6ec; color: #99581a; border: 1px solid #f0cfa6; }
 .modal-badge--bot      { background: #f0f0f0; color: #666; border: 1px solid #d4d4d4; display: inline-flex; align-items: center; gap: 0.3em; cursor: default; }
 
+/* Dónde hay actividad presencial, o por qué no consta (issue #45). */
+.community-modal-locations-note {
+  margin: 0.45rem 0 0;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: #4a4a4a;
+}
+
+.community-modal-locations-note strong {
+  font-weight: 600;
+  color: #257953;
+}
+
+.community-modal-locations-note--missing {
+  color: #7a7a7a;
+}
+
 .community-modal-header-meta {
   display: flex;
   flex-wrap: wrap;

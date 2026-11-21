@@ -153,13 +153,32 @@ describe("resolveCoordinates", () => {
     expect(fetchMock).toHaveBeenCalledTimes(2);
   });
 
-  it("deja sin coordenadas lo que no se muestra en el mapa", async () => {
+  it("no geocodifica lo que no va al mapa, pero conserva las coordenadas que trae", async () => {
     const fetchMock = stubNominatim([{ lat: "39.6378", lon: "2.6446" }]);
     const result = await run(
-      payloadOf({ displayOnMap: false, locations: [{ name: "Parc Bit, Mallorca", latLon: { ...BARCELONA } }] }),
+      payloadOf({
+        displayOnMap: false,
+        locations: [
+          { name: "Parc Bit, Mallorca", latLon: { ...BARCELONA } },
+          { name: "Soria", latLon: { ...NULL } },
+        ],
+      }),
       existingOf(),
     );
-    expect(result).toEqual([{ name: "Parc Bit, Mallorca", latLon: NULL }]);
+    expect(result).toEqual([
+      { name: "Parc Bit, Mallorca", latLon: BARCELONA },
+      { name: "Soria", latLon: NULL },
+    ]);
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
+
+  it("no geocodifica \"Itinerante\": no es un sitio", async () => {
+    const fetchMock = stubNominatim([{ lat: "-9.05", lon: "-77.81" }]);
+    const result = await run(
+      payloadOf({ locations: [{ name: "Itinerante", latLon: { ...NULL } }] }),
+      undefined,
+    );
+    expect(result).toEqual([{ name: "Itinerante", latLon: NULL }]);
     expect(fetchMock).not.toHaveBeenCalled();
   });
 });

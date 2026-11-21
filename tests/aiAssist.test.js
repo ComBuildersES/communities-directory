@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import {
+  ASSIST_KEYS,
   ASSIST_PROVIDERS,
   buildAssistChatUrl,
   buildAssistPrompt,
@@ -45,7 +46,7 @@ describe('parseAssistedCommunityJson', () => {
         status: 'active',
         communityType: 'tech-meetup',
         eventFormat: 'in-person',
-        location: 'Valencia',
+        locations: ['Valencia', { name: 'Gandía', latLon: { lat: 1, lon: 2 } }, 'n/a', 'valencia'],
         communityUrl: 'https://example.org',
         rating: 5,
         internalNotes: 'lo que sea',
@@ -59,7 +60,9 @@ describe('parseAssistedCommunityJson', () => {
       status: 'active',
       communityType: 'tech-meetup',
       eventFormat: 'in-person',
-      location: 'Valencia',
+      // Sólo nombres: las coordenadas que traiga la IA se descartan, igual que los marcadores
+      // y las repetidas.
+      locations: [{ name: 'Valencia' }, { name: 'Gandía' }],
       communityUrl: 'https://example.org',
     });
   });
@@ -184,11 +187,31 @@ describe('buildAssistPrompt', () => {
   it('incluye lo que ya hay en el borrador para que la IA no lo rehaga', () => {
     const prompt = buildAssistPrompt({
       communityUrl: 'https://a.dev',
-      draft: { name: 'Python Valencia', location: 'Valencia' },
+      draft: { name: 'Python Valencia', locations: [{ name: 'Valencia' }, { name: 'Gandía' }] },
     });
 
     expect(prompt).toContain('Python Valencia');
-    expect(prompt).toContain('Valencia');
+    expect(prompt).toContain('- Ubicación: Valencia, Gandía');
+  });
+
+  it('el prompt pide exactamente las claves que el parser acepta (ASSIST_KEYS)', () => {
+    for (const locale of ['es', 'en']) {
+      const prompt = buildAssistPrompt({ locale });
+      expect(prompt).toContain(ASSIST_KEYS.join(', '));
+      expect(prompt).not.toMatch(/"location" /);
+    }
+    const sample = {
+      name: 'A', status: 'active', communityType: 'tech-meetup', eventFormat: 'in-person',
+      locations: ['Madrid'], geographicScope: 'local', shortDescription: 'x',
+      shortDescriptionI18n: { en: 'x' }, langs: ['es'], tags: [], targetAudience: [], openTo: ['speakers'],
+      contactInfo: 'a@b.c', communityUrl: 'https://a.dev', urls: { github: 'https://github.com/a' },
+      matchesAllTags: true, matchesAllAudience: true,
+    };
+    expect(Object.keys(sample).sort()).toEqual([...ASSIST_KEYS].sort());
+    const { community } = parseAssistedCommunityJson(JSON.stringify(sample), CATALOGUES);
+    const accepted = Object.keys(community);
+    // `tags` y `targetAudience` vacíos no se emiten; el resto de claves pedidas sí llegan.
+    expect(ASSIST_KEYS.filter((key) => !['tags', 'targetAudience'].includes(key) && !accepted.includes(key))).toEqual([]);
   });
 });
 

@@ -25,16 +25,8 @@ import {
 } from "../../lib/cbMembers";
 import "./TagSearch.css";
 import { MatchHighlight } from './MatchHighlight.jsx';
+import { formatLocationNames } from "../../lib/communityLocations.js";
 import { TopicExplorer } from './TopicExplorer.jsx';
-
-const INVALID_LOCATION_VALUES = new Set([
-  "",
-  "n/a",
-  "n.a.",
-  "n.a",
-  "sin completar",
-  "sin localidad",
-]);
 
 const STATUS_BADGE_CLASS = {
   active:   "tag-option-badge tag-option-badge--active",
@@ -49,16 +41,9 @@ const COMMUNITY_SUGGESTION_STATUS_ORDER = {
 };
 
 
-function normalizeLocation(location) {
-  const normalized = location?.trim();
-
-  if (!normalized) return null;
-
-  return INVALID_LOCATION_VALUES.has(normalized.toLowerCase()) ? null : normalized;
-}
-
 function buildCommunityMeta(community, t) {
-  const location = normalizeLocation(community.location);
+  // Todas las sedes en un badge: es una pista para reconocer la comunidad, no un filtro.
+  const location = formatLocationNames(community, ", ");
 
   return [
     community.status && {

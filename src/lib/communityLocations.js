@@ -34,6 +34,23 @@ export const LOCATION_PLACEHOLDER_HINTS = new Set([
 
 const NULL_LAT_LON = Object.freeze({ lat: null, lon: null });
 
+/**
+ * "Itinerante" es un dato (la conferencia cambia de ciudad cada edición), no un hueco: se
+ * enseña. Pero no es un sitio: no se geocodifica ni pone a la comunidad en el mapa. Nominatim
+ * lo resolvía a un pueblo de Perú.
+ */
+const ITINERANT_NAMES = new Set(["itinerante", "itinerant"]);
+
+export function isItinerantLocation(name) {
+  return ITINERANT_NAMES.has(normalizeLocationKey(name));
+}
+
+/** ¿Nombra esta sede un sitio que se pueda poner en el mapa? */
+export function isMappableLocationName(name) {
+  const value = typeof name === "string" ? name.trim() : "";
+  return Boolean(value) && !looksLikeLocationPlaceholder(value) && !isItinerantLocation(value);
+}
+
 function cleanName(name) {
   return typeof name === "string" ? name.trim() : "";
 }
@@ -182,4 +199,82 @@ export function provincesInLocationName(name, infer = inferProvinceIdFromText) {
     if (id) ids.add(id);
   }
   return [...ids];
+}
+
+/**
+ * Un elemento por sede con coordenadas: lo que el mapa convierte en pins. Una comunidad con
+ * sedes en Barcelona y Madrid da dos.
+ */
+export function buildMapLocations(communities) {
+  return (Array.isArray(communities) ? communities : []).flatMap((community) =>
+    getMappableLocations(community).map((location) => ({ community, location }))
+  );
+}
+
+/**
+ * Quita repetidas por `id` conservando el orden de la primera aparición. Todo lo que va del
+ * mapa a la lista pasa por aquí: dos sedes en pantalla no son dos comunidades, y React no
+ * admite dos tarjetas con la misma `key`.
+ */
+export function uniqueCommunitiesById(communities) {
+  const seen = new Set();
+  return (Array.isArray(communities) ? communities : []).filter((community) => {
+    const key = community?.id ?? community;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
+/*
+ * Filas del formulario. Cada sede del borrador lleva un `_rowId` estable: sin él, quitar una
+ * fila no sabe a cuál se refiere (es lo que pasó con los canales, donde quitar uno borraba
+ * todos). `_rowId` y `provinceId` sólo viven en el borrador; `fromLocationRows` los quita.
+ */
+let locationRowSeq = 0;
+
+export function makeLocationRow(location = {}) {
+  locationRowSeq += 1;
+  return {
+    _rowId: `location-row-${locationRowSeq}`,
+    name: typeof location?.name === "string" ? location.name : "",
+    latLon: {
+      lat: typeof location?.latLon?.lat === "number" ? location.latLon.lat : null,
+      lon: typeof location?.latLon?.lon === "number" ? location.latLon.lon : null,
+    },
+    provinceId: typeof location?.provinceId === "string" ? location.provinceId : "",
+  };
+}
+
+/**
+ * Siembra las filas del borrador desde las sedes de una ficha (o de un borrador guardado).
+ * Siempre devuelve al menos una fila: el campo es obligatorio y sin fila no hay dónde
+ * escribir. La fila vacía no llega al payload (`fromLocationRows` la descarta).
+ */
+export function toLocationRows(locations) {
+  const rows = (Array.isArray(locations) ? locations : [])
+    .filter((location) => location && typeof location === "object")
+    .map((location) => (location._rowId ? { ...makeLocationRow(location), _rowId: location._rowId } : makeLocationRow(location)));
+  return rows.length > 0 ? rows : [makeLocationRow()];
+}
+
+/** Sedes que se guardan, a partir de las filas: sin filas vacías, marcadores ni repetidas. */
+export function fromLocationRows(rows) {
+  return normalizeLocations(rows);
+}
+
+/**
+ * Provincias de las filas, en orden y sin repetir: lo que el payload manda como
+ * `provinceIds` para asignar responsables. Una fila sin provincia inferida no aporta nada;
+ * el procesado del issue la vuelve a inferir por el nombre.
+ */
+export function provinceIdsFromLocationRows(rows) {
+  const ids = [];
+  for (const row of Array.isArray(rows) ? rows : []) {
+    const name = cleanName(row?.name);
+    if (!name || isLocationPlaceholder(name)) continue;
+    const id = typeof row?.provinceId === "string" ? row.provinceId.trim() : "";
+    if (id && !ids.includes(id)) ids.push(id);
+  }
+  return ids;
 }

@@ -4,6 +4,13 @@ import { DESCRIPTION_I18N_KEY, normalizeDescriptionTranslations } from "./locali
 import { MERGED_STATUS } from "./mergedCommunities.js";
 import { normalizeOrganizedBy } from "./organizedCommunities.js";
 import { URL_KINDS, mergeDraftUrls, toUrlEntries, toUrlRows } from "./communityUrls.js";
+import {
+  fromLocationRows,
+  isMappableLocationName,
+  normalizeLocationKey,
+  provinceIdsFromLocationRows,
+  toLocationRows,
+} from "./communityLocations.js";
 
 const GITHUB_NEW_ISSUE_URL = "https://github.com/ComBuildersES/communities-directory/issues/new";
 export const COMMUNITY_BUILDERS_EMAIL = "communitybuilders.es@gmail.com";
@@ -26,7 +33,7 @@ export const COMMUNITY_TYPE_OPTIONS = [
 export const EVENT_FORMAT_OPTIONS = ["in-person", "online", "hybrid", "unknown"];
 /**
  * Ámbito geográfico al que la comunidad da servicio (issue #402). Es independiente de
- * `location`: una comunidad puede celebrar sus eventos en Madrid y dar apoyo a nivel
+ * `locations`: una comunidad puede celebrar sus eventos en Madrid y dar apoyo a nivel
  * nacional (p. ej. Women4TT).
  */
 export const GEOGRAPHIC_SCOPE_OPTIONS = [
@@ -404,8 +411,9 @@ export function getEmptyCommunityDraft(nextId = null) {
     lastReviewed: getTodayDate(),
     communityType: "tech-meetup",
     eventFormat: "in-person",
-    location: "",
-    provinceId: "",
+    // Sedes como filas con identidad (src/lib/communityLocations.js). Un alta presencial
+    // empieza con una fila vacía para que el campo se vea; el payload descarta las vacías.
+    locations: toLocationRows([]),
     geographicScope: "unknown",
     shortDescription: "",
     // Traducciones de la descripción, `{ idioma: texto }` (src/lib/localizedText.js). Vacío
@@ -424,10 +432,6 @@ export function getEmptyCommunityDraft(nextId = null) {
     archivedUrls: [],
     thumbnailUrl: "",
     replaceThumbnail: false,
-    latLon: {
-      lat: "",
-      lon: "",
-    },
     displayOnMap: true,
     humanValidated: true,
     matchesAllTags: false,
@@ -445,8 +449,6 @@ export function getCommunityDraft(community, nextId = null) {
     return getEmptyCommunityDraft(nextId);
   }
 
-  const isUmbrella = community.communityType === "umbrella-org";
-
   return {
     ...getEmptyCommunityDraft(nextId),
     ...community,
@@ -460,16 +462,14 @@ export function getCommunityDraft(community, nextId = null) {
     urls: toUrlRows(community.urls),
     archivedUrls: normalizeArchivedUrls(community.archivedUrls),
     replaceThumbnail: false,
-    latLon: {
-      lat: community.latLon?.lat ?? "",
-      lon: community.latLon?.lon ?? "",
-    },
+    // Un paraguas no tiene sede (el campo se oculta y el payload manda `[]`), pero las filas
+    // se siembran igual: si alguien cambia el tipo, el campo aparece con lo que hubiera.
+    locations: toLocationRows(community.locations),
     displayOnMap: Boolean(community.displayOnMap),
     humanValidated: Boolean(community.humanValidated),
     matchesAllTags: Boolean(community.matchesAllTags),
     matchesAllAudience: Boolean(community.matchesAllAudience),
     organizedBy: normalizeOrganizedBy(community.organizedBy, { selfId: community.id ?? null }),
-    ...(isUmbrella && { location: "n/a" }),
   };
 }
 
@@ -570,15 +570,6 @@ export function parseProposalDraft(paramsOrSearch = window.location.search) {
   }
 }
 
-function normalizeLatLon(value) {
-  if (value === "" || value === null || value === undefined) {
-    return null;
-  }
-
-  const parsed = Number(value);
-  return Number.isFinite(parsed) ? parsed : null;
-}
-
 function normalizeTaxonomySelection(selectedValues, catalogItems, matchesAllFlag) {
   const normalizedValues = Array.isArray(selectedValues)
     ? [...new Set(selectedValues.filter(Boolean))]
@@ -610,6 +601,25 @@ function normalizeTaxonomySelection(selectedValues, catalogItems, matchesAllFlag
   };
 }
 
+/**
+ * ¿Va la comunidad al mapa? Sólo si alguna sede es un sitio ("Itinerante" se enseña, pero no
+ * lleva pin). En una edición que no toca las sedes se conserva lo que tenía la ficha: hay
+ * fichas fuera del mapa a propósito (AI4MED, con cuatro ciudades en una sola sede), y
+ * enviarlas sin cambios las metía en el mapa con un pin geocodificado a ciegas.
+ */
+function resolveDisplayOnMap(locations, existingCommunity) {
+  const hasPlace = locations.some((location) => isMappableLocationName(location.name));
+  if (!existingCommunity) return hasPlace;
+
+  const namesOf = (list) => (Array.isArray(list) ? list : [])
+    .map((location) => normalizeLocationKey(location?.name))
+    .filter(Boolean)
+    .join("|");
+  const unchanged = namesOf(locations) === namesOf(existingCommunity.locations);
+
+  return unchanged ? Boolean(existingCommunity.displayOnMap) && hasPlace : hasPlace;
+}
+
 export function buildCommunityPayload(draft, existingCommunity = null, options = {}) {
   const { allTags = [], allAudience = [] } = options;
   // `mergeDraftUrls` acepta tanto la lista de entradas que edita el formulario hoy como el
@@ -624,18 +634,16 @@ export function buildCommunityPayload(draft, existingCommunity = null, options =
   );
   const normalizedArchivedUrls = normalizeArchivedUrls(draft.archivedUrls)
     .filter((url) => !activeComparableUrls.has(normalizeUrlForComparison(url)));
-  const lat = normalizeLatLon(draft.latLon?.lat);
-  const lon = normalizeLatLon(draft.latLon?.lon);
   const resolvedId = existingCommunity?.id ?? draft.id ?? null;
   const currentReviewDate = getTodayDate();
   const normalizedEventFormat = cleanString(draft.eventFormat) || "unknown";
   const supportsLocation = EVENT_FORMATS_WITH_LOCATION.includes(normalizedEventFormat);
   const isUmbrellaOrganization = cleanString(draft.communityType) === "umbrella-org";
-  const normalizedLocation = isUmbrellaOrganization
-    ? "n/a"
-    : supportsLocation
-      ? cleanString(draft.location)
-      : "";
+  // Paraguas y online emiten `[]` ("sin ubicación física"): antes forzaban `"n/a"` y `""`,
+  // dos marcadores distintos para decir lo mismo.
+  const hasLocations = supportsLocation && !isUmbrellaOrganization;
+  const normalizedLocations = hasLocations ? fromLocationRows(draft.locations) : [];
+  const normalizedProvinceIds = hasLocations ? provinceIdsFromLocationRows(draft.locations) : [];
   const rawThumbnailUrl = draft.replaceThumbnail
     ? cleanString(draft.thumbnailUrl)
     : cleanString(existingCommunity?.thumbnailUrl ?? draft.thumbnailUrl);
@@ -661,8 +669,10 @@ export function buildCommunityPayload(draft, existingCommunity = null, options =
     lastReviewed: currentReviewDate,
     communityType: cleanString(draft.communityType) || "tech-meetup",
     eventFormat: normalizedEventFormat,
-    location: normalizedLocation,
-    provinceId: cleanString(draft.provinceId),
+    locations: normalizedLocations,
+    // Provincia de cada sede, inferida en el navegador: decide a quién se asigna la
+    // propuesta (scripts/resolve-issue-assignees.js). No se guarda en la ficha.
+    provinceIds: normalizedProvinceIds,
     geographicScope: cleanString(draft.geographicScope) || "unknown",
     shortDescription: cleanString(draft.shortDescription),
     // Mismo criterio que `archivedUrls` y `organizedBy`: la clave se omite cuando no hay
@@ -688,11 +698,7 @@ export function buildCommunityPayload(draft, existingCommunity = null, options =
       ? { archivedUrls: normalizedArchivedUrls }
       : {}),
     thumbnailUrl: normalizedThumbnailUrl,
-    latLon: {
-      lat,
-      lon,
-    },
-    displayOnMap: Boolean(normalizedLocation),
+    displayOnMap: resolveDisplayOnMap(normalizedLocations, existingCommunity),
     humanValidated: true,
     matchesAllTags: normalizedTags.matchesAll,
     matchesAllAudience: normalizedAudience.matchesAll,
