@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Canarias",
+  "locations": [
+    {
+      "name": "Canarias",
+      "latLon": {
+        "lat": 28,
+        "lon": -15.5
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -24,10 +32,6 @@
     }
   ],
   "thumbnailUrl": "images/socracan-socrates-canaries.webp",
-  "latLon": {
-    "lat": 28,
-    "lon": -15.5
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

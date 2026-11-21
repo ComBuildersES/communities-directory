@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Granada",
+  "locations": [
+    {
+      "name": "Granada",
+      "latLon": {
+        "lat": 37.1831938,
+        "lon": -3.604747
+      }
+    }
+  ],
   "parentId": 302,
   "topics": "",
   "langs": [
@@ -21,10 +29,6 @@
     }
   ],
   "thumbnailUrl": "images/granadajug.webp",
-  "latLon": {
-    "lat": 37.1831938,
-    "lon": -3.604747
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

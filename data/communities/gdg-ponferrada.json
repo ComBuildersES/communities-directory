@@ -5,7 +5,15 @@
   "lastReviewed": "11/12/2024",
   "communityType": "tech-meetup",
   "eventFormat": "hybrid",
-  "location": "Ponferrada",
+  "locations": [
+    {
+      "name": "Ponferrada",
+      "latLon": {
+        "lat": 42.5463315,
+        "lon": -6.5908331
+      }
+    }
+  ],
   "parentId": 207,
   "topics": "",
   "langs": [
@@ -30,10 +38,6 @@
     }
   ],
   "thumbnailUrl": "images/gdg-ponferrada.webp",
-  "latLon": {
-    "lat": 42.5463315,
-    "lon": -6.5908331
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

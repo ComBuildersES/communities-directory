@@ -5,7 +5,7 @@
   "lastReviewed": "24/03/2026",
   "communityType": "collaborative-group",
   "eventFormat": "online",
-  "location": "",
+  "locations": [],
   "shortDescription": "Asociación sin ánimo de lucro de voluntarios digitales. Personas experimentadas en el uso y aplicación en remoto de la tecnología geoespacial para ayudar a las organizaciones que ayudan en situaciones de emergencia y en proyectos alineados con los ODS",
   "shortDescriptionI18n": {
     "en": "A non-profit association of digital volunteers: people experienced in the remote use and application of geospatial technology, helping organisations that respond to emergencies and working on projects aligned with the SDGs."
@@ -66,10 +66,6 @@
     }
   ],
   "thumbnailUrl": "",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": true
 }

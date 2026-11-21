@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Galicia",
+  "locations": [
+    {
+      "name": "Galicia",
+      "latLon": {
+        "lat": 42.756588768824,
+        "lon": -7.910665567756
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -24,10 +32,6 @@
     }
   ],
   "thumbnailUrl": "images/betabeers-galicia.webp",
-  "latLon": {
-    "lat": 42.756588768824,
-    "lon": -7.910665567756
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

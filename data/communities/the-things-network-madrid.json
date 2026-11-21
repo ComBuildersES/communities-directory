@@ -5,7 +5,15 @@
   "lastReviewed": "23/06/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Madrid, Spain",
+  "locations": [
+    {
+      "name": "Madrid, Spain",
+      "latLon": {
+        "lat": 40.416782,
+        "lon": -3.703507
+      }
+    }
+  ],
   "parentId": 620,
   "shortDescription": "La comunidad TTN Madrid, tiene por objeto implementar la tecnologia de telecomunicaciones LoRa, que habilita Internet de las Cosas. Desplegamos la red The Things Network, y colaboramos en la implantación de Gateways, nodos y desarrollamos casos de uso.",
   "shortDescriptionI18n": {
@@ -30,10 +38,6 @@
     }
   ],
   "thumbnailUrl": "images/the-things-network-madrid.webp",
-  "latLon": {
-    "lat": 40.416782,
-    "lon": -3.703507
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

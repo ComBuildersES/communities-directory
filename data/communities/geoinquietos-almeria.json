@@ -5,7 +5,15 @@
   "lastReviewed": "31/07/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Almería",
+  "locations": [
+    {
+      "name": "Almería",
+      "latLon": {
+        "lat": 36.8685739,
+        "lon": -2.3120282
+      }
+    }
+  ],
   "parentId": 616,
   "shortDescription": "Encuentros locales informales entre gente que comparte inquietudes, intereses, experiencias o cualquier idea en el ámbito de la geomática, el software libre y la tecnología geoespacial (todo aquello relacionado con el ámbito GEO y SIG).",
   "shortDescriptionI18n": {
@@ -40,10 +48,6 @@
     }
   ],
   "thumbnailUrl": "images/geoinquietos-almera.webp",
-  "latLon": {
-    "lat": 36.8685739,
-    "lon": -2.3120282
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

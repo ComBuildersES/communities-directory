@@ -5,7 +5,15 @@
   "lastReviewed": "25/04/2025",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Madrid",
+  "locations": [
+    {
+      "name": "Madrid",
+      "latLon": {
+        "lat": 40.4167047,
+        "lon": -3.7035825
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -32,10 +40,6 @@
     }
   ],
   "thumbnailUrl": "images/devmad-developers.webp",
-  "latLon": {
-    "lat": 40.4167047,
-    "lon": -3.7035825
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

@@ -5,7 +5,15 @@
   "lastReviewed": "29/11/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Córdoba",
+  "locations": [
+    {
+      "name": "Córdoba",
+      "latLon": {
+        "lat": 37.888422,
+        "lon": -4.77513
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -31,10 +39,6 @@
     }
   ],
   "thumbnailUrl": "images/cordoba-software-crafters.webp",
-  "latLon": {
-    "lat": 37.888422,
-    "lon": -4.77513
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

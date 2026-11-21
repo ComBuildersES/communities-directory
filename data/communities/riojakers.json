@@ -5,7 +5,15 @@
   "lastReviewed": "26/05/2025",
   "communityType": "mutual-aid",
   "eventFormat": "online",
-  "location": "La Rioja",
+  "locations": [
+    {
+      "name": "La Rioja",
+      "latLon": {
+        "lat": 42.46569,
+        "lon": -2.44998
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -20,10 +28,6 @@
     }
   ],
   "thumbnailUrl": "images/riojakers.webp",
-  "latLon": {
-    "lat": 42.46569,
-    "lon": -2.44998
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

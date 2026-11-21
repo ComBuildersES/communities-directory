@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Itinerante",
+  "locations": [
+    {
+      "name": "Itinerante",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "parentId": 469,
   "topics": "",
   "langs": [
@@ -30,10 +38,6 @@
     }
   ],
   "thumbnailUrl": "images/jornadas-anuales-wikimedia-espana.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

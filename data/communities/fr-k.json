@@ -5,7 +5,15 @@
   "lastReviewed": "25/06/2026",
   "communityType": "umbrella-org",
   "eventFormat": "in-person",
-  "location": "n/a",
+  "locations": [
+    {
+      "name": "n/a",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "shortDescription": "Un espacio donde el conocimiento conecta con la pasión. Únete a tu club especializado donde profesionales como tú se reúnen para aprender de forma colaborativa. Desde Software, Diseño, IA, Marketing, Emprendedores y muchos más, cada club tiene su propia identidad y una comunidad",
   "shortDescriptionI18n": {
     "en": "A space where knowledge meets passion. Join a specialised club where professionals like you gather to learn together. From software, design, AI and marketing to entrepreneurship and more, each club has its own identity and community."
@@ -38,10 +46,6 @@
     }
   ],
   "thumbnailUrl": "images/frk.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": true,
   "removalReason": ""

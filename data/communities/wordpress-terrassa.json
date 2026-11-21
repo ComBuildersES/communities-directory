@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Barcelona (Terrassa)",
+  "locations": [
+    {
+      "name": "Barcelona (Terrassa)",
+      "latLon": {
+        "lat": 41.5609412,
+        "lon": 2.0104484
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -22,10 +30,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-terrassa.webp",
-  "latLon": {
-    "lat": 41.5609412,
-    "lon": 2.0104484
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

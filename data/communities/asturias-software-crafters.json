@@ -5,7 +5,15 @@
   "lastReviewed": "25/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Oviedo/Gijón (Asturias)",
+  "locations": [
+    {
+      "name": "Oviedo/Gijón (Asturias)",
+      "latLon": {
+        "lat": 43.520243144013,
+        "lon": -5.685033233419
+      }
+    }
+  ],
   "shortDescription": "Grupo de entusiastas de la tecnología que queremos fomentar las relaciones personales en torno a eventos tecnológicos en Asturias. Organizamos, charlas, talleres, dinámicas.... Siempre con respeto y alrededor de un espacio acogedor donde divertirnos.",
   "shortDescriptionI18n": {
     "en": "A group of technology enthusiasts who want to build personal relationships around tech events in Asturias. We organise talks, workshops and hands-on sessions, always respectfully and in a welcoming space where we can have fun."
@@ -74,10 +82,6 @@
     }
   ],
   "thumbnailUrl": "images/asturias-software-crafters.webp",
-  "latLon": {
-    "lat": 43.520243144013,
-    "lon": -5.685033233419
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

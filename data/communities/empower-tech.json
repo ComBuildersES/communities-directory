@@ -5,7 +5,7 @@
   "lastReviewed": "26/08/2025",
   "communityType": "collaborative-group",
   "eventFormat": "online",
-  "location": "",
+  "locations": [],
   "topics": "Women in Tech, Girls in STEM, Female Empowerment, Gender Equality, Tech Mentorship, Tech Networking, Programming, Coding, Leadership, Diversity in Tech, Inclusive Tech, Career Development, Technology Education, Future Leaders, STEM Education",
   "langs": [
     "es"
@@ -29,10 +29,6 @@
     }
   ],
   "thumbnailUrl": "images/empower-tech.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

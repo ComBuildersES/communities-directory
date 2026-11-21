@@ -5,7 +5,15 @@
   "lastReviewed": "25/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "hybrid",
-  "location": "Girona",
+  "locations": [
+    {
+      "name": "Girona",
+      "latLon": {
+        "lat": 41.9793006,
+        "lon": 2.8199439
+      }
+    }
+  ],
   "parentId": 207,
   "shortDescription": "",
   "topics": "",
@@ -58,10 +66,6 @@
     }
   ],
   "thumbnailUrl": "images/gdg-girona.webp",
-  "latLon": {
-    "lat": 41.9793006,
-    "lon": 2.8199439
-  },
   "displayOnMap": true,
   "humanValidated": true
 }

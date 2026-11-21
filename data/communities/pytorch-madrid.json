@@ -5,7 +5,15 @@
   "lastReviewed": "20/08/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Madrid",
+  "locations": [
+    {
+      "name": "Madrid",
+      "latLon": {
+        "lat": 40.416782,
+        "lon": -3.703507
+      }
+    }
+  ],
   "parentId": null,
   "shortDescription": "PyTorch no es solo un framework: es la columna vertebral del aprendizaje profundo moderno y el motor que impulsa los avances más potentes en IA Generativa. Nos hace una ilusión enorme traer esta comunidad global a nuestra ciudad!",
   "shortDescriptionI18n": {
@@ -39,10 +47,6 @@
     }
   ],
   "thumbnailUrl": "images/pytorch-madrid.webp",
-  "latLon": {
-    "lat": 40.416782,
-    "lon": -3.703507
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

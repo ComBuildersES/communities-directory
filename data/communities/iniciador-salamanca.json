@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Salamanca",
+  "locations": [
+    {
+      "name": "Salamanca",
+      "latLon": {
+        "lat": 40.966674,
+        "lon": -5.665434
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -15,10 +23,6 @@
   "contactInfo": "",
   "communityUrl": "https://iniciador.com/Salamanca",
   "urls": {},
-  "latLon": {
-    "lat": 40.966674,
-    "lon": -5.665434
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

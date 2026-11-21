@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Chiclana, Cádiz",
+  "locations": [
+    {
+      "name": "Chiclana, Cádiz",
+      "latLon": {
+        "lat": 36.41976,
+        "lon": -6.14367
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -22,10 +30,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-chiclana.webp",
-  "latLon": {
-    "lat": 36.41976,
-    "lon": -6.14367
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

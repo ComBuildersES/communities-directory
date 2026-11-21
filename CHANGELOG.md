@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-21 `5dcc390` librería de sedes y validación anti-deriva
+- 2026-11-21 `c15abbc` migra las 663 fichas de `location` + `latLon` a `locations`
+- 2026-11-21 `5c4ddf3` librería de sedes y validación anti-deriva
 - 2026-11-21 `d7d81e6` script de migración a `locations` y orden canónico de claves
 - 2026-11-21 `5124b39` traduce la descripción de CaceresTech
 - 2026-11-21 `8b555ea` descripción en varios idiomas y repaso del inglés

@@ -5,7 +5,15 @@
   "lastReviewed": "30/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Murcia",
+  "locations": [
+    {
+      "name": "Murcia",
+      "latLon": {
+        "lat": 37.9835334,
+        "lon": -1.129905
+      }
+    }
+  ],
   "parentId": 512,
   "shortDescription": "Comunidad WordPress de Murcia para compartir conocimiento, encuentros y actividad local del ecosistema.",
   "shortDescriptionI18n": {
@@ -43,10 +51,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-murcia.webp",
-  "latLon": {
-    "lat": 37.9835334,
-    "lon": -1.129905
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

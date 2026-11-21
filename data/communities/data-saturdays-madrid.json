@@ -5,7 +5,15 @@
   "lastReviewed": "30/10/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Madrid",
+  "locations": [
+    {
+      "name": "Madrid",
+      "latLon": {
+        "lat": 40.416782,
+        "lon": -3.703507
+      }
+    }
+  ],
   "parentId": null,
   "shortDescription": "El evento más grande de Datos en España con tecnologías Microsoft. Conferencia y exposición. Profesionales, futuros profesionales y referentes del mundo de los datos comparten y aprenden por igual.",
   "shortDescriptionI18n": {
@@ -33,10 +41,6 @@
   "communityUrl": "https://datasaturdays.com/Event/20261107-datasaturday0095",
   "urls": {},
   "thumbnailUrl": "images/data-saturdays-madrid.webp",
-  "latLon": {
-    "lat": 40.416782,
-    "lon": -3.703507
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

@@ -5,7 +5,15 @@
   "lastReviewed": "06/04/2026",
   "communityType": "hacklab",
   "eventFormat": "in-person",
-  "location": "Almería",
+  "locations": [
+    {
+      "name": "Almería",
+      "latLon": {
+        "lat": 36.8400939,
+        "lon": -2.4679043
+      }
+    }
+  ],
   "parentId": null,
   "shortDescription": "Asociación cultural sin ánimo de lucro en Almería que promueve la experimentación tecnológica, científica y artística mediante colaboración y educación social. Difunde la cultura maker, acerca la ciencia a la ciudadanía y fomenta proyectos colectivos con impacto social.",
   "shortDescriptionI18n": {
@@ -53,10 +61,6 @@
     }
   ],
   "thumbnailUrl": "images/la-jaqueria.webp",
-  "latLon": {
-    "lat": 36.8400939,
-    "lon": -2.4679043
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

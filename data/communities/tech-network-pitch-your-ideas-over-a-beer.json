@@ -5,7 +5,15 @@
   "lastReviewed": "11/12/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Madrid",
+  "locations": [
+    {
+      "name": "Madrid",
+      "latLon": {
+        "lat": 40.4167047,
+        "lon": -3.7035825
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -19,10 +27,6 @@
       "url": "https://www.meetup.com/technetwork/events/304881438/"
     }
   ],
-  "latLon": {
-    "lat": 40.4167047,
-    "lon": -3.7035825
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

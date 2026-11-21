@@ -5,7 +5,15 @@
   "lastReviewed": "23/06/2026",
   "communityType": "umbrella-org",
   "eventFormat": "in-person",
-  "location": "n/a",
+  "locations": [
+    {
+      "name": "n/a",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "shortDescription": "We are a global collaborative Internet of Things ecosystem that creates networks, devices, and solutions using LoRaWAN®.",
   "shortDescriptionI18n": {
     "en": "We are a global collaborative Internet of Things ecosystem that creates networks, devices and solutions using LoRaWAN.",
@@ -25,10 +33,6 @@
   "communityUrl": "https://www.thethingsnetwork.org/",
   "urls": {},
   "thumbnailUrl": "images/the-things-network.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": true,
   "removalReason": ""

@@ -5,7 +5,15 @@
   "lastReviewed": "06/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Valencia",
+  "locations": [
+    {
+      "name": "Valencia",
+      "latLon": {
+        "lat": 39.4702393,
+        "lon": -0.3768049
+      }
+    }
+  ],
   "geographicScope": "local",
   "shortDescription": "Capítulo valenciano de AI Tinkerers: demo nights mensuales de builders de IA, teardowns de producto y encuentros para quien lleva sistemas con agentes a producción.",
   "shortDescriptionI18n": {
@@ -30,10 +38,6 @@
     }
   ],
   "thumbnailUrl": "images/ai-tinkerers-valencia.webp",
-  "latLon": {
-    "lat": 39.4702393,
-    "lon": -0.3768049
-  },
   "displayOnMap": true,
   "humanValidated": false,
   "removalReason": ""

@@ -5,7 +5,15 @@
   "lastReviewed": "06/04/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Roquetas de Mar, Almería",
+  "locations": [
+    {
+      "name": "Roquetas de Mar, Almería",
+      "latLon": {
+        "lat": 36.7630203,
+        "lon": -2.6115886
+      }
+    }
+  ],
   "parentId": null,
   "shortDescription": "Congreso Internacional de ciberseguridad y transformación digital organizado por el equipo del podcast Cosas de Hackers.",
   "shortDescriptionI18n": {
@@ -54,10 +62,6 @@
     }
   ],
   "thumbnailUrl": "images/canallacon.webp",
-  "latLon": {
-    "lat": 36.7630203,
-    "lon": -2.6115886
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

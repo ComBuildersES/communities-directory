@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Málaga (Marbella)",
+  "locations": [
+    {
+      "name": "Málaga (Marbella)",
+      "latLon": {
+        "lat": 36.5118318,
+        "lon": -4.8822775
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -25,10 +33,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-marbella.webp",
-  "latLon": {
-    "lat": 36.5118318,
-    "lon": -4.8822775
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

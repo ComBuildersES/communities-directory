@@ -5,7 +5,15 @@
   "lastReviewed": "24/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Granada",
+  "locations": [
+    {
+      "name": "Granada",
+      "latLon": {
+        "lat": 37.1831938,
+        "lon": -3.604747
+      }
+    }
+  ],
   "parentId": 207,
   "topics": "Cloud, AI, Backend, Frontend, soft skills",
   "langs": [
@@ -27,10 +35,6 @@
     }
   ],
   "thumbnailUrl": "images/gdg-granada.webp",
-  "latLon": {
-    "lat": 37.1831938,
-    "lon": -3.604747
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

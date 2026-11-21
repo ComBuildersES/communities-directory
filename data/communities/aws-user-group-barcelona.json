@@ -5,7 +5,15 @@
   "lastReviewed": "06/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Barcelona",
+  "locations": [
+    {
+      "name": "Barcelona",
+      "latLon": {
+        "lat": 41.387917,
+        "lon": 2.1699187
+      }
+    }
+  ],
   "geographicScope": "local",
   "shortDescription": "Grupo de usuarios de AWS en Barcelona: charlas y talleres prácticos sobre la nube de AWS, desde Bedrock y agentes de IA hasta arquitectura y operación.",
   "shortDescriptionI18n": {
@@ -24,10 +32,6 @@
   "communityUrl": "https://www.meetup.com/barcelona-amazon-web-services-meetup/",
   "urls": {},
   "thumbnailUrl": "images/aws-user-group-barcelona.webp",
-  "latLon": {
-    "lat": 41.387917,
-    "lon": 2.1699187
-  },
   "displayOnMap": true,
   "humanValidated": false,
   "removalReason": ""

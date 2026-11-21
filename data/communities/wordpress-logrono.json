@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Logroño",
+  "locations": [
+    {
+      "name": "Logroño",
+      "latLon": {
+        "lat": 42.46569,
+        "lon": -2.44998
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -25,10 +33,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-logrono.webp",
-  "latLon": {
-    "lat": 42.46569,
-    "lon": -2.44998
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

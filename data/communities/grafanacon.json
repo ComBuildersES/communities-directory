@@ -5,7 +5,15 @@
   "lastReviewed": "11/12/2025",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Itinerante",
+  "locations": [
+    {
+      "name": "Itinerante",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "topics": "data-visualization, big-data, data-engineering, etl, system-administration, OpenTelemetry, Loki, open-source, DevOps & Platform Engineer, Data Engineer, Cloud Engineer, Site Reliability Engineer, ci-cd, statistics, iot",
   "langs": [
     "es"
@@ -36,10 +44,6 @@
     }
   ],
   "thumbnailUrl": "images/grafanacon.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

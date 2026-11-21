@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Granada",
+  "locations": [
+    {
+      "name": "Granada",
+      "latLon": {
+        "lat": 37.1831938,
+        "lon": -3.604747
+      }
+    }
+  ],
   "parentId": 483,
   "topics": "",
   "langs": [
@@ -22,10 +30,6 @@
     }
   ],
   "thumbnailUrl": "images/wordcamp-granada.webp",
-  "latLon": {
-    "lat": 37.1831938,
-    "lon": -3.604747
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

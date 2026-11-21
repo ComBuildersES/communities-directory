@@ -5,7 +5,15 @@
   "lastReviewed": "25/03/2026",
   "communityType": "collaborative-group",
   "eventFormat": "in-person",
-  "location": "Granada",
+  "locations": [
+    {
+      "name": "Granada",
+      "latLon": {
+        "lat": 37.1831938,
+        "lon": -3.604747
+      }
+    }
+  ],
   "shortDescription": "Grupo de usuarios GNU/Linux de Granada",
   "shortDescriptionI18n": {
     "en": "The GNU/Linux user group of Granada."
@@ -36,10 +44,6 @@
     }
   ],
   "thumbnailUrl": "images/gcubo.webp",
-  "latLon": {
-    "lat": 37.1831938,
-    "lon": -3.604747
-  },
   "displayOnMap": true,
   "humanValidated": true
 }

@@ -5,7 +5,15 @@
   "lastReviewed": "19/04/2025",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Bilbao",
+  "locations": [
+    {
+      "name": "Bilbao",
+      "latLon": {
+        "lat": 43.2569608,
+        "lon": -2.9234602
+      }
+    }
+  ],
   "parentId": 404,
   "topics": "Python & Tech",
   "langs": [
@@ -29,10 +37,6 @@
     }
   ],
   "thumbnailUrl": "images/python-bilbao.webp",
-  "latLon": {
-    "lat": 43.2569608,
-    "lon": -2.9234602
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

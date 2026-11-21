@@ -5,7 +5,15 @@
   "lastReviewed": "17/10/2024",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Valladolid",
+  "locations": [
+    {
+      "name": "Valladolid",
+      "latLon": {
+        "lat": 41.6529421,
+        "lon": -4.7283839
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -24,10 +32,6 @@
     }
   ],
   "thumbnailUrl": "images/pucelatechday.webp",
-  "latLon": {
-    "lat": 41.6529421,
-    "lon": -4.7283839
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

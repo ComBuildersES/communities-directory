@@ -5,7 +5,15 @@
   "lastReviewed": "25/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Coruña",
+  "locations": [
+    {
+      "name": "Coruña",
+      "latLon": {
+        "lat": 43.3707332,
+        "lon": -8.3958532
+      }
+    }
+  ],
   "parentId": 207,
   "shortDescription": "GDG A Coruña es una comunidad abierta que conecta a los amantes de la tecnología en A Coruña. Organizamos eventos, talleres y charlas para fomentar el aprendizaje, el intercambio de ideas y la innovación tecnológica.",
   "shortDescriptionI18n": {
@@ -49,10 +57,6 @@
     }
   ],
   "thumbnailUrl": "images/gdg-a-coruna.webp",
-  "latLon": {
-    "lat": 43.3707332,
-    "lon": -8.3958532
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

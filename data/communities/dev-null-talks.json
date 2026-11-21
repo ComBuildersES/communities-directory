@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Sevilla",
+  "locations": [
+    {
+      "name": "Sevilla",
+      "latLon": {
+        "lat": 37.38264,
+        "lon": -5.9962951
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -23,10 +31,6 @@
     }
   ],
   "thumbnailUrl": "images/devnull-talks.webp",
-  "latLon": {
-    "lat": 37.38264,
-    "lon": -5.9962951
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

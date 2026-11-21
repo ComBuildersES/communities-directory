@@ -5,7 +5,15 @@
   "lastReviewed": "07/06/2025",
   "communityType": "tech-meetup",
   "eventFormat": "hybrid",
-  "location": "Alicante",
+  "locations": [
+    {
+      "name": "Alicante",
+      "latLon": {
+        "lat": 38.3436365,
+        "lon": -0.4881708
+      }
+    }
+  ],
   "parentId": 207,
   "topics": "ciencia, tecnología, comunidad, aprendizaje, conocimiento compartido, desarrollo personal, desarrollo profesional, metodologías de aprendizaje, innovación, formación, networking, colaboración, multidisciplinar, educación, divulgación científica, asociación sin ánimo de lucro",
   "langs": [
@@ -34,10 +42,6 @@
     }
   ],
   "thumbnailUrl": "images/gdg-alicante.webp",
-  "latLon": {
-    "lat": 38.3436365,
-    "lon": -0.4881708
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

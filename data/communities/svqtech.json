@@ -5,7 +5,15 @@
   "lastReviewed": "29/11/2024",
   "communityType": "meta-community",
   "eventFormat": "unknown",
-  "location": "Sevilla",
+  "locations": [
+    {
+      "name": "Sevilla",
+      "latLon": {
+        "lat": 37.38264,
+        "lon": -5.9962951
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -16,10 +24,6 @@
   "communityUrl": "https://svqtech.com/",
   "urls": {},
   "thumbnailUrl": "images/svqtech.webp",
-  "latLon": {
-    "lat": 37.38264,
-    "lon": -5.9962951
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

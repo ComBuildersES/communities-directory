@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Las Palmas",
+  "locations": [
+    {
+      "name": "Las Palmas",
+      "latLon": {
+        "lat": 29.416481733333,
+        "lon": -13.504866833333
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -15,10 +23,6 @@
   "contactInfo": "",
   "communityUrl": "https://www.iniciador.com/es/laspalmas",
   "urls": {},
-  "latLon": {
-    "lat": 29.416481733333,
-    "lon": -13.504866833333
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

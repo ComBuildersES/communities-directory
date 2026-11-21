@@ -5,7 +5,15 @@
   "lastReviewed": "03/03/2025",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Coruña",
+  "locations": [
+    {
+      "name": "Coruña",
+      "latLon": {
+        "lat": 43.3707332,
+        "lon": -8.3958532
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -23,10 +31,6 @@
     }
   ],
   "thumbnailUrl": "images/galstech.webp",
-  "latLon": {
-    "lat": 43.3707332,
-    "lon": -8.3958532
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

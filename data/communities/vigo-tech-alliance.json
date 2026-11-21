@@ -5,7 +5,15 @@
   "lastReviewed": "03/03/2025",
   "communityType": "meta-community",
   "eventFormat": "unknown",
-  "location": "Vigo, Galicia",
+  "locations": [
+    {
+      "name": "Vigo, Galicia",
+      "latLon": {
+        "lat": 42.2313601,
+        "lon": -8.7124252
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -32,10 +40,6 @@
     }
   ],
   "thumbnailUrl": "images/vigo-tech-alliance.webp",
-  "latLon": {
-    "lat": 42.2313601,
-    "lon": -8.7124252
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

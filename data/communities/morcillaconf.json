@@ -5,7 +5,15 @@
   "lastReviewed": "17/10/2024",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Burgos",
+  "locations": [
+    {
+      "name": "Burgos",
+      "latLon": {
+        "lat": 42.3408923,
+        "lon": -3.6997623
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -26,10 +34,6 @@
     }
   ],
   "thumbnailUrl": "images/morcillaconf.webp",
-  "latLon": {
-    "lat": 42.3408923,
-    "lon": -3.6997623
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

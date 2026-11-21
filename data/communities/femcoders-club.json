@@ -5,7 +5,15 @@
   "lastReviewed": "06/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "hybrid",
-  "location": "Barcelona",
+  "locations": [
+    {
+      "name": "Barcelona",
+      "latLon": {
+        "lat": 41.387917,
+        "lon": 2.1699187
+      }
+    }
+  ],
   "geographicScope": "national",
   "shortDescription": "Comunidad de mujeres desarrolladoras con base en Barcelona: talleres, charlas y mentoría para cerrar la brecha de género en tecnología.",
   "shortDescriptionI18n": {
@@ -40,10 +48,6 @@
     }
   ],
   "thumbnailUrl": "images/femcoders-club.webp",
-  "latLon": {
-    "lat": 41.387917,
-    "lon": 2.1699187
-  },
   "displayOnMap": true,
   "humanValidated": false,
   "removalReason": ""

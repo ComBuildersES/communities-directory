@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Álava (Vitoria-Gasteiz)",
+  "locations": [
+    {
+      "name": "Álava (Vitoria-Gasteiz)",
+      "latLon": {
+        "lat": 42.8468573,
+        "lon": -2.6715859
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -22,10 +30,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-vitoria-gasteiz.webp",
-  "latLon": {
-    "lat": 42.8468573,
-    "lon": -2.6715859
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

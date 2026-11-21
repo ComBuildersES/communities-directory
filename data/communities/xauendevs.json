@@ -5,7 +5,15 @@
   "lastReviewed": "18/12/2024",
   "communityType": "tech-meetup",
   "eventFormat": "hybrid",
-  "location": "Jaén",
+  "locations": [
+    {
+      "name": "Jaén",
+      "latLon": {
+        "lat": 37.7657753,
+        "lon": -3.7893929
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -26,10 +34,6 @@
     }
   ],
   "thumbnailUrl": "images/xauendevs.webp",
-  "latLon": {
-    "lat": 37.7657753,
-    "lon": -3.7893929
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

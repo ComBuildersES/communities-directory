@@ -5,7 +5,15 @@
   "lastReviewed": "24/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "hybrid",
-  "location": "Málaga",
+  "locations": [
+    {
+      "name": "Málaga",
+      "latLon": {
+        "lat": 36.7196292,
+        "lon": -4.4200007
+      }
+    }
+  ],
   "shortDescription": "Comunidad local para compartir conocimiento y experiencias sobre ciberseguridad.",
   "shortDescriptionI18n": {
     "en": "A local community for sharing knowledge and experiences about cybersecurity."
@@ -24,10 +32,6 @@
     }
   ],
   "thumbnailUrl": "images/boqueronsec.webp",
-  "latLon": {
-    "lat": 36.7196292,
-    "lon": -4.4200007
-  },
   "displayOnMap": true,
   "humanValidated": true
 }

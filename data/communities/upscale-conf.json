@@ -5,7 +5,15 @@
   "lastReviewed": "03/11/2025",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Málaga, Spain",
+  "locations": [
+    {
+      "name": "Málaga, Spain",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "topics": "inteligencia artificial,diseño, tecnologías emergentes",
   "langs": [
     "es"
@@ -35,10 +43,6 @@
     }
   ],
   "thumbnailUrl": "images/upscale-conf.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

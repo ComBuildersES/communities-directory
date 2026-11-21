@@ -5,7 +5,15 @@
   "lastReviewed": "24/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "hybrid",
-  "location": "Málaga",
+  "locations": [
+    {
+      "name": "Málaga",
+      "latLon": {
+        "lat": 36.7196292,
+        "lon": -4.4200007
+      }
+    }
+  ],
   "parentId": 302,
   "shortDescription": "Comunidad para compartir conocimiento y experiencias sobre el lenguaje y plataforma Java y otros lenguajes de la JVM.",
   "shortDescriptionI18n": {
@@ -44,10 +52,6 @@
     }
   ],
   "thumbnailUrl": "images/malagajug.webp",
-  "latLon": {
-    "lat": 36.7196292,
-    "lon": -4.4200007
-  },
   "displayOnMap": true,
   "humanValidated": true
 }

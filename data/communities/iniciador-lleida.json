@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Lérida (Lleida)",
+  "locations": [
+    {
+      "name": "Lérida (Lleida)",
+      "latLon": {
+        "lat": 41.6141646,
+        "lon": 0.6258029
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -15,10 +23,6 @@
   "contactInfo": "",
   "communityUrl": "https://iniciador.com/Lleida",
   "urls": {},
-  "latLon": {
-    "lat": 41.6141646,
-    "lon": 0.6258029
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Barcelona (Igualada)",
+  "locations": [
+    {
+      "name": "Barcelona (Igualada)",
+      "latLon": {
+        "lat": 41.5787648,
+        "lon": 1.6171926
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -22,10 +30,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-igualada.webp",
-  "latLon": {
-    "lat": 41.5787648,
-    "lon": 1.6171926
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

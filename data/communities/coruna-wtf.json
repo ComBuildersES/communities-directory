@@ -5,7 +5,15 @@
   "lastReviewed": "25/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Coruña",
+  "locations": [
+    {
+      "name": "Coruña",
+      "latLon": {
+        "lat": 43.3707332,
+        "lon": -8.3958532
+      }
+    }
+  ],
   "shortDescription": "CoruñaWTF somos una comunidad de personas de A Coruña y alrededores, que se reúnen para compartir, aprender y disfrutar alrededor del desarrollo y diseño web.",
   "shortDescriptionI18n": {
     "en": "CorunaWTF is a community of people from A Coruña and nearby who get together to share, learn and enjoy themselves around web development and design."
@@ -55,10 +63,6 @@
     }
   ],
   "thumbnailUrl": "images/coruna-wtf.webp",
-  "latLon": {
-    "lat": 43.3707332,
-    "lon": -8.3958532
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Alicante",
+  "locations": [
+    {
+      "name": "Alicante",
+      "latLon": {
+        "lat": 38.34521,
+        "lon": -0.4809945
+      }
+    }
+  ],
   "parentId": 512,
   "topics": "",
   "langs": [
@@ -29,10 +37,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-alicante.webp",
-  "latLon": {
-    "lat": 38.34521,
-    "lon": -0.4809945
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

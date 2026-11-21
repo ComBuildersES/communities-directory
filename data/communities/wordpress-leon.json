@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "León",
+  "locations": [
+    {
+      "name": "León",
+      "latLon": {
+        "lat": 42.598862,
+        "lon": -5.572586
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -31,10 +39,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-leon.webp",
-  "latLon": {
-    "lat": 42.598862,
-    "lon": -5.572586
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

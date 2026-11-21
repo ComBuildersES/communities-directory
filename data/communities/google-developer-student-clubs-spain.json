@@ -5,7 +5,15 @@
   "lastReviewed": "15/10/2024",
   "communityType": "umbrella-org",
   "eventFormat": "unknown",
-  "location": "n/a",
+  "locations": [
+    {
+      "name": "n/a",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -23,10 +31,6 @@
     }
   ],
   "thumbnailUrl": "images/google-developer-student-clubs-spain.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

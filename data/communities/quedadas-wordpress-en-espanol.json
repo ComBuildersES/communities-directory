@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "online",
-  "location": "n/a",
+  "locations": [
+    {
+      "name": "n/a",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -34,10 +42,6 @@
     }
   ],
   "thumbnailUrl": "images/quedadas-wordpress-en-espanol.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

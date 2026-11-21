@@ -5,7 +5,15 @@
   "lastReviewed": "30/10/2026",
   "communityType": "collaborative-group",
   "eventFormat": "hybrid",
-  "location": "Madrid",
+  "locations": [
+    {
+      "name": "Madrid",
+      "latLon": {
+        "lat": 40.416782,
+        "lon": -3.703507
+      }
+    }
+  ],
   "geographicScope": "national",
   "parentId": null,
   "shortDescription": "Women for technical talks (W4TT) es una asociación dedicada a impulsar la participación de mujeres en carreras STEM como ponentes en eventos técnicos. Nuestro objetivo es visibilizar el talento femenino y fomentar un cambio positivo en la comunidad tecnológica.",
@@ -38,10 +46,6 @@
     }
   ],
   "thumbnailUrl": "images/women4tt.webp",
-  "latLon": {
-    "lat": 40.416782,
-    "lon": -3.703507
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

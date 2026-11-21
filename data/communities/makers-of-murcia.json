@@ -5,7 +5,15 @@
   "lastReviewed": "12/11/2026",
   "communityType": "hacklab",
   "eventFormat": "in-person",
-  "location": "Murcia",
+  "locations": [
+    {
+      "name": "Murcia",
+      "latLon": {
+        "lat": 37.9835334,
+        "lon": -1.129905
+      }
+    }
+  ],
   "mergedIntoId": 631,
   "topics": "",
   "langs": [
@@ -24,10 +32,6 @@
     }
   ],
   "thumbnailUrl": "images/makers-of-murcia.webp",
-  "latLon": {
-    "lat": 37.9835334,
-    "lon": -1.129905
-  },
   "displayOnMap": false,
   "humanValidated": true
 }

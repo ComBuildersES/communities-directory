@@ -5,7 +5,15 @@
   "lastReviewed": "26/05/2025",
   "communityType": "umbrella-org",
   "eventFormat": "unknown",
-  "location": "n/a",
+  "locations": [
+    {
+      "name": "n/a",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -22,10 +30,6 @@
     }
   ],
   "thumbnailUrl": "images/unity-user-group-network.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

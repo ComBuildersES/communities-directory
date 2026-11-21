@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Murcia",
+  "locations": [
+    {
+      "name": "Murcia",
+      "latLon": {
+        "lat": 37.9835334,
+        "lon": -1.129905
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -23,10 +31,6 @@
       "url": "https://gauss.inf.um.es/umur/"
     }
   ],
-  "latLon": {
-    "lat": 37.9835334,
-    "lon": -1.129905
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

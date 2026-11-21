@@ -5,7 +5,15 @@
   "lastReviewed": "25/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Granada, España",
+  "locations": [
+    {
+      "name": "Granada, España",
+      "latLon": {
+        "lat": 37.1831938,
+        "lon": -3.604747
+      }
+    }
+  ],
   "shortDescription": "AiBirras es un punto de encuentro único para desarrolladores, investigadores y entusiastas de la IA para discutir lo último en inteligencia artificial, compartir ideas y disfrutar de una buena cerveza.",
   "shortDescriptionI18n": {
     "en": "AiBirras is a one-of-a-kind meeting point for developers, researchers and AI enthusiasts to discuss the latest in artificial intelligence, share ideas and enjoy a good beer."
@@ -38,10 +46,6 @@
     }
   ],
   "thumbnailUrl": "images/aibirras.webp",
-  "latLon": {
-    "lat": 37.1831938,
-    "lon": -3.604747
-  },
   "displayOnMap": true,
   "humanValidated": true
 }

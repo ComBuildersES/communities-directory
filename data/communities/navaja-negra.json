@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Albacete",
+  "locations": [
+    {
+      "name": "Albacete",
+      "latLon": {
+        "lat": 38.9976623,
+        "lon": -1.8600675
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -29,10 +37,6 @@
     }
   ],
   "thumbnailUrl": "images/navaja-negra.webp",
-  "latLon": {
-    "lat": 38.9976623,
-    "lon": -1.8600675
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

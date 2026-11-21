@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Madrid (Griñón)",
+  "locations": [
+    {
+      "name": "Madrid (Griñón)",
+      "latLon": {
+        "lat": 40.2142405,
+        "lon": -3.8561918
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -31,10 +39,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-grinon.webp",
-  "latLon": {
-    "lat": 40.2142405,
-    "lon": -3.8561918
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

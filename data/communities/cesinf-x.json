@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Tenerife",
+  "locations": [
+    {
+      "name": "Tenerife",
+      "latLon": {
+        "lat": 28.2631,
+        "lon": -16.60942
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -26,10 +34,6 @@
     }
   ],
   "thumbnailUrl": "images/cesinf-x.webp",
-  "latLon": {
-    "lat": 28.2631,
-    "lon": -16.60942
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

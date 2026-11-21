@@ -5,7 +5,15 @@
   "lastReviewed": "26/05/2025",
   "communityType": "collaborative-group",
   "eventFormat": "hybrid",
-  "location": "Sevilla, Spain",
+  "locations": [
+    {
+      "name": "Sevilla, Spain",
+      "latLon": {
+        "lat": 37.3886303,
+        "lon": -5.9953403
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -27,10 +35,6 @@
     }
   ],
   "thumbnailUrl": "images/the-things-network-sevilla.webp",
-  "latLon": {
-    "lat": 37.3886303,
-    "lon": -5.9953403
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

@@ -5,7 +5,15 @@
   "lastReviewed": "13/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Cádiz",
+  "locations": [
+    {
+      "name": "Cádiz",
+      "latLon": {
+        "lat": 36.5297453,
+        "lon": -6.2926477
+      }
+    }
+  ],
   "geographicScope": "provincial",
   "parentId": null,
   "shortDescription": "Agrupación de Desarrolladores de videojuegos Gaditanos fundada por José Antonio Escribano Allyon (Horizon Zero Dawn I & II, Ryse: Son of Rome, Crysis 3) desde 20 de octubre de 2023\nEn el que hacemos quedadas sobre desarrollo del videojuegos o hacer GameJams.",
@@ -58,10 +66,6 @@
     }
   ],
   "thumbnailUrl": "images/cadiz-gamedev.webp",
-  "latLon": {
-    "lat": 36.5297453,
-    "lon": -6.2926477
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

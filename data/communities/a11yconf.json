@@ -5,7 +5,15 @@
   "lastReviewed": "12/12/2025",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Girona",
+  "locations": [
+    {
+      "name": "Girona",
+      "latLon": {
+        "lat": 41.9793006,
+        "lon": 2.8199439
+      }
+    }
+  ],
   "topics": "accessibility, diversity, ethics, tech4good, frontend-developer, ux-designer, ui-designer, web, inclusive-design",
   "langs": [
     "es"
@@ -51,10 +59,6 @@
     }
   ],
   "thumbnailUrl": "images/a11yconf.webp",
-  "latLon": {
-    "lat": 41.9793006,
-    "lon": 2.8199439
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

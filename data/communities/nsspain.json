@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Logroño, La Rioja",
+  "locations": [
+    {
+      "name": "Logroño, La Rioja",
+      "latLon": {
+        "lat": 42.46569,
+        "lon": -2.44998
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -24,10 +32,6 @@
     }
   ],
   "thumbnailUrl": "images/nsspain.webp",
-  "latLon": {
-    "lat": 42.46569,
-    "lon": -2.44998
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

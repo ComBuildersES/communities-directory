@@ -5,7 +5,15 @@
   "lastReviewed": "30/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "unknown",
-  "location": "Canarias",
+  "locations": [
+    {
+      "name": "Canarias",
+      "latLon": {
+        "lat": 28,
+        "lon": -15.5
+      }
+    }
+  ],
   "parentId": 404,
   "shortDescription": "Asociación y comunidad de usuarios de Python en Canarias.",
   "shortDescriptionI18n": {
@@ -30,10 +38,6 @@
     }
   ],
   "thumbnailUrl": "images/python-alicante.webp",
-  "latLon": {
-    "lat": 28,
-    "lon": -15.5
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

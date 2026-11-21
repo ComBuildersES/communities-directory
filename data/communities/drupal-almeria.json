@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Almería",
+  "locations": [
+    {
+      "name": "Almería",
+      "latLon": {
+        "lat": 36.8400939,
+        "lon": -2.4679043
+      }
+    }
+  ],
   "parentId": 39,
   "topics": "",
   "langs": [
@@ -16,10 +24,6 @@
   "contactInfo": "help@drupal.org",
   "communityUrl": "http://web.archive.org/web/20250531043545/https://groups.drupal.org/almeria",
   "urls": {},
-  "latLon": {
-    "lat": 36.8400939,
-    "lon": -2.4679043
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

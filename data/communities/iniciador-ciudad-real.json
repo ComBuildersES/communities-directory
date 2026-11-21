@@ -5,7 +5,15 @@
   "lastReviewed": "26/05/2025",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Ciudad Real",
+  "locations": [
+    {
+      "name": "Ciudad Real",
+      "latLon": {
+        "lat": 38.984305,
+        "lon": -3.929649
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -15,10 +23,6 @@
   "contactInfo": "",
   "communityUrl": "https://www.iniciador.com/es/ciudad-real",
   "urls": {},
-  "latLon": {
-    "lat": 38.984305,
-    "lon": -3.929649
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

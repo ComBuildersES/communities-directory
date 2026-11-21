@@ -5,7 +5,15 @@
   "lastReviewed": "24/03/2025",
   "communityType": "mutual-aid",
   "eventFormat": "online",
-  "location": "n/a",
+  "locations": [
+    {
+      "name": "n/a",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -16,10 +24,6 @@
   "communityUrl": "https://impulsar.ai/#/",
   "urls": {},
   "thumbnailUrl": "images/impulsarai.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

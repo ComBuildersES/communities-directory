@@ -5,17 +5,21 @@
   "lastReviewed": "27/11/2024",
   "communityType": "tech-meetup",
   "eventFormat": "unknown",
-  "location": "Vigo, Galicia",
+  "locations": [
+    {
+      "name": "Vigo, Galicia",
+      "latLon": {
+        "lat": 42.2313601,
+        "lon": -8.7124252
+      }
+    }
+  ],
   "langs": [
     "es"
   ],
   "tags": [],
   "targetAudience": [],
   "urls": {},
-  "latLon": {
-    "lat": 42.2313601,
-    "lon": -8.7124252
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

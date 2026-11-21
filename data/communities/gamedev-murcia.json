@@ -5,7 +5,15 @@
   "lastReviewed": "12/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Murcia",
+  "locations": [
+    {
+      "name": "Murcia",
+      "latLon": {
+        "lat": 37.9347521,
+        "lon": -1.1131029
+      }
+    }
+  ],
   "geographicScope": "regional",
   "parentId": null,
   "mergedIntoId": 631,
@@ -40,10 +48,6 @@
     }
   ],
   "thumbnailUrl": "images/gamedev-murcia.webp",
-  "latLon": {
-    "lat": 37.9347521,
-    "lon": -1.1131029
-  },
   "displayOnMap": false,
   "humanValidated": true,
   "removalReason": ""

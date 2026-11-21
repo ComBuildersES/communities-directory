@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Cartagena, Murcia",
+  "locations": [
+    {
+      "name": "Cartagena, Murcia",
+      "latLon": {
+        "lat": 37.6057068,
+        "lon": -0.9913063
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -25,10 +33,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-cartagena.webp",
-  "latLon": {
-    "lat": 37.6057068,
-    "lon": -0.9913063
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

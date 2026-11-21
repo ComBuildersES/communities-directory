@@ -5,7 +5,15 @@
   "lastReviewed": "06/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Lleida",
+  "locations": [
+    {
+      "name": "Lleida",
+      "latLon": {
+        "lat": 41.6175899,
+        "lon": 0.6200145
+      }
+    }
+  ],
   "geographicScope": "local",
   "shortDescription": "Associació d'estudiants de l'Escola Politècnica Superior de la Universitat de Lleida que promou la tecnologia: organitza la HackEPS i tech meetings durant el curs.",
   "shortDescriptionI18n": {
@@ -42,10 +50,6 @@
     }
   ],
   "thumbnailUrl": "images/lleidahack.webp",
-  "latLon": {
-    "lat": 41.6175899,
-    "lon": 0.6200145
-  },
   "displayOnMap": true,
   "humanValidated": false,
   "removalReason": ""

@@ -5,7 +5,15 @@
   "lastReviewed": "23/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "unknown",
-  "location": "España",
+  "locations": [
+    {
+      "name": "España",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -22,10 +30,6 @@
     }
   ],
   "thumbnailUrl": "images/artificial-intelligence-network.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

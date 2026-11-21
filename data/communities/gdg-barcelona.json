@@ -5,7 +5,15 @@
   "lastReviewed": "30/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Barcelona",
+  "locations": [
+    {
+      "name": "Barcelona",
+      "latLon": {
+        "lat": 41.387917,
+        "lon": 2.1699187
+      }
+    }
+  ],
   "parentId": 207,
   "shortDescription": "Google Developer Group de Barcelona con encuentros de comunidad y divulgacion tecnica.",
   "shortDescriptionI18n": {
@@ -36,10 +44,6 @@
     }
   ],
   "thumbnailUrl": "images/gdg-barcelona.webp",
-  "latLon": {
-    "lat": 41.387917,
-    "lon": 2.1699187
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

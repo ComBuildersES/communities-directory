@@ -5,7 +5,15 @@
   "lastReviewed": "10/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Alicante (Denia)",
+  "locations": [
+    {
+      "name": "Alicante (Denia)",
+      "latLon": {
+        "lat": 38.8403996,
+        "lon": 0.1086422
+      }
+    }
+  ],
   "geographicScope": "unknown",
   "parentId": null,
   "shortDescription": "",
@@ -37,10 +45,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-denia.webp",
-  "latLon": {
-    "lat": 38.8403996,
-    "lon": 0.1086422
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

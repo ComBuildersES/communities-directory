@@ -5,7 +5,15 @@
   "lastReviewed": "14/12/2024",
   "communityType": "collaborative-group",
   "eventFormat": "hybrid",
-  "location": "Almería",
+  "locations": [
+    {
+      "name": "Almería",
+      "latLon": {
+        "lat": 36.8400939,
+        "lon": -2.4679043
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -16,10 +24,6 @@
   "communityUrl": "https://hacklabalmeria.net/",
   "urls": {},
   "thumbnailUrl": "images/hacklab-almeria.webp",
-  "latLon": {
-    "lat": 36.8400939,
-    "lon": -2.4679043
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

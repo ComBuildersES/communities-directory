@@ -5,7 +5,15 @@
   "lastReviewed": "06/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Madrid",
+  "locations": [
+    {
+      "name": "Madrid",
+      "latLon": {
+        "lat": 40.4167047,
+        "lon": -3.7035825
+      }
+    }
+  ],
   "geographicScope": "national",
   "shortDescription": "Asociación profesional sin ánimo de lucro de creatividad e IA generativa: organiza Birras Sintéticas, el encuentro mensual de perfiles creativos que trabajan con IA.",
   "shortDescriptionI18n": {
@@ -28,10 +36,6 @@
     }
   ],
   "thumbnailUrl": "images/club-sintetico.webp",
-  "latLon": {
-    "lat": 40.4167047,
-    "lon": -3.7035825
-  },
   "displayOnMap": true,
   "humanValidated": false,
   "removalReason": ""

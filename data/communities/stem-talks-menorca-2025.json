@@ -5,7 +5,15 @@
   "lastReviewed": "24/03/2025",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Menorca",
+  "locations": [
+    {
+      "name": "Menorca",
+      "latLon": {
+        "lat": 39.8154,
+        "lon": 4.2754
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -25,10 +33,6 @@
     }
   ],
   "thumbnailUrl": "images/stem-talks-menorca-2025.webp",
-  "latLon": {
-    "lat": 39.8154,
-    "lon": 4.2754
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

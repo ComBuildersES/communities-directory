@@ -5,7 +5,15 @@
   "lastReviewed": "24/03/2025",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Málaga",
+  "locations": [
+    {
+      "name": "Málaga",
+      "latLon": {
+        "lat": 36.7196292,
+        "lon": -4.4200007
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -32,10 +40,6 @@
     }
   ],
   "thumbnailUrl": "images/malagajam.webp",
-  "latLon": {
-    "lat": 36.7196292,
-    "lon": -4.4200007
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

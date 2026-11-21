@@ -5,7 +5,15 @@
   "lastReviewed": "16/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Málaga, Andalucía",
+  "locations": [
+    {
+      "name": "Málaga, Andalucía",
+      "latLon": {
+        "lat": 36.7647913,
+        "lon": -4.4422005
+      }
+    }
+  ],
   "geographicScope": "provincial",
   "parentId": null,
   "shortDescription": "Comunidad de Azure del sur de España! Organizamos encuentros y participamos en eventos internacionales: Global Azure, Global AI y GlobalDevOpsX; además, ofrecemos talleres y oportunidades para establecer contactos entre los aficionados a la nube.",
@@ -59,10 +67,6 @@
     }
   ],
   "thumbnailUrl": "images/azure-malaga.webp",
-  "latLon": {
-    "lat": 36.7647913,
-    "lon": -4.4422005
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

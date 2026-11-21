@@ -5,7 +5,15 @@
   "lastReviewed": "26/05/2025",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Cádiz",
+  "locations": [
+    {
+      "name": "Cádiz",
+      "latLon": {
+        "lat": 36.5297453,
+        "lon": -6.2926477
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -23,10 +31,6 @@
       "url": "https://www.iniciador.com/es/cadiz"
     }
   ],
-  "latLon": {
-    "lat": 36.5297453,
-    "lon": -6.2926477
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

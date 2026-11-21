@@ -5,7 +5,15 @@
   "lastReviewed": "06/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Barcelona",
+  "locations": [
+    {
+      "name": "Barcelona",
+      "latLon": {
+        "lat": 41.387917,
+        "lon": 2.1699187
+      }
+    }
+  ],
   "geographicScope": "local",
   "shortDescription": "Encuentro de la comunidad de música e IA en Barcelona: demos en directo, charlas y networking entre músicos, productores y tecnólogos creativos.",
   "shortDescriptionI18n": {
@@ -28,10 +36,6 @@
     }
   ],
   "thumbnailUrl": "images/barcelona-ai-music-meetup-bamm.webp",
-  "latLon": {
-    "lat": 41.387917,
-    "lon": 2.1699187
-  },
   "displayOnMap": true,
   "humanValidated": false,
   "removalReason": ""

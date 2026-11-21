@@ -5,7 +5,15 @@
   "lastReviewed": "12/09/2025",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Málaga, Spain",
+  "locations": [
+    {
+      "name": "Málaga, Spain",
+      "latLon": {
+        "lat": 36.7213028,
+        "lon": -4.4216366
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -20,10 +28,6 @@
     }
   ],
   "thumbnailUrl": "images/code-fest.webp",
-  "latLon": {
-    "lat": 36.7213028,
-    "lon": -4.4216366
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

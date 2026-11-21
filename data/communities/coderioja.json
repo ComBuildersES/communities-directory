@@ -5,7 +5,15 @@
   "lastReviewed": "25/03/2026",
   "communityType": "conference",
   "eventFormat": "hybrid",
-  "location": "Logroño La Rioja",
+  "locations": [
+    {
+      "name": "Logroño La Rioja",
+      "latLon": {
+        "lat": 42.46569,
+        "lon": -2.44998
+      }
+    }
+  ],
   "organizedBy": [
     201,
     311
@@ -41,10 +49,6 @@
     }
   ],
   "thumbnailUrl": "images/coderioja.webp",
-  "latLon": {
-    "lat": 42.46569,
-    "lon": -2.44998
-  },
   "displayOnMap": true,
   "humanValidated": true
 }

@@ -5,7 +5,15 @@
   "lastReviewed": "27/11/2024",
   "communityType": "meta-community",
   "eventFormat": "online",
-  "location": "La Rioja",
+  "locations": [
+    {
+      "name": "La Rioja",
+      "latLon": {
+        "lat": 42.46569,
+        "lon": -2.44998
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -15,10 +23,6 @@
   "contactInfo": "",
   "communityUrl": "https://web.archive.org/web/20230309185755/http://www.lariojatech.org/",
   "urls": {},
-  "latLon": {
-    "lat": 42.46569,
-    "lon": -2.44998
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

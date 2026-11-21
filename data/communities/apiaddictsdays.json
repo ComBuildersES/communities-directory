@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Madrid",
+  "locations": [
+    {
+      "name": "Madrid",
+      "latLon": {
+        "lat": 40.4167047,
+        "lon": -3.7035825
+      }
+    }
+  ],
   "topics": "APIs, Cloud, MIcroservicios",
   "langs": [
     "es"
@@ -29,10 +37,6 @@
     }
   ],
   "thumbnailUrl": "images/apiaddictsdays.webp",
-  "latLon": {
-    "lat": 40.4167047,
-    "lon": -3.7035825
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

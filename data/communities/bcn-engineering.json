@@ -5,7 +5,15 @@
   "lastReviewed": "29/10/2024",
   "communityType": "mutual-aid",
   "eventFormat": "online",
-  "location": "Barcelona",
+  "locations": [
+    {
+      "name": "Barcelona",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -26,10 +34,6 @@
     }
   ],
   "thumbnailUrl": "images/bcn-engineering.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

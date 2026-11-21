@@ -5,7 +5,15 @@
   "lastReviewed": "26/05/2025",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Madrid",
+  "locations": [
+    {
+      "name": "Madrid",
+      "latLon": {
+        "lat": 40.4167047,
+        "lon": -3.7035825
+      }
+    }
+  ],
   "parentId": 196,
   "topics": "",
   "langs": [
@@ -23,10 +31,6 @@
       "url": "https://www.meetup.com/es-ES/gcdcmadrid/"
     }
   ],
-  "latLon": {
-    "lat": 40.4167047,
-    "lon": -3.7035825
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

@@ -5,7 +5,15 @@
   "lastReviewed": "27/11/2024",
   "communityType": "tech-meetup",
   "eventFormat": "hybrid",
-  "location": "Murcia, Murcia",
+  "locations": [
+    {
+      "name": "Murcia, Murcia",
+      "latLon": {
+        "lat": 37.9835334,
+        "lon": -1.129905
+      }
+    }
+  ],
   "topics": "TDD, Pair Programming, Katas,...",
   "langs": [
     "es"
@@ -25,10 +33,6 @@
     }
   ],
   "thumbnailUrl": "images/murcia-software-crafters.webp",
-  "latLon": {
-    "lat": 37.9835334,
-    "lon": -1.129905
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

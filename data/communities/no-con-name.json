@@ -5,7 +5,15 @@
   "lastReviewed": "10/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Palma, Mallorca",
+  "locations": [
+    {
+      "name": "Palma, Mallorca",
+      "latLon": {
+        "lat": 39.5695818,
+        "lon": 2.6500745
+      }
+    }
+  ],
   "geographicScope": "national",
   "parentId": null,
   "shortDescription": "Congreso de hacking y seguridad informática activo más antiguo de España, fundado en 1999. Como asociación sin ánimo de lucro, organiza en Barcelona y Mallorca eventos independientes y sin sesgo comercial, reuniendo a profesionales y entusiastas del hacking y la ciberseguridad.",
@@ -71,10 +79,6 @@
     }
   ],
   "thumbnailUrl": "images/no-con-name.webp",
-  "latLon": {
-    "lat": 39.5695818,
-    "lon": 2.6500745
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

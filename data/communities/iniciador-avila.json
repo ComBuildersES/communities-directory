@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Ávila",
+  "locations": [
+    {
+      "name": "Ávila",
+      "latLon": {
+        "lat": 40.6563881,
+        "lon": -4.700433
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -15,10 +23,6 @@
   "contactInfo": "",
   "communityUrl": "https://iniciador.com/avila",
   "urls": {},
-  "latLon": {
-    "lat": 40.6563881,
-    "lon": -4.700433
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

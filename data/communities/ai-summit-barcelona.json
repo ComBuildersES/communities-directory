@@ -5,7 +5,15 @@
   "lastReviewed": "01/09/2025",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Barcelona, España",
+  "locations": [
+    {
+      "name": "Barcelona, España",
+      "latLon": {
+        "lat": 41.3825802,
+        "lon": 2.177073
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -33,10 +41,6 @@
     }
   ],
   "thumbnailUrl": "images/ai-summit-barcelona.webp",
-  "latLon": {
-    "lat": 41.3825802,
-    "lon": 2.177073
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

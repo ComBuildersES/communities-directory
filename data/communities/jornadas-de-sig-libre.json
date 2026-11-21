@@ -5,7 +5,15 @@
   "lastReviewed": "16/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Gerona (Girona)",
+  "locations": [
+    {
+      "name": "Gerona (Girona)",
+      "latLon": {
+        "lat": 42.128030322674,
+        "lon": 2.673305566784
+      }
+    }
+  ],
   "geographicScope": "national",
   "parentId": null,
   "shortDescription": "Las Jornadas de SIG Libre son un evento donde compartir e intercambiar conocimientos alrededor de las geotecnologías libres y la ciencia de datos espaciales.",
@@ -40,10 +48,6 @@
     }
   ],
   "thumbnailUrl": "images/jornadas-de-sig-libre.webp",
-  "latLon": {
-    "lat": 42.128030322674,
-    "lon": 2.673305566784
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

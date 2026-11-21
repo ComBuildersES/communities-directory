@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Toledo",
+  "locations": [
+    {
+      "name": "Toledo",
+      "latLon": {
+        "lat": 39.85966175170025,
+        "lon": -4.024544270483665
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -19,10 +27,6 @@
       "url": "https://www.meetup.com/toledo-wordpress/"
     }
   ],
-  "latLon": {
-    "lat": 39.85966175170025,
-    "lon": -4.024544270483665
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

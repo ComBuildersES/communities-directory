@@ -5,7 +5,15 @@
   "lastReviewed": "26/05/2025",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Madrid (Tielmes)",
+  "locations": [
+    {
+      "name": "Madrid (Tielmes)",
+      "latLon": {
+        "lat": 40.2445707,
+        "lon": -3.3144655
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -24,10 +32,6 @@
     }
   ],
   "thumbnailUrl": "images/wonderhack-event.webp",
-  "latLon": {
-    "lat": 40.2445707,
-    "lon": -3.3144655
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

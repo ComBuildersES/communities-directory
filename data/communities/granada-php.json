@@ -5,7 +5,15 @@
   "lastReviewed": "15/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Granada",
+  "locations": [
+    {
+      "name": "Granada",
+      "latLon": {
+        "lat": 37.1831938,
+        "lon": -3.604747
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -15,10 +23,6 @@
   "contactInfo": "",
   "communityUrl": "https://web.archive.org/web/20070217032309/http://www.agenciaq4.com:80/granadasitu/granada_php/",
   "urls": {},
-  "latLon": {
-    "lat": 37.1831938,
-    "lon": -3.604747
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

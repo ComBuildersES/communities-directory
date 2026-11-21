@@ -5,7 +5,15 @@
   "lastReviewed": "26/05/2025",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Málaga (Fuengirola)",
+  "locations": [
+    {
+      "name": "Málaga (Fuengirola)",
+      "latLon": {
+        "lat": 36.5390044,
+        "lon": -4.6243528
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -22,10 +30,6 @@
     }
   ],
   "thumbnailUrl": "images/criptomonedas-meetup-group.webp",
-  "latLon": {
-    "lat": 36.5390044,
-    "lon": -4.6243528
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

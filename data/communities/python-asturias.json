@@ -5,7 +5,15 @@
   "lastReviewed": "30/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "hybrid",
-  "location": "Asturias",
+  "locations": [
+    {
+      "name": "Asturias",
+      "latLon": {
+        "lat": 43.3602825,
+        "lon": -5.8447919
+      }
+    }
+  ],
   "parentId": 404,
   "shortDescription": "Grupo de usuarios de Python en Asturias con eventos tanto presenciales como online.",
   "shortDescriptionI18n": {
@@ -30,10 +38,6 @@
     }
   ],
   "thumbnailUrl": "images/python-valencia.webp",
-  "latLon": {
-    "lat": 43.3602825,
-    "lon": -5.8447919
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

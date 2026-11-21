@@ -5,7 +5,15 @@
   "lastReviewed": "26/05/2025",
   "communityType": "tech-meetup",
   "eventFormat": "unknown",
-  "location": "Sin completar",
+  "locations": [
+    {
+      "name": "Sin completar",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -26,10 +34,6 @@
     }
   ],
   "thumbnailUrl": "images/name-de-alexa-en-espanol.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

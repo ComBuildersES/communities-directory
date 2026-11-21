@@ -5,7 +5,15 @@
   "lastReviewed": "22/05/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Fuenlabrada, Madrid",
+  "locations": [
+    {
+      "name": "Fuenlabrada, Madrid",
+      "latLon": {
+        "lat": 40.282476,
+        "lon": -3.7923422
+      }
+    }
+  ],
   "parentId": null,
   "shortDescription": "Una jornada para compartir conocimientos, experiencias, herramientas e ideas en torno a la intersección entre software libre e IA abierta",
   "shortDescriptionI18n": {
@@ -36,10 +44,6 @@
   "communityUrl": "https://selia.codeberg.page/",
   "urls": {},
   "thumbnailUrl": "images/i-jornada-sobre-software-libre-e-inteligencia-artificial-abierta.webp",
-  "latLon": {
-    "lat": 40.282476,
-    "lon": -3.7923422
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

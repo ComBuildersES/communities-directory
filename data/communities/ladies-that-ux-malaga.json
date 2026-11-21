@@ -5,7 +5,15 @@
   "lastReviewed": "06/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Málaga",
+  "locations": [
+    {
+      "name": "Málaga",
+      "latLon": {
+        "lat": 36.7196292,
+        "lon": -4.4200007
+      }
+    }
+  ],
   "geographicScope": "local",
   "shortDescription": "Capítulo malagueño de Ladies that UX, red internacional de mujeres en diseño y experiencia de usuario: meetup mensual de UX, UI y producto digital.",
   "shortDescriptionI18n": {
@@ -30,10 +38,6 @@
     }
   ],
   "thumbnailUrl": "images/ladies-that-ux-malaga.webp",
-  "latLon": {
-    "lat": 36.7196292,
-    "lon": -4.4200007
-  },
   "displayOnMap": true,
   "humanValidated": false,
   "removalReason": ""

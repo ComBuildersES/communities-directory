@@ -5,7 +5,15 @@
   "lastReviewed": "25/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Málaga",
+  "locations": [
+    {
+      "name": "Málaga",
+      "latLon": {
+        "lat": 36.7196292,
+        "lon": -4.4200007
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -19,10 +27,6 @@
       "url": "https://www.meetup.com/malaga-techstars/"
     }
   ],
-  "latLon": {
-    "lat": 36.7196292,
-    "lon": -4.4200007
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

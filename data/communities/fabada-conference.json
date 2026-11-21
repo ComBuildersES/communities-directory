@@ -5,7 +5,15 @@
   "lastReviewed": "17/10/2024",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Gijón, Asturias",
+  "locations": [
+    {
+      "name": "Gijón, Asturias",
+      "latLon": {
+        "lat": 43.545229,
+        "lon": -5.6619245
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -16,10 +24,6 @@
   "communityUrl": "https://fabadaconf.com/",
   "urls": {},
   "thumbnailUrl": "images/fabada-conference.webp",
-  "latLon": {
-    "lat": 43.545229,
-    "lon": -5.6619245
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

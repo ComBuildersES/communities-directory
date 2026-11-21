@@ -5,7 +5,15 @@
   "lastReviewed": "30/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Alicante",
+  "locations": [
+    {
+      "name": "Alicante",
+      "latLon": {
+        "lat": 38.34521,
+        "lon": -0.4809945
+      }
+    }
+  ],
   "parentId": 404,
   "shortDescription": "Comunidad para gente a la que le gusta y quiere aprender a programar en Python desde Alicante.",
   "shortDescriptionI18n": {
@@ -36,10 +44,6 @@
     }
   ],
   "thumbnailUrl": "images/python-asturias.webp",
-  "latLon": {
-    "lat": 38.34521,
-    "lon": -0.4809945
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

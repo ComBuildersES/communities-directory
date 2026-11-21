@@ -5,7 +5,15 @@
   "lastReviewed": "16/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Logroño, La Rioja",
+  "locations": [
+    {
+      "name": "Logroño, La Rioja",
+      "latLon": {
+        "lat": 42.46569,
+        "lon": -2.44998
+      }
+    }
+  ],
   "geographicScope": "unknown",
   "parentId": null,
   "organizedBy": [
@@ -29,10 +37,6 @@
     }
   ],
   "thumbnailUrl": "images/zurracapoteconf.webp",
-  "latLon": {
-    "lat": 42.46569,
-    "lon": -2.44998
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

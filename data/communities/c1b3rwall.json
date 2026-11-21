@@ -5,7 +5,15 @@
   "lastReviewed": "17/10/2024",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Ávila",
+  "locations": [
+    {
+      "name": "Ávila",
+      "latLon": {
+        "lat": 40.6563881,
+        "lon": -4.700433
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -29,10 +37,6 @@
     }
   ],
   "thumbnailUrl": "images/c1b3rwall.webp",
-  "latLon": {
-    "lat": 40.6563881,
-    "lon": -4.700433
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

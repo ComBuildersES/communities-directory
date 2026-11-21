@@ -5,7 +5,15 @@
   "lastReviewed": "06/04/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Viator, Almería",
+  "locations": [
+    {
+      "name": "Viator, Almería",
+      "latLon": {
+        "lat": 36.8887282,
+        "lon": -2.4251246
+      }
+    }
+  ],
   "parentId": null,
   "shortDescription": "Jornada de Videojuegos Indie y Programación \"Jam Attack\". Un pequeño encuentro que cuenta con una zona de juegos, una zona de exposición y presentaciones, donde algunos estudiantes y profesionales muestran sus juegos indie y creaciones personales, y una zona de charlas.",
   "shortDescriptionI18n": {
@@ -42,10 +50,6 @@
     }
   ],
   "thumbnailUrl": "images/jam-attack.webp",
-  "latLon": {
-    "lat": 36.8887282,
-    "lon": -2.4251246
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

@@ -5,7 +5,15 @@
   "lastReviewed": "15/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Granada",
+  "locations": [
+    {
+      "name": "Granada",
+      "latLon": {
+        "lat": 37.1831938,
+        "lon": -3.604747
+      }
+    }
+  ],
   "parentId": 404,
   "topics": "",
   "langs": [
@@ -19,10 +27,6 @@
   "communityUrl": "https://pythongranada.github.io/blog/",
   "urls": {},
   "thumbnailUrl": "images/python-granada.webp",
-  "latLon": {
-    "lat": 37.1831938,
-    "lon": -3.604747
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

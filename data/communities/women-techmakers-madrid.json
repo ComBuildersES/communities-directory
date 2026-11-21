@@ -5,7 +5,15 @@
   "lastReviewed": "30/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "hybrid",
-  "location": "Madrid",
+  "locations": [
+    {
+      "name": "Madrid",
+      "latLon": {
+        "lat": 40.4167047,
+        "lon": -3.7035825
+      }
+    }
+  ],
   "parentId": null,
   "shortDescription": "WTM Madrid es la extensión local de la iniciativa global de Google que impulsa y apoya a mujeres en tecnología en la capital. Buscamos crear un ecosistema donde sean visibles, tengan comunidad sólida y acceso a recursos para crecer profesionalmente.",
   "shortDescriptionI18n": {
@@ -41,10 +49,6 @@
     }
   ],
   "thumbnailUrl": "images/women-techmakers-madrid.webp",
-  "latLon": {
-    "lat": 40.4167047,
-    "lon": -3.7035825
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

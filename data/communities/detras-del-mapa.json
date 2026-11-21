@@ -5,7 +5,7 @@
   "lastReviewed": "14/04/2026",
   "communityType": "collaborative-group",
   "eventFormat": "online",
-  "location": "",
+  "locations": [],
   "parentId": null,
   "shortDescription": "Una sala para compartir y debatir sobre los contenidos publicados en Nosolosig y en el boletín Nosolosig, además de proponer nuevos recursos.",
   "shortDescriptionI18n": {
@@ -35,10 +35,6 @@
     }
   ],
   "thumbnailUrl": "images/detrs-del-mapa.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": true,
   "removalReason": ""

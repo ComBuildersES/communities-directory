@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Huelva",
+  "locations": [
+    {
+      "name": "Huelva",
+      "latLon": {
+        "lat": 37.2571454,
+        "lon": -6.9495382
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -25,10 +33,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-huelva.webp",
-  "latLon": {
-    "lat": 37.2571454,
-    "lon": -6.9495382
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

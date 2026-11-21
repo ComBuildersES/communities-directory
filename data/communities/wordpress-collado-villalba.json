@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Madrid (Collado Villalba)",
+  "locations": [
+    {
+      "name": "Madrid (Collado Villalba)",
+      "latLon": {
+        "lat": 40.6272562,
+        "lon": -4.0085868
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -19,10 +27,6 @@
       "url": "https://www.meetup.com/wordpress-collado-villalba-meetup/"
     }
   ],
-  "latLon": {
-    "lat": 40.6272562,
-    "lon": -4.0085868
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

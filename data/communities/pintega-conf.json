@@ -5,7 +5,15 @@
   "lastReviewed": "06/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "A Coruña",
+  "locations": [
+    {
+      "name": "A Coruña",
+      "latLon": {
+        "lat": 43.37093360323112,
+        "lon": -8.389923881863806
+      }
+    }
+  ],
   "parentId": null,
   "shortDescription": "Píntega Conf '27, la conferencia tecnológica de las comunidades tech: charlas el sábado 10 de abril de 2027 en el Rectorado de la UDC, A Coruña, y pre-evento el viernes 9. La sucesora de Lareira Conf",
   "shortDescriptionI18n": {
@@ -33,10 +41,6 @@
     }
   ],
   "thumbnailUrl": "images/pintega-conf.webp",
-  "latLon": {
-    "lat": 43.37093360323112,
-    "lon": -8.389923881863806
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

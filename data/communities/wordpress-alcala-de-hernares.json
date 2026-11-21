@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Madrid (Alcalá de Henares)",
+  "locations": [
+    {
+      "name": "Madrid (Alcalá de Henares)",
+      "latLon": {
+        "lat": 40.481663,
+        "lon": -3.3641362
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -22,10 +30,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-alcala-de-hernares.webp",
-  "latLon": {
-    "lat": 40.481663,
-    "lon": -3.3641362
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

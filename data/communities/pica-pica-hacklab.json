@@ -5,7 +5,15 @@
   "lastReviewed": "24/10/2024",
   "communityType": "hacklab",
   "eventFormat": "in-person",
-  "location": "Oviedo, Asturias",
+  "locations": [
+    {
+      "name": "Oviedo, Asturias",
+      "latLon": {
+        "lat": 43.3602825,
+        "lon": -5.8447919
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -16,10 +24,6 @@
   "communityUrl": "http://www.picahack.org/",
   "urls": {},
   "thumbnailUrl": "images/pica-pica-hacklab.webp",
-  "latLon": {
-    "lat": 43.3602825,
-    "lon": -5.8447919
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

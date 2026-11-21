@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Tarragona",
+  "locations": [
+    {
+      "name": "Tarragona",
+      "latLon": {
+        "lat": 41.1186629,
+        "lon": 1.24533
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -22,10 +30,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-tarragona.webp",
-  "latLon": {
-    "lat": 41.1186629,
-    "lon": 1.24533
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

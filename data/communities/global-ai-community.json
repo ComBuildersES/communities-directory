@@ -5,7 +5,15 @@
   "lastReviewed": "24/03/2025",
   "communityType": "umbrella-org",
   "eventFormat": "hybrid",
-  "location": "n/a",
+  "locations": [
+    {
+      "name": "n/a",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "topics": "artificial intelligence",
   "langs": [
     "es"
@@ -33,10 +41,6 @@
     }
   ],
   "thumbnailUrl": "images/global-ai-bootcamp.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

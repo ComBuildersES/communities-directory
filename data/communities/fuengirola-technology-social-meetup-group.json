@@ -5,7 +5,15 @@
   "lastReviewed": "06/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Málaga (Fuengirola)",
+  "locations": [
+    {
+      "name": "Málaga (Fuengirola)",
+      "latLon": {
+        "lat": 36.5390044,
+        "lon": -4.6243528
+      }
+    }
+  ],
   "geographicScope": "local",
   "shortDescription": "Café quincenal en inglés en Fuengirola para quien vive o trabaja allí: conversación informal sobre tecnología, IA, programación, ciberseguridad y negocio digital.",
   "shortDescriptionI18n": {
@@ -23,10 +31,6 @@
   "communityUrl": "https://www.meetup.com/fuengirola-technology-social-meetup-group/",
   "urls": {},
   "thumbnailUrl": "images/fuengirola-technology-social-meetup-group.webp",
-  "latLon": {
-    "lat": 36.5390044,
-    "lon": -4.6243528
-  },
   "displayOnMap": true,
   "humanValidated": false,
   "removalReason": ""

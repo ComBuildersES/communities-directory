@@ -5,7 +5,15 @@
   "lastReviewed": "31/05/2024",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Tenerife",
+  "locations": [
+    {
+      "name": "Tenerife",
+      "latLon": {
+        "lat": 28.2631,
+        "lon": -16.60942
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -20,10 +28,6 @@
     }
   ],
   "thumbnailUrl": "images/canariasjs.webp",
-  "latLon": {
-    "lat": 28.2631,
-    "lon": -16.60942
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

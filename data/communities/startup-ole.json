@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Salamanca",
+  "locations": [
+    {
+      "name": "Salamanca",
+      "latLon": {
+        "lat": 40.966674,
+        "lon": -5.665434
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -28,10 +36,6 @@
     }
   ],
   "thumbnailUrl": "images/startup-ole.webp",
-  "latLon": {
-    "lat": 40.966674,
-    "lon": -5.665434
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

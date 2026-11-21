@@ -5,7 +5,15 @@
   "lastReviewed": "31/05/2024",
   "communityType": "conference",
   "eventFormat": "unknown",
-  "location": "Sin completar",
+  "locations": [
+    {
+      "name": "Sin completar",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -26,10 +34,6 @@
       "url": "https://github.com/coderetreat"
     }
   ],
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

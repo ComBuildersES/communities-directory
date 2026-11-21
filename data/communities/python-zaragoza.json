@@ -5,7 +5,15 @@
   "lastReviewed": "30/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Zaragoza",
+  "locations": [
+    {
+      "name": "Zaragoza",
+      "latLon": {
+        "lat": 41.656837,
+        "lon": -0.8794245
+      }
+    }
+  ],
   "parentId": 404,
   "shortDescription": "Comunidad local para aprender, compartir y reunirse alrededor de Python en Zaragoza.",
   "shortDescriptionI18n": {
@@ -33,10 +41,6 @@
     }
   ],
   "thumbnailUrl": "images/python-murcia.webp",
-  "latLon": {
-    "lat": 41.656837,
-    "lon": -0.8794245
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

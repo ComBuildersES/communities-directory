@@ -5,7 +5,15 @@
   "lastReviewed": "03/10/2024",
   "communityType": "collaborative-group",
   "eventFormat": "hybrid",
-  "location": "Madrid",
+  "locations": [
+    {
+      "name": "Madrid",
+      "latLon": {
+        "lat": 40.4167047,
+        "lon": -3.7035825
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -15,10 +23,6 @@
   "contactInfo": "",
   "communityUrl": "http://web.archive.org/web/20251105160740/https://osweekends.com/",
   "urls": {},
-  "latLon": {
-    "lat": 40.4167047,
-    "lon": -3.7035825
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

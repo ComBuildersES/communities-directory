@@ -5,7 +5,15 @@
   "lastReviewed": "03/03/2025",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Orense (Ourense)",
+  "locations": [
+    {
+      "name": "Orense (Ourense)",
+      "latLon": {
+        "lat": 42.3401174,
+        "lon": -7.8646923
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -28,10 +36,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-ourense.webp",
-  "latLon": {
-    "lat": 42.3401174,
-    "lon": -7.8646923
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

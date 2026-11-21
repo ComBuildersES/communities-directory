@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Albacete",
+  "locations": [
+    {
+      "name": "Albacete",
+      "latLon": {
+        "lat": 38.9976623,
+        "lon": -1.8600675
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -15,10 +23,6 @@
   "contactInfo": "",
   "communityUrl": "https://www.iniciador.com/es/albacete",
   "urls": {},
-  "latLon": {
-    "lat": 38.9976623,
-    "lon": -1.8600675
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

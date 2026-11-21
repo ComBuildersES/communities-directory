@@ -5,7 +5,15 @@
   "lastReviewed": "30/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Madrid",
+  "locations": [
+    {
+      "name": "Madrid",
+      "latLon": {
+        "lat": 40.4167047,
+        "lon": -3.7035825
+      }
+    }
+  ],
   "parentId": 512,
   "shortDescription": "Punto de encuentro en Madrid para usuarias, usuarios, disenadores, desarrolladores y empresas alrededor de WordPress.",
   "shortDescriptionI18n": {
@@ -39,10 +47,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-madrid.webp",
-  "latLon": {
-    "lat": 40.4167047,
-    "lon": -3.7035825
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

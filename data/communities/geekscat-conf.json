@@ -5,7 +5,15 @@
   "lastReviewed": "12/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Girona",
+  "locations": [
+    {
+      "name": "Girona",
+      "latLon": {
+        "lat": 41.9794,
+        "lon": 2.8214
+      }
+    }
+  ],
   "geographicScope": "regional",
   "organizedBy": [
     647
@@ -35,10 +43,6 @@
     }
   ],
   "thumbnailUrl": "images/geekscat-conf.webp",
-  "latLon": {
-    "lat": 41.9794,
-    "lon": 2.8214
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

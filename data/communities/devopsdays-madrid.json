@@ -5,7 +5,15 @@
   "lastReviewed": "16/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Madrid",
+  "locations": [
+    {
+      "name": "Madrid",
+      "latLon": {
+        "lat": 40.4167047,
+        "lon": -3.7035825
+      }
+    }
+  ],
   "geographicScope": "unknown",
   "parentId": null,
   "shortDescription": "",
@@ -19,10 +27,6 @@
   "communityUrl": "http://devopsdays.org/madrid",
   "urls": [],
   "thumbnailUrl": "images/devopsdays-madrid.webp",
-  "latLon": {
-    "lat": 40.4167047,
-    "lon": -3.7035825
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

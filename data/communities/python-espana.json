@@ -5,7 +5,15 @@
   "lastReviewed": "31/05/2024",
   "communityType": "umbrella-org",
   "eventFormat": "online",
-  "location": "n/a",
+  "locations": [
+    {
+      "name": "n/a",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -41,10 +49,6 @@
     }
   ],
   "thumbnailUrl": "images/python-canarias.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

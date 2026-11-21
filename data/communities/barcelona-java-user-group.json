@@ -5,7 +5,15 @@
   "lastReviewed": "16/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Barcelona",
+  "locations": [
+    {
+      "name": "Barcelona",
+      "latLon": {
+        "lat": 41.387917,
+        "lon": 2.1699187
+      }
+    }
+  ],
   "geographicScope": "unknown",
   "parentId": 302,
   "shortDescription": "Somos un grupo de \"frikis\" de la ciudad condal que nos gusta compartir experiencias y conocimientos relacionados con el mundo de la informática y en especial con Java, ese lenguaje de programación que nos da tantas risas y tantos quebraderos de cabeza 😅",
@@ -88,10 +96,6 @@
     }
   ],
   "thumbnailUrl": "images/barcelona-java-user-group.webp",
-  "latLon": {
-    "lat": 41.387917,
-    "lon": 2.1699187
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

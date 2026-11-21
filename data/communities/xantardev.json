@@ -5,7 +5,15 @@
   "lastReviewed": "02/07/2025",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Coruña (Santiago de Compostela)",
+  "locations": [
+    {
+      "name": "Coruña (Santiago de Compostela)",
+      "latLon": {
+        "lat": 42.8806228,
+        "lon": -8.5466071
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -20,10 +28,6 @@
     }
   ],
   "thumbnailUrl": "images/xantardev.webp",
-  "latLon": {
-    "lat": 42.8806228,
-    "lon": -8.5466071
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Region de Murcia y Cartagena",
+  "locations": [
+    {
+      "name": "Region de Murcia y Cartagena",
+      "latLon": {
+        "lat": 37.6057068,
+        "lon": -0.9913063
+      }
+    }
+  ],
   "parentId": 39,
   "topics": "",
   "langs": [
@@ -16,10 +24,6 @@
   "contactInfo": "help@drupal.org",
   "communityUrl": "https://groups.drupal.org/murcia",
   "urls": {},
-  "latLon": {
-    "lat": 37.6057068,
-    "lon": -0.9913063
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

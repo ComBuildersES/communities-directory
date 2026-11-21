@@ -5,7 +5,15 @@
   "lastReviewed": "27/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Madrid",
+  "locations": [
+    {
+      "name": "Madrid",
+      "latLon": {
+        "lat": 40.4167047,
+        "lon": -3.7035825
+      }
+    }
+  ],
   "shortDescription": "Grupo de meetup donde hablamos principalmente de Node.js y temas relacionados con el mundo del desarrollo de software.",
   "shortDescriptionI18n": {
     "en": "A meetup group where we mostly talk about Node.js and topics related to the software development world."
@@ -45,10 +53,6 @@
     }
   ],
   "thumbnailUrl": "images/nodejs-madrid.webp",
-  "latLon": {
-    "lat": 40.4167047,
-    "lon": -3.7035825
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

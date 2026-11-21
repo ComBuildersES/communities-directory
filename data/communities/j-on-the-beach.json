@@ -5,7 +5,15 @@
   "lastReviewed": "24/03/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Málaga",
+  "locations": [
+    {
+      "name": "Málaga",
+      "latLon": {
+        "lat": 36.7196292,
+        "lon": -4.4200007
+      }
+    }
+  ],
   "shortDescription": "Conferencia internacional sobre sistemas distribuidos, DevOps, y muuuuchos datos.",
   "shortDescriptionI18n": {
     "en": "An international conference on distributed systems, DevOps and looooots of data."
@@ -46,10 +54,6 @@
     }
   ],
   "thumbnailUrl": "images/j-on-the-breach.webp",
-  "latLon": {
-    "lat": 36.7196292,
-    "lon": -4.4200007
-  },
   "displayOnMap": true,
   "humanValidated": true
 }

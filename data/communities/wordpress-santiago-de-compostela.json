@@ -5,7 +5,15 @@
   "lastReviewed": "30/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Coruña (Santiago de Compostela)",
+  "locations": [
+    {
+      "name": "Coruña (Santiago de Compostela)",
+      "latLon": {
+        "lat": 42.8806228,
+        "lon": -8.5466071
+      }
+    }
+  ],
   "parentId": 512,
   "topics": "",
   "langs": [
@@ -26,10 +34,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-santiago-de-compostela.webp",
-  "latLon": {
-    "lat": 42.8806228,
-    "lon": -8.5466071
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

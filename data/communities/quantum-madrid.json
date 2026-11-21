@@ -5,7 +5,15 @@
   "lastReviewed": "06/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Madrid",
+  "locations": [
+    {
+      "name": "Madrid",
+      "latLon": {
+        "lat": 40.4167047,
+        "lon": -3.7035825
+      }
+    }
+  ],
   "geographicScope": "local",
   "shortDescription": "Comunidad de computación cuántica en Madrid (Entangle Tech Hub): talleres, charlas, hackathones con Qiskit y encuentros para iniciarse en tecnologías cuánticas.",
   "shortDescriptionI18n": {
@@ -31,10 +39,6 @@
     }
   ],
   "thumbnailUrl": "images/quantum-madrid.webp",
-  "latLon": {
-    "lat": 40.4167047,
-    "lon": -3.7035825
-  },
   "displayOnMap": true,
   "humanValidated": false,
   "removalReason": ""

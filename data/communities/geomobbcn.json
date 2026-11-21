@@ -5,7 +5,15 @@
   "lastReviewed": "01/04/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Barcelona",
+  "locations": [
+    {
+      "name": "Barcelona",
+      "latLon": {
+        "lat": 41.3825802,
+        "lon": 2.177073
+      }
+    }
+  ],
   "parentId": null,
   "shortDescription": "Geomob es una serie de eventos y un podcast para entusiastas de la información geoespacial. Nos reunimos cada pocos meses en diversas ciudades europeas y ofrecemos un foro distendido para debatir sobre la geoinnovación en todas sus formas, ya sea por diversión o con fines lucrat",
   "shortDescriptionI18n": {
@@ -30,10 +38,6 @@
   "communityUrl": "https://thegeomob.com/",
   "urls": {},
   "thumbnailUrl": "images/geomobbcn.webp",
-  "latLon": {
-    "lat": 41.3825802,
-    "lon": 2.177073
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

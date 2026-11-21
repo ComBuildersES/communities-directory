@@ -5,7 +5,15 @@
   "lastReviewed": "10/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Málaga (Alhaurín de la Torre, )",
+  "locations": [
+    {
+      "name": "Málaga (Alhaurín de la Torre, )",
+      "latLon": {
+        "lat": 36.6683574,
+        "lon": -4.5529671
+      }
+    }
+  ],
   "geographicScope": "unknown",
   "parentId": 483,
   "shortDescription": "",
@@ -27,10 +35,6 @@
     }
   ],
   "thumbnailUrl": "images/wordcamp-alhaurin-de-la-torre.webp",
-  "latLon": {
-    "lat": 36.6683574,
-    "lon": -4.5529671
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

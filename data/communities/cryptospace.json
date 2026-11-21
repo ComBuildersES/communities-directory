@@ -5,7 +5,15 @@
   "lastReviewed": "18/12/2024",
   "communityType": "tech-meetup",
   "eventFormat": "unknown",
-  "location": "Sin completar",
+  "locations": [
+    {
+      "name": "Sin completar",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -31,10 +39,6 @@
     }
   ],
   "thumbnailUrl": "images/cryptospace.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

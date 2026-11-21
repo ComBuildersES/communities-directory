@@ -5,7 +5,15 @@
   "lastReviewed": "26/05/2025",
   "communityType": "collaborative-group",
   "eventFormat": "hybrid",
-  "location": "Barcelona, Spain",
+  "locations": [
+    {
+      "name": "Barcelona, Spain",
+      "latLon": {
+        "lat": 41.3825802,
+        "lon": 2.177073
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -30,10 +38,6 @@
     }
   ],
   "thumbnailUrl": "images/hackbcn.webp",
-  "latLon": {
-    "lat": 41.3825802,
-    "lon": 2.177073
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Valladolid",
+  "locations": [
+    {
+      "name": "Valladolid",
+      "latLon": {
+        "lat": 41.6529421,
+        "lon": -4.7283839
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -25,10 +33,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-valladolid.webp",
-  "latLon": {
-    "lat": 41.6529421,
-    "lon": -4.7283839
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

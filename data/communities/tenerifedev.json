@@ -5,7 +5,15 @@
   "lastReviewed": "18/12/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Tenerife",
+  "locations": [
+    {
+      "name": "Tenerife",
+      "latLon": {
+        "lat": 28.2631,
+        "lon": -16.609420751149337
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -26,10 +34,6 @@
     }
   ],
   "thumbnailUrl": "images/tenerifedev.webp",
-  "latLon": {
-    "lat": 28.2631,
-    "lon": -16.609420751149337
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

@@ -5,7 +5,15 @@
   "lastReviewed": "17/02/2025",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Menorca",
+  "locations": [
+    {
+      "name": "Menorca",
+      "latLon": {
+        "lat": 39.8154,
+        "lon": 4.2754
+      }
+    }
+  ],
   "parentId": 207,
   "topics": "",
   "langs": [
@@ -27,10 +35,6 @@
     }
   ],
   "thumbnailUrl": "images/gdg-menorca.webp",
-  "latLon": {
-    "lat": 39.8154,
-    "lon": 4.2754
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

@@ -5,7 +5,7 @@
   "lastReviewed": "06/04/2026",
   "communityType": "meta-community",
   "eventFormat": "unknown",
-  "location": "",
+  "locations": [],
   "parentId": null,
   "shortDescription": "Marca Coruñesa dedicada a apoyar y organizar todo tipo de eventos y comunidades en Coruña. Desde rutas de senderismo, manualidades a charlas tech, CorunaEvents es una iniciativa joven que apuesta por el ocio alternativo y saludable.",
   "shortDescriptionI18n": {
@@ -35,10 +35,6 @@
     }
   ],
   "thumbnailUrl": "images/corunaevents.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": true,
   "removalReason": ""

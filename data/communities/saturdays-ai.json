@@ -5,7 +5,7 @@
   "lastReviewed": "26/05/2025",
   "communityType": "umbrella-org",
   "eventFormat": "in-person",
-  "location": "",
+  "locations": [],
   "topics": "",
   "langs": [
     "es"
@@ -16,10 +16,6 @@
   "communityUrl": "https://saturdays.ai/cities/",
   "urls": {},
   "thumbnailUrl": "images/saturdaysai.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

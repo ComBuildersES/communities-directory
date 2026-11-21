@@ -5,7 +5,15 @@
   "lastReviewed": "31/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "hybrid",
-  "location": "Madrid",
+  "locations": [
+    {
+      "name": "Madrid",
+      "latLon": {
+        "lat": 40.4167047,
+        "lon": -3.7035825
+      }
+    }
+  ],
   "parentId": null,
   "shortDescription": "MakersIA es una comunidad hispanohablante de desarrolladores que trabajan activamente con inteligencia artificial. No solo usan IA, la construyen, la integran y la llevan a producción. Hasta el propio agente que gestiona la comunidad fue creado por sus miembros.",
   "shortDescriptionI18n": {
@@ -33,10 +41,6 @@
     }
   ],
   "thumbnailUrl": "images/makers-ia.webp",
-  "latLon": {
-    "lat": 40.4167047,
-    "lon": -3.7035825
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

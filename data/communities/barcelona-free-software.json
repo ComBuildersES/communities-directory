@@ -5,7 +5,15 @@
   "lastReviewed": "31/07/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Barcelona",
+  "locations": [
+    {
+      "name": "Barcelona",
+      "latLon": {
+        "lat": 41.3825802,
+        "lon": 2.177073
+      }
+    }
+  ],
   "parentId": 625,
   "shortDescription": "Comunidad de creadores de software libre, también conocido como código abierto, con sede en Barcelona. Nuestra actividad principal es un grupo de Meetup, un encuentro abierto para desarrolladores y usuarios que comparten la pasión por la libertad del software.",
   "shortDescriptionI18n": {
@@ -51,10 +59,6 @@
     }
   ],
   "thumbnailUrl": "images/barcelona-free-software.webp",
-  "latLon": {
-    "lat": 41.3825802,
-    "lon": 2.177073
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

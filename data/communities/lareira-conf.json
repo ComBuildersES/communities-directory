@@ -5,7 +5,15 @@
   "lastReviewed": "06/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Coruña",
+  "locations": [
+    {
+      "name": "Coruña",
+      "latLon": {
+        "lat": 43.3707332,
+        "lon": -8.3958532
+      }
+    }
+  ],
   "geographicScope": "unknown",
   "parentId": null,
   "shortDescription": "Lareira Conf es una conferencia tecnológica en A Coruña pensada para reunir a la comunidad, aprender, conectar y vivir una experiencia distinta, con buen rollo y mucha energía.",
@@ -47,10 +55,6 @@
     }
   ],
   "thumbnailUrl": "images/lareira-conf.webp",
-  "latLon": {
-    "lat": 43.3707332,
-    "lon": -8.3958532
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

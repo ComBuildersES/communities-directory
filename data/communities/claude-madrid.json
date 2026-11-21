@@ -5,7 +5,15 @@
   "lastReviewed": "06/08/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Madrid, Spain",
+  "locations": [
+    {
+      "name": "Madrid, Spain",
+      "latLon": {
+        "lat": 40.416782,
+        "lon": -3.703507
+      }
+    }
+  ],
   "parentId": 627,
   "shortDescription": "The home of the Claude community in Madrid. Events, talks and people building with AI in Madrid.",
   "shortDescriptionI18n": {
@@ -31,10 +39,6 @@
     }
   ],
   "thumbnailUrl": "images/claude-madrid.webp",
-  "latLon": {
-    "lat": 40.416782,
-    "lon": -3.703507
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

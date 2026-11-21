@@ -5,7 +5,7 @@
   "lastReviewed": "26/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "online",
-  "location": "",
+  "locations": [],
   "shortDescription": "Grupo de usuario para hablar sobre Liferay (uso, tecnologías, etc )",
   "shortDescriptionI18n": {
     "en": "A user group for talking about Liferay: how to use it, its technologies and everything around it."
@@ -37,10 +37,6 @@
     }
   ],
   "thumbnailUrl": "images/liferay-spain-user-group-lugspain.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": true,
   "removalReason": ""

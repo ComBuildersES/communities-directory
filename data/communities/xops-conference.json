@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Madrid",
+  "locations": [
+    {
+      "name": "Madrid",
+      "latLon": {
+        "lat": 40.4167047,
+        "lon": -3.7035825
+      }
+    }
+  ],
   "topics": "devops, platform-engineering, site-reliability-engineering, cloud, cloud-security, cybersecurity, ci/cd, infrastructure, automation, software-architecture",
   "langs": [
     "es"
@@ -42,10 +50,6 @@
     }
   ],
   "thumbnailUrl": "images/xops-conference.webp",
-  "latLon": {
-    "lat": 40.4167047,
-    "lon": -3.7035825
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

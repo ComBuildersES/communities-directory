@@ -5,7 +5,15 @@
   "lastReviewed": "06/04/2026",
   "communityType": "collaborative-group",
   "eventFormat": "in-person",
-  "location": "Almería",
+  "locations": [
+    {
+      "name": "Almería",
+      "latLon": {
+        "lat": 36.8400939,
+        "lon": -2.4679043
+      }
+    }
+  ],
   "parentId": 469,
   "shortDescription": "Colectivo que tiene como objetivo crear, mejorar y organizar todos los artículos relacionados con la provincia de Almería, en España, prestando especial atención a los más representativos, como las localidades, los monumentos, espacios naturales y las personalidades de Almería.",
   "shortDescriptionI18n": {
@@ -31,10 +39,6 @@
     }
   ],
   "thumbnailUrl": "images/wikiproyecto-almera.webp",
-  "latLon": {
-    "lat": 36.8400939,
-    "lon": -2.4679043
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

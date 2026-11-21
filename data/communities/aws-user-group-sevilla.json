@@ -5,7 +5,15 @@
   "lastReviewed": "18/12/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Sevilla",
+  "locations": [
+    {
+      "name": "Sevilla",
+      "latLon": {
+        "lat": 37.38264,
+        "lon": -5.9962951
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -18,10 +26,6 @@
   "communityUrl": "https://awsugsevilla.com/",
   "urls": {},
   "thumbnailUrl": "images/aws-user-group-sevilla.webp",
-  "latLon": {
-    "lat": 37.38264,
-    "lon": -5.9962951
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

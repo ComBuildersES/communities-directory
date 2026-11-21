@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Burgos",
+  "locations": [
+    {
+      "name": "Burgos",
+      "latLon": {
+        "lat": 42.3408923,
+        "lon": -3.6997623
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -15,10 +23,6 @@
   "contactInfo": "",
   "communityUrl": "https://iniciador.com/Burgos",
   "urls": {},
-  "latLon": {
-    "lat": 42.3408923,
-    "lon": -3.6997623
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

@@ -5,7 +5,15 @@
   "lastReviewed": "25/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Coruña",
+  "locations": [
+    {
+      "name": "Coruña",
+      "latLon": {
+        "lat": 43.3707332,
+        "lon": -8.3958532
+      }
+    }
+  ],
   "parentId": 404,
   "shortDescription": "Somos una comunidad apasionada por el lenguaje de programación Python y su amplia gama de aplicaciones en diferentes áreas, desde el desarrollo web y móvil hasta la ciencia de datos y el aprendizaje automático.",
   "shortDescriptionI18n": {
@@ -58,10 +66,6 @@
     }
   ],
   "thumbnailUrl": "images/python-coruna.webp",
-  "latLon": {
-    "lat": 43.3707332,
-    "lon": -8.3958532
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

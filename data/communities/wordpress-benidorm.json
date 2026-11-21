@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Benidorm",
+  "locations": [
+    {
+      "name": "Benidorm",
+      "latLon": {
+        "lat": 38.5369002,
+        "lon": -0.1291231
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -22,10 +30,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-benidorm.webp",
-  "latLon": {
-    "lat": 38.5369002,
-    "lon": -0.1291231
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

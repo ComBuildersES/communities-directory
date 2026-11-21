@@ -5,7 +5,15 @@
   "lastReviewed": "25/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Granada, España",
+  "locations": [
+    {
+      "name": "Granada, España",
+      "latLon": {
+        "lat": 37.1831938,
+        "lon": -3.604747
+      }
+    }
+  ],
   "parentId": 399,
   "shortDescription": "Comunidad donde compartir buenas prácticas, nuevos enfoques y tecnologías para la gestión, el procesamiento, el análisis y la visualización de datos. Abordan la ciencia de datos utilizando muchos lenguajes, incluyendo Python, Julia y R.",
   "shortDescriptionI18n": {
@@ -59,10 +67,6 @@
     }
   ],
   "thumbnailUrl": "images/pydata-granada.webp",
-  "latLon": {
-    "lat": 37.1831938,
-    "lon": -3.604747
-  },
   "displayOnMap": true,
   "humanValidated": true
 }

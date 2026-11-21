@@ -5,7 +5,15 @@
   "lastReviewed": "26/05/2025",
   "communityType": "umbrella-org",
   "eventFormat": "in-person",
-  "location": "Andalucía, Aragón, Asturias, Cantabria, Castilla, y, León, Catalunya, Euskadi, Galicia, Illes, Balears, Madrid, Murcia, Navarra",
+  "locations": [
+    {
+      "name": "Andalucía, Aragón, Asturias, Cantabria, Castilla, y, León, Catalunya, Euskadi, Galicia, Illes, Balears, Madrid, Murcia, Navarra",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -36,10 +44,6 @@
     }
   ],
   "thumbnailUrl": "images/ingenieria-sin-frontera.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

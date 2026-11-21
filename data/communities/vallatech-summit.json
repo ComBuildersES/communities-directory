@@ -5,7 +5,15 @@
   "lastReviewed": "12/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Valladolid",
+  "locations": [
+    {
+      "name": "Valladolid",
+      "latLon": {
+        "lat": 41.6523,
+        "lon": -4.7245
+      }
+    }
+  ],
   "geographicScope": "provincial",
   "organizedBy": [
     663
@@ -32,10 +40,6 @@
     }
   ],
   "thumbnailUrl": "images/vallatech-summit.webp",
-  "latLon": {
-    "lat": 41.6523,
-    "lon": -4.7245
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

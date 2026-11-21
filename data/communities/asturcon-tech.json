@@ -5,7 +5,15 @@
   "lastReviewed": "17/10/2024",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Oviedo, Asturias",
+  "locations": [
+    {
+      "name": "Oviedo, Asturias",
+      "latLon": {
+        "lat": 43.3602825,
+        "lon": -5.8447919
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -39,10 +47,6 @@
     }
   ],
   "thumbnailUrl": "images/asturcontech.webp",
-  "latLon": {
-    "lat": 43.3602825,
-    "lon": -5.8447919
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

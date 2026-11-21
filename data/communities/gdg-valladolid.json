@@ -5,7 +5,15 @@
   "lastReviewed": "12/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Valladolid",
+  "locations": [
+    {
+      "name": "Valladolid",
+      "latLon": {
+        "lat": 41.6523,
+        "lon": -4.7245
+      }
+    }
+  ],
   "geographicScope": "provincial",
   "parentId": 207,
   "shortDescription": "Capítulo de Google Developer Groups en Valladolid. Organiza charlas, talleres y quedadas sobre tecnologías de Google, inteligencia artificial y cloud, y es quien está detrás del VallaTech Summit.",
@@ -37,10 +45,6 @@
     }
   ],
   "thumbnailUrl": "images/gdg-valladolid.webp",
-  "latLon": {
-    "lat": 41.6523,
-    "lon": -4.7245
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

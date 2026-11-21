@@ -5,7 +5,15 @@
   "lastReviewed": "24/03/2026",
   "communityType": "collaborative-group",
   "eventFormat": "in-person",
-  "location": "Ciudad Real (Tomelloso)",
+  "locations": [
+    {
+      "name": "Ciudad Real (Tomelloso)",
+      "latLon": {
+        "lat": 39.157747,
+        "lon": -3.0208068
+      }
+    }
+  ],
   "shortDescription": "Asociación sin ánimo de lucro formada por una comunidad de personas apasionadas la tecnología y el emprendimiento. Nuestro fin es divulgar todos los beneficios que puede aportar la tecnología.",
   "shortDescriptionI18n": {
     "en": "A non-profit association formed by a community of people passionate about technology and entrepreneurship. Our purpose is to spread the word about everything technology can bring."
@@ -70,10 +78,6 @@
     }
   ],
   "thumbnailUrl": "",
-  "latLon": {
-    "lat": 39.157747,
-    "lon": -3.0208068
-  },
   "displayOnMap": true,
   "humanValidated": true
 }

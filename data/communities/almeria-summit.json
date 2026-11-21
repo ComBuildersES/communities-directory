@@ -5,7 +5,15 @@
   "lastReviewed": "24/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Almería",
+  "locations": [
+    {
+      "name": "Almería",
+      "latLon": {
+        "lat": 36.8414197,
+        "lon": -2.4628135
+      }
+    }
+  ],
   "shortDescription": "Punto de encuentro para profesionales, empresas e instituciones que quieren comprender el presente de la inteligencia artificial y anticipar su futuro. Un evento diseñado para conectar conocimiento, territorio y oportunidad real.",
   "shortDescriptionI18n": {
     "en": "A meeting point for professionals, companies and institutions who want to understand where artificial intelligence stands today and anticipate where it is going. An event designed to connect knowledge, local context and real opportunity."
@@ -34,10 +42,6 @@
     }
   ],
   "thumbnailUrl": "images/almeria-summit.webp",
-  "latLon": {
-    "lat": 36.8414197,
-    "lon": -2.4628135
-  },
   "displayOnMap": true,
   "humanValidated": true
 }

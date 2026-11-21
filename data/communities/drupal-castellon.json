@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Castellón de la Plana",
+  "locations": [
+    {
+      "name": "Castellón de la Plana",
+      "latLon": {
+        "lat": 39.9860398,
+        "lon": -0.0360705
+      }
+    }
+  ],
   "parentId": 39,
   "topics": "",
   "langs": [
@@ -16,10 +24,6 @@
   "contactInfo": "help@drupal.org",
   "communityUrl": "https://groups.drupal.org/castellon",
   "urls": {},
-  "latLon": {
-    "lat": 39.9860398,
-    "lon": -0.0360705
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

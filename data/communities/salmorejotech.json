@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Córdoba",
+  "locations": [
+    {
+      "name": "Córdoba",
+      "latLon": {
+        "lat": 37.888422,
+        "lon": -4.77513
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -34,10 +42,6 @@
     }
   ],
   "thumbnailUrl": "images/salmorejotech.webp",
-  "latLon": {
-    "lat": 37.888422,
-    "lon": -4.77513
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

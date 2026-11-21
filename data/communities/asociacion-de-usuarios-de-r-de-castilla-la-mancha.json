@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Albacete",
+  "locations": [
+    {
+      "name": "Albacete",
+      "latLon": {
+        "lat": 38.9976623,
+        "lon": -1.8600675
+      }
+    }
+  ],
   "parentId": 103,
   "topics": "",
   "langs": [
@@ -23,10 +31,6 @@
     }
   ],
   "thumbnailUrl": "images/asociacion-de-usuarios-de-r-de-castilla-la-mancha.webp",
-  "latLon": {
-    "lat": 38.9976623,
-    "lon": -1.8600675
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

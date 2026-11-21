@@ -5,7 +5,15 @@
   "lastReviewed": "27/11/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "La RIoja",
+  "locations": [
+    {
+      "name": "La RIoja",
+      "latLon": {
+        "lat": 42.46569,
+        "lon": -2.44998
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -27,10 +35,6 @@
     }
   ],
   "thumbnailUrl": "images/databeersrio.webp",
-  "latLon": {
-    "lat": 42.46569,
-    "lon": -2.44998
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

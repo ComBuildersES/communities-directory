@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Huesca",
+  "locations": [
+    {
+      "name": "Huesca",
+      "latLon": {
+        "lat": 42.1400519,
+        "lon": -0.40887
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -15,10 +23,6 @@
   "contactInfo": "",
   "communityUrl": "https://iniciador.com/Huesca",
   "urls": {},
-  "latLon": {
-    "lat": 42.1400519,
-    "lon": -0.40887
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

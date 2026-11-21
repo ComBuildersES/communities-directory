@@ -5,7 +5,15 @@
   "lastReviewed": "07/06/2025",
   "communityType": "collaborative-group",
   "eventFormat": "in-person",
-  "location": "Alicante",
+  "locations": [
+    {
+      "name": "Alicante",
+      "latLon": {
+        "lat": 38.3436365,
+        "lon": -0.4881708
+      }
+    }
+  ],
   "topics": "ciencia, tecnología, comunidad, aprendizaje, conocimiento compartido, desarrollo personal, desarrollo profesional, metodologías de aprendizaje, innovación, formación, networking, colaboración, multidisciplinar, educación, divulgación científica, asociación sin ánimo de lucro",
   "langs": [
     "es"
@@ -32,10 +40,6 @@
     }
   ],
   "thumbnailUrl": "images/multitecua.webp",
-  "latLon": {
-    "lat": 38.3436365,
-    "lon": -0.4881708
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

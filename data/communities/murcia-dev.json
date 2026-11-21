@@ -5,7 +5,15 @@
   "lastReviewed": "12/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "hybrid",
-  "location": "Murcia, Murcia",
+  "locations": [
+    {
+      "name": "Murcia, Murcia",
+      "latLon": {
+        "lat": 37.9835334,
+        "lon": -1.129905
+      }
+    }
+  ],
   "mergedIntoId": 631,
   "topics": "",
   "langs": [
@@ -40,10 +48,6 @@
     }
   ],
   "thumbnailUrl": "images/murcia-dev.webp",
-  "latLon": {
-    "lat": 37.9835334,
-    "lon": -1.129905
-  },
   "displayOnMap": false,
   "humanValidated": true
 }

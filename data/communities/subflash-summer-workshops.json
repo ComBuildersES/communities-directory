@@ -5,7 +5,15 @@
   "lastReviewed": "27/11/2024",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Itinerante",
+  "locations": [
+    {
+      "name": "Itinerante",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "topics": "Desarrollo web, diseño y multimedia",
   "langs": [
     "es"
@@ -23,10 +31,6 @@
     }
   ],
   "thumbnailUrl": "images/subflash-summer-workshops.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

@@ -5,7 +5,15 @@
   "lastReviewed": "27/11/2024",
   "communityType": "tech-meetup",
   "eventFormat": "unknown",
-  "location": "Logroño",
+  "locations": [
+    {
+      "name": "Logroño",
+      "latLon": {
+        "lat": 42.46569,
+        "lon": -2.44998
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -19,10 +27,6 @@
       "url": "https://www.facebook.com/groups/juglogrono/?locale=es_LA"
     }
   ],
-  "latLon": {
-    "lat": 42.46569,
-    "lon": -2.44998
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

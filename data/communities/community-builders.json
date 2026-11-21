@@ -5,7 +5,7 @@
   "lastReviewed": "24/03/2026",
   "communityType": "meta-community",
   "eventFormat": "online",
-  "location": "",
+  "locations": [],
   "shortDescription": "Somos un colectivo que reúne a personas que dinamizan comunidades tech de habla hispana con el objetivo de ser un lugar de referencia donde se facilite la colaboración y el intercambio de experiencias.",
   "shortDescriptionI18n": {
     "en": "We are a collective of people who run Spanish-speaking tech communities, aiming to be a reference place that makes collaboration and sharing experiences easier."
@@ -67,10 +67,6 @@
     }
   ],
   "thumbnailUrl": "images/community-builders.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": true
 }

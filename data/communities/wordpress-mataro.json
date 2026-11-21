@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Barcelona (Mataró)",
+  "locations": [
+    {
+      "name": "Barcelona (Mataró)",
+      "latLon": {
+        "lat": 41.5375002,
+        "lon": 2.4452776
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -22,10 +30,6 @@
     }
   ],
   "thumbnailUrl": "images/wordpress-mataro.webp",
-  "latLon": {
-    "lat": 41.5375002,
-    "lon": 2.4452776
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

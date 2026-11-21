@@ -5,7 +5,15 @@
   "lastReviewed": "16/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Cáceres",
+  "locations": [
+    {
+      "name": "Cáceres",
+      "latLon": {
+        "lat": 39.4762161,
+        "lon": -6.3708585
+      }
+    }
+  ],
   "geographicScope": "unknown",
   "parentId": null,
   "shortDescription": "",
@@ -32,10 +40,6 @@
     }
   ],
   "thumbnailUrl": "images/devopsdays-caceres.webp",
-  "latLon": {
-    "lat": 39.4762161,
-    "lon": -6.3708585
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

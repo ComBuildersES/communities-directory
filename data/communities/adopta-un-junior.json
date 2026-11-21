@@ -5,7 +5,15 @@
   "lastReviewed": "15/10/2024",
   "communityType": "collaborative-group",
   "eventFormat": "online",
-  "location": "n/a",
+  "locations": [
+    {
+      "name": "n/a",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -35,10 +43,6 @@
     }
   ],
   "thumbnailUrl": "images/adopta-un-junior.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

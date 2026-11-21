@@ -5,7 +5,15 @@
   "lastReviewed": "31/05/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Madrid",
+  "locations": [
+    {
+      "name": "Madrid",
+      "latLon": {
+        "lat": 40.4167047,
+        "lon": -3.7035825
+      }
+    }
+  ],
   "parentId": 207,
   "topics": "",
   "langs": [
@@ -37,10 +45,6 @@
     }
   ],
   "thumbnailUrl": "images/gdg-madrid.webp",
-  "latLon": {
-    "lat": 40.4167047,
-    "lon": -3.7035825
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

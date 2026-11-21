@@ -5,7 +5,15 @@
   "lastReviewed": "24/03/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Madrid",
+  "locations": [
+    {
+      "name": "Madrid",
+      "latLon": {
+        "lat": 40.4167047,
+        "lon": -3.7035825
+      }
+    }
+  ],
   "shortDescription": "La conferencia de tecnología y negocio más awesómica del mundo. Un punto de encuentro para TODOS los profesionales del sector digital.",
   "shortDescriptionI18n": {
     "en": "The most awesome technology and business conference in the world. A meeting point for ALL professionals in the digital sector."
@@ -61,10 +69,6 @@
     }
   ],
   "thumbnailUrl": "images/trgcon.webp",
-  "latLon": {
-    "lat": 40.4167047,
-    "lon": -3.7035825
-  },
   "displayOnMap": true,
   "humanValidated": true
 }

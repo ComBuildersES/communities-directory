@@ -5,7 +5,7 @@
   "lastReviewed": "24/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "online",
-  "location": "",
+  "locations": [],
   "shortDescription": "Personas interesadas en mejorar sus habilidades de programación con datos geolocalizados para visualización, análisis, transformación y automatización. Objetivos: conectar personas, fomentar ayuda mutua, colaborar en proyectos y divulgar este campo.",
   "shortDescriptionI18n": {
     "en": "People interested in improving their programming skills with geolocated data for visualisation, analysis, transformation and automation. Our goals: connect people, encourage mutual help, collaborate on projects and spread the word about this field."
@@ -94,10 +94,6 @@
     }
   ],
   "thumbnailUrl": "images/geodevelopers.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": true
 }

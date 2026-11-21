@@ -5,7 +5,15 @@
   "lastReviewed": "26/05/2025",
   "communityType": "tech-meetup",
   "eventFormat": "hybrid",
-  "location": "Madrid y resto de España",
+  "locations": [
+    {
+      "name": "Madrid y resto de España",
+      "latLon": {
+        "lat": 40.4167047,
+        "lon": -3.7035825
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -41,10 +49,6 @@
     }
   ],
   "thumbnailUrl": "images/github-community-spain.webp",
-  "latLon": {
-    "lat": 40.4167047,
-    "lon": -3.7035825
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

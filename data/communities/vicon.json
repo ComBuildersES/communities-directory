@@ -5,7 +5,15 @@
   "lastReviewed": "17/10/2024",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Vigo, Galicia",
+  "locations": [
+    {
+      "name": "Vigo, Galicia",
+      "latLon": {
+        "lat": 42.2313601,
+        "lon": -8.7124252
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -23,10 +31,6 @@
     }
   ],
   "thumbnailUrl": "images/vicon.webp",
-  "latLon": {
-    "lat": 42.2313601,
-    "lon": -8.7124252
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

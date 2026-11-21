@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Badajoz",
+  "locations": [
+    {
+      "name": "Badajoz",
+      "latLon": {
+        "lat": 38.8785497,
+        "lon": -6.9701578
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -15,10 +23,6 @@
   "contactInfo": "",
   "communityUrl": "https://iniciador.com/Badajoz",
   "urls": {},
-  "latLon": {
-    "lat": 38.8785497,
-    "lon": -6.9701578
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

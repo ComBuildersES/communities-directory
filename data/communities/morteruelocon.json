@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "conference",
   "eventFormat": "hybrid",
-  "location": "Cuenca",
+  "locations": [
+    {
+      "name": "Cuenca",
+      "latLon": {
+        "lat": 40.06682,
+        "lon": -2.14167
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -36,10 +44,6 @@
     }
   ],
   "thumbnailUrl": "images/morteruelocon.webp",
-  "latLon": {
-    "lat": 40.06682,
-    "lon": -2.14167
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

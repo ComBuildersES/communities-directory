@@ -5,7 +5,15 @@
   "lastReviewed": "18/12/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Tenerife",
+  "locations": [
+    {
+      "name": "Tenerife",
+      "latLon": {
+        "lat": 28.26061255652491,
+        "lon": -16.592734601719567
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -33,10 +41,6 @@
     }
   ],
   "thumbnailUrl": "images/guarandinga-tech.webp",
-  "latLon": {
-    "lat": 28.26061255652491,
-    "lon": -16.592734601719567
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

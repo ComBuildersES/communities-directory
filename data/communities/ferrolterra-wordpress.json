@@ -5,7 +5,15 @@
   "lastReviewed": "04/08/2025",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Coruña (Ferrol)",
+  "locations": [
+    {
+      "name": "Coruña (Ferrol)",
+      "latLon": {
+        "lat": 43.4883872,
+        "lon": -8.2225093
+      }
+    }
+  ],
   "parentId": 512,
   "topics": "",
   "langs": [
@@ -23,10 +31,6 @@
     }
   ],
   "thumbnailUrl": "images/ferrolterra-wordpress.webp",
-  "latLon": {
-    "lat": 43.4883872,
-    "lon": -8.2225093
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

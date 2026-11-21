@@ -5,7 +5,15 @@
   "lastReviewed": "06/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "A Coruña",
+  "locations": [
+    {
+      "name": "A Coruña",
+      "latLon": {
+        "lat": 43.3707332,
+        "lon": -8.3958532
+      }
+    }
+  ],
   "geographicScope": "local",
   "shortDescription": "Asociación sin ánimo de lucro de A Coruña que organiza jornadas de desarrollo de software e IA con charlas, experiencias y networking, a menudo junto a otras comunidades locales.",
   "shortDescriptionI18n": {
@@ -32,10 +40,6 @@
     }
   ],
   "thumbnailUrl": "images/cascarilla-tech.webp",
-  "latLon": {
-    "lat": 43.3707332,
-    "lon": -8.3958532
-  },
   "displayOnMap": true,
   "humanValidated": false,
   "removalReason": ""

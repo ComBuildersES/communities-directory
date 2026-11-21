@@ -5,7 +5,15 @@
   "lastReviewed": "25/03/2026",
   "communityType": "tech-meetup",
   "eventFormat": "hybrid",
-  "location": "Logroño La Rioja",
+  "locations": [
+    {
+      "name": "Logroño La Rioja",
+      "latLon": {
+        "lat": 42.46569,
+        "lon": -2.44998
+      }
+    }
+  ],
   "parentId": 207,
   "shortDescription": "Los Grupos de Desarrolladores de Google (GDG) reúnen a desarrolladores y tecnólogos para que se conecten, aprendan y crezcan junto con las tecnologías y los expertos de Google. Estos grupos apoyan la innovación y el crecimiento en el mundo de la tecnología.",
   "shortDescriptionI18n": {
@@ -47,10 +55,6 @@
     }
   ],
   "thumbnailUrl": "images/gdg-la-rioja.webp",
-  "latLon": {
-    "lat": 42.46569,
-    "lon": -2.44998
-  },
   "displayOnMap": true,
   "humanValidated": true
 }

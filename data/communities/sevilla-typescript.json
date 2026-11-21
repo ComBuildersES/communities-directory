@@ -5,7 +5,15 @@
   "lastReviewed": "26/05/2025",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Sevilla, Spain",
+  "locations": [
+    {
+      "name": "Sevilla, Spain",
+      "latLon": {
+        "lat": 37.3886303,
+        "lon": -5.9953403
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -23,10 +31,6 @@
     }
   ],
   "thumbnailUrl": "images/sevilla-typescript.webp",
-  "latLon": {
-    "lat": 37.3886303,
-    "lon": -5.9953403
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

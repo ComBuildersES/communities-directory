@@ -5,7 +5,15 @@
   "lastReviewed": "25/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Córdoba",
+  "locations": [
+    {
+      "name": "Córdoba",
+      "latLon": {
+        "lat": 37.888422,
+        "lon": -4.77513
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -27,10 +35,6 @@
     }
   ],
   "thumbnailUrl": "images/andalucia-startup-founder.webp",
-  "latLon": {
-    "lat": 37.888422,
-    "lon": -4.77513
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

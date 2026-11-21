@@ -5,7 +5,15 @@
   "lastReviewed": "26/05/2025",
   "communityType": "collaborative-group",
   "eventFormat": "in-person",
-  "location": "Anceu, Pontevedra",
+  "locations": [
+    {
+      "name": "Anceu, Pontevedra",
+      "latLon": {
+        "lat": 42.3604762,
+        "lon": -8.4652171
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -26,10 +34,6 @@
     }
   ],
   "thumbnailUrl": "images/rural-hackers.webp",
-  "latLon": {
-    "lat": 42.3604762,
-    "lon": -8.4652171
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

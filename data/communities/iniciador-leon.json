@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "León",
+  "locations": [
+    {
+      "name": "León",
+      "latLon": {
+        "lat": 42.598862,
+        "lon": -5.572586
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -15,10 +23,6 @@
   "contactInfo": "",
   "communityUrl": "https://iniciador.com/Leon",
   "urls": {},
-  "latLon": {
-    "lat": 42.598862,
-    "lon": -5.572586
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

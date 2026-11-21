@@ -5,7 +5,15 @@
   "lastReviewed": "31/05/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Zaragoza",
+  "locations": [
+    {
+      "name": "Zaragoza",
+      "latLon": {
+        "lat": 41.656837,
+        "lon": -0.8794245
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -23,10 +31,6 @@
     }
   ],
   "thumbnailUrl": "images/agile-aragon.webp",
-  "latLon": {
-    "lat": 41.656837,
-    "lon": -0.8794245
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

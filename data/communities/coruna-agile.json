@@ -5,7 +5,15 @@
   "lastReviewed": "19/05/2025",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "A Coruña, España",
+  "locations": [
+    {
+      "name": "A Coruña, España",
+      "latLon": {
+        "lat": 43.3709703,
+        "lon": -8.3959425
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -20,10 +28,6 @@
     }
   ],
   "thumbnailUrl": "images/corua-agile.webp",
-  "latLon": {
-    "lat": 43.3709703,
-    "lon": -8.3959425
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

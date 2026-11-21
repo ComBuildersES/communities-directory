@@ -5,7 +5,15 @@
   "lastReviewed": "25/10/2024",
   "communityType": "collaborative-group",
   "eventFormat": "online",
-  "location": "Huelva",
+  "locations": [
+    {
+      "name": "Huelva",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "parentId": 469,
   "topics": "",
   "langs": [
@@ -17,10 +25,6 @@
   "communityUrl": "https://es.wikipedia.org/wiki/Wikiproyecto:Huelva_(provincia)/participantes",
   "urls": {},
   "thumbnailUrl": "images/wikiproyecto-huelva.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

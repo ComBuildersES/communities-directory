@@ -5,7 +5,15 @@
   "lastReviewed": "31/07/2026",
   "communityType": "meta-community",
   "eventFormat": "in-person",
-  "location": "Coruña, Spain",
+  "locations": [
+    {
+      "name": "Coruña, Spain",
+      "latLon": {
+        "lat": 43.1539943,
+        "lon": -8.5805076
+      }
+    }
+  ],
   "parentId": null,
   "shortDescription": "El punto de encuentro de todas las comunidades tecnológicas de A Coruña. Conectamos a desarrolladores, diseñadores y profesionales de la tecnología de Galicia.",
   "shortDescriptionI18n": {
@@ -22,10 +30,6 @@
   "communityUrl": "https://corunatech.org/",
   "urls": {},
   "thumbnailUrl": "images/corua-tech.webp",
-  "latLon": {
-    "lat": 43.1539943,
-    "lon": -8.5805076
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

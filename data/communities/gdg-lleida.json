@@ -5,7 +5,15 @@
   "lastReviewed": "12/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Lleida",
+  "locations": [
+    {
+      "name": "Lleida",
+      "latLon": {
+        "lat": 41.6176,
+        "lon": 0.62
+      }
+    }
+  ],
   "geographicScope": "provincial",
   "parentId": 207,
   "shortDescription": "Capítulo de Google Developer Groups en Lleida. Organiza charlas, talleres y concursos sobre tecnologías de Google, inteligencia artificial, Android, cloud y cultura maker, y acoge el capítulo de Women Techmakers Lleida.",
@@ -47,10 +55,6 @@
     }
   ],
   "thumbnailUrl": "images/gdg-lleida.webp",
-  "latLon": {
-    "lat": 41.6176,
-    "lon": 0.62
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

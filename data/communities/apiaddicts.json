@@ -5,7 +5,15 @@
   "lastReviewed": "31/05/2024",
   "communityType": "tech-meetup",
   "eventFormat": "hybrid",
-  "location": "Madrid, Valencia, Barcelona, Medellín, Lima, México D.F",
+  "locations": [
+    {
+      "name": "Madrid, Valencia, Barcelona, Medellín, Lima, México D.F",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "topics": "APIs, Cloud, MIcroservicios",
   "langs": [
     "es"
@@ -27,10 +35,6 @@
     }
   ],
   "thumbnailUrl": "images/apiaddicts.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

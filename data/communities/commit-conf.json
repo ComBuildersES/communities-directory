@@ -5,7 +5,15 @@
   "lastReviewed": "07/04/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Madrid",
+  "locations": [
+    {
+      "name": "Madrid",
+      "latLon": {
+        "lat": 40.4052141,
+        "lon": -3.8769548
+      }
+    }
+  ],
   "parentId": null,
   "shortDescription": "Conferencia tecnológica española centrada en desarrollo de software, Cloud, Inteligencia Artificial y cultura técnica. Se celebra anualmente en Madrid, siendo un punto de encuentro clave para profesionales del sector IT.",
   "shortDescriptionI18n": {
@@ -58,10 +66,6 @@
     }
   ],
   "thumbnailUrl": "images/commitconf.webp",
-  "latLon": {
-    "lat": 40.4052141,
-    "lon": -3.8769548
-  },
   "displayOnMap": true,
   "humanValidated": true,
   "removalReason": ""

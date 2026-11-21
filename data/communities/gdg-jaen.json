@@ -5,7 +5,15 @@
   "lastReviewed": "26/05/2025",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Jaén ",
+  "locations": [
+    {
+      "name": "Jaén ",
+      "latLon": {
+        "lat": 37.7657753,
+        "lon": -3.7893929
+      }
+    }
+  ],
   "parentId": 207,
   "topics": "",
   "langs": [
@@ -32,10 +40,6 @@
     }
   ],
   "thumbnailUrl": "images/gdg-jaen.webp",
-  "latLon": {
-    "lat": 37.7657753,
-    "lon": -3.7893929
-  },
   "displayOnMap": true,
   "humanValidated": false
 }

@@ -5,7 +5,15 @@
   "lastReviewed": "24/03/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
-  "location": "Torremolinos",
+  "locations": [
+    {
+      "name": "Torremolinos",
+      "latLon": {
+        "lat": 36.5297453,
+        "lon": -6.2926477
+      }
+    }
+  ],
   "shortDescription": "Evento internacional sobre programación funcional.",
   "shortDescriptionI18n": {
     "en": "An international event about functional programming."
@@ -47,10 +55,6 @@
     }
   ],
   "thumbnailUrl": "images/lambda-world.webp",
-  "latLon": {
-    "lat": 36.5297453,
-    "lon": -6.2926477
-  },
   "displayOnMap": true,
   "humanValidated": true
 }

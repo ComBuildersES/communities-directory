@@ -5,7 +5,15 @@
   "lastReviewed": "31/05/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "location": "Asturias",
+  "locations": [
+    {
+      "name": "Asturias",
+      "latLon": {
+        "lat": 43.3602825,
+        "lon": -5.8447919
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -16,10 +24,6 @@
   "communityUrl": "http://web.archive.org/web/20260211153131/http://www.techclubasturias.com/",
   "urls": {},
   "thumbnailUrl": "images/tech-club-asturias.webp",
-  "latLon": {
-    "lat": 43.3602825,
-    "lon": -5.8447919
-  },
   "displayOnMap": false,
   "humanValidated": false
 }

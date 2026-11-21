@@ -5,7 +5,15 @@
   "lastReviewed": "18/10/2024",
   "communityType": "umbrella-org",
   "eventFormat": "unknown",
-  "location": "n/a",
+  "locations": [
+    {
+      "name": "n/a",
+      "latLon": {
+        "lat": null,
+        "lon": null
+      }
+    }
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -27,10 +35,6 @@
     }
   ],
   "thumbnailUrl": "images/droidcon.webp",
-  "latLon": {
-    "lat": null,
-    "lon": null
-  },
   "displayOnMap": false,
   "humanValidated": false
 }
