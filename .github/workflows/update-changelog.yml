@@ -1,10 +1,17 @@
 name: Actualizar changelog
 
+# Red manual, NO automática: en un push a master el changelog ya lo regenera y commitea el
+# job `build` de deploy.yml, que es el que tiene que hacerlo (va despues de asignar los ids,
+# para que un alta nueva pueda enlazar su ficha, y antes del build, para que lo publicado
+# incluya el cambio).
+#
+# Con el disparador `push` los dos workflows corrian a la vez sobre la misma rama y el
+# segundo en llegar se quedaba sin poder empujar: `! [rejected] master -> master (fetch
+# first)`. No era un fallo esporadico; pasaba siempre que el changelog estaba desactualizado
+# y los dos tenian algo que escribir (runs 44910002022, 43898808548, 43891708883...).
+#
+# Queda disponible a mano por si alguna vez hay que regenerarlo sin pasar por un deploy.
 on:
-  push:
-    branches:
-      - master
-      - main
   workflow_dispatch:
 
 permissions:
@@ -49,4 +56,20 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add CHANGELOG.md
           git commit -m "docs(changelog): update changelog [skip ci]"
-          git push
+          # Mismo patron que deploy.yml: si algo entro por medio, rebasar y reintentar. El
+          # changelog se regenera entero desde el log, asi que un conflicto se resuelve
+          # volviendolo a generar sobre el historial ya rebasado.
+          for attempt in 1 2 3; do
+            if git push origin HEAD:"${GITHUB_REF_NAME}"; then
+              exit 0
+            fi
+            echo "Push rechazado (intento $attempt); rebasando."
+            git fetch origin "${GITHUB_REF_NAME}"
+            if ! git rebase "origin/${GITHUB_REF_NAME}"; then
+              node scripts/generate-changelog.js
+              git add CHANGELOG.md
+              GIT_EDITOR=true git rebase --continue || git rebase --abort
+            fi
+          done
+          echo "No se pudo publicar el changelog tras 3 intentos." >&2
+          exit 1

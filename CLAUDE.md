@@ -953,7 +953,7 @@ en `src/lib/freshness.js` (`shouldRevalidateFreshData`, función pura con test).
 - Base path dinámico según variable `VITE_BASE`
 - Entry: `index.html` → monta en `<div id="search_app">`
 
-### El CHANGELOG se regenera solo, en dos sitios
+### El CHANGELOG se regenera solo, en dos sitios (y un tercero a mano)
 
 `CHANGELOG.md` **nunca se edita a mano**: lo genera `scripts/generate-changelog.js` a partir
 del log de git, entero, en cada ejecución.
@@ -967,6 +967,15 @@ El paso de CI es el que de verdad lo garantiza: **el hook solo existe en los clo
 que hayan hecho `npm install`**, así que nada de lo que se mergea desde la web de GitHub
 —incluidas todas las propuestas de comunidad— pasa por él. Sin ese paso, el changelog se
 quedaba atrás hasta que alguien commiteaba a mano desde su máquina.
+
+`update-changelog.yml` hace lo mismo, pero **solo a mano** (`workflow_dispatch`). Cuando se
+disparaba también en cada push a `master`, los dos workflows escribían `CHANGELOG.md` sobre
+la misma rama a la vez y el segundo se quedaba sin poder empujar
+(`! [rejected] master -> master (fetch first)`). No fallaba de vez en cuando: fallaba siempre
+que los dos tenían algo que escribir. **El que manda es el de `deploy.yml`**, porque va
+después de asignar los ids y antes del build, así que lo que se publica ya lleva el cambio.
+Es el mismo criterio que con los ids: dos jobs escribiendo lo mismo en grupos de concurrencia
+distintos es una carrera, no una red de seguridad.
 
 Va **después** de asignar los IDs porque una comunidad recién dada de alta necesita su id
 para poder enlazar su ficha del directorio.
