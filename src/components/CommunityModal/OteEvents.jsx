@@ -12,7 +12,6 @@ import {
 const OTE_ABOUT_URL = "https://opentechevents.org/";
 
 /** Feed de la comunidad; si no admite CORS, quedan disponibles sus enlaces. */
-/* eslint-disable react/prop-types */
 export function OteEvents({ feedUrl }) {
   const { t, i18n } = useTranslation();
   const [state, setState] = useState({ status: "loading", feed: null });

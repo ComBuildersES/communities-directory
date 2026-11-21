@@ -1,5 +1,4 @@
 import { buildContributionPath } from "../../lib/communitySubmission.js";
-/* eslint-disable react/prop-types */
 import { startTransition, useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 

@@ -18,14 +18,3 @@ export const useSideBarVisible = () =>
 
 export const useSidebarActions = () =>
   useSidebarStore((state) => state.actions);
-
-// Funcion encargada de mostrar el boton o no cuando
-// este en mobile
-
-const handleResize = (set) => {
-  if (window.innerWidth > 768) {
-    set({ isSidebarVisible: true });
-  } else {
-    set({ isSidebarVisible: false });
-  }
-};

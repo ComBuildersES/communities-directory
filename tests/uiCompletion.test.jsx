@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { renderToStaticMarkup } from 'react-dom/server';
 import es from '../src/i18n/locales/es.json';

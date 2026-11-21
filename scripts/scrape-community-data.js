@@ -233,7 +233,7 @@ async function extractContactEmail(page) {
 
   // 2. Fallback: regex sobre el texto visible de la página
   const pageContent = await page.evaluate(() => document.body?.innerText ?? '');
-  const EMAIL_REGEX = /[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}/g;
+  const EMAIL_REGEX = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
   const matches = pageContent.match(EMAIL_REGEX) ?? [];
 
   for (const email of matches) {

@@ -33,7 +33,6 @@ const FILTER_LABEL_KEYS = {
   cbMembers: "resultsBar.filterLabel.cbMembers",
 };
 
-/* eslint-disable react/prop-types */
 export function ResultsBar({ view, toggleView }) {
   const { t } = useTranslation();
   const filters = useFilters();

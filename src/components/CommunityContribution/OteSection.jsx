@@ -34,7 +34,6 @@ const OTE_READER_URL = "https://reader.opentechevents.org/";
  * lista de canales, y el desplegable de plataformas no ofrece OTE: un campo con dos sitios
  * donde editarlo acaba con dos valores distintos.
  */
-/* eslint-disable react/prop-types */
 export function OteSection({ urls = [], onChange }) {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);

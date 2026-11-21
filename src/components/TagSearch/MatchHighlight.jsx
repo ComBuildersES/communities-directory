@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { splitSearchMatches } from '../../lib/searchHighlight.js';
 
 export function MatchHighlight({ text, query }) {

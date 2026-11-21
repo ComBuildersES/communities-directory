@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useCommunityActions, useAllCommunities, useChildrenByParentId, useMergedFromById, useOrganizedById } from "../../stores/community.store.js";

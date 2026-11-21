@@ -7,6 +7,13 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 export default [
   { ignores: ['dist'] },
   {
+    // Ficheros que corren en Node, no en el navegador
+    files: ['scripts/**/*.js', 'tests/**/*.js', '*.config.js', '.githooks/**/*.js'],
+    languageOptions: {
+      globals: { ...globals.node },
+    },
+  },
+  {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
       ecmaVersion: 2020,
@@ -29,6 +36,8 @@ export default [
       ...react.configs['jsx-runtime'].rules,
       ...reactHooks.configs.recommended.rules,
       'react/jsx-no-target-blank': 'off',
+      // El proyecto no usa PropTypes (prop-types no es dependencia declarada)
+      'react/prop-types': 'off',
       'react-refresh/only-export-components': [
         'warn',
         { allowConstantExport: true },

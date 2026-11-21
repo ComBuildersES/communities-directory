@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useCallback, useEffect, useId, useMemo, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { useTranslation } from "react-i18next";

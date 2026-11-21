@@ -1,6 +1,5 @@
 import { TAG_CATEGORY_ORDER, AUDIENCE_CATEGORY_ORDER } from '../../lib/topicExplorer.js';
 import { BuildersInvitation } from "../CommunityBuildersModal/BuildersInvitation.jsx";
-/* eslint-disable react/prop-types */
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
@@ -416,8 +415,6 @@ function TaxonomyPicker({
   onSearchChange,
   groupByCategory = false,
   defaultExpanded = false,
-  collapsibleGroups = false,
-  collapseGroupsByDefault = false,
   categoryOrder = [],
   suggestionCta = null,
   matchesAllToggle = null,
@@ -492,8 +489,6 @@ function TaxonomyPicker({
     () => new Map(items.map((item) => [item.id, item])),
     [items]
   );
-
-  const hasActiveSearch = searchValue.trim().length > 0;
 
   return (
     <section className="contribution-card">
@@ -2628,8 +2623,6 @@ export function CommunityContribution({
         onSearchChange={setTagQuery}
         groupByCategory
         defaultExpanded={false}
-        collapsibleGroups={isEditMode}
-        collapseGroupsByDefault={isEditMode}
         categoryOrder={TAG_CATEGORY_ORDER}
         suggestionCta={{
           text: t("contribution.tags.suggestionText"),

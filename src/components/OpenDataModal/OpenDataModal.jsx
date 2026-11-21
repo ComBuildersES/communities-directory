@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useAllCommunities } from "../../stores/community.store.js";

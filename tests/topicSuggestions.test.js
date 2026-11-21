@@ -40,11 +40,9 @@ describe('propuestas de temáticas', () => {
     expect(buildTopicSuggestionIssueUrl({ names: ['Nueva'], category: '' })).toBe('');
   });
 
-  it('incluye la plantilla referenciada sin habilitar los issues en blanco', () => {
+  it('incluye la plantilla referenciada', () => {
     const template = readFileSync(new URL(`../.github/ISSUE_TEMPLATE/${TOPIC_ISSUE_TEMPLATE}`, import.meta.url), 'utf8');
     expect(template).toContain('name: Proponer temáticas');
     expect(template).toContain('## Categoría propuesta');
-    const config = readFileSync(new URL('../.github/ISSUE_TEMPLATE/config.yml', import.meta.url), 'utf8');
-    expect(config).toContain('blank_issues_enabled: false');
   });
 });

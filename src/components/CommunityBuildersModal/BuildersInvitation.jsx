@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { lazy, Suspense, useCallback, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import "./CommunityBuildersModal.css";

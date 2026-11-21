@@ -49,6 +49,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Fixes
 
+- 2026-11-22 `8689d10` globals de Node, código muerto y una aserción obsoleta
 - 2026-11-21 `710f226` correcciones de la revisión del PR
 - 2026-11-16 `59b83f1` assign community builders to issues
 - 2026-11-12 `28ef24f` no pedir logo ni URL a las comunidades inactivas
@@ -110,7 +111,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Maintenance
 
-- 2026-11-22 `67389ea` CSV y changelog de la migración
+- 2026-11-22 `02d3a49` CSV y changelog de la migración
 - 2026-11-21 `cca3255` deja la actualización del changelog en un solo workflow automático
 - 2026-11-05 `0b31f64` borrar la rama de las propuestas de comunidad descartadas
 
@@ -693,6 +694,3 @@ Se organiza por mes y por tipo de cambio.
 - 2024-11-22 `9e1a3da` normalizando valores y quirar funcion indice inverso antigua
 - 2024-11-22 `a12bfa8` quitado codigo comentado de CommunitiesList
 - 2024-11-20 `bddbfff` Initial commit
-### Maintenance
-
-- 2026-11-21 `cca3255` deja la actualización del changelog en un solo workflow automático

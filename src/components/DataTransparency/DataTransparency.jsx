@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useCommunityActions, useDataCoverage, useFilters } from "../../stores/community.store.js";

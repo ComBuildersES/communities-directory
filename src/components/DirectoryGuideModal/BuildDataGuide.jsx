@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { GuideSection } from "./FindCommunityGuide.jsx";

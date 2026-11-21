@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { URL_GROUPS, URL_KIND_PICKER_OPTIONS } from "../../lib/communityUrls.js";
