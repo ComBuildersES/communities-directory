@@ -15,7 +15,8 @@
   ],
   "tags": [],
   "targetAudience": [],
-  "contactInfo": "",
+  "matchesAllTags": true,
+  "contactInfo": "https://cacerestech.com/",
   "communityUrl": "https://cacerestech.com/",
   "urls": [
     {
@@ -30,6 +31,10 @@
     {
       "url": "https://cacerestech.com/",
       "kind": "web"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/cacerestech/events.json",
+      "kind": "ote"
     }
   ],
   "thumbnailUrl": "images/cacerestech.webp",
