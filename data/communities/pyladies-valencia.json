@@ -8,6 +8,9 @@
   "location": "Valencia",
   "geographicScope": "local",
   "shortDescription": "Capítulo valenciano de PyLadies: charlas y encuentros de mujeres que programan en Python, con networking y espacio para quien empieza.",
+  "shortDescriptionI18n": {
+    "en": "The Valencia chapter of PyLadies: talks and meetups for women who code in Python, with networking and room for those just starting out."
+  },
   "topics": "",
   "langs": [
     "es"

@@ -8,6 +8,9 @@
   "location": "Madrid",
   "parentId": null,
   "shortDescription": "WTM Madrid es la extensión local de la iniciativa global de Google que impulsa y apoya a mujeres en tecnología en la capital. Buscamos crear un ecosistema donde sean visibles, tengan comunidad sólida y acceso a recursos para crecer profesionalmente.",
+  "shortDescriptionI18n": {
+    "en": "WTM Madrid is the local extension of Google's global initiative supporting women in technology in the capital. We want to build an ecosystem where they are visible, have a solid community and can access the resources to grow professionally."
+  },
   "topics": "women-in-tech, diversity, mentoring, stem, tech4good",
   "langs": [
     "es"

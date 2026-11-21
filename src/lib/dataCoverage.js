@@ -13,6 +13,7 @@
  */
 
 import { toLegacyUrlMap } from "./communityUrls.js";
+import { normalizeDescriptionTranslations, DESCRIPTION_I18N_KEY } from "./localizedText.js";
 
 const STATUSES = ["active", "inactive", "unknown"];
 
@@ -24,6 +25,12 @@ const hasScope = (community) =>
 // `urls` es un array de pares desde #478, así que "¿tiene feed OTE?" no es un acceso por
 // clave: se pregunta al helper, que entiende los dos formatos.
 const hasOte = (community) => Boolean(toLegacyUrlMap(community.urls).ote);
+const hasDescription = (community) => Boolean(community.shortDescription?.trim());
+// La interfaz se lee en `/es/` y `/en/`, así que la cobertura que falta medir es cuántas
+// fichas se pueden leer de verdad en inglés: sin este recuento, `/en/` parece completo
+// porque cada ficha tiene *una* descripción, aunque esté en castellano.
+const hasEnglishDescription = (community) =>
+  Boolean(normalizeDescriptionTranslations(community[DESCRIPTION_I18N_KEY]).en);
 
 /** Porcentaje entero, redondeado hacia abajo: 89 de 657 es un 13%, no un 14%. */
 export const percentage = (part, whole) => (whole > 0 ? Math.floor((part / whole) * 100) : 0);
@@ -59,6 +66,8 @@ export function buildCoverage(communities = []) {
       withAudience: active.filter(hasAudience).length,
       withScope: active.filter(hasScope).length,
       withOte: active.filter(hasOte).length,
+      withDescription: active.filter(hasDescription).length,
+      withEnglishDescription: active.filter(hasEnglishDescription).length,
     },
   };
 }

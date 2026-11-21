@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "Granada",
   "shortDescription": "Comunidad local que organizaba encuentros de webmasters (como dice Wikipedia: a persona responsable del mantenimiento o programación de uno o más sitios web) en la provincia de Granada",
+  "shortDescriptionI18n": {
+    "en": "A local community that used to run meetups for webmasters (as Wikipedia puts it, the person responsible for maintaining or developing one or more websites) in the province of Granada."
+  },
   "topics": "",
   "langs": [
     "es"

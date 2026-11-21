@@ -17,6 +17,7 @@
  */
 import { OPEN_TO_OPTIONS } from "./communityOpenTo.js";
 import { URL_PLATFORM_OPTIONS } from "./communitySubmission";
+import { DESCRIPTION_I18N_KEY, normalizeDescriptionTranslations } from "./localizedText.js";
 
 export const SCHEMA_URL = "https://directory.communitybuilders.dev/data/schema.json";
 export const TAGS_URL = "https://directory.communitybuilders.dev/data/tags.json";
@@ -175,6 +176,27 @@ export function parseAssistedCommunityJson(raw, { knownTagIds = [], knownAudienc
     if (Object.keys(urls).length > 0) community.urls = urls;
   }
 
+  // Traducciones de la descripción (`{ idioma: texto }`). Se filtran a los idiomas del
+  // catálogo igual que `langs`: un modelo que devuelve "english" o "castellano" como clave
+  // dejaría una traducción que ninguna superficie llega a pintar.
+  if (
+    parsed[DESCRIPTION_I18N_KEY]
+    && typeof parsed[DESCRIPTION_I18N_KEY] === "object"
+    && !Array.isArray(parsed[DESCRIPTION_I18N_KEY])
+  ) {
+    const translations = normalizeDescriptionTranslations(parsed[DESCRIPTION_I18N_KEY]);
+    const dropped = Object.keys(parsed[DESCRIPTION_I18N_KEY]).filter(
+      (key) => !(key in translations)
+    );
+
+    if (dropped.length > 0) {
+      warnings.push(`unknown:${DESCRIPTION_I18N_KEY}:${[...new Set(dropped)].join(", ")}`);
+    }
+    if (Object.keys(translations).length > 0) {
+      community[DESCRIPTION_I18N_KEY] = translations;
+    }
+  }
+
   ["matchesAllTags", "matchesAllAudience"].forEach((field) => {
     if (typeof parsed[field] === "boolean") community[field] = parsed[field];
   });
@@ -233,11 +255,12 @@ Please:
 1. Read the field definitions at ${SCHEMA_URL} — it is a JSON Schema and it explains every field and every allowed enum value.
 2. Read the catalogues at ${TAGS_URL} and ${AUDIENCE_URL}. The "tags" and "targetAudience" fields take **ids from those files**, never free text and never invented ids. Match on label, description and synonyms. The same catalogues exist in English at ${TAGS_EN_URL} and ${AUDIENCE_EN_URL} — same ids, translated labels — so use whichever helps you match, and if the community describes itself in English, check both.
 3. Visit every link I gave you and work out what the community actually is. Each source tells you something different: the website says what they are about, an events platform says whether they are still alive and how often they meet, social channels say who runs it and in what language, a code repository says what they build. Cross-check them, and if two sources disagree, trust the most recent one and tell me about it.
-4. Reply with **one JSON object and nothing else**, using only these keys: name, status, communityType, eventFormat, location, geographicScope, shortDescription, langs, tags, targetAudience, openTo, contactInfo, communityUrl, urls, matchesAllTags, matchesAllAudience.
+4. Reply with **one JSON object and nothing else**, using only these keys: name, status, communityType, eventFormat, location, geographicScope, shortDescription, shortDescriptionI18n, langs, tags, targetAudience, openTo, contactInfo, communityUrl, urls, matchesAllTags, matchesAllAudience.
 
 Rules that matter:
 - "openTo" is an array of these ids: volunteers, collaborations, co-organisers, speakers, sponsors, venues, mentors. Include only explicitly documented openness to these contributions; it does not mean urgent recruitment. Omit it without evidence; an empty or absent field means unknown, not refusal.
 - "location" is where the events happen ("City, Region"); "geographicScope" is the territory served. They are different.
+- "shortDescription": one or two sentences in the community own language. "shortDescriptionI18n" holds that SAME text translated, keyed by language code: always "en", plus "es" when the canonical text is not Spanish.
 - "urls" only takes the platform keys listed in the schema. Meetup, Eventbrite and Luma have their own keys ("meetup", "eventbrite", "luma"); "eventsUrl" is for any other events platform.
 - Set "matchesAllTags" (or "matchesAllAudience") to true only for a genuinely generalist community, and leave its array empty in that case.
 - Fill "urls" with the channels you found, each under its own key.
@@ -259,11 +282,12 @@ Haz lo siguiente:
 1. Lee la definición de los campos en ${SCHEMA_URL}: es un JSON Schema y explica cada campo y cada valor permitido de los enums.
 2. Lee los catálogos ${TAGS_URL} y ${AUDIENCE_URL}. Los campos "tags" y "targetAudience" llevan **IDs de esos ficheros**, nunca texto libre ni IDs inventados. Busca por label, description y synonyms. Los mismos catálogos están en inglés en ${TAGS_EN_URL} y ${AUDIENCE_EN_URL} (mismos IDs, etiquetas traducidas): usa el que te sirva para emparejar, y si la comunidad se describe en inglés, consulta los dos.
 3. Visita todos los enlaces que te he dado y entiende qué es realmente esa comunidad. Cada fuente te dice algo distinto: la web dice de qué va, una plataforma de eventos dice si sigue viva y cada cuánto se reúne, los canales sociales dicen quién la dinamiza y en qué idioma, un repositorio dice qué construyen. Crúzalos, y si dos se contradicen, hazle caso al más reciente y avísame.
-4. Respóndeme con **un único objeto JSON y nada más**, usando solo estas claves: name, status, communityType, eventFormat, location, geographicScope, shortDescription, langs, tags, targetAudience, openTo, contactInfo, communityUrl, urls, matchesAllTags, matchesAllAudience.
+4. Respóndeme con **un único objeto JSON y nada más**, usando solo estas claves: name, status, communityType, eventFormat, location, geographicScope, shortDescription, shortDescriptionI18n, langs, tags, targetAudience, openTo, contactInfo, communityUrl, urls, matchesAllTags, matchesAllAudience.
 
 Reglas que importan:
 - "openTo" es un array de estos IDs: volunteers, collaborations, co-organisers, speakers, sponsors, venues, mentors. Incluye solo disponibilidad explícitamente documentada para esas aportaciones; no significa búsqueda urgente. Omítelo si no hay evidencia: vacío o ausente significa sin información, no rechazo.
 - "location" es dónde se celebran los eventos ("Ciudad, Comunidad Autónoma"); "geographicScope" es el territorio al que da servicio. No son lo mismo.
+- "shortDescription": una o dos frases en el idioma de la comunidad. En "shortDescriptionI18n" va ese MISMO texto traducido, por código de idioma: siempre "en", y "es" si el canónico no está en castellano.
 - "urls" solo admite las claves de plataforma del esquema. Meetup, Eventbrite y Luma tienen clave propia ("meetup", "eventbrite", "luma"); "eventsUrl" es para cualquier otra plataforma de eventos.
 - Pon "matchesAllTags" (o "matchesAllAudience") a true solo si la comunidad es realmente generalista, y en ese caso deja su array vacío.
 - Rellena "urls" con los canales que hayas encontrado, cada uno en su clave.

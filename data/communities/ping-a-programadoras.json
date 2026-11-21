@@ -8,6 +8,9 @@
   "location": "Sevilla, España",
   "parentId": null,
   "shortDescription": "Mujeres y personas de género no binario interesadas en hacer y pensar juntas con los ordenadores, desde una perspectiva crítica y de empoderamiento",
+  "shortDescriptionI18n": {
+    "en": "Women and non-binary people interested in making and thinking with computers together, from a critical and empowering perspective."
+  },
   "topics": "",
   "langs": [
     "es"

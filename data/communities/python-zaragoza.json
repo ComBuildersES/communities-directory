@@ -8,6 +8,9 @@
   "location": "Zaragoza",
   "parentId": 404,
   "shortDescription": "Comunidad local para aprender, compartir y reunirse alrededor de Python en Zaragoza.",
+  "shortDescriptionI18n": {
+    "en": "A local community for learning, sharing and meeting up around Python in Zaragoza."
+  },
   "topics": "",
   "langs": [
     "es"

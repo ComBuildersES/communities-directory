@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "Málaga",
   "shortDescription": "Conferencia internacional sobre interfaces de usuario.",
+  "shortDescriptionI18n": {
+    "en": "An international conference about user interfaces."
+  },
   "topics": "",
   "langs": [
     "es"

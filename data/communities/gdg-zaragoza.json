@@ -9,6 +9,9 @@
   "geographicScope": "provincial",
   "parentId": 207,
   "shortDescription": "Capítulo de Google Developer Groups en Zaragoza. Organiza talleres y charlas sobre tecnologías de Google, inteligencia artificial y realidad virtual, y ha venido celebrando el DevFest Zaragoza.",
+  "shortDescriptionI18n": {
+    "en": "The Google Developer Groups chapter in Zaragoza. It runs workshops and talks on Google technologies, artificial intelligence and virtual reality, and has been organising DevFest Zaragoza."
+  },
   "topics": "",
   "langs": [
     "es"

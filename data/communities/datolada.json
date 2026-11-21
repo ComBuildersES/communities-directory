@@ -8,6 +8,9 @@
   "location": "Coruña",
   "parentId": null,
   "shortDescription": "El evento de referencia en analítica y datos del mundo digital, donde nos juntamos para compartir, aprender y celebrar el valor de la comunidad.",
+  "shortDescriptionI18n": {
+    "en": "The reference event for analytics and data in the digital world, where we get together to share, learn and celebrate the value of community."
+  },
   "topics": "",
   "langs": [
     "es"

@@ -144,7 +144,8 @@
       "name": "Community",
       "parentId": "",
       "humanValidated": "Review",
-      "cbMembers": "Person"
+      "cbMembers": "Person",
+      "nameQuery": "Name"
     }
   },
   "tagSearch": {
@@ -161,7 +162,92 @@
     "memberCommunities": "{{count}} community",
     "memberCommunities_other": "{{count}} communities",
     "copyMemberLink": "Copy link to these communities",
-    "memberHint": "Type @ to filter by a Community Builders member"
+    "memberHint": "Type @ to filter by a Community Builders member",
+    "searchLabel": "Search communities",
+    "close": "Close search",
+    "submitName": "Search for “{{query}}” by name",
+    "noNames": "No names match all the words.",
+    "startHint": "Search for a community by name, or pick a topic, an audience or a person with @.",
+    "noMembers": "No people found. Try another username.",
+    "noSuggestions": "No matches. Try another term.",
+    "suggestions": "Search suggestions",
+    "related": "Approximate or partial matches",
+    "openDetails": "Open record",
+    "applyFilter": "Filter"
+  },
+  "topicExplorer": {
+    "catalogues": "Catalogues to explore",
+    "tabs": {
+      "topics": "Topics",
+      "audience": "Audiences"
+    },
+    "audience": {
+      "searchLabel": "Search audiences",
+      "searchPlaceholder": "Search every audience…",
+      "selected_one": "{{count}} selected",
+      "selected_other": "{{count}} selected",
+      "clearSelection": "Clear selection",
+      "selectionLabel": "Selected audiences",
+      "remove": "Remove audience {{label}}",
+      "combine": "Combine audiences",
+      "modeLabel": "Audiences",
+      "any": "Any",
+      "all": "All",
+      "modeHelpLabel": "How audiences are combined",
+      "modeHelp": "Any: at least one of those selected. All: every one of them. Communities declared open to every audience are included too; a record with no audiences filled in is not the same as being open to all.",
+      "topicCount_one": "{{count}} audience",
+      "topicCount_other": "{{count}} audiences",
+      "searchResults_one": "{{count}} audience found",
+      "searchResults_other": "{{count}} audiences found",
+      "noTopics": "No audiences match. Try another term.",
+      "addCategory": "Add all",
+      "categoryAdded": "All added",
+      "suggestion": {
+        "title": "Suggest audiences",
+        "names": "Missing audiences",
+        "namesHint": "You can write several, separated by commas.",
+        "existing": "Already there: {{names}}. Only the new ones will be proposed."
+      }
+    },
+    "addCategory": "Add all",
+    "categoryAdded": "All added",
+    "suggestion": {
+      "title": "Suggest topics",
+      "names": "Missing topics",
+      "namesHint": "You can write several, separated by commas.",
+      "category": "Category",
+      "chooseCategory": "Choose a category",
+      "undecided": "I am not sure",
+      "existing": "Already there: {{names}}. Only the new ones will be proposed.",
+      "githubHint": "You will be able to review and publish the issue on GitHub.",
+      "back": "Back to exploring",
+      "continue": "Continue on GitHub"
+    },
+    "title": "Explore topics and audiences",
+    "close": "Close the topics and audiences explorer",
+    "searchLabel": "Search topics",
+    "searchPlaceholder": "Search every topic…",
+    "selected_one": "{{count}} selected",
+    "selected_other": "{{count}} selected",
+    "clearSelection": "Clear selection",
+    "selectionLabel": "Selected topics",
+    "remove": "Remove topic {{label}}",
+    "combine": "Combine topics",
+    "modeLabel": "Topics",
+    "any": "Any",
+    "all": "All",
+    "modeHelpLabel": "How topics are combined",
+    "modeHelp": "Any: at least one of those selected. All: every one of them. Communities declared generalist are included too; a record with no topics filled in is not a generalist one.",
+    "categories": "All categories",
+    "topicCount_one": "{{count}} topic",
+    "topicCount_other": "{{count}} topics",
+    "searchResults_one": "{{count}} topic found",
+    "searchResults_other": "{{count}} topics found",
+    "noTopics": "No topics match. Try another term.",
+    "communityCount_one": "{{count}} community with this selection",
+    "communityCount_other": "{{count}} communities with this selection",
+    "apply_one": "See {{count}} community",
+    "apply_other": "See {{count}} communities"
   },
   "communityCard": {
     "viewDetails": "View details for {{name}}",
@@ -233,6 +319,7 @@
     "noOwnChannelsOrganizer": "See {{name}}'s channels",
     "shortDescription": "Short description",
     "noDescription": "No short description yet",
+    "descriptionFallback": "This description is in {{language}}: nobody has translated it yet. You can add the translation by editing the record.",
     "links": "Links",
     "mainLink": "Main link",
     "archivedUrlNote": "The main link points to an archived copy on web.archive.org because the original source no longer seems to be available.",
@@ -609,8 +696,11 @@
         "bullet4": "International: the community operates beyond Spain."
       },
       "organizedBy": {
-        "title": "Who organises this community?",
-        "description": "Use this when the entry is a recurring event with a brand of its own, run by one or more communities in the directory (e.g. GDG Málaga runs Biznaga Fest; GeeksCAT runs GeeksCAT Conf). It is not the same as an umbrella organisation: there the community belongs to a network, here someone runs the event and both entries stay alive. Only communities listed in this directory are enumerated: companies, sponsors or institutional support are not linked here. If no community in the directory runs the event, leave it empty."
+        "title": "Who organises this event?",
+        "description": "For records that are a recurring event with a brand of their own, run by one or more communities in the directory.",
+        "bullet0": "Not the umbrella organisation: there the community belongs to a network; here someone organises the event and both records stay alive.",
+        "bullet1": "Only communities listed in the directory. Companies, sponsors or institutional support are not linked here.",
+        "bullet2": "If no community in the directory organises it, leave it empty."
       },
       "mergedInto": {
         "title": "What is a merge?",
@@ -678,6 +768,9 @@
       "shortDescriptionLabel": "Short description",
       "shortDescriptionPlaceholder": "Describe in one sentence what this community offers, its focus or value proposition. Avoid repeating the tags or target audience already selected.",
       "shortDescriptionExample": "Example: \"Non-profit collective that organizes monthly meetups to share practical experiences on software architecture and platform engineering.\"",
+      "descriptionI18nToggle": "Add the description in another language",
+      "descriptionI18nNote": "The text above is stored as you wrote it, in the language you wrote it in. The directory is read in Spanish and in English: adding the translation means whoever visits in the other language reads the record in theirs.",
+      "descriptionI18nPlaceholder": "The same description in {{language}}",
       "contactLabel": "Public contact",
       "contactPlaceholder": "email@community.org or contact URL",
       "thumbnailLabel": "Thumbnail or logo",
@@ -694,12 +787,13 @@
       "mergedIntoPlaceholder": "Search by name…",
       "mergedIntoNone": "Pick the community resulting from the merge",
       "organizedByLabel": "Organised by (communities in the directory)",
+      "organizedByReveal": "A community in the directory organises it",
       "organizedByPlaceholder": "Search by name…",
-      "organizedByNone": "No organising communities",
       "organizedByRemove": "Remove {{name}}",
       "parentOrgPlaceholder": "Search by name…",
       "parentOrgTooltip": "An umbrella organization is an entity that groups several local communities under the same network or brand (e.g. GDG Spain, PyLadies, Codebar). If your community belongs to one of these networks, select it here. The vast majority of communities have no umbrella organization.",
-      "geographicScopeLabel": "Geographic scope"
+      "geographicScopeLabel": "Geographic scope",
+      "organizedByHint": "Only if a community in the directory organises it. E.g. GDG Malaga organises Biznaga Fest."
     },
     "tags": {
       "title": "Tags",
@@ -1113,7 +1207,12 @@
     "reviewCta": "Show the {{pending}} pending",
     "clearFilters": "Clear filters",
     "allReviewedTitle": "Nothing left to review here",
-    "allReviewedBody": "All {{reviewed}} communities matching these filters have already been reviewed by a person. Thanks to whoever did it."
+    "allReviewedBody": "All {{reviewed}} communities matching these filters have already been reviewed by a person. Thanks to whoever did it.",
+    "excludedByStatus": "Outside the status filter",
+    "inactiveMatches_one": "There is {{count}} inactive community matching this search.",
+    "inactiveMatches_other": "There are {{count}} inactive communities matching this search.",
+    "includeInactive": "Include inactive ones",
+    "similarNames": "Similar names"
   },
   "builders": {
     "cta": "Do you run a tech community?",

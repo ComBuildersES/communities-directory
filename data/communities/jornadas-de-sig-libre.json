@@ -9,6 +9,9 @@
   "geographicScope": "national",
   "parentId": null,
   "shortDescription": "Las Jornadas de SIG Libre son un evento donde compartir e intercambiar conocimientos alrededor de las geotecnologías libres y la ciencia de datos espaciales.",
+  "shortDescriptionI18n": {
+    "en": "The Jornadas de SIG Libre are an event for sharing and exchanging knowledge around free geospatial technologies and spatial data science."
+  },
   "topics": "",
   "langs": [
     "es"

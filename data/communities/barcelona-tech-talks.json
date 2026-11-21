@@ -8,6 +8,9 @@
   "location": "Barcelona",
   "geographicScope": "local",
   "shortDescription": "Ciclo de charlas técnicas en Barcelona sobre ingeniería y datos a escala, con equipos de producto de empresas locales e invitadas.",
+  "shortDescriptionI18n": {
+    "en": "A series of technical talks in Barcelona about engineering and data at scale, featuring product teams from local and visiting companies."
+  },
   "topics": "",
   "langs": [
     "en"

@@ -8,6 +8,9 @@
   "location": "Madrid",
   "parentId": null,
   "shortDescription": "El evento más grande de Datos en España con tecnologías Microsoft. Conferencia y exposición. Profesionales, futuros profesionales y referentes del mundo de los datos comparten y aprenden por igual.",
+  "shortDescriptionI18n": {
+    "en": "The largest data event in Spain around Microsoft technologies. A conference and exhibition where data professionals, future professionals and well-known voices share and learn alike."
+  },
   "topics": "",
   "langs": [
     "es"

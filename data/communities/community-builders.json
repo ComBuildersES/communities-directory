@@ -7,6 +7,9 @@
   "eventFormat": "online",
   "location": "",
   "shortDescription": "Somos un colectivo que reúne a personas que dinamizan comunidades tech de habla hispana con el objetivo de ser un lugar de referencia donde se facilite la colaboración y el intercambio de experiencias.",
+  "shortDescriptionI18n": {
+    "en": "We are a collective of people who run Spanish-speaking tech communities, aiming to be a reference place that makes collaboration and sharing experiences easier."
+  },
   "topics": "",
   "langs": [
     "es"

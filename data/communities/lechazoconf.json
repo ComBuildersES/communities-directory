@@ -8,6 +8,9 @@
   "location": "Valladolid",
   "parentId": null,
   "shortDescription": "La LechazoConf es una conferencia anual sobre tecnología, emprendimiento y startups que se celebra en Valladolid, España.\nDura un solo día y cuenta con una única línea de charlas (track único).Temática central (\"Un fracaso y un éxito\").",
+  "shortDescriptionI18n": {
+    "en": "LechazoConf is an annual conference about technology, entrepreneurship and startups held in Valladolid, Spain. It lasts a single day with a single track of talks, built around one theme: one failure and one success."
+  },
   "topics": "",
   "langs": [
     "es"

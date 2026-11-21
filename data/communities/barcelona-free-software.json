@@ -8,6 +8,9 @@
   "location": "Barcelona",
   "parentId": 625,
   "shortDescription": "Comunidad de creadores de software libre, también conocido como código abierto, con sede en Barcelona. Nuestra actividad principal es un grupo de Meetup, un encuentro abierto para desarrolladores y usuarios que comparten la pasión por la libertad del software.",
+  "shortDescriptionI18n": {
+    "en": "A community of free software (also known as open source) makers based in Barcelona. Our main activity is a Meetup group, an open gathering for developers and users who share a passion for software freedom."
+  },
   "topics": "",
   "langs": [
     "es"

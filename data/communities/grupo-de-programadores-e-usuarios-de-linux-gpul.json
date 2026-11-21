@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "A Coruña",
   "shortDescription": "Colectivo sin ánimo de lucro que organiza diversos tipos de encuentros, conferencias y hackathones para divulgar el software y la cultura libres.",
+  "shortDescriptionI18n": {
+    "en": "A non-profit collective that organises all kinds of meetups, conferences and hackathons to spread free software and free culture."
+  },
   "topics": "",
   "langs": [
     "es"

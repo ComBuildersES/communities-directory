@@ -8,6 +8,9 @@
   "location": "Madrid",
   "parentId": null,
   "shortDescription": "Conferencia tecnológica española centrada en desarrollo de software, Cloud, Inteligencia Artificial y cultura técnica. Se celebra anualmente en Madrid, siendo un punto de encuentro clave para profesionales del sector IT.",
+  "shortDescriptionI18n": {
+    "en": "A Spanish tech conference focused on software development, cloud, artificial intelligence and engineering culture. Held annually in Madrid, it is a key meeting point for IT professionals."
+  },
   "topics": "",
   "langs": [
     "es"

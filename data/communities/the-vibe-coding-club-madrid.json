@@ -8,6 +8,9 @@
   "location": "Madrid",
   "geographicScope": "local",
   "shortDescription": "Encuentro quincenal en Madrid de gente que construye con IA: se comparte qué se está creando, con qué herramientas y qué flujos de trabajo funcionan.",
+  "shortDescriptionI18n": {
+    "en": "A fortnightly meetup in Madrid for people building with AI: what they are making, which tools they use and which workflows actually work."
+  },
   "topics": "",
   "langs": [
     "es",

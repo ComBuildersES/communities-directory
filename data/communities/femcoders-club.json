@@ -8,6 +8,9 @@
   "location": "Barcelona",
   "geographicScope": "national",
   "shortDescription": "Comunidad de mujeres desarrolladoras con base en Barcelona: talleres, charlas y mentoría para cerrar la brecha de género en tecnología.",
+  "shortDescriptionI18n": {
+    "en": "A community of women developers based in Barcelona: workshops, talks and mentoring to close the gender gap in technology."
+  },
   "topics": "",
   "langs": [
     "es"

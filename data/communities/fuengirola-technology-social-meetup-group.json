@@ -8,6 +8,9 @@
   "location": "Málaga (Fuengirola)",
   "geographicScope": "local",
   "shortDescription": "Café quincenal en inglés en Fuengirola para quien vive o trabaja allí: conversación informal sobre tecnología, IA, programación, ciberseguridad y negocio digital.",
+  "shortDescriptionI18n": {
+    "en": "A fortnightly coffee meetup in English in Fuengirola for people living or working there: informal conversation about technology, AI, programming, cybersecurity and digital business."
+  },
   "topics": "",
   "langs": [
     "en"

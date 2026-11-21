@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "n/a",
   "shortDescription": "Comunidad de Claude para compartir soluciones, ayudarse mutuamente y ampliar los límites de lo que es posible con la IA.",
+  "shortDescriptionI18n": {
+    "en": "The Claude community for sharing solutions, helping each other out and pushing the limits of what is possible with AI."
+  },
   "topics": "",
   "langs": [
     "es",

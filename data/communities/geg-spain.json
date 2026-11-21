@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "n/a",
   "shortDescription": "Google Educator Group Spain (GEG Spain) es una comunidad de educadores dedicada a promover la innovación y la eficacia colectiva en la educación. Profesores, directores, pedagogos y apasionados de la enseñanza con meetups en varias ciudades",
+  "shortDescriptionI18n": {
+    "en": "Google Educator Group Spain (GEG Spain) is a community of educators devoted to promoting innovation and collective effectiveness in education: teachers, head teachers, pedagogues and teaching enthusiasts, with meetups in several cities."
+  },
   "topics": "",
   "langs": [
     "es"

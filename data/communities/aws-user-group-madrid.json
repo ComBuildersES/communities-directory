@@ -8,6 +8,9 @@
   "location": "Madrid",
   "geographicScope": "local",
   "shortDescription": "Grupo de usuarios de AWS en Madrid: meetups y talleres prácticos sobre servicios de AWS, arquitectura en la nube e IA agéntica.",
+  "shortDescriptionI18n": {
+    "en": "The AWS user group in Madrid: meetups and hands-on workshops about AWS services, cloud architecture and agentic AI."
+  },
   "topics": "",
   "langs": [
     "es"

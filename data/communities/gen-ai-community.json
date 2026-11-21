@@ -7,6 +7,9 @@
   "eventFormat": "online",
   "location": "",
   "shortDescription": "Gen AI Community es un espacio hands-on para profesionales que trabajan con IA y que no solo quieren debatir, sino también probar, compartir y aplicar. Para quienes tienen más preguntas que respuestas y quieren pensar en colectivo y construir el futuro de la humanidad.",
+  "shortDescriptionI18n": {
+    "en": "Gen AI Community is a hands-on space for professionals working with AI who want not only to discuss it but to try, share and apply it. For those with more questions than answers, who want to think collectively and build the future."
+  },
   "topics": "",
   "langs": [
     "es"

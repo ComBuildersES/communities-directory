@@ -7,6 +7,9 @@
   "eventFormat": "hybrid",
   "location": "Granada, España",
   "shortDescription": "Granada Tech somos un conjunto de asociaciones, grupos y entidades que organizamos eventos tecnológicos en la provincia de Granada.",
+  "shortDescriptionI18n": {
+    "en": "Granada Tech is a set of associations, groups and organisations that run technology events in the province of Granada."
+  },
   "topics": "",
   "langs": [
     "es"

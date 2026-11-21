@@ -7,6 +7,10 @@
   "eventFormat": "in-person",
   "location": "n/a",
   "shortDescription": "We are a global collaborative Internet of Things ecosystem that creates networks, devices, and solutions using LoRaWAN®.",
+  "shortDescriptionI18n": {
+    "en": "We are a global collaborative Internet of Things ecosystem that creates networks, devices and solutions using LoRaWAN.",
+    "es": "Somos un ecosistema global y colaborativo de Internet de las Cosas que crea redes, dispositivos y soluciones con LoRaWAN."
+  },
   "topics": "",
   "langs": [
     "en"

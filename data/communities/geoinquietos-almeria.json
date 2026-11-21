@@ -8,6 +8,9 @@
   "location": "Almería",
   "parentId": 616,
   "shortDescription": "Encuentros locales informales entre gente que comparte inquietudes, intereses, experiencias o cualquier idea en el ámbito de la geomática, el software libre y la tecnología geoespacial (todo aquello relacionado con el ámbito GEO y SIG).",
+  "shortDescriptionI18n": {
+    "en": "Informal local meetups among people who share curiosity, interests, experiences or any idea around geomatics, free software and geospatial technology (anything in the GEO and GIS space)."
+  },
   "topics": "",
   "langs": [
     "es"

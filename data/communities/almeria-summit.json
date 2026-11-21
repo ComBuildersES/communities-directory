@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "Almería",
   "shortDescription": "Punto de encuentro para profesionales, empresas e instituciones que quieren comprender el presente de la inteligencia artificial y anticipar su futuro. Un evento diseñado para conectar conocimiento, territorio y oportunidad real.",
+  "shortDescriptionI18n": {
+    "en": "A meeting point for professionals, companies and institutions who want to understand where artificial intelligence stands today and anticipate where it is going. An event designed to connect knowledge, local context and real opportunity."
+  },
   "topics": "",
   "langs": [
     "es"

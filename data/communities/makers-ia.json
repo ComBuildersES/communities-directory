@@ -8,6 +8,9 @@
   "location": "Madrid",
   "parentId": null,
   "shortDescription": "MakersIA es una comunidad hispanohablante de desarrolladores que trabajan activamente con inteligencia artificial. No solo usan IA, la construyen, la integran y la llevan a producción. Hasta el propio agente que gestiona la comunidad fue creado por sus miembros.",
+  "shortDescriptionI18n": {
+    "en": "MakersIA is a Spanish-speaking community of developers actively working with artificial intelligence. They do not just use AI: they build it, integrate it and take it to production. Even the agent that runs the community was created by its members."
+  },
   "topics": "",
   "langs": [
     "es"

@@ -8,6 +8,9 @@
   "location": "Viator, Almería",
   "parentId": null,
   "shortDescription": "Jornada de Videojuegos Indie y Programación \"Jam Attack\". Un pequeño encuentro que cuenta con una zona de juegos, una zona de exposición y presentaciones, donde algunos estudiantes y profesionales muestran sus juegos indie y creaciones personales, y una zona de charlas.",
+  "shortDescriptionI18n": {
+    "en": "Jam Attack, a day of indie games and programming. A small gathering with a play area, an exhibition and demo area where students and professionals show their indie games and personal creations, and a talks track."
+  },
   "topics": "desarrollo de videojuegos,programación",
   "langs": [
     "es"

@@ -8,6 +8,9 @@
   "location": "Málaga",
   "geographicScope": "local",
   "shortDescription": "Capítulo malagueño de Ladies that UX, red internacional de mujeres en diseño y experiencia de usuario: meetup mensual de UX, UI y producto digital.",
+  "shortDescriptionI18n": {
+    "en": "The Málaga chapter of Ladies that UX, an international network of women in design and user experience: a monthly meetup on UX, UI and digital product."
+  },
   "topics": "",
   "langs": [
     "es"

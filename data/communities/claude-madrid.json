@@ -8,6 +8,10 @@
   "location": "Madrid, Spain",
   "parentId": 627,
   "shortDescription": "The home of the Claude community in Madrid. Events, talks and people building with AI in Madrid.",
+  "shortDescriptionI18n": {
+    "en": "The home of the Claude community in Madrid. Events, talks and people building with AI in Madrid.",
+    "es": "La casa de la comunidad de Claude en Madrid. Eventos, charlas y gente que construye con IA en Madrid."
+  },
   "topics": "",
   "langs": [
     "es",

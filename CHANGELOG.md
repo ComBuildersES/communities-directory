@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-11-21 `5f98abb` descripción en varios idiomas y repaso del inglés
 - 2026-11-14 `9fed223` medir visitas con consentimiento previo y LibreCounter
 - 2026-11-14 `74f1690` mejorar búsqueda y explorar temáticas y públicos
 - 2026-11-14 `431d4c3` completar mejoras del directorio y traducciones
@@ -101,7 +102,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
-- 2026-11-16 `f2fc169` Updating changelog
+- 2026-11-16 `c919a9e` Updating changelog
 - 2026-11-16 `9f9fcf8` Update config.yml
 - 2026-11-16 `2ddafcd` Update canarias-go-retro.json
 - 2026-11-10 `1e0a9a4` ajustar coordenadas de No cON Name

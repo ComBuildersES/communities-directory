@@ -9,6 +9,9 @@
   "geographicScope": "provincial",
   "parentId": null,
   "shortDescription": "Agrupación de Desarrolladores de videojuegos Gaditanos fundada por José Antonio Escribano Allyon (Horizon Zero Dawn I & II, Ryse: Son of Rome, Crysis 3) desde 20 de octubre de 2023\nEn el que hacemos quedadas sobre desarrollo del videojuegos o hacer GameJams.",
+  "shortDescriptionI18n": {
+    "en": "A group of video game developers from Cádiz founded by Jose Antonio Escribano Allyon (Horizon Zero Dawn I & II, Ryse: Son of Rome, Crysis 3) on 20 October 2023, where we meet up around game development and run game jams."
+  },
   "topics": "",
   "langs": [
     "es"

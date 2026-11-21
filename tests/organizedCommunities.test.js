@@ -4,6 +4,7 @@ import {
   findOrganizers,
   hasOrganizers,
   normalizeOrganizedBy,
+  resolveOrganizedByFieldState,
   validateOrganizedByReferences,
 } from "../src/lib/organizedCommunities.js";
 import {
@@ -228,5 +229,32 @@ describe("normalizePayload con organizedBy", () => {
   it("dropEmptyArchivedUrls no escribe organizedBy: [] en el fichero", () => {
     const written = dropEmptyArchivedUrls(normalizePayload({ ...payloadBase, organizedBy: [] }));
     expect("organizedBy" in written).toBe(false);
+  });
+});
+
+describe("resolveOrganizedByFieldState", () => {
+  it("en una conferencia el campo va a la vista: es el caso normal", () => {
+    expect(resolveOrganizedByFieldState({ communityType: "conference" })).toEqual({
+      variant: "expected",
+      collapsible: false,
+      startsOpen: true,
+    });
+  });
+
+  it.each(["tech-meetup", "meta-community", "collaborative-group", "mutual-aid", "hacklab", "umbrella-org"])(
+    "en %s se pliega: ahí casi nunca aplica y el campo abierto invita a confundirlo con parentId",
+    (communityType) => {
+      expect(resolveOrganizedByFieldState({ communityType })).toEqual({
+        variant: "unusual",
+        collapsible: true,
+        startsOpen: false,
+      });
+    },
+  );
+
+  /** En una edición, esconder un vínculo que ya existe es perderlo sin avisar. */
+  it("se abre si la ficha ya declara organizadoras, sea del tipo que sea", () => {
+    expect(resolveOrganizedByFieldState({ communityType: "tech-meetup", hasOrganizers: true }).startsOpen)
+      .toBe(true);
   });
 });

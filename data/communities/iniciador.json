@@ -7,6 +7,9 @@
   "eventFormat": "unknown",
   "location": "n/a",
   "shortDescription": "La Fundación Iniciador tenía como objetivo principal ayudar a las personas que desean emprender, principalmente centrado (aunque no exclusivamente) en empresas con base tecnológica. Llegó a contar con +50 grupos locales y +185 voluntarios",
+  "shortDescriptionI18n": {
+    "en": "The Iniciador Foundation's main goal was to help people who want to start a business, mainly (though not exclusively) technology-based companies. It grew to more than 50 local groups and over 185 volunteers."
+  },
   "topics": "",
   "langs": [
     "es"

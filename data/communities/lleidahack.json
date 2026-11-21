@@ -8,6 +8,10 @@
   "location": "Lleida",
   "geographicScope": "local",
   "shortDescription": "Associació d'estudiants de l'Escola Politècnica Superior de la Universitat de Lleida que promou la tecnologia: organitza la HackEPS i tech meetings durant el curs.",
+  "shortDescriptionI18n": {
+    "en": "A student association at the Escola Politècnica Superior of the University of Lleida that promotes technology: it organises HackEPS and tech meetings throughout the academic year.",
+    "es": "Asociación de estudiantes de la Escola Politècnica Superior de la Universidad de Lleida que promueve la tecnología: organiza la HackEPS y tech meetings durante el curso."
+  },
   "topics": "",
   "langs": [
     "ca",

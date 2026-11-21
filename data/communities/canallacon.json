@@ -8,6 +8,9 @@
   "location": "Roquetas de Mar, Almería",
   "parentId": null,
   "shortDescription": "Congreso Internacional de ciberseguridad y transformación digital organizado por el equipo del podcast Cosas de Hackers.",
+  "shortDescriptionI18n": {
+    "en": "An international cybersecurity and digital transformation congress organised by the team behind the Cosas de Hackers podcast."
+  },
   "topics": "Seguridad, Hacking",
   "langs": [
     "es"

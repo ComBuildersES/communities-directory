@@ -8,6 +8,9 @@
   "location": "Madrid",
   "parentId": null,
   "shortDescription": "PyTorch no es solo un framework: es la columna vertebral del aprendizaje profundo moderno y el motor que impulsa los avances más potentes en IA Generativa. Nos hace una ilusión enorme traer esta comunidad global a nuestra ciudad!",
+  "shortDescriptionI18n": {
+    "en": "PyTorch is not just a framework: it is the backbone of modern deep learning and the engine behind the most powerful advances in generative AI. We are thrilled to bring this global community to our city."
+  },
   "topics": "",
   "langs": [
     "es",

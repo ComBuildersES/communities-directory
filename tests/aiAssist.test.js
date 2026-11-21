@@ -163,7 +163,10 @@ describe('buildAssistPrompt', () => {
     expect(prompt).toContain(SCHEMA_URL);
     expect(prompt).toContain(TAGS_URL);
     expect(prompt).toContain('https://a.dev');
-    expect(prompt.length).toBeLessThan(3000);
+    // El prompt viaja en una query string (`claude.ai/new?q=`), así que el tope es un
+    // guardarraíl contra el truncado, no un límite del navegador. Subió de 3000 al añadir
+    // la traducción de la descripción (`shortDescriptionI18n`).
+    expect(prompt.length).toBeLessThan(3200);
   });
 
   it('avisa de las dos trampas del modelo de datos', () => {

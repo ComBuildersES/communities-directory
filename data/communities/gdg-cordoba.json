@@ -9,6 +9,9 @@
   "geographicScope": "provincial",
   "parentId": 207,
   "shortDescription": "Capítulo de Google Developer Groups en Córdoba. Organiza meetups y talleres sobre tecnologías de Google e inteligencia artificial, y el DevFest Córdoba.",
+  "shortDescriptionI18n": {
+    "en": "The Google Developer Groups chapter in Córdoba. It runs meetups and workshops on Google technologies and artificial intelligence, and organises DevFest Córdoba."
+  },
   "topics": "",
   "langs": [
     "es"

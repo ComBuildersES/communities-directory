@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "Oviedo/Gijón (Asturias)",
   "shortDescription": "Grupo de entusiastas de la tecnología que queremos fomentar las relaciones personales en torno a eventos tecnológicos en Asturias. Organizamos, charlas, talleres, dinámicas.... Siempre con respeto y alrededor de un espacio acogedor donde divertirnos.",
+  "shortDescriptionI18n": {
+    "en": "A group of technology enthusiasts who want to build personal relationships around tech events in Asturias. We organise talks, workshops and hands-on sessions, always respectfully and in a welcoming space where we can have fun."
+  },
   "topics": "",
   "langs": [
     "es"

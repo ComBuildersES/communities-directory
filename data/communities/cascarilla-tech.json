@@ -8,6 +8,9 @@
   "location": "A Coruña",
   "geographicScope": "local",
   "shortDescription": "Asociación sin ánimo de lucro de A Coruña que organiza jornadas de desarrollo de software e IA con charlas, experiencias y networking, a menudo junto a otras comunidades locales.",
+  "shortDescriptionI18n": {
+    "en": "A non-profit association in A Coruña that runs software development and AI events with talks, experience reports and networking, often together with other local communities."
+  },
   "topics": "",
   "langs": [
     "es"

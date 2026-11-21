@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "Coruña",
   "shortDescription": "CoruñaWTF somos una comunidad de personas de A Coruña y alrededores, que se reúnen para compartir, aprender y disfrutar alrededor del desarrollo y diseño web.",
+  "shortDescriptionI18n": {
+    "en": "CorunaWTF is a community of people from A Coruña and nearby who get together to share, learn and enjoy themselves around web development and design."
+  },
   "topics": "",
   "langs": [
     "es"

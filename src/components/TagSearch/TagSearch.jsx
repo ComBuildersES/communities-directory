@@ -314,7 +314,7 @@ export function TagSearch({ onShowResults }) {
     { key: 'communities', label: t('tagSearch.groupCommunities'), suggestions: communitySuggestions },
     { key: 'topics', label: t('tagSearch.groupTopics'), suggestions: tagSuggestions },
     { key: 'audience', label: t('tagSearch.groupAudience'), suggestions: audienceSuggestions },
-    { key: 'related', label: t('tagSearch.related', { defaultValue: 'Coincidencias aproximadas o parciales' }), suggestions: relatedSuggestions },
+    { key: 'related', label: t('tagSearch.related'), suggestions: relatedSuggestions },
   ].filter((section) => section.suggestions.length > 0);
   let optionIndex = 0;
   const indexedSections = sections.map((section) => ({ ...section,
@@ -493,7 +493,7 @@ export function TagSearch({ onShowResults }) {
       <div className={`tag-search-bar${dedicated ? ' tag-search-bar--dedicated' : ''}`}
         ref={containerRef} style={viewport} onKeyDown={handleKeyDown}
         role={dedicated ? 'dialog' : undefined} aria-modal={dedicated ? true : undefined}
-        aria-label={dedicated ? t('tagSearch.searchLabel', { defaultValue: 'Buscar comunidades' }) : undefined}
+        aria-label={dedicated ? t('tagSearch.searchLabel') : undefined}
         onBlur={(event) => {
           if (!dedicated && event.relatedTarget && !event.currentTarget.contains(event.relatedTarget)) setShowDropdown(false);
         }}
@@ -526,7 +526,7 @@ export function TagSearch({ onShowResults }) {
               </span>
             ))}
             <input ref={inputRef} className="tag-search-input" type="text" role="combobox"
-              aria-label={t('tagSearch.searchLabel', { defaultValue: 'Buscar comunidades' })}
+              aria-label={t('tagSearch.searchLabel')}
               aria-autocomplete="list" aria-expanded={showDropdown}
               aria-controls={showDropdown ? listId : undefined}
               aria-activedescendant={showDropdown && activeIndex >= 0 && suggestions[activeIndex] ? `${listId}-${activeIndex}` : undefined}
@@ -545,7 +545,7 @@ export function TagSearch({ onShowResults }) {
             </button>
           )}
           {dedicated && <button type="button" className="tag-search-close" onClick={closeSearch}
-            aria-label={t('tagSearch.close', { defaultValue: 'Cerrar búsqueda' })}>×</button>}
+            aria-label={t('tagSearch.close')}>×</button>}
         </div>
         <button type="button" className="button is-light tag-search-explore" aria-haspopup="dialog" disabled={allTags.length === 0}
           onClick={() => { setShowDropdown(false); setExplorerOpen(true); }}>
@@ -558,20 +558,20 @@ export function TagSearch({ onShowResults }) {
               <div className="tag-search-submit-row">
                 <button type="button" className="tag-search-submit" onClick={submitSearch}>
                   <i className="fas fa-search" aria-hidden="true"></i>
-                  <span>{t('tagSearch.submitName', { query: q, defaultValue: 'Buscar «{{query}}» por nombre' })}</span>
+                  <span>{t('tagSearch.submitName', { query: q })}</span>
                   <span className="tag-search-enter" aria-hidden="true">↵</span>
                 </button>
                 {communitySuggestions.length === 0 && sections.length > 0 && <p className="tag-search-empty" role="status">
-                  {t('tagSearch.noNames', { defaultValue: 'No hay nombres que coincidan con todas las palabras.' })}
+                  {t('tagSearch.noNames')}
                 </p>}
               </div>
             )}
-            {!q && <p className="tag-search-empty">{t('tagSearch.startHint', { defaultValue: 'Busca una comunidad por nombre o elige una temática, un público o una persona con @.' })}</p>}
+            {!q && <p className="tag-search-empty">{t('tagSearch.startHint')}</p>}
             {q && sections.length === 0 && <p className="tag-search-empty" role="status">
-              {isMemberQuery ? t('tagSearch.noMembers', { defaultValue: 'No se encontraron personas. Prueba con otro nombre de usuario.' })
-                : t('tagSearch.noSuggestions', { defaultValue: 'Sin sugerencias. Prueba con otro término.' })}
+              {isMemberQuery ? t('tagSearch.noMembers')
+                : t('tagSearch.noSuggestions')}
             </p>}
-            <div id={listId} role="listbox" aria-label={t('tagSearch.suggestions', { defaultValue: 'Sugerencias de búsqueda' })}>
+            <div id={listId} role="listbox" aria-label={t('tagSearch.suggestions')}>
               {indexedSections.map(({ key, label, suggestions: items }) => (
                 <div key={key} className={`tag-search-group tag-search-group--${key}`} role="group" aria-label={label}>
                   <div className="tag-search-group-label" aria-hidden="true">{label}</div>
@@ -587,8 +587,8 @@ export function TagSearch({ onShowResults }) {
                           <MatchHighlight text={suggestion.label} query={isMemberQuery ? memberTerm : q} />
                         </span>
                         <span className="tag-option-action">{suggestion.communityIdentifier != null
-                          ? t('tagSearch.openDetails', { defaultValue: 'Abrir ficha' })
-                          : t('tagSearch.applyFilter', { defaultValue: 'Filtrar' })}</span>
+                          ? t('tagSearch.openDetails')
+                          : t('tagSearch.applyFilter')}</span>
                       </span>
                       {suggestion.meta?.length ? <span className="tag-option-meta" aria-hidden="true">
                         {suggestion.meta.map((item) => <span key={item.value} className={item.className}>{item.value}</span>)}

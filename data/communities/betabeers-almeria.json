@@ -8,6 +8,9 @@
   "location": "Almeria, Spain",
   "parentId": 56,
   "shortDescription": "Evento mensual para desarrolladores web y apps en Almeria.\n\nFormato del evento:\n- Charla sobre desarrollo.\n- Presentación de startups, como están hechas por detrás.\n- Networking.\n- Debates.",
+  "shortDescriptionI18n": {
+    "en": "A monthly event for web and app developers in Almería. The format: a talk about development, startups presenting how they are built under the hood, networking and open discussion."
+  },
   "topics": "",
   "langs": [
     "es"

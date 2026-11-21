@@ -8,6 +8,9 @@
   "location": "Almería",
   "parentId": 469,
   "shortDescription": "Colectivo que tiene como objetivo crear, mejorar y organizar todos los artículos relacionados con la provincia de Almería, en España, prestando especial atención a los más representativos, como las localidades, los monumentos, espacios naturales y las personalidades de Almería.",
+  "shortDescriptionI18n": {
+    "en": "A collective whose goal is to create, improve and organise every article related to the province of Almería, Spain, paying special attention to the most representative ones: its towns, monuments, natural areas and notable people."
+  },
   "topics": "",
   "langs": [
     "es"
