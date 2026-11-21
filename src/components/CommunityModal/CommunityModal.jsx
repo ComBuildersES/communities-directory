@@ -16,6 +16,7 @@ import {
 import { normalizeOpenTo } from "../../lib/communityOpenTo.js";
 import { resolveShortDescription } from "../../lib/localizedText.js";
 import { getDisplayLocations, hasCoordinates, resolveMissingLocationReason } from "../../lib/communityLocations.js";
+import { buildCommunityShareUrl } from "../../lib/communityShare.js";
 import { OteEvents } from "./OteEvents.jsx";
 import "./CommunityModal.css";
 
@@ -73,7 +74,7 @@ function extractSocialHandle(platform, url) {
 function buildShareLinks(community, t) {
   // Solo quiere dos handles concretos, así que pide el mapa por clave en vez de recorrer pares.
   const urls = toLegacyUrlMap(community.urls);
-  const directLink = `${APP_URL}?community=${community.id}`;
+  const directLink = buildCommunityShareUrl(community, APP_URL);
   const enc = encodeURIComponent;
 
   function msg(subject, ccHandle) {
@@ -151,11 +152,30 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
   const [audienceExpanded, setAudienceExpanded] = useState(false);
   const [openUrlGroup, setOpenUrlGroup] = useState(null);
   const [isShareOpen, setIsShareOpen] = useState(false);
+  const [isLinkCopied, setIsLinkCopied] = useState(false);
   const [thumbBg, setThumbBg] = useState(null);
   const shareRef = useRef(null);
 
   const CHIPS_THRESHOLD = 3;
 
+
+  /**
+   * Copia el enlace a la ficha. El resto del desplegable lleva a una red concreta, y quien
+   * quiere pegarlo en su propio canal (un grupo interno, un correo) no tenía de dónde
+   * sacarlo: en móvil la barra de direcciones está escondida (issue #520).
+   */
+  const copyCommunityLink = async () => {
+    const url = buildCommunityShareUrl(community, APP_URL);
+    try {
+      await navigator.clipboard.writeText(url);
+      setIsLinkCopied(true);
+      window.setTimeout(() => setIsLinkCopied(false), 2000);
+    } catch {
+      // Sin permiso de portapapeles (http, Safari sin gesto previo): abrir el enlace deja a
+      // la persona en una pestaña cuya URL sí puede copiar a mano.
+      window.open(url, "_blank", "noopener,noreferrer");
+    }
+  };
 
   const applyFilter = (key, value) => {
     filterComunities(key, value);
@@ -178,6 +198,13 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
     document.addEventListener("mousedown", handler);
     return () => document.removeEventListener("mousedown", handler);
   }, [openUrlGroup]);
+
+  // El aviso de "copiado" no sobrevive a cerrar el desplegable: al volver a abrirlo diría
+  // que se acaba de copiar algo que se copió hace diez minutos.
+  useEffect(() => {
+    if (isShareOpen) return;
+    setIsLinkCopied(false);
+  }, [isShareOpen]);
 
   // Cerrar dropdown de compartir al clicar fuera
   useEffect(() => {
@@ -794,6 +821,15 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
                   </button>
                   {isShareOpen && (
                     <div className="community-modal-url-dropdown community-modal-share-dropdown">
+                      <button
+                        type="button"
+                        className="community-modal-url-dropdown-item community-modal-url-dropdown-item--action"
+                        onClick={copyCommunityLink}
+                      >
+                        <i className={isLinkCopied ? "fas fa-check" : "fas fa-link"}></i>
+                        <span>{isLinkCopied ? t("communityModal.copyLinkDone") : t("communityModal.copyLink")}</span>
+                      </button>
+                      <span className="community-modal-url-dropdown-separator" aria-hidden="true"></span>
                       {buildShareLinks(community, t).map(({ key, label, icon, href }) => (
                         <a
                           key={key}

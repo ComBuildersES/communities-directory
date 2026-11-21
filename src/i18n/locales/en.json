@@ -346,6 +346,8 @@
     "collaborate": "Collaborate",
     "edit": "Edit",
     "share": "Share",
+    "copyLink": "Copy link",
+    "copyLinkDone": "Link copied!",
     "cbTooltip": "One of the people who leads or led this community is part of Community Builders, the meta-community of tech community organizers in Spain.",
     "githubHandle": "@{{handle}} on GitHub",
     "cbCta": "Do you run this community?",

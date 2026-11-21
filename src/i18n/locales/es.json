@@ -346,6 +346,8 @@
     "collaborate": "Colaborar",
     "edit": "Editar",
     "share": "Compartir",
+    "copyLink": "Copiar enlace",
+    "copyLinkDone": "¡Enlace copiado!",
     "cbTooltip": "Alguna de las personas que lidera o lideró esta comunidad forma parte de Community Builders, la meta-comunidad de organizadores de comunidades tech en España.",
     "githubHandle": "@{{handle}} en GitHub",
     "cbCta": "¿Dinamizas esta comunidad?",

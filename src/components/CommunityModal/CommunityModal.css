@@ -483,6 +483,25 @@ button.modal-badge:focus-visible {
   color: #3273dc;
 }
 
+/* "Copiar enlace": un <button> dentro de una lista de <a>, así que hay que deshacer los
+   estilos de botón del navegador para que no cante entre las redes. */
+.community-modal-url-dropdown-item--action {
+  width: 100%;
+  border: 0;
+  background: none;
+  font-family: inherit;
+  font-size: 0.82rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.community-modal-url-dropdown-separator {
+  display: block;
+  height: 1px;
+  margin: 0.25rem 0.35rem;
+  background: #ededed;
+}
+
 /* URLs */
 .community-modal-urls {
   display: flex;
