@@ -2,7 +2,7 @@
   "id": 433,
   "name": "Step4ward",
   "status": "active",
-  "lastReviewed": "17/10/2024",
+  "lastReviewed": "11/11/2026",
   "communityType": "collaborative-group",
   "eventFormat": "hybrid",
   "locations": [
@@ -12,14 +12,36 @@
         "lat": 41.387917,
         "lon": 2.1699187
       }
+    },
+    {
+      "name": "Madrid",
+      "latLon": {
+        "lat": 40.416782,
+        "lon": -3.703507
+      }
     }
   ],
+  "geographicScope": "national",
+  "parentId": null,
+  "shortDescription": "Step4ward es un proyecto creado por mujeres, para mujeres, desde mayo de 2021. Somos un grupo de mentoras con experiencia en el sector tecnológico en España que ayudan a mujeres a comenzar o continuar su camino profesional en tech.",
   "topics": "",
   "langs": [
-    "es"
+    "es",
+    "en",
+    "ca"
   ],
-  "tags": [],
-  "targetAudience": [],
+  "tags": [
+    "diversity",
+    "women-in-tech",
+    "mentoring"
+  ],
+  "targetAudience": [
+    "junior-developer",
+    "student",
+    "career-changer",
+    "mentee",
+    "mentor"
+  ],
   "contactInfo": "infostep4ward@gmail.com",
   "communityUrl": "https://step4ward.es/",
   "urls": [
@@ -37,9 +59,19 @@
     },
     {
       "url": "https://bsky.app/profile/step4ward-es.bsky.social"
+    },
+    {
+      "url": "https://github.com/step4ward"
+    },
+    {
+      "url": "https://www.eventbrite.es/o/61194230943"
+    },
+    {
+      "kind": "slack",
+      "url": "https://slack.bcneng.org/"
     }
   ],
   "thumbnailUrl": "images/step4ward.webp",
   "displayOnMap": true,
-  "humanValidated": false
+  "humanValidated": true
 }
