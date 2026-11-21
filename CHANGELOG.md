@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-11-21 `3e82ffd` script de migración a `locations` y orden canónico de claves
 - 2026-11-21 `5124b39` traduce la descripción de CaceresTech
 - 2026-11-21 `8b555ea` descripción en varios idiomas y repaso del inglés
 - 2026-11-14 `9fed223` medir visitas con consentimiento previo y LibreCounter
@@ -102,7 +103,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Maintenance
 
-- 2026-11-21 `5fb59dc` deja la actualización del changelog en un solo workflow automático
+- 2026-11-21 `cca3255` deja la actualización del changelog en un solo workflow automático
 - 2026-11-05 `0b31f64` borrar la rama de las propuestas de comunidad descartadas
 
 ### Other

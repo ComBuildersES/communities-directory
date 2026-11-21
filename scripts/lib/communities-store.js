@@ -29,7 +29,7 @@ const CANONICAL_KEY_ORDER = [
   'lastReviewed',
   'communityType',
   'eventFormat',
-  'location',
+  'locations',
   'provinceId',
   'geographicScope',
   'parentId',
@@ -49,7 +49,6 @@ const CANONICAL_KEY_ORDER = [
   'urls',
   'archivedUrls',
   'thumbnailUrl',
-  'latLon',
   'displayOnMap',
   'humanValidated',
 ];

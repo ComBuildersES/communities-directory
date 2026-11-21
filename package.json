@@ -26,6 +26,7 @@
     "migrate-add-lang": "node scripts/migrate-add-lang.js",
     "migrate-enum-keys": "node scripts/migrate-enum-keys.js",
     "migrate-urls-to-pairs": "node scripts/migrate-urls-to-pairs.js",
+    "migrate-locations": "node scripts/migrate-locations.js",
     "apply-url-mapping": "node scripts/apply-url-mapping.js",
     "match-eventos-wiki": "node scripts/match-eventos-wiki.js",
     "simulate-community-owner-assignment": "node scripts/simulate-community-owner-assignment.js",
