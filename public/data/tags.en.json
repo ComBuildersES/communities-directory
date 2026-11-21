@@ -1160,5 +1160,12 @@
     "description": "Design disciplines focused on user experience and the visual interface of digital products.",
     "category": "Web & Frontend",
     "synonyms": ["user experience", "user interface", "ux design", "ui design", "product design"]
+  },
+  {
+    "id": "earth-observation",
+    "label": "Earth Observation",
+    "description": "Remote sensing and analysis of satellite, drone and remote sensor imagery to study the Earth's surface, climate and environment.",
+    "category": "Data, AI & Analytics",
+    "synonyms": ["earth observation", "remote sensing", "satellite imagery", "copernicus", "sentinel", "landsat", "google earth engine", "radar", "lidar"]
   }
 ]

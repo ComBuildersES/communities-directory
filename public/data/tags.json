@@ -1979,5 +1979,23 @@
       "leaderboards",
       "dinámicas de juego"
     ]
+  },
+  {
+    "id": "earth-observation",
+    "label": "Observación de la Tierra",
+    "description": "Teledetección y análisis de imágenes de satélite, dron y sensores remotos para estudiar la superficie terrestre, el clima y el medio ambiente.",
+    "category": "Datos, IA y Analítica",
+    "synonyms": [
+      "earth observation",
+      "teledetección",
+      "remote sensing",
+      "imágenes de satélite",
+      "satellite imagery",
+      "copernicus",
+      "sentinel",
+      "landsat",
+      "google earth engine",
+      "radar y lidar"
+    ]
   }
 ]

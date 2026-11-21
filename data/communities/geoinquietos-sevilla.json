@@ -10,7 +10,10 @@
   "langs": [
     "es"
   ],
-  "tags": [],
+  "tags": [
+    "geospatial",
+    "earth-observation"
+  ],
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://wiki.osgeo.org/wiki/Category:Geoinquietos_Sevilla",

@@ -49,7 +49,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Fixes
 
-- 2026-11-22 `8689d10` globals de Node, código muerto y una aserción obsoleta
+- 2026-11-22 `e91bd59` globals de Node, código muerto y una aserción obsoleta
 - 2026-11-21 `710f226` correcciones de la revisión del PR
 - 2026-11-16 `59b83f1` assign community builders to issues
 - 2026-11-12 `28ef24f` no pedir logo ni URL a las comunidades inactivas
@@ -117,6 +117,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
+- 2026-11-22 `d249449` nueva etiqueta de observación de la Tierra (#498)
 - 2026-11-22 `01342e4` Step4ward con sedes en Barcelona y Madrid
 - 2026-11-16 `c919a9e` Updating changelog
 - 2026-11-16 `9f9fcf8` Update config.yml
