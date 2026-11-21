@@ -49,6 +49,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-11-21 `ca7103f` [Actualizada CaceresTech](https://directory.communitybuilders.dev/?community=70) ([PR #516](https://github.com/ComBuildersES/communities-directory/pull/516))
 - 2026-11-16 `4ca30a7` [Actualizada DevopsDays Madrid](https://directory.communitybuilders.dev/?community=138) ([PR #509](https://github.com/ComBuildersES/communities-directory/pull/509))
 - 2026-11-16 `e2c6703` [Actualizada DevOpsDays Cáceres](https://directory.communitybuilders.dev/?community=137) ([PR #507](https://github.com/ComBuildersES/communities-directory/pull/507))
 - 2026-11-16 `8231584` [Actualizada Congreso TryIT!](https://directory.communitybuilders.dev/?community=109) ([PR #505](https://github.com/ComBuildersES/communities-directory/pull/505))
