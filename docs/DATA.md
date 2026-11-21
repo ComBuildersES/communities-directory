@@ -11,7 +11,7 @@ Los ficheros publicados se sirven desde la propia app, listos para consumir:
 | Fichero | Contenido |
 | --- | --- |
 | [`communities.json`](https://directory.communitybuilders.dev/data/communities.json) | Todas las comunidades del directorio, en un array JSON |
-| [`communities.geojson`](https://directory.communitybuilders.dev/data/communities.geojson) | Las comunidades con ubicación (presenciales e híbridas), como `FeatureCollection` GeoJSON |
+| [`communities.geojson`](https://directory.communitybuilders.dev/data/communities.geojson) | Las comunidades con ubicación (presenciales e híbridas), como `FeatureCollection` GeoJSON: una feature por sede, con el `id` de la comunidad |
 | [`deleted-communities.json`](https://directory.communitybuilders.dev/data/deleted-communities.json) | Bajas del directorio, con su motivo |
 | [`tags.json`](https://directory.communitybuilders.dev/data/tags.json) | Taxonomía de etiquetas temáticas (`id`, `label`, `description`, `category`, `synonyms`) |
 | [`audience.json`](https://directory.communitybuilders.dev/data/audience.json) | Perfiles de público objetivo |
@@ -101,7 +101,10 @@ datos ya estructurados, y de ahí sale una PR automática. Ver
   communityType: "tech-meetup" | "conference" | "umbrella-org" | "hacklab"
                | "collaborative-group" | "meta-community" | "mutual-aid",
   eventFormat: "in-person" | "online" | "hybrid" | "unknown",
-  location: string,             // dónde ocurren sus eventos
+  locations: Array<{            // ciudades donde se reúne en persona; la primera es la principal
+    name: string,
+    latLon: { lat: number | null, lon: number | null },
+  }>,                           // [] = sin ubicación física (online, paraguas o sin rellenar)
   geographicScope: "unknown" | "local" | "provincial" | "regional"
                  | "national" | "international",   // a qué territorio da servicio
   shortDescription: string,       // en el idioma de la propia comunidad
@@ -122,8 +125,7 @@ datos ya estructurados, y de ahí sale una PR automática. Ver
   mergedIntoId?: number | null, // solo con status "merged": comunidad en la que continúa
   organizedBy?: number[],       // comunidades del directorio que organizan esta
   thumbnailUrl: string,
-  latLon: { lat: number | null, lon: number | null },
-  displayOnMap: boolean,
+  displayOnMap: boolean,        // un pin por sede con coordenadas
   humanValidated: boolean       // false = datos enriquecidos automáticamente, sin revisar
 }
 ```

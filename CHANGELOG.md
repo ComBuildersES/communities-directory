@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-21 `538bbf8` mapa, ficha, buscador y formulario con varias sedes
+- 2026-11-21 `f81b2e2` mapa, ficha, buscador y formulario con varias sedes
 - 2026-11-21 `352d3ed` scripts y workflows leen `locations`
 - 2026-11-21 `f0409cd` migra las 663 fichas de `location` + `latLon` a `locations`
 - 2026-11-21 `5c4ddf3` librería de sedes y validación anti-deriva
@@ -95,6 +95,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-11-21 `c2bba93` reglas del dataset y documentación de las sedes
 - 2026-11-12 `9bdda6c` por qué las cuatro altas de GDG se quedan fuera
 - 2026-11-12 `66364d5` el porqué de los canales como pares, no lo que ya dice el esquema
 - 2026-11-10 `9c84a1a` regenerar el changelog tras el merge

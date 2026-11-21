@@ -111,12 +111,12 @@ Puedes colaborar con los datos de varias formas:
 
 #### Asignación automática de issues y PRs
 
-Los issues de alta o edición de comunidades creados desde la web intentan inferir automáticamente una `provinceId` a partir del campo `location`.
+Los issues de alta o edición de comunidades creados desde la web intentan inferir automáticamente la provincia de **cada sede** de `locations`.
 
 - La lista viva de responsables por provincia está en [`.github/community-owners.yml`](./.github/community-owners.yml).
 - Ese fichero es la fuente de verdad para automatizar asignaciones; el issue [#53](https://github.com/ComBuildersES/communities-directory/issues/53) se mantiene como punto de coordinación para que nuevas personas se ofrezcan voluntarias.
 - Cuando una persona se ofrece para una zona, hay que actualizar también `community-owners.yml` para que la automatización la tenga en cuenta.
-- Al abrir un issue de comunidad, se asigna automáticamente a las personas responsables de esa provincia.
+- Al abrir un issue de comunidad, se asigna automáticamente a las personas responsables de las provincias de todas sus sedes. Si alguna no tiene responsable, se añaden además las personas asignadas por defecto y la etiqueta `needs-area-owner`.
 - Cuando ese issue genera una PR automática, la PR se asigna a las mismas personas y además se les solicita revisión.
 - Si no se puede resolver la provincia o no hay responsables configurados para esa provincia, se asigna a `@hhkaos` y `@alvarosaugar` y se añade la etiqueta `needs-area-owner`.
 
@@ -186,7 +186,9 @@ Cada comunidad vive en su propio fichero, [`data/communities/<slug>.json`](https
   "lastReviewed": "dd/mm/yyyy",
   "communityType": "<enum>",
   "eventFormat": "<enum>",
-  "location": "<postal address>",
+  "locations": [
+    { "name": "<city>", "latLon": { "lat": <float or null>, "lon": <float or null> } }
+  ],
   "geographicScope": "<enum>",
   "shortDescription": "<texto breve>",
   "topics": "<comma separated values>",
@@ -216,10 +218,6 @@ Cada comunidad vive en su propio fichero, [`data/communities/<slug>.json`](https
   "archivedUrls": ["<absolute URL>", "..."],
   "parentId": <integer or null>,
   "thumbnailUrl": "images/<slugify-name>.webp",
-  "latLon": {
-    "lat": <float or null>,
-    "lon": <float or null>
-  },
   "displayOnMap": <true or false>,
   "humanValidated": <true or false>
 },
@@ -231,8 +229,8 @@ Cada comunidad vive en su propio fichero, [`data/communities/<slug>.json`](https
 - **lastReviewed** _(*)_: Última fecha en la que alguien modificó o validó los datos (`dd/mm/yyyy`).
 - **communityType** _(*)_: Tipo de comunidad (ver [Campo `communityType`](#campo-communitytype-taxonomía-de-comunidades)).
 - **eventFormat** _(*)_: Formato de eventos (ver [Campo `eventFormat`](#campo-eventformat-formato-de-eventos)).
-- **location**: Ciudad o región principal en formato `Ciudad` o `Ciudad, País`. Para comunidades sin ubicación fija: `Itinerante`. Para organizaciones paraguas: `n/a`. Solo para comunidades presenciales o híbridas.
-- **geographicScope**: Territorio al que la comunidad da servicio: `unknown`, `local`, `provincial`, `regional`, `national` o `international`. **No** es lo mismo que `location`: una comunidad puede celebrar sus eventos en Madrid y dar apoyo a nivel nacional. Campo opcional; las fichas antiguas no lo traen.
+- **locations**: Ciudades donde la comunidad tiene actividad presencial fija, **una por entrada** y la principal primero: `[{ "name": "Barcelona", "latLon": {…} }, { "name": "Madrid", "latLon": {…} }]`. Cada sede es un pin en el mapa. Para comunidades sin ubicación fija: `[{ "name": "Itinerante", … }]` (se muestra, pero no lleva pin). Para organizaciones paraguas y comunidades online: `[]`. Las coordenadas las pone el procesado del issue con Nominatim; si ya hay comunidades en esa ciudad, se pueden usar las mismas. Una sede es la **misma comunidad** en otra ciudad (mismo nombre, canales y equipo); si cada ciudad tiene su propio equipo y canales, son comunidades distintas, con `parentId` si comparten paraguas.
+- **geographicScope**: Territorio al que la comunidad da servicio: `unknown`, `local`, `provincial`, `regional`, `national` o `international`. **No** es lo mismo que `locations`: una comunidad puede celebrar sus eventos en Madrid y dar apoyo a nivel nacional. Campo opcional; las fichas antiguas no lo traen.
 - **shortDescription**: Descripción breve de la comunidad, la que se muestra en su ficha.
 - **langs**: Idiomas en los que la comunidad se comunica: `es`, `en`, `ca`, `eu`, `gl`, `oc`.
 - **topics**: Lista de temáticas en texto libre separada por comas (campo heredado, [ver issue](https://github.com/ComBuildersES/communities-directory/issues/6)).
@@ -246,8 +244,7 @@ Cada comunidad vive en su propio fichero, [`data/communities/<slug>.json`](https
 - **archivedUrls**: Canales que la comunidad tuvo abiertos pero que su equipo actual ya no atiende. Se conservan como histórico y **no se muestran** en la web: un canal zombie manda a la gente a un sitio donde nadie responde. Una URL no puede estar a la vez activa y archivada. La clave se omite cuando no hay nada archivado.
 - **parentId**: `id` de la organización paraguas a la que pertenece la comunidad (por ejemplo, un GDG local apuntando a GDG Spain), o `null`. No aplica a las propias organizaciones paraguas.
 - **thumbnailUrl** _(*)_: Ruta relativa a la imagen de la comunidad (`images/<slug>.webp`). El fondo de la web es blanco.
-- **latLon**: Coordenadas geográficas para comunidades presenciales o híbridas. Si ya hay comunidades en esa ciudad, usar las mismas coordenadas. Si no aplica: `{ "lat": null, "lon": null }`.
-- **displayOnMap**: `true` para comunidades presenciales o híbridas.
+- **displayOnMap**: `true` para comunidades presenciales o híbridas con al menos una sede con coordenadas.
 - **humanValidated**: `true` si los datos han sido revisados por una persona. `false` indica que fueron enriquecidos automáticamente por el scraper y están pendientes de validación humana.
 
 > _(*): Campos obligatorios_

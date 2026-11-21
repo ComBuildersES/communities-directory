@@ -64,7 +64,7 @@ scripts/               # Utilidades de mantenimiento de datos
   ensure-id-autoincrement.js
   compile-communities.js           # Compila el bundle + geojson desde data/communities/
   generate-llm-artifacts.js        # Genera llms.txt, llms-full.txt, CSV, schema.json y sitemap
-  explode-communities.js           # Migración one-shot: bundle → fichero por comunidad
+  migrate-locations.js             # Migración one-shot (ya aplicada): location + latLon → locations
   assign-community-ids.js          # Asigna ids pendientes (solo en master)
   lib/communities-store.js         # API de lectura/escritura de la fuente de verdad
   lib/communities-git.js           # Reconstruye el listado en un ref de git (baselines)
@@ -87,7 +87,7 @@ scripts/               # Utilidades de mantenimiento de datos
   lastReviewed: "DD/MM/YYYY",
   communityType: "tech-meetup" | "conference" | "umbrella-org" | "hacklab" | "collaborative-group" | "meta-community" | "mutual-aid",
   eventFormat: "in-person" | "online" | "hybrid" | "unknown",
-  location: string,
+  locations: Array<{ name: string, latLon: { lat: number | null, lon: number | null } }>, // sedes; [] = sin ubicación física
   geographicScope: "unknown" | "local" | "provincial" | "regional" | "national" | "international",
   mergedIntoId?: number | null, // solo con status "merged": comunidad en la que continúa
   organizedBy?: number[],       // comunidades del directorio que organizan esta (ver abajo)
@@ -101,7 +101,6 @@ scripts/               # Utilidades de mantenimiento de datos
   urls: Array<UrlEntry>,        // canales; ver src/lib/communityUrls.js
   archivedUrls?: string[],      // canales históricos que ya nadie atiende: se conservan pero NO se muestran
   thumbnailUrl: string,
-  latLon: { lat: number | null, lon: number | null },
   displayOnMap: boolean,
   humanValidated: boolean   // false = datos enriquecidos por IA (scraper), true = revisados por humano
 }
@@ -148,7 +147,6 @@ npm run find-duplicates               # Detecta duplicados por ID
 npm run ensure-id-autoincrement       # Verifica secuencia de IDs
 npm run compile-communities           # Compila communities.json + .geojson desde la fuente
 npm run generate-llm-artifacts        # Genera llms.txt, llms-full.txt, CSV, schema.json y sitemap
-npm run explode-communities           # Migración one-shot al layout por fichero
 npm run assign-community-ids          # Asigna ids pendientes (uso en master / CI)
 
 # Enriquecimiento de datos (nuevos)
@@ -396,18 +394,77 @@ que lo escribió. `shortDescriptionI18n` son traducciones de ese mismo texto,
   `src/lib/dataCoverage.js`). Sin ese recuento, `/en/` parece completo porque cada ficha tiene
   *una* descripción, aunque esté en castellano.
 
-### Coordenadas (`latLon`) en una edición
+### Sedes (`locations`)
 
-El formulario **no** geocodifica: siembra el borrador con el `latLon` de la ficha actual y
-solo usa Nominatim para inferir `provinceId`. Tampoco hay input de lat/lon. Por eso una
-edición que mueve `location` llega con las coordenadas viejas en el payload (PR #457: la
-ubicación pasó a Mallorca y el pin se quedó en Barcelona).
+Una comunidad puede tener actividad presencial fija en varias ciudades compartiendo nombre,
+web, canales y equipo (issue #45; el caso que lo motivó es Step4ward, #470). `locations` es
+la lista de esas sedes, `[{ name, latLon }]`, **la primera es la principal**. Sustituyó a
+`location` + `latLon` en la fuente **y** en el bundle publicado: no hay campos derivados, y
+`schema.json`, el CSV (`locations` unido por `|`, sin lat/lon), `llms-full.txt` y el GeoJSON
+(una feature por sede) leen la lista. Toda la lógica pura en `src/lib/communityLocations.js`.
 
-Quien lo arregla es `resolveCoordinates` en `scripts/process-community-issue.js`: si la
-propuesta cambia `location` **y** trae exactamente las coordenadas heredadas, regeocodifica.
-Si las trae distintas, alguien las puso a mano y manda su valor. Si Nominatim falla o no
-devuelve nada, conserva las heredadas: sacar la comunidad del mapa es peor que un pin
-desactualizado.
+- **Sede o ficha propia.** Sede si las ciudades comparten nombre, web, canales, temáticas y
+  equipo. Ficha propia (con `parentId` si hay paraguas) en cuanto cada ciudad tiene equipo,
+  canales y agenda propios: GDG, grupos de Drupal. Las sedes son ubicaciones **fijas**: una
+  conferencia que cambia de ciudad cada año sigue siendo `Itinerante`.
+- **`[]` es "sin ubicación física registrada"**: paraguas, online o dato que falta. Lo que los
+  distingue es `communityType` y `eventFormat`, no un campo más; la ficha lo dice en voz alta
+  (`resolveMissingLocationReason`). El formulario emite `[]` para paraguas y online (antes
+  forzaba `"n/a"` y `""`).
+- **Marcadores.** Una lista **cerrada** (`LOCATION_PLACEHOLDERS`: `n/a`, `Sin completar`…)
+  autoriza a descartar una sede al procesar una propuesta; una lista amplia borraría `NA`
+  (Navarra). Lo que solo *parece* un marcador (`?`, `-`, `desconocido`) se oculta al pintar y
+  el validador avisa, pero nunca se borra. Los marcadores que quedan en el dataset se limpian
+  en bloque, aparte.
+- **`Itinerante` se enseña, pero no es un sitio**: no se geocodifica (Nominatim lo resolvía a
+  un pueblo de Perú) ni pone a la comunidad en el mapa (`isMappableLocationName`).
+- **Anti-deriva.** La validación **global** —no la estricta, que solo mira lo que cambia—
+  exige `locations` y rechaza `location`/`latLon` en cualquier fichero. No hubo código de
+  transición: lo que siga escribiendo la forma vieja (una propuesta de antes, un script) falla
+  en `validate-data`. `tests/noLegacyLocation.test.js` hace lo mismo con el código.
+- **Edición parcial**: en `normalizePayload`, sin clave `locations` (o `displayOnMap`) la ficha
+  conserva lo suyo; `[]` vacía. Misma convención que `openTo` y `archivedUrls`.
+- **Responsables**: se asigna a las provincias de **todas** las sedes, inferidas sede a sede
+  (sobre el texto unido, `inferProvinceIdFromText` devuelve el primer alias de su tabla, no la
+  primera ciudad). Si alguna no tiene responsable, además los de defecto y `needs-area-owner`.
+  El payload manda `provinceIds`; `provinceId` en la salida del resolver es la principal.
+- **El validador avisa** de una sede que nombra varias provincias ("Madrid, Barcelona"): suele
+  ser alguien que metió varias ciudades en una fila. "Vigo, Galicia" da una sola y no avisa.
+
+#### El mapa promete una cosa
+
+El mapa responde **"¿dónde hay actividad presencial?"**. Un pin es una afirmación sobre un
+sitio concreto: si no ocurre nada allí, no hay pin. Lo que da servicio sin sede (una
+comunidad nacional sin encuentros en Soria) se descubre por el listado, **nunca replicando
+pins**. "¿Qué podría montar o reactivar aquí?" es otro caso de uso (#522).
+
+- Un pin por sede con coordenadas. Todo lo que va del mapa a la lista (comunidades visibles,
+  leyenda, recuentos, `key` de las tarjetas) pasa por `uniqueCommunitiesById`: una comunidad
+  con dos sedes en pantalla es **una** tarjeta, y entra en la lista si **cualquiera** de sus
+  sedes cae en el extent.
+- La tarjeta no cambia (ni etiqueta de ubicación ni `+N`): ruido en la cuadrícula. La ficha
+  pinta un badge por sede, cada uno con su foco de mapa, y no resalta la sede del extent
+  porque no sabe qué hay en pantalla.
+
+#### Coordenadas en una edición
+
+El formulario **no** geocodifica: siembra cada fila con el `latLon` de su sede y solo usa
+Nominatim para inferir la provincia de cada fila, de una en una. Tampoco hay input de
+lat/lon. Por eso renombrar una sede llega con las coordenadas viejas (PR #457: la ubicación
+pasó a Mallorca y el pin se quedó en Barcelona).
+
+Quien lo arregla es `resolveCoordinates` en `scripts/process-community-issue.js`, **sede a
+sede**: si el nombre ya estaba en la ficha, conserva sus coordenadas; si una sede renombrada
+trae exactamente las de otra sede anterior, regeocodifica; si las trae distintas, alguien las
+puso a mano y manda su valor; las nuevas se geocodifican, a 1 req/s. Si Nominatim falla,
+conserva lo que traía la fila: sacar la comunidad del mapa es peor que un pin desactualizado.
+Fuera del mapa no se geocodifica, pero **tampoco se borran** las coordenadas que hubiera.
+
+`displayOnMap` lo deriva el formulario (alguna sede que sea un sitio), salvo en una edición
+que no toca las sedes: ahí se conserva el de la ficha. Hay fichas fuera del mapa a propósito
+(AI4MED, con cuatro ciudades en una sola sede) y enviarlas sin cambios las metía en el mapa
+con un pin geocodificado a ciegas. `tests/locationsEditRoundTrip.test.js` comprueba sobre
+todo el dataset que editar sin tocar nada no cambia sedes ni `displayOnMap`.
 
 ### Fusiones (`status: "merged"` + `mergedIntoId`)
 
@@ -533,7 +590,7 @@ borra, se van con él.
 
 ### Ámbito geográfico (`geographicScope`)
 
-Territorio al que la comunidad da servicio (issue #402). **No** es lo mismo que `location`:
+Territorio al que la comunidad da servicio (issue #402). **No** es lo mismo que `locations`:
 una comunidad puede celebrar sus eventos en Madrid y dar apoyo a nivel nacional (Women4TT).
 
 - El campo es **opcional** en los ficheros fuente: las 600+ fichas anteriores no lo traen y

@@ -65,9 +65,9 @@ comunidades en un único JSON, dos propuestas simultáneas chocaban siempre.
 ## Modelo mental de datos
 
 Campos de una comunidad: `id`, `name`, `status`, `hidden`, `lastReviewed`, `communityType`,
-`eventFormat`, `location`, `provinceId`, `geographicScope`, `parentId`, `shortDescription`,
+`eventFormat`, `locations`, `geographicScope`, `parentId`, `shortDescription`,
 `topics`, `langs`, `tags`, `targetAudience`, `matchesAllTags`, `matchesAllAudience`,
-`contactInfo`, `communityUrl`, `urls`, `archivedUrls`, `thumbnailUrl`, `latLon`,
+`contactInfo`, `communityUrl`, `urls`, `archivedUrls`, `thumbnailUrl`,
 `displayOnMap`, `humanValidated`. El esquema comentado está en `docs/DATA.md` y en
 `buildSchema()` de `scripts/generate-llm-artifacts.js`.
 
@@ -80,8 +80,12 @@ Lo que no se deduce leyendo el JSON:
   `description` y `synonyms`, no solo el ID.
 - `matchesAllTags` y `matchesAllAudience` compactan el array a `[]` en el payload final, pero
   **no** deben borrar la selección visible del formulario.
-- `location` es dónde ocurren los eventos; `geographicScope` es el territorio al que da
-  servicio. Son cosas distintas (#402).
+- `locations` son las sedes: `[{ name, latLon }]`, la principal primero (#45). `[]` es "sin
+  ubicación física" (online, paraguas o sin rellenar). `location` y `latLon` ya no existen:
+  la validación global los rechaza en cualquier fichero. `geographicScope` es el territorio
+  al que da servicio, otra cosa (#402).
+- Sede o ficha propia: sede si las ciudades comparten nombre, web, canales y equipo; ficha
+  propia (con `parentId` si hay paraguas) en cuanto cada ciudad tiene equipo y agenda propios.
 - `archivedUrls` son canales que la comunidad ya no atiende: se conservan pero **nunca** se
   renderizan, y la clave se omite si está vacía.
 - `communityUrl` sigue siendo la URL principal y el fallback.
