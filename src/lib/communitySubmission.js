@@ -642,7 +642,19 @@ export function buildCommunityPayload(draft, existingCommunity = null, options =
   // Paraguas y online emiten `[]` ("sin ubicación física"): antes forzaban `"n/a"` y `""`,
   // dos marcadores distintos para decir lo mismo.
   const hasLocations = supportsLocation && !isUmbrellaOrganization;
-  const normalizedLocations = hasLocations ? fromLocationRows(draft.locations) : [];
+  // Una edición de una ficha que ya era online / formato desconocido y lo sigue siendo no
+  // toca sus sedes: el campo está oculto, y mandar `[]` le borraba sedes y coordenadas a
+  // quien sólo venía a corregir una URL (23 fichas con pin). Si el formato cambia en esta
+  // edición, sí se vacían: eso es lo que se está proponiendo.
+  const keepsExistingLocations = !hasLocations
+    && !isUmbrellaOrganization
+    && Boolean(existingCommunity)
+    && existingCommunity.eventFormat === normalizedEventFormat;
+  const normalizedLocations = hasLocations
+    ? fromLocationRows(draft.locations)
+    : keepsExistingLocations
+      ? fromLocationRows(existingCommunity.locations)
+      : [];
   const normalizedProvinceIds = hasLocations ? provinceIdsFromLocationRows(draft.locations) : [];
   const rawThumbnailUrl = draft.replaceThumbnail
     ? cleanString(draft.thumbnailUrl)

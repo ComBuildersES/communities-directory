@@ -1,7 +1,8 @@
 /* eslint-env node */
 import fs from 'fs';
 import { resolveUrlEntry, toUrlEntries } from '../../src/lib/communityUrls.js';
-import { hasCoordinates, inferProvinceIdsFromLocations } from '../../src/lib/communityLocations.js';
+import { hasCoordinates } from '../../src/lib/communityLocations.js';
+import { resolveProvinceIds } from '../resolve-issue-assignees.js';
 
 /**
  * Ficha legible de una propuesta de comunidad para el cuerpo de la PR automática
@@ -252,7 +253,9 @@ function buildUrlDiffRows(payload, existing) {
 
 function withProvinceIds(record) {
   if (!record || !Array.isArray(record.locations)) return record;
-  return { ...record, provinceIds: inferProvinceIdsFromLocations(record.locations) };
+  // La misma resolución que la asignación real (resolve-issue-assignees.js): si no, la fila
+  // dice unas provincias y la propuesta se asigna a otras.
+  return { ...record, provinceIds: resolveProvinceIds({ payload: record }) };
 }
 
 export function buildProposalSummary({ mode, payload: rawPayload, existing: rawExisting = null, catalogs }) {

@@ -283,3 +283,16 @@ describe("vínculos entre fichas", () => {
     expect(warnings).toBeInstanceOf(Array);
   });
 });
+
+describe('sedes desde la IA (code review)', () => {
+  it('acepta una sola ciudad como texto', () => {
+    const { community } = parseAssistedCommunityJson('{"name":"A","locations":"Madrid"}', CATALOGUES);
+    expect(community.locations).toEqual([{ name: 'Madrid' }]);
+  });
+
+  it('avisa en vez de callar si el modelo manda el campo viejo `location`', () => {
+    const { community, warnings } = parseAssistedCommunityJson('{"name":"A","location":"Madrid"}', CATALOGUES);
+    expect(community).not.toHaveProperty('locations');
+    expect(warnings).toContain('unknown:location:Madrid');
+  });
+});

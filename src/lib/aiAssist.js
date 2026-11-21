@@ -96,6 +96,7 @@ export const ASSIST_KEYS = [
  * Nominatim; un modelo las adivinaría, y un pin mal puesto parece un dato.
  */
 function parseAssistLocations(value) {
+  if (typeof value === "string") return parseAssistLocations([value]);
   if (!Array.isArray(value)) return [];
   const seen = new Set();
   const names = [];
@@ -247,6 +248,11 @@ export function parseAssistedCommunityJson(raw, { knownTagIds = [], knownAudienc
 
   const locations = parseAssistLocations(parsed.locations);
   if (locations.length > 0) community.locations = locations;
+  // Un modelo que sigue el esquema viejo manda `location`: no se aplica (los campos viejos no
+  // existen), pero se avisa para que la persona lo copie a mano en vez de perderlo.
+  if (locations.length === 0 && cleanString(parsed.location)) {
+    warnings.push(`unknown:location:${cleanString(parsed.location)}`);
+  }
 
   const fieldCount = Object.keys(community).length;
 

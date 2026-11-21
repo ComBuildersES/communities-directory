@@ -16,7 +16,8 @@ const REQUEST_DELAY_MS = 1100;
 // "Itinerante" es un hecho, no un hueco, pero no hay provincia que simular. Los marcadores
 // (`n/a`, `Sin completar`…) los descarta `getDisplayLocationNames`.
 const SKIPPED_LOCATIONS = new Set(["", "itinerante"]);
-const EVENT_FORMATS_WITH_LOCATION = new Set(["Presencial", "Híbridos"]);
+// Claves neutrales: con las españolas de antes ("Presencial", "Híbridos") se saltaba todo.
+const EVENT_FORMATS_WITH_LOCATION = new Set(["in-person", "hybrid"]);
 
 function parseArgs(argv) {
   const options = {
@@ -141,7 +142,7 @@ function shouldSkipLocation(value = "") {
 function shouldSkipCommunity(community = {}) {
   const normalizedCommunityType = normalizeText(community.communityType);
 
-  if (normalizedCommunityType === normalizeText("Organización paraguas")) {
+  if (normalizedCommunityType === normalizeText("umbrella-org")) {
     return {
       skipped: true,
       reason: "community-type-without-location",

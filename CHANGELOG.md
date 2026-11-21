@@ -48,6 +48,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Fixes
 
+- 2026-11-21 `6e5716b` correcciones de la revisión del PR
 - 2026-11-16 `59b83f1` assign community builders to issues
 - 2026-11-12 `28ef24f` no pedir logo ni URL a las comunidades inactivas
 - 2026-11-12 `d131a3d` dejar de cobrar clics y atención por lo que ya se sabe
@@ -95,7 +96,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
-- 2026-11-21 `c2bba93` reglas del dataset y documentación de las sedes
+- 2026-11-21 `84b7ed2` reglas del dataset y documentación de las sedes
 - 2026-11-12 `9bdda6c` por qué las cuatro altas de GDG se quedan fuera
 - 2026-11-12 `66364d5` el porqué de los canales como pares, no lo que ya dice el esquema
 - 2026-11-10 `9c84a1a` regenerar el changelog tras el merge

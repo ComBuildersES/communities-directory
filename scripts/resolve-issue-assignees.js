@@ -58,7 +58,7 @@ function buildAliasLookup(provinces = {}) {
   return aliasLookup;
 }
 
-function resolveProvinceIdFromText(value, aliasLookup) {
+function resolveProvinceIdFromText(value, aliasLookup, { bySubstring = true } = {}) {
   if (!value) return null;
 
   const normalizedCandidate = normalizeText(value);
@@ -66,7 +66,9 @@ function resolveProvinceIdFromText(value, aliasLookup) {
     return aliasLookup.get(normalizedCandidate);
   }
 
-  return normalizeProvinceCandidate(value) ?? inferProvinceIdFromText(value) ?? null;
+  return normalizeProvinceCandidate(value)
+    ?? (bySubstring ? inferProvinceIdFromText(value) : null)
+    ?? null;
 }
 
 /**
@@ -85,10 +87,15 @@ export function resolveProvinceIds({ payload, aliasLookup = new Map() }) {
     .map((location) => location.name);
 
   const ids = [];
-  for (const candidate of [...declared, ...fromLocations]) {
-    const id = resolveProvinceIdFromText(candidate, aliasLookup);
-    if (id && !ids.includes(id)) ids.push(id);
-  }
+  const push = (id) => { if (id && !ids.includes(id)) ids.push(id); };
+
+  for (const candidate of declared.filter(Boolean)) push(resolveProvinceIdFromText(candidate, aliasLookup));
+
+  // Lo que mandó el navegador (Nominatim) manda. Sobre los nombres, si ya hay provincias
+  // declaradas, sólo cuenta una coincidencia **exacta** con un alias: la inferencia por
+  // subcadena convertía "San Sebastián de los Reyes" (Madrid) en Gipuzkoa.
+  const bySubstring = ids.length === 0;
+  for (const name of fromLocations) push(resolveProvinceIdFromText(name, aliasLookup, { bySubstring }));
   return ids;
 }
 

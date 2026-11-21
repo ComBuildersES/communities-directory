@@ -593,7 +593,13 @@ async function main() {
     `${buildProposalSummary({
       mode,
       // Con las coordenadas ya resueltas: es lo que se va a escribir en la ficha.
-      payload: resolvedLocations !== undefined ? { ...payload, locations: resolvedLocations } : payload,
+      payload: {
+        ...payload,
+        ...(resolvedLocations !== undefined ? { locations: resolvedLocations } : {}),
+        // Las provincias que infirió el navegador, para que la fila del resumen sea la de la
+        // asignación. No se guardan en la ficha.
+        ...(Array.isArray(rawPayload.provinceIds) ? { provinceIds: rawPayload.provinceIds } : {}),
+      },
       existing,
     })}\n`
   );

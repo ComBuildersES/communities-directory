@@ -63,6 +63,20 @@ describe("resolveIssueAssignees", () => {
       expect(result.provincesWithoutOwner).toEqual(["soria"]);
     });
 
+    it("lo que mandó el navegador manda: el nombre sólo suma si coincide exacto con un alias", () => {
+      const result = resolveIssueAssignees({
+        body: bodyOf({ provinceIds: ["madrid"], locations: [{ name: "San Sebastián de los Reyes" }] }),
+        ownersConfig,
+      });
+      expect(result.provinceIds).toEqual(["madrid"]);
+      expect(result.usedFallback).toBe(false);
+    });
+
+    it("sin provincias declaradas, se infiere por el nombre", () => {
+      const result = resolveIssueAssignees({ body: bodyOf({ locations: [{ name: "Barcelona, España" }] }), ownersConfig });
+      expect(result.provinceIds).toEqual(["barcelona"]);
+    });
+
     it("no cuenta los marcadores como sede", () => {
       const result = resolveIssueAssignees({ body: bodyOf({ locations: [{ name: "n/a" }] }), ownersConfig });
       expect(result.provinceIds).toEqual([]);

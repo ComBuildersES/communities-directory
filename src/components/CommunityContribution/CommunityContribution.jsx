@@ -2344,7 +2344,8 @@ export function CommunityContribution({
                         onChange={(event) => handleLocationRowChange(row._rowId, event.target.value)}
                         placeholder={t("contribution.form.locationPlaceholder")}
                         aria-label={t("contribution.form.locationRowLabel", { position: index + 1 })}
-                        required={index === 0}
+                        // Obligatorio es "al menos una ciudad", no "la primera fila".
+                        required={index === 0 && draft.locations.every((location) => !location.name.trim())}
                       />
                     </div>
                     {(draft.locations.length > 1 || row.name.trim()) && (

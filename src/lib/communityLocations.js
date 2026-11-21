@@ -254,7 +254,10 @@ export function makeLocationRow(location = {}) {
 export function toLocationRows(locations) {
   const rows = (Array.isArray(locations) ? locations : [])
     .filter((location) => location && typeof location === "object")
-    .map((location) => (location._rowId ? { ...makeLocationRow(location), _rowId: location._rowId } : makeLocationRow(location)));
+    // Siempre un `_rowId` nuevo, aunque la fila venga de un borrador guardado: el contador
+    // vuelve a 0 en cada carga, y reutilizar el guardado chocaba con las filas nuevas
+    // (escribir en una editaba las dos, quitar una quitaba las dos).
+    .map((location) => makeLocationRow(location));
   return rows.length > 0 ? rows : [makeLocationRow()];
 }
 

@@ -410,7 +410,12 @@ la lista de esas sedes, `[{ name, latLon }]`, **la primera es la principal**. Su
 - **`[]` es "sin ubicación física registrada"**: paraguas, online o dato que falta. Lo que los
   distingue es `communityType` y `eventFormat`, no un campo más; la ficha lo dice en voz alta
   (`resolveMissingLocationReason`). El formulario emite `[]` para paraguas y online (antes
-  forzaba `"n/a"` y `""`).
+  forzaba `"n/a"` y `""`), **salvo** en una edición de una ficha que ya era online o de
+  formato desconocido y lo sigue siendo: ahí el campo está oculto y se reenvían sus sedes tal
+  cual (23 fichas con pin perdían sedes y coordenadas al corregirles una URL).
+- **Responsables**: lo que infiere el navegador (`provinceIds`, Nominatim) manda; sobre los
+  nombres solo suma una coincidencia **exacta** con un alias, salvo que no haya nada
+  declarado ("San Sebastián de los Reyes" no es Gipuzkoa).
 - **Marcadores.** Una lista **cerrada** (`LOCATION_PLACEHOLDERS`: `n/a`, `Sin completar`…)
   autoriza a descartar una sede al procesar una propuesta; una lista amplia borraría `NA`
   (Navarra). Lo que solo *parece* un marcador (`?`, `-`, `desconocido`) se oculta al pintar y
@@ -420,8 +425,12 @@ la lista de esas sedes, `[{ name, latLon }]`, **la primera es la principal**. Su
   un pueblo de Perú) ni pone a la comunidad en el mapa (`isMappableLocationName`).
 - **Anti-deriva.** La validación **global** —no la estricta, que solo mira lo que cambia—
   exige `locations` y rechaza `location`/`latLon` en cualquier fichero. No hubo código de
-  transición: lo que siga escribiendo la forma vieja (una propuesta de antes, un script) falla
-  en `validate-data`. `tests/noLegacyLocation.test.js` hace lo mismo con el código.
+  transición: lo que **escriba** la forma vieja (un script, un fichero a mano) falla en
+  `validate-data`, y `tests/noLegacyLocation.test.js` hace lo mismo con el código. Ojo: una
+  **edición** de antes de la migración (issue, borrador en `localStorage`) no escribe los
+  campos viejos —`normalizePayload` los ignora y la ficha conserva sus sedes—, así que no
+  falla: su cambio de ubicación se pierde en silencio. Lo que estuviese en vuelo el día del
+  deploy lo repasa un agente a mano (decisión de @hhkaos).
 - **Edición parcial**: en `normalizePayload`, sin clave `locations` (o `displayOnMap`) la ficha
   conserva lo suyo; `[]` vacía. Misma convención que `openTo` y `archivedUrls`.
 - **Responsables**: se asigna a las provincias de **todas** las sedes, inferidas sede a sede
@@ -442,6 +451,9 @@ pins**. "¿Qué podría montar o reactivar aquí?" es otro caso de uso (#522).
   leyenda, recuentos, `key` de las tarjetas) pasa por `uniqueCommunitiesById`: una comunidad
   con dos sedes en pantalla es **una** tarjeta, y entra en la lista si **cualquiera** de sus
   sedes cae en el extent.
+- El número de un cluster cuenta **pins**, no comunidades: dos sedes cercanas de la misma
+  comunidad suman 2 en el cluster y 1 en la lista. Aceptado: tocar la etiqueta del cluster
+  se descartó en el plan.
 - La tarjeta no cambia (ni etiqueta de ubicación ni `+N`): ruido en la cuadrícula. La ficha
   pinta un badge por sede, cada uno con su foco de mapa, y no resalta la sede del extent
   porque no sabe qué hay en pantalla.

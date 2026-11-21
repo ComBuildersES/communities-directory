@@ -4,7 +4,6 @@ import { readCommunities, stableStringify } from "../scripts/lib/communities-sto
 import { normalizePayload, resolveCoordinates } from "../scripts/process-community-issue.js";
 import { getDisplayLocations } from "../src/lib/communityLocations.js";
 import {
-  EVENT_FORMATS_WITH_LOCATION,
   buildCommunityPayload,
   getCommunityDraft,
 } from "../src/lib/communitySubmission.js";
@@ -20,8 +19,9 @@ import {
  * `n/a` (se descarta). Ese es el comportamiento acordado, no una deriva.
  */
 function editsWithoutChanges(community) {
-  return EVENT_FORMATS_WITH_LOCATION.includes(community.eventFormat)
-    && community.communityType !== "umbrella-org"
+  // Incluye las online y de formato desconocido: su campo de sedes está oculto, y aun así
+  // una edición no puede borrarles las sedes (code review: 23 fichas con pin).
+  return community.communityType !== "umbrella-org"
     && getDisplayLocations(community).length === community.locations.length;
 }
 

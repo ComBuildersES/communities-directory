@@ -8,6 +8,8 @@ import {
   getMappableLocations,
   inferProvinceIdsFromLocations,
   isLocationPlaceholder,
+  makeLocationRow,
+  toLocationRows,
   looksLikeLocationPlaceholder,
   normalizeLocations,
   provincesInLocationName,
@@ -170,5 +172,16 @@ describe("mapa: pins por sede, comunidades únicas", () => {
   it("dos sedes en el extent son una comunidad en la lista", () => {
     const visible = buildMapLocations([two, one]).map((p) => p.community);
     expect(uniqueCommunitiesById(visible).map((c) => c.id)).toEqual([1, 2]);
+  });
+});
+
+describe("toLocationRows (code review)", () => {
+  it("da ids nuevos aunque la fila venga de un borrador con `_rowId`: no chocan con las nuevas", () => {
+    // Ids guardados que el contador va a volver a repartir tras recargar la página.
+    const stored = [1, 2, 3, 4, 5, 6].map((n) => ({ _rowId: `location-row-${n}`, name: `Ciudad ${n}` }));
+    const restored = toLocationRows(stored);
+    const fresh = [makeLocationRow(), makeLocationRow(), makeLocationRow()];
+    const ids = [...restored, ...fresh].map((row) => row._rowId);
+    expect(new Set(ids).size).toBe(ids.length);
   });
 });

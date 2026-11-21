@@ -124,3 +124,25 @@ describe("buildCommunityPayload: sedes (issue #45)", () => {
     expect(buildCommunityPayload(getCommunityDraft(existing), existing).displayOnMap).toBe(false);
   });
 });
+
+describe("buildCommunityPayload: formatos sin campo de sedes (code review)", () => {
+  const existing = {
+    ...baseCommunity,
+    eventFormat: "unknown",
+    locations: [{ name: "Madrid", latLon: { lat: 40.4, lon: -3.7 } }],
+    displayOnMap: true,
+  };
+
+  it("una edición que no cambia el formato conserva sedes, coordenadas y pin", () => {
+    const draft = { ...getCommunityDraft(existing), communityUrl: "https://nueva.example" };
+    const payload = buildCommunityPayload(draft, existing);
+    expect(payload.locations).toEqual(existing.locations);
+    expect(payload.displayOnMap).toBe(true);
+  });
+
+  it("si la edición pasa la ficha a online, las sedes sí se vacían", () => {
+    const presencial = { ...existing, eventFormat: "in-person" };
+    const draft = { ...getCommunityDraft(presencial), eventFormat: "online" };
+    expect(buildCommunityPayload(draft, presencial).locations).toEqual([]);
+  });
+});
