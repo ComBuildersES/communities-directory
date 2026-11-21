@@ -8,6 +8,9 @@
   "location": "Coruña",
   "parentId": 207,
   "shortDescription": "GDG A Coruña es una comunidad abierta que conecta a los amantes de la tecnología en A Coruña. Organizamos eventos, talleres y charlas para fomentar el aprendizaje, el intercambio de ideas y la innovación tecnológica.",
+  "shortDescriptionI18n": {
+    "en": "GDG A Coruña is an open community connecting technology lovers in A Coruña. We organise events, workshops and talks to encourage learning, the exchange of ideas and technical innovation."
+  },
   "topics": "",
   "langs": [
     "es"

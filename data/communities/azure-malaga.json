@@ -9,6 +9,9 @@
   "geographicScope": "provincial",
   "parentId": null,
   "shortDescription": "Comunidad de Azure del sur de España! Organizamos encuentros y participamos en eventos internacionales: Global Azure, Global AI y GlobalDevOpsX; además, ofrecemos talleres y oportunidades para establecer contactos entre los aficionados a la nube.",
+  "shortDescriptionI18n": {
+    "en": "The Azure community of southern Spain. We run our own meetups and take part in international events -- Global Azure, Global AI and GlobalDevOpsX -- and we offer workshops and chances to network for cloud enthusiasts."
+  },
   "topics": "",
   "langs": [
     "es"

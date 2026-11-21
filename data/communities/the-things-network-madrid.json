@@ -8,6 +8,9 @@
   "location": "Madrid, Spain",
   "parentId": 620,
   "shortDescription": "La comunidad TTN Madrid, tiene por objeto implementar la tecnologia de telecomunicaciones LoRa, que habilita Internet de las Cosas. Desplegamos la red The Things Network, y colaboramos en la implantación de Gateways, nodos y desarrollamos casos de uso.",
+  "shortDescriptionI18n": {
+    "en": "The TTN Madrid community exists to deploy LoRa telecommunications technology, which enables the Internet of Things. We roll out The Things Network, help install gateways and nodes, and develop use cases."
+  },
   "topics": "",
   "langs": [
     "es"

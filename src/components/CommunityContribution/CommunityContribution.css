@@ -104,25 +104,40 @@
   position: absolute;
   top: calc(100% + 0.45rem);
   left: 0;
-  width: min(360px, 75vw);
-  padding: 0.85rem 0.95rem;
+  width: min(340px, 75vw);
+  padding: 0.9rem 1rem;
   border-radius: 14px;
-  background: #f8fbff;
+  background: #ffffff;
   border: 1px solid #d7e3f3;
   box-shadow: 0 18px 40px rgba(35, 61, 99, 0.14);
-  color: #56677d;
+  color: #4a5a70;
   z-index: 60;
+  /*
+    El popover vive dentro del <label>, y Bulma le pone `font-weight: 700` a `.label`: sin
+    esto, el cuerpo del texto se hereda en negrita y un párrafo de cuatro líneas en negrita
+    sobre fondo azul es exactamente lo que no se lee.
+  */
+  font-weight: 400;
+  line-height: 1.55;
+  text-align: left;
+  white-space: normal;
 }
 
 .contribution-field-help-popover strong {
   display: block;
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.4rem;
   color: #21324a;
+  font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .contribution-field-help-popover p {
-  margin: 0 0 0.45rem;
-  font-size: 0.9rem;
+  margin: 0 0 0.6rem;
+  font-size: 0.875rem;
+}
+
+.contribution-field-help-popover p:last-child {
+  margin-bottom: 0;
 }
 
 .contribution-field-help-popover ul {
@@ -133,8 +148,8 @@
 
 .contribution-field-help-popover li {
   font-weight: 400;
-  line-height: 1.5;
-  font-size: 0.9rem;
+  line-height: 1.55;
+  font-size: 0.875rem;
 }
 
 .contribution-field-help-popover li::marker {
@@ -142,7 +157,12 @@
 }
 
 .contribution-field-help-popover li + li {
-  margin-top: 0.55rem;
+  margin-top: 0.4rem;
+}
+
+/* Sin viñetas no hay lista que pintar: el hueco dejaba un margen suelto bajo el párrafo. */
+.contribution-field-help-popover ul:empty {
+  display: none;
 }
 
 .contribution-help-modal-overlay {
@@ -1562,4 +1582,61 @@
        ese hueco además del del borde, o se corta por la izquierda. */
     max-width: calc(100vw - 3rem);
   }
+}
+
+/* Traducciones de la descripción: plegadas, porque la mayoría escribe en un solo idioma. */
+.contribution-description-i18n {
+  margin-top: 0.75rem;
+  border-top: 1px solid #e4e9f0;
+  padding-top: 0.6rem;
+}
+
+.contribution-description-i18n-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #2563eb;
+}
+
+.contribution-description-i18n-toggle:hover {
+  text-decoration: underline;
+}
+
+.contribution-description-i18n-count {
+  color: #62748a;
+  font-variant: all-small-caps;
+  letter-spacing: 0.04em;
+}
+
+.contribution-description-i18n-fields {
+  margin-top: 0.6rem;
+}
+
+/*
+  Autoría plegada: en los tipos donde casi nunca aplica, el campo se ofrece en vez de
+  preguntarse (src/lib/organizedCommunities.js).
+*/
+.contribution-organized-by-reveal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  /* Alineado con la primera línea de la columna de al lado: la celda no lleva etiqueta y,
+     sin este margen, el enlace flotaba a media altura entre dos campos etiquetados. */
+  margin-top: 1.85rem;
+  align-self: start;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #2563eb;
+}
+
+.contribution-organized-by-reveal:hover {
+  text-decoration: underline;
 }

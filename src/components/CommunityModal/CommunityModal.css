@@ -297,6 +297,13 @@ button.modal-badge:focus-visible {
   font-style: italic;
 }
 
+/* Aviso de "esta descripción no está en el idioma que estás leyendo" */
+.community-modal-summary-note {
+  margin: 0.5rem 0 0;
+  font-size: 0.75rem;
+  color: #7a7a7a;
+}
+
 /* Red paraguas (comunidad pertenece a una umbrella org) */
 .community-modal-parent-network {
   display: inline-flex;

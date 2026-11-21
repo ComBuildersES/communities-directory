@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "Málaga",
   "shortDescription": "Comunidad para compartir conocimiento y experiencias sobre el lenguaje de programación Scala.",
+  "shortDescriptionI18n": {
+    "en": "A community for sharing knowledge and experiences about the Scala programming language."
+  },
   "topics": "",
   "langs": [
     "es"

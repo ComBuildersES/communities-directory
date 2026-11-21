@@ -7,6 +7,9 @@
   "eventFormat": "hybrid",
   "location": "Málaga",
   "shortDescription": "Comunidad local para compartir conocimiento y experiencias sobre ciberseguridad.",
+  "shortDescriptionI18n": {
+    "en": "A local community for sharing knowledge and experiences about cybersecurity."
+  },
   "topics": "",
   "langs": [
     "es"

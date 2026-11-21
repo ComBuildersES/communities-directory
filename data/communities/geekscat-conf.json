@@ -11,6 +11,10 @@
     647
   ],
   "shortDescription": "Esdeveniment anual de la comunitat tecnològica catalana, hereu de la Festa Open Source. Xerrades tècniques sobre codi, infraestructura, dades i IA, organitzades per voluntaris de GeeksCAT.",
+  "shortDescriptionI18n": {
+    "en": "The annual event of the Catalan tech community, heir to the Festa Open Source. Technical talks on code, infrastructure, data and AI, organised by GeeksCAT volunteers.",
+    "es": "Evento anual de la comunidad tecnológica catalana, heredero de la Festa Open Source. Charlas técnicas sobre código, infraestructura, datos e IA, organizadas por voluntarios de GeeksCAT."
+  },
   "topics": "",
   "langs": [
     "ca",

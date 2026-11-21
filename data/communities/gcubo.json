@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "Granada",
   "shortDescription": "Grupo de usuarios GNU/Linux de Granada",
+  "shortDescriptionI18n": {
+    "en": "The GNU/Linux user group of Granada."
+  },
   "topics": "",
   "langs": [
     "es"

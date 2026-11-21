@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "Torremolinos",
   "shortDescription": "Evento internacional sobre programación funcional.",
+  "shortDescriptionI18n": {
+    "en": "An international event about functional programming."
+  },
   "topics": "",
   "langs": [
     "es"

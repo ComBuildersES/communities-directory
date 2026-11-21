@@ -8,6 +8,9 @@
   "location": "Valencia",
   "geographicScope": "local",
   "shortDescription": "Capítulo valenciano de AI Tinkerers: demo nights mensuales de builders de IA, teardowns de producto y encuentros para quien lleva sistemas con agentes a producción.",
+  "shortDescriptionI18n": {
+    "en": "The Valencia chapter of AI Tinkerers: monthly demo nights by AI builders, product teardowns and meetups for people running agent-based systems in production."
+  },
   "topics": "",
   "langs": [
     "es",

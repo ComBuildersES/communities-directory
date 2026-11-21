@@ -9,6 +9,9 @@
   "geographicScope": "national",
   "parentId": null,
   "shortDescription": "Women for technical talks (W4TT) es una asociación dedicada a impulsar la participación de mujeres en carreras STEM como ponentes en eventos técnicos. Nuestro objetivo es visibilizar el talento femenino y fomentar un cambio positivo en la comunidad tecnológica.",
+  "shortDescriptionI18n": {
+    "en": "Women for Technical Talks (W4TT) is an association devoted to boosting the participation of women in STEM careers as speakers at technical events. Our goal is to make female talent visible and encourage positive change in the tech community."
+  },
   "topics": "",
   "langs": [
     "es"

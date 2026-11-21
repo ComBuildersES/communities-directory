@@ -8,6 +8,9 @@
   "location": "Málaga",
   "geographicScope": "local",
   "shortDescription": "Comunidad de mujeres en tecnología en Málaga: encuentros de networking, marca personal y crecimiento profesional, abiertos a cualquier perfil tech.",
+  "shortDescriptionI18n": {
+    "en": "The community of women in technology in Málaga: networking, personal branding and professional growth meetups, open to any tech profile."
+  },
   "topics": "",
   "langs": [
     "es",

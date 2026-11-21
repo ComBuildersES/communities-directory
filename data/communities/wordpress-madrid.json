@@ -8,6 +8,9 @@
   "location": "Madrid",
   "parentId": 512,
   "shortDescription": "Punto de encuentro en Madrid para usuarias, usuarios, disenadores, desarrolladores y empresas alrededor de WordPress.",
+  "shortDescriptionI18n": {
+    "en": "The meeting point in Madrid for users, designers, developers and companies around WordPress."
+  },
   "topics": "",
   "langs": [
     "es"

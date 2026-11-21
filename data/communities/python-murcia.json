@@ -8,6 +8,9 @@
   "location": "Murcia",
   "parentId": 404,
   "shortDescription": "Comunidad de programadores Python en Murcia, España.",
+  "shortDescriptionI18n": {
+    "en": "The community of Python programmers in Murcia, Spain."
+  },
   "topics": "",
   "langs": [
     "es"

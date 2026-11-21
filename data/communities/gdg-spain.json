@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "n/a",
   "shortDescription": "Organización que agrupa a todos los Google Developer Groups (GDGs) de España, entidades sin ánimo de lucro creada con el objetivo de mejorar la comunidad de entusiastas tecnológicos y aumentar el conocimiento y las relaciones entre las personas que se dedican a esta área.",
+  "shortDescriptionI18n": {
+    "en": "The organisation that brings together every Google Developer Group (GDG) in Spain. A non-profit created to improve the community of technology enthusiasts and to grow the knowledge and the relationships among people working in this field."
+  },
   "topics": "",
   "langs": [
     "es"

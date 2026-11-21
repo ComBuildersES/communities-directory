@@ -8,6 +8,9 @@
   "location": "Coruña",
   "parentId": null,
   "shortDescription": "Nuestro objetivo es difundir conocimientos sobre este CMS de código abierto y dar la oportunidad a asistentes y ponentes de compartir sus experiencias.\n\nTanto si usas WordPress de forma personal como si trabajas con él, podrás disfrutar de estas jornadas gratuitas en A Coruña.",
+  "shortDescriptionI18n": {
+    "en": "Our goal is to spread knowledge about this open source CMS and to give attendees and speakers the chance to share their experiences. Whether you use WordPress personally or professionally, you can enjoy these free events in A Coruña."
+  },
   "topics": "",
   "langs": [
     "es"

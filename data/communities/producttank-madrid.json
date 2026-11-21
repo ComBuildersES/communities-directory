@@ -8,6 +8,9 @@
   "location": "Madrid",
   "geographicScope": "local",
   "shortDescription": "Encuentro de la comunidad de producto en Madrid (red ProductTank de Mind the Product): charlas y experiencias prácticas sobre gestión de producto digital.",
+  "shortDescriptionI18n": {
+    "en": "The product community meetup in Madrid (part of Mind the Product's ProductTank network): talks and practical experience reports on digital product management."
+  },
   "topics": "",
   "langs": [
     "es",

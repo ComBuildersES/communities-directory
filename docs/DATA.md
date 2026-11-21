@@ -104,7 +104,10 @@ datos ya estructurados, y de ahí sale una PR automática. Ver
   location: string,             // dónde ocurren sus eventos
   geographicScope: "unknown" | "local" | "provincial" | "regional"
                  | "national" | "international",   // a qué territorio da servicio
-  shortDescription: string,
+  shortDescription: string,       // en el idioma de la propia comunidad
+  shortDescriptionI18n?: {        // traducciones de shortDescription, por idioma
+    [lang: string]: string,       // se omite cuando no hay ninguna
+  },
   topics: string,               // texto libre heredado, separado por comas
   langs: string[],              // "es", "en", "ca", "eu", "gl", "oc"
   tags: string[],               // IDs de tags.json

@@ -7,6 +7,10 @@
   "eventFormat": "in-person",
   "location": "n/a",
   "shortDescription": "Data Saturdays is a place for the data community to run small regional events with little outlay or set-up difficulties. Here you can access a set of tools and have open, transparent discussions on how your event should be set up and utilised.",
+  "shortDescriptionI18n": {
+    "en": "Data Saturdays is a place for the data community to run small regional events with little outlay or set-up difficulties. Here you can access a set of tools and have open, transparent discussions on how your event should be set up and used.",
+    "es": "Data Saturdays es un espacio para que la comunidad de datos organice eventos regionales pequeños sin apenas coste ni complicaciones de montaje. Ofrece un conjunto de herramientas y un espacio de debate abierto y transparente sobre cómo montar y aprovechar tu evento."
+  },
   "topics": "",
   "langs": [
     "es",

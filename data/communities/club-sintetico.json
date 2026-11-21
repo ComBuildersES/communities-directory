@@ -8,6 +8,9 @@
   "location": "Madrid",
   "geographicScope": "national",
   "shortDescription": "Asociación profesional sin ánimo de lucro de creatividad e IA generativa: organiza Birras Sintéticas, el encuentro mensual de perfiles creativos que trabajan con IA.",
+  "shortDescriptionI18n": {
+    "en": "A non-profit professional association around creativity and generative AI. It runs Birras Sintéticas, the monthly meetup for creative professionals working with AI."
+  },
   "topics": "",
   "langs": [
     "es"

@@ -150,7 +150,10 @@
   },
   "topicExplorer": {
     "catalogues": "Catálogos para explorar",
-    "tabs": { "topics": "Temáticas", "audience": "Públicos" },
+    "tabs": {
+      "topics": "Temáticas",
+      "audience": "Públicos"
+    },
     "audience": {
       "searchLabel": "Buscar públicos",
       "searchPlaceholder": "Buscar en todos los públicos…",
@@ -316,6 +319,7 @@
     "noOwnChannelsOrganizer": "Ver los canales de {{name}}",
     "shortDescription": "Descripción breve",
     "noDescription": "Sin descripción breve todavía",
+    "descriptionFallback": "Esta descripción está en {{language}}: todavía no la ha traducido nadie. Puedes añadir la traducción editando la ficha.",
     "links": "Enlaces",
     "mainLink": "Enlace principal",
     "archivedUrlNote": "El enlace principal apunta a una copia archivada en web.archive.org porque la fuente original ya no parece estar disponible.",
@@ -692,8 +696,11 @@
         "bullet4": "Internacional: la comunidad opera más allá de España."
       },
       "organizedBy": {
-        "title": "¿Quién organiza esta comunidad?",
-        "description": "Úsalo cuando esta ficha sea un encuentro recurrente con marca propia que organizan una o varias comunidades del directorio (ej: el Biznaga Fest lo organiza GDG Málaga; la GeeksCAT Conf, GeeksCAT). Es distinto de la organización paraguas: ahí la comunidad pertenece a una red, aquí alguien organiza el encuentro y las dos fichas siguen vivas. Solo se enumeran comunidades listadas en el directorio: empresas, patrocinadores o apoyo institucional no se vinculan aquí. Si el encuentro no lo organiza ninguna comunidad del directorio, déjalo vacío."
+        "title": "¿Quién organiza este encuentro?",
+        "description": "Para fichas que son un encuentro recurrente con marca propia organizado por una o varias comunidades del directorio.",
+        "bullet0": "No es la organización paraguas: ahí la comunidad pertenece a una red; aquí alguien organiza el encuentro y las dos fichas siguen vivas.",
+        "bullet1": "Solo comunidades con ficha en el directorio. Empresas, patrocinadores o apoyo institucional no se enlazan aquí.",
+        "bullet2": "Si no lo organiza ninguna comunidad del directorio, déjalo vacío."
       },
       "mergedInto": {
         "title": "¿Qué es una fusión?",
@@ -761,6 +768,9 @@
       "shortDescriptionLabel": "Descripción breve",
       "shortDescriptionPlaceholder": "Describe en una frase qué ofrece esta comunidad, su enfoque o propuesta de valor. Evita repetir las etiquetas o el público objetivo ya seleccionados.",
       "shortDescriptionExample": "Ejemplo: \"Colectivo sin ánimo de lucro que organiza encuentros mensuales para compartir experiencias prácticas sobre arquitectura de software e ingeniería de plataforma.\"",
+      "descriptionI18nToggle": "Añadir la descripción en otro idioma",
+      "descriptionI18nNote": "El texto de arriba se guarda tal cual, en el idioma en el que lo hayas escrito. El directorio se lee en castellano y en inglés: si añades la traducción, quien entre en el otro idioma leerá la ficha en el suyo.",
+      "descriptionI18nPlaceholder": "La misma descripción en {{language}}",
       "contactLabel": "Contacto público",
       "contactPlaceholder": "email@comunidad.org o URL de contacto",
       "thumbnailLabel": "Thumbnail o logo",
@@ -777,12 +787,13 @@
       "mergedIntoPlaceholder": "Busca por nombre…",
       "mergedIntoNone": "Elige la comunidad resultante de la fusión",
       "organizedByLabel": "Organizada por (comunidades del directorio)",
+      "organizedByReveal": "La organiza una comunidad del directorio",
       "organizedByPlaceholder": "Busca por nombre…",
-      "organizedByNone": "Sin comunidades organizadoras",
       "organizedByRemove": "Quitar {{name}}",
       "parentOrgPlaceholder": "Busca por nombre…",
       "parentOrgTooltip": "Una organización paraguas es una entidad que agrupa varias comunidades locales bajo una misma red o marca (ej: GDG Spain, PyLadies, Codebar). Si tu comunidad pertenece a una de estas redes, selecciónala aquí. La gran mayoría de comunidades no tienen organización paraguas.",
-      "geographicScopeLabel": "Ámbito geográfico"
+      "geographicScopeLabel": "Ámbito geográfico",
+      "organizedByHint": "Solo si la organiza una comunidad del directorio. Ej.: GDG Málaga organiza el Biznaga Fest."
     },
     "tags": {
       "title": "Etiquetas",

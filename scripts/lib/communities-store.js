@@ -36,6 +36,7 @@ const CANONICAL_KEY_ORDER = [
   'mergedIntoId',
   'organizedBy',
   'shortDescription',
+  'shortDescriptionI18n',
   'topics',
   'langs',
   'tags',

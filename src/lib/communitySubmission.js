@@ -1,5 +1,6 @@
 import { normalizeOpenTo } from "./communityOpenTo.js";
 import { normalizeCommunityLangs } from "./communityLanguages.js";
+import { DESCRIPTION_I18N_KEY, normalizeDescriptionTranslations } from "./localizedText.js";
 import { MERGED_STATUS } from "./mergedCommunities.js";
 import { normalizeOrganizedBy } from "./organizedCommunities.js";
 import { URL_KINDS, mergeDraftUrls, toUrlEntries, toUrlRows } from "./communityUrls.js";
@@ -407,6 +408,9 @@ export function getEmptyCommunityDraft(nextId = null) {
     provinceId: "",
     geographicScope: "unknown",
     shortDescription: "",
+    // Traducciones de la descripción, `{ idioma: texto }` (src/lib/localizedText.js). Vacío
+    // es lo normal: la mayoría de la gente escribe su descripción en un solo idioma.
+    [DESCRIPTION_I18N_KEY]: {},
     topics: "",
     langs: ["es"],
     tags: [],
@@ -448,6 +452,7 @@ export function getCommunityDraft(community, nextId = null) {
     ...community,
     openTo: normalizeOpenTo(community.openTo),
     langs: normalizeCommunityLangs(community.langs),
+    [DESCRIPTION_I18N_KEY]: normalizeDescriptionTranslations(community[DESCRIPTION_I18N_KEY]),
     tags: Array.isArray(community.tags) ? community.tags : [],
     targetAudience: Array.isArray(community.targetAudience) ? community.targetAudience : [],
     // Con filas, no entradas sueltas: cada una necesita su `_rowId` o el formulario no sabe
@@ -641,6 +646,7 @@ export function buildCommunityPayload(draft, existingCommunity = null, options =
     ? rawThumbnailUrl.slice(baseUrl.length)
     : rawThumbnailUrl;
   const normalizedOrganizedBy = normalizeOrganizedBy(draft.organizedBy, { selfId: resolvedId });
+  const normalizedDescriptionI18n = normalizeDescriptionTranslations(draft[DESCRIPTION_I18N_KEY]);
   const normalizedTags = normalizeTaxonomySelection(draft.tags, allTags, draft.matchesAllTags);
   const normalizedAudience = normalizeTaxonomySelection(
     draft.targetAudience,
@@ -659,6 +665,13 @@ export function buildCommunityPayload(draft, existingCommunity = null, options =
     provinceId: cleanString(draft.provinceId),
     geographicScope: cleanString(draft.geographicScope) || "unknown",
     shortDescription: cleanString(draft.shortDescription),
+    // Mismo criterio que `archivedUrls` y `organizedBy`: la clave se omite cuando no hay
+    // traducciones, para no sembrar un `{}` en las 600+ fichas. Si la ficha SÍ las tenía, el
+    // objeto viaja aunque quede vacío: es lo que distingue "no se tocó" de "se borraron".
+    ...(Object.keys(normalizedDescriptionI18n).length > 0
+      || Object.keys(normalizeDescriptionTranslations(existingCommunity?.[DESCRIPTION_I18N_KEY])).length > 0
+      ? { [DESCRIPTION_I18N_KEY]: normalizedDescriptionI18n }
+      : {}),
     topics: cleanString(draft.topics),
     langs: normalizeCommunityLangs(draft.langs),
     tags: normalizedTags.values,

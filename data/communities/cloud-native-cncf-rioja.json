@@ -8,6 +8,9 @@
   "location": "Logroño La Rioja",
   "parentId": 79,
   "shortDescription": "Este Community Group perteneciente a la CNCF se dedica a construir una comunidad de desarrolladores fuerte, abierta y diversa en torno a la plataforma y tecnologías Cloud Native en La Rioja.",
+  "shortDescriptionI18n": {
+    "en": "A CNCF community group dedicated to building a strong, open and diverse developer community around the cloud native platform and its technologies in La Rioja."
+  },
   "topics": "",
   "langs": [
     "es"

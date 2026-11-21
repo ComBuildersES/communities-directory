@@ -8,6 +8,9 @@
   "location": "Granada, España",
   "parentId": 399,
   "shortDescription": "Comunidad donde compartir buenas prácticas, nuevos enfoques y tecnologías para la gestión, el procesamiento, el análisis y la visualización de datos. Abordan la ciencia de datos utilizando muchos lenguajes, incluyendo Python, Julia y R.",
+  "shortDescriptionI18n": {
+    "en": "A community for sharing good practices, new approaches and technologies for managing, processing, analysing and visualising data. They approach data science using many languages, including Python, Julia and R."
+  },
   "topics": "",
   "langs": [
     "es"

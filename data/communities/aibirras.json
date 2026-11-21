@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "Granada, España",
   "shortDescription": "AiBirras es un punto de encuentro único para desarrolladores, investigadores y entusiastas de la IA para discutir lo último en inteligencia artificial, compartir ideas y disfrutar de una buena cerveza.",
+  "shortDescriptionI18n": {
+    "en": "AiBirras is a one-of-a-kind meeting point for developers, researchers and AI enthusiasts to discuss the latest in artificial intelligence, share ideas and enjoy a good beer."
+  },
   "topics": "",
   "langs": [
     "es"

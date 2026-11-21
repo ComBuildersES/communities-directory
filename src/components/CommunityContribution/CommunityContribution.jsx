@@ -50,6 +50,12 @@ import { inferProvinceIdFromNominatim } from "../../lib/provinceNormalization";
 import { AiAssistPanel } from "./AiAssistPanel.jsx";
 import { scoreItem } from "../../lib/fuzzyMatch";
 import "./CommunityContribution.css";
+import {
+  DESCRIPTION_I18N_KEY,
+  normalizeDescriptionTranslations,
+  resolveDescriptionTranslationLangs,
+} from "../../lib/localizedText.js";
+import { resolveOrganizedByFieldState } from "../../lib/organizedCommunities.js";
 
 function getFieldHelp(t) {
   return {
@@ -185,7 +191,14 @@ function getFieldHelp(t) {
     organizedBy: {
       title: t("contribution.fieldHelp.organizedBy.title"),
       description: t("contribution.fieldHelp.organizedBy.description"),
-      bullets: [],
+      // En viñetas y no en un párrafo: lo que hay que separar aquí son tres cosas distintas
+      // (no es el paraguas, solo comunidades del directorio, puede quedarse vacío), y
+      // seguidas se leían como un muro que nadie termina.
+      bullets: [
+        t("contribution.fieldHelp.organizedBy.bullet0"),
+        t("contribution.fieldHelp.organizedBy.bullet1"),
+        t("contribution.fieldHelp.organizedBy.bullet2"),
+      ],
     },
   };
 }
@@ -1132,6 +1145,41 @@ export function CommunityContribution({
     [existingCommunity?.id, hasExternalProposal, isEditMode, proposalSignature]
   );
   const [draft, setDraft] = useState(() => getInitialContributionDraft(existingCommunity, nextId, proposalDraft));
+
+  // Idiomas que se ofrecen para traducir la descripción (src/lib/localizedText.js). Depende
+  // de `langs`, así que se recalcula cuando la persona marca otro idioma.
+  const draftLangs = draft.langs;
+  const draftDescriptionI18n = draft[DESCRIPTION_I18N_KEY];
+  const descriptionTranslationLangs = useMemo(
+    () => resolveDescriptionTranslationLangs({
+      langs: draftLangs,
+      [DESCRIPTION_I18N_KEY]: draftDescriptionI18n,
+    }),
+    [draftLangs, draftDescriptionI18n]
+  );
+  const filledDescriptionTranslations = useMemo(
+    () => Object.keys(normalizeDescriptionTranslations(draftDescriptionI18n)),
+    [draftDescriptionI18n]
+  );
+  const [showDescriptionTranslations, setShowDescriptionTranslations] = useState(
+    () => Object.keys(normalizeDescriptionTranslations(draft[DESCRIPTION_I18N_KEY])).length > 0
+  );
+
+  /**
+   * Cómo se presenta el campo de autoría según el tipo de ficha
+   * (src/lib/organizedCommunities.js): en una conferencia es la pregunta normal, en los demás
+   * tipos casi nunca aplica y queda plegado para no invitar a confundirlo con la organización
+   * paraguas o con los patrocinadores.
+   */
+  const organizedByFieldState = useMemo(
+    () => resolveOrganizedByFieldState({
+      communityType: draft.communityType,
+      hasOrganizers: (draft.organizedBy?.length ?? 0) > 0,
+    }),
+    [draft.communityType, draft.organizedBy]
+  );
+  const [showOrganizedBy, setShowOrganizedBy] = useState(false);
+  const isOrganizedByOpen = organizedByFieldState.startsOpen || showOrganizedBy;
   const [tagQuery, setTagQuery] = useState("");
   const [audienceQuery, setAudienceQuery] = useState("");
   const [parentOrgQuery, setParentOrgQuery] = useState(
@@ -1541,6 +1589,26 @@ export function CommunityContribution({
   const updateUrlRows = (updater) => {
     setHasUserInteracted(true);
     setDraft((current) => ({ ...current, urls: updater(current.urls ?? []) }));
+  };
+
+  /**
+   * Una traducción vacía se quita del objeto en vez de guardarse como cadena vacía: la
+   * ficha anunciaría un idioma que al pintarse no existe (`normalizeDescriptionTranslations`
+   * lo filtra igual, pero así el borrador no arrastra claves muertas).
+   */
+  const handleDescriptionTranslationChange = (lang, value) => {
+    setHasUserInteracted(true);
+    setDraft((current) => {
+      const next = { ...(current[DESCRIPTION_I18N_KEY] ?? {}) };
+
+      if (value.trim()) {
+        next[lang] = value;
+      } else {
+        delete next[lang];
+      }
+
+      return { ...current, [DESCRIPTION_I18N_KEY]: next };
+    });
   };
 
   const handleUrlRowChange = (rowId, patch) => {
@@ -2057,6 +2125,23 @@ export function CommunityContribution({
             encuentro y las dos fichas siguen vivas.
           */}
           <div className="field">
+            {organizedByFieldState.collapsible && !isOrganizedByOpen ? (
+              /*
+                En un meetup o una meta-comunidad la autoría casi nunca aplica, así que la
+                pregunta no se hace: se ofrece. Un campo abierto pidiendo "comunidades
+                organizadoras" en una ficha de meetup se rellena con el paraguas (que es
+                parentId) o con los patrocinadores (que no están en el directorio).
+              */
+              <button
+                type="button"
+                className="contribution-organized-by-reveal"
+                onClick={() => setShowOrganizedBy(true)}
+              >
+                <i className="fas fa-plus" aria-hidden="true"></i>
+                {t("contribution.form.organizedByReveal")}
+              </button>
+            ) : (
+              <>
             <label className="label contribution-label-with-help" htmlFor="organized-by-input">
               <span>{t("contribution.form.organizedByLabel")}</span>
               <FieldHelp
@@ -2066,6 +2151,12 @@ export function CommunityContribution({
                 onClose={() => setOpenHelpField(null)}
               />
             </label>
+            {/*
+              Una línea con el ejemplo, que es lo único que no se deduce del nombre del campo.
+              Los matices (no es el paraguas, no son los patrocinadores) viven en la ayuda:
+              repetidos aquí eran cuatro líneas que descuadraban la columna y que nadie lee.
+            */}
+            <p className="contribution-field-note">{t("contribution.form.organizedByHint")}</p>
             {draft.organizedBy?.length > 0 && (
               <div className="contribution-organizers">
                 {draft.organizedBy.map((organizerId) => {
@@ -2119,10 +2210,7 @@ export function CommunityContribution({
                   ))}
               </datalist>
             </div>
-            {!(draft.organizedBy?.length > 0) && (
-              <p className="help is-italic" style={{ color: "#888" }}>
-                {t("contribution.form.organizedByNone")}
-              </p>
+              </>
             )}
           </div>
 
@@ -2236,6 +2324,74 @@ export function CommunityContribution({
             <p className="contribution-field-counter">
               {(draft.shortDescription ?? "").length}/{SHORT_DESCRIPTION_MAX_LENGTH}
             </p>
+
+            {/*
+              Traducciones de la descripción. Va plegado porque la mayoría escribe en un solo
+              idioma y esto no puede ponerse delante de quien viene a corregir una URL; pero
+              se abre solo si la ficha ya tiene alguna, que si no es exactamente como se
+              pierde un texto que alguien escribió.
+            */}
+            {descriptionTranslationLangs.length > 0 && (
+              <div className="contribution-description-i18n">
+                <button
+                  type="button"
+                  className="contribution-description-i18n-toggle"
+                  aria-expanded={showDescriptionTranslations}
+                  onClick={() => setShowDescriptionTranslations((current) => !current)}
+                >
+                  <i
+                    className={`fas fa-chevron-${showDescriptionTranslations ? "up" : "down"}`}
+                    aria-hidden="true"
+                  ></i>
+                  {t("contribution.form.descriptionI18nToggle")}
+                  {filledDescriptionTranslations.length > 0 && (
+                    <span className="contribution-description-i18n-count">
+                      {filledDescriptionTranslations
+                        .map((lang) => t(`languageShort.${lang}`, lang.toUpperCase()))
+                        .join(" · ")}
+                    </span>
+                  )}
+                </button>
+
+                {showDescriptionTranslations && (
+                  <div className="contribution-description-i18n-fields">
+                    <p className="contribution-field-note">
+                      {t("contribution.form.descriptionI18nNote")}
+                    </p>
+                    {descriptionTranslationLangs.map((lang) => {
+                      const value = draft[DESCRIPTION_I18N_KEY]?.[lang] ?? "";
+
+                      return (
+                        <div className="field" key={lang}>
+                          <label className="label is-small" htmlFor={`community-short-description-${lang}`}>
+                            {t(`language.${lang}`, lang)}
+                          </label>
+                          <div className="control">
+                            <textarea
+                              id={`community-short-description-${lang}`}
+                              className="textarea"
+                              value={value}
+                              onChange={(event) => handleDescriptionTranslationChange(
+                                lang,
+                                event.target.value.slice(0, SHORT_DESCRIPTION_MAX_LENGTH)
+                              )}
+                              placeholder={t("contribution.form.descriptionI18nPlaceholder", {
+                                language: t(`language.${lang}`, lang),
+                              })}
+                              maxLength={SHORT_DESCRIPTION_MAX_LENGTH}
+                              rows={3}
+                            />
+                          </div>
+                          <p className="contribution-field-counter">
+                            {value.length}/{SHORT_DESCRIPTION_MAX_LENGTH}
+                          </p>
+                        </div>
+                      );
+                    })}
+                  </div>
+                )}
+              </div>
+            )}
           </div>
 
           <div className="field contribution-grid-span-2">

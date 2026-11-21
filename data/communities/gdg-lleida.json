@@ -9,6 +9,10 @@
   "geographicScope": "provincial",
   "parentId": 207,
   "shortDescription": "Capítulo de Google Developer Groups en Lleida. Organiza charlas, talleres y concursos sobre tecnologías de Google, inteligencia artificial, Android, cloud y cultura maker, y acoge el capítulo de Women Techmakers Lleida.",
+  "shortDescriptionI18n": {
+    "en": "The Google Developer Groups chapter in Lleida. It runs talks, workshops and contests on Google technologies, artificial intelligence, Android, cloud and maker culture, and hosts the Women Techmakers Lleida chapter.",
+    "es": "Capítulo de Google Developer Groups en Lleida. Organiza charlas, talleres y concursos sobre tecnologías de Google, inteligencia artificial, Android, cloud y cultura maker, y acoge el capítulo de Women Techmakers Lleida."
+  },
   "topics": "",
   "langs": [
     "ca",

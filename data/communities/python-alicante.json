@@ -8,6 +8,9 @@
   "location": "Alicante",
   "parentId": 404,
   "shortDescription": "Comunidad para gente a la que le gusta y quiere aprender a programar en Python desde Alicante.",
+  "shortDescriptionI18n": {
+    "en": "A community for people in Alicante who enjoy Python and want to learn to program in it."
+  },
   "topics": "",
   "langs": [
     "es"

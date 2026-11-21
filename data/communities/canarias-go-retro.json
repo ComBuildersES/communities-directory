@@ -9,6 +9,9 @@
   "geographicScope": "unknown",
   "parentId": null,
   "shortDescription": "Somos un grupo de amantes de la informática clásica, la electrónica, demoscene, consolas viejunas y los videojuegos, que nos reunimos de forma presencial una vez al mes para trabajar en nuestros proyectos, divertirnos y, sobre todo, comer y pasar un rato de charla distendida.",
+  "shortDescriptionI18n": {
+    "en": "We are a group of lovers of classic computing, electronics, the demoscene, old consoles and video games. We meet in person once a month to work on our projects, have fun and, above all, eat and chat."
+  },
   "topics": "",
   "langs": [
     "es"

@@ -8,6 +8,9 @@
   "location": "Murcia",
   "parentId": 512,
   "shortDescription": "Comunidad WordPress de Murcia para compartir conocimiento, encuentros y actividad local del ecosistema.",
+  "shortDescriptionI18n": {
+    "en": "The WordPress community in Murcia, for sharing knowledge, meetups and local activity in the ecosystem."
+  },
   "topics": "",
   "langs": [
     "es"

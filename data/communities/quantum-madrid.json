@@ -8,6 +8,9 @@
   "location": "Madrid",
   "geographicScope": "local",
   "shortDescription": "Comunidad de computación cuántica en Madrid (Entangle Tech Hub): talleres, charlas, hackathones con Qiskit y encuentros para iniciarse en tecnologías cuánticas.",
+  "shortDescriptionI18n": {
+    "en": "The quantum computing community in Madrid (Entangle Tech Hub): workshops, talks, Qiskit hackathons and meetups for getting started with quantum technologies."
+  },
   "topics": "",
   "langs": [
     "es",

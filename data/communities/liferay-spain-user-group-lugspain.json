@@ -7,6 +7,9 @@
   "eventFormat": "online",
   "location": "",
   "shortDescription": "Grupo de usuario para hablar sobre Liferay (uso, tecnologías, etc )",
+  "shortDescriptionI18n": {
+    "en": "A user group for talking about Liferay: how to use it, its technologies and everything around it."
+  },
   "topics": "",
   "langs": [
     "es"

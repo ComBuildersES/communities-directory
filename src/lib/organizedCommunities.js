@@ -163,3 +163,31 @@ export function validateOrganizedByReferences(communities = []) {
 
   return errors;
 }
+
+/**
+ * Tipos de ficha en los que la autoría es el caso normal: un encuentro recurrente con marca
+ * propia. Hoy son todas `conference` (las cinco que usan el campo), pero la lista existe
+ * porque el campo no es "de conferencias": cuando salga el tipo para hackathones, jams y
+ * datatones (pendiente en #475), entra aquí sin tocar el formulario.
+ */
+export const ORGANIZED_BY_EXPECTED_TYPES = new Set(["conference"]);
+
+/**
+ * Cómo presenta el formulario el campo de autoría según el tipo de comunidad.
+ *
+ * En una conferencia la pregunta es la normal y va a la vista; en un meetup, un hacklab o una
+ * meta-comunidad casi nunca aplica, y ahí un campo abierto pidiendo "comunidades
+ * organizadoras" invita a rellenarlo con el paraguas (que es `parentId`) o con los
+ * patrocinadores (que no van en el directorio). Plegado sigue estando para quien lo necesita,
+ * pero deja de ser una pregunta que hay que contestar.
+ *
+ * Se abre siempre que la ficha ya declara organizadoras: en una edición, esconder un vínculo
+ * existente es la forma de perderlo sin que nadie se entere.
+ */
+export function resolveOrganizedByFieldState({ communityType, hasOrganizers = false } = {}) {
+  if (ORGANIZED_BY_EXPECTED_TYPES.has(communityType)) {
+    return { variant: "expected", collapsible: false, startsOpen: true };
+  }
+
+  return { variant: "unusual", collapsible: true, startsOpen: hasOrganizers };
+}

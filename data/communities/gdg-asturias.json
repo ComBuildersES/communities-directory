@@ -9,6 +9,9 @@
   "geographicScope": "provincial",
   "parentId": 207,
   "shortDescription": "Grupo sin ánimo de lucro, formado por desarrolladores y personas interesadas en tecnología en Asturias que tienen el objetivo de aprender e intercambiar conocimientos y experiencias sobre tecnología.",
+  "shortDescriptionI18n": {
+    "en": "A non-profit group of developers and people interested in technology in Asturias whose goal is to learn and exchange technical knowledge and experiences."
+  },
   "topics": "",
   "langs": [
     "es"

@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "n/a",
   "shortDescription": "La comunidad de OpenAI Developers conecta a desarrolladores de todo el mundo para crear con IA. Ofrece soporte, un foro, eventos locales de hackatones y programas destacados, como Codex Ambassadors, para organizar talleres locales, además de ayudas para startups y estudiantes.",
+  "shortDescriptionI18n": {
+    "en": "The OpenAI Developers community connects developers worldwide to build with AI. It offers support, a forum, local hackathon events and flagship programmes such as Codex Ambassadors for running local workshops, plus credits for startups and students."
+  },
   "topics": "",
   "langs": [
     "es",

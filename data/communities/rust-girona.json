@@ -7,6 +7,10 @@
   "eventFormat": "in-person",
   "location": "Girona",
   "shortDescription": "Català\nComunitat técnica del llenguatge de programación Rust de Girona\n\nEspañol\nComunidad técnica del lenguage de programación Rust de Girona\n\nEnglish\nTech community of the Rust programming language of Gironas",
+  "shortDescriptionI18n": {
+    "en": "The technical community around the Rust programming language in Girona.",
+    "es": "Comunidad técnica del lenguaje de programación Rust de Girona."
+  },
   "topics": "",
   "langs": [
     "es"

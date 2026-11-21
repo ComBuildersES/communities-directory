@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { resolveShortDescription } from "../lib/localizedText.js";
 
 /**
  * Iniciales con las que se rellena el hueco cuando una comunidad no tiene logo. Una o dos,
@@ -28,12 +29,14 @@ export function CommunityCard({
   isMuted = false,
   onOpen,
 }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const {
     name: comunidad,
     thumbnailUrl: miniatura,
-    shortDescription,
   } = community;
+  // La descripción se resuelve contra el locale de la interfaz: el canónico está en el
+  // idioma de la comunidad y hay que marcar con `lang` cuando no coinciden (src/lib/localizedText.js).
+  const description = resolveShortDescription(community, i18n.resolvedLanguage);
   const openModal = () => onOpen?.(community.id);
   // Una imagen que no carga (fichero renombrado o borrado) salía como icono roto: el `src`
   // solo caía al sustituto cuando `thumbnailUrl` venía vacío, no cuando daba 404.
@@ -90,9 +93,12 @@ export function CommunityCard({
             <figcaption className="community-card-overlay">
               <div className="community-card-overlay-content">
                 <span className="community-card-name">{comunidad}</span>
-                {shortDescription && (
-                  <span className="community-card-description">
-                    {shortDescription}
+                {description.text && (
+                  <span
+                    className="community-card-description"
+                    lang={description.isFallback ? description.lang : undefined}
+                  >
+                    {description.text}
                   </span>
                 )}
               </div>

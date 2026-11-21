@@ -8,6 +8,9 @@
   "location": "Coruña",
   "parentId": 302,
   "shortDescription": "El Grupo de Usuarios de Java de A Coruña (o CoruñaJUG, para abreviar) es una comunidad tecnológica nacida en A Coruña con el propósito de reunir a programadores profesionales y aficionados y a personas no técnicas, que quieran aprender sobre todo lo que funciona en la JVM.",
+  "shortDescriptionI18n": {
+    "en": "The A Coruña Java User Group (CorunaJUG for short) is a tech community born in A Coruña to bring together professional and hobbyist programmers, as well as non-technical people, who want to learn about everything that runs on the JVM."
+  },
   "topics": "",
   "langs": [
     "es"

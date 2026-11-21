@@ -8,6 +8,9 @@
   "location": "",
   "parentId": null,
   "shortDescription": "Marca Coruñesa dedicada a apoyar y organizar todo tipo de eventos y comunidades en Coruña. Desde rutas de senderismo, manualidades a charlas tech, CorunaEvents es una iniciativa joven que apuesta por el ocio alternativo y saludable.",
+  "shortDescriptionI18n": {
+    "en": "A brand from A Coruña devoted to supporting and organising all kinds of events and communities in the city. From hiking routes and crafts to tech talks, CorunaEvents is a young initiative betting on alternative, healthy ways to spend free time."
+  },
   "topics": "",
   "langs": [
     "es",

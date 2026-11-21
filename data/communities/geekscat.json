@@ -8,6 +8,10 @@
   "location": "Girona",
   "geographicScope": "regional",
   "shortDescription": "Associació sense ànim de lucre nascuda a Girona per dinamitzar la comunitat tecnològica catalana: GeeksCAT Conf, hackdays i projectes de programari lliure.",
+  "shortDescriptionI18n": {
+    "en": "A non-profit association born in Girona to energise the Catalan tech community: the GeeksCAT Conf, hackdays and free software projects.",
+    "es": "Asociación sin ánimo de lucro nacida en Girona para dinamizar la comunidad tecnológica catalana: GeeksCAT Conf, hackdays y proyectos de software libre."
+  },
   "topics": "",
   "langs": [
     "ca",

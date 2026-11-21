@@ -8,6 +8,9 @@
   "location": "Fuenlabrada, Madrid",
   "parentId": null,
   "shortDescription": "Una jornada para compartir conocimientos, experiencias, herramientas e ideas en torno a la intersección entre software libre e IA abierta",
+  "shortDescriptionI18n": {
+    "en": "A one-day event for sharing knowledge, experiences, tools and ideas around the intersection of free software and open AI."
+  },
   "topics": "",
   "langs": [
     "es",

@@ -14,6 +14,7 @@ import {
   withEmptyUrlGroups,
 } from "../../lib/communityUrls.js";
 import { normalizeOpenTo } from "../../lib/communityOpenTo.js";
+import { resolveShortDescription } from "../../lib/localizedText.js";
 import { OteEvents } from "./OteEvents.jsx";
 import "./CommunityModal.css";
 
@@ -135,7 +136,7 @@ function normalizeLocation(location) {
 }
 
 export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = [], childCount = 0, onClose, onGoToMap, onOpenCommunity }) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { filterComunities } = useCommunityActions();
   const allCommunities = useAllCommunities();
   const childrenByParentId = useChildrenByParentId();
@@ -190,7 +191,6 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
     eventFormat,
     geographicScope,
     location: rawLocation = "",
-    shortDescription,
     langs,
     lastReviewed,
     contactInfo,
@@ -220,6 +220,7 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
   // del otro lado: una asociación dormida puede seguir sacando su conferencia, y al revés.
   const organizers = findOrganizers(community, allCommunities);
   const organizes = organizedById.get(community.id) ?? [];
+  const description = resolveShortDescription(community, i18n.resolvedLanguage);
 
   const hasMapCoords = latLon?.lat != null && latLon?.lon != null;
   const languages = normalizeCommunityLangs(langs);
@@ -418,9 +419,24 @@ export function CommunityModal({ community, tagsMap, audienceMap, cbHandles = []
             <h3 className="community-modal-section-title">
               <i className="fas fa-align-left"></i> {t("communityModal.shortDescription")}
             </h3>
-            <p className={`community-modal-summary ${shortDescription ? "" : "community-modal-summary--missing"}`}>
-              {shortDescription || t("communityModal.noDescription")}
+            <p
+              className={`community-modal-summary ${description.text ? "" : "community-modal-summary--missing"}`}
+              lang={description.isFallback ? description.lang : undefined}
+            >
+              {description.text || t("communityModal.noDescription")}
             </p>
+            {/*
+              Cuando la ficha se lee en un idioma que no es el de su descripción, se dice en
+              voz alta en vez de dejar un párrafo en otro idioma sin explicación: quien lo ve
+              es justo quien puede traducirlo, así que el aviso lleva la invitación.
+            */}
+            {description.isFallback && (
+              <p className="community-modal-summary-note">
+                {t("communityModal.descriptionFallback", {
+                  language: t(`language.${description.lang}`, description.lang),
+                })}
+              </p>
+            )}
           </div>
 
           {normalizeOpenTo(community.openTo).length > 0 && <section className="community-modal-section">

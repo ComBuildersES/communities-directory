@@ -8,6 +8,9 @@
   "location": "",
   "parentId": null,
   "shortDescription": "Una sala para compartir y debatir sobre los contenidos publicados en Nosolosig y en el boletín Nosolosig, además de proponer nuevos recursos.",
+  "shortDescriptionI18n": {
+    "en": "A room for sharing and discussing the content published on Nosolosig and in its newsletter, and for suggesting new resources."
+  },
   "topics": "",
   "langs": [
     "es"

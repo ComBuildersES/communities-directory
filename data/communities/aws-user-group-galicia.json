@@ -8,6 +8,9 @@
   "location": "A Coruña",
   "geographicScope": "regional",
   "shortDescription": "Comunidad gallega de usuarios de AWS: sesiones técnicas sobre resiliencia, caos controlado, arquitectura y servicios de AWS.",
+  "shortDescriptionI18n": {
+    "en": "The Galician community of AWS users: technical sessions on resilience, controlled chaos, architecture and AWS services."
+  },
   "topics": "",
   "langs": [
     "es"

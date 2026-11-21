@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "Ciudad Real (Tomelloso)",
   "shortDescription": "Asociación sin ánimo de lucro formada por una comunidad de personas apasionadas la tecnología y el emprendimiento. Nuestro fin es divulgar todos los beneficios que puede aportar la tecnología.",
+  "shortDescriptionI18n": {
+    "en": "A non-profit association formed by a community of people passionate about technology and entrepreneurship. Our purpose is to spread the word about everything technology can bring."
+  },
   "topics": "",
   "langs": [
     "es"

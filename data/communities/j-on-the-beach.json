@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "Málaga",
   "shortDescription": "Conferencia internacional sobre sistemas distribuidos, DevOps, y muuuuchos datos.",
+  "shortDescriptionI18n": {
+    "en": "An international conference on distributed systems, DevOps and looooots of data."
+  },
   "topics": "",
   "langs": [
     "es"

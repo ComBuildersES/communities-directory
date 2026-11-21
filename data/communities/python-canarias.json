@@ -8,6 +8,9 @@
   "location": "Canarias",
   "parentId": 404,
   "shortDescription": "Asociación y comunidad de usuarios de Python en Canarias.",
+  "shortDescriptionI18n": {
+    "en": "The association and community of Python users in the Canary Islands."
+  },
   "topics": "",
   "langs": [
     "es"

@@ -1,0 +1,387 @@
+{
+ "ai-tinkerers-valencia": {
+  "en": "The Valencia chapter of AI Tinkerers: monthly demo nights by AI builders, product teardowns and meetups for people running agent-based systems in production."
+ },
+ "aibirras": {
+  "en": "AiBirras is a one-of-a-kind meeting point for developers, researchers and AI enthusiasts to discuss the latest in artificial intelligence, share ideas and enjoy a good beer."
+ },
+ "almeria-summit": {
+  "en": "A meeting point for professionals, companies and institutions who want to understand where artificial intelligence stands today and anticipate where it is going. An event designed to connect knowledge, local context and real opportunity."
+ },
+ "almeriatech": {
+  "en": "AlmeriaTech is a tech community based in Almería connecting digital professionals. It runs events, talks and workshops on AI, software development and data, to boost local talent and strengthen the tech ecosystem through collaboration and networking.",
+  "es": "AlmeriaTech es una comunidad tecnológica de Almería que conecta a profesionales del ámbito digital. Organiza eventos, charlas y talleres sobre IA, desarrollo de software y datos para impulsar el talento local y fortalecer el ecosistema mediante la colaboración."
+ },
+ "arcasiles-community-madrid": {
+  "en": "Arcasiles is a tech community born in the Vega Baja with an established presence in Madrid. Since 2025 we have been running events with a character of their own: not just interactivity, but experiences people remember and come back to."
+ },
+ "asociacion-de-webmasters-de-granada": {
+  "en": "A local community that used to run meetups for webmasters (as Wikipedia puts it, the person responsible for maintaining or developing one or more websites) in the province of Granada."
+ },
+ "asturias-software-crafters": {
+  "en": "A group of technology enthusiasts who want to build personal relationships around tech events in Asturias. We organise talks, workshops and hands-on sessions, always respectfully and in a welcoming space where we can have fun."
+ },
+ "atlanticaconf": {
+  "en": "AtlanticaConf was created to be the meeting point of the Galician tech community: a place where companies, professionals, students and communities can come together and build an ecosystem."
+ },
+ "aws-user-group-barcelona": {
+  "en": "The AWS user group in Barcelona: talks and hands-on workshops about the AWS cloud, from Bedrock and AI agents to architecture and operations."
+ },
+ "aws-user-group-galicia": {
+  "en": "The Galician community of AWS users: technical sessions on resilience, controlled chaos, architecture and AWS services."
+ },
+ "aws-user-group-madrid": {
+  "en": "The AWS user group in Madrid: meetups and hands-on workshops about AWS services, cloud architecture and agentic AI."
+ },
+ "azure-malaga": {
+  "en": "The Azure community of southern Spain. We run our own meetups and take part in international events -- Global Azure, Global AI and GlobalDevOpsX -- and we offer workshops and chances to network for cloud enthusiasts."
+ },
+ "barcelona-ai-music-meetup-bamm": {
+  "en": "The music and AI community meetup in Barcelona: live demos, talks and networking among musicians, producers and creative technologists."
+ },
+ "barcelona-free-software": {
+  "en": "A community of free software (also known as open source) makers based in Barcelona. Our main activity is a Meetup group, an open gathering for developers and users who share a passion for software freedom."
+ },
+ "barcelona-java-user-group": {
+  "en": "We are a bunch of geeks from Barcelona who enjoy sharing experiences and knowledge about computing, and especially about Java, the programming language that gives us so many laughs and so many headaches."
+ },
+ "barcelona-tech-talks": {
+  "en": "A series of technical talks in Barcelona about engineering and data at scale, featuring product teams from local and visiting companies."
+ },
+ "betabeers-almeria": {
+  "en": "A monthly event for web and app developers in Almería. The format: a talk about development, startups presenting how they are built under the hood, networking and open discussion."
+ },
+ "boqueronsec": {
+  "en": "A local community for sharing knowledge and experiences about cybersecurity."
+ },
+ "bricolabs": {
+  "en": "BricoLabs is an association that brings together, every week, anyone who wants to help design, build and test all kinds of devices and gadgets proposed by the participants themselves, in the spirit of other hackerspaces and fab labs around the world."
+ },
+ "cadiz-gamedev": {
+  "en": "A group of video game developers from Cádiz founded by Jose Antonio Escribano Allyon (Horizon Zero Dawn I & II, Ryse: Son of Rome, Crysis 3) on 20 October 2023, where we meet up around game development and run game jams."
+ },
+ "canallacon": {
+  "en": "An international cybersecurity and digital transformation congress organised by the team behind the Cosas de Hackers podcast."
+ },
+ "canarias-go-retro": {
+  "en": "We are a group of lovers of classic computing, electronics, the demoscene, old consoles and video games. We meet in person once a month to work on our projects, have fun and, above all, eat and chat."
+ },
+ "cascarilla-tech": {
+  "en": "A non-profit association in A Coruña that runs software development and AI events with talks, experience reports and networking, often together with other local communities."
+ },
+ "claude-community-ambassadors": {
+  "en": "The Claude community for sharing solutions, helping each other out and pushing the limits of what is possible with AI."
+ },
+ "claude-community-barcelona": {
+  "en": "The Claude community in Barcelona: meetups, Claude & Coffee, round tables and hands-on sessions for people building with AI."
+ },
+ "claude-madrid": {
+  "en": "The home of the Claude community in Madrid. Events, talks and people building with AI in Madrid.",
+  "es": "La casa de la comunidad de Claude en Madrid. Eventos, charlas y gente que construye con IA en Madrid."
+ },
+ "cloud-native-cncf-rioja": {
+  "en": "A CNCF community group dedicated to building a strong, open and diverse developer community around the cloud native platform and its technologies in La Rioja."
+ },
+ "club-sintetico": {
+  "en": "A non-profit professional association around creativity and generative AI. It runs Birras Sintéticas, the monthly meetup for creative professionals working with AI."
+ },
+ "codemotion-madrid": {
+  "en": "Codemotion Madrid is one of the most relevant tech events in Spain, designed to bring developers, tech leads and digital professionals together in one place."
+ },
+ "coderioja": {
+  "en": "CodeRioja's goals include spreading knowledge about free software, boosting the tech business sector in La Rioja, offering a constructive, instructive and participatory way to spend free time, and encouraging communication among computing enthusiasts."
+ },
+ "codex-community": {
+  "en": "The OpenAI Developers community connects developers worldwide to build with AI. It offers support, a forum, local hackathon events and flagship programmes such as Codex Ambassadors for running local workshops, plus credits for startups and students."
+ },
+ "commit-conf": {
+  "en": "A Spanish tech conference focused on software development, cloud, artificial intelligence and engineering culture. Held annually in Madrid, it is a key meeting point for IT professionals."
+ },
+ "community-builders": {
+  "en": "We are a collective of people who run Spanish-speaking tech communities, aiming to be a reference place that makes collaboration and sharing experiences easier."
+ },
+ "coruna-tech": {
+  "en": "The meeting point for every tech community in A Coruña. We connect developers, designers and technology professionals across Galicia."
+ },
+ "coruna-wtf": {
+  "en": "CorunaWTF is a community of people from A Coruña and nearby who get together to share, learn and enjoy themselves around web development and design."
+ },
+ "corunaevents": {
+  "en": "A brand from A Coruña devoted to supporting and organising all kinds of events and communities in the city. From hiking routes and crafts to tech talks, CorunaEvents is a young initiative betting on alternative, healthy ways to spend free time."
+ },
+ "corunajug": {
+  "en": "The A Coruña Java User Group (CorunaJUG for short) is a tech community born in A Coruña to bring together professional and hobbyist programmers, as well as non-technical people, who want to learn about everything that runs on the JVM."
+ },
+ "data-saturdays-global": {
+  "en": "Data Saturdays is a place for the data community to run small regional events with little outlay or set-up difficulties. Here you can access a set of tools and have open, transparent discussions on how your event should be set up and used.",
+  "es": "Data Saturdays es un espacio para que la comunidad de datos organice eventos regionales pequeños sin apenas coste ni complicaciones de montaje. Ofrece un conjunto de herramientas y un espacio de debate abierto y transparente sobre cómo montar y aprovechar tu evento."
+ },
+ "data-saturdays-madrid": {
+  "en": "The largest data event in Spain around Microsoft technologies. A conference and exhibition where data professionals, future professionals and well-known voices share and learn alike."
+ },
+ "datolada": {
+  "en": "The reference event for analytics and data in the digital world, where we get together to share, learn and celebrate the value of community."
+ },
+ "detras-del-mapa": {
+  "en": "A room for sharing and discussing the content published on Nosolosig and in its newsletter, and for suggesting new resources."
+ },
+ "devopsdays-barcelona": {
+  "en": "A worldwide series of community-led conferences focused on software development, IT infrastructure operations, and the culture that connects them. No marketing pitches -- just real-world engineering.",
+  "es": "Serie mundial de conferencias organizadas por la comunidad en torno al desarrollo de software, la operación de infraestructura y la cultura que las conecta. Sin charlas comerciales: solo ingeniería real."
+ },
+ "everything-everywhere-all-with-kdb-q": {
+  "en": "The Madrid community around the q language and the kdb+ database: technical meetups on time series, high-frequency data analysis and how to combine them with AI agents."
+ },
+ "femcoders-club": {
+  "en": "A community of women developers based in Barcelona: workshops, talks and mentoring to close the gender gap in technology."
+ },
+ "fr-k": {
+  "en": "A space where knowledge meets passion. Join a specialised club where professionals like you gather to learn together. From software, design, AI and marketing to entrepreneurship and more, each club has its own identity and community."
+ },
+ "free-software-foundation-europe": {
+  "en": "The Free Software Foundation Europe helps free software enthusiasts share their positive experiences, ask for recommendations about free software topics and programs, and solve problems together."
+ },
+ "fuengirola-technology-social-meetup-group": {
+  "en": "A fortnightly coffee meetup in English in Fuengirola for people living or working there: informal conversation about technology, AI, programming, cybersecurity and digital business."
+ },
+ "gamedev-murcia": {
+  "en": "The group of video game developers and creators of the Region of Murcia. A community where every kind of developer -- artists, programmers, designers, producers -- can share their experiences, their knowledge and above all their passion."
+ },
+ "gcubo": {
+  "en": "The GNU/Linux user group of Granada."
+ },
+ "gdg-a-coruna": {
+  "en": "GDG A Coruña is an open community connecting technology lovers in A Coruña. We organise events, workshops and talks to encourage learning, the exchange of ideas and technical innovation."
+ },
+ "gdg-asturias": {
+  "en": "A non-profit group of developers and people interested in technology in Asturias whose goal is to learn and exchange technical knowledge and experiences."
+ },
+ "gdg-barcelona": {
+  "en": "The Google Developer Group of Barcelona, with community meetups and technical talks."
+ },
+ "gdg-cloud-espanol": {
+  "en": "Google Developer Groups (GDGs) bring developers and technologists together to connect, learn and grow alongside Google technologies and experts. These groups support innovation and growth in the tech world."
+ },
+ "gdg-cordoba": {
+  "en": "The Google Developer Groups chapter in Córdoba. It runs meetups and workshops on Google technologies and artificial intelligence, and organises DevFest Córdoba."
+ },
+ "gdg-jerez-de-la-frontera": {
+  "en": "A tech community connecting professionals, students, makers and enthusiasts from across the province of Cádiz to learn, share and collaborate through talks, workshops, networking and events on development, AI, cloud and other technologies."
+ },
+ "gdg-la-rioja": {
+  "en": "Google Developer Groups (GDGs) bring developers and technologists together to connect, learn and grow alongside Google technologies and experts. These groups support innovation and growth in the tech world."
+ },
+ "gdg-lleida": {
+  "en": "The Google Developer Groups chapter in Lleida. It runs talks, workshops and contests on Google technologies, artificial intelligence, Android, cloud and maker culture, and hosts the Women Techmakers Lleida chapter.",
+  "es": "Capítulo de Google Developer Groups en Lleida. Organiza charlas, talleres y concursos sobre tecnologías de Google, inteligencia artificial, Android, cloud y cultura maker, y acoge el capítulo de Women Techmakers Lleida."
+ },
+ "gdg-spain": {
+  "en": "The organisation that brings together every Google Developer Group (GDG) in Spain. A non-profit created to improve the community of technology enthusiasts and to grow the knowledge and the relationships among people working in this field."
+ },
+ "gdg-valladolid": {
+  "en": "The Google Developer Groups chapter in Valladolid. It runs talks, workshops and meetups on Google technologies, artificial intelligence and cloud, and it is the group behind VallaTech Summit."
+ },
+ "gdg-zaragoza": {
+  "en": "The Google Developer Groups chapter in Zaragoza. It runs workshops and talks on Google technologies, artificial intelligence and virtual reality, and has been organising DevFest Zaragoza."
+ },
+ "geekscat-conf": {
+  "en": "The annual event of the Catalan tech community, heir to the Festa Open Source. Technical talks on code, infrastructure, data and AI, organised by GeeksCAT volunteers.",
+  "es": "Evento anual de la comunidad tecnológica catalana, heredero de la Festa Open Source. Charlas técnicas sobre código, infraestructura, datos e IA, organizadas por voluntarios de GeeksCAT."
+ },
+ "geekscat": {
+  "en": "A non-profit association born in Girona to energise the Catalan tech community: the GeeksCAT Conf, hackdays and free software projects.",
+  "es": "Asociación sin ánimo de lucro nacida en Girona para dinamizar la comunidad tecnológica catalana: GeeksCAT Conf, hackdays y proyectos de software libre."
+ },
+ "geg-spain": {
+  "en": "Google Educator Group Spain (GEG Spain) is a community of educators devoted to promoting innovation and collective effectiveness in education: teachers, head teachers, pedagogues and teaching enthusiasts, with meetups in several cities."
+ },
+ "gen-ai-community": {
+  "en": "Gen AI Community is a hands-on space for professionals working with AI who want not only to discuss it but to try, share and apply it. For those with more questions than answers, who want to think collectively and build the future."
+ },
+ "geodevelopers": {
+  "en": "People interested in improving their programming skills with geolocated data for visualisation, analysis, transformation and automation. Our goals: connect people, encourage mutual help, collaborate on projects and spread the word about this field."
+ },
+ "geoinquietos-almeria": {
+  "en": "Informal local meetups among people who share curiosity, interests, experiences or any idea around geomatics, free software and geospatial technology (anything in the GEO and GIS space)."
+ },
+ "geoinquietos": {
+  "en": "Informal groups that meet to talk and learn about anything related to earth sciences."
+ },
+ "geomobbcn": {
+  "en": "Geomob is a series of events and a podcast for geospatial information enthusiasts. We meet every few months in various European cities and offer a relaxed forum to discuss geo innovation in all its forms, whether for fun or for profit."
+ },
+ "geovoluntarios": {
+  "en": "A non-profit association of digital volunteers: people experienced in the remote use and application of geospatial technology, helping organisations that respond to emergencies and working on projects aligned with the SDGs."
+ },
+ "granada-tech": {
+  "en": "Granada Tech is a set of associations, groups and organisations that run technology events in the province of Granada."
+ },
+ "grupo-de-programadores-e-usuarios-de-linux-gpul": {
+  "en": "A non-profit collective that organises all kinds of meetups, conferences and hackathons to spread free software and free culture."
+ },
+ "i-jornada-sobre-software-libre-e-inteligencia-artificial-abierta": {
+  "en": "A one-day event for sharing knowledge, experiences, tools and ideas around the intersection of free software and open AI."
+ },
+ "iniciador": {
+  "en": "The Iniciador Foundation's main goal was to help people who want to start a business, mainly (though not exclusively) technology-based companies. It grew to more than 50 local groups and over 185 volunteers."
+ },
+ "innovators-hub-sevilla": {
+  "en": "The Seville community around startups, technology and entrepreneurship: fortnightly breakfasts (Innovation Brekkie) to meet each other and share projects."
+ },
+ "intersystems-developers-spain": {
+  "en": "The community of InterSystems developers in Spain: technical meetups on IRIS, healthcare interoperability and AI-assisted development."
+ },
+ "j-on-the-beach": {
+  "en": "An international conference on distributed systems, DevOps and looooots of data."
+ },
+ "jam-attack": {
+  "en": "Jam Attack, a day of indie games and programming. A small gathering with a play area, an exhibition and demo area where students and professionals show their indie games and personal creations, and a talks track."
+ },
+ "jornadas-de-sig-libre": {
+  "en": "The Jornadas de SIG Libre are an event for sharing and exchanging knowledge around free geospatial technologies and spatial data science."
+ },
+ "la-jaqueria": {
+  "en": "A non-profit cultural association in Almería promoting technological, scientific and artistic experimentation through collaboration and social education. It spreads maker culture, brings science closer to people and encourages collective projects with social impact."
+ },
+ "ladies-that-ux-malaga": {
+  "en": "The Málaga chapter of Ladies that UX, an international network of women in design and user experience: a monthly meetup on UX, UI and digital product."
+ },
+ "lambda-world": {
+  "en": "An international event about functional programming."
+ },
+ "lareira-conf": {
+  "en": "Lareira Conf is a tech conference in A Coruña designed to bring the community together, learn, connect and go through a different kind of experience, with good vibes and plenty of energy."
+ },
+ "lechazoconf": {
+  "en": "LechazoConf is an annual conference about technology, entrepreneurship and startups held in Valladolid, Spain. It lasts a single day with a single track of talks, built around one theme: one failure and one success."
+ },
+ "liferay-spain-user-group-lugspain": {
+  "en": "A user group for talking about Liferay: how to use it, its technologies and everything around it."
+ },
+ "lleidahack": {
+  "en": "A student association at the Escola Politècnica Superior of the University of Lleida that promotes technology: it organises HackEPS and tech meetings throughout the academic year.",
+  "es": "Asociación de estudiantes de la Escola Politècnica Superior de la Universidad de Lleida que promueve la tecnología: organiza la HackEPS y tech meetings durante el curso."
+ },
+ "makers-ia": {
+  "en": "MakersIA is a Spanish-speaking community of developers actively working with artificial intelligence. They do not just use AI: they build it, integrate it and take it to production. Even the agent that runs the community was created by its members."
+ },
+ "malaga-scala": {
+  "en": "A community for sharing knowledge and experiences about the Scala programming language."
+ },
+ "malagajug": {
+  "en": "A community for sharing knowledge and experiences about the Java language and platform and other JVM languages."
+ },
+ "murciatech": {
+  "en": "A single community with activities, events, outreach and plenty of technology for anyone who wants to learn, build and share."
+ },
+ "no-con-name": {
+  "en": "The oldest active hacking and information security congress in Spain, founded in 1999. As a non-profit association it runs independent, commercially unbiased events in Barcelona and Mallorca, bringing together hacking and cybersecurity professionals and enthusiasts."
+ },
+ "nodejsmadrid": {
+  "en": "A meetup group where we mostly talk about Node.js and topics related to the software development world."
+ },
+ "notion-coruna": {
+  "en": "A group based in A Coruña devoted (initially) to the world of Notion, and now to all kinds of no-code and AI tools. We organise occasional gatherings, from talks to coffees for chatting and sharing ideas."
+ },
+ "opensouthcode": {
+  "en": "An annual conference around open culture and open technologies. It includes professional tracks for every level of experience and a parallel event for children and teenagers, OpenSouthKids. Content in Spanish and English."
+ },
+ "ping-a-programadoras": {
+  "en": "Women and non-binary people interested in making and thinking with computers together, from a critical and empowering perspective."
+ },
+ "pintega-conf": {
+  "en": "Pintega Conf '27, the tech conference of the tech communities: talks on Saturday 10 April 2027 at the UDC Rectorate in A Coruña, with a pre-event on Friday the 9th. The successor to Lareira Conf."
+ },
+ "producttank-madrid": {
+  "en": "The product community meetup in Madrid (part of Mind the Product's ProductTank network): talks and practical experience reports on digital product management."
+ },
+ "pydata-granada": {
+  "en": "A community for sharing good practices, new approaches and technologies for managing, processing, analysing and visualising data. They approach data science using many languages, including Python, Julia and R."
+ },
+ "pyladies-valencia": {
+  "en": "The Valencia chapter of PyLadies: talks and meetups for women who code in Python, with networking and room for those just starting out."
+ },
+ "python-alicante": {
+  "en": "A community for people in Alicante who enjoy Python and want to learn to program in it."
+ },
+ "python-asturias": {
+  "en": "The Python user group in Asturias, with both in-person and online events."
+ },
+ "python-canarias": {
+  "en": "The association and community of Python users in the Canary Islands."
+ },
+ "python-coruna": {
+  "en": "We are a community passionate about the Python programming language and its wide range of applications, from web and mobile development to data science and machine learning."
+ },
+ "python-murcia": {
+  "en": "The community of Python programmers in Murcia, Spain."
+ },
+ "python-valencia": {
+  "en": "The Python Valencia community is a group of enthusiasts who share knowledge and organise talks and workshops."
+ },
+ "python-zaragoza": {
+  "en": "A local community for learning, sharing and meeting up around Python in Zaragoza."
+ },
+ "pytorch-madrid": {
+  "en": "PyTorch is not just a framework: it is the backbone of modern deep learning and the engine behind the most powerful advances in generative AI. We are thrilled to bring this global community to our city."
+ },
+ "quantum-madrid": {
+  "en": "The quantum computing community in Madrid (Entangle Tech Hub): workshops, talks, Qiskit hackathons and meetups for getting started with quantum technologies."
+ },
+ "rust-girona": {
+  "en": "The technical community around the Rust programming language in Girona.",
+  "es": "Comunidad técnica del lenguaje de programación Rust de Girona."
+ },
+ "sirviendo-codigo": {
+  "en": "We are a space for sharing knowledge. Here you will find somewhere to share what you know about technology and to learn from what others have made: free, simple and as a community."
+ },
+ "sysarmy-galicia": {
+  "en": "Sysarmy is the sysadmin community that brings professionals in the field together to encourage contact and informal knowledge sharing."
+ },
+ "t3chfest": {
+  "en": "T3chFest is the non-profit computing and new technologies fair held at Universidad Carlos III de Madrid. Over 2,000 attendees, students and professionals alike, ready to learn and get excited about technology."
+ },
+ "the-things-network-madrid": {
+  "en": "The TTN Madrid community exists to deploy LoRa telecommunications technology, which enables the Internet of Things. We roll out The Things Network, help install gateways and nodes, and develop use cases."
+ },
+ "the-things-network": {
+  "en": "We are a global collaborative Internet of Things ecosystem that creates networks, devices and solutions using LoRaWAN.",
+  "es": "Somos un ecosistema global y colaborativo de Internet de las Cosas que crea redes, dispositivos y soluciones con LoRaWAN."
+ },
+ "the-vibe-coding-club-madrid": {
+  "en": "A fortnightly meetup in Madrid for people building with AI: what they are making, which tools they use and which workflows actually work."
+ },
+ "tomelloso-tech": {
+  "en": "A non-profit association formed by a community of people passionate about technology and entrepreneurship. Our purpose is to spread the word about everything technology can bring."
+ },
+ "trgcon": {
+  "en": "The most awesome technology and business conference in the world. A meeting point for ALL professionals in the digital sector."
+ },
+ "vallatech-summit": {
+  "en": "The annual gathering of the Valladolid tech community, with talks, workshops and networking on artificial intelligence, cloud and cybersecurity. It is the DevFest organised by GDG Valladolid, with its own brand and website."
+ },
+ "wey-wey-web": {
+  "en": "An international conference about user interfaces."
+ },
+ "wikiproyecto-almeria": {
+  "en": "A collective whose goal is to create, improve and organise every article related to the province of Almería, Spain, paying special attention to the most representative ones: its towns, monuments, natural areas and notable people."
+ },
+ "women-in-tech-malaga": {
+  "en": "The community of women in technology in Málaga: networking, personal branding and professional growth meetups, open to any tech profile."
+ },
+ "women-techmakers-madrid": {
+  "en": "WTM Madrid is the local extension of Google's global initiative supporting women in technology in the capital. We want to build an ecosystem where they are visible, have a solid community and can access the resources to grow professionally."
+ },
+ "women4tt": {
+  "en": "Women for Technical Talks (W4TT) is an association devoted to boosting the participation of women in STEM careers as speakers at technical events. Our goal is to make female talent visible and encourage positive change in the tech community."
+ },
+ "wordpress-coruna": {
+  "en": "Our goal is to spread knowledge about this open source CMS and to give attendees and speakers the chance to share their experiences. Whether you use WordPress personally or professionally, you can enjoy these free events in A Coruña."
+ },
+ "wordpress-madrid": {
+  "en": "The meeting point in Madrid for users, designers, developers and companies around WordPress."
+ },
+ "wordpress-murcia": {
+  "en": "The WordPress community in Murcia, for sharing knowledge, meetups and local activity in the ecosystem."
+ }
+}

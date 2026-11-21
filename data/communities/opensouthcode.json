@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "Málaga",
   "shortDescription": "Conferencia anual alrededor de la cultura y tecnologías abiertas. Incluye tracks profesionales para todos los niveles de conocimiento, y evento paralelo para niños y adolescentes, OpenSouthKids. Con contenido en español e inglés.",
+  "shortDescriptionI18n": {
+    "en": "An annual conference around open culture and open technologies. It includes professional tracks for every level of experience and a parallel event for children and teenagers, OpenSouthKids. Content in Spanish and English."
+  },
   "topics": "",
   "langs": [
     "es"

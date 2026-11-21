@@ -250,6 +250,16 @@ export function buildSchema({ tags = [], audience = [] } = {}) {
         type: 'string',
         description: 'One or two sentences describing the community, in its own language.',
       },
+      shortDescriptionI18n: {
+        type: 'object',
+        additionalProperties: { type: 'string' },
+        description:
+          'Translations of `shortDescription`, keyed by ISO 639-1 code (for example ' +
+          '`{"en": "..."}`). Omitted when there are none, so an absent key means nobody has ' +
+          'translated the record yet, not that the community only works in one language -- ' +
+          'that is what `langs` says. `shortDescription` stays canonical: it holds the text ' +
+          'the community itself wrote, in the language it wrote it in.',
+      },
       topics: {
         type: 'string',
         description:
@@ -376,6 +386,14 @@ function formatCommunitySection(community, { tagLabels, audienceLabels, nameById
     lines.push(description, '');
   }
 
+  // La descripción canónica va en el idioma de la comunidad (convención del proyecto). La
+  // traducción inglesa, cuando existe, se emite aparte y marcada: un modelo que lee este
+  // fichero en inglés no tiene por qué adivinar en qué idioma está el párrafo de arriba.
+  const englishDescription = meaningfulText(community.shortDescriptionI18n?.en);
+  if (englishDescription && englishDescription !== description) {
+    lines.push(`(en) ${englishDescription}`, '');
+  }
+
   const facts = [
     ['Type', ENUMS.communityType[community.communityType] ? community.communityType : null],
     ['Status', community.status],
@@ -492,7 +510,7 @@ export function buildLlmsIndex(communities, { tags = [], audience = [], deleted 
    * que ve una persona dirían cosas distintas.
    */
   const { active: fieldCoverage, reviewed, total } = buildCoverage(published);
-  const { withTags, withAudience, withScope, withOte } = fieldCoverage;
+  const { withTags, withAudience, withScope, withOte, withEnglishDescription } = fieldCoverage;
   const withHumanValidation = fieldCoverage.reviewed;
 
   return `# Community Builders Directory
@@ -529,7 +547,7 @@ regenerated on every deploy.
 - \`matchesAllTags\` / \`matchesAllAudience\` mean "generalist": the community matches any topic or any profile, and its array is empty on purpose. Treat an empty array plus the flag as "everything", never as "nothing".
 - \`openTo\` lists explicitly declared openness to contributions: volunteers, collaborations, co-organisers, speakers, sponsors, venues, mentors. It does not imply urgent recruitment. Empty or absent means unknown, not refusal. Never infer it from community type or activity.
 - \`location\` is where events happen; \`geographicScope\` is the territory served. They differ often: a community can meet in Madrid and serve all of Spain.
-- Coverage is uneven, so do not read an empty field as a statement about the community. Of the ${active} active communities, ${withTags} have \`tags\`, ${withAudience} have \`targetAudience\` and ${withScope} have \`geographicScope\`. An empty field means nobody has filled it in yet, not that the community has no topic or serves nowhere. Say which recommendations rest on a field that is often missing.
+- Coverage is uneven, so do not read an empty field as a statement about the community. Of the ${active} active communities, ${withTags} have \`tags\`, ${withAudience} have \`targetAudience\` and ${withScope} have \`geographicScope\`. ${withEnglishDescription} carry an English translation of \`shortDescription\` in \`shortDescriptionI18n\`; the rest are described in their own language only. An empty field means nobody has filled it in yet, not that the community has no topic or serves nowhere. Say which recommendations rest on a field that is often missing.
 - \`lastReviewed\` is the date a person last checked the record. It is **not** an activity signal: most records have not been revisited since they were added. The only place where live activity can be checked is the \`urls\` entry whose \`kind\` is \`ote\`, the community's events feed (${withOte} active communities publish one). The field only says the community publishes one; it says nothing about what is in it, and keeping it current is the community's call, not the directory's. Read the dates inside the feed rather than inferring activity from the field being present.
 - \`humanValidated: false\` means a person added the community but its tagging was filled in semi-automatically and nobody has checked it. Say so if you present it as fact. Only ${withHumanValidation} of the active communities have been reviewed by a person, and ${reviewed} of all ${total} records. The live counts are in [coverage.json](${SITE_URL}/data/coverage.json).
 - \`urls\` is a **list** of channels, not an object keyed by platform: each entry is \`{ url, kind?, label? }\`. \`kind\` is omitted whenever the domain already identifies the platform, so to find a community's Telegram you look at the URLs, not only at \`kind\`. The same \`kind\` can appear more than once, and there \`label\` is the name to show (a group's Meetup plus its own annual event). Event platforms have their own kinds (\`meetup\`, \`eventbrite\`, \`luma\`) and \`eventsUrl\` is the generic one, so to find where a community publishes events look at that whole family, not at one key.

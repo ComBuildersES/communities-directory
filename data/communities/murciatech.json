@@ -8,6 +8,9 @@
   "location": "Murcia",
   "parentId": null,
   "shortDescription": "Una sola comunidad con actividades, eventos, divulgación y mucha tecnología para quien quiera aprender, crear y compartir.",
+  "shortDescriptionI18n": {
+    "en": "A single community with activities, events, outreach and plenty of technology for anyone who wants to learn, build and share."
+  },
   "topics": "",
   "langs": [
     "es"

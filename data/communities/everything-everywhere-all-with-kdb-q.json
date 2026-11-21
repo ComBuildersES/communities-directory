@@ -8,6 +8,9 @@
   "location": "Madrid",
   "geographicScope": "local",
   "shortDescription": "Comunidad en Madrid del lenguaje q y la base de datos kdb+: meetups técnicos sobre series temporales, análisis de datos a alta frecuencia y su combinación con agentes de IA.",
+  "shortDescriptionI18n": {
+    "en": "The Madrid community around the q language and the kdb+ database: technical meetups on time series, high-frequency data analysis and how to combine them with AI agents."
+  },
   "topics": "",
   "langs": [
     "es",

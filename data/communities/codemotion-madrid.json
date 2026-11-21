@@ -9,6 +9,9 @@
   "geographicScope": "unknown",
   "parentId": null,
   "shortDescription": "Codemotion Madrid es uno de los eventos tecnológicos más relevantes en España, diseñado para reunir a desarrolladores, líderes técnicos y profesionales del sector digital en un mismo espacio.",
+  "shortDescriptionI18n": {
+    "en": "Codemotion Madrid is one of the most relevant tech events in Spain, designed to bring developers, tech leads and digital professionals together in one place."
+  },
   "topics": "",
   "langs": [
     "es"

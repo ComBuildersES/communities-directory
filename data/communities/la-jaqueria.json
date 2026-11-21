@@ -8,6 +8,9 @@
   "location": "Almería",
   "parentId": null,
   "shortDescription": "Asociación cultural sin ánimo de lucro en Almería que promueve la experimentación tecnológica, científica y artística mediante colaboración y educación social. Difunde la cultura maker, acerca la ciencia a la ciudadanía y fomenta proyectos colectivos con impacto social.",
+  "shortDescriptionI18n": {
+    "en": "A non-profit cultural association in Almería promoting technological, scientific and artistic experimentation through collaboration and social education. It spreads maker culture, brings science closer to people and encourages collective projects with social impact."
+  },
   "topics": "",
   "langs": [
     "es"

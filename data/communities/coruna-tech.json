@@ -8,6 +8,9 @@
   "location": "Coruña, Spain",
   "parentId": null,
   "shortDescription": "El punto de encuentro de todas las comunidades tecnológicas de A Coruña. Conectamos a desarrolladores, diseñadores y profesionales de la tecnología de Galicia.",
+  "shortDescriptionI18n": {
+    "en": "The meeting point for every tech community in A Coruña. We connect developers, designers and technology professionals across Galicia."
+  },
   "topics": "",
   "langs": [
     "es",

@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "A Coruña",
   "shortDescription": "AtlanticaConf es un evento que nació para ser el punto de encuentro de la comunidad tecnológica gallega, un lugar en donde empresas, profesionales, estudiantes y comunidades puedan juntarse y crear ecosistema.",
+  "shortDescriptionI18n": {
+    "en": "AtlanticaConf was created to be the meeting point of the Galician tech community: a place where companies, professionals, students and communities can come together and build an ecosystem."
+  },
   "topics": "",
   "langs": [
     "es"

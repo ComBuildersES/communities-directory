@@ -8,6 +8,9 @@
   "location": "Barcelona",
   "parentId": null,
   "shortDescription": "Geomob es una serie de eventos y un podcast para entusiastas de la información geoespacial. Nos reunimos cada pocos meses en diversas ciudades europeas y ofrecemos un foro distendido para debatir sobre la geoinnovación en todas sus formas, ya sea por diversión o con fines lucrat",
+  "shortDescriptionI18n": {
+    "en": "Geomob is a series of events and a podcast for geospatial information enthusiasts. We meet every few months in various European cities and offer a relaxed forum to discuss geo innovation in all its forms, whether for fun or for profit."
+  },
   "topics": "",
   "langs": [
     "en"

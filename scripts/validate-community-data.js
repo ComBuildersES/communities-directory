@@ -5,6 +5,7 @@ import { COMMUNITY_LANGUAGE_SET } from "../src/lib/communityLanguages.js";
 import { MERGED_STATUS, validateMergedReferences } from "../src/lib/mergedCommunities.js";
 import { validateOrganizedByReferences } from "../src/lib/organizedCommunities.js";
 import { URL_KINDS, URL_KIND_BY_KEY } from "../src/lib/communityUrls.js";
+import { DESCRIPTION_I18N_KEY } from "../src/lib/localizedText.js";
 
 // Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
 import { readCommunities, readDeletedCommunities, stableStringify } from "./lib/communities-store.js";
@@ -291,6 +292,39 @@ function validateCommunityGlobal(community, index, knownTagIds, knownAudienceIds
       }
 
       seenAudience.add(audienceId);
+    }
+  }
+
+  // Traducciones de la descripción (`shortDescriptionI18n`): la clave se omite cuando no hay
+  // ninguna, así que solo se valida su forma si viene. Un idioma con texto vacío es peor que
+  // no tenerlo: la ficha anunciaría una traducción que al pintarse no existe.
+  if (DESCRIPTION_I18N_KEY in community && community[DESCRIPTION_I18N_KEY] !== undefined) {
+    const translations = community[DESCRIPTION_I18N_KEY];
+
+    if (!isPlainObject(translations)) {
+      pushIssue(
+        issues.errors,
+        "error",
+        `${label}: ${DESCRIPTION_I18N_KEY} debe ser un objeto { idioma: texto }.`,
+      );
+    } else {
+      for (const [langCode, text] of Object.entries(translations)) {
+        if (!COMMUNITY_LANGUAGE_SET.has(langCode)) {
+          pushIssue(
+            issues.errors,
+            "error",
+            `${label}: ${DESCRIPTION_I18N_KEY} usa un idioma no soportado: "${langCode}".`,
+          );
+        }
+
+        if (!isNonEmptyString(text)) {
+          pushIssue(
+            issues.errors,
+            "error",
+            `${label}: ${DESCRIPTION_I18N_KEY}.${langCode} no puede estar vacío.`,
+          );
+        }
+      }
     }
   }
 

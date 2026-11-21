@@ -9,6 +9,9 @@
   "geographicScope": "national",
   "parentId": null,
   "shortDescription": "Congreso de hacking y seguridad informática activo más antiguo de España, fundado en 1999. Como asociación sin ánimo de lucro, organiza en Barcelona y Mallorca eventos independientes y sin sesgo comercial, reuniendo a profesionales y entusiastas del hacking y la ciberseguridad.",
+  "shortDescriptionI18n": {
+    "en": "The oldest active hacking and information security congress in Spain, founded in 1999. As a non-profit association it runs independent, commercially unbiased events in Barcelona and Mallorca, bringing together hacking and cybersecurity professionals and enthusiasts."
+  },
   "topics": "",
   "langs": [
     "es",

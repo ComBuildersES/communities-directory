@@ -8,6 +8,9 @@
   "location": "Madrid",
   "geographicScope": "national",
   "shortDescription": "Comunidad de desarrolladores de InterSystems en España: meetups técnicos sobre IRIS, interoperabilidad sanitaria y desarrollo asistido por IA.",
+  "shortDescriptionI18n": {
+    "en": "The community of InterSystems developers in Spain: technical meetups on IRIS, healthcare interoperability and AI-assisted development."
+  },
   "topics": "",
   "langs": [
     "es"

@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "Coruña",
   "shortDescription": "BricoLabs es una asociación que reúne semanalmente a todos aquellos que quieran colaborar en el diseño, construcción y pruebas de todo tipo de aparatos y gadgets, propuestos por los propios participantes y al estilo de otros HackerSpaces y FabLabs del mundo.",
+  "shortDescriptionI18n": {
+    "en": "BricoLabs is an association that brings together, every week, anyone who wants to help design, build and test all kinds of devices and gadgets proposed by the participants themselves, in the spirit of other hackerspaces and fab labs around the world."
+  },
   "topics": "",
   "langs": [
     "es"

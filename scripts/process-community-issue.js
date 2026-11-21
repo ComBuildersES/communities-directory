@@ -15,6 +15,7 @@ import {
 import { buildProposalSummary } from './lib/proposal-summary.js';
 import { normalizeOrganizedBy } from '../src/lib/organizedCommunities.js';
 import { toUrlEntries } from '../src/lib/communityUrls.js';
+import { DESCRIPTION_I18N_KEY, normalizeDescriptionTranslations } from '../src/lib/localizedText.js';
 
 const body = process.argv[2] ?? '';
 const imagesFolder = './public/images';
@@ -272,6 +273,14 @@ export function dropEmptyArchivedUrls(community) {
     (key) => Array.isArray(community?.[key]) && community[key].length === 0
   );
 
+  // Mismo caso con las traducciones de la descripción, que son un objeto y no un array.
+  if (
+    community?.[DESCRIPTION_I18N_KEY]
+    && Object.keys(community[DESCRIPTION_I18N_KEY]).length === 0
+  ) {
+    emptyKeys.push(DESCRIPTION_I18N_KEY);
+  }
+
   if (emptyKeys.length === 0) return community;
 
   return Object.fromEntries(
@@ -298,6 +307,12 @@ export function normalizePayload(payload) {
     location: normalizeString(payload.location),
     geographicScope: normalizeString(payload.geographicScope) || 'unknown',
     shortDescription: normalizeString(payload.shortDescription),
+    // Traducciones de la descripción. Igual que `archivedUrls`: el objeto viaja tal cual si
+    // la propuesta trae la clave, incluso vacío (en una edición es lo que distingue "no se
+    // tocó" de "se borraron todas"); `dropEmptyArchivedUrls` lo limpia antes de escribir.
+    ...(payload[DESCRIPTION_I18N_KEY] !== undefined
+      ? { [DESCRIPTION_I18N_KEY]: normalizeDescriptionTranslations(payload[DESCRIPTION_I18N_KEY]) }
+      : {}),
     topics: normalizeString(payload.topics),
     langs: normalizeCommunityLangs(payload.langs),
     tags: matchesAllTags ? [] : normalizedTags,

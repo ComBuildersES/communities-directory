@@ -8,6 +8,9 @@
   "location": "Asturias",
   "parentId": 404,
   "shortDescription": "Grupo de usuarios de Python en Asturias con eventos tanto presenciales como online.",
+  "shortDescriptionI18n": {
+    "en": "The Python user group in Asturias, with both in-person and online events."
+  },
   "topics": "",
   "langs": [
     "es"

@@ -9,6 +9,10 @@
   "geographicScope": "local",
   "parentId": null,
   "shortDescription": "A worldwide series of community-led conferences focused on software development, IT infrastructure operations, and the culture that connects them. No marketing pitches—just real-world engineering.",
+  "shortDescriptionI18n": {
+    "en": "A worldwide series of community-led conferences focused on software development, IT infrastructure operations, and the culture that connects them. No marketing pitches -- just real-world engineering.",
+    "es": "Serie mundial de conferencias organizadas por la comunidad en torno al desarrollo de software, la operación de infraestructura y la cultura que las conecta. Sin charlas comerciales: solo ingeniería real."
+  },
   "topics": "",
   "langs": [
     "es",

@@ -8,6 +8,9 @@
   "location": "Coruña",
   "parentId": null,
   "shortDescription": "Grupo con sede en Coruña dedicado (inicialmente) al mundo de Notion, pero actualmente también sobre todo tipo de herramientas no-code e IA. Organizamos encuentros puntuales, ya sean charlas o cafés para charlar y compartir ideas.",
+  "shortDescriptionI18n": {
+    "en": "A group based in A Coruña devoted (initially) to the world of Notion, and now to all kinds of no-code and AI tools. We organise occasional gatherings, from talks to coffees for chatting and sharing ideas."
+  },
   "topics": "",
   "langs": [
     "es",

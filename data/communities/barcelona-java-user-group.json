@@ -9,6 +9,9 @@
   "geographicScope": "unknown",
   "parentId": 302,
   "shortDescription": "Somos un grupo de \"frikis\" de la ciudad condal que nos gusta compartir experiencias y conocimientos relacionados con el mundo de la informática y en especial con Java, ese lenguaje de programación que nos da tantas risas y tantos quebraderos de cabeza 😅",
+  "shortDescriptionI18n": {
+    "en": "We are a bunch of geeks from Barcelona who enjoy sharing experiences and knowledge about computing, and especially about Java, the programming language that gives us so many laughs and so many headaches."
+  },
   "topics": "",
   "langs": [
     "es",

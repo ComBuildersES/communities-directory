@@ -362,6 +362,40 @@ Canales que una comunidad tuvo abiertos pero que su equipo dinamizador actual no
   el directorio ya tiene archivada, incluida la de la propia comunidad que se está editando.
 - `apply-suggestions` no reintroduce un canal archivado por scraping.
 
+### La descripción se lee en dos idiomas (`shortDescriptionI18n`)
+
+`shortDescription` es el texto **canónico**: lo que escribió la comunidad, en el idioma en
+que lo escribió. `shortDescriptionI18n` son traducciones de ese mismo texto,
+`{ idioma: texto }`, y la clave **se omite** cuando no hay ninguna. Toda la lógica en
+`src/lib/localizedText.js`.
+
+- El problema no era de las comunidades multilingües: `langs` (en qué idioma opera la
+  comunidad) y el locale de la URL (en qué idioma lee la persona) son **dos ejes distintos**,
+  y esto resuelve el segundo. `/en/` servía las 663 descripciones en castellano, no solo las
+  32 de comunidades que trabajan en varios idiomas.
+- **No** se convirtió el campo a objeto: eso rompía `schema.json`, el CSV, `llms-full.txt`,
+  el formulario y los issues abiertos, para ganar lo mismo que un campo hermano.
+- `resolveShortDescription` devuelve **texto y `lang`**, y la ficha escribe ese `lang` en el
+  elemento cuando no coincide con el locale: un párrafo en castellano dentro de `/en/` sin
+  marcar lo destroza un lector de pantalla y el traductor del navegador no sabe qué leer. El
+  modal lo dice además en voz alta (`communityModal.descriptionFallback`), porque quien lo
+  está viendo es justo quien puede traducirlo.
+- El idioma del canónico **se deduce de `langs`** (`es` si está, si no el primero); no se
+  guarda. Marcarlo exigiría rellenar 663 fichas para acertar en las pocas que no están en
+  castellano. Quien necesite exactitud guarda ese idioma en `shortDescriptionI18n`, que manda
+  sobre la deducción (GeeksCAT, con la descripción en catalán y `langs: ["ca","es"]`).
+- En el formulario va **plegado** bajo la descripción, y se abre solo si la ficha ya tiene
+  traducciones: esconder un texto guardado es perderlo sin avisar. Los idiomas que ofrece son
+  los locales de la interfaz más los `langs` de la ficha (`resolveDescriptionTranslationLangs`).
+- El objeto vacío viaja en el payload cuando la ficha tenía traducciones y se han quitado
+  todas, igual que `archivedUrls`; `dropEmptyArchivedUrls` lo limpia antes de escribir.
+- El relleno inicial (125 fichas) está en `data/description-translations/` y lo aplica
+  `scripts/apply-description-translations.js`, que **no pisa** lo que ya esté escrito.
+- `llms-full.txt` emite el canónico y, si la hay, la traducción inglesa marcada con `(en)`;
+  `llms.txt` publica cuántas activas la tienen (`withEnglishDescription` en
+  `src/lib/dataCoverage.js`). Sin ese recuento, `/en/` parece completo porque cada ficha tiene
+  *una* descripción, aunque esté en castellano.
+
 ### Coordenadas (`latLon`) en una edición
 
 El formulario **no** geocodifica: siembra el borrador con el `latLon` de la ficha actual y
@@ -461,6 +495,16 @@ lógica en `src/lib/organizedCommunities.js`.
   significa algo dentro de este dataset, así que un modelo que lo rellena está adivinando.
 - El relleno de las conferencias ya publicadas es **manual**, caso a caso. Un vínculo de
   autoría equivocado es peor que ninguno, así que no hay script de matching por nombre.
+
+El campo **no es "de conferencias"**, aunque hoy las cinco fichas que lo usan lo sean: el
+formulario decide cómo presentarlo con `resolveOrganizedByFieldState`
+(`ORGANIZED_BY_EXPECTED_TYPES`). En una conferencia la pregunta va a la vista con su ejemplo
+al lado; en un meetup, un hacklab o una meta-comunidad queda **plegado tras un enlace**, y se
+abre solo si la ficha ya declara organizadoras. Un campo abierto pidiendo "comunidades
+organizadoras" en una ficha de meetup se rellena con el paraguas (que es `parentId`) o con los
+patrocinadores (que no están en el directorio), y un vínculo de autoría equivocado es peor que
+ninguno. El ejemplo vive en el propio formulario y no solo en la ayuda emergente: una ayuda
+que hay que abrir no la lee quien está rellenando deprisa.
 
 Queda abierto en #475 el tipo para hackathones, jams y datatones: hoy están repartidos entre
 `conference` y `tech-meetup`, y ninguno de los dos es verdad.

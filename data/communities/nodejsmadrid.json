@@ -7,6 +7,9 @@
   "eventFormat": "in-person",
   "location": "Madrid",
   "shortDescription": "Grupo de meetup donde hablamos principalmente de Node.js y temas relacionados con el mundo del desarrollo de software.",
+  "shortDescriptionI18n": {
+    "en": "A meetup group where we mostly talk about Node.js and topics related to the software development world."
+  },
   "topics": "",
   "langs": [
     "es"

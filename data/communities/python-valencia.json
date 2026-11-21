@@ -8,6 +8,9 @@
   "location": "Valencia",
   "parentId": 404,
   "shortDescription": "La comunidad de Python Valencia es un grupo de entusiastas que comparten conocimientos y organizan charlas y talleres.",
+  "shortDescriptionI18n": {
+    "en": "The Python Valencia community is a group of enthusiasts who share knowledge and organise talks and workshops."
+  },
   "topics": "",
   "langs": [
     "es"

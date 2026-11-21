@@ -8,6 +8,9 @@
   "location": "Galicia",
   "parentId": 438,
   "shortDescription": "Sysarmy es la comunidad de sistemas que junta profesionales del área para favorecer el contacto y el intercambio de conocimiento de manera informal.",
+  "shortDescriptionI18n": {
+    "en": "Sysarmy is the sysadmin community that brings professionals in the field together to encourage contact and informal knowledge sharing."
+  },
   "topics": "",
   "langs": [
     "es"

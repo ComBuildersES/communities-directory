@@ -8,6 +8,9 @@
   "location": "Barcelona",
   "parentId": 207,
   "shortDescription": "Google Developer Group de Barcelona con encuentros de comunidad y divulgacion tecnica.",
+  "shortDescriptionI18n": {
+    "en": "The Google Developer Group of Barcelona, with community meetups and technical talks."
+  },
   "topics": "",
   "langs": [
     "es"
