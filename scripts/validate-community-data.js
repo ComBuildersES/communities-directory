@@ -6,6 +6,13 @@ import { MERGED_STATUS, validateMergedReferences } from "../src/lib/mergedCommun
 import { validateOrganizedByReferences } from "../src/lib/organizedCommunities.js";
 import { URL_KINDS, URL_KIND_BY_KEY } from "../src/lib/communityUrls.js";
 import { DESCRIPTION_I18N_KEY } from "../src/lib/localizedText.js";
+import {
+  hasCoordinates,
+  isLocationPlaceholder,
+  looksLikeLocationPlaceholder,
+  normalizeLocationKey,
+  provincesInLocationName,
+} from "../src/lib/communityLocations.js";
 
 // Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
 import { readCommunities, readDeletedCommunities, stableStringify } from "./lib/communities-store.js";
@@ -359,25 +366,7 @@ function validateCommunityGlobal(community, index, knownTagIds, knownAudienceIds
     }
   }
 
-  if (!isPlainObject(community.latLon) || !("lat" in community.latLon) || !("lon" in community.latLon)) {
-    pushIssue(
-      issues.errors,
-      "error",
-      `${label}: latLon debe ser un objeto con las claves lat y lon.`,
-    );
-  } else {
-    for (const coordinate of ["lat", "lon"]) {
-      const value = community.latLon[coordinate];
-
-      if (value !== null && typeof value !== "number") {
-        pushIssue(
-          issues.errors,
-          "error",
-          `${label}: latLon.${coordinate} debe ser number o null.`,
-        );
-      }
-    }
-  }
+  validateLocations(community, label, issues);
 
   if ("displayOnMap" in community && typeof community.displayOnMap !== "boolean") {
     pushIssue(issues.errors, "error", `${label}: displayOnMap debe ser boolean.`);
@@ -477,6 +466,98 @@ function validateCommunityGlobal(community, index, knownTagIds, knownAudienceIds
  */
 export function requiresBranding(community) {
   return community?.status !== "inactive";
+}
+
+/**
+ * Sedes (`locations`, issue #45). Va en la validación **global**, no en la estricta: la
+ * estricta sólo corre sobre las fichas que cambian, y lo que tiene que saltar es cualquier
+ * fichero que vuelva a traer `location` o `latLon` (una propuesta en vuelo de antes de la
+ * migración, un script viejo), toque lo que toque el PR.
+ */
+export function validateLocations(community, label, issues) {
+  for (const legacyKey of ["location", "latLon"]) {
+    if (legacyKey in community) {
+      pushIssue(
+        issues.errors,
+        "error",
+        `${label}: "${legacyKey}" ya no existe; las ubicaciones van en "locations" (lista de { name, latLon }).`,
+      );
+    }
+  }
+
+  if (!Array.isArray(community.locations)) {
+    pushIssue(
+      issues.errors,
+      "error",
+      `${label}: locations es obligatorio y debe ser un array de { name, latLon } ([] si no hay ubicación física).`,
+    );
+    return;
+  }
+
+  const seen = new Set();
+
+  community.locations.forEach((location, position) => {
+    const where = `${label}: locations[${position}]`;
+
+    if (!isPlainObject(location)) {
+      pushIssue(issues.errors, "error", `${where} debe ser un objeto { name, latLon }.`);
+      return;
+    }
+
+    if (!isNonEmptyString(location.name) || !location.name.trim()) {
+      pushIssue(issues.errors, "error", `${where}.name debe ser un texto no vacío.`);
+    } else {
+      const key = normalizeLocationKey(location.name);
+      if (seen.has(key)) {
+        pushIssue(issues.errors, "error", `${where}: la sede "${location.name}" está repetida.`);
+      }
+      seen.add(key);
+
+      // Sólo los que están fuera de la lista cerrada: los de dentro (`n/a`, `Sin completar`)
+      // se limpian en bloque, y 75 avisos repetidos esconderían los que sí hay que mirar.
+      if (looksLikeLocationPlaceholder(location.name) && !isLocationPlaceholder(location.name)) {
+        pushIssue(
+          issues.warnings,
+          "warning",
+          `${where}: "${location.name}" no parece una ubicación. Si no hay sede, usa locations: [].`,
+        );
+      }
+
+      const provinces = provincesInLocationName(location.name);
+      if (provinces.length > 1) {
+        pushIssue(
+          issues.warnings,
+          "warning",
+          `${where}: "${location.name}" nombra varias provincias (${provinces.join(", ")}). Si son sedes distintas, va una entrada por sede.`,
+        );
+      }
+    }
+
+    const { latLon } = location;
+    if (!isPlainObject(latLon) || !("lat" in latLon) || !("lon" in latLon)) {
+      pushIssue(issues.errors, "error", `${where}.latLon debe ser un objeto con las claves lat y lon.`);
+      return;
+    }
+
+    for (const coordinate of ["lat", "lon"]) {
+      const value = latLon[coordinate];
+      if (value !== null && (typeof value !== "number" || !Number.isFinite(value))) {
+        pushIssue(issues.errors, "error", `${where}.latLon.${coordinate} debe ser number o null.`);
+      }
+    }
+
+    if ((latLon.lat === null) !== (latLon.lon === null)) {
+      pushIssue(issues.errors, "error", `${where}.latLon debe traer lat y lon, o los dos a null.`);
+    }
+  });
+
+  if (community.displayOnMap === true && !community.locations.some((location) => hasCoordinates(location?.latLon))) {
+    pushIssue(
+      issues.errors,
+      "error",
+      `${label}: si displayOnMap es true, al menos una sede de locations debe tener coordenadas.`,
+    );
+  }
 }
 
 function validateCommunityStrict(community, index, issues, isNew = true) {
@@ -597,18 +678,6 @@ function validateCommunityStrict(community, index, issues, isNew = true) {
 
   validateArchivedUrls(community, label, issues);
 
-  if (
-    community.displayOnMap === true &&
-    (!isPlainObject(community.latLon) ||
-      typeof community.latLon.lat !== "number" ||
-      typeof community.latLon.lon !== "number")
-  ) {
-    pushIssue(
-      issues.errors,
-      "error",
-      `${label}: si displayOnMap es true, latLon.lat y latLon.lon deben ser numéricos.`,
-    );
-  }
 }
 
 /**

@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-21 `3e82ffd` script de migración a `locations` y orden canónico de claves
+- 2026-11-21 `5dcc390` librería de sedes y validación anti-deriva
+- 2026-11-21 `d7d81e6` script de migración a `locations` y orden canónico de claves
 - 2026-11-21 `5124b39` traduce la descripción de CaceresTech
 - 2026-11-21 `8b555ea` descripción en varios idiomas y repaso del inglés
 - 2026-11-14 `9fed223` medir visitas con consentimiento previo y LibreCounter
