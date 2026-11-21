@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-11-22 `755ec08` copiar el enlace de la ficha desde el desplegable Compartir
 - 2026-11-21 `f81b2e2` mapa, ficha, buscador y formulario con varias sedes
 - 2026-11-21 `352d3ed` scripts y workflows leen `locations`
 - 2026-11-21 `f0409cd` migra las 663 fichas de `location` + `latLon` a `locations`
@@ -109,12 +110,13 @@ Se organiza por mes y por tipo de cambio.
 
 ### Maintenance
 
+- 2026-11-22 `67389ea` CSV y changelog de la migración
 - 2026-11-21 `cca3255` deja la actualización del changelog en un solo workflow automático
 - 2026-11-05 `0b31f64` borrar la rama de las propuestas de comunidad descartadas
 
 ### Other
 
-- 2026-11-22 `c8a96f1` Step4ward con sedes en Barcelona y Madrid
+- 2026-11-22 `01342e4` Step4ward con sedes en Barcelona y Madrid
 - 2026-11-16 `c919a9e` Updating changelog
 - 2026-11-16 `9f9fcf8` Update config.yml
 - 2026-11-16 `2ddafcd` Update canarias-go-retro.json

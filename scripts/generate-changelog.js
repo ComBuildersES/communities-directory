@@ -287,7 +287,7 @@ function stripConventionalPrefix(subject) {
   return subject.replace(/^([a-z]+)(\([^)]+\))?!?:\s*/i, "");
 }
 
-function classifyCommit(subject) {
+export function classifyCommit(subject) {
   const normalized = subject.toLowerCase();
 
   if (normalized.startsWith("feat:") || normalized.startsWith("feat(")) return "Features";
