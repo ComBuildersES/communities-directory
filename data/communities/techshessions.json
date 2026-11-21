@@ -2,16 +2,30 @@
   "id": 445,
   "name": "TechShessions",
   "status": "active",
-  "lastReviewed": "18/10/2024",
+  "lastReviewed": "21/11/2026",
   "communityType": "mutual-aid",
-  "eventFormat": "hybrid",
-  "location": "Madrid",
+  "eventFormat": "in-person",
+  "location": "Madrid, Barccelona, La Rioja",
+  "geographicScope": "national",
+  "parentId": null,
+  "organizedBy": [
+    100
+  ],
+  "shortDescription": "Free, in-person programme (Madrid, La Rioja and Barcelona) aimed at women with a technical background (professionals or students) who want to take the leap into speaking at technology events.",
   "topics": "",
   "langs": [
-    "es"
+    "es",
+    "ca"
   ],
   "tags": [],
   "targetAudience": [],
+  "openTo": [
+    "speakers",
+    "mentors",
+    "volunteers",
+    "sponsors"
+  ],
+  "matchesAllTags": true,
   "contactInfo": "info@techshessions.com",
   "communityUrl": "https://techshessions.com/",
   "urls": [
@@ -23,6 +37,10 @@
     },
     {
       "url": "https://www.meetup.com/es-ES/Tech-SHEssions/"
+    },
+    {
+      "url": "https://techshessions.com/",
+      "kind": "ote"
     }
   ],
   "thumbnailUrl": "images/techshessions.webp",
@@ -31,5 +49,6 @@
     "lon": -3.7035825
   },
   "displayOnMap": true,
-  "humanValidated": false
+  "humanValidated": true,
+  "removalReason": ""
 }
