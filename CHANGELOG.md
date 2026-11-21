@@ -7,7 +7,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-21 `5f98abb` descripción en varios idiomas y repaso del inglés
+- 2026-11-21 `61763ec` traduce la descripción de CaceresTech
+- 2026-11-21 `8b555ea` descripción en varios idiomas y repaso del inglés
 - 2026-11-14 `9fed223` medir visitas con consentimiento previo y LibreCounter
 - 2026-11-14 `74f1690` mejorar búsqueda y explorar temáticas y públicos
 - 2026-11-14 `431d4c3` completar mejoras del directorio y traducciones
@@ -50,7 +51,6 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
-- 2026-11-16 `4ca30a7` [Actualizada DevopsDays Madrid](https://directory.communitybuilders.dev/?community=138) ([PR #509](https://github.com/ComBuildersES/communities-directory/pull/509))
 - 2026-11-21 `ca7103f` [Actualizada CaceresTech](https://directory.communitybuilders.dev/?community=70) ([PR #516](https://github.com/ComBuildersES/communities-directory/pull/516))
 - 2026-11-21 `a90b003` [Actualizada CaceresTech](https://directory.communitybuilders.dev/?community=70) ([PR #514](https://github.com/ComBuildersES/communities-directory/pull/514))
 - 2026-11-16 `4ca30a7` [Actualizada DevopsDays Madrid](https://directory.communitybuilders.dev/?community=138) ([PR #509](https://github.com/ComBuildersES/communities-directory/pull/509))
