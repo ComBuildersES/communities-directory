@@ -2,17 +2,21 @@
   "id": 70,
   "name": "CaceresTech",
   "status": "active",
-  "lastReviewed": "18/10/2024",
+  "lastReviewed": "21/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
   "location": "Cáceres",
+  "geographicScope": "unknown",
+  "parentId": null,
+  "shortDescription": "Somos un grupo apasionado por la tecnología y la innovación, con un firme compromiso de impulsar el desarrollo tecnológico en nuestra querida Cáceres, en el corazón de Extremadura. Nos reunimos cada mes para compartir conocimientos, ideas, y proyectos, siempre con la intención de",
   "topics": "",
   "langs": [
     "es"
   ],
   "tags": [],
   "targetAudience": [],
-  "contactInfo": "",
+  "matchesAllTags": true,
+  "contactInfo": "https://cacerestech.com/",
   "communityUrl": "https://cacerestech.com/",
   "urls": [
     {
@@ -25,8 +29,12 @@
       "url": "https://x.com/caceresfront"
     },
     {
-      "kind": "web",
-      "url": "https://cacerestech.com/"
+      "url": "https://cacerestech.com/",
+      "kind": "web"
+    },
+    {
+      "url": "https://eventos.wiki/organizations/cacerestech/events.json",
+      "kind": "ote"
     }
   ],
   "thumbnailUrl": "images/cacerestech.webp",
@@ -35,5 +43,6 @@
     "lon": -6.3708585
   },
   "displayOnMap": true,
-  "humanValidated": false
+  "humanValidated": true,
+  "removalReason": ""
 }
