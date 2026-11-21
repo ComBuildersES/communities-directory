@@ -25,7 +25,7 @@ function community(overrides = {}) {
     status: 'active',
     communityType: 'tech-meetup',
     eventFormat: 'in-person',
-    location: 'Valencia, Comunidad Valenciana',
+    locations: [{ name: 'Valencia, Comunidad Valenciana', latLon: { lat: 39.47, lon: -0.37 } }],
     geographicScope: 'local',
     langs: ['es'],
     tags: ['python'],
@@ -34,7 +34,6 @@ function community(overrides = {}) {
     communityUrl: 'https://example.org',
     urls: { eventsUrl: 'https://www.meetup.com/python-valencia/' },
     thumbnailUrl: 'images/python-valencia.webp',
-    latLon: { lat: 39.47, lon: -0.37 },
     displayOnMap: true,
     humanValidated: true,
     ...overrides,
@@ -105,7 +104,7 @@ describe('buildLlmsFull', () => {
   });
 
   it('omite los marcadores vacíos heredados en vez de emitir "n/a"', () => {
-    const markdown = buildLlmsFull([community({ location: 'n/a', contactInfo: '-' })], {
+    const markdown = buildLlmsFull([community({ locations: [{ name: 'n/a', latLon: { lat: null, lon: null } }], contactInfo: '-' })], {
       tags: TAGS,
       audience: AUDIENCE,
     });
@@ -280,7 +279,7 @@ describe('organizedBy en los artefactos', () => {
   });
 
   it('el CSV trae la columna, con los ids separados por |', () => {
-    // Partir por comas a pelo no sirve: `location` viaja entrecomillada y desplaza las
+    // Partir por comas a pelo no sirve: `locations` viaja entrecomillada y desplaza las
     // columnas siguientes.
     const splitCsvRow = (row) =>
       (row.match(/("([^"]|"")*"|[^,]*)(,|$)/g) ?? [])
@@ -303,4 +302,41 @@ describe('organizedBy en los artefactos', () => {
     // La ficha de la comunidad organizadora no repite la relación: es derivada.
     expect(full.split('## GDG Málaga')[1].split('##')[0]).not.toContain('Organised by');
   });
+
+describe('sedes (issue #45)', () => {
+  const twoCities = community({
+    name: 'Step4ward',
+    locations: [
+      { name: 'Barcelona', latLon: { lat: 41.38, lon: 2.17 } },
+      { name: 'Madrid', latLon: { lat: 40.41, lon: -3.7 } },
+    ],
+  });
+
+  it('el CSV trae una columna `locations` con los nombres separados por | y sin lat/lon', () => {
+    const [header, row] = buildCsv([twoCities]).trim().split('\n');
+    const columns = header.split(',');
+    expect(columns).toContain('locations');
+    expect(columns).not.toContain('lat');
+    expect(columns).not.toContain('lon');
+    expect(columns).not.toContain('location');
+    expect(row).toContain('Barcelona|Madrid');
+  });
+
+  it('llms-full.txt nombra todas las sedes', () => {
+    const full = buildLlmsFull([twoCities], { tags: TAGS, audience: AUDIENCE });
+    expect(full).toContain('- Location: Barcelona, Madrid');
+  });
+
+  it('schema.json documenta `locations` y ya no `location` ni `latLon`', () => {
+    const { properties } = buildSchema({ tags: TAGS, audience: AUDIENCE });
+    expect(properties.locations.type).toBe('array');
+    expect(properties).not.toHaveProperty('location');
+    expect(properties).not.toHaveProperty('latLon');
+  });
+
+  it('una comunidad online sin sedes se lee como online, no como vacía', () => {
+    const full = buildLlmsFull([community({ eventFormat: 'online', locations: [] })], { tags: TAGS, audience: AUDIENCE });
+    expect(full).toContain('- Location: Online only');
+  });
+});
 });

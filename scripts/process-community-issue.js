@@ -15,6 +15,13 @@ import {
 import { buildProposalSummary } from './lib/proposal-summary.js';
 import { normalizeOrganizedBy } from '../src/lib/organizedCommunities.js';
 import { toUrlEntries } from '../src/lib/communityUrls.js';
+import {
+  getLocations,
+  getPrimaryLocation,
+  hasCoordinates,
+  normalizeLocationKey,
+  normalizeLocations,
+} from '../src/lib/communityLocations.js';
 import { DESCRIPTION_I18N_KEY, normalizeDescriptionTranslations } from '../src/lib/localizedText.js';
 
 const body = process.argv[2] ?? '';
@@ -78,6 +85,17 @@ function normalizeLatLon(value) {
   if (value === '' || value === null || value === undefined) return null;
   const parsed = Number(value);
   return Number.isFinite(parsed) ? parsed : null;
+}
+
+/** Un issue editado a mano puede traer las coordenadas como texto: se leen antes de normalizar. */
+function normalizeIssueLocations(locations) {
+  return normalizeLocations(
+    locations.map((location) => (
+      location && typeof location === 'object' && location.latLon
+        ? { ...location, latLon: { lat: normalizeLatLon(location.latLon.lat), lon: normalizeLatLon(location.latLon.lon) } }
+        : location
+    ))
+  );
 }
 
 function readCatalogIds(filePath) {
@@ -163,7 +181,9 @@ function extractLegacyPayload() {
     lastReviewed: todayDDMMYYYY(),
     communityType: extractField('Tipo de comunidad'),
     eventFormat: extractField('Formato'),
-    location: extractField('Ciudad o región principal'),
+    // Issues escritos a mano (plantilla antigua): una sola ciudad en texto libre. Los
+    // marcadores (`n/a`, `Sin completar`) se descartan igual que en `normalizePayload`.
+    locations: normalizeLocations([extractField('Ciudad o región principal')]),
     topics: extractField('Temas que trata'),
     langs: parseLegacyLangs(extractField('Idiomas de la comunidad')),
     tags: [],
@@ -172,10 +192,6 @@ function extractLegacyPayload() {
     communityUrl: extractField('URL principal de la comunidad'),
     urls: [],
     thumbnailUrl: extractField('Imagen o logotipo de la comunidad'),
-    latLon: {
-      lat: null,
-      lon: null,
-    },
     displayOnMap: normalizeBoolean(extractField('Mostrar en el mapa')),
     humanValidated: false,
   };
@@ -304,7 +320,10 @@ export function normalizePayload(payload) {
     lastReviewed: normalizeString(payload.lastReviewed) || todayDDMMYYYY(),
     communityType: normalizeString(payload.communityType) || 'tech-meetup',
     eventFormat: normalizeString(payload.eventFormat) || 'unknown',
-    location: normalizeString(payload.location),
+    // Sedes (issue #45). Como `openTo` y `archivedUrls`: sin la clave, una edición conserva
+    // las sedes de la ficha; con `[]`, se quedan vacías. Los marcadores de la lista cerrada
+    // (`n/a`, `Sin completar`) se descartan aquí: no son una sede.
+    ...(Array.isArray(payload.locations) ? { locations: normalizeIssueLocations(payload.locations) } : {}),
     geographicScope: normalizeString(payload.geographicScope) || 'unknown',
     shortDescription: normalizeString(payload.shortDescription),
     // Traducciones de la descripción. Igual que `archivedUrls`: el objeto viaja tal cual si
@@ -328,12 +347,13 @@ export function normalizePayload(payload) {
     // desarchivó todo". La clave vacía se limpia justo antes de escribir el fichero.
     ...(Array.isArray(payload.archivedUrls) ? { archivedUrls } : {}),
     thumbnailUrl: normalizeString(payload.thumbnailUrl),
-    removalReason: normalizeString(payload.removalReason),
-    latLon: {
-      lat: normalizeLatLon(payload.latLon?.lat),
-      lon: normalizeLatLon(payload.latLon?.lon),
-    },
-    displayOnMap: normalizeBoolean(payload.displayOnMap) && normalizeString(payload.communityType) !== 'umbrella-org',
+    // Sólo en una baja. Antes viajaba siempre, y cada edición dejaba un `"removalReason": ""`
+    // en el fichero de la comunidad.
+    ...(normalizeString(payload.removalReason) ? { removalReason: normalizeString(payload.removalReason) } : {}),
+    // Igual que `locations`: sin la clave, la edición no lo toca.
+    ...(payload.displayOnMap !== undefined
+      ? { displayOnMap: normalizeBoolean(payload.displayOnMap) && normalizeString(payload.communityType) !== 'umbrella-org' }
+      : {}),
     humanValidated: Boolean(payload.humanValidated),
     ...(matchesAllTags ? { matchesAllTags: true } : {}),
     ...(matchesAllAudience ? { matchesAllAudience: true } : {}),
@@ -368,25 +388,28 @@ function buildDeletedCommunityEntry(community, removalReason) {
 }
 
 /**
- * Una edición que mueve `location` arrastra el `latLon` de la ficha anterior: el formulario
- * siembra el borrador con las coordenadas existentes y no las recalcula. Sin esto, cambiar
- * "Barcelona" por "Parc Bit, Mallorca" dejaba el pin en Barcelona (PR #457).
+ * Una edición que renombra una sede arrastra el `latLon` de la sede anterior: el formulario
+ * siembra cada fila con sus coordenadas y no las recalcula. Sin esto, cambiar "Barcelona" por
+ * "Parc Bit, Mallorca" dejaba el pin en Barcelona (PR #457).
  *
- * Solo se regeocodifica si las coordenadas de la propuesta son exactamente las heredadas:
- * si vienen distintas, alguien las ha puesto a mano y manda su valor.
+ * Se regeocodifica una sede sólo si su nombre no está entre las sedes de la ficha y sus
+ * coordenadas son exactamente las de alguna de ellas (la fila renombrada). Si vienen
+ * distintas, alguien las ha puesto a mano y manda su valor.
  */
-export function shouldRegeocodeLocation(payload, existing) {
-  if (!existing || !payload.location) return false;
+export function shouldRegeocodeLocation(location, existingLocations = []) {
+  if (!hasCoordinates(location?.latLon) || !Array.isArray(existingLocations)) return false;
 
-  const sameLocation =
-    normalizeString(existing.location).toLowerCase() === normalizeString(payload.location).toLowerCase();
-  if (sameLocation) return false;
+  const key = normalizeLocationKey(location.name);
+  if (existingLocations.some((entry) => normalizeLocationKey(entry?.name) === key)) return false;
 
-  return (
-    payload.latLon.lat === normalizeLatLon(existing.latLon?.lat) &&
-    payload.latLon.lon === normalizeLatLon(existing.latLon?.lon)
-  );
+  return existingLocations.some((entry) => (
+    hasCoordinates(entry?.latLon)
+    && entry.latLon.lat === location.latLon.lat
+    && entry.latLon.lon === location.latLon.lon
+  ));
 }
+
+const NOMINATIM_DELAY_MS = 1100;
 
 async function geocodeLocation(location) {
   try {
@@ -409,27 +432,56 @@ async function geocodeLocation(location) {
   }
 }
 
-export async function resolveCoordinates(payload, existing) {
-  if (!payload.displayOnMap || payload.communityType === 'umbrella-org') {
-    return { lat: null, lon: null };
+const NULL_LAT_LON = { lat: null, lon: null };
+
+/**
+ * Coordenadas de cada sede. Devuelve `undefined` si la propuesta no trae `locations` (en una
+ * edición, la ficha conserva las suyas).
+ *
+ * Por sede: si su nombre ya estaba en la ficha y llega sin coordenadas, hereda las de antes;
+ * si es nueva o se ha renombrado, se geocodifica. Las peticiones van de una en una y
+ * espaciadas (Nominatim pide 1 req/s). Si la geocodificación falla, se conservan las
+ * coordenadas que traía la fila: sacar la comunidad del mapa es peor que un pin
+ * desactualizado.
+ */
+export async function resolveCoordinates(payload, existing, { delayMs = NOMINATIM_DELAY_MS } = {}) {
+  if (!Array.isArray(payload.locations)) return undefined;
+
+  const displayOnMap = payload.displayOnMap ?? existing?.displayOnMap ?? false;
+  if (!displayOnMap || payload.communityType === 'umbrella-org') {
+    return payload.locations.map((location) => ({ ...location, latLon: { ...NULL_LAT_LON } }));
   }
 
-  const inheritedLatLon = payload.latLon.lat !== null && payload.latLon.lon !== null
-    ? payload.latLon
-    : null;
+  const existingLocations = getLocations(existing);
+  const resolved = [];
+  let requests = 0;
 
-  if (inheritedLatLon && !shouldRegeocodeLocation(payload, existing)) {
-    return inheritedLatLon;
+  for (const location of payload.locations) {
+    const sameName = existingLocations.find(
+      (entry) => normalizeLocationKey(entry?.name) === normalizeLocationKey(location.name)
+    );
+    const ownLatLon = hasCoordinates(location.latLon) ? location.latLon : null;
+
+    if (ownLatLon && !shouldRegeocodeLocation(location, existingLocations)) {
+      resolved.push({ ...location, latLon: { ...ownLatLon } });
+      continue;
+    }
+
+    if (!ownLatLon && hasCoordinates(sameName?.latLon)) {
+      resolved.push({ ...location, latLon: { ...sameName.latLon } });
+      continue;
+    }
+
+    if (requests > 0 && delayMs > 0) {
+      await new Promise((resolve) => setTimeout(resolve, delayMs));
+    }
+    requests += 1;
+
+    const geocoded = await geocodeLocation(location.name);
+    resolved.push({ ...location, latLon: geocoded ?? (ownLatLon ? { ...ownLatLon } : { ...NULL_LAT_LON }) });
   }
 
-  if (!payload.location) {
-    return inheritedLatLon ?? { lat: null, lon: null };
-  }
-
-  // Si la geocodificación falla, conservar las coordenadas heredadas es menos malo que
-  // sacar la comunidad del mapa.
-  const geocoded = await geocodeLocation(payload.location);
-  return geocoded ?? inheritedLatLon ?? { lat: null, lon: null };
+  return resolved;
 }
 
 export function buildThumbnailTransform(image) {
@@ -510,10 +562,16 @@ async function main() {
     throw new Error(`No se encontró la comunidad con ID ${payload.id} para ${mode === ISSUE_MODES.DELETE ? 'eliminar' : 'editar'}`);
   }
 
-  const resolvedCoordinates = mode === ISSUE_MODES.DELETE
-    ? { lat: null, lon: null }
+  const resolvedLocations = mode === ISSUE_MODES.DELETE
+    ? undefined
     : await resolveCoordinates(payload, existing);
-  fs.writeFileSync(path.join('.geo', 'last-coordinates.json'), JSON.stringify(resolvedCoordinates, null, 2));
+  // El workflow lee `.lat` / `.lon` de este fichero para el cuerpo de la PR: es la sede
+  // principal, la que se habría pintado antes de que hubiera varias.
+  const primaryLatLon = getPrimaryLocation({ locations: resolvedLocations ?? getLocations(existing) })?.latLon;
+  fs.writeFileSync(
+    path.join('.geo', 'last-coordinates.json'),
+    JSON.stringify(primaryLatLon ?? NULL_LAT_LON, null, 2)
+  );
   fs.writeFileSync(
     path.join('.geo', 'community-meta.json'),
     JSON.stringify({ name: payload.name, mode, proposalEditorUrl }, null, 2)
@@ -523,7 +581,12 @@ async function main() {
   // tabla markdown no cabe en un `$GITHUB_OUTPUT` de una línea.
   fs.writeFileSync(
     path.join('.geo', 'proposal-summary.md'),
-    `${buildProposalSummary({ mode, payload, existing })}\n`
+    `${buildProposalSummary({
+      mode,
+      // Con las coordenadas ya resueltas: es lo que se va a escribir en la ficha.
+      payload: resolvedLocations !== undefined ? { ...payload, locations: resolvedLocations } : payload,
+      existing,
+    })}\n`
   );
 
   if (mode === ISSUE_MODES.DELETE) {
@@ -548,7 +611,7 @@ async function main() {
   const normalizedCommunity = {
     ...payload,
     id: mode === ISSUE_MODES.CREATE ? null : existing.id,
-    latLon: resolvedCoordinates,
+    ...(resolvedLocations !== undefined ? { locations: resolvedLocations } : {}),
     thumbnailUrl,
   };
 

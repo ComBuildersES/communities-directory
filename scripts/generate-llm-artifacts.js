@@ -26,6 +26,7 @@ import {
   slugifyCommunityName,
 } from './lib/communities-store.js';
 import { buildCoverage } from '../src/lib/dataCoverage.js';
+import { formatLocationNames, getDisplayLocationNames } from '../src/lib/communityLocations.js';
 import { URL_KINDS, resolveUrlEntry, toLegacyUrlMap, toUrlEntries } from '../src/lib/communityUrls.js';
 
 export const SITE_URL = 'https://directory.communitybuilders.dev';
@@ -51,7 +52,7 @@ const CSV_COLUMNS = [
   'status',
   'communityType',
   'eventFormat',
-  'location',
+  'locations',
   'provinceId',
   'geographicScope',
   'langs',
@@ -60,8 +61,6 @@ const CSV_COLUMNS = [
   'openTo',
   'communityUrl',
   'contactInfo',
-  'lat',
-  'lon',
   'lastReviewed',
   'humanValidated',
   'organizedBy',
@@ -141,7 +140,9 @@ export function buildCsv(communities) {
       status: community.status,
       communityType: community.communityType,
       eventFormat: community.eventFormat,
-      location: community.location,
+      // Nombres de las sedes separados por `|`, como el resto de listas del CSV. Sin
+      // coordenadas: con varias sedes no caben en dos columnas, y están en el JSON.
+      locations: getDisplayLocationNames(community),
       provinceId: community.provinceId,
       geographicScope: community.geographicScope ?? 'unknown',
       langs: community.langs,
@@ -150,8 +151,6 @@ export function buildCsv(communities) {
       openTo: community.openTo,
       communityUrl: community.communityUrl,
       contactInfo: community.contactInfo,
-      lat: community.latLon?.lat,
-      lon: community.latLon?.lon,
       lastReviewed: community.lastReviewed,
       humanValidated: community.humanValidated,
       organizedBy: community.organizedBy ?? [],
@@ -204,11 +203,30 @@ export function buildSchema({ tags = [], audience = [] } = {}) {
       },
       communityType: enumProperty('communityType', 'What kind of community this is.'),
       eventFormat: enumProperty('eventFormat', 'How the community meets.'),
-      location: {
-        type: 'string',
+      locations: {
+        type: 'array',
         description:
-          'Free-text place where events happen, usually "City, Region". Empty for online-only ' +
-          'communities. Not the same as `geographicScope`.',
+          'Places where the community holds in-person activity on a regular basis, main one ' +
+          'first. One entry per city: a community that meets in Barcelona and Madrid has two. ' +
+          'An empty array means no physical location is recorded: online-only, an umbrella ' +
+          'organisation, or simply not filled in yet (tell them apart with `eventFormat` and ' +
+          '`communityType`). Not the same as `geographicScope`. Some legacy entries still hold ' +
+          'several cities in one `name`, or a placeholder such as "n/a": read `name` as text.',
+        items: {
+          type: 'object',
+          required: ['name', 'latLon'],
+          properties: {
+            name: { type: 'string', description: 'Free-text place name, usually a city.' },
+            latLon: {
+              type: 'object',
+              description: 'Coordinates of this place; both members are null when unknown.',
+              properties: {
+                lat: { type: ['number', 'null'] },
+                lon: { type: ['number', 'null'] },
+              },
+            },
+          },
+        },
       },
       provinceId: {
         type: 'string',
@@ -217,7 +235,7 @@ export function buildSchema({ tags = [], audience = [] } = {}) {
       geographicScope: enumProperty(
         'geographicScope',
         'Territory the community serves. A community can meet in Madrid and serve the whole ' +
-          'country, so this is independent of `location`.'
+          'country, so this is independent of `locations`.'
       ),
       parentId: {
         type: ['integer', 'null'],
@@ -353,14 +371,6 @@ export function buildSchema({ tags = [], audience = [] } = {}) {
         type: 'string',
         description: `Logo path relative to the site root, e.g. ${SITE_URL}/images/foo.webp`,
       },
-      latLon: {
-        type: 'object',
-        description: 'Coordinates of `location`; both members are null for online-only communities.',
-        properties: {
-          lat: { type: ['number', 'null'] },
-          lon: { type: ['number', 'null'] },
-        },
-      },
       displayOnMap: {
         type: 'boolean',
         description: 'Whether the community is plotted on the map view.',
@@ -400,7 +410,7 @@ function formatCommunitySection(community, { tagLabels, audienceLabels, nameById
     ['Format', community.eventFormat],
     [
       'Location',
-      meaningfulText(community.location) ??
+      (formatLocationNames(community, ', ') || null) ??
         (community.eventFormat === 'online' ? 'Online only' : null),
     ],
     ['Scope', community.geographicScope && community.geographicScope !== 'unknown' ? community.geographicScope : null],
@@ -546,7 +556,7 @@ regenerated on every deploy.
 - \`tags\` and \`targetAudience\` are **ids**, not labels: join them against tags.json and audience.json to get human-readable names. Match on \`label\`, \`description\` and \`synonyms\`, not just the id.
 - \`matchesAllTags\` / \`matchesAllAudience\` mean "generalist": the community matches any topic or any profile, and its array is empty on purpose. Treat an empty array plus the flag as "everything", never as "nothing".
 - \`openTo\` lists explicitly declared openness to contributions: volunteers, collaborations, co-organisers, speakers, sponsors, venues, mentors. It does not imply urgent recruitment. Empty or absent means unknown, not refusal. Never infer it from community type or activity.
-- \`location\` is where events happen; \`geographicScope\` is the territory served. They differ often: a community can meet in Madrid and serve all of Spain.
+- \`locations\` is the list of places where events happen, main one first; \`geographicScope\` is the territory served. They differ often: a community can meet in Barcelona and Madrid and serve all of Spain. An empty \`locations\` means no physical place is recorded (online-only, an umbrella, or not filled in yet), not that the community has no presence anywhere.
 - Coverage is uneven, so do not read an empty field as a statement about the community. Of the ${active} active communities, ${withTags} have \`tags\`, ${withAudience} have \`targetAudience\` and ${withScope} have \`geographicScope\`. ${withEnglishDescription} carry an English translation of \`shortDescription\` in \`shortDescriptionI18n\`; the rest are described in their own language only. An empty field means nobody has filled it in yet, not that the community has no topic or serves nowhere. Say which recommendations rest on a field that is often missing.
 - \`lastReviewed\` is the date a person last checked the record. It is **not** an activity signal: most records have not been revisited since they were added. The only place where live activity can be checked is the \`urls\` entry whose \`kind\` is \`ote\`, the community's events feed (${withOte} active communities publish one). The field only says the community publishes one; it says nothing about what is in it, and keeping it current is the community's call, not the directory's. Read the dates inside the feed rather than inferring activity from the field being present.
 - \`humanValidated: false\` means a person added the community but its tagging was filled in semi-automatically and nobody has checked it. Say so if you present it as fact. Only ${withHumanValidation} of the active communities have been reviewed by a person, and ${reviewed} of all ${total} records. The live counts are in [coverage.json](${SITE_URL}/data/coverage.json).

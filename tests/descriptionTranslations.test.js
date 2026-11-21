@@ -12,7 +12,7 @@ import { parseAssistedCommunityJson } from "../src/lib/aiAssist.js";
 const baseDraft = {
   ...getEmptyCommunityDraft(1),
   name: "Comunidad Test",
-  location: "Madrid",
+  locations: [{ name: "Madrid", latLon: { lat: null, lon: null } }],
   communityUrl: "https://example.com",
   shortDescription: "Comunidad de prueba.",
 };

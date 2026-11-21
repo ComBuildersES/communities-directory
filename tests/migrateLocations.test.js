@@ -16,6 +16,8 @@ import {
  * ya no tenga los campos viejos.
  */
 const PRE_MIGRATION_REF = "cca3255";
+/** Commit que aplicó la migración a los datos. */
+const MIGRATION_REF = "f0409cd";
 
 function refExists(ref) {
   try {
@@ -132,3 +134,18 @@ describe.skipIf(!refExists(PRE_MIGRATION_REF))("migración sobre el dataset comp
     expect(empty).toEqual([]);
   });
 });
+
+describe.skipIf(!refExists(PRE_MIGRATION_REF) || !refExists(MIGRATION_REF))(
+  "el commit de datos es exactamente la salida del script",
+  () => {
+    it("cada ficha migrada coincide con migrateCommunityLocation(ficha anterior)", () => {
+      const before = readCommunitiesAtRef(PRE_MIGRATION_REF);
+      const after = new Map(readCommunitiesAtRef(MIGRATION_REF).map((c) => [c.id, c]));
+      const mismatches = before
+        .filter((c) => stableStringify(migrateCommunityLocation(c).community) !== stableStringify(after.get(c.id)))
+        .map((c) => c.name);
+      expect(after.size).toBe(before.length);
+      expect(mismatches).toEqual([]);
+    });
+  },
+);

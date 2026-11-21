@@ -17,6 +17,8 @@
  * - `haskellmad`: `location: ""` pero con las coordenadas de Madrid y `displayOnMap: true`.
  *   El nombre que faltaba es obvio, y sin él la ficha no podría tener sede con pin.
  */
+import process from "node:process";
+
 import {
   readCommunities,
   stableStringify,

@@ -1,6 +1,7 @@
 /* eslint-env node */
 import fs from 'fs';
 import { resolveUrlEntry, toUrlEntries } from '../../src/lib/communityUrls.js';
+import { hasCoordinates, inferProvinceIdsFromLocations } from '../../src/lib/communityLocations.js';
 
 /**
  * Ficha legible de una propuesta de comunidad para el cuerpo de la PR automática
@@ -19,8 +20,11 @@ const FIELD_DEFS = [
   { key: 'status', label: 'Estado', enumGroup: 'status' },
   { key: 'communityType', label: 'Tipo', enumGroup: 'communityType' },
   { key: 'eventFormat', label: 'Formato', enumGroup: 'eventFormat' },
-  { key: 'location', label: 'Ubicación' },
-  { key: 'provinceId', label: 'Provincia' },
+  // Sedes (issue #45): nombre y coordenadas de cada una. `partial`: en una edición la clave
+  // puede no venir, y entonces no se ha tocado (no es "se han quitado todas").
+  { key: 'locations', label: 'Sedes', locations: true, partial: true },
+  // Derivada de las sedes al construir la ficha: es lo que decide a quién se asigna.
+  { key: 'provinceIds', label: 'Provincias', list: true },
   { key: 'geographicScope', label: 'Ámbito geográfico', enumGroup: 'geographicScope' },
   { key: 'langs', label: 'Idiomas', enumGroup: 'language', list: true },
   { key: 'shortDescription', label: 'Descripción corta' },
@@ -37,7 +41,7 @@ const FIELD_DEFS = [
   { key: 'parentId', label: 'Comunidad madre (parentId)' },
   // Autoría (issue #475): ids de las comunidades del directorio que organizan esta.
   { key: 'organizedBy', label: 'Organizada por (ids)', list: true },
-  { key: 'displayOnMap', label: 'Mostrar en el mapa', boolean: true },
+  { key: 'displayOnMap', label: 'Mostrar en el mapa', boolean: true, partial: true },
   { key: 'humanValidated', label: 'Validado por humano', boolean: true },
 ];
 
@@ -92,9 +96,20 @@ function isEmptyValue(value) {
   return String(value).trim() === '';
 }
 
+function formatLocations(locations) {
+  return locations
+    .map((location) => (
+      hasCoordinates(location?.latLon)
+        ? `${location.name} (${location.latLon.lat}, ${location.latLon.lon})`
+        : `${location?.name ?? ''} (sin coordenadas)`
+    ))
+    .join(' · ');
+}
+
 function formatValue(def, value, catalogs) {
   if (def.boolean) return value ? 'Sí' : 'No';
   if (isEmptyValue(value)) return '—';
+  if (def.locations) return formatLocations(value);
 
   if (def.list) {
     const labels = def.catalog ? catalogs[def.catalog] ?? {} : null;
@@ -155,6 +170,7 @@ function buildFieldRows(payload, catalogs) {
 
 function buildDiffRows(payload, existing, catalogs) {
   return FIELD_DEFS
+    .filter((def) => !def.partial || payload[def.key] !== undefined)
     .filter((def) => serializeForComparison(payload[def.key]) !== serializeForComparison(existing[def.key]))
     .map((def) => [
       '|',
@@ -234,8 +250,15 @@ function buildUrlDiffRows(payload, existing) {
   return rows;
 }
 
-export function buildProposalSummary({ mode, payload, existing = null, catalogs }) {
+function withProvinceIds(record) {
+  if (!record || !Array.isArray(record.locations)) return record;
+  return { ...record, provinceIds: inferProvinceIdsFromLocations(record.locations) };
+}
+
+export function buildProposalSummary({ mode, payload: rawPayload, existing: rawExisting = null, catalogs }) {
   const resolvedCatalogs = catalogs ?? loadSummaryCatalogs();
+  const payload = withProvinceIds(rawPayload);
+  const existing = withProvinceIds(rawExisting);
   const name = typeof payload?.name === 'string' && payload.name.trim() ? payload.name.trim() : 'Sin nombre';
   const lines = [];
 

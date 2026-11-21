@@ -37,7 +37,6 @@
     "test:watch": "vitest",
     "compile-communities": "node scripts/compile-communities.js",
     "generate-llm-artifacts": "node scripts/generate-llm-artifacts.js",
-    "explode-communities": "node scripts/explode-communities.js",
     "assign-community-ids": "node scripts/assign-community-ids.js"
   },
   "dependencies": {

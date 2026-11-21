@@ -12,7 +12,7 @@ import { dropEmptyArchivedUrls, normalizePayload } from "../scripts/process-comm
 const baseDraft = {
   ...getEmptyCommunityDraft(1),
   name: "Comunidad Test",
-  location: "Madrid",
+  locations: [{ name: "Madrid", latLon: { lat: null, lon: null } }],
   communityUrl: "https://example.com",
 };
 
@@ -113,7 +113,6 @@ describe("normalizePayload (procesado del issue)", () => {
     langs: ["es"],
     tags: [],
     targetAudience: [],
-    latLon: { lat: null, lon: null },
     displayOnMap: false,
   };
 

@@ -7,12 +7,15 @@ import { inferProvinceIdFromNominatim } from "../src/lib/provinceNormalization.j
 
 // Fuente de verdad: data/communities/ (el bundle de public/data/ es un artefacto generado).
 import { readCommunities } from "./lib/communities-store.js";
+import { getDisplayLocationNames } from "../src/lib/communityLocations.js";
 const OWNERS_PATH = ".github/community-owners.yml";
 const DEFAULT_CACHE_PATH = "tmp/nominatim-community-owner-cache.json";
 const DEFAULT_REPORT_PATH = "tmp/community-owner-assignment-report.json";
 const NOMINATIM_URL = "https://nominatim.openstreetmap.org/search";
 const REQUEST_DELAY_MS = 1100;
-const SKIPPED_LOCATIONS = new Set(["", "n/a", "itinerante", "sin completar"]);
+// "Itinerante" es un hecho, no un hueco, pero no hay provincia que simular. Los marcadores
+// (`n/a`, `Sin completar`…) los descarta `getDisplayLocationNames`.
+const SKIPPED_LOCATIONS = new Set(["", "itinerante"]);
 const EVENT_FORMATS_WITH_LOCATION = new Set(["Presencial", "Híbridos"]);
 
 function parseArgs(argv) {
@@ -122,6 +125,15 @@ function normalizeText(value = "") {
     .replace(/\s+/g, " ");
 }
 
+/**
+ * Simula sobre la sede principal. La asignación real va a todas las provincias de las sedes
+ * (`resolve-issue-assignees.js`); para este informe, que sirve para ver qué provincias se
+ * quedan sin responsable, la principal basta.
+ */
+function primaryLocationName(community) {
+  return getDisplayLocationNames(community)[0] ?? "";
+}
+
 function shouldSkipLocation(value = "") {
   return SKIPPED_LOCATIONS.has(normalizeText(value));
 }
@@ -143,7 +155,7 @@ function shouldSkipCommunity(community = {}) {
     };
   }
 
-  if (shouldSkipLocation(community.location ?? "")) {
+  if (shouldSkipLocation(primaryLocationName(community))) {
     return {
       skipped: true,
       reason: "location-no-simulable",
@@ -264,7 +276,7 @@ async function main() {
   );
 
   for (const [index, community] of selectedCommunities.entries()) {
-    const location = community.location ?? "";
+    const location = primaryLocationName(community);
     const skipDecision = shouldSkipCommunity(community);
     const progressPrefix = `[${index + 1}/${selectedCommunities.length}] [${community.id}] ${community.name}`;
 

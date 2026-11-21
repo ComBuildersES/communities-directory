@@ -19,7 +19,7 @@ const payload = {
   status: 'active',
   communityType: 'collaborative-group',
   eventFormat: 'hybrid',
-  location: 'Madrid',
+  locations: [{ name: 'Madrid', latLon: { lat: 40.4167, lon: -3.7033 } }],
   geographicScope: 'national',
   langs: ['es'],
   shortDescription: 'Impulsa la participación de mujeres como ponentes.',
@@ -74,7 +74,7 @@ describe('buildProposalSummary', () => {
       ...payload,
       id: 632,
       status: 'active',
-      location: 'Barcelona',
+      locations: [{ name: 'Barcelona', latLon: { lat: null, lon: null } }],
       tags: ['stem'],
       urls: { linkedin: 'https://linkedin.com/company/old' },
     };
@@ -82,7 +82,8 @@ describe('buildProposalSummary', () => {
 
     expect(summary).toContain('### ✏️ Cambios propuestos — Women4TT');
     expect(summary).toContain('| Campo | Antes | Ahora |');
-    expect(summary).toContain('| Ubicación | Barcelona | Madrid |');
+    expect(summary).toContain('| Sedes | Barcelona (sin coordenadas) | Madrid (40.4167, -3.7033) |');
+    expect(summary).toContain('| Provincias | barcelona | madrid |');
     expect(summary).toContain('| Etiquetas | STEM | Women in tech · STEM |');
     expect(summary).toContain('| urls.linkedin | https://linkedin.com/company/old | https://linkedin.com/company/w4tt |');
     // `status` no cambia: no debe aparecer como fila de diff.
@@ -165,5 +166,31 @@ describe('ruido en la ficha', () => {
       .not.toContain('Vale para cualquier');
     expect(buildProposalSummary({ mode: 'create', payload: { ...base, matchesAllTags: true }, catalogs }))
       .toContain('| Vale para cualquier etiqueta | Sí |');
+  });
+
+  it('una edición sin `locations` no lista las sedes como borradas', () => {
+    const existing = { ...payload, id: 632 };
+    const edited = { ...payload, id: 632, name: 'Women4TT bis' };
+    delete edited.locations;
+    delete edited.displayOnMap;
+    const summary = buildProposalSummary({ mode: 'edit', payload: edited, existing, catalogs });
+    expect(summary).not.toContain('| Sedes |');
+    expect(summary).not.toContain('| Mostrar en el mapa |');
+  });
+
+  it('en un alta muestra cada sede y sus provincias', () => {
+    const summary = buildProposalSummary({
+      mode: 'create',
+      payload: {
+        ...payload,
+        locations: [
+          { name: 'Barcelona', latLon: { lat: 41.38, lon: 2.17 } },
+          { name: 'Madrid', latLon: { lat: null, lon: null } },
+        ],
+      },
+      catalogs,
+    });
+    expect(summary).toContain('| Sedes | Barcelona (41.38, 2.17) · Madrid (sin coordenadas) |');
+    expect(summary).toContain('| Provincias | barcelona · madrid |');
   });
 });

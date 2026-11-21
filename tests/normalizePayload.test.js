@@ -6,7 +6,7 @@ const base = {
   status: "active",
   communityType: "tech-meetup",
   eventFormat: "in-person",
-  location: "Madrid",
+  locations: [{ name: "Madrid", latLon: { lat: null, lon: null } }],
   shortDescription: "",
   topics: "",
   langs: ["es"],
@@ -16,7 +16,6 @@ const base = {
   communityUrl: "https://example.com",
   urls: {},
   thumbnailUrl: "",
-  latLon: { lat: null, lon: null },
   displayOnMap: false,
   humanValidated: false,
 };
@@ -95,5 +94,54 @@ describe("normalizePayload", () => {
     expect(normalizePayload({ ...base, matchesAllAudience: true }).matchesAllAudience).toBe(true);
     expect(normalizePayload({ ...base, matchesAllAudience: false })).not.toHaveProperty("matchesAllAudience");
     expect(normalizePayload({ ...base })).not.toHaveProperty("matchesAllAudience");
+  });
+
+  describe("locations (issue #45)", () => {
+    it("sin la clave, no la emite: la edición conserva las sedes de la ficha", () => {
+      const payload = { ...base };
+      delete payload.locations;
+      expect(normalizePayload(payload)).not.toHaveProperty("locations");
+    });
+
+    it("[] se conserva: es vaciar las sedes", () => {
+      expect(normalizePayload({ ...base, locations: [] }).locations).toEqual([]);
+    });
+
+    it("descarta los marcadores de la lista cerrada y deduplica", () => {
+      const result = normalizePayload({
+        ...base,
+        locations: [{ name: "n/a" }, { name: " Madrid " }, { name: "madrid" }, { name: "NA" }],
+      });
+      expect(result.locations).toEqual([
+        { name: "Madrid", latLon: { lat: null, lon: null } },
+        { name: "NA", latLon: { lat: null, lon: null } },
+      ]);
+    });
+
+    it("lee coordenadas escritas como texto en un issue editado a mano", () => {
+      const result = normalizePayload({
+        ...base,
+        locations: [{ name: "Madrid", latLon: { lat: "40.41", lon: "-3.70" } }],
+      });
+      expect(result.locations[0].latLon).toEqual({ lat: 40.41, lon: -3.7 });
+    });
+
+    it("no emite los campos viejos", () => {
+      const result = normalizePayload({ ...base, location: "Madrid", latLon: { lat: 1, lon: 2 } });
+      expect(result).not.toHaveProperty("location");
+      expect(result).not.toHaveProperty("latLon");
+    });
+
+    it("displayOnMap ausente no se emite; un paraguas nunca va al mapa", () => {
+      const payload = { ...base };
+      delete payload.displayOnMap;
+      expect(normalizePayload(payload)).not.toHaveProperty("displayOnMap");
+      expect(normalizePayload({ ...base, displayOnMap: true, communityType: "umbrella-org" }).displayOnMap).toBe(false);
+    });
+  });
+
+  it("no escribe removalReason vacío en una edición", () => {
+    expect(normalizePayload({ ...base, removalReason: "" })).not.toHaveProperty("removalReason");
+    expect(normalizePayload({ ...base, removalReason: "cerró" }).removalReason).toBe("cerró");
   });
 });

@@ -29,4 +29,44 @@ describe("resolveIssueAssignees", () => {
     expect(result.assignees).toEqual(["guldoe", "NeoVasili", "area-owner"]);
     expect(result.usedFallback).toBe(false);
   });
+
+  describe("varias sedes (issue #45)", () => {
+    const ownersConfig = {
+      defaults: { assignees: ["hhkaos"] },
+      provinces: {
+        madrid: { assignees: ["owner-madrid"] },
+        barcelona: { assignees: ["owner-bcn"] },
+        soria: { assignees: [] },
+      },
+    };
+    const bodyOf = (payload) => `\`\`\`json\n${JSON.stringify(payload)}\n\`\`\``;
+
+    it("asigna a los responsables de todas las provincias, la principal primero", () => {
+      const result = resolveIssueAssignees({
+        body: bodyOf({ locations: [{ name: "Madrid" }, { name: "Barcelona" }] }),
+        ownersConfig,
+      });
+      expect(result.provinceIds).toEqual(["madrid", "barcelona"]);
+      expect(result.provinceId).toBe("madrid");
+      expect(result.assignees).toEqual(["owner-madrid", "owner-bcn"]);
+      expect(result.usedFallback).toBe(false);
+    });
+
+    it("si una provincia no tiene responsable, añade los de defecto y needs-area-owner", () => {
+      const result = resolveIssueAssignees({
+        body: bodyOf({ provinceIds: ["madrid", "soria"], locations: [{ name: "Madrid" }, { name: "Soria" }] }),
+        ownersConfig,
+      });
+      expect(result.assignees).toEqual(["owner-madrid", "hhkaos"]);
+      expect(result.labels).toEqual(["needs-area-owner"]);
+      expect(result.fallbackReason).toBe("province-without-owner");
+      expect(result.provincesWithoutOwner).toEqual(["soria"]);
+    });
+
+    it("no cuenta los marcadores como sede", () => {
+      const result = resolveIssueAssignees({ body: bodyOf({ locations: [{ name: "n/a" }] }), ownersConfig });
+      expect(result.provinceIds).toEqual([]);
+      expect(result.fallbackReason).toBe("province-unresolved");
+    });
+  });
 });

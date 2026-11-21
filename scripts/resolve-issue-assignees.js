@@ -4,6 +4,7 @@ import process from "node:process";
 import { pathToFileURL } from "node:url";
 import YAML from "yaml";
 import { inferProvinceIdFromText, normalizeProvinceCandidate } from "../src/lib/provinceNormalization.js";
+import { looksLikeLocationPlaceholder } from "../src/lib/communityLocations.js";
 
 const ownersFilePath = ".github/community-owners.yml";
 const communityBuildersFilePath = "public/data/community-builders-members.json";
@@ -57,54 +58,74 @@ function buildAliasLookup(provinces = {}) {
   return aliasLookup;
 }
 
-function resolveProvinceId({ payload, aliasLookup }) {
-  const directCandidates = [
-    payload?.provinceId,
-    payload?.location,
-  ].filter(Boolean);
+function resolveProvinceIdFromText(value, aliasLookup) {
+  if (!value) return null;
 
-  for (const candidate of directCandidates) {
-    const normalizedCandidate = normalizeText(candidate);
-    if (aliasLookup.has(normalizedCandidate)) {
-      return aliasLookup.get(normalizedCandidate);
-    }
-
-    const normalizedProvinceId = normalizeProvinceCandidate(candidate);
-    if (normalizedProvinceId) {
-      return normalizedProvinceId;
-    }
+  const normalizedCandidate = normalizeText(value);
+  if (aliasLookup.has(normalizedCandidate)) {
+    return aliasLookup.get(normalizedCandidate);
   }
 
-  if (payload?.location) {
-    const inferredProvinceId = inferProvinceIdFromText(payload.location);
-    if (inferredProvinceId) {
-      return inferredProvinceId;
-    }
-  }
-
-  return null;
+  return normalizeProvinceCandidate(value) ?? inferProvinceIdFromText(value) ?? null;
 }
 
+/**
+ * Provincias de la propuesta, la de la sede principal primero. Lo que mande el formulario
+ * (`provinceIds`, o el `provinceId` escalar de antes) va delante; después lo que se infiere
+ * **sede a sede** (issue #45): sobre el texto unido, la inferencia devolvía el primer alias de
+ * su tabla, no la primera ciudad ("Madrid, Barcelona" → barcelona).
+ */
+export function resolveProvinceIds({ payload, aliasLookup = new Map() }) {
+  const declared = [
+    ...(Array.isArray(payload?.provinceIds) ? payload.provinceIds : []),
+    payload?.provinceId,
+  ];
+  const fromLocations = (Array.isArray(payload?.locations) ? payload.locations : [])
+    .filter((location) => location?.name && !looksLikeLocationPlaceholder(location.name))
+    .map((location) => location.name);
+
+  const ids = [];
+  for (const candidate of [...declared, ...fromLocations]) {
+    const id = resolveProvinceIdFromText(candidate, aliasLookup);
+    if (id && !ids.includes(id)) ids.push(id);
+  }
+  return ids;
+}
+
+/**
+ * Responsables de una propuesta. Con varias sedes se asigna a **todas** sus provincias: una
+ * segunda sede sin auditar es justo lo que se cuela. Si alguna provincia no tiene
+ * responsable (o no se ha podido resolver ninguna), se añaden además los asignados por
+ * defecto y la etiqueta `needs-area-owner`.
+ */
 export function resolveIssueAssignees({ body, ownersConfig, communityBuilders = [] }) {
   const payload = extractJsonPayload(body);
   const aliasLookup = buildAliasLookup(ownersConfig?.provinces ?? {});
-  const provinceId = resolveProvinceId({ payload, aliasLookup });
-  const provinceConfig = provinceId ? ownersConfig?.provinces?.[provinceId] : null;
+  const provinceIds = resolveProvinceIds({ payload, aliasLookup });
   const defaultAssignees = normalizeAssignees(ownersConfig?.defaults?.assignees);
-  const matchedAssignees = normalizeAssignees(provinceConfig?.assignees);
+
+  const provincesWithoutOwner = [];
+  const matchedAssignees = [];
+  for (const provinceId of provinceIds) {
+    const owners = normalizeAssignees(ownersConfig?.provinces?.[provinceId]?.assignees);
+    if (owners.length === 0) provincesWithoutOwner.push(provinceId);
+    matchedAssignees.push(...owners);
+  }
+
   const communityAssignees = normalizeAssignees(
     communityBuilders
       .filter(({ communityId }) => payload?.id != null && String(communityId) === String(payload.id))
       .map(({ github }) => github),
   );
+  const shouldFallback = provinceIds.length === 0 || provincesWithoutOwner.length > 0;
   const assignees = [
     ...communityAssignees,
-    ...(matchedAssignees.length > 0 ? matchedAssignees : defaultAssignees),
+    ...matchedAssignees,
+    ...(shouldFallback ? defaultAssignees : []),
   ];
-  const shouldFallback = matchedAssignees.length === 0;
   const fallbackReason = !shouldFallback
     ? null
-    : provinceId
+    : provinceIds.length > 0
       ? "province-without-owner"
       : "province-unresolved";
   const labels = shouldFallback ? ["needs-area-owner"] : [];
@@ -112,7 +133,11 @@ export function resolveIssueAssignees({ body, ownersConfig, communityBuilders = 
   return {
     communityId: payload?.id ?? null,
     communityAssignees,
-    provinceId,
+    // `provinceId` es la provincia de la sede principal: los logs de los workflows lo
+    // imprimen como escalar.
+    provinceId: provinceIds[0] ?? null,
+    provinceIds,
+    provincesWithoutOwner,
     assignees: normalizeAssignees(assignees),
     labels,
     usedFallback: shouldFallback,

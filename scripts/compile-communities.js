@@ -18,19 +18,23 @@ import {
   compileDeletedBundle,
   hasSourceDir,
 } from './lib/communities-store.js';
+import { getMappableLocations } from '../src/lib/communityLocations.js';
 
 /**
  * Las comunidades `hidden` no se publican: el store de la app ya las descarta, y dejarlas
  * fuera del GeoJSON evita que se filtren por el visor de `public/viewer/`.
+ *
+ * Una feature **por sede** con coordenadas (issue #45), cada una con el nombre de su sede en
+ * `location`: una comunidad con sedes en Barcelona y Madrid son dos puntos con el mismo `id`.
  */
 export function buildGeoJson(communities) {
   const features = communities
     .filter((community) => community.displayOnMap === true && community.hidden !== true)
-    .map((community) => ({
+    .flatMap((community) => getMappableLocations(community).map((location) => ({
       type: 'Feature',
       geometry: {
         type: 'Point',
-        coordinates: [community.latLon.lon, community.latLon.lat],
+        coordinates: [location.latLon.lon, location.latLon.lat],
       },
       properties: {
         id: community.id,
@@ -39,7 +43,7 @@ export function buildGeoJson(communities) {
         lastReviewed: community.lastReviewed,
         communityType: community.communityType,
         eventFormat: community.eventFormat,
-        location: community.location,
+        location: location.name,
         topics: community.topics,
         langs: community.langs,
         tags: community.tags,
@@ -50,7 +54,7 @@ export function buildGeoJson(communities) {
         thumbnailUrl: community.thumbnailUrl,
         humanValidated: community.humanValidated,
       },
-    }));
+    })));
 
   return { type: 'FeatureCollection', features };
 }
@@ -58,7 +62,7 @@ export function buildGeoJson(communities) {
 export function compileAll() {
   if (!hasSourceDir()) {
     throw new Error(
-      'No hay ficheros fuente en data/communities/. Ejecuta `npm run explode-communities` primero.'
+      'No hay ficheros fuente en data/communities/: son la fuente de verdad y deben estar en el repo.'
     );
   }
 

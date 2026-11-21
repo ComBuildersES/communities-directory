@@ -17,7 +17,7 @@ import { dropEmptyArchivedUrls, normalizePayload } from "../scripts/process-comm
 const baseDraft = {
   ...getEmptyCommunityDraft(1),
   name: "Biznaga Fest",
-  location: "Málaga",
+  locations: [{ name: "Málaga", latLon: { lat: null, lon: null } }],
   communityUrl: "https://biznaga.fest",
 };
 
@@ -204,12 +204,11 @@ describe("normalizePayload con organizedBy", () => {
     status: "active",
     communityType: "conference",
     eventFormat: "in-person",
-    location: "Málaga",
+    locations: [{ name: "Málaga", latLon: { lat: null, lon: null } }],
     langs: ["es"],
     tags: [],
     targetAudience: [],
     urls: {},
-    latLon: { lat: null, lon: null },
   };
 
   it("conserva las organizadoras de la propuesta", () => {
