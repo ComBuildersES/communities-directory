@@ -108,7 +108,7 @@ describe.each([{ locale: 'es', data: es }, { locale: 'en', data: en }])('tour li
     expect(html).not.toContain('directoryGuide.');
   });
 
-  it('ofrece la ayuda de los siete tipos directamente en el panel de filtros', () => {
+  it('ofrece la ayuda de los ocho tipos directamente en el panel de filtros', () => {
     state.locale = locale;
     const html = renderToStaticMarkup(<FilterPanel />);
     for (const type of Object.keys(data.sidebar.communityTypeDescriptions)) {

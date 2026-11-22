@@ -16,7 +16,7 @@
  * que lo rellena está adivinando. Esos vínculos los elige una persona en el formulario.
  */
 import { OPEN_TO_OPTIONS } from "./communityOpenTo.js";
-import { URL_PLATFORM_OPTIONS } from "./communitySubmission";
+import { COMMUNITY_TYPE_OPTIONS, URL_PLATFORM_OPTIONS } from "./communitySubmission";
 import { DESCRIPTION_I18N_KEY, normalizeDescriptionTranslations } from "./localizedText.js";
 import { isLocationPlaceholder, normalizeLocationKey } from "./communityLocations.js";
 
@@ -34,15 +34,7 @@ export const ASSIST_PROVIDERS = [
 
 const ENUM_VALUES = {
   status: ["active", "inactive", "unknown"],
-  communityType: [
-    "tech-meetup",
-    "conference",
-    "umbrella-org",
-    "hacklab",
-    "collaborative-group",
-    "meta-community",
-    "mutual-aid",
-  ],
+  communityType: COMMUNITY_TYPE_OPTIONS,
   eventFormat: ["in-person", "online", "hybrid", "unknown"],
   geographicScope: [
     "unknown",

@@ -46,6 +46,12 @@ export const Sidebar = () => {
         </li>
         <li className="menu-item">
           <div className="option-item is-size-7">
+            <p>{t("communityType.hackathon")}</p>
+            <Switch name="communityType" value="hackathon" />
+          </div>
+        </li>
+        <li className="menu-item">
+          <div className="option-item is-size-7">
             <p>{t("communityType.collaborative-group")}</p>
             <Switch name="communityType" value="collaborative-group" />
           </div>

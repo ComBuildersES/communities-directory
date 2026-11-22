@@ -14,6 +14,7 @@
   "communityType": {
     "tech-meetup": "Tech Meetup",
     "conference": "Conferencia",
+    "hackathon": "Hackathones y jams",
     "umbrella-org": "Organización paraguas",
     "hacklab": "Hacklab",
     "collaborative-group": "Grupo colaborativo",
@@ -274,6 +275,7 @@
     "communityTypeDescriptions": {
       "tech-meetup": "Encuentros para compartir charlas, aprender y conocer gente.",
       "conference": "Jornadas o congresos con un programa concentrado de sesiones.",
+      "hackathon": "Gente que vuelve cada edición a construir algo junta en 24 o 48 horas.",
       "collaborative-group": "Participación continuada en proyectos y trabajo compartido.",
       "mutual-aid": "Intercambio de apoyo, experiencias y recursos entre personas.",
       "hacklab": "Experimentación y aprendizaje práctico en un espacio compartido.",
@@ -669,6 +671,7 @@
         "description": "Elige el tipo principal que mejor describe cómo funciona la comunidad.",
         "techMeetup": "Encuentros periódicos, normalmente en formato charla y tamaño contenido.",
         "conference": "Evento normalmente anual, más grande y con varias ponencias o tracks.",
+        "hackathon": "Hackathones, game jams, datatones o CTF que se repiten con marca y canales propios. La edición concreta no, eso es un evento.",
         "umbrellaOrg": "Agrupa comunidades locales bajo una marca o estructura común.",
         "hacklab": "Comunidad maker con espacio físico y recursos compartidos.",
         "collaborativeGroup": "Personas que colaboran en proyectos, eventos, contenidos u otras iniciativas comunes.",
@@ -1115,12 +1118,12 @@
       "tribe": {
         "label": "Encontrar mi tribu",
         "hint": "te pregunta tu perfil y luego recomienda",
-        "text": "Descarga {{dataUrl}} (datos abiertos del directorio de comunidades tech de España).\n\nQuiero encontrar comunidades que encajen conmigo, no solo por temática.\n\n**Antes de recomendarme nada, pregúntame.** Mira primero qué campos trae el dataset y los catálogos de temáticas y perfiles, y hazme las preguntas que de verdad te sirvan para afinar: qué temas me interesan, si quiero acotar a una ubicación concreta (con los límites de coincidencia exacta de las reglas), si prefiero presencial, online o me da igual, qué tipo de comunidad busco (meetup recurrente, conferencia, hacklab, grupo de ayuda mutua…), en qué momento profesional estoy, en qué idiomas me manejo, y cualquier otra cosa que el dataset permita cruzar y que mejore la recomendación. Hazlo de forma conversacional, en un par de rondas como mucho, y con opciones concretas para que me resulte fácil responder.\n\nCuando tengas mi perfil, recomiéndame entre 5 y 8 comunidades ordenadas por lo bien que encajan. De cada una: nombre, ciudad, por qué encaja conmigo en concreto, y su enlace. Añade al final 2 o 3 que no haya pedido pero que creas que me pueden sorprender, explicando por qué.\n\n{{rules}}"
+        "text": "Descarga {{dataUrl}} (datos abiertos del directorio de comunidades tech de España).\n\nQuiero encontrar comunidades que encajen conmigo, no solo por temática.\n\n**Antes de recomendarme nada, pregúntame.** Mira primero qué campos trae el dataset y los catálogos de temáticas y perfiles, y hazme las preguntas que de verdad te sirvan para afinar: qué temas me interesan, si quiero acotar a una ubicación concreta (con los límites de coincidencia exacta de las reglas), si prefiero presencial, online o me da igual, qué tipo de comunidad busco (meetup recurrente, conferencia, hackathón, hacklab, grupo de ayuda mutua…), en qué momento profesional estoy, en qué idiomas me manejo, y cualquier otra cosa que el dataset permita cruzar y que mejore la recomendación. Hazlo de forma conversacional, en un par de rondas como mucho, y con opciones concretas para que me resulte fácil responder.\n\nCuando tengas mi perfil, recomiéndame entre 5 y 8 comunidades ordenadas por lo bien que encajan. De cada una: nombre, ciudad, por qué encaja conmigo en concreto, y su enlace. Añade al final 2 o 3 que no haya pedido pero que creas que me pueden sorprender, explicando por qué.\n\n{{rules}}"
       },
       "types": {
         "label": "Descubrir tipos de comunidades",
         "hint": "dinámicas y formas de participar que quizá no conocías",
-        "text": "Consulta {{dataUrl}} y el diccionario de campos {{schemaUrl}} del directorio de comunidades tech de España.\n\nQuiero descubrir tipos y dinámicas de comunidades que quizá estoy pasando por alto. No busco que decidas qué tipo me conviene ni que me asignes uno por mi perfil.\n\nAntes de explicarlos, pregúntame qué tipos de comunidades conozco y en cuáles he participado, para no repetir lo que ya sé.\n\n1. Compara brevemente los siete tipos de \"communityType\": \"tech-meetup\", \"conference\", \"hacklab\", \"umbrella-org\", \"collaborative-group\", \"meta-community\" y \"mutual-aid\". Explica qué se suele hacer y las distintas maneras de participar, sin prometer una cadencia ni un compromiso concreto para todas las comunidades de un tipo.\n2. Contrasta dinámicas que podrían parecer similares pero no lo son: por ejemplo, experimentar o construir en un hacklab frente a asistir a charlas en un meetup, o participar en un grupo de ayuda mutua frente a una conferencia.\n3. Señala formas de participar que quizá no conocía, como aprender haciendo, construir en grupo, intercambiar apoyo o conectar con otras personas que organizan. Invítame a explorar las que me llamen la atención, sin descartar las demás por mi perfil.\n4. Si incluyes ejemplos del dataset, dales su nombre y enlace y úsalos solo para ilustrar las diferencias, no como recomendaciones personales ni como promesas sobre su actividad actual. Si falta información, dilo.\n\n{{rules}}"
+        "text": "Consulta {{dataUrl}} y el diccionario de campos {{schemaUrl}} del directorio de comunidades tech de España.\n\nQuiero descubrir tipos y dinámicas de comunidades que quizá estoy pasando por alto. No busco que decidas qué tipo me conviene ni que me asignes uno por mi perfil.\n\nAntes de explicarlos, pregúntame qué tipos de comunidades conozco y en cuáles he participado, para no repetir lo que ya sé.\n\n1. Compara brevemente los ocho tipos de \"communityType\": \"tech-meetup\", \"conference\", \"hackathon\", \"hacklab\", \"umbrella-org\", \"collaborative-group\", \"meta-community\" y \"mutual-aid\". Explica qué se suele hacer y las distintas maneras de participar, sin prometer una cadencia ni un compromiso concreto para todas las comunidades de un tipo.\n2. Contrasta dinámicas que podrían parecer similares pero no lo son: por ejemplo, experimentar o construir en un hacklab frente a asistir a charlas en un meetup, o un hackathón recurrente frente a una conferencia, o participar en un grupo de ayuda mutua frente a una conferencia.\n3. Señala formas de participar que quizá no conocía, como aprender haciendo, construir en grupo, intercambiar apoyo o conectar con otras personas que organizan. Invítame a explorar las que me llamen la atención, sin descartar las demás por mi perfil.\n4. Si incluyes ejemplos del dataset, dales su nombre y enlace y úsalos solo para ilustrar las diferencias, no como recomendaciones personales ni como promesas sobre su actividad actual. Si falta información, dilo.\n\n{{rules}}"
       },
       "speaker": {
         "label": "Dónde dar una charla",

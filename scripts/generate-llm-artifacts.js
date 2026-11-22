@@ -79,6 +79,9 @@ const ENUMS = {
   communityType: {
     'tech-meetup': 'Recurring local meetup or user group.',
     conference: 'Conference or single large-scale event.',
+    hackathon:
+      'Recurring hackathon, game jam, datathon or CTF with its own name and channels. ' +
+      'The record is the series, never one edition.',
     'umbrella-org': 'Organisation that hosts or coordinates several communities.',
     hacklab: 'Hacklab, makerspace or physical community space.',
     'collaborative-group': 'Informal collaborative group or working group.',

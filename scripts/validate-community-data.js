@@ -5,6 +5,7 @@ import { COMMUNITY_LANGUAGE_SET } from "../src/lib/communityLanguages.js";
 import { MERGED_STATUS, validateMergedReferences } from "../src/lib/mergedCommunities.js";
 import { validateOrganizedByReferences } from "../src/lib/organizedCommunities.js";
 import { URL_KINDS, URL_KIND_BY_KEY } from "../src/lib/communityUrls.js";
+import { COMMUNITY_TYPE_OPTIONS } from "../src/lib/communitySubmission.js";
 import { DESCRIPTION_I18N_KEY } from "../src/lib/localizedText.js";
 import {
   hasCoordinates,
@@ -24,15 +25,9 @@ const AUDIENCE_PATH = "public/data/audience.json";
 // `merged`: la comunidad se fusionó con otras y continúa en la que indica `mergedIntoId`
 // (ver src/lib/mergedCommunities.js).
 const CANONICAL_STATUS = new Set(["active", "inactive", "unknown", MERGED_STATUS]);
-const CANONICAL_COMMUNITY_TYPES = new Set([
-  "conference",
-  "collaborative-group",
-  "mutual-aid",
-  "hacklab",
-  "meta-community",
-  "umbrella-org",
-  "tech-meetup",
-]);
+// Mantenida a mano se quedaba atrás en cuanto se añadía un tipo (issue #477): el alta
+// asistida ofrecía un valor que el validador rechazaba. Se deriva del enum del formulario.
+export const CANONICAL_COMMUNITY_TYPES = new Set(COMMUNITY_TYPE_OPTIONS);
 const CANONICAL_EVENT_FORMATS = new Set([
   "unknown",
   "hybrid",

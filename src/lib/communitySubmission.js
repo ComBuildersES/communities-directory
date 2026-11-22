@@ -21,9 +21,17 @@ export const COMMUNITY_BUILDERS_EMAIL = "communitybuilders.es@gmail.com";
  * comunidad en la que continúa. Ver `src/lib/mergedCommunities.js`.
  */
 export const COMMUNITY_STATUS_OPTIONS = ["active", "inactive", "unknown", "merged"];
+/**
+ * `hackathon` cubre la familia de encuentros recurrentes en los que la gente construye algo
+ * junta (hackathones, game jams, datatones, CTF). Es un valor del eje del **formato**, igual
+ * que `conference`: lo que se da de alta es la serie con marca y canales propios, nunca una
+ * edición concreta (issue #477). Si la organiza una comunidad del directorio, el vínculo va
+ * en `organizedBy` (#475).
+ */
 export const COMMUNITY_TYPE_OPTIONS = [
   "tech-meetup",
   "conference",
+  "hackathon",
   "umbrella-org",
   "hacklab",
   "collaborative-group",

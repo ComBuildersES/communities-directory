@@ -1,0 +1,39 @@
+{
+  "id": null,
+  "name": "Hackathon URJC",
+  "status": "active",
+  "lastReviewed": "22/11/2026",
+  "communityType": "hackathon",
+  "eventFormat": "in-person",
+  "locations": [
+    {
+      "name": "Móstoles",
+      "latLon": {
+        "lat": 40.3226966,
+        "lon": -3.8649004
+      }
+    }
+  ],
+  "shortDescription": "Competición universitaria de emprendimiento organizada por Hermes URJC en el campus de Móstoles: 48 horas, 70 equipos y retos planteados por empresas, con mentoría, ponencias y premios en efectivo.",
+  "shortDescriptionI18n": {
+    "en": "University entrepreneurship competition run by Hermes URJC on the Móstoles campus: 48 hours, 70 teams and challenges set by companies, with mentoring, talks and cash prizes."
+  },
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "innovation",
+    "startups"
+  ],
+  "targetAudience": [
+    "student",
+    "entrepreneur"
+  ],
+  "contactInfo": "",
+  "communityUrl": "https://www.hackathonurjc.com/",
+  "urls": [],
+  "thumbnailUrl": "images/hackathon-urjc.webp",
+  "displayOnMap": true,
+  "humanValidated": false
+}

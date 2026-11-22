@@ -17,7 +17,7 @@ export function FilterPanel() {
             <InfoTooltip label={t("sidebar.communityTypeHelp")} text={t("sidebar.communityTypeNote")} />
           </div>
           <div className="filter-group-items">
-            {["tech-meetup", "conference", "collaborative-group", "mutual-aid", "hacklab", "umbrella-org", "meta-community"].map((type) => (
+            {["tech-meetup", "conference", "hackathon", "collaborative-group", "mutual-aid", "hacklab", "umbrella-org", "meta-community"].map((type) => (
               <div className="option-item community-type-option is-size-7" key={type}>
                 <p>{t(`communityType.${type}`)}</p>
                 <InfoTooltip

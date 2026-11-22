@@ -1,0 +1,42 @@
+{
+  "id": null,
+  "name": "HackEPS",
+  "status": "active",
+  "lastReviewed": "22/11/2026",
+  "communityType": "hackathon",
+  "eventFormat": "in-person",
+  "locations": [
+    {
+      "name": "Lleida",
+      "latLon": {
+        "lat": 41.6175899,
+        "lon": 0.6200145
+      }
+    }
+  ],
+  "organizedBy": [
+    651
+  ],
+  "shortDescription": "La hackató de les terres de Lleida, organitzada per LleidaHack a l'Escola Politècnica Superior de la Universitat de Lleida. Va per la desena edició.",
+  "shortDescriptionI18n": {
+    "es": "El hackathon de las tierras de Lleida, organizado por LleidaHack en la Escola Politècnica Superior de la Universitat de Lleida. Va por su décima edición.",
+    "en": "The hackathon of the Lleida area, organised by LleidaHack at the Escola Politècnica Superior of the Universitat de Lleida. Now in its tenth edition."
+  },
+  "topics": "",
+  "langs": [
+    "ca",
+    "es"
+  ],
+  "tags": [
+    "open-source"
+  ],
+  "targetAudience": [
+    "student"
+  ],
+  "contactInfo": "",
+  "communityUrl": "https://hackeps.dev/",
+  "urls": [],
+  "thumbnailUrl": "images/hackeps.webp",
+  "displayOnMap": true,
+  "humanValidated": false
+}

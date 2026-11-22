@@ -108,6 +108,15 @@ function getFieldHelp(t) {
           ],
         },
         {
+          label: t("communityType.hackathon"),
+          detail: t("contribution.fieldHelp.communityType.hackathon"),
+          examples: [
+            { name: "HackUDC", url: "https://hackudc.gpul.org/" },
+            { name: "LleidaHack", url: "https://lleidahack.dev/" },
+            { name: "MálagaJam", url: "https://malagajam.com/" },
+          ],
+        },
+        {
           label: t("communityType.umbrella-org"),
           detail: t("contribution.fieldHelp.communityType.umbrellaOrg"),
           examples: [

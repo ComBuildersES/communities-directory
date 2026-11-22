@@ -36,6 +36,12 @@ const COMMUNITY_TYPE_CONFIG = [
     textColor: "#21324a",
   },
   {
+    key: "hackathon",
+    labelKey: "communityType.hackathon",
+    color: "#ff924c",
+    textColor: "#21324a",
+  },
+  {
     key: "collaborative-group",
     labelKey: "communityType.collaborative-group",
     color: "#8ac926",

@@ -1,0 +1,43 @@
+{
+  "id": null,
+  "name": "HackUDC",
+  "status": "active",
+  "lastReviewed": "22/11/2026",
+  "communityType": "hackathon",
+  "eventFormat": "in-person",
+  "locations": [
+    {
+      "name": "A Coruña",
+      "latLon": {
+        "lat": 43.3707332,
+        "lon": -8.3958532
+      }
+    }
+  ],
+  "organizedBy": [
+    228
+  ],
+  "shortDescription": "Hackathon de software libre de 36 horas en A Coruña, organizada por GPUL. Equipos que construyen un proyecto de principio a fin con retos propuestos por las entidades colaboradoras y mentoría durante todo el fin de semana.",
+  "shortDescriptionI18n": {
+    "en": "A 36-hour free software hackathon in A Coruña, organised by GPUL. Teams build a project end to end, with challenges proposed by the partner organisations and mentoring throughout the weekend."
+  },
+  "topics": "",
+  "langs": [
+    "es",
+    "gl",
+    "en"
+  ],
+  "tags": [
+    "free-software",
+    "open-source"
+  ],
+  "targetAudience": [
+    "student"
+  ],
+  "contactInfo": "hackudc@gpul.org",
+  "communityUrl": "https://hackudc.com/",
+  "urls": [],
+  "thumbnailUrl": "images/hackudc.webp",
+  "displayOnMap": true,
+  "humanValidated": false
+}

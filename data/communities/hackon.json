@@ -1,0 +1,50 @@
+{
+  "id": null,
+  "name": "HackOn",
+  "status": "active",
+  "lastReviewed": "22/11/2026",
+  "communityType": "conference",
+  "eventFormat": "in-person",
+  "locations": [
+    {
+      "name": "Móstoles",
+      "latLon": {
+        "lat": 40.3226966,
+        "lon": -3.8649004
+      }
+    }
+  ],
+  "shortDescription": "Congreso de ciberseguridad de la Universidad Rey Juan Carlos, organizado por estudiantes voluntarios del Grado en Ingeniería de la Ciberseguridad. Ponencias, talleres y una competición CTF, abierto desde niveles básicos.",
+  "shortDescriptionI18n": {
+    "en": "Cybersecurity conference at Universidad Rey Juan Carlos, run by volunteer students from its Cybersecurity Engineering degree. Talks, workshops and a CTF competition, open to beginners."
+  },
+  "topics": "",
+  "langs": [
+    "es"
+  ],
+  "tags": [
+    "cybersecurity",
+    "ethical-hacking"
+  ],
+  "targetAudience": [
+    "student",
+    "cybersecurity-engineer",
+    "pentester"
+  ],
+  "contactInfo": "info@hackon.es",
+  "communityUrl": "https://hackon.es/",
+  "urls": [
+    {
+      "url": "https://twitter.com/hackonurjc"
+    },
+    {
+      "url": "https://www.instagram.com/hackonurjc/"
+    },
+    {
+      "url": "https://www.linkedin.com/company/hackonevent/"
+    }
+  ],
+  "thumbnailUrl": "images/hackon.webp",
+  "displayOnMap": true,
+  "humanValidated": false
+}

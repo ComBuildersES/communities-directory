@@ -85,7 +85,7 @@ scripts/               # Utilidades de mantenimiento de datos
   name: string,
   status: "active" | "inactive" | "unknown" | "merged",
   lastReviewed: "DD/MM/YYYY",
-  communityType: "tech-meetup" | "conference" | "umbrella-org" | "hacklab" | "collaborative-group" | "meta-community" | "mutual-aid",
+  communityType: "tech-meetup" | "conference" | "hackathon" | "umbrella-org" | "hacklab" | "collaborative-group" | "meta-community" | "mutual-aid",
   eventFormat: "in-person" | "online" | "hybrid" | "unknown",
   locations: Array<{ name: string, latLon: { lat: number | null, lon: number | null } }>, // sedes; [] = sin ubicación física
   geographicScope: "unknown" | "local" | "provincial" | "regional" | "national" | "international",

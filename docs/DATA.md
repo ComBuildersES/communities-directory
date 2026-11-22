@@ -98,7 +98,7 @@ datos ya estructurados, y de ahí sale una PR automática. Ver
   name: string,
   status: "active" | "inactive" | "unknown" | "merged",
   lastReviewed: "DD/MM/YYYY",   // última revisión humana de la ficha
-  communityType: "tech-meetup" | "conference" | "umbrella-org" | "hacklab"
+  communityType: "tech-meetup" | "conference" | "hackathon" | "umbrella-org" | "hacklab"
                | "collaborative-group" | "meta-community" | "mutual-aid",
   eventFormat: "in-person" | "online" | "hybrid" | "unknown",
   locations: Array<{            // ciudades donde se reúne en persona; la primera es la principal
