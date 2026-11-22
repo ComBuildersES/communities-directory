@@ -2,9 +2,9 @@
   "id": 445,
   "name": "TechShessions",
   "status": "active",
-  "lastReviewed": "18/10/2024",
+  "lastReviewed": "22/11/2026",
   "communityType": "mutual-aid",
-  "eventFormat": "hybrid",
+  "eventFormat": "in-person",
   "locations": [
     {
       "name": "Madrid",
@@ -12,14 +12,45 @@
         "lat": 40.4167047,
         "lon": -3.7035825
       }
+    },
+    {
+      "name": "Barcelona",
+      "latLon": {
+        "lat": 41.3825802,
+        "lon": 2.177073
+      }
+    },
+    {
+      "name": "La Rioja",
+      "latLon": {
+        "lat": 42.3285528,
+        "lon": -2.4674917
+      }
     }
   ],
+  "geographicScope": "national",
+  "parentId": null,
+  "organizedBy": [
+    100
+  ],
+  "shortDescription": "Programa gratuito y presencial (Madrid, La Rioja y Barcelona) dirigido a mujeres con formación técnica (profesionales o estudiantes) que quieran dar el salto y empezar a dar charlas en eventos tecnológicos.",
+  "shortDescriptionI18n": {
+    "en": "Free, in-person programme (Madrid, La Rioja and Barcelona) aimed at women with a technical background (professionals or students) who want to take the leap into speaking at technology events."
+  },
   "topics": "",
   "langs": [
-    "es"
+    "es",
+    "ca"
   ],
   "tags": [],
   "targetAudience": [],
+  "openTo": [
+    "speakers",
+    "mentors",
+    "volunteers",
+    "sponsors"
+  ],
+  "matchesAllTags": true,
   "contactInfo": "info@techshessions.com",
   "communityUrl": "https://techshessions.com/",
   "urls": [
@@ -35,5 +66,5 @@
   ],
   "thumbnailUrl": "images/techshessions.webp",
   "displayOnMap": true,
-  "humanValidated": false
+  "humanValidated": true
 }
