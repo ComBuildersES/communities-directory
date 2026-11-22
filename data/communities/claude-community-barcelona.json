@@ -44,6 +44,5 @@
   ],
   "thumbnailUrl": "images/claude-community-barcelona.webp",
   "displayOnMap": true,
-  "humanValidated": false,
-  "removalReason": ""
+  "humanValidated": false
 }

@@ -117,7 +117,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
-- 2026-11-22 `d249449` nueva etiqueta de observación de la Tierra (#498)
+- 2026-11-22 `243cbbf` quitar el removalReason vacío de 101 fichas
+- 2026-11-22 `ac40c9f` nueva etiqueta de observación de la Tierra (#498)
 - 2026-11-22 `01342e4` Step4ward con sedes en Barcelona y Madrid
 - 2026-11-16 `c919a9e` Updating changelog
 - 2026-11-16 `9f9fcf8` Update config.yml
