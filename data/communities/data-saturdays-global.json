@@ -5,15 +5,7 @@
   "lastReviewed": "28/10/2026",
   "communityType": "umbrella-org",
   "eventFormat": "in-person",
-  "locations": [
-    {
-      "name": "n/a",
-      "latLon": {
-        "lat": null,
-        "lon": null
-      }
-    }
-  ],
+  "locations": [],
   "shortDescription": "Data Saturdays is a place for the data community to run small regional events with little outlay or set-up difficulties. Here you can access a set of tools and have open, transparent discussions on how your event should be set up and utilised.",
   "shortDescriptionI18n": {
     "en": "Data Saturdays is a place for the data community to run small regional events with little outlay or set-up difficulties. Here you can access a set of tools and have open, transparent discussions on how your event should be set up and used.",
@@ -52,6 +44,5 @@
   ],
   "thumbnailUrl": "images/data-saturdays.webp",
   "displayOnMap": false,
-  "humanValidated": true,
-  "removalReason": ""
+  "humanValidated": true
 }

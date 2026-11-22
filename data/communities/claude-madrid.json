@@ -40,6 +40,5 @@
   ],
   "thumbnailUrl": "images/claude-madrid.webp",
   "displayOnMap": true,
-  "humanValidated": true,
-  "removalReason": ""
+  "humanValidated": true
 }

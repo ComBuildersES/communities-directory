@@ -5,15 +5,7 @@
   "lastReviewed": "18/10/2024",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
-  "locations": [
-    {
-      "name": "Sin completar",
-      "latLon": {
-        "lat": null,
-        "lon": null
-      }
-    }
-  ],
+  "locations": [],
   "parentId": 39,
   "topics": "",
   "langs": [

@@ -5,15 +5,7 @@
   "lastReviewed": "15/10/2024",
   "communityType": "mutual-aid",
   "eventFormat": "unknown",
-  "locations": [
-    {
-      "name": "Sin completar",
-      "latLon": {
-        "lat": null,
-        "lon": null
-      }
-    }
-  ],
+  "locations": [],
   "topics": "",
   "langs": [
     "es"

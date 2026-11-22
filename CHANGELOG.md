@@ -119,6 +119,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
+- 2026-11-22 `b4e2f82` las sedes que eran un marcador pasan a locations vacío
+- 2026-11-22 `0342c19` quitar el removalReason vacío de 101 fichas
 - 2026-11-22 `ac40c9f` nueva etiqueta de observación de la Tierra (#498)
 - 2026-11-22 `01342e4` Step4ward con sedes en Barcelona y Madrid
 - 2026-11-16 `c919a9e` Updating changelog

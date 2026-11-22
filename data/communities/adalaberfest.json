@@ -5,15 +5,7 @@
   "lastReviewed": "17/10/2024",
   "communityType": "conference",
   "eventFormat": "online",
-  "locations": [
-    {
-      "name": "n/a",
-      "latLon": {
-        "lat": null,
-        "lon": null
-      }
-    }
-  ],
+  "locations": [],
   "topics": "",
   "langs": [
     "es"

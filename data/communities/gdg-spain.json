@@ -5,15 +5,7 @@
   "lastReviewed": "30/03/2026",
   "communityType": "umbrella-org",
   "eventFormat": "in-person",
-  "locations": [
-    {
-      "name": "n/a",
-      "latLon": {
-        "lat": null,
-        "lon": null
-      }
-    }
-  ],
+  "locations": [],
   "shortDescription": "Organización que agrupa a todos los Google Developer Groups (GDGs) de España, entidades sin ánimo de lucro creada con el objetivo de mejorar la comunidad de entusiastas tecnológicos y aumentar el conocimiento y las relaciones entre las personas que se dedican a esta área.",
   "shortDescriptionI18n": {
     "en": "The organisation that brings together every Google Developer Group (GDG) in Spain. A non-profit created to improve the community of technology enthusiasts and to grow the knowledge and the relationships among people working in this field."
@@ -65,6 +57,5 @@
   ],
   "thumbnailUrl": "images/gdg-spain.webp",
   "displayOnMap": false,
-  "humanValidated": true,
-  "removalReason": ""
+  "humanValidated": true
 }

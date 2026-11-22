@@ -5,15 +5,7 @@
   "lastReviewed": "30/03/2026",
   "communityType": "umbrella-org",
   "eventFormat": "in-person",
-  "locations": [
-    {
-      "name": "n/a",
-      "latLon": {
-        "lat": null,
-        "lon": null
-      }
-    }
-  ],
+  "locations": [],
   "shortDescription": "Grupos informales que se reúnen para conversar y aprender sobre cualquier tema relacionado con las ciencias de la tierra.",
   "shortDescriptionI18n": {
     "en": "Informal groups that meet to talk and learn about anything related to earth sciences."
@@ -62,6 +54,5 @@
   ],
   "thumbnailUrl": "images/geoinquietos.webp",
   "displayOnMap": false,
-  "humanValidated": true,
-  "removalReason": ""
+  "humanValidated": true
 }

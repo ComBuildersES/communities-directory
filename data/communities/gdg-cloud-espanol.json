@@ -5,15 +5,7 @@
   "lastReviewed": "25/03/2026",
   "communityType": "umbrella-org",
   "eventFormat": "hybrid",
-  "locations": [
-    {
-      "name": "n/a",
-      "latLon": {
-        "lat": null,
-        "lon": null
-      }
-    }
-  ],
+  "locations": [],
   "shortDescription": "Los Grupos de Desarrolladores de Google (GDG) reúnen a desarrolladores y tecnólogos para que se conecten, aprendan y crezcan junto con las tecnologías y los expertos de Google. Estos grupos apoyan la innovación y el crecimiento en el mundo de la tecnología.",
   "shortDescriptionI18n": {
     "en": "Google Developer Groups (GDGs) bring developers and technologists together to connect, learn and grow alongside Google technologies and experts. These groups support innovation and growth in the tech world."
