@@ -699,3 +699,4 @@ Se organiza por mes y por tipo de cambio.
 - 2024-11-22 `9e1a3da` normalizando valores y quirar funcion indice inverso antigua
 - 2024-11-22 `a12bfa8` quitado codigo comentado de CommunitiesList
 - 2024-11-20 `bddbfff` Initial commit
+- 2026-11-22 `4991ccb` tipo hackathon para hackathones, jams y datatones (#477)
