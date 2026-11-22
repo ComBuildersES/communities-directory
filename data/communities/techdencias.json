@@ -5,15 +5,7 @@
   "lastReviewed": "31/05/2024",
   "communityType": "collaborative-group",
   "eventFormat": "unknown",
-  "locations": [
-    {
-      "name": "Sin completar",
-      "latLon": {
-        "lat": null,
-        "lon": null
-      }
-    }
-  ],
+  "locations": [],
   "topics": "",
   "langs": [
     "es"

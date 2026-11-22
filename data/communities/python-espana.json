@@ -5,15 +5,7 @@
   "lastReviewed": "31/05/2024",
   "communityType": "umbrella-org",
   "eventFormat": "online",
-  "locations": [
-    {
-      "name": "n/a",
-      "latLon": {
-        "lat": null,
-        "lon": null
-      }
-    }
-  ],
+  "locations": [],
   "topics": "",
   "langs": [
     "es"

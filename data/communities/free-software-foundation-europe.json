@@ -5,15 +5,7 @@
   "lastReviewed": "31/07/2026",
   "communityType": "umbrella-org",
   "eventFormat": "hybrid",
-  "locations": [
-    {
-      "name": "n/a",
-      "latLon": {
-        "lat": null,
-        "lon": null
-      }
-    }
-  ],
+  "locations": [],
   "shortDescription": "La Fundación para el Software Libre de Europa ayuda a los entusiastas del software libre a compartir sus experiencias positivas, pedir recomendaciones sobre temas y programas relacionados con el software libre y resolver problemas de forma conjunta.",
   "shortDescriptionI18n": {
     "en": "The Free Software Foundation Europe helps free software enthusiasts share their positive experiences, ask for recommendations about free software topics and programs, and solve problems together."

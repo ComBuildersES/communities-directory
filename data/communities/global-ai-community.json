@@ -5,15 +5,7 @@
   "lastReviewed": "24/03/2025",
   "communityType": "umbrella-org",
   "eventFormat": "hybrid",
-  "locations": [
-    {
-      "name": "n/a",
-      "latLon": {
-        "lat": null,
-        "lon": null
-      }
-    }
-  ],
+  "locations": [],
   "topics": "artificial intelligence",
   "langs": [
     "es"
