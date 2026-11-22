@@ -1,5 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-45-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-46-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 # Communities directory
@@ -224,6 +224,7 @@ Echa un vistazo a algunas de las tareas por las que podrías empezar a ayudar:
       <td align="center" valign="top" width="14.28%"><a href="http://gabuscuv.dev"><img src="https://avatars.githubusercontent.com/u/52936877?v=4&size=100" width="100px" height="100px" alt="Gabriel Bustillo del Cuvillo"/><br /><sub><b>Gabriel Bustillo del Cuvillo</b></sub></a><br /><a href="#data-gabuscuv" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://josepsitjar.wordpress.com"><img src="https://avatars.githubusercontent.com/u/6552008?v=4&size=100" width="100px" height="100px" alt="josep sitjar"/><br /><sub><b>josep sitjar</b></sub></a><br /><a href="#data-josepsitjar" title="Data">🔣</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.danielcastanera.com"><img src="https://avatars.githubusercontent.com/u/6005590?v=4&size=100" width="100px" height="100px" alt="Daniel Castañera Garrido"/><br /><sub><b>Daniel Castañera Garrido</b></sub></a><br /><a href="#data-guldoe" title="Data">🔣</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/cldelgadop"><img src="https://avatars.githubusercontent.com/u/62181574?v=4&size=100" width="100px" height="100px" alt="Carmen Delgado"/><br /><sub><b>Carmen Delgado</b></sub></a><br /><a href="#data-cldelgadop" title="Data">🔣</a></td>
     </tr>
   </tbody>
 </table>
