@@ -51,7 +51,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Fixes
 
-- 2026-11-23 `dd1aa30` clon completo en deploy para no vaciar el CHANGELOG
+- 2026-11-23 `24ef1bf` clon completo en deploy para no vaciar el CHANGELOG
 - 2026-11-22 `e91bd59` globals de Node, código muerto y una aserción obsoleta
 - 2026-11-21 `710f226` correcciones de la revisión del PR
 - 2026-11-16 `59b83f1` assign community builders to issues
