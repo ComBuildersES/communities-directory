@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-11-23 `9fd6811` marcar la fecha que no es firme y mostrar el CFP abierto
 - 2026-11-22 `4991ccb` tipo hackathon para hackathones, jams y datatones (#477)
 - 2026-11-22 `755ec08` copiar el enlace de la ficha desde el desplegable Compartir
 - 2026-11-21 `f81b2e2` mapa, ficha, buscador y formulario con varias sedes
@@ -120,7 +121,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
-- 2026-11-23 `3089218` feeds OTE de confs.rauljimenez.info en 22 comunidades
+- 2026-11-23 `353b2c7` feeds OTE de confs.rauljimenez.info en 22 comunidades
 - 2026-11-22 `a495c8c` las sedes que eran un marcador pasan a locations vacío
 - 2026-11-22 `0342c19` quitar el removalReason vacío de 101 fichas
 - 2026-11-22 `ac40c9f` nueva etiqueta de observación de la Tierra (#498)

@@ -407,7 +407,28 @@
       "previous": "Evento anterior",
       "next": "Evento siguiente",
       "carousel": "carrusel",
-      "position": "Evento {{current}} de {{total}}"
+      "position": "Evento {{current}} de {{total}}",
+      "dateNote": {
+        "tentative": "fecha sin confirmar",
+        "tentativeHint": "La comunidad ha anunciado el evento pero aún no ha confirmado la fecha.",
+        "postponed": "aplazado",
+        "postponedHint": "El evento se ha aplazado. La fecha que se muestra es la anterior."
+      },
+      "cfp": {
+        "link": "Convocatoria de ponencias",
+        "open": "hasta el {{date}}",
+        "opens": "abre el {{date}}",
+        "covers": {
+          "travel": {
+            "yes": "cubre viaje",
+            "no": "no cubre viaje"
+          },
+          "accommodation": {
+            "yes": "cubre alojamiento",
+            "no": "no cubre alojamiento"
+          }
+        }
+      }
     },
     "pendingReviewTitle": "Comunidad pendiente de revisión",
     "pendingReviewBody": "El etiquetado de esta comunidad —temáticas, enlaces, estado— lo puso un proceso semiautomático y todavía no lo ha repasado ninguna persona. Puede estar incompleto o desactualizado.",

@@ -32,6 +32,66 @@ export function getFeedAttribution(feed, feedUrl) {
 }
 
 /**
+ * Un `status` que dice que la fecha mostrada no es firme (spec OTE 0.6).
+ *
+ * Solo se marcan los estados que afectan a la fecha: `tentative` (anunciado sin confirmar)
+ * y `postponed` (aplazado sin fecha nueva). `rescheduled` no se marca porque la fecha que
+ * trae el feed ya es la nueva, y `moved-online` habla del formato, no del día.
+ *
+ * `cancelled` no llega hasta aquí: lo descartan los selectores.
+ */
+export function resolveEventDateNoteKey(event) {
+  const status = typeof event?.status === "string" ? event.status.trim().toLowerCase() : null;
+  return status === "tentative" || status === "postponed" ? status : null;
+}
+
+/**
+ * El call for papers de un evento, solo si merece la pena enseñarlo (spec OTE 0.6).
+ *
+ * Un CFP cerrado **no se muestra**: un enlace que dice "envía tu propuesta" y lleva a un
+ * plazo vencido hace perder el tiempo a quien lo sigue. Hoy son 7 de los 16 que publica
+ * el feed de confs.rauljimenez.info.
+ *
+ * `closesAt` es *recomendado*, no obligatorio, así que un CFP sin fecha de cierre se
+ * enseña sin plazo — pero solo si el evento está por venir: el carrusel cae a ediciones
+ * pasadas cuando no queda ninguna futura, y ahí el CFP está muerto siempre.
+ *
+ * Las fechas OTE son instantes con offset; el plazo se pinta solo como día, que es la
+ * precisión que declaran los feeds (`confwatch:closesAtPrecision: "date"`).
+ */
+/**
+ * Lo que el CFP dice que cubre a quien seleccione. Es lo que una ponente mira antes de
+ * enviar propuesta: quién puede permitirse ir a hablar depende de esto.
+ *
+ * Se devuelve **un campo por dato declarado**, sin combinarlos: en OTE la ausencia
+ * significa "no se sabe", no "no lo cubren", así que un `coversTravel: false` con el
+ * alojamiento sin declarar no autoriza a decir que no cubren nada.
+ */
+export function resolveCfpCoverage(cfp) {
+  return ["Travel", "Accommodation"]
+    .map((field) => ({ key: field.toLowerCase(), covered: cfp?.[`covers${field}`] }))
+    .filter(({ covered }) => typeof covered === "boolean");
+}
+
+export function resolveCfpState(event, { now = new Date() } = {}) {
+  const url = typeof event?.cfp?.url === "string" && event.cfp.url.trim() ? event.cfp.url.trim() : null;
+  if (!url) return null;
+
+  const closesAt = parseOteDate(event.cfp.closesAt);
+  const opensAt = parseOteDate(event.cfp.opensAt);
+
+  const covers = resolveCfpCoverage(event.cfp);
+
+  if (closesAt && closesAt < now) return null;
+  if (opensAt && opensAt > now) return { url, state: "opens", at: opensAt, covers };
+  if (closesAt) return { url, state: "open", at: closesAt, covers };
+
+  const startsAt = event.startsAt instanceof Date ? event.startsAt : parseOteDate(event.startDate);
+  if (startsAt && startsAt < now) return null;
+  return { url, state: "undated", at: null, covers };
+}
+
+/**
  * Próximos eventos ordenados de más cercano a más lejano. Si no queda ninguno por venir,
  * devuelve el último celebrado: para una comunidad con poca actividad reciente es más
  * informativo que una sección vacía.
@@ -56,7 +116,7 @@ export function selectEventsToShow(events, { now = new Date(), limit = 3 } = {})
   }
 
   const past = dated
-    .filter(({ startsAt }) => startsAt < now)
+    .filter(({ event, startsAt }) => startsAt < now && event.status !== "cancelled")
     .sort((a, b) => b.startsAt - a.startsAt)[0];
 
   return {

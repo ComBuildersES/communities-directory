@@ -6,6 +6,8 @@ import {
   formatEventDate,
   getEventLocationLabel,
   getFeedAttribution,
+  resolveCfpState,
+  resolveEventDateNoteKey,
   selectCarouselEvents,
 } from "./oteEvents.js";
 
@@ -40,6 +42,8 @@ export function OteEvents({ feedUrl }) {
   const index = Math.min(activeIndex, Math.max(0, events.length - 1));
   const event = events[index];
   const place = event ? getEventLocationLabel(event) : null;
+  const dateNoteKey = event ? resolveEventDateNoteKey(event) : null;
+  const cfp = event ? resolveCfpState(event) : null;
   const title = t(`communityModal.oteEvents.${events.length ? (upcoming ? 'upcoming' : 'past') : 'title'}`);
   const move = (direction) => setActiveIndex(Math.max(0, Math.min(events.length - 1, index + direction)));
 
@@ -76,9 +80,28 @@ export function OteEvents({ feedUrl }) {
             <time className="community-modal-ote-date" dateTime={event.startDate}>
               {formatEventDate(event.startsAt, i18n.resolvedLanguage)}
             </time>
+            {dateNoteKey && <span className="community-modal-ote-tentative"
+              title={t(`communityModal.oteEvents.dateNote.${dateNoteKey}Hint`)}>
+              {t(`communityModal.oteEvents.dateNote.${dateNoteKey}`)}
+            </span>}
             {place && <span className="community-modal-ote-place">{place}</span>}
           </div>
           {event.url ? <a href={event.url} target="_blank" rel="noopener noreferrer">{event.name}</a> : <span>{event.name}</span>}
+          {cfp && <p className="community-modal-ote-cfp">
+            <a href={cfp.url} target="_blank" rel="noopener noreferrer">
+              <i className="fas fa-bullhorn" aria-hidden="true"></i> {t("communityModal.oteEvents.cfp.link")}
+            </a>
+            {cfp.at && <span className="community-modal-ote-cfp-deadline">
+              {t(`communityModal.oteEvents.cfp.${cfp.state}`, {
+                date: formatEventDate(cfp.at, i18n.resolvedLanguage),
+              })}
+            </span>}
+            {cfp.covers.map(({ key, covered }) => (
+              <span key={key} className={`community-modal-ote-cfp-covers ${covered ? "is-covered" : "is-not-covered"}`}>
+                {t(`communityModal.oteEvents.cfp.covers.${key}.${covered ? "yes" : "no"}`)}
+              </span>
+            ))}
+          </p>}
         </div>
       </div>}
 

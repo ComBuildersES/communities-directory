@@ -851,6 +851,39 @@ button.modal-badge:focus-visible {
 .community-modal-ote-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem .65rem; }
 .community-modal-ote-date { font-variant-numeric: tabular-nums; color: #444; font-size: .78rem; font-weight: 600; }
 .community-modal-ote-place { color: #777; font-size: .78rem; }
+/* Un evento tentativo o aplazado: la fecha de al lado no es firme. */
+.community-modal-ote-tentative {
+  font-size: .7rem;
+  font-weight: 600;
+  text-transform: lowercase;
+  color: #8a5a00;
+  background: #fdf3d8;
+  border: 1px solid #f0dca6;
+  border-radius: 999px;
+  padding: 0 .45rem;
+  cursor: help;
+}
+
+/* CFP abierto: la acción es enviar propuesta, así que el enlace manda y el plazo acompaña. */
+.community-modal-ote-cfp {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: .3rem .5rem;
+  margin: .15rem 0 0;
+  font-size: .78rem;
+}
+.community-modal-ote-cfp > a { font-weight: 600; }
+.community-modal-ote-cfp-deadline { color: #777; }
+/* Lo que cubre el CFP: dato de coste para quien se plantea enviar propuesta. */
+.community-modal-ote-cfp-covers {
+  font-size: .7rem;
+  border-radius: 999px;
+  padding: 0 .45rem;
+  border: 1px solid transparent;
+}
+.community-modal-ote-cfp-covers.is-covered { color: #1b6b4a; background: #e7f6ee; border-color: #bfe6d2; }
+.community-modal-ote-cfp-covers.is-not-covered { color: #777; background: #f1f3f5; border-color: #e3e7ea; }
 
 .community-modal-ote-note {
   font-size: 0.8rem;

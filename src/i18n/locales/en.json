@@ -407,7 +407,28 @@
       "previous": "Previous event",
       "next": "Next event",
       "carousel": "carousel",
-      "position": "Event {{current}} of {{total}}"
+      "position": "Event {{current}} of {{total}}",
+      "dateNote": {
+        "tentative": "date not confirmed",
+        "tentativeHint": "The community has announced the event but has not confirmed the date yet.",
+        "postponed": "postponed",
+        "postponedHint": "The event was postponed. The date shown is the previous one."
+      },
+      "cfp": {
+        "link": "Call for papers",
+        "open": "until {{date}}",
+        "opens": "opens {{date}}",
+        "covers": {
+          "travel": {
+            "yes": "travel covered",
+            "no": "travel not covered"
+          },
+          "accommodation": {
+            "yes": "accommodation covered",
+            "no": "accommodation not covered"
+          }
+        }
+      }
     },
     "pendingReviewTitle": "Community pending review",
     "pendingReviewBody": "This community's tagging — topics, links, status — was filled in by a semi-automated pass and no person has checked it yet. It may be incomplete or out of date.",
