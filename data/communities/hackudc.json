@@ -36,7 +36,12 @@
   ],
   "contactInfo": "hackudc@gpul.org",
   "communityUrl": "https://hackudc.com/",
-  "urls": [],
+  "urls": [
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/hackudc.json"
+    }
+  ],
   "thumbnailUrl": "images/hackudc.webp",
   "displayOnMap": true,
   "humanValidated": false

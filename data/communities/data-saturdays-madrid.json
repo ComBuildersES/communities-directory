@@ -39,7 +39,12 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://datasaturdays.com/Event/20261107-datasaturday0095",
-  "urls": {},
+  "urls": [
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/data-saturdays-madrid.json"
+    }
+  ],
   "thumbnailUrl": "images/data-saturdays-madrid.webp",
   "displayOnMap": true,
   "humanValidated": true

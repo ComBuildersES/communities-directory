@@ -46,6 +46,10 @@
     },
     {
       "url": "https://youtu.be/88m4uHDIzRs"
+    },
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/coderioja.json"
     }
   ],
   "thumbnailUrl": "images/coderioja.webp",

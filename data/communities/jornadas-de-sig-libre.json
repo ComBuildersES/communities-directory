@@ -46,6 +46,10 @@
     },
     {
       "url": "https://www.instagram.com/sigteudg/"
+    },
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/jornadas-de-sig-libre.json"
     }
   ],
   "thumbnailUrl": "images/jornadas-de-sig-libre.webp",

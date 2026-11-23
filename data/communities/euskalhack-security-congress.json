@@ -39,6 +39,10 @@
     },
     {
       "url": "https://github.com/euskalhack"
+    },
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/euskalhack-security-congress.json"
     }
   ],
   "thumbnailUrl": "images/euskalhack-security-congress.webp",

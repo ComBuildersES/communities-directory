@@ -22,7 +22,12 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.southsummit.io/",
-  "urls": {},
+  "urls": [
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/south-summit.json"
+    }
+  ],
   "thumbnailUrl": "images/south-summit.webp",
   "displayOnMap": true,
   "humanValidated": false

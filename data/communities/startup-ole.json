@@ -33,6 +33,10 @@
     },
     {
       "url": "https://youtube.com/c/StartupOLE"
+    },
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/startup-ol.json"
     }
   ],
   "thumbnailUrl": "images/startup-ole.webp",

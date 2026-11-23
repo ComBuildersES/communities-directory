@@ -22,7 +22,12 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://eslib.re",
-  "urls": {},
+  "urls": [
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/eslibre.json"
+    }
+  ],
   "thumbnailUrl": "images/eslibre.webp",
   "displayOnMap": false,
   "humanValidated": false
