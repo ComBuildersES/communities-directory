@@ -106,6 +106,20 @@ scripts/               # Utilidades de mantenimiento de datos
 }
 ```
 
+### `lastReviewed` se actualiza en cada cambio de una ficha
+
+**Cualquier modificación de un fichero de `data/communities/` lleva `lastReviewed` a la fecha
+actual**, sea un cambio de estado, una URL, una etiqueta o una corrección de una letra. También
+cuando el cambio lo hace un script en bloque: el que escribe la ficha es el que pone la fecha.
+
+El campo es la fecha de la **última revisión de la ficha**, y es lo que se enseña como señal de
+cuándo se miró por última vez. Un dato tocado hoy bajo una fecha de 2024 dice que nadie ha
+repasado eso en dos años, que es exactamente lo contrario de lo que acaba de pasar.
+
+Ojo con lo que **no** significa: no mide la actividad de la comunidad (ver la nota de los
+prompts), y no se usa para ordenar nada. Tampoco se deduce del log de git: una migración en
+bloque tocó 500 ficheros sin que nadie revisara su contenido.
+
 ## Taxonomía de etiquetas (`tags.json` / `audience.json`)
 
 Cada tag tiene: `{ id, label, description, category, synonyms[] }`.

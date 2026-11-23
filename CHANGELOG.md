@@ -103,6 +103,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
+- 2026-11-24 `2ebb511` la fecha de revisión se actualiza en cada cambio de una ficha
 - 2026-11-21 `84b7ed2` reglas del dataset y documentación de las sedes
 - 2026-11-12 `9bdda6c` por qué las cuatro altas de GDG se quedan fuera
 - 2026-11-12 `66364d5` el porqué de los canales como pares, no lo que ya dice el esquema

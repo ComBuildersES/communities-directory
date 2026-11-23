@@ -71,6 +71,12 @@ Campos de una comunidad: `id`, `name`, `status`, `hidden`, `lastReviewed`, `comm
 `displayOnMap`, `humanValidated`. El esquema comentado está en `docs/DATA.md` y en
 `buildSchema()` de `scripts/generate-llm-artifacts.js`.
 
+**Al modificar cualquier fichero de `data/communities/`, pon `lastReviewed` en la fecha actual.**
+Vale para todo: cambio de estado, una URL, una etiqueta o una errata, y también cuando lo hace un
+script en bloque. Es la fecha de la última revisión de la ficha y se enseña como tal, así que un
+dato tocado hoy con fecha de 2024 miente. No se deduce del log de git: hubo migraciones que
+tocaron cientos de ficheros sin que nadie mirase su contenido.
+
 Lo que no se deduce leyendo el JSON:
 
 - `id` puede ser `null`: se asigna en `master`, dentro del job `build`, no al crear la
