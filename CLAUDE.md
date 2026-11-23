@@ -575,8 +575,9 @@ patrocinadores (que no están en el directorio), y un vínculo de autoría equiv
 ninguno. El ejemplo vive en el propio formulario y no solo en la ayuda emergente: una ayuda
 que hay que abrir no la lee quien está rellenando deprisa.
 
-Queda abierto en #475 el tipo para hackathones, jams y datatones: hoy están repartidos entre
-`conference` y `tech-meetup`, y ninguno de los dos es verdad.
+Queda abierto en #477 el tipo para hackathones, jams y datatones: hoy están repartidos entre
+`conference` y `tech-meetup`, y ninguno de los dos es verdad. La convención de tipos en
+general se revisa en #63.
 
 ### A una comunidad inactiva no se le pide logo ni URL
 

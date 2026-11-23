@@ -1,9 +1,9 @@
 {
   "id": 308,
   "name": "Killer Skills",
-  "status": "active",
+  "status": "inactive",
   "lastReviewed": "16/10/2024",
-  "communityType": "conference",
+  "communityType": "tech-meetup",
   "eventFormat": "in-person",
   "locations": [
     {

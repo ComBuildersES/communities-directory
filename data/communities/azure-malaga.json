@@ -2,7 +2,7 @@
   "id": 49,
   "name": "Azure Málaga",
   "status": "active",
-  "lastReviewed": "16/11/2026",
+  "lastReviewed": "23/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
   "locations": [
@@ -64,6 +64,9 @@
     },
     {
       "url": "https://www.meetup.com/es-ES/azuremalaga/"
+    },
+    {
+      "url": "https://www.linkedin.com/groups/8197954/"
     }
   ],
   "thumbnailUrl": "images/azure-malaga.webp",

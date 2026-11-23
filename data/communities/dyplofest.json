@@ -1,8 +1,8 @@
 {
   "id": 170,
   "name": "DyploFest",
-  "status": "active",
-  "lastReviewed": "17/10/2024",
+  "status": "inactive",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -18,11 +18,27 @@
   "langs": [
     "es"
   ],
-  "tags": [],
-  "targetAudience": [],
+  "tags": [
+    "accessibility",
+    "ux-ui",
+    "frontend-tooling",
+    "web-standards"
+  ],
+  "targetAudience": [
+    "frontend-developer",
+    "ux-designer",
+    "ui-designer"
+  ],
   "contactInfo": "",
   "communityUrl": "http://web.archive.org/web/20250521164517/http://dyplofest.com/",
-  "urls": {},
+  "urls": [
+    {
+      "url": "https://x.com/DyploFest"
+    },
+    {
+      "url": "https://www.youtube.com/channel/UC5uiAnmxb715SVp7dIj2NRA"
+    }
+  ],
   "thumbnailUrl": "images/dyplofest.webp",
   "displayOnMap": true,
   "humanValidated": false

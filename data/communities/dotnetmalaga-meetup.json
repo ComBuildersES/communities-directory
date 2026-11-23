@@ -1,8 +1,8 @@
 {
   "id": 144,
   "name": "dotnetMalaga (meetup)",
-  "status": "active",
-  "lastReviewed": "31/05/2024",
+  "status": "merged",
+  "lastReviewed": "23/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
   "locations": [
@@ -14,6 +14,7 @@
       }
     }
   ],
+  "mergedIntoId": 145,
   "topics": "",
   "langs": [
     "es"

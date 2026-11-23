@@ -1,8 +1,8 @@
 {
   "id": 50,
   "name": "Azure Malaga (Meetup)",
-  "status": "active",
-  "lastReviewed": "25/10/2024",
+  "status": "merged",
+  "lastReviewed": "23/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
   "locations": [
@@ -14,6 +14,7 @@
       }
     }
   ],
+  "mergedIntoId": 49,
   "topics": "",
   "langs": [
     "es"
