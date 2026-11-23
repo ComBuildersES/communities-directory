@@ -2,7 +2,7 @@
   "id": 458,
   "name": "viCON",
   "status": "active",
-  "lastReviewed": "17/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -28,6 +28,10 @@
     },
     {
       "url": "https://instagram.com/vicon.gal"
+    },
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/vicon.json"
     }
   ],
   "thumbnailUrl": "images/vicon.webp",

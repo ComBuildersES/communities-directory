@@ -2,7 +2,7 @@
   "id": 177,
   "name": "Extremadura Digital Day",
   "status": "active",
-  "lastReviewed": "17/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -34,6 +34,10 @@
     },
     {
       "url": "https://www.youtube.com/@extremaduradigitalday"
+    },
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/extremadura-digital-day.json"
     }
   ],
   "thumbnailUrl": "images/extremadura-digital-day.webp",

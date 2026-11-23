@@ -2,7 +2,7 @@
   "id": 13,
   "name": "Agile Open Spain (AOS)",
   "status": "active",
-  "lastReviewed": "18/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -24,7 +24,12 @@
   ],
   "contactInfo": "aos@agile-spain.org",
   "communityUrl": "https://aos.agile-spain.org/",
-  "urls": {},
+  "urls": [
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/agile-open-spain-aos.json"
+    }
+  ],
   "thumbnailUrl": "images/agile-open-spain-aos.webp",
   "displayOnMap": false,
   "humanValidated": false

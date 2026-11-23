@@ -2,7 +2,7 @@
   "id": 30,
   "name": "APIAddictsDays",
   "status": "active",
-  "lastReviewed": "18/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -34,6 +34,10 @@
     },
     {
       "url": "https://github.com/apiaddicts"
+    },
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/apiaddicts-days.json"
     }
   ],
   "thumbnailUrl": "images/apiaddictsdays.webp",

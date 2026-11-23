@@ -2,7 +2,7 @@
   "id": 534,
   "name": "Xornada de Usuarios de R en Galicia",
   "status": "active",
-  "lastReviewed": "18/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -25,7 +25,12 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "https://www.r-users.gal/",
-  "urls": {},
+  "urls": [
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/xornada-de-usuarios-de-r-en-galicia.json"
+    }
+  ],
   "thumbnailUrl": "images/xornada-de-usuarios-de-r-en-galicia.webp",
   "displayOnMap": true,
   "humanValidated": false

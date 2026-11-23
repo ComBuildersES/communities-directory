@@ -2,7 +2,7 @@
   "id": 619,
   "name": "I Jornada sobre Software Libre e Inteligencia Artificial Abierta",
   "status": "active",
-  "lastReviewed": "22/05/2026",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -42,7 +42,12 @@
   ],
   "contactInfo": "",
   "communityUrl": "https://selia.codeberg.page/",
-  "urls": {},
+  "urls": [
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/i-jornada-sobre-software-libre-e-inteligencia-artificial-abierta.json"
+    }
+  ],
   "thumbnailUrl": "images/i-jornada-sobre-software-libre-e-inteligencia-artificial-abierta.webp",
   "displayOnMap": true,
   "humanValidated": true

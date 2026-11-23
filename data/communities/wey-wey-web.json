@@ -2,7 +2,7 @@
   "id": 468,
   "name": "Wey Wey Web",
   "status": "active",
-  "lastReviewed": "24/03/2026",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -48,6 +48,10 @@
     },
     {
       "url": "https://twitter.com/WeyWeyWeb"
+    },
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/wey-wey-web.json"
     }
   ],
   "thumbnailUrl": "images/wey-wey-web.webp",

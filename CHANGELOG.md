@@ -103,7 +103,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Docs
 
-- 2026-11-24 `2ebb511` la fecha de revisión se actualiza en cada cambio de una ficha
+- 2026-11-24 `a8808ac` la fecha de revisión se actualiza en cada cambio de una ficha
 - 2026-11-21 `84b7ed2` reglas del dataset y documentación de las sedes
 - 2026-11-12 `9bdda6c` por qué las cuatro altas de GDG se quedan fuera
 - 2026-11-12 `66364d5` el porqué de los canales como pares, no lo que ya dice el esquema
@@ -123,6 +123,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
+- 2026-11-24 `9d62006` feed OTE en 33 conferencias desde confs.rauljimenez.info
 - 2026-11-23 `538ccde` repaso de estados, fusión de duplicados y ficha de DyploFest
 - 2026-11-23 `353b2c7` feeds OTE de confs.rauljimenez.info en 22 comunidades
 - 2026-11-22 `a495c8c` las sedes que eran un marcador pasan a locations vacío

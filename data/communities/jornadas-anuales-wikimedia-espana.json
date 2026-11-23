@@ -2,7 +2,7 @@
   "id": 304,
   "name": "Jornadas Anuales Wikimedia España",
   "status": "active",
-  "lastReviewed": "18/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -35,6 +35,10 @@
     },
     {
       "url": "https://www.instagram.com/wikimedia_es/"
+    },
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/jornadas-anuales-wikimedia-espa-a.json"
     }
   ],
   "thumbnailUrl": "images/jornadas-anuales-wikimedia-espana.webp",

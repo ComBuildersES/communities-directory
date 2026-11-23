@@ -2,7 +2,7 @@
   "id": 596,
   "name": "CODE FEST",
   "status": "active",
-  "lastReviewed": "12/09/2025",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -25,6 +25,10 @@
   "urls": [
     {
       "url": "https://www.instagram.com/swatfit8/"
+    },
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/code-fest.json"
     }
   ],
   "thumbnailUrl": "images/code-fest.webp",

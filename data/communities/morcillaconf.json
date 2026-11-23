@@ -2,7 +2,7 @@
   "id": 349,
   "name": "MorcillaConf",
   "status": "active",
-  "lastReviewed": "17/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -31,6 +31,10 @@
     },
     {
       "url": "https://www.meetup.com/es-ES/gdg-burgos/"
+    },
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/morcillaconf.json"
     }
   ],
   "thumbnailUrl": "images/morcillaconf.webp",

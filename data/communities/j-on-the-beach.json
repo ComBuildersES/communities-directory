@@ -2,7 +2,7 @@
   "id": 301,
   "name": "J On The Beach",
   "status": "active",
-  "lastReviewed": "24/03/2026",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -51,6 +51,10 @@
     },
     {
       "url": "https://x.com/jotbconf"
+    },
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/j-on-the-beach.json"
     }
   ],
   "thumbnailUrl": "images/j-on-the-breach.webp",
