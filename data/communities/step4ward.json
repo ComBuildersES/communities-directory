@@ -2,7 +2,7 @@
   "id": 433,
   "name": "Step4ward",
   "status": "active",
-  "lastReviewed": "11/11/2026",
+  "lastReviewed": "23/11/2026",
   "communityType": "collaborative-group",
   "eventFormat": "hybrid",
   "locations": [
@@ -23,7 +23,7 @@
   ],
   "geographicScope": "national",
   "parentId": null,
-  "shortDescription": "Step4ward es un proyecto creado por mujeres, para mujeres, desde mayo de 2021. Somos un grupo de mentoras con experiencia en el sector tecnológico en España que ayudan a mujeres a comenzar o continuar su camino profesional en tech.",
+  "shortDescription": "Step4ward es un proyecto creado por mujeres, para mujeres, desde mayo de 2021. Somos un grupo de mentoras con experiencia en el sector tecnológico en España que ayuda a mujeres a comenzar o continuar su camino profesional en tech. Hacemos mentorías online, speed mentoring y más.",
   "topics": "",
   "langs": [
     "es",
@@ -67,8 +67,8 @@
       "url": "https://www.eventbrite.es/o/61194230943"
     },
     {
-      "kind": "slack",
-      "url": "https://slack.bcneng.org/"
+      "url": "https://slack.bcneng.org/",
+      "kind": "slack"
     }
   ],
   "thumbnailUrl": "images/step4ward.webp",
