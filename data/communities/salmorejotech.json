@@ -2,7 +2,7 @@
   "id": 417,
   "name": "SalmorejoTech",
   "status": "active",
-  "lastReviewed": "18/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -13,6 +13,9 @@
         "lon": -4.77513
       }
     }
+  ],
+  "organizedBy": [
+    46
   ],
   "topics": "",
   "langs": [
@@ -26,23 +29,8 @@
   "communityUrl": "https://salmorejo.tech/2024/",
   "urls": [
     {
-      "url": "https://twitter.com/jesusescribanos"
-    },
-    {
-      "url": "https://github.com/jes106"
-    },
-    {
-      "url": "https://www.instagram.com/aulasoftwarelibre/?hl=es"
-    },
-    {
-      "url": "https://t.me/AulaSoftwareLibreUCO"
-    },
-    {
-      "url": "https://www.youtube.com/channel/UCfWiR5j-cbKcGTi9faK8P6w"
-    },
-    {
-      "kind": "ote",
-      "url": "https://confs.rauljimenez.info/conf/salmorejotech.json"
+      "url": "https://confs.rauljimenez.info/conf/salmorejotech.json",
+      "kind": "ote"
     }
   ],
   "thumbnailUrl": "images/salmorejotech.webp",

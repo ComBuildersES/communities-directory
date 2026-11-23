@@ -2,7 +2,7 @@
   "id": 659,
   "name": "GeeksCAT Conf",
   "status": "active",
-  "lastReviewed": "12/11/2026",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -38,8 +38,12 @@
   "communityUrl": "https://conf.geeks.cat/",
   "urls": [
     {
-      "kind": "web",
-      "url": "https://conf.geeks.cat/"
+      "url": "https://conf.geeks.cat/",
+      "kind": "web"
+    },
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/geekscat-conf.json"
     }
   ],
   "thumbnailUrl": "images/geekscat-conf.webp",

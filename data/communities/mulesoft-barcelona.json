@@ -2,7 +2,7 @@
   "id": 353,
   "name": "Mulesoft Barcelona",
   "status": "active",
-  "lastReviewed": "15/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
   "locations": [
@@ -25,14 +25,8 @@
   "communityUrl": "https://meetups.mulesoft.com/barcelona",
   "urls": [
     {
-      "url": "https://www.linkedin.com/groups/6936034"
-    },
-    {
-      "url": "https://twitter.com/MuleDev"
-    },
-    {
-      "kind": "eventsUrl",
-      "url": "https://meetups.mulesoft.com/barcelona"
+      "url": "https://meetups.mulesoft.com/barcelona",
+      "kind": "eventsUrl"
     }
   ],
   "thumbnailUrl": "images/mulesoft-barcelona.webp",

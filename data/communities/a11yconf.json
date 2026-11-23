@@ -2,7 +2,7 @@
   "id": 598,
   "name": "a11yconf",
   "status": "active",
-  "lastReviewed": "12/12/2025",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -33,29 +33,11 @@
   "communityUrl": "https://www.a11yconf.com/es",
   "urls": [
     {
-      "url": "https://www.instagram.com/plexus.tech/"
-    },
-    {
-      "url": "https://linkedin.com/company/plexus-tech"
-    },
-    {
-      "url": "https://www.youtube.com/user/tecnologiasplexus"
-    },
-    {
-      "url": "https://x.com/nextdigitalhub"
-    },
-    {
-      "url": "https://bsky.app/profile/nextdigitalhub.bsky.social"
-    },
-    {
-      "url": "https://github.com/Lemoncode"
-    },
-    {
       "url": "https://eventos.wiki/organizations/a11yconf"
     },
     {
-      "kind": "ote",
-      "url": "https://eventos.wiki/organizations/a11yconf/events.json"
+      "url": "https://eventos.wiki/organizations/a11yconf/events.json",
+      "kind": "ote"
     }
   ],
   "thumbnailUrl": "images/a11yconf.webp",

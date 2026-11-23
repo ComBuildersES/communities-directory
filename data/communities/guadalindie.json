@@ -2,7 +2,7 @@
   "id": 236,
   "name": "Guadalindie",
   "status": "active",
-  "lastReviewed": "17/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -14,6 +14,9 @@
       }
     }
   ],
+  "organizedBy": [
+    343
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -24,9 +27,6 @@
   "communityUrl": "https://guadalindie.com/",
   "urls": [
     {
-      "url": "https://discord.com/invite/6Q3DKDT"
-    },
-    {
       "url": "https://bsky.app/profile/guadalindie.bsky.social"
     },
     {
@@ -34,6 +34,10 @@
     },
     {
       "url": "https://www.instagram.com/guadalindie/"
+    },
+    {
+      "url": "https://confs.rauljimenez.info/conf/guadalindie.json",
+      "kind": "ote"
     }
   ],
   "thumbnailUrl": "images/guadalindie.webp",

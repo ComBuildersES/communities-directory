@@ -1,8 +1,8 @@
 {
   "id": 346,
   "name": "miduConf",
-  "status": "active",
-  "lastReviewed": "17/10/2024",
+  "status": "inactive",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "online",
   "locations": [],
@@ -23,6 +23,10 @@
     },
     {
       "url": "https://www.instagram.com/midu.dev"
+    },
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/miduconf.json"
     }
   ],
   "thumbnailUrl": "images/miduconf.webp",

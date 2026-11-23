@@ -2,7 +2,7 @@
   "id": 356,
   "name": "Mulesoft Murcia",
   "status": "active",
-  "lastReviewed": "15/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
   "locations": [
@@ -14,6 +14,7 @@
       }
     }
   ],
+  "parentId": 355,
   "topics": "",
   "langs": [
     "es"
@@ -24,14 +25,8 @@
   "communityUrl": "https://meetups.mulesoft.com/murcia",
   "urls": [
     {
-      "url": "https://www.linkedin.com/groups/6936034"
-    },
-    {
-      "url": "https://twitter.com/MuleDev"
-    },
-    {
-      "kind": "eventsUrl",
-      "url": "https://meetups.mulesoft.com/murcia"
+      "url": "https://meetups.mulesoft.com/murcia",
+      "kind": "eventsUrl"
     }
   ],
   "thumbnailUrl": "images/mulesoft-murcia.webp",

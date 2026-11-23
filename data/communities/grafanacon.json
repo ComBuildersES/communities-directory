@@ -2,7 +2,7 @@
   "id": 597,
   "name": "GrafanaCON",
   "status": "active",
-  "lastReviewed": "11/12/2025",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -31,16 +31,8 @@
   "communityUrl": "https://grafana.com/events/grafanacon/",
   "urls": [
     {
-      "url": "https://twitter.com/grafana"
-    },
-    {
-      "url": "https://www.linkedin.com/company/grafana-labs/"
-    },
-    {
-      "url": "https://github.com/grafana/"
-    },
-    {
-      "url": "https://www.youtube.com/channel/UCYCwgQAMm9sTJv0rgwQLCxw"
+      "url": "https://confs.rauljimenez.info/conf/grafanacon.json",
+      "kind": "ote"
     }
   ],
   "thumbnailUrl": "images/grafanacon.webp",

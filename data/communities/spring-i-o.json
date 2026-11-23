@@ -2,7 +2,7 @@
   "id": 430,
   "name": "Spring I/O",
   "status": "active",
-  "lastReviewed": "18/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -24,14 +24,11 @@
   "communityUrl": "https://2025.springio.net/",
   "urls": [
     {
-      "url": "https://twitter.com/sergialmar"
-    },
-    {
       "url": "https://www.youtube.com/@SpringIOConference"
     },
     {
-      "kind": "ote",
-      "url": "https://confs.rauljimenez.info/conf/spring-i-o.json"
+      "url": "https://confs.rauljimenez.info/conf/spring-i-o.json",
+      "kind": "ote"
     }
   ],
   "thumbnailUrl": "images/spring-io.webp",

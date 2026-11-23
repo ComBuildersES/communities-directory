@@ -2,7 +2,7 @@
   "id": 380,
   "name": "OWASP Logroño",
   "status": "active",
-  "lastReviewed": "18/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
   "locations": [
@@ -14,6 +14,7 @@
       }
     }
   ],
+  "parentId": 378,
   "topics": "",
   "langs": [
     "es"
@@ -27,23 +28,14 @@
   "communityUrl": "https://owasp.org/www-chapter-logrono/",
   "urls": [
     {
-      "url": "https://www.youtube.com/user/OWASPGLOBAL/videos"
-    },
-    {
       "url": "https://www.linkedin.com/company/owasp-logrono"
     },
     {
-      "kind": "mastodon",
-      "url": "https://infosec.exchange/@owasp_lo"
+      "url": "https://infosec.exchange/@owasp_lo",
+      "kind": "mastodon"
     },
     {
       "url": "https://bsky.app/profile/owasp-lo.bsky.social"
-    },
-    {
-      "url": "https://github.com/OWASP/"
-    },
-    {
-      "url": "https://twitter.com/owasp"
     }
   ],
   "thumbnailUrl": "images/owasp-logrono.webp",

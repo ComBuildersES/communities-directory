@@ -1,8 +1,8 @@
 {
   "id": 563,
   "name": "CanallaCon",
-  "status": "active",
-  "lastReviewed": "06/04/2026",
+  "status": "unknown",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -59,6 +59,10 @@
     },
     {
       "url": "https://t.me/CosasDeHackers"
+    },
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/canallacon.json"
     }
   ],
   "thumbnailUrl": "images/canallacon.webp",

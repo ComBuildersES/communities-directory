@@ -2,7 +2,7 @@
   "id": 66,
   "name": "BoquerónSec",
   "status": "inactive",
-  "lastReviewed": "24/03/2026",
+  "lastReviewed": "24/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "hybrid",
   "locations": [
@@ -25,11 +25,10 @@
   "tags": [],
   "targetAudience": [],
   "contactInfo": "",
-  "communityUrl": "https://www.meetup.com/es-ES/BoqueronSec/",
-  "urls": [
-    {
-      "url": "https://www.meetup.com/es-ES/BoqueronSec/"
-    }
+  "communityUrl": "",
+  "urls": [],
+  "archivedUrls": [
+    "https://www.meetup.com/es-ES/BoqueronSec/"
   ],
   "thumbnailUrl": "images/boqueronsec.webp",
   "displayOnMap": true,

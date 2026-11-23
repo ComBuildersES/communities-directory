@@ -1,11 +1,12 @@
 {
   "id": 423,
   "name": "Sistopics Distribuidos",
-  "status": "inactive",
-  "lastReviewed": "31/05/2024",
+  "status": "merged",
+  "lastReviewed": "23/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "unknown",
   "locations": [],
+  "mergedIntoId": 232,
   "topics": "",
   "langs": [
     "es"

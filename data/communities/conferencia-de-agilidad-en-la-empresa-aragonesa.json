@@ -1,8 +1,8 @@
 {
   "id": 106,
   "name": "Conferencia de Agilidad\nen la Empresa Aragonesa",
-  "status": "active",
-  "lastReviewed": "18/10/2024",
+  "status": "inactive",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -28,6 +28,10 @@
     },
     {
       "url": "https://www.youtube.com/channel/UCZkVhc0TGy_mgFhIkel7Khw"
+    },
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/conferencia-de-agilidad-en-la-empresa-aragonesa.json"
     }
   ],
   "thumbnailUrl": "images/conferencia-de-agilidad-en-la-empresa-aragonesa.webp",

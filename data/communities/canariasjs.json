@@ -1,9 +1,9 @@
 {
   "id": 73,
   "name": "CanariasJS",
-  "status": "active",
-  "lastReviewed": "31/05/2024",
-  "communityType": "conference",
+  "status": "unknown",
+  "lastReviewed": "23/11/2026",
+  "communityType": "tech-meetup",
   "eventFormat": "in-person",
   "locations": [
     {
@@ -21,10 +21,22 @@
   "tags": [],
   "targetAudience": [],
   "contactInfo": "",
-  "communityUrl": "https://t.me/canariasjs ",
+  "communityUrl": "https://t.me/canariasjs",
   "urls": [
     {
       "url": "https://t.me/canariasjs"
+    },
+    {
+      "url": "https://www.instagram.com/canariasjs"
+    },
+    {
+      "url": "https://www.youtube.com/@CanariasJS/"
+    },
+    {
+      "url": "https://www.linkedin.com/in/canariasjs/"
+    },
+    {
+      "url": "https://twitter.com/canariasjs"
     }
   ],
   "thumbnailUrl": "images/canariasjs.webp",

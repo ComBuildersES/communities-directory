@@ -2,7 +2,7 @@
   "id": 460,
   "name": "Vigo Tech Alliance",
   "status": "active",
-  "lastReviewed": "03/03/2025",
+  "lastReviewed": "23/11/2026",
   "communityType": "meta-community",
   "eventFormat": "unknown",
   "locations": [
@@ -24,19 +24,10 @@
   "communityUrl": "https://vigotech.org/",
   "urls": [
     {
-      "url": "https://twitter.com/agilevigo"
-    },
-    {
-      "url": "https://github.com/agileVigo"
-    },
-    {
       "url": "https://www.youtube.com/channel/UC9DPKfcLiNd7SEU-QLlIG7A"
     },
     {
       "url": "https://t.me/vigotech"
-    },
-    {
-      "url": "https://www.meetup.com/es-ES/agile-vigo/"
     }
   ],
   "thumbnailUrl": "images/vigo-tech-alliance.webp",

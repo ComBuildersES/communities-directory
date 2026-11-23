@@ -2,7 +2,7 @@
   "id": 341,
   "name": "Málaga-AI",
   "status": "active",
-  "lastReviewed": "24/03/2025",
+  "lastReviewed": "23/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
   "locations": [
@@ -36,11 +36,8 @@
       "url": "https://discord.com/invite/2tv7W2jxXF"
     },
     {
-      "kind": "web",
-      "url": "https://malaga-ai.community/"
-    },
-    {
-      "url": "https://www.meetup.com/es-ES/BoqueronSec/"
+      "url": "https://malaga-ai.community/",
+      "kind": "web"
     }
   ],
   "thumbnailUrl": "images/malaga-ai.webp",

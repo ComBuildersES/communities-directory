@@ -2,7 +2,7 @@
   "id": 565,
   "name": "Cloud Native Sevilla",
   "status": "active",
-  "lastReviewed": "26/05/2025",
+  "lastReviewed": "23/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
   "locations": [
@@ -14,6 +14,7 @@
       }
     }
   ],
+  "parentId": 79,
   "topics": "",
   "langs": [
     "es"

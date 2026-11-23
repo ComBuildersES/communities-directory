@@ -2,7 +2,7 @@
   "id": 232,
   "name": "Grupo de usuarios de Sharepoint de Cataluña (SUG)",
   "status": "inactive",
-  "lastReviewed": "31/05/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "unknown",
   "locations": [
@@ -25,6 +25,12 @@
   "urls": [
     {
       "url": "https://www.meetup.com/es-ES/sug-cat/"
+    },
+    {
+      "url": "https://twitter.com/SUG_Cat"
+    },
+    {
+      "url": "http://www.linkedin.com/groups/SUGCAT-2883719"
     }
   ],
   "displayOnMap": true,

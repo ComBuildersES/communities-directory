@@ -1,11 +1,12 @@
 {
   "id": 187,
   "name": "Foro Cybercamp",
-  "status": "active",
-  "lastReviewed": "25/10/2024",
+  "status": "merged",
+  "lastReviewed": "24/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "online",
   "locations": [],
+  "mergedIntoId": 120,
   "topics": "",
   "langs": [
     "es"
@@ -13,11 +14,10 @@
   "tags": [],
   "targetAudience": [],
   "contactInfo": "",
-  "communityUrl": "https://www.meetup.com/cybercamp-uma/",
-  "urls": [
-    {
-      "url": "https://www.meetup.com/cybercamp-uma/"
-    }
+  "communityUrl": "",
+  "urls": [],
+  "archivedUrls": [
+    "https://www.meetup.com/cybercamp-uma/"
   ],
   "thumbnailUrl": "images/foro-cybercamp.webp",
   "displayOnMap": false,

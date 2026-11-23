@@ -1,8 +1,8 @@
 {
   "id": 376,
   "name": "OpenExpo Europe",
-  "status": "active",
-  "lastReviewed": "18/10/2024",
+  "status": "inactive",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "hybrid",
   "locations": [
@@ -22,7 +22,12 @@
   "targetAudience": [],
   "contactInfo": "",
   "communityUrl": "http://web.archive.org/web/20250812184530/https://openexpoeurope.com/",
-  "urls": {},
+  "urls": [
+    {
+      "kind": "ote",
+      "url": "https://confs.rauljimenez.info/conf/openexpo-europe.json"
+    }
+  ],
   "thumbnailUrl": "images/openexpo-europe.webp",
   "displayOnMap": true,
   "humanValidated": false

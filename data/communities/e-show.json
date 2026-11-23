@@ -1,8 +1,8 @@
 {
   "id": 172,
-  "name": "E-Show Madrid",
+  "name": "E-Show",
   "status": "active",
-  "lastReviewed": "18/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -21,7 +21,7 @@
   "tags": [],
   "targetAudience": [],
   "contactInfo": "",
-  "communityUrl": "https://eshow.es/madrid",
+  "communityUrl": "https://www.techshowmadrid.es/e-show",
   "urls": [
     {
       "url": "https://www.linkedin.com/company/eshowcloserstillmedia/"

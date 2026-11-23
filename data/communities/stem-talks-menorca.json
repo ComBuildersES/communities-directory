@@ -1,8 +1,8 @@
 {
   "id": 544,
-  "name": "STEM Talks Menorca 2025",
+  "name": "STEM Talks Menorca",
   "status": "active",
-  "lastReviewed": "24/03/2025",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -14,6 +14,9 @@
       }
     }
   ],
+  "organizedBy": [
+    543
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -23,13 +26,11 @@
   ],
   "targetAudience": [],
   "contactInfo": "info@gdgmenorca.dev",
-  "communityUrl": "https://gdgmenorca.dev/",
+  "communityUrl": "https://stem.gdgmenorca.dev/",
   "urls": [
     {
-      "url": "https://x.com/GDGMenorca/"
-    },
-    {
-      "url": "https://www.instagram.com/gdgmenorca/"
+      "url": "https://confs.rauljimenez.info/conf/stem-talks-menorca.json",
+      "kind": "ote"
     }
   ],
   "thumbnailUrl": "images/stem-talks-menorca-2025.webp",

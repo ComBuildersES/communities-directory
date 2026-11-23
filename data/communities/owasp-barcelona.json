@@ -2,7 +2,7 @@
   "id": 379,
   "name": "OWASP Barcelona",
   "status": "active",
-  "lastReviewed": "18/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
   "locations": [
@@ -14,6 +14,7 @@
       }
     }
   ],
+  "parentId": 378,
   "topics": "",
   "langs": [
     "es"
@@ -27,20 +28,7 @@
   "communityUrl": "https://owasp.org/www-chapter-barcelona/",
   "urls": [
     {
-      "url": "https://www.youtube.com/user/OWASPGLOBAL/videos"
-    },
-    {
       "url": "https://www.linkedin.com/company/owasp-barcelona-2/"
-    },
-    {
-      "url": "https://github.com/OWASP/"
-    },
-    {
-      "kind": "mastodon",
-      "url": "https://infosec.exchange/@owasp"
-    },
-    {
-      "url": "https://twitter.com/owasp"
     }
   ],
   "thumbnailUrl": "images/owasp-barcelona.webp",

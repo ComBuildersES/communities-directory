@@ -2,7 +2,7 @@
   "id": 357,
   "name": "Mulesoft Sevilla",
   "status": "active",
-  "lastReviewed": "15/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
   "locations": [
@@ -14,6 +14,7 @@
       }
     }
   ],
+  "parentId": 355,
   "topics": "",
   "langs": [
     "es"
@@ -24,14 +25,8 @@
   "communityUrl": "https://meetups.mulesoft.com/sevilla",
   "urls": [
     {
-      "url": "https://www.linkedin.com/groups/6936034"
-    },
-    {
-      "url": "https://twitter.com/MuleDev"
-    },
-    {
-      "kind": "eventsUrl",
-      "url": "https://meetups.mulesoft.com/sevilla"
+      "url": "https://meetups.mulesoft.com/sevilla",
+      "kind": "eventsUrl"
     }
   ],
   "thumbnailUrl": "images/mulesoft-sevilla.webp",

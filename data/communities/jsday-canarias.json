@@ -1,8 +1,8 @@
 {
   "id": 306,
   "name": "JSDay Canarias",
-  "status": "active",
-  "lastReviewed": "18/10/2024",
+  "status": "inactive",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -13,6 +13,9 @@
         "lon": -16.60942
       }
     }
+  ],
+  "organizedBy": [
+    73
   ],
   "topics": "",
   "langs": [
@@ -26,13 +29,8 @@
   "communityUrl": "https://jsdaycanarias.com/",
   "urls": [
     {
-      "url": "https://twitter.com/canariasjs"
-    },
-    {
-      "url": "https://youtube.com/c/canariasjs"
-    },
-    {
-      "url": "https://www.instagram.com/canariasjs"
+      "url": "https://confs.rauljimenez.info/conf/jsday-canarias.json",
+      "kind": "ote"
     }
   ],
   "thumbnailUrl": "images/jsday-canarias.webp",

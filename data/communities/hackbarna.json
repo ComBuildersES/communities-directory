@@ -2,7 +2,7 @@
   "id": 241,
   "name": "HackBarna",
   "status": "active",
-  "lastReviewed": "15/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "hackathon",
   "eventFormat": "in-person",
   "locations": [
@@ -26,10 +26,16 @@
   "communityUrl": "https://hackbarna.com",
   "urls": [
     {
-      "url": "https://www.youtube.com/@rivela_"
+      "url": "https://x.com/hackbarna"
     },
     {
-      "url": "https://www.meetup.com/es-ES/ai-engineers-barcelona/"
+      "url": "https://instagram.com/hackbarna"
+    },
+    {
+      "url": "https://linkedin.com/company/hackbarna"
+    },
+    {
+      "url": "https://luma.com/hackbarna"
     }
   ],
   "thumbnailUrl": "images/hackbarna.webp",

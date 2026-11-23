@@ -123,7 +123,8 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
-- 2026-11-24 `9d62006` feed OTE en 33 conferencias desde confs.rauljimenez.info
+- 2026-11-24 `2efc8f4` canales mal atribuidos, duplicados fusionados y conferencias sin edición en 2026
+- 2026-11-24 `2bb4e1f` feed OTE en 33 conferencias desde confs.rauljimenez.info
 - 2026-11-23 `538ccde` repaso de estados, fusión de duplicados y ficha de DyploFest
 - 2026-11-23 `353b2c7` feeds OTE de confs.rauljimenez.info en 22 comunidades
 - 2026-11-22 `a495c8c` las sedes que eran un marcador pasan a locations vacío

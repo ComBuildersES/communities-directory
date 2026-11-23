@@ -2,7 +2,7 @@
   "id": 169,
   "name": "DrupalCamp Spain",
   "status": "active",
-  "lastReviewed": "18/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -13,6 +13,9 @@
         "lon": null
       }
     }
+  ],
+  "organizedBy": [
+    39
   ],
   "topics": "",
   "langs": [
@@ -29,10 +32,8 @@
       "url": "https://www.instagram.com/drupalcampspain/"
     },
     {
-      "url": "https://www.youtube.com/channel/UCJlthEUN__9_-KWFQ_-0fLg"
-    },
-    {
-      "url": "https://github.com/AsociacionDrupalES"
+      "url": "https://confs.rauljimenez.info/conf/drupalcamp-spain.json",
+      "kind": "ote"
     }
   ],
   "thumbnailUrl": "images/drupalcamp-spain.webp",

@@ -2,7 +2,7 @@
   "id": 465,
   "name": "Wasm I/O",
   "status": "active",
-  "lastReviewed": "17/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -24,10 +24,11 @@
   "communityUrl": "https://wasm.io/",
   "urls": [
     {
-      "url": "https://twitter.com/sergialmar"
+      "url": "https://www.youtube.com/@wasmio"
     },
     {
-      "url": "https://www.youtube.com/@wasmio"
+      "url": "https://confs.rauljimenez.info/conf/wasm-i-o.json",
+      "kind": "ote"
     }
   ],
   "thumbnailUrl": "images/wasm-io.webp",

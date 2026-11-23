@@ -2,7 +2,7 @@
   "id": 486,
   "name": "Wordcamp Griñón",
   "status": "inactive",
-  "lastReviewed": "18/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
@@ -15,6 +15,9 @@
     }
   ],
   "parentId": 483,
+  "organizedBy": [
+    502
+  ],
   "topics": "",
   "langs": [
     "es"
@@ -28,18 +31,6 @@
   "urls": [
     {
       "url": "https://t.me/WCGrinon"
-    },
-    {
-      "url": "https://twitter.com/WPGrinon"
-    },
-    {
-      "url": "https://www.instagram.com/wpgrinon/"
-    },
-    {
-      "url": "https://www.youtube.com/channel/UCuwhtNtXjCqAs9ty2pvDO2g"
-    },
-    {
-      "url": "https://www.meetup.com/es-ES/Wordpress-Grinon/"
     }
   ],
   "thumbnailUrl": "images/wordcamp-grinon.webp",

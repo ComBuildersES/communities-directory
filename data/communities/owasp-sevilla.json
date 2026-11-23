@@ -2,7 +2,7 @@
   "id": 381,
   "name": "OWASP Sevilla",
   "status": "active",
-  "lastReviewed": "18/10/2024",
+  "lastReviewed": "23/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
   "locations": [
@@ -14,6 +14,7 @@
       }
     }
   ],
+  "parentId": 378,
   "topics": "",
   "langs": [
     "es"
@@ -27,20 +28,7 @@
   "communityUrl": "https://owasp.org/www-chapter-sevilla/",
   "urls": [
     {
-      "url": "https://www.youtube.com/user/OWASPGLOBAL/videos"
-    },
-    {
       "url": "https://twitter.com/OWASP_Sevilla"
-    },
-    {
-      "url": "https://github.com/OWASP/"
-    },
-    {
-      "kind": "mastodon",
-      "url": "https://infosec.exchange/@owasp"
-    },
-    {
-      "url": "https://www.linkedin.com/company/owasp/"
     }
   ],
   "thumbnailUrl": "images/owasp-sevilla.webp",

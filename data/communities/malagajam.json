@@ -2,7 +2,7 @@
   "id": 343,
   "name": "MálagaJam",
   "status": "active",
-  "lastReviewed": "24/03/2025",
+  "lastReviewed": "24/11/2026",
   "communityType": "hackathon",
   "eventFormat": "in-person",
   "locations": [
@@ -34,9 +34,6 @@
     },
     {
       "url": "https://www.instagram.com/malagajam/"
-    },
-    {
-      "url": "https://youtu.be/IYio8Z2dWh4?si=k0i31T_Yy4ku7jMW"
     }
   ],
   "thumbnailUrl": "images/malagajam.webp",
