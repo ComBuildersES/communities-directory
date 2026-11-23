@@ -27,6 +27,10 @@ jobs:
         with:
           # Necesario para poder commitear los IDs asignados sobre la rama, no sobre el SHA.
           ref: master
+          # `generate-changelog.js` reconstruye CHANGELOG.md entero desde el log de git, así
+          # que con el clon superficial por defecto (1 commit) lo dejaba en una sola entrada:
+          # cada deploy vaciaba el fichero y solo sobrevivía en los clones locales con el hook.
+          fetch-depth: 0
           # El token por defecto no dispara workflows con su push, que es justo lo que
           # queremos: este mismo run ya publica el resultado.
           persist-credentials: true
