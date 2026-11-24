@@ -2,7 +2,7 @@
   "id": 112,
   "name": "Coruña WTF",
   "status": "active",
-  "lastReviewed": "25/03/2026",
+  "lastReviewed": "24/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
   "locations": [
@@ -14,6 +14,8 @@
       }
     }
   ],
+  "geographicScope": "unknown",
+  "parentId": null,
   "shortDescription": "CoruñaWTF somos una comunidad de personas de A Coruña y alrededores, que se reúnen para compartir, aprender y disfrutar alrededor del desarrollo y diseño web.",
   "shortDescriptionI18n": {
     "en": "CorunaWTF is a community of people from A Coruña and nearby who get together to share, learn and enjoy themselves around web development and design."
@@ -60,6 +62,10 @@
     },
     {
       "url": "https://linktr.ee/corunawtf"
+    },
+    {
+      "url": "https://corunawtf.github.io/page/feed.json",
+      "kind": "ote"
     }
   ],
   "thumbnailUrl": "images/coruna-wtf.webp",
