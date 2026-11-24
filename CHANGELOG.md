@@ -51,6 +51,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Fixes
 
+- 2026-11-24 `8933036` actualizar ubicación de Lambda World
 - 2026-11-23 `24ef1bf` clon completo en deploy para no vaciar el CHANGELOG
 - 2026-11-22 `e91bd59` globals de Node, código muerto y una aserción obsoleta
 - 2026-11-21 `710f226` correcciones de la revisión del PR

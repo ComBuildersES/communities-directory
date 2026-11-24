@@ -2,15 +2,15 @@
   "id": 312,
   "name": "Lambda World",
   "status": "active",
-  "lastReviewed": "23/11/2026",
+  "lastReviewed": "24/11/2026",
   "communityType": "conference",
   "eventFormat": "in-person",
   "locations": [
     {
-      "name": "Torremolinos",
+      "name": "Málaga",
       "latLon": {
-        "lat": 36.5297453,
-        "lon": -6.2926477
+        "lat": 36.7212737,
+        "lon": -4.4212655
       }
     }
   ],
