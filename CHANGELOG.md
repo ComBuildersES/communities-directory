@@ -7,6 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
+- 2026-11-24 `f9ae41f` actualizar y añadir comunidades
 - 2026-11-23 `1843c96` marcar la fecha que no es firme y mostrar el CFP abierto
 - 2026-11-22 `4991ccb` tipo hackathon para hackathones, jams y datatones (#477)
 - 2026-11-22 `755ec08` copiar el enlace de la ficha desde el desplegable Compartir
@@ -51,7 +52,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Fixes
 
-- 2026-11-24 `631cc7f` reconocer calendarios de eventos
+- 2026-11-24 `c1ae7d4` reconocer calendarios de eventos
 - 2026-11-24 `1783208` actualizar ubicación de Lambda World
 - 2026-11-23 `24ef1bf` clon completo en deploy para no vaciar el CHANGELOG
 - 2026-11-22 `e91bd59` globals de Node, código muerto y una aserción obsoleta

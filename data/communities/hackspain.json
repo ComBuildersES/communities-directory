@@ -1,0 +1,27 @@
+{
+  "id": null,
+  "name": "HackSpain",
+  "status": "active",
+  "lastReviewed": "24/11/2026",
+  "communityType": "hackathon",
+  "eventFormat": "in-person",
+  "locations": [
+    {
+      "name": "Madrid",
+      "latLon": { "lat": 40.4167047, "lon": -3.7035825 }
+    }
+  ],
+  "shortDescription": "Hackathon presencial en Madrid que reúne a jóvenes para desarrollar proyectos tecnológicos en equipo, con retos y mentoría. Es un evento de la Asociación Exponential Fellowship.",
+  "topics": "",
+  "langs": ["es"],
+  "tags": [],
+  "targetAudience": [],
+  "contactInfo": "contact@hackspain.com",
+  "communityUrl": "https://hackspain.com/",
+  "urls": [
+    { "url": "https://www.linkedin.com/company/hackspain/" }
+  ],
+  "thumbnailUrl": "https://hackspain.com/recap/poster.webp",
+  "displayOnMap": true,
+  "humanValidated": false
+}

@@ -2,7 +2,7 @@
   "id": 226,
   "name": "Granada Tech",
   "status": "active",
-  "lastReviewed": "25/03/2026",
+  "lastReviewed": "24/11/2026",
   "communityType": "meta-community",
   "eventFormat": "hybrid",
   "locations": [
@@ -40,6 +40,9 @@
     },
     {
       "url": "https://whatsapp.com/channel/0029VaqmAGqGOj9p1hXppl27"
+    },
+    {
+      "url": "https://calendar.google.com/calendar/ical/c1e9aa03275fcf80c962f69f120e0238e097b5baabbd9ebb75471fd072f176bf%40group.calendar.google.com/public/basic.ics"
     }
   ],
   "thumbnailUrl": "images/granada-tech.webp",
