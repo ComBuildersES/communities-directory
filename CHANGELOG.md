@@ -62,6 +62,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Data
 
+- 2026-11-24 `b5aa13a` [Actualizada HackUDC](https://directory.communitybuilders.dev/?community=671) ([PR #533](https://github.com/ComBuildersES/communities-directory/pull/533))
 - 2026-11-23 `3ea1a5a` [Actualizada Step4ward](https://directory.communitybuilders.dev/?community=433) ([PR #530](https://github.com/ComBuildersES/communities-directory/pull/530))
 - 2026-11-21 `9b12a2a` [Actualizada TechShessions](https://directory.communitybuilders.dev/?community=445) ([PR #524](https://github.com/ComBuildersES/communities-directory/pull/524))
 - 2026-11-21 `ca7103f` [Actualizada CaceresTech](https://directory.communitybuilders.dev/?community=70) ([PR #516](https://github.com/ComBuildersES/communities-directory/pull/516))
