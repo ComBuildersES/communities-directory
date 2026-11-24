@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-24 `f9ae41f` actualizar y añadir comunidades
+- 2026-11-24 `9f1e9e6` actualizar y añadir comunidades
 - 2026-11-23 `1843c96` marcar la fecha que no es firme y mostrar el CFP abierto
 - 2026-11-22 `4991ccb` tipo hackathon para hackathones, jams y datatones (#477)
 - 2026-11-22 `755ec08` copiar el enlace de la ficha desde el desplegable Compartir
