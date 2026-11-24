@@ -35,6 +35,12 @@ function readSourceCommunities() {
 }
 
 describe("inferKindFromUrl", () => {
+  it("identifica feeds iCalendar como eventos, también cuando los sirve Luma", () => {
+    expect(inferKindFromUrl("https://api.luma.com/ics/get?entity=calendar&id=cal-kIWuABnuAFTEk09")).toBe("eventsUrl");
+    expect(inferKindFromUrl("https://ejemplo.org/eventos.ics?token=1")).toBe("eventsUrl");
+    expect(inferKindFromUrl("https://lu.ma/comunidad")).toBe("luma");
+    expect(inferKindFromUrl("https://api.luma.com/ics/other")).toBe("luma");
+  });
   it("reconoce las plataformas cuyo dominio las identifica sin ambigüedad", () => {
     expect(inferKindFromUrl("https://x.com/GDGZaragoza")).toBe("twitter");
     expect(inferKindFromUrl("https://twitter.com/BiznagaFest")).toBe("twitter");

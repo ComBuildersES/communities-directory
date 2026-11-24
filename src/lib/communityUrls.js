@@ -130,12 +130,26 @@ function hostnameOf(url) {
   }
 }
 
+/** Un feed iCalendar es un calendario, aunque lo sirva una plataforma conocida. */
+export function isCalendarUrl(url) {
+  if (typeof url !== "string") return false;
+  try {
+    const parsed = new URL(url.trim());
+    if (!/^https?:$/.test(parsed.protocol)) return false;
+    return /\.ics$/i.test(parsed.pathname) ||
+      (parsed.hostname.toLowerCase() === "api.luma.com" && parsed.pathname === "/ics/get");
+  } catch {
+    return false;
+  }
+}
+
 /**
  * `kind` que el dominio delata, o `null`. Mastodon se queda fuera a propósito: vive en miles
  * de instancias con dominio propio, así que su `kind` no se puede deducir y siempre viaja
  * explícito.
  */
 export function inferKindFromUrl(url) {
+  if (isCalendarUrl(url)) return "eventsUrl";
   const hostname = hostnameOf(url);
   if (!hostname) return null;
   for (const [pattern, kind] of DOMAIN_KINDS) {

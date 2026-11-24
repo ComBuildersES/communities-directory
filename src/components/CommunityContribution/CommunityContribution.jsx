@@ -31,6 +31,7 @@ import {
   URL_KINDS,
   URL_KIND_BY_KEY,
   inferKindFromUrl,
+  isCalendarUrl,
   isOteRow,
   makeUrlRow,
   resolveKindOrLabelInput,
@@ -703,7 +704,9 @@ function UrlRow({ row, index, onChange, onRemove, onArchive, helpContent, isHelp
   // Lo que se ve en el campo: la etiqueta propia si la hay, y si no el nombre de la
   // plataforma. Vacío solo cuando no hay ni una ni otra, que es cuando el placeholder pide
   // que alguien lo escriba.
-  const fieldValue = row.label ?? (known ? t(`communityModal.url.${kind}`, { defaultValue: kind }) : "");
+  const fieldValue = row.label ?? (!row.kind && isCalendarUrl(url)
+    ? "Calendario de eventos"
+    : known ? t(`communityModal.url.${kind}`, { defaultValue: kind }) : "");
 
   const handleKindOrLabelChange = (value) => {
     onChange(resolveKindOrLabelInput({ text: value, url, kindLabels }));
