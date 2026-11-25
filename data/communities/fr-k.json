@@ -2,39 +2,51 @@
   "id": 600,
   "name": "FR!K",
   "status": "active",
-  "lastReviewed": "25/06/2026",
+  "lastReviewed": "25/11/2026",
   "communityType": "umbrella-org",
-  "eventFormat": "in-person",
+  "eventFormat": "hybrid",
   "locations": [],
-  "shortDescription": "Un espacio donde el conocimiento conecta con la pasión. Únete a tu club especializado donde profesionales como tú se reúnen para aprender de forma colaborativa. Desde Software, Diseño, IA, Marketing, Emprendedores y muchos más, cada club tiene su propia identidad y una comunidad",
+  "geographicScope": "international",
+  "shortDescription": "FR!K desarrolla una app para que personas de una misma zona con intereses comunes compartan actividades presenciales en grupos pequeños, con el objetivo de crear una red de comunidades locales abiertas.",
   "shortDescriptionI18n": {
-    "en": "A space where knowledge meets passion. Join a specialised club where professionals like you gather to learn together. From software, design, AI and marketing to entrepreneurship and more, each club has its own identity and community."
+    "en": "FR!K is building an app to bring people with shared interests together for small, in-person group activities in their area, with the aim of creating a network of open local communities.",
+    "ca": "FR!K desenvolupa una aplicació perquè persones d’una mateixa zona amb interessos comuns comparteixin activitats presencials en grups petits, amb l’objectiu de crear una xarxa de comunitats locals obertes.",
+    "eu": "FR!K aplikazio bat garatzen ari da, gertu dauden eta interes berak dituzten pertsonek talde txikietan aurrez aurreko jarduerak egin ditzaten, tokiko komunitate irekien sare bat sortzeko asmoz.",
+    "gl": "FR!K desenvolve unha aplicación para que persoas da mesma zona con intereses comúns compartan actividades presenciais en grupos pequenos, co obxectivo de crear unha rede de comunidades locais abertas.",
+    "oc": "FR!K desvolòpe ua aplicacion entà facilitar trobades presenciaus en grops petiti entre persones d’un madeish lòc damb interèssi comuns, damb er objectiu de crear un hilat de comunitats locaus dubèrtes."
   },
   "topics": "personal-growth, mentoring, ethics, tech4good, innovation, business-and-innovation-manager, community-and-social-media-manager, diversity, startups, entrepreneur-startup-founder",
   "langs": [
     "es",
     "en",
-    "ca"
+    "ca",
+    "eu",
+    "gl",
+    "oc"
   ],
   "tags": [],
   "targetAudience": [],
+  "openTo": [
+    "speakers",
+    "co-organisers",
+    "mentors",
+    "volunteers",
+    "venues",
+    "collaborations"
+  ],
   "matchesAllTags": true,
   "matchesAllAudience": true,
-  "contactInfo": "hey@frik.you",
-  "communityUrl": "https://frik.global/es",
+  "contactInfo": "hello@frik.app",
+  "communityUrl": "https://frik.app/es",
   "urls": [
     {
-      "url": "https://instagram.com/frik_spain"
+      "url": "https://instagram.com/frik.app"
     },
     {
-      "url": "https://linkedin.com/company/frikglobal"
+      "url": "https://linkedin.com/company/frik.app"
     },
     {
-      "url": "https://youtube.com/@frik.global"
-    },
-    {
-      "kind": "web",
-      "url": "https://frik.global/es"
+      "url": "https://youtube.com/@frik.app"
     }
   ],
   "thumbnailUrl": "images/frk.webp",
