@@ -128,7 +128,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
-- 2026-11-25 `3d19080` Añadiendo a andrea y jorge a HackUDC
+- 2026-11-25 `57ad8fc` Añadiendo a andrea y jorge a HackUDC
 - 2026-11-24 `ca7941f` canales mal atribuidos, duplicados fusionados y conferencias sin edición en 2026
 - 2026-11-24 `3615ab6` feed OTE en 33 conferencias desde confs.rauljimenez.info
 - 2026-11-23 `538ccde` repaso de estados, fusión de duplicados y ficha de DyploFest
