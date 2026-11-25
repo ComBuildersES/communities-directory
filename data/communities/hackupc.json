@@ -1,5 +1,5 @@
 {
-  "id": null,
+  "id": 673,
   "name": "HackUPC",
   "status": "active",
   "lastReviewed": "24/11/2026",
@@ -8,19 +8,28 @@
   "locations": [
     {
       "name": "Barcelona",
-      "latLon": { "lat": 41.387917, "lon": 2.1699187 }
+      "latLon": {
+        "lat": 41.387917,
+        "lon": 2.1699187
+      }
     }
   ],
   "geographicScope": "international",
   "shortDescription": "Hackathon para estudiantes en Barcelona, organizado por Hackers@UPC. Durante 36 horas, equipos desarrollan proyectos tecnológicos y participan en actividades y charlas.",
   "topics": "",
-  "langs": ["en"],
+  "langs": [
+    "en"
+  ],
   "tags": [],
-  "targetAudience": ["student"],
+  "targetAudience": [
+    "student"
+  ],
   "contactInfo": "contact@hackupc.com",
   "communityUrl": "https://hackupc.com/",
   "urls": [
-    { "url": "https://www.instagram.com/hackupc/" }
+    {
+      "url": "https://www.instagram.com/hackupc/"
+    }
   ],
   "thumbnailUrl": "https://hackupc.com/hackupcLogoWhite.svg",
   "displayOnMap": true,
