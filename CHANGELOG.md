@@ -7,7 +7,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Features
 
-- 2026-11-24 `f9ae41f` actualizar y añadir comunidades
+- 2026-11-24 `9f1e9e6` actualizar y añadir comunidades
 - 2026-11-23 `1843c96` marcar la fecha que no es firme y mostrar el CFP abierto
 - 2026-11-22 `4991ccb` tipo hackathon para hackathones, jams y datatones (#477)
 - 2026-11-22 `755ec08` copiar el enlace de la ficha desde el desplegable Compartir
@@ -128,6 +128,7 @@ Se organiza por mes y por tipo de cambio.
 
 ### Other
 
+- 2026-11-25 `3d19080` Añadiendo a andrea y jorge a HackUDC
 - 2026-11-24 `ca7941f` canales mal atribuidos, duplicados fusionados y conferencias sin edición en 2026
 - 2026-11-24 `3615ab6` feed OTE en 33 conferencias desde confs.rauljimenez.info
 - 2026-11-23 `538ccde` repaso de estados, fusión de duplicados y ficha de DyploFest
