@@ -1,8 +1,8 @@
 {
   "id": 164,
   "name": "Drupal Madrid",
-  "status": "active",
-  "lastReviewed": "18/10/2024",
+  "status": "inactive",
+  "lastReviewed": "27/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
   "locations": [
@@ -14,7 +14,9 @@
       }
     }
   ],
+  "geographicScope": "unknown",
   "parentId": 39,
+  "shortDescription": "",
   "topics": "",
   "langs": [
     "es"
@@ -23,8 +25,8 @@
   "targetAudience": [],
   "contactInfo": "help@drupal.org",
   "communityUrl": "https://groups.drupal.org/madrid",
-  "urls": {},
+  "urls": [],
   "thumbnailUrl": "images/drupal-madrid.webp",
   "displayOnMap": true,
-  "humanValidated": false
+  "humanValidated": true
 }
