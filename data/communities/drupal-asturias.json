@@ -1,8 +1,8 @@
 {
   "id": 152,
   "name": "Drupal Asturias",
-  "status": "active",
-  "lastReviewed": "18/10/2024",
+  "status": "inactive",
+  "lastReviewed": "27/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
   "locations": [
@@ -14,17 +14,19 @@
       }
     }
   ],
+  "geographicScope": "unknown",
   "parentId": 39,
+  "shortDescription": "",
   "topics": "",
   "langs": [
     "es"
   ],
   "tags": [],
   "targetAudience": [],
-  "contactInfo": "help@drupal.org",
+  "contactInfo": "",
   "communityUrl": "http://web.archive.org/web/20230529034252/https://groups.drupal.org/asturias-spain",
-  "urls": {},
+  "urls": [],
   "thumbnailUrl": "images/drupal-asturias.webp",
   "displayOnMap": true,
-  "humanValidated": false
+  "humanValidated": true
 }
