@@ -2,7 +2,7 @@
   "id": 41,
   "name": "Asturias Software Crafters",
   "status": "active",
-  "lastReviewed": "25/03/2026",
+  "lastReviewed": "27/11/2026",
   "communityType": "tech-meetup",
   "eventFormat": "in-person",
   "locations": [
@@ -14,13 +14,16 @@
       }
     }
   ],
+  "geographicScope": "regional",
+  "parentId": null,
   "shortDescription": "Grupo de entusiastas de la tecnología que queremos fomentar las relaciones personales en torno a eventos tecnológicos en Asturias. Organizamos, charlas, talleres, dinámicas.... Siempre con respeto y alrededor de un espacio acogedor donde divertirnos.",
   "shortDescriptionI18n": {
     "en": "A group of technology enthusiasts who want to build personal relationships around tech events in Asturias. We organise talks, workshops and hands-on sessions, always respectfully and in a welcoming space where we can have fun."
   },
   "topics": "",
   "langs": [
-    "es"
+    "es",
+    "en"
   ],
   "tags": [
     "software-architecture",
@@ -54,6 +57,12 @@
     "tech-lead",
     "product-manager"
   ],
+  "openTo": [
+    "speakers",
+    "venues",
+    "collaborations",
+    "sponsors"
+  ],
   "contactInfo": "asturiascrafters@gmail.com",
   "communityUrl": "https://saraos.tech/@asturias-software-crafters",
   "urls": [
@@ -67,8 +76,8 @@
       "url": "https://linkedin.com/company/asturiaswcraft"
     },
     {
-      "kind": "eventsUrl",
-      "url": "https://saraos.tech/@asturias-software-crafters"
+      "url": "https://saraos.tech/@asturias-software-crafters",
+      "kind": "eventsUrl"
     },
     {
       "url": "https://t.me/+F_0R2L0OowljMGY0"
@@ -77,8 +86,12 @@
       "url": "https://eventos.wiki/organizations/asturias-software-crafters"
     },
     {
-      "kind": "ote",
-      "url": "https://eventos.wiki/organizations/asturias-software-crafters/events.json"
+      "url": "https://eventos.wiki/organizations/asturias-software-crafters/events.json",
+      "kind": "ote"
+    },
+    {
+      "url": "https://asturiascrafters.com/",
+      "kind": "web"
     }
   ],
   "thumbnailUrl": "images/asturias-software-crafters.webp",
